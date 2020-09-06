@@ -35,4 +35,6 @@ Voor deze opdracht is het jouw taak om een verzameling regels te ontwerpen om Pi
 - Vergeet niet dat jouw oplossing moet werken voor elke mogelijke startpositie van Picobot!
 - Klik op "Enter rules for Picobot" voordat je Picobot start
 
-Let op, als je Picobot afsluit zijn al jouw regels verdwenen! Kopiëeer daarom de regels naar een tekstbestand en sla het op.
+:::{admonition,warning} Let op
+Als je Picobot afsluit zijn al jouw regels verdwenen! Kopiëeer daarom de regels naar een tekstbestand en sla het op.
+:::
