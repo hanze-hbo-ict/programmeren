@@ -1,7 +1,11 @@
-# Physics 111 - Anonymous Feedback Form
+# Anonieme feedback
 
-Please let me know if you have any comments, thoughts, questions, and feedback about the course or me as an instructor. This form is completely anonymous and no identifiable information will be collected or stored. I hope you will consider this a safe space to provide genuine feedback to your instructor (Firas Moosvi).
- 
-Note that despite the fact that this form is anonymous and I will never find out who you are, I urge you to still be respectful, courteous, and professional. Don't forget, I am human too!
+Laat het ons weten als je opmerkingen, ideeën, vragen of andere feedback hebt over de cursus of docent. Dit formulier is volledig anoniem en er wordt geen identificeerbare informatie verzameld of opgeslagen. We hopen dat je dit als een veilige plek beschouwt om eerlijke en oprechte feedback te geven!
 
-<iframe src="https://ubc.ca1.qualtrics.com/jfe/form/SV_1YZe0vJpH16qKeF" frameborder="0" width="700" height="650"></iframe>
+:::{admonition,info} Let op
+Dit formulier is om algemene opmerkingen over de cursus te plaatsen en *niet* om vragen over opgaven te stellen.
+:::
+
+Zorg dat jouw feedback respectvol, vriendelijk en professioneel is. Hoewel dit formulier anoniem is en we er nooit achter kunnen komen wie je bent, bedenk dat het een ander mens is die jouw feedback zal lezen...
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdUpRZj3jWVA_LRWW2g8E8Xi2gJfUgmO6rREkX4eqpGTq1N-g/viewform?embedded=true" width="640" height="887" frameborder="0" marginheight="0" marginwidth="0">Laden…</iframe>

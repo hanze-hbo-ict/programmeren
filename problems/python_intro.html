@@ -1,0 +1,1026 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terminal, teksteditors en Python &#8212; Programmeren</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "misja/programmeren");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://misja.github.io/programmeren/problems/python_intro.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Week 1" href="../class/opgaven_1.html" />
+    <link rel="prev" title="Picobot" href="../topics/2b_picobot.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://misja.github.io/programmeren/problems/python_intro.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Terminal, teksteditors en Python" />
+<meta property="og:description" content="Terminal, teksteditors en Python      Naam  Beschrijving  Onderwerp  Een eerste kennismaking met de terminal, teksteditors en Python  Bestandsnaam  wk1ex1.py  I" />
+<meta property="og:image"       content="https://misja.github.io/programmeren/_static/mascot.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/mascot.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Programmeren</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/syllabus.html">
+   Programmeren
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Opmerkingen
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/feedback.html">
+   Anoniem feedbackformulier
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 1
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_1.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_1.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Voorbeelden
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/recursie.html">
+   Recursie
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/design_recipe.html">
+   Functie ontwerp
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/platte_tekst.html">
+   Tekstbestanden
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python_browser.html">
+   Python in de browser
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python2_vs_python3.html">
+   Python 2 versus Python 3
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/problems/python_intro.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Fproblems/python_intro.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/problems/python_intro.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#de-software-installeren">
+   De software installeren
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#welke-software-gebruiken-we">
+     Welke software gebruiken we?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#downloaden-en-installeren">
+     Downloaden en installeren
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#wacht-ik-heb-python-al">
+     Wacht, ik heb Python al…
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python-in-je-browser-uitvoeren">
+     Python in je browser uitvoeren
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vscode-als-editor-gebruiken">
+   VSCode als editor gebruiken
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#probeer-vscode-een-teksteditor">
+     Probeer VSCode, een
+     <em>
+      teksteditor
+     </em>
+     .
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vensters-herschikken-dit-is-belangrijk">
+   Vensters herschikken! (Dit is belangrijk!)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#het-terminalvenster">
+   Het terminalvenster!
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ipython-opstarten">
+   IPython opstarten…
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#de-terminal-en-de-command-line">
+   De terminal en de command-line
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pwd">
+   pwd
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ls-het-list-commando">
+   ls: het
+   <em>
+    list
+   </em>
+   -commando
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cd-het-change-directory-commando">
+   cd: het
+   <em>
+    change-directory
+   </em>
+   -commando
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cd-een-map-omhoog-gaan">
+   cd ..: een map “omhoog” gaan
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oefenen">
+     Oefenen!
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python">
+   Python!
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-in-een-bestand-uitvoeren">
+   Python in een
+   <em>
+    bestand
+   </em>
+   uitvoeren
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#de-opgave-vier-vieren">
+   De opgave: Vier vieren!
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#je-bestand-wk1ex1-py-inleveren">
+   Je bestand
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     wk1ex1.py
+    </span>
+   </code>
+   inleveren
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#een-interactief-programma-uitvoeren">
+   Een
+   <em>
+    interactief
+   </em>
+   programma uitvoeren
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#omgaan-met-fouten">
+     Omgaan met fouten!
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#de-opdracht-is-klaar">
+   De opdracht is klaar!
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="terminal-teksteditors-en-python">
+<h1>Terminal, teksteditors en Python<a class="headerlink" href="#terminal-teksteditors-en-python" title="Permalink to this headline">¶</a></h1>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Naam</p></th>
+<th class="head"><p>Beschrijving</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Onderwerp</p></td>
+<td><p>Een eerste kennismaking met de terminal, teksteditors en Python</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bestandsnaam</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">wk1ex1.py</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Inleveren</p></td>
+<td><p>Lever jouw bestand met de juiste bestandsnaam in op GradeScope</p></td>
+</tr>
+<tr class="row-odd"><td><p>Punten</p></td>
+<td><p>15</p></td>
+</tr>
+</tbody>
+</table>
+<p>Het <strong>doel</strong> van deze opgave is om:</p>
+<ul class="simple">
+<li><p>Te zorgen dat je IPython en een teksteditor geïnstalleerd krijgt op je computer</p></li>
+<li><p>Om je kennis te laten maken met een command-line interface, het bewerken van tekstbestanden, en Python</p></li>
+<li><p>Om een “Hallo”-programma te lezen, bewerken en uitvoeren in Python</p></li>
+<li><p>Je uit te dagen om een aantal “vier-vieren”-problemen op te lossen in Python</p></li>
+</ul>
+<p>Als je eerder klaar bent, kan je met iets anders aan de slag, maar je mag ook verder gaan met de rest van opgaven:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="rochambeau.html"><span class="doc std std-doc">Rochambeau</span></a></p></li>
+</ul>
+<div class="section" id="de-software-installeren">
+<h2>De software installeren<a class="headerlink" href="#de-software-installeren" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="welke-software-gebruiken-we">
+<h3>Welke software gebruiken we?<a class="headerlink" href="#welke-software-gebruiken-we" title="Permalink to this headline">¶</a></h3>
+<p>We gebruiken bij Programmeren I software die je misschien nog niet hebt. Je hebt de volgende programma’s nodig:</p>
+<ul class="simple">
+<li><p><strong>Python</strong>; wij gebruiken de versie die Anaconda Python heet (Anaconda-versie 2020.02, die bevat Python-versie 3.7). <em>Je hebt Python 3.x nodig</em>.</p></li>
+<li><p><strong>Een teksteditor</strong>; geen tekstverwerker; om je Python-bestanden te bewerken. We raden VSCode aan, een gratis, veel gebruikte tekstverwerker die beschikbaar is voor alle besturingssystemen (Mac, Windows en Linux). <em>Als je al een favoriete teksteditor hebt, kan je die ook gebruiken.</em></p></li>
+</ul>
+</div>
+<div class="section" id="downloaden-en-installeren">
+<h3>Downloaden en installeren<a class="headerlink" href="#downloaden-en-installeren" title="Permalink to this headline">¶</a></h3>
+<p><strong>Voor Mac-gebruikers:</strong></p>
+<ul>
+<li><p>Download <a class="reference external" href="https://repo.anaconda.com/archive/Anaconda3-2020.02-MacOSX-x86_64.pkg">Anaconda Python 2020.02 (met Python 3.7)</a></p>
+<p>Installeer VSCode <em><strong>WEL</strong></em> als er om gevraagd wordt; de andere defaults staan goed.</p>
+</li>
+</ul>
+<p><strong>Voor Windows-gebruikers:</strong></p>
+<ul>
+<li><p>Download <a class="reference external" href="https://repo.anaconda.com/archive/Anaconda3-2020.02-Windows-x86_64.exe">Anaconda Python 2019.03 (met Python 3.7)</a></p>
+<p>Installeer VSCode <em><strong>WEL</strong></em> als er om gevraagd wordt; de andere defaults staan goed.</p>
+</li>
+</ul>
+<p><strong>Voor Linux-gebruikers:</strong></p>
+<ul class="simple">
+<li><p>Download <a class="reference external" href="https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh">Anaconda Python 2019.03 (met Python 3.7)</a>, vermoedelijk staan alle defaults goed.</p></li>
+<li><p>Als hierbij VSCode niet geïnstalleerd wordt, <a class="reference external" href="https://code.visualstudio.com/download">kan je de teksteditor VSCode hier vinden</a> en deze installeren: ook hier zullen de defaults goed staan.</p></li>
+<li><p>Je hebt geen terminalprogramma nodig. De ingebouwde <code class="docutils literal notranslate"><span class="pre">Terminal</span></code> van Linux, of de terminal van VSCode zijn afdoende.</p></li>
+</ul>
+</div>
+<div class="section" id="wacht-ik-heb-python-al">
+<h3>Wacht, ik heb Python al…<a class="headerlink" href="#wacht-ik-heb-python-al" title="Permalink to this headline">¶</a></h3>
+<p>Geen probleem; als je Anaconda Python installeert, zou deze zonder problemen tegelijk met je andere Python-versies op je computer moeten kunnen staan.</p>
+<p>We gebruiken in dit vak Python 3. De installatie van Anaconda bevat ook een aantal handige extra bibliotheken.</p>
+<p>Als je eerder met Python 2 gewerkt hebt,
+<a class="reference internal" href="../support/python2_vs_python3.html"><span class="doc std std-doc">vat deze pagina de verschillen tussen Python 2 en Python 3 samen</span></a>. (Korte versie: het is grotendeels hetzelfde…)</p>
+</div>
+<div class="section" id="python-in-je-browser-uitvoeren">
+<h3>Python in je browser uitvoeren<a class="headerlink" href="#python-in-je-browser-uitvoeren" title="Permalink to this headline">¶</a></h3>
+<p>Nu de 21e eeuw goed op gang gekomen is, kan je ook Python helemaal in je browser draaien. Dit werkt niet voor elke opgave die je in dit vak krijgt, maar hier zijn een paar opties voor <a class="reference internal" href="../support/python_browser.html"><span class="doc std std-doc">Python in de browser</span></a></p>
+</div>
+</div>
+<div class="section" id="vscode-als-editor-gebruiken">
+<h2>VSCode als editor gebruiken<a class="headerlink" href="#vscode-als-editor-gebruiken" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="probeer-vscode-een-teksteditor">
+<h3>Probeer VSCode, een <em>teksteditor</em>.<a class="headerlink" href="#probeer-vscode-een-teksteditor" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p>Teksteditors zijn niet hetzelfde als tekstverwerkers.</p>
+<ul class="simple">
+<li><p>Microsoft Word, Google Docs, Pages van Apple of elke andere <em>tekstverwerker</em> kan tekst
+mooi opmaken</p></li>
+<li><p>Maar ze geven je <em>geen</em> rechtstreekse toegang tot de daadwerkelijke inhoud van een bestand!</p></li>
+<li><p>Ze bevatten speciale, onzichtbare tekens met informatie over de opmaak</p></li>
+<li><p>Aangezien programmeertalen <em><strong>platte tekst</strong></em> (strings met karakters) gebruiken, zijn (platte-)teksteditors de geschikte tool om in te programmeren!</p></li>
+</ul>
+</li>
+<li><p>Start dus je teksteditor op; vermoedelijk VSCode, als je die net geïnstalleerd hebt…</p></li>
+<li><p>Sluit de introductietabs (je kan VSCode vertellen deze niet meer te tonen) en zorg dat je een “leeg bestand” (een leeg venster) ziet.</p>
+<ul>
+<li><p>Type daarna wat tekst, zoals bijvoorbeeld:</p>
+<p><img alt="Leeg bestand" src="../_images/edit1.png" /></p>
+</li>
+</ul>
+</li>
+<li><p>Sla dit bestand op als <code class="docutils literal notranslate"><span class="pre">intro.txt</span></code></p>
+<ul>
+<li><p>Dat kan op je bureaublad of in een speciale map voor Programmeren I; dat mag je zelf bepalen. Dit ziet er dan ongeveer zo uit:</p>
+<p><img alt="Intro.txt" src="../_images/edit0.png" /></p>
+</li>
+</ul>
+</li>
+<li><p><em><strong>Automatisch opslaan!</strong></em>; het is een goed idee om VSCode in te stellen zodat deze al je bestanden automatisch opslaat
+Deze optie kan je hier vinden:</p>
+<p><img alt="Autosave" src="../_images/autosave.png" /></p>
+</li>
+</ul>
+<p>We gaan nu je vensters herschikken zodat je efficiënter kan gebruiken; als je aan het programmeren bent kan het <em>erg veel</em> helpen als je zorgt dat de goede vensters tegelijk zichtbaar zijn!</p>
+</div>
+</div>
+<div class="section" id="vensters-herschikken-dit-is-belangrijk">
+<h2>Vensters herschikken! (Dit is belangrijk!)<a class="headerlink" href="#vensters-herschikken-dit-is-belangrijk" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>Probeer je vensters zo te herschikken en in grootte aan te passen zodat je tegelijk je browser (met deze instructies) en je teksteditor, naast elkaar, kan zien.</p>
+<ul class="simple">
+<li><p>Het is <em><strong>belachelijk</strong></em> hoe veel efficiënter je wordt als je niet steeds tussen vensters hoeft te wisselen.</p></li>
+<li><p>Mocht je artistiek zijn of van kookprogramma’s houden: <a class="reference external" href="https://nl.wikipedia.org/wiki/Mise-en-place"><em>mise-en-place</em></a> is belangrijk!</p></li>
+</ul>
+</li>
+<li><p>Hier is een voorbeeld van een Mac-omgeving:</p>
+<p><img alt="Mac-omgeving" src="../_images/edit2.png" /></p>
+</li>
+<li><p>en een Windows-omgeving:</p>
+<p><img alt="Windows-omgeving" src="problems/TODO" /></p>
+</li>
+<li><p>Neem even een kijkje in de menu’s van VSCode. Je kan bijkvoorbeeld in <em>View</em> de optie <em>Hide Status Bar</em> en <em>Hide Activity Bar</em> kiezen, maar het kleurenschema veranderen is nog leuker!</p></li>
+<li><p><strong>Kleurenschema!</strong> Besteed niet te veel tijd hieraan, maar voel je vrij om je favoriete kleurenschema te kiezen voor VSCode (menu’s: File/Code … Preferences … Color Theme). Dit is erg leuk, misschien zelfs <a class="reference external" href="https://code.visualstudio.com/docs/getstarted/themes">te leuk</a>…</p></li>
+</ul>
+<p>Hierna ga je een <em>terminalvenster</em> openen…</p>
+</div>
+<div class="section" id="het-terminalvenster">
+<h2>Het terminalvenster!<a class="headerlink" href="#het-terminalvenster" title="Permalink to this headline">¶</a></h2>
+<p><em>Terminalvenster?</em></p>
+<p>De meeste interacties die we met computers hebben zijn via vensters die door het besturingssysteem aangeboden worden. Het besturingssysteem (of <em>OS</em>, kort voor <em>operating system</em>), is meestal Windows of Mac OS, maar er zijn vele andere, waarvan Linux de meest voorkomende is. Het besturingsysteem dat je gebruikt voorziet in een <em>venstersysteem</em> waardoor je een muis kan gebruiken, op een gebruikersvriendelijke manier kan interacteren met de computer, en zelfs films kan bekijken. De klik-en-sleepinterface van moderne venstersystemen is zeker heel erg handig!</p>
+<p><em><strong>Echter</strong></em>, de grafische interface is ook een gordijn, dat de gebruiker afschermt van wat er echt gebeurt met de bestanden op het systeem. Het is een krachtige en nuttige vaardigheid om een duidelijk idee te hebben van hoe bestanden gebruikt worden <em>achter</em> het gordijn van het venstersysteem. De terminal is een programma dat “achter” het gordijn kijkt. Hij gebruikt tekstcommando’s op de zogeheten “command line” (of commandoregel) om bestanden en acties op je computer aan te spreken.</p>
+<p>Je op je gemak voelen op de command line is vaak handig om programma’s te <em>maken</em>. Het besturingssysteem is erg geschikt voor het <em>gebruiken</em> van programma’s!</p>
+<p><em><strong>Start je terminal op!</strong></em></p>
+<p>Trek nu het “gordijn” van je besturingsysteem weg door naar de teksteditor VSCode te gaan en in het menu daarvan <em>View</em> en dan <em>Terminal</em> te kiezen. Je scherm wordt nu opgesplitst:</p>
+<p><img alt="Terminal" src="../_images/edit3.png" /></p>
+<p>De bovenste helft is nog steeds de teksteditor.</p>
+<p><em><strong>De onderste helft is nu je terminalvenster.</strong></em> De terminal heeft vele namen:</p>
+<ul class="simple">
+<li><p>De terminal</p></li>
+<li><p>De shell</p></li>
+<li><p>De command line</p></li>
+</ul>
+<p>Als dit de eerste keer is dat je de terminal gebruikt, goed bezig!</p>
+</div>
+<div class="section" id="ipython-opstarten">
+<h2>IPython opstarten…<a class="headerlink" href="#ipython-opstarten" title="Permalink to this headline">¶</a></h2>
+<p>In het volgende deel laten we zien hoe je de command line kan gebruiken; dit is erg handig!</p>
+<p>Start eerst <code class="docutils literal notranslate"><span class="pre">ipython</span></code>.</p>
+<p>Doe dit door eerst te zorgen dat het terminalvenster de focus heeft, en type dan</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ipython</span>
+</pre></div>
+</div>
+<p>op de prompt van de terminal. Elk terminalcommando wordt pas uitgevoerd nadat je op enter drukt, dus doe dat nu.</p>
+<p>Als ipython niet gevonden wordt, dan</p>
+<ul>
+<li><p>kan het zijn dat het niet geïnstalleerd is; de instructies hiervoor vind je een stukje omhoog…</p></li>
+<li><p>kan het zijn dat je Windows gebruikt en Windows niet kan vinden waar ipython geïnstalleerd was (dit komt vaker voor)</p></li>
+<li><p>als je denkt dat dit het probleem is, kan je onderstaand commando kopiëren of overtypen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">gebruiker</span>\<span class="n">Anaconda3</span>\<span class="n">scripts</span>\<span class="n">ipython3</span><span class="o">.</span><span class="n">exe</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>… vervang wel <code class="docutils literal notranslate"><span class="pre">gebruiker</span></code> door je Windows-gebruikersnaam</p></li>
+</ul>
+</li>
+<li><p>als je er niet uit komt, kan je het aan je docent vragen!</p></li>
+</ul>
+<p>Voor in de toekomst kan het handig zijn om de locatie van <code class="docutils literal notranslate"><span class="pre">ipython</span></code> en <code class="docutils literal notranslate"><span class="pre">ipython3</span></code> toe te voegen aan het “PATH” van Windows; <a class="reference external" href="https://www.java.com/nl/download/help/path.xml">deze link legt uit hoe dat moet</a>. De locatie die je moet toevoegen is <code class="docutils literal notranslate"><span class="pre">C:\Users\gebruiker\Anaconda3\scripts\</span></code>, waarbij je <code class="docutils literal notranslate"><span class="pre">gebruiker</span></code> moet vervangen door je eigen gebruikersnaam. Vraag het gerust als je hulp nodig hebt hierbij!</p>
+</div>
+<div class="section" id="de-terminal-en-de-command-line">
+<h2>De terminal en de command-line<a class="headerlink" href="#de-terminal-en-de-command-line" title="Permalink to this headline">¶</a></h2>
+<p>Alles wat je kan doen met de vensters van je besturingssyteem kan je ook met de terminal en de command-line doen. (Sterker, je kan nog veel <em>meer</em> met de command line doen…)</p>
+<p>Bij dit vak heb je drie terminalcommando’s nodig. We behandelen ze alledrie kort. Hier is een kort overzicht:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pwd</span></code>; kort voor <em>print working directory</em>. Het drukt je huidige locatie (map) af.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ls</span></code>; kort voor <em>list (files)</em>. Het drukt een lijst af van alle bestanden in de huidige locatie.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span></code>; kort voor <em>change directory</em>. Het laat je van map naar map door je computer navigeren.</p></li>
+</ul>
+</div>
+<div class="section" id="pwd">
+<h2>pwd<a class="headerlink" href="#pwd" title="Permalink to this headline">¶</a></h2>
+<p>Eerst zie je de <em>prompt</em>. De prompt is het stukje tekst aan de linkerkant dat wacht totdat je wat op de command line typt:</p>
+<p><img alt="Prompt" src="../_images/pwd1.png" /></p>
+<p>Het commando <code class="docutils literal notranslate"><span class="pre">pwd</span></code> is een afkorting van <code class="docutils literal notranslate"><span class="pre">print</span> <span class="pre">working</span> <span class="pre">directory</span></code>. Het drukt je huidige locatie (map) af. Probeer het:</p>
+<p><img alt="pwd" src="../_images/pwd2.png" /></p>
+<p>Je ziet de locatie waarin je terminal en command line op dit moment draaien. Waarschijnlijk zal je een iets ander resulaat zien, behalve als je naam toevallig <code class="docutils literal notranslate"><span class="pre">ralf</span></code> is.</p>
+<ul class="simple">
+<li><p>Het formaat zal er ook anders uitzien als je Windows gebruikt; dat is geen probleem</p></li>
+<li><p>Merk ook op dat een volgende prompt verschenen is, die op een volgend commando wacht…</p></li>
+</ul>
+<p>De uitvoer is de <em>naam van de map</em> waar je je momenteel bevindt in de terminal. “Map” en “directory” betekenen hetzelfde.</p>
+<p>De slashes <code class="docutils literal notranslate"><span class="pre">/</span></code> scheiden submappen van de map waar ze in zitten. Op Windows zie je meestal backslashes <code class="docutils literal notranslate"><span class="pre">\</span></code> of dubbele backslashes; dit verschil is niet belangrijk.</p>
+<p>In dit voorbeeld is de gebruiker in een submap met de naam <code class="docutils literal notranslate"><span class="pre">ralf</span></code>, in een map met de naam <code class="docutils literal notranslate"><span class="pre">Users</span></code> op de harde schijf. Dit is een voorbeeld van een “home directory”.</p>
+<p>Je zit waarschijnlijk in je eigen home directory (en je zal de volledige padnaam zien).</p>
+<p>Hierna gaan we kijken wat we hier kunnen vinden met het commando <code class="docutils literal notranslate"><span class="pre">ls</span></code>…</p>
+</div>
+<div class="section" id="ls-het-list-commando">
+<h2>ls: het <em>list</em>-commando<a class="headerlink" href="#ls-het-list-commando" title="Permalink to this headline">¶</a></h2>
+<p><strong>Het commando <code class="docutils literal notranslate"><span class="pre">ls</span></code></strong> staat voor <em>list</em>.</p>
+<p>Als je <code class="docutils literal notranslate"><span class="pre">ls</span></code> uitvoert maakt dit een lijst van alle bestanden en mappen in je huidige directory. Een voorbeelduitvoer van <code class="docutils literal notranslate"><span class="pre">ls</span></code> is:</p>
+<p><img alt="ls" src="../_images/ls1.png" /></p>
+<p>De uitvoer is een lijst van alle bestanden en (sub)mappen in de huidige directory (Ter herinnering, “directory” en “map” zijn hetzelfde; de begrippen worden beide gebruikt.)</p>
+<p>Aangezien dit een Mac is, zie je een aantal submappen die standaard aanwezig zijn in elke home directory in Mac OS, en een aantal extra dingen. In Windows ziet het er wat anders uit:</p>
+<p><img alt="ls" src="problems/TODO" /></p>
+<p>Probeer het commando om een lijst van de namen van bestanden en submappen in je huidige directory te zien in de terminal.</p>
+<p>Hierna ga je door de directory’s heen “bewegen” met <code class="docutils literal notranslate"><span class="pre">cd</span></code>…</p>
+</div>
+<div class="section" id="cd-het-change-directory-commando">
+<h2>cd: het <em>change-directory</em>-commando<a class="headerlink" href="#cd-het-change-directory-commando" title="Permalink to this headline">¶</a></h2>
+<p><strong>Het commando <code class="docutils literal notranslate"><span class="pre">cd</span></code></strong> is het belangrijkste. Het staat voor <em>change directory</em>.</p>
+<p>Het commando <code class="docutils literal notranslate"><span class="pre">cd</span></code> laat je van je huidige map naar andere mappen (directory’s) op je computer navigeren. Om het te gebruiken, moet je weten waar je heen wilt gaan!</p>
+<p>Je kan bijvoorbeeld het bureaublad (desktop) proberen… typ dus <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">Desktop</span></code> in. Hier is een voorbeeld:</p>
+<p><img alt="cd" src="../_images/cd1.png" /></p>
+<p>Er is niet veel gebeurd… totdat je <code class="docutils literal notranslate"><span class="pre">pwd</span></code> intypt en ziet dat je ergens anders bent:</p>
+<p><img alt="pwd" src="../_images/cd2.png" /></p>
+<p>Als je nu <code class="docutils literal notranslate"><span class="pre">ls</span></code> typt zouden er <em>veel</em> meer bestanden kunnen zijn; dat hangt er een beetje vanaf hoe rommelig je bureaublad is! <em>Probeer het maar!</em> Hier is een voorbeeld van mogelijke uitvoer:</p>
+<p><img alt="ls" src="../_images/cd3.png" /></p>
+<p>Je eigen resultaten kunnen natuurlijk anders zijn…</p>
+<p>Je gaat je nu “omhoog” verplaatsen in de directorystructuur…</p>
+</div>
+<div class="section" id="cd-een-map-omhoog-gaan">
+<h2>cd ..: een map “omhoog” gaan<a class="headerlink" href="#cd-een-map-omhoog-gaan" title="Permalink to this headline">¶</a></h2>
+<p>Ok, je bent nu naar het bureaublad ge-<code class="docutils literal notranslate"><span class="pre">cd</span></code>’d, <em>maar hoe ga je terug?!</em></p>
+<p>De speciale directorynaam met twee punten achter elkaar <code class="docutils literal notranslate"><span class="pre">..</span></code> betekent “één directory <em>omhoog</em>”.</p>
+<p>Als je dus <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">..</span></code> intypt en op return drukt ben je terug in de map die je bureaublad <em>bevat</em>. Probeer maar:</p>
+<p><img alt="cd .." src="../_images/cd4.png" /></p>
+<p>Probeer daarna <code class="docutils literal notranslate"><span class="pre">pwd</span></code> en <code class="docutils literal notranslate"><span class="pre">ls</span></code>. Misschien valt het je op dat twee van de genoemde mappen <code class="docutils literal notranslate"><span class="pre">..</span></code> (één directory “omhoog”) en <code class="docutils literal notranslate"><span class="pre">.</span></code>, die verwijst naar de huidige directory, zijn.</p>
+<div class="section" id="oefenen">
+<h3>Oefenen!<a class="headerlink" href="#oefenen" title="Permalink to this headline">¶</a></h3>
+<p>Probeer deze commando’s, maar dan voor je eigen computer. Misschien wordt de directory niet zonder meer getoond. Gebruik in dat geval <code class="docutils literal notranslate"><span class="pre">pwd</span></code>!</p>
+<p><img alt="Commando's" src="../_images/cd5.png" /></p>
+<p>Dat is alles! Je kan nu de command line gebruiken. Er zijn een paar <em>erg</em> handige shortcuts die de command line <em>veel</em> efficiënter maken; efficiënter dan de drag-en-drop-vensterinterface! Een paar voorbeelden:</p>
+<ul class="simple">
+<li><p><em>tab completion</em> Typ <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">Des</span></code> als je in je home directory staat en druk op de <em>tab</em>-toets. De command line zal je commando proberen aan te vullen. Ervaren (en luie!) gebruikers zullen lange namen bijna altijd met tab afmaken, in plaats van ze te typen. Het kan je veel tijd schelen!</p></li>
+<li><p><em>pijltje omhoog</em> en <em>pijltje omlaag</em> De pijltje-omhoog- en pijltje-omlaag-toetsen onthouden wat je eerder gedaan hebt. Nadat je een commando hebt gebruikt, kan je deze met pijltje-omhoog terughalen. Je kan het ook bewerken (pijltje-links en pijltje-rechts werken hier ook) als je een fout maakt.</p></li>
+</ul>
+<p>Ok! We zijn nu klaar voor Python. We gaan dat doen met <em><strong>ipython</strong></em>.</p>
+</div>
+</div>
+<div class="section" id="python">
+<h2>Python!<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
+<p>Python is een programmeertaal, en wordt soms een scripttaal genoemd. Scripttalen hebben een interactive command line.</p>
+<p>Sterker nog, je hebt zojuist de command line van Python gebruikt!</p>
+<p>Je kan experimenteren met Python via de command line van ipython.</p>
+<ul class="simple">
+<li><p>De “prompt” vertelt je dat Python klaar voor de start is.</p></li>
+<li><p>Je kan bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">6*7</span></code> proberen als je eerste berekening op de prompt.</p></li>
+<li><p><em><strong>Waarschuwing</strong></em>: dit kan tot diepe inzichten leiden!</p></li>
+</ul>
+<p>Hier is het voorbeeld:</p>
+<p><img alt="6*7" src="../_images/python1.png" /></p>
+<p>Als alles tot nu toe werkt, kun je wat grotere berekeningen proberen…</p>
+<p>Je kan proberen een googol (tien tot de macht honderd) te berekenen. Google is (ongeveer) naar dit getal vernoemd.</p>
+<ul>
+<li><p>De machtsverheffingsoperator in Python is twee sterretjes <code class="docutils literal notranslate"><span class="pre">**</span></code>.</p></li>
+<li><p>Je kan dus op de prompt het volgende typen:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span><span class="o">**</span><span class="mi">100</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p><img alt="10**100" src="../_images/python2.png" /></p>
+<p>Ok… maar we kunnen nog verder gaan! (<em><strong>Merk op: dit is eigenlijk GEEN goed idee</strong></em>)
+Als je dus boos bent op je computer of zin hebt om ipython, of zelfs je hele computer, te laten crashen,
+kan je het vragen om een <em>googolplex</em>, tien tot de macht googol, te laten berekenen:</p>
+<p><img alt="1010100" src="../_images/python3.png" /></p>
+<ul class="simple">
+<li><p>Dit gaat niet werken. Het is echt <em><strong>geen</strong></em> goed idee: je moet vermoedelijk in ieder geval Python geforceerd stoppen en opnieuw starten, en je computer wordt totdat je dat doet mogelijk erg langzaam.</p></li>
+<li><p>Het laat <em>wel</em> zien hoe makkelijk het is om de grenzen van je computer te bereiken!</p></li>
+<li><p><strong>ALS</strong> je dit om wat voor reden dan ook toch wilt testen, kan je de berekening annuleren door op Ctrl-C te drukken, of door de terminal te sluiten met het kruisje in de rechterbovenhoek, of door de hele VSCode-applicatie te sluiten, of door de powerknop van je computer ingedrukt te houden, of door de stekker en de batterij eruit te trekken…</p></li>
+</ul>
+<p>We gaan nu door voor de minder roekelozen. Kopieer en plak (of typ) deze regel Python-code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nul is&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="o">+</span><span class="mi">4</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul>
+<li><p>Je zou deze uitvoer moeten zien: <code class="docutils literal notranslate"><span class="pre">Nul</span> <span class="pre">is</span> <span class="pre">0</span></code></p></li>
+<li><p>Merk op dat je precies vier vieren hebt gebruikt om de numerieke waarde 0 te maken. Hier is een voorbeeld van de uitvoer:</p>
+<p><img alt="Nul" src="../_images/python4.png" /></p>
+</li>
+</ul>
+<p>Dit idee uitbreiden is de volgende, en belangrijkste, uitdaging van het practicum van deze week</p>
+<p>Eerst gaan we kijken hoe we een <em>bestand</em> kunnen gebruiken om onze Python-code in op te slaan, zodat je deze kan inleveren…</p>
+</div>
+<div class="section" id="python-in-een-bestand-uitvoeren">
+<h2>Python in een <em>bestand</em> uitvoeren<a class="headerlink" href="#python-in-een-bestand-uitvoeren" title="Permalink to this headline">¶</a></h2>
+<p>We hebben al een teksteditor open staan!</p>
+<p>Maak dus in een nieuwe tab een nieuw, leeg bestand (via het menu <em>File</em> en daaronder <em>New File</em>)</p>
+<p>Plak (of typ) onderstaande code in het nieuwe bestand</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Programmeren I, Practicum 1</span>
+<span class="c1"># Bestandsnaam: wk1ex1.py</span>
+<span class="c1"># Naam:</span>
+<span class="c1"># Probleemomschrijving: het vier-vierenprobleem</span>
+
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nul is&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="o">+</span><span class="mi">4</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Sla dit bestand op als <code class="docutils literal notranslate"><span class="pre">wk1ex1.py</span></code> <em><strong>op je bureaublad</strong></em></p>
+<ul>
+<li><p>Hierna kan je je Python-programma’s overal opslaan; het is handig om ze te organiseren in mappen.</p></li>
+<li><p>Maar voor dit practicum gaan we ervan uit dat je het bestand op je bureaublad hebt opgeslagen.</p></li>
+<li><p>Vergeet <strong>niet</strong> om de extensie <code class="docutils literal notranslate"><span class="pre">.py</span></code> toe te voegen</p></li>
+<li><p>Als je het bestand opslaat met de extensie <code class="docutils literal notranslate"><span class="pre">.py</span></code> (zoals we dat noemen), zie je dat de Python-code <em>gekleurd</em> wordt.</p>
+<ul>
+<li><p>Dit wordt ook wel <em>syntax highlighting</em> genoemd</p></li>
+<li><p>Als je code niet kleurt, vraag het ons! Het is belangrijk dat je deze kleurrijke aanwijzingen hebt voor de structuur van je programma. Hier is een voorbeeld:</p>
+<p><img alt="Syntax highlighting" src="../_images/file1.png" /></p>
+</li>
+</ul>
+</li>
+<li><p><strong>Windows-gebruikers</strong>: stel Windows in om extensies te tonen!</p>
+<ul class="simple">
+<li><p>Als je Windows gebruikt, is het nodig dat je het tonen van bestandsextensies (zoals <code class="docutils literal notranslate"><span class="pre">.py</span></code>, <code class="docutils literal notranslate"><span class="pre">.txt</span></code> en <code class="docutils literal notranslate"><span class="pre">.doc</span></code>) <em><strong>aanzet</strong></em>, in ieder geval tijdens deze twee blokken.</p></li>
+<li><p><em>Het kan verwarrend zijn als Windows de extensies verbergt</em>, omdat de <code class="docutils literal notranslate"><span class="pre">.py</span></code>- of <code class="docutils literal notranslate"><span class="pre">.txt</span></code>-extensie die je nodig hebt er wel of niet kan zijn.</p></li>
+<li><p>Als je mappen in Windows de bestandsextensie <code class="docutils literal notranslate"><span class="pre">.py</span></code> niet tonen, <a class="reference external" href="https://hlrnet.com/technoblog/bestandsextensies-tonen-in-windows-10/">zet dan alle bestandsextensies aan door
+de instructies op deze pagina te volgen</a></p></li>
+</ul>
+</li>
+<li><p><strong>Een bestand uitvoeren!</strong></p>
+<p>Om een bestand uit te voeren, moet je weer naar de terminal gaan.</p>
+<ul>
+<li><p>Zorg dat <code class="docutils literal notranslate"><span class="pre">ipython</span></code> draait</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">ls</span></code> om de bestanden in de huidige directory te zien</p></li>
+<li><p>Zorg dat je je bestand <code class="docutils literal notranslate"><span class="pre">wk1ex1.py</span></code> ziet!</p>
+<ul class="simple">
+<li><p>Als je hem niet zien, gebruik dan <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">..</span></code> of <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">Desktop</span></code> of andere combinaties om naar de juiste directory te gaan. Vraag om hulp als je het bestand niet kan vinden!</p></li>
+</ul>
+</li>
+<li><p>Typ op de prompt van ipython <code class="docutils literal notranslate"><span class="pre">run</span> <span class="pre">wk1ex1.py</span></code> (je kan hier tab completion voor gebruiken)</p></li>
+<li><p>Dit voert het bestand <code class="docutils literal notranslate"><span class="pre">wk1ex1.py</span></code> uit.</p></li>
+<li><p>Als alles goed gaat wordt het programma uitgevoerd en zie je de uitvoer.</p></li>
+<li><p>Vraag het ons als dit niet gebeurt!</p></li>
+<li><p>Je kan nu je bestand bewerken, opnieuw opslaan en <em>pijltje omhoog</em> drukken om het opnieuw uit te voeren. Fantasisch! Hier is een voorbeeld:</p>
+<p><img alt="Bestand uitvoeren" src="../_images/file2.png" /></p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="de-opgave-vier-vieren">
+<h2>De opgave: Vier vieren!<a class="headerlink" href="#de-opgave-vier-vieren" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>Het <strong>vier-vierenprobleem!</strong> Voeg nu een aantal regels toe die lijken op die met nul om de waardes van <code class="docutils literal notranslate"><span class="pre">0</span></code> tot en met <code class="docutils literal notranslate"><span class="pre">20</span></code> te berekenen met <em><strong>precies vier vieren</strong></em>. (Je kan ook een voldoende halen als je er een aantal overslaat waar je niet uitkomt!) Je mag alle rekenkundige bewerkingen van Python gebruiken:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">+</span></code> optellen</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-</span></code> aftrekken (of getal negatief maken)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">*</span></code> vermenigvuldigen</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/</span></code> delen</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(</span> <span class="pre">)</span></code> haakjes om de volgorde van de berekening aan te passen</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">**</span></code> machtsverheffen</p></li>
+</ul>
+</li>
+<li><p>Resultaten met een decimale punt: <code class="docutils literal notranslate"><span class="pre">1.0</span></code>, <code class="docutils literal notranslate"><span class="pre">2.0</span></code>, enz. zijn geen probleem!</p></li>
+<li><p>Je mag ook <code class="docutils literal notranslate"><span class="pre">44</span></code> of <code class="docutils literal notranslate"><span class="pre">4.4</span></code> gebruiken, die ieder als twee vieren tellen,</p></li>
+<li><p>of <code class="docutils literal notranslate"><span class="pre">.4</span></code>, die als één vier telt.</p></li>
+<li><p>of <code class="docutils literal notranslate"><span class="pre">sqrt</span></code>, bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">sqrt(4)</span></code> (of andere wortels)</p>
+<ul class="simple">
+<li><p>De waarde van <code class="docutils literal notranslate"><span class="pre">sqrt(4)</span></code>, de wortel van 4, is dat getal wat je met zichzelf moet vermenigvuldigen om 4 te krijgen. <code class="docutils literal notranslate"><span class="pre">2*2</span> <span class="pre">==</span> <span class="pre">4</span></code>, dus <code class="docutils literal notranslate"><span class="pre">sqrt(4)</span> <span class="pre">==</span> <span class="pre">2</span></code>. Een ander voorbeeld: <code class="docutils literal notranslate"><span class="pre">sqrt(9)</span> <span class="pre">==</span> <span class="pre">3</span></code>, want <code class="docutils literal notranslate"><span class="pre">3*3</span> <span class="pre">==</span> <span class="pre">9</span></code>.</p></li>
+</ul>
+</li>
+<li><p>of <code class="docutils literal notranslate"><span class="pre">factorial</span></code>, bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">factorial(4)</span></code> (of andere faculteiten)</p>
+<ul class="simple">
+<li><p>De waarde van <code class="docutils literal notranslate"><span class="pre">factorial(4)</span></code>, 4 faculteit (ook wel geschreven als 4!) is <code class="docutils literal notranslate"><span class="pre">4*3*2*1</span></code>, dus <code class="docutils literal notranslate"><span class="pre">24</span></code>. Net zo is <code class="docutils literal notranslate"><span class="pre">factorial(2)</span></code> gelijk aan <code class="docutils literal notranslate"><span class="pre">2*1</span></code>, dus <code class="docutils literal notranslate"><span class="pre">2</span></code>, en <code class="docutils literal notranslate"><span class="pre">factorial(5)</span></code> gelijk aan <code class="docutils literal notranslate"><span class="pre">5*4*3*2*1</span></code>, dus <code class="docutils literal notranslate"><span class="pre">120</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sqrt</span></code> en <code class="docutils literal notranslate"><span class="pre">factorial</span></code> komen allebei uit de module <code class="docutils literal notranslate"><span class="pre">math</span></code> van Python</p></li>
+<li><p>terzijde, de regel <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">math</span> <span class="pre">import</span> <span class="pre">*</span></code> zorgt dat deze module beschikbaar is in de code</p></li>
+<li><p>Dit is hoe het resultaat, <em>maar niet je broncode</em>, eruit komt te zien.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Nul</span> <span class="ow">is</span> <span class="mi">0</span>
+<span class="n">Een</span> <span class="ow">is</span> <span class="mi">1</span>
+<span class="n">Twee</span> <span class="ow">is</span> <span class="mi">2</span>
+<span class="n">Drie</span> <span class="ow">is</span> <span class="mi">3</span>
+<span class="n">Vier</span> <span class="ow">is</span> <span class="mi">4</span>
+<span class="n">Vijf</span> <span class="ow">is</span> <span class="mi">5</span>
+<span class="n">Zes</span> <span class="ow">is</span> <span class="mi">6</span>
+<span class="n">Zeven</span> <span class="ow">is</span> <span class="mi">7</span>
+<span class="n">Acht</span> <span class="ow">is</span> <span class="mi">8</span>
+<span class="n">Negen</span> <span class="ow">is</span> <span class="mi">9</span>
+<span class="n">Tien</span> <span class="ow">is</span> <span class="mi">10</span>
+<span class="n">Elf</span> <span class="ow">is</span> <span class="mi">11</span>
+<span class="n">Twaalf</span> <span class="ow">is</span> <span class="mi">12</span>
+<span class="n">Dertien</span> <span class="ow">is</span> <span class="mi">13</span>
+<span class="n">Veertien</span> <span class="ow">is</span> <span class="mi">14</span>
+<span class="n">Vijftien</span> <span class="ow">is</span> <span class="mi">15</span>
+<span class="n">Zestien</span> <span class="ow">is</span> <span class="mi">16</span>
+<span class="n">Zeventien</span> <span class="ow">is</span> <span class="mi">17</span>
+<span class="n">Achttien</span> <span class="ow">is</span> <span class="mi">18</span>
+<span class="n">Negentien</span> <span class="ow">is</span> <span class="mi">19</span>
+<span class="n">Twintig</span> <span class="ow">is</span> <span class="mi">20</span>
+</pre></div>
+</div>
+</li>
+<li><p>Misschien vind je de vier-vierenpuzzle verslavend, frustrerend, of allebei!</p>
+<p><strong>Tip:</strong> vergeet <code class="docutils literal notranslate"><span class="pre">sqrt</span></code> en <code class="docutils literal notranslate"><span class="pre">factorial</span></code> niet!</p>
+<p>(<em>Terzijde</em>) De vier-vierenpuzzle is verbazingwekkend oud. Hier is bijvoorbeeld een stukje uit een artikel van Martin Gardner in Scientific American erover:</p>
+<p><img alt="Scientific American" src="../_images/fourfours.png" /></p>
+</li>
+<li><p><em>Bonuskarma</em>: als je wilt, mag je verder gaan dan 20.</p>
+<ul class="simple">
+<li><p>We willen dit niet te veel aanmoedigen (er zijn andere dingen om te doen!)</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="je-bestand-wk1ex1-py-inleveren">
+<h2>Je bestand <code class="docutils literal notranslate"><span class="pre">wk1ex1.py</span></code> inleveren<a class="headerlink" href="#je-bestand-wk1ex1-py-inleveren" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Als je je resultaten hebt kan je je bestand <code class="docutils literal notranslate"><span class="pre">wk1ex1.py</span></code> inleveren.</p></li>
+<li><p>Bij dit vak lever je je uitwerkingen in via <a class="reference external" href="https://www.gradescope.com">GradeScope</a>.</p></li>
+<li><p>De bestandsnaam maakt uit! Zorg ervoor dat je bestand <code class="docutils literal notranslate"><span class="pre">wk1ex1.py</span></code> heet.</p>
+<ul>
+<li><p>Dit is met het cijfer <code class="docutils literal notranslate"><span class="pre">1</span></code>, niet de kleine letter L</p></li>
+</ul>
+</li>
+<li><p>Geef het bij het inleveren aan als je met iemand hebt samengewerkt</p>
+<ul>
+<li><p>Deze opgave moet je alleen maken, zodat je in ieder geval zelf een werkende Python-installatie hebt.</p></li>
+</ul>
+</li>
+<li><p><strong>Belangrijk!</strong> Als je een verbeterde versie wilt inleveren, kan dat tot aan de inleverdeadline.</p>
+<ul>
+<li><p>Alleen de nieuwste versie wordt beoordeeld.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="een-interactief-programma-uitvoeren">
+<h2>Een <em>interactief</em> programma uitvoeren<a class="headerlink" href="#een-interactief-programma-uitvoeren" title="Permalink to this headline">¶</a></h2>
+<p>Het practicum is nog niet af! Om je voor te bereiden op de rest van het huiswerk, kan je proberen dit langere, <em>interactive</em> Python-programma uit te voeren.</p>
+<p>Maak een nieuw bestand aan met de naam <code class="docutils literal notranslate"><span class="pre">wk1ex2a.py</span></code> en plak de volgende startcode er in:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="c1"># wk1ex2a.py</span>
+<span class="c1">#</span>
+
+<span class="kn">import</span> <span class="nn">time</span>          <span class="c1"># importeer de module met de naam time</span>
+<span class="kn">import</span> <span class="nn">random</span>        <span class="c1"># importeer de module met de naam random</span>
+
+
+<span class="k">def</span> <span class="nf">rps</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot; this plays a game of rock-paper-scissors in Dutch (&quot;steen&quot;-&quot;papier&quot;-&quot;schaar&quot;)</span>
+<span class="sd">        (or a variant of that game ...)</span>
+<span class="sd">        inputs: no inputs    (prompted text doesn&#39;t count as input)</span>
+<span class="sd">        outputs: no outputs  (printing doesn&#39;t count as output)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Hoi... wat is je naam? &#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hmmm...&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;Tjerk&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Even lekker opsparren!&#39;</span><span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;Bart&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Maakt dat sense?&#39;</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ja dat maakt sense&#39;</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Welkom,&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="n">my_choice</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;steen&#39;</span><span class="p">,</span> <span class="s1">&#39;papier&#39;</span><span class="p">,</span> <span class="s1">&#39;schaar&#39;</span><span class="p">])</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ik kies overigens &#39;</span><span class="p">,</span> <span class="n">my_choice</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul>
+<li><p>Laad dit bestand en voer het uit met <code class="docutils literal notranslate"><span class="pre">run</span> <span class="pre">wk1ex2a.py</span></code></p></li>
+<li><p>Als dat gelukt is, zie je <em>helemaal geen bericht verschijnen</em></p></li>
+<li><p>De code van dit bestand zit in een <em>functie</em> met de naam <code class="docutils literal notranslate"><span class="pre">rps()</span></code></p></li>
+<li><p>Om de functie uit te voeren (nadat het bestand geladen is) kan je <code class="docutils literal notranslate"><span class="pre">rps()</span></code> typen bij de prompt en op enter drukken.</p></li>
+<li><p>Als het lukt, top! (Als het niet lukt, vraag het ons.) Hier is hoe het eruit ziet net voordat de functie uitgevoerd wordt:</p>
+<p><img alt="rps()" src="../_images/run1.png" /></p>
+</li>
+</ul>
+<div class="section" id="omgaan-met-fouten">
+<h3>Omgaan met fouten!<a class="headerlink" href="#omgaan-met-fouten" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><em><strong>Om te zien hoe Python met fouten omgaat</strong></em>, kan je één van de twee gelijktekens <code class="docutils literal notranslate"><span class="pre">=</span></code> weghalen in de regel met <code class="docutils literal notranslate"><span class="pre">elif</span></code></p>
+<ul>
+<li><p>zodat de regel <code class="docutils literal notranslate"><span class="pre">elif</span> <span class="pre">name</span> <span class="pre">=</span> <span class="pre">'Bart':</span></code> wordt</p></li>
+<li><p>Probeer dan het bestand opnieuw te laden met <code class="docutils literal notranslate"><span class="pre">run</span> <span class="pre">wk1ex2a.py</span></code></p></li>
+<li><p>Python zal je vertellen dat er een “syntax error” is en je de gelegenheid geven de fout op te lossen</p></li>
+</ul>
+</li>
+<li><p><strong>Pas het aan!</strong> Maak andere aanpassingen aan het programma zodat</p>
+<ul>
+<li><p>Het een andere melding afdrukt als de gebruiker jouw naam invoert (of een andere naam)</p></li>
+<li><p>Vergeet niet het programma uit te voeren nadat je aanpassingen gemaakt hebt!</p></li>
+<li><p>De volgende huiswerkopgave is om dit programma aan te passen zodat het het spel steen, papier, schaar (of iets gelijkends) speeld.</p></li>
+<li><p>… en de opgave daarna breidt dat idee uit tot een compleet tekstavontuur</p></li>
+</ul>
+</li>
+<li><p><strong>Vragen? Problemen?</strong> Vraag het ons! Of vraag het aan je buurman of buurvrouw, als je wilt.</p></li>
+<li><p>Je hoeft dit bestand <code class="docutils literal notranslate"><span class="pre">wk1ex2a.py</span></code> <em>niet</em> in te leveren.</p>
+<ul>
+<li><p>Maar je bent nu <em>wel</em> klaar om dit interactieve programma uit te breiden naar het volledige spel steen, papier, schaar.</p></li>
+<li><p>Als je hiermee verder wilt gaan, ga dan naar de opgave over <a class="reference internal" href="rochambeau.html"><span class="doc std std-doc">Rochambeau</span></a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="de-opdracht-is-klaar">
+<h2>De opdracht is klaar!<a class="headerlink" href="#de-opdracht-is-klaar" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Als alles goed werkt ben je klaar met deze opdracht!</p></li>
+<li><p>Als je eerder klaar bent, kan je met andere dingen aan de slag.</p></li>
+<li><p>Je mag ook verder gaan met de rest van de opdrachten.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "misja/programmeren",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./problems"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../topics/2b_picobot.html" title="previous page">Picobot</a>
+    <a class='right-next' id="next-link" href="../class/opgaven_1.html" title="next page">Week 1</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Hanze University of Applied Sciences<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>

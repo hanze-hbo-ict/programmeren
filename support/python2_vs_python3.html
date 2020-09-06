@@ -1,0 +1,589 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python 2 en Python 3 &#8212; Programmeren</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "misja/programmeren");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://misja.github.io/programmeren/support/python2_vs_python3.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Python in de browser" href="python_browser.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://misja.github.io/programmeren/support/python2_vs_python3.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Python 2 en Python 3" />
+<meta property="og:description" content="Python 2 en Python 3  Python 3 is de nieuwste versie (maar bestaat al sinds 2008!) en Python 2 wordt sinds 1 januari 2020 niet meer verder ontwikkeld of onderst" />
+<meta property="og:image"       content="https://misja.github.io/programmeren/_static/mascot.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/mascot.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Programmeren</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/syllabus.html">
+   Programmeren
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Opmerkingen
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/feedback.html">
+   Anoniem feedbackformulier
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 1
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_1.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/python_intro.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_1.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Voorbeelden
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/recursie.html">
+   Recursie
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/design_recipe.html">
+   Functie ontwerp
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="platte_tekst.html">
+   Tekstbestanden
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_browser.html">
+   Python in de browser
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Python 2 versus Python 3
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/support/python2_vs_python3.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Fsupport/python2_vs_python3.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/support/python2_vs_python3.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#de-functie-print">
+   De functie
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     print
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#integerdeling">
+   Integerdeling
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#execfile">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     execfile()
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#raw-input">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     raw_input()
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#geen-long-of-short-integers">
+   Geen long of short integers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vergelijken-van-types">
+   Vergelijken van types
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#range-als-generator">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     range()
+    </span>
+   </code>
+   als generator
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reduce-file-en-reload">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     reduce()
+    </span>
+   </code>
+   ,
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     file()
+    </span>
+   </code>
+   en
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     reload()
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#verwijderd-of-hernoemd">
+   Verwijderd of hernoemd
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bytes-encoding-en-chr">
+   Bytes, encoding en
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     chr()
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dict-keys-en-dict-values">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     dict.keys()
+    </span>
+   </code>
+   en
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     dict.values()
+    </span>
+   </code>
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="python-2-en-python-3">
+<h1>Python 2 en Python 3<a class="headerlink" href="#python-2-en-python-3" title="Permalink to this headline">¶</a></h1>
+<p>Python 3 is de nieuwste versie (maar bestaat al sinds 2008!) en Python 2 wordt sinds 1 januari 2020 niet meer verder ontwikkeld of ondersteund.</p>
+<p>Als je al eerder in Python 2 geprogrammeerd hebt dan is de overstap naar Python 3 niet <em>heel</em> groot, maar er zijn een aantal belangrijke verschillen. <strong>Deze lijst is in volgorde van meest naar minder voorkomend.</strong></p>
+<div class="info admonition">
+<p class="admonition-title"> In detail</p>
+<p>Zie voor een meer compleet overzicht <a class="reference external" href="http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html">The key differences between Python 2.7.x and Python 3.x with examples</a>.</p>
+</div>
+<div class="section" id="de-functie-print">
+<h2>De functie <code class="docutils literal notranslate"><span class="pre">print</span></code><a class="headerlink" href="#de-functie-print" title="Permalink to this headline">¶</a></h2>
+<p>In Python 3 is <code class="docutils literal notranslate"><span class="pre">print</span></code> een <em>functie</em> en niet een <em>statement</em>, je moet dus haakjes om het argument zetten. De functie <code class="docutils literal notranslate"><span class="pre">print()</span></code> werkte overigens ook al in Python 2, maar het gebruik van het statement <code class="docutils literal notranslate"><span class="pre">print</span></code> zal in Python 3 een fout geven. Dit is een klein maar belangrijk verschil.</p>
+<p>In Python 2:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="nb">print</span> <span class="s2">&quot;Hallo wereld!&quot;</span>
+<span class="s1">&#39;Hallo wereld!&#39;</span>
+</pre></div>
+</div>
+<p>In Python 3:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hallo wereld!&quot;</span><span class="p">)</span>
+<span class="s1">&#39;Hallo wereld!&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="integerdeling">
+<h2>Integerdeling<a class="headerlink" href="#integerdeling" title="Permalink to this headline">¶</a></h2>
+<p>Python 3 voert nu een <em>floating-point</em>deling uit als een enkele slash (<code class="docutils literal notranslate"><span class="pre">/</span></code>) wordt gebruikt, in Python 2 was dit een <em>integer</em>deling. In Python 3 moet nu een dubbele slash (<code class="docutils literal notranslate"><span class="pre">//</span></code>) worden gebruikt voor een integer deling.</p>
+<p>In Python 2:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>In Python 3:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="mf">1.5</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="mi">3</span> <span class="o">//</span> <span class="mi">2</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="execfile">
+<h2><code class="docutils literal notranslate"><span class="pre">execfile()</span></code><a class="headerlink" href="#execfile" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">execfile()</span></code> bestaat niet meer in Python 3, in plaats hiervan gebruiken we het <code class="docutils literal notranslate"><span class="pre">run</span></code>-commando in IPython.</p>
+</div>
+<div class="section" id="raw-input">
+<h2><code class="docutils literal notranslate"><span class="pre">raw_input()</span></code><a class="headerlink" href="#raw-input" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">raw_input()</span></code> is nu <code class="docutils literal notranslate"><span class="pre">input()</span></code> en Python 3 schoont de invoer die met <code class="docutils literal notranslate"><span class="pre">input</span></code> gelezen wordt automatisch op (dat wil zeggen, het leest de invoer altijd als een <em>string</em>). Om het oude gedrag van Python 2
+te krijgen, moet <code class="docutils literal notranslate"><span class="pre">eval(input())</span></code> worden gebruikt, maar dit is niet aan te raden.</p>
+<p>In Python 2:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">foo</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="nb">type</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="nb">int</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">foo</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<p>In Python 3:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">foo</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="nb">type</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="nb">str</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">foo</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="s1">&#39;1 + 2&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="geen-long-of-short-integers">
+<h2>Geen long of short integers<a class="headerlink" href="#geen-long-of-short-integers" title="Permalink to this headline">¶</a></h2>
+<p>Er zijn geen long of short integers meer in Python 3. Alle <code class="docutils literal notranslate"><span class="pre">int</span></code>s in Python 3 werken als <code class="docutils literal notranslate"><span class="pre">long</span></code>s in Python 2, alleen staat er geen <code class="docutils literal notranslate"><span class="pre">L</span></code> meer
+achter het resultaat van <code class="docutils literal notranslate"><span class="pre">repr</span></code>.</p>
+</div>
+<div class="section" id="vergelijken-van-types">
+<h2>Vergelijken van types<a class="headerlink" href="#vergelijken-van-types" title="Permalink to this headline">¶</a></h2>
+<p>Het vergelijken van variabelen van verschillende types werkt niet meer. In Python 2 kon bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">'spam'</span> <span class="pre">&gt;</span> <span class="pre">42</span></code> worden vergeleken en gaf het als resultaat <code class="docutils literal notranslate"><span class="pre">True</span></code>. Dit werkt niet meer in Python 3 en in plaats daarvan krijg zal een <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> foutmelding volgen. Dit betekent ook dat lijsten met verschillende types niet meer kunnen worden gesorteerd.</p>
+</div>
+<div class="section" id="range-als-generator">
+<h2><code class="docutils literal notranslate"><span class="pre">range()</span></code> als generator<a class="headerlink" href="#range-als-generator" title="Permalink to this headline">¶</a></h2>
+<p>In Python 3 geeft <code class="docutils literal notranslate"><span class="pre">range()</span></code> een <em>generator</em> terug in plaats van een lijst. In Python 3 werkt <code class="docutils literal notranslate"><span class="pre">range()</span></code> op dezelfde manier als <code class="docutils literal notranslate"><span class="pre">xrange()</span></code> in Python 2, en is <code class="docutils literal notranslate"><span class="pre">xrange()</span></code> verwijderd. Om het gedrag van Python 2 na te bootsen kan je <code class="docutils literal notranslate"><span class="pre">list(range())</span></code> gebruiken.</p>
+<p>In Python 2:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">L</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">L</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>In Python 3:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">L</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">L</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">L</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">L</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="reduce-file-en-reload">
+<h2><code class="docutils literal notranslate"><span class="pre">reduce()</span></code>, <code class="docutils literal notranslate"><span class="pre">file()</span></code> en <code class="docutils literal notranslate"><span class="pre">reload()</span></code><a class="headerlink" href="#reduce-file-en-reload" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">reduce()</span></code>, <code class="docutils literal notranslate"><span class="pre">file()</span></code> en <code class="docutils literal notranslate"><span class="pre">reload()</span></code> zijn niet meer ingebouwd in Python 3</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">reduce()</span></code> moet nu worden geïmporteerd uit <code class="docutils literal notranslate"><span class="pre">functools</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">file()</span></code> moet nu worden geïmporteerd uit <code class="docutils literal notranslate"><span class="pre">io</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reload()</span></code> moet nu worden geïmporteerd uit <code class="docutils literal notranslate"><span class="pre">importlib</span></code>.</p></li>
+</ul>
+</div>
+<div class="section" id="verwijderd-of-hernoemd">
+<h2>Verwijderd of hernoemd<a class="headerlink" href="#verwijderd-of-hernoemd" title="Permalink to this headline">¶</a></h2>
+<p>Belangrijke modules die niet meer werken (of hernoemd zijn) in Python 3:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">visual</span></code>: VPython in Python 3 is behoorlijk veranderd ten opzichte van VPython in Python 2.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">imp</span></code>: gebruik in plaats hiervan <code class="docutils literal notranslate"><span class="pre">importlib</span></code>, deze lijken erg op elkaar</p></li>
+</ul>
+</div>
+<div class="section" id="bytes-encoding-en-chr">
+<h2>Bytes, encoding en <code class="docutils literal notranslate"><span class="pre">chr()</span></code><a class="headerlink" href="#bytes-encoding-en-chr" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">chr()</span></code> zal niet meer een <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> genereren als de karaktercodes groter zijn dan 256 omdat UTF-8 nu de standaard tekstcodering is. Dit kan ook andere zaken als het lezen van bestanden als bytes beïnvloeden.</p>
+</div>
+<div class="section" id="dict-keys-en-dict-values">
+<h2><code class="docutils literal notranslate"><span class="pre">dict.keys()</span></code> en <code class="docutils literal notranslate"><span class="pre">dict.values()</span></code><a class="headerlink" href="#dict-keys-en-dict-values" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">dict.keys()</span></code> en <code class="docutils literal notranslate"><span class="pre">dict.values</span></code> geven nu een object in plaats van een lijst terug.</p>
+<p>Verder zijn een aantal van de aanroepen in <code class="docutils literal notranslate"><span class="pre">dict</span></code> zijn veranderd, zie het eerder genoemde artikel voor meer details.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "misja/programmeren",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./support"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="python_browser.html" title="previous page">Python in de browser</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Hanze University of Applied Sciences<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>

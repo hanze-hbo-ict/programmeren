@@ -1,0 +1,518 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functie ontwerp &#8212; Programmeren</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "misja/programmeren");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://misja.github.io/programmeren/examples/design_recipe.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tekstbestanden" href="../support/platte_tekst.html" />
+    <link rel="prev" title="Voorbeelden van recursie" href="recursie.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://misja.github.io/programmeren/examples/design_recipe.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Functie ontwerp" />
+<meta property="og:description" content="Functie ontwerp  Een recept, of stappenplan voor het ontwerp van een functie1.  Een probleem  Gegeven de formule voor de omzetting van een temperatuurmeting in " />
+<meta property="og:image"       content="https://misja.github.io/programmeren/_static/mascot.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/mascot.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Programmeren</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/syllabus.html">
+   Programmeren
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Opmerkingen
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/feedback.html">
+   Anoniem feedbackformulier
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 1
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_1.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/python_intro.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_1.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Voorbeelden
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="recursie.html">
+   Recursie
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Functie ontwerp
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/platte_tekst.html">
+   Tekstbestanden
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python_browser.html">
+   Python in de browser
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python2_vs_python3.html">
+   Python 2 versus Python 3
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/examples/design_recipe.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Fexamples/design_recipe.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/examples/design_recipe.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#een-probleem">
+   Een probleem
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#wat-is-de-input">
+     Wat is de input
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#wat-is-de-output">
+     Wat is de output
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stappenplan">
+   Stappenplan
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="functie-ontwerp">
+<h1>Functie ontwerp<a class="headerlink" href="#functie-ontwerp" title="Permalink to this headline">¶</a></h1>
+<p>Een recept, of stappenplan voor het ontwerp van een functie<a class="footnote-reference brackets" href="#pbd" id="id1">1</a>.</p>
+<div class="section" id="een-probleem">
+<h2>Een probleem<a class="headerlink" href="#een-probleem" title="Permalink to this headline">¶</a></h2>
+<p>Gegeven de formule voor de omzetting van een temperatuurmeting in graden Fahrenheit naar graden Celsius</p>
+<div class="math notranslate nohighlight">
+\[^oC =  (^oF - 32) \cdot \frac{5}{9}\]</div>
+<p>schrijf een functie met graden Fahrenheit als parameter en geef deze terug als graden Celsius waar graden Fahrenheit een <em>decimaal</em> getal is en graden Celsius een <em>decimaal</em> getal afgerond tot één cijfer achter de komma.</p>
+<div class="section" id="wat-is-de-input">
+<h3>Wat is de input<a class="headerlink" href="#wat-is-de-input" title="Permalink to this headline">¶</a></h3>
+<p>Bij elk probleem, vraag jezelf af wat de input van de functie is:</p>
+<ul class="simple">
+<li><p>is het in de vorm van argumenten (<em>parameters</em>) die aan de functie worden meegegeven;</p></li>
+<li><p>komt het van een gebruiker, bijvoorbeeld in de vorm <code class="docutils literal notranslate"><span class="pre">name</span> <span class="pre">=</span> <span class="pre">input('Jouw</span> <span class="pre">naam:</span> <span class="pre">')</span></code>;</p></li>
+<li><p>wordt het uit een bestand gelezen;</p></li>
+<li><p>of komt het van een apparaat als een muis, trackpad of sensor?</p></li>
+</ul>
+<p>Bedenk dat een functie die “een waarde als input verwacht” vrijwel altijd een argument als input heeft en niet de functie <a class="reference external" href="https://docs.python.org/3/library/functions.html#input"><code class="docutils literal notranslate"><span class="pre">input()</span></code></a> zal aanroepen, een functie die invoer van een gebruiker zal vragen.</p>
+</div>
+<div class="section" id="wat-is-de-output">
+<h3>Wat is de output<a class="headerlink" href="#wat-is-de-output" title="Permalink to this headline">¶</a></h3>
+<p>Wat moet met het resultaat van de functie gebeuren:</p>
+<ul class="simple">
+<li><p>wordt het teruggegeven met <code class="docutils literal notranslate"><span class="pre">return</span></code> (een <em>returnwaarde</em>);</p></li>
+<li><p>wordt het afgedrukt met <a class="reference external" href="https://docs.python.org/3/library/functions.html#print"><code class="docutils literal notranslate"><span class="pre">print()</span></code></a>;</p></li>
+<li><p>wordt het naar een bestand geschreven;</p></li>
+<li><p>wordt het naar bijvoorbeeld een speaker, robot of andere machine op het internet verstuurd?</p></li>
+</ul>
+<div class="info admonition">
+<p class="admonition-title"> Over input en output</p>
+<p>Het beslissen of functies moeten worden ontworpen met parameters en returnwaarden, of met printinstructies of andere directe interacties, is een vraag die meer verdieping vereist dan in deze module kan worden aangeboden.</p>
+<p>In de meeste gevallen zal het probleem je dus expliciet vertellen wat je moet doen (bv. “neem een getal als parameter en geef het terug als vierkantswortel” of “vraag de gebruiker om een getal in te voeren en vervolgens de vierkantswortel van dat getal af te drukken”). Lees het probleem altijd zorgvuldig door om deze belangrijke informatie te vinden.</p>
+<p>In het algemeen is het aan te raden om elke functie met parameters en returnwaarden te schrijven. Dit maakt een functie flexibel, het programma dat het aanroept kan dan beslissen wat te doen met de returnwaarde (afdrukken, naar een robot sturen, of anders).</p>
+</div>
+</div>
+</div>
+<div class="section" id="stappenplan">
+<h2>Stappenplan<a class="headerlink" href="#stappenplan" title="Permalink to this headline">¶</a></h2>
+<ol>
+<li><p>Schrijf de <strong>signatuur</strong> van de functie</p>
+<p>Hier schrijf je de <em>naam</em> van de functie en eventuele <em>parameters</em> die de functie accepteert. Vergeet niet te af te sluiten met een dubbele punt.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fahrenheit_to_celsius</span><span class="p">(</span><span class="n">degrees</span><span class="p">):</span>
+</pre></div>
+</div>
+</li>
+<li><p>Bepaal het <strong>type contract</strong></p>
+<p>Schrijf binnen een ingesprongen string met driedubbele aanhalingstekens (een <a class="reference external" href="https://www.python.org/dev/peps/pep-0257/"><em>docstring</em></a>) een <em>type contract</em> dat de naam en type van elke parameter identificeert. Kies een betekenisvolle naam voor elke parameter en identificeer ook het type van het resultaat van de functie (de <em>returnwaarde</em>). Bedenk dat een functie ook <em>niets</em> kan teruggeven, de returnwaarde is dan <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fahrenheit_to_celsius</span><span class="p">(</span><span class="n">degrees</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="hll"><span class="sd">    :type degrees: float</span>
+</span><span class="hll"><span class="sd">    :rtype: float</span>
+</span><span class="sd">    &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Bedenk <strong>voorbeelden</strong></p>
+<p>Schrijf een aantal voorbeelden hoe de functie kan worden aangeroepen en de returnwaarden die je verwacht. Begin elke aanroep van de functie met <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span> </code> en schrijf het resultaat op de volgende regel.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fahrenheit_to_celsius</span><span class="p">(</span><span class="n">degrees</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    :type degrees: float</span>
+<span class="sd">    :rtype: float</span>
+
+<span class="hll"><span class="sd">    &gt;&gt;&gt; fahrenheit_to_celsius(70.0)</span>
+</span><span class="hll"><span class="sd">    21.1</span>
+</span><span class="hll"><span class="sd">    &gt;&gt;&gt; fahrenheit_to_celsius(32.0)</span>
+</span><span class="hll"><span class="sd">    0.0</span>
+</span><span class="sd">    &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Voeg een <strong>beschrijving</strong> toe</p>
+<p>Beschrijf direct achter de driedubbele aanhalingstekens van de docstring in één regel wat de functie <em>doet</em>.</p>
+<p>Indien nodig kan meer uitgebreide informatie worden toevoegd onder de beschrijving.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fahrenheit_to_celsius</span><span class="p">(</span><span class="n">degrees</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Convert degrees Fahrenheit to Celsius</span>
+
+<span class="hll"><span class="sd">    This function converts a Fahrenheit temperature reading as used</span>
+</span><span class="hll"><span class="sd">    in Anglo-Saxon countries to Celsius, a more common temperature</span>
+</span><span class="hll"><span class="sd">    measure scale. The result is rounded to a single decimal value.</span>
+</span>
+<span class="sd">    :type degrees: float</span>
+<span class="sd">    :rtype: float</span>
+
+<span class="sd">    &gt;&gt;&gt; fahrenheit_to_celsius(70.0)</span>
+<span class="sd">    21.1</span>
+<span class="sd">    &gt;&gt;&gt; fahrenheit_to_celsius(32.0)</span>
+<span class="sd">    0.0</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Schrijf de functie <strong>body</strong></p>
+<p>Schrijf de hoofdtekst (de <em>body</em>) van de functie en let op dat de inspringing op hetzelfde niveau begint als de <em>docstring</em>. Lees weer de voorbeelden die je in <em>stap 3</em> hebt geschreven en denk terug aan hoe je tot de returnwaarden bent gekomen. Het kan handig zijn op dit moment meer voorbeelden te bedenken om er zeker van te zijn dat je in alle mogelijke gevallen tot een juiste returnwaarde komt.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fahrenheit_to_celsius</span><span class="p">(</span><span class="n">degrees</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Convert degrees Fahrenheit to Celsius</span>
+
+<span class="sd">    This function converts a Fahrenheit temperature reading as used</span>
+<span class="sd">    in Anglo-Saxon countries to Celsius, a more common temperature</span>
+<span class="sd">    measure scale. The result is rounded to a single decimal value.</span>
+
+<span class="sd">    :type degrees: float</span>
+<span class="sd">    :rtype: float</span>
+
+<span class="sd">    &gt;&gt;&gt; fahrenheit_to_celsius(70.0)</span>
+<span class="sd">    21.1</span>
+<span class="sd">    &gt;&gt;&gt; fahrenheit_to_celsius(32.0)</span>
+<span class="sd">    0.0</span>
+<span class="sd">    &gt;&gt;&gt; fahrenheit_to_celsius(33.0) &gt; 0.0</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; fahrenheit_to_celsius(-10.0)</span>
+<span class="sd">    -23.3</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<span class="hll">    <span class="k">return</span> <span class="nb">round</span><span class="p">((</span><span class="n">degrees</span> <span class="o">-</span> <span class="mi">32</span><span class="p">)</span> <span class="o">*</span> <span class="mi">5</span><span class="o">/</span><span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</span></pre></div>
+</div>
+</li>
+<li><p><strong>Test</strong> de functie</p>
+<p>Test de functie voor alle voorbeelden die je hebt geschreven, inclusief extra voorbeelden die je in <em>stap 5</em> hebt bedacht. Als één of meerdere voorbeelden falen dan keer je terug naar <em>stap 5</em> en pas je de oplossing in de <em>body</em> aan.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python3 -m doctest mijn_bestand.py
+</pre></div>
+</div>
+<div class="warning admonition">
+<p class="admonition-title"> Uitvoeren van tests</p>
+<p>In dit voorbeeld wordt verondersteld dat jouw functie in het bestand <code class="docutils literal notranslate"><span class="pre">mijn_bestand.py</span></code> is geschreven.
+[TODO over doctest en test alternatieven. Wordt testen/debuggen integraal onderdeel van de module?]
+<a class="reference external" href="https://docs.python.org/3/library/doctest.html">doctest</a></p>
+</div>
+</li>
+</ol>
+<hr class="docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="pbd"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Het idee van <em>design recipes</em> voor programma’s is gebaseerd op <a class="reference external" href="https://programbydesign.org/">Program By Design</a></p>
+</dd>
+</dl>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "misja/programmeren",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./examples"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="recursie.html" title="previous page">Voorbeelden van recursie</a>
+    <a class='right-next' id="next-link" href="../support/platte_tekst.html" title="next page">Tekstbestanden</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Hanze University of Applied Sciences<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>
