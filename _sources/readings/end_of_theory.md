@@ -5,7 +5,7 @@
 Het artikel *The end of theory* komt uit [Wired](https://wired.com) en sluit aan bij het thema *data* en de mogelijkheden van data.
 
 - Hier is een directe link naar het [artikel](http://www.wired.com/science/discoveries/magazine/16-07/pb_theory) in *Wired*
-- Een [pdf-versie](https://github.com/misja/programmeren/readings/assets/end_of_theory.pdf) is ook beschikbaar
+- Een [pdf-versie](https://github.com/misja/programmeren/raw/master/readings/assets/end_of_theory.pdf) is ook beschikbaar
 
 ## Vragen
 
