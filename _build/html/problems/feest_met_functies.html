@@ -1,0 +1,902 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feest met functies &#8212; Programmeren</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.30270b6e4c972e43c488.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "misja/programmeren");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://misja.github.io/programmeren/problems/feest_met_functies.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://misja.github.io/programmeren/problems/feest_met_functies.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Feest met functies" />
+<meta property="og:description" content="Feest met functies  In deze opgave ga je een aantal functies uitwerken door middel van recursie.  Een begin  Maak een nieuw tekstbestand aan met behulp van VSCo" />
+<meta property="og:image"       content="https://misja.github.io/programmeren/_static/mascot.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/mascot.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Programmeren</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/syllabus.html">
+   Programmeren
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Opmerkingen
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/feedback.html">
+   Anoniem feedbackformulier
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 1
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_1.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_intro.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_1.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Voorbeelden
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/recursie.html">
+   Recursie
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/design_recipe.html">
+   Functie ontwerp
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/platte_tekst.html">
+   Tekstbestanden
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python_browser.html">
+   Python in de browser
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python2_vs_python3.html">
+   Python 2 versus Python 3
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/problems/feest_met_functies.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Fproblems/feest_met_functies.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/problems/feest_met_functies.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#een-begin">
+   Een begin
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recursie-toepassen">
+   Recursie toepassen
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recursie-visualiseren">
+     Recursie visualiseren
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#docstrings">
+     Docstrings
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#testen">
+     Testen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#opgaven">
+   Opgaven
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mult-n-m">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       mult(n,
+      </span>
+      <span class="pre">
+       m)
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dot-l-k">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       dot(L,
+      </span>
+      <span class="pre">
+       k)
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ind-e-l">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       ind(e,
+      </span>
+      <span class="pre">
+       L)
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#letter-score-let">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       letter_score(let)
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#scrabble-score-s">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       scrabble_score(s)
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#transcribe-s">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       transcribe(s)
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#extra-opgaven">
+   Extra opgaven
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#codingbat-en-python-strings">
+     CodingBat en Python
+     <em>
+      strings
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#codingbat-en-python-lists">
+     CodingBat en Python
+     <em>
+      lists
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#potjeslatijn">
+     Potjeslatijn
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#opwarmen">
+       Opwarmen
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#de-echte-uitdaging">
+       De echte uitdaging
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="feest-met-functies">
+<h1>Feest met functies<a class="headerlink" href="#feest-met-functies" title="Permalink to this headline">¶</a></h1>
+<p>In deze opgave ga je een aantal functies uitwerken door middel van recursie.</p>
+<div class="section" id="een-begin">
+<h2>Een begin<a class="headerlink" href="#een-begin" title="Permalink to this headline">¶</a></h2>
+<p>Maak een nieuw tekstbestand aan met behulp van VSCode of een andere tekstverwerker. Je kan de onderstaande code gebruiken als begin:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="c1"># voorbeeldfunctie leng uit het college</span>
+<span class="c1">#</span>
+<span class="k">def</span> <span class="nf">leng</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;leng returns the length of s</span>
+<span class="sd">       Argument: s, which can be a string or list</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span> <span class="ow">or</span> <span class="n">s</span> <span class="o">==</span> <span class="p">[]:</span>   <span class="c1"># als lege string of lege lijst</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">leng</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+</pre></div>
+</div>
+<p>In de bovenstaande code zie je de functie <code class="docutils literal notranslate"><span class="pre">leng</span></code> die we al eerder hebben behandeld en je terug kan vinden in de <a class="reference internal" href="../examples/recursie.html"><span class="doc std std-doc">voorbeelden van recursie</span></a>. Het bestand ga je verder aanvullen met functies die je in deze opgave gaat uitwerken.</p>
+</div>
+<div class="section" id="recursie-toepassen">
+<h2>Recursie toepassen<a class="headerlink" href="#recursie-toepassen" title="Permalink to this headline">¶</a></h2>
+<p>In deze opgave moeten de functies <code class="docutils literal notranslate"><span class="pre">mult</span></code>, <code class="docutils literal notranslate"><span class="pre">dot</span></code>, <code class="docutils literal notranslate"><span class="pre">ind</span></code>, <code class="docutils literal notranslate"><span class="pre">scrabble_score</span></code> en <code class="docutils literal notranslate"><span class="pre">transcribe</span></code> worden uitgewerkt met behulp van recursie. Gebruik de functies <code class="docutils literal notranslate"><span class="pre">power</span></code>, <code class="docutils literal notranslate"><span class="pre">mymax</span></code>, <code class="docutils literal notranslate"><span class="pre">leng</span></code> en <code class="docutils literal notranslate"><span class="pre">vwl</span></code> die je al eerder hebt gezien (en terug kan vinden in de <a class="reference internal" href="../examples/recursie.html"><span class="doc std std-doc">voorbeelden van recursie</span></a>) als basis voor het ontwerp van jouw functies.</p>
+<div class="section" id="recursie-visualiseren">
+<h3>Recursie visualiseren<a class="headerlink" href="#recursie-visualiseren" title="Permalink to this headline">¶</a></h3>
+<p>Je kan <a class="reference external" href="http://www.pythontutor.com/visualize.html">Python Tutor</a> gebruiken om beter inzicht te verkrijgen in hoe recursie werkt. Let op, om de aanroep van de functie in Python Tutor te visualiseren moet je de recursieve functie definiëren (schrijven) én de functie ook aanroepen, bijvoorbeeld direct onder de functie.</p>
+<p>Hier is een voorbeeld die je in Python Tutor kan gebruiken en uitproberen (ook deze functie kan je terugvinden in de <a class="reference internal" href="../examples/recursie.html"><span class="doc std std-doc">voorbeelden van recursie</span></a>):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mylen</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">mylen</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">mylen</span><span class="p">(</span><span class="s2">&quot;hoi&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;test is&quot;</span><span class="p">,</span> <span class="n">test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="docstrings">
+<h3>Docstrings<a class="headerlink" href="#docstrings" title="Permalink to this headline">¶</a></h3>
+<p>Zorg er ook voor dat voor elke functie een docstring wordt opgenomen die aangeeft wat de argumenten van de functie betekenen en wat de returnwaarde ervan is, d.w.z. wat de functie <em>doet</em>. Hier is een voorbeeld van een docstring voor de functie <code class="docutils literal notranslate"><span class="pre">mult</span></code> die je verder ook als sjabloon voor de andere functies die je gaat uitwerken kan gebruiken:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mult</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
+<span class="hll">    <span class="sd">&quot;&quot;&quot;mult returns the product of its two arguments</span>
+</span><span class="hll"><span class="sd">       Arguments: n and m are both integers</span>
+</span><span class="hll"><span class="sd">       Return value: the result of multiplying n and m</span>
+</span><span class="hll"><span class="sd">    &quot;&quot;&quot;</span>
+</span>    <span class="o">...</span>  <span class="c1"># jouw code komt hier (de body)</span>
+</pre></div>
+</div>
+<p>Let op dat de docstring op hetzelfde niveau moet worden ingesprongen als de body (de hoofdtekst) van de functie, Python doet hier anders heel moeilijk over!</p>
+<div class="question admonition">
+<p class="admonition-title"> docstrings</p>
+<p>Waarom docstrings schrijven? Code wordt vaker gelezen dan geschreven en het is een manier om “aantekeningen” voor jezelf te maken maar ook voor anderen die jouw code misschien ooit gaan lezen!</p>
+<p>Er zijn verschillende manieren om Python docstrings te schrijven en hier zijn geen harde regels voor … Bijvoorbeeld, Google heeft een geheel eigen <a class="reference external" href="http://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings">syntax en stijl</a> opgesteld waar docstrings aan moeten voldoen.</p>
+<p>We moeten dus een keus maken hoe we docstrings vormgeven: de syntax die wij gebruiken is een conventie (afspraak) die ook in andere grotere Python projecten en gereedschappen wordt gebruikt, bijvoorbeeld <a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a> en <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a>.</p>
+</div>
+</div>
+<div class="section" id="testen">
+<h3>Testen<a class="headerlink" href="#testen" title="Permalink to this headline">¶</a></h3>
+<p>Test jouw functies! Het is héél verleidelijk om een functie te schrijven en verder aan te nemen dat alles werkt, maar tot je hebt getest weet je niet zeker of alles in orde is! Kleine (of grote!) fouten zijn snel gemaakt en kunnen ervoor zorgen dat de code niet kan worden uitgevoerd (<em>syntax</em> fouten) of een resultaat geeft dat jij niet zo hebt bedoeld (<em>functionele</em> fouten) …</p>
+<p>Voor de opdrachten geven we jou een aantal tests die je aan jouw uitwerkingen kan toevoegen. Als je vervolgens jouw bestand uitvoert worden de tests ook uitgevoerd en kan je (visueel, in ieder geval) controleren of er tests zijn die niet werken.</p>
+<p>Hier is een voorbeeld dat je al eerder hebt gezien, de functie <code class="docutils literal notranslate"><span class="pre">flipside(s)</span></code>. Plak dit in jouw bestand en voer het uit:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">flipside</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;flipside swaps s&#39;s sides</span>
+<span class="sd">       Argument s: a string</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="n">x</span><span class="p">:]</span> <span class="o">+</span> <span class="n">s</span><span class="p">[:</span><span class="n">x</span><span class="p">]</span>
+
+
+<span class="c1">#</span>
+<span class="c1"># Tests</span>
+<span class="c1">#</span>
+<span class="k">assert</span> <span class="n">flipside</span><span class="p">(</span><span class="s2">&quot;zijkant&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;kantzij&quot;</span>
+<span class="k">assert</span> <span class="n">flipside</span><span class="p">(</span><span class="s2">&quot;huiswerk&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;werkhuis&quot;</span>
+<span class="k">assert</span> <span class="n">flipside</span><span class="p">(</span><span class="s2">&quot;flipside&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;sideflip&quot;</span>
+<span class="k">assert</span> <span class="n">flipside</span><span class="p">(</span><span class="s2">&quot;az&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;za&quot;</span>
+<span class="k">assert</span> <span class="n">flipside</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;a&quot;</span>
+<span class="k">assert</span> <span class="n">flipside</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span>
+</pre></div>
+</div>
+<div class="question admonition">
+<p class="admonition-title"> Assertions</p>
+<p>Het <code class="docutils literal notranslate"><span class="pre">assert</span></code> keyword staat voor een <em>aanname</em>. Je vraagt hier Python om bijvoorbeeld aan te nemen dat de returnwaarde van de functie <code class="docutils literal notranslate"><span class="pre">flipside(s)</span></code> waar de parameter <code class="docutils literal notranslate"><span class="pre">s</span></code> een waarde “zijkant” heeft gelijk is aan de string “kantzij”. Als dit niet het geval is zal Python het programma beëindigen met een <code class="docutils literal notranslate"><span class="pre">AssertionError</span></code> die jou zal vertellen welke assert statement niet is geslaagd.</p>
+</div>
+<p>Als het goed zal je niets bijzonders aan de uitvoer zien, alle assertions zullen in het bovenstaande voorbeeld slagen. Maar wijzig de laatste assertion in bijvoorbeeld het volgende en voer het bestand nogmaals uit en je zult zien dat Python jou laat weten dat iets niet correct is:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">flipside</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;ergfout&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="opgaven">
+<h2>Opgaven<a class="headerlink" href="#opgaven" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="mult-n-m">
+<h3><code class="docutils literal notranslate"><span class="pre">mult(n,</span> <span class="pre">m)</span></code><a class="headerlink" href="#mult-n-m" title="Permalink to this headline">¶</a></h3>
+<p>De functie <code class="docutils literal notranslate"><span class="pre">mult(n,</span> <span class="pre">m)</span></code> moet het product (de vermenigvuldiging) van de twee gehele getallen <code class="docutils literal notranslate"><span class="pre">n</span></code> en <code class="docutils literal notranslate"><span class="pre">m</span></code> als resultaat teruggeven. Omdat het een beetje te gemakkelijk zou zijn om de vermenigvuldigingsoperator <code class="docutils literal notranslate"><span class="pre">*</span></code> te gebruiken mag je <strong>alleen</strong> maar gebruik maken van <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code> (om negatieve getallen te maken), in combinatie met recursie. Gebruik de <a class="reference external" href="/examples/recursie.md#powerb-p"><code class="docutils literal notranslate"><span class="pre">power</span></code></a> functie die eerder is behandeld als voorbeeld. Een mogelijke uitvoer kan zijn:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">mult</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="mi">42</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">mult</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="o">-</span><span class="mi">18</span>
+</pre></div>
+</div>
+<p>Hier zijn een aantal tests die je voor deze functie kan gebruiken:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">mult</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="mi">42</span>
+<span class="k">assert</span> <span class="n">mult</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">42</span>
+<span class="k">assert</span> <span class="n">mult</span><span class="p">(</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">42</span>
+<span class="k">assert</span> <span class="n">mult</span><span class="p">(</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="mi">42</span>
+<span class="k">assert</span> <span class="n">mult</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="k">assert</span> <span class="n">mult</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="k">assert</span> <span class="n">mult</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dot-l-k">
+<h3><code class="docutils literal notranslate"><span class="pre">dot(L,</span> <span class="pre">k)</span></code><a class="headerlink" href="#dot-l-k" title="Permalink to this headline">¶</a></h3>
+<p>De functie <code class="docutils literal notranslate"><span class="pre">dot(L,</span> <span class="pre">k)</span></code> moet het <em>inwendig product</em> (<em>inproduct</em> of <em>dot product</em>) van de lijsten <code class="docutils literal notranslate"><span class="pre">L</span></code> en <code class="docutils literal notranslate"><span class="pre">k</span></code> teruggeven. Als de twee lijsten niet even lang zijn, moet <code class="docutils literal notranslate"><span class="pre">dot</span></code> de waarde <code class="docutils literal notranslate"><span class="pre">0.0</span></code> teruggeven. Als de lijsten beide leeg zijn, moet <code class="docutils literal notranslate"><span class="pre">dot</span></code> ook <code class="docutils literal notranslate"><span class="pre">0.0</span></code> teruggeven. Je mag ervan uitgaan dat de lijsten alleen maar getallen bevatten en je mag de vermenigvuldigingsoperator <code class="docutils literal notranslate"><span class="pre">*</span></code> gebruiken bij deze opgave!</p>
+<div class="question admonition">
+<p class="admonition-title"> Inwendig product (inproduct)</p>
+<p>Wat is het inproduct? Het inproduct van twee lijsten (die in deze context dan <em>vectoren</em> genoemd worden) is de som van de producten van de elementen die op dezelfde positie staan in de twee vectoren. Bijvoorbeeld, het inproduct van de lijsten <code class="docutils literal notranslate"><span class="pre">[5,</span> <span class="pre">3]</span></code> en <code class="docutils literal notranslate"><span class="pre">[6,</span> <span class="pre">4]</span></code> zal <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">*</span> <span class="pre">6</span></code> plus <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">*</span> <span class="pre">4</span></code> zijn wat gelijk staat aan <code class="docutils literal notranslate"><span class="pre">42</span></code>.</p>
+</div>
+<p>Je kan deze opdracht vergelijken met het voorbeeld <code class="docutils literal notranslate"><span class="pre">mylen</span></code> dat eerder is besproken, maar houd er rekening mee dat je nu te maken hebt met <em>twee</em> lijsten en geen strings! In de <a class="reference internal" href="../examples/recursie.html"><span class="doc std std-doc">voorbeelden van recursie</span></a> is de functie <code class="docutils literal notranslate"><span class="pre">leng</span></code> een beetje aangepast zodat het zowel lijsten als strings kan verwerken!</p>
+<p>Een mogelijke uitvoer kan je hier zien. Let op dat het resultaat steeds een <em>decimaal</em> getal is en niet een heel getal, dit kan je bereiken door een <em>floating point</em> getal in de <em>base case</em> te gebruiken.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">dot</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="mf">42.0</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">dot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">10000</span><span class="p">])</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="mf">43210.0</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">dot</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">])</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="mf">0.0</span>
+</pre></div>
+</div>
+<p>Hier zie je een aantal tests die je voor de functie <code class="docutils literal notranslate"><span class="pre">dot</span></code> kan gebruiken:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="c1"># Tests</span>
+<span class="c1">#</span>
+<span class="k">assert</span> <span class="n">dot</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span> <span class="o">==</span> <span class="mf">42.0</span>
+<span class="k">assert</span> <span class="n">dot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">10000</span><span class="p">])</span> <span class="o">==</span> <span class="mf">43210.0</span>
+<span class="k">assert</span> <span class="n">dot</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">])</span> <span class="o">==</span> <span class="mf">0.0</span>
+<span class="k">assert</span> <span class="n">dot</span><span class="p">([],</span> <span class="p">[</span><span class="mi">6</span><span class="p">])</span> <span class="o">==</span> <span class="mf">0.0</span>
+<span class="k">assert</span> <span class="n">dot</span><span class="p">([],</span> <span class="p">[])</span> <span class="o">==</span> <span class="mf">0.0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="ind-e-l">
+<h3><code class="docutils literal notranslate"><span class="pre">ind(e,</span> <span class="pre">L)</span></code><a class="headerlink" href="#ind-e-l" title="Permalink to this headline">¶</a></h3>
+<p>Schrijf de functie <code class="docutils literal notranslate"><span class="pre">ind(e,</span> <span class="pre">L)</span></code>, die een sequentie <code class="docutils literal notranslate"><span class="pre">L</span></code> en een element <code class="docutils literal notranslate"><span class="pre">e</span></code> accepteert. <code class="docutils literal notranslate"><span class="pre">L</span></code> kan een string of een lijst zijn.</p>
+<p>De functie <code class="docutils literal notranslate"><span class="pre">ind</span></code> moet de positie of <em>index</em> teruggeven waarop <code class="docutils literal notranslate"><span class="pre">e</span></code> voor het eerst voorkomt in <code class="docutils literal notranslate"><span class="pre">L</span></code>. De index begint bij <code class="docutils literal notranslate"><span class="pre">0</span></code>, zoals gebruikelijk bij lijsten. Als <code class="docutils literal notranslate"><span class="pre">e</span></code> <em>geen</em> element van <code class="docutils literal notranslate"><span class="pre">L</span></code> is, dan moet <code class="docutils literal notranslate"><span class="pre">ind(e,</span> <span class="pre">L)</span></code> een integer teruggeven die gelijk is aan <code class="docutils literal notranslate"><span class="pre">len(L)</span></code>. Je mag hier de Python functie <code class="docutils literal notranslate"><span class="pre">index</span></code> <strong>niet</strong> gebruiken. Hier zijn een paar voorbeelden van mogelijke uitvoer:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">ind</span><span class="p">(</span><span class="mi">42</span><span class="p">,</span> <span class="p">[</span><span class="mi">55</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">100</span><span class="p">])</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="mi">2</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">ind</span><span class="p">(</span><span class="mi">42</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)))</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="mi">42</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">ind</span><span class="p">(</span><span class="s1">&#39;hoi&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;hallo&#39;</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="kc">True</span><span class="p">])</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="mi">3</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">ind</span><span class="p">(</span><span class="s1">&#39;hoi&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;oh&#39;</span><span class="p">,</span> <span class="s1">&#39;hoi&#39;</span><span class="p">,</span> <span class="s1">&#39;daar&#39;</span><span class="p">])</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="mi">1</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">ind</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;team&#39;</span><span class="p">)</span>  <span class="c1"># er is geen i in team!</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="mi">4</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="n">ind</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;nader onderzoek&#39;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="mi">5</span>
+</pre></div>
+</div>
+<p>Let op, in het laatste voorbeeld is het eerste argument van <code class="docutils literal notranslate"><span class="pre">ind</span></code> een string met een enkele spatie en <em>niet</em> een lege string!</p>
+<div class="tip admonition">
+<p class="admonition-title"> Controleren of een element voorkomt</p>
+<p>Je kan controleren of een element in een sequentie voorkomt met het keyword <code class="docutils literal notranslate"><span class="pre">in</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">L</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>Op een vergelijkbare manier kan je ook kijken of een element <em>niet</em> in een sequentie voorkomt met</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">e</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">L</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>De syntax <code class="docutils literal notranslate"><span class="pre">in</span></code> en <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> voor het controleren of een element zich wel of niet in een sequentie bevindt is in het geval van <code class="docutils literal notranslate"><span class="pre">ind</span></code> erg handig!</p>
+</div>
+<p>De functie <code class="docutils literal notranslate"><span class="pre">ind</span></code> lijkt net als <code class="docutils literal notranslate"><span class="pre">dot</span></code> vermoedelijk het meeste op het voorbeeld <code class="docutils literal notranslate"><span class="pre">leng</span></code> in de <a class="reference internal" href="../examples/recursie.html"><span class="doc std std-doc">voorbeelden van recursie</span></a>.</p>
+<p>Hier zijn een aantal tests die je voor deze functie kan gebruiken:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="c1"># Tests</span>
+<span class="c1">#</span>
+<span class="k">assert</span> <span class="n">ind</span><span class="p">(</span><span class="mi">42</span><span class="p">,</span> <span class="p">[</span><span class="mi">55</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">100</span><span class="p">])</span> <span class="o">==</span> <span class="mi">2</span>
+<span class="k">assert</span> <span class="n">ind</span><span class="p">(</span><span class="mi">42</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)))</span> <span class="o">==</span> <span class="mi">42</span>
+<span class="k">assert</span> <span class="n">ind</span><span class="p">(</span><span class="s2">&quot;hoi&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;hallo&quot;</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="kc">True</span><span class="p">])</span> <span class="o">==</span> <span class="mi">3</span>
+<span class="k">assert</span> <span class="n">ind</span><span class="p">(</span><span class="s2">&quot;hoi&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;oh&quot;</span><span class="p">,</span> <span class="s2">&quot;hoi&quot;</span><span class="p">,</span> <span class="s2">&quot;daar&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="mi">1</span>
+<span class="k">assert</span> <span class="n">ind</span><span class="p">(</span><span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="s2">&quot;team&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span>
+<span class="k">assert</span> <span class="n">ind</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;nader onderzoek&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="letter-score-let">
+<h3><code class="docutils literal notranslate"><span class="pre">letter_score(let)</span></code><a class="headerlink" href="#letter-score-let" title="Permalink to this headline">¶</a></h3>
+<p>De functie <code class="docutils literal notranslate"><span class="pre">letter_score(let)</span></code> krijgt één argument mee, een string met een <em>enkele</em> letter en geeft de waarde van deze letter op de Scrabble tegel terug. Als het argument niet een letter van <code class="docutils literal notranslate"><span class="pre">'a'</span></code> tot en met <code class="docutils literal notranslate"><span class="pre">'z'</span></code> is moet de functie <code class="docutils literal notranslate"><span class="pre">0</span></code> teruggeven.</p>
+<p>Let op, <code class="docutils literal notranslate"><span class="pre">letter_score</span></code> heeft <strong>geen</strong> recursie nodig. Je hebt recursie <em>wel</em> nodig in de volgende opgave <code class="docutils literal notranslate"><span class="pre">scrabble_score(s)</span></code> …</p>
+<p>Om deze functie te schrijven heb je onderstaande waardes van de Scrabble tegels nodig.</p>
+<p><img alt="Scrabble tegels" src="../_images/Older_Scrabble_Dutch_edition_letter_overview.jpg" /></p>
+<p>Betekent dit dat je 25 of 26 <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code> of <code class="docutils literal notranslate"><span class="pre">else</span></code> statements moet gaan schrijven? <strong>Nee!</strong> Gebruik in plaats daarvan het keyword <code class="docutils literal notranslate"><span class="pre">in</span></code> zoals je deze ook hebt gebruikt in de functie <code class="docutils literal notranslate"><span class="pre">ind(e,</span> <span class="pre">L)</span></code>:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="s1">&#39;deze string bevat een a&#39;</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kc">True</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="s1">&#39;q&#39;</span> <span class="ow">in</span> <span class="s1">&#39;deze string bevat de letter voor de r niet&#39;</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<p>OK! … maar hoe helpt dit in het vereenvoudigen van de oplossing? Denk hier aan het gebruik van een conditioneel statement, bijvoorbeeld:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">let</span> <span class="ow">in</span> <span class="s2">&quot;xy&quot;</span><span class="p">:</span>
+    <span class="k">return</span> <span class="mi">8</span>
+</pre></div>
+</div>
+<p>Hier zijn een paar voorbeelden van <code class="docutils literal notranslate"><span class="pre">letter_score</span></code>:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">letter_score</span><span class="p">(</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="mi">4</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">letter_score</span><span class="p">(</span><span class="s1">&#39;%&#39;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>Schrijf nu zelf een aantal tests voor <code class="docutils literal notranslate"><span class="pre">letter_score</span></code>, de functie zal ook worden ook getest als onderdeel van de volgende functie! Test wel de functie <code class="docutils literal notranslate"><span class="pre">letter_score</span></code> afzonderlijk anders zal de functie <code class="docutils literal notranslate"><span class="pre">scrabble_score</span></code> je flink wat problemen kunnen geven!</p>
+</div>
+<div class="section" id="scrabble-score-s">
+<h3><code class="docutils literal notranslate"><span class="pre">scrabble_score(s)</span></code><a class="headerlink" href="#scrabble-score-s" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">scrabble_score</span></code> moet een string <code class="docutils literal notranslate"><span class="pre">s</span></code> meekrijgen, die alleen maar kleine letters bevat, en de Scrabble score van de string teruggeeft. Je mag negeren dat in het echte spel sommige tegels maar beperkt beschikbaar zijn.</p>
+<div class="tip admonition">
+<p class="admonition-title"> <code class="docutils literal notranslate"><span class="pre">letter_score</span></code></p>
+<p>Gebruik de functie <code class="docutils literal notranslate"><span class="pre">letter_score</span></code> die je eerder hebt uitgewerkt en pas recursie toe. Vergelijk dit met het voorbeeld <code class="docutils literal notranslate"><span class="pre">vwl</span></code> dat eerder is besproken, maar bedenk dat je <em>verschillende</em> waardes moet toevoegen voor elke letter. Zie de <a class="reference internal" href="../examples/recursie.html"><span class="doc std std-doc">voorbeelden van recursie</span></a> voor de functie <code class="docutils literal notranslate"><span class="pre">vwl</span></code>.</p>
+</div>
+<p>Hier zijn een paar voorbeelden:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">scrabble_score</span><span class="p">(</span><span class="s1">&#39;quotums&#39;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="mi">24</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">scrabble_score</span><span class="p">(</span><span class="s1">&#39;jacquet&#39;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="mi">24</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">scrabble_score</span><span class="p">(</span><span class="s1">&#39;pyjama&#39;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="mi">20</span>
+</pre></div>
+</div>
+<p>Hier zijn de tests die je kan gebruiken:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="c1"># Tests</span>
+<span class="c1">#</span>
+<span class="k">assert</span> <span class="n">scrabble_score</span><span class="p">(</span><span class="s2">&quot;quotums&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">24</span>
+<span class="k">assert</span> <span class="n">scrabble_score</span><span class="p">(</span><span class="s2">&quot;jacquet&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">24</span>
+<span class="k">assert</span> <span class="n">scrabble_score</span><span class="p">(</span><span class="s2">&quot;pyjama&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">20</span>
+<span class="k">assert</span> <span class="n">scrabble_score</span><span class="p">(</span><span class="s2">&quot;abcdefghijklmnopqrstuvwxyz&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">84</span>
+<span class="k">assert</span> <span class="n">scrabble_score</span><span class="p">(</span><span class="s2">&quot;?!@#$%^&amp;*()&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="k">assert</span> <span class="n">scrabble_score</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="transcribe-s">
+<h3><code class="docutils literal notranslate"><span class="pre">transcribe(s)</span></code><a class="headerlink" href="#transcribe-s" title="Permalink to this headline">¶</a></h3>
+<p>In een bijzonder moleculair proces dat <em>transcriptie</em> wordt genoemd creëren jouw cellen boodschapper-RNA moleculen die de volgorde van de nucleotiden in jouw DNA weerspiegelen. Het RNA wordt dan gebruikt om eiwitten te creëren die het werk van de cel doen, zie verder <a class="reference external" href="https://nl.wikipedia.org/wiki/Transcriptie_%28biologie%29">transcriptie van DNA naar RNA</a> voor meer informatie over dit biologisch wonder!</p>
+<p>Schrijf een recursieve functie <code class="docutils literal notranslate"><span class="pre">transcribe(s)</span></code>, die een string <code class="docutils literal notranslate"><span class="pre">s</span></code> als argument accepteert die DNA-nucleotiden bevat. Dit zijn de hoofdletters <code class="docutils literal notranslate"><span class="pre">A</span></code>, <code class="docutils literal notranslate"><span class="pre">C</span></code>, <code class="docutils literal notranslate"><span class="pre">G</span></code> en <code class="docutils literal notranslate"><span class="pre">T</span></code>.</p>
+<p>Er kunnen ook andere karakters voorkomen in de string, maar die moeten door de functie <code class="docutils literal notranslate"><span class="pre">transcribe</span></code> worden genegeerd en verdwijnen uit het resultaat (dit zouden spaties of andere tekens kunnen zijn die geen DNA-nucleotide voorstellen).</p>
+<p><code class="docutils literal notranslate"><span class="pre">transcribe</span></code> moet het boodschapper-RNA teruggeven dat geproduceerd zou worden van de string <code class="docutils literal notranslate"><span class="pre">s</span></code>. De correcte waarde kan gevonden worden door de onderstaande vervangingen toe te passen:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">A</span></code>’s in het argument worden <code class="docutils literal notranslate"><span class="pre">U</span></code>’s in het resultaat.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">C</span></code>’s in het argument worden <code class="docutils literal notranslate"><span class="pre">G</span></code>’s in het resultaat.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">G</span></code>’s in het argument worden <code class="docutils literal notranslate"><span class="pre">C</span></code>’s in het resultaat.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">T</span></code>’s in het argument worden <code class="docutils literal notranslate"><span class="pre">A</span></code>’s in het resultaat.</p></li>
+<li><p>Andere tekens in de invoer moeten helemaal verdwijnen uit het resultaat.</p></li>
+</ul>
+<p>Net zoals in de vorige opgave is het handig om te beginnen met een hulpfunctie die een enkele nucleotide omzet. Je kan deze code gebruiken als begin voor deze hulpfunctie:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">one_dna_to_rna</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Converts a single-character c from DNA nucleotide</span>
+<span class="sd">       to complementary RNA nucleotide</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">c</span> <span class="o">==</span> <span class="s1">&#39;A&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;U&#39;</span>
+
+    <span class="c1"># vul verder aan met andere vervangingsregels ...</span>
+</pre></div>
+</div>
+<p>Je kan het voorbeeld <code class="docutils literal notranslate"><span class="pre">vwl</span></code> in de <a class="reference internal" href="../examples/recursie.html"><span class="doc std std-doc">voorbeelden van recursie</span></a> aanpassen, maar let op dat je nu <em>strings</em> moet samenvoegen in plaats van getallen op te tellen!</p>
+<p>Hier zijn een paar voorbeelden van <code class="docutils literal notranslate"><span class="pre">transcribe</span></code>:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">transcribe</span><span class="p">(</span><span class="s1">&#39;ACGT TGCA&#39;</span><span class="p">)</span>  <span class="c1"># spaties moeten worden verwijderd</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="s1">&#39;UGCAACGU&#39;</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">transcribe</span><span class="p">(</span><span class="s1">&#39;GATTACA&#39;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="s1">&#39;CUAAUGU&#39;</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">transcribe</span><span class="p">(</span><span class="s1">&#39;hallo&#39;</span><span class="p">)</span>      <span class="c1"># kleine letters tellen niet</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="s1">&#39;&#39;</span>
+</pre></div>
+</div>
+<p>Let op, een veel voorkomende fout is dat <code class="docutils literal notranslate"><span class="pre">one_dna_to_rna</span></code> geen <code class="docutils literal notranslate"><span class="pre">else</span></code> statement bevat om ongeldige tekens af te vangen. Aangezien alle niet-nucleotide karakters moeten worden weggelaten, kan dit worden opgelost door het volgende als aanvulling op te nemen zodat <em>alle</em> mogelijke condities worden afgehandeld:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;&quot;</span>  <span class="c1"># lege string als het geen geldige nucleotide is</span>
+</pre></div>
+</div>
+<p>Let op dat de <code class="docutils literal notranslate"><span class="pre">else</span></code> hierboven in de functie <code class="docutils literal notranslate"><span class="pre">one_dna_to_rna</span></code> moet worden gebruikt, en <em>niet</em> in <code class="docutils literal notranslate"><span class="pre">transcribe</span></code>!</p>
+<p>Hier zijn de tests die je kan gebruiken:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="c1"># Tests</span>
+<span class="c1">#</span>
+<span class="k">assert</span> <span class="n">transcribe</span><span class="p">(</span><span class="s1">&#39;ACGTTGCA&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;UGCAACGU&#39;</span>
+<span class="k">assert</span> <span class="n">transcribe</span><span class="p">(</span><span class="s1">&#39;ACG TGCA&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;UGCACGU&#39;</span>  <span class="c1"># De spatie verdwijnt</span>
+<span class="k">assert</span> <span class="n">transcribe</span><span class="p">(</span><span class="s1">&#39;GATTACA&#39;</span><span class="p">)</span>  <span class="o">==</span> <span class="s1">&#39;CUAAUGU&#39;</span>
+<span class="k">assert</span> <span class="n">transcribe</span><span class="p">(</span><span class="s1">&#39;hanze&#39;</span><span class="p">)</span>    <span class="o">==</span> <span class="s1">&#39;&#39;</span>         <span class="c1"># Andere tekens verdwijnen</span>
+<span class="k">assert</span> <span class="n">transcribe</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>         <span class="o">==</span> <span class="s1">&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="extra-opgaven">
+<h2>Extra opgaven<a class="headerlink" href="#extra-opgaven" title="Permalink to this headline">¶</a></h2>
+<p>In deze opgaven laten we je <a class="reference external" href="http://codingbat.com/python">CodingBat</a> zien, een heel handige site waar je kan oefenen met Python functies. Verder is er een (niet eenvoudige!) uitdaging om strings naar “potjeslatijn” te vertalen…</p>
+<p>Er zijn drie bonusopgaven:</p>
+<ul class="simple">
+<li><p>Oefenen op CodingBat met <a class="reference external" href="http://codingbat.com/python/String-1">Python-strings</a></p></li>
+<li><p>Oefenen op CodingBat met <a class="reference external" href="http://codingbat.com/python/List-1">Python-lijsten</a></p></li>
+<li><p>Een functie schrijven om tekst om te zetten naar potjeslatijn (ook met strings)</p></li>
+</ul>
+<div class="tip admonition">
+<p class="admonition-title"> CodingBat</p>
+<p>Maak een account aan op CodingBat zodat je voor jezelf kan bijhouden welke opgaven je al wel of niet hebt gemaakt. Voor alle CodingBat opgaven geldt een onbeperkt aantal pogingen, dat wil zeggen dat je ze zo vaak mag maken als je wilt.</p>
+</div>
+<div class="section" id="codingbat-en-python-strings">
+<h3>CodingBat en Python <em>strings</em><a class="headerlink" href="#codingbat-en-python-strings" title="Permalink to this headline">¶</a></h3>
+<p>Maak <strong>alle</strong> Python <em>string</em> opgaven op de <a class="reference external" href="http://codingbat.com/python/String-1">CodingBat String-1</a> pagina. Je kan deze opgaven zo vaak maken als je wilt.</p>
+</div>
+<div class="section" id="codingbat-en-python-lists">
+<h3>CodingBat en Python <em>lists</em><a class="headerlink" href="#codingbat-en-python-lists" title="Permalink to this headline">¶</a></h3>
+<p>Maak <strong>alle</strong> Python <em>list</em> opgaven op de <a class="reference external" href="http://codingbat.com/python/List-1">CodingBat List-1</a> pagina. Je kan deze opgaven zo vaak maken als je wilt.</p>
+</div>
+<div class="section" id="potjeslatijn">
+<h3>Potjeslatijn<a class="headerlink" href="#potjeslatijn" title="Permalink to this headline">¶</a></h3>
+<p>In deze opgave ga je twee functies schrijven die een vertaling kunnen maken van Nederlands naar <a class="reference external" href="https://nl.wikipedia.org/wiki/Potjeslatijn">potjeslatijn</a>. Dit probleem is gebaseerd op <a class="reference external" href="https://www.google.com/?hl=xx-piglatin">Google Pig Latin</a><a class="footnote-reference brackets" href="#easter-egg" id="id1">1</a>:</p>
+<p><img alt="Google Pig Latin" src="../_images/google_pig_latin.png" /></p>
+<p>Zorg ervoor dat je de functies de juiste namen geeft en zorgvuldig test. Neem in elke functie een docstring op, die moet aangeven wat de functie berekent (teruggeeft) en wat de argumenten zijn en wat ze betekenen.</p>
+<div class="section" id="opwarmen">
+<h4>Opwarmen<a class="headerlink" href="#opwarmen" title="Permalink to this headline">¶</a></h4>
+<p>Schrijf de functie <code class="docutils literal notranslate"><span class="pre">piglet_latin(s)</span></code> die een string <code class="docutils literal notranslate"><span class="pre">s</span></code> als argument accepteert. <code class="docutils literal notranslate"><span class="pre">s</span></code> is een enkel woord dat bestaat uit kleine letters.
+<code class="docutils literal notranslate"><span class="pre">piglet_latin</span></code> moet dan de vertaling van <code class="docutils literal notranslate"><span class="pre">s</span></code> in potjes-Latijn teruggeven volgens de volgende <em>drie</em> regels:</p>
+<ul>
+<li><p>Als het argument helemaal geen letters heeft (de lege string) moet de functie een lege string teruggeven</p></li>
+<li><p>Als het argument begint met een klinker wordt in Pig Latin gewoon de string <code class="docutils literal notranslate"><span class="pre">'hee'</span></code> toegevoegd aan het eind. De <code class="docutils literal notranslate"><span class="pre">'y'</span></code> telt in ons geval als <em>medeklinker</em> en niet als klinker.</p>
+<p><strong>Voorbeeld:</strong> <code class="docutils literal notranslate"><span class="pre">piglet_latin('aap')</span></code> geeft <code class="docutils literal notranslate"><span class="pre">'aaphee'</span></code> terug</p>
+</li>
+<li><p>Als het argument begint met een medeklinker, is het resultaat van potjes-Latijn identiek aan het argument, behalve dat de oorspronkelijke medeklinker van het argument aan het eind van het woord staat in plaats van aan het begin en het wordt gevolgd door de string <code class="docutils literal notranslate"><span class="pre">'ee'</span></code>.</p>
+<p><strong>Voorbeeld:</strong> <code class="docutils literal notranslate"><span class="pre">piglet_latin('noot')</span></code> geeft <code class="docutils literal notranslate"><span class="pre">'ootnee'</span></code> terug</p>
+</li>
+</ul>
+<p>Vergeet niet om tests te schrijven met <code class="docutils literal notranslate"><span class="pre">assert</span></code>! Dit is nog niet de complete versie van potjes-Latijn, omdat woorden die beginnen met meerdere medeklinkers nog niet goed verwerkt worden, Zo geeft <code class="docutils literal notranslate"><span class="pre">piglet_latin('straat')</span></code> bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">'traatsee'</span></code> terug.</p>
+</div>
+<div class="section" id="de-echte-uitdaging">
+<h4>De echte uitdaging<a class="headerlink" href="#de-echte-uitdaging" title="Permalink to this headline">¶</a></h4>
+<p>Schrijf een functie <code class="docutils literal notranslate"><span class="pre">pig_latin(s)</span></code> die de bovenstaande regels volgt en ook meer dan één eerste medeklinker correct behandelt in de vertaling naar potjes-Latijn. Dat wil zeggen dat <code class="docutils literal notranslate"><span class="pre">pig_latin</span></code> alle eerste medeklinkers naar het einde van het woord verplaatst alvorens <code class="docutils literal notranslate"><span class="pre">'ee'</span></code> toe te voegen. (Het kan handig zijn om hier een hulpfunctie voor te gebruiken, zie de hint hieronder).</p>
+<p>Ook moet <code class="docutils literal notranslate"><span class="pre">pig_latin</span></code> een eerste <code class="docutils literal notranslate"><span class="pre">'y'</span></code> als medeklinker <strong>of</strong> als klinker behandelen, afhankelijk van de vraag of de <code class="docutils literal notranslate"><span class="pre">y</span></code> gevolgd wordt door een klinker, respectievelijk een medeklinker. Bijvoorbeeld, <code class="docutils literal notranslate"><span class="pre">'yoghurt'</span></code> heeft een initiële <code class="docutils literal notranslate"><span class="pre">y</span></code> die als medeklinker fungeert. Het woord <code class="docutils literal notranslate"><span class="pre">'ypsilon'</span></code> heeft echter een <code class="docutils literal notranslate"><span class="pre">y</span></code> in het begin die als klinker telt. Hier zijn enkele aanvullende voorbeelden:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">pig_latin</span><span class="p">(</span><span class="s1">&#39;straat&#39;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="s1">&#39;aatstree&#39;</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">pig_latin</span><span class="p">(</span><span class="s1">&#39;ypsilon&#39;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="s1">&#39;ypsilonhee&#39;</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">pig_latin</span><span class="p">(</span><span class="s1">&#39;yoghurt&#39;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="s1">&#39;oghurtyee&#39;</span>
+</pre></div>
+</div>
+<p><strong>Tests?</strong> Die mag je zelf schrijven!</p>
+<div class="tip admonition">
+<p class="admonition-title"> Hoe recursie te gebruiken</p>
+<p>Eén manier om recursie te gebruiken bij het uitwerken van deze functie is om een hulpfunctie</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">initial_consonants</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>te schrijven die een string teruggeeft met alle medeklinkers aan het begin van de string <code class="docutils literal notranslate"><span class="pre">s</span></code>. Als <code class="docutils literal notranslate"><span class="pre">s</span></code> dus start met een klinker moet de lege string <code class="docutils literal notranslate"><span class="pre">''</span></code> worden teruggegeven.</p>
+</div>
+<p>Als je verder over dit probleem gaat nadenken zul je merken dat niet alle mogelijke gevallen worden afgehandeld (de zogenaamde <em>edge cases</em>, of randgevallen). Je mag zelf bepalen hoe je deze situaties uitwerkt, ze zullen in ieder geval niet door ons worden getest …</p>
+<p>Eelvee uccessee!</p>
+<hr class="docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="easter-egg"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Google Pig Latin is een <em>easter egg</em> en zo zijn er meer van deze verborgen grappen en functies op Google te vinden. Typ bijvoorbeeld “recursie” en zie met welke suggestie Google komt … of typ “What is the Answer to Life, the Universe and Everything” en ontdek waarom wij het getal 42 vaak in voorbeelden gebruiken!</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "misja/programmeren",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./problems"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Hanze University of Applied Sciences<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    
+  </body>
+</html>

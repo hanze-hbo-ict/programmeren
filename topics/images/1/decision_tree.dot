@@ -1,0 +1,25 @@
+digraph
+{
+    // 100dpi png rendering:
+    // dot -Tpng -Gdpi=100 -Nfontname=Helvetica -Efontname=Helvetica -o decision_tree.png decision_tree.dot
+
+    node [shape=oval]
+    temp [label="15.0"]
+    heet [label="Heet!"]
+    warm [label="Warm"]
+    koel [label="Koel"]
+    koud [label="Brrr!"]
+
+    node [shape=diamond]
+    is_heet [label="> 35.0"]
+    is_warm [label="> 20.0"]
+    is_koel [label="> 10.0"]
+
+    temp -> is_heet
+    is_heet -> heet [label="True"]
+    is_heet -> is_warm [label="False"]
+    is_warm -> warm [label="True"]
+    is_warm -> is_koel [label="False"]
+    is_koel -> koel [label="True"]
+    is_koel -> koud [label="False"]
+}

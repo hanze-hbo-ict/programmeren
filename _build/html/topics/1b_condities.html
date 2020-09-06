@@ -1,0 +1,1043 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Condities &#8212; Programmeren</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.30270b6e4c972e43c488.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "misja/programmeren");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://misja.github.io/programmeren/topics/1b_condities.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Programmeren" href="2a_programmeren.html" />
+    <link rel="prev" title="Wat is informatica" href="1a_introductie.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://misja.github.io/programmeren/topics/1b_condities.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Condities" />
+<meta property="og:description" content="Condities  Keuzes maken  Een van de eerste concepten die we nodig hebben bij het programmeren is het conditioneel statement, dat ons in staat stelt om onze comp" />
+<meta property="og:image"       content="https://misja.github.io/programmeren/_static/mascot.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/mascot.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Programmeren</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/syllabus.html">
+   Programmeren
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Opmerkingen
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/feedback.html">
+   Anoniem feedbackformulier
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 1
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="../class/week_1.html">
+   Onderwerpen
+  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="1a_introductie.html">
+     Introductie
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Condities
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2a_programmeren.html">
+     Programmeren
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2b_picobot.html">
+     Picobot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/python_intro.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_1.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Voorbeelden
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/recursie.html">
+   Recursie
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/design_recipe.html">
+   Functie ontwerp
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/platte_tekst.html">
+   Tekstbestanden
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python_browser.html">
+   Python in de browser
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python2_vs_python3.html">
+   Python 2 versus Python 3
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/topics/1b_condities.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/1b_condities.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/topics/1b_condities.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/misja/programmeren/master?urlpath=lab/tree/topics/1b_condities.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/misja/programmeren/blob/master/topics/1b_condities.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#drie-mogelijkheden">
+   Drie mogelijkheden
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#if">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       if
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#elif">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       elif
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#else">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       else
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#waar-of-niet-waar">
+   Waar of niet waar
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mogelijke-fouten">
+   Mogelijke fouten
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#volgorde">
+     Volgorde
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uitsluiting">
+     Uitsluiting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conditionele-statements">
+   Conditionele statements
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#blokken">
+     Blokken
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#handelen">
+     Handelen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#geneste-blokken">
+   Geneste blokken
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#is-elif-nodig">
+     Is
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       elif
+      </span>
+     </code>
+     nodig?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#steen-papier-en-schaar">
+   Steen, papier en schaar
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quiz">
+   Quiz
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vraag-1">
+     Vraag 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vraag-2">
+     Vraag 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vraag-3">
+     Vraag 3
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="condities">
+<h1>Condities<a class="headerlink" href="#condities" title="Permalink to this headline">¶</a></h1>
+<p><img alt="Keuzes maken" src="../_images/AB-Vzw.png" /></p>
+<p>Een van de eerste concepten die we nodig hebben bij het programmeren is het <strong>conditioneel statement</strong>, dat ons in staat stelt om onze computer te vertellen dat hij een set instructies moet volgen als aan een bepaalde voorwaarde is voldaan. Elke keer dat we controleren of aan een voorwaarde wordt voldaan wordt dit een <strong>test</strong> genoemd. Deze tests slagen als aan de voorwaarde wordt voldaan (waar, of <code class="docutils literal notranslate"><span class="pre">True</span></code> zijn), en falen als de uitkomst van de test <code class="docutils literal notranslate"><span class="pre">False</span></code> is.</p>
+<p>Een keus maken in Python kan heel eenvoudig zijn…</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">[</span><span class="n">conditie</span><span class="p">]:</span>
+    <span class="p">[</span><span class="n">doe</span> <span class="n">iets</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="section" id="drie-mogelijkheden">
+<h2>Drie mogelijkheden<a class="headerlink" href="#drie-mogelijkheden" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">if</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">elif</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">else</span></code></p></li>
+</ul>
+<p>Er zijn drie manieren om een conditionele statement te schrijven. <code class="docutils literal notranslate"><span class="pre">if</span></code> is verplicht en kan gecombineerd worden met <code class="docutils literal notranslate"><span class="pre">elif</span></code> en/of <code class="docutils literal notranslate"><span class="pre">else</span></code>. We lopen ze kort even langs.</p>
+<div class="section" id="if">
+<h3><code class="docutils literal notranslate"><span class="pre">if</span></code><a class="headerlink" href="#if" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">cijfer</span> <span class="o">&gt;</span> <span class="mf">5.5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Voldoende&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Als aan de conditie is voldaan dan worden de instructies uitgevoerd die ingesprongen onder <code class="docutils literal notranslate"><span class="pre">if</span></code> staan. <code class="docutils literal notranslate"><span class="pre">if</span></code> is natuurlijk Engels voor “als”, en zo zal je meer termen in het Engels gaan tegenkomen. En let op, het gebruik van <code class="docutils literal notranslate"><span class="pre">if</span></code> is verplicht, een <code class="docutils literal notranslate"><span class="pre">elif</span></code> of <code class="docutils literal notranslate"><span class="pre">else</span></code> zonder <code class="docutils literal notranslate"><span class="pre">if</span></code> is niet geldig!</p>
+</div>
+<div class="section" id="elif">
+<h3><code class="docutils literal notranslate"><span class="pre">elif</span></code><a class="headerlink" href="#elif" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">cijfer</span> <span class="o">&gt;</span> <span class="mf">7.5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Goed&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">cijfer</span> <span class="o">&gt;</span> <span class="mf">5.5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Voldoende&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">elif</span></code> is een afkorting van “else if”, of “anders als”. Dit geeft aan dat in het geval de test boven deze faalt (de <code class="docutils literal notranslate"><span class="pre">if</span></code>, in dit geval), een nieuwe conditie zal moeten worden gecontroleerd op dezelfde manier als het <code class="docutils literal notranslate"><span class="pre">if</span></code> statement. Als aan de voorwaarde erboven (<code class="docutils literal notranslate"><span class="pre">if</span></code>) al is voldaan, dan zal de <code class="docutils literal notranslate"><span class="pre">elif</span></code> niet worden uitgevoerd.</p>
+</div>
+<div class="section" id="else">
+<h3><code class="docutils literal notranslate"><span class="pre">else</span></code><a class="headerlink" href="#else" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">cijfer</span> <span class="o">&gt;</span> <span class="mf">7.5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Goed&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">cijfer</span> <span class="o">&gt;</span> <span class="mf">5.5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Voldoende&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Onvoldoende&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">else</span></code> is de laatste optie: als alle voorgaande tests mislukken, voer dan de volgende instructie(s) uit.</p>
+<p>Let op: Python is zeer gevoelig voor de manier waarop je jouw code schrijft, zowel de <em>syntaxis</em> (hoe je de woorden van de taal samenvoegt tot samenhangende instructies) als de inspringing (hoe ver de tekst van de linkerkant van het scherm af staat) zijn belangrijk.</p>
+<p>Voor conditionele statements moet je ervoor zorgen dat de instructies die bij elke test horen, daar direct onder staan en vier spaties onder het <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code> of <code class="docutils literal notranslate"><span class="pre">anders</span></code> statement ingesprongen staan.</p>
+<p>We zullen het nu hebben over waarom je misschien conditionele statements wilt gebruiken, en je zult zien hoe je ze schrijft. Vervolgens nemen we enkele voorbeelden door en leggen we uit waarom ze werken. Na deze lezing zal je voorbereid zijn om het steen, papier en schaar lezing te volgen en aan het huiswerk te beginnen.</p>
+</div>
+</div>
+<div class="section" id="waar-of-niet-waar">
+<h2>Waar of niet waar<a class="headerlink" href="#waar-of-niet-waar" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">True</span></code> of <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+<p>Een conditioneel statement maakt het mogelijk dat onze code verschillende dingen kan doen, afhankelijk van de vraag of een conditie waar of niet waar was.</p>
+<p>Dit is waarschijnlijk de meest nuttige uitdrukking die we kunnen schrijven. Als we geen condities hadden dan zou onze code elke keer weer hetzelfde doen. Dat zou een niet heel erg nuttig programma zijn.</p>
+<p>Stel je voor dat jouw e-mailprovider je altijd laat inloggen, ongeacht het wachtwoord dat je gebruikt? Conditionele statements stellen ons programma in staat om het juiste antwoord te geven, zelfs als de invoer verandert.</p>
+<p>In dit geval is het conditionele statement: is het ingevoerde wachtwoord gelijk aan het eerder bewaarde wachtwoord van een gebruiker?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="mf">22.0</span>
+
+<span class="k">if</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">35.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Heet!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Conditionele statements stellen ons programma in staat om het juiste antwoord te geven, zelfs als de invoer verandert.</p>
+<p>Stel je bijvoorbeeld voor dat we proberen te bepalen of het buiten heet is. Als het warmer is dan 35 graden Celsius, zullen we zeggen dat het heet is.</p>
+<p>Een <code class="docutils literal notranslate"><span class="pre">if</span></code>-statement is de juiste keuze voor deze code omdat we alleen willen zeggen dat het heet is als de temperatuur hoger is dan 35 graden Celsius. Op dit moment hebben we de temperatuur gedefinieerd op 22. We weten dat 22 niet groter is dan 35, dus deze test zal mislukken. Wanneer een test faalt, dan zal zijn <em>body</em> niet worden uitgevoerd.</p>
+<p>Dus deze code zal <em>niets</em> afdrukken. Onthoud, dat is wat we willen!</p>
+<p>Merk op dat de body altijd één niveau dieper ingesprongen is dan de test en dat er een dubbele punt is geschreven na de test.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="mf">36.0</span>
+
+<span class="k">if</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">35.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Heet!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Heet!
+</pre></div>
+</div>
+</div>
+</div>
+<p>Als we de temperatuur veranderen naar 36 en dan de code uitvoeren, dan wordt er ‘Heet!’ geprint.</p>
+<p>Wat als we ook andere temperaturen willen classificeren? Om dit te doen, moeten we twee nieuwe conditionele statements introduceren, <code class="docutils literal notranslate"><span class="pre">elif</span></code> en <code class="docutils literal notranslate"><span class="pre">else</span></code>. Laten we beginnen met <code class="docutils literal notranslate"><span class="pre">elif</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="mf">36.0</span>
+
+<span class="k">if</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">35.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Heet!&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">20.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Warm&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Heet!
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">elif</span></code> is een combinatie van de woorden “else” en “if”. Het betekent dat als de vorige test is mislukt, doe dan deze test. Om te zien hoe het werkt, laten we een voorbeeld proberen.</p>
+<p>Hier is de temperatuur nog steeds 36. Net als eerder, de eerste <code class="docutils literal notranslate"><span class="pre">if</span></code> slaagt, dus de body wordt uitgevoerd en het programma drukt ‘Heet!’ af.</p>
+<p>Wordt het <em>tweede</em> blok uitgevoerd? Bedenk, <code class="docutils literal notranslate"><span class="pre">elif</span></code> betekent als de eerste test mislukt, voer deze test uit. Sinds de eerste test is geslaagd, voeren we de <code class="docutils literal notranslate"><span class="pre">elif</span></code> niet meer uit, en er wordt niets meer geprint.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="mf">23.0</span>
+
+<span class="k">if</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">35.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Heet!&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">20.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Warm&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warm
+</pre></div>
+</div>
+</div>
+</div>
+<p>Wat gebeurt er als we de temperatuur op 23 zetten? Dan faalt de eerste test, zodat de body niet wordt uitgevoerd.</p>
+<p>Sinds de eerste test faalde, doen we vervolgens de <code class="docutils literal notranslate"><span class="pre">elif</span></code> test. We zien dat deze test slaagt, dus deze body wordt uitgevoerd en het programma drukt ‘Warm’ af.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="mf">23.0</span>
+
+<span class="k">if</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">35.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Heet!&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">20.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Warm&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">10.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Koel&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Brrr!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warm
+</pre></div>
+</div>
+</div>
+</div>
+<p>Laten we dit programma nu voltooien met een volledig temperatuurbereik. We hebben een classificatie van ‘Koel’ toegevoegd voor temperaturen tussen 10 graden en 20 graden. We hebben ook een nieuwe conditie toegevoegd, het <code class="docutils literal notranslate"><span class="pre">else</span></code>-statement. Het <code class="docutils literal notranslate"><span class="pre">else</span></code>-statement betekent dat als geen van de <code class="docutils literal notranslate"><span class="pre">if</span></code>’s of <code class="docutils literal notranslate"><span class="pre">elif</span></code>’s geslaagd is, de code in het <code class="docutils literal notranslate"><span class="pre">else</span></code>-statement wordt uitgevoerd.</p>
+<p>Hier betekent dat als de temperatuur niet hoger was dan 35, 20 of 10, we ‘Brrr!’ afdrukken.
+Bijvoorbeeld, de temperatuur is nu 23. Dus wat drukt onze code af? De eerste test faalt, maar we slagen voor de tweede test. Dat betekent dat de body van de tweede test wordt uitgevoerd, maar geen van de andere <code class="docutils literal notranslate"><span class="pre">elif</span></code>’s  of het <code class="docutils literal notranslate"><span class="pre">else</span></code>-statement.</p>
+<p>Onze code drukt ‘Warm’ af, dat is wat we wilden.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="k">if</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">35.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Heet!&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">20.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Warm&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">10.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Koel&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Brrr!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Brrr!
+</pre></div>
+</div>
+</div>
+</div>
+<p>Wat gebeurt er als de temperatuur 0 is? Dan slagen we niet voor alle <code class="docutils literal notranslate"><span class="pre">if</span></code>- en <code class="docutils literal notranslate"><span class="pre">elif</span></code>-statements, dus geen van de bodies zal worden uitgevoerd. Aangezien alle tests mislukt zijn, wordt het <code class="docutils literal notranslate"><span class="pre">else</span></code>-statement uitgevoerd. Het heeft geen test en in plaats daarvan drukt het ‘Brrr’ af.</p>
+</div>
+<div class="section" id="mogelijke-fouten">
+<h2>Mogelijke fouten<a class="headerlink" href="#mogelijke-fouten" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>volgorde</p></li>
+<li><p>uitsluiting</p></li>
+</ul>
+<p>We laten nu een paar dingen zien die fout kunnen gaan bij het schrijven van het temperatuurprogramma.</p>
+<div class="section" id="volgorde">
+<h3>Volgorde<a class="headerlink" href="#volgorde" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="o">-</span><span class="mf">10.0</span>
+
+<span class="k">if</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">0.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Brrr!&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">10.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Koel&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">20.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Warm&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Heet!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Heet!
+</pre></div>
+</div>
+</div>
+</div>
+<p>De code die je hier ziet is een soortgelijk programma dat we eerder hebben geschreven. Maar wat gebeurt er als je de temperatuur op negatief 10 zet? Het eerder geschreven programma zal ‘Brrr!’ afdrukken. Echter, het programma dat je hier ziet zal ‘Heet!’ afdrukken!</p>
+<p>Merk op dat het niet werkt voor negatieve getallen. Maar ook een temperatuur van bijvoorbeeld 15 zal niet het gewenste resultaat geven, en zal ‘Brrr!’ afdrukken …</p>
+</div>
+<div class="section" id="uitsluiting">
+<h3>Uitsluiting<a class="headerlink" href="#uitsluiting" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="mf">40.0</span>
+
+<span class="k">if</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">35.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Heet!&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">20.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Warm&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">10.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Koel&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Heet!
+Warm
+Koel
+</pre></div>
+</div>
+</div>
+</div>
+<p>Laten we eens kijken naar een andere manier om dit programma te schrijven die misschien ook niet werkt zoals we zouden willen.</p>
+<p>In plaats van een heleboel <code class="docutils literal notranslate"><span class="pre">elif</span></code>-statements te schrijven, hadden we drie <code class="docutils literal notranslate"><span class="pre">if</span></code>-statements kunnen schrijven. Maar wat gebeurt er als de temperatuur 40 graden is?</p>
+<p>In dit geval zullen alle drie de tests slagen en drie verschillende statements over de temperatuur afdrukken. Dat gebeurt omdat de <code class="docutils literal notranslate"><span class="pre">if</span></code>-statements elkaar niet uitsluiten. Als één slaagt, dan wordt de rest nog steeds getest.</p>
+<p>Dat was veel informatie, dus laten we de belangrijke concepten even kort samenvatten.</p>
+</div>
+</div>
+<div class="section" id="conditionele-statements">
+<h2>Conditionele statements<a class="headerlink" href="#conditionele-statements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>één of meerdere blokken</p></li>
+<li><p>alleen de geslaagde test wordt uitgevoerd</p></li>
+</ul>
+<div class="section" id="blokken">
+<h3>Blokken<a class="headerlink" href="#blokken" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">35.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Heet!&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">20.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Warm&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">10.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Koel&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Brrr!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Een <code class="docutils literal notranslate"><span class="pre">if</span></code>-statement laat een programma verschillende code uitvoeren, afhankelijk van het feit of een test slaagt of niet. Het typische <code class="docutils literal notranslate"><span class="pre">if</span></code>-statement heeft één of meer blokken, en elke <code class="docutils literal notranslate"><span class="pre">if</span></code> of <code class="docutils literal notranslate"><span class="pre">elif</span></code> heeft een test. Hier tel je 4 blokken (één <code class="docutils literal notranslate"><span class="pre">if</span></code>, twee <code class="docutils literal notranslate"><span class="pre">elif</span></code>’s en een <code class="docutils literal notranslate"><span class="pre">else</span></code>)</p>
+</div>
+<div class="section" id="handelen">
+<h3>Handelen<a class="headerlink" href="#handelen" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="o">-</span><span class="mf">10.0</span>
+
+<span class="k">if</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">35.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Heet!&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">20.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Warm&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">10.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Koel&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Brrr!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Tests worden achtereenvolgens uitgevoerd totdat één slaagt. De code die bij deze test hoort wordt uitgevoerd, en er worden verder <em>geen</em> andere tests meer uitgevoerd.</p>
+<p>Als geen enkele test slaagt, dan wordt de optionele <code class="docutils literal notranslate"><span class="pre">else</span></code> uitgevoerd.</p>
+<p>Vergeet niet dat <code class="docutils literal notranslate"><span class="pre">if</span></code> tests altijd worden uitgevoerd, terwijl <code class="docutils literal notranslate"><span class="pre">elif</span></code> en <code class="docutils literal notranslate"><span class="pre">else</span></code> tests alleen worden uitgevoerd als de vorige tests zijn mislukt.</p>
+</div>
+</div>
+<div class="section" id="geneste-blokken">
+<h2>Geneste blokken<a class="headerlink" href="#geneste-blokken" title="Permalink to this headline">¶</a></h2>
+<p><img alt="Matroesjka" src="../_images/matroesjka.png" /></p>
+<p>Blokken kunnen worden genest en we gaan een klein experiment doen om dit te laten zien: is <code class="docutils literal notranslate"><span class="pre">elif</span></code> echt nodig?</p>
+<div class="section" id="is-elif-nodig">
+<h3>Is <code class="docutils literal notranslate"><span class="pre">elif</span></code> nodig?<a class="headerlink" href="#is-elif-nodig" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="o">-</span><span class="mf">10.0</span>
+
+<span class="k">if</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">35.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Heet!&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">20.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Warm&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">10.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Koel&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Brrr!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Brrr!
+</pre></div>
+</div>
+</div>
+</div>
+<p>Dit is het voorbeeld dat we al eerder hebben gezien. Wat nu als <code class="docutils literal notranslate"><span class="pre">elif</span></code> niet zou bestaan, kunnen we dit ook met alleen <code class="docutils literal notranslate"><span class="pre">if</span></code> en <code class="docutils literal notranslate"><span class="pre">else</span></code> schrijven? Laten we beginnen met de eerste conditie!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="o">-</span><span class="mf">10.0</span>
+
+<span class="k">if</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">35.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Heet!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">20.0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Warm&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">10.0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Koel&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Brrr!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Brrr!
+</pre></div>
+</div>
+</div>
+</div>
+<p>Als de eerste conditie (<code class="docutils literal notranslate"><span class="pre">temp</span> <span class="pre">&gt;</span> <span class="pre">35.0</span></code>) faalt, doe dan het volgende (<code class="docutils literal notranslate"><span class="pre">else</span></code>). Dit principe gaan we herhalen voor de volgende condities, tot er geen <code class="docutils literal notranslate"><span class="pre">elif</span></code> meer over is. En hier zie je ook een eerste genest blok!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="mf">15.0</span>
+
+<span class="k">if</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">35.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Heet!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">20.0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Warm&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">10.0</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Koel&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Brrr!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Koel
+</pre></div>
+</div>
+</div>
+</div>
+<p>Het blijkt dat we heel goed zonder <code class="docutils literal notranslate"><span class="pre">elif</span></code> kunnen! En je ziet ook dat we langzaam de diepte ingaan, een vorm die je misschien herkent als een beslissingsboom.</p>
+<p><img alt="Beslisboom" src="../_images/decision_tree.png" /></p>
+<p>Waarom tóch <code class="docutils literal notranslate"><span class="pre">elif</span></code> gebruiken? <code class="docutils literal notranslate"><span class="pre">elif</span></code> is een syntactisch hulpmiddel dat het voor ons gemakkelijker maakt: met heel veel keuzes zou onze code door alle inspringen van de pagina gaan lopen!</p>
+</div>
+</div>
+<div class="section" id="steen-papier-en-schaar">
+<h2>Steen, papier en schaar<a class="headerlink" href="#steen-papier-en-schaar" title="Permalink to this headline">¶</a></h2>
+<p><img alt="RPS" src="../_images/RPS-3_NL1.png" /></p>
+<p>Een voorbeeld waar geneste conditionele statements kunnen worden gebruikt is bij het steen, papier en schaar spel (RPS, of <em>rock, paper and scissors</em>).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">comp</span> <span class="o">=</span> <span class="s2">&quot;steen&quot;</span>
+<span class="n">user</span> <span class="o">=</span> <span class="s2">&quot;papier&quot;</span>
+
+<span class="k">if</span> <span class="n">comp</span> <span class="o">==</span> <span class="s2">&quot;papier&quot;</span> <span class="ow">and</span> <span class="n">user</span> <span class="o">==</span> <span class="s2">&quot;papier&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gelijkspel. Nog een keer?&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">comp</span> <span class="o">==</span> <span class="s2">&quot;steen&quot;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">user</span> <span class="o">==</span> <span class="s2">&quot;schaar&quot;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ik win! *_*&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jij wint. Aargh!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We gaan dit spel tegen de computer spelen, waar de variabele <code class="docutils literal notranslate"><span class="pre">user</span></code> jouw keus is en de variabele <code class="docutils literal notranslate"><span class="pre">comp</span></code> de keus van de computer. De vraag is nu of dit programma correct is…</p>
+<ol class="simple">
+<li><p>zal dit programma de juiste uitkomst printen?</p></li>
+<li><p>zal het <strong>altijd</strong> de juiste uitkomst printen, ook als <code class="docutils literal notranslate"><span class="pre">user</span></code> en <code class="docutils literal notranslate"><span class="pre">comp</span></code> andere waarden krijgen?</p></li>
+</ol>
+<p>Let op, je ziet hier een voorbeeld hoe je meerdere condities kan combineren door middel van <code class="docutils literal notranslate"><span class="pre">and</span></code>: de test slaagt alleen als zowel de eerste (<code class="docutils literal notranslate"><span class="pre">comp</span> <span class="pre">==</span> <span class="pre">&quot;papier&quot;</span></code>) als de tweede test (<code class="docutils literal notranslate"><span class="pre">user</span> <span class="pre">==</span> <span class="pre">&quot;papier&quot;</span></code>) correct is!</p>
+</div>
+<div class="section" id="quiz">
+<h2>Quiz<a class="headerlink" href="#quiz" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="vraag-1">
+<h3>Vraag 1<a class="headerlink" href="#vraag-1" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">comp</span> <span class="o">=</span> <span class="s2">&quot;steen&quot;</span>
+<span class="n">user</span> <span class="o">=</span> <span class="s2">&quot;steen&quot;</span>
+
+<span class="k">if</span> <span class="n">comp</span> <span class="o">==</span> <span class="s2">&quot;steen&quot;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">user</span> <span class="o">==</span> <span class="s2">&quot;papier&quot;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ik win *_*!&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">user</span> <span class="o">==</span> <span class="s2">&quot;schaar&quot;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jij wint.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gelijkspel.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>wat zal dit programma printen?</p></li>
+<li><p>wat zal dit programma printen als het <code class="docutils literal notranslate"><span class="pre">else</span></code> blok inspringt zodat het onderdeel wordt van de geneste <code class="docutils literal notranslate"><span class="pre">if</span></code>-<code class="docutils literal notranslate"><span class="pre">elif</span></code>?</p></li>
+</ul>
+</div>
+<div class="section" id="vraag-2">
+<h3>Vraag 2<a class="headerlink" href="#vraag-2" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">comp</span> <span class="o">=</span> <span class="s2">&quot;steen&quot;</span>
+<span class="n">user</span> <span class="o">=</span> <span class="s2">&quot;steen&quot;</span>
+
+<span class="k">if</span> <span class="n">comp</span> <span class="o">==</span> <span class="s2">&quot;steen&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ik win *_*!&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">user</span> <span class="o">==</span> <span class="s2">&quot;papier&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jij wint.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gelijkspel.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>zoals dit programma nu is geschreven, wat zal het printen?</p></li>
+<li><p>welke waarden moeten <code class="docutils literal notranslate"><span class="pre">comp</span></code> en <code class="docutils literal notranslate"><span class="pre">user</span></code> hebben om een juist antwoord te printen?</p></li>
+<li><p>hoeveel van de mogelijke 9 combinaties wordt door dit programma correct afgehandeld?</p></li>
+</ul>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p><strong>steen</strong></p></th>
+<th class="head"><p><strong>papier</strong></p></th>
+<th class="head"><p><strong>schaar</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>steen</strong></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>papier</strong></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>schaar</strong></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p>Tip, gebruik een waarheidstabel om de combinaties te noteren die dit programma correct afhandelt waar de kolommen voor de keus van de computer staan en de rijen voor de keus van de gebruiker.</p>
+<p>Je zult merken dat voor het oplossen van het steen, papier en schaar spel (en zeker als je een variant met meer dan drie opties uitwerkt!) je een <code class="docutils literal notranslate"><span class="pre">if</span></code> … <code class="docutils literal notranslate"><span class="pre">elif</span></code> … <code class="docutils literal notranslate"><span class="pre">else</span></code> combinatie nodig hebt. Je zal jezelf ook kunnen gaan afvragen wat de meest <em>efficënte</em> oplossing is. Zou de oplossing nog steeds even efficiënt zijn bij een spel met 15 of 25 varianten of zal je daar andere oplossingen moeten vinden?</p>
+</div>
+<div class="section" id="vraag-3">
+<h3>Vraag 3<a class="headerlink" href="#vraag-3" title="Permalink to this headline">¶</a></h3>
+<p>Gegeven de volgende twee programma’s</p>
+<p><strong>Programma A</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">perc</span> <span class="o">=</span> <span class="mf">0.70</span>
+
+<span class="k">if</span> <span class="n">perc</span> <span class="o">&gt;</span> <span class="mf">0.90</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Uitmuntend&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">perc</span> <span class="o">&gt;</span> <span class="mf">0.70</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Goed&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">perc</span> <span class="o">&gt;</span> <span class="mf">0.60</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Voldoende&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Aargh!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Programma B</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">perc</span> <span class="o">=</span> <span class="mf">0.70</span>
+
+<span class="k">if</span> <span class="n">perc</span> <span class="o">&gt;</span> <span class="mf">0.00</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Aargh!&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">perc</span> <span class="o">&gt;</span> <span class="mf">0.60</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Voldoende&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">perc</span> <span class="o">&gt;</span> <span class="mf">0.75</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Goed&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Uitmuntend&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Wat zal programma <strong>A</strong> printen?</p>
+<ul class="simple">
+<li><p>Uitmuntend</p></li>
+<li><p>Goed</p></li>
+<li><p>Voldoende</p></li>
+<li><p>Aargh!</p></li>
+</ul>
+<p>Wat zal programma <strong>B</strong> printen?</p>
+<ul class="simple">
+<li><p>Uitmuntend</p></li>
+<li><p>Goed</p></li>
+<li><p>Voldoende</p></li>
+<li><p>Aargh!</p></li>
+</ul>
+<p>Wat is een mogelijke waarde van <code class="docutils literal notranslate"><span class="pre">perc</span></code> zodat programma <strong>A</strong> “Goed” zal printen?</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "misja/programmeren",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./topics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="1a_introductie.html" title="previous page">Wat is informatica</a>
+    <a class='right-next' id="next-link" href="2a_programmeren.html" title="next page">Programmeren</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Hanze University of Applied Sciences<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    
+  </body>
+</html>

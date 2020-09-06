@@ -1,0 +1,838 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functies &#8212; Programmeren</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.30270b6e4c972e43c488.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "misja/programmeren");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://misja.github.io/programmeren/topics/4a_functies.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://misja.github.io/programmeren/topics/4a_functies.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Functies" />
+<meta property="og:description" content="Functies  Fun met Python functies!  Computing  Berekeningen, handelingen op data  Een computer rekent, en daarmee voert het handelingen op data uit. Met data he" />
+<meta property="og:image"       content="https://misja.github.io/programmeren/_static/mascot.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/mascot.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Programmeren</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/syllabus.html">
+   Programmeren
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Opmerkingen
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/feedback.html">
+   Anoniem feedbackformulier
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 1
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_1.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/python_intro.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_1.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Voorbeelden
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/recursie.html">
+   Recursie
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/design_recipe.html">
+   Functie ontwerp
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/platte_tekst.html">
+   Tekstbestanden
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python_browser.html">
+   Python in de browser
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python2_vs_python3.html">
+   Python 2 versus Python 3
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/topics/4a_functies.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/4a_functies.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/topics/4a_functies.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/misja/programmeren/master?urlpath=lab/tree/topics/4a_functies.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/misja/programmeren/blob/master/topics/4a_functies.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#computing">
+   Computing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#handelen">
+   Handelen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#structuur-versus-procedure">
+   Structuur versus procedure
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#binnen-een-functie">
+   Binnen een functie
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#docstrings">
+     Docstrings
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gebruik-variabelen">
+     Gebruik variabelen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variabelen-opnieuw-definieren">
+     Variabelen opnieuw definieren
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#return-versus-print">
+     Return versus print
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#het-verschil">
+       Het verschil
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#testen">
+     Testen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#none">
+     None?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quiz">
+   Quiz
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vraag">
+     Vraag
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#antwoord">
+     Antwoord
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hoe-functies-werken">
+   Hoe functies werken
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#functies-aanroepen">
+   Functies aanroepen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Quiz
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Vraag
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Antwoord
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-stack">
+     De stack
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tot-slot">
+   Tot slot
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="functies">
+<h1>Functies<a class="headerlink" href="#functies" title="Permalink to this headline">¶</a></h1>
+<p>Fun met Python functies!</p>
+<div class="section" id="computing">
+<h2>Computing<a class="headerlink" href="#computing" title="Permalink to this headline">¶</a></h2>
+<p><em>Berekeningen</em>, handelingen op data</p>
+<p>Een computer <em>rekent</em>, en daarmee voert het handelingen op data uit. Met data heb je kennisgemaakt en hoe dit door de computer wordt opgeslagen (denk aan de “dozen” in het geheugen en bits als fundamentele informatie-eenheid). Maar hoe worden <em>bewerkingen</em> op deze data uitgevoerd? We gaan kennismaken met een andere bouwsteen om te kunnen handelen: functies!</p>
+</div>
+<div class="section" id="handelen">
+<h2>Handelen<a class="headerlink" href="#handelen" title="Permalink to this headline">¶</a></h2>
+<p>Input en output</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="s2">&quot;huiswerk&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
+</pre></div>
+</div>
+</div>
+</div>
+<p>Je hebt inmiddels al functies gebruikt, bijvoorbeeld de functie <code class="docutils literal notranslate"><span class="pre">len(x)</span></code>. Deze functie accepteert een <em>parameter</em> (een waarde, de <em>input</em>) en geeft een resultaat terug (<em>output</em>). We weten of zien niet welke handelingen <code class="docutils literal notranslate"><span class="pre">len(x)</span></code> verricht, we weten alleen dat het een waarde terugggeeft. Laten we Python functies eens vergelijken met wat je al kent van andere disciplines, bijvoorbeeld wiskunde.</p>
+<p><img alt="Google googol" src="../_images/google_googol.png" /></p>
+<p><a class="reference external" href="https://nl.wikipedia.org/wiki/Googol">Googol</a> is de wiskundige aanduiding van een getal met de waarde <span class="math notranslate nohighlight">\(10^{100}\)</span> (uitgeschreven een 1 gevolgd door 100 nullen). Dit is meer dan het aantal deeltjes in het waarneembaar heelal, maar minder dan het geschat <a class="reference external" href="https://en.wikipedia.org/wiki/Shannon_number">mogelijk aantal zetten in een schaakspel</a> (<span class="math notranslate nohighlight">\(10^{120}\)</span>)!</p>
+<p>En als iemand in het verleden niet een spelfout had gemaakt dan zocht je nu met Googol in plaats van <a class="reference external" href="https://google.com">Google</a> … Laten we onze eigen “googoler” functie maken die <em>elk</em> getal tot de macht 100 kan verheffen.</p>
+</div>
+<div class="section" id="structuur-versus-procedure">
+<h2>Structuur versus procedure<a class="headerlink" href="#structuur-versus-procedure" title="Permalink to this headline">¶</a></h2>
+<div class="math notranslate nohighlight">
+\[
+g(x) = x^{100}
+\]</div>
+<p>Definieert een <strong>structuur</strong>: wat het <em>is</em> (en wat logischerwijs volgt)</p>
+<p>Functies ken je uit de wiskunde en je zou een “googolige” machtsverheffing kunnen <em>beschrijven</em> als een functie. We beschrijven hier dat voor elke parameter <span class="math notranslate nohighlight">\(x\)</span> je deze als <span class="math notranslate nohighlight">\(x^{100}\)</span> terugkrijgt. Dit is de syntax die wiskudigen hebben bedacht om een <em>structuur</em> te beschrijven en wat daar logischerwijs uit zou moeten volgen.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">100</span>
+</pre></div>
+</div>
+<p>Defineert een <strong>procedure</strong>: wat het <em>doet</em> (en wat gedragsmatig volgt)</p>
+<p>Python heeft ook functies. Het heeft de speciale syntax <code class="docutils literal notranslate"><span class="pre">def</span></code> (wat <em>define</em> betekent) om te zeggen “Ik definieer een functie”, in dit geval een functie met de naam <code class="docutils literal notranslate"><span class="pre">g</span></code> die een enkele parameter accepteer.</p>
+<p>De combintie van naam en welke paramaters worden geaccepteerd wordt ook de <em>signatuur</em> van een functie genoemd, want dit is wat het uniek maakt en onderscheidt van andere functies die we gaan schrijven. Let ook op dat een functie definitie wordt afgesloten met de dubbele punt <code class="docutils literal notranslate"><span class="pre">:</span></code>!</p>
+<p>Dit is al een stuk concreter, want anders dan de wiskundige beschrijving definiëren we hier een procedure (één of meerdere handelingen die uitgevoerd moeten worden op basis van een mogelijke input) en een resultaat dat met het <code class="docutils literal notranslate"><span class="pre">return</span></code> <em>statement</em> wordt teruggegeven (output). Let ook op dat alles wat na de dubbele punt volgt moet worden ingesprongen om aan te geven dat het een codeblok is dat onderdeel van de functie is.</p>
+<p>Syntax check! De dubbele punt geeft aan dat een nieuwe context volgt, je hebt dit bijvoorbeeld ook gezien bij conditionele statements als <code class="docutils literal notranslate"><span class="pre">if:</span></code>. De vuistregel is <em>altijd inspringen</em> na een dubbele punt!</p>
+</div>
+<div class="section" id="binnen-een-functie">
+<h2>Binnen een functie<a class="headerlink" href="#binnen-een-functie" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">flipside</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; flipside(s): spiegel s!</span>
+<span class="sd">    input s: een string</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="n">x</span><span class="p">:]</span> <span class="o">+</span> <span class="n">s</span><span class="p">[:</span><span class="n">x</span><span class="p">]</span>
+
+<span class="n">flipside</span><span class="p">(</span><span class="s2">&quot;automaat&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;maatauto&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Laten we gaan kijken naar de binnenkant van functies. We hebben hier een functie <code class="docutils literal notranslate"><span class="pre">flipside</span></code> gedefinieerd die een <em>string</em> spiegelt. Je ziet dat functie <code class="docutils literal notranslate"><span class="pre">len(x)</span></code>, <em>floor division</em> <code class="docutils literal notranslate"><span class="pre">//</span></code> en string <em>slicing</em> wordt gebruikt. Maar je ziet ook andere dingen, bijvoorbeeld binnen de functie een nieuwe variabele <code class="docutils literal notranslate"><span class="pre">x</span></code> en tekst tussen driedubbele aanhalingstekens <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span></code>.</p>
+<div class="section" id="docstrings">
+<h3>Docstrings<a class="headerlink" href="#docstrings" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">flipside</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; flipside(s): spiegel s!</span>
+<span class="sd">    input s: een string</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">flipside</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function flipside in module __main__:
+
+flipside(s)
+    flipside(s): spiegel s!
+    input s: een string
+</pre></div>
+</div>
+</div>
+</div>
+<p>Met een string met driedubbele aanhalingstekens direct na de dubbele punt documenteer je de functie (voor jezelf en voor anderen). Je beschrijft in deze <em>docstring</em> op de eerste regel kort wat de functie doet en verder andere informatie die nodig is, bijvoorbeeld de typen van parameters. Deze documentatie kan je altijd opvragen met <code class="docutils literal notranslate"><span class="pre">help(x)</span></code>. Probeer dit ook een voor (ingebouwde) Python functies als (<code class="docutils literal notranslate"><span class="pre">len(x)</span></code> of <code class="docutils literal notranslate"><span class="pre">print()</span></code>).</p>
+</div>
+<div class="section" id="gebruik-variabelen">
+<h3>Gebruik variabelen<a class="headerlink" href="#gebruik-variabelen" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">flipside</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="n">x</span><span class="p">:]</span> <span class="o">+</span> <span class="n">s</span><span class="p">[:</span><span class="n">x</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>De lengte van de string is nodig om vervolgens met een floor division het aantal karaketers tot het middelpunt van de string te bepalen. Dit aantal wordt aan de nieuwe variabele <code class="docutils literal notranslate"><span class="pre">x</span></code> toegekend en deze <code class="docutils literal notranslate"><span class="pre">x</span></code> wordt vervolgens 2 keer gebruikt voor het slicen van de string (de start- en stop waarden). We breken met het zetten van deze variabele <code class="docutils literal notranslate"><span class="pre">x</span></code> ook het probleem in stukjes op, en het scheelt ons typewerk!</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">flipside</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">:]</span> <span class="o">+</span> <span class="n">s</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Je had de stap van het zetten van een variabele ook kunnnen overslaan en de start- en stop waarde voor het slicen van de string ook als resultaat van <code class="docutils literal notranslate"><span class="pre">len(s)</span> <span class="pre">//</span> <span class="pre">2</span></code> kunnen schrijven, maar je merkt al dat het minder goed leesbaar is. Het gebruik van variabelen helpt de leesbaarheid en zelfs de computer vind het prettiger omdat het efficiënter is: er hoeft maar één keer het aantal karakters tot het midden te worden berekend!</p>
+</div>
+<div class="section" id="variabelen-opnieuw-definieren">
+<h3>Variabelen opnieuw definieren<a class="headerlink" href="#variabelen-opnieuw-definieren" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">convert_from_seconds</span><span class="p">(</span><span class="n">s</span><span class="p">):</span> <span class="c1"># aantal seconden</span>
+    <span class="sd">&quot;&quot;&quot;Een getal naar dagen, uren, minuten en seconden</span>
+<span class="sd">    </span>
+<span class="sd">    Zet een getal om naar naar een lijst van</span>
+<span class="sd">    [days, hours, minutes, seconds]</span>
+<span class="sd">    input s: een int</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">days</span> <span class="o">=</span> <span class="n">s</span> <span class="o">//</span> <span class="p">(</span><span class="mi">24</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span> <span class="c1"># aantal dagen</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">%</span> <span class="p">(</span><span class="mi">24</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>     <span class="c1"># restant s</span>
+    <span class="n">hours</span> <span class="o">=</span> <span class="n">s</span> <span class="o">//</span> <span class="p">(</span><span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>   <span class="c1"># aantal uren</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">%</span> <span class="p">(</span><span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>        <span class="c1"># restant s</span>
+    <span class="n">minutes</span> <span class="o">=</span> <span class="n">s</span> <span class="o">//</span> <span class="mi">60</span>      <span class="c1"># aantal minuten</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">%</span> <span class="mi">60</span>             <span class="c1"># restant s</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">days</span><span class="p">,</span> <span class="n">hours</span><span class="p">,</span> <span class="n">minutes</span><span class="p">,</span> <span class="n">s</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Gebruik variabelen en definiereer ze opnieuw als het nodig is! In dit voorbeeld wordt <code class="docutils literal notranslate"><span class="pre">s</span></code> steeds opnieuw gedefineerd op basis van het resultaat van een voorgaande handeling. Een floor division wordt eerst gebruikt om bijvoorbeeld het aantal dagen te vinden, met het restant wordt op dezlfde manier het aantal uren en minuten en eventeel restant aan seconden te vinden.</p>
+<p>Naast de docstring zie je ook commentaren: alles wat na een <code class="docutils literal notranslate"><span class="pre">#</span></code> volgt slaat Python over, het doet daar niets mee. Het is vooral voor mensen een manier om opmerkingen tussendoor te plaatsen. Let verder ook op het return statement waar de waarden als <em>list</em> wordt teruggegeven.</p>
+</div>
+<div class="section" id="return-versus-print">
+<h3>Return versus print<a class="headerlink" href="#return-versus-print" title="Permalink to this headline">¶</a></h3>
+<p>Wat is het verschil?</p>
+<p>Je hebt eerder kennisgemaakt met <code class="docutils literal notranslate"><span class="pre">print(x)</span></code> en deze functie lijkt iets terug te geven, althans zo lijkt het! <code class="docutils literal notranslate"><span class="pre">return</span></code> geeft een resultaat van een functie terug, wat is nu het verschil met <code class="docutils literal notranslate"><span class="pre">print(x)</span></code>?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dbl</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;verdubbelt x?</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span>
+
+<span class="n">a_dbl</span> <span class="o">=</span> <span class="n">dbl</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="o">+</span> <span class="mi">20</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Dit is een eenvoudige functie die een waarde verdubbelt en het resultaat teruggeeft met <code class="docutils literal notranslate"><span class="pre">return</span></code>. Nu een variant met <code class="docutils literal notranslate"><span class="pre">print(x)</span></code> in plaats van <code class="docutils literal notranslate"><span class="pre">return</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dbl_pr</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;verdubbelt x?</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span>
+    
+<span class="n">a_dbl_pr</span> <span class="o">=</span> <span class="n">dbl_pr</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="o">+</span> <span class="mi">20</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>40
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="n">f85fb4a1e955</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">a_dbl_pr</span> <span class="o">=</span> <span class="n">dbl_pr</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="o">+</span> <span class="mi">20</span>
+
+<span class="ne">TypeError</span>: unsupported operand type(s) for +: &#39;NoneType&#39; and &#39;int&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Dit geeft een fout op regel 6, waar we bij het resultaat van de functie 20 willen optellen. Waarom deze fout terwijl we wél een resultaat op scherm zien (40)? De verklaring is dat een functie zonder <code class="docutils literal notranslate"><span class="pre">return</span></code> niets teruggeeft en dat “niets” heeft (verassend genoeg!) wél een waarde, een waarde met type <code class="docutils literal notranslate"><span class="pre">None</span></code>. <code class="docutils literal notranslate"><span class="pre">None</span></code> (“geen”) representeert het niets en Python zegt ons hier dat we 20 <em>niet</em> bij niets kunnen optellen!</p>
+<p>Een leeg resultaat (niets) heeft dus wel een waarde (<code class="docutils literal notranslate"><span class="pre">None</span></code>), verwarrend! We komer hier later op terug …</p>
+<div class="section" id="het-verschil">
+<h4>Het verschil<a class="headerlink" href="#het-verschil" title="Permalink to this headline">¶</a></h4>
+<p><strong>print</strong> wijzigt pixels op het scherm</p>
+<p><strong>return</strong> geeft resultaat van de functie-aanroep terug</p>
+<p><code class="docutils literal notranslate"><span class="pre">return</span></code> is de manier hoe software informatie aan functies doorgeeft, waar het resultaat (output) van de een de input kan zijn voor de ander.</p>
+</div>
+</div>
+<div class="section" id="testen">
+<h3>Testen<a class="headerlink" href="#testen" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1: functie definitie</span>
+
+<span class="k">def</span> <span class="nf">flipside</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; flipside(s): spiegel s!</span>
+<span class="sd">    input s: een string</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="n">x</span><span class="p">:]</span> <span class="o">+</span> <span class="n">s</span><span class="p">[:</span><span class="n">x</span><span class="p">]</span>
+
+<span class="c1"># 2: Tests</span>
+
+<span class="k">assert</span> <span class="n">flipside</span><span class="p">(</span><span class="s1">&#39;huiswerk&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;werkhuis&#39;</span>
+<span class="k">assert</span> <span class="n">flipside</span><span class="p">(</span><span class="s1">&#39;popster&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;sterpop&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; toplap ~&quot;</span><span class="p">,</span> <span class="n">flipside</span><span class="p">(</span><span class="s1">&#39;laptop&#39;</span><span class="p">))</span> <span class="c1"># print het resultaat naar het scherm</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Voeg <code class="docutils literal notranslate"><span class="pre">assert</span></code> statements toe, waar <em>assert</em> een aanname betekent. Bijvoorbeeld, lees</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">flipside</span><span class="p">(</span><span class="s1">&#39;huiswerk&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;werkhuis&#39;</span>
+</pre></div>
+</div>
+<p>als “neem aan dat het resultaat van de aanroep <code class="docutils literal notranslate"><span class="pre">flipside('huiswerk')</span></code> gelijk is aan de string <code class="docutils literal notranslate"><span class="pre">'werkhuis'</span></code>”. Verder kan je natuurlijk altijd print statements gebruiken om waarden naar het scherm te printen!</p>
+</div>
+<div class="section" id="none">
+<h3>None?<a class="headerlink" href="#none" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">None</span></code> is iets dat <em>niets</em> representeert, kan je dit ook testen?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">dbl_pr</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="o">==</span> <span class="kc">None</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>40
+</pre></div>
+</div>
+</div>
+</div>
+<p>Je ziet hier alleen 40 (vanwege het <code class="docutils literal notranslate"><span class="pre">print</span></code> statement, pixels op het scherm…) en verder niets en dit is ok! Dit betekent dat de aanname dat de aanroep <code class="docutils literal notranslate"><span class="pre">dbl_pr(20)</span></code> inderdaad <code class="docutils literal notranslate"><span class="pre">None</span></code> teruggeeft.</p>
+</div>
+</div>
+<div class="section" id="quiz">
+<h2>Quiz<a class="headerlink" href="#quiz" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="vraag">
+<h3>Vraag<a class="headerlink" href="#vraag" title="Permalink to this headline">¶</a></h3>
+<p>Functies kunnen andere functies aanroepen!</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">demo</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">/</span> <span class="mi">3</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">g</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">z</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">x</span>
+
+<span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+</div>
+<p>Wat is het resultaat van <code class="docutils literal notranslate"><span class="pre">demo(15)</span></code>?</p>
+<p>Probeer regel voor regel het programma zelf te volgen om tot het antwoord te komen!</p>
+</div>
+<div class="section" id="antwoord">
+<h3>Antwoord<a class="headerlink" href="#antwoord" title="Permalink to this headline">¶</a></h3>
+<p>42.0</p>
+</div>
+</div>
+<div class="section" id="hoe-functies-werken">
+<h2>Hoe functies werken<a class="headerlink" href="#hoe-functies-werken" title="Permalink to this headline">¶</a></h2>
+<p>Hoe functies worden uitgevoerd: ze stapelen!</p>
+<p><img alt="stack plates" src="../_images/stack_plates.png" /></p>
+<p>Python gebruikt speciaal deel van het geheugen dat de <em>stack</em> wordt genoemd waar het voor elke functie de <em>variabelen</em> een bijbehorende <em>waarden</em> in een <em>frame</em> zet (een <em>stack frame</em>). Op deze manier stapelen de frames zich op in de stack, traditioneel van onderen naar boven (onhandig als het om een stapel borden zou gaan!).</p>
+<p><img alt="frame test" src="../_images/prob_1_step_1a.png" /></p>
+<p>Je herkent hier de vraag van de quiz die we stap voor stap gaan doorlopen. Rechts van de code zie je de stack waar de frames worden geplaatst.</p>
+<p><img alt="frame test" src="../_images/prob_1_step_3.png" /></p>
+<p>Het programma is nu ingelezen door Python en het eerste (algemene) frame is gezet, dit zijn de namen van de functies (dit zijn uiteindelijk ook variabelen) en een verwijzing naar waar de functies in het geheugen zijn opgeslagen. Dit is overigens een meer algemeen type geheugen dat de <em>heap</em> wordt genoemd.</p>
+<p><img alt="frame test" src="../_images/prob_1_step_6.png" /></p>
+<p>De frame voor de aanroep van <code class="docutils literal notranslate"><span class="pre">demo</span></code> is nu toegevoegd met de variabelen <code class="docutils literal notranslate"><span class="pre">x</span></code> (de waarde die als parameter is meegegeven) en <code class="docutils literal notranslate"><span class="pre">y</span></code>. Maar wat nu te doen met de variabele <code class="docutils literal notranslate"><span class="pre">z</span></code>? De waarde van <code class="docutils literal notranslate"><span class="pre">z</span></code> is pas bekend als de functie <code class="docutils literal notranslate"><span class="pre">g(y)</span></code> een resultaat teruggeeft … Python plaatst nu een nieuw frame op de stack van precies deze aanroep.</p>
+<p><img alt="frame test" src="../_images/prob_1_step_9.png" /></p>
+<p>In dit derde frame worden ook de variabelen gezet die horen bij de aanroep van <code class="docutils literal notranslate"><span class="pre">g(5.0)</span></code> en het resultaat zal worden teruggegeven.</p>
+<p><img alt="frame test" src="../_images/prob_1_step_10a.png" /></p>
+<p><code class="docutils literal notranslate"><span class="pre">z</span></code> is nog niet zichtbaar in het tweede frame (voor de duidelijkheid is dit weggelaten) maar het is er zeker wel als een verwijzing aanwezig naar het de returnwaarde van het volgende frame!</p>
+<p><img alt="frame test" src="../_images/prob_1_step_11.png" /></p>
+<p>Het resultaat van het derde frame wordt gezet als waarde van <code class="docutils literal notranslate"><span class="pre">z</span></code> van het tweede frame en het derde frame wordt vervolgens van de stack verwijderd.</p>
+<p><img alt="frame test" src="../_images/prob_1_step_12.png" /></p>
+<p>Tot slot geeft het tweede frame de returnwaarde terug aan het eerste frame en zal het vervolgens ook van de stack worden verwijderd. Het programma is nu beeindigd en wordt ook het eerste frame van de stack verwijderd zodat we weer terug zijn bij de beginsituatie.</p>
+<p>Let op, je ziet dat variabele <code class="docutils literal notranslate"><span class="pre">x</span></code> type <code class="docutils literal notranslate"><span class="pre">int</span></code> en <code class="docutils literal notranslate"><span class="pre">y</span></code> en <code class="docutils literal notranslate"><span class="pre">z</span></code> type <code class="docutils literal notranslate"><span class="pre">float</span></code> (decimale getallen) zijn. Python zal altijd kiezen voor het type met de hoogste precisie als type voor het resultaat als het gaat om numerieke waarden (in dit geval de optelling van verschillende typen).</p>
+</div>
+<div class="section" id="functies-aanroepen">
+<h2>Functies aanroepen<a class="headerlink" href="#functies-aanroepen" title="Permalink to this headline">¶</a></h2>
+<p>Functies kunnen andere functies aanroepen, maar … ook zichzelf?</p>
+<p>Je hebt gezien dat functies andere functies kunnen aanroepen. Dit is een strategie om een groter probleem op te breken in kleinere problemen waar elke functie verantwoordelijk is voor een deel van het probleem. Maar als een functie andere functies kan aanroepen, zou een functie ook zichzelf kunnen aanroepen? Het antwoord is ja!</p>
+</div>
+<div class="section" id="id1">
+<h2>Quiz<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>Vraag<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Een functie die zichzelf aanroept</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">12</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="mi">10</span><span class="o">*</span><span class="n">x</span> 
+</pre></div>
+</div>
+<p>Wat is het resultaat van <code class="docutils literal notranslate"><span class="pre">f(2)</span></code>?</p>
+</div>
+<div class="section" id="id3">
+<h3>Antwoord<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>42</p></li>
+</ol>
+</div>
+<div class="section" id="de-stack">
+<h3>De stack<a class="headerlink" href="#de-stack" title="Permalink to this headline">¶</a></h3>
+<p>Wat gebeurt er als een functie zichzelf aanroept?</p>
+<p>Hoe wordt de <em>stack</em> gevuld met met <em>frames</em> voor een functie die zichzelf steeds aanroept? Met andere woorden, hoe stapelt een functie zichzelf?!?</p>
+<p><img alt="q2_3" src="../_images/prob_2_step_3a.png" /></p>
+<p>De eerste aanroep van <code class="docutils literal notranslate"><span class="pre">f</span></code> met parameter waarde 2 wordt aan de stack toegevoegd. De test faalt <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">0</span></code> (want <code class="docutils literal notranslate"><span class="pre">x</span></code> is 2) en regel 5 wordt uitgevoerd waar <code class="docutils literal notranslate"><span class="pre">f</span></code> zichzelf aanroept met de waarde <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">-</span> <span class="pre">1</span></code> (1, want <code class="docutils literal notranslate"><span class="pre">x</span></code> was op dat moment 2).</p>
+<p><img alt="q2_8" src="../_images/prob_2_step_8a.png" /></p>
+<p>Hier gebeurt weer hetzelfde, de test faalt want <code class="docutils literal notranslate"><span class="pre">x</span></code> is gelijk aan 1, niet 0. Vervolgens roept <code class="docutils literal notranslate"><span class="pre">f</span></code> zichzelf weerr aan met de waarde 0 (1 - 0).</p>
+<p><img alt="q2_10" src="../_images/prob_2_step_10a.png" /></p>
+<p>Er staan nu drie frames op de stack! Nu slaagt de test wel want <code class="docutils literal notranslate"><span class="pre">x</span></code> gelijk is aan 0.</p>
+<p><img alt="q2_12" src="../_images/prob_2_step_12a.png" /></p>
+<p>De returnwaarde 12 van dit frame wordt teruggegeven.</p>
+<p><img alt="q2_13" src="../_images/prob_2_step_13a.png" /></p>
+<p>Het resultaat van het derde frame kan nu worden ingevuld en het resultaat kan worden teruggegeven (12 + 10*1).</p>
+<p><img alt="q2_14" src="../_images/prob_2_step_14a.png" /></p>
+<p>Het resultaat van het tweede frame kan nu ook in het eerste worden ingevuld en het resultaat worden teruggegeven (22 + 10*2). Tot slot wordt dit resultaat teruggegeven, <code class="docutils literal notranslate"><span class="pre">f(2)</span></code> is dus gelijk aan 42!</p>
+</div>
+</div>
+<div class="section" id="tot-slot">
+<h2>Tot slot<a class="headerlink" href="#tot-slot" title="Permalink to this headline">¶</a></h2>
+<p>Elke functie is een op zichzelf staande eenheid!</p>
+<p>Een functie is een zelfstandig handelende eenheid: zou informatica biologie zijn, dan zou je functies kunnen vergelijken met cellen. Ze kunnen de interactie met elkaar aangaan (zichzelf aanroepen) maar ook andere functies aanspreken die relevant zijn voor het oplossen van een bepaald probleem.</p>
+<p><img alt="Stack Overflow" src="../_images/Stack_Overflow_logo.png" /></p>
+<p><a class="reference external" href="https://stackoverflow.com/">Stack Overflow</a> is een populaire site waar je vragen kan stellen en antwoorden kan vinden die alles met programmeren te maken hebben. Aangezien het geheugen van een computer niet eindeloos is én je nu weet van de stack kan je je misschien iets voorstellen bij de fout waar deze site naar is vernoemd?</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "misja/programmeren",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./topics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Hanze University of Applied Sciences<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    
+  </body>
+</html>
