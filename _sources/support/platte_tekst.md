@@ -62,6 +62,15 @@ Linux heeft vele opties voor het bewerken van tekstbestanden. Eén van de meest 
 
 Een veel krachtiger editor is `emacs` die populair is bij ervaren gebruikers omdat het zo veel kan. De leercurve is echter steil (gelukkig is er een ingebouwde tutorial, type de `F1`-functietoets gevolgd door `t`). Als je besluit om `emacs` te proberen, vergeet dan niet dat je het programma kunt afsluiten door gewoon het venster te sluiten of door `Ctrl-X` en vervolgens `Ctrl-C` te typen (hoewel ervaren `emacs` gebruikers de editor nooit verlaten, ze laten het venster open zodat het op elk moment kan worden gebruikt).
 
-Tot slot zal je misschien van `vim` hebben gehoord. Hoewel `vim` populair is raden we het gebruik ervan af. Het heeft een lastige gebruikersinterface en is net zo moeilijk te leren als `emacs`, misschien zelfs moeilijker! Het het niet voor niets dat de "how to exit vim" een veelgestelde vraag aan Google is ... (hint: `:q`)
+Tot slot zal je misschien van `vim` hebben gehoord. Hoewel `vim` populair is raden we het gebruik ervan af. Het heeft een lastige gebruikersinterface en is net zo moeilijk te leren als `emacs`, misschien zelfs moeilijker! Het het niet voor niets dat "how to exit vim" een veelgestelde vraag aan Google is ... (hint: `:q` of `Esc:q`, afhankelijk van welke modus `vim` zich in bevindt)
 
 <!-- het staat BABA vrij hier eventueel commentaar aan toe te voegen ; -->
+
+```{margin}
+![mascot](../images/mascot_small.png)
+<br/>Dit lijkt een samenvatting van leren programmeren!
+```
+
+![vim Arrival meme](images/vim_arrival_meme.jpg)
+
+Dat `vim` lastig te gebruiken (en af te sluiten!) is levert gelukkig ook humor op. Deze *meme* is vrij naar [Arrival](https://www.imdb.com/title/tt2543164/), een film waarin mensen proberen te communiceren met aliens.
