@@ -5,7 +5,7 @@ description: "Over het maken en bewerken van platte tekst bestanden"
 
 # Tekstbestanden
 
-De uitwerkingen van de wekelijkse leesopgaven en bijvoorbeeld de Picobot opdrachten moeten in platte tekst als `.txt`-bestanden worden geschreven. Je zal verder ontdekken dat de Python code die je gaat schrijven ook platte tekst is (maar dan met een `.py` bestandsnaamextensie)!
+De uitwerkingen van bijvoorbeeld de Picobot opdrachten moeten in platte tekst als `.txt`-bestanden worden geschreven. Je zal verder ontdekken dat de Python code die je gaat schrijven ook platte tekst is (maar dan met een `.py` bestandsnaamextensie)!
 
 Het is belangrijk om bekend te raken met het maken en bewerken van tekstbestanden. Programma's zoals Microsoft Word maken *geen* platte tekst, althans niet standaard.
 
