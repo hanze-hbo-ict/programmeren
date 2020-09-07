@@ -73,4 +73,4 @@ Tot slot zal je misschien van `vim` hebben gehoord. Hoewel `vim` populair is rad
 
 ![vim Arrival meme](images/vim_arrival_meme.jpg)
 
-Dat `vim` lastig te gebruiken (en af te sluiten!) is levert gelukkig ook humor op. Deze *meme* is vrij naar [Arrival](https://www.imdb.com/title/tt2543164/), een film waarin mensen proberen te communiceren met aliens.
+Dat `vim` lastig te gebruiken (en af te sluiten!) is levert gelukkig ook humor op. Deze *meme* is gebaseerd op de film [Arrival](https://www.imdb.com/title/tt2543164/) waar mensen proberen te communiceren met buitenaardse wezens.
