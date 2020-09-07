@@ -169,20 +169,23 @@ Eerst zie je de *prompt*. De prompt is het stukje tekst aan de linkerkant dat wa
 
 ![Prompt](images/python_intro/pwd1.png)
 
-Het commando `pwd` is een afkorting van `print working directory`. Het drukt je huidige locatie (map) af. Probeer het:
+Het commando `pwd` is een afkorting van *print working directory*`*. Het drukt je huidige locatie (map) af. Probeer het:
 
 ![pwd](images/python_intro/pwd2.png)
 
-Je ziet de locatie waarin je terminal en command line op dit moment draaien. Waarschijnlijk zal je een iets ander resulaat zien, behalve als je naam toevallig `ralf` is.
+Je ziet de locatie waarin je terminal en command line op dit moment draaien. Waarschijnlijk zal je een iets ander resulaat zien, behalve als je naam toevallig `misja` is.
 
-* Het formaat zal er ook anders uitzien als je Windows gebruikt; dat is geen probleem
+Op Windows zal de uitvoer van `pwd` als volgt zijn:
+
+![pwd](images/python_intro/pwd2_win.png)
+
 * Merk ook op dat een volgende prompt verschenen is, die op een volgend commando wacht...
 
 De uitvoer is de *naam van de map* waar je je momenteel bevindt in de terminal. "Map" en "directory" betekenen hetzelfde.
 
 De slashes `/` scheiden submappen van de map waar ze in zitten. Op Windows zie je meestal backslashes `\` of dubbele backslashes; dit verschil is niet belangrijk.
 
-In dit voorbeeld is de gebruiker in een submap met de naam `ralf`, in een map met de naam `Users` op de harde schijf. Dit is een voorbeeld van een "home directory".
+In dit voorbeeld is de gebruiker in een submap met de naam `misja`, in een map met de naam `home` op de harde schijf. Dit is een voorbeeld van een "home directory".
 
 Je zit waarschijnlijk in je eigen home directory (en je zal de volledige padnaam zien).
 
@@ -436,37 +439,37 @@ Het practicum is nog niet af! Om je voor te bereiden op de rest van het huiswerk
 Maak een nieuw bestand aan met de naam `wk1ex2a.py` en plak de volgende startcode er in:
 
 ```python
-#
-# wk1ex2a.py
-#
-
-import time          # importeer de module met de naam time
-import random        # importeer de module met de naam random
+import time  # includes a library named time
+import random  # includes a library named random
 
 
 def rps():
-    """ this plays a game of rock-paper-scissors in Dutch ("steen"-"papier"-"schaar")
-        (or a variant of that game ...)
+    """This plays a game of rock-paper-scissors
+
+        Dutch version (or a variant of that game ...)
+
         inputs: no inputs    (prompted text doesn't count as input)
         outputs: no outputs  (printing doesn't count as output)
     """
-    name = input('Hoi... wat is je naam? ')
+    name = input("Hoi...wat is jouw naam? ")
     print()
     print("Hmmm...")
     print()
 
-    if name == 'Tjerk':
-        print('Even lekker opsparren!')
+    if name == "Johan" or name == "Marjan":
+        print('Ik ben "offline". Probeer het later.')
 
-    elif name == 'Bart':
-        print('Maakt dat sense?')
+    elif name == "Piet":
+        print("Bedoel je Riet?")
         time.sleep(1)
-        print('Ja dat maakt sense')
+        print("Nee?")
+        time.sleep(1)
+        print("Oh.")
 
     else:
-        print('Welkom,', name)
-        my_choice = random.choice(['steen', 'papier', 'schaar'])
-        print('Ik kies overigens ', my_choice)
+        print("Welkom, ", name)
+        my_choice = random.choice(["steen", "papier", "schaar"])
+        print("Trouwens, ik koos ", my_choice)
 ```
 
 * Laad dit bestand en voer het uit met `run wk1ex2a.py`

@@ -637,16 +637,17 @@ Deze optie kan je hier vinden:</p>
 <h2>pwd<a class="headerlink" href="#pwd" title="Permalink to this headline">¶</a></h2>
 <p>Eerst zie je de <em>prompt</em>. De prompt is het stukje tekst aan de linkerkant dat wacht totdat je wat op de command line typt:</p>
 <p><img alt="Prompt" src="../_images/pwd1.png" /></p>
-<p>Het commando <code class="docutils literal notranslate"><span class="pre">pwd</span></code> is een afkorting van <code class="docutils literal notranslate"><span class="pre">print</span> <span class="pre">working</span> <span class="pre">directory</span></code>. Het drukt je huidige locatie (map) af. Probeer het:</p>
+<p>Het commando <code class="docutils literal notranslate"><span class="pre">pwd</span></code> is een afkorting van <em>print working directory</em>`*. Het drukt je huidige locatie (map) af. Probeer het:</p>
 <p><img alt="pwd" src="../_images/pwd2.png" /></p>
-<p>Je ziet de locatie waarin je terminal en command line op dit moment draaien. Waarschijnlijk zal je een iets ander resulaat zien, behalve als je naam toevallig <code class="docutils literal notranslate"><span class="pre">ralf</span></code> is.</p>
+<p>Je ziet de locatie waarin je terminal en command line op dit moment draaien. Waarschijnlijk zal je een iets ander resulaat zien, behalve als je naam toevallig <code class="docutils literal notranslate"><span class="pre">misja</span></code> is.</p>
+<p>Op Windows zal de uitvoer van <code class="docutils literal notranslate"><span class="pre">pwd</span></code> als volgt zijn:</p>
+<p><img alt="pwd" src="../_images/pwd2_win.png" /></p>
 <ul class="simple">
-<li><p>Het formaat zal er ook anders uitzien als je Windows gebruikt; dat is geen probleem</p></li>
 <li><p>Merk ook op dat een volgende prompt verschenen is, die op een volgend commando wacht…</p></li>
 </ul>
 <p>De uitvoer is de <em>naam van de map</em> waar je je momenteel bevindt in de terminal. “Map” en “directory” betekenen hetzelfde.</p>
 <p>De slashes <code class="docutils literal notranslate"><span class="pre">/</span></code> scheiden submappen van de map waar ze in zitten. Op Windows zie je meestal backslashes <code class="docutils literal notranslate"><span class="pre">\</span></code> of dubbele backslashes; dit verschil is niet belangrijk.</p>
-<p>In dit voorbeeld is de gebruiker in een submap met de naam <code class="docutils literal notranslate"><span class="pre">ralf</span></code>, in een map met de naam <code class="docutils literal notranslate"><span class="pre">Users</span></code> op de harde schijf. Dit is een voorbeeld van een “home directory”.</p>
+<p>In dit voorbeeld is de gebruiker in een submap met de naam <code class="docutils literal notranslate"><span class="pre">misja</span></code>, in een map met de naam <code class="docutils literal notranslate"><span class="pre">home</span></code> op de harde schijf. Dit is een voorbeeld van een “home directory”.</p>
 <p>Je zit waarschijnlijk in je eigen home directory (en je zal de volledige padnaam zien).</p>
 <p>Hierna gaan we kijken wat we hier kunnen vinden met het commando <code class="docutils literal notranslate"><span class="pre">ls</span></code>…</p>
 </div>
@@ -889,37 +890,37 @@ de instructies op deze pagina te volgen</a></p></li>
 <h2>Een <em>interactief</em> programma uitvoeren<a class="headerlink" href="#een-interactief-programma-uitvoeren" title="Permalink to this headline">¶</a></h2>
 <p>Het practicum is nog niet af! Om je voor te bereiden op de rest van het huiswerk, kan je proberen dit langere, <em>interactive</em> Python-programma uit te voeren.</p>
 <p>Maak een nieuw bestand aan met de naam <code class="docutils literal notranslate"><span class="pre">wk1ex2a.py</span></code> en plak de volgende startcode er in:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-<span class="c1"># wk1ex2a.py</span>
-<span class="c1">#</span>
-
-<span class="kn">import</span> <span class="nn">time</span>          <span class="c1"># importeer de module met de naam time</span>
-<span class="kn">import</span> <span class="nn">random</span>        <span class="c1"># importeer de module met de naam random</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>  <span class="c1"># includes a library named time</span>
+<span class="kn">import</span> <span class="nn">random</span>  <span class="c1"># includes a library named random</span>
 
 
 <span class="k">def</span> <span class="nf">rps</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot; this plays a game of rock-paper-scissors in Dutch (&quot;steen&quot;-&quot;papier&quot;-&quot;schaar&quot;)</span>
-<span class="sd">        (or a variant of that game ...)</span>
+    <span class="sd">&quot;&quot;&quot;This plays a game of rock-paper-scissors</span>
+
+<span class="sd">        Dutch version (or a variant of that game ...)</span>
+
 <span class="sd">        inputs: no inputs    (prompted text doesn&#39;t count as input)</span>
 <span class="sd">        outputs: no outputs  (printing doesn&#39;t count as output)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Hoi... wat is je naam? &#39;</span><span class="p">)</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Hoi...wat is jouw naam? &quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">()</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hmmm...&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">()</span>
 
-    <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;Tjerk&#39;</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Even lekker opsparren!&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Johan&quot;</span> <span class="ow">or</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Marjan&quot;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ik ben &quot;offline&quot;. Probeer het later.&#39;</span><span class="p">)</span>
 
-    <span class="k">elif</span> <span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;Bart&#39;</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Maakt dat sense?&#39;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Piet&quot;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bedoel je Riet?&quot;</span><span class="p">)</span>
         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ja dat maakt sense&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nee?&quot;</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Oh.&quot;</span><span class="p">)</span>
 
     <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Welkom,&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-        <span class="n">my_choice</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;steen&#39;</span><span class="p">,</span> <span class="s1">&#39;papier&#39;</span><span class="p">,</span> <span class="s1">&#39;schaar&#39;</span><span class="p">])</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ik kies overigens &#39;</span><span class="p">,</span> <span class="n">my_choice</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Welkom, &quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="n">my_choice</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s2">&quot;steen&quot;</span><span class="p">,</span> <span class="s2">&quot;papier&quot;</span><span class="p">,</span> <span class="s2">&quot;schaar&quot;</span><span class="p">])</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Trouwens, ik koos &quot;</span><span class="p">,</span> <span class="n">my_choice</span><span class="p">)</span>
 </pre></div>
 </div>
 <ul>
