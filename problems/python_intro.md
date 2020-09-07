@@ -200,7 +200,7 @@ De uitvoer is een lijst van alle bestanden en (sub)mappen in de huidige director
 
 Aangezien dit een Mac is, zie je een aantal submappen die standaard aanwezig zijn in elke home directory in Mac OS, en een aantal extra dingen. In Windows ziet het er wat anders uit:
 
-![ls](TODO)
+![ls](images/python_intro/ls1_win.png)
 
 Probeer het commando om een lijst van de namen van bestanden en submappen in je huidige directory te zien in de terminal.
 
@@ -291,6 +291,10 @@ kan je het vragen om een *googolplex*, tien tot de macht googol, te laten bereke
 * Dit gaat niet werken. Het is echt ***geen*** goed idee: je moet vermoedelijk in ieder geval Python geforceerd stoppen en opnieuw starten, en je computer wordt totdat je dat doet mogelijk erg langzaam.
 * Het laat *wel* zien hoe makkelijk het is om de grenzen van je computer te bereiken!
 * **ALS** je dit om wat voor reden dan ook toch wilt testen, kan je de berekening annuleren door op Ctrl-C te drukken, of door de terminal te sluiten met het kruisje in de rechterbovenhoek, of door de hele VSCode-applicatie te sluiten, of door de powerknop van je computer ingedrukt te houden, of door de stekker en de batterij eruit te trekken...
+
+  ![10**10**100:ctrl-c](images/python_intro/python3_halt.png)
+
+  Met `KeyboardInterupt` geeft Python aan om welke reden het de bewerking heeft afgebroken en dit is natuurlijk de Ctrl-C toetscombinatie geweest.
 
 We gaan nu door voor de minder roekelozen. Kopieer en plak (of typ) deze regel Python-code:
 
