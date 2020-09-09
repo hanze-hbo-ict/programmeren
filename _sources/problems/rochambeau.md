@@ -25,7 +25,7 @@ In deze opgave ga je het volgende oefenen:
 
 ![RPS-3](images/rochambeau/RPS-3_NL.png)
 
-Bij steen, papier en schaar gaan twee spelers eerst aftellen en vormen daarna tegelijkertijd met de hand een steen (een vuist), een schaar (twee uitgestoken vingers) of papier (een vlakke hand). Hierbij verslaat de steen de schaar, de schaar het papier en het papier de steen. Indien beide spelers dezelfde keuze maken, dan wint geen van beiden.
+Bij steen, papier en schaar gaan twee spelers eerst aftellen en vormen daarna tegelijkertijd met de hand een steen (een vuist), een schaar (twee uitgestoken vingers) of papier (een vlakke hand). Hierbij verslaat de steen de schaar, de schaar het papier en het papier de steen. Indien beide spelers dezelfde keuze maken wint geen van beide.
 
 ## Een begin
 
@@ -63,8 +63,8 @@ def rps():
 
 Voer in ipython vanuit de juiste directory het bestand uit met `run  mijn_bestand.py` (wijzig `mijn_bestand.py` natuurlijk in de naam van jouw bestand).
 
--   Met `run` wordt het bestand door ipython geladen. Elke keer dat je het bestand wijzigt zal je dit steeds weer moeten uitvoeren, je kan het commando terughalen met pijltje omhoog (dit scheelt typewerk!).
--   Als het bestand succesvol is geladen, typ dan `rps()` om de functie `rps` uit te voeren.
+-   Met `run` wordt het bestand door ipython ingelezen. Elke keer dat je het bestand wijzigt zal je dit steeds weer moeten uitvoeren, je kan het commando terughalen met pijltje omhoog (dit scheelt typwerk!).
+-   Als het bestand succesvol is ingelezen, typ dan `rps()` om de functie `rps` uit te voeren.
 
 Werk de bovenstaande code nu verder uit tot een volledig programma dat:
 
@@ -123,7 +123,7 @@ Heb je nog meer tijd over? Je zou [RPS-25](http://www.umop.com/rps25.htm), een s
 
 ![RPS-25](images/rochambeau/RPS-25.png)
 
-De complexiteit neemt toe maar het blijft hetzelfde probleem!
+De complexiteit neemt toe maar het probleem blijft hetzelfde!
 
 ### RPS-101
 
@@ -143,7 +143,7 @@ while True:
         break
 ```
 
-Hier is een andere mogelijkheid, een variant met het gebruik van een variabele `running` die aangeeft of het spel nog actief is of niet:
+Hier zie je een andere mogelijkheid, een variant met het gebruik van een variabele `running` die aangeeft of het spel nog actief is of niet:
 
 ```python
 running = True
@@ -153,4 +153,4 @@ while running:
         running = False
 ```
 
-Nogmaals, dit zijn voorbeelden en het is geen probleem als je niet begrijpt wat we hier staat, we komen later nog uitgebreid terug op het gebruik van *lussen* (een techniek om handelingen te herhalen)!
+Nogmaals, dit zijn voorbeelden en het is geen probleem als je niet begrijpt wat we hier staat, we komen later uitgebreid terug op het gebruik van *lussen* (een techniek om handelingen te herhalen)!
