@@ -1,5 +1,8 @@
 # Sequenties en data
 
+```{include} ../class/problems/sequenties_en_data.md
+```
+
 Je gaat in deze opdracht het volgende oefenen:
 
 - in het eerste gedeelte ga je oefenen met splitsen en gebruiken van Python data

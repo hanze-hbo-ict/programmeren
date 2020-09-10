@@ -5,6 +5,9 @@ csa-level: 2
 
 # Fijne functies
 
+```{include} ../class/problems/fijne_functies.md
+```
+
 In deze opgave ga je oefenen met het schrijven van functies (de fundamentele bouwstenen van software) en het toepassen van onder andere string- en lijstbewerkingen.
 
 ## Ingebouwde functies

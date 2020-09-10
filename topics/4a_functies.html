@@ -19,7 +19,6 @@
     <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/sphinx-book-theme.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -27,6 +26,7 @@
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
     <script src="../_static/save_state.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
@@ -63,7 +63,6 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
@@ -463,20 +462,22 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="section" id="structuur-versus-procedure">
 <h2>Structuur versus procedure<a class="headerlink" href="#structuur-versus-procedure" title="Permalink to this headline">¶</a></h2>
+<p>De expressie</p>
 <div class="math notranslate nohighlight">
 \[
 g(x) = x^{100}
 \]</div>
-<p>Definieert een <strong>structuur</strong>: wat het <em>is</em> (en wat logischerwijs volgt)</p>
+<p>definieert een <strong>structuur</strong>: wat het <em>is</em> (en wat logischerwijs volgt)</p>
 <p>Functies ken je uit de wiskunde en je zou een “googolige” machtsverheffing kunnen <em>beschrijven</em> als een functie. We beschrijven hier dat voor elke parameter <span class="math notranslate nohighlight">\(x\)</span> je deze als <span class="math notranslate nohighlight">\(x^{100}\)</span> terugkrijgt. Dit is de syntax die wiskudigen hebben bedacht om een <em>structuur</em> te beschrijven en wat daar logischerwijs uit zou moeten volgen.</p>
+<p>De expressie</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">100</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">100</span>
 </pre></div>
 </div>
-<p>Defineert een <strong>procedure</strong>: wat het <em>doet</em> (en wat gedragsmatig volgt)</p>
+<p>defineert een <strong>procedure</strong>: wat het <em>doet</em> (en wat gedragsmatig volgt)</p>
 <p>Python heeft ook functies. Het heeft de speciale syntax <code class="docutils literal notranslate"><span class="pre">def</span></code> (wat <em>define</em> betekent) om te zeggen “Ik definieer een functie”, in dit geval een functie met de naam <code class="docutils literal notranslate"><span class="pre">g</span></code> die een enkele parameter accepteer.</p>
-<p>De combintie van naam en welke paramaters worden geaccepteerd wordt ook de <em>signatuur</em> van een functie genoemd, want dit is wat het uniek maakt en onderscheidt van andere functies die we gaan schrijven. Let ook op dat een functie definitie wordt afgesloten met de dubbele punt <code class="docutils literal notranslate"><span class="pre">:</span></code>!</p>
-<p>Dit is al een stuk concreter, want anders dan de wiskundige beschrijving definiëren we hier een procedure (één of meerdere handelingen die uitgevoerd moeten worden op basis van een mogelijke input) en een resultaat dat met het <code class="docutils literal notranslate"><span class="pre">return</span></code> <em>statement</em> wordt teruggegeven (output). Let ook op dat alles wat na de dubbele punt volgt moet worden ingesprongen om aan te geven dat het een codeblok is dat onderdeel van de functie is.</p>
+<p>De combintie van naam en welke paramaters worden geaccepteerd wordt ook de <em>signatuur</em> van een functie genoemd, want dit is wat het onderscheidt (en uniek maakt) van andere functies die we gaan schrijven. Let op dat een functie definitie ook wordt afgesloten met de dubbele punt <code class="docutils literal notranslate"><span class="pre">:</span></code>!</p>
+<p>Een Python functie is al een stuk concreter, want anders dan de wiskundige beschrijving definiëren we hier een procedure (één of meerdere handelingen die uitgevoerd moeten worden op basis van een mogelijke input) en een resultaat dat met het <code class="docutils literal notranslate"><span class="pre">return</span></code> <em>statement</em> wordt teruggegeven (output). Let ook op dat alles wat na de dubbele punt volgt moet worden ingesprongen om aan te geven dat het een codeblok is dat onderdeel van de functie is.</p>
 <p>Syntax check! De dubbele punt geeft aan dat een nieuwe context volgt, je hebt dit bijvoorbeeld ook gezien bij conditionele statements als <code class="docutils literal notranslate"><span class="pre">if:</span></code>. De vuistregel is <em>altijd inspringen</em> na een dubbele punt!</p>
 </div>
 <div class="section" id="binnen-een-functie">
@@ -526,6 +527,7 @@ flipside(s)
 </div>
 </div>
 <p>Met een string met driedubbele aanhalingstekens direct na de dubbele punt documenteer je de functie (voor jezelf en voor anderen). Je beschrijft in deze <em>docstring</em> op de eerste regel kort wat de functie doet en verder andere informatie die nodig is, bijvoorbeeld de typen van parameters. Deze documentatie kan je altijd opvragen met <code class="docutils literal notranslate"><span class="pre">help(x)</span></code>. Probeer dit ook een voor (ingebouwde) Python functies als (<code class="docutils literal notranslate"><span class="pre">len(x)</span></code> of <code class="docutils literal notranslate"><span class="pre">print()</span></code>).</p>
+<p>Mogen het ook driedubbele <em>enkele</em> aanhalingstekens zijn (<code class="docutils literal notranslate"><span class="pre">'''</span></code>)? Ja natuurlijk, want Python maakt geen onderscheid tussen <code class="docutils literal notranslate"><span class="pre">'</span></code> en <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> als het gaat on <em>strings</em>, wat een doc<em>string</em> natuurlijk is. De conventie (of afspraak) onder Python gebruikers is om liever het dubbele dan enkele aanhalingsteken te gebruiken voor docstrings.</p>
 </div>
 <div class="section" id="gebruik-variabelen">
 <h3>Gebruik variabelen<a class="headerlink" href="#gebruik-variabelen" title="Permalink to this headline">¶</a></h3>
@@ -612,7 +614,7 @@ flipside(s)
 <h4>Het verschil<a class="headerlink" href="#het-verschil" title="Permalink to this headline">¶</a></h4>
 <p><strong>print</strong> wijzigt pixels op het scherm</p>
 <p><strong>return</strong> geeft resultaat van de functie-aanroep terug</p>
-<p><code class="docutils literal notranslate"><span class="pre">return</span></code> is de manier hoe software informatie aan functies doorgeeft, waar het resultaat (output) van de een de input kan zijn voor de ander.</p>
+<p><code class="docutils literal notranslate"><span class="pre">return</span></code> is de manier hoe software informatie aan functies doorgeeft, waar het resultaat (output) van de één de input kan zijn voor de ander.</p>
 </div>
 </div>
 <div class="section" id="testen">
