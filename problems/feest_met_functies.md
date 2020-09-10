@@ -1,5 +1,8 @@
 # Feest met functies
 
+```{include} ../class/problems/feest_met_functies.md
+```
+
 In deze opgave ga je een aantal functies uitwerken door middel van recursie.
 
 ## Een begin
@@ -7,9 +10,6 @@ In deze opgave ga je een aantal functies uitwerken door middel van recursie.
 Maak een nieuw tekstbestand aan met behulp van VSCode of een andere tekstverwerker. Je kan de onderstaande code gebruiken als begin:
 
 ```python
-#
-# voorbeeldfunctie leng uit het college
-#
 def leng(s):
     """leng returns the length of s
        Argument: s, which can be a string or list

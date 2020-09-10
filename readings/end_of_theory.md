@@ -1,5 +1,8 @@
 # The End of Theory
 
+```{include} ../class/readings/end_of_theory.md
+```
+
 ## Het artikel
 
 Het artikel *The end of theory* komt uit [Wired](https://wired.com) en sluit aan bij het thema *data* en de mogelijkheden van data.
