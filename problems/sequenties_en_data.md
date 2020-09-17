@@ -181,7 +181,7 @@ In deze opgave ga je een aantal lijsten maken met *alleen* maar de getallen in d
 :::{admonition,info} Lege regels en experimenteren
 Gebruik *één of meer lege regels* tussen jouw antwoorden (zodat het zowel voor jou als voor ons goed leesbaar blijft!).
 
-Nadat je het bestand een eerste keer hebt uitgevoerd met `run` kan je experimenteren op de IPython command line, probeer bijvoorbeeld `e[0:1] + p[0:1]` te typen.
+Nadat je het bestand een eerste keer hebt uitgevoerd met `run` kan je experimenteren op de IPython command line, probeer bijvoorbeeld `e[0:1] + pi[0:1]` te typen.
 
 *Als je het leuk vindt* kan je proberen zo min mogelijk bewerkingen te gebruiken om tot eenvoudige, elegante en efficiënte oplossingen te komen.
 :::

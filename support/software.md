@@ -5,17 +5,37 @@ description: Python 3 en VSCode installatie
 
 # Software
 
-We gebruiken Python 3, de nieuwste versie. Je kan Python in de [browser](python_browser.md) gebruiken (het is immers de 21e eeuw!) maar we raden je aan het op jouw systeem te installeren.
+We gebruiken Python 3. Je kan Python in de [browser](python_browser.md) gebruiken (het is immers de 21e eeuw!) maar we raden je aan het op jouw systeem te installeren.
 
 Om Python bestanden te kunnen bewerken heb je een **teksteditor** nodig (en niet een *tekstverwerker* als bijvoorbeeld Microsoft Word!). Standaard gebruiken we [Visual Studio Code](#editor) (VSCode), een gratis en veelgebruikte editor die beschikbaar is voor alle besturingssystemen (Mac, Windows en Linux). Heb je al een favoriet? Geen probleem, deze kan je blijven gebruiken!
 
 ## Python
 
-Als je al Python 3 (minimaal versie 3.7) hebt geïnstalleerd via bijvoorbeeld [https://www.python.org](https://www.python.org/) of [Anaconda Python](https://www.anaconda.com/distribution/) dan kan je deze blijven gebruiken.
+Als je al Python 3 (minimaal versie 3.8) hebt geïnstalleerd via bijvoorbeeld [https://www.python.org](https://www.python.org/) of [Anaconda Python](https://www.anaconda.com/distribution/) dan kan je deze blijven gebruiken.
 
 ### Windows
 
+<!--
+
+Windows store:
+pip install etc. installeert in andere scripts dir dan store scripts dir die niet in user path staat
+
+vscode:
+installeert met pip in user roaming dir oid, ook niet in user path
+
+Oplossing:
+Reguliere python install, aan pad laten toevoegen
+
+pip install ipython
+
+*Voor* vscode wordt opgestart
+pip install black pylint
+
+-->
+
 We volgen de aanbevelingen van Microsoft voor [Python op Windows](https://docs.microsoft.com/en-us/windows/python/beginners). Installeer Python via Windows Store, zoek daar naar de Python app (uitgever *Python Software Foundation*) en kies versie 3.8 of hoger.
+
+![Python Installer](images/python_installer.png)
 
 ![Windows Store](images/windows_store_python.png)
 
