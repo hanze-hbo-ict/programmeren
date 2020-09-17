@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -76,6 +76,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="canonical" href="https://misja.github.io/programmeren/support/software.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Python 2 en Python 3" href="python2_vs_python3.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -85,7 +86,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <meta property="og:url"         content="https://misja.github.io/programmeren/support/software.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Software" />
-<meta property="og:description" content="Software  We gebruiken Python 3, de nieuwste versie. Je kan Python in de browser gebruiken (het is immers de 21e eeuw!) maar we raden je aan het op jouw systeem" />
+<meta property="og:description" content="Software  We gebruiken Python 3. Je kan Python in de browser gebruiken (het is immers de 21e eeuw!) maar we raden je aan het op jouw systeem te installeren.  Om" />
 <meta property="og:image"       content="https://misja.github.io/programmeren/_static/mascot.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -187,6 +188,28 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 <p class="caption">
  <span class="caption-text">
+  Week 3
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_3.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/python_turtles.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_3.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Voorbeelden
  </span>
 </p>
@@ -207,7 +230,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   Python
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="platte_tekst.html">
    Tekstbestanden
@@ -221,6 +244,11 @@ commentsRunWhenDOMLoaded(addUtterances);
  <li class="toctree-l1">
   <a class="reference internal" href="python2_vs_python3.html">
    Python 2 versus Python 3
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Software
   </a>
  </li>
 </ul>
@@ -379,14 +407,32 @@ commentsRunWhenDOMLoaded(addUtterances);
                 
   <div class="section" id="software">
 <h1>Software<a class="headerlink" href="#software" title="Permalink to this headline">¶</a></h1>
-<p>We gebruiken Python 3, de nieuwste versie. Je kan Python in de <a class="reference internal" href="python_browser.html"><span class="doc std std-doc">browser</span></a> gebruiken (het is immers de 21e eeuw!) maar we raden je aan het op jouw systeem te installeren.</p>
+<p>We gebruiken Python 3. Je kan Python in de <a class="reference internal" href="python_browser.html"><span class="doc std std-doc">browser</span></a> gebruiken (het is immers de 21e eeuw!) maar we raden je aan het op jouw systeem te installeren.</p>
 <p>Om Python bestanden te kunnen bewerken heb je een <strong>teksteditor</strong> nodig (en niet een <em>tekstverwerker</em> als bijvoorbeeld Microsoft Word!). Standaard gebruiken we <a class="reference external" href="#editor">Visual Studio Code</a> (VSCode), een gratis en veelgebruikte editor die beschikbaar is voor alle besturingssystemen (Mac, Windows en Linux). Heb je al een favoriet? Geen probleem, deze kan je blijven gebruiken!</p>
 <div class="section" id="python">
 <h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
-<p>Als je al Python 3 (minimaal versie 3.7) hebt geïnstalleerd via bijvoorbeeld <a class="reference external" href="https://www.python.org/">https://www.python.org</a> of <a class="reference external" href="https://www.anaconda.com/distribution/">Anaconda Python</a> dan kan je deze blijven gebruiken.</p>
+<p>Als je al Python 3 (minimaal versie 3.8) hebt geïnstalleerd via bijvoorbeeld <a class="reference external" href="https://www.python.org/">https://www.python.org</a> of <a class="reference external" href="https://www.anaconda.com/distribution/">Anaconda Python</a> dan kan je deze blijven gebruiken.</p>
 <div class="section" id="windows">
 <h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
+<!--
+
+Windows store:
+pip install etc. installeert in andere scripts dir dan store scripts dir die niet in user path staat
+
+vscode:
+installeert met pip in user roaming dir oid, ook niet in user path
+
+Oplossing:
+Reguliere python install, aan pad laten toevoegen
+
+pip install ipython
+
+*Voor* vscode wordt opgestart
+pip install black pylint
+
+-->
 <p>We volgen de aanbevelingen van Microsoft voor <a class="reference external" href="https://docs.microsoft.com/en-us/windows/python/beginners">Python op Windows</a>. Installeer Python via Windows Store, zoek daar naar de Python app (uitgever <em>Python Software Foundation</em>) en kies versie 3.8 of hoger.</p>
+<p><img alt="Python Installer" src="../_images/python_installer.png" /></p>
 <p><img alt="Windows Store" src="../_images/windows_store_python.png" /></p>
 <div class="info admonition">
 <p class="admonition-title"> WSL</p>
@@ -520,6 +566,7 @@ TODO gebruik formatter is optioneel, een aanroep (Ctrl-Shift-i Windows/Linux, Ma
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="python2_vs_python3.html" title="previous page">Python 2 en Python 3</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

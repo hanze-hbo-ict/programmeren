@@ -1,0 +1,957 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulatie &#8212; Programmeren</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "misja/programmeren");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://misja.github.io/programmeren/topics/5a_simulatie.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Lijnenspel" href="5b_turtle_recursie.html" />
+    <link rel="prev" title="Week 3" href="../class/week_3.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://misja.github.io/programmeren/topics/5a_simulatie.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Simulatie" />
+<meta property="og:description" content="Simulatie  Over kansen en kiezen!  Recursie  Jij zorgt voor het EERSTE geval, recursie zorgt voor de REST  Een korte herhaling van recursie en één van de belang" />
+<meta property="og:image"       content="https://misja.github.io/programmeren/_static/mascot.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/mascot.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Programmeren</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/syllabus.html">
+   Programmeren
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Opmerkingen
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/feedback.html">
+   Anoniem feedbackformulier
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 1
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_1.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/python_intro.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_1.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 2
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_2.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/sequenties_en_data.html">
+   Practicum I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/fijne_functies.html">
+   Practicum II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_2.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 3
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="../class/week_3.html">
+   Onderwerpen
+  </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Simulatie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5b_turtle_recursie.html">
+     Turtle en recursie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="6a_list_comprehension.html">
+     List comprehension
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/python_turtles.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_3.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Voorbeelden
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/recursie.html">
+   Recursie
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/design_recipe.html">
+   Functie ontwerp
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/platte_tekst.html">
+   Tekstbestanden
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python_browser.html">
+   Python in de browser
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python2_vs_python3.html">
+   Python 2 versus Python 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/software.html">
+   Software
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/topics/5a_simulatie.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/5a_simulatie.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/topics/5a_simulatie.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/misja/programmeren/master?urlpath=lab/tree/topics/5a_simulatie.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/misja/programmeren/blob/master/topics/5a_simulatie.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recursie">
+   Recursie
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inwendig-product">
+   Inwendig product
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualiseren">
+   Visualiseren
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#toeval-en-keus">
+   Toeval en keus
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import">
+     Import
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gebruik">
+     Gebruik
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reeksen-maken">
+     Reeksen maken
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#een-inclusieve-reeks">
+     Een inclusieve reeks
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#een-precieze-keus">
+     Een precieze keus
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#een-random-functie">
+   Een random functie
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uitbreidingen">
+     Uitbreidingen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recursief-pogingen-tellen">
+     Recursief pogingen tellen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quiz">
+   Quiz
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oplossing">
+     Oplossing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#twee-monte-carlo-s">
+   Twee Monte Carlo’s
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#monte-carlo-in-actie">
+   Monte Carlo in actie
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dobbelen">
+     Dobbelen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#monte-carlo-monty-hall">
+     Monte Carlo Monty Hall
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dichter-bij-huis">
+     Dichter bij huis
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="simulatie">
+<h1>Simulatie<a class="headerlink" href="#simulatie" title="Permalink to this headline">¶</a></h1>
+<p>Over kansen en kiezen!</p>
+<div class="section" id="recursie">
+<h2>Recursie<a class="headerlink" href="#recursie" title="Permalink to this headline">¶</a></h2>
+<p>Jij zorgt voor het EERSTE geval, recursie zorgt voor de REST</p>
+<p>Een korte herhaling van recursie en één van de belangrijkste lessen als het gaan om het ontwerp van recursieve functies: naast het bepalen van de base case(s) zorg jij voor het eerste geval en recursie zorgt voor de rest. Laten we dit nog een keer bekijken.</p>
+</div>
+<div class="section" id="inwendig-product">
+<h2>Inwendig product<a class="headerlink" href="#inwendig-product" title="Permalink to this headline">¶</a></h2>
+<p>Of in het Engels: <em>dot product</em></p>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2]</span> <span class="pre">*</span> <span class="pre">[3,</span> <span class="pre">4]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">*</span> <span class="pre">3</span> <span class="pre">+</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">4</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">+</span> <span class="pre">8</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">11</span></code></p></li>
+</ol>
+<p>Het inwendig product is het resultaat van de vermenigvuldiging van twee <em>vectoren</em> van gelijke grootte. Vectoren kunnen worden gerepresenteerd als lists.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dot</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">K</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Het inwendig (dot) product van L en K</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">K</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mf">0.0</span>
+    
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">K</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mf">0.0</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">K</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">dot</span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">K</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+</pre></div>
+</div>
+<p>Er zijn <em>twee</em> base cases, de lijsten <code class="docutils literal notranslate"><span class="pre">L</span></code> en <code class="docutils literal notranslate"><span class="pre">K</span></code> zijn leeg of ze zijn niet van gelijke lengte. Zie je ook dat we tests kunnen combineren met <code class="docutils literal notranslate"><span class="pre">or</span></code> (als de een óf de ander faalt)?</p>
+<p>Recursie zorgt voor de REST</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">else</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">K</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">dot</span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">K</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+</pre></div>
+</div>
+<p>Als de base cases zijn gedefieerd dan zorg jij voor het <em>eerste</em> geval <code class="docutils literal notranslate"><span class="pre">L[0]</span> <span class="pre">*</span> <span class="pre">K[0]</span></code> en recursie zorgt voor de <em>rest</em> <code class="docutils literal notranslate"><span class="pre">dot(L[1:],</span> <span class="pre">K[1:])</span></code>. Het is een product, dus jouw geval en de rest moeten wel met elkaar gecombineerd worden (<code class="docutils literal notranslate"><span class="pre">+</span></code>).</p>
+</div>
+<div class="section" id="visualiseren">
+<h2>Visualiseren<a class="headerlink" href="#visualiseren" title="Permalink to this headline">¶</a></h2>
+<p>Een hulpmiddel voor het visualiseren van de stack: <a class="reference external" href="http://www.pythontutor.com/">pythontutor.com</a></p>
+<p><img alt="pythontutor.org" src="../_images/pythontutor_dot.png" /></p>
+<p>Gebruik <a class="reference external" href="http://www.pythontutor.com/">pythontutor.com</a> voor het verkennen van een probleem of (visueel) testen van jouw oplossing!</p>
+</div>
+<div class="section" id="toeval-en-keus">
+<h2>Toeval en keus<a class="headerlink" href="#toeval-en-keus" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+</pre></div>
+</div>
+<p>Na de import kan je <code class="docutils literal notranslate"><span class="pre">dir(random)</span></code> en <code class="docutils literal notranslate"><span class="pre">help(random)</span></code> gebruiken</p>
+<p>Met deze syntax importeer je de Python <em>module</em> random.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+<p>Alle random functies zijn nu beschikbaar!</p>
+<p>Met deze syntax importeert je <em>alle</em> functies in de module random.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
+</pre></div>
+</div>
+<p>Alleen de functie <code class="docutils literal notranslate"><span class="pre">choice</span></code> is nu beschikbaar …</p>
+<div class="section" id="import">
+<h3>Import<a class="headerlink" href="#import" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">choice</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Wat is het verschil en maakt het uit? Nee, zoals je kan zien kan je met beide import statements de functie <code class="docutils literal notranslate"><span class="pre">choice</span></code> gebruiken. In het eerste geval leeft de functie in een zogenaamde <em>namespace</em> of context (de namespace “random”) en roep je het via die context aan (<code class="docutils literal notranslate"><span class="pre">random.choice</span></code>), in het tweede geval komt het in de context van jouw programma terecht en kan je het direct aanroepen (<code class="docutils literal notranslate"><span class="pre">choice</span></code>).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">def</span> <span class="nf">choice</span><span class="p">(</span><span class="o">...</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Mijn choice functie</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>In dit geval zal jouw functie <code class="docutils literal notranslate"><span class="pre">choice</span></code> worden aanroepen, het “overschrijft” de functie <code class="docutils literal notranslate"><span class="pre">choice</span></code> die je eerder met het import statement uit de module random hebt geïmporteerd. In dit geval kan het handig zijn om alleen de module random te importeren en via <code class="docutils literal notranslate"><span class="pre">random.choice</span></code> de oorspronkelijke functie te kunnen aanroepen (als dat nodig is).</p>
+</div>
+<div class="section" id="gebruik">
+<h3>Gebruik<a class="headerlink" href="#gebruik" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">choice</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Kies willekeurig 1 element uit de sequentie L</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">choice</span><span class="p">(</span><span class="s2">&quot;roos&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>of 1 karakter uit een string</p>
+<p>De kans op <code class="docutils literal notranslate"><span class="pre">&quot;r&quot;</span></code> is <span class="math notranslate nohighlight">\(\frac{1}{4}\)</span>, op <code class="docutils literal notranslate"><span class="pre">&quot;o&quot;</span></code> <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span> en op <code class="docutils literal notranslate"><span class="pre">&quot;s&quot;</span></code> <span class="math notranslate nohighlight">\(\frac{1}{4}\)</span> …</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;slapen&#39;</span><span class="p">,</span> <span class="s1">&#39;eten&#39;</span><span class="p">,</span> <span class="s1">&#39;netflix&#39;</span><span class="p">,</span> <span class="s1">&#39;studeren&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>of 1 element uit een list</p>
+</div>
+<div class="section" id="reeksen-maken">
+<h3>Reeksen maken<a class="headerlink" href="#reeksen-maken" title="Permalink to this headline">¶</a></h3>
+<p>Kan je ook eigen reeksen maken?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 2, 3, 4]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lees dit als “ik wil de waarden van <code class="docutils literal notranslate"><span class="pre">range(5)</span></code> als een list”. Let op dat <code class="docutils literal notranslate"><span class="pre">range(5)</span></code>  5 <em>elementen</em> oplevert!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 4]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Dit begint op de list slicing syntax te lijken met een start en stop positie! Zou het ook de step kennen?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 2, 4, 6, 8]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="een-inclusieve-reeks">
+<h3>Een inclusieve reeks<a class="headerlink" href="#een-inclusieve-reeks" title="Permalink to this headline">¶</a></h3>
+<p>Een willekeurig getal uit de reeks 0 <strong>tot en met</strong> 99?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
+
+<span class="n">choice</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">99</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>74
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="een-precieze-keus">
+<h3>Een precieze keus<a class="headerlink" href="#een-precieze-keus" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">uniform</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">hi</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Kies een random <em>float</em> waarde tussen low en hi</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">uniform</span>
+
+<span class="n">uniform</span><span class="p">(</span><span class="mf">41.9</span><span class="p">,</span> <span class="mf">42.1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>41.90843896911721
+</pre></div>
+</div>
+</div>
+</div>
+<p>Helaas, geen <code class="docutils literal notranslate"><span class="pre">42.0</span></code>. Python <code class="docutils literal notranslate"><span class="pre">float</span></code> waarden hebben 16 decimale posities aan precisie en die worden in dit geval allemaal gebruikt!</p>
+</div>
+</div>
+<div class="section" id="een-random-functie">
+<h2>Een random functie<a class="headerlink" href="#een-random-functie" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">def</span> <span class="nf">guess</span><span class="p">(</span><span class="n">hidden</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;De computer raadt een geheim getal</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">comp_guess</span> <span class="o">=</span> <span class="n">choice</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)))</span>  <span class="c1"># [0, ..., 99]</span>
+    
+    <span class="k">if</span> <span class="n">comp_guess</span> <span class="o">==</span> <span class="n">hidden</span><span class="p">:</span>  <span class="c1"># base case, eindelijk...</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gevonden!&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>                     <span class="c1"># recursive case</span>
+        <span class="n">guess</span><span class="p">(</span><span class="n">hidden</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>De <em>docstring</em> verraadt al wat deze functie doet, de computer moet een getal raden dat wij hebben gekozen (een getal tussen 0 en 99), dit is de waarde van de parameter <code class="docutils literal notranslate"><span class="pre">hidden</span></code>. Als je de functie uitvoert zien we niet veel, alleen dat de computer op een gegeven moment het getal heeft gevonden. Laten we een paar aanpassingen maken.</p>
+<div class="section" id="uitbreidingen">
+<h3>Uitbreidingen<a class="headerlink" href="#uitbreidingen" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>print steeds de keuze?</p></li>
+<li><p>het aantal pogingen als returnwaarde?</p></li>
+<li><p>dit gaat snel, kan het vertraagd worden?</p></li>
+<li><p>het te verwachten aantal pogingen?!?</p></li>
+</ul>
+</div>
+<div class="section" id="recursief-pogingen-tellen">
+<h3>Recursief pogingen tellen<a class="headerlink" href="#recursief-pogingen-tellen" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">def</span> <span class="nf">guess</span><span class="p">(</span><span class="n">hidden</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;De computer raadt een geheim getal</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">comp_guess</span> <span class="o">=</span> <span class="n">choice</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)))</span>  <span class="c1"># [0, ..., 99]</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ik koos&quot;</span><span class="p">,</span> <span class="n">comp_guess</span><span class="p">)</span>  <span class="c1"># print de keus</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>               <span class="c1"># pauzeer een halve seconde</span>
+    
+    <span class="k">if</span> <span class="n">comp_guess</span> <span class="o">==</span> <span class="n">hidden</span><span class="p">:</span>      <span class="c1"># base case, eindelijk...</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gevonden!&quot;</span><span class="p">)</span>        <span class="c1"># de computer is blij :)</span>
+        <span class="k">return</span> <span class="mi">1</span>                  <span class="c1"># poging</span>
+    <span class="k">else</span><span class="p">:</span>                         <span class="c1"># recursive case</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">guess</span><span class="p">(</span><span class="n">hidden</span><span class="p">)</span>  <span class="c1"># volgende poging!</span>
+</pre></div>
+</div>
+<p>Je ziet hier een aantal aanvullingen, bijvoorbeeld het printen van de keus, een halve seconde pauzeren na de keus en het tellen en teruggeven van het aantal keer dat is gekozen. Maar wat valt te zeggen over het te <em>verwachten</em> aantal pogingen? Ook dit probleem kan <em>recursief</em> worden benaderd!</p>
+<p>De kans dat de eerste keer het getal wordt geraden is <span class="math notranslate nohighlight">\(\frac{1}{100}\)</span> en <span class="math notranslate nohighlight">\(\frac{99}{100}\)</span> dat het <em>niet</em> wordt geraden (en weer opnieuw moet worden begonnen, maar we hebben al een eerste poging gedaan). Laat <span class="math notranslate nohighlight">\(E\)</span> nu het te verwachten aantal pogingen zijn voor het raden van het juiste getal, op basis van de bovenstaande (recursieve) redenatie komen we dan tot een EERSTE geval <span class="math notranslate nohighlight">\(1\cdot\frac{1}{100}\)</span> en een REST <span class="math notranslate nohighlight">\((E + 1)\cdot\frac{99}{100}\)</span> (<span class="math notranslate nohighlight">\(E + 1\)</span> omdat de recursieve aanroep moet weten dat het EERSTE geval, een <em>eerste</em> poging, al is gedaan voor het verhogen van de telling). We kunnen dit nu schrijven als</p>
+<div class="math notranslate nohighlight">
+\[
+E = 1\cdot\frac{1}{100} + (E + 1)\cdot\frac{99}{100}
+\]</div>
+<p>en dit is een vergelijking die kan worden <a class="reference external" href="https://mathsolver.microsoft.com/nl/solve-problem/E%20%3D%20%201%20%60cdot%20%20%20%60frac%7B%201%20%20%7D%7B%20100%20%20%7D%20%20%2B%20%60left(%20E%2B1%20%20%60right)%20%20%20%60cdot%20%20%20%60frac%7B%2099%20%20%7D%7B%20100%20%20%7D">opgelost</a> tot</p>
+<div class="math notranslate nohighlight">
+\[
+E = 100
+\]</div>
+<p>We kunnen dus 100 pogingen <em>verwachten</em>, maar wat betekent dit getal nu? In het geval dat we deze funtie een oneindig aantal keer zouden uitvoeren zal het gemiddeld aantal pogingen uitkomen op 100 (het gemiddelde van alle mogelijke uitkomsten).</p>
+</div>
+</div>
+<div class="section" id="quiz">
+<h2>Quiz<a class="headerlink" href="#quiz" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">choice([1,2,3,2])</span></code>: wat is de kans op 2?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">choice(list(range(5))</span> <span class="pre">+</span> <span class="pre">[4,2,4,2])</span></code>: wat is de kans op 4?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">choice('1,2,3,4')</span></code>: wat is de meest waarschijnlijke returnwaarde?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">choice(['1,2,3,4'])</span></code>: wat is de meest waarschijnlijke returnwaarde?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">choice('[1,2,3,4]')</span></code>: wat is de meest waarschijnlijke returnwaarde?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">choice(list(range(5)))</span></code>: welke kans is groter, een even of oneven getal?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uniform(-20.5,</span> <span class="pre">0.5)</span></code>: Wat is de kans dat de returnwaarde groter dan 0 is?</p></li>
+</ol>
+<p>Syntax: welke is correct?</p>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">choice(0,1,2,3,4)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">choice([list(range(5))])</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">choice[list(range(5))]</span></code></p></li>
+</ol>
+<div class="section" id="oplossing">
+<h3>Oplossing<a class="headerlink" href="#oplossing" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(\frac{2}{4} = \frac{1}{2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{3}{9} = \frac{1}{3}\)</span> (<code class="docutils literal notranslate"><span class="pre">[0,1,2,3,4]</span> <span class="pre">+</span> <span class="pre">[4,2,4,2]</span></code> is <code class="docutils literal notranslate"><span class="pre">[0,1,2,3,4,4,2,4,2]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">','</span></code> (kans is <span class="math notranslate nohighlight">\(\frac{3}{7}\)</span>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'1,2,3,4'</span></code> (kans is <span class="math notranslate nohighlight">\(\frac{1}{1}\)</span>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">','</span></code> (kans is <span class="math notranslate nohighlight">\(\frac{3}{9}\)</span>)</p></li>
+<li><p>even getal (kans is <span class="math notranslate nohighlight">\(\frac{3}{5}\)</span>)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{1}{42}\)</span> (in totaal 42 stappen van 0,5 (<span class="math notranslate nohighlight">\(\frac{20,5 + 0,5}{0,5}\)</span>) , waarvan één stap groter dan 0)</p></li>
+</ol>
+<p>Syntax</p>
+<ol class="simple">
+<li><p>vierkante haken ontbreken voor een list: <code class="docutils literal notranslate"><span class="pre">choice([0,1,2,3,4])</span></code></p></li>
+<li><p>is correct! (en geeft altijd <code class="docutils literal notranslate"><span class="pre">[0,1,2,3,4]</span></code> terug)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">choice</span></code> is een functie, dus ronde haken voor openen en sluiten: <code class="docutils literal notranslate"><span class="pre">choice(list(range(5)))</span></code></p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="twee-monte-carlo-s">
+<h2>Twee Monte Carlo’s<a class="headerlink" href="#twee-monte-carlo-s" title="Permalink to this headline">¶</a></h2>
+<p><img alt="Casino Monte Carlo" src="topics/images/5/1084px-Casin%C3%B2_-_panoramio.jpg" /></p>
+<p>Het casino van Monte Carlo, als je een gokje wilt wagen!</p>
+<p><img alt="Casino Monte Carlo" src="../_images/casino-royale-bond.jpg" /></p>
+<p>Bond, James Bond (bekend van <a class="reference external" href="https://nl.wikipedia.org/wiki/Casino_Royale_(2006)">Casino Royale</a> )</p>
+<p><img alt="Dartboard" src="../_images/500px-Dartboard_unlabeled.svg.png" /></p>
+<p>In het boek wordt een methode beschreven voor een simulatie met dartboard om de waarde van <span class="math notranslate nohighlight">\(\pi\)</span> (<a class="reference external" href="https://nl.wikipedia.org/wiki/Pi_(wiskunde)">pi</a>) te bepalen. Maar, wat heeft dit te maken met Monte Carlo?!?</p>
+<p>(Als je het boek niet hebt dan geeft de volgende video een goede uitleg. Misschien is dit iets om zelf uit te proberen!)</p>
+<p><img alt="Stanislaw Ulam" src="../_images/stan_ulam.jpg" /></p>
+<p>Ulam, Stan Ulam (bekend van <a class="reference external" href="https://nl.wikipedia.org/wiki/Monte-Carlosimulatie">Monte Carlo simulaties</a>)</p>
+<p>Bij het spelen van solitaire tijdens zijn herstel na een operatie had Stan Ulam gedacht aan het spelen van honderden spelletjes om de kans op een succesvolle uitkomst statistisch in te schatten. Ulam was betrokken bij <a class="reference external" href="https://en.wikipedia.org/wiki/ENIAC">ENIAC</a>, de eerste elektronische computer voor algemeen gebruik en collega <a class="reference external" href="https://nl.wikipedia.org/wiki/John_von_Neumann">John von Neumann</a> stelde in maart 1947 voor een vergelijkbaar probleem op ENIAC uit te werken.</p>
+<p>Waarom een “Monte Carlo” simulatie? Het is vernoemd naar <a class="reference external" href="https://nl.wikipedia.org/wiki/Monte_Carlo_(Monaco)">Monte Carlo</a>, waar je in het casino kan aanschuiven om verschillende gokspellen te spelen. De kans om te winnen kan je berekenen, maar ook simuleren met <code class="docutils literal notranslate"><span class="pre">random</span></code>izatie!.</p>
+</div>
+<div class="section" id="monte-carlo-in-actie">
+<h2>Monte Carlo in actie<a class="headerlink" href="#monte-carlo-in-actie" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="dobbelen">
+<h3>Dobbelen<a class="headerlink" href="#dobbelen" title="Permalink to this headline">¶</a></h3>
+<p><img alt="Dubbel 6" src="../_images/dice-6.png" /></p>
+<p>Hoeveel dubbel paar ogen gooi je als je N keer werpt?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">def</span> <span class="nf">count_doubles</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Tel aantal dubbele ogen bij N worpen</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">N</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>    <span class="c1"># base case</span>
+        <span class="k">return</span> <span class="mi">0</span>  <span class="c1"># 0 worpen, 0 dubbele ogen...</span>
+
+    <span class="n">d1</span> <span class="o">=</span> <span class="n">choice</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>     <span class="c1"># eerste dobbelsteen</span>
+    <span class="n">d2</span> <span class="o">=</span> <span class="n">choice</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">)))</span>  <span class="c1"># tweede dobbelsteen</span>
+
+    <span class="k">if</span> <span class="n">d1</span> <span class="o">!=</span> <span class="n">d2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span> <span class="o">+</span> <span class="n">count_doubles</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># niet gelijk</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">count_doubles</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># gelijk! tel 1 op</span>
+
+<span class="n">count_doubles</span><span class="p">(</span><span class="mi">600</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>98
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let op waar de dobbelstenen in de code worden geworpen, kan je zien hoe de worp voor beide wordt gesimuleerd? <code class="docutils literal notranslate"><span class="pre">choice([1,2,3,4,5,6])</span></code> en <code class="docutils literal notranslate"><span class="pre">choice(list(range(1,7)))</span></code> geven natuurlijk hetzelfde resultaat, de computer zal het meest blij zijn met de eerste variant omdat het efficënter is. In het eerste geval is de list als argument voor <code class="docutils literal notranslate"><span class="pre">choice</span></code> al <em>gedefinieerd</em>, in het tweede geval moet het steeds weer worden <em>gegenereerd</em> (aangemaakt).</p>
+<p>Bij elke worp zijn <span class="math notranslate nohighlight">\(6 \times 6 = 36\)</span> mogelijke combinaties van ogen mogelijk. 6 van deze mogelijkheden zijn gelijke paren. De kans op een gelijk paar ogen is dus <span class="math notranslate nohighlight">\(\frac{6}{36}\)</span> wat gelijk is aan <span class="math notranslate nohighlight">\(\frac{1}{6}\)</span> en deze simulatie komt daar héél dichtbij!</p>
+</div>
+<div class="section" id="monte-carlo-monty-hall">
+<h3>Monte Carlo Monty Hall<a class="headerlink" href="#monte-carlo-monty-hall" title="Permalink to this headline">¶</a></h3>
+<p>Het <a class="reference external" href="https://nl.wikipedia.org/wiki/Driedeurenprobleem">driedeurenprobleem</a></p>
+<p><img alt="Let's make a deal" src="../_images/monty_hall.jpg" /></p>
+<p>In de jaren 60 van de vorige eeuw kon in de spelshow “Let’s Make a Deal”, gepresenteerd door <a class="reference external" href="https://nl.wikipedia.org/wiki/Monty_Hall">Monty Hall</a>, een auto worden gewonnen door één van de drie deuren te kiezen (achter de andere twee deuren stond een geit!).</p>
+<blockquote>
+<div><p>Stel dat je deelneemt aan een spelprogramma en je mag kiezen uit drie deuren: achter een van de deuren staat een auto, achter de andere twee staan geiten. Je kiest een deur, zeg nr. 1, en de presentator, die weet wat er achter de deuren staat, opent een andere deur, zeg nr. 3, met een geit erachter. Hij zegt dan tegen je: “Zou je deur nr. 2 willen kiezen?” Is het in je voordeel om van deur te wisselen?</p>
+</div></blockquote>
+<p>Wat zou het meest succes (auto!) opleveren, bij de eerste keus blijven of van deur wisselen? Dit dilemma is bekend geworden als het “Monty Hall”- of driedeurenprobleem. Het blijkt dat de beste kans op winnen het wisselen van deur is!</p>
+<p><img alt="Spam and PMFP" src="../_images/spam_pmfp.png" /></p>
+<p>In plaats van een auto wordt onze prijs <a class="reference external" href="https://nl.wikipedia.org/wiki/Spam_(vlees)">SPAM</a>, ook wel bekend van jouw <a class="reference external" href="https://nl.wikipedia.org/wiki/Spam_(post)">mailbox</a>. SPAM is … een ingeblikt gekookt vleesproduct en een anonieme variant (Potted Meat Food Product, of misschien <a class="reference external" href="https://www.urbandictionary.com/define.php?term=PMFP">PMFP</a>) wordt de geit.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">def</span> <span class="nf">MCMH</span><span class="p">(</span><span class="n">init</span><span class="p">,</span> <span class="n">sors</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Speel Let&#39;s Make a Deal N keer</span>
+<span class="sd">    </span>
+<span class="sd">    Geeft het aantal keer dat *Spam!* wordt gewonnen</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">N</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># base case</span>
+        <span class="k">return</span> <span class="mi">0</span>
+
+    <span class="n">prz_door</span> <span class="o">=</span> <span class="n">choice</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>  <span class="c1"># de deur met de prijs!</span>
+
+    <span class="k">if</span> <span class="n">init</span> <span class="o">==</span> <span class="n">prz_door</span><span class="p">:</span> 
+        <span class="k">if</span> <span class="n">sors</span> <span class="o">==</span> <span class="s1">&#39;stay&#39;</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="s1">&#39;Spam!&#39;</span>
+        <span class="k">else</span><span class="p">:</span> 
+            <span class="n">result</span> <span class="o">=</span> <span class="s1">&#39;pmfp.&#39;</span>
+    <span class="k">else</span><span class="p">:</span> 
+        <span class="k">if</span> <span class="n">sors</span> <span class="o">==</span> <span class="s1">&#39;switch&#39;</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="s1">&#39;Spam!&#39;</span>
+        <span class="k">else</span><span class="p">:</span> 
+            <span class="n">result</span> <span class="o">=</span> <span class="s1">&#39;pmfp.&#39;</span>      
+
+    <span class="k">if</span> <span class="n">result</span> <span class="o">==</span> <span class="s1">&#39;Spam!&#39;</span><span class="p">:</span>  
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">MCMH</span><span class="p">(</span><span class="n">init</span><span class="p">,</span> <span class="n">sors</span><span class="p">,</span> <span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span> <span class="o">+</span> <span class="n">MCMH</span><span class="p">(</span><span class="n">init</span><span class="p">,</span> <span class="n">sors</span><span class="p">,</span> <span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bij blijven winnen we&#39;</span><span class="p">,</span> <span class="n">MCMH</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;stay&#39;</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s1">&#39;keer&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bij wisselen winnen we&#39;</span><span class="p">,</span> <span class="n">MCMH</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;switch&#39;</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s1">&#39;keer&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bij blijven winnen we 200 keer
+Bij wisselen winnen we 399 keer
+</pre></div>
+</div>
+</div>
+</div>
+<p>De functie <code class="docutils literal notranslate"><span class="pre">MCMH</span></code> accepteert drie parameters, <code class="docutils literal notranslate"><span class="pre">init</span></code> is de initiële keus (deur 1, 2 of 3, de beginsituatie), <code class="docutils literal notranslate"><span class="pre">sors</span></code> is <code class="docutils literal notranslate"><span class="pre">'stay'</span></code> (blijf) of <code class="docutils literal notranslate"><span class="pre">'switch'</span></code> (wissel) en <code class="docutils literal notranslate"><span class="pre">N</span></code> het aantal keer dat het spel moet worden gesimuleerd.</p>
+<p>Dit is al een behoorlijk gecompliceerd programma, lees het regel voor regel door en probeer te begrijpen wat elke stap doet!</p>
+<p><img alt="A few minutes later, the goat from behind door C drives away in the car." src="../_images/xkcd_monty_hall.png" /></p>
+<p>Maar als je liever een geit wint?</p>
+<p>Een uitdaging, hoe zou je de simulatie schrijven als je liever een geit (of, pmfp) wint?!?</p>
+</div>
+<div class="section" id="dichter-bij-huis">
+<h3>Dichter bij huis<a class="headerlink" href="#dichter-bij-huis" title="Permalink to this headline">¶</a></h3>
+<p>Een scenario:</p>
+<blockquote>
+<div><p>Een overwerkte student gaat op pad na een “late-night” ontbijt (of lunch, wie zal het zeggen). De student strompelt willekeurig steeds een stap richting huis of naar de campus …</p>
+</div></blockquote>
+<p>Zodra de student thuis of op de campus aankomt is de reis voorbij.</p>
+<p>Als de student steeds willekeurige stappen neem óf naar huis óf naar de campus, waar komt de student dan uiteindelijk terecht? Dit scenario kan worden uitgewerkt in een programma en is een voorbeeld van een “<a class="reference external" href="https://nl.wikipedia.org/wiki/Toevalsbeweging">random walk</a>”!</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "misja/programmeren",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./topics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../class/week_3.html" title="previous page">Week 3</a>
+    <a class='right-next' id="next-link" href="5b_turtle_recursie.html" title="next page">Lijnenspel</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Hanze University of Applied Sciences<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,938 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numerieke integratie &#8212; Programmeren</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "misja/programmeren");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://misja.github.io/programmeren/problems/numerieke_integratie.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Turtles all the way down!" href="turtles_tot_het_einde.html" />
+    <link rel="prev" title="De slaapwandelende student" href="slaapwandelende_student.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://misja.github.io/programmeren/problems/numerieke_integratie.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Numerieke integratie" />
+<meta property="og:description" content="Numerieke integratie      Naam  Beschrijving  Onderwerp  Beter dan wiskundigen oppervlakten berekenen  Bestandsnaam  wk3ex3.py  Inleveren  Lever jouw bestand me" />
+<meta property="og:image"       content="https://misja.github.io/programmeren/_static/mascot.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/mascot.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Programmeren</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/syllabus.html">
+   Programmeren
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Opmerkingen
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/feedback.html">
+   Anoniem feedbackformulier
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 1
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_1.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_intro.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_1.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 2
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_2.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sequenties_en_data.html">
+   Practicum I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fijne_functies.html">
+   Practicum II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_2.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 3
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_3.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_turtles.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="../class/opgaven_3.html">
+   Opgaven
+  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/computer_wins_jeopardy.html">
+     De computer wint
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="slaapwandelende_student.html">
+     Slaapwandelende student
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Numerieke integratie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="turtles_tot_het_einde.html">
+     Turtles all the way down
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Voorbeelden
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/recursie.html">
+   Recursie
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/design_recipe.html">
+   Functie ontwerp
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/platte_tekst.html">
+   Tekstbestanden
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python_browser.html">
+   Python in de browser
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python2_vs_python3.html">
+   Python 2 versus Python 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/software.html">
+   Software
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/problems/numerieke_integratie.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Fproblems/numerieke_integratie.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/problems/numerieke_integratie.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#een-begin">
+   Een begin
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-comprehensions">
+     List comprehensions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aanpassing">
+     Aanpassing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#integreren">
+   Integreren
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stap-1-de-x-waarden-berekenen">
+   Stap 1: De
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     x
+    </span>
+   </code>
+   -waarden berekenen
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-functie-unitfracs">
+     De functie
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       unitfracs
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-functie-scaledfracs">
+     De functie
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       scaledfracs
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stap-2-de-y-waarden-berekenen">
+   Stap 2: De
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     y
+    </span>
+   </code>
+   -waarden berekenen
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-functie-sqfracs">
+     De functie
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       sqfracs
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-functie-f-of-fracs">
+     De functie
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       f_of_fracs
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stap-3-berekenen-en-combineren">
+   Stap 3: berekenen en combineren
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vragen">
+   Vragen
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vraag-0-voorbeeld">
+     Vraag 0 (voorbeeld)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vraag-1">
+     Vraag 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vraag-2">
+     Vraag 2
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="numerieke-integratie">
+<h1>Numerieke integratie<a class="headerlink" href="#numerieke-integratie" title="Permalink to this headline">¶</a></h1>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Naam</p></th>
+<th class="head"><p>Beschrijving</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Onderwerp</p></td>
+<td><p>Beter dan wiskundigen oppervlakten berekenen</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bestandsnaam</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">wk3ex3.py</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Inleveren</p></td>
+<td><p>Lever jouw bestand met de juiste bestandsnaam in op GradeScope</p></td>
+</tr>
+<tr class="row-odd"><td><p>Punten</p></td>
+<td><p>30</p></td>
+</tr>
+</tbody>
+</table>
+<p>In deze opgave schrijf je een Python programma dat de oppervlakten onder willekeurige wiskundige functies kan berekenen (wiskundigen noemen dit <em>integralen</em>).</p>
+<p>Door dit te doen oefen je:</p>
+<ul class="simple">
+<li><p>het schrijven van Python-functies</p></li>
+<li><p>het gebruik van <em>list comprehensions</em></p></li>
+<li><p>het schrijven van hulpfuncties en opbouwen van grotere functies uit kleinere functies</p></li>
+</ul>
+<p>Bovendien bereken je antwoorden waar wiskundigen geen formule voor hebben… en daar heb je niets meer dan vermenigvuldigen voor nodig!</p>
+<div class="section" id="een-begin">
+<h2>Een begin<a class="headerlink" href="#een-begin" title="Permalink to this headline">¶</a></h2>
+<p>Begin met een nieuw bestand <code class="docutils literal notranslate"><span class="pre">wk3ex3.py</span></code> en plak daar de onderstaande code in:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Programmeren I, Week 3 Opgave 3</span>
+<span class="c1"># Bestandsnaam: wk3ex3.py</span>
+<span class="c1"># Naam:</span>
+<span class="c1"># Probleemomschrijving: List comprehensions</span>
+
+
+
+<span class="c1"># hiermee krijgen we functies als sin en cos...</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
+
+
+<span class="c1"># twee extra functies (die niet in de module math hierboven zitten)</span>
+
+
+<span class="k">def</span> <span class="nf">dbl</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Doubler!  argument: x, a number&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span>
+
+
+<span class="k">def</span> <span class="nf">sq</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Squarer!  argument: x, a number&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
+
+
+<span class="c1"># voorbeelden om aan list comprehensions te wennen...</span>
+
+
+<span class="k">def</span> <span class="nf">lc_mult</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This example accepts an integer n</span>
+<span class="sd">       and returns a list of integers</span>
+<span class="sd">       from 0 to n-1, **each multiplied by 2**</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">[</span><span class="mi">2</span> <span class="o">*</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+
+
+<span class="k">def</span> <span class="nf">lc_idiv</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This example accepts an integer n</span>
+<span class="sd">       and returns a list of integers</span>
+<span class="sd">       from 0 to n-1, **each divided by 2**</span>
+<span class="sd">       WARNING: this is INTEGER division...!</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">x</span> <span class="o">//</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+
+
+<span class="k">def</span> <span class="nf">lc_fdiv</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This example accepts an integer n</span>
+<span class="sd">       and returns a list of integers</span>
+<span class="sd">       from 0 to n-1, **each divided by 2**</span>
+<span class="sd">       NOTE: this is floating-point division...!</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">x</span> <span class="o">/</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+
+
+<span class="k">assert</span> <span class="n">lc_mult</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">lc_idiv</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">lc_fdiv</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">]</span>
+
+
+<span class="c1"># Hier begin je met de functies voor deze opgave:</span>
+
+
+<span class="c1"># Stap 1, deel 1</span>
+<span class="k">def</span> <span class="nf">unitfracs</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Vergeet niet deze docstring te verbeteren!</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span>  <span class="c1"># vervang deze regel (pass is een Python-statement dat niets doet)</span>
+</pre></div>
+</div>
+<div class="section" id="list-comprehensions">
+<h3>List comprehensions<a class="headerlink" href="#list-comprehensions" title="Permalink to this headline">¶</a></h3>
+<p>Probeer om te beginnen <em>list comprehensions</em> uit op de IPython-prompt. Deze voorbeelden zouden moeten helpen bij het begrijpen hoe list comprehensions werken:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">lc_mult</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>   <span class="c1"># voorbeeld met vermenigvuldigen</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">]</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">lc_mult</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>    <span class="c1"># een kleiner voorbeeld</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">lc_idiv</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>   <span class="c1"># integerdeling</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">lc_fdiv</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>   <span class="c1"># floating-pointdeling</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Lees deze drie functies van ieder één regel en zorg dat je echt begrijpt hoe ze werken!</p>
+<div class="notice admonition">
+<p class="admonition-title"> Integer- en floating-pointdeling</p>
+<p>Merk op dat de aanroepen van <code class="docutils literal notranslate"><span class="pre">lc_idiv(10)</span></code> en <code class="docutils literal notranslate"><span class="pre">lc_fdiv(10)</span></code> <em>verschillende</em> lijsten teruggeven. De eerste gebruikt <em>integer</em>deling (de resultaten worden omlaag afgerond) en de tweede <em>floating-point</em>deling (dus de resultaten blijven een kommagetal).</p>
+</div>
+</div>
+<div class="section" id="aanpassing">
+<h3>Aanpassing<a class="headerlink" href="#aanpassing" title="Permalink to this headline">¶</a></h3>
+<p>Pas de functie <code class="docutils literal notranslate"><span class="pre">lc_idiv</span></code> aan zodat de body gelijk is aan:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">x</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p>Bedenk voordat je de functie uitvoert of <code class="docutils literal notranslate"><span class="pre">lc_idiv(10)</span></code> nog hetzelfde of anders dan daarvoor. Zal het <code class="docutils literal notranslate"><span class="pre">assert</span></code> statement hierboven nog slagen, of zal het een fout geven?</p>
+<p>Typ nu <code class="docutils literal notranslate"><span class="pre">run</span> <span class="pre">wk3ex3.py</span></code> in IPython en probeer <code class="docutils literal notranslate"><span class="pre">lc_idiv(10)</span></code>. Komt dit overeen met wat je verwachtte? Je hoeft hier niets over op te schrijven, maar wees er zeker van dat duidelijk is waarom deze nieuwe uitvoer is zoals het is!</p>
+<p>Zie verder voorbeelden van <span class="xref myst">list comprehensions</span> voor meer oefeningen!</p>
+</div>
+</div>
+<div class="section" id="integreren">
+<h2>Integreren<a class="headerlink" href="#integreren" title="Permalink to this headline">¶</a></h2>
+<p>Integreren wordt soms beschreven als het vinden van het gebied tussen een wiskundige functie en de horizontale (x-)as.</p>
+<p>Meer in het algemeen is een integraal eenvoudigweg de <em>som</em> van de resultaten van een numerieke functie, dat wil zeggen de y-waarden over een gekozen bereik.</p>
+<p>Dit is belangrijk omdat het aan de hand van één getal een soort van samenvatting geeft van wat de functie “doet” over een interval (een bepaald bereik). Het wordt ook gebruikt om te bepalen hoe verschillende krachten (zwaartekracht, trekkracht, …) zich gedragen op een bepaald punt, oppervlak of object over een periode van tijd. Het is ook essentieel bij het definiëren van de “gemiddelde waarde” van een functie over een interval of een gebied. Integralen kunnen worden gebruikt om een vliegtuigvleugel te ontwerpen, het weer te voorspellen of te berekenen hoeveel een bankrekening over tien jaar waard zal zijn, zelfs als de rentetarieven veranderen.</p>
+<p>Bijvoorbeeld, denk aan de functie <code class="docutils literal notranslate"><span class="pre">dbl</span></code> hierboven (maar nu met een betere docstring):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dbl</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Argument: a number x (int or float)</span>
+<span class="sd">       Return value: twice the argument</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span>
+</pre></div>
+</div>
+<p>Stel je voor dat je een schatting wilt maken van de integraal van <code class="docutils literal notranslate"><span class="pre">dbl</span></code> op het interval tussen <code class="docutils literal notranslate"><span class="pre">0.0</span></code> en <code class="docutils literal notranslate"><span class="pre">10.0</span></code>. Je zou de volgende (ruwe) benadering kunnen maken met rechthoeken:</p>
+<p><img alt="Integraal" src="../_images/y2x.png" /></p>
+<ol>
+<li><p>Hier wordt het interval verdeeld over 4 delen. De lijst <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">2.5,</span> <span class="pre">5,</span> <span class="pre">7.5]</span></code> bevat de x-waarde van de <em>linkergrenzen</em> van elk van de vier subintervallen.</p></li>
+<li><p>We bepalen hierna het resultaat van <code class="docutils literal notranslate"><span class="pre">dbl(x)</span></code> voor elke mogelijke <code class="docutils literal notranslate"><span class="pre">x</span></code> uit de lijst hierboven. We noemen deze waarden <code class="docutils literal notranslate"><span class="pre">y</span></code>: <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">[0,</span> <span class="pre">5,</span> <span class="pre">10,</span> <span class="pre">15]</span></code>.</p></li>
+<li><p>We tellen nu de oppervlaktes van de rechthoeken op waarvan de linkerbovenhoek (dus de hoogte) op deze <code class="docutils literal notranslate"><span class="pre">y</span></code>-waarden ligt. Elke rechthoek loopt door tot de x-as. De breedte van elke rechthoek is <code class="docutils literal notranslate"><span class="pre">2.5</span></code>, omdat de vier rechthoeken met gelijke breedte in totaal een breedte van <code class="docutils literal notranslate"><span class="pre">10</span></code> moeten hebben.</p></li>
+<li><p>We bepalen de oppervlaktes van de rechthoeken op de gebruikelijke manier. Hun hoogtes staan in de lijst <code class="docutils literal notranslate"><span class="pre">y</span></code> en hun breedtes zijn <code class="docutils literal notranslate"><span class="pre">2.5</span></code>, dus de totale oppervlakte is</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span> <span class="o">*</span> <span class="mf">2.5</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">*</span> <span class="mf">2.5</span> <span class="o">+</span> <span class="mi">10</span> <span class="o">*</span> <span class="mf">2.5</span> <span class="o">+</span> <span class="mi">15</span> <span class="o">*</span> <span class="mf">2.5</span>
+</pre></div>
+</div>
+<p>of</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">0</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">15</span><span class="p">)</span> <span class="o">*</span> <span class="mf">2.5</span>
+</pre></div>
+</div>
+<p>wat gelijk is aan <code class="docutils literal notranslate"><span class="pre">(30)</span> <span class="pre">*</span> <span class="pre">2.5</span></code>, of <code class="docutils literal notranslate"><span class="pre">75</span></code>.</p>
+</li>
+</ol>
+<p>Bedenk, dit is een <em>hele</em> ruwe benadering van het “oppervlakte onder de lijn”, oftewel de integraal. Maar als we de breedte van de rechthoeken kleiner maken, dan zal hun som dat gebied zo goed kunnen benaderen als we zouden willen!</p>
+<p>Belangrijker nog is dat aan de hand van dit voorbeeld we een algemene aanpak kunnen uitwerken om de integraal van een functie over een gegeven interval te benaderen:</p>
+<ol class="simple">
+<li><p>Deel het interval op in <code class="docutils literal notranslate"><span class="pre">n</span></code> gelijke delen en maak een lijst met de corresponderende <code class="docutils literal notranslate"><span class="pre">x</span></code>-waarden (deze worden het argument van de functie)</p></li>
+<li><p>Bereken de <code class="docutils literal notranslate"><span class="pre">y</span></code>-waarden (resultaten) van de functie voor elke waarde van <code class="docutils literal notranslate"><span class="pre">x</span></code> uit stap 1.</p></li>
+<li><p>Bereken de oppervlakte van de rechthoeken onder de kromme. Hun hoogtes zijn de <code class="docutils literal notranslate"><span class="pre">y</span></code>-waarden, hun breedtes de afstand tussen de <code class="docutils literal notranslate"><span class="pre">x</span></code>-waarden.</p></li>
+<li><p>Tel de oppervlaktes bij elkaar op en geef het resultaat terug. Dit is de integraal, of een schatting daarvan die verder onbeperkt nauwkeurig gemaakt kan worden.</p></li>
+</ol>
+<p>In de rest van deze opgave ga je de functies schrijven voor elk van deze vier stappen, en je gebruikt vervolgens deze functies om vragen over de resultaten te beantwoorden.</p>
+</div>
+<div class="section" id="stap-1-de-x-waarden-berekenen">
+<h2>Stap 1: De <code class="docutils literal notranslate"><span class="pre">x</span></code>-waarden berekenen<a class="headerlink" href="#stap-1-de-x-waarden-berekenen" title="Permalink to this headline">¶</a></h2>
+<p>De eerste stap betreft het berekenen van de <code class="docutils literal notranslate"><span class="pre">x</span></code>-waarden die we gaan gebruiken. Allereerst ga je de functie <code class="docutils literal notranslate"><span class="pre">unitfracs(n)</span></code> schrijven en vervolgens de functie <code class="docutils literal notranslate"><span class="pre">scaledfracs(low,</span> <span class="pre">hi,</span> <span class="pre">n)</span></code>.</p>
+<div class="section" id="de-functie-unitfracs">
+<h3>De functie <code class="docutils literal notranslate"><span class="pre">unitfracs</span></code><a class="headerlink" href="#de-functie-unitfracs" title="Permalink to this headline">¶</a></h3>
+<p>Bekijk hoe <code class="docutils literal notranslate"><span class="pre">unitfracs(n)</span></code> zal moeten gaan werken:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">unitfracs</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">unitfracs</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">]</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">unitfracs</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">]</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">unitfracs</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.3333333333333333</span><span class="p">,</span> <span class="mf">0.6666666666666666</span><span class="p">]</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">unitfracs</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Zoals de naam al aangeeft zal de functie een lijst van linkergrenzen (en dit zijn breuken, of <em>fracties</em>) op gelijke afstand van elkaar en met elk een waarde tussen <code class="docutils literal notranslate"><span class="pre">0</span></code> en <code class="docutils literal notranslate"><span class="pre">1</span></code> teruggeven. Dat wil zeggen, als <code class="docutils literal notranslate"><span class="pre">n</span></code> 5 is dan zal de lijst 5 waarden moet bevatten, namelijk <code class="docutils literal notranslate"><span class="pre">0/5</span></code>, <code class="docutils literal notranslate"><span class="pre">1/5</span></code>, <code class="docutils literal notranslate"><span class="pre">2/5</span></code>, <code class="docutils literal notranslate"><span class="pre">3/5</span></code> en <code class="docutils literal notranslate"><span class="pre">4/5</span></code>.</p>
+<div class="tip admonition">
+<p class="admonition-title"> Gebruik <code class="docutils literal notranslate"><span class="pre">lc_fdiv</span></code> als begin</p>
+<p>Kopieer en plak de voorbeeldfunctie <code class="docutils literal notranslate"><span class="pre">lc_fdiv</span></code> en pas deze aan om <code class="docutils literal notranslate"><span class="pre">unitfracs</span></code> te schrijven. Je hoeft maar een <em>enkel</em> karakter aan te passen in deze code! Vergeet niet de docstring van <code class="docutils literal notranslate"><span class="pre">unitfracs</span></code> aan te passen om aan te geven wat de functie doet.</p>
+</div>
+<p>Schrijf ten slotte ten minste drie <code class="docutils literal notranslate"><span class="pre">assert</span></code> statements om tests te implementeren, je mag een aantal van de voorbeelden hierboven gebruiken.</p>
+</div>
+<div class="section" id="de-functie-scaledfracs">
+<h3>De functie <code class="docutils literal notranslate"><span class="pre">scaledfracs</span></code><a class="headerlink" href="#de-functie-scaledfracs" title="Permalink to this headline">¶</a></h3>
+<p>Bekijk nu hoe de functie <code class="docutils literal notranslate"><span class="pre">scaledfracs(low,</span> <span class="pre">hi,</span> <span class="pre">n)</span></code> zal moeten gaan werken:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">scaledfracs</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="p">[</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">14.0</span><span class="p">,</span> <span class="mf">18.0</span><span class="p">,</span> <span class="mf">22.0</span><span class="p">,</span> <span class="mf">26.0</span><span class="p">]</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">scaledfracs</span><span class="p">(</span><span class="mi">41</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="p">[</span><span class="mf">41.0</span><span class="p">,</span> <span class="mf">41.25</span><span class="p">,</span> <span class="mf">41.5</span><span class="p">,</span> <span class="mf">41.75</span><span class="p">,</span> <span class="mf">42.0</span><span class="p">,</span> <span class="mf">42.25</span><span class="p">,</span> <span class="mf">42.5</span><span class="p">,</span> <span class="mf">42.75</span><span class="p">]</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">scaledfracs</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">7.5</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Schrijf <code class="docutils literal notranslate"><span class="pre">scaledfracs(low,</span> <span class="pre">hi,</span> <span class="pre">n)</span></code>. De functie geeft een lijst met <code class="docutils literal notranslate"><span class="pre">n</span></code> linkergrenzen terug die evenredig verdeeld zijn over een interval dat van <code class="docutils literal notranslate"><span class="pre">low</span></code> tot <code class="docutils literal notranslate"><span class="pre">hi</span></code> loopt.</p>
+<p>Schrijf ook <code class="docutils literal notranslate"><span class="pre">assert</span></code> statements om de voorbeelden hierboven te testen.</p>
+<div class="tip admonition">
+<p class="admonition-title"> Hoe <code class="docutils literal notranslate"><span class="pre">scaledfracs</span></code> uit te werken</p>
+<p>De functie <code class="docutils literal notranslate"><span class="pre">scaledfracs</span></code> is lastig om uit te werken, we geven je extra uitleg en tips. Om te beginnen, <em>gebruik</em> <code class="docutils literal notranslate"><span class="pre">unitfracs</span></code>, de functie die al hebt geschreven. De volgende regel geeft een idee hoe je dit zou kunnen doen:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="p">[</span><span class="o">...</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">unitfracs</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p>Op deze manier hoef je het werk van <code class="docutils literal notranslate"><span class="pre">unitfracs</span></code> niet opnieuw te doen! Je zal ook misschien hebben zien dat <code class="docutils literal notranslate"><span class="pre">scaledfracs</span></code> erg lijkt op de functie <code class="docutils literal notranslate"><span class="pre">interp</span></code> die je eerder hebt geschreven, en dat klopt!</p>
+<p>De functie <code class="docutils literal notranslate"><span class="pre">interp</span></code> hoef je niet te gebruiken, maar je kan er wel ideeën uit opdoen! Hier is de functie, ter herinnering:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">interp</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">hi</span><span class="p">,</span> <span class="n">fraction</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns a value frac of the way from low to hi&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">low</span> <span class="o">+</span> <span class="p">(</span><span class="n">hi</span> <span class="o">-</span> <span class="n">low</span><span class="p">)</span> <span class="o">*</span> <span class="n">fraction</span>
+</pre></div>
+</div>
+<p>Merk op dat de rol van <code class="docutils literal notranslate"><span class="pre">fraction</span></code> hierboven is om aan te geven hoe ver je op de weg bent van <code class="docutils literal notranslate"><span class="pre">low</span></code> naar <code class="docutils literal notranslate"><span class="pre">hi</span></code> en dat is precies wat <code class="docutils literal notranslate"><span class="pre">x</span></code> doet in de list comprehension!</p>
+<p>Vergeet niet een docstring toe te voegen die beschrijft wat <code class="docutils literal notranslate"><span class="pre">scaledfracs</span></code> doet.</p>
+</div>
+</div>
+</div>
+<div class="section" id="stap-2-de-y-waarden-berekenen">
+<h2>Stap 2: De <code class="docutils literal notranslate"><span class="pre">y</span></code>-waarden berekenen<a class="headerlink" href="#stap-2-de-y-waarden-berekenen" title="Permalink to this headline">¶</a></h2>
+<p>De functie <code class="docutils literal notranslate"><span class="pre">scaledfracs</span></code> kan allerlei lijsten met <code class="docutils literal notranslate"><span class="pre">x</span></code>-waarden op gelijke afstand maken.</p>
+<p>Je moet nu de <code class="docutils literal notranslate"><span class="pre">y</span></code>-waarden (de resultaten) van een functie op elk van deze <code class="docutils literal notranslate"><span class="pre">x</span></code>-posities berekenen. Ook hier gebruik je list comprehensions om dit proces simpel en snel te maken!</p>
+<p>Het doel is om elke functie te kunnen verwerken, maar we beginnen met een concreet voorbeeld dat later verder uitgebreid gaat worden.</p>
+<div class="section" id="de-functie-sqfracs">
+<h3>De functie <code class="docutils literal notranslate"><span class="pre">sqfracs</span></code><a class="headerlink" href="#de-functie-sqfracs" title="Permalink to this headline">¶</a></h3>
+<p>Schrijf een functie <code class="docutils literal notranslate"><span class="pre">sqfracs(low,</span> <span class="pre">hi,</span> <span class="pre">n)</span></code> die als volgt werkt:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">sqfracs</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="p">[</span><span class="mf">16.0</span><span class="p">,</span> <span class="mf">25.0</span><span class="p">,</span> <span class="mf">36.0</span><span class="p">,</span> <span class="mf">49.0</span><span class="p">,</span> <span class="mf">64.0</span><span class="p">,</span> <span class="mf">81.0</span><span class="p">]</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">sqfracs</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">16.0</span><span class="p">,</span> <span class="mf">36.0</span><span class="p">,</span> <span class="mf">64.0</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Deze functie <code class="docutils literal notranslate"><span class="pre">sqfracs</span></code> lijkt heel erg op <code class="docutils literal notranslate"><span class="pre">scaledfracs</span></code>, alleen is elke waarde <em>gekwadrateerd</em>.</p>
+<div class="tip admonition">
+<p class="admonition-title"> Gebruik <code class="docutils literal notranslate"><span class="pre">scaledfracs</span></code></p>
+<p>Gebruik hier <code class="docutils literal notranslate"><span class="pre">scaledfracs</span></code> hier. <code class="docutils literal notranslate"><span class="pre">sqfracs</span></code> kan <code class="docutils literal notranslate"><span class="pre">scaledfracs</span></code> op dezelfde manier gebruiken als de manier waarop <code class="docutils literal notranslate"><span class="pre">scaledfracs</span></code> gebruikmaakt van <code class="docutils literal notranslate"><span class="pre">unitfracs</span></code>! Bekijk dit stukje code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">scaledfracs</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">hi</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Zoals altijd, schrijf aantal <code class="docutils literal notranslate"><span class="pre">assert</span></code> statements om <code class="docutils literal notranslate"><span class="pre">sqfracs</span></code> te testen. Bedenk ook zelf een aantal voorbeelden om te testen!</p>
+</div>
+<div class="section" id="de-functie-f-of-fracs">
+<h3>De functie <code class="docutils literal notranslate"><span class="pre">f_of_fracs</span></code><a class="headerlink" href="#de-functie-f-of-fracs" title="Permalink to this headline">¶</a></h3>
+<p>Schrijf een functie <code class="docutils literal notranslate"><span class="pre">f_of_fracs(f,</span> <span class="pre">low,</span> <span class="pre">hi,</span> <span class="pre">n)</span></code> die als volgt werkt:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">f_of_fracs</span><span class="p">(</span><span class="n">dbl</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="p">[</span><span class="mf">20.0</span><span class="p">,</span> <span class="mf">24.0</span><span class="p">,</span> <span class="mf">28.0</span><span class="p">,</span> <span class="mf">32.0</span><span class="p">,</span> <span class="mf">36.0</span><span class="p">]</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">f_of_fracs</span><span class="p">(</span><span class="n">sq</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="p">[</span><span class="mf">16.0</span><span class="p">,</span> <span class="mf">25.0</span><span class="p">,</span> <span class="mf">36.0</span><span class="p">,</span> <span class="mf">49.0</span><span class="p">,</span> <span class="mf">64.0</span><span class="p">,</span> <span class="mf">81.0</span><span class="p">]</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">f_of_fracs</span><span class="p">(</span><span class="n">sin</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">pi</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>   <span class="c1"># de sinusfunctie</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
+<span class="c1"># de waardes hierboven zijn afgeronde versies van</span>
+<span class="c1"># wat je misschien zelf ziet...</span>
+</pre></div>
+</div>
+<p>Merk op dat <code class="docutils literal notranslate"><span class="pre">f_of_fracs</span></code> als eerste argument een <em>functie</em> accepteert, dat kan in Python (zie ook <span class="xref myst">list comprehensions</span> voor voorbeelden hoe je functies als argument kan doorgeven).</p>
+<p>Je kan <code class="docutils literal notranslate"><span class="pre">sqfracs</span></code> kopiëren en plakken als <em>basis</em> voor deze functie, je hoeft maar een paar tekens aan te passen! Gebruik net als in de eerdere delen van deze opgave de voorbeelden hierboven om ten minste drie <code class="docutils literal notranslate"><span class="pre">assert</span></code> statements voor <code class="docutils literal notranslate"><span class="pre">f_of_fracs</span></code> te schrijven.</p>
+</div>
+</div>
+<div class="section" id="stap-3-berekenen-en-combineren">
+<h2>Stap 3: berekenen en combineren<a class="headerlink" href="#stap-3-berekenen-en-combineren" title="Permalink to this headline">¶</a></h2>
+<p>Je hebt nu functies die zowel de <code class="docutils literal notranslate"><span class="pre">x</span></code>-, en belangrijker nog, de <code class="docutils literal notranslate"><span class="pre">y</span></code>-waarden voor een functie berekenen op gelijke afstanden.</p>
+<p>Je gaat nu een functie <code class="docutils literal notranslate"><span class="pre">integrate(f,</span> <span class="pre">low,</span> <span class="pre">hi,</span> <span class="pre">n)</span></code> schrijven die de uiteindelijke gewenste waarde teruggeeft, de integraal over <code class="docutils literal notranslate"><span class="pre">f</span></code> van <code class="docutils literal notranslate"><span class="pre">low</span></code> naar <code class="docutils literal notranslate"><span class="pre">hi</span></code>, benaderd met <code class="docutils literal notranslate"><span class="pre">n</span></code> stappen.</p>
+<p>Bekijk de voorbeelden en hints hieronder. Zoals je kan zien aan de voorbeelden geeft <code class="docutils literal notranslate"><span class="pre">integrate</span></code> geen lijst terug, maar geeft het een enkel floating-point getal terug:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">import</span> <span class="nn">math</span>                  <span class="c1"># om math.pi en math.sin te gebruiken</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">integrate</span><span class="p">(</span><span class="n">dbl</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="mf">75.0</span>                         <span class="c1"># het voorbeeld van het begin van deze opgave</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">integrate</span><span class="p">(</span><span class="n">dbl</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="mf">99.9</span>                         <span class="c1"># afgerond van 99.8999... (precieze waarde: 100)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">integrate</span><span class="p">(</span><span class="n">sq</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1000000</span><span class="p">)</span> <span class="c1"># Python heeft wel even nodig voor een miljoen stappen</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="mf">8.9999865000044963</span>           <span class="c1"># bijna! (precieze waarde: 9.0)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">integrate</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="mf">1.9999983550656628</span>           <span class="c1"># best goed! (precieze waarde: 2.0)</span>
+</pre></div>
+</div>
+<p>Maak je geen zorgen over kleine fouten in de meest rechtse cijfers achter de komma. Deze komen door afrondfouten, dit kan je niet voorkomen omdat de nauwkeurigheid van floating-point getallen beperkt is.</p>
+<p>Om te beginnen is hier de <em>signature</em> (de regel met <code class="docutils literal notranslate"><span class="pre">def</span></code>) en de docstring voor <code class="docutils literal notranslate"><span class="pre">integrate</span></code>. Voel je vrij dit te gebruiken:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">integrate</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">hi</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Integrate returns an estimate of the definite integral</span>
+<span class="sd">       of the function f (the first argument)</span>
+<span class="sd">       with lower limit low (the second argument)</span>
+<span class="sd">       and upper limit hi (the third argument)</span>
+<span class="sd">       where n steps are taken (the fourth argument)</span>
+
+<span class="sd">       integrate simply returns the sum of the areas of rectangles</span>
+<span class="sd">       under f, drawn at the left endpoints of n uniform steps</span>
+<span class="sd">       from low to hi</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+
+<span class="k">assert</span> <span class="n">integrate</span><span class="p">(</span><span class="n">dbl</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="mi">75</span>
+<span class="k">assert</span> <span class="n">integrate</span><span class="p">(</span><span class="n">sq</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="mf">2.5</span> <span class="o">*</span> <span class="nb">sum</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mf">2.5</span><span class="o">*</span><span class="mf">2.5</span><span class="p">,</span> <span class="mi">5</span><span class="o">*</span><span class="mi">5</span><span class="p">,</span> <span class="mf">7.5</span><span class="o">*</span><span class="mf">7.5</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Deze keer gaan we “test-driven development” gebruiken, waarin je <em>eerst</em> de tests schrijft en daarna zorgt dat je functie aan de tests voldoet. Daarom hebben we de <code class="docutils literal notranslate"><span class="pre">assert</span></code> statements hierboven toegevoegd! Merk op dat de tweede <code class="docutils literal notranslate"><span class="pre">assert</span></code> een voorbeeld is van hoe je kan testen ook als je niet weet wat het numerieke antwoord is!</p>
+<div class="tip admonition">
+<p class="admonition-title"> Hoe <code class="docutils literal notranslate"><span class="pre">integrate</span></code> uit te werken</p>
+<p>Om te beginnen, gebruik GEEN list comprehensions, er wordt hier geen lijst gemaakt. Gebruik in plaats daarvan <code class="docutils literal notranslate"><span class="pre">f_of_fracs</span></code> om een lijst van hoogtes te maken.</p>
+<p>Onthoud dat het resultaat van <code class="docutils literal notranslate"><span class="pre">f_of_fracs</span></code> een grote lijst <code class="docutils literal notranslate"><span class="pre">y</span></code>-waarden is! Je moet deze <code class="docutils literal notranslate"><span class="pre">y</span></code>-waarden (hoogtes) vermenigvuldigen met de breedtes van de rechthoeken. Maar alle breedtes zijn hetzelfde! Je kan dus eerst de hoogtes optellen en daarna vermenigvuldigen met de breedte!</p>
+<p>Gebruik de ingebouwde Python functie <code class="docutils literal notranslate"><span class="pre">sum</span></code>. <code class="docutils literal notranslate"><span class="pre">sum(L)</span></code> geeft de som van de elementen in <code class="docutils literal notranslate"><span class="pre">L</span></code> terug. Een paar voorbeelden van hoe <code class="docutils literal notranslate"><span class="pre">sum</span></code> werkt:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="nb">sum</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="mi">15</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">101</span><span class="p">))</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="mi">5050</span>
+</pre></div>
+</div>
+</div>
+<p>Als jouw functie <code class="docutils literal notranslate"><span class="pre">integrate</span></code>werkt, gefeliciteerd! Je hebt een algemeen bruikbare routine geschreven om integralen te berekenen voor elke functie die je kan berekenen (ook waarvoor geen formule van de integraal bestaat, dat wil zeggen, waarvoor zelfs de beste wiskundigen ter wereld niet weten hoe je een precies antwoord moet berekenen).</p>
+<p>Je gaat nu <code class="docutils literal notranslate"><span class="pre">integrate</span></code> toepassen…</p>
+</div>
+<div class="section" id="vragen">
+<h2>Vragen<a class="headerlink" href="#vragen" title="Permalink to this headline">¶</a></h2>
+<p>Neem jouw antwoorden op in het bestand <code class="docutils literal notranslate"><span class="pre">wk3ex3.py</span></code> als commentaar (met het <code class="docutils literal notranslate"><span class="pre">#</span></code> teken) of <em>eenvoudiger</em> door ze in een triple-quoted string op te nemen die je kent van docstrings (omdat daar regelafbrekingen in mogen voorkomen)</p>
+<p>Je hoeft geen antwoord te geven op de “nulde” vraag, we hebben het antwoord hier neergezet als voorbeeld van hoe je de andere twee kan beantwoorden:</p>
+<div class="section" id="vraag-0-voorbeeld">
+<h3>Vraag 0 (voorbeeld)<a class="headerlink" href="#vraag-0-voorbeeld" title="Permalink to this headline">¶</a></h3>
+<p>Leg uit waarom <code class="docutils literal notranslate"><span class="pre">integrate(dbl,</span> <span class="pre">0,</span> <span class="pre">10,</span> <span class="pre">n)</span></code> steeds dichter naar 100 nadert als <code class="docutils literal notranslate"><span class="pre">n</span></code> groter wordt.</p>
+<p>Het antwoord zou er als volgt uit kunnen zien (merk op dat dit een matig antwoord is, omdat het niet echt de vraag beantwoordt):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Vraag 0.</span>
+
+<span class="sd">De waarde van integrate(dbl, 0, 10, n) waarbij n steeds groter wordt is</span>
+<span class="sd">gelijk aan de oppervlakte onder de functie dbl, de lijn y = 2*x tussen</span>
+<span class="sd">x = 0.0 en x = 10.0</span>
+
+<span class="sd">Deze waarde is de oppervlakte van de driehoek in de afbeelding bovenaan</span>
+<span class="sd">de pagina met de opgave.</span>
+
+<span class="sd">Die oppervlakte is 100, omdat de hoogte van de driehoek 20 is en de</span>
+<span class="sd">breedte 10 is.</span>
+
+<span class="sd">Voor een driehoek geldt dat A = 0.5*h*w.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="vraag-1">
+<h3>Vraag 1<a class="headerlink" href="#vraag-1" title="Permalink to this headline">¶</a></h3>
+<p>Zoals opgemerkt is de exacte waarde van de integraal van de functie <code class="docutils literal notranslate"><span class="pre">dbl</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">2x</span></code>, van <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">0,0</span></code> tot <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">10,0</span></code> gelijk aan 100, wat de oppervlakte is van de driehoek in de afbeelding bovenaan deze pagina. Die oppervlakte is 100, want de hoogte van de driehoek is 20 en de breedte is 10.</p>
+<p>De oproepen <code class="docutils literal notranslate"><span class="pre">integrate(dbl,</span> <span class="pre">0,</span> <span class="pre">10,</span> <span class="pre">4)</span></code> en <code class="docutils literal notranslate"><span class="pre">integrate(dbl,</span> <span class="pre">0,</span> <span class="pre">10,</span> <span class="pre">1000)</span></code>, zoals hierboven weergegeven, geven als resultaat waarden die <em>kleiner</em> dan 100 zijn.</p>
+<p>Leg in één zin uit waarom <code class="docutils literal notranslate"><span class="pre">integrate</span></code> altijd een <em>onderschatting</em> maakt van de exacte waarde van deze specifieke integraal.</p>
+<p>Als een vervolgvraag, kan je een functie bedenkten waarvan de integraal altijd <em>overschat</em> wordt op hetzelfde bereik, van <code class="docutils literal notranslate"><span class="pre">0</span></code> tot <code class="docutils literal notranslate"><span class="pre">10</span></code>? (Als je hier niet uitkomt kan je eerst naar de volgende vraag kijken.)</p>
+</div>
+<div class="section" id="vraag-2">
+<h3>Vraag 2<a class="headerlink" href="#vraag-2" title="Permalink to this headline">¶</a></h3>
+<p>De volgende functie <code class="docutils literal notranslate"><span class="pre">c</span></code> volgt de bovenste helft van een cirkel met straal 2.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">c</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;c is a semicircular function of radius two&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">(</span><span class="mi">4</span> <span class="o">-</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">0.5</span>
+</pre></div>
+</div>
+<p>Voeg deze functie toe aan jouw bestand <code class="docutils literal notranslate"><span class="pre">wk3ex3.py</span></code> en controleer onderstaande waardes.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">integrate</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="mf">3.732</span>                    <span class="c1"># afgerond...</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">integrate</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="mf">3.228</span>                    <span class="c1"># afgerond...</span>
+</pre></div>
+</div>
+<p>Bepaal de waardes van <code class="docutils literal notranslate"><span class="pre">integrate(c,</span> <span class="pre">0,</span> <span class="pre">2,</span> <span class="pre">200)</span></code> en <code class="docutils literal notranslate"><span class="pre">integrate(c,</span> <span class="pre">0,</span> <span class="pre">2,</span> <span class="pre">2000)</span></code> en noteer ze in jouw antwoord.</p>
+<p>Als <code class="docutils literal notranslate"><span class="pre">n</span></code> naar oneindig gaat (dat wil zeggen, steeds groter wordt), wat gebeurt er dan met de waarde van deze integraal? Waarom?</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "misja/programmeren",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./problems"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="slaapwandelende_student.html" title="previous page">De slaapwandelende student</a>
+    <a class='right-next' id="next-link" href="turtles_tot_het_einde.html" title="next page">Turtles all the way down!</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Hanze University of Applied Sciences<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>
