@@ -1,0 +1,1498 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rekenen met taal &#8212; Programmeren</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "misja/programmeren");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://misja.github.io/programmeren/topics/7b_rekenen_met_taal.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Klinkt goed!" href="../problems/klinkt_goed.html" />
+    <link rel="prev" title="Ontwerpen met data" href="7a_data_based_design.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://misja.github.io/programmeren/topics/7b_rekenen_met_taal.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Rekenen met taal" />
+<meta property="og:description" content="Rekenen met taal  Taal  🌍 ideeën, meningen  👄 natuurlijke taal, woorden, zinnen  🐍 strings (Python)  💻 getallen, bits (computer)  Van strings naat bits  Van 🐍 s" />
+<meta property="og:image"       content="https://misja.github.io/programmeren/_static/mascot.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/mascot.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Programmeren</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/syllabus.html">
+   Programmeren
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Opmerkingen
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/feedback.html">
+   Anoniem feedbackformulier
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 1
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_1.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/python_intro.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_1.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 2
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_2.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/sequenties_en_data.html">
+   Practicum I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/fijne_functies.html">
+   Practicum II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_2.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 3
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_3.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/python_turtles.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_3.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 4
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="../class/week_4.html">
+   Onderwerpen
+  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="7a_data_based_design.html">
+     Data based design
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Rekenen met taal
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/klinkt_goed.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_4.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Voorbeelden
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/recursie.html">
+   Recursie
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/design_recipe.html">
+   Functie ontwerp
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/platte_tekst.html">
+   Tekstbestanden
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python_browser.html">
+   Python in de browser
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python2_vs_python3.html">
+   Python 2 versus Python 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/software.html">
+   Software
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/topics/7b_rekenen_met_taal.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/7b_rekenen_met_taal.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/topics/7b_rekenen_met_taal.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/misja/programmeren/master?urlpath=lab/tree/topics/7b_rekenen_met_taal.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/misja/programmeren/blob/master/topics/7b_rekenen_met_taal.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#taal">
+   Taal
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#van-strings-naat-bits">
+     Van
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       str
+      </span>
+     </code>
+     ings naat bits
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#van-strings-naar-natuurlijk-taal">
+     Van
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       str
+      </span>
+     </code>
+     ings naar natuurlijk taal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#en-verder">
+     En verder
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#caesarcijfer">
+   Caesarcijfer
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#encipher">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       encipher
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#decipher">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       decipher
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ascii">
+   ASCII
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#beperkingen">
+     Beperkingen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ascii-unicode">
+     ASCII ⊂ Unicode
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#chr-en-ord">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       chr
+      </span>
+     </code>
+     en
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       ord
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vergelijken">
+     Vergelijken
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mini-quiz">
+     Mini quiz
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uitproberen">
+     Uitproberen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rot13">
+   Rot13
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#het-doel">
+     Het doel
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#een-begin">
+     Een begin
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uitwerking">
+     Uitwerking
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     decipher
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#een-bericht">
+     Een bericht
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#taalherkenning">
+     Taalherkenning
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nederlandstaligheid-meten">
+     Nederlandstaligheid meten
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aantal-klinkers">
+     Aantal klinkers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#letterfrequentie">
+     Letterfrequentie
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kansen">
+     Kansen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#opeenvolging">
+     Opeenvolging
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#het-max-bericht">
+     Het
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       max
+      </span>
+     </code>
+     bericht
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#strategie-en-algoritme">
+     Strategie en algoritme
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quiz">
+   Quiz
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oplossing">
+     Oplossing
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="rekenen-met-taal">
+<h1>Rekenen met taal<a class="headerlink" href="#rekenen-met-taal" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="taal">
+<h2>Taal<a class="headerlink" href="#taal" title="Permalink to this headline">¶</a></h2>
+<p>🌍 ideeën, meningen</p>
+<p>👄 natuurlijke taal, woorden, zinnen</p>
+<p>🐍 strings (Python)</p>
+<p>💻 getallen, bits (computer)</p>
+<div class="section" id="van-strings-naat-bits">
+<h3>Van <code class="docutils literal notranslate"><span class="pre">str</span></code>ings naat bits<a class="headerlink" href="#van-strings-naat-bits" title="Permalink to this headline">¶</a></h3>
+<p>Van 🐍 strings naar 💻 bits gaan we straks naar kijken</p>
+</div>
+<div class="section" id="van-strings-naar-natuurlijk-taal">
+<h3>Van <code class="docutils literal notranslate"><span class="pre">str</span></code>ings naar natuurlijk taal<a class="headerlink" href="#van-strings-naar-natuurlijk-taal" title="Permalink to this headline">¶</a></h3>
+<p>Van 🐍 strings naar 👄 natuurlijke taal</p>
+<blockquote>
+<div><p>kan je bepalen hoe “Nederlandstalig” een string is?</p>
+</div></blockquote>
+<p>Natural language processing (NLP)</p>
+<p>We gaan straks zien hoe we <em>rekenkundig</em> Nederlandstaligheid kunnen bepalen.</p>
+</div>
+<div class="section" id="en-verder">
+<h3>En verder<a class="headerlink" href="#en-verder" title="Permalink to this headline">¶</a></h3>
+<p>Van 🐍 strings naar 👄 natuurlijke taal en 🌍 grote ideeën</p>
+<p>Openstaande vragen in kunstmatige intelligentie (AI)</p>
+<p>Als we taal rekenkundig kunnen benaderen, wat zijn dan de mogelijkheden? Hiermee komen we op het gebied van bijvoorbeeld kunstmatige intelligentie (AI).</p>
+<p><img alt="The Guardian GPT3" src="../_images/guardian_gpt3.png" /></p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/GPT-3">GPT-3</a> is een voolbeeld van een kunstmatige intelligentie. Het volledig door AI geschreven artikel kan je vinden in <a class="reference external" href="https://www.theguardian.com/commentisfree/2020/sep/08/robot-wrote-this-article-gpt-3">The Guardian</a>. Andere GPT-3 voorbeelden kan je zien op <a class="reference external" href="https://gpt3examples.com/">https://gpt3examples.com/</a>.</p>
+</div>
+</div>
+<div class="section" id="caesarcijfer">
+<h2>Caesarcijfer<a class="headerlink" href="#caesarcijfer" title="Permalink to this headline">¶</a></h2>
+<p><img alt="Julius Caesar" src="../_images/jcaesar-bust.jpg" /></p>
+<p>Het <a class="reference external" href="https://nl.wikipedia.org/wiki/Caesarcijfer">Caesarcijfer</a> is vernoemd naar de Romein Julius Caesar. Hij gebruikte een versleuteling van berichten op basis van een rotatie van karakters. De sleutel is het aantal stappen van de rotatie.</p>
+<p><img alt="Caesar cijfer" src="../_images/caesar_cipher.png" /></p>
+<p>Stel jezelf een dubbele schijf voor met de alle karakters van het alfabet waarbij de middelste schijf kan draaien (roteren).</p>
+<p><img alt="Caesar encrypt" src="../_images/caesar_cipher_encipher_3.png" /></p>
+<p>De <em>verzender</em> kiest een rotatie van 3 en elk karakter is nu 3 posities met de klok mee verschoven. Je ziet bijvoorbeeld dat het oorspronkelijke karakter “A” nu gelijk staat aan “D”.</p>
+<p>Wat zijn de karakters in het bericht “HOI” na een rotatie van 3?</p>
+<p>KRL</p>
+<p><img alt="Caesar cijfer" src="../_images/caesar_cipher.png" /></p>
+<p>De <em>ontvanger</em> van het versleuteld bericht “KRL” heeft dezelfde startpositie. De sleutel (rotatie) is bekend want deze is met de <em>verzender</em> afgesproken.</p>
+<p><img alt="Caesar cijfer decrypt" src="../_images/caesar_cipher_decipher_3.png" /></p>
+<p>Hoe kan de ontvanger het bericht nu ontcijferen? Door de rotatie in de omgekeerde richting toe te passen (tegen de klok in)! Kan je het versleuteld bericht “KRL” op basis van deze omgekeerde rotatie ontcijferen?</p>
+<div class="section" id="encipher">
+<h3><code class="docutils literal notranslate"><span class="pre">encipher</span></code><a class="headerlink" href="#encipher" title="Permalink to this headline">¶</a></h3>
+<p>Versleutelen</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">encipher</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>Verschuif elk <strong>alfabetisch</strong> karakter in string <code class="docutils literal notranslate"><span class="pre">s</span></code> met <code class="docutils literal notranslate"><span class="pre">n</span></code> plaatsen in het alfabet</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">encipher</span><span class="p">(</span><span class="s2">&quot;I &lt;3 Latijn&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>  <span class="o">==</span> <span class="s2">&quot;I &lt;3 Latijn&quot;</span>
+<span class="n">encipher</span><span class="p">(</span><span class="s2">&quot;I &lt;3 Latijn&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="o">==</span> <span class="s2">&quot;J &lt;3 Mbujko&quot;</span>
+<span class="n">encipher</span><span class="p">(</span><span class="s2">&quot;I &lt;3 Latijn&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="o">==</span> <span class="s2">&quot;K &lt;3 Ncvklp&quot;</span>
+<span class="n">encipher</span><span class="p">(</span><span class="s2">&quot;I &lt;3 Latijn&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>  <span class="o">==</span> <span class="s2">&quot;L &lt;3 Odwlmq&quot;</span>
+<span class="n">encipher</span><span class="p">(</span><span class="s2">&quot;I &lt;3 Latijn&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>  <span class="o">==</span> <span class="s2">&quot;M &lt;3 Pexmnr&quot;</span>
+<span class="n">encipher</span><span class="p">(</span><span class="s2">&quot;I &lt;3 Latijn&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>  <span class="o">==</span> <span class="s2">&quot;N &lt;3 Qfynos&quot;</span>
+
+<span class="c1"># ...</span>
+
+<span class="n">encipher</span><span class="p">(</span><span class="s2">&quot;I &lt;3 Latijn&quot;</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;H &lt;3 Kzshim&quot;</span>
+</pre></div>
+</div>
+<p>Met <em>alfabetisch</em> karakters bedoelen we “a” tot en met “z” in hoofd- of kleine letters.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">encipher</span><span class="p">(</span><span class="s2">&quot;Bzdrzqbhiedq? Hj gda khdudq Bzdrzqrzkzcd.&quot;</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="s1">&#39;Aycqypaghdcp? Gi fcz jgctcp Aycqypqyjybc.&#39;</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">encipher</span><span class="p">(</span><span class="s2">&quot;Bzdrzqbhiedq? Hj gda khdudq Bzdrzqrzkzcd.&quot;</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="s1">&#39;Qosgofqwxtsf? Wy vsp zwsjsf Qosgofgozors.&#39;</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">encipher</span><span class="p">(</span><span class="s2">&quot;Bzdrzqbhiedq? Hj gda khdudq Bzdrzqrzkzcd.&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="s1">&#39;Fdhvduflmihu? Ln khe olhyhu Fdhvduvdodgh.&#39;</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">encipher</span><span class="p">(</span><span class="s2">&quot;Bzdrzqbhiedq? Hj gda khdudq Bzdrzqrzkzcd.&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="s1">&#39;Caesarcijfer? Ik heb liever Caesarsalade.&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="decipher">
+<h3><code class="docutils literal notranslate"><span class="pre">decipher</span></code><a class="headerlink" href="#decipher" title="Permalink to this headline">¶</a></h3>
+<p>Ontijferen</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">decipher</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>Ontcijfer een bericht zonder de rotatie te kennen! Wat zou een goede strategie zijn om dit probleem op te lossen? Een mogelijke strategie is om de kijken nar letterfrequenties, hoe vaak worden karakters in een taal gebruikt en hoe <em>waarschijnlijk</em> is het dat ze in een bepaalde combinatie worden gebruikt.</p>
+<p>Nederlands</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">decipher</span><span class="p">(</span><span class="s2">&quot;Bzdrzqbhiedq? Hj gda khdudq Bzdrzqrzkzcd.&quot;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="s1">&#39;Caesarcijfer? Ik heb liever Caesarsalade.&#39;</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="n">decipher</span><span class="p">(</span><span class="s2">&quot;Aadxas ue exqotfe pq haadflqffuzs hmz baxufuqw yqf mzpqdq yuppqxqz.&quot;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="s1">&#39;Oorlog is slechts de voortzetting van politiek met andere middelen.&#39;</span>
+</pre></div>
+</div>
+<p>Latijn</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="n">decipher</span><span class="p">(</span><span class="s2">&quot;Gv vw, Dtwvg?&quot;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="s1">&#39;Od de, Lbedo?&#39;</span>
+</pre></div>
+</div>
+<p>Een Nederlandse frequentieverdeling is niet gelijk aan Latijn. Wat we hier hadden willen zien was “Et tu Brute?”, Caesar’s beroemde <a class="reference external" href="https://en.wikipedia.org/wiki/Et_tu,_Brute%3F">laatste woorden</a>.</p>
+<p>Maar dan nog zou het de vraag zijn of het kon worden gevonden, de tekst is wellicht ook te kort.</p>
+</div>
+</div>
+<div class="section" id="ascii">
+<h2>ASCII<a class="headerlink" href="#ascii" title="Permalink to this headline">¶</a></h2>
+<p>American Standard Code for Information Interchange</p>
+<p><img alt="ASCII" src="../_images/ascii_0.png" /></p>
+<p>Laten we eerst kijken hoe karakters worden gerepresenteerd door een computer. De computer kent alleen maar bytes (8 opeenvolgende bits) dus hoe kan het karakters als A, B en C opslaan? Dit kan een computer niet en er is een vertaaltabel nodig om van bits naar karakters te komen en vice versa. De <a class="reference external" href="https://nl.wikipedia.org/wiki/ASCII_(tekenset)">ASCII</a> tekenset is zo’n vertaaltabel.</p>
+<p><img alt="ASCII" src="../_images/ascii.png" /></p>
+<p>Je zult later zien dat je decimale getallen kan omzetten naar een binaire representatie en in dit voorbeeld staat 67 decimaal gelijk aan 1000011 binair (bits!). Het karakter dat volgens de tabel bij deze waarde hoort is het karakter C.</p>
+<p><img alt="ASCII decimal" src="../_images/ascii_2.png" /></p>
+<p>Je ziet dat <em>dezelfde</em> bits zowel een integer (decimaal) of string (teken) kunnen representeren, afhankelijk van het <em>type</em>: <code class="docutils literal notranslate"><span class="pre">int</span></code> of <code class="docutils literal notranslate"><span class="pre">str</span></code>. Anders gezegd, het type bepaalt of de binaire waarde (de bits) een getal vertegenwoordigen waar bijvoorbeeld mee gerekend kan worden of een karakter dat op scherm kan worden geprint: het type bepaalt de <em>context</em> van gebruik.</p>
+<p><img alt="Binary box" src="../_images/box_binary.png" /></p>
+<p>Denk terug aan de “dozen” die we hebben gebruikt om een voorstelling te maken van wat zich in het geheugen van een computer afspeelt en met wat we nu weten kunnen we dit beeld gaan aanpassen. De “inhoud” van een doos zijn de bits, zoveel is nu wel duidelijk. De inhoud van verschillende dozen kan hetzelfde zijn maar het type bepaalt de representatie, bijvoorbeeld of het integer met waarde 67 of een string met waarde “C” is.</p>
+<p>De naam van een waarde (variabele) maakt dus ook niet uit, je weet inmiddels dat je (bijna) elke naam voor een variabele mag kiezen en het is niets meer dan een verwijzing naar de waarde die voor jou betekenis heeft (en je zult misschien hebben gemerkt dat het kiezen van een betekenisvolle naam niet altijd eenvoudig is!).</p>
+<div class="section" id="beperkingen">
+<h3>Beperkingen<a class="headerlink" href="#beperkingen" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>ASCII 8 bits betekent maximaal 256 mogelijke karakters</p></li>
+</ul>
+<p>Maar de 🌍 is groter dan 256 karakters,ñïㅌtwååя?</p>
+<p>Historisch gezien was de byte het aantal bits dat werd gebruikt om een enkel karakter van de tekst in een computer te coderen. Het was begin jaren 60 van de vorige eeuw dat dit werd bepaald en dit zie je in ASCII terug, het is een oude tekenset!</p>
+</div>
+<div class="section" id="ascii-unicode">
+<h3>ASCII ⊂ Unicode<a class="headerlink" href="#ascii-unicode" title="Permalink to this headline">¶</a></h3>
+<p>Een moderne encodering met ASCII als subset</p>
+<p>Tegenwoording wordt van andere tekensets gebruik gemaakt. Unicode is een moderne variant die ASCII als subset heeft. Dit betekent dat 67 nog steeds naar C verwijst, maar 128077 naar 👍. Unicode gebruikt een byte op een veel slimmere manier op optimaal van de mogelijke adresruimte gebruik te maken. De meest gebruikte variant is tegenwoordig <a class="reference external" href="https://nl.wikipedia.org/wiki/UTF-8">UTF-8</a> hoewel ook <a class="reference external" href="https://nl.wikipedia.org/wiki/UTF-16">UTF-16</a> en UTF-32 bestaan (16 en 32 bits).</p>
+</div>
+<div class="section" id="chr-en-ord">
+<h3><code class="docutils literal notranslate"><span class="pre">chr</span></code> en <code class="docutils literal notranslate"><span class="pre">ord</span></code><a class="headerlink" href="#chr-en-ord" title="Permalink to this headline">¶</a></h3>
+<p>Zet een getal om naar een karakter</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">chr</span><span class="p">(</span><span class="mi">67</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;C&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Zet een karakter om naar een getal</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;C&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>67
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="vergelijken">
+<h3>Vergelijken<a class="headerlink" href="#vergelijken" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;w&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>119
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>101
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;w&quot;</span> <span class="o">&gt;</span> <span class="s2">&quot;e&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Weet je nog dat Python een mening had? Het is om deze reden dat <code class="docutils literal notranslate"><span class="pre">w</span></code>erk &gt; <code class="docutils literal notranslate"><span class="pre">e</span></code>ten!</p>
+</div>
+<div class="section" id="mini-quiz">
+<h3>Mini quiz<a class="headerlink" href="#mini-quiz" title="Permalink to this headline">¶</a></h3>
+<p>Wat is</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;U&quot;</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>Zie de <a class="reference external" href="https://nl.wikipedia.org/wiki/ASCII_(tekenset)">ASCII tabel</a>, de decimale waarde van U is 85.</p>
+<p>Het antwoord op “The Answer to the Ultimate Question of Life, the Universe, and Everything” is een verwijzing naar “*”, het wildcard karakter? Zijn we hier iets op het spoor …?</p>
+</div>
+<div class="section" id="uitproberen">
+<h3>Uitproberen<a class="headerlink" href="#uitproberen" title="Permalink to this headline">¶</a></h3>
+<p>Andere leuke karakters om uit te proberen</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">chr</span><span class="p">(</span><span class="mi">156265</span><span class="p">)</span>
+<span class="nb">chr</span><span class="p">(</span><span class="mi">9835</span><span class="p">)</span>
+<span class="nb">chr</span><span class="p">(</span><span class="mi">9731</span><span class="p">)</span>
+<span class="nb">chr</span><span class="p">(</span><span class="mi">127881</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Windows gebruikers let op: voer dit in een VSCode terminal uit met python of IPython. De standaard Windows terminal is te oud om bijvoorbeeld emoji te tonen (hogere getallen). Microsoft werkt aan een nieuwe, <a class="reference external" href="https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab">moderne terminal</a> om onder andere dit probleem te verhelpen.</p>
+<p><img alt="Windows Unicode" src="../_images/windows_unicode.png" /></p>
+</div>
+</div>
+<div class="section" id="rot13">
+<h2>Rot13<a class="headerlink" href="#rot13" title="Permalink to this headline">¶</a></h2>
+<p><em>Rotate by 13 places</em></p>
+<p>Waarom 13? Bij gebruik van het alfabet is dertien de waarde waarbij codering en decodering gelijkwaardig zijn (het alfabet telt 26 karakters). Het werd vaak gebruikt op fora om gevoelige posts of spoilers te versleutelen.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">8</span><span class="p">]:</span> <span class="n">rot13</span><span class="p">(</span><span class="s2">&quot;Don&#39;t Panic.&quot;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">8</span><span class="p">]:</span> <span class="s2">&quot;Qba&#39;g Cnavp.&quot;</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">9</span><span class="p">]:</span> <span class="n">rot13</span><span class="p">(</span><span class="s2">&quot;Qba&#39;g Cnavp.&quot;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">9</span><span class="p">]:</span> <span class="s2">&quot;Don&#39;t Panic.&quot;</span>
+</pre></div>
+</div>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><code class="docutils literal notranslate"><span class="pre">chr</span></code> waarde</p></th>
+<th class="head"><p>a</p></th>
+<th class="head"><p>b</p></th>
+<th class="head"><p>c</p></th>
+<th class="head"><p>…</p></th>
+<th class="head"><p>z</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ord</span></code> waarde</p></td>
+<td><p>97</p></td>
+<td><p>98</p></td>
+<td><p>99</p></td>
+<td><p>…</p></td>
+<td><p>122</p></td>
+</tr>
+</tbody>
+</table>
+<p>Wat is</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;i&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">13</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Het karakter “v”</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><code class="docutils literal notranslate"><span class="pre">chr</span></code> waarde</p></th>
+<th class="head"><p>A</p></th>
+<th class="head"><p>B</p></th>
+<th class="head"><p>C</p></th>
+<th class="head"><p>…</p></th>
+<th class="head"><p>Z</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ord</span></code> waarde</p></td>
+<td><p>65</p></td>
+<td><p>66</p></td>
+<td><p>67</p></td>
+<td><p>…</p></td>
+<td><p>90</p></td>
+</tr>
+</tbody>
+</table>
+<p>Wat is</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;W&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">13</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Het karakter “e”</p>
+<p>Dit betekent <code class="docutils literal notranslate"><span class="pre">chr(87</span> <span class="pre">+</span> <span class="pre">13)</span></code>, maar <code class="docutils literal notranslate"><span class="pre">chr(100)</span></code> valt buiten de reeks! Hoe kan weer terug naar het begin worden doorgeteld?</p>
+<p><img alt="Caesar cijfer" src="../_images/caesar_cipher.png" /></p>
+<p>We willen net als bij de schijf door kunnen tellen zodat het eerstvolgende karakter na Z (ordinale waarde 90) A (ordinale waarde 65) is. Er zijn meerdere manieren om dit op te lossen, bijvoorbeeld met een modulo bewerking.</p>
+<p>Stel je voor dat A t/m Z niet volgens ASCII van 65 tot en met 90 maar van 0 tot en met 25 loopt. De karakters staan in dit geval op een index positie.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>A</p></th>
+<th class="head"><p>B</p></th>
+<th class="head"><p>C</p></th>
+<th class="head"><p>…</p></th>
+<th class="head"><p>Z</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>2</p></td>
+<td><p>…</p></td>
+<td><p>25</p></td>
+</tr>
+</tbody>
+</table>
+<p>Met een rotatie 3 zou het karakter Z verschuiven naar positie 28, maar dit valt buiten het bereik. Een modulo bewerking <code class="docutils literal notranslate"><span class="pre">28</span> <span class="pre">%</span> <span class="pre">26</span></code> levert 2 op en daarmee kom je op het karakter met index positie 2 (C) en zo is de cirkel rond!</p>
+<p>We gaan <code class="docutils literal notranslate"><span class="pre">rot13</span></code> op een andere manier uitwerken, als uitdaging kan je proberen een modulo bewerking toe te passen om “door te draaien” ;)</p>
+<div class="section" id="het-doel">
+<h3>Het doel<a class="headerlink" href="#het-doel" title="Permalink to this headline">¶</a></h3>
+<p>Een karakter verschuiven met 13 posities en doordraaien indien nodig</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">rot13</span><span class="p">(</span><span class="s2">&quot;n&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;a&quot;</span>
+<span class="k">assert</span> <span class="n">rot13</span><span class="p">(</span><span class="s2">&quot;W&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;J&quot;</span>
+</pre></div>
+</div>
+<p>Spaties en andere karakter negeren</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">rot13</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot; &quot;</span>
+<span class="k">assert</span> <span class="n">rot13</span><span class="p">(</span><span class="s2">&quot;&lt;&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;&lt;&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="een-begin">
+<h3>Een begin<a class="headerlink" href="#een-begin" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rot13</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Roteer c met 13 karakters</span>
+<span class="sd">    </span>
+<span class="sd">    &quot;Draai door&quot; indien nodig, negeer NIET alfabetische karakters</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="s2">&quot;a&quot;</span> <span class="o">&lt;=</span> <span class="n">c</span> <span class="o">&lt;=</span> <span class="s2">&quot;z&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">+</span> <span class="mi">13</span> <span class="o">&lt;=</span> <span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;z&quot;</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">+</span> <span class="mi">13</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="o">...</span>
+    <span class="k">elif</span> <span class="s2">&quot;A&quot;</span> <span class="o">&lt;=</span> <span class="n">c</span> <span class="o">&lt;=</span> <span class="s2">&quot;Z&quot;</span><span class="p">:</span>  <span class="c1"># hoofdletter test</span>
+        <span class="o">...</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Wat doen de tests <code class="docutils literal notranslate"><span class="pre">&quot;a&quot;</span> <span class="pre">&lt;=</span> <span class="pre">c</span> <span class="pre">&lt;=</span> <span class="pre">&quot;z&quot;</span></code> en <code class="docutils literal notranslate"><span class="pre">ord(c)</span> <span class="pre">+</span> <span class="pre">13</span> <span class="pre">&lt;=</span> <span class="pre">ord(&quot;z&quot;)</span></code>?</p></li>
+</ul>
+<ul class="simple">
+<li><p>Welke code is nodig om door te draaien als <code class="docutils literal notranslate"><span class="pre">ord(c)</span> <span class="pre">+</span> <span class="pre">13</span> <span class="pre">&lt;=</span> <span class="pre">ord(&quot;z&quot;)</span></code> faalt (de <code class="docutils literal notranslate"><span class="pre">else</span></code>)?</p></li>
+</ul>
+<ul class="simple">
+<li><p>Wat zou anders moeten zijn bij hoofdletters <code class="docutils literal notranslate"><span class="pre">&quot;A&quot;</span> <span class="pre">&lt;=</span> <span class="pre">c</span> <span class="pre">&lt;=</span> <span class="pre">&quot;Z&quot;</span></code>?</p></li>
+</ul>
+<ul class="simple">
+<li><p>Wat zou moeten gebeuren als <code class="docutils literal notranslate"><span class="pre">c</span></code> geen karakter in het alfabet is?</p></li>
+</ul>
+</div>
+<div class="section" id="uitwerking">
+<h3>Uitwerking<a class="headerlink" href="#uitwerking" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rot13</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Roteer c met 13 karakters</span>
+<span class="sd">    </span>
+<span class="sd">    &quot;Draai door&quot; indien nodig en negeer NIET alfabetische karakters</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="s2">&quot;a&quot;</span> <span class="o">&lt;=</span> <span class="n">c</span> <span class="o">&lt;=</span> <span class="s2">&quot;z&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">+</span> <span class="mi">13</span> <span class="o">&lt;=</span> <span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;z&quot;</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">+</span> <span class="mi">13</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">+</span> <span class="mi">13</span> <span class="o">-</span> <span class="mi">26</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="s2">&quot;A&quot;</span> <span class="o">&lt;=</span> <span class="n">c</span> <span class="o">&lt;=</span> <span class="s2">&quot;Z&quot;</span><span class="p">:</span>
+        <span class="c1"># upper-case test!</span>
+        <span class="k">if</span> <span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">+</span> <span class="mi">13</span> <span class="o">&lt;=</span> <span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;Z&quot;</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">+</span> <span class="mi">13</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">+</span> <span class="mi">13</span> <span class="o">-</span> <span class="mi">26</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">c</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2><code class="docutils literal notranslate"><span class="pre">decipher</span></code><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Een bericht ontcijferen <em>zonder</em> bekende rotatie</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">10</span><span class="p">]:</span> <span class="n">decipher</span><span class="p">(</span><span class="s2">&quot;Bzdrzqbhiedq? Hj gda khdudq Bzdrzqrzkzcd.&quot;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">10</span><span class="p">]:</span> <span class="s1">&#39;Caesarcijfer? Ik heb liever Caesarsalade.&#39;</span>
+</pre></div>
+</div>
+<p>Welke <em>strategie</em>, welk <em>algoritme</em>?</p>
+<p>Encryptie wordt overal toegepast, of het nu gaat om het beschermen van jouw betaalgegevens of om meeluisteren met een chat of gesprek onmogelijk te maken. Toch hoor je vaak over versleutelingen die “gekraakt” zijn. Hoe zou je een substitutieversleuteling als een Caesarcijfer kunnen breken? Wat zouden geschikte benaderingen (strategie) en bijbehorende handelingen (algoritme) kunnen zijn om dit probleem op te lossen?</p>
+<div class="section" id="een-bericht">
+<h3>Een bericht<a class="headerlink" href="#een-bericht" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">decipher</span><span class="p">(</span><span class="s2">&quot;jgddcp qnnc xqicnc&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We hebben een versleuteld bericht uit het verleden ontvangen maar helaas is de sleutel (de rotatie) niet bekend … hoe zou je dit bericht geautomatiseerd kunnen ontcijferen? We hebben weinig informatie, laten we aannemen dat het bericht in het Nederlands is opgesteld…</p>
+</div>
+<div class="section" id="taalherkenning">
+<h3>Taalherkenning<a class="headerlink" href="#taalherkenning" title="Permalink to this headline">¶</a></h3>
+<p>Welke rotatie is het meest Nederlandstalig?</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>rotatie</p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">grkg</span> <span class="pre">ogizg</span> <span class="pre">kyz</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">hslh</span> <span class="pre">phjah</span> <span class="pre">lza</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">itmi</span> <span class="pre">qikbi</span> <span class="pre">mab</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">junj</span> <span class="pre">rjlcj</span> <span class="pre">nbc</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">kvok</span> <span class="pre">skmdk</span> <span class="pre">ocd</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">lwpl</span> <span class="pre">tlnel</span> <span class="pre">pde</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">mxqm</span> <span class="pre">umofm</span> <span class="pre">qef</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">nyrn</span> <span class="pre">vnpgn</span> <span class="pre">rfg</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ozso</span> <span class="pre">woqho</span> <span class="pre">sgh</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">patp</span> <span class="pre">xprip</span> <span class="pre">thi</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">qbuq</span> <span class="pre">yqsjq</span> <span class="pre">uij</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">rcvr</span> <span class="pre">zrtkr</span> <span class="pre">vjk</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>13</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">sdws</span> <span class="pre">asuls</span> <span class="pre">wkl</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>14</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">text</span> <span class="pre">btvmt</span> <span class="pre">xlm</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>15</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ufyu</span> <span class="pre">cuwnu</span> <span class="pre">ymn</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>16</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">vgzv</span> <span class="pre">dvxov</span> <span class="pre">zno</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>17</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">whaw</span> <span class="pre">ewypw</span> <span class="pre">aop</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>18</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">xibx</span> <span class="pre">fxzqx</span> <span class="pre">bpq</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>19</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">yjcy</span> <span class="pre">gyary</span> <span class="pre">cqr</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>20</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">zkdz</span> <span class="pre">hzbsz</span> <span class="pre">drs</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>21</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">alea</span> <span class="pre">iacta</span> <span class="pre">est</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>22</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">bmfb</span> <span class="pre">jbdub</span> <span class="pre">ftu</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>23</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">cngc</span> <span class="pre">kcevc</span> <span class="pre">guv</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>24</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">dohd</span> <span class="pre">ldfwd</span> <span class="pre">hvw</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>25</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">epie</span> <span class="pre">megxe</span> <span class="pre">iwx</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>26</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fqjf</span> <span class="pre">nfhyf</span> <span class="pre">jxy</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Voor het versleutelde bericht kan je elke rotatie toepassen zodat je tot een lijst van 26 mogelijke ontcijferingen komt. Maar welk element van deze lijst is het meest … Nederlandstalig?</p>
+</div>
+<div class="section" id="nederlandstaligheid-meten">
+<h3>Nederlandstaligheid meten<a class="headerlink" href="#nederlandstaligheid-meten" title="Permalink to this headline">¶</a></h3>
+<p>Hoog</p>
+<blockquote>
+<div><p>Denkend aan Holland zie ik breede rivieren traag door oneindig laagland gaan.</p>
+</div></blockquote>
+<p>Je zal hier de eerste strophe van het gedicht “<a class="reference external" href="https://nl.wikipedia.org/wiki/Herinnering_aan_Holland">Herinnering aan Holland</a>” van <a class="reference external" href="https://nl.wikipedia.org/wiki/Hendrik_Marsman">Hendrik Marsman</a> herkennen. Dit is een voorbeeld van hoge Nederlandtaligheid wat betreft syntax en betekenis (semantiek).</p>
+<p>Middel</p>
+<blockquote>
+<div><p>De gostak is die welke de doshes distims</p>
+</div></blockquote>
+<p>Je zal nog steeds “Nederlands” herkennen, maar heeft het betekenis?</p>
+<p>Laag</p>
+<blockquote>
+<div><p>Epadxo, nojarpn, gdxokpw</p>
+</div></blockquote>
+<p>Dit lijkt op het bericht dat we hebben ontvangen en heeft niet veel met Nederlands te maken!</p>
+<p>Voor elke mogelijke rotatie van het versleuteld bericht zal je een maat moeten hebben om te bepalen welke de <code class="docutils literal notranslate"><span class="pre">max</span></code> is, oftwel wat de meest Nederlandstalige ontcijfering is.</p>
+</div>
+<div class="section" id="aantal-klinkers">
+<h3>Aantal klinkers<a class="headerlink" href="#aantal-klinkers" title="Permalink to this headline">¶</a></h3>
+<p>Is dit een mogelijke maat?</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>klinkers</p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">grkg</span> <span class="pre">ogizg</span> <span class="pre">kyz</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">hslh</span> <span class="pre">phjah</span> <span class="pre">lza</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">itmi</span> <span class="pre">qikbi</span> <span class="pre">mab</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">junj</span> <span class="pre">rjlcj</span> <span class="pre">nbc</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">kvok</span> <span class="pre">skmdk</span> <span class="pre">ocd</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">lwpl</span> <span class="pre">tlnel</span> <span class="pre">pde</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">mxqm</span> <span class="pre">umofm</span> <span class="pre">qef</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">nyrn</span> <span class="pre">vnpgn</span> <span class="pre">rfg</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ozso</span> <span class="pre">woqho</span> <span class="pre">sgh</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">patp</span> <span class="pre">xprip</span> <span class="pre">thi</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">qbuq</span> <span class="pre">yqsjq</span> <span class="pre">uij</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">rcvr</span> <span class="pre">zrtkr</span> <span class="pre">vjk</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">sdws</span> <span class="pre">asuls</span> <span class="pre">wkl</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">text</span> <span class="pre">btvmt</span> <span class="pre">xlm</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ufyu</span> <span class="pre">cuwnu</span> <span class="pre">ymn</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">vgzv</span> <span class="pre">dvxov</span> <span class="pre">zno</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">whaw</span> <span class="pre">ewypw</span> <span class="pre">aop</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">xibx</span> <span class="pre">fxzqx</span> <span class="pre">bpq</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">yjcy</span> <span class="pre">gyary</span> <span class="pre">cqr</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">zkdz</span> <span class="pre">hzbsz</span> <span class="pre">drs</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">alea</span> <span class="pre">iacta</span> <span class="pre">est</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">max</span></code>!</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">bmfb</span> <span class="pre">jbdub</span> <span class="pre">ftu</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">cngc</span> <span class="pre">kcevc</span> <span class="pre">guv</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">dohd</span> <span class="pre">ldfwd</span> <span class="pre">hvw</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">epie</span> <span class="pre">megxe</span> <span class="pre">iwx</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fqjf</span> <span class="pre">nfhyf</span> <span class="pre">jxy</span></code></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p>Een mogelijke strategie zou het tellen van het aantal klinkers voor elke rotatie kunnen zijn. Dit is misschien een intuïtief ingegeven strategie, het gebruik van klinkers is immers een kenmerk van een taal. In dit geval hebben we een <code class="docutils literal notranslate"><span class="pre">max</span></code> gevonden maar hoe Nederlandstalig is deze <code class="docutils literal notranslate"><span class="pre">max</span></code>? Is dit het oorspronkelijke bericht?</p>
+<p>Je kan je afvragen in hoeverre dit een goede maat is. Bijvoorbeeld, <code class="docutils literal notranslate"><span class="pre">aaaa</span> <span class="pre">eeeee</span> <span class="pre">iii</span></code> zou een absolute <code class="docutils literal notranslate"><span class="pre">max</span></code> zijn, maar is het ook betenisvol? Waarschijnlijk niet en daarmee is het een niet heel betrouwbare maat en zullen we op zoek moeten naar iets beters.</p>
+</div>
+<div class="section" id="letterfrequentie">
+<h3>Letterfrequentie<a class="headerlink" href="#letterfrequentie" title="Permalink to this headline">¶</a></h3>
+<p>Het <em>vaak</em> worden klinkers én medeklinkers in een taal gebruikt?</p>
+<p>Talen verschillen van elkaar en wat is nu één van de kenmerken waar zij zich van elkaar onderscheiden? Syntax! Dit uit zich in het gebruik van klinkers en medeklinkers waar karakters in de ene taal vaker zullen worden gebruikt dan in een andere taal.</p>
+</div>
+<div class="section" id="kansen">
+<h3>Kansen<a class="headerlink" href="#kansen" title="Permalink to this headline">¶</a></h3>
+<p>De frequentieverdeling van karakters: wat is de kans dat de letter G wordt gebruikt?</p>
+<ul class="simple">
+<li><p>Nederlands: 3.17%</p></li>
+<li><p>Engels:  1.92%</p></li>
+<li><p>Frans: 0.97%</p></li>
+</ul>
+<p>(G als hoofd- of kleine letter)</p>
+<p>Stel dat je een pagina van <a class="reference external" href="https://nos.nl/">NOS</a>, <a class="reference external" href="https://bbc.com/">BBC</a> of <a class="reference external" href="https://www.france.tv/">FRANCE.TV</a> op scherm hebt en je zou met de ogen dicht een punt op de pagina aanwijzen, wat is de kans dat je een “a”, “i” of “g” aanwijst? Deze kans zal verschillen omdat het gebruik van klinkers en medeklinkers per taal verschilt.</p>
+<p>Deze letterfrequenties zijn bekend op basis van tellingen van héél veel teksten per taal. Een frequentieverdeling van karakters voor Nederlands kan je bijvoorbeeld vinden op <a class="reference external" href="https://www.sttmedia.com/characterfrequency-nederlands">WordCreator</a>.</p>
+<p>Het vakgebied dat zich onder andere met deze maten bezig houdt is <a class="reference external" href="https://en.wikipedia.org/wiki/Computational_linguistics"><em>computational linguistics</em></a> (computationele taalkunde). Dit is een interdisciplinair vakgebied waar de computationele modellering van taalkundige verschijnselen centraal staat.</p>
+</div>
+<div class="section" id="opeenvolging">
+<h3>Opeenvolging<a class="headerlink" href="#opeenvolging" title="Permalink to this headline">¶</a></h3>
+<p>De kans dat de letter A wordt gebruikt is 7.76% (NL)</p>
+<p>Wat is de kans dat G (3.17%) wordt opgevolgd door A?</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{3.17}{100} \times \frac{7.76}{100} \approx 0.025
+\]</div>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>score</p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">2.3e-20</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">grkg</span> <span class="pre">ogizg</span> <span class="pre">kyz</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">1.3e-18</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">hslh</span> <span class="pre">phjah</span> <span class="pre">lza</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">2.6e-20</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">itmi</span> <span class="pre">qikbi</span> <span class="pre">mab</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">1.1e-19</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">junj</span> <span class="pre">rjlcj</span> <span class="pre">nbc</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">1.7e-18</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">kvok</span> <span class="pre">skmdk</span> <span class="pre">ocd</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">1.0e-16</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">lwpl</span> <span class="pre">tlnel</span> <span class="pre">pde</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">2.7e-26</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">mxqm</span> <span class="pre">umofm</span> <span class="pre">qef</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">4.3e-19</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">nyrn</span> <span class="pre">vnpgn</span> <span class="pre">rfg</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">1.4e-20</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ozso</span> <span class="pre">woqho</span> <span class="pre">sgh</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">5.4e-20</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">patp</span> <span class="pre">xprip</span> <span class="pre">thi</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">2.9e-31</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">qbuq</span> <span class="pre">yqsjq</span> <span class="pre">uij</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">9.5e-19</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">rcvr</span> <span class="pre">zrtkr</span> <span class="pre">vjk</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">2.3e-18</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">sdws</span> <span class="pre">asuls</span> <span class="pre">wkl</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">6.2e-21</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">text</span> <span class="pre">btvmt</span> <span class="pre">xlm</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">3.0e-23</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ufyu</span> <span class="pre">cuwnu</span> <span class="pre">ymn</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">1.8e-20</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">vgzv</span> <span class="pre">dvxov</span> <span class="pre">zno</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">2.4e-20</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">whaw</span> <span class="pre">ewypw</span> <span class="pre">aop</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">1.3e-32</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">xibx</span> <span class="pre">fxzqx</span> <span class="pre">bpq</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">3.0e-28</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">yjcy</span> <span class="pre">gyary</span> <span class="pre">cqr</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">1.9e-19</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">zkdz</span> <span class="pre">hzbsz</span> <span class="pre">drs</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">6.3e-15</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">alea</span> <span class="pre">iacta</span> <span class="pre">est</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">max</span></code>!</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">1.3e-21</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">bmfb</span> <span class="pre">jbdub</span> <span class="pre">ftu</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">1.6e-19</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">cngc</span> <span class="pre">kcevc</span> <span class="pre">guv</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">8.9e-19</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">dohd</span> <span class="pre">ldfwd</span> <span class="pre">hvw</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">2.7e-19</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">epie</span> <span class="pre">megxe</span> <span class="pre">iwx</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">5.2e-29</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fqjf</span> <span class="pre">nfhyf</span> <span class="pre">jxy</span></code></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p>Deze notatie van getallen zal je misschien vaker zien. Voor decimale getallen zal Python vaak de wetenschappelijke notatie gebruiken om de precicie aan te duiden. In dit geval staat <code class="docutils literal notranslate"><span class="pre">6.3e-15</span></code> gelijk aan <span class="math notranslate nohighlight">\(6.3\cdot{10}^{-15}\)</span>.</p>
+</div>
+<div class="section" id="het-max-bericht">
+<h3>Het <code class="docutils literal notranslate"><span class="pre">max</span></code> bericht<a class="headerlink" href="#het-max-bericht" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p><em>Alea iacta est</em></p>
+<p>–Julius Caesar</p>
+</div></blockquote>
+<p><a class="reference external" href="https://onzetaal.nl/taaladvies/alea-iacta-est-de-teerling-is-geworpen/">Alea iacta est</a> of “de teerling is geworpen” is een uitspraak van Julius Caesar. Het is blijkbaar Nederlandstalig genoeg voor onze strategie! Voor Nedelandstalige teksten zal het preciezer werken en merk daarbij op dat de lengte van een bericht ook van belang is.</p>
+</div>
+<div class="section" id="strategie-en-algoritme">
+<h3>Strategie en algoritme<a class="headerlink" href="#strategie-en-algoritme" title="Permalink to this headline">¶</a></h3>
+<p><em>Strategie</em></p>
+<p>Letterfrequentie is een goede maat voor Nederlandstaligheid</p>
+<p><em>Algoritme</em></p>
+<ul class="simple">
+<li><p>doorloop elke rotatie</p></li>
+<li><p>bepaal op basis van letterfrequenties de kans op de lettercombinatie per rotatie</p></li>
+<li><p>vind de <code class="docutils literal notranslate"><span class="pre">max</span></code> kans van alle rotaties</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="quiz">
+<h2>Quiz<a class="headerlink" href="#quiz" title="Permalink to this headline">¶</a></h2>
+<p>Van een woord naar een opeenvolging van letters: n-gram</p>
+<p>Weer een kleine quiz om list slicing en recursie te oefenen!</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ngram</span><span class="p">(</span><span class="s2">&quot;alien&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;l&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;n&quot;</span><span class="p">]</span>  <span class="c1"># 1-gram (unigram)</span>
+<span class="n">ngram</span><span class="p">(</span><span class="s2">&quot;alien&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;al&quot;</span><span class="p">,</span> <span class="s2">&quot;li&quot;</span><span class="p">,</span> <span class="s2">&quot;ie&quot;</span><span class="p">,</span> <span class="s2">&quot;en&quot;</span><span class="p">]</span>   <span class="c1"># 2-gram (bigram)</span>
+<span class="n">ngram</span><span class="p">(</span><span class="s2">&quot;alien&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;ali&quot;</span><span class="p">,</span> <span class="s2">&quot;lie&quot;</span><span class="p">,</span> <span class="s2">&quot;ien&quot;</span><span class="p">]</span>      <span class="c1"># 3-gram (trigram)</span>
+</pre></div>
+</div>
+<p>De kans dat een letter wordt gebruikt is een maat voor een taal. Om karakters te tellen in tekst moeten woorden worden opgebroken in opeenvolgende karakters, zogenaamde <a class="reference external" href="https://en.wikipedia.org/wiki/N-gram"><em>n-gram</em></a>s. In het geval van een enkel karakter spreek je van een <em>unigram</em>, langere opeenvolgingen geven meer informatie, bijvoorbeeld een bi- of trigram (twee of drie opeenvolgende karakters).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ngram</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Breek een woord op in steeds n opeenvolgende delen</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>  <span class="c1"># base case</span>
+        <span class="k">return</span> <span class="o">...</span>
+    <span class="k">else</span><span class="p">:</span>  <span class="c1"># recursive case</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">w</span><span class="p">[:</span><span class="n">n</span><span class="p">]]</span> <span class="o">+</span> <span class="o">...</span>
+</pre></div>
+</div>
+<p>Tip: bedenk dat je lists bij elkaar op kan tellen</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="section" id="oplossing">
+<h3>Oplossing<a class="headerlink" href="#oplossing" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ngram</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">w</span><span class="p">[:</span><span class="n">n</span><span class="p">]]</span> <span class="o">+</span> <span class="n">ngrams</span><span class="p">(</span><span class="n">w</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "misja/programmeren",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./topics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="7a_data_based_design.html" title="previous page">Ontwerpen met data</a>
+    <a class='right-next' id="next-link" href="../problems/klinkt_goed.html" title="next page">Klinkt goed!</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Hanze University of Applied Sciences<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>

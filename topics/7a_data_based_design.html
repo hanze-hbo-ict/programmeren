@@ -1,0 +1,1143 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ontwerpen met data &#8212; Programmeren</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "misja/programmeren");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://misja.github.io/programmeren/topics/7a_data_based_design.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Rekenen met taal" href="7b_rekenen_met_taal.html" />
+    <link rel="prev" title="Week 4" href="../class/week_4.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://misja.github.io/programmeren/topics/7a_data_based_design.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Ontwerpen met data" />
+<meta property="og:description" content="Ontwerpen met data  Computing to the max!  Tot nu toe heb je gezien hoe je oplossingen met functies kan ontwerpen met technieken als recursie maar ook compositi" />
+<meta property="og:image"       content="https://misja.github.io/programmeren/_static/mascot.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/mascot.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Programmeren</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/syllabus.html">
+   Programmeren
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Opmerkingen
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/feedback.html">
+   Anoniem feedbackformulier
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 1
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_1.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/python_intro.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_1.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 2
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_2.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/sequenties_en_data.html">
+   Practicum I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/fijne_functies.html">
+   Practicum II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_2.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 3
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_3.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/python_turtles.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_3.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 4
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="../class/week_4.html">
+   Onderwerpen
+  </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Data based design
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="7b_rekenen_met_taal.html">
+     Rekenen met taal
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/klinkt_goed.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_4.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Voorbeelden
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/recursie.html">
+   Recursie
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/design_recipe.html">
+   Functie ontwerp
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/platte_tekst.html">
+   Tekstbestanden
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python_browser.html">
+   Python in de browser
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python2_vs_python3.html">
+   Python 2 versus Python 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/software.html">
+   Software
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/topics/7a_data_based_design.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/7a_data_based_design.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/topics/7a_data_based_design.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/misja/programmeren/master?urlpath=lab/tree/topics/7a_data_based_design.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/misja/programmeren/blob/master/topics/7a_data_based_design.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#max-of-min">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     max
+    </span>
+   </code>
+   of
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     min
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#max">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     max
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#to-the-max">
+     to the
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       max
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#maximaal-rendement">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     max
+    </span>
+   </code>
+   imaal rendement
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#maar-wanneer">
+     Maar wanneer?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-s-advies">
+   Python’s advies
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#strings-to-the-max">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       str
+      </span>
+     </code>
+     ings to the
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       max
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#max-recursief">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     max
+    </span>
+   </code>
+   recursief
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#max-scrabble-score">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     max
+    </span>
+   </code>
+   scrabble score
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#voor-de-lol">
+   Voor de
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     LoL
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lol-met-list-comprehension">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       LoL
+      </span>
+     </code>
+     met list comprehension
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#stap-voor-stap">
+     Stap voor stap
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quiz">
+   Quiz
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#langste-woord">
+     Langste woord
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#antwoord">
+       Antwoord
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dichtst-bij-42">
+     Dichtst bij 42
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Antwoord
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#meest-voorkomend">
+     Meest voorkomend
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Antwoord
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="ontwerpen-met-data">
+<h1>Ontwerpen met data<a class="headerlink" href="#ontwerpen-met-data" title="Permalink to this headline">¶</a></h1>
+<p>Computing to the <code class="docutils literal notranslate"><span class="pre">max</span></code>!</p>
+<p>Tot nu toe heb je gezien hoe je oplossingen met functies kan ontwerpen met technieken als recursie maar ook compositie, het opdelen van een probleem in kleinere stukken waar meerdere functies verantwoordelijk zijn voor een deel van de oplossing.</p>
+<p>Nu gaan we kijken hoe we kunnen ontwerpen met data!</p>
+<div class="section" id="max-of-min">
+<h2><code class="docutils literal notranslate"><span class="pre">max</span></code> of <code class="docutils literal notranslate"><span class="pre">min</span></code><a class="headerlink" href="#max-of-min" title="Permalink to this headline">¶</a></h2>
+<p>De niet subtiele kunst van het uitzoeken van het beste (en slechtste) van alles: <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> of <code class="docutils literal notranslate"><span class="pre">&lt;</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;m&amp;m&#39;s&quot;</span> <span class="o">&gt;</span> <span class="s2">&quot;koffie&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">42</span><span class="p">]</span> <span class="o">&lt;</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;m&amp;m&#39;s&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;koffie&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;🥚&quot;</span> <span class="o">&gt;</span> <span class="s2">&quot;🐔&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let op, het kip of ei probleem is nu opgelost 😉</p>
+</div>
+<div class="section" id="max">
+<h2><code class="docutils literal notranslate"><span class="pre">max</span></code><a class="headerlink" href="#max" title="Permalink to this headline">¶</a></h2>
+<p>Een recept voor het leven? Python heeft het al voor ons!</p>
+<blockquote>
+<div><p>De echte vraag is natuurlijk <strong>wat</strong> te maximaliseren!</p>
+</div></blockquote>
+<p>Of te minimaliseren met <code class="docutils literal notranslate"><span class="pre">min</span></code> …</p>
+<p><img alt="Pineapple pizza" src="topics/images/7/pineapple_pizza.jpg" /></p>
+<p>Smaken verschillen en je zal zien dat Python een heel duidelijke mening heeft!</p>
+<div class="section" id="to-the-max">
+<h3>to the <code class="docutils literal notranslate"><span class="pre">max</span></code><a class="headerlink" href="#to-the-max" title="Permalink to this headline">¶</a></h3>
+<p><img alt="GOOG NASDAQ" src="../_images/goog_nasdaq.png" /></p>
+<p>Je ziet hier de koersontwikkeling van een willekeurig aandeel. Wanneer was dit aandeel in deze periode het meest en wanneer het minst waard?</p>
+</div>
+</div>
+<div class="section" id="maximaal-rendement">
+<h2><code class="docutils literal notranslate"><span class="pre">max</span></code>imaal rendement<a class="headerlink" href="#maximaal-rendement" title="Permalink to this headline">¶</a></h2>
+<p>Wat is de hoogste prijs van een aandeel in een bepaalde periode?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">max</span><span class="p">([</span><span class="mf">475.5</span><span class="p">,</span> <span class="mf">458.0</span><span class="p">,</span> <span class="mf">441.3</span><span class="p">,</span> <span class="mf">470.8</span><span class="p">,</span> <span class="mf">532.8</span><span class="p">,</span> <span class="mf">520.9</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>532.8
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="maar-wanneer">
+<h3>Maar wanneer?<a class="headerlink" href="#maar-wanneer" title="Permalink to this headline">¶</a></h3>
+<p>De informatie is beperkt want we weten niet <em>wanneer</em> de koers <code class="docutils literal notranslate"><span class="pre">max</span></code> was!</p>
+<p>Hoe zou je de bijbehorende maand ook in de reeks kunnen opnemen?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">max</span><span class="p">([[</span><span class="mf">470.8</span><span class="p">,</span> <span class="s2">&quot;may&quot;</span><span class="p">],</span> <span class="p">[</span><span class="mf">532.8</span><span class="p">,</span> <span class="s2">&quot;jul&quot;</span><span class="p">],</span> <span class="p">[</span><span class="mf">520.9</span><span class="p">,</span> <span class="s2">&quot;sep&quot;</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[532.8, &#39;jul&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Dit is een interessant idee, hoe zou een combinatie van prijs en maand kunnen worden gerepresenteerd? Het zijn twee elementen die logisch bij elkaar horen en dit zou je kunnen zien als een collectie van <code class="docutils literal notranslate"><span class="pre">max</span></code>imaal <em>twee</em> elementen. Het datatype dat dit goed zou kunnen representeren is een list, waar je ook de betekenis van de volgorde mee kan uitdrukken: het element op index positie 0 is altijd de prijs (een integer) en het element op positie 1 de bijbehorende maand (een string).</p>
+<p>Prijs en maand kunnen combineren in een list is handig! Maar misschien hebben we liever de maand als eerste element?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">max</span><span class="p">([[</span><span class="s2">&quot;may&quot;</span><span class="p">,</span> <span class="mf">470.8</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;jul&quot;</span><span class="p">,</span> <span class="mf">532.8</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;sep&quot;</span><span class="p">,</span> <span class="mf">520.9</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;sep&#39;, 520.9]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Bij het vergelijken van lists zal Python altijd naar het <em>eerste</em> element van een list kijken om te komen tot een <code class="docutils literal notranslate"><span class="pre">max</span></code> of <code class="docutils literal notranslate"><span class="pre">min</span></code>. Dit werkt heel goed als het eerste element een getal is (een integer, in dit geval) maar hoe worden strings vergeleken?</p>
+<p>Bedenk je dat lists en strings beide sequenties zijn, collecties van opeenvolgende elementen. Net als bij lists zal Python het eerste element van een string kiezen (een karaker) om mee te vergelijken. In dit geval is “s” het <code class="docutils literal notranslate"><span class="pre">max</span></code> karakter en dit komt overeen met de positie in het alfabet.</p>
+</div>
+</div>
+<div class="section" id="python-s-advies">
+<h2>Python’s advies<a class="headerlink" href="#python-s-advies" title="Permalink to this headline">¶</a></h2>
+<p>Python’s advies voor een beter leven</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;liefde&quot;</span><span class="p">,</span> <span class="s2">&quot;werken&quot;</span><span class="p">,</span> <span class="s2">&quot;studeren&quot;</span><span class="p">,</span> <span class="s2">&quot;feesten&quot;</span><span class="p">,</span> <span class="s2">&quot;eten&quot;</span><span class="p">,</span> <span class="s2">&quot;sporten&quot;</span><span class="p">,</span> <span class="s2">&quot;of&quot;</span><span class="p">,</span> <span class="s2">&quot;slapen&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Wat is het belangrijkst voor een <code class="docutils literal notranslate"><span class="pre">max(L)</span></code> of <code class="docutils literal notranslate"><span class="pre">min(L)</span></code> beter leven?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">max</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;werken&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">min</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;eten&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Hmm Python, het is niet waarschijnlijk dat iedereen het hier mee eens is!</p>
+<div class="section" id="strings-to-the-max">
+<h3><code class="docutils literal notranslate"><span class="pre">str</span></code>ings to the <code class="docutils literal notranslate"><span class="pre">max</span></code><a class="headerlink" href="#strings-to-the-max" title="Permalink to this headline">¶</a></h3>
+<p>Strings zijn collecties en net als bij lists kiest Python het <em>eerste</em> element voor vergelijkingen</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;w&quot;</span> <span class="o">&gt;</span> <span class="s2">&quot;e&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Intuïtief zou je denken dat dit een vergelijking is op basis van de positie in het alfabet waar “w” <code class="docutils literal notranslate"><span class="pre">max</span></code> is.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;w&quot;</span> <span class="o">&gt;</span> <span class="s2">&quot;🤷‍♀️&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p>Weet je nog dat emoji ook karakters zijn? In dit geval is 🤷‍♀️ de <code class="docutils literal notranslate"><span class="pre">max</span></code>!</p>
+<p>Als je er bij stilstaat bestaan er zoveel meer karakters dan alleen het alfabet, bijvoorbeeld “&amp;”, “?” of “!”. Maar denk ook aan karakters in andere talen, bijvoorbeeld Koreaans (안녕하세요!): wat is de <code class="docutils literal notranslate"><span class="pre">min</span></code> en <code class="docutils literal notranslate"><span class="pre">max</span></code> van al deze karakters?!?</p>
+<p>Hier is duidelijk meer aan de hand en dit gaan we verder onderzoeken wanneer je gaat rekenen met taal. We zullen dan ook zien of het kip of ei probleem écht is opgelost!</p>
+</div>
+</div>
+<div class="section" id="max-recursief">
+<h2><code class="docutils literal notranslate"><span class="pre">max</span></code> recursief<a class="headerlink" href="#max-recursief" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">max</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Vind het max element in L</span>
+<span class="sd">    input: L, een (niet lege) list</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>           <span class="c1"># maar 1 element</span>
+
+    <span class="n">max_of_rest</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>  <span class="c1"># max van de rest</span>
+
+    <span class="k">if</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">max_of_rest</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>           <span class="c1"># of L[0]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">max_of_rest</span>    <span class="c1"># of max_of_rest!</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="max-scrabble-score">
+<h2><code class="docutils literal notranslate"><span class="pre">max</span></code> scrabble score<a class="headerlink" href="#max-scrabble-score" title="Permalink to this headline">¶</a></h2>
+<p>Welk element (woord) in een lijst heeft de hoogste scrabble score?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">letter_score</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Scrabble letter score</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">s</span> <span class="ow">in</span> <span class="s2">&quot;aeinorst&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">elif</span> <span class="n">s</span> <span class="ow">in</span> <span class="s2">&quot;ghl&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">2</span>
+    <span class="k">elif</span> <span class="n">s</span> <span class="ow">in</span> <span class="s2">&quot;bcm&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">3</span>
+    <span class="k">elif</span> <span class="n">s</span> <span class="ow">in</span> <span class="s2">&quot;jkuvw&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">4</span>
+    <span class="k">elif</span> <span class="n">s</span> <span class="o">==</span> <span class="s2">&quot;f&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">5</span>
+    <span class="k">elif</span> <span class="n">s</span> <span class="o">==</span> <span class="s2">&quot;z&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">6</span>
+    <span class="k">elif</span> <span class="n">s</span> <span class="ow">in</span> <span class="s2">&quot;xyz&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">8</span>
+    <span class="k">elif</span> <span class="n">s</span> <span class="o">==</span> <span class="s2">&quot;q&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">10</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Je herkent hier de oplossing om voor een letter <code class="docutils literal notranslate"><span class="pre">s</span></code> de scrabble score te vinden.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">scrabble_score</span><span class="p">(</span><span class="n">S</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">S</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">letter_score</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>                             <span class="c1"># base case</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">letter_score</span><span class="p">(</span><span class="n">S</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="n">scrabble_score</span><span class="p">(</span><span class="n">S</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>  <span class="c1"># recursive case</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Om voor een woord de totale scrabble score te berekenen heb je deze functie moeten implementeren. Als je dit niet gelukt is dan krijg je het bij dezen cadeau, bestudeer natuurlijk wel wat het doet!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;aliens&quot;</span><span class="p">,</span> <span class="s2">&quot;zap&quot;</span><span class="p">,</span> <span class="s2">&quot;hazy&quot;</span><span class="p">,</span> <span class="s2">&quot;code&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">max_ss</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Vind L&#39;s element met de hoogste scrabble score</span>
+<span class="sd">    input: L, een (niet lege) list</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>              <span class="c1"># maar 1 element</span>
+
+    <span class="n">max_of_rest</span> <span class="o">=</span> <span class="n">max_ss</span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>  <span class="c1"># max van de rest</span>
+
+    <span class="k">if</span> <span class="n">scrabble_score</span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">&gt;</span> <span class="n">scrabble_score</span><span class="p">(</span><span class="n">max_of_rest</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>              <span class="c1"># of L[0]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">max_of_rest</span>       <span class="c1"># of max_of_rest!</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">max_ss</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;hazy&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="voor-de-lol">
+<h2>Voor de <code class="docutils literal notranslate"><span class="pre">LoL</span></code><a class="headerlink" href="#voor-de-lol" title="Permalink to this headline">¶</a></h2>
+<p>Kunnen we deze oplossing vereenvoudigen, voor de <code class="docutils literal notranslate"><span class="pre">LoL</span></code>?</p>
+<p>List comprehension is een eenvoudige en effciënte oplossing om iteraties niet recursief maar sequentieel op te lossen. We gaan hier het principe van lists om gegevens te combineren gebruiken (zoals je ook net zag bij de aandelenkoersen) om zo te komen tot lijsten met lijsten, oftewel <em>List of Lists</em>!</p>
+<div class="section" id="lol-met-list-comprehension">
+<h3><code class="docutils literal notranslate"><span class="pre">LoL</span></code> met list comprehension<a class="headerlink" href="#lol-met-list-comprehension" title="Permalink to this headline">¶</a></h3>
+<p><em>List of Lists</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">max_ss</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Vind L&#39;s element met de hoogste scrabble score</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">LoL</span> <span class="o">=</span> <span class="p">[[</span><span class="n">scrabble_score</span><span class="p">(</span><span class="n">w</span><span class="p">),</span> <span class="n">w</span><span class="p">]</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">L</span><span class="p">]</span>
+
+    <span class="n">bestpair</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">LoL</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">bestpair</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Onze <code class="docutils literal notranslate"><span class="pre">LoL</span></code>, of <em>List of Lists</em> is een list comprehension waar elk element een <em>score</em>- en <em>woord</em>paar is.</p>
+<p>Je zag eerder dat (in het voorbeeld met aandelen) dat Python een <code class="docutils literal notranslate"><span class="pre">max</span></code> (en <code class="docutils literal notranslate"><span class="pre">min</span></code>) bepaalt op basis van het eerste element van een collectie. Python weet niet waar het op moet vergelijken om tot een <code class="docutils literal notranslate"><span class="pre">max</span></code> te komen van een list en daarom kiest het het eerste element als basis voor vergelijking. Wij maken hier dankbaar gebruik van dat gedrag!</p>
+</div>
+<div class="section" id="stap-voor-stap">
+<h3>Stap voor stap<a class="headerlink" href="#stap-voor-stap" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;aliens&quot;</span><span class="p">,</span> <span class="s2">&quot;zap&quot;</span><span class="p">,</span> <span class="s2">&quot;hazy&quot;</span><span class="p">,</span> <span class="s2">&quot;code&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We gebruiken weer dezelfde list aan scrabble woorden.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">LoL</span> <span class="o">=</span> <span class="p">[[</span><span class="n">scrabble_score</span><span class="p">(</span><span class="n">w</span><span class="p">),</span> <span class="n">w</span><span class="p">]</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">L</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>De lists of lists waar elk element een combinatie is van score en woord.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">LoL</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[7, &#39;aliens&#39;], [7, &#39;zap&#39;], [17, &#39;hazy&#39;], [5, &#39;code&#39;]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>De <code class="docutils literal notranslate"><span class="pre">LoL</span></code> kan je inspecteren en dit is het resultaat van de list comprehension. Je ziet inderdaad paren van score en woord.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bestpair</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">LoL</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bestpair</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[17, &#39;hazy&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>To the <code class="docutils literal notranslate"><span class="pre">max</span></code>! Het beste score- en woordpaar wordt gevonden op basis van de waarde van het eerste element, de score.</p>
+<p>Wat geeft de functie uiteindelijk terug?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="n">bestpair</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="quiz">
+<h2>Quiz<a class="headerlink" href="#quiz" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="langste-woord">
+<h3>Langste woord<a class="headerlink" href="#langste-woord" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">maxlen</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Vind het langste woord in L</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">LoL</span> <span class="o">=</span> <span class="p">[[</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">),</span> <span class="n">s</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">L</span><span class="p">]</span>
+    
+    <span class="n">bestpair</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">LoL</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">bestpair</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;aliens&quot;</span><span class="p">,</span> <span class="s2">&quot;zap&quot;</span><span class="p">,</span> <span class="s2">&quot;hazy&quot;</span><span class="p">,</span> <span class="s2">&quot;code&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<ol>
+<li><p>Vul aan, <code class="docutils literal notranslate"><span class="pre">LoL</span></code> is:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;aliens&quot;</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;zap&quot;</span><span class="p">],</span> <span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p>Wat is <code class="docutils literal notranslate"><span class="pre">bestpair</span></code>?</p></li>
+<li><p>Wat wordt als <em>resultaat</em> teruggegeven?</p></li>
+</ol>
+<div class="section" id="antwoord">
+<h4>Antwoord<a class="headerlink" href="#antwoord" title="Permalink to this headline">¶</a></h4>
+<ol>
+<li><p><code class="docutils literal notranslate"><span class="pre">LoL</span></code> is:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;aliens&quot;</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;zap&quot;</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;hazy&quot;</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;code&quot;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bestpair</span></code> is</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;aliens&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p>Het resultaat is “aliens”</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="dichtst-bij-42">
+<h3>Dichtst bij 42<a class="headerlink" href="#dichtst-bij-42" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">bestnumb</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Vind het getal het dichtst bij 42</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">LoL</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+    
+    <span class="n">bestpair</span> <span class="o">=</span> <span class="o">...</span>
+
+    <span class="k">return</span> <span class="n">bestpair</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    
+<span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>Wat is de <code class="docutils literal notranslate"><span class="pre">LoL</span></code>?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min(LoL)</span></code> of <code class="docutils literal notranslate"><span class="pre">max(LoL)</span></code> voor <code class="docutils literal notranslate"><span class="pre">bestpair</span></code>?</p></li>
+</ol>
+<p>Hint, Python heeft een ingebouwde functie <code class="docutils literal notranslate"><span class="pre">abs(x)</span></code>, bijvoorbeeld:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">20</span> <span class="o">==</span> <span class="nb">abs</span><span class="p">(</span><span class="mi">22</span> <span class="o">-</span> <span class="mi">42</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="id1">
+<h4>Antwoord<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<ol>
+<li><p><code class="docutils literal notranslate"><span class="pre">LoL</span></code> is</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">42</span><span class="p">),</span> <span class="n">x</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">L</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bestpair</span></code> is</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">min</span><span class="p">(</span><span class="n">LoL</span><span class="p">)</span>  <span class="c1"># let op, het *dichst* bij!</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Terzijde, we adviseren je de quiz opgaven altijd zelf te proberen! We geven je hier het antwoord, maar probeer
+bijvoorbeeld in dit voorbeeld te beredeneren waarom de <code class="docutils literal notranslate"><span class="pre">LoL</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">42</span><span class="p">),</span> <span class="n">x</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">L</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>het volgende resultaat geeft</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">40</span><span class="p">],</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">50</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>bij gebruik van de functie <code class="docutils literal notranslate"><span class="pre">abs(x)</span></code>. Vraag jezelf af wat de functie <code class="docutils literal notranslate"><span class="pre">abs(x)</span></code> nu precies <em>doet</em>?</p>
+</div>
+</div>
+<div class="section" id="meest-voorkomend">
+<h3>Meest voorkomend<a class="headerlink" href="#meest-voorkomend" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mostnumb</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Vind het meest voorkomend getal in L</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">LoL</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+    
+    <span class="n">bestpair</span> <span class="o">=</span> <span class="o">...</span>
+    
+    <span class="k">return</span> <span class="n">bstpr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>Wat is de <code class="docutils literal notranslate"><span class="pre">LoL</span></code>?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min(LoL)</span></code> of <code class="docutils literal notranslate"><span class="pre">max(LoL)</span></code> voor <code class="docutils literal notranslate"><span class="pre">bestpair</span></code>?</p></li>
+</ol>
+<p>Tip, gebruik de volgende <em>hulpfunctie</em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">count</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">L</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Vind het aantal e&#39;s in L</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">LC</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">L</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">e</span><span class="p">]</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">LC</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="id2">
+<h4>Antwoord<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<ol>
+<li><p><code class="docutils literal notranslate"><span class="pre">LoL</span></code> is</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">count</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">L</span><span class="p">),</span> <span class="n">e</span><span class="p">]</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">L</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bestpair</span></code> is</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">max</span><span class="p">(</span><span class="n">LoL</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "misja/programmeren",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./topics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../class/week_4.html" title="previous page">Week 4</a>
+    <a class='right-next' id="next-link" href="7b_rekenen_met_taal.html" title="next page">Rekenen met taal</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Hanze University of Applied Sciences<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>

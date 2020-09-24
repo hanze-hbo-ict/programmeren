@@ -1,0 +1,16 @@
+# Week 4
+
+![Schotel](/images/saucer.png)
+
+## Onderwerpen
+
+- [Data based design](/topics/7a_data_based_design)
+- [Rekenen met taal](/topics/7b_rekenen_met_taal)
+
+## Boek
+
+Hoofdstuk 3 uit *CS for All*.{cite}`alvarado2019cs`
+
+```{bibliography} /references.bib
+:style: unsrt
+```
