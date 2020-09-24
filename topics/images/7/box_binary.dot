@@ -1,0 +1,16 @@
+digraph
+{
+    // 100dpi png rendering:
+    // dot -Tpng -Gdpi=100 -Nfontname=Helvetica -Efontname=Helvetica -o box_binary.png box_binary.dot
+
+    node [shape=plaintext]
+    bin1 [label="1000011"]
+    bin2 [label="1000011"]
+
+    node [shape=box3d]
+    mem1 [label="type = str\nvalue = 'C'\nname = ..."]
+    mem2 [label="type = int\nvalue = 67\nname = ..."]
+    
+    bin1 -> mem1
+    bin2 -> mem2
+}
