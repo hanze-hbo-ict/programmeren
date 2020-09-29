@@ -489,7 +489,7 @@ Je zou kunnen uitproberen hoe hoog je het percentage ruis kunt verhogen totdat h
 Schrijf nu een geluidsbewerkende functie `overlay` met de volgende signature
 
 ```python
-def static(filename1, filename2):
+def overlay(filename1, filename2):
     ...
 ```
 
