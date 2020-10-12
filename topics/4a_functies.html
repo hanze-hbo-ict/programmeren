@@ -549,12 +549,12 @@ commentsRunWhenDOMLoaded(addUtterances);
      Antwoord
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#de-stack">
-     De stack
-    </a>
-   </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#de-stack">
+   De stack
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tot-slot">
@@ -602,22 +602,20 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="section" id="structuur-versus-procedure">
 <h2>Structuur versus procedure<a class="headerlink" href="#structuur-versus-procedure" title="Permalink to this headline">¶</a></h2>
-<p>De expressie</p>
 <div class="math notranslate nohighlight">
 \[
 g(x) = x^{100}
 \]</div>
-<p>definieert een <strong>structuur</strong>: wat het <em>is</em> (en wat logischerwijs volgt)</p>
+<p>Definieert een <strong>structuur</strong>: wat het <em>is</em> (en wat logischerwijs volgt)</p>
 <p>Functies ken je uit de wiskunde en je zou een “googolige” machtsverheffing kunnen <em>beschrijven</em> als een functie. We beschrijven hier dat voor elke parameter <span class="math notranslate nohighlight">\(x\)</span> je deze als <span class="math notranslate nohighlight">\(x^{100}\)</span> terugkrijgt. Dit is de syntax die wiskudigen hebben bedacht om een <em>structuur</em> te beschrijven en wat daar logischerwijs uit zou moeten volgen.</p>
-<p>De expressie</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">100</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">100</span>
 </pre></div>
 </div>
-<p>defineert een <strong>procedure</strong>: wat het <em>doet</em> (en wat gedragsmatig volgt)</p>
-<p>Python heeft ook functies. Het heeft de speciale syntax <code class="docutils literal notranslate"><span class="pre">def</span></code> (wat <em>define</em> betekent) om te zeggen “Ik definieer een functie”, in dit geval een functie met de naam <code class="docutils literal notranslate"><span class="pre">g</span></code> die een enkele parameter accepteer.</p>
-<p>De combintie van naam en welke paramaters worden geaccepteerd wordt ook de <em>signatuur</em> van een functie genoemd, want dit is wat het onderscheidt (en uniek maakt) van andere functies die we gaan schrijven. Let op dat een functie definitie ook wordt afgesloten met de dubbele punt <code class="docutils literal notranslate"><span class="pre">:</span></code>!</p>
-<p>Een Python functie is al een stuk concreter, want anders dan de wiskundige beschrijving definiëren we hier een procedure (één of meerdere handelingen die uitgevoerd moeten worden op basis van een mogelijke input) en een resultaat dat met het <code class="docutils literal notranslate"><span class="pre">return</span></code> <em>statement</em> wordt teruggegeven (output). Let ook op dat alles wat na de dubbele punt volgt moet worden ingesprongen om aan te geven dat het een codeblok is dat onderdeel van de functie is.</p>
+<p>Defineert een <strong>procedure</strong>: wat het <em>doet</em> (en wat gedragsmatig volgt)</p>
+<p>Python heeft ook functies. Het heeft de speciale syntax <code class="docutils literal notranslate"><span class="pre">def</span></code> (wat <em>define</em> betekent) om te zeggen “Ik definieer een functie”, in dit geval een functie met de naam <code class="docutils literal notranslate"><span class="pre">g</span></code> die een enkele parameter accepteert.</p>
+<p>De combintie van naam en welke paramaters worden geaccepteerd wordt ook de <em>signatuur</em> van een functie genoemd, want dit is wat het uniek maakt en onderscheidt van andere functies die we gaan schrijven. Let ook op dat een functie definitie wordt afgesloten met de dubbele punt <code class="docutils literal notranslate"><span class="pre">:</span></code>!</p>
+<p>Dit is al een stuk concreter, want anders dan de wiskundige beschrijving definiëren we hier een procedure (één of meerdere handelingen die uitgevoerd moeten worden op basis van een mogelijke input) en een resultaat dat mogelijk met het <code class="docutils literal notranslate"><span class="pre">return</span></code> <em>statement</em> wordt teruggegeven (output). Let ook op dat alles wat na de dubbele punt volgt moet worden ingesprongen om aan te geven dat het een codeblok is dat onderdeel van de functie is.</p>
 <p>Syntax check! De dubbele punt geeft aan dat een nieuwe context volgt, je hebt dit bijvoorbeeld ook gezien bij conditionele statements als <code class="docutils literal notranslate"><span class="pre">if:</span></code>. De vuistregel is <em>altijd inspringen</em> na een dubbele punt!</p>
 </div>
 <div class="section" id="binnen-een-functie">
@@ -667,7 +665,6 @@ flipside(s)
 </div>
 </div>
 <p>Met een string met driedubbele aanhalingstekens direct na de dubbele punt documenteer je de functie (voor jezelf en voor anderen). Je beschrijft in deze <em>docstring</em> op de eerste regel kort wat de functie doet en verder andere informatie die nodig is, bijvoorbeeld de typen van parameters. Deze documentatie kan je altijd opvragen met <code class="docutils literal notranslate"><span class="pre">help(x)</span></code>. Probeer dit ook een voor (ingebouwde) Python functies als (<code class="docutils literal notranslate"><span class="pre">len(x)</span></code> of <code class="docutils literal notranslate"><span class="pre">print()</span></code>).</p>
-<p>Mogen het ook driedubbele <em>enkele</em> aanhalingstekens zijn (<code class="docutils literal notranslate"><span class="pre">'''</span></code>)? Ja natuurlijk, want Python maakt geen onderscheid tussen <code class="docutils literal notranslate"><span class="pre">'</span></code> en <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> als het gaat on <em>strings</em>, wat een doc<em>string</em> natuurlijk is. De conventie (of afspraak) onder Python gebruikers is om liever het dubbele dan enkele aanhalingsteken te gebruiken voor docstrings.</p>
 </div>
 <div class="section" id="gebruik-variabelen">
 <h3>Gebruik variabelen<a class="headerlink" href="#gebruik-variabelen" title="Permalink to this headline">¶</a></h3>
@@ -676,7 +673,7 @@ flipside(s)
     <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="n">x</span><span class="p">:]</span> <span class="o">+</span> <span class="n">s</span><span class="p">[:</span><span class="n">x</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>De lengte van de string is nodig om vervolgens met een floor division het aantal karaketers tot het middelpunt van de string te bepalen. Dit aantal wordt aan de nieuwe variabele <code class="docutils literal notranslate"><span class="pre">x</span></code> toegekend en deze <code class="docutils literal notranslate"><span class="pre">x</span></code> wordt vervolgens 2 keer gebruikt voor het slicen van de string (de start- en stop waarden). We breken met het zetten van deze variabele <code class="docutils literal notranslate"><span class="pre">x</span></code> ook het probleem in stukjes op, en het scheelt ons typewerk!</p>
+<p>De lengte van de string is nodig om vervolgens met een floor division het aantal karakters tot het middelpunt van de string te bepalen. Dit aantal wordt aan de nieuwe variabele <code class="docutils literal notranslate"><span class="pre">x</span></code> toegekend en deze <code class="docutils literal notranslate"><span class="pre">x</span></code> wordt vervolgens 2 keer gebruikt voor het slicen van de string (de start- en stop waarden). We breken met het zetten van deze variabele <code class="docutils literal notranslate"><span class="pre">x</span></code> ook het probleem in stukjes op, en het scheelt ons typewerk!</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">flipside</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">:]</span> <span class="o">+</span> <span class="n">s</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">]</span>
 </pre></div>
@@ -685,29 +682,32 @@ flipside(s)
 </div>
 <div class="section" id="variabelen-opnieuw-definieren">
 <h3>Variabelen opnieuw definieren<a class="headerlink" href="#variabelen-opnieuw-definieren" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">convert_from_seconds</span><span class="p">(</span><span class="n">s</span><span class="p">):</span> <span class="c1"># aantal seconden</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">convert_from_seconds</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Een getal naar dagen, uren, minuten en seconden</span>
 <span class="sd">    </span>
 <span class="sd">    Zet een getal om naar naar een lijst van</span>
 <span class="sd">    [days, hours, minutes, seconds]</span>
 <span class="sd">    input s: een int</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">days</span> <span class="o">=</span> <span class="n">s</span> <span class="o">//</span> <span class="p">(</span><span class="mi">24</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span> <span class="c1"># aantal dagen</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">%</span> <span class="p">(</span><span class="mi">24</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>     <span class="c1"># restant s</span>
-    <span class="n">hours</span> <span class="o">=</span> <span class="n">s</span> <span class="o">//</span> <span class="p">(</span><span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>   <span class="c1"># aantal uren</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">%</span> <span class="p">(</span><span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>        <span class="c1"># restant s</span>
-    <span class="n">minutes</span> <span class="o">=</span> <span class="n">s</span> <span class="o">//</span> <span class="mi">60</span>      <span class="c1"># aantal minuten</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">%</span> <span class="mi">60</span>             <span class="c1"># restant s</span>
+    <span class="n">days</span> <span class="o">=</span> <span class="n">s</span> <span class="o">//</span> <span class="p">(</span><span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>  <span class="c1"># aantal dagen</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">%</span> <span class="p">(</span><span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>  <span class="c1"># restant s</span>
+
+    <span class="n">hours</span> <span class="o">=</span> <span class="n">s</span> <span class="o">//</span> <span class="p">(</span><span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>  <span class="c1"># aantal uren</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">%</span> <span class="p">(</span><span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>  <span class="c1"># restant s</span>
+
+    <span class="n">minutes</span> <span class="o">=</span> <span class="n">s</span> <span class="o">//</span> <span class="mi">60</span>  <span class="c1"># aantal minuten</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">%</span> <span class="mi">60</span>  <span class="c1"># restant s</span>
+
     <span class="k">return</span> <span class="p">[</span><span class="n">days</span><span class="p">,</span> <span class="n">hours</span><span class="p">,</span> <span class="n">minutes</span><span class="p">,</span> <span class="n">s</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>Gebruik variabelen en definiereer ze opnieuw als het nodig is! In dit voorbeeld wordt <code class="docutils literal notranslate"><span class="pre">s</span></code> steeds opnieuw gedefineerd op basis van het resultaat van een voorgaande handeling. Een floor division wordt eerst gebruikt om bijvoorbeeld het aantal dagen te vinden, met het restant wordt op dezlfde manier het aantal uren en minuten en eventeel restant aan seconden te vinden.</p>
-<p>Naast de docstring zie je ook commentaren: alles wat na een <code class="docutils literal notranslate"><span class="pre">#</span></code> volgt slaat Python over, het doet daar niets mee. Het is vooral voor mensen een manier om opmerkingen tussendoor te plaatsen. Let verder ook op het return statement waar de waarden als <em>list</em> wordt teruggegeven.</p>
+<p>Gebruik variabelen en definiereer ze opnieuw als het nodig is! In dit voorbeeld wordt <code class="docutils literal notranslate"><span class="pre">s</span></code> steeds opnieuw gedefineerd op basis van het resultaat van een vorige handeling. Een floor division (<code class="docutils literal notranslate"><span class="pre">//</span></code>) wordt eerst gebruikt om bijvoorbeeld het aantal dagen te vinden en met het restant (<code class="docutils literal notranslate"><span class="pre">%</span></code>) wordt op dezlfde manier het aantal uren weer gevonden. Hetzelfde proces wordt herhaald voor het aantal minuten tot een restant aan aantal seconden overblijft.</p>
+<p>Naast de <em>docstring</em> zie je ook commentaren: alles wat na een <code class="docutils literal notranslate"><span class="pre">#</span></code> volgt slaat Python over, het doet daar niets mee. Het is vooral voor mensen een manier om opmerkingen tussendoor te plaatsen. Let verder ook op het return statement waar de waarden als <em>list</em> wordt teruggegeven.</p>
 </div>
 <div class="section" id="return-versus-print">
 <h3>Return versus print<a class="headerlink" href="#return-versus-print" title="Permalink to this headline">¶</a></h3>
 <p>Wat is het verschil?</p>
-<p>Je hebt eerder kennisgemaakt met <code class="docutils literal notranslate"><span class="pre">print(x)</span></code> en deze functie lijkt iets terug te geven, althans zo lijkt het! <code class="docutils literal notranslate"><span class="pre">return</span></code> geeft een resultaat van een functie terug, wat is nu het verschil met <code class="docutils literal notranslate"><span class="pre">print(x)</span></code>?</p>
+<p>Je hebt eerder kennisgemaakt met <code class="docutils literal notranslate"><span class="pre">print(x)</span></code> en deze functie geeft iets terug, althans zo lijkt het! <code class="docutils literal notranslate"><span class="pre">return</span></code> geeft een resultaat van een functie terug, wat is nu het verschil met <code class="docutils literal notranslate"><span class="pre">print(x)</span></code>?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dbl</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -748,13 +748,14 @@ flipside(s)
 </div>
 </div>
 </div>
-<p>Dit geeft een fout op regel 6, waar we bij het resultaat van de functie 20 willen optellen. Waarom deze fout terwijl we wél een resultaat op scherm zien (40)? De verklaring is dat een functie zonder <code class="docutils literal notranslate"><span class="pre">return</span></code> niets teruggeeft en dat “niets” heeft (verassend genoeg!) wél een waarde, een waarde met type <code class="docutils literal notranslate"><span class="pre">None</span></code>. <code class="docutils literal notranslate"><span class="pre">None</span></code> (“geen”) representeert het niets en Python zegt ons hier dat we 20 <em>niet</em> bij niets kunnen optellen!</p>
-<p>Een leeg resultaat (niets) heeft dus wel een waarde (<code class="docutils literal notranslate"><span class="pre">None</span></code>), verwarrend! We komer hier later op terug …</p>
+<p>Dit geeft een fout op regel 6, waar we bij het resultaat van de functie 20 willen optellen. Waarom deze fout terwijl we wél een resultaat op scherm zien (40)? De verklaring is dat een functie zonder <code class="docutils literal notranslate"><span class="pre">return</span></code> niets teruggeeft en dat “niets” (verassend genoeg!) wél een waarde heeft, een waarde <code class="docutils literal notranslate"><span class="pre">None</span></code> (met type <code class="docutils literal notranslate"><span class="pre">NoneType</span></code>). <code class="docutils literal notranslate"><span class="pre">None</span></code> (“geen”) representeert het niets en Python zegt ons hier dat we 20 <em>niet</em> bij niets kunnen optellen!</p>
+<p>Het <em>niets</em> is voor Python blijkbaar wel “iets” (<code class="docutils literal notranslate"><span class="pre">None</span></code>)!</p>
+<p>Als je er bij stilstaat is dit niet zo gek. Wij mensen maken ook een onderscheid tussen iets en niets (en hebben daar woorden voor, <em>iets</em> of <em>niets</em>) en voor Python is in dit niet(s) anders: het heeft een manier nodig om niets te kunnen representeren en uit te drukken.</p>
 <div class="section" id="het-verschil">
 <h4>Het verschil<a class="headerlink" href="#het-verschil" title="Permalink to this headline">¶</a></h4>
 <p><strong>print</strong> wijzigt pixels op het scherm</p>
 <p><strong>return</strong> geeft resultaat van de functie-aanroep terug</p>
-<p><code class="docutils literal notranslate"><span class="pre">return</span></code> is de manier hoe software informatie aan functies doorgeeft, waar het resultaat (output) van de één de input kan zijn voor de ander.</p>
+<p><code class="docutils literal notranslate"><span class="pre">return</span></code> is de manier hoe software informatie aan functies doorgeeft, waar het resultaat (output) van de een de input kan zijn voor de ander.</p>
 </div>
 </div>
 <div class="section" id="testen">
@@ -792,11 +793,6 @@ flipside(s)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">dbl_pr</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="o">==</span> <span class="kc">None</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>40
 </pre></div>
 </div>
 </div>
@@ -869,18 +865,17 @@ flipside(s)
 </div>
 <div class="section" id="id3">
 <h3>Antwoord<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<ol class="simple">
-<li><p>42</p></li>
-</ol>
+<p>42</p>
+</div>
 </div>
 <div class="section" id="de-stack">
-<h3>De stack<a class="headerlink" href="#de-stack" title="Permalink to this headline">¶</a></h3>
+<h2>De stack<a class="headerlink" href="#de-stack" title="Permalink to this headline">¶</a></h2>
 <p>Wat gebeurt er als een functie zichzelf aanroept?</p>
 <p>Hoe wordt de <em>stack</em> gevuld met met <em>frames</em> voor een functie die zichzelf steeds aanroept? Met andere woorden, hoe stapelt een functie zichzelf?!?</p>
 <p><img alt="q2_3" src="../_images/prob_2_step_3a.png" /></p>
 <p>De eerste aanroep van <code class="docutils literal notranslate"><span class="pre">f</span></code> met parameter waarde 2 wordt aan de stack toegevoegd. De test faalt <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">0</span></code> (want <code class="docutils literal notranslate"><span class="pre">x</span></code> is 2) en regel 5 wordt uitgevoerd waar <code class="docutils literal notranslate"><span class="pre">f</span></code> zichzelf aanroept met de waarde <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">-</span> <span class="pre">1</span></code> (1, want <code class="docutils literal notranslate"><span class="pre">x</span></code> was op dat moment 2).</p>
 <p><img alt="q2_8" src="../_images/prob_2_step_8a.png" /></p>
-<p>Hier gebeurt weer hetzelfde, de test faalt want <code class="docutils literal notranslate"><span class="pre">x</span></code> is gelijk aan 1, niet 0. Vervolgens roept <code class="docutils literal notranslate"><span class="pre">f</span></code> zichzelf weerr aan met de waarde 0 (1 - 0).</p>
+<p>Hier gebeurt weer hetzelfde, de test faalt want <code class="docutils literal notranslate"><span class="pre">x</span></code> is gelijk aan 1, niet 0. Vervolgens roept <code class="docutils literal notranslate"><span class="pre">f</span></code> zichzelf weer aan met de waarde 0 (1 - 1).</p>
 <p><img alt="q2_10" src="../_images/prob_2_step_10a.png" /></p>
 <p>Er staan nu drie frames op de stack! Nu slaagt de test wel want <code class="docutils literal notranslate"><span class="pre">x</span></code> gelijk is aan 0.</p>
 <p><img alt="q2_12" src="../_images/prob_2_step_12a.png" /></p>
@@ -889,7 +884,6 @@ flipside(s)
 <p>Het resultaat van het derde frame kan nu worden ingevuld en het resultaat kan worden teruggegeven (12 + 10*1).</p>
 <p><img alt="q2_14" src="../_images/prob_2_step_14a.png" /></p>
 <p>Het resultaat van het tweede frame kan nu ook in het eerste worden ingevuld en het resultaat worden teruggegeven (22 + 10*2). Tot slot wordt dit resultaat teruggegeven, <code class="docutils literal notranslate"><span class="pre">f(2)</span></code> is dus gelijk aan 42!</p>
-</div>
 </div>
 <div class="section" id="tot-slot">
 <h2>Tot slot<a class="headerlink" href="#tot-slot" title="Permalink to this headline">¶</a></h2>
