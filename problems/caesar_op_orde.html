@@ -636,25 +636,22 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2>De functie <code class="docutils literal notranslate"><span class="pre">decipher(s)</span></code><a class="headerlink" href="#de-functie-decipher-s" title="Permalink to this headline">¶</a></h2>
 <p>Omgekeerd krijgt <code class="docutils literal notranslate"><span class="pre">decipher(s)</span></code> een string <code class="docutils literal notranslate"><span class="pre">s</span></code> met een (Nederlandstalige) tekst die al versleuteld is. De functie <code class="docutils literal notranslate"><span class="pre">decipher</span></code> moet, voorzover mogelijk, de <em>originele</em> tekst teruggeven, dit zal een rotatie (mogelijk ook <code class="docutils literal notranslate"><span class="pre">0</span></code>) zijn van het argument <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
 <p>Wees bewust dat sommige strings meer dan één “ontsleuteling” kunnen hebben. Bovendien is het moeilijk of soms zelfs onmogelijk om hele korte strings goed te ontsleutelen. De functie <code class="docutils literal notranslate"><span class="pre">decipher</span></code> hoeft dus ook niet <em>perfect</em> te zijn, maar moet wel vrijwel altijd werken met langere stukken Nederlandse tekst, bijvoorbeeld zinnen van 8 of meer woorden. Het is dus geen probleem als een enkel woord of een korte zinnen niet goed worden ontsleuteld.</p>
-<p>!!! tip “Lists of lists”
-Het is handig om te beginnen met het genereren van <em>alle mogelijke versleutelingen</em>, bijvoorbeeld via:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```python
-L = [... for n in range(26)]
-```
-
-Vervolgens is het handig om de `LoL` &quot;lists of lists&quot;, oftewel de  &quot;lijst van lijsten&quot;-techniek te gebruiken om elk element van `L` een score te geven. Het kan handig zijn om nog even op te zoeken hoe dat werkt.
-
-```python
-lists = [... for x in L]
-```
-
-Je mag zelf bepalen hoe je &quot;Nederlandstaligheid&quot; een score geeft, hier een paar aanknopingspunten:
-
--  Je kan kijken naar het voorbeeld met `best_word` dat het woord zocht met de hoogste Scrabble score in een lijst woorden. Dat lijkt heel aardig op wat je hier wilt doen!
--   Kijk daarna nog eens terug naar het college over `min` en `max` om te zien hoe je de &quot;lijst van lijsten&quot; `lists` kan gebruiken
-
-&lt;!-- TODO verwijzing naar college --&gt;
+<div class="tip admonition">
+<p class="admonition-title"> Lists of lists</p>
+<p>Het is handig om te beginnen met het genereren van <em>alle mogelijke versleutelingen</em>, bijvoorbeeld via:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">26</span><span class="p">)]</span>
 </pre></div>
+</div>
+<p>Vervolgens is het handig om de <code class="docutils literal notranslate"><span class="pre">LoL</span></code> “lists of lists”, oftewel de  “lijst van lijsten”-techniek te gebruiken om elk element van <code class="docutils literal notranslate"><span class="pre">L</span></code> een score te geven. Het kan handig zijn om nog even op te zoeken hoe dat werkt.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">lists</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">L</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Je mag zelf bepalen hoe je “Nederlandstaligheid” een score geeft, hier een paar aanknopingspunten:</p>
+<ul class="simple">
+<li><p>Je kan kijken naar het voorbeeld met <code class="docutils literal notranslate"><span class="pre">best_word</span></code> dat het woord zocht met de hoogste Scrabble score in een lijst woorden. Dat lijkt heel aardig op wat je hier wilt doen!</p></li>
+<li><p>Kijk daarna nog eens terug naar het college over <code class="docutils literal notranslate"><span class="pre">min</span></code> en <code class="docutils literal notranslate"><span class="pre">max</span></code> om te zien hoe je de “lijst van lijsten” <code class="docutils literal notranslate"><span class="pre">lists</span></code> kan gebruiken</p></li>
+</ul>
+<!-- TODO verwijzing naar college -->
 </div>
 <p>Een mogelijke aanpak is het gebruik van letterfrequenties, hieronder is een functie gegeven met de freuqenties per letter en deze kan je gebruiken in de opgave. Je zou ook Scrabble scores kunnen proberen (want deze zijn ook gebaseerd op letterfrequenties). Je mag zelf extra heuristieken (“vuistregels”) bedenken en verder mag je ook kleine hulpfuncties toevoegen om te helpen met het schrijven van <code class="docutils literal notranslate"><span class="pre">decipher</span></code>.</p>
 <p>Hoe je het ook aanpakt, onthoud dat je de strategie die je gebruikt bij het schrijven van de functie <code class="docutils literal notranslate"><span class="pre">decipher</span></code> moet documenteren in een kort stukje commentaar boven de functie <code class="docutils literal notranslate"><span class="pre">decipher</span></code>.</p>
