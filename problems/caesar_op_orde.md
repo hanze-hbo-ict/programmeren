@@ -106,25 +106,26 @@ Omgekeerd krijgt `decipher(s)` een string `s` met een (Nederlandstalige) tekst d
 
 Wees bewust dat sommige strings meer dan één "ontsleuteling" kunnen hebben. Bovendien is het moeilijk of soms zelfs onmogelijk om hele korte strings goed te ontsleutelen. De functie `decipher` hoeft dus ook niet *perfect* te zijn, maar moet wel vrijwel altijd werken met langere stukken Nederlandse tekst, bijvoorbeeld zinnen van 8 of meer woorden. Het is dus geen probleem als een enkel woord of een korte zinnen niet goed worden ontsleuteld.
 
-!!! tip "Lists of lists"
-    Het is handig om te beginnen met het genereren van *alle mogelijke versleutelingen*, bijvoorbeeld via:
+:::{admonition,tip} Lists of lists
+Het is handig om te beginnen met het genereren van *alle mogelijke versleutelingen*, bijvoorbeeld via:
 
-    ```python
-    L = [... for n in range(26)]
-    ```
+```python
+L = [... for n in range(26)]
+```
 
-    Vervolgens is het handig om de `LoL` "lists of lists", oftewel de  "lijst van lijsten"-techniek te gebruiken om elk element van `L` een score te geven. Het kan handig zijn om nog even op te zoeken hoe dat werkt.
+Vervolgens is het handig om de `LoL` "lists of lists", oftewel de  "lijst van lijsten"-techniek te gebruiken om elk element van `L` een score te geven. Het kan handig zijn om nog even op te zoeken hoe dat werkt.
 
-    ```python
-    lists = [... for x in L]
-    ```
+```python
+lists = [... for x in L]
+```
 
-    Je mag zelf bepalen hoe je "Nederlandstaligheid" een score geeft, hier een paar aanknopingspunten:
+Je mag zelf bepalen hoe je "Nederlandstaligheid" een score geeft, hier een paar aanknopingspunten:
 
-    -  Je kan kijken naar het voorbeeld met `best_word` dat het woord zocht met de hoogste Scrabble score in een lijst woorden. Dat lijkt heel aardig op wat je hier wilt doen!
-    -   Kijk daarna nog eens terug naar het college over `min` en `max` om te zien hoe je de "lijst van lijsten" `lists` kan gebruiken
+-  Je kan kijken naar het voorbeeld met `best_word` dat het woord zocht met de hoogste Scrabble score in een lijst woorden. Dat lijkt heel aardig op wat je hier wilt doen!
+-   Kijk daarna nog eens terug naar het college over `min` en `max` om te zien hoe je de "lijst van lijsten" `lists` kan gebruiken
 
-    <!-- TODO verwijzing naar college -->
+<!-- TODO verwijzing naar college -->
+:::
 
 Een mogelijke aanpak is het gebruik van letterfrequenties, hieronder is een functie gegeven met de freuqenties per letter en deze kan je gebruiken in de opgave. Je zou ook Scrabble scores kunnen proberen (want deze zijn ook gebaseerd op letterfrequenties). Je mag zelf extra heuristieken ("vuistregels") bedenken en verder mag je ook kleine hulpfuncties toevoegen om te helpen met het schrijven van `decipher`.
 
