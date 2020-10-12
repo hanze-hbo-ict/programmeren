@@ -599,25 +599,25 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p><img alt="box_locatie" src="../_images/box_2.png" /></p>
 <p>Geheugen is een hele lange lijst van dit soort dozen, elk met een naam, waarde, type en geheugenlocatie.</p>
 <p><img alt="RAM 8Gb" src="../_images/1136px-Samsung-1GB-DDR2-Laptop-RAM.jpg" /></p>
-<p>Random Access Memory (<a class="reference external" href="https://nl.wikipedia.org/wiki/Dynamic_random-access_memory">RAM</a>) is waar variabelen worden opgeslagen, een kaart zoals je deze hier ziet zit ook in jouw laptop! Als je het zwarte materiaal voorzichtig zou weghalen dan zal een (microscopisch klein) raster zichtbaar worden.</p>
+<p>Random Access Memory (<a class="reference external" href="https://nl.wikipedia.org/wiki/Dynamic_random-access_memory">RAM</a>) is waar variabelen worden opgeslagen, een kaart zoals je deze hier ziet zit ook in jouw computer! Als je het zwarte materiaal voorzichtig zou weghalen zal een (microscopisch klein) raster zichtbaar worden.</p>
 <p><img alt="RAM Grid" src="../_images/ramgrid.png" /></p>
 <p>Horizontaal zie je de <em>bitlijnen</em>, of adresregels (de geheugenlokatie) en verticaal de <em>woordlijnen</em> (of dataregels). Elk kruispunt is een <a class="reference external" href="https://nl.wikipedia.org/wiki/Condensator">condensator</a> die elektrisch geladen of ongeladen kan zijn.</p>
 </div>
 <div class="section" id="bits">
 <h3>Bits<a class="headerlink" href="#bits" title="Permalink to this headline">¶</a></h3>
 <p><img alt="RAM Grid Bit" src="../_images/ramgrid_bit.png" /></p>
-<p>Zo’n punt dat geladen (1 of <code class="docutils literal notranslate"><span class="pre">True</span></code>) of ongeladen (0 of <code class="docutils literal notranslate"><span class="pre">False</span></code>) kan zijn wordt een <em>bit</em> genoemd. Dit is de kleinst mogelijk informatie-eenheid!</p>
+<p>Zo’n punt (een condensator) dat geladen (1 of <code class="docutils literal notranslate"><span class="pre">True</span></code>) of ongeladen (0 of <code class="docutils literal notranslate"><span class="pre">False</span></code>) kan zijn wordt een <em>bit</em> genoemd. Dit is de kleinst mogelijk informatie-eenheid!</p>
 </div>
 <div class="section" id="bytes">
 <h3>Bytes<a class="headerlink" href="#bytes" title="Permalink to this headline">¶</a></h3>
 <p><img alt="RAM Grid Byte" src="../_images/ramgrid_byte.png" /></p>
-<p>Een <em>byte</em> is een verzameling van 8 aaneengesloten bits op een adresregel.</p>
+<p>Je zal ook vaak horen over <em>bytes</em> en dit is een verzameling van 8 aaneengesloten <em>bits</em> op een adresregel. Waarom 8 en niet 5, 10, 12 of meer (of minder) zal je je misschien afvragen? Dit is historisch bepaald en heeft alles te maken met het minimaal aantal bits dat ooit nodig was om een bepaalde set van karakters (letters en andere tekens) te kunnen representeren (<a class="reference external" href="https://nl.wikipedia.org/wiki/ASCII_(tekenset)">ASCII</a> om precies te zijn). Maak je geen zorgen om wat dit precies betekent, we komen hier nog op terug!</p>
 </div>
 <div class="section" id="woord">
 <h3>Woord?<a class="headerlink" href="#woord" title="Permalink to this headline">¶</a></h3>
 <p><img alt="Windows 64bit" src="../_images/windows_64bit.png" /></p>
 <p><em>Woord</em> in woordregel is niet een woord als in een zin (taal) maar een term die staat voor de <a class="reference external" href="https://en.wikipedia.org/wiki/Word_(computer_architecture)">natuurlijke eenheid</a> van informatie voor een bepaalde computerarchitectuur. Tegenwoordig is deze voor de meeste systemen 64-bit, dit wordt ook wel de <em>adresruimte</em> van een architectuur genoemd.</p>
-<p>Deze eenheid is van belang want het bepaalt bijvoorbeeld het grootste gehele getal dat kan worden opgeslagen. Maar hoe komen we van bits naar bytes en vervolgens tot getallen en andere data zul je je afvragen? Maak je geen zorgen, daar komen we later uitgebreid op terug, eerst gaan we kijken naar datatypes!</p>
+<p>Deze eenheid is van belang want het bepaalt bijvoorbeeld het grootste gehele getal dat kan worden opgeslagen. Maar hoe komen we van bits naar bytes en vervolgens tot getallen en andere data zul je je afvragen? Dit zul je later zien, eerst gaan we kijken naar de verschillende typen data die we kunnen onderscheiden.</p>
 </div>
 </div>
 <div class="section" id="datatypes">
@@ -769,7 +769,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">7</span> <span class="pre">//</span> <span class="pre">3</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">9</span> <span class="pre">//</span> <span class="pre">3</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">9</span> <span class="pre">//</span> <span class="pre">3</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">30</span> <span class="pre">//</span> <span class="pre">7</span></code></p></li>
 </ul>
 <p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">//</span> <span class="pre">y</span></code> is als <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">/</span> <span class="pre">y</span></code> maar dan <strong>afgerond</strong> tot een geheel getal</p>
 <div class="cell docutils container">
@@ -790,11 +790,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>Zouden we dit kunnen generaliseren tot een algemene regel met behulp van de operatoren <code class="docutils literal notranslate"><span class="pre">//</span></code> en <code class="docutils literal notranslate"><span class="pre">%</span></code> die we nu hebben leren kennen?</p>
-<p>De verdeling van <code class="docutils literal notranslate"><span class="pre">x</span></code> in veelheden van <code class="docutils literal notranslate"><span class="pre">y</span></code>:</p>
+<p>De verdeling van <code class="docutils literal notranslate"><span class="pre">x</span></code> in veelheden van <code class="docutils literal notranslate"><span class="pre">y</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">==</span> <span class="p">(</span><span class="n">x</span> <span class="o">//</span> <span class="n">y</span><span class="p">)</span> <span class="o">*</span> <span class="n">y</span> <span class="o">+</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>En daar is de <code class="docutils literal notranslate"><span class="pre">%</span></code> operator weer :) Je zult later zien dat het gebruik van <code class="docutils literal notranslate"><span class="pre">%</span></code> en <code class="docutils literal notranslate"><span class="pre">//</span></code> bijzonder handig zal zijn als we gaan rekenen met … bits!</p>
+<p>en dit ingevuld voor ons voorbeeld:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">30</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span> <span class="o">//</span> <span class="mi">7</span><span class="p">)</span> <span class="o">*</span> <span class="mi">7</span> <span class="o">+</span> <span class="p">(</span><span class="mi">30</span> <span class="o">%</span> <span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>En daar is de <code class="docutils literal notranslate"><span class="pre">%</span></code> operator weer :) Je zult later zien dat het gebruik van <code class="docutils literal notranslate"><span class="pre">%</span></code> en <code class="docutils literal notranslate"><span class="pre">//</span></code> bijzonder handig is als we gaan rekenen met … bits!</p>
 <p>Kort samengevat: de <code class="docutils literal notranslate"><span class="pre">//</span></code> operator rondt volledig naar beneden af (door alles achter de komma weg te laten).</p>
 </div>
 <div class="section" id="wat-is-gelijk">
@@ -817,17 +821,23 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="section" id="identiteit">
 <h3>Identiteit<a class="headerlink" href="#identiteit" title="Permalink to this headline">¶</a></h3>
-<p>Is <code class="docutils literal notranslate"><span class="pre">==</span></code> een test op <em>waarde</em> of <em>identiteit</em> (geheugenlokatie)?</p>
+<p>Is <code class="docutils literal notranslate"><span class="pre">==</span></code> een test op <em>waarde</em> of <em>identiteit</em> (de geheugenlokatie waar de waarde <em>leeft</em>)?</p>
 <p>Sommige talen hebben <code class="docutils literal notranslate"><span class="pre">===</span></code>!</p>
 <p>Er is een verschil tussen testen op <em>waarde</em> en testen op <em>identiteit</em> (of het hetzelfde “doos” is, de geheugenlokatie). Python heeft geen <code class="docutils literal notranslate"><span class="pre">===</span></code> (zoals Javascript, een programeertal gebruikt in browsers) maar heeft speciaal voor dit geval <code class="docutils literal notranslate"><span class="pre">is</span></code>, bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">is</span> <span class="pre">b</span></code> om te vergelijken op basis van identiteit.</p>
 <p>Vergelijken op waarde of identiteit met <code class="docutils literal notranslate"><span class="pre">==</span></code> kan erg verschillen per taal. Voor Java (een veel gebruikte programmeertaal) betekent <code class="docutils literal notranslate"><span class="pre">==</span></code> een test op <em>identiteit</em>. Python heeft gekozen om <code class="docutils literal notranslate"><span class="pre">==</span></code> een test op gelijkheid van <em>waarde</em> te laten zijn. Dit ligt misschien het dichtst bij hoe mensen denken, zeker als het gaat om vergelijken van bijvoorbeeld getallen of tekst.</p>
-<p>Een voorbeeld om het verschil duidelijk te maken:</p>
+<p>Een voorbeeld om het verschil duidelijk te maken.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">3141592</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">3141592</span>
-
-<span class="n">a</span> <span class="o">==</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Gegeven twee variabelen <code class="docutils literal notranslate"><span class="pre">a</span></code> en <code class="docutils literal notranslate"><span class="pre">b</span></code> met dezelfde waarde</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span>
 </pre></div>
 </div>
 </div>
@@ -837,6 +847,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
+<p>zal inderdaar blijken dat <code class="docutils literal notranslate"><span class="pre">a</span></code> en <code class="docutils literal notranslate"><span class="pre">b</span></code> een gelijke <em>waarde</em> hebben.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="ow">is</span> <span class="n">b</span>
@@ -849,6 +860,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
+<p>maar een vergelijking op basis van <em>identiteit</em> zal niet slagen…</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
@@ -857,13 +869,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140592668772176
-140592668772720
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140529457801872
+140529457801232
 </pre></div>
 </div>
 </div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">id(x)</span></code> geeft de adreslokatie van een waarde terug. Je kan zien dat <code class="docutils literal notranslate"><span class="pre">a</span></code> en <code class="docutils literal notranslate"><span class="pre">b</span></code> anders zijn, hoewel ze tóch dezelfe waarde hebben!</p>
+<p><code class="docutils literal notranslate"><span class="pre">id(x)</span></code> geeft de adreslokatie van een waarde terug. Je kan zien dat <code class="docutils literal notranslate"><span class="pre">a</span></code> en <code class="docutils literal notranslate"><span class="pre">b</span></code> anders zijn, hoewel ze tóch dezelfe waarde hebben! (let op, deze geheugenlokaties kunnen verschillen met jouw computer!)</p>
 </div>
 </div>
 <div class="section" id="quiz">
@@ -942,8 +954,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">11</span> <span class="o">//</span> <span class="mi">2</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="o">%</span> <span class="mi">3</span>
 <span class="n">c</span> <span class="o">=</span> <span class="n">b</span> <span class="o">**</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span> <span class="o">*</span> <span class="n">a</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
