@@ -107,7 +107,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <meta property="og:url"         content="https://misja.github.io/programmeren/topics/4b_recursie.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Recursie" />
-<meta property="og:description" content="Recursie  Om recursie te kunnen begrijpen moet je eerst recursie kunnen begrijpen.  – student (anoniem)  Of: het antwoord op het probleem is het antwoord op het" />
+<meta property="og:description" content="Recursie  Om recursie te kunnen begrijpen moet je eerst recursie kunnen begrijpen.  – student, anoniem  Of: het antwoord op het probleem is het antwoord op het " />
 <meta property="og:image"       content="https://misja.github.io/programmeren/_static/mascot.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -700,11 +700,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h1>Recursie<a class="headerlink" href="#recursie" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><p>Om recursie te kunnen begrijpen moet je eerst recursie kunnen begrijpen.</p>
-<p>– student (anoniem)</p>
+<p>– student, anoniem</p>
 </div></blockquote>
 <p>Of: het antwoord op het probleem is het antwoord op het probleem (is het antwoord op het probleem)</p>
 <p><img alt="mind, blown ... recursive" src="../_images/mind_blown_recursive.gif" /></p>
-<p>Zet je schrap want dit onderwerp gaat voor hoofpijn én verassingen zorgen, kies je <a class="reference external" href="https://giphy.com/explore/mind-blown">favoriet</a>… Nazorg is beschikbaar middels een persoonlijk gesprek met een docent of het studentendecanaat ;)</p>
+<p>Zet je schrap want dit onderwerp gaat voor hoofpijn én verassende inzichten zorgen, kies je <a class="reference external" href="https://giphy.com/explore/mind-blown">favoriet</a>…</p>
 <div class="section" id="een-oplossing-die-zichzelf-herhaalt">
 <h2>Een oplossing die zichzelf herhaalt<a class="headerlink" href="#een-oplossing-die-zichzelf-herhaalt" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">numis</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
@@ -714,43 +714,43 @@ commentsRunWhenDOMLoaded(addUtterances);
     <span class="o">...</span>
 </pre></div>
 </div>
-<p>Stel je een functie voor die het aantal i’s in een string telt en dit als waarde teruggeeft. Dit is een lastig probleem, laten we proberen het eerst uit te schrijven zonder direct in Python te denken! Het resultaat van de functie moet dus het volgende zijn:</p>
-<p>Totaal aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;i❤️spruitjes&quot;</span></code>?</p>
-<p>Iedereen houdt van spruitjes, toch? Laat dit de string zijn die we willen gaan onderzoeken en je weet dat een string een opeenvolging van karakters is. We zullen karakter voor karakter moeten controleren (testen) of het gelijk is aan het karakter “i” (en ja, emoji zijn ook karakters :heart:). Karakter voor karakter betekent dat een eerste stap om dit probleem op te lossen de volgende zal zijn:</p>
-<p>Aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;i&quot;</span></code> + Aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;❤️spruitjes&quot;</span></code></p>
+<p>Stel je een functie voor die het aantal i’s in een string telt en dit als waarde teruggeeft. Dit is een lastig probleem, laten we proberen het eerst uit te schrijven zonder direct in Python te denken. Het resultaat van de functie zou het volgende moeten zijn:</p>
+<p>Totaal aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;i❤️aliens&quot;</span></code>?</p>
+<p>Aliens zijn om van te houden, toch?!? Laat dit de string zijn die we willen gaan onderzoeken en je weet dat een string een opeenvolging van karakters is. We zullen karakter voor karakter moeten controleren (testen) of het gelijk is aan het karakter “i” (en ja, emoji zijn ook karakters :heart:). Karakter voor karakter betekent dat een eerste stap om dit probleem op te lossen de volgende zal zijn:</p>
+<p>Aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;i&quot;</span></code> + Aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;❤️aliens&quot;</span></code></p>
 <p>We nemen het eerst karakter, tellen het aantal i’s (dit kan voor een enkel karakter 0 of 1 zijn) en tellen daar het aantal i’s in het <em>restant</em> van de string bij op. We herhalen deze handeling voor het eerste karakter van het restant, en tellen daar natuurlijk het resultaat van het eerste karakter bij op:</p>
-<p>Aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;i&quot;</span></code> + Aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;❤️&quot;</span></code> + Aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;spruitjes&quot;</span></code></p>
+<p>Aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;i&quot;</span></code> + Aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;❤️&quot;</span></code> + Aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;aliens&quot;</span></code></p>
 <p>Et cetera. Je zal hier een patroon zien, het probleem en oplossing herhaalt zich steeds: na het eerste karakter moeten we hetzelfde “recept” steeds weer herhalen voor het restant van de string.</p>
 <p>Terzijde, weet je nog dat je het eerste karakter en het restant van een string kan lezen met <code class="docutils literal notranslate"><span class="pre">s[0]</span></code> en <code class="docutils literal notranslate"><span class="pre">s[1:]</span></code>?</p>
 </div>
 <div class="section" id="paradigmas">
 <h2>Paradigmas<a class="headerlink" href="#paradigmas" title="Permalink to this headline">¶</a></h2>
-<p>Hoe een probleem op te lossen?</p>
+<p>Verschillende manieren om dit probleem dit op te lossen:</p>
 <p><strong>sequentieeel</strong> (iteratief)</p>
 <p><strong>zelfgelijkend</strong> (recursief)</p>
-<p>Het <code class="docutils literal notranslate"><span class="pre">numis(s)</span></code> probleem valt op meer dan één manier op te lossen en we komen daarmee aan bij het bestaan van verschillende <a class="reference external" href="https://nl.wikipedia.org/wiki/Programmeerparadigma">programmeerparadigmas</a>, dat wil zeggen technieken en benaderingen voor het oplossen van een probleem. We gaan eerst recursie verkennen, een iteratieve benadering komt later.</p>
+<p>Het <code class="docutils literal notranslate"><span class="pre">numis(s)</span></code> probleem valt op meer dan één manier op te lossen en we komen daarmee aan bij het bestaan van verschillende <a class="reference external" href="https://nl.wikipedia.org/wiki/Programmeerparadigma">programmeerparadigmas</a>, dat wil zeggen technieken en benaderingen voor het oplossen van een probleem. We gaan eerst recursie verkennen, een <em>iteratieve</em> benadering komt later.</p>
 <p>Als je al eerder (meer of minder) hebt geprogrammeerd zal je iteratieve constructies wellicht kennen als <em>lussen</em> (bijvoobeeld “while” of “for each” lussen), deze benadering gaan we nu dus <em>niet</em> gebruiken!</p>
 <div class="section" id="sequentieel-denken">
 <h3>Sequentieel denken<a class="headerlink" href="#sequentieel-denken" title="Permalink to this headline">¶</a></h3>
 <p><strong>faculteit</strong></p>
 <p>wiskunde: <span class="math notranslate nohighlight">\(5! = 120\)</span></p>
-<p>informatica: <code class="docutils literal notranslate"><span class="pre">fac(5)</span> <span class="pre">=</span> <span class="pre">5*4*3*2*1</span></code></p>
-<p>Laten we het geheugen even opfrissen wat de faculteit van een getal ook alweer is. Stel je 42 aliens voor en je zou willen weten op hoeveel manieren je deze aliens op een rij kan zetten. Je weet wellicht het antwoord, dit is 42 x 41 x 41 … 3 x 2 x 1, of ook wel bekend als de “42 faculteit” en (wiskundig) geschreven als <span class="math notranslate nohighlight">\(42!\)</span>. Sequentieel denken en daarmee dit probleem oplossen (uitschrijven) als <code class="docutils literal notranslate"><span class="pre">5*4*3*2*1</span></code> is heel natuurlijk voor mensen, zo hebben we het als oplossing geleerd!</p>
-<p><code class="docutils literal notranslate"><span class="pre">fac(N)</span> <span class="pre">=</span> <span class="pre">N*(N-1)*</span> <span class="pre">...</span> <span class="pre">*3*2*1</span></code></p>
-<p>Maar zou je <code class="docutils literal notranslate"><span class="pre">fac(5)</span></code> als een meer algemene versie van zichzelf kunnen schrijven? Dat kan, laten we daar een begin mee maken en je zal zien dat een zichzelf herhalend (terugkerend?) patroon gaat ontstaan…</p>
+<p>informatica: <code class="docutils literal notranslate"><span class="pre">fac(5)</span> <span class="pre">=</span> <span class="pre">5</span> <span class="pre">*</span> <span class="pre">4</span> <span class="pre">*</span> <span class="pre">3</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">1</span></code></p>
+<p>Laten we het geheugen even opfrissen wat de faculteit van een getal ook alweer is. Stel je 42 aliens voor en je zou willen weten op hoeveel manieren je deze aliens op een rij kan zetten. Je weet misschien het antwoord, dit is 42 x 41 x 41 … 3 x 2 x 1, of ook wel bekend als de <em>42 faculteit</em> en (wiskundig) geschreven als <span class="math notranslate nohighlight">\(42!\)</span>. Sequentieel denken en daarmee dit probleem oplossen (uitschrijven) als <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">*</span> <span class="pre">4</span> <span class="pre">*</span> <span class="pre">3</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">1</span></code> is heel natuurlijk voor mensen, zo hebben we het als oplossing geleerd!</p>
+<p><code class="docutils literal notranslate"><span class="pre">fac(N)</span> <span class="pre">=</span> <span class="pre">N</span> <span class="pre">*</span> <span class="pre">(N-1)</span> <span class="pre">*</span> <span class="pre">...</span> <span class="pre">*</span> <span class="pre">3</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">1</span></code></p>
+<p>Maar zou je <code class="docutils literal notranslate"><span class="pre">fac(5)</span></code> als een meer algemene versie van zichzelf kunnen schrijven? Dat kan, laten we daar een begin mee maken en je zal zien dat een zichzelf herhalend (terugkerend?) patroon gaat ontstaan, net als bij het aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;i❤️aliens&quot;</span></code>…</p>
 </div>
 <div class="section" id="recursief-denken">
 <h3>Recursief denken<a class="headerlink" href="#recursief-denken" title="Permalink to this headline">¶</a></h3>
 <p><strong>faculteit</strong></p>
 <p>wiskunde: <span class="math notranslate nohighlight">\(5! = 120\)</span></p>
-<p>informatica: <code class="docutils literal notranslate"><span class="pre">fac(5)</span> <span class="pre">=</span> <span class="pre">5*4*3*2*1</span></code></p>
+<p>informatica: <code class="docutils literal notranslate"><span class="pre">fac(5)</span> <span class="pre">=</span> <span class="pre">5</span> <span class="pre">*</span> <span class="pre">4</span> <span class="pre">*</span> <span class="pre">3</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">1</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">fac(5)</span> <span class="pre">=</span> <span class="pre">5</span> <span class="pre">*</span> <span class="pre">fac(4)</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">fac(N)</span> <span class="pre">=</span> <span class="pre">N</span> <span class="pre">+</span> <span class="pre">fac(N-1)</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">fac(N)</span> <span class="pre">=</span> <span class="pre">N</span> <span class="pre">*</span> <span class="pre">fac(N</span> <span class="pre">-</span> <span class="pre">1)</span></code></p>
 </div>
 <div class="section" id="dit-is-correct">
 <h3>Dit is correct…<a class="headerlink" href="#dit-is-correct" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fac</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">N</span> <span class="o">*</span> <span class="n">fac</span><span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">N</span> <span class="o">*</span> <span class="n">fac</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>maar is niet aan te raden…</p>
@@ -766,7 +766,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="is-het-correct">
 <h3>Is het correct?<a class="headerlink" href="#is-het-correct" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fac</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">N</span> <span class="o">*</span> <span class="n">fac</span><span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">N</span> <span class="o">*</span> <span class="n">fac</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Een <em>base case</em> ontbreekt, de <em>noodstop</em>!</p>
@@ -779,7 +779,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <span class="k">if</span> <span class="n">N</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># base case </span>
         <span class="k">return</span> <span class="mi">1</span>
     <span class="k">else</span><span class="p">:</span>       <span class="c1"># recursive case</span>
-        <span class="k">return</span> <span class="n">N</span> <span class="o">*</span> <span class="n">fac</span><span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">N</span> <span class="o">*</span> <span class="n">fac</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Je kan testen op de <em>base case</em>, in het geval van een faculteit is dit bereikt als N gelijk is aan 0. Maar als je naar de laatste regel kijkt (<code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">*</span> <span class="pre">fac(N-1)</span></code>),  hoe kan iets (<code class="docutils literal notranslate"><span class="pre">N</span></code>) vermenigvudigd worden met iets dat nog niet is uitgevoerd (<code class="docutils literal notranslate"><span class="pre">fac(N-1)</span></code>)?</p>
@@ -790,11 +790,11 @@ commentsRunWhenDOMLoaded(addUtterances);
     <span class="k">if</span> <span class="n">N</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># base case</span>
         <span class="k">return</span> <span class="mi">1</span>
     <span class="k">else</span><span class="p">:</span>       <span class="c1"># recursive case</span>
-        <span class="n">rest</span> <span class="o">=</span> <span class="n">fac</span><span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">rest</span> <span class="o">=</span> <span class="n">fac</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">N</span> <span class="o">*</span> <span class="n">rest</span>
 </pre></div>
 </div>
-<p>Deze uitwerking is meer in de buurt van wat achter schermen gebeurt. In het geval <code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">*</span> <span class="pre">fac(N-1)</span></code> wordt door de computer de recursieve aanroep (<code class="docutils literal notranslate"><span class="pre">fac(N-1)</span></code>) eerst aangeroepen om vervolgens daar <code class="docutils literal notranslate"><span class="pre">N</span></code> mee te vermenigvuldigen. Je kan dit goed vergelijken met het eerst zetten van een variabele (<code class="docutils literal notranslate"><span class="pre">rest</span></code> in dit geval) die later wordt gebruikt om het antwoord te berekenen (<code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">*</span> <span class="pre">rest</span></code>).</p>
+<p>Deze uitwerking is meer in de buurt van wat achter schermen gebeurt. In het geval <code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">*</span> <span class="pre">fac(N</span> <span class="pre">-</span> <span class="pre">1)</span></code> wordt door de computer de recursieve aanroep (<code class="docutils literal notranslate"><span class="pre">fac(N</span> <span class="pre">-</span> <span class="pre">1)</span></code>) eerst aangeroepen om vervolgens daar <code class="docutils literal notranslate"><span class="pre">N</span></code> mee te vermenigvuldigen. Je kan dit goed vergelijken met het eerst zetten van een variabele (<code class="docutils literal notranslate"><span class="pre">rest</span></code> in dit geval) die later wordt gebruikt om het antwoord te berekenen (<code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">*</span> <span class="pre">rest</span></code>).</p>
 <div class="section" id="stapelen">
 <h3>Stapelen<a class="headerlink" href="#stapelen" title="Permalink to this headline">¶</a></h3>
 <p>Recursief stapelen!</p>
@@ -942,7 +942,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-<p>Er is hier meer uitgeschreven dan je zou verwachten! Want, wat moeten je doen in het geval dat de exponent <code class="docutils literal notranslate"><span class="pre">p</span></code> een negatief getal is? Is dit een base- of recursive case?!?</p>
+<p>Er is hier meer uitgeschreven dan je zou verwachten! Want, wat moet je doen in het geval dat de exponent <code class="docutils literal notranslate"><span class="pre">p</span></code> een negatief getal is? Is dit een base- of recursive case?!?</p>
 <p>Een machtsverheffing met grondtal <span class="math notranslate nohighlight">\(b\)</span> en negatieve exponent <span class="math notranslate nohighlight">\(p\)</span></p>
 <div class="math notranslate nohighlight">
 \[
@@ -1003,12 +1003,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p><img alt="Romanesco broccoli" src="../_images/hand.jpg" /></p>
 <p>Maar is recursie ook bij ons te vinden?</p>
 <p><img alt="Romanesco broccoli" src="../_images/fractal_hands.jpg" /></p>
-<p>Misschien, gelukkig heeft ons lichaam wél de base case goed gedefinieerd!</p>
+<p>Misschien, maar gelukkig heeft ons lichaam wél de <em>base case</em> goed gedefinieerd!</p>
 </div>
 <div class="section" id="python-is-in">
 <h2>Python is <code class="docutils literal notranslate"><span class="pre">in</span></code><a class="headerlink" href="#python-is-in" title="Permalink to this headline">¶</a></h2>
 <p>Bevind een element zich in een sequentie (een list, een string, …)?</p>
-<p>Dit probleem zal je vaak tegen gaan komen: bijvoorbeeld de vraag is i een klinker? Klinkers zijn de karakters a, e, i, o en u. Dit kan je als een sequentie schrijven, bijvoorbeeld als string <code class="docutils literal notranslate"><span class="pre">&quot;aeiou&quot;</span></code> of als list <code class="docutils literal notranslate"><span class="pre">[&quot;a&quot;,</span> <span class="pre">&quot;e&quot;,</span> <span class="pre">&quot;o&quot;,</span> <span class="pre">&quot;u&quot;]</span></code>. Python kent  de <code class="docutils literal notranslate"><span class="pre">in</span></code> operator om te testen of een element zich in een sequentie bevindt, bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">&quot;i&quot;</span> <span class="pre">in</span> <span class="pre">&quot;aeiou&quot;</span></code>. Een paar vorbeelden:</p>
+<p>Dit probleem zal je vaak gaan tegenkomen: bijvoorbeeld bij de vraag of “i” een klinker is? Klinkers zijn de karakters a, e, i, o en u. Dit kan je als een sequentie schrijven, bijvoorbeeld als string <code class="docutils literal notranslate"><span class="pre">&quot;aeiou&quot;</span></code> of als list <code class="docutils literal notranslate"><span class="pre">[&quot;a&quot;,</span> <span class="pre">&quot;e&quot;,</span> <span class="pre">&quot;i&quot;,</span> <span class="pre">&quot;o&quot;,</span> <span class="pre">&quot;u&quot;]</span></code>. Python kent  de <code class="docutils literal notranslate"><span class="pre">in</span></code> operator om te testen of een element zich in een sequentie bevindt, bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">&quot;i&quot;</span> <span class="pre">in</span> <span class="pre">&quot;aeiou&quot;</span></code>. Een paar voorbeelden:</p>
 <div class="section" id="is-in-string">
 <h3>is <code class="docutils literal notranslate"><span class="pre">in</span></code> string<a class="headerlink" href="#is-in-string" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
@@ -1183,7 +1183,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">max</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Geef de grootste waarde van L terug</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">return</span> <span class="o">...</span>
     
     <span class="n">M</span> <span class="o">=</span> <span class="o">...</span>  <span class="c1"># De max van het RESTANT van L</span>
@@ -1233,7 +1233,7 @@ M is 9 en L[0] is 7
 </div>
 <div class="section" id="spring-eerst-kijk-later">
 <h4>Spring eerst, kijk later<a class="headerlink" href="#spring-eerst-kijk-later" title="Permalink to this headline">¶</a></h4>
-<p><code class="docutils literal notranslate"><span class="pre">max(L)</span></code> is een goed voorbeeld van eerst spring eerst (recursie) en kijken later (testen) strategie!</p>
+<p><code class="docutils literal notranslate"><span class="pre">max(L)</span></code> is een goed voorbeeld van een <em>spring eerst</em> (recursie) en <em>kijk later</em> (test) strategie!</p>
 <p>Denk ook hier weer aan de stack, werk door tot en met de base case, in dit geval door eerst de recursieve aanroep te doen (<code class="docutils literal notranslate"><span class="pre">M</span> <span class="pre">=</span> <span class="pre">max(L[1:])</span></code>) voordat je gaat controleren (<code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">L[0]</span> <span class="pre">&gt;</span> <span class="pre">M</span></code> etc.).</p>
 </div>
 </div>
