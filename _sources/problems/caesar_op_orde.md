@@ -217,7 +217,7 @@ def letter_prob(c):
 Voor `decipher` zal jouw programma alle 26 mogelijke rotaties van de string `s` die als argument is meegegeven moeten "bekijken" en dan beslissen welke de "beste" is...
 :::
 
-## De functie `bisort(L)`
+## De functie `blsort(L)`
 
 Schrijf een functie `blsort(L)` die als argument een lijst `L` accepteert en een lijst teruggeeft met dezelfde elementen als `L`, maar in oplopende volgorde. (Let op: het tweede teken van de functienaam is een "el" voor "lijst", niet een 1 (één) of een "i"!)
 
