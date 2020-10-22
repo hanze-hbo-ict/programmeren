@@ -1,6 +1,7 @@
 # Van decimaal naar binair en verder!
 
-(30 punten; bestandsnaam: `wk5ex1.py`)
+```{include} ../class/problems/decimaal_en_verder.md
+```
 
 Dit probleem gaat over het omzetten van getallen naar en van grondtal 10 (*decimaal*, wat de *meeste* mensen gebruiken) en van en naar grondtal 2 (*binair*, waar vrijwel alle computers mee werken).
 
@@ -77,7 +78,7 @@ assert num_to_binary(0) == ""
 assert num_to_binary(42) == "101010"
 ```
 
-:::{adminition,notice} Opmerkingen
+:::{admonition,notice} Opmerkingen
 Merk op dat deze functie inderdaad slechts één "bit" (nul of één) tegelijk verwerkt, verder:
 
 -   We hebben `is_odd` niet gebruikt, maar dat is geen probleem. (Dit is flexibeler als we overstappen naar grondtal 3!)
@@ -201,7 +202,7 @@ In [7]: binary_to_num("101010")
 Out[1]: 42
 ```
 
-:::{adminition,tip} Tips
+:::{admonition,tip} Tips
 -   Je zal de recursieve aanroep van `binary_to_num` met een kleinere string moeten doen.
 
 -   Hoe krijg je de string van alles *behalve* het laatste cijfer?! (Gebruik string slicing!)
