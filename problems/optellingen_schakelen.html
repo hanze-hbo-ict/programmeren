@@ -1,0 +1,734 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Optellingen schakelen &#8212; Programmeren</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "misja/programmeren");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://misja.github.io/programmeren/problems/optellingen_schakelen.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Voorbeelden van recursie" href="../examples/recursie.html" />
+    <link rel="prev" title="Fraaie plaatjes" href="fraaie_plaatjes.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://misja.github.io/programmeren/problems/optellingen_schakelen.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Optellingen schakelen" />
+<meta property="og:description" content="Optellingen schakelen  &lt;!-- elektrisch schema, een circuitdiagram of schakelschema --&gt;       Naam  Beschrijving  Onderwerp  Schakelingen ontwerpen  Bestandsnaam" />
+<meta property="og:image"       content="https://misja.github.io/programmeren/_static/mascot.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/mascot.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Programmeren</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/syllabus.html">
+   Programmeren
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Opmerkingen
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/feedback.html">
+   Anoniem feedbackformulier
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 1
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_1.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_intro.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_1.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 2
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_2.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sequenties_en_data.html">
+   Practicum I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fijne_functies.html">
+   Practicum II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_2.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 3
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_3.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_turtles.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_3.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 4
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_4.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="klinkt_goed.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_4.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 5
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_5.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="decimaal_en_verder.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_5.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 6
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Practicum
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Voorbeelden
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/recursie.html">
+   Recursie
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/design_recipe.html">
+   Functie ontwerp
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Oefening
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../practice/1_recursie.html">
+   Recursie
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../practice/2_list_comprehension.html">
+   List comprehension
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/platte_tekst.html">
+   Tekstbestanden
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python_browser.html">
+   Python in de browser
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python2_vs_python3.html">
+   Python 2 versus Python 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/software.html">
+   Software
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/problems/optellingen_schakelen.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Fproblems/optellingen_schakelen.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/problems/optellingen_schakelen.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#voorbereiding">
+   Voorbereiding
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#java">
+     Java
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#logisim-evolution-starten">
+     Logisim Evolution starten
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#permissies-op-macos">
+     Permissies op macOS
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#projectbestand">
+     Projectbestand
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#schakelingen-optellen">
+   Schakelingen optellen
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#schakelingen-ontwerpen">
+     Schakelingen ontwerpen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#deel-1-tutorial-en-xor">
+   Deel 1: Tutorial en XOR
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#deel-2-full-adder">
+   Deel 2: Full Adder
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#deel-3-4-bit-ripple-carry-adder">
+   Deel 3: 4-Bit Ripple-Carry Adder
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inleveren">
+   Inleveren
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#schermen-of-menu-s-kwijt-in-mac-os">
+   Schermen of menu’s kwijt in Mac OS?
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="optellingen-schakelen">
+<h1>Optellingen schakelen<a class="headerlink" href="#optellingen-schakelen" title="Permalink to this headline">¶</a></h1>
+<!-- elektrisch schema, een circuitdiagram of schakelschema -->
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Naam</p></th>
+<th class="head"><p>Beschrijving</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Onderwerp</p></td>
+<td><p>Schakelingen ontwerpen</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bestandsnaam</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">wk6ex1-4.circ</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Inleveren</p></td>
+<td><p>Lever jouw bestand met de juiste bestandsnaam in op GradeScope</p></td>
+</tr>
+<tr class="row-odd"><td><p>Punten</p></td>
+<td><p>30</p></td>
+</tr>
+</tbody>
+</table>
+<p>Deze week ga je verschillende logische schakelingen ontwerpen met behulp van <em>Logisim Evolution</em>, een programma om schakelingen te ontwerpen.</p>
+<div class="section" id="voorbereiding">
+<h2>Voorbereiding<a class="headerlink" href="#voorbereiding" title="Permalink to this headline">¶</a></h2>
+<p>Download de volgende bestanden:</p>
+<!-- https://github.com/reds-heig/logisim-evolution/releases/download/v3.3.1/logisim-evolution-3.3.1.jar -->
+<ul class="simple">
+<li><p>Het Java-applicatiebestand: <a class="reference external" href="https://github.com/misja/programmeren/raw/master/problems/assets/logisim-evolution-3.3.4-all.jar">logisim-evolution-3.3.4-all.jar</a></p></li>
+<li><p>Het startbestand (pakt dit uit en gebruik het!): <a class="reference external" href="https://github.com/misja/programmeren/raw/master/problems/assets/wk6ex1-4.circ.zip">wk6ex1-4.circ.zip</a></p></li>
+</ul>
+<div class="section" id="java">
+<h3>Java<a class="headerlink" href="#java" title="Permalink to this headline">¶</a></h3>
+<p>Voor Logisim zal je Java geïnstalleerd moeten hebben. Als je dit nog niet hebt kan je het downloaden van de <a class="reference external" href="https://adoptopenjdk.net/">OpenJDK</a> website:</p>
+<ul class="simple">
+<li><p>kies versie 11 of hoger</p></li>
+<li><p>bij download kan je kiezen voor een JVM (Java Virtual Machine): HotSpot is een prima keus</p></li>
+<li><p>indien gevraagd, kies bij installatie om <code class="docutils literal notranslate"><span class="pre">JAVA_HOME</span></code> aan het pad toe te voegen!</p></li>
+<li><p>indien gevraagd, <em>negeer</em> bij installatie de optie om Oracle licentiesleutels toe te voegen!</p></li>
+</ul>
+</div>
+<div class="section" id="logisim-evolution-starten">
+<h3>Logisim Evolution starten<a class="headerlink" href="#logisim-evolution-starten" title="Permalink to this headline">¶</a></h3>
+<p>Als je Java geïnstalleerd hebt, zou je Logisim Evolution moeten kunnen starten door te dubbelklikken op <code class="docutils literal notranslate"><span class="pre">logisim-evolution-3.3.4-all.jar</span></code> (Windows en macOS). Als dit niet werkt, kan je ook het commando <code class="docutils literal notranslate"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">logisim-evolution-3.3.4-all.jar</span></code> vanuit de Terminal gebruiken. Zorg dan wel dat je in de goede directory staat!</p>
+</div>
+<div class="section" id="permissies-op-macos">
+<h3>Permissies op macOS<a class="headerlink" href="#permissies-op-macos" title="Permalink to this headline">¶</a></h3>
+<p>Als je op een Mac werkt en het klaagt dat je geen toestemming hebt om de applicatie te starten (omdat het van een door Apple erkende ontwikkelaar is), hoef je je geen zorgen te maken. Het klopt dat deze applicatie niet door een “formele” ontwikkelaar gemaakt is, het is een “open source” project, maar is zeker niet schadelijk. Rechts-klik (of met Command (⌘) en klik) op het icoon, en kies <strong>Open</strong>. Je moet nu een optie krijgen om de applicatie te starten.</p>
+<p><img alt="File, Open" src="../_images/ssopen.png" /></p>
+<p>of</p>
+<p><img alt="File, Open" src="../_images/control_click_open.png" /></p>
+<p>Nog steeds geen toestemming? Je zal dan waarschijnlijk in <em>Systeemvoorkeuren</em> onder <em>Beveiliging en privacy</em> moeten toestaan dat de applicatie mag worden uitgevoerd.</p>
+</div>
+<div class="section" id="projectbestand">
+<h3>Projectbestand<a class="headerlink" href="#projectbestand" title="Permalink to this headline">¶</a></h3>
+<p>Deze en alle verdere opgaven ga je uitwerken in hetzelfde bestand:</p>
+<ul class="simple">
+<li><p><em>Begin niet met een nieuw bestand!</em></p></li>
+<li><p>Gebruik <em>in plaats daarvan</em> het bestand <code class="docutils literal notranslate"><span class="pre">wk6ex1-4.circ</span></code> dat je hebt gedownload.</p></li>
+</ul>
+<p>Je kan <em>niet</em> op het bestand dubbelklikken om het te openen, in plaats daarvan moet je <em>Logisim Evolution</em> starten (zie boven) en <em>File (of “Dossier”), Open</em> gebruiken uit het menu van Logisim Evolution:</p>
+<p><img alt="Navigeren" src="../_images/fo_1.png" /></p>
+<p>Vervolgens navigeer je naar het bestand <code class="docutils literal notranslate"><span class="pre">wk6ex1-4.circ</span></code> en open je het:</p>
+<p><img alt="Bestand openen" src="../_images/file_open.png" /></p>
+<p>Zorg ervoor dat links een schakelingenmenu staat dat er als volgt uitziet:</p>
+<p><img alt="Bestand openen" src="../_images/logev_good.png" /></p>
+</div>
+</div>
+<div class="section" id="schakelingen-optellen">
+<h2>Schakelingen optellen<a class="headerlink" href="#schakelingen-optellen" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="schakelingen-ontwerpen">
+<h3>Schakelingen ontwerpen<a class="headerlink" href="#schakelingen-ontwerpen" title="Permalink to this headline">¶</a></h3>
+<p>Nogmaals, het bestand <code class="docutils literal notranslate"><span class="pre">wk6ex1-4.circ</span></code> is de plaats waar je al jouw schakelingen voor deze opdracht schrijft en in bewaart.</p>
+<p><em>Merk op</em> dat je in de verkenner van Logisim (het linkerbovendeel van het scherm) iconen met de teksten <code class="docutils literal notranslate"><span class="pre">MyXOR</span></code>, <code class="docutils literal notranslate"><span class="pre">FullAdder</span></code>, <code class="docutils literal notranslate"><span class="pre">Een_4bit_Ripple_Carry_Adder</span></code>, <code class="docutils literal notranslate"><span class="pre">Een_4bit_vermenigvuldiger</span></code>, <code class="docutils literal notranslate"><span class="pre">Een_3bij2_deler</span></code> en mogelijk nog wat meer ziet. Dit zijn de onderdelen (“deelschakelingen”) van de opgaven die je gaat maken. In deze opdracht gebruikenwe alleen de eerste <em>drie</em> deelschakelingen.</p>
+<div class="notice admonition">
+<p class="admonition-title"> Schakeling of circuit</p>
+<p>We gebruiken de woorden <em>schakeling</em> en <em>circuit</em> afwisselend, maar bedoelen daar hetzelfde mee, het zijn synoniemen!</p>
+</div>
+</div>
+</div>
+<div class="section" id="deel-1-tutorial-en-xor">
+<h2>Deel 1: Tutorial en XOR<a class="headerlink" href="#deel-1-tutorial-en-xor" title="Permalink to this headline">¶</a></h2>
+<p>Nu je <code class="docutils literal notranslate"><span class="pre">wk6ex1-4.circ</span></code> geopend hebt, dubbelklik op het icoon <code class="docutils literal notranslate"><span class="pre">MyXOR</span></code> in het Logisism verkenningsvenster. Voorlopig werk je aan deze deelschakeling. Jouw taak hier is om een circuit te bouwen om de <code class="docutils literal notranslate"><span class="pre">XOR</span></code>-functie te berekenen met alleen <code class="docutils literal notranslate"><span class="pre">AND</span></code>, <code class="docutils literal notranslate"><span class="pre">OR</span></code> en <code class="docutils literal notranslate"><span class="pre">NOT</span></code> poorten.</p>
+<ul class="simple">
+<li><p>Ga naar het menu “Help” en selecteer “Tutorial”. Lees de handleiding tot en met stap 4 door en test jouw schakeling. Maak daarbij de <code class="docutils literal notranslate"><span class="pre">XOR</span></code>-circuit aan die in de tutorial wordt beschreven. Doe dit in het tabblad “MyXOR” van jouw Logisim-bestand. Dit is een vrij korte introductie, en maak je geen zorgen nog niet elk “bit” bij je landt!</p></li>
+<li><p>Je weet nu tenminste wat er in de tutorial staat, zodat je later terug kunt gaan en de details kunt vinden als je ze nodig hebt.</p></li>
+<li><p>Zorg ervoor dat je jouw <code class="docutils literal notranslate"><span class="pre">XOR</span></code>-circuit test door de waarden van de invoer te veranderen met de “poke” tool (het handje linksboven in de menubalk). Controleer of je de juiste uitvoer voor jouw inver krijgt. Sla het bestand op door naar het menu “File” (of “Dossier”) te gaan en op “Opslaan” te klikken.</p></li>
+</ul>
+</div>
+<div class="section" id="deel-2-full-adder">
+<h2>Deel 2: Full Adder<a class="headerlink" href="#deel-2-full-adder" title="Permalink to this headline">¶</a></h2>
+<p><em>Dubbelklik</em> nu op de deelschakeling <code class="docutils literal notranslate"><span class="pre">FullAdder</span></code> in je bestand <code class="docutils literal notranslate"><span class="pre">wk6ex1-4.circ</span></code>, en je zult nu in de verkenner van het <code class="docutils literal notranslate"><span class="pre">FullAdder</span></code>-circuit moeten zijn. Je zult ook zien dat we de gelabelde in- en uitvoer al hebben toegevoegd. Gebruik deze in- en uitvoer, ze helpen ons bij het beoordelen van de opdracht.</p>
+<ul class="simple">
+<li><p>De invoer <code class="docutils literal notranslate"><span class="pre">X</span></code> en <code class="docutils literal notranslate"><span class="pre">Y</span></code> zijn de twee bits die moeten worden toegevoegd, en <code class="docutils literal notranslate"><span class="pre">CarryIn</span></code> is de carry van de vorige kolom.</p></li>
+<li><p>Op dezelfde manier zijn de twee uitvoeren al aan de onderkant geplaatst. Je kunt deze verplaatsen als dat nodig is, maar behoud hun onderlinge posities, zodat we de schakeling makkelijker kunnen testen!</p></li>
+<li><p>Merk op dat we de ingangs- en uitgangspennen hebben gedraaid vanuit hun normale standaard oriëntatie. Dit is gedaan door op het item te klikken en de gewenste rotatie te selecteren in het attribuutvenster linksonder in het scherm.</p></li>
+</ul>
+<!-- TODO verwijzing naar FullAdder schema in college -->
+<p>Jouw taak is nu om een full adder (FA) te bouwen, een circuit dat je eerder op papier hebt ontworpen. Bedenk dat een volledige adder een apparaat is dat <em>drie</em> ingangen nodig heeft:</p>
+<ul class="simple">
+<li><p>twee bits die opgeteld moeten worden, en de “carry in” van de vorige optellingskolom.</p></li>
+<li><p>De FA berekent dan twee uitvoerwaarden: de “som”-bit, en een “carry out”-bit.</p></li>
+</ul>
+<!-- TODO verwijzing naar HM slide, omzetten -->
+<p>De eerste stap is dus het opzoeken van de volledige waarheidstabel van de FA (full adder), bijvoorbeeld met behulp van aantekeningen die je eerder hebt gemaakt. De onderstaande afbeelding heeft het grootste deel ervan:</p>
+<!-- TODO gebruik van HM slide, omzetten -->
+<p><img alt="Full adder" src="../_images/take2.png" /></p>
+<p>De volledige adder moet het minterm-expansieprincipe gebruiken om vier <code class="docutils literal notranslate"><span class="pre">AND</span></code>-poorten te maken voor de “sum”-bit en vier <code class="docutils literal notranslate"><span class="pre">AND</span></code>-poorten voor de “carry out” bit. Je hebt (op papier) eerder een volledige adder ontworpen, nu ga je het implementeren zodat je kan controleren of het werkt!</p>
+<ul class="simple">
+<li><p>Je zult de twee “rails” voor het invoerbit <code class="docutils literal notranslate"><span class="pre">Y</span></code> willen maken en nog twee “rails” voor het invoerbit <code class="docutils literal notranslate"><span class="pre">CarryIn</span></code></p></li>
+<li><p>Er zullen vier <code class="docutils literal notranslate"><span class="pre">AND</span></code>-poorten zijn waarvan de uitgangen verbonden zijn met één <code class="docutils literal notranslate"><span class="pre">OR</span></code>-poort en vervolgens het uitvoerbit <code class="docutils literal notranslate"><span class="pre">Sum</span></code>.</p></li>
+<li><p>Er zijn vier <code class="docutils literal notranslate"><span class="pre">AND</span></code>-poorten waarvan de uitvoer verbonden wordt met één <code class="docutils literal notranslate"><span class="pre">OR</span></code>-poort en vervolgens het uitvoersbit <code class="docutils literal notranslate"><span class="pre">CarryOut</span></code>.</p></li>
+</ul>
+<p>Elk van de twee uitvoetbits <code class="docutils literal notranslate"><span class="pre">CarryIn</span></code> en <code class="docutils literal notranslate"><span class="pre">CarryOut</span></code> is een op zichzelf staande toepassing van het minterm-expansieprincipe.</p>
+<ul class="simple">
+<li><p>Probeer de schakeling niet te vereenvoudigen en gebruik geen andere poorten dan <code class="docutils literal notranslate"><span class="pre">AND</span></code>, <code class="docutils literal notranslate"><span class="pre">OR</span></code> en <code class="docutils literal notranslate"><span class="pre">NOT</span></code>. Het doel van dit probleem is om te oefenen met het gebruik van het minterm-expansieprincipe , niet om te optimaliseren!</p></li>
+</ul>
+<p>Zorg ervoor dat je jouw FA grondig test voordat je verder gaat. De FA moet werken, want je zal het gaan gebruiken om de vier-bit ripple-carry adder te bouwen.</p>
+</div>
+<div class="section" id="deel-3-4-bit-ripple-carry-adder">
+<h2>Deel 3: 4-Bit Ripple-Carry Adder<a class="headerlink" href="#deel-3-4-bit-ripple-carry-adder" title="Permalink to this headline">¶</a></h2>
+<p><em>Dubbelklik</em> nu op het ripple-carry deelschakeling in jouw <code class="docutils literal notranslate"><span class="pre">wk6ex1-4.circ</span></code> bestand.</p>
+<p>Nu je een volledige adder (FA) hebt, ga je een een 4-bit ripple-carry adder bouwen. Bedenk dat dit apparaat twee 4-bits nummers als invoer heeft en deze bij elkaar optelt. Laten we de bits van het eerste getal <code class="docutils literal notranslate"><span class="pre">X3</span></code>, <code class="docutils literal notranslate"><span class="pre">X2</span></code>, <code class="docutils literal notranslate"><span class="pre">X1</span></code> en <code class="docutils literal notranslate"><span class="pre">X0</span></code> noemen, waarbij <code class="docutils literal notranslate"><span class="pre">X0</span></code> het minst significante bit is (het meest rechtse bit) en <code class="docutils literal notranslate"><span class="pre">X3</span></code> het meest significante bit. Op dezelfde manier noemen we de cijfers van het tweede getal <code class="docutils literal notranslate"><span class="pre">Y3</span></code>, <code class="docutils literal notranslate"><span class="pre">Y2</span></code>, <code class="docutils literal notranslate"><span class="pre">Y1</span></code> en <code class="docutils literal notranslate"><span class="pre">Y0</span></code>. We willen het volgende berekenen:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>    X3 X2 X1 X0
++   Y3 Y2 Y1 Y0
+---------------
+</pre></div>
+</div>
+<p>Let op dat hoewel er slechts 4 bits in elk van de twee getallen zitten, de som 5 bits kan hebben als gevolg van een carry!</p>
+<p>Als je dubbelklikt op het “Een 4-bit Ripple-Carry Adder” icoon in de verkenner, kan je full-adders aan jouw 4-bit ripple-carry adder toevoegen met een <em>enkele</em> klik op het “Full Adder” icoon in de verkenner (aangezien je de FA al ontworpen hebt).</p>
+<p>Dit maakt een “blok” die de FA voorstelt. Immers, nu je de FA hebt ontworpen, wil je niet echt alle details zien elke keer dat je hem gebruikt! Als je met de muis over dit vakje beweegt, kan je zien dat er “FA” staat. Als je met de muis over de “pinnen” (de kleine invoer- en uitvoermarkeringen op het vakje) beweegt, zul je zien wat die pinnen zijn. Dit komt omdat we die pinnen een naam hebben gegeven toen we de FA ontwierpen.</p>
+<p>Je kan de in- en uitvoerpins die gegeven zijn verplaatsen, maar behoud de relatieve posities, zodat we ze gemakkelijk kunnen vinden!</p>
+<div class="tip admonition">
+<p class="admonition-title"> Constanten</p>
+<p>Nog een laatste opmerking! Je hebt een 0 als carry-in nodig aan de rechterkant van jouw ripple-carry adder. Een manier om dit te doen is om een extra input toe te voegen en de waarde ervan op 0 te zetten. Dit is niet de beste oplossing, omdat we echt niet willen dat de gebruiker van onze ripple-carry adder deze carry-in waarde kan veranderen. Een betere keuze is om naar het verkenningsvenster te gaan, op de map “Bedrading” te klikken, daar het item “Constant” te kiezen en daar één van toe te voegen aan jouw schakeling. Klik er vervolgens op en je kunt de waarde van die constante in het eigenschappenscherm veranderen. Dit is nu een constante, onveranderlijke waarde die je schakeling kan gebruiken!</p>
+</div>
+<!-- TODO course (niet boek) opgaven hebben verwijzing naar college waar een 4-bit ripple-carry adder zou zijn geschetst: https://www.cs.hmc.edu/twiki/pub/CS5/AdvancedAdditionGold/rca.png -->
+</div>
+<div class="section" id="inleveren">
+<h2>Inleveren<a class="headerlink" href="#inleveren" title="Permalink to this headline">¶</a></h2>
+<p>Test je schakeling en vergeet niet hem op te slaan! Als je hem instuurt zonder op te slaan lever je het oorspronkelijke, lege bestand in, in plaats van je uitwerking!</p>
+</div>
+<div class="section" id="schermen-of-menu-s-kwijt-in-mac-os">
+<h2>Schermen of menu’s kwijt in Mac OS?<a class="headerlink" href="#schermen-of-menu-s-kwijt-in-mac-os" title="Permalink to this headline">¶</a></h2>
+<p>Als je per ongeluk de verkenner of het eigenschappenscherm aan de linkerkant hebt geminimaliseerd:</p>
+<p><img alt="Onderdelen van het scherm" src="../_images/evolution.png" /></p>
+<p>Het kan lastig zijn om deze terug te krijgen! Een commando (vanaf de command line) dat op de Mac werkt om het terug te
+krijgen is:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>defaults delete com.cburch.logisim
+</pre></div>
+</div>
+<p>Om de default domeinen te zien kan je onderstaand commando gebruiken.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>defaults domains | tr , &quot;\n&quot; | grep -v  com.apple
+</pre></div>
+</div>
+<p><em>Soms</em> kan het ook helpen om de applicatie opnieuw te starten, dan komen ze misschien terug.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "misja/programmeren",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./problems"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="fraaie_plaatjes.html" title="previous page">Fraaie plaatjes</a>
+    <a class='right-next' id="next-link" href="../examples/recursie.html" title="next page">Voorbeelden van recursie</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Hanze University of Applied Sciences<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
