@@ -1,0 +1,1191 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hmmm… Assembly! &#8212; Programmeren</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "misja/programmeren");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://misja.github.io/programmeren/problems/hmmm_assembly.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Week 7" href="../class/opgaven_7.html" />
+    <link rel="prev" title="Week 7" href="../class/week_7.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://misja.github.io/programmeren/problems/hmmm_assembly.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Hmmm… Assembly!" />
+<meta property="og:description" content="Hmmm… Assembly!  (30 punten; bestandsnamen: wk7ex1a.hmmm, wk7ex1b.hmmm en wk7ex1c.py)  Er zijn twee opgaven en drie bestanden voor dit Hmmm-practicum. Ze staan " />
+<meta property="og:image"       content="https://misja.github.io/programmeren/_static/mascot.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/mascot.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Programmeren</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/syllabus.html">
+   Programmeren
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Opmerkingen
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/feedback.html">
+   Anoniem feedbackformulier
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 1
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_1.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_intro.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_1.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 2
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_2.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sequenties_en_data.html">
+   Practicum I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fijne_functies.html">
+   Practicum II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_2.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 3
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_3.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_turtles.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_3.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 4
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_4.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="klinkt_goed.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_4.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 5
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_5.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="decimaal_en_verder.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_5.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 6
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_6.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="optellingen_schakelen.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_6.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 7
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_7.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/opgaven_7.html">
+   Opgaven
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Voorbeelden
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/recursie.html">
+   Recursie
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/design_recipe.html">
+   Functie ontwerp
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Oefening
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../practice/1_recursie.html">
+   Recursie
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../practice/2_list_comprehension.html">
+   List comprehension
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/platte_tekst.html">
+   Tekstbestanden
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python_browser.html">
+   Python in de browser
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python2_vs_python3.html">
+   Python 2 versus Python 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/software.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/hmmm.html">
+   Hmmmm assembly
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/problems/hmmm_assembly.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Fproblems/hmmm_assembly.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/problems/hmmm_assembly.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inleiding">
+   Inleiding
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introductie-in-assemblytaal">
+   Introductie in assemblytaal
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#waarom-programmeren-we-in-assembly">
+     Waarom programmeren we in assembly?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#wat-is-het-verschil-tussen-registers-en-geheugen">
+     Wat is het verschil tussen registers en geheugen?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#een-nadere-blik-op-de-hmmm-instructies">
+     Een nadere blik op de Hmmm-instructies
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hmmm-downloaden-en-uitvoeren">
+   Hmmm downloaden en uitvoeren
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#probeer-het-uit">
+     Probeer het uit!
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nog-een-voorbeeld-proberen-voorbeeld1">
+     Nog een voorbeeld proberen,
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       voorbeeld1
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aftellen-tot-de-derde-macht">
+   Aftellen tot de derde macht
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#commentaar">
+     Commentaar
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#randohmmm-getallen-genereren">
+   RandoHmmm getallen genereren
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-wiskunde-achter-het-genereren-van-willekeurige-getallen">
+     De wiskunde achter het genereren van willekeurige getallen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hoe-onze-random-number-generator-werkt">
+     Hoe onze random number generator werkt…
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-randohmmm-number-generator-schrijven">
+     De RandoHmmm number generator schrijven
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#details">
+       Details
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#je-generator-controleren">
+       Je generator controleren
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#goede-invoerwaardes-kiezen-voor-het-genereren-van-willekeurige-getallen">
+     Goede invoerwaardes kiezen voor het genereren van willekeurige getallen
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#in-de-praktijk">
+       In de praktijk
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#in-theorie">
+       In theorie
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unique-schrijven">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       unique
+      </span>
+     </code>
+     schrijven
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unique-testen">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       unique
+      </span>
+     </code>
+     testen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#waardes-genereren-en-testen">
+     100 waardes genereren en testen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-functie-test-gebruiken">
+     De functie
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       test
+      </span>
+     </code>
+     gebruiken
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#afronden">
+     Afronden…
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#je-cv-bijwerken">
+   Je CV bijwerken!
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="hmmm-assembly">
+<h1>Hmmm… Assembly!<a class="headerlink" href="#hmmm-assembly" title="Permalink to this headline">¶</a></h1>
+<p>(30 punten; bestandsnamen: <code class="docutils literal notranslate"><span class="pre">wk7ex1a.hmmm</span></code>, <code class="docutils literal notranslate"><span class="pre">wk7ex1b.hmmm</span></code> en <code class="docutils literal notranslate"><span class="pre">wk7ex1c.py</span></code>)</p>
+<p>Er zijn twee opgaven en drie bestanden voor dit Hmmm-practicum. Ze staan allemaal in <code class="docutils literal notranslate"><span class="pre">hmmm</span></code>.</p>
+<div class="section" id="inleiding">
+<h2>Inleiding<a class="headerlink" href="#inleiding" title="Permalink to this headline">¶</a></h2>
+<p>Begin met het downloaden van de beginbestanden in <a class="reference external" href="https://github.com/misja/programmeren/raw/master/problems/assets/wk7ex1.zip">wk7ex1.zip via deze link</a></p>
+<p>Je kan de <a class="reference internal" href="../support/hmmm.html"><span class="doc std std-doc">documentatie van Hmmm, alle instructies in de Hmmm-taal, hier vinden</span></a></p>
+<p>Dit practicum gaat over het programmeren in assemblytaal op een klein model van een computer genaamd Hmmm, de “Harvey Mudd Miniature Machine”.</p>
+<p>Er zijn drie onderdelen:</p>
+<ul class="simple">
+<li><p>Eerst bespreken we wat achtergrondinformatie. Hiermee kan je een aantal mogelijke valkuilen vermijden.</p></li>
+<li><p>Daarna moet je een Hmmm-programma schrijven die aftelt naar nul, beginnend bij de <em>derde macht</em> van een positief getal.</p></li>
+<li><p>In het laatste deel vragen we je een <em>pseudorandom-number generator</em> te schrijven in Hmmm…</p></li>
+</ul>
+<p>Veel succes!</p>
+</div>
+<div class="section" id="introductie-in-assemblytaal">
+<h2>Introductie in assemblytaal<a class="headerlink" href="#introductie-in-assemblytaal" title="Permalink to this headline">¶</a></h2>
+<p>Alhoewel het Hmmm-model geen fysieke computer is, is het ontwerp ervan fundamenteel hetzelfde als dat van moderne echte computers.</p>
+<p>Waarom gebruiken we geen “echte” computer? Het is op dit moment niet de moeite waard om de instructieset van een echte processor te leren: ze bevatten allemaal veel dingen die niet essentieel zijn. (dan valt DNA nog wel mee!) Veel van die details zijn machine-specifiek: ze zijn niet van toepassing op andere computers.</p>
+<p>De instructies in Hmmm zijn een subset die van toepassing zijn op <em><strong>alle processoren</strong></em>.</p>
+<p>Hmmm heeft ongeveer 20 instructies. Moderne computes hebben tussen de twee en twintig keer zoveel instructies. Bij Computerarchitectuur, een vak voor studenten met als major Software Engineering of Network &amp; Security Engineeering, maak je kennis met een “echte” assemblytaal die op Hmmm lijkt maar een grotere (en meer gecompliceerde) verzameling instructies heeft.</p>
+<div class="section" id="waarom-programmeren-we-in-assembly">
+<h3>Waarom programmeren we in assembly?<a class="headerlink" href="#waarom-programmeren-we-in-assembly" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://xkcd.com/409/">XKCD heeft wel een reden</a></p>
+<p>Als een computer net gemaakt is, kan hij alleen maar binaire machinetaal uitvoeren. Het is heel lastig om in deze taal te programmeren! Daarom is het maken van een “assembler” meestal het eerste wat de ontwerpers van een computer (zoals Hmmm) doen.</p>
+<p>Met deze assembler kunnen programmeurs nu programma’s schrijven met instructies zoals <code class="docutils literal notranslate"><span class="pre">add</span></code>, <code class="docutils literal notranslate"><span class="pre">jump</span></code> en de andere instructies in Hmmm. De assembler zet deze instructies om naar de corresponderende binaire versies, oftewel de “machinetaal” die de schakelingen in de computer uitvoeren.</p>
+<p>Als de assembler gemaakt is, is de volgende stap het gebruik van de assemblytaal om krachtigere talen te schrijven, zoals Python.</p>
+<p>Geen zorgen, we gaan je niet vragen Python te implementeren in Hmmm! Het schrijven van een paar korte assemblyprogramma’s kan je echter een idee geven van hoe je het zou aanpakken om zulke toepassingen te schrijven in de “moedertaal” van de processor.</p>
+<p>Er is nog een reden om assembly te begrijpen. Alle programma’s die je uitvoert in Python (of Java of C of …) worden uiteindelijk gecompileerd (vertaald) naar assembly zodat de computer ze kan uitvoeren. Leren programmeren in Assembly zorgt ervoor dat je begrijpt wat er <strong>echt</strong> gebeurt in de machine als je je programma uitvoert.</p>
+</div>
+<div class="section" id="wat-is-het-verschil-tussen-registers-en-geheugen">
+<h3>Wat is het verschil tussen registers en geheugen?<a class="headerlink" href="#wat-is-het-verschil-tussen-registers-en-geheugen" title="Permalink to this headline">¶</a></h3>
+<p>Hmmm heeft 16 registers genaamd <code class="docutils literal notranslate"><span class="pre">r0</span></code> tot en met <code class="docutils literal notranslate"><span class="pre">r15</span></code>, en 256 geheugenlocaties (“RAM”). Een echte processor heeft meestal (ongeveer) hetzelfde aantal registers als Hmmm, misschien een paar keer meer, maar heeft heel veel RAM-geheugen, normaal gesproken in de orde van grootte van miljoenen of miljarden geheugenlocaties die hij kan aanspreken.</p>
+<p>Registers zijn waar de computer zijn berekeningen daadwerkelijk <em><strong>uitvoert</strong></em>. Registers bevatten de beperkte hoeveelheid data die de computer in zijn “hoofd” kan onthouden.</p>
+<p>RAM-geheugen is waar alle andere data, <em><strong>en het programma zelf</strong></em>, te vinden zijn. Je kan RAM zien als een “kladblok” waar de computer veel informatie onthoud die hij anders niet kan onthouden.</p>
+</div>
+<div class="section" id="een-nadere-blik-op-de-hmmm-instructies">
+<h3>Een nadere blik op de Hmmm-instructies<a class="headerlink" href="#een-nadere-blik-op-de-hmmm-instructies" title="Permalink to this headline">¶</a></h3>
+<p>Elke instructie vertelt de computer in principe wat te doen met zijn registers (getallen optellen, etc.). Als de instructie voltooid is, haalt de computer de volgende instructie uit het geheugen. We spreken af dat het programma vanaf geheugenadres 0 in het geheugen wordt gezet.</p>
+<p>Zoals bij de meeste computers “werken” de instructies van Hmmm op <em>registers</em>. Als je naar de collegeslides kijkt, zal je zien dat er instructies zijn zoals <code class="docutils literal notranslate"><span class="pre">add</span></code>, die drie registers meekrijgen als argument, bijvoorbeeld:</p>
+<div class="highlight-hmmm notranslate"><div class="highlight"><pre><span></span>add r3 r1 r2
+</pre></div>
+</div>
+<p>De waardes in de rechtertwee registers, <code class="docutils literal notranslate"><span class="pre">r1</span></code> en <code class="docutils literal notranslate"><span class="pre">r2</span></code>, worden opgeteld en het resultaat wordt opgeslagen in het linkerregister <code class="docutils literal notranslate"><span class="pre">r3</span></code>.</p>
+<p>Deze instructie zou in Python als <code class="docutils literal notranslate"><span class="pre">r3</span> <span class="pre">=</span> <span class="pre">r1</span> <span class="pre">+</span> <span class="pre">r2</span></code> geschreven worden. Op dezelfde manier werken de instructies <code class="docutils literal notranslate"><span class="pre">sub</span></code> (aftrekken), <code class="docutils literal notranslate"><span class="pre">mul</span></code> (vermenigvuldigen) en vele anderen geheel op registers.</p>
+<p>Er zijn een aantal uitzonderingen! De belangrijkste zijn <code class="docutils literal notranslate"><span class="pre">jumpn</span></code>, <code class="docutils literal notranslate"><span class="pre">addn</span></code> en <code class="docutils literal notranslate"><span class="pre">setn</span></code>. Merk op dat elk van deze instructies eindigt op de letter n. Dit betekent dat elk van deze instructies een <em>getal</em> als argument meekrijgt. Als voorbeeld geeft het getal dat meegegeven wordt aan de instructie <code class="docutils literal notranslate"><span class="pre">jumpn</span></code> aan naar welke regel het programma zal springen. De hierop lijkende instructies <code class="docutils literal notranslate"><span class="pre">jltzn</span></code>, <code class="docutils literal notranslate"><span class="pre">jgtzn</span></code>, <code class="docutils literal notranslate"><span class="pre">jnezn</span></code>, <code class="docutils literal notranslate"><span class="pre">jeqzn</span></code> krijgen allemaal een register <em>en</em> een getal mee. <code class="docutils literal notranslate"><span class="pre">jltzn</span> <span class="pre">r2</span> <span class="pre">42</span></code> springt bijvoorbeeld naar regel 42 <em>als de waarde in het register <code class="docutils literal notranslate"><span class="pre">r2</span></code> kleiner is dan nul</em>.</p>
+<p>De instructies <code class="docutils literal notranslate"><span class="pre">addn</span></code> en <code class="docutils literal notranslate"><span class="pre">loadn</span></code> werken op dezelfde manier. Simpel gezegd telt de instructie <code class="docutils literal notranslate"><span class="pre">addn</span> <span class="pre">r5</span> <span class="pre">42</span></code> het getal 42 op bij de bestaande waarde van register <code class="docutils literal notranslate"><span class="pre">r5</span></code> en slaat het resultaat weer op in register <code class="docutils literal notranslate"><span class="pre">r5</span></code>.</p>
+<p>Merk op dat de instructie <code class="docutils literal notranslate"><span class="pre">addn</span> <span class="pre">rX</span> <span class="pre">-1</span></code> een makkelijke manier is om 1 van een register af te trekken.</p>
+<p>De instructie <code class="docutils literal notranslate"><span class="pre">setn</span> <span class="pre">r3</span> <span class="pre">42</span></code> zet gewoon de waarde <code class="docutils literal notranslate"><span class="pre">42</span></code> in register <code class="docutils literal notranslate"><span class="pre">r3</span></code>; dit is ook handig…</p>
+<p>Laten we beginnen met Hmmm!</p>
+</div>
+</div>
+<div class="section" id="hmmm-downloaden-en-uitvoeren">
+<h2>Hmmm downloaden en uitvoeren<a class="headerlink" href="#hmmm-downloaden-en-uitvoeren" title="Permalink to this headline">¶</a></h2>
+<p>Om Hmmm uit te voeren, moet je het volgende zipbestand downloaden:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/misja/programmeren/raw/master/problems/assets/wk7ex1.zip">wk7ex1.zip</a>, de map met alle benodigde bestanden, inclusief <code class="docutils literal notranslate"><span class="pre">wk7ex1.hmmm</span></code> en <code class="docutils literal notranslate"><span class="pre">wk7ex1b.hmmm</span></code>.</p></li>
+</ul>
+<p>Pak dat bestand uit en je krijgt een map <code class="docutils literal notranslate"><span class="pre">wk7ex1</span></code> met een aantal bestanden erin.</p>
+<div class="section" id="probeer-het-uit">
+<h3>Probeer het uit!<a class="headerlink" href="#probeer-het-uit" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Probeer Hmmm uit door naar de map <code class="docutils literal notranslate"><span class="pre">wk7ex1</span></code> te <code class="docutils literal notranslate"><span class="pre">cd</span></code>’en die je gedownload en uitgepakt hebt.</p></li>
+<li><p>Voer daarna het gebruikelijke commando uit op de command line: <code class="docutils literal notranslate"><span class="pre">ipython</span></code></p></li>
+<li><p>Type daarna <code class="docutils literal notranslate"><span class="pre">run</span> <span class="pre">hmmm</span> <span class="pre">wk7ex1a.hmmm</span></code> om Hmmm zelf uit te voeren. Hmmm zal <code class="docutils literal notranslate"><span class="pre">wk7ex1a.hmmm</span></code> assembleren en uitvoeren.</p></li>
+</ol>
+<div class="notice admonition">
+<p class="admonition-title"> Werkt het niet?</p>
+<p>Misschien werk je op Windows en moet je de map <em><strong>uitpakken</strong></em> voordat je de bestanden opent.</p>
+<p>Of je hebt misschien het bestand <code class="docutils literal notranslate"><span class="pre">wk7ex1a.hmmm</span></code> verplaatst uit die map; dat werkt niet, je moet de <em>hele map</em> verplaatsen!</p>
+</div>
+<p>Dit is hoe <code class="docutils literal notranslate"><span class="pre">wk7ex1a.hmmm</span></code> eruit ziet:</p>
+<div class="highlight-hmmm notranslate"><div class="highlight"><pre><span></span># wk7ex1a.hmmm is een voorbeeldprogramma dat
+#   1) de gebruiker om invoer vraagt
+#   2) doortelt vanaf dat getal
+#   3) eeuwig door blijft gaan...
+#
+# Naam:
+#
+
+# Practicumopgave #1: Bouw dit programma om naar &quot;aftellen tot de derde macht&quot;
+# Zie de practicumbeschrijving voor details
+
+00 read r1          # lees getal van de gebruiker in r1
+01 write r1         # druk de waarde van r1 af
+02 addn r1 1        # voeg 1 toe aan r1
+03 jumpn 01         # spring naar regel 01
+04 halt             # stopt nooit! [gebruik ctrl-c]
+</pre></div>
+</div>
+<p>Nadat je <code class="docutils literal notranslate"><span class="pre">run</span> <span class="pre">hmmm</span> <span class="pre">wk7ex1a.hmmm</span></code> hebt getypt zou je iets als dit moeten zien:</p>
+<div class="highlight-asm notranslate"><div class="highlight"><pre><span></span>----------------------​
+| ASSEMBLY SUCCESSFUL |
+----------------------
+
+0: 0000 0001 0000 0001             00 read r1          # lees getal van de geb
+1: 0000 0001 0000 0010             01 write r1         # druk de waarde van r1
+2: 0101 0001 0000 0001             02 addn r1 1        # voeg 1 toe aan r1
+3: 1011 0000 0000 0001             03 jumpn 01         # spring naar regel 01
+4: 0000 0000 0000 0000             04 halt             # stopt nooit! [gebruik
+</pre></div>
+</div>
+<p>Daarna zie je:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Enter number:
+</pre></div>
+</div>
+<p>Alles heeft gewerkt en het programma draait. Het vraagt je om een getal in te voeren (dit komt door de instructie <code class="docutils literal notranslate"><span class="pre">read</span> <span class="pre">r1</span></code> aan het begin van het programma)</p>
+<p>Typ <code class="docutils literal notranslate"><span class="pre">32000</span></code> in en druk op return. Je zou de simulator omhoog moeten zien tellen vanaf <code class="docutils literal notranslate"><span class="pre">32000</span></code> of welk getal je ook ingevoerd hebt. Als hij bij de maximumwaarde, <code class="docutils literal notranslate"><span class="pre">32767</span></code>, aankomt, stopt hij (omdat het getal <em>overflowt</em>!)</p>
+<div class="notice admonition">
+<p class="admonition-title"> Overflow</p>
+<p>We hebben bij Programmeren I besproken dat integers in een computer maar een beperkt aantal bits tot hun beschikking hebben; omdat de maximumwaarde hier <code class="docutils literal notranslate"><span class="pre">32767</span></code> is, kunnen we constateren dat het aantal bits dat een integer in Hmmm tot zijn beschikking heeft 16 is (15 voor het getal en 1 voor het teken, positief of negatief). Je zou Hmmm een 16-bits <em>architectuur</em> kunnen noemen</p>
+</div>
+<p>(Als je eerder wilt stoppen, druk dan op control-C.)</p>
+</div>
+<div class="section" id="nog-een-voorbeeld-proberen-voorbeeld1">
+<h3>Nog een voorbeeld proberen, <code class="docutils literal notranslate"><span class="pre">voorbeeld1</span></code><a class="headerlink" href="#nog-een-voorbeeld-proberen-voorbeeld1" title="Permalink to this headline">¶</a></h3>
+<p>Probeer het voorbeeld <code class="docutils literal notranslate"><span class="pre">voorbeeld1.hmmm</span></code>. (Het is voorbeeldig!) Hier kan je de inhoud van <code class="docutils literal notranslate"><span class="pre">voorbeeld1.hmmm</span></code> zien:</p>
+<div class="highlight-hmmm notranslate"><div class="highlight"><pre><span></span>00 read r1          # lees getal van gebruiker in r1
+01 read r2          # ook voor r2
+02 mul r3 r1 r2     # r3 = r1 * r2
+03 write r3         # druk inhoud van r3 af
+04 halt             # stop.
+</pre></div>
+</div>
+<p>Lees het programma <code class="docutils literal notranslate"><span class="pre">voorbeeld1</span></code> instructie voor instructie door zodat je begrijpt wat er gebeurt; het laat je zien hoe je meerdere waardes aan de gebruiker vraagt en er vervolgens een berekening mee uitvoert.</p>
+<p>Probeer het maar!</p>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">run</span> <span class="pre">hmmm</span> <span class="pre">voorbeeld1.hmmm</span></code></p></li>
+<li><p>Het programma draait en vraagt je om een getal. Typ 7, en typ 6 als tweede getal.</p></li>
+</ol>
+<p>Het programma zal Het Antwoord geven!</p>
+</div>
+</div>
+<div class="section" id="aftellen-tot-de-derde-macht">
+<h2>Aftellen tot de derde macht<a class="headerlink" href="#aftellen-tot-de-derde-macht" title="Permalink to this headline">¶</a></h2>
+<p>Voor deze eerste opgave, die je straks inlevert als <code class="docutils literal notranslate"><span class="pre">wk7ex1a.hmmm</span></code>, is je opgave om de code in het bestand zo aan te passen dat deze het volgende doet:</p>
+<ol class="simple">
+<li><p>Eerst moet het de gebruiker vragen om invoer. Hmmm staat alleen integers toe van -32768 tot en met 32767. Voor deze opgave mag je ervan uitgaan dat de invoer <em><strong>positief</strong></em> is en kleiner dan 30.</p></li>
+<li><p>Hierna moet je Hmmm-programma de <em><strong>derde macht</strong></em> van de invoer berekenen. Het moet het resultaat printen. Je hebt hier <em>meerdere</em> vermenigvuldigingen voor nodig! Dit vereist meerdere instructies. Het kost in het algemeen <em>veel</em> meer Hmmm-instructies om iets te doen dan bijvoorbeeld regels Pythoncode.</p></li>
+<li><p>Hierna moet je programma <em><strong>naar beneden</strong></em> tellen vanaf de berekende waarde (de derde macht van de invoer), één integer per keer. Het moet elke waarde afdrukken totdat de waarde 0 is.</p></li>
+<li><p>Als deze aftelling bij nul is uitgekomen, moet het programma stopen. De laatste waarde die afgedrukt wordt moet <code class="docutils literal notranslate"><span class="pre">0</span></code> of <code class="docutils literal notranslate"><span class="pre">1</span></code> zijn. Beide zijn acceptabel als laatste waarde.</p></li>
+</ol>
+<div class="tip admonition">
+<p class="admonition-title"> Een aantal tips</p>
+<p>Een goede manier om deze opgave aan te pakken is om <em>één stap</em> uit de lijst hierboven uit te werken, en je programma goed te <em>testen</em> om te controleren dat deze stap werkt. Je kan bijvoorbeeld</p>
+<ul class="simple">
+<li><p>Eerst een programma schrijven die een invoer leest, de derde macht ervan uitrekent en vervolgens stopt.</p></li>
+<li><p>Daarna dat programma <em>aanpassen</em> zodat deze de invoer lees, de derde macht uitrekent en afdrukt, en daarna <em>één minder dan de derde macht</em> afdrukt, en dan stopt.</p></li>
+<li><p>Ten slotte bedenken hoe je een lus kan toevoegen die dit blijft doen tot je bij nul bent voordat hij stopt.</p></li>
+</ul>
+<p>Je <em>hoeft</em> dit ontwikkelproces niet te gebruiken, maar de één-stap-per-keeraanpak is extra belangrijk voor assembly, omdat het lastiger is (in ieder geval voor een mens!) om bij te houden waar alles is.</p>
+</div>
+<div class="section" id="commentaar">
+<h3>Commentaar<a class="headerlink" href="#commentaar" title="Permalink to this headline">¶</a></h3>
+<p>Om dezelfde reden, dat het voor mensen erg lastig is om bij te houden wat er in elke stap gebeurt, is het verstandig om op <em><strong>elke regel</strong></em> van alle Hmmm-code die je schrijft commentaar te schrijven. Bij null-operaties, <code class="docutils literal notranslate"><span class="pre">nop</span></code>s, hoeft dit niet; die zijn handig om code uit elkaar te houden zodat je programma kan groeien zonder steeds regels te hoeven hernummeren.</p>
+</div>
+</div>
+<div class="section" id="randohmmm-getallen-genereren">
+<h2>RandoHmmm getallen genereren<a class="headerlink" href="#randohmmm-getallen-genereren" title="Permalink to this headline">¶</a></h2>
+<p>Voor dit gedeelte van het pracitcum heb je de bestanden <code class="docutils literal notranslate"><span class="pre">wk7ex1b.hmmm</span></code> en <code class="docutils literal notranslate"><span class="pre">wk7ex1c.py</span></code> nodig. Je kan ze beide vinden in het zip-bestand dat je gedownload hebt.</p>
+<p>De begincode staat al in het bestand <code class="docutils literal notranslate"><span class="pre">wk7ex1b.hmmm</span></code>:</p>
+<div class="highlight-hmmm notranslate"><div class="highlight"><pre><span></span>00 read r1    # input a
+01 read r2    # input c
+02 read r3    # input m
+03 read r4    # input X_0
+04 read r5    # input N
+</pre></div>
+</div>
+<p>In de volgende paragrafen worden deze invoerwaardes uitgelegd, en daarna hoe je daarmee willekeurige getallen kan genereren met deze waardes.</p>
+<div class="section" id="de-wiskunde-achter-het-genereren-van-willekeurige-getallen">
+<h3>De wiskunde achter het genereren van willekeurige getallen<a class="headerlink" href="#de-wiskunde-achter-het-genereren-van-willekeurige-getallen" title="Permalink to this headline">¶</a></h3>
+<p>De getallen die door RNG’s (random number generators) gegenereerd worden zijn niet <em>“echt”</em> willekeurig omdat ze worden gegenereerd door een wiskundige formule. Ze hebben echter wel statistische eigenschappen waardoor ze zich gedragen op een manier die lijkt op hoe echt willekeurige getallen zich gedragen.</p>
+<p>Daarom is het nauwkeuriger om random number generators *pseudo-*random number generators te noemen. We zullen dit verschil hier verder laten voor wat het is.</p>
+<p>Onze random number generator genereert een rij van willekeurige getallen, <code>X<sub>0</sub></code>, <code>X<sub>1</sub></code>, <code>X<sub>2</sub></code>, …, <code>X<sub>n</sub></code>, <code>X<sub>n+1</sub></code>, …, gedefinieerd door de volgende wiskundige relatie:</p>
+<pre lang="text">
+X<sub>n+1</sub> = (a X<sub>n</sub> + c) % m
+</pre>
+<p>waarbij we de volgende waardes kunnen kiezen</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">a</span></code>, een vermenigvuldigingsfactor</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">c</span></code>, een optelwaarde (“offset”)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">m</span></code>, een deler, maar alleen de “mod” of rest na deling wordt gebruikt!</p></li>
+<li><p><code>X<sub>0</sub></code>, een “seedwaarde” of startwaarde, waarbij geldt dat
+<code>0 ≤ X<sub>0</sub> ≤ m</code>, dat wil zeggen, van <code class="docutils literal notranslate"><span class="pre">0</span></code> tot en met <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p></li>
+</ul>
+<p>In een normale random number generator worden deze waardes automatisch gekozen. Vaak wordt dit gedaan aan de hand van het aantal milliseconden op de klok van de computer.</p>
+<p>Nu gaan we zelf deze waardes kiezen. We gaan ook een waarde voor <code class="docutils literal notranslate"><span class="pre">N</span></code> kiezen en de gebruiker kiest de seedwaarde, <code>X<sub>0</sub></code>.</p>
+</div>
+<div class="section" id="hoe-onze-random-number-generator-werkt">
+<h3>Hoe onze random number generator werkt…<a class="headerlink" href="#hoe-onze-random-number-generator-werkt" title="Permalink to this headline">¶</a></h3>
+<p>Je gaat een random number generator genaamd LCG implementeren; dit staat voor <em>linear congruential generator</em>.</p>
+<p>Een LCG random number generator werkt als volgt:</p>
+<ol class="simple">
+<li><p>Begin met de seedwaarde <code>X<sub>0</sub></code>. Dat wil zeggen dat <code class="docutils literal notranslate"><span class="pre">n</span></code> gelijk is aan <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
+<li><p>Gebruik de formule <code>X<sub>n+1</sub> = (a X<sub>n</sub> + c) % m</code> om <code>X<sub>n+1</sub></code> te genereren.</p></li>
+<li><p>Gebruik nu <code>X<sub>n+1</sub></code> als de <em>nieuwe</em> seedwaarde</p></li>
+<li><p>Ga terug naar stap 2 en blijf getallen genereren zolang je wilt…</p></li>
+</ol>
+<p>Hier is een voorbeeld met kleine getallen:</p>
+<ul class="simple">
+<li><p>a = 5</p></li>
+<li><p>c = 1</p></li>
+<li><p>m = 7</p></li>
+<li><p>x<sub>0</sub> = 0</p></li>
+</ul>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>i</p></th>
+<th class="head"><p>Formule</p></th>
+<th class="head"><p>x<sub>i</sub></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>(5*0 + 1) % 7</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>(5*1 + 1) % 7</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>(5*6 + 1) % 7</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>(5*3 + 1) % 7</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>(5*2 + 1) % 7</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>(5*4 + 1) % 7</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>(5*0 + 1) % 7</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+<p>Vanaf hier herhaalt alles zich…</p>
+<p>Merk op dat omdat de willekeurige getallen die je op deze manier genereert altijd tussen 0 en <code class="docutils literal notranslate"><span class="pre">m-1</span></code> liggen omdat we onze getallen steeds modulo <code class="docutils literal notranslate"><span class="pre">m</span></code> nemen. Het <code class="docutils literal notranslate"><span class="pre">mod</span></code>-commando bestaat al in Hmmm (je hoeft het niet zelf te schrijven!).</p>
+<p>In het voorbeeld hierboven herhaalt de LCG zichzelf na het genereren van <code class="docutils literal notranslate"><span class="pre">m</span></code> willekeurige getallen. Als een LCG zich pas herhaalt na het genereren van <code class="docutils literal notranslate"><span class="pre">m</span></code> getallen, zeggen we dat het een <strong>volledige periode</strong> heeft. Dit is een gewenste eigenschap, omdat het betekent dat de generator het grootst mogelijke aantal getallen genereert voordat hij zich herhaalt.</p>
+<p>Hieronder ga je ervoor zorgen dat je generator deze eigenschap heeft.</p>
+</div>
+<div class="section" id="de-randohmmm-number-generator-schrijven">
+<h3>De RandoHmmm number generator schrijven<a class="headerlink" href="#de-randohmmm-number-generator-schrijven" title="Permalink to this headline">¶</a></h3>
+<p>De opgave is om dit LCG-algoritme te implementeren in Hmmm.</p>
+<p>Dit is de samenvatting in een enkele zin: je progamma moet <code class="docutils literal notranslate"><span class="pre">N</span></code> pseudorandom getallen genereren en afdrukken, door gebruik te maken van onze formule:</p>
+<pre lang="text">
+X<sub>n+1</sub> = (a X<sub>n</sub> + c) % m
+</pre>
+<div class="section" id="details">
+<h4>Details<a class="headerlink" href="#details" title="Permalink to this headline">¶</a></h4>
+<p>Je programma moet als volgt werken: De gebruiker geeft <strong>vijf</strong> getallen als invoer in de
+onderstaande volgorde. Deze invoer wordt al geregeld door <code class="docutils literal notranslate"><span class="pre">wk6ex1b.hmmm</span></code>:</p>
+<ul class="simple">
+<li><p>Als eerste geeft de gebruiker het getal <code class="docutils literal notranslate"><span class="pre">a</span></code> op, de vermenigvuldigingsfactor in het LCG-algoritme.</p></li>
+<li><p>Als tweede geeft de gebruiker het getal <code class="docutils literal notranslate"><span class="pre">c</span></code> op, de optelwaarde in het LCG-algoritme.</p></li>
+<li><p>Als derde geeft de gebruiker het getal <code class="docutils literal notranslate"><span class="pre">m</span></code> op, de modulusdeler in het LCG-algoritme.</p></li>
+<li><p>Als vierde geeft de gebruiker de seedwaarde <code>X<sub>0</sub></code> uit het LCG-algoritme op.</p></li>
+<li><p>Als vijfde geeft de gebruiker het geral <code class="docutils literal notranslate"><span class="pre">N</span></code> op, dat aangeeft hoeveel pseudorandom getallen afgedrukt moeten worden.</p></li>
+</ul>
+<p>Daarna moet je Hmmm random number generator</p>
+<ul class="simple">
+<li><p>Eerst kijken of er meer getallen gegenereerd moeten worden (basisgeval!). In welk register staat de waarde die je moet bekijken?</p>
+<ul>
+<li><p>Als er geen getallen meer gegenereerd hoeven te worden, spring dan naar het einde van de code.</p></li>
+<li><p>Misschien weet je nog niet waar het einde zal zijn; je kan nu bijvoorbeeld te ver springen (15 is te ver) en deze regel later aanpassen als je dat wel weet…</p></li>
+</ul>
+</li>
+<li><p>Schrijf daarna de instructies die je nodig hebt om de <em><strong>volgende</strong></em> waarde van <code class="docutils literal notranslate"><span class="pre">X</span></code> te berekenen, bijvoorbeeld <code>X<sub>1</sub></code></p>
+<ul>
+<li><p>Onthoud dat, met de formule van hierboven, <code>X<sub>1</sub> = (a X<sub>0</sub> + c) % m</code></p></li>
+<li><p>Of algemener <code>X<sub>n+1</sub> = (a X<sub>n</sub> + c) % m</code></p></li>
+</ul>
+</li>
+<li><p>Merk op dat het geen probleem is als je het register voor <code>X<sub>0</sub></code> hergebruikt als je <code>X<sub>1</sub></code> aan het berekenen bent, enzovoorts…</p></li>
+<li><p>Nadat je <code>X<sub>1</sub></code> hebt berekend, druk het af.</p>
+<ul>
+<li><p>Druk <code>X<sub>0</sub></code> niet af; dat is de <em>seed</em> van de random number generator.</p></li>
+<li><p>Alle andere getallen <code>X<sub>n</sub></code> (met <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">≥</span> <span class="pre">1</span></code>) zijn <em>wel</em> onderdeel van de lijst willekeurige getallen en moeten dus wel afgedrukt worden.</p></li>
+</ul>
+</li>
+<li><p>Update ten slotte die waarden die geüpdatet moeten worden, zoals <code class="docutils literal notranslate"><span class="pre">N</span></code>, en spring met <code class="docutils literal notranslate"><span class="pre">jumpn</span></code> terug naar de juiste plaats.</p>
+<ul>
+<li><p>Je moet aan het einde van elke branch wel een <code class="docutils literal notranslate"><span class="pre">halt</span></code>-instructie gebruiken.</p></li>
+</ul>
+</li>
+<li><p>Merk op dat je op dit moment weet hoe groot je programma zal zijn, en je kan dat gebruiken in de <code class="docutils literal notranslate"><span class="pre">jumpn</span></code> regels die nog een goed regelnummer nodig hadden…</p></li>
+</ul>
+<div class="tip admonition">
+<p class="admonition-title"> Samenvatting en tips</p>
+<p>Je Hmmm-programma in <code class="docutils literal notranslate"><span class="pre">wk7ex1b.hmmm</span></code> moet dus <code class="docutils literal notranslate"><span class="pre">N</span></code> pseudorandom getallen genereren, te beginnen bij <code>X<sub>1</sub></code> (ter herinnering, <code>X<sub>0</sub></code> wordt niet beschouwd als een pseudorandom getal en wordt dus niet geprint.)</p>
+<ul class="simple">
+<li><p>Merk op dat <code class="docutils literal notranslate"><span class="pre">mod</span></code> ingebouwd is in Hmmm! <em>Ga mod niet zelf schrijven!</em></p></li>
+<li><p>Het kan handig zijn om een register naar een ander register te <em>kopiëren</em>…</p></li>
+<li><p>Het commando <code class="docutils literal notranslate"><span class="pre">copy</span> <span class="pre">r4</span> <span class="pre">r8</span></code> kopieert de inhoud van register <code class="docutils literal notranslate"><span class="pre">r8</span></code> <strong>naar</strong> register <code class="docutils literal notranslate"><span class="pre">r4</span></code>.</p>
+<ul>
+<li><p><em><strong>Let op!</strong></em>: het <code class="docutils literal notranslate"><span class="pre">copy</span></code>-commando werkt van rechts naar links.</p></li>
+<li><p><em>Opmerking</em> Dit is waarom de toekenningsoperator in Python van rechts naar links werkt!</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Het kan hierbij handig zijn om de <a class="reference internal" href="../support/hmmm.html"><span class="doc std std-doc">lijst van alle instructies in Hmmm</span></a> te raadplegen.</p>
+</div>
+<div class="section" id="je-generator-controleren">
+<h4>Je generator controleren<a class="headerlink" href="#je-generator-controleren" title="Permalink to this headline">¶</a></h4>
+<p>Om te controleren of je random-numbergeneratr werkt kan je het proberen met de volgende invoer:</p>
+<ul class="simple">
+<li><p>Gebruik als eerste invoer het getal <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">10</span></code>, de vermenigvuldigingsfactor in het LCG-algoritme.</p></li>
+<li><p>Gebruik als tweede invoer het getal <code class="docutils literal notranslate"><span class="pre">c</span> <span class="pre">=</span> <span class="pre">7</span></code>, de optelwaarde in het LCG-algoritme.</p></li>
+<li><p>Gebruik als derde invoer het getal <code class="docutils literal notranslate"><span class="pre">m</span> <span class="pre">=</span> <span class="pre">11</span></code>, de modulus in het LCG-algoritme.</p></li>
+<li><p>Gebruik als vierde invoer de seed <code>X<sub>0</sub> = 3</code>, de startwaarde in het LCG-algoritme.</p></li>
+<li><p>Gebruik als vijfde invoer het getal <code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">=</span> <span class="pre">10</span></code>, om aan te geven dat er 10 pseudorandom getallen afgedrukt moeten worden.</p></li>
+</ul>
+<p>Kort gezegd:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span>
+<span class="mi">7</span>
+<span class="mi">11</span>
+<span class="mi">3</span>
+<span class="mi">10</span>
+</pre></div>
+</div>
+<p>De uitvoer zal dan afwisselend <code class="docutils literal notranslate"><span class="pre">4</span></code> en <code class="docutils literal notranslate"><span class="pre">3</span></code> moeten zijn:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">3</span>
+</pre></div>
+</div>
+<p>Dit zijn duidelijk <em><strong>geen</strong></em> goede waardes voor onze random-numbergenerator: ze zijn niet erg “willekeurig”! In het volgende onderdeel ga je betere, en daarna ideale, waardes kiezen voor <code class="docutils literal notranslate"><span class="pre">a</span></code> en <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p>
+</div>
+</div>
+<div class="section" id="goede-invoerwaardes-kiezen-voor-het-genereren-van-willekeurige-getallen">
+<h3>Goede invoerwaardes kiezen voor het genereren van willekeurige getallen<a class="headerlink" href="#goede-invoerwaardes-kiezen-voor-het-genereren-van-willekeurige-getallen" title="Permalink to this headline">¶</a></h3>
+<p>Je baas bij <strong>SPRANG</strong> B.V. (Spam-Processed RAndom Number Generation) heeft je gevraagd een
+random-numbergenerator te maken met <code class="docutils literal notranslate"><span class="pre">m</span></code> gelijk aan 100.</p>
+<p>Je moet nu nog waardes voor <code class="docutils literal notranslate"><span class="pre">a</span></code> en <code class="docutils literal notranslate"><span class="pre">c</span></code> vinden die gebruikt kunnen worden met deze waarde van <code class="docutils literal notranslate"><span class="pre">m</span></code> en <em>redelijke</em> willekeurige getallen produceert. Dus ga je in dit deel “goede” waardes voor de parameters <code class="docutils literal notranslate"><span class="pre">a</span></code> en <code class="docutils literal notranslate"><span class="pre">c</span></code> van ons random-numbergeneratoralgoritme kiezen.</p>
+<p>We gebruiken hiervoor dus <code class="docutils literal notranslate"><span class="pre">m</span> <span class="pre">=</span> <span class="pre">100</span></code>.</p>
+<div class="section" id="in-de-praktijk">
+<h4>In de praktijk<a class="headerlink" href="#in-de-praktijk" title="Permalink to this headline">¶</a></h4>
+<p>Probeer twee of drie verschillende waardes voor <code class="docutils literal notranslate"><span class="pre">a</span></code> en <code class="docutils literal notranslate"><span class="pre">c</span></code> (met <code class="docutils literal notranslate"><span class="pre">m</span> <span class="pre">=</span> <span class="pre">100</span></code>, <code>X<sub>0</sub> = 42</code> en <code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">=</span> <span class="pre">100</span></code>).</p>
+<p>Misschien <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">10</span></code> en <code class="docutils literal notranslate"><span class="pre">c</span> <span class="pre">=</span> <span class="pre">5</span></code> om mee te beginnen?</p>
+<p>Hoe verschillend zijn alle 100 uitvoergetallen? Beoordeel dit door naar de uitvoer te kijken…</p>
+<p>Voor de volledigheid is hier de volledige set waardes gegeven die we nu gebruiken:</p>
+<ul class="simple">
+<li><p>Gebruik als eerste invoer het getal <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">10</span></code>, de vermenigvuldigingsfactor in het LCG-algoritme.</p></li>
+<li><p>Gebruik als tweede invoer het getal <code class="docutils literal notranslate"><span class="pre">c</span> <span class="pre">=</span> <span class="pre">5</span></code>, de optelwaarde in het LCG-algoritme.</p></li>
+<li><p>Gebruik als derde invoer het getal <code class="docutils literal notranslate"><span class="pre">m</span> <span class="pre">=</span> <span class="pre">100</span></code>, de modulus in het LCG-algoritme.</p></li>
+<li><p>Gebruik als vierde invoer de seed <code>X<sub>0</sub> = 42</code>, de startwaarde in het LCG-algoritme.</p></li>
+<li><p>Gebruik als vijfde invoer het getal <code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">=</span> <span class="pre">100</span></code>, om aan te geven dat er 10 pseudorandom getallen afgedrukt moeten worden.</p></li>
+</ul>
+<p>Kort gezegd:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span>
+<span class="mi">5</span>
+<span class="mi">100</span>
+<span class="mi">42</span>
+<span class="mi">100</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="in-theorie">
+<h4>In theorie<a class="headerlink" href="#in-theorie" title="Permalink to this headline">¶</a></h4>
+<p>Het blijkt dat het LCG-algoritme zijn best mogelijke performance; dat wil zeggen, het genereert dan een volledige set van <code class="docutils literal notranslate"><span class="pre">m</span></code> verschillende waardes voordat het zich herhaalt; als aan de volgende drie voorwaardes voldaan wordt:</p>
+<ul class="simple">
+<li><p>Voorwaade 1: <code class="docutils literal notranslate"><span class="pre">c</span></code> is relatief priem aan <code class="docutils literal notranslate"><span class="pre">m</span></code> (dat betekent dat <code class="docutils literal notranslate"><span class="pre">c</span></code> en <code class="docutils literal notranslate"><span class="pre">m</span></code> geen gemeenschappelijke delers hebben behalve 1).</p></li>
+<li><p>Voorwaarde 2: <code class="docutils literal notranslate"><span class="pre">a-1</span></code> is deelbaar door alle <em>priemfactoren</em> van <code class="docutils literal notranslate"><span class="pre">m</span></code> (niet <em>alle</em> factoren
+van <code class="docutils literal notranslate"><span class="pre">m</span></code>, maar alleen de <em>priemfactoren</em>).</p></li>
+<li><p>Voorwaarde 3: <code class="docutils literal notranslate"><span class="pre">a-1</span></code> moet een veelvoud van 4 zijn als <code class="docutils literal notranslate"><span class="pre">m</span></code> een veelvoud van 4 is.</p></li>
+</ul>
+<div class="notice admonition">
+<p class="admonition-title"> Opmerkingen</p>
+<ul class="simple">
+<li><p>De priemfactoren van <code class="docutils literal notranslate"><span class="pre">m</span> <span class="pre">=</span> <span class="pre">100</span></code> alleen <code class="docutils literal notranslate"><span class="pre">2</span></code> en <code class="docutils literal notranslate"><span class="pre">5</span></code> zijn.</p></li>
+<li><p>100 <em>wel</em> een veelvoud van 4 is.</p></li>
+<li><p>Voorwaarden 2 en 3 hierboven niet over <code class="docutils literal notranslate"><span class="pre">a</span></code> gaan maar over <code class="docutils literal notranslate"><span class="pre">a-1</span></code>.</p></li>
+</ul>
+</div>
+<p>Kijk of je, met deze feiten in het achterhoofd, de <em><strong>kleinste</strong></em> waardes van <code class="docutils literal notranslate"><span class="pre">c</span></code> en <code class="docutils literal notranslate"><span class="pre">a</span></code> kan vinden waarbij het lukt om <strong>alle</strong> 100 getallen voor <code class="docutils literal notranslate"><span class="pre">m</span></code> = 100 te genereren. Houd <code>X<sub>0</sub> = 42</code> en <code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">=</span> <span class="pre">100</span></code>.</p>
+<p>Het is <em>niet</em> essentieel dat je deze zonder hulp vindt; als je het niet zeker weet, vraag het dan!</p>
+<p>Hoe je de getallen ook vind, <strong>probeer ze uit</strong> met <code class="docutils literal notranslate"><span class="pre">wk7pr1b.hmmm</span></code>. <em>Lijkt het alsof alle 100 mogelijke getallen geproduceerd worden?</em></p>
+<p>Je gaat dit hierna toetsen.</p>
+</div>
+</div>
+<div class="section" id="unique-schrijven">
+<h3><code class="docutils literal notranslate"><span class="pre">unique</span></code> schrijven<a class="headerlink" href="#unique-schrijven" title="Permalink to this headline">¶</a></h3>
+<p>Het is lastig om <em><strong>zeker</strong></em> te weten dat er geen herhalingen zitten in een ljst van 100 getallen. Daarom heeft je baas bij SPRANG je gevraagd om te <em>controleren</em> dat alle getallen uit je LCG-programma uniek zijn. Deze check mag (en moet) met Python uitgevoerd worden.</p>
+<p>Open hiervoor het bestand genaamd <code class="docutils literal notranslate"><span class="pre">wk7ex1c.py</span></code> en bewerk de Python-startfunctie genaamd <code class="docutils literal notranslate"><span class="pre">unique(L)</span></code>.</p>
+<p>Je functie <code class="docutils literal notranslate"><span class="pre">unique(L)</span></code> krijgt als enige invoer een lijst en moet <code class="docutils literal notranslate"><span class="pre">True</span></code> teruggeven als deze lijst alleen maar unieke elementen heeft (geen elementen worden herhaald) en <code class="docutils literal notranslate"><span class="pre">False</span></code> als dat niet zo is.</p>
+<div class="tip admonition">
+<p class="admonition-title"> Een paar tips</p>
+<ul class="simple">
+<li><p>Je functie heeft alleen recursie, lijsten indexeren en slicing nodig.</p></li>
+<li><p>Een goed basisgeval kijkt naar de meest eenvoudige lijst <code class="docutils literal notranslate"><span class="pre">L</span></code>. <em>Wat is de meest eenvoudige lijst getallen <code class="docutils literal notranslate"><span class="pre">L</span></code>?</em> Het is niet 0, maar de <em><strong>lijst</strong></em> met lengte 0.</p></li>
+<li><p>Je hebt nog twee gevallen nodig.</p></li>
+<li><p>Je zal merken dat de Pythonoperator <code class="docutils literal notranslate"><span class="pre">in</span></code> handig is om te kijken of <code class="docutils literal notranslate"><span class="pre">L[0]</span></code> voorkomt <code class="docutils literal notranslate"><span class="pre">in</span></code> de rest van de lijst!</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="unique-testen">
+<h3><code class="docutils literal notranslate"><span class="pre">unique</span></code> testen<a class="headerlink" href="#unique-testen" title="Permalink to this headline">¶</a></h3>
+<p>Om <code class="docutils literal notranslate"><span class="pre">unique</span></code> te testen kan je het bestand uitvoeren en dan een paar invoerwaardes proberen, bijvoorbeeld:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">unique</span><span class="p">([</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">1001</span><span class="p">,</span><span class="mi">42</span><span class="p">])</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kc">True</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">unique</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">42</span><span class="p">])</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="waardes-genereren-en-testen">
+<h3>100 waardes genereren en testen<a class="headerlink" href="#waardes-genereren-en-testen" title="Permalink to this headline">¶</a></h3>
+<p>Nu gaan we je functie <code class="docutils literal notranslate"><span class="pre">unique</span></code> gebruiken om te testen of je LCG-programma, met de waardes die je berekend hebt voor <code class="docutils literal notranslate"><span class="pre">a</span></code> en <code class="docutils literal notranslate"><span class="pre">c</span></code> je inderdaad een volledige periode geven als je deze het uitvoert met <code class="docutils literal notranslate"><span class="pre">m</span></code> ingesteld op 100:</p>
+<ul class="simple">
+<li><p>Voer eerst je Hmmm-LCG-programma uit met deze parameters.</p></li>
+<li><p>Gebruik een seed naar keuze, van 0 tot en met 99. Wij hebben gekozen voor 42.</p></li>
+<li><p>Zet ook de vijfde invoer <code class="docutils literal notranslate"><span class="pre">N</span></code> op 100, zodat je 100 uitvoernummers krijgt,</p></li>
+<li><p>Ten slotte moet je controleren dat deze 100 nummers uniek zijn.</p></li>
+</ul>
+<p><em>Gelukkig</em> heb je de functie <code class="docutils literal notranslate"><span class="pre">unique</span></code>.</p>
+<p><em>Helaas</em> heeft <code class="docutils literal notranslate"><span class="pre">unique</span></code> een lijst als argument, <strong>maar</strong> de uitvoer die we op ons scherm hebben is geen lijst (geen komma’s en geen blokhaken aan het begin en einde).</p>
+<p>Geen probleem! Kijk eerst naar het volgende stukje Pythoncode in het bestand <code class="docutils literal notranslate"><span class="pre">wk7ex1c.py</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Je plakt je 100 getallen in deze triple-quoted string:</span>
+<span class="n">NUMBERS</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">3</span>
+<span class="s2">42</span>
+<span class="s2">47</span>
+<span class="s2">46</span>
+<span class="s2">91</span>
+<span class="s2">5</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+
+<span class="k">def</span> <span class="nf">unique</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+    <span class="o">...</span> <span class="c1"># dit heb je hierboven geschreven...</span>
+
+
+<span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="o">...</span> <span class="c1"># zie wk7ex1c.py voor deze functie ...</span>
+</pre></div>
+</div>
+<p>Er zijn twee dingen om op te merken in bovenstaande code: ten eerste is er een triple-quoted string genaamd <code class="docutils literal notranslate"><span class="pre">NUMBERS</span></code> die een aantal getallen bevat.</p>
+<p>Ten tweede is er een kleine functie met de naam <code class="docutils literal notranslate"><span class="pre">test</span></code> die een string (<code class="docutils literal notranslate"><span class="pre">s</span></code>) als parameter meekrijgt, bijvoorbeeld de string <code class="docutils literal notranslate"><span class="pre">NUMBERS</span></code> (een triple-quoted string is gewoon een string!), en daarna <code class="docutils literal notranslate"><span class="pre">unique</span></code> gebruikt om te kijken of alle getallen in die string uniek zijn.</p>
+<p>De <code class="docutils literal notranslate"><span class="pre">print</span></code>-statements die in commentaar staan kunnen je wat meer idee geven van hoe <code class="docutils literal notranslate"><span class="pre">test</span></code> werkt.</p>
+</div>
+<div class="section" id="de-functie-test-gebruiken">
+<h3>De functie <code class="docutils literal notranslate"><span class="pre">test</span></code> gebruiken<a class="headerlink" href="#de-functie-test-gebruiken" title="Permalink to this headline">¶</a></h3>
+<p>Kopieer en plak de uitvoer van je Hmmm-progamma (100 getallen) in de triple-quoted string <code class="docutils literal notranslate"><span class="pre">NUMBERS</span></code>. <em>Vervang</em> hierbij de huidige inhoud van de string vervangt!</p>
+<p>Voer het bestand opnieuw uit. Voer daarna</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">test</span><span class="p">(</span><span class="n">NUMBERS</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>uit in de prompt van de Pythonshell.</p>
+<p>Als alles goed gegaan is, zal Python <code class="docutils literal notranslate"><span class="pre">True</span></code> als uitvoer geven.</p>
+<p>Dit betekent dat je 100-number random-numbergenerator inderdaad precies 100 unieke willekeurige getallen heeft gegenereerd, het best-mogelijke resultaat.</p>
+</div>
+<div class="section" id="afronden">
+<h3>Afronden…<a class="headerlink" href="#afronden" title="Permalink to this headline">¶</a></h3>
+<p>Nadat je je programma hebt gecontroleerd om te zien dat het inderdaad 100 verschillende waardes geeft is het practicum af!</p>
+</div>
+</div>
+<div class="section" id="je-cv-bijwerken">
+<h2>Je CV bijwerken!<a class="headerlink" href="#je-cv-bijwerken" title="Permalink to this headline">¶</a></h2>
+<p>Gefeliciteerd! Je kan nu Hmmm offcieel op je CV zetten, naast Logisim (en Picobot!)</p>
+<p>Vergeet niet om de bestanden <code class="docutils literal notranslate"><span class="pre">wk7ex1a.hmmm</span></code>, <code class="docutils literal notranslate"><span class="pre">wk7ex1b.hmmm</span></code> en <code class="docutils literal notranslate"><span class="pre">wk7ex1c.py</span></code> in te leveren in Gradescope!</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "misja/programmeren",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./problems"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../class/week_7.html" title="previous page">Week 7</a>
+    <a class='right-next' id="next-link" href="../class/opgaven_7.html" title="next page">Week 7</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Hanze University of Applied Sciences<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
