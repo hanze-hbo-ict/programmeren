@@ -58,7 +58,7 @@ Elke instructie vertelt de computer in principe wat te doen met zijn registers (
 
 Zoals bij de meeste computers "werken" de instructies van Hmmm op *registers*. Als je naar de collegeslides kijkt, zal je zien dat er instructies zijn zoals `add`, die drie registers meekrijgen als argument, bijvoorbeeld:
 
-```hmmm
+```asm
 add r3 r1 r2
 ```
 
@@ -98,7 +98,7 @@ Of je hebt misschien het bestand `wk7ex1a.hmmm` verplaatst uit die map; dat werk
 
 Dit is hoe `wk7ex1a.hmmm` eruit ziet:
 
-```hmmm
+```asm
 # wk7ex1a.hmmm is een voorbeeldprogramma dat
 #   1) de gebruiker om invoer vraagt
 #   2) doortelt vanaf dat getal
@@ -151,7 +151,7 @@ We hebben bij Programmeren I besproken dat integers in een computer maar een bep
 
 Probeer het voorbeeld `voorbeeld1.hmmm`. (Het is voorbeeldig!) Hier kan je de inhoud van `voorbeeld1.hmmm` zien:
 
-```hmmm
+```asm
 00 read r1          # lees getal van gebruiker in r1
 01 read r2          # ook voor r2
 02 mul r3 r1 r2     # r3 = r1 * r2
@@ -197,7 +197,7 @@ Voor dit gedeelte van het pracitcum heb je de bestanden `wk7ex1b.hmmm` en `wk7ex
 
 De begincode staat al in het bestand `wk7ex1b.hmmm`:
 
-```hmmm
+```asm
 00 read r1    # input a
 01 read r2    # input c
 02 read r3    # input m
