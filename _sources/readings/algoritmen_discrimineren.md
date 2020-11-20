@@ -1,0 +1,31 @@
+# When Algorithms Discriminate
+
+```{include} ../class/readings/algoritmen_discrimineren.md
+```
+
+Het ontwerpen van algoritmes is de centrale uitdaging in informatica.
+
+In de tekst van deze week laten we wat van de problemen zien die kunnen optreden als die algoritmes op hun beurt proberen **menselijke keuzes weer te geven**, bijvoorbeeld via machine learning van sociale feedback, zoals de autocomplete van Google, of **oordelen over mensen te maken**, bijvoorbeeld om doktoren werkgevers, enz. te ondersteunen. Dit gebeurt in steeds meer velden.
+
+## Het artikel
+
+* [When Algorithms Discriminate](http://www.nytimes.com/2015/07/10/upshot/when-algorithms-discriminate.html?_r=0)
+* Hier is een [lokaal opgeslagen kopie](https://github.com/misja/programmeren/raw/master/readings//assets/whenAlgorithmsDiscriminate.pdf), als bovenstaande link niet werkt.
+
+## De vraag (kies er één om te beantwoorden)
+
+Beantwoord, na het lezen van bovenstaand artikel, in ieder geval één van de volgende vragen (eigen keuze) in een *platte-tekstbestand* genaamd `wk8ex0.txt`, die je op de gebruikelijk manier inlevert:
+
+* In dit artikel wordt onderscheid gemaakt tussen algoritmes en auteurs, bijvoorbeeld, *often, algorithms and online results simply reflect people's attitudes and behavior*.
+
+  In hoeverre ben je het ermee eens dat algoritmes wel (of niet) subjectief zijn als ze mensen beoordelen?
+
+* [In een ander artikel in de New York Times](http://bits.blogs.nytimes.com/2015/07/26/using-algorithms-to-determine-character/) suggereert iemand dat *"We're always judging people in all sorts of ways, but without data we do it with a selection bias."* Denk je dat algoritmes de *mogelijkheid* hebben om menselijke interacties eerlijker te maken? Of is het waarschijnlijker dat ze leiden tot *minder eerlijkheid* of *minder aandacht voor eerlijkheid*? Je eigen idee hierover kan, zoals altijd, een middenweg zijn; of een geheel andere weg.
+
+Zoals bij de antwoorden van elke week is een korte paragraaf van 5-6 zinnen die laat zien dat je over de thema's van het artikel hebt nagedacht; of ze misschien hebt gekoppeld aan je eigen ervaring; voldoende.
+
+Er zijn veel andere artikelen en groepen die dit onderwerpt bespreken:
+
+* Er is een jaarlijkse conferentie: [http://www.fatml.org/](http://www.fatml.org/)
+* Een vroeg artikel dat de juridische aspecten bekijkt: [https://arxiv.org/abs/1412.3756](https://arxiv.org/abs/1412.3756)
+* Een leesbare en inzichtelijke [blogpost met uitleg hierover](https://medium.com/@geomblog/when-an-algorithm-isn-t-2b9fe01b9bb5#.sjendul5h) door één van de meest uitgesproken onderzoekers in dit vakgebied, Suresh Venkatasubramanian
