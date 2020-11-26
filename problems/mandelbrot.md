@@ -13,7 +13,7 @@ Tijdens dit practicum ga je een programma schrijven om de punten in en rond de m
 
 ## Inleiding op `for`-lussen
 
-Omdat je afbeeldingen gaat maken in dit practicum heb je wat extra code nodig om mee te beginnen; download [wk8ex1.zip](https://github.com/misja/programmeren/raw/master/problems/assets//wk8ex1.zip) en pak het uit.
+Omdat je afbeeldingen gaat maken in dit practicum heb je wat extra code nodig om mee te beginnen; download [wk8ex1.zip](https://github.com/misja/programmeren/raw/master/problems/assets/wk8ex1.zip) en pak het uit.
 
 Om wat inzicht in lussen te krijgen, schrijf je eerst twee korte functies in `wk8ex1.py`:
 

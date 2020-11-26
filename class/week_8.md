@@ -1,10 +1,10 @@
-# Week 9
+# Week 8
 
 ![Schotel](/images/saucer.png)
 
 ## Onderwerpen
 
-2D arrays en geneste lussen
+Imperatief programmeren, lussen
 
 ## Boek
 
