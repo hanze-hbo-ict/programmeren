@@ -4,7 +4,7 @@
 
 ## Onderwerpen
 
-Imperatief programmeren, lussen
+2D arrays en geneste lussen
 
 ## Boek
 

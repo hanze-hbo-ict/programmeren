@@ -4,26 +4,29 @@
 
 ## Practicum
 
-### [Mandelbrot](/problems/mandelbrot.md)
-
-```{include} problems/mandelbrot.md
+```{include} ../class/problems/boter_kaas_eieren.md
 ```
 
 ## Leesopgave
 
-### [When Algorithms Discriminate](/readings/algoritmen_discrimineren.md)
+### [From horseless to driverless](/readings/horseless_driverless.md)
 
-```{include} readings/end_of_theory.md
+```{include} ../class/readings/horseless_driverless.md
 ```
 
 ## Huiswerk
 
-### [PythonBat lussen](/problems/pythonbat_lussen.md)
+### [Boter kaas en eieren](/problems/boter_kaas_eieren.md)
 
-```{include} problems/pythonbat_lussen.md
+```{include} ../class/problems/boter_kaas_eieren.md
 ```
 
-### [Pi met pijltjes](/problems/pi_pijlen.md)
+### [De rij van Conway](/problems/rij_van_conway.md)
 
-```{include} problems/pi_pijlen.md
+```{include} ../class/problems/rij_van_conway.md
+```
+
+### [Game of Life](/problems/game_of_life.md)
+
+```{include} ../class/problems/game_of_life.md
 ```

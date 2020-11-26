@@ -1,0 +1,1631 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game of Life &#8212; Programmeren</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "misja/programmeren");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://misja.github.io/programmeren/problems/game_of_life.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Voorbeelden van recursie" href="../examples/recursie.html" />
+    <link rel="prev" title="De Rij van Conway" href="rij_van_conway.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://misja.github.io/programmeren/problems/game_of_life.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Game of Life" />
+<meta property="og:description" content="Game of Life      Naam  Beschrijving  Onderwerp  De evolutie van leven  Bestandsnaam  wk9ex1.py  Inleveren  Lever jouw bestand met de juiste bestandsnaam in op " />
+<meta property="og:image"       content="https://misja.github.io/programmeren/_static/mascot.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/mascot.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Programmeren</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/syllabus.html">
+   Programmeren
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Opmerkingen
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/feedback.html">
+   Anoniem feedbackformulier
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Week 1
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/week_1.html">
+   Onderwerpen
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/1a_introductie.html">
+     Introductie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/1b_condities.html">
+     Condities
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/2a_programmeren.html">
+     Programmeren
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/2b_picobot.html">
+     Picobot
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_intro.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/opgaven_1.html">
+   Opgaven
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/guugu_yimithirr.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rochambeau.html">
+     Rochambeau
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="interactieve_fictie.html">
+     Interactieve fictie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="picobot_1.html">
+     Picobot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="picobot_2.html">
+     Picobot II: Picobot Strikes Back
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="picobot_3.html">
+     Picobot III: Return of the Picobot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="picobot_4.html">
+     Picobot IV: The Picobot Menace
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Week 2
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/week_2.html">
+   Onderwerpen
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/3a_data.html">
+     Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/3b_strings_en_lists.html">
+     Strings en lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/4a_functies.html">
+     Functies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/4b_recursie.html">
+     Recursie
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sequenties_en_data.html">
+   Practicum I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fijne_functies.html">
+   Practicum II
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/opgaven_2.html">
+   Opgaven
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/end_of_theory.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="feest_met_functies.html">
+     Feest met functies
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Week 3
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/week_3.html">
+   Onderwerpen
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/5a_simulatie.html">
+     Simulatie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/5b_turtle_recursie.html">
+     Turtle en recursie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/6a_list_comprehension.html">
+     List comprehension
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_turtles.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/opgaven_3.html">
+   Opgaven
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/computer_wins_jeopardy.html">
+     De computer wint
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="slaapwandelende_student.html">
+     Slaapwandelende student
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="numerieke_integratie.html">
+     Numerieke integratie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="turtles_tot_het_einde.html">
+     Turtles all the way down
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Week 4
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/week_4.html">
+   Onderwerpen
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/7a_data_based_design.html">
+     Data based design
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/7b_rekenen_met_taal.html">
+     Rekenen met taal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/8_ontwerp_algoritmen.html">
+     Ontwerp van algoritmen
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="klinkt_goed.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/opgaven_4.html">
+   Opgaven
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/universum_simulatie.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="caesar_op_orde.html">
+     Caesar op orde
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Week 5
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/week_5.html">
+   Onderwerpen
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/9a_talstelsels.html">
+     Talstalsels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/9b_binaire_getallen.html">
+     Binaire getallen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/10_bewerkingen_met_bits.html">
+     Bewerkingen met bits
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="decimaal_en_verder.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/opgaven_5.html">
+   Opgaven
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/bug_and_crash.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="wisselende_stelsels.html">
+     Wisselende stelsels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fraaie_plaatjes.html">
+     Fraaie plaatjes
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Week 6
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/week_6.html">
+   Onderwerpen
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/11a_logische_schakelingen.html">
+     Logische schakelingen
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="optellingen_schakelen.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/opgaven_6.html">
+   Opgaven
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/just_add_water.html">
+     Leesopgave
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Week 7
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_7.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hmmm_assembly.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/opgaven_7.html">
+   Opgaven
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/hijacked_minds.html">
+     Leesopave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="macht_van_hmmm.html">
+     De macht van hmmm
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Week 8
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_8.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mandelbrot.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/opgaven_8.html">
+   Opgaven
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/algoritmen_discrimineren.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pythonbat_lussen.html">
+     PythonBat lussen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pi_pijlen.html">
+     Pi met pijltjes
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Week 9
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_9.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="boter_kaas_eieren.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../class/opgaven_9.html">
+   Opgaven
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="rij_van_conway.html">
+     Lees en huiver
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Game of Life
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Voorbeelden
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/recursie.html">
+   Recursie
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/design_recipe.html">
+   Functie ontwerp
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Oefening
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../practice/1_recursie.html">
+   Recursie
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../practice/2_list_comprehension.html">
+   List comprehension
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../practice/3a_toets.html">
+   Zelftoets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../practice/3b_toets_uitwerking.html">
+   Uitwerking
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/platte_tekst.html">
+   Tekstbestanden
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python_browser.html">
+   Python in de browser
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python2_vs_python3.html">
+   Python 2 versus Python 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/software.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/hmmm.html">
+   Hmmmm assembly
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/problems/game_of_life.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Fproblems/game_of_life.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/problems/game_of_life.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#john-conway-s-game-of-life">
+   John Conway’s Game of Life
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nadenken-over-het-leven">
+     Nadenken over het leven
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#begincode">
+     Begincode
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stap-1-een-tweedimensionaal-bord-met-cellen-maken-create-one-row-en-create-board">
+   Stap 1: Een tweedimensionaal “bord” met cellen maken:
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     create_one_row
+    </span>
+   </code>
+   en
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     create_board
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-functie-create-board">
+     De functie
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       create_board
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stap-2-je-tweedimensionale-bord-met-cellen-afdrukken">
+   Stap 2: Je tweedimensionale bord met cellen afdrukken
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-functie-print-board">
+     De functie
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       print_board
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stap-3-patronen-toevoegen-aan-tweedimensionale-arrays">
+   Stap 3: Patronen toevoegen aan tweedimensionale arrays
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-functie-diagonalize">
+     De functie
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       diagonalize
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-functie-inner-cells">
+     De functie
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       inner_cells
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-functie-random-cells">
+     De functie
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       random_cells
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#de-functie-copy">
+   De functie
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     copy
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#copy-a-een-deep-copier-schrijven">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     copy(a)
+    </span>
+   </code>
+   , een “deep” copier, schrijven…
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-functie-inner-reverse">
+     De functie
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       inner_reverse
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stap-4-game-of-life-van-john-conway">
+   Stap 4: Game of Life van John Conway
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-functie-count-neighbours">
+     De functie
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       count_neighbours
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-functie-next-life-generation-a">
+     De functie
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       next_life_generation(a)
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stap-5-grafisch-leven">
+   Stap 5: Grafisch leven!
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kleurrijk-leven">
+     Kleurrijk leven!
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#maximaal-leven">
+     Maximaal leven…
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#optionele-variaties-op-game-of-life">
+   Optionele variaties op Game of Life
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-donut">
+     De donut
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#buitenaards-leven">
+     Buitenaards leven
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#meer-soorten-cellen">
+     Meer soorten cellen
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="game-of-life">
+<h1>Game of Life<a class="headerlink" href="#game-of-life" title="Permalink to this headline">¶</a></h1>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Naam</p></th>
+<th class="head"><p>Beschrijving</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Onderwerp</p></td>
+<td><p>De evolutie van leven</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bestandsnaam</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">wk9ex1.py</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Inleveren</p></td>
+<td><p>Lever jouw bestand met de juiste bestandsnaam in op GradeScope</p></td>
+</tr>
+<tr class="row-odd"><td><p>Punten</p></td>
+<td><p>30</p></td>
+</tr>
+<tr class="row-even"><td><p>Opmerking</p></td>
+<td><p>Dit is een bonusopgave</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="john-conway-s-game-of-life">
+<h2>John Conway’s Game of Life<a class="headerlink" href="#john-conway-s-game-of-life" title="Permalink to this headline">¶</a></h2>
+<p>Game of Life is een <em>cellulaire automaat</em> uitgevonden door de in 2020 overleden wiskundige John Conway. Game of Life is niet zozeer een “spel” in de traditionele betekenis, maar een proces dat over tijd veranderd aan de hand van een paar simpele regels. Het proces wordt opgezet als een raster cellen, die ieder “levend” of “dood” kunnen zijn op een gegeven tijdstip. Op elk tijdstip overleven of sterven cellen aan de hand van de volgende regels:</p>
+<ol class="simple">
+<li><p>Een cel met minder dan twee levende buren sterft (vanwege isolatie)</p></li>
+<li><p>Een cel met meer dan 3 levende buren sterft (vanwege overbevolking)</p></li>
+<li><p>Een dode cel met precies 3 levende buren komt weer tot leven</p></li>
+<li><p>Alle andere cellen blijven in dezelfde toestand</p></li>
+</ol>
+<p>Alhoewel deze regels simpel lijken leiden ze tot complexe en interessante patronen. Meer informatie en een aantal interessante patronen kan je vinden op [https://nl.wikipedia.org/wiki/Game_of_Life].</p>
+<p>In dit practicum ga je een Pythonprogramma implementeren om Game of Life te spelen.</p>
+<div class="section" id="nadenken-over-het-leven">
+<h3>Nadenken over het leven<a class="headerlink" href="#nadenken-over-het-leven" title="Permalink to this headline">¶</a></h3>
+<p>Zoals altijd is het belangrijk om het probleem in kleine onderdelen op te delen en het programma in stappen te ontwikkelen zodat anderen de code kunnen begrijpen en je kan garanderen dat elk onderdeel correct is voordat je er op doorontwikkelt. We zullen het probleem in de volgende stappen onderverdelen:</p>
+<ul class="simple">
+<li><p>Een tweedimensionale array van cellen maken</p></li>
+<li><p>Het bord weergeven (in verschillende kleuren) en het bijwerken met nieuwe gegevens</p></li>
+<li><p>De gebruiker toestaan de toestand van de cellen aan te passen</p></li>
+<li><p>De regels van “Game of Life” implementeren</p></li>
+<li><p>(Optioneel) De simulatie starten en stoppen</p></li>
+</ul>
+<p>Voordat je begint moet je een schema ontwerpen om je gegevens bij te houden. In beginsel zijn de gegevens die je mmoet bijhouden de toestand van alle cellen op het bord. Om dit te doen, kan je de gegevens in een tweedimensionale array met integerwaardes bijhouden, waar <code class="docutils literal notranslate"><span class="pre">0</span></code> een lege cel (uit) voorstelt en <code class="docutils literal notranslate"><span class="pre">1</span></code> een levende cel (aan) voorstelt.</p>
+</div>
+<div class="section" id="begincode">
+<h3>Begincode<a class="headerlink" href="#begincode" title="Permalink to this headline">¶</a></h3>
+<p>Begin ermee het zip-bestand op onderstaande link te downloaden:</p>
+<p><a class="reference external" href="https://github.com/misja/programmeren/raw/master/problems/assets/assets/wk9ex1.zip">wk9ex1.zip</a></p>
+<p>Het is het makkelijkst om dit zip-bestand op het bureaublad uit te pakken. Het bevat wat ondersteunende code om je levensgeneraties grafisch weer te geven, maar dat is het laatste deel van het practicum. Eerst ga je de basisfunctionaliteit implementeren om tweedimensionale arrays te maken, te wijzigen en te laten evolueren volgens de regels van Life.</p>
+</div>
+</div>
+<div class="section" id="stap-1-een-tweedimensionaal-bord-met-cellen-maken-create-one-row-en-create-board">
+<h2>Stap 1: Een tweedimensionaal “bord” met cellen maken: <code class="docutils literal notranslate"><span class="pre">create_one_row</span></code> en <code class="docutils literal notranslate"><span class="pre">create_board</span></code><a class="headerlink" href="#stap-1-een-tweedimensionaal-bord-met-cellen-maken-create-one-row-en-create-board" title="Permalink to this headline">¶</a></h2>
+<p>In het bestand <code class="docutils literal notranslate"><span class="pre">wk9ex1.py</span></code> zie je deze voorbeeldfunctie:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_one_row</span><span class="p">(</span><span class="n">width</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns one row of zeros of width &quot;width&quot;.</span>
+<span class="sd">       You might use this in your create_board(width, height) function.&quot;&quot;&quot;</span>
+    <span class="n">row</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">width</span><span class="p">):</span>
+        <span class="n">row</span> <span class="o">+=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">row</span>
+</pre></div>
+</div>
+<p>Deze functie biedt een startpunt om <em>ééndimensionale</em> lijsten te maken; maar je kan hetzelfde idee gebruiken om onbeperkt diepe geneste lijststructuren te bouwen.</p>
+<div class="section" id="de-functie-create-board">
+<h3>De functie <code class="docutils literal notranslate"><span class="pre">create_board</span></code><a class="headerlink" href="#de-functie-create-board" title="Permalink to this headline">¶</a></h3>
+<p>Bouw op dit voorbeeld voort en schrijf een functie genaamd <code class="docutils literal notranslate"><span class="pre">create_board(width,</span> <span class="pre">height)</span></code> die een nieuwe tweedimensionale lijst met <code class="docutils literal notranslate"><span class="pre">height</span></code> rijen en <code class="docutils literal notranslate"><span class="pre">width</span></code> kolommen maakt en teruggeeft, waarin alle gegevenselementen <code class="docutils literal notranslate"><span class="pre">0</span></code> zijn (dit hoeft niet grafisch weergegeven te worden, alleen maar als Pythonlijst!).</p>
+<p>Zorg dat je de functie <code class="docutils literal notranslate"><span class="pre">create_one_row</span></code> <strong>niet opnieuw</strong> implementeert!</p>
+<p><strong>Gebruik</strong> in plaats daarvan <code class="docutils literal notranslate"><span class="pre">create_one_row</span></code> in je functie <code class="docutils literal notranslate"><span class="pre">create_board</span></code> op een zelfde manier waarop <code class="docutils literal notranslate"><span class="pre">0</span></code> gebruikt wordt om individuele elementen toe te voegen in <code class="docutils literal notranslate"><span class="pre">create_one_row</span></code>. Hier zie je een sjabloon; je kan dit kopiëren en plakken en dan de delen die nodig zijn om het te voltooien invullen:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_board</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns a 2D array with &quot;height&quot; rows and &quot;width&quot; columns.&quot;&quot;&quot;</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">height</span><span class="p">):</span>
+        <span class="n">a</span> <span class="o">+=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span>        <span class="c1"># gebruik de bovenstaande functie zodat ... één rij is!!</span>
+    <span class="k">return</span> <span class="n">a</span>
+</pre></div>
+</div>
+<p>Dat is alles wat je nodig hebt! Het idee is dus om het voorbeeld van <code class="docutils literal notranslate"><span class="pre">create_one_row</span></code> te gebruiken; maar in plaats van dat je elke keer een <code class="docutils literal notranslate"><span class="pre">0</span></code> toevoegt, voegt de functie elke keer een hele rije met <code class="docutils literal notranslate"><span class="pre">0</span></code>’en toe, namelijk het resultaat van <code class="docutils literal notranslate"><span class="pre">create_one_row</span></code>!</p>
+<p>Probeer je functie <code class="docutils literal notranslate"><span class="pre">create_board</span></code> uit!</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">a</span> <span class="o">=</span> <span class="n">create_board</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">a</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="stap-2-je-tweedimensionale-bord-met-cellen-afdrukken">
+<h2>Stap 2: Je tweedimensionale bord met cellen afdrukken<a class="headerlink" href="#stap-2-je-tweedimensionale-bord-met-cellen-afdrukken" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="de-functie-print-board">
+<h3>De functie <code class="docutils literal notranslate"><span class="pre">print_board</span></code><a class="headerlink" href="#de-functie-print-board" title="Permalink to this headline">¶</a></h3>
+<p>Je hebt ongetwijfeld gemerkt dat als Python een tweedimensionale lijst afdrukt, het de tweedimensionale structuur compleet negeert en alles platslaat naar een enkele regel (misschien met regelafbreking, als dat nodig is). Om je bord tweedimensionaal af te drukken met ASCII-tekens (we zullen het grafisch weergeven als het helemaal werkt) kan je deze functie kopiëren naar je bestand.</p>
+<p><em><strong>Let op: er mist één regel!</strong></em> Misschien zie je het al…</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_board</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This function prints the 2D list-of-lists a.&quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>               <span class="c1"># row is de hele rij</span>
+        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">row</span><span class="p">:</span>         <span class="c1"># col is het individuele element</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>  <span class="c1"># druk dat element af</span>
+</pre></div>
+</div>
+<p>Probeer <code class="docutils literal notranslate"><span class="pre">print_board</span></code> vervolgens uit. Op dit moment, klopt het <em>niet helemaal</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">a</span> <span class="o">=</span> <span class="n">create_board</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">print_board</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">000000000000000</span>
+</pre></div>
+</div>
+<p>*<em>Voeg één regel toe</em> zodat <code class="docutils literal notranslate"><span class="pre">print_board</span></code> onze <em>tweedimensionale</em> array tweedimensionaal weergeeft!</p>
+<p>!!! tip “<code class="docutils literal notranslate"><span class="pre">print()</span></code>”
+De betreffende regel is <code class="docutils literal notranslate"><span class="pre">print()</span></code>; een leeg print-statement. <em>Waar moet deze regel staan?!</em></p>
+<p>Vergeet niet je verbeterde <code class="docutils literal notranslate"><span class="pre">print_board</span></code> te testen:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">a</span> <span class="o">=</span> <span class="n">create_board</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">print_board</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">00000</span>
+<span class="mi">00000</span>
+<span class="mi">00000</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="stap-3-patronen-toevoegen-aan-tweedimensionale-arrays">
+<h2>Stap 3: Patronen toevoegen aan tweedimensionale arrays<a class="headerlink" href="#stap-3-patronen-toevoegen-aan-tweedimensionale-arrays" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="de-functie-diagonalize">
+<h3>De functie <code class="docutils literal notranslate"><span class="pre">diagonalize</span></code><a class="headerlink" href="#de-functie-diagonalize" title="Permalink to this headline">¶</a></h3>
+<p>Om te oefenen met het lussen over tweedimensionale arrays, kan je deze functie genaamd <code class="docutils literal notranslate"><span class="pre">diagonalize(width,</span> <span class="pre">height)</span></code> naar je bestand kopiëren:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">diagonalize</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Creates an empty board and then modifies it</span>
+<span class="sd">       so that it has a diagonal strip of &quot;on&quot; cells.</span>
+<span class="sd">       But do that only in the *interior* of the 2D array.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">create_board</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">height</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">width</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">row</span> <span class="o">==</span> <span class="n">col</span><span class="p">:</span>
+                <span class="n">a</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">a</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">return</span> <span class="n">a</span>
+</pre></div>
+</div>
+<p>Deze functie, <code class="docutils literal notranslate"><span class="pre">diagonalize</span></code>, krijgt de gewenste breedte en hoogte mee. Ze maakt dan een array <code class="docutils literal notranslate"><span class="pre">a</span></code> en stelt de elementen in <code class="docutils literal notranslate"><span class="pre">a</span></code> zo in dat alle elementen <code class="docutils literal notranslate"><span class="pre">0</span></code> zijn <em>behalve de <strong>binnenkant</strong> van de diagonaal</em> waar geldt dat <code class="docutils literal notranslate"><span class="pre">row</span> <span class="pre">==</span> <span class="pre">col</span></code>.</p>
+<p>Probeer de resultaten weer te geven met deze commandos:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">a</span> <span class="o">=</span> <span class="n">diagonalize</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">a</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span>
+<span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+ <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+ <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+ <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+ <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+ <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">print_board</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">0000000</span>
+<span class="mi">0100000</span>
+<span class="mi">0010000</span>
+<span class="mi">0001000</span>
+<span class="mi">0000100</span>
+<span class="mi">0000000</span>
+</pre></div>
+</div>
+<p>Bekijk even goed in welke richting de diagonaal loopt; dat geeft aan op welke manier de <em>rijen</em> van het bord weergegeven worden: van boven naar beneden, in dit geval.</p>
+<div class="notice admonition">
+<p class="admonition-title"> De randen blijven 0!</p>
+<p>Merk op dat de code <code class="docutils literal notranslate"><span class="pre">range(1,</span> <span class="pre">height</span> <span class="pre">-</span> <span class="pre">1)</span></code> en <code class="docutils literal notranslate"><span class="pre">range(1,</span> <span class="pre">width</span> <span class="pre">-</span> <span class="pre">1)</span></code> gebruikt om te voorkomen dat de randen aangepast worden.</p>
+<p>We zullen dit patroon blijven gebruiken tijdens dit practicum, aangezien Game of Life niet kan werken met randcellen (ze hebben minder dan 8 buren).</p>
+</div>
+<p>Je kan in dit voorbeeld ook zien dat <code class="docutils literal notranslate"><span class="pre">height</span></code> en <code class="docutils literal notranslate"><span class="pre">width</span></code> niet hetzelfde hoeven te zijn; het is echter geen probleem als dat wel zo is.</p>
+</div>
+<div class="section" id="de-functie-inner-cells">
+<h3>De functie <code class="docutils literal notranslate"><span class="pre">inner_cells</span></code><a class="headerlink" href="#de-functie-inner-cells" title="Permalink to this headline">¶</a></h3>
+<p>Schrijf aan de hand van het voorbeeld van <code class="docutils literal notranslate"><span class="pre">diagonalize</span></code> een variatie met de naam <code class="docutils literal notranslate"><span class="pre">inner_cells(w,</span> <span class="pre">h)</span></code> die een tweedimensionale array teruggeeft met <em>alleen maar</em> levende cellen, met een waarde <code class="docutils literal notranslate"><span class="pre">1</span></code>, <em><strong>behalve</strong></em> een rand van één cel breedt die leeg blijft (met een waarde <code class="docutils literal notranslate"><span class="pre">0</span></code>) langs de buitenrand van de tweedimensionale array.</p>
+<p>Je kan bijvoorbeeld dit proberen:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">a</span> <span class="o">=</span> <span class="n">inner_cells</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">print_board</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>            <span class="c1"># je kan hiervoor pijltje omhoog gebruiken!</span>
+<span class="mi">00000</span>
+<span class="mi">01110</span>
+<span class="mi">01110</span>
+<span class="mi">01110</span>
+<span class="mi">00000</span>
+</pre></div>
+</div>
+<p>Dit is maar een kleine aanpassing op <code class="docutils literal notranslate"><span class="pre">diagonalize</span></code>!</p>
+</div>
+<div class="section" id="de-functie-random-cells">
+<h3>De functie <code class="docutils literal notranslate"><span class="pre">random_cells</span></code><a class="headerlink" href="#de-functie-random-cells" title="Permalink to this headline">¶</a></h3>
+<p>Maak nu een functie genaamd <code class="docutils literal notranslate"><span class="pre">random_cells(w,</span> <span class="pre">h)</span></code>, die een array met willekeurig toegekende <code class="docutils literal notranslate"><span class="pre">1</span></code>’en en <code class="docutils literal notranslate"><span class="pre">0</span></code>’en teruggeeft, <em>behalve</em> de buitenrand, die moet nog steeds helemaal leeg zijn (allemaal <code class="docutils literal notranslate"><span class="pre">0</span></code>’en), net zoals bij <code class="docutils literal notranslate"><span class="pre">inner_cells</span></code>.</p>
+<p>Hier is een voorbeelduitvoer:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">a</span> <span class="o">=</span> <span class="n">random_cells</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">print_board</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c1"># pijltje omhoog!</span>
+<span class="mi">0000000000</span>
+<span class="mi">0100000110</span>
+<span class="mi">0001111100</span>
+<span class="mi">0101011110</span>
+<span class="mi">0000111000</span>
+<span class="mi">0010101010</span>
+<span class="mi">0010111010</span>
+<span class="mi">0011010110</span>
+<span class="mi">0110001000</span>
+<span class="mi">0000000000</span>
+</pre></div>
+</div>
+<p>Je herinnert je misschien dat <code class="docutils literal notranslate"><span class="pre">random.choice([0,</span> <span class="pre">1])</span></code> een <code class="docutils literal notranslate"><span class="pre">0</span></code> of een <code class="docutils literal notranslate"><span class="pre">1</span></code> teruggeeft. Je hebt <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">random</span></code> nodig om dit te kunnen gebruiken!</p>
+</div>
+</div>
+<div class="section" id="de-functie-copy">
+<h2>De functie <code class="docutils literal notranslate"><span class="pre">copy</span></code><a class="headerlink" href="#de-functie-copy" title="Permalink to this headline">¶</a></h2>
+<p>Elk van de functies tot nu toe die een array bijwerken maken een nieuwe verzameling cellen zonder rekening te houden met een oude “generatie” waar ze van af zouden kunnen hangen. Game of Life van Conway, daarentegen, volgt een verzameling cellen door de ene generatie te <em>veranderen</em> in de volgende.</p>
+<p>Om te zien waarom <code class="docutils literal notranslate"><span class="pre">copy(a)</span></code> een essentiële hulpfunctie is voor dit proces, kan je de volgende commando’s proberen:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">a</span> <span class="o">=</span> <span class="n">inner_cells</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>  <span class="c1"># maak een bord van 5 bij 5 met inner_cells</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">print_board</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>         <span class="c1"># pijltje omhoog</span>
+<span class="mi">00000</span>
+<span class="mi">01110</span>
+<span class="mi">01110</span>
+<span class="mi">01110</span>
+<span class="mi">00000</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">new_a</span> <span class="o">=</span> <span class="n">a</span>              <span class="c1"># maakt een oneigenlijke (&quot;shallow&quot; of &quot;ondiepe&quot;) kopie</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">print_board</span><span class="p">(</span><span class="n">new_a</span><span class="p">)</span>     <span class="c1"># pijlte omhoog en aanpassen... ZIET er hetzelfde uit...!</span>
+<span class="mi">00000</span>
+<span class="mi">01110</span>
+<span class="mi">01110</span>
+<span class="mi">01110</span>
+<span class="mi">00000</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>            <span class="c1"># zet het midden van de oude a op 5</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="n">print_board</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>         <span class="c1"># er is een 5 in het midden...</span>
+<span class="mi">00000</span>
+<span class="mi">01110</span>
+<span class="mi">01510</span>
+<span class="mi">01110</span>
+<span class="mi">00000</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="n">print_board</span><span class="p">(</span><span class="n">new_a</span><span class="p">)</span>     <span class="c1"># merk op dat new_a ook veranderd is; aargh!</span>
+<span class="mi">00000</span>
+<span class="mi">01110</span>
+<span class="mi">01510</span>
+<span class="mi">01110</span>
+<span class="mi">00000</span>
+</pre></div>
+</div>
+<p>Hier hebben we een ondiepe “kopie” (of <em>shallow copy</em>) van <code class="docutils literal notranslate"><span class="pre">a</span></code> gemaakt, en die shallow copy <code class="docutils literal notranslate"><span class="pre">new_a</span></code> genoemd.</p>
+<p><code class="docutils literal notranslate"><span class="pre">new_a</span></code> is echter alleen maar een kopie van de <em>verwijzing</em> naar de originele elementen van <code class="docutils literal notranslate"><span class="pre">a</span></code>!</p>
+<p>Het gevolg hiervan is dat als de elementen van <code class="docutils literal notranslate"><span class="pre">a</span></code> veranderen, de elementen van <code class="docutils literal notranslate"><span class="pre">new_a</span></code> ook veranderen, ondanks dat we die nooit rechtstreeks hebben aangepast!</p>
+<p>Het voorbeeld hierboven laat <em><strong>shallow</strong></em> copying zien: het kopiëren van een <em>verwijzing</em> naar de elementen, niet het maken van een volledige <em>kopie</em> van alle elementen.</p>
+<p>Een volledige kopie van alle elementen maken heet <strong>diep</strong> kopiëren of <em>deep copying</em>.</p>
+</div>
+<div class="section" id="copy-a-een-deep-copier-schrijven">
+<h2><code class="docutils literal notranslate"><span class="pre">copy(a)</span></code>, een “deep” copier, schrijven…<a class="headerlink" href="#copy-a-een-deep-copier-schrijven" title="Permalink to this headline">¶</a></h2>
+<p>Begin met deze code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">copy</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns a DEEP copy of the 2D array a.&quot;&quot;&quot;</span>
+    <span class="n">height</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">width</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">new_a</span> <span class="o">=</span> <span class="n">create_board</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">height</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">width</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="c1"># welke enkele regel moet hier staan om elk element van a</span>
+            <span class="c1"># naar het corresponderende element van new_a te kopiëren?</span>
+            <span class="o">...</span>
+
+    <span class="k">return</span> <span class="n">new_a</span>
+</pre></div>
+</div>
+<p>en maak de implementatie af om een functie genaamd <code class="docutils literal notranslate"><span class="pre">copy(a)</span></code> te maken, die een <strong>deep</strong> copy van de tweedimensionale array <code class="docutils literal notranslate"><span class="pre">a</span></code> maakt.</p>
+<p>Je hoeft je zoals gebruikelijk geen zorgen te maken over de buitenrand: die blijft altijd <code class="docutils literal notranslate"><span class="pre">0</span></code>. De lussen lopen alleen over de cellen die niet op de rand liggen.</p>
+<p><code class="docutils literal notranslate"><span class="pre">copy</span></code> krijgt dus een tweedimensionale array <code class="docutils literal notranslate"><span class="pre">a</span></code> als invoer. En <code class="docutils literal notranslate"><span class="pre">copy</span></code> geeft een helemaal nieuwe tweedimensionale array terug waarvan de elementen hetzelfde patroon vormen als in de originele array.</p>
+<p>Je kan controleren dat je functie <code class="docutils literal notranslate"><span class="pre">copy</span></code> goed werkt met dit voorbeeld:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">a</span> <span class="o">=</span> <span class="n">inner_cells</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>  <span class="c1"># maak een bord van 5 bij 5 met inner_cells bord</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">print_board</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>         <span class="c1"># pijltje omhoog</span>
+<span class="mi">00000</span>
+<span class="mi">01110</span>
+<span class="mi">01110</span>
+<span class="mi">01110</span>
+<span class="mi">00000</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">new_a</span> <span class="o">=</span> <span class="n">copy</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">print_board</span><span class="p">(</span><span class="n">new_a</span><span class="p">)</span>
+<span class="mi">00000</span>
+<span class="mi">01110</span>
+<span class="mi">01110</span>
+<span class="mi">01110</span>
+<span class="mi">00000</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="n">print_board</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>     <span class="c1"># deze is veranderd!</span>
+<span class="mi">00000</span>
+<span class="mi">01110</span>
+<span class="mi">01510</span>
+<span class="mi">01110</span>
+<span class="mi">00000</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="n">print_board</span><span class="p">(</span><span class="n">new_a</span><span class="p">)</span>  <span class="c1"># NIET veranderd!</span>
+<span class="mi">00000</span>
+<span class="mi">01110</span>
+<span class="mi">01110</span>
+<span class="mi">01110</span>
+<span class="mi">00000</span>
+</pre></div>
+</div>
+<p>Deze keer wordt <code class="docutils literal notranslate"><span class="pre">new_a</span></code> <em><strong>niet</strong></em> veranderd ondanks dat <code class="docutils literal notranslate"><span class="pre">a</span></code> wel veranderd is: het is een echte, “diepe” kopie.</p>
+<div class="notice admonition">
+<p class="admonition-title"> de ingebouwde <code class="docutils literal notranslate"><span class="pre">deepcopy</span></code> van Python</p>
+<p>Je functie <code class="docutils literal notranslate"><span class="pre">copy</span></code> geeft een deep copy terug van haar invoer. Dit is handig genoeg om ingebouwd te zijn in Python. Om deze ingebouwde functie te gebruiken, kan je dit uitvoeren:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
+
+<span class="n">new_a</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Nu heb je gezien hoe dit geïmplementeerd wordt: elementsgewijs! Voel je vrij om te kiezen welke
+van de twee je wilt gebruiken.</p>
+</div>
+<div class="section" id="de-functie-inner-reverse">
+<h3>De functie <code class="docutils literal notranslate"><span class="pre">inner_reverse</span></code><a class="headerlink" href="#de-functie-inner-reverse" title="Permalink to this headline">¶</a></h3>
+<p>Kopiëren is een simpele manier om een nieuwe “generatie” array-elementen te maken die kan afhangen van een vorige generatie.</p>
+<p>Nu ga je een functie schrijven die een generatie cellen <em>veranderd</em> in een nieuwe generatie.</p>
+<p>Om dit te doen, schrijf je een functie <code class="docutils literal notranslate"><span class="pre">inner_reverse(a)</span></code> die een oude tweedimensionale array <code class="docutils literal notranslate"><span class="pre">a</span></code> (een oude “generatie”) meekrijgt en dan een nieuwe generatie <code class="docutils literal notranslate"><span class="pre">new_a</span></code> met dezelfde afmetingen maakt, met behulp van <code class="docutils literal notranslate"><span class="pre">create_board</span></code> of <code class="docutils literal notranslate"><span class="pre">copy</span></code>.</p>
+<p>Bij <code class="docutils literal notranslate"><span class="pre">inner_reverse</span></code> moet de nieuwe generatie echter overal het “tegenovergesteld” van de cellen van <code class="docutils literal notranslate"><span class="pre">a</span></code> zijn, behalve aan de buitenrand.</p>
+<p>Net zoals bij <code class="docutils literal notranslate"><span class="pre">inner_cells</span></code> moet je ervoor zorgen dat de cellen in de buitenrand van de nieuwe generatie altijd allemaal <code class="docutils literal notranslate"><span class="pre">0</span></code> zijn.</p>
+<p>Voor cellen aan de binnenkant; dus niet op de rand; waar <code class="docutils literal notranslate"><span class="pre">a[row][col]</span></code> een <code class="docutils literal notranslate"><span class="pre">1</span></code> is, moet de waarde in de nieuwe array een <code class="docutils literal notranslate"><span class="pre">0</span></code> zijn en omgekeerd.</p>
+<div class="tip admonition">
+<p class="admonition-title"> Maak gebruik van <code class="docutils literal notranslate"><span class="pre">copy</span></code></p>
+<p>Je kan de functie <code class="docutils literal notranslate"><span class="pre">copy(a)</span></code> kopiëren en plakken, en dan een toepasselijke <code class="docutils literal notranslate"><span class="pre">if/else</span></code> toevoegen.</p>
+</div>
+<p>Probeer je functie <code class="docutils literal notranslate"><span class="pre">inner_reverse</span></code> door een voorbeeld te laten zien. Dit voorbeeld gebruikt <code class="docutils literal notranslate"><span class="pre">random_cells</span></code>:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">a</span> <span class="o">=</span> <span class="n">random_cells</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">print_board</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">00000000</span>
+<span class="mi">01011010</span>
+<span class="mi">00110010</span>
+<span class="mi">00000010</span>
+<span class="mi">01111110</span>
+<span class="mi">00101010</span>
+<span class="mi">01111010</span>
+<span class="mi">00000000</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">a2</span> <span class="o">=</span> <span class="n">inner_reverse</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">print_board</span><span class="p">(</span><span class="n">a2</span><span class="p">)</span>
+<span class="mi">00000000</span>
+<span class="mi">00100100</span>
+<span class="mi">01001100</span>
+<span class="mi">01111100</span>
+<span class="mi">00000000</span>
+<span class="mi">01010100</span>
+<span class="mi">00000100</span>
+<span class="mi">00000000</span>
+</pre></div>
+</div>
+<div class="notice admonition">
+<p class="admonition-title"> Terzijde</p>
+<p>Je zou kunnen beargumenteren dat het mogelijk is om gewoon het oude argument <code class="docutils literal notranslate"><span class="pre">a</span></code> aan te passen, in plaats van het aanmaken en teruggeven van een nieuwe array; dit is wel waar voor het omdraaien van een patroon met array-elementen, maar het is <em>niet</em> waar als we de regels voor Game of Life van Conway gaan implementeren. In dat geval zou het aanpassen van cellen zonder te kopiëren het aantal buren van andere cellen veranderen!</p>
+</div>
+</div>
+</div>
+<div class="section" id="stap-4-game-of-life-van-john-conway">
+<h2>Stap 4: Game of Life van John Conway<a class="headerlink" href="#stap-4-game-of-life-van-john-conway" title="Permalink to this headline">¶</a></h2>
+<p>In deze stap maak je twee functies:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">count_neighbours(row,</span> <span class="pre">col,</span> <span class="pre">a)</span></code> en</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">next_life_generation(a)</span></code></p></li>
+</ul>
+<div class="section" id="de-functie-count-neighbours">
+<h3>De functie <code class="docutils literal notranslate"><span class="pre">count_neighbours</span></code><a class="headerlink" href="#de-functie-count-neighbours" title="Permalink to this headline">¶</a></h3>
+<p>Het is handig om een hulpfunctie <code class="docutils literal notranslate"><span class="pre">count_neighbours(row,</span> <span class="pre">col,</span> <span class="pre">a)</span></code> te schrijven, die <em>het aantal levende buren</em> van een cel in het bord <code class="docutils literal notranslate"><span class="pre">a</span></code> op een gegeven <code class="docutils literal notranslate"><span class="pre">row</span></code> en <code class="docutils literal notranslate"><span class="pre">col</span></code> teruggeeft.</p>
+<p>Er zijn twee mogelijke oplossingsrichtingen voor <code class="docutils literal notranslate"><span class="pre">count_neighbours</span></code>:</p>
+<ol class="simple">
+<li><p>Schrijf <em>kleine</em> for-lussen die de negen cells gecentreerd <strong>op <code class="docutils literal notranslate"><span class="pre">a[row][col]</span></code></strong> bekijken. Je zal dan het centrum toevoegen. Dit is geen probleem, mits je het weer van het resultaat <em>aftrekt</em> voordat je dat teruggeeft!</p></li>
+<li><p><strong>OF</strong> schrijf acht <code class="docutils literal notranslate"><span class="pre">if</span></code>-statements om alle acht mogelijke buren te bekijken… Merk hierbij op dat je ze ALLE acht wilt uitvoeren; gebruik dus <code class="docutils literal notranslate"><span class="pre">if</span></code> voor ze allemaal; gebruik geen <code class="docutils literal notranslate"><span class="pre">elif</span></code>: die is te “exclusief” 🙂</p></li>
+</ol>
+<p>Definieer of plak deze 5-bij-5-array <code class="docutils literal notranslate"><span class="pre">a</span></code> en controleer daarna de aantallen
+buren van een paar cellen, om te testen of <code class="docutils literal notranslate"><span class="pre">count_neighbours</span></code> werkt:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">run</span> <span class="n">wk9ex1</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+      <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+      <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+      <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+      <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">print_board</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">00000</span>
+<span class="mi">00100</span>
+<span class="mi">00100</span>
+<span class="mi">00100</span>
+<span class="mi">00000</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">count_neighbours</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="mi">3</span>                <span class="c1"># Klopt! Er zijn hier 3 levende buren</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">count_neighbours</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="mi">2</span>                <span class="c1"># Vergeet niet de cel zelf niet te tellen!</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="n">count_neighbours</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="de-functie-next-life-generation-a">
+<h3>De functie <code class="docutils literal notranslate"><span class="pre">next_life_generation(a)</span></code><a class="headerlink" href="#de-functie-next-life-generation-a" title="Permalink to this headline">¶</a></h3>
+<p>Je schrijft ten slotte <code class="docutils literal notranslate"><span class="pre">next_life_generation</span></code>, die de regels van Game of Life implementeert.</p>
+<div class="tip admonition">
+<p class="admonition-title"> <code class="docutils literal notranslate"><span class="pre">inner_reverse</span></code></p>
+<p>Deze functie zal het meeste lijken op <code class="docutils literal notranslate"><span class="pre">inner_reverse</span></code>, dus die kan je als sjabloon gebruiken.</p>
+</div>
+<p>Hier is een beginsignature voor <code class="docutils literal notranslate"><span class="pre">next_life_generation</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">next_life_generation</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Makes a copy of a and then advances one</span>
+<span class="sd">       generation of Conway&#39;s Game of Life within</span>
+<span class="sd">       the *inner cells* of that copy.</span>
+<span class="sd">       The outer edge always stays at 0.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>Deze functie <code class="docutils literal notranslate"><span class="pre">next_life_generation</span></code> moet een tweedimensionale array <code class="docutils literal notranslate"><span class="pre">a</span></code> meekrijgen, die de “oude” generatie cellen voorstelt, en moet een <em>nieuwe generatie</em> cellen teruggeven, die ieder <code class="docutils literal notranslate"><span class="pre">0</span></code> of <code class="docutils literal notranslate"><span class="pre">1</span></code> zijn, gebaseerd op de regels voor <em>Game of Life</em> van John Conway:</p>
+<ol class="simple">
+<li><p>Vergeet niet de nieuwe generatie <code class="docutils literal notranslate"><span class="pre">new_a</span></code> te maken met dezelfde afmetingen als de oude generatie <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p></li>
+<li><p>Alle randcelen blijven nul (<code class="docutils literal notranslate"><span class="pre">0</span></code>), zoals gebruikelijk (maar zie de extra uitdagingen, hieronder).</p></li>
+<li><p>Een cel met minder dan twee levende buren sterft (vanwege eenzaamheid).</p></li>
+<li><p>Een cel met meer dan 3 levende buren sterft (vanwege overbevolking).</p></li>
+<li><p>Een cel die dood is en precies 3 levende buren heeft wordt weer levend.</p></li>
+<li><p>Alle andere cellen behouden hun huidige staat (en krijgen dus de waarde van de bijbehorende oude cel).</p></li>
+</ol>
+<p>Om dit iets concreter te maken noemen we de nieuwe generatie cellen die je teruggeeft <code class="docutils literal notranslate"><span class="pre">new_a</span></code> om deze te onderscheiden van <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p>
+<div class="notice admonition">
+<p class="admonition-title"> De buitenrand moet <code class="docutils literal notranslate"><span class="pre">0</span></code> blijven</p>
+<p>Zoals benoemd bij <code class="docutils literal notranslate"><span class="pre">inner_reverse</span></code> moet je alle cellen in de buitenrand altijd leeg houden!** Dit is simpelweg een kwestie van het beperken van je lussen tot een geschikt bereik. Dit maakt echter de bijwerkingsregels hierboven een stuk makkelijker, omdat het betekent dat je altijd alleen de cellen aan de binnenkant bewerkt, die allemaal <em><strong>een volledige verzameling van acht buren hebben zonder dat je de grenzen overschrijdt.</strong></em></p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title"> Waarschuwingen/tips</p>
+<p>Er zijn een paar zaken die je in je achterhoofd moet houden:</p>
+<ul class="simple">
+<li><p>Tel alleen buren in de oude generatie <code class="docutils literal notranslate"><span class="pre">a</span></code>. Verander alleen de nieuwe generatie, <code class="docutils literal notranslate"><span class="pre">new_a</span></code>.</p></li>
+<li><p>Onthoud dat je <em>elke</em> waarde in <code class="docutils literal notranslate"><span class="pre">new_a</span></code> (de nieuwe elementen) moet instellen, ook als deze hetzelfde is als in <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p></li>
+<li><p>Een cel is <strong>GEEN</strong> buur van zichzelf.</p></li>
+<li><p>Een vierkant van 2 bij 2 cellen is stabiel en zal niet veranderen (als dit geïsoleerd is); je kan dit op een klein raster proberen om het te testen.</p></li>
+<li><p>Een lijn van 3 bij 1 cellen zal afwisselend horizontaal en verticaal zijn (als deze geisoleerd is); dit is ook een goed patroon om te testen.</p></li>
+</ul>
+</div>
+<p>Hier is een aantal tests die je kan proberen gebaseerd op de laatste suggestie in de bovenstaande lijst:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>  <span class="c1"># vertical bar</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">print_board</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">00000</span>
+<span class="mi">00100</span>
+<span class="mi">00100</span>
+<span class="mi">00100</span>
+<span class="mi">00000</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">a2</span> <span class="o">=</span> <span class="n">next_life_generation</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">print_board</span><span class="p">(</span><span class="n">a2</span><span class="p">)</span>
+<span class="mi">00000</span>
+<span class="mi">00000</span>
+<span class="mi">01110</span>
+<span class="mi">00000</span>
+<span class="mi">00000</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">a3</span> <span class="o">=</span> <span class="n">next_life_generation</span><span class="p">(</span><span class="n">a2</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="n">print_board</span><span class="p">(</span><span class="n">a3</span><span class="p">)</span>
+<span class="mi">00000</span>
+<span class="mi">00100</span>
+<span class="mi">00100</span>
+<span class="mi">00100</span>
+<span class="mi">00000</span>
+</pre></div>
+</div>
+<p>enzovoorts.</p>
+<p>Als je Game of Life werkt, kan je wat andere gangbare patronen vinden, dat wil zeggen, andere onveranderlijke stabiele vormen (“stenen”), herhalende patronen (“planten”), maar ook andere patronen die over het scherm bewegen, ook wel bekend als gliders (“dieren” of “vogels”).</p>
+</div>
+</div>
+<div class="section" id="stap-5-grafisch-leven">
+<h2>Stap 5: Grafisch leven!<a class="headerlink" href="#stap-5-grafisch-leven" title="Permalink to this headline">¶</a></h2>
+<p>Als je code voor <code class="docutils literal notranslate"><span class="pre">next_life_generation</span></code> werkt, kan je het bestand <code class="docutils literal notranslate"><span class="pre">wk9ex1_graphics.py</span></code> uitvoeren; daarvoor kan je deze code gebruiken:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>run wk9ex1_graphics.py
+</pre></div>
+</div>
+<div class="warning admonition">
+<p class="admonition-title"> Waarschuwing</p>
+<p>Als dit niet werkt, moet je <code class="docutils literal notranslate"><span class="pre">ipython</span></code> opnieuw opstarten. Dit lost het probleem meestal op. Het bestand <code class="docutils literal notranslate"><span class="pre">wk9ex1_graphics.py</span></code> probeert je functie <code class="docutils literal notranslate"><span class="pre">next_life_generation</span></code> te laden; soms werkt de interactie tussen deze twee bestanden niet helemaal.</p>
+</div>
+<p>Dit bestand doet een paar aannemes:</p>
+<ul class="simple">
+<li><p>Het bestand <code class="docutils literal notranslate"><span class="pre">wk9ex1.py</span></code> bevindt zich in dezelfde directory</p></li>
+<li><p>Je hebt <code class="docutils literal notranslate"><span class="pre">next_life_generation</span></code> correct geschreven in dat bestand (met de naam <code class="docutils literal notranslate"><span class="pre">wk9ex1.py</span></code>)</p></li>
+</ul>
+<p>Soms moet je <code class="docutils literal notranslate"><span class="pre">start()</span></code> twee keer aanroepen, als het een foutmelding geeft:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">start</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Nadat je het gestart hebt, zou je een venster met een Game-of-Life-omgeving van 20 bij 20 willekeurige cellen moeten zien. Het zou ook zijn opties moeten afdrukken:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">PAUZE</span><span class="p">:</span> <span class="s1">&#39;p&#39;</span>
+ <span class="n">DOORGAAN</span><span class="p">:</span> <span class="s1">&#39;Return&#39;</span><span class="o">/</span><span class="s1">&#39;Enter&#39;</span>
+   <span class="n">WISSEN</span><span class="p">:</span> <span class="s1">&#39;Spatie&#39;</span>
+  <span class="n">SLUITEN</span><span class="p">:</span> <span class="s1">&#39;Esc&#39;</span>
+</pre></div>
+</div>
+<p>Vergeet niet op het venster te klikken zodat het de focus krijgt.</p>
+<p>Als je op Enter drukt, zal het programma je functie <code class="docutils literal notranslate"><span class="pre">next_life_generation</span></code> herhaaldelijk aanroepen om naar de volgende generatie te gaan.</p>
+<p>Om de simulatie te pauseren, klik je op het venster en druk je op de <code class="docutils literal notranslate"><span class="pre">P</span></code>-toets.</p>
+<p>Als de simulatie gepauseerd is, kan je de toestand van cellen veranderen door er in te klikken…</p>
+<p>Om de simulatie verder te laten gaan, druk je op de <code class="docutils literal notranslate"><span class="pre">Enter</span></code>-toets (met de focus in het venster).</p>
+<p>Je kan het venster sluiten op de gebruikelijke manier, door op het kruisje in de hoek te klikken, of door op de Escape-toets (Esc) te drukken met de focus in het Life-venster.</p>
+<div class="section" id="kleurrijk-leven">
+<h3>Kleurrijk leven!<a class="headerlink" href="#kleurrijk-leven" title="Permalink to this headline">¶</a></h3>
+<p>Je kan de kleuren die gebruikt worden om <code class="docutils literal notranslate"><span class="pre">0</span></code> en <code class="docutils literal notranslate"><span class="pre">1</span></code> weer te geven veranderen door middel van de gegeven functie <code class="docutils literal notranslate"><span class="pre">set_color</span></code>. Je kan bijvoorbeeld deze code gebruiken vanaf de prompt die je krijgt na het laden van het bestand <code class="docutils literal notranslate"><span class="pre">wk9ex1_graphics.py</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">set_color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;white&quot;</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">set_color</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">start</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>om het kleurschema van de Hanzehogeschool te gebruiken. De <a class="reference external" href="https://www.tcl.tk/man/tcl8.4/TkCmd/colors.htm">lijst met kleuren</a> is erg uitgebreid, laat je creativiteit de vrije loop!</p>
+</div>
+<div class="section" id="maximaal-leven">
+<h3>Maximaal leven…<a class="headerlink" href="#maximaal-leven" title="Permalink to this headline">¶</a></h3>
+<p>Vereist meer dan alleen programmeren, helaas! (Alhoewel Python vond dat <code class="docutils literal notranslate"><span class="pre">werken</span></code> maximaal leven was!)</p>
+<p>Als je Game of Life vrolijk “leeft”, dan heb je het practicum voltooid. We hopen dat je het
+leven nu in een ander licht ziet, of dat het in ieder geval levendig geweest is… Vergeet niet je
+bestand <code class="docutils literal notranslate"><span class="pre">wk9ex1.py</span></code> in te leveren in Gradescope!</p>
+</div>
+</div>
+<div class="section" id="optionele-variaties-op-game-of-life">
+<h2>Optionele variaties op Game of Life<a class="headerlink" href="#optionele-variaties-op-game-of-life" title="Permalink to this headline">¶</a></h2>
+<p>Dat gezegd hebbende, er is altijd meer!</p>
+<p>Als je wilt, kan je proberen een variatie op Game of Life te implementeren:</p>
+<div class="section" id="de-donut">
+<h3>De donut<a class="headerlink" href="#de-donut" title="Permalink to this headline">¶</a></h3>
+<p>Voor deze variatie moet je de lege rand cellen om het bord weghalen. In dit geval moet het bord de vorm van een donut hebben: de linker- en rechterranden van het bord worden buren, en de boven- en onderranden ook. Dit maakt het tellen van het aantal buren en het bewaken van de grenswaardes lastiger. Met één enkele functie om de “echte” locatie op het bord van een gegeven <code class="docutils literal notranslate"><span class="pre">row</span></code> en <code class="docutils literal notranslate"><span class="pre">col</span></code> op te zoeken valt het wel mee…</p>
+</div>
+<div class="section" id="buitenaards-leven">
+<h3>Buitenaards leven<a class="headerlink" href="#buitenaards-leven" title="Permalink to this headline">¶</a></h3>
+<p>Game of Life wordt gezien als een cellulaire automaat van het type 23/3, omdat cellen overleven met 2 of 3 buren (de cijfers voor de streep) en geboren worden met 3 buren (het cijfer na de streep). Veel van de (misschien zelfs alle) andere overlevings/geboortemogelijkheden zijn ook bestudeerd. Sommige hebben zelfs namen: 1358/357 heet bijvoorbeeld “Amoeba” en 1/1 heet “Gnarl”. Kies voor deze variatie op het spel andere regels voor overleven en geboren worden, misschien uit <a class="reference external" href="http://en.wikipedia.org/wiki/Life-like_cellular_automaton">deze lijst van varianten</a> en implementeer een toets die tussen Game of Life van John Conway en je eigen gekozen regels wisselt (en een andere toets om terug te gaan…)</p>
+</div>
+<div class="section" id="meer-soorten-cellen">
+<h3>Meer soorten cellen<a class="headerlink" href="#meer-soorten-cellen" title="Permalink to this headline">¶</a></h3>
+<p>Je kan ook regels bedenken die meer dan twee soorten cellen toestaan. Je kan ook kleuren instellen voor maximaal 8 soorten cellen, genummerd van 0 tot en met 7.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "misja/programmeren",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./problems"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="rij_van_conway.html" title="previous page">De Rij van Conway</a>
+    <a class='right-next' id="next-link" href="../examples/recursie.html" title="next page">Voorbeelden van recursie</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Hanze University of Applied Sciences<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
