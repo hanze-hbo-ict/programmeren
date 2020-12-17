@@ -4,11 +4,12 @@
 
 ## Onderwerpen
 
-Klassen en objecten
+- [Klassen en objecten](/topics/19_objecten)
+- [Dictionaries](/topics/20_dictionaries)
 
 ## Boek
 
-Hoofdstuk 6 uit *CS for All*.{cite}`alvarado2019cs`
+Hoofdstuk 5.5 en 6 uit *CS for All*.{cite}`alvarado2019cs`
 
 ```{bibliography} /references.bib
 :style: unsrt

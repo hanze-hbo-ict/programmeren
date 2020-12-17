@@ -1,0 +1,1505 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vier op een rij: de klasse Board &#8212; Programmeren</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "misja/programmeren");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://misja.github.io/programmeren/problems/vier_op_een_rij.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Voorbeelden van recursie" href="../examples/recursie.html" />
+    <link rel="prev" title="Tekst genereren met Markovprocessen" href="tekst_genereren.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://misja.github.io/programmeren/problems/vier_op_een_rij.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Vier op een rij: de klasse Board" />
+<meta property="og:description" content="Vier op een rij: de klasse Board      Naam  Vier op een rij  Onderwerp  Een eerste kunstmatige intelligentie  Bestandsnaam  wk10ex2.py  Inleveren  Lever jouw be" />
+<meta property="og:image"       content="https://misja.github.io/programmeren/_static/mascot.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/mascot.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Programmeren</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/syllabus.html">
+   Programmeren
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Opmerkingen
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/feedback.html">
+   Anoniem feedbackformulier
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Week 1
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/week_1.html">
+   Onderwerpen
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/1a_introductie.html">
+     Introductie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/1b_condities.html">
+     Condities
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/2a_programmeren.html">
+     Programmeren
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/2b_picobot.html">
+     Picobot
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_intro.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/opgaven_1.html">
+   Opgaven
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/guugu_yimithirr.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rochambeau.html">
+     Rochambeau
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="interactieve_fictie.html">
+     Interactieve fictie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="picobot_1.html">
+     Picobot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="picobot_2.html">
+     Picobot II: Picobot Strikes Back
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="picobot_3.html">
+     Picobot III: Return of the Picobot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="picobot_4.html">
+     Picobot IV: The Picobot Menace
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Week 2
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/week_2.html">
+   Onderwerpen
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/3a_data.html">
+     Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/3b_strings_en_lists.html">
+     Strings en lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/4a_functies.html">
+     Functies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/4b_recursie.html">
+     Recursie
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sequenties_en_data.html">
+   Practicum I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fijne_functies.html">
+   Practicum II
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/opgaven_2.html">
+   Opgaven
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/end_of_theory.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="feest_met_functies.html">
+     Feest met functies
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Week 3
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/week_3.html">
+   Onderwerpen
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/5a_simulatie.html">
+     Simulatie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/5b_turtle_recursie.html">
+     Turtle en recursie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/6a_list_comprehension.html">
+     List comprehension
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_turtles.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/opgaven_3.html">
+   Opgaven
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/computer_wins_jeopardy.html">
+     De computer wint
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="slaapwandelende_student.html">
+     Slaapwandelende student
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="numerieke_integratie.html">
+     Numerieke integratie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="turtles_tot_het_einde.html">
+     Turtles all the way down
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Week 4
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/week_4.html">
+   Onderwerpen
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/7a_data_based_design.html">
+     Data based design
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/7b_rekenen_met_taal.html">
+     Rekenen met taal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/8_ontwerp_algoritmen.html">
+     Ontwerp van algoritmen
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="klinkt_goed.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/opgaven_4.html">
+   Opgaven
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/universum_simulatie.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="caesar_op_orde.html">
+     Caesar op orde
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Week 5
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/week_5.html">
+   Onderwerpen
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/9a_talstelsels.html">
+     Talstalsels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/9b_binaire_getallen.html">
+     Binaire getallen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/10_bewerkingen_met_bits.html">
+     Bewerkingen met bits
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="decimaal_en_verder.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/opgaven_5.html">
+   Opgaven
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/bug_and_crash.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="wisselende_stelsels.html">
+     Wisselende stelsels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fraaie_plaatjes.html">
+     Fraaie plaatjes
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Week 6
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/week_6.html">
+   Onderwerpen
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/11a_logische_schakelingen.html">
+     Logische schakelingen
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="optellingen_schakelen.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/opgaven_6.html">
+   Opgaven
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/just_add_water.html">
+     Leesopgave
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Week 7
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_7.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hmmm_assembly.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/opgaven_7.html">
+   Opgaven
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/hijacked_minds.html">
+     Leesopave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="macht_van_hmmm.html">
+     De macht van hmmm
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Week 8
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_8.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mandelbrot.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/opgaven_8.html">
+   Opgaven
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/algoritmen_discrimineren.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pythonbat_lussen.html">
+     PythonBat lussen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pi_pijlen.html">
+     Pi met pijltjes
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Week 9
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_9.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="boter_kaas_eieren.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/opgaven_9.html">
+   Opgaven
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/horseless_driverless.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rij_van_conway.html">
+     Lees en huiver
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="game_of_life.html">
+     Game of Life
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Week 10
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/week_10.html">
+   Onderwerpen
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/19_objecten.html">
+     Objecten en klassen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/20_dictionaries.html">
+     Dictionaries
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../class/opgaven_10.html">
+   Opgaven
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/an_algorithm_wrote_this.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="eeuwigdurende_kalender.html">
+     Eeuwigdurende kalender
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="tekst_genereren.html">
+     Teksten genereren
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Vier op een rij
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Voorbeelden
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/recursie.html">
+   Recursie
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/design_recipe.html">
+   Functie ontwerp
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Oefening
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../practice/1_recursie.html">
+   Recursie
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../practice/2_list_comprehension.html">
+   List comprehension
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../practice/3a_toets.html">
+   Zelftoets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../practice/3b_toets_uitwerking.html">
+   Uitwerking
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/platte_tekst.html">
+   Tekstbestanden
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python_browser.html">
+   Python in de browser
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python2_vs_python3.html">
+   Python 2 versus Python 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/software.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/hmmm.html">
+   Hmmmm assembly
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/problems/vier_op_een_rij.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Fproblems/vier_op_een_rij.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/problems/vier_op_een_rij.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#de-klasse-board">
+   De klasse
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     Board
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-constructror-init">
+     De constructror
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       __init__
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-methode-repr">
+     De methode
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       __repr__
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-methode-add-move">
+     De methode
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       add_move
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-methode-clear">
+     De methode
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       clear
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-methode-set-board">
+     De methode
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       set_board
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-methode-allows-move">
+     De methode
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       allows_move
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-methode-is-full">
+     De methode
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       is_full
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-methode-del-move">
+     De methode
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       del_move
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-methode-wins-for">
+     De methode
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       wins_for
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-methode-host-game">
+     De methode
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       host_game
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="vier-op-een-rij-de-klasse-board">
+<h1>Vier op een rij: de klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code><a class="headerlink" href="#vier-op-een-rij-de-klasse-board" title="Permalink to this headline">¶</a></h1>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Naam</p></th>
+<th class="head"><p>Vier op een rij</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Onderwerp</p></td>
+<td><p>Een eerste kunstmatige intelligentie</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bestandsnaam</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">wk10ex2.py</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Inleveren</p></td>
+<td><p>Lever jouw bestand met de juiste bestandsnaam in op GradeScope</p></td>
+</tr>
+<tr class="row-odd"><td><p>Punten</p></td>
+<td><p>25</p></td>
+</tr>
+<tr class="row-even"><td><p>Opmerking</p></td>
+<td><p>Dit is een bonusopgave</p></td>
+</tr>
+</tbody>
+</table>
+<p>Voor deze opgave moet je met een nieuw bestand <code class="docutils literal notranslate"><span class="pre">wk10ex2.py</span></code> beginnen.</p>
+<p>Vier op een rij is een variant van Boter, kaas en eieren dat gespeeld wordt op een rechthoekig bord van 7 bij 6:</p>
+<p><img alt="Vier op een rij" src="../_images/game_b2.png" /></p>
+<p>Het spel wordt gespeeld door twee spelers, die om de beurt een zet doen, waarbij beide spelers proberen om vier stenen op een verticale, horizontale of diagonale rij te krijgen. Eén voorwaarde bij het spelen is dat, omdat het bord verticaal opgesteld staat, de stenen niet zomaar overal geplaatst kunnen worden. Een stee mag alleen maar bovenaan een bestaande kolom stenen gespeeld worden (of het mag een nieuwe kolom stenen beginnen).</p>
+<div class="section" id="de-klasse-board">
+<h2>De klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code><a class="headerlink" href="#de-klasse-board" title="Permalink to this headline">¶</a></h2>
+<p>In deze opgave ga je een klasse genaamd <code class="docutils literal notranslate"><span class="pre">Board</span></code> maken die sommige eigenschappen van het spel Vier op een rij implementeert. De klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code> heeft drie instantievariabelen: er is een tweedimensionale lijst (een lijst van lijsten) met karakters die het spelbord voorstelt, en twee variabelen die het aantal rijen en kolommen op het bord bijhouden (6 rijen en 7 kolommen is standaard, maar je klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code> kan elk formaat bord aan).</p>
+<p>Zelfs als we onbeperkt grote borden toestaan blijft de regel echter bestaan dat je vier stenen op een rij nodig hebt om te winnen. Toegegeven, dit maakt het wel lastig om het spel te winnen op een bord van 3 bij 3…</p>
+<p>Je klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code> heeft minstens drie instantievariabelen:</p>
+<ul class="simple">
+<li><p>Een variabele met de naam <code class="docutils literal notranslate"><span class="pre">data</span></code> waarin de tweedimensionale array (lijst van lijsten) met het spelbord wordt opgeslagen</p></li>
+<li><p>Een variabele <code class="docutils literal notranslate"><span class="pre">height</span></code> waarin het aantal rijen op het bord wordt opgeslagen</p></li>
+<li><p>Een variabele <code class="docutils literal notranslate"><span class="pre">width</span></code> waarin het aantal kolommen op het bord wordt opgeslagen</p></li>
+</ul>
+<p>Merk op dat de tweedimensionale lijst een tweedimensionale lijst van <em>karakters</em> is; dit zijn gewoon strings van lengte 1. Je moet een leeg veld laten voorstellen door <code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">'</span></code>, een spatieteken; niet de lege string. Je moet de stenen van speler X laten voorstellen door een <code class="docutils literal notranslate"><span class="pre">'X'</span></code> (de hoofdletter x) en je moet de stenen van speler O laten voorstellen door een <code class="docutils literal notranslate"><span class="pre">'O'</span></code> (de hoofdletter o).</p>
+<div class="danger admonition">
+<p class="admonition-title"> Waarschuwing</p>
+<p>Een <strong>heel</strong> moeilijk te vinden bug treedt op als je het <em><strong>nulteken</strong></em> <code class="docutils literal notranslate"><span class="pre">'0'</span></code> gebruikt in plaats van het teken <code class="docutils literal notranslate"><span class="pre">'O'</span></code> (hoofdletter o) om één van de spelers voor te stellen. Het probleem treedt op als door jou, of tijdens het nakijken, de waardes in het bord vergeleken worden met de verkeerde karakters! Zorg ervoor dat je consistent bent in het gebruik van de hoofdletter o.</p>
+</div>
+<p>Je moet een aantal methodes implementeren in de klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code>. Vergeet niet de tips over hoe je ze kan testen te gebruiken nadat je ze geschreven hebt! De eerste twee methodes zijn in het college behandeld en zijn hieronder gegeven zodat je ze kan kopiëren en plakken.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Board</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;A data type representing a Connect-4 board</span>
+<span class="sd">       with an arbitrary number of rows and columns.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Construct objects of type Board, with the given width and height.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39; &#39;</span><span class="p">]</span><span class="o">*</span><span class="n">width</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">height</span><span class="p">)]</span>
+
+        <span class="c1"># We hoeven niets terug te geven vanuit een constructor!</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a string representation</span>
+<span class="sd">           for an object of type Board.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>                          <span class="c1"># de string om terug te geven</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">):</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39;|&#39;</span>
+            <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">):</span>
+                <span class="n">s</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+
+        <span class="n">s</span> <span class="o">+=</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="s1">&#39;-&#39;</span>   <span class="c1"># onderkant van het bord</span>
+
+        <span class="c1"># hier moeten de nummers nog onder gezet worden</span>
+
+        <span class="k">return</span> <span class="n">s</span>       <span class="c1"># het bord is compleet, geef het terug</span>
+
+</pre></div>
+</div>
+<p>Implementeer vervolgens de volgende methodes in je klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code>. Vergeet niet ze allemaal te testen nadat je ze geschreven hebt; het is veel makkelijker om ze elk onafhankelijk te testen dan om te proberen een grote verzameling methodes tegelijk te debuggen.</p>
+<div class="section" id="de-constructror-init">
+<h3>De constructror <code class="docutils literal notranslate"><span class="pre">__init__</span></code><a class="headerlink" href="#de-constructror-init" title="Permalink to this headline">¶</a></h3>
+<p>De klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code> heeft een constructor <code class="docutils literal notranslate"><span class="pre">__init__(self,</span> <span class="pre">width,</span> <span class="pre">height)</span></code> die twee argumenten meekrijgt. (Onthoud dat <code class="docutils literal notranslate"><span class="pre">self</span></code> verwijst naar het object dat aangemaakt wordt en dat het niet expliciet wordt meegegeven aan de constructor.) De constructor krijgt een aantal kolommen en rijen mee (7 en 6 zijn de standaard in Vier op een rij, maar ons datatype kan alle bordformaten aan). De constructor stelt de waardes van de instantievariabelen van het object in. Het maakt bovendien de tweedimensionale lijst aan die gebruikt wordt om het bord op te slaan. Je maakt hiervoor een lijst van lijsten <em>op een manier die erg lijkt op die van het practicum over Game of Life</em>.</p>
+<p>Merk op dat <code class="docutils literal notranslate"><span class="pre">self.data</span></code> niet alle karakters bevat die gebruikt worden om het bord af te drukken; alleen de karakters die nodig zijn om het spel te spelen. De extra karakters worden gegenereerd in de methode <code class="docutils literal notranslate"><span class="pre">__repr__</span></code>.</p>
+</div>
+<div class="section" id="de-methode-repr">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">__repr__</span></code><a class="headerlink" href="#de-methode-repr" title="Permalink to this headline">¶</a></h3>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">__repr__(self)</span></code> geeft een string<code class="docutils literal notranslate"><span class="pre">repr</span></code>esentatie terug van het <code class="docutils literal notranslate"><span class="pre">Board</span></code>-object dat de methode aanroept. Elke “steen” neemt één teken in beslag, en alle kolommen worden gescheiden door verticale lijnen (<code class="docutils literal notranslate"><span class="pre">|</span></code>). De kolommen worden aan de onderkant gelabeld. Hier is een voorbeeld voor een bord met 6 rijen en 7 kolommen, 6 bij 7 dus (zie de onderstaande code voor meer details…)</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+---------------
+ 0 1 2 3 4 5 6
+</pre></div>
+</div>
+<p>Om te zorgen dat alles netjes onder elkaar blijft staan, moet de kolomnummering “modulo 10” gedaan worden,
+zoals te zien in dit grotere voorbeeld met 5 rijen en 15 kolommen (5 bij 15):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">-------------------------------</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span>
+</pre></div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title"> Eén string, meerdere regels?</p>
+<p>De string <code class="docutils literal notranslate"><span class="pre">'\n'</span></code> stelt het <em>newline</em>-karakter voor in Python. Je kan dus meerdere regels in een enkele string zetten door <code class="docutils literal notranslate"><span class="pre">'\n'</span></code> toe te voegen. Bijvoorbeeld met</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span>In [1]: s = &#39;Dit is de bovenste regel.&#39;
+In [2]: s += &#39;\n&#39;
+In [3]: s += &#39;Dit is de tweede regel!\n&#39;
+In [4]: print(s)
+Dit is de bovenste regel.
+Dit is de tweede regel!
+</pre></div>
+</div>
+<p>Merk op dat <code class="docutils literal notranslate"><span class="pre">'\n'</span></code> ook <em>in</em> een string gebruikt kan worden. In dit geval voegt het een extra lege regel toe aan het einde van de string.</p>
+</div>
+</div>
+<div class="section" id="de-methode-add-move">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">add_move</span></code><a class="headerlink" href="#de-methode-add-move" title="Permalink to this headline">¶</a></h3>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">add_move(self,</span> <span class="pre">col,</span> <span class="pre">ox)</span></code> krijgt twee argumenten mee: het eerste, <code class="docutils literal notranslate"><span class="pre">col</span></code>, geeft de kolom aan waaraan de steen moet worden toegevoegd. Het tweede argument, <code class="docutils literal notranslate"><span class="pre">ox</span></code>, is een string van 1 karakter die de steen aangeeft die aan het bord moet worden toegevoegd. Dat wil zeggen, <code class="docutils literal notranslate"><span class="pre">ox</span></code> moet <code class="docutils literal notranslate"><span class="pre">'X'</span></code> of <code class="docutils literal notranslate"><span class="pre">'O'</span></code> zijn (hoofdletter O dus, niet nul).</p>
+<div class="notice admonition">
+<p class="admonition-title"> Onthoud dat de stenen van bovenaf in het bord vallen!</p>
+<p>Je code moet dus het geschikte rijnummer vinden die beschikbaar is in kolom <code class="docutils literal notranslate"><span class="pre">col</span></code> en de steen in die rij toevoegen. Je hoeft in <code class="docutils literal notranslate"><span class="pre">add_move</span></code> <strong>niet</strong> te controleren of <code class="docutils literal notranslate"><span class="pre">col</span></code> een geldig kolomnummer is en of er ruimte is in kolom <code class="docutils literal notranslate"><span class="pre">col</span></code>. Die controles zijn wel belangrijk: ze worden in een toekomstige methode, <code class="docutils literal notranslate"><span class="pre">allows_move</span></code>, gedaan.</p>
+</div>
+<p>Hier is een reeks zetten om <code class="docutils literal notranslate"><span class="pre">add_move</span></code> mee te testen; probeer ze uit!</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">b</span> <span class="o">=</span> <span class="n">Board</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">add_move</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">)</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">add_move</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">)</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">add_move</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">)</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">add_move</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">)</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">add_move</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">)</span>  <span class="c1"># Valsspelen door O opnieuw te laten zetten!</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">add_move</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">)</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">8</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">add_move</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">)</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">9</span><span class="p">]:</span> <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>En wat hieruit moet komen is:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+|X| | | | | | |
+|O| | | | | | |
+|X| | |O|O|O|O|
+---------------
+ 0 1 2 3 4 5 6
+</pre></div>
+</div>
+</div>
+<div class="section" id="de-methode-clear">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">clear</span></code><a class="headerlink" href="#de-methode-clear" title="Permalink to this headline">¶</a></h3>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">clear(self)</span></code> moet het aanroepende bord leeg maken; er valt hier verder weinig over te zeggen, maar de methode is wel nuttig!</p>
+</div>
+<div class="section" id="de-methode-set-board">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">set_board</span></code><a class="headerlink" href="#de-methode-set-board" title="Permalink to this headline">¶</a></h3>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">set_board(self,</span> <span class="pre">move_string)</span></code> is erg handig om snel een bord te maken om de methode <code class="docutils literal notranslate"><span class="pre">wins_for</span></code> te testen in het volgende deel. Hier is de code die we voor <code class="docutils literal notranslate"><span class="pre">set_board</span></code> gebruikt hebben; voeg dit toe aan
+je klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code>, het maakt het testen veel simpeler!</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">set_board</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">move_string</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Accepts a string of columns and places</span>
+<span class="sd">       alternating checkers in those columns,</span>
+<span class="sd">       starting with &#39;X&#39;.</span>
+
+<span class="sd">       For example, call b.set_board(&#39;012345&#39;)</span>
+<span class="sd">       to see &#39;X&#39;s and &#39;O&#39;s alternate on the</span>
+<span class="sd">       bottom row, or b.set_board(&#39;000000&#39;) to</span>
+<span class="sd">       see them alternate in the left column.</span>
+
+<span class="sd">       move_string must be a string of one-digit integers.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">next_checker</span> <span class="o">=</span> <span class="s1">&#39;X&#39;</span>   <span class="c1"># we starten door een &#39;X&#39; te spelen</span>
+    <span class="k">for</span> <span class="n">col_char</span> <span class="ow">in</span> <span class="n">move_string</span><span class="p">:</span>
+        <span class="n">col</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">col_char</span><span class="p">)</span>
+        <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">col</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_move</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">next_checker</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">next_checker</span> <span class="o">==</span> <span class="s1">&#39;X&#39;</span><span class="p">:</span>
+            <span class="n">next_checker</span> <span class="o">=</span> <span class="s1">&#39;O&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">next_checker</span> <span class="o">=</span> <span class="s1">&#39;X&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="de-methode-allows-move">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">allows_move</span></code><a class="headerlink" href="#de-methode-allows-move" title="Permalink to this headline">¶</a></h3>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">allows_move(self,</span> <span class="pre">col)</span></code> methode moet <code class="docutils literal notranslate"><span class="pre">True</span></code> teruggeven als in het aanroepende <code class="docutils literal notranslate"><span class="pre">Board</span></code>-object een zet in kolom <code class="docutils literal notranslate"><span class="pre">col</span></code> <em>wel</em>* geldig is. Ze moet <code class="docutils literal notranslate"><span class="pre">False</span></code> teruggeven als kolom <code class="docutils literal notranslate"><span class="pre">col</span></code> geen geldig kolomnummer is voor het aanroepende object. Ze moet ook <code class="docutils literal notranslate"><span class="pre">False</span></code> teruggeven als kolom <code class="docutils literal notranslate"><span class="pre">col</span></code> vol is. De methode moet dus controleren dat <code class="docutils literal notranslate"><span class="pre">col</span></code> in het bereik van 0 tot de laatste kolom valt <em>en</em> dat er nog ruimte over is in de kolom!</p>
+<p>Hier is een voorbeeldreeks om mee te testen; probeer hem uit!</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">b</span> <span class="o">=</span> <span class="n">Board</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">b</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">-----</span>
+ <span class="mi">0</span> <span class="mi">1</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">add_move</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">add_move</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">b</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span>
+<span class="o">|</span><span class="n">O</span><span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span><span class="n">X</span><span class="o">|</span> <span class="o">|</span>
+<span class="o">-----</span>
+ <span class="mi">0</span> <span class="mi">1</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">allows_move</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="kc">False</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">allows_move</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="kc">False</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">8</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">allows_move</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">8</span><span class="p">]:</span> <span class="kc">True</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">9</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">allows_move</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">9</span><span class="p">]:</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="de-methode-is-full">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">is_full</span></code><a class="headerlink" href="#de-methode-is-full" title="Permalink to this headline">¶</a></h3>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">is_full(self)</span></code> moet <code class="docutils literal notranslate"><span class="pre">True</span></code> teruggeven als het aanroepende <code class="docutils literal notranslate"><span class="pre">Board</span></code>-object volledig gevuld is met stenen. Ze moet anders <code class="docutils literal notranslate"><span class="pre">False</span></code> teruggeven. Merk op dat je <code class="docutils literal notranslate"><span class="pre">allows_move</span></code> kan gebruiken om deze methode heel kort te schrijven! Als je niet buitengewoon geduldig bent is het handiger om dit op kleinere borden te testen!</p>
+<p>Hier is een voorbeeldreeks om mee te testen; hij gebruikt de methode <code class="docutils literal notranslate"><span class="pre">set_board</span></code> die je hierboven kan vinden.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">b</span> <span class="o">=</span> <span class="n">Board</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">is_full</span><span class="p">()</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="kc">False</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">set_board</span><span class="p">(</span><span class="s1">&#39;0011&#39;</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">b</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span>
+<span class="o">|</span><span class="n">O</span><span class="o">|</span><span class="n">O</span><span class="o">|</span>
+<span class="o">|</span><span class="n">X</span><span class="o">|</span><span class="n">X</span><span class="o">|</span>
+<span class="o">-----</span>
+ <span class="mi">0</span> <span class="mi">1</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">is_full</span><span class="p">()</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="de-methode-del-move">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">del_move</span></code><a class="headerlink" href="#de-methode-del-move" title="Permalink to this headline">¶</a></h3>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">del_move(self,</span> <span class="pre">col)</span></code> moet het omgekeerde doen van <code class="docutils literal notranslate"><span class="pre">add_move</span></code>. Ze moet de bovenste steen van kolom <code class="docutils literal notranslate"><span class="pre">col</span></code> verwijderen. Als de kolom leeg is moet <code class="docutils literal notranslate"><span class="pre">del_move</span></code> <em>niets</em> doen. Deze functie lijkt nu niet handig, maar het zal <em>erg</em> handig zijn als je je eigen computerspeler voor Vier op een rij wilt implementeren…</p>
+<p>Hier is een voorbeeldreeks om mee te testen:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">b</span> <span class="o">=</span> <span class="n">Board</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">set_board</span><span class="p">(</span><span class="s1">&#39;0011&#39;</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">del_move</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">del_move</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">del_move</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">del_move</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="n">b</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">7</span><span class="p">]:</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span><span class="n">X</span><span class="o">|</span> <span class="o">|</span>
+<span class="o">-----</span>
+ <span class="mi">0</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="de-methode-wins-for">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">wins_for</span></code><a class="headerlink" href="#de-methode-wins-for" title="Permalink to this headline">¶</a></h3>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">wins_for(self,</span> <span class="pre">ox)</span></code> controleert of iemand het spel gewonnen heeft. Het argument <code class="docutils literal notranslate"><span class="pre">ox</span></code> van deze methode is een steen van 1 karakter: <code class="docutils literal notranslate"><span class="pre">'X'</span></code> of <code class="docutils literal notranslate"><span class="pre">'O'</span></code>. De methode moet <code class="docutils literal notranslate"><span class="pre">True</span></code> teruggeven als er vier stenen van het type <code class="docutils literal notranslate"><span class="pre">ox</span></code> op een rij zijn op het bord. Ze moet anders <code class="docutils literal notranslate"><span class="pre">False</span></code> teruggeven.</p>
+<div class="danger admonition">
+<p class="admonition-title"> Let op</p>
+<p>Je moet controleren of de speler horizontaal, verticaal of diagonaal gewonnen heeft (en er zijn twee verschillende richtingen voor een diagonale overwinning).</p>
+<p>Eén mogelijke manier om dit aan te pakken is om je functies uit week 9 te gebruiken in een paar geneste lussen om alle mogelijke manieren om te winnen te controleren. <span class="xref myst">Hier is een pagina met een aanzet voor deze strategie</span></p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title"> Waarschuwing</p>
+<p>De in-een-rij-functies moeten <em><strong>buiten</strong></em> de klasse staan; ze zijn globaal, en geen onderdeel van de klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code>!</p>
+</div>
+<p>Als je opgave 2 van week 9 niet gedaan hebt, kan je ook een aanpak kiezen waarbij je deze functies niet nodig hebt. Hierbij is het nodig om te bedenken welke stenen als een mogelijk <em>“anker”</em> zouden kunnen dienen om een reeks van vier op een rij te beginnen. Alle “ankers” die een horizontale rij kunnen beginnen (van links naar rechts) moeten bijvoorbeeld vallen in kolommen die <em>minstens vier plaatsen van het eind van het bord af liggen</em>. Die begrenzing kan je helpen om te voorkomen dat je code buiten de grenzen van de array loopt. Hier is wat begincode om deze techniek toe te lichten (maar deze controleert nu nog alleen op horizontale overwinningen):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Controleren op horizontale overwinningen</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">-</span> <span class="mi">3</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">==</span> <span class="n">ox</span> <span class="ow">and</span> \
+           <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">ox</span> <span class="ow">and</span> \
+           <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span> <span class="o">+</span> <span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="n">ox</span> <span class="ow">and</span> \
+           <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span> <span class="o">+</span> <span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="n">ox</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<p>Let op de backslashes; deze vertellen Python dat de coderegel doorloopt naar de volgende regel in het bestand.</p>
+<p>Let ook op de “<code class="docutils literal notranslate"><span class="pre">-</span> <span class="pre">3</span></code>” die ervoor zorgt dat de code niet buiten de grenzen loopt. Andere richtingen zullen andere condities nodig hebben om binnen de grenzen te blijven.</p>
+<div class="warning admonition">
+<p class="admonition-title"> Waarschuwing</p>
+<p>Het is beter om de stenen <em>niet</em> expliciet te gaan tellen om te zien of je er vier hebt. Het probleem is dan dat je elke steen in de goede volgorde moet bezoeken. Verticaal en horizontaal is dat nog niet zo lastig, maar elke steen in diagonale volgorde bezoeken is lastig en bovendien niet zo praktisch. Het is makkelijker om alle vier stenen tegelijk te controleren, zoals in het voorbeeld hierboven.</p>
+</div>
+<p>Dit is een belangrijke methode die goed getest moet worden! Hier is een voorbeeldreeks om mee te testen:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">b</span> <span class="o">=</span> <span class="n">Board</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">set_board</span><span class="p">(</span><span class="s1">&#39;00102030&#39;</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">wins_for</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="kc">True</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">wins_for</span><span class="p">(</span><span class="s1">&#39;O&#39;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="kc">True</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">b</span> <span class="o">=</span> <span class="n">Board</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">set_board</span><span class="p">(</span><span class="s1">&#39;23344545515&#39;</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="n">b</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">7</span><span class="p">]:</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span><span class="n">X</span><span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span><span class="n">X</span><span class="o">|</span><span class="n">X</span><span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span><span class="n">X</span><span class="o">|</span><span class="n">X</span><span class="o">|</span><span class="n">O</span><span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span><span class="n">O</span><span class="o">|</span><span class="n">X</span><span class="o">|</span><span class="n">O</span><span class="o">|</span><span class="n">O</span><span class="o">|</span><span class="n">O</span><span class="o">|</span> <span class="o">|</span>
+<span class="o">---------------</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">8</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">wins_for</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">)</span>  <span class="c1"># diagonaal</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">8</span><span class="p">]:</span> <span class="kc">True</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">9</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">wins_for</span><span class="p">(</span><span class="s1">&#39;O&#39;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">9</span><span class="p">]:</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="de-methode-host-game">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">host_game</span></code><a class="headerlink" href="#de-methode-host-game" title="Permalink to this headline">¶</a></h3>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">host_game(self)</span></code> voegt alles samen tot het complete spel Vier op een rij. Ze moet de gebruiker Vier op een rij laten spelen, en hiervoor de bovenstaande methodes gebruiken. In het bijzonder moeten <code class="docutils literal notranslate"><span class="pre">'X'</span></code> (die altijd als eerste is) en <code class="docutils literal notranslate"><span class="pre">'O'</span></code> (die altijd als tweede is) afwisselend aan de beurt zijn. De methode moet de gebruiker (door middel van de functie <code class="docutils literal notranslate"><span class="pre">input</span></code>) vragen een kolomnummer te selecteren voor elke zet. Hieronder kan je een voorbeeld zien van hoe deze interactie moet werken, maar hier zijn een paar belangrijke punten om in de gaten te houden:</p>
+<ul class="simple">
+<li><p>Deze methode moet elke keer het bord afdrukken voordat de zet gevraagd wordt.</p></li>
+<li><p>Het is handig om een grote <code class="docutils literal notranslate"><span class="pre">while</span></code>-lus te gebruiken om het spel te structureren. <code class="docutils literal notranslate"><span class="pre">'X'</span></code> is eerst aan de beurt en daarna <code class="docutils literal notranslate"><span class="pre">'O'</span></code>. We stellen voor dat je beurt van zowel <code class="docutils literal notranslate"><span class="pre">'X'</span></code> als <code class="docutils literal notranslate"><span class="pre">'O'</span></code> in de body van de lus zet. Op die manier speelt één iteratie twee zetten in Vier op een rij.</p></li>
+<li><p>Je kan ook een oneindige lus <code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">True:</span></code> gebruiken en dan ergens in de body van de lus <code class="docutils literal notranslate"><span class="pre">break</span></code> gebruiken als het spel eindigt.</p></li>
+</ul>
+<p>Controleer na elke <code class="docutils literal notranslate"><span class="pre">input</span></code> of de gekozen kolom geldig is. Deze methode moet dus ongeldige zetten, zowel als de kolom niet bestaat of als deze vol is, herkennen, en de gebruiker om een andere kolom vragren. Je hoeft echter niet te controleren of de invoer van de gebruiker een integer is; je mag ervan uitgaan dat dit altijd zo is.</p>
+<p>Je kan als richtlijn voor het voorkomen van <em>ongeldige</em> zetten onderstaande kleine lus gebruiken:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">users_col</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">allows_move</span><span class="p">(</span><span class="n">users_col</span><span class="p">):</span>
+    <span class="n">users_col</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Kies een kolom: &quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Bovenstaande code vraagt de gebruiker simpelweg net zo lang om een geldig kolomnummer tot hij er één ontvangt.</p>
+<p>Let op de elegante constructie <code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">not</span> <span class="pre">self.allows_move(...)</span></code>. Dit is exact hetzelfde als <code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">self.allows_move(...)</span> <span class="pre">==</span> <span class="pre">False</span></code>. Het beschrijft echter heel mooi het idee om door te gaan zolang de zet NIET geldig is”.</p>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">host_game</span></code> moet elke steen in de door de gebruiker gekozen (geldige!) kolom zetten. Gebruik hiervoor <code class="docutils literal notranslate"><span class="pre">add_move</span></code>! Daarna moet ze controleren of die speler gewonnen heeft; als dat zo is, moet er een bericht worden afgedrukt en moet de lus afgebroken worden met <code class="docutils literal notranslate"><span class="pre">break</span></code>. Ook moet je controleren of het bord nu vol is; als dat zo is, moet er een bericht worden afgedrukt en moet de lus afgebroken worden met <code class="docutils literal notranslate"><span class="pre">break</span></code>.</p>
+<p>Als het spel dus afgelopen is voor één van deze redenen, moet het spel stoppen, het bord moet nog een laatste keer worden afgedrukt en het programma moet vertellen wie er gewonnen heeft (of dat het een gelijkspel was.) Merk op dat je <code class="docutils literal notranslate"><span class="pre">break</span></code> kan gebruiken om uit een lus te komen; zelfs als die <code class="docutils literal notranslate"><span class="pre">break</span></code> in een <code class="docutils literal notranslate"><span class="pre">if</span></code>-<code class="docutils literal notranslate"><span class="pre">else</span></code>-statement staat.</p>
+<p>Als het spel niet over is, moet de andere speler gevraagd worden een zet te doen, en zo verder…</p>
+<p>Vergeet niet de methode te testen door het spel een paar keer te spelen (met elke mogelijke uitkomst…)!</p>
+<p>Hier is een voorbeelduitvoer, om een idee te geven van de invoer en uitvoer:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span>In [1]: b = Board(7, 6)
+
+In [2]: b.host_game()
+
+Welkom bij Vier op een rij!
+
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+---------------
+ 0 1 2 3 4 5 6
+
+Keuze van X:  3
+
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | |X| | | |
+---------------
+ 0 1 2 3 4 5 6
+
+Keuze van O:  4
+
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | |X|O| | |
+---------------
+ 0 1 2 3 4 5 6
+
+Keuze van X:  2
+
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | |X|X|O| | |
+---------------
+ 0 1 2 3 4 5 6
+
+Keuze van O:  4
+
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | |O| | |
+| | |X|X|O| | |
+---------------
+ 0 1 2 3 4 5 6
+
+Keuze van X:  1
+
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | |O| | |
+| |X|X|X|O| | |
+---------------
+ 0 1 2 3 4 5 6
+
+Keuze van O:  2
+
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | |O| |O| | |
+| |X|X|X|O| | |
+---------------
+ 0 1 2 3 4 5 6
+
+Keuze van X:  0
+
+
+X wint -- Gefeliciteerd!
+
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | |O| |O| | |
+|X|X|X|X|O| | |
+---------------
+ 0 1 2 3 4 5 6
+
+In [3]:
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "misja/programmeren",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./problems"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="tekst_genereren.html" title="previous page">Tekst genereren met Markovprocessen</a>
+    <a class='right-next' id="next-link" href="../examples/recursie.html" title="next page">Voorbeelden van recursie</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Hanze University of Applied Sciences<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
