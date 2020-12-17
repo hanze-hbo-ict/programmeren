@@ -281,7 +281,7 @@ In [5]: d.is_before(d)        # moet False zijn!
 Out[5]: False
 ```
 
-Herdefinieer ook de operator `<`, net zoals we met `__eq__` gedaan hebbe. De methodenaam hiervoor is `__lt__`. Nadat je dit gedaan hebt, kan je het testen met
+Herdefinieer ook de operator `<`, net zoals we met `__eq__` gedaan hebben. De methodenaam hiervoor is `__lt__`. Nadat je dit gedaan hebt, kan je het testen met
 
 ```ipython
 In [4]: d < ny
