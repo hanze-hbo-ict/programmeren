@@ -37,7 +37,9 @@ De methode `cols_to_win(self, ox)` moet een onderdeel van de klasse `Board` zijn
 De methode `cols_to_win` moet dan een ***lijst*** kolommen teruggeven waar `ox` in de volgende beurt kan spelen om het spel te winnne. De kolommen moeten op volgorde van hun nummer worden teruggegeven (als er meerdere mogelijkheden
 zijn om te winnen). `cols_to_win` hoeft *niet* verder dan één beurt vooruit te kijken. Als je software wilt schrijven die verder vooruit kijkt, probeer dan het project over Vier op een rij!
 
-:::{admonition,tip} Tip
+:::{admonition} Tip
+:class: tip
+
 Voer onderstaande stappen uit voor elke kolom op het bord:
 
 * Kijk of er een legale zet gedaan kan worden met behulp van `allows_move`.
@@ -93,7 +95,9 @@ Er zijn een aantal strategieën die goed kunnen werken, bijvoorbeeld,
 
 Uiteindelijk mag je zelf bepalen welke strategie je volgt. De enige regel is dat `ai_move` geldige zetten moet doen, moet winnen als dat kan, en overwinningen van de tegenstander moet blokkeren als ze zelf niet kan winnen.
 
-:::{admonition,tip} Lus niet over de kolommen van het bord!
+:::{admonition} Lus niet over de kolommen van het bord!
+:class: tip
+
 In plaats daarvan kan je
 
 * `cols_to_win` aanroepen voor `ox`.
@@ -157,7 +161,9 @@ Out[45]: 4      # moet 4 zijn
 Pas ten slotte je methode `host_game(self)` aan zodat ofwel `'X'` ofwel `'O'` zelfstandig kan spelen;
 dat wil zeggen, dat de computer deze speler bestuurt met de methode `ai_move`.
 
-:::{admonition,notice} Opmerking
+:::{admonition} Opmerking
+:class: notice
+
 Je mag zelf kiezen of de computer `'X'` of `'O'` speelt.
 :::
 

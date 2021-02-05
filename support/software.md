@@ -39,7 +39,9 @@ We volgen de aanbevelingen van Microsoft voor [Python op Windows](https://docs.m
 
 ![Windows Store](images/windows_store_python.png)
 
-:::{admonition,info} WSL
+:::{admonition} WSL
+:class: info
+
 Microsoft [adviseert](https://docs.microsoft.com/en-us/windows/python/) voor gevanceerde Python toepassingen Windows Subsystem for Linux (WSL). Ook WSL kan via Windows Store worden geïnstalleerd (kies daar voor Ubuntu als je nog niet goed bekend bent met Linux en WSL wilt proberen).
 
 Voor leren programmeren is WSL **niet** nodig en is de Python app voldoende!
@@ -65,7 +67,9 @@ Installeer [Homebrew](https://docs.brew.sh/Installation) op jouw Mac als je dit 
 $ brew install python3
 ```
 
-:::{admonition,tip} Updates
+:::{admonition} Updates
+:class: tip
+
 Met Homebrew is het gemakkelijk Python (en andere software die je met Homebrew hebt geïnstalleerd) op nieuwere versies te controleren en te updaten:
 
 ```console
@@ -84,7 +88,9 @@ $ python3 --version
 
 Als Python niet aanwezig is dan is aan te raden om de standaard Python 3 versie met een *package manager* te installeren.
 
-:::{admonition,info} Package managers
+:::{admonition} Package managers
+:class: info
+
 Linux: zoveel keus uit distributies met gelukkig maar een beperkt aantal package managers! Bijvoorbeeld, gebruik `apt` op distributies als Debian, Ubuntu of Mint:
 
 ```console
@@ -109,7 +115,9 @@ Tot slot heb je een editor nodig, Visual Studio Code (VSCode) is een flexibele t
 
 > Download en installeer [Visual Studion Code](https://code.visualstudio.com/download) voor Mac, Windows of Linux.
 
-:::{admonition,notice} Andere editors
+:::{admonition} Andere editors
+:class: notice
+
 Wij adviseren Visual Studio Code voor als je nog *geen* editor hebt geïnstalleerd. Het is dus niet verplicht, je kan jouw eigen editor blijven gebruiken als je wilt! Zie verder ook [platte tekst](platte_tekst) voor meer suggesties voor het bewerken van tekstbestanden.
 :::
 
@@ -117,7 +125,9 @@ Wij adviseren Visual Studio Code voor als je nog *geen* editor hebt geïnstallee
 
 Configuratie van VSCode zal vanzelf gaan: de eerste keer dat je Python code schrijft en opslaat met een `.py` bestandsextensie (zie ook werken met [platte tekst](platte_tekst)) zal VSCode jou vragen of je de Python uitbreiding voor VSCode wilt installeren. Hier kies je natuurlijk voor :)
 
-:::{admonition,warning} macOS
+:::{admonition} macOS
+:class: warning
+
 De VSCode Python uitbreiding ondersteunt macOS met Python versie 2 niet, zorg dat je Python 3 hebt geïnstalleerd.
 :::
 
@@ -151,7 +161,9 @@ TODO gebruik formatter is optioneel, een aanroep (Ctrl-Shift-i Windows/Linux, Ma
 
 VSCode zal vragen welke *formatter* je wilt gebruiken. Kies hier voor `black` en deze zal vervolgens voor jou worden geïnstalleerd.
 
-:::{admonition,info} Syntactische- en stylistische fouten?
+:::{admonition} Syntactische- en stylistische fouten?
+:class: info
+
 Code schrijven lijkt soms op het schrijven van gewone tekst, bijvoorbeeld een brief. Naast correcte spelling zal een brief ook elementen moeten bevatten die de lezer verwacht zoals een adressering, aanhef en plaats en datum.
 
 Een *linter* zal in het geval van een brief wijzen op spelfouten maar ook op het ontbreken van verplichte elementen. Een *formatter* zal stijlaanpassingen doen (maar niet de inhoud van de brief wijzigen) door bijvoorbeeld plaats en datum rechts uit te lijnen.

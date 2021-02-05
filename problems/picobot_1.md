@@ -108,7 +108,9 @@ Je zou kunnen bepalen hoe *efficiënt* jouw oplossing is door te kijken naar het
 
 De uitdaging is om deze opgave in slechts *6 regels* voor Picobot op te lossen.
 
-:::{admonition,notice} De perfecte oplossing
+:::{admonition} De perfecte oplossing
+:class: notice
+
 Let op, de 6 regels zouden kunnen gelden als een meest efficënte, of misschien zelfs perfecte oplossing voor dit probleem. Dit is een streven, maar het is *geen* probleem als jouw oplossing meer regels nodig heeft!
 :::
 
@@ -119,6 +121,8 @@ Voor deze opdracht is het jouw taak om een verzameling regels te ontwerpen om Pi
 - Vergeet niet dat jouw oplossing moet werken voor elke mogelijke startpositie van Picobot!
 - Klik op "Enter rules for Picobot" voordat je Picobot start
 
-:::{admonition,warning} Let op
+:::{admonition} Let op
+:class: warning
+
 Als je Picobot afsluit zijn al jouw regels verdwenen! Kopiëeer daarom de regels naar een tekstbestand en sla het op.
 :::

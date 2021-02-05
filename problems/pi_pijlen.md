@@ -13,7 +13,9 @@ Zie ook [Calculating Pi with Darts](https://www.youtube.com/watch?v=M34TO71SKGk)
 
 Stel je een cirkel voor die ingeschreven is in een vierkant die het gebied met `-1 ≤ x ≤ 1` en `-1 ≤ y ≤ -1` beslaat. De oppervlakte van de ingeschreven cirkel, waarvan de straal `1.0` is, moet dan π zijn: de oppervlaktre van een cirkel is immers gelijk aan π*r*<sup>2</sup>, en de straal *r* is hier `1.0`.
 
-:::{admonition,notice} Ingeschreven cirkel
+:::{admonition} Ingeschreven cirkel
+:class: notice
+
 Een *ingeschreven* cirkel raakt de randen van het omliggende vierkant precies; als het vierkant dus zijden van lengte 2 heeft, is de diameter van de cirkel ook 2.
 :::
 
@@ -60,7 +62,9 @@ Met dit in het achterhoofd is het handig om een hulpfunctie `throw_dart()` te sc
 * `True` teruggeeft als het pijltje de cirkel raakt en `False` teruggeeft als het pijlte de cirkel mist
 * Onthoud dat het pijltje altijd het vierkant raakt, door de manier waarop de worp ontworpen is...
 
-:::{admonition,tip} Valt het pijltje binnen de cirkel?"
+:::{admonition} Valt het pijltje binnen de cirkel?"
+:class: tip
+
 Het pijltje valt binnen de cirkel als de afstand tot het middenpunt, in dit geval (0, 0), kleiner is dan of gelijk is aan de straal. Je kan de afstand berekenen met de stelling van Pythagoras: de afstand van een punt (*x*, *y*) tot het punt (0, 0) is gelijk aan de wortel van *x*<sup>2</sup> + *y*<sup>2</sup>
 :::
 

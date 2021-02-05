@@ -56,7 +56,9 @@ In [11]: num_to_base_b(0, 2)
 Out[11]: ''                   # merk op dat als n 0 is we een lege string willen!!
 ```
 
-:::{admonition,notice} Opmerkingen
+:::{admonition} Opmerkingen
+:class: notice
+
 Vergeet niet dat jouw functie een string en *niet* een getal moet teruggeven! Verder,
 
 <!-- TODO verwijzing naar num_to_bin in college -->
@@ -74,7 +76,9 @@ assert num_to_base_b(42, 5) == '132'
 
 Je kan er natuurlijk meer bedenken!
 
-:::{admonition,tip} Tips
+:::{admonition} Tips
+:class: tip
+
 Jouw code moet een lege string teruggeven wanneer de waarde van `n` 0 is (dit voorkomt voorloopnullen!)
 
 Gebruik de volgende twee Python functies voor het heen en weer schakelen tussen strings en getallen. Deze zijn het meest nuttig als je daar enkele tekens of getallen gebruikt:
@@ -125,7 +129,9 @@ In [10]: base_b_to_num("", 10)
 Out[10]: 0                         # de lege string moet 0 opleveren
 ```
 
-:::{admonition,notice} Opmerkingen
+:::{admonition} Opmerkingen
+:class: notice
+
 Vergeet niet dat jouw functie een getal teruggeeft, en een string als argument `s` accepteert! Verder,
 
 <!-- TODO verwijzing naar bin_to_num in college -->
@@ -137,7 +143,9 @@ Vergeet niet dat jouw functie een getal teruggeeft, en een string als argument `
 
 Gebruik de bovenstaande voorbeelden in jouw tests!
 
-:::{admonition,tip} Tips
+:::{admonition} Tips
+:class: tip
+
 Jouw functie `base_b_to_num` moet `0` teruggeven als `s` een lege string is. Verder,
 
 -   Zoals gewoonlijk zal het meest rechtse karakter van de string de "een"'en kolom zijn," het minst significante getal in grondtal `b`.
@@ -187,7 +195,9 @@ In [9]: base_to_base(2, 5, "1001001010")
 Out[9]: '4321'
 ```
 
-:::{admonition,notice} Opmerkingen
+:::{admonition} Opmerkingen
+:class: notice
+
 Ga geen conversie functies herschrijven! Converteer in plaats daarvan het getal naar decimaal en dan terug naar de gewenste grondtal!
 :::
 
@@ -198,7 +208,9 @@ assert base_to_base(2, 4, "101010") == "222"
 assert base_to_base(2, 5, "1001001010") == "4321"
 ```
 
-:::{admonition,tip} Tips
+:::{admonition} Tips
+:class: tip
+
 -   Gebruik eerst `base_b_to_num` om een gewoon, decimaal getal voor `s_in_b1` te krijgen. Geef het een naam.
 
 -   Gebruik dan de functie `num_to_base_b` om die waarde om te zetten naar het juiste grondtal!
@@ -263,7 +275,9 @@ De functie `add_b` moet een nieuwe string teruggeven die de som van de twee argu
 
 De som moet berekend worden met het "basisschool" binaire optelalgoritme, zoals hierboven is besproken, en niet met basisconversies (door grondtallen om te zetten). Dat wil zeggen dat de optelling puur *syntactisch* zal moeten zijn: je gebruikt de opteloperator `+` voor getallen van Python *niet*.
 
-:::{admonition,tip} Tips
+:::{admonition} Tips
+:class: tip
+
 -   Je hebt op zijn minst *twee* base cases nodig. Eén base case om te overwegen is wat als `s` geen karakters meer heeft, maar `t` nog wel: wat zou de juiste string zijn om terug te geven?
 
 -   De "carry" case (als je een bit moet "onthouden") is een ander lastig onderdeel van dit probleem.

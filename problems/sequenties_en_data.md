@@ -35,7 +35,9 @@ Out[3]: '6*76*7'
 
 Heel fijn! De Python `eval` functie voert strings uit alsof het Python commando's zijn. Probeer `eval(Out[3])` eens in het bovenstaande voorbeeld uit te voeren!
 
-:::{admonition,notice} Nummering van de prompt
+:::{admonition} Nummering van de prompt
+:class: notice
+
 Het kan heel goed zijn dat de opgaven *niet* dezelfde nummering hebben als jouw prompt, maak je geen zorgen als deze afwijkt!
 :::
 
@@ -146,7 +148,9 @@ answer0 = e[0:2] + pi[-2:]
 print(answer0)
 ```
 
-:::{admonition,notice} Opmerkingen bij deze code
+:::{admonition} Opmerkingen bij deze code
+:class: notice
+
 - let op dat je het bestand opslaat als platte tekst met een `.py` bestandsextensie (zie werken met [platte tekst](../support/platte_tekst.md))
 - in de code worden *twee* lists gedefiniëerd, één met de naam `e` en een ander met de naam `pi`
 - wanneer je de code uitvoert zal de regel `answer0 = e[0:2] + pi[-2:]` de waarde van de variabele `answer0` definiëren. Met andere woorden, vanaf deze regel is in het programma de naam `answer0` bekend die verwijst naar het resultaat van de expressie `e[0:2] + pi[-2:]`!
@@ -161,7 +165,9 @@ Let op het volgende om jouw bestand in IPython te kunnen uitvoeren:
 * typ `ipython` om IPython te starten
 * voer in IPython vervolgens `run wk2ex1.py` uit
 
-:::{admonition,tip} Liever lui dan moe
+:::{admonition} Liever lui dan moe
+:class: tip
+
 Een geschiedenis wordt bijgehouden van alles wat je al eerder op de command line hebt getypt en zo kan je eerdere commandos terughalen met pijltje omhoog.
 
 Een ander hulpmiddel dat je op de command line kan gebruiken is *Tab completion*, dat wil zeggen, laat de shell voorzover mogelijk het commando aanvullen zolang het uniek is. Bijvoorbeeld, je wilt jouw bestand `mijn_bestand.py` laten uitvoeren in IPython, dan zal je waarschijnlijk aan `run mijn<Tab>` genoeg hebben om het door de shell te laten aanvullen tot `run mijn_bestand.py` (`<Tab>` is natuurlijk de tab-toets op jouw toetsenbord!).
@@ -178,7 +184,9 @@ In deze opgave ga je een aantal lijsten maken met *alleen* maar de getallen in d
 
     (voor deze opgaven vragen we jou `+` *niet* te gebruiken voor het optellen van getallen)
 
-:::{admonition,info} Lege regels en experimenteren
+:::{admonition} Lege regels en experimenteren
+:class: info
+
 Gebruik *één of meer lege regels* tussen jouw antwoorden (zodat het zowel voor jou als voor ons goed leesbaar blijft!).
 
 Nadat je het bestand een eerste keer hebt uitgevoerd met `run` kan je experimenteren op de IPython command line, probeer bijvoorbeeld `e[0:1] + pi[0:1]` te typen.
@@ -241,7 +249,9 @@ De opgaven zijn als volgt (de eerste kijg je van ons):
 
     In totaal zijn 3 bewerkingen nodig, het ophalen van `ho` met `s[0:2]` (slicen), het ophalen van `i` met `g[4]` (indexeren) en vervolgens deze twee waarden samenvoegen met `+` zodat we tot `hoi` komen als nieuwe waarde.
 
-    :::{admonition,warning} Meer of minder bewerkingen
+    :::{admonition} Meer of minder bewerkingen
+    :class: warning
+
     Bij elk van de volgende opgaven zullen we steeds aangeven wat het minimaal aantal bewerkingen is dat wij hebben kunnen vinden. Het maakt niet uit als jij meer bewerkingen nodig hebt, zolang je maar tot een *juiste oplossing* komt!
     :::
 

@@ -23,7 +23,9 @@ In [1]: list(range(0, 100))
 Out[1]: [0, 1, 2, ..., 99]
 ```
 
-:::{admonition,info} Tot het eind!
+:::{admonition} Tot het eind!
+:class: info
+
 Let op dat `range`, zoals bij vrijwel alles in Python, *tot* het eindpunt telt (en niet tot *en met*)!
 :::
 
@@ -70,7 +72,9 @@ In [7]: dir(__builtins__)
 
 De functie `dir` is vaak handig, het laat alles zien wat zich in een specifieke Python *module* bevindt. Zo bevat de speciale module `__builtins__` alle *ingebouwde* functies.
 
-:::{admonition,info} Dubbele underscores
+:::{admonition} Dubbele underscores
+:class: info
+
 Let op dat je twee *underscores* typt bij `__builitins__`, zowel voor als na de kleine letters, de underscore `_` is Shift-minteken op de meeste toetsenborden.
 :::
 
@@ -115,7 +119,9 @@ Om functies te gebruiken die niet standaard ingebouwd zijn moet je de module waa
 
     Zonder `from math import *` zou je in dit geval `math.cos(math.pi)` moeten hebben geschreven.
 
-    :::{admonition,warning} import *
+    :::{admonition} import *
+    :class: warning
+
     Het is niet *altijd* een goed idee om dit te doen, zeker niet als je veel modules gebruikt. Sommige modules kunnen dezelfde functienaam gebruiken en in dat geval zal de ene import de andere vervangen ...
     :::
 
@@ -172,7 +178,9 @@ In [2]: help(dbl)
 
 Je zal zien dat Python de docstring als hulp teruggeeft! Het hulpsysteem van de taal is gebouwd op docstrings! Deze manier van zelfdocumentatie in Python is belangrijk om jouw functies inzichtelijk te maken, zowel voor anderen als voor jezelf.
 
-:::{admonition,warning} Inspringen (indentatie)
+:::{admonition} Inspringen (indentatie)
+:class: warning
+
 De eerste driedubbele aanhalingstekens *moeten* ingesprongen worden direct onder de signatuur. De afsluitende driedubbele aanhalingstekens van de docstring springen op hetzelfde niveau en an alle volgende code binnen de functie (de functie "body").
 :::
 
@@ -230,7 +238,9 @@ In [3]: interp(2, 12, 0.22)     # 22% op weg van 2 naar 12
 Out[3]: 4.2
 ```
 
-:::{admonition,tip} Tip
+:::{admonition} Tip
+:class: tip
+
 
 Als je niet zeker weet hoe je moet beginnen, kan je naar het eerste voorbeeld hierboven kijken. Hierbij geldt dat
 
@@ -259,7 +269,9 @@ In de volgende functies ga je strings gebruiken, reeksen van karakters. Schrijf 
 
 Schrijf een functie `checkend(s)` die als parameter een string `s` accepteert en `True` teruggeeft als het eerste karakter van `s` gelijk is aan het laatste karakter van `s`. Anders zal het `False` teruggeven. De functie `checkends` hoeft niet te werken met een lege string `s` (een string met waarde `""`).
 
-:::{admonition,warning} boolean waarden
+:::{admonition} boolean waarden
+:class: warning
+
 De functie moet *geen* strings teruggeven! In plaats daarvan moet het een *boolean* teruggeven, dus `True` of `False`, zonder aanhalingstekens.
 
 In de editor zul je zien dat booleans een andere kleur krijgen (in het standaardkleurenschema van VSCode worden ze blauw) om aan te geven dat Python ze herkent als waarden van het type `bool`. Als je er per ongeluk strings van hebt gemaakt (`"True"` in plaats van `True`) dan worden ze oranje in VSCode.
@@ -286,7 +298,9 @@ Out[4]: True
 
 Zorg dat het laatste voorbeeld (de string met een enkele spatie) ook werkt in jouw functie. Zoals eerder gezegd, een lege string hoeft *niet* te werken.
 
-:::{admonition,tip} Vergelijken
+:::{admonition} Vergelijken
+:class: tip
+
 Je kan in deze functie gebruikmaken van een `if`-`else`-constructie, hier is een begin:
 
 ```python
@@ -308,7 +322,9 @@ tweede helft van `s` is en de tweede helft de eerste helft van `s`. De functie z
 
 Als `len(s)` (de lengte van `s`) oneven is, dan geldt dat *eerste helft* van `s` één karakter korter is dan de tweede helft. De tweede helft van de string die teruggegeven wordt zal in dit geval één karakter korter zijn dan de eerste helft. Na de onderstaande voorbeelden kan je ook een tip vinden.
 
-:::{admonition,info} Lengte bepalen
+:::{admonition} Lengte bepalen
+:class: info
+
 Het kan hier handig zijn de ingebouwde functie `len(s)` te gebruiken, die de lengte van het argument, een string `s`, teruggeeft. De functie `len` kan je ook gebruiken voor andere typen, bijvoorbeeld lijsten (lists).
 :::
 
@@ -322,7 +338,9 @@ In [2]: flipside('zijkant')
 Out[2]: kantzij
 ```
 
-:::{admonition,tip} Integerdeling
+:::{admonition} Integerdeling
+:class: tip
+
 Deze functie is eenvoudiger als je op de eerste regel een variabele maakt die gelijk is aan `len(s) // 2`, bijvoorbeeld,
 
 ```python

@@ -88,7 +88,9 @@ De *mandelbrotverzameling* is een verzameling punten op het complexe vlak die ee
 * Herhaal dan de volgende berekening:
 * *z*<sub>*n*+1</sub> = *z<sub>n</sub>*<sup>2</sup> + *c*
 
-:::{admonition,notice} Complexe getallen
+:::{admonition} Complexe getallen
+:class: notice
+
 Je weet misschien dat het met normale getallen niet mogelijk is om de wortel van een negatief getal te nemen. Dit is voor wiskundigen een onwenselijke situatie, dus hebben ze een stelsel getallen bedacht waarbij dit wel kan. We noemen deze getallen "complexe getallen". Waar je de normale getallen op een getallenlijn kan zetten, kan je de complexe getallen op een getallen*vlak* zetten, met een *x*- en een *y*-as. Elk complex getal kan je dus aangeven als een combinatie van een *x*- en een *y*-coördinaat. De *x*-waarde noemen we **reëel** en de *y*-waarde **imaginair**, en je schrijft dit als *c* = *x* + *iy*; *i* is de eenheid van imaginaire getallen, en is het antwoord op de vraag wat de wortel van -1 is.
 
 Je kan je afvragen of dit nog nut buiten de wiskunde heeft; en het antwoord hierop is ja: het blijkt dat bij de berekeneningen over sommige natuurkundige processen je tijdens de berekening imaginaire getallen krijgt, maar als je dat dan allemaal netjes doorrekent, je toch weer op "echte" getallen uitkomt, die bovendien blijken te kloppen met wat we in de werkelijkheid zien.
@@ -129,7 +131,9 @@ Ook de waarde `1 + j` is geen complex getal: Python gaat ervan uit dat je een va
 
 Je hoef zelf verder niet te weten wat bijvoorbeeld de rekenregels voor vermenigvuldigen, optellen en machtsverheffen zijn met complexe getallen, Python zorgt er wel voor dat ze goed gebruikt worden!
 
-:::{admonition,notice} *i* of *j*?
+:::{admonition} *i* of *j*?
+:class: notice
+
 Wiskundigen gebruiken *i*; elektrotechnici gebruiken *j* omdat in de elektrotechniek *i* gebruikt wordt voor elektrische stroom. Python gebruikt deze laatste conventie, wat een bron van *oneidinge* verwarring kan zijn!
 :::
 
@@ -152,7 +156,9 @@ Python gebruikt zonder problemen de machtsverheffingsoperator (`**`) en andere o
 
 Je kan echter **wel** de magnitude, of lengte (tussen de oorsprong van het complexe vlak en het punt *c*), vergelijken: `abs(c) > 2`. We kunnen blijkbaar de ingebouwde functie `abs` gebruiken om de magnitude van een complex getal te bepalen.
 
-:::{admonition,notice} Absolute waarde
+:::{admonition} Absolute waarde
+:class: notice
+
 Eerder hebben we `abs` gebruikt om te zorgen dat een getal altijd positief is: `abs(-5)` wordt 5, maar `abs(5)` is ook 5. Dit is consistent met deze nieuwe definitie: immers, de lengte op de getallen lijn tussen 0 en 5 is 5, maar de lengte tussen 0 en -5 is dat ook!
 :::
 
@@ -202,7 +208,9 @@ De functie `in_mset` moet `False` teruggeven als de reeks *z*<sub>*n*+1</sub> = 
 
 Merk op dat je ***geen*** verschillende variabelen nodig hebt voor *z*<sub>0</sub>, *z*<sub>1</sub>, *z*<sub>2</sub>, en zo verder. Je gebruikt in plaats daarvan een enkele variabele `z`. Je kan `z` bijwerken in een lus, net als in `update`.
 
-:::{admonition,tip} `True` of `False`?
+:::{admonition} `True` of `False`?
+:class: tip
+
 Zorg ervoor dat je `return False` ergens *in* je lus hebt staan. Je weet echter pas zeker dat het antword `True` is **nadat** de lus al haar iteraties heeft uitgevoerd, dus dan kan je pas `return True` doen!
 :::
 
@@ -242,7 +250,9 @@ In [11]: in_mset(c, 50)      # maar bij 50 pogingen blijkt dat niet zo te zijn!
 Out[11]: False
 ```
 
-:::{admonition,tip} Krijg je teveel `True`s?
+:::{admonition} Krijg je teveel `True`s?
+:class: tip
+
 Als dat zo is, kan het zijn dat je `abs(z) > 2` pas controleert nadat de `for`-lus klaar is. Zorg dat je *in* de lus controleert!
 
 Er is een subtiele reden dat je in de lus moet controleren:
@@ -292,7 +302,9 @@ def test():
 
 Sla deze code op en voer het uit door `test()`, met haakjes, in te typen in de Pythonshell.
 
-:::{admonition,warning} `ModuleNotFoundError`
+:::{admonition} `ModuleNotFoundError`
+:class: warning
+
 Als je een `ModuleNotFoundError` krijgt, betekent dit dat de Python-module `pillow` niet geïnstalleerd is. Als je Anaconda Python gebruikt zou deze al geïnstalleerd moeten zijn, maar mogelijk heb je nog een Python-installatie op je systeem. Je kan dat `conda activate base` proberen om Anaconda te activeren. Als je geen Anaconda Python hebt, moet je `pillow` zelf installeren met het commando `pip install pillow`.
 :::
 
@@ -442,7 +454,9 @@ In [5]: scale(299, 300, -2.0, 1.0)  # de precieze uitkomst kan een beetje versch
 Out[5]: 0.99
 ```
 
-:::{admonition,notice} Opmerking
+:::{admonition} Opmerking
+:class: notice
+
 We hebben `scale` beschreven in termen van het berekenen van floating-pointwaardes voor de x-coördinaat (de reële as), maar de functie `scale` werkt ook voor de y-dimensie. Je hebt geen aparte functie nodig voor de verticale as!
 :::
 
@@ -598,7 +612,9 @@ YMIN = -.5
 YMAX = -.1
 ```
 
-:::{admonition,notice} Zeepaardjes?!?
+:::{admonition} Zeepaardjes?!?
+:class: notice
+
 Kijk ook eens of je andere waardes kan vinden die een interessant deel van de verzameling tonen; en benoem ze in commentaar in je bestand `wk8ex1.py`. Als richtlijn kun je de suggesties proberen op [deze pagina over de "Vallei der Zeepaarden"](http://mrob.com/pub/muency/seahorsevalley.html)
 :::
 

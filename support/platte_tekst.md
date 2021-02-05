@@ -9,7 +9,9 @@ De uitwerkingen van bijvoorbeeld de Picobot opdrachten moeten in platte tekst al
 
 Het is belangrijk om bekend te raken met het maken en bewerken van tekstbestanden. Programma's zoals Microsoft Word maken *geen* platte tekst, althans niet standaard.
 
-:::{admonition,info} Een experiment
+:::{admonition} Een experiment
+:class: info
+
 Waarom maakt Microsoft Word standaard *geen* tekstbestanden? Open Microsoft Word, typ wat tekst en sla jouw werk op. Je zal zien dat een `.docx`-bestand wordt aanmaakt (bijvoorbeeld `Test.docx`) en verander nu de naam van dit bestand waar je `.docx` wijzigt in `.zip`. Vervolgens zal je zien dat jouw systeem het bestand zal tonen als een *gecomprimeerd* bestand met als inhoud *meerdere* bestanden! Een standaard Microsoft Word document is met andere woorden een verzameling van bestanden en niet een enkel tekstbestand ...
 :::
 

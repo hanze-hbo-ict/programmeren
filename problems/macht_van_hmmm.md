@@ -25,7 +25,9 @@ Aangezien het tweede faculteitvoorbeeld in het college recursief was, maar deze 
 
 Dit is geen oplossing voor dit probleem! Onthoud dat je dit programma moet aanpassen om een macht, geen faculteit, te berekenen.
 
-:::{admonition,tip} Machtsverheffen in Hmmm
+:::{admonition} Machtsverheffen in Hmmm
+:class: tip
+
 * Gebruik het bestaande `read`-statement om het grondtal te vragen aan de gebruiker.
 * Voeg nog een `read`-statement toe om de macht te op te vragen en op te slaan, bijvoorbeeld in `r2`.
 * *Laat 1 nog steeds je initiële resultaat zijn! (het "basisgeval")* Gebruik bijvoorbeeld `r3`.

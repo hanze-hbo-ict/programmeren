@@ -106,7 +106,9 @@ Open een *terminal* in VSCode (of anders) en probeer het bovenstaande verhaal ui
 - vervolgens `run mijn_bestand.py` te typen (wijzig `mijn_bestand.py` natuurlijk in de naam van jouw bestand)
 - als het laden gelukt is, type je `adventure()` en drukt op enter
 
-:::{admonition,tip} `cd` in ipython
+:::{admonition} `cd` in ipython
+:class: tip
+
 In ipython kan je ook met `cd` naar de juiste directory gaan waar jouw bestand staat. Ook andere commandos kan je in ipython uitvoeren, bijvoorbeeld `ls` en niet te vergeten `pwd` (in welke directory ben ik?!?)
 :::
 
@@ -118,7 +120,9 @@ Als je het eenmaal in ipython hebt geladen, probeer het dan minstens twee keer t
 - `adventure()` is de functie die in het bestand is gedefinieerd
 - alleen als je dit bestand hebt *aangepast* moet je opnieuw `run mijn_bestand.py` typen
 
-:::{admonition,info} Nieuwe regel
+:::{admonition} Nieuwe regel
+:class: info
+
 Het zal je opvallen dat `print()` (ongeacht het argument, bijvoorbeeld jouw tekst) altijd een nieuwe regel start. Dit gebeurt omdat standaard de karaktercombinatie `'\n'` aan de uitvoer wordt toevoegd. `'\n'` staat voor "newline" (nieuwe regel) en kent zelfs een hele [geschiedenis](https://en.wikipedia.org/wiki/Newline) (inclusief de oudewetse typemachine, en het wordt zeker niet alleen in Python gebruikt!).
 
 Kan je in het voorbeeldverhaal het gebruik van `'\n'` ontdekken, en zou je dit misschien straks in jouw verhaal op een slimme manier kunnen gebruiken?
@@ -146,7 +150,9 @@ Verder geldt het volgende:
 - de controlestructuren hoeven niet in de genoemde volgorde te worden toegepast
 - je mag meer dan 5 controlestructuren gebruiken (als je wilt!)
 
-:::{admonition,notice} De kunst van de eenvoud
+:::{admonition} De kunst van de eenvoud
+:class: notice
+
 Houd het alsjeblieft eenvoudig! Andere fora of cursussen zijn beter geschikt voor vormen van creatieve expressie, hier gaat het ons voornamelijk om het verkennen van condities bij programmeren. Houd ook in gedachten dat mogelijk veel mensen jouw verhaal zullen lezen, uitvoeren en beoordelen (we kijken er naar uit!).
 
 Wees verder ook bewust van de tijd die je aan deze opdracht besteedt, het is gemakkelijk om de tijd te verliezen. Het schrijven van het taartavontuur duurde ons al veel langer dan we oorspronkelijk hadden gedacht en het telt slechts *twee* controlestructuren!

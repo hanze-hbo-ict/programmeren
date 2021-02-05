@@ -68,7 +68,9 @@ Nogmaals, het bestand `wk6ex1-4.circ` is de plaats waar je al jouw schakelingen 
 
 *Merk op* dat je in de verkenner van Logisim (het linkerbovendeel van het scherm) iconen met de teksten `MyXOR`, `FullAdder`, `Een_4bit_Ripple_Carry_Adder`, `Een_4bit_vermenigvuldiger`, `Een_3bij2_deler` en mogelijk nog wat meer ziet. Dit zijn de onderdelen ("deelschakelingen") van de opgaven die je gaat maken. In deze opdracht gebruikenwe alleen de eerste *drie* deelschakelingen.
 
-:::{admonition,notice} Schakeling of circuit
+:::{admonition} Schakeling of circuit
+:class: notice
+
 We gebruiken de woorden *schakeling* en *circuit* afwisselend, maar bedoelen daar hetzelfde mee, het zijn synoniemen!
 :::
 
@@ -142,7 +144,9 @@ Dit maakt een "blok" die de FA voorstelt. Immers, nu je de FA hebt ontworpen, wi
 
 Je kan de in- en uitvoerpins die gegeven zijn verplaatsen, maar behoud de relatieve posities, zodat we ze gemakkelijk kunnen vinden!
 
-:::{admonition,tip} Constanten
+:::{admonition} Constanten
+:class: tip
+
 Nog een laatste opmerking! Je hebt een 0 als carry-in nodig aan de rechterkant van jouw ripple-carry adder. Een manier om dit te doen is om een extra input toe te voegen en de waarde ervan op 0 te zetten. Dit is niet de beste oplossing, omdat we echt niet willen dat de gebruiker van onze ripple-carry adder deze carry-in waarde kan veranderen. Een betere keuze is om naar het verkenningsvenster te gaan, op de map "Bedrading" te klikken, daar het item "Constant" te kiezen en daar één van toe te voegen aan jouw schakeling. Klik er vervolgens op en je kunt de waarde van die constante in het eigenschappenscherm veranderen. Dit is nu een constante, onveranderlijke waarde die je schakeling kan gebruiken!
 :::
 <!-- TODO course (niet boek) opgaven hebben verwijzing naar college waar een 4-bit ripple-carry adder zou zijn geschetst: https://www.cs.hmc.edu/twiki/pub/CS5/AdvancedAdditionGold/rca.png -->

@@ -19,6 +19,8 @@ Voeg de regels toe aan het bestand en eef duidelijk aan om wel probleem het gaat
 - Vergeet niet dat jouw oplossing moet werken voor elke mogelijke startpositie van Picobot!
 - Klik op "Enter rules for Picobot" voordat je Picobot start
 
-:::{admonition,warning} Let op
+:::{admonition} Let op
+:class: warning
+
 Als je Picobot afsluit zijn al jouw regels verdwenen! Kopiëeer daarom de regels naar een tekstbestand en sla het op.
 :::

@@ -90,7 +90,9 @@ Pak dat bestand uit en je krijgt een map `wk7ex1` met een aantal bestanden erin.
 2. Voer daarna het gebruikelijke commando uit op de command line: `ipython`
 3. Type daarna `run hmmm wk7ex1a.hmmm` om Hmmm zelf uit te voeren. Hmmm zal `wk7ex1a.hmmm` assembleren en uitvoeren.
 
-:::{admonition,notice} Werkt het niet?
+:::{admonition} Werkt het niet?
+:class: notice
+
 Misschien werk je op Windows en moet je de map ***uitpakken*** voordat je de bestanden opent.
 
 Of je hebt misschien het bestand `wk7ex1a.hmmm` verplaatst uit die map; dat werkt niet, je moet de *hele map* verplaatsen!
@@ -141,7 +143,9 @@ Alles heeft gewerkt en het programma draait. Het vraagt je om een getal in te vo
 
 Typ `32000` in en druk op return. Je zou de simulator omhoog moeten zien tellen vanaf `32000` of welk getal je ook ingevoerd hebt. Als hij bij de maximumwaarde, `32767`, aankomt, stopt hij (omdat het getal *overflowt*!)
 
-:::{admonition,notice} Overflow
+:::{admonition} Overflow
+:class: notice
+
 We hebben bij Programmeren I besproken dat integers in een computer maar een beperkt aantal bits tot hun beschikking hebben; omdat de maximumwaarde hier `32767` is, kunnen we constateren dat het aantal bits dat een integer in Hmmm tot zijn beschikking heeft 16 is (15 voor het getal en 1 voor het teken, positief of negatief). Je zou Hmmm een 16-bits *architectuur* kunnen noemen
 :::
 
@@ -177,7 +181,9 @@ Voor deze eerste opgave, die je straks inlevert als `wk7ex1a.hmmm`, is je opgave
 3. Hierna moet je programma ***naar beneden*** tellen vanaf de berekende waarde (de derde macht van de invoer), één integer per keer. Het moet elke waarde afdrukken totdat de waarde 0 is.
 4. Als deze aftelling bij nul is uitgekomen, moet het programma stopen. De laatste waarde die afgedrukt wordt moet `0` of `1` zijn. Beide zijn acceptabel als laatste waarde.
 
-:::{admonition,tip} Een aantal tips
+:::{admonition} Een aantal tips
+:class: tip
+
 Een goede manier om deze opgave aan te pakken is om *één stap* uit de lijst hierboven uit te werken, en je programma goed te *testen* om te controleren dat deze stap werkt. Je kan bijvoorbeeld
 
 * Eerst een programma schrijven die een invoer leest, de derde macht ervan uitrekent en vervolgens stopt.
@@ -305,7 +311,9 @@ Daarna moet je Hmmm random number generator
   * Je moet aan het einde van elke branch wel een `halt`-instructie gebruiken.
 * Merk op dat je op dit moment weet hoe groot je programma zal zijn, en je kan dat gebruiken in de `jumpn` regels die nog een goed regelnummer nodig hadden...
 
-:::{admonition,tip} Samenvatting en tips
+:::{admonition} Samenvatting en tips
+:class: tip
+
 Je Hmmm-programma in `wk7ex1b.hmmm` moet dus `N` pseudorandom getallen genereren, te beginnen bij <code>X<sub>1</sub></code> (ter herinnering, <code>X<sub>0</sub></code> wordt niet beschouwd als een pseudorandom getal en wordt dus niet geprint.)
 
 * Merk op dat `mod` ingebouwd is in Hmmm! *Ga mod niet zelf schrijven!*
@@ -400,7 +408,9 @@ Het blijkt dat het LCG-algoritme zijn best mogelijke performance; dat wil zeggen
   van `m`, maar alleen de *priemfactoren*).
 * Voorwaarde 3: `a-1` moet een veelvoud van 4 zijn als `m` een veelvoud van 4 is.
 
-:::{admonition,notice} Opmerkingen
+:::{admonition} Opmerkingen
+:class: notice
+
 * De priemfactoren van `m = 100` alleen `2` en `5` zijn.
 * 100 *wel* een veelvoud van 4 is.
 * Voorwaarden 2 en 3 hierboven niet over `a` gaan maar over `a-1`.
@@ -422,7 +432,9 @@ Open hiervoor het bestand genaamd `wk7ex1c.py` en bewerk de Python-startfunctie 
 
 Je functie `unique(L)` krijgt als enige invoer een lijst en moet `True` teruggeven als deze lijst alleen maar unieke elementen heeft (geen elementen worden herhaald) en `False` als dat niet zo is.
 
-:::{admonition,tip} Een paar tips
+:::{admonition} Een paar tips
+:class: tip
+
 * Je functie heeft alleen recursie, lijsten indexeren en slicing nodig.
 * Een goed basisgeval kijkt naar de meest eenvoudige lijst `L`. *Wat is de meest eenvoudige lijst getallen `L`?* Het is niet 0, maar de ***lijst*** met lengte 0.
 * Je hebt nog twee gevallen nodig.
