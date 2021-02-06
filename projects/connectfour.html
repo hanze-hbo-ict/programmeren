@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vier op een rij &#8212; Programmeren</title>
     
-  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
     
   <link rel="stylesheet"
@@ -31,12 +31,12 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -1083,8 +1083,9 @@ commentsRunWhenDOMLoaded(addUtterances);
   <div class="section" id="vier-op-een-rij">
 <h1>Vier op een rij<a class="headerlink" href="#vier-op-een-rij" title="Permalink to this headline">¶</a></h1>
 <p>In dit project ga je Python gebruiken om een kunstmatige intelligentie (AI) te maken voor het spel Vier op een rij. Hij kan een aantal zetten (<em>“ply’s”</em>) in het spel vooruitkijken, een optimale zet kiezen <em>voor die ply</em>, en (heel misschien) zijn maker verslaan met Vier op een rij!</p>
-<div class="notice admonition">
+<div class="admonition">
 <p class="admonition-title"> Ply’s</p>
+<p>:class: notice</p>
 <p>Hogere ply’s kosten meer tijd. Het aantal ply’s boven de 5 of 6 zetten kost waarschijnlijk te veel tijd om uit te voeren, dus je zult beperkt zijn bij het kiezen hiervan.</p>
 </div>
 <div class="section" id="achtergrond">
@@ -1112,8 +1113,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="de-klasse-board">
 <h2>De klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code><a class="headerlink" href="#de-klasse-board" title="Permalink to this headline">¶</a></h2>
 <p>Je kan de klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code> uit je uitwerking van <span class="xref myst">opgave 2 van week 10</span>. Als je deze niet hebt gemaakt kan je ook <span class="xref myst">onze uitwerking</span> gebruiken.</p>
-<div class="notice admonition">
+<div class="admonition">
 <p class="admonition-title"> Bordgrootte</p>
+<p>:class: notice</p>
 <p>Je mag je klasse <code class="docutils literal notranslate"><span class="pre">Player</span></code> zo schrijven dat deze elk aantal rijen en kolommen ondersteunt, en dat moedigen we ook zeker aan, maar wij zullen hem alleen testen met borden met zeven kolommen en zes rijen. Je mag dit ook best als standaardformaat gebruiken als je wilt!</p>
 </div>
 </div>
@@ -1235,8 +1237,9 @@ klasse <code class="docutils literal notranslate"><span class="pre">Board</span>
 <span class="k">assert</span> <span class="n">p2</span><span class="o">.</span><span class="n">tiebreak_move</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span>
 </pre></div>
 </div>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Tip</p>
+<p>:class: tip</p>
 <p>Het is handig om eerst het maximum van de lijst te zoeken (met de ingebouwde Python-functie <code class="docutils literal notranslate"><span class="pre">max</span></code>) en daarna de kolom te zoeken waar de waarde maximaal is. <em>Kies hier een slimme startpositie</em>; de waarde van <code class="docutils literal notranslate"><span class="pre">self.tbt</span></code> kan helpen om een geschikte startpositie te kiezen van waar je kan zoeken.</p>
 </div>
 </div>
@@ -1249,19 +1252,22 @@ klasse <code class="docutils literal notranslate"><span class="pre">Board</span>
 <p><strong>Basisgeval:</strong> Als een bepaalde kolom vol is, geeft de methode deze kolom de waarde <code class="docutils literal notranslate"><span class="pre">-1.0</span></code>.</p>
 <p><strong>Nog een basisgeval:</strong> Als <code class="docutils literal notranslate"><span class="pre">self</span></code> het spel <em>nu al</em> heeft gewonnen, dan hoeven er geen extra zetten gedaan te worden (dat mag niet eens!); gebruik simpelweg de geschikte score (<code class="docutils literal notranslate"><span class="pre">100.0</span></code>) voor de kolom die nu bekeken wordt.</p>
 <p><strong>Nog weer een basisgeval:</strong> Op dezelfde manier geldt dat als <code class="docutils literal notranslate"><span class="pre">self.opp_ch()</span></code> het spel <em>nu al</em> heeft gewonnen, het ook niet nodig is om nog meer zetten te doen; gebruik simpelweg de geschikte score (<code class="docutils literal notranslate"><span class="pre">0.0</span></code>) voor de kolom die nu bekeken wordt.</p>
-<div class="notice admonition">
+<div class="admonition">
 <p class="admonition-title"> Belangrijk</p>
+<p>:class: notice</p>
 <p>Het is belangrijk dat de controle of de speler wint gebeurt <em>voor de controle</em> dat de tegenstander wint, omdat er borden zijn waar beide waar zijn, maar <code class="docutils literal notranslate"><span class="pre">self</span></code> is nu aan de beurt, dus die zou dan winnen!</p>
 </div>
 <p><strong>Nog een ander basisgeval:</strong> Nu komen we bij het <em>echte</em> basisgeval: als de <code class="docutils literal notranslate"><span class="pre">ply</span></code> van het object 0 is, wordt er geen zet gedaaan. Bovendien zijn de situaties waar de kolom vol is of het spel afgelopen is al afgehandeld, dus er is maar één score die je hoeft te geven aan een kolom als de lookahead 0-ply is: <strong>welke score is dat?</strong> Dit is wat je verwacht als de speler helemaal <em>niet</em> in de toekomst kijkt.</p>
 <p><strong>Recursief geval:</strong> Als de ply van de speler wel groter is dan 0 en het spel nog niet over is, <em><strong>moet de code een zet doen in de kolom die nu bekeken wordt</strong></em>. Hiervoor gebruik je een aantal methodes uit <code class="docutils literal notranslate"><span class="pre">Board</span></code>. Het is bovendien handig om te kijken of het bij het nieuwe bord het spel nu wel beëindigd is… Als dat zo is, geef dan de kolom de juiste score.</p>
 <p>Als deze zet gedaan is, en het spel <em>niet</em> voorbij is, is de belangrijkste taak om te bepalen <strong>welke scores de tegenstander aan het nieuwe bord zou geven</strong>. Dit betekent dat je een tegenstander moet maken (van de klasse <code class="docutils literal notranslate"><span class="pre">Player</span></code>!) en kijkt welke scores de tegenstander aan het bord zou geven. Je kan hiervoor recursie gebruiken om te bepalen wat de zeven scores zijn die de tegenstander zou geven aan zijn volgende zet.</p>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Hoe maak je een tegenstander</p>
+<p>:class: tip</p>
 <p>Je maakt gewoon een nieuw object <strong>van het type <code class="docutils literal notranslate"><span class="pre">Player</span></code></strong>! Bijvoorbeeld met <code class="docutils literal notranslate"><span class="pre">op</span> <span class="pre">=</span> <span class="pre">Player(self.opp_ch(),</span> <span class="pre">...,</span> <span class="pre">...)</span></code>. Het is veilig om deze nieuwe tegenstander dezelfde keuzestrategie te laten volgen als de speler zelf; dus gelijk aan de waarde van <code class="docutils literal notranslate"><span class="pre">self.tbt</span></code>.</p>
 </div>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Wat is het juiste aantal ply dat je moet gebruiken?</p>
+<p>:class: tip</p>
 <p>Als je zelf bijvoorbeeld vijf zetten vooruitkijkt, hoeveel zetten kijkt je tegenstander dan nog vooruit? We willen toewerken naar het basisgeval waar <strong>niet</strong>, oftewel nul zetten, vooruitgekeken wordt!</p>
 </div>
 <p>De scores die de tegenstander bepaald heeft zijn NIET de scores die <code class="docutils literal notranslate"><span class="pre">self</span></code> moet gebruiken! De tegenstander heeft immers een ander doel dan <code class="docutils literal notranslate"><span class="pre">self</span></code>! Je moet in plaats daarvan uitzoeken welke van de zeven scores de tegenstander, <code class="docutils literal notranslate"><span class="pre">op</span></code>, zou kiezen. Bereken dan de score die jij (<code class="docutils literal notranslate"><span class="pre">self</span></code>) dan zou krijgen: dit is honderd min de beste score van de tegenstander! Gebruik ten slotte deze berekende score als de waarde van een zet in de huidige kolom.</p>
@@ -1341,8 +1347,9 @@ klasse <code class="docutils literal notranslate"><span class="pre">Board</span>
 <code class="docutils literal notranslate"><span class="pre">Player</span></code> om het spel te spelen. Deze objecten heten <code class="docutils literal notranslate"><span class="pre">px</span></code> en <code class="docutils literal notranslate"><span class="pre">po</span></code>.</p>
 <p>Er is nog één extra detail in <code class="docutils literal notranslate"><span class="pre">play_game</span></code>: je moet je code om Vier op een rij te spelen zowel tegen zichzelf
 kunnen laten spelen, maar ook tegen een mens. Dat wil zeggen dat als <code class="docutils literal notranslate"><span class="pre">px</span></code> of <code class="docutils literal notranslate"><span class="pre">po</span></code> de string <code class="docutils literal notranslate"><span class="pre">'human'</span></code> bevat in plaats van een object van het type <code class="docutils literal notranslate"><span class="pre">Player</span></code>, <code class="docutils literal notranslate"><span class="pre">play_game</span></code> moet wachten en de gebruiker moet vragen in welke kolom deze wil spelen, met foutcontroles net zoals in <code class="docutils literal notranslate"><span class="pre">host_game</span></code>.</p>
-<div class="notice admonition">
+<div class="admonition">
 <p class="admonition-title"> Zelf schrijven?</p>
+<p>:class: notice</p>
 <p>Je mag natuurlijk <code class="docutils literal notranslate"><span class="pre">play_game</span></code> zelf schrijven, als je dat een leuke uitdaging vindt. Anders kan je deze methode vinden in de <span class="xref myst">begincode voor de klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code></span>.</p>
 </div>
 <p>Probeer de voorbeelden hieronder; deze zijn niet afhankelijk van een willekeurige waarde, dus je kan ze goed gebruiken om <code class="docutils literal notranslate"><span class="pre">play_game</span></code> en je AI voor Vier op een rij te testen!</p>
@@ -1473,8 +1480,9 @@ O wint!
 <h3>Graphics!<a class="headerlink" href="#graphics" title="Permalink to this headline">¶</a></h3>
 <p>Ten slotte de derde optie… Deze optie is vermoedelijk het lastigste om te implementeren… Gebruik voor deze uitbreiding turtle graphics of de 3D-graphics van VPython, samen met je AI, om een speelbare versie van
 Vier op een rij te maken.</p>
-<div class="warning admonition">
+<div class="admonition">
 <p class="admonition-title"> Opmerking</p>
+<p>:class: warning</p>
 <p>Het is vaak vrij uitdagend om een werkende Vier op een rij in ASCII te integreren met een grafische interface. Het kan zeker gedaan worden, maar het is niet zo simpel als het misschien lijkt…</p>
 </div>
 <p>Het ontwerp is aan jou, maar je resultaat moet:</p>
@@ -1573,7 +1581,7 @@ Vier op een rij te maken.</p>
     </div>
 
     
-  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
     

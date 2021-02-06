@@ -84,7 +84,9 @@ assert new_a == a
 
 Probeer het bestand uit door het op de command line van ipython uit te voeren.
 
-:::{admonition,notice} Gegevensformaat
+:::{admonition} Gegevensformaat
+:class: notice
+
 Merk op dat alle tweedimensionele data in deze opgave lijsten van lijsten van losse karakters zijn:
 
 * De algehele structuur, meestal `a` genoemd, is een lijst van rijen

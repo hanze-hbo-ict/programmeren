@@ -6,7 +6,9 @@
 
 Welkom bij programmeren!
 
-:::{admonition,notice} Let op
+:::{admonition} Let op
+:class: notice
+
 Deze cursus zal wekelijks worden aangevuld met opdrachten en andere relevante informatie. Dit is werk in uitvoering!
 :::
 

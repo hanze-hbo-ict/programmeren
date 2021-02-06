@@ -2,7 +2,9 @@
 
 In dit project ga je Python gebruiken om een kunstmatige intelligentie (AI) te maken voor het spel Vier op een rij. Hij kan een aantal zetten (*"ply's"*) in het spel vooruitkijken, een optimale zet kiezen *voor die ply*, en (heel misschien) zijn maker verslaan met Vier op een rij!
 
-:::{admonition,notice} Ply's
+:::{admonition} Ply's
+:class: notice
+
 Hogere ply's kosten meer tijd. Het aantal ply's boven de 5 of 6 zetten kost waarschijnlijk te veel tijd om uit te voeren, dus je zult beperkt zijn bij het kiezen hiervan.
 :::
 
@@ -33,7 +35,9 @@ Nadat je de AI gebouwd hebt moet je deze op minstens één van deze manieren uit
 
 Je kan de klasse `Board` uit je uitwerking van [opgave 2 van week 10](../week10/wk10ex2.md). Als je deze niet hebt gemaakt kan je ook [onze uitwerking](../assets/board.py) gebruiken.
 
-:::{admonition,notice} Bordgrootte
+:::{admonition} Bordgrootte
+:class: notice
+
 Je mag je klasse `Player` zo schrijven dat deze elk aantal rijen en kolommen ondersteunt, en dat moedigen we ook zeker aan, maar wij zullen hem alleen testen met borden met zeven kolommen en zes rijen. Je mag dit ook best als standaardformaat gebruiken als je wilt!
 :::
 
@@ -174,7 +178,9 @@ assert p.tiebreak_move(scores) == 2
 assert p2.tiebreak_move(scores) == 5
 ```
 
-:::{admonition,tip} Tip
+:::{admonition} Tip
+:class: tip
+
 Het is handig om eerst het maximum van de lijst te zoeken (met de ingebouwde Python-functie `max`) en daarna de kolom te zoeken waar de waarde maximaal is. *Kies hier een slimme startpositie*; de waarde van `self.tbt` kan helpen om een geschikte startpositie te kiezen van waar je kan zoeken.
 :::
 
@@ -194,7 +200,9 @@ Deze methode lust daarna over alle kolommen.
 
 **Nog weer een basisgeval:** Op dezelfde manier geldt dat als `self.opp_ch()` het spel *nu al* heeft gewonnen, het ook niet nodig is om nog meer zetten te doen; gebruik simpelweg de geschikte score (`0.0`) voor de kolom die nu bekeken wordt.
 
-:::{admonition,notice} Belangrijk
+:::{admonition} Belangrijk
+:class: notice
+
 Het is belangrijk dat de controle of de speler wint gebeurt *voor de controle* dat de tegenstander wint, omdat er borden zijn waar beide waar zijn, maar `self` is nu aan de beurt, dus die zou dan winnen!
 :::
 
@@ -204,11 +212,15 @@ Het is belangrijk dat de controle of de speler wint gebeurt *voor de controle* d
 
 Als deze zet gedaan is, en het spel *niet* voorbij is, is de belangrijkste taak om te bepalen **welke scores de tegenstander aan het nieuwe bord zou geven**. Dit betekent dat je een tegenstander moet maken (van de klasse `Player`!) en kijkt welke scores de tegenstander aan het bord zou geven. Je kan hiervoor recursie gebruiken om te bepalen wat de zeven scores zijn die de tegenstander zou geven aan zijn volgende zet.
 
-:::{admonition,tip} Hoe maak je een tegenstander
+:::{admonition} Hoe maak je een tegenstander
+:class: tip
+
 Je maakt gewoon een nieuw object **van het type `Player`**! Bijvoorbeeld met `op = Player(self.opp_ch(), ..., ...)`. Het is veilig om deze nieuwe tegenstander dezelfde keuzestrategie te laten volgen als de speler zelf; dus gelijk aan de waarde van `self.tbt`.
 :::
 
-:::{admonition,tip} Wat is het juiste aantal ply dat je moet gebruiken?
+:::{admonition} Wat is het juiste aantal ply dat je moet gebruiken?
+:class: tip
+
 Als je zelf bijvoorbeeld vijf zetten vooruitkijkt, hoeveel zetten kijkt je tegenstander dan nog vooruit? We willen toewerken naar het basisgeval waar **niet**, oftewel nul zetten, vooruitgekeken wordt!
 :::
 
@@ -300,7 +312,9 @@ Je kan je implementatie testen door de methode `play_game(self, px, po)` aan de 
 Er is nog één extra detail in `play_game`: je moet je code om Vier op een rij te spelen zowel tegen zichzelf
 kunnen laten spelen, maar ook tegen een mens. Dat wil zeggen dat als `px` of `po` de string `'human'` bevat in plaats van een object van het type `Player`, `play_game` moet wachten en de gebruiker moet vragen in welke kolom deze wil spelen, met foutcontroles net zoals in `host_game`.
 
-:::{admonition,notice} Zelf schrijven?
+:::{admonition} Zelf schrijven?
+:class: notice
+
 Je mag natuurlijk `play_game` zelf schrijven, als je dat een leuke uitdaging vindt. Anders kan je deze methode vinden in de [begincode voor de klasse `Board`](../assets/board.py).
 :::
 
@@ -452,7 +466,9 @@ Vergeet niet de scores die je berekent af te drukken, zodat je kan zien of ze ov
 Ten slotte de derde optie... Deze optie is vermoedelijk het lastigste om te implementeren... Gebruik voor deze uitbreiding turtle graphics of de 3D-graphics van VPython, samen met je AI, om een speelbare versie van
 Vier op een rij te maken.
 
-:::{admonition,warning} Opmerking
+:::{admonition} Opmerking
+:class: warning
+
 Het is vaak vrij uitdagend om een werkende Vier op een rij in ASCII te integreren met een grafische interface. Het kan zeker gedaan worden, maar het is niet zo simpel als het misschien lijkt...
 :::
 

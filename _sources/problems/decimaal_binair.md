@@ -77,7 +77,9 @@ assert num_to_binary(0) == ""
 assert num_to_binary(42) == "101010"
 ```
 
-:::{admonition,notice} Opmerkingen
+:::{admonition} Opmerkingen
+:class: notice
+
 Merk op dat deze functie inderdaad slechts één "bit" (nul of één) tegelijk verwerkt, verder:
 
 -   We hebben `is_odd` niet gebruikt, maar dat is geen probleem. (Dit is flexibeler als we overstappen naar grondtal 3!)
@@ -115,7 +117,9 @@ In [6]: num_to_binary(100)
 Out[6]: '1100100'
 ```
 
-:::{admonition,tip} Tips
+:::{admonition} Tips
+:class: tip
+
 -   Je zal de recursieve aanroep van `num_to_binary` met een kleinere waarde moeten doen.
 
 -   Welke *waarde* van `n` blijft over wanneer één bit (het meest rechtse bit) van `n` wordt verwijderd? Deze waarde heb je nodig!
@@ -162,7 +166,9 @@ assert binary_to_num("") == 0
 assert binary_to_num("101010") == 42
 ```
 
-:::{admonition,notice} Opmerkingen
+:::{admonition} Opmerkingen
+:class: notice
+
 Onthoud dat het argument `s` een *string* is! Verder:
 
 -   Merk op dat ook deze functie slechts één "bit" (nul of één) tegelijk verwerkt, van rechts naar links.
@@ -201,7 +207,9 @@ In [7]: binary_to_num("101010")
 Out[1]: 42
 ```
 
-:::{admonition,tip} Tips
+:::{admonition} Tips
+:class: tip
+
 -   Je zal de recursieve aanroep van `binary_to_num` met een kleinere string moeten doen.
 
 -   Hoe krijg je de string van alles *behalve* het laatste cijfer?! (Gebruik string slicing!)
@@ -225,7 +233,9 @@ Je gaat nu functies schrijven om binair te tellen, gebruik de twee functies die 
 
 In het kort, schrijft `increment(S)`, die een binaire string `s` met `0`'en en `1`'en accepteert en het volgende getal in grondtal 2 teruggeeft.
 
-:::{admonition,notice} Opmerkingen
+:::{admonition} Opmerkingen
+:class: notice
+
 Merk op dat `increment('11111111')` in de voorbeelden hier beneden weer uitkomt op een string met alleen maar nullen. Dit kan een speciaal geval zijn (`if`).
 
 Je hebt hier geen recursie nodig, gebruik in plaats recursie de functies die je eerder hebt geschreven! Hier is de pseudocode:
@@ -253,7 +263,9 @@ In [4]: increment("11111111")
 Out[4]: '00000000'
 ```
 
-:::{admonition,tip} Tips
+:::{admonition} Tips
+:class: tip
+
 -   Het lastige deel is zorgen dat je genoeg voorloopnullen hebt (voor `y`, als je die naam hebt gebruikt).
 
 -   Je kan 42 nullen voor `y` zetten met `"0" * 42 + y`
@@ -292,7 +304,9 @@ In [2]: count("11111110", 5)
 00000011
 ```
 
-:::{admonition,tip} Tips
+:::{admonition} Tips
+:class: tip
+
 -   Gebruik de functie `increment`!
 
 -   Het basisgeval heeft te maken met `n` (wat is de meest "eenvoudige" waarde van `n`?)
@@ -329,7 +343,9 @@ In [2]: num_to_ternary(4242)
 Out[2]: '12211010'
 ```
 
-:::{admonition,notice} Opmerkingen
+:::{admonition} Opmerkingen
+:class: notice
+
 We geven hier geen startcode, maar...
 
 -   Baseer jouw oplossing op de overeenkomstige functie `num_to_binary`!
@@ -368,7 +384,9 @@ Dit leidt tot een eenduidige weergave met dezelfde machten van drie zoals gebrui
 
 kan worden geëvalueerd, van rechts naar links, als `+1` in de kolom met enen, `-1` in de kolom met drieën, `0` in de kolom met negens en `+1` in de kolom met zevenentwintigs, en dit komt uit op `1*27 + 0*9 -1*3 + 1*1 = 25`.
 
-:::{admonition,tip} Verlagen en ophogen
+:::{admonition} Verlagen en ophogen
+:class: tip
+
 Als tip voor de volgende twee functies geven we mee dat het omzetten van een cijfer met waarde 2 naar een cijfer met waarde -1 de waarde van `n` *met 3 verlaagt*! Om de oorspronkelijke waarde van `n` niet aan te passen moet deze drie weer ergens terugkomen, door deze erbij op te tellen!
 :::
 

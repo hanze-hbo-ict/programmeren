@@ -66,7 +66,9 @@ Het antwoord hierop is `self`. De variabele `self` bevat **het object dat de met
 
 Dit is waarom `self` altijd het eerste argument is van alle methodes in de klasse `Date` (en van elke andere klasse die je schrijft!): omdat `self` de manier is waarmee de methode toegang heeft tot de individuele instantievariabelen van het object dat de methode heeft aangeroepen.
 
-:::{admonition,notice} Opmerking
+:::{admonition} Opmerking
+:class: notice
+
 Dit betekent dat een methode altijd op zijn minst één argument heeft, namelijk `self`. Deze waarde wordt echter **impliciet** meegegeven als de methode wordt aangeroepen. De variabele `self` *is het object dat de methode aanroept!*
 
 Als voorbeeld wordt `is_leap_year` in het voorbeeld hierboven aangeroepen met `Date(1, 1, 1900).is_leap_year()`, en geeft Python automatisch `self`, in dit geval het object `Date(1, 1, 1900)`, als het eerste argument aan de methode `is_leap_year` mee.
@@ -259,7 +261,9 @@ Vergeet niet een docstring toe te voegen aan de methodes die je schrijft! (Een *
 
 Voeg de methode `is_before(self, d2)` toe aan je klasse `Date`. Deze methode moet `True` teruggeven als het object dat de methode aanroept een kalenderdatum bevat die ***eerder*** is dan die van het argument `d2` (dit zal altijd een object van het type `Date` zijn). Als `self` en `d2` dezelfde datum voorstellen, moet de methode `False` teruggeven. Ook als `self` *later* is dan `d2` moet de methode `False` teruggeven.
 
-:::{admonition,tip} Tip
+:::{admonition} Tip
+:class: tip
+
 Er zijn meerdere manieren om dit aan te pakken (sommige staan misschien in je aantekeningen!) Een mogelijke aanpak is om eerst de jaren te vergelijken: `self.year < d2.year`, daarna de maanden, daarna de dagen. Maar *vergelijk de maanden **alleen** als de jaren gelijk zijn*. Er is een soortgelijke voorwaarde voor de dagen (vergelijk ze alleen als de maanden en de jaren *beide* gelijk zijn).
 :::
 
@@ -306,7 +310,9 @@ Je kan "goochelen" met je types en `fdays = 28 + self.is_leap_year()` gebruiken.
 
 Daarnaast is een lijst `dim = [0, 31, fdays, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]` van het aantal dagen in elke maand handig om te gebruiken! Het maakt het makkelijk om te zien hoeveel dagen er in een gegeven maand (`self.month`) zijn
 
-:::{admonition,notice} Waarom staat er een 0 aan het begin?
+:::{admonition} Waarom staat er een 0 aan het begin?
+:class: notice
+
 Zie je waarom de 0 aan het begin handig is? Bedenk nog eens hoe lijsten geïndexeerd worden...
 :::
 
@@ -371,7 +377,9 @@ Out[10]: 28-02-2020
 
 Voeg de methode `add_n_days(self, n)` toe aan je klasse `Date`. Deze methode hoeft alleen maar niet-negatieve integers als waarde voor het argument `n` te kunnen verwerken. Deze methode moet net zoals de methode `tomorrow` niets teruggeven. In plaats daarvan moet het het aanroepende object ***veranderen*** zodat dit een datum `n` kalenderdagen *na* de oorspronkelijke datum voorstelt.
 
-:::{admonition,warning} Let op
+:::{admonition} Let op
+:class: warning
+
 Kopieer hiervoor geen code uit de methode `tomorrow`!
 
 Bedenk ***in plaats daarvan*** hoe je de methode `tomorrow` zou kunnen ***aanroepen*** in een `for`-lus om dit te implementeren!
@@ -424,11 +432,15 @@ Er zijn ook twee Python-operators die erg goed passen bij de methodes `add_n_day
 * `__iadd__(self, n)` voor `add_n_days(self, n)`; hiermee kan je `d += 1` of `d += 1000` gebruiken
 * `__isub__(self, n)` voor `sub_n_days(self, n)`; hiermee kan je `d -= 1` of `d -= 1000` gebruiken
 
-:::{admonition,tip} `return self`
+:::{admonition} `return self`
+:class: tip
+
 Merk op dat om deze operators goed te laten werken, je `return self` moet toevoegen aan het eind van beide functies. (dit heeft te maken met de interne werking van Python...)
 :::
 
-:::{admonition,notice} Nog meer operators
+:::{admonition} Nog meer operators
+:class: notice
+
 De [Python-handleiding](https://docs.python.org/3/reference/datamodel.html#emulating-numeric-types) kan je vertellen welke operators je nog meer kan herdefiniëren.
 :::
 
@@ -444,7 +456,9 @@ De operator voor aftrekken is `__sub__`; implementeer deze ook, naast de methode
 
 Datums zijn complexer dan getallen!! Het implementeren van `diff` is dus nog niet zo simpel. Zie hieronder voor meer tips.
 
-:::{admonition,warning} Belangrijk
+:::{admonition} Belangrijk
+:class: warning
+
 Deze methode moet `self` en `d2` **niet** veranderen!
 
 In plaats daarvan moet je ***kopieën*** maken van `self` en `d2`; hierdoor worden de oorspronkelijke waardes niet aangepast.
@@ -520,7 +534,9 @@ Je kan andere verschillen controleren op https://www.timeanddate.com/date/durati
 
 Voeg de methode `dow(self)` toe aan je klasse `Date`. Deze methode moet een string teruggeven die de dag van de week (`dow`, *day of week*) teruggeeft van het `Date`-object dat de methode aanroept. Dat wil zeggen dat de methode één van de volgende strings teruggeeft: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday` of `Sunday`.
 
-:::{admonition,tip} Tips
+:::{admonition} Tips
+:class: tip
+
 Hoe zou het kunnen helpen om de `diff` vanaf een ***bekende*** dag te vinden, zoals de uitzonderlijk populaire trouwdag, *zondag* 10 oktober 2010?
 
 Hoe zou de modulusoperator (`%`) kunnen helpen?

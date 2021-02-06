@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tekst genereren met Markovprocessen &#8212; Programmeren</title>
     
-  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
     
   <link rel="stylesheet"
@@ -31,12 +31,12 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -1095,8 +1095,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>De dictionary die wordt teruggegeven door <code class="docutils literal notranslate"><span class="pre">create_dictionary</span></code> geeft je de mogelijkheid om woord <code class="docutils literal notranslate"><span class="pre">t</span></code>+1 te kiezen als je woord <code class="docutils literal notranslate"><span class="pre">t</span></code> al hebt. Maar hoe kies je het <em>eerste</em> woord, als je geen bestaand woord hebt die je als sleutel voor
 de dictionary kan gebruiken?</p>
 <p>Om dit geval te kunnen afhandelen, moet je dictionary de string <code class="docutils literal notranslate"><span class="pre">$</span></code> bevatten; dit is het <em>startsymbool</em>. Het eerste woord in het bestand moet op deze string “opvolgen”. Bovendien moet elke string die volgt op het laatste woord van een zin deze string opvolgen. Een woord dat een zin eindigt wordt gedefinieerd als elk woord waarvan het laatste teken een punt <code class="docutils literal notranslate"><span class="pre">.</span></code>, een vraagteken <code class="docutils literal notranslate"><span class="pre">?</span></code> of een uitroepteken <code class="docutils literal notranslate"><span class="pre">!</span></code> is.</p>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Bepalen of een woord eindigt op een leesteken</p>
+<p>:class: tip</p>
 <p>Het makkelijkst is om <code class="docutils literal notranslate"><span class="pre">w[-1]</span></code> te controleren. We zijn alleen geïnteresseerd in <code class="docutils literal notranslate"><span class="pre">'.'</span></code>, <code class="docutils literal notranslate"><span class="pre">'?'</span></code> en <code class="docutils literal notranslate"><span class="pre">'!'</span></code>.</p>
 <p>Onthoud dat, als je <code class="docutils literal notranslate"><span class="pre">or</span></code> gebruikt, je elke test helemaal moet uitschrijven, bijvoorbeeld,</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">w</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;.&#39;</span> <span class="ow">or</span> <span class="n">w</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;?&#39;</span> <span class="ow">or</span> <span class="o">...</span>
@@ -1186,8 +1187,9 @@ Ik krijg toch spam en taarten voor
 de vakantie? Ik wil 42 taarten!
 </pre></div>
 </div>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Teksteditor op Mac</p>
+<p>:class: tip</p>
 <p>Als je de Teksteditor op een Mac gebruikt, moet je <em>Opmaak … Converteer naar platte tekst</em> gebruiken; je hebt een <code class="docutils literal notranslate"><span class="pre">.txt</span></code>-bestand nodig, geen <code class="docutils literal notranslate"><span class="pre">.rtf</span></code>-bestand.</p>
 </div>
 <p>Het is slim om te controleren of de dictionary die je als uitvoer krijgt met dit bestand hetzelfde is als
@@ -1237,16 +1239,19 @@ degene die je het college hebt gezien (merk op dat de volgorde van de sleutels k
 <li><p>Wijs ons bovenaan de string graag op erg mooie stukjes proza die je hebt gegenereerd. 🙂</p></li>
 </ul>
 <p>Je kan zelf kiezen welke invoertekst je wilt gebruiken, en die mag ook best Engels zijn! Je kan bijvoorbeeld willekeurige <a class="reference external" href="https://ocw.mit.edu/ans7870/6/6.006/s08/lecturenotes/files/t8.shakespeare.txt">scenes uit het werk van Shakespeare</a> gebruiken… ook kindergedichtjes kunnen (soms) goed werken. Je kan ook songteksten, speeches, of je eigen werk gebruiken; alles is mogelijk.</p>
-<div class="warning admonition">
+<div class="admonition">
 <p class="admonition-title"> Waarschuwing</p>
+<p>:class: warning</p>
 <p>Probeer gegenereerde essays niet te gebruiken als <em>echte</em> essays!</p>
 </div>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Platte-tekstbestanden</p>
+<p>:class: tip</p>
 <p>De makkelijkste manier om een platte-tekstbestand te maken dat je als invoer kan gebruiken is door de tekst te kopiëren van waar je hem gezien hebt via het menu of Control-C (Command-C op een Mac), en daarna een leeg tekstbestand te openen met Kladblok (Windows) of Teksteditor (Mac). Sla je <code class="docutils literal notranslate"><span class="pre">.txt</span></code>-bestand met platte tekst, bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">spam.txt</span></code>, op in dezelfde map als je bestand <code class="docutils literal notranslate"><span class="pre">wk10ex3.py</span></code>.</p>
 </div>
-<div class="warning admonition">
+<div class="admonition">
 <p class="admonition-title"> Teksteditor op Mac</p>
+<p>:class: warning</p>
 <p>Teksteditor slaat bestanden standaard op als <em>rich text format</em> of <code class="docutils literal notranslate"><span class="pre">.rtf</span></code>. Je kan dit aanpassen door <em>Opmaak … Converteer naar platte tekst</em> te kiezen. Doe dit om te zorgen dat je een <code class="docutils literal notranslate"><span class="pre">.txt</span></code>-bestand met platte tekst krijgt.</p>
 </div>
 </div>
@@ -1307,7 +1312,7 @@ degene die je het college hebt gezien (merk op dat de volgorde van de sleutels k
     </div>
 
     
-  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
     

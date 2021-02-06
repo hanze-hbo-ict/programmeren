@@ -134,7 +134,9 @@ assert tm.sentence_lengths == {16: 1, 5: 1, 6: 1}
 
 Dit moet geen uitvoer geven, omdat er in dit voorbeeld één zin met 16 woorden, één met 5 woorden en één met 6 woorden is.
 
-:::{admonition,notice} Opmerking
+:::{admonition} Opmerking
+:class: notice
+
 De volgorde van de sleutels in de dictionary is niet belangrijk; het maakt voor de `assert` niet uit welke volgorde ze hebben.
 :::
 
@@ -145,7 +147,9 @@ leestekens en zonder hoofdletters.
 
 Je kan `s = s.lower()` gebruiken om hoofdletters te vervangen; hoe je leestekens weghaalt mag je zelf bepalen; gebruik hier echter **geen** recursie, maar lussen (recursie loopt op grote strings uit het geheugen!)
 
-:::{admonition,tip} Tip
+:::{admonition} Tip
+:class: tip
+
 Je kan `import string` gebruiken, en dan deze lus gebruiken:
 
 ```python
@@ -308,15 +312,21 @@ Je hoeft het niet precies zo af te drukken, dit is puur om te testen!
 
 De methode `normalize_dictionary(self, d)` krijgt één van de dictionary's uit het model mee en geeft een genormaliseerde versie terug, dat wil zeggen, een versie waar de som van alle waardes exact `1.0` is. Deze moet je teruggeven, niet afdrukken!
 
-:::{admonition,notice} Complexere methodes
+:::{admonition} Complexere methodes
+:class: notice
+
 Deze methode, en de volgende zijn algoritmisch complexer, dus we beschrijven ze in meer detail.
 :::
 
-:::{admonition,tip} Tip
+:::{admonition} Tip
+:class: tip
+
 Je kan `d.values()` gebruiken om een lijst van alle waardes in een dictionary `d` te krijgen.
 :::
 
-:::{admonition,tip} Belangrijkere tip
+:::{admonition} Belangrijkere tip
+:class: tip
+
 Je kan door alle *sleutels* van een dictionary `d` lussen met:
 
 ```python
@@ -340,7 +350,9 @@ Dit moet wederom geen uitvoer geven.
 
 De methode `smallest_value(self, nd1, nd2)` krijgt twee dictionary's `nd1` en `nd2` mee uit het model en geeft de kleinste positieve *waarde* terug die in de dictionary's samen voorkomt.
 
-:::{admonition,notice} Positieve waarde
+:::{admonition} Positieve waarde
+:class: notice
+
 Een positieve waarde is een waarde die groter is dan 0; 0 is dus **geen** positieve waarde.
 :::
 
@@ -377,15 +389,21 @@ Met "kans" bedoelen we hier iets wat we de [log-waarschijnlijkheid](https://en.w
 
 De functie moet beide log-waarschijnlijkheden als een lijst teruggeven, bijvoorbeeld `[log1, log2]` (de eerste is de log-waarschijnlijkheden voor `nd1` en de tweede voor `nd2`).
 
-:::{admonition,notice} Logaritmes
+:::{admonition} Logaritmes
+:class: notice
+
 `math.log2` is een functie die de logaritme met grondtal 2 berekent. De intuïtieve manier om hier als programmeur over na te denken is dat dit ongeveer hetzelfde is als de lengte van het getal in bits, dus binair geschreven. Als een getal dus twee keer zo groot wordt, wordt dit logaritme 1 meer. Omdat deze functie niet berekent kan worden voor het getal `0` gebruiken we als een waarde niet voorkomt in de modeldictionary een kleine, in principe arbitrair gekozen waarde, namelijk de helft van de kleinste waarde die voorkomt in beide modeldictionary's `d1` en `d2` samen.
 :::
 
-:::{admonition,danger} Normaliseren
+:::{admonition} Normaliseren
+:class: danger
+
 Je moet zorgen dat `nd1` en `nd2` allebei ***genormaliseerd*** zijn voordat de log-waarschijnlijkheden berekend worden; aan de andere kant hoeft `d` *niet* genormaliseerd te worden (sterker, hij *moet* niet genormaliseerd zijn).
 :::
 
-:::{admonition,notice} Opmerkingen
+:::{admonition} Opmerkingen
+:class: notice
+
 Gebruik als een sleutel `k` wel in `d` maar niet in `nd1` voorkomt een log-waarschijnlijkheid gelijk aan `math.log2(epsilon)`; hetzelfde geldt als `k` niet in `nd2` voorkomt...
 :::
 
@@ -407,7 +425,9 @@ assert list_of_log_probs[1] == -19.18621880878296
 
 Deze getallen zijn gecontroleerd, dus we weten *echt* zeker dat ze kloppen!
 
-:::{admonition,notice} Hoe moet je deze negatieve getallen interpreteren?
+:::{admonition} Hoe moet je deze negatieve getallen interpreteren?
+:class: notice
+
 De log-waarschijnlijkheid kan je het best zien als een "truc" om hele kleine kansen inzichtelijk te maken. De twee getallen hierboven, ongeveer -16.4 en -19.2, betekenen dat
 
 * De kans dat je `d` krijgt door willekeurige keuzes te maken uit model `nd1` ongeveer **2<sup>-16.4</sup>** is (dat is ongeveer 0.00001156, oftwel 0.001156%)
@@ -587,7 +607,9 @@ Ten slotte vragen we je in dit project om je tekstanalysesysteem te **gebruiken*
 3. Vergelijk je twee "testteksten" met de twee getrainde modellen (je krijgt dus vier vergelijkingen) en schrijf een
    kort verslagje over de resultaten, hoe je tot deze resultaten gekomen bent (inclusief hoe je hebt bepaald welk model wint als niet alle dictionary's het daar over eens waren) en of je die resultaten *verwachtte*...!
 
-:::{admonition,warning} Foutmelding
+:::{admonition} Foutmelding
+:class: warning
+
 Als je een foutmelding krijgt die lijkt op deze: `codec can't encode character ... in ... position`, dan heb je misschien een andere *encoding* nodig in `read_text_from_file`; vermoedelijk moet je dan de aanroep naar `open` zo aanpassen: `open(filename, encoding='utf-8')`
 :::
 

@@ -117,7 +117,9 @@ de dictionary kan gebruiken?
 
 Om dit geval te kunnen afhandelen, moet je dictionary de string `$` bevatten; dit is het *startsymbool*. Het eerste woord in het bestand moet op deze string "opvolgen". Bovendien moet elke string die volgt op het laatste woord van een zin deze string opvolgen. Een woord dat een zin eindigt wordt gedefinieerd als elk woord waarvan het laatste teken een punt `.`, een vraagteken `?` of een uitroepteken `!` is.
 
-:::{admonition,tip} Bepalen of een woord eindigt op een leesteken
+:::{admonition} Bepalen of een woord eindigt op een leesteken
+:class: tip
+
 Het makkelijkst is om `w[-1]` te controleren. We zijn alleen geïnteresseerd in `'.'`, `'?'` en `'!'`.
 
 Onthoud dat, als je `or` gebruikt, je elke test helemaal moet uitschrijven, bijvoorbeeld,
@@ -225,7 +227,9 @@ Ik krijg toch spam en taarten voor
 de vakantie? Ik wil 42 taarten!
 ```
 
-:::{admonition,tip} Teksteditor op Mac
+:::{admonition} Teksteditor op Mac
+:class: tip
+
 Als je de Teksteditor op een Mac gebruikt, moet je *Opmaak ... Converteer naar platte tekst* gebruiken; je hebt een `.txt`-bestand nodig, geen `.rtf`-bestand.
 :::
 
@@ -284,14 +288,20 @@ Voeg onderin je bestand een triple-quoted string (commentaar) toe met:
 
 Je kan zelf kiezen welke invoertekst je wilt gebruiken, en die mag ook best Engels zijn! Je kan bijvoorbeeld willekeurige [scenes uit het werk van Shakespeare](https://ocw.mit.edu/ans7870/6/6.006/s08/lecturenotes/files/t8.shakespeare.txt) gebruiken... ook kindergedichtjes kunnen (soms) goed werken. Je kan ook songteksten, speeches, of je eigen werk gebruiken; alles is mogelijk.
 
-:::{admonition,warning} Waarschuwing
+:::{admonition} Waarschuwing
+:class: warning
+
 Probeer gegenereerde essays niet te gebruiken als *echte* essays!
 :::
 
-:::{admonition,tip} Platte-tekstbestanden
+:::{admonition} Platte-tekstbestanden
+:class: tip
+
 De makkelijkste manier om een platte-tekstbestand te maken dat je als invoer kan gebruiken is door de tekst te kopiëren van waar je hem gezien hebt via het menu of Control-C (Command-C op een Mac), en daarna een leeg tekstbestand te openen met Kladblok (Windows) of Teksteditor (Mac). Sla je `.txt`-bestand met platte tekst, bijvoorbeeld `spam.txt`, op in dezelfde map als je bestand `wk10ex3.py`.
 :::
 
-:::{admonition,warning} Teksteditor op Mac
+:::{admonition} Teksteditor op Mac
+:class: warning
+
 Teksteditor slaat bestanden standaard op als *rich text format* of `.rtf`. Je kan dit aanpassen door *Opmaak ... Converteer naar platte tekst* te kiezen. Doe dit om te zorgen dat je een `.txt`-bestand met platte tekst krijgt.
 :::

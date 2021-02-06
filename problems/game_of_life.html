@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Game of Life &#8212; Programmeren</title>
     
-  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
     
   <link rel="stylesheet"
@@ -31,12 +31,12 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -1272,8 +1272,9 @@ De betreffende regel is <code class="docutils literal notranslate"><span class="
 </pre></div>
 </div>
 <p>Bekijk even goed in welke richting de diagonaal loopt; dat geeft aan op welke manier de <em>rijen</em> van het bord weergegeven worden: van boven naar beneden, in dit geval.</p>
-<div class="notice admonition">
+<div class="admonition">
 <p class="admonition-title"> De randen blijven 0!</p>
+<p>:class: notice</p>
 <p>Merk op dat de code <code class="docutils literal notranslate"><span class="pre">range(1,</span> <span class="pre">height</span> <span class="pre">-</span> <span class="pre">1)</span></code> en <code class="docutils literal notranslate"><span class="pre">range(1,</span> <span class="pre">width</span> <span class="pre">-</span> <span class="pre">1)</span></code> gebruikt om te voorkomen dat de randen aangepast worden.</p>
 <p>We zullen dit patroon blijven gebruiken tijdens dit practicum, aangezien Game of Life niet kan werken met randcellen (ze hebben minder dan 8 buren).</p>
 </div>
@@ -1420,8 +1421,9 @@ De betreffende regel is <code class="docutils literal notranslate"><span class="
 </pre></div>
 </div>
 <p>Deze keer wordt <code class="docutils literal notranslate"><span class="pre">new_a</span></code> <em><strong>niet</strong></em> veranderd ondanks dat <code class="docutils literal notranslate"><span class="pre">a</span></code> wel veranderd is: het is een echte, “diepe” kopie.</p>
-<div class="notice admonition">
+<div class="admonition">
 <p class="admonition-title"> de ingebouwde <code class="docutils literal notranslate"><span class="pre">deepcopy</span></code> van Python</p>
+<p>:class: notice</p>
 <p>Je functie <code class="docutils literal notranslate"><span class="pre">copy</span></code> geeft een deep copy terug van haar invoer. Dit is handig genoeg om ingebouwd te zijn in Python. Om deze ingebouwde functie te gebruiken, kan je dit uitvoeren:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
 
@@ -1439,8 +1441,9 @@ van de twee je wilt gebruiken.</p>
 <p>Bij <code class="docutils literal notranslate"><span class="pre">inner_reverse</span></code> moet de nieuwe generatie echter overal het “tegenovergesteld” van de cellen van <code class="docutils literal notranslate"><span class="pre">a</span></code> zijn, behalve aan de buitenrand.</p>
 <p>Net zoals bij <code class="docutils literal notranslate"><span class="pre">inner_cells</span></code> moet je ervoor zorgen dat de cellen in de buitenrand van de nieuwe generatie altijd allemaal <code class="docutils literal notranslate"><span class="pre">0</span></code> zijn.</p>
 <p>Voor cellen aan de binnenkant; dus niet op de rand; waar <code class="docutils literal notranslate"><span class="pre">a[row][col]</span></code> een <code class="docutils literal notranslate"><span class="pre">1</span></code> is, moet de waarde in de nieuwe array een <code class="docutils literal notranslate"><span class="pre">0</span></code> zijn en omgekeerd.</p>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Maak gebruik van <code class="docutils literal notranslate"><span class="pre">copy</span></code></p>
+<p>:class: tip</p>
 <p>Je kan de functie <code class="docutils literal notranslate"><span class="pre">copy(a)</span></code> kopiëren en plakken, en dan een toepasselijke <code class="docutils literal notranslate"><span class="pre">if/else</span></code> toevoegen.</p>
 </div>
 <p>Probeer je functie <code class="docutils literal notranslate"><span class="pre">inner_reverse</span></code> door een voorbeeld te laten zien. Dit voorbeeld gebruikt <code class="docutils literal notranslate"><span class="pre">random_cells</span></code>:</p>
@@ -1469,8 +1472,9 @@ van de twee je wilt gebruiken.</p>
 <span class="mi">00000000</span>
 </pre></div>
 </div>
-<div class="notice admonition">
+<div class="admonition">
 <p class="admonition-title"> Terzijde</p>
+<p>:class: notice</p>
 <p>Je zou kunnen beargumenteren dat het mogelijk is om gewoon het oude argument <code class="docutils literal notranslate"><span class="pre">a</span></code> aan te passen, in plaats van het aanmaken en teruggeven van een nieuwe array; dit is wel waar voor het omdraaien van een patroon met array-elementen, maar het is <em>niet</em> waar als we de regels voor Game of Life van Conway gaan implementeren. In dat geval zou het aanpassen van cellen zonder te kopiëren het aantal buren van andere cellen veranderen!</p>
 </div>
 </div>
@@ -1521,8 +1525,9 @@ buren van een paar cellen, om te testen of <code class="docutils literal notrans
 <div class="section" id="de-functie-next-life-generation-a">
 <h3>De functie <code class="docutils literal notranslate"><span class="pre">next_life_generation(a)</span></code><a class="headerlink" href="#de-functie-next-life-generation-a" title="Permalink to this headline">¶</a></h3>
 <p>Je schrijft ten slotte <code class="docutils literal notranslate"><span class="pre">next_life_generation</span></code>, die de regels van Game of Life implementeert.</p>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> <code class="docutils literal notranslate"><span class="pre">inner_reverse</span></code></p>
+<p>:class: tip</p>
 <p>Deze functie zal het meeste lijken op <code class="docutils literal notranslate"><span class="pre">inner_reverse</span></code>, dus die kan je als sjabloon gebruiken.</p>
 </div>
 <p>Hier is een beginsignature voor <code class="docutils literal notranslate"><span class="pre">next_life_generation</span></code>:</p>
@@ -1544,12 +1549,14 @@ buren van een paar cellen, om te testen of <code class="docutils literal notrans
 <li><p>Alle andere cellen behouden hun huidige staat (en krijgen dus de waarde van de bijbehorende oude cel).</p></li>
 </ol>
 <p>Om dit iets concreter te maken noemen we de nieuwe generatie cellen die je teruggeeft <code class="docutils literal notranslate"><span class="pre">new_a</span></code> om deze te onderscheiden van <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p>
-<div class="notice admonition">
+<div class="admonition">
 <p class="admonition-title"> De buitenrand moet <code class="docutils literal notranslate"><span class="pre">0</span></code> blijven</p>
+<p>:class: notice</p>
 <p>Zoals benoemd bij <code class="docutils literal notranslate"><span class="pre">inner_reverse</span></code> moet je alle cellen in de buitenrand altijd leeg houden!** Dit is simpelweg een kwestie van het beperken van je lussen tot een geschikt bereik. Dit maakt echter de bijwerkingsregels hierboven een stuk makkelijker, omdat het betekent dat je altijd alleen de cellen aan de binnenkant bewerkt, die allemaal <em><strong>een volledige verzameling van acht buren hebben zonder dat je de grenzen overschrijdt.</strong></em></p>
 </div>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Waarschuwingen/tips</p>
+<p>:class: tip</p>
 <p>Er zijn een paar zaken die je in je achterhoofd moet houden:</p>
 <ul class="simple">
 <li><p>Tel alleen buren in de oude generatie <code class="docutils literal notranslate"><span class="pre">a</span></code>. Verander alleen de nieuwe generatie, <code class="docutils literal notranslate"><span class="pre">new_a</span></code>.</p></li>
@@ -1598,8 +1605,9 @@ buren van een paar cellen, om te testen of <code class="docutils literal notrans
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>run wk9ex1_graphics.py
 </pre></div>
 </div>
-<div class="warning admonition">
+<div class="admonition">
 <p class="admonition-title"> Waarschuwing</p>
+<p>:class: warning</p>
 <p>Als dit niet werkt, moet je <code class="docutils literal notranslate"><span class="pre">ipython</span></code> opnieuw opstarten. Dit lost het probleem meestal op. Het bestand <code class="docutils literal notranslate"><span class="pre">wk9ex1_graphics.py</span></code> probeert je functie <code class="docutils literal notranslate"><span class="pre">next_life_generation</span></code> te laden; soms werkt de interactie tussen deze twee bestanden niet helemaal.</p>
 </div>
 <p>Dit bestand doet een paar aannemes:</p>
@@ -1718,7 +1726,7 @@ bestand <code class="docutils literal notranslate"><span class="pre">wk9ex1.py</
     </div>
 
     
-  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
     

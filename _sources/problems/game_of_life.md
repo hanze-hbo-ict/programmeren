@@ -169,7 +169,9 @@ In [3]: print_board(a)
 
 Bekijk even goed in welke richting de diagonaal loopt; dat geeft aan op welke manier de *rijen* van het bord weergegeven worden: van boven naar beneden, in dit geval.
 
-:::{admonition,notice} De randen blijven 0!
+:::{admonition} De randen blijven 0!
+:class: notice
+
 Merk op dat de code `range(1, height - 1)` en `range(1, width - 1)` gebruikt om te voorkomen dat de randen aangepast worden.
 
 We zullen dit patroon blijven gebruiken tijdens dit practicum, aangezien Game of Life niet kan werken met randcellen (ze hebben minder dan 8 buren).
@@ -338,7 +340,9 @@ In [7]: print_board(new_a)  # NIET veranderd!
 
 Deze keer wordt `new_a` ***niet*** veranderd ondanks dat `a` wel veranderd is: het is een echte, "diepe" kopie.
 
-:::{admonition,notice} de ingebouwde `deepcopy` van Python
+:::{admonition} de ingebouwde `deepcopy` van Python
+:class: notice
+
 Je functie `copy` geeft een deep copy terug van haar invoer. Dit is handig genoeg om ingebouwd te zijn in Python. Om deze ingebouwde functie te gebruiken, kan je dit uitvoeren:
 
 ```python
@@ -365,7 +369,9 @@ Net zoals bij `inner_cells` moet je ervoor zorgen dat de cellen in de buitenrand
 
 Voor cellen aan de binnenkant; dus niet op de rand; waar `a[row][col]` een `1` is, moet de waarde in de nieuwe array een `0` zijn en omgekeerd.
 
-:::{admonition,tip} Maak gebruik van `copy`
+:::{admonition} Maak gebruik van `copy`
+:class: tip
+
 Je kan de functie `copy(a)` kopiëren en plakken, en dan een toepasselijke `if/else` toevoegen.
 :::
 
@@ -397,7 +403,9 @@ In [4]: print_board(a2)
 00000000
 ```
 
-:::{admonition,notice} Terzijde
+:::{admonition} Terzijde
+:class: notice
+
 Je zou kunnen beargumenteren dat het mogelijk is om gewoon het oude argument `a` aan te passen, in plaats van het aanmaken en teruggeven van een nieuwe array; dit is wel waar voor het omdraaien van een patroon met array-elementen, maar het is *niet* waar als we de regels voor Game of Life van Conway gaan implementeren. In dat geval zou het aanpassen van cellen zonder te kopiëren het aantal buren van andere cellen veranderen!
 :::
 
@@ -450,7 +458,9 @@ Out[6]: 1
 
 Je schrijft ten slotte `next_life_generation`, die de regels van Game of Life implementeert.
 
-:::{admonition,tip} `inner_reverse`
+:::{admonition} `inner_reverse`
+:class: tip
+
 Deze functie zal het meeste lijken op `inner_reverse`, dus die kan je als sjabloon gebruiken.
 :::
 
@@ -476,11 +486,15 @@ Deze functie `next_life_generation` moet een tweedimensionale array `a` meekrijg
 
 Om dit iets concreter te maken noemen we de nieuwe generatie cellen die je teruggeeft `new_a` om deze te onderscheiden van `a`.
 
-:::{admonition,notice} De buitenrand moet `0` blijven
+:::{admonition} De buitenrand moet `0` blijven
+:class: notice
+
 Zoals benoemd bij `inner_reverse` moet je alle cellen in de buitenrand altijd leeg houden!** Dit is simpelweg een kwestie van het beperken van je lussen tot een geschikt bereik. Dit maakt echter de bijwerkingsregels hierboven een stuk makkelijker, omdat het betekent dat je altijd alleen de cellen aan de binnenkant bewerkt, die allemaal ***een volledige verzameling van acht buren hebben zonder dat je de grenzen overschrijdt.***
 :::
 
-:::{admonition,tip} Waarschuwingen/tips
+:::{admonition} Waarschuwingen/tips
+:class: tip
+
 Er zijn een paar zaken die je in je achterhoofd moet houden:
 
 * Tel alleen buren in de oude generatie `a`. Verander alleen de nieuwe generatie, `new_a`.
@@ -533,7 +547,9 @@ Als je code voor `next_life_generation` werkt, kan je het bestand `wk9ex1_graphi
 run wk9ex1_graphics.py
 ```
 
-:::{admonition,warning} Waarschuwing
+:::{admonition} Waarschuwing
+:class: warning
+
 Als dit niet werkt, moet je `ipython` opnieuw opstarten. Dit lost het probleem meestal op. Het bestand `wk9ex1_graphics.py` probeert je functie `next_life_generation` te laden; soms werkt de interactie tussen deze twee bestanden niet helemaal.
 :::
 

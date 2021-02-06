@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Van decimaal naar binair en verder! &#8212; Programmeren</title>
     
-  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
     
   <link rel="stylesheet"
@@ -31,12 +31,12 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -1116,8 +1116,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="k">assert</span> <span class="n">num_to_binary</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;101010&quot;</span>
 </pre></div>
 </div>
-<div class="notice admonition">
+<div class="admonition">
 <p class="admonition-title"> Opmerkingen</p>
+<p>:class: notice</p>
 <p>Merk op dat deze functie inderdaad slechts één “bit” (nul of één) tegelijk verwerkt, verder:</p>
 <ul class="simple">
 <li><p>We hebben <code class="docutils literal notranslate"><span class="pre">is_odd</span></code> niet gebruikt, maar dat is geen probleem. (Dit is flexibeler als we overstappen naar grondtal 3!)</p></li>
@@ -1148,8 +1149,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="n">Out</span><span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="s1">&#39;1100100&#39;</span>
 </pre></div>
 </div>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Tips</p>
+<p>:class: tip</p>
 <ul class="simple">
 <li><p>Je zal de recursieve aanroep van <code class="docutils literal notranslate"><span class="pre">num_to_binary</span></code> met een kleinere waarde moeten doen.</p></li>
 <li><p>Welke <em>waarde</em> van <code class="docutils literal notranslate"><span class="pre">n</span></code> blijft over wanneer één bit (het meest rechtse bit) van <code class="docutils literal notranslate"><span class="pre">n</span></code> wordt verwijderd? Deze waarde heb je nodig!</p></li>
@@ -1191,8 +1193,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="k">assert</span> <span class="n">binary_to_num</span><span class="p">(</span><span class="s2">&quot;101010&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">42</span>
 </pre></div>
 </div>
-<div class="notice admonition">
+<div class="admonition">
 <p class="admonition-title"> Opmerkingen</p>
+<p>:class: notice</p>
 <p>Onthoud dat het argument <code class="docutils literal notranslate"><span class="pre">s</span></code> een <em>string</em> is! Verder:</p>
 <ul class="simple">
 <li><p>Merk op dat ook deze functie slechts één “bit” (nul of één) tegelijk verwerkt, van rechts naar links.</p></li>
@@ -1225,8 +1228,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="mi">42</span>
 </pre></div>
 </div>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Tips</p>
+<p>:class: tip</p>
 <ul>
 <li><p>Je zal de recursieve aanroep van <code class="docutils literal notranslate"><span class="pre">binary_to_num</span></code> met een kleinere string moeten doen.</p></li>
 <li><p>Hoe krijg je de string van alles <em>behalve</em> het laatste cijfer?! (Gebruik string slicing!)</p></li>
@@ -1246,8 +1250,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="functie-4-increment-s">
 <h3>Functie 4: <code class="docutils literal notranslate"><span class="pre">increment(s)</span></code><a class="headerlink" href="#functie-4-increment-s" title="Permalink to this headline">¶</a></h3>
 <p>In het kort, schrijft <code class="docutils literal notranslate"><span class="pre">increment(S)</span></code>, die een binaire string <code class="docutils literal notranslate"><span class="pre">s</span></code> met <code class="docutils literal notranslate"><span class="pre">0</span></code>’en en <code class="docutils literal notranslate"><span class="pre">1</span></code>’en accepteert en het volgende getal in grondtal 2 teruggeeft.</p>
-<div class="notice admonition">
+<div class="admonition">
 <p class="admonition-title"> Opmerkingen</p>
+<p>:class: notice</p>
 <p>Merk op dat <code class="docutils literal notranslate"><span class="pre">increment('11111111')</span></code> in de voorbeelden hier beneden weer uitkomt op een string met alleen maar nullen. Dit kan een speciaal geval zijn (<code class="docutils literal notranslate"><span class="pre">if</span></code>).</p>
 <p>Je hebt hier geen recursie nodig, gebruik in plaats recursie de functies die je eerder hebt geschreven! Hier is de pseudocode:</p>
 <ul class="simple">
@@ -1272,8 +1277,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="s1">&#39;00000000&#39;</span>
 </pre></div>
 </div>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Tips</p>
+<p>:class: tip</p>
 <ul class="simple">
 <li><p>Het lastige deel is zorgen dat je genoeg voorloopnullen hebt (voor <code class="docutils literal notranslate"><span class="pre">y</span></code>, als je die naam hebt gebruikt).</p></li>
 <li><p>Je kan 42 nullen voor <code class="docutils literal notranslate"><span class="pre">y</span></code> zetten met <code class="docutils literal notranslate"><span class="pre">&quot;0&quot;</span> <span class="pre">*</span> <span class="pre">42</span> <span class="pre">+</span> <span class="pre">y</span></code></p></li>
@@ -1284,8 +1290,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="functie-4-count-s-n">
 <h3>Functie 4: <code class="docutils literal notranslate"><span class="pre">count(s,</span> <span class="pre">n)</span></code><a class="headerlink" href="#functie-4-count-s-n" title="Permalink to this headline">¶</a></h3>
 <p>Gebruik de functie <code class="docutils literal notranslate"><span class="pre">increment</span></code> om de functie <code class="docutils literal notranslate"><span class="pre">count(s,</span> <span class="pre">n)</span></code> te schrijven, die een binaire string van 8 tekens accepteert als argument en vervolgens <code class="docutils literal notranslate"><span class="pre">n</span></code> keer doortelt vanaf <code class="docutils literal notranslate"><span class="pre">s</span></code>, terwijl hij wordt afgedrukt.</p>
-<div class="notice admonition">
+<div class="admonition">
 <p class="admonition-title"> Opmerkingen</p>
+<p>:class: notice</p>
 <ul class="simple">
 <li><p>Dit betekent dat jouw functie in totaal <code class="docutils literal notranslate"><span class="pre">n+1</span></code> binaire strings zal afdrukken.</p></li>
 <li><p>Je moet de Python <code class="docutils literal notranslate"><span class="pre">print</span></code> functie gebruiken, omdat er niets wordt teruggegeven. We printen alleen naar het scherm.</p></li>
@@ -1309,8 +1316,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="mi">00000011</span>
 </pre></div>
 </div>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Tips</p>
+<p>:class: tip</p>
 <ul class="simple">
 <li><p>Gebruik de functie <code class="docutils literal notranslate"><span class="pre">increment</span></code>!</p></li>
 <li><p>Het basisgeval heeft te maken met <code class="docutils literal notranslate"><span class="pre">n</span></code> (wat is de meest “eenvoudige” waarde van <code class="docutils literal notranslate"><span class="pre">n</span></code>?)</p></li>
@@ -1339,8 +1347,9 @@ Er zijn 10 soorten mensen in de wereld: zij die ternaire getallen kennen, zij di
 <span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="s1">&#39;12211010&#39;</span>
 </pre></div>
 </div>
-<div class="notice admonition">
+<div class="admonition">
 <p class="admonition-title"> Opmerkingen</p>
+<p>:class: notice</p>
 <p>We geven hier geen startcode, maar…</p>
 <ul class="simple">
 <li><p>Baseer jouw oplossing op de overeenkomstige functie <code class="docutils literal notranslate"><span class="pre">num_to_binary</span></code>!</p></li>
@@ -1375,8 +1384,9 @@ Er zijn 10 soorten mensen in de wereld: zij die ternaire getallen kennen, zij di
 </pre></div>
 </div>
 <p>kan worden geëvalueerd, van rechts naar links, als <code class="docutils literal notranslate"><span class="pre">+1</span></code> in de kolom met enen, <code class="docutils literal notranslate"><span class="pre">-1</span></code> in de kolom met drieën, <code class="docutils literal notranslate"><span class="pre">0</span></code> in de kolom met negens en <code class="docutils literal notranslate"><span class="pre">+1</span></code> in de kolom met zevenentwintigs, en dit komt uit op <code class="docutils literal notranslate"><span class="pre">1*27</span> <span class="pre">+</span> <span class="pre">0*9</span> <span class="pre">-1*3</span> <span class="pre">+</span> <span class="pre">1*1</span> <span class="pre">=</span> <span class="pre">25</span></code>.</p>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Verlagen en ophogen</p>
+<p>:class: tip</p>
 <p>Als tip voor de volgende twee functies geven we mee dat het omzetten van een cijfer met waarde 2 naar een cijfer met waarde -1 de waarde van <code class="docutils literal notranslate"><span class="pre">n</span></code> <em>met 3 verlaagt</em>! Om de oorspronkelijke waarde van <code class="docutils literal notranslate"><span class="pre">n</span></code> niet aan te passen moet deze drie weer ergens terugkomen, door deze erbij op te tellen!</p>
 </div>
 <div class="section" id="functie-8-balanced-ternary-to-num-s">
@@ -1467,7 +1477,7 @@ Er zijn 10 soorten mensen in de wereld: zij die ternaire getallen kennen, zij di
     </div>
 
     
-  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
     

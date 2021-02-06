@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Feest met functies &#8212; Programmeren</title>
     
-  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
     
   <link rel="stylesheet"
@@ -31,12 +31,12 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -1114,8 +1114,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>Let op dat de docstring op hetzelfde niveau moet worden ingesprongen als de body (de hoofdtekst) van de functie, Python doet hier anders heel moeilijk over!</p>
-<div class="question admonition">
+<div class="admonition">
 <p class="admonition-title"> docstrings</p>
+<p>:class: question</p>
 <p>Waarom docstrings schrijven? Code wordt vaker gelezen dan geschreven en het is een manier om “aantekeningen” voor jezelf te maken maar ook voor anderen die jouw code misschien ooit gaan lezen!</p>
 <p>Er zijn verschillende manieren om Python docstrings te schrijven en hier zijn geen harde regels voor … Bijvoorbeeld, Google heeft een geheel eigen <a class="reference external" href="http://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings">syntax en stijl</a> opgesteld waar docstrings aan moeten voldoen.</p>
 <p>We moeten dus een keus maken hoe we docstrings vormgeven: de syntax die wij gebruiken is een conventie (afspraak) die ook in andere grotere Python projecten en gereedschappen wordt gebruikt, bijvoorbeeld <a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a> en <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a>.</p>
@@ -1145,8 +1146,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="k">assert</span> <span class="n">flipside</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span>
 </pre></div>
 </div>
-<div class="question admonition">
+<div class="admonition">
 <p class="admonition-title"> Assertions</p>
+<p>:class: question</p>
 <p>Het <code class="docutils literal notranslate"><span class="pre">assert</span></code> keyword staat voor een <em>aanname</em>. Je vraagt hier Python om bijvoorbeeld aan te nemen dat de returnwaarde van de functie <code class="docutils literal notranslate"><span class="pre">flipside(s)</span></code> waar de parameter <code class="docutils literal notranslate"><span class="pre">s</span></code> een waarde “zijkant” heeft gelijk is aan de string “kantzij”. Als dit niet het geval is zal Python het programma beëindigen met een <code class="docutils literal notranslate"><span class="pre">AssertionError</span></code> die jou zal vertellen welke assert statement niet is geslaagd.</p>
 </div>
 <p>Als het goed zal je niets bijzonders aan de uitvoer zien, alle assertions zullen in het bovenstaande voorbeeld slagen. Maar wijzig de laatste assertion in bijvoorbeeld het volgende en voer het bestand nogmaals uit en je zult zien dat Python jou laat weten dat iets niet correct is:</p>
@@ -1181,8 +1183,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="dot-l-k">
 <h3><code class="docutils literal notranslate"><span class="pre">dot(L,</span> <span class="pre">k)</span></code><a class="headerlink" href="#dot-l-k" title="Permalink to this headline">¶</a></h3>
 <p>De functie <code class="docutils literal notranslate"><span class="pre">dot(L,</span> <span class="pre">k)</span></code> moet het <em>inwendig product</em> (<em>inproduct</em> of <em>dot product</em>) van de lijsten <code class="docutils literal notranslate"><span class="pre">L</span></code> en <code class="docutils literal notranslate"><span class="pre">k</span></code> teruggeven. Als de twee lijsten niet even lang zijn, moet <code class="docutils literal notranslate"><span class="pre">dot</span></code> de waarde <code class="docutils literal notranslate"><span class="pre">0.0</span></code> teruggeven. Als de lijsten beide leeg zijn, moet <code class="docutils literal notranslate"><span class="pre">dot</span></code> ook <code class="docutils literal notranslate"><span class="pre">0.0</span></code> teruggeven. Je mag ervan uitgaan dat de lijsten alleen maar getallen bevatten en je mag de vermenigvuldigingsoperator <code class="docutils literal notranslate"><span class="pre">*</span></code> gebruiken bij deze opgave!</p>
-<div class="question admonition">
+<div class="admonition">
 <p class="admonition-title"> Inwendig product (inproduct)</p>
+<p>:class: question</p>
 <p>Wat is het inproduct? Het inproduct van twee lijsten (die in deze context dan <em>vectoren</em> genoemd worden) is de som van de producten van de elementen die op dezelfde positie staan in de twee vectoren. Bijvoorbeeld, het inproduct van de lijsten <code class="docutils literal notranslate"><span class="pre">[5,</span> <span class="pre">3]</span></code> en <code class="docutils literal notranslate"><span class="pre">[6,</span> <span class="pre">4]</span></code> zal <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">*</span> <span class="pre">6</span></code> plus <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">*</span> <span class="pre">4</span></code> zijn wat gelijk staat aan <code class="docutils literal notranslate"><span class="pre">42</span></code>.</p>
 </div>
 <p>Je kan deze opdracht vergelijken met het voorbeeld <code class="docutils literal notranslate"><span class="pre">mylen</span></code> dat eerder is besproken, maar houd er rekening mee dat je nu te maken hebt met <em>twee</em> lijsten en geen strings! In de <a class="reference internal" href="../examples/recursie.html"><span class="doc std std-doc">voorbeelden van recursie</span></a> is de functie <code class="docutils literal notranslate"><span class="pre">leng</span></code> een beetje aangepast zodat het zowel lijsten als strings kan verwerken!</p>
@@ -1233,8 +1236,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>Let op, in het laatste voorbeeld is het eerste argument van <code class="docutils literal notranslate"><span class="pre">ind</span></code> een string met een enkele spatie en <em>niet</em> een lege string!</p>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Controleren of een element voorkomt</p>
+<p>:class: tip</p>
 <p>Je kan controleren of een element in een sequentie voorkomt met het keyword <code class="docutils literal notranslate"><span class="pre">in</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">L</span><span class="p">:</span>
 </pre></div>
@@ -1291,8 +1295,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="scrabble-score-s">
 <h3><code class="docutils literal notranslate"><span class="pre">scrabble_score(s)</span></code><a class="headerlink" href="#scrabble-score-s" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">scrabble_score</span></code> moet een string <code class="docutils literal notranslate"><span class="pre">s</span></code> meekrijgen, die alleen maar kleine letters bevat, en de Scrabble score van de string teruggeeft. Je mag negeren dat in het echte spel sommige tegels maar beperkt beschikbaar zijn.</p>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> <code class="docutils literal notranslate"><span class="pre">letter_score</span></code></p>
+<p>:class: tip</p>
 <p>Gebruik de functie <code class="docutils literal notranslate"><span class="pre">letter_score</span></code> die je eerder hebt uitgewerkt en pas recursie toe. Vergelijk dit met het voorbeeld <code class="docutils literal notranslate"><span class="pre">vwl</span></code> dat eerder is besproken, maar bedenk dat je <em>verschillende</em> waardes moet toevoegen voor elke letter. Zie de <a class="reference internal" href="../examples/recursie.html"><span class="doc std std-doc">voorbeelden van recursie</span></a> voor de functie <code class="docutils literal notranslate"><span class="pre">vwl</span></code>.</p>
 </div>
 <p>Hier zijn een paar voorbeelden:</p>
@@ -1383,8 +1388,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>Oefenen op CodingBat met <a class="reference external" href="http://codingbat.com/python/List-1">Python-lijsten</a></p></li>
 <li><p>Een functie schrijven om tekst om te zetten naar potjeslatijn (ook met strings)</p></li>
 </ul>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> CodingBat</p>
+<p>:class: tip</p>
 <p>Maak een account aan op CodingBat zodat je voor jezelf kan bijhouden welke opgaven je al wel of niet hebt gemaakt. Voor alle CodingBat opgaven geldt een onbeperkt aantal pogingen, dat wil zeggen dat je ze zo vaak mag maken als je wilt.</p>
 </div>
 <div class="section" id="codingbat-en-python-strings">
@@ -1430,8 +1436,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p><strong>Tests?</strong> Die mag je zelf schrijven!</p>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Hoe recursie te gebruiken</p>
+<p>:class: tip</p>
 <p>Eén manier om recursie te gebruiken bij het uitwerken van deze functie is om een hulpfunctie</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">initial_consonants</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="o">...</span>
@@ -1507,7 +1514,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     </div>
 
     
-  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
     

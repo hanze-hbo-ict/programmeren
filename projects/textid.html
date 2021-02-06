@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tekstidentificatie &#8212; Programmeren</title>
     
-  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
     
   <link rel="stylesheet"
@@ -31,12 +31,12 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -1209,8 +1209,9 @@ geen vraag, of wel?
 </pre></div>
 </div>
 <p>Dit moet geen uitvoer geven, omdat er in dit voorbeeld één zin met 16 woorden, één met 5 woorden en één met 6 woorden is.</p>
-<div class="notice admonition">
+<div class="admonition">
 <p class="admonition-title"> Opmerking</p>
+<p>:class: notice</p>
 <p>De volgorde van de sleutels in de dictionary is niet belangrijk; het maakt voor de <code class="docutils literal notranslate"><span class="pre">assert</span></code> niet uit welke volgorde ze hebben.</p>
 </div>
 </div>
@@ -1219,8 +1220,9 @@ geen vraag, of wel?
 <p>De methode <code class="docutils literal notranslate"><span class="pre">clean_string(self,</span> <span class="pre">s)</span></code> krijgt een string <code class="docutils literal notranslate"><span class="pre">s</span></code> mee en geeft een opgeschoonde versie ervan terug zonder
 leestekens en zonder hoofdletters.</p>
 <p>Je kan <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">s.lower()</span></code> gebruiken om hoofdletters te vervangen; hoe je leestekens weghaalt mag je zelf bepalen; gebruik hier echter <strong>geen</strong> recursie, maar lussen (recursie loopt op grote strings uit het geheugen!)</p>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Tip</p>
+<p>:class: tip</p>
 <p>Je kan <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">string</span></code> gebruiken, en dan deze lus gebruiken:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">string</span><span class="o">.</span><span class="n">punctuation</span>
 </pre></div>
@@ -1358,16 +1360,19 @@ Leestekens:
 <div class="section" id="de-methode-normalize-dictionary">
 <h3>De methode <code class="docutils literal notranslate"><span class="pre">normalize_dictionary</span></code><a class="headerlink" href="#de-methode-normalize-dictionary" title="Permalink to this headline">¶</a></h3>
 <p>De methode <code class="docutils literal notranslate"><span class="pre">normalize_dictionary(self,</span> <span class="pre">d)</span></code> krijgt één van de dictionary’s uit het model mee en geeft een genormaliseerde versie terug, dat wil zeggen, een versie waar de som van alle waardes exact <code class="docutils literal notranslate"><span class="pre">1.0</span></code> is. Deze moet je teruggeven, niet afdrukken!</p>
-<div class="notice admonition">
+<div class="admonition">
 <p class="admonition-title"> Complexere methodes</p>
+<p>:class: notice</p>
 <p>Deze methode, en de volgende zijn algoritmisch complexer, dus we beschrijven ze in meer detail.</p>
 </div>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Tip</p>
+<p>:class: tip</p>
 <p>Je kan <code class="docutils literal notranslate"><span class="pre">d.values()</span></code> gebruiken om een lijst van alle waardes in een dictionary <code class="docutils literal notranslate"><span class="pre">d</span></code> te krijgen.</p>
 </div>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Belangrijkere tip</p>
+<p>:class: tip</p>
 <p>Je kan door alle <em>sleutels</em> van een dictionary <code class="docutils literal notranslate"><span class="pre">d</span></code> lussen met:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
     <span class="c1"># doe iets met de sleutel k en de waarde d[k]</span>
@@ -1386,8 +1391,9 @@ Leestekens:
 <div class="section" id="de-methode-smallest-value">
 <h3>De methode <code class="docutils literal notranslate"><span class="pre">smallest_value</span></code><a class="headerlink" href="#de-methode-smallest-value" title="Permalink to this headline">¶</a></h3>
 <p>De methode <code class="docutils literal notranslate"><span class="pre">smallest_value(self,</span> <span class="pre">nd1,</span> <span class="pre">nd2)</span></code> krijgt twee dictionary’s <code class="docutils literal notranslate"><span class="pre">nd1</span></code> en <code class="docutils literal notranslate"><span class="pre">nd2</span></code> mee uit het model en geeft de kleinste positieve <em>waarde</em> terug die in de dictionary’s samen voorkomt.</p>
-<div class="notice admonition">
+<div class="admonition">
 <p class="admonition-title"> Positieve waarde</p>
+<p>:class: notice</p>
 <p>Een positieve waarde is een waarde die groter is dan 0; 0 is dus <strong>geen</strong> positieve waarde.</p>
 </div>
 <p>Als je deze gaat gebruiken zullen de invoerdictionary’s vermoedelijk genormaliseerd zijn, vandaar de namen <code class="docutils literal notranslate"><span class="pre">nd1</span></code> en <code class="docutils literal notranslate"><span class="pre">nd2</span></code>, maar de methode moet ook werken als ze niet genormaliseerd zijn. Geef het resultaat terug, en druk het niet af!</p>
@@ -1422,16 +1428,19 @@ samen (gebruik hier de methode <code class="docutils literal notranslate"><span 
 </li>
 </ul>
 <p>De functie moet beide log-waarschijnlijkheden als een lijst teruggeven, bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">[log1,</span> <span class="pre">log2]</span></code> (de eerste is de log-waarschijnlijkheden voor <code class="docutils literal notranslate"><span class="pre">nd1</span></code> en de tweede voor <code class="docutils literal notranslate"><span class="pre">nd2</span></code>).</p>
-<div class="notice admonition">
+<div class="admonition">
 <p class="admonition-title"> Logaritmes</p>
+<p>:class: notice</p>
 <p><code class="docutils literal notranslate"><span class="pre">math.log2</span></code> is een functie die de logaritme met grondtal 2 berekent. De intuïtieve manier om hier als programmeur over na te denken is dat dit ongeveer hetzelfde is als de lengte van het getal in bits, dus binair geschreven. Als een getal dus twee keer zo groot wordt, wordt dit logaritme 1 meer. Omdat deze functie niet berekent kan worden voor het getal <code class="docutils literal notranslate"><span class="pre">0</span></code> gebruiken we als een waarde niet voorkomt in de modeldictionary een kleine, in principe arbitrair gekozen waarde, namelijk de helft van de kleinste waarde die voorkomt in beide modeldictionary’s <code class="docutils literal notranslate"><span class="pre">d1</span></code> en <code class="docutils literal notranslate"><span class="pre">d2</span></code> samen.</p>
 </div>
-<div class="danger admonition">
+<div class="admonition">
 <p class="admonition-title"> Normaliseren</p>
+<p>:class: danger</p>
 <p>Je moet zorgen dat <code class="docutils literal notranslate"><span class="pre">nd1</span></code> en <code class="docutils literal notranslate"><span class="pre">nd2</span></code> allebei <em><strong>genormaliseerd</strong></em> zijn voordat de log-waarschijnlijkheden berekend worden; aan de andere kant hoeft <code class="docutils literal notranslate"><span class="pre">d</span></code> <em>niet</em> genormaliseerd te worden (sterker, hij <em>moet</em> niet genormaliseerd zijn).</p>
 </div>
-<div class="notice admonition">
+<div class="admonition">
 <p class="admonition-title"> Opmerkingen</p>
+<p>:class: notice</p>
 <p>Gebruik als een sleutel <code class="docutils literal notranslate"><span class="pre">k</span></code> wel in <code class="docutils literal notranslate"><span class="pre">d</span></code> maar niet in <code class="docutils literal notranslate"><span class="pre">nd1</span></code> voorkomt een log-waarschijnlijkheid gelijk aan <code class="docutils literal notranslate"><span class="pre">math.log2(epsilon)</span></code>; hetzelfde geldt als <code class="docutils literal notranslate"><span class="pre">k</span></code> niet in <code class="docutils literal notranslate"><span class="pre">nd2</span></code> voorkomt…</p>
 </div>
 <p>Hier is een voorbeeld om je methide <code class="docutils literal notranslate"><span class="pre">compare_dictionaries</span></code> mee te testen:</p>
@@ -1449,8 +1458,9 @@ samen (gebruik hier de methode <code class="docutils literal notranslate"><span 
 </pre></div>
 </div>
 <p>Deze getallen zijn gecontroleerd, dus we weten <em>echt</em> zeker dat ze kloppen!</p>
-<div class="notice admonition">
+<div class="admonition">
 <p class="admonition-title"> Hoe moet je deze negatieve getallen interpreteren?</p>
+<p>:class: notice</p>
 <p>De log-waarschijnlijkheid kan je het best zien als een “truc” om hele kleine kansen inzichtelijk te maken. De twee getallen hierboven, ongeveer -16.4 en -19.2, betekenen dat</p>
 <ul class="simple">
 <li><p>De kans dat je <code class="docutils literal notranslate"><span class="pre">d</span></code> krijgt door willekeurige keuzes te maken uit model <code class="docutils literal notranslate"><span class="pre">nd1</span></code> ongeveer <strong>2<sup>-16.4</sup></strong> is (dat is ongeveer 0.00001156, oftwel 0.001156%)</p></li>
@@ -1618,8 +1628,9 @@ sentence_lengths         -4.17         -5.17
 <li><p>Vergelijk je twee “testteksten” met de twee getrainde modellen (je krijgt dus vier vergelijkingen) en schrijf een
 kort verslagje over de resultaten, hoe je tot deze resultaten gekomen bent (inclusief hoe je hebt bepaald welk model wint als niet alle dictionary’s het daar over eens waren) en of je die resultaten <em>verwachtte</em>…!</p></li>
 </ol>
-<div class="warning admonition">
+<div class="admonition">
 <p class="admonition-title"> Foutmelding</p>
+<p>:class: warning</p>
 <p>Als je een foutmelding krijgt die lijkt op deze: <code class="docutils literal notranslate"><span class="pre">codec</span> <span class="pre">can't</span> <span class="pre">encode</span> <span class="pre">character</span> <span class="pre">...</span> <span class="pre">in</span> <span class="pre">...</span> <span class="pre">position</span></code>, dan heb je misschien een andere <em>encoding</em> nodig in <code class="docutils literal notranslate"><span class="pre">read_text_from_file</span></code>; vermoedelijk moet je dan de aanroep naar <code class="docutils literal notranslate"><span class="pre">open</span></code> zo aanpassen: <code class="docutils literal notranslate"><span class="pre">open(filename,</span> <span class="pre">encoding='utf-8')</span></code></p>
 </div>
 <p>Extra’s zijn natuurlijk welkom, bijvoorbeeld,</p>
@@ -1716,7 +1727,7 @@ kort verslagje over de resultaten, hoe je tot deze resultaten gekomen bent (incl
     </div>
 
     
-  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
     

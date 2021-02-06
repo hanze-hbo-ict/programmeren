@@ -31,7 +31,9 @@ Bij steen, papier en schaar gaan twee spelers eerst aftellen en vormen daarna te
 
 Begin met een leeg bestand in VSCode of een andere tekstverwerker.
 
-:::{admonition,warning} Bestandsextensies
+:::{admonition} Bestandsextensies
+:class: warning
+
 Vergeet niet het bestand de extensie `.py` te geven wanneer je het opslaat. Tekstverwerkers (*editors*) als VSCode herkennen het dan als een Python bestand en kunnen er vervolgens extra dingen mee doen, bijvoorbeeld het toepassen van *syntax highlighting* (het kleuren van onderdelen in de code). Zie verder het werken met [tekstbestanden](/support/platte_tekst/) voor meer informatie over tekst, bestandsextensies en andere tips.
 :::
 
@@ -79,7 +81,9 @@ Werk de bovenstaande code nu verder uit tot een volledig programma dat:
 -   Afdrukt welke keuze het *zelf* heeft gemaakt uit de mogelijke opties (eerlijk of niet)
 -   Afdrukt wie het spel heeft gewonnen (of een gelijkspel, of een andere uitkomst)
 
-:::{admonition,tip} Extra commentaar
+:::{admonition} Extra commentaar
+:class: tip
+
 Het toevoegen van extra commentaar (`# ...`) aan de code is optioneel, maar is aan te raden voor wanneer jouw uitwerking gaat worden beoordeeld!
 :::
 

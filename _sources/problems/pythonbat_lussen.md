@@ -41,7 +41,9 @@ Zorg dat je de ***strategie*** voor deze oplossing voor `double_char` begrijpt:
 * We schrijven een lus die het gewenste resultaat verzamelt
 * Daarna geven we het resultaat terug
 
-:::{admonition,notice} Je hoeft geen docstrings of asserts te schrijven!
+:::{admonition} Je hoeft geen docstrings of asserts te schrijven!
+:class: notice
+
 ***ALLEEN*** voor deze opgave voor lussen in PythonBat hoef je geen docstrings en asserts te maken. Ze zijn puur ter oefening.
 :::
 

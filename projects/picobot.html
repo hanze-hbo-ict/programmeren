@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>De evolutie van Picobot &#8212; Programmeren</title>
     
-  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
     
   <link rel="stylesheet"
@@ -31,12 +31,12 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -1294,8 +1294,9 @@ xxWx
 <div class="section" id="de-methode-repr">
 <h3>De methode <code class="docutils literal notranslate"><span class="pre">__repr__</span></code><a class="headerlink" href="#de-methode-repr" title="Permalink to this headline">¶</a></h3>
 <p>Daarnaast heeft de klasse een methode <code class="docutils literal notranslate"><span class="pre">__repr__(self)</span></code> nodig die de stringrepresentatie van het programma <strong>teruggeeft</strong>; Python verwacht dat deze methode een string teruggeeft! Als je een nieuwe regel wilt beginnen in een string, kan je <code class="docutils literal notranslate"><span class="pre">\n</span></code> gebruiken.</p>
-<div class="notice admonition">
+<div class="admonition">
 <p class="admonition-title"> Belangrijk!</p>
+<p>:class: notice</p>
 <p>Vergeet niet dat <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> een string moet <strong>teruggeven</strong> in plaats van de string af te drukken!</p>
 </div>
 <p>Zorg er in het bijzonder voor dat je methode <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> een string maakt die alle regels in <code class="docutils literal notranslate"><span class="pre">self.rules</span></code> <strong>gesorteerd</strong> bevat, gesorteerd op de sleutels van de dictionary. Dit is handig omdat het betekent dat de programma’s makkelijker met elkaar te vergelijken zijn; ze staan immers dan altijd in dezelfde volgorde.</p>
@@ -1309,8 +1310,9 @@ xxWx
 </pre></div>
 </div>
 <p>Dit maakt een <strong>gesorteerde</strong> lijst met sleutels, met de naam <code class="docutils literal notranslate"><span class="pre">sorted_keys</span></code>. Top!</p>
-<div class="danger admonition">
+<div class="admonition">
 <p class="admonition-title"> Net zo belangrijk!</p>
+<p>:class: danger</p>
 <p>Je methode <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> moet het hele Picobot-programma zo teruggeven <em><strong>dat je deze direct kan kopiëren en plakken</strong></em> in e <span class="xref myst">Picobot-simulator</span>. Elke regel moet dus als volgt geformatteerd worden:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="n">Nxxx</span> <span class="o">-&gt;</span> <span class="n">W</span> <span class="mi">3</span>
 </pre></div>
@@ -1321,12 +1323,14 @@ xxWx
 <div class="section" id="de-methode-randomize">
 <h3>De methode <code class="docutils literal notranslate"><span class="pre">randomize</span></code><a class="headerlink" href="#de-methode-randomize" title="Permalink to this headline">¶</a></h3>
 <p>De klasse moet een methode <code class="docutils literal notranslate"><span class="pre">randomize(self)</span></code> bevatten, die een willekeurige volledige set regels genereert voor de dictionary <code class="docutils literal notranslate"><span class="pre">self.rules</span></code> van het programma. Onthoud dat de dictionary leeg begint. Deze methode maakt willekeurige regels, één voor elke combinatie van de <code class="docutils literal notranslate"><span class="pre">NUM_STATES</span></code> mogelijke toestanden; in het begin zijn dit er 5; en de 9 mogelijke omgevingen. Merk op dat er voor 5 toestanden en 9 omgevingen 45 willekeurig gegenereerde regels zijn.</p>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Sleutels van <code class="docutils literal notranslate"><span class="pre">rules</span></code></p>
+<p>:class: tip</p>
 <p>De sleutels (begintoestand, omgeving) van de dictionary zijn <em><strong>niet</strong></em> willekeurig! Je kan gewoon door alle mogelijke toestanden en alle mogelijke omgevingen lussen. Voor elke combinatie moet je <em>wel</em> een willekeurige nieuwe toestand en een willekeurige verplaatsing genereren. Een uitdaging is dat de verplaatsing <em>geldig moet zijn, dus <strong>niet</strong> tegen een muur aan</em>!</p>
 </div>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Geldige verplaatsingen</p>
+<p>:class: tip</p>
 <p>Om ervoor te zorgen dat je alleen een geldige verplaatsing kiest voor een gegeven omgeving <code class="docutils literal notranslate"><span class="pre">pattern</span></code> kan je een while-lus die op deze lijkt gebruiken:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">movedir</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">POSSIBLE_MOVES</span><span class="p">)</span>
 <span class="k">while</span> <span class="n">movedir</span> <span class="ow">in</span> <span class="n">pattern</span><span class="p">:</span>
@@ -1348,13 +1352,15 @@ originele…)</p>
 <div class="section" id="de-methode-crossover">
 <h3>De methode <code class="docutils literal notranslate"><span class="pre">crossover</span></code><a class="headerlink" href="#de-methode-crossover" title="Permalink to this headline">¶</a></h3>
 <p>De methode <code class="docutils literal notranslate"><span class="pre">crossover(self,</span> <span class="pre">other)</span></code> is een methode die een object <code class="docutils literal notranslate"><span class="pre">other</span></code> van het type <code class="docutils literal notranslate"><span class="pre">Program</span></code> meekrijgt. Het moet een nieuw “kind”, ook van het type <code class="docutils literal notranslate"><span class="pre">Program</span></code> teruggeven die <em>sommige</em> regels van <code class="docutils literal notranslate"><span class="pre">self</span></code> en de rest van <code class="docutils literal notranslate"><span class="pre">other</span></code> bevat. Merk op dat de programma’s <code class="docutils literal notranslate"><span class="pre">self</span></code> en <code class="docutils literal notranslate"><span class="pre">other</span></code> precies evenveel regels bevatten! Als we bijvoorbeed 5 toestanden hebben, zijn er omdat er maar 9 mogelijke omgevingen zijn precies 45 regels in het programma.</p>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Effectieve crossovers</p>
+<p>:class: tip</p>
 <p>De <strong>effectiefste</strong> manier om de crossover uit te voeren is om een willekeurige “crossover-toestand” te kiezen, van 1 tot en met 3. Stel dat toestand 2 gekozen is. Het kind krijgt dan alle regels van één ouder uit toestanden 0, 1 en 2 en krijgt alle regels van de <em>andere</em> ouder uit de overgebleven toestanden, 3 en 4.</p>
 <p>Het blijkt dat als je elke regel van een willekeurige ouder kiest, de “genetische code” te veel gehusseld wordt waardoor de kinderen de goede eigenschappen van de ouders niet bewaren.</p>
 </div>
-<div class="danger admonition">
+<div class="admonition">
 <p class="admonition-title"> Veel voorkomende fout</p>
+<p>:class: danger</p>
 <p>Een veel voorkomende fout is om het programma van één van de ouders te <em>wijzigen</em>, in plaats van een nieuw kind van het type <code class="docutils literal notranslate"><span class="pre">Program</span></code> terug te geven. Dit is niet alleen biologisch een slecht idee, maar zal hier ook niet werken! Waarom niet? Stel je voor dat paren het genoom van een ouder zou aanpassen. Als een ouder een hoge fitness heeft, heeft hij waarschijnlijk meerdere kinderen, die hopelijk veel van de goede eigenschappen van de ouder erven. Als het genoom van de ouder echter <em>verandert</em> de eerste keer dat hij paart, is het erg waarschijnlijk dat zijn fitness kleiner wordt! Zijn verdere kinderen hebben daardoor vermoedelijk een lagere fitness dan de eerste.</p>
 </div>
 </div>
@@ -1397,15 +1403,17 @@ originele…)</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">room</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39; &#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">WIDTH</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">HEIGHT</span><span class="p">)]</span>
 </pre></div>
 </div>
-<div class="notice admonition">
+<div class="admonition">
 <p class="admonition-title"> <code class="docutils literal notranslate"><span class="pre">self.room</span></code></p>
+<p>:class: notice</p>
 <p>Die lege list is niet de uiteindelijke waarde voor <code class="docutils literal notranslate"><span class="pre">self.room</span></code>! Deze verandert nog!</p>
 </div>
 <p>Je kan terugkijken naar de implementatie van de klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code> uit Vier op een rij als een voorbeeld van hoe je een ruimte in Picobot wilt opslaan; het beginpunt hierboven lijkt daar op! Merk op dat, net als <code class="docutils literal notranslate"><span class="pre">self.data</span></code> bij Vier op een rij, het een redelijke aanpak voor het maken van <code class="docutils literal notranslate"><span class="pre">self.room</span></code> is om een lijst van rijen te maken, die ieder een rij van kolommen is, die ieder een string van één karakter is.</p>
 <p>Je moet bovendien zorgen dat de <em><strong>buitenrand</strong></em> van <code class="docutils literal notranslate"><span class="pre">self.room</span></code> muren bevat, misschien met het karakter <code class="docutils literal notranslate"><span class="pre">'W'</span></code>, of
 wat je maar wilt. Als je je ASCII-weergave extra mooi wilt maken kan je <code class="docutils literal notranslate"><span class="pre">'-'</span></code> voor horizontale muren, <code class="docutils literal notranslate"><span class="pre">'|'</span></code> voor verticale muren en <code class="docutils literal notranslate"><span class="pre">+</span></code> voor kruisingen gebruiken!</p>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Tip</p>
+<p>:class: tip</p>
 <p>Als je een eenvoudigere aanpak kiest, waarin alle muren een <code class="docutils literal notranslate"><span class="pre">'+'</span></code> zijn, dan wordt alles veel makkelijker door <strong>de plustekens in de ruimte zelf te zetten</strong> met code als deze in je constructor <code class="docutils literal notranslate"><span class="pre">__init__</span></code>, <em>nadat</em> je de ruimte met lege spaties gemaakt hebt:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">WIDTH</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">room</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;+&#39;</span>
@@ -1450,8 +1458,9 @@ wat je maar wilt. Als je je ASCII-weergave extra mooi wilt maken kan je <code cl
 <p>Een erg korte fitness-evaluatiefunctie die de fitness van een gegeven Picobot-programma bepaalt. Deze functie krijgt de naam <code class="docutils literal notranslate"><span class="pre">evaluate_fitness(program,</span> <span class="pre">trials,</span> <span class="pre">steps)</span></code>. De argumenten zijn een Picobot-programma <code class="docutils literal notranslate"><span class="pre">program</span></code>, een positieve integer <code class="docutils literal notranslate"><span class="pre">trials</span></code> die het aantal willekeurige beginposities die getest moeten worden, en een positieve integer <code class="docutils literal notranslate"><span class="pre">steps</span></code> die het aantal stappen dat de simulatie mag nemen aangeeft. De functie geeft de fitness (een floating-pointgetal tussen 0.0 en 1.0) terug die overeenkomt met het percentage van de cellen die dit Picobot-programma bezoekt, gemiddeld over het aantal <code class="docutils literal notranslate"><span class="pre">trials</span></code>. Je kan hiervoor <code class="docutils literal notranslate"><span class="pre">fraction_visited_cells</span></code> gebruiken.</p>
 <p>Stel je als voorbeeld voor dat <code class="docutils literal notranslate"><span class="pre">p</span></code> een Picobot-programma is en we <code class="docutils literal notranslate"><span class="pre">evaluate_fitness(p,</span> <span class="pre">42,</span> <span class="pre">1000)</span></code> uitvoeren. Deze functie kiest dan een willekeurige startpositie voor Picobot, voert het gegeven programma 1000 stappen lang uit, en berekent het percentage bezochte cellen. Daarna wist het de ruimte, kiest een nieuwe startpositie en doet het nog een keer; 42 keer in totaal.</p>
 <p>Na alle 42 tests neemt de code het gemiddelde van het percentage van bezochte cellen van alle pogingen.</p>
-<div class="notice admonition">
+<div class="admonition">
 <p class="admonition-title"> Opmerking</p>
+<p>:class: notice</p>
 <p>De ruimte bevat 529 cellen (23 bij 23 lege cellen), dus zelfs een programma met relatief hoge fitness heeft een stuk meer dan 529 stappen nodig heeft om een groot deel van de ruimte te vullen, omdat het onwaarschijnlijk is dat het programma erg efficiënt zal zijn. Dat is waarom je misschien 1000 <code class="docutils literal notranslate"><span class="pre">steps</span></code> gebruikt, of zelfs een nog hoger aantal, in plaats van 529.</p>
 </div>
 </div>
@@ -1459,21 +1468,24 @@ wat je maar wilt. Als je je ASCII-weergave extra mooi wilt maken kan je <code cl
 <h3>De hoofdfunctie <code class="docutils literal notranslate"><span class="pre">genetic_algorithm</span></code><a class="headerlink" href="#de-hoofdfunctie-genetic-algorithm" title="Permalink to this headline">¶</a></h3>
 <p>De <strong>hoofdfunctie</strong> moet naar het onderwerp, genetische algoritmes, vernoemd worden: <code class="docutils literal notranslate"><span class="pre">genetic_algorithm(pop_size,</span> <span class="pre">num_gens)</span></code>.</p>
 <p>Deze functie <code class="docutils literal notranslate"><span class="pre">genetic_algorithm(pop_size,</span> <span class="pre">num_gens)</span></code> moet <code class="docutils literal notranslate"><span class="pre">pop_size</span></code> willekeurige Picobot-programma’s genereren als de beginpopulatie (200 is hier een goede waarde voor). Daarna moet de fitness van al deze programma’s geëvalueerd worden, en moet je de programma’s met de hoogste fitness kiezen. Deze programma’s overleven en dienen bovendien als “ouders” voor de volgende generatie.</p>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> List-of-lists</p>
+<p>:class: tip</p>
 <p>Je kan een lijst met paren met (fitness, programma) sorteren. Stel dat dit de lijst <code class="docutils literal notranslate"><span class="pre">programs</span> <span class="pre">=</span>&#160; <span class="pre">[(.4,</span> <span class="pre">prog1),</span> <span class="pre">(.2,</span> <span class="pre">prog2),</span> <span class="pre">(.3,</span> <span class="pre">prog3)]</span></code> is, dan kan je</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sorted_programs</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">programs</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>aanroepen en zal je zien dat <code class="docutils literal notranslate"><span class="pre">sorted_programs</span></code> gelijk wordt aan <code class="docutils literal notranslate"><span class="pre">[(.2,</span> <span class="pre">prog2),</span> <span class="pre">(.3,</span> <span class="pre">prog3),</span> <span class="pre">(.4,</span> <span class="pre">prog1)]</span></code></p>
 </div>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Het aantal overlevende programma’s</p>
+<p>:class: tip</p>
 <p>10% van de populatie (bijvoorbeeld 20 van de 200) is een goede keuze voor het aantal overlevende programma’s, maar je mag hier natuurlijk mee experimenteren.</p>
 </div>
 <p>De overlevende programma’s moeten <strong>bewaard</strong> blijven als onderdeel van de volgende generatie; die moet vervolgens aangevuld worden met “kinderen”, nieuwe programma’s.</p>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Kinderen maken</p>
+<p>:class: tip</p>
 <p>Om deze kinderen te maken kan je bijvoorbeeld deze aanpak gebruiken:</p>
 <ul class="simple">
 <li><p>Twee willekeurige ouders kiezen uit de programma’s met hoge fitness.</p></li>
@@ -1484,8 +1496,9 @@ wat je maar wilt. Als je je ASCII-weergave extra mooi wilt maken kan je <code cl
 </div>
 <p>Je hebt nu een nieuwe populatie, hopelijk met hogere fitness, dus kan je nu het hele proces herhalen. Het is het beste om elke generatie even groot te laten zijn (<code class="docutils literal notranslate"><span class="pre">pop_size</span></code>), bijvoorbeeld 200.</p>
 <p>Aan het eind moet je programma het beste programma uit de laatste generatie teruggeven (en als je wilt afdrukken). Je kan dan dat programma kopiëren en plakken in de Picobot-simulator om hem uit te voeren!</p>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Programma’s bewaren</p>
+<p>:class: tip</p>
 <p>Je kan het handig vinden om het beste programma van elke generatie op te slaan in een bestand (dat is minder onoverzichtelijk en makkelijker te bewaren). Hier is een stukje code om dit makkelijker te maken:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">save_to_file</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Saves the data from Program p</span>
@@ -1536,12 +1549,14 @@ wat je maar wilt. Als je je ASCII-weergave extra mooi wilt maken kan je <code cl
  <span class="o">...</span> <span class="n">rest</span> <span class="n">van</span> <span class="n">het</span> <span class="n">programma</span> <span class="n">overgeslagen</span> <span class="o">...</span>
 </pre></div>
 </div>
-<div class="notice admonition">
+<div class="admonition">
 <p class="admonition-title"> Hulpfuncties</p>
+<p>:class: notice</p>
 <p>Als je een aantal hulpfuncties wilt schrijven hiervoor mag dat natuurlijk!</p>
 </div>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Keuzes voor de parameters</p>
+<p>:class: tip</p>
 <p>Als je wilt kan je wat lezen over hoe je de programma’s met de hoogste fitness kan kiezen om die zich te laten voortplanten en de <span class="xref myst">keuzes voor de parameters</span> die daar bij horen (maar het staat je natuurlijk vrij om er mee te experimenteren en andere te kiezen).</p>
 </div>
 </div>
@@ -1704,7 +1719,7 @@ handig om te zorgen dat <code class="docutils literal notranslate"><span class="
     </div>
 
     
-  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
     

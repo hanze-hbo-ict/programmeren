@@ -64,13 +64,17 @@ Nu komt de truc: ***probeer het nu opnieuw***!
 Als twee keer uitvoeren werkt op jouw computer, is het ***prima*** om turtle-functies of -commando's
 twee keer uit te voeren!
 
-:::{admonition,danger} Buggy turtle!
+:::{admonition} Buggy turtle!
+:class: danger
+
 Turtle in Python is leuk maar kan zich soms eigenaardig gedragen (ook omdat het een al wat oudere Python module is). Vraag ons om hulp als je computer of het turtle-venster toch niet meer reageert, of als je tegen andere problemen aanloopt.
 
 Als dingen echt helemaal de mist ingaan kan je altijd de terminal met iptyhon geforceerd beëindigen, maar we hopen dat dat niet nodig is! (Vraag om hulp als het wel nodig lijkt te zijn.)
 :::
 
-:::{admonition,warning} Waarschuwing!
+:::{admonition} Waarschuwing!
+:class: warning
+
 Voeg `done()` niet toe aan de broncode van je functies.
 
 Als je functie recursief is, zou het hierdoor te vroeg stoppen met uitvoeren!
@@ -124,7 +128,9 @@ Voeg de regel `dot(10, 'red')` toe als de eerste regel in het `else`-blok.
 
 Verder zijn de twee functies `t.clear()` en `t.reset()` handig! Probeer ze beide uit, `t.reset()` is de meest "grondige" van deze twee! Verder is er nog de functie `clearscreen()` (let op, *geen* `t.clearscreen()`) die het scherm *volledig* wist. Wil je nóg meer van turtle weten dan kan je de online turtle [documentatie](https://docs.python.org/3/library/turtle.html) lezen.
 
-:::{admonition,notice} Achterliggend idee
+:::{admonition} Achterliggend idee
+:class: notice
+
 Spelen met turrtle is leuk, maar even terug naar wat je hier écht met turtle gaat doen. Het voorbeeld `tri` laat recursie zien met een *enkel pad*: er is steeds maar één recursieve aanroep, waardoor er precies één pad is dat stap voor stap wordt doorlopen.
 :::
 
@@ -225,7 +231,9 @@ Om deze tweede tak toe te voegen, moet je
 Probeer het opnieuw uit, het resultaat zal er als volgt uitzien, magisch!:
 ![Turtle vertakking](images/python_turtles/turtle_2.png)
 
-:::{admonition,info} Eindigen waar je begint
+:::{admonition} Eindigen waar je begint
+:class: info
+
 Vertakkende recursie werkt door een kleinere versie van de structuur te maken op *meerdere plekken* binnen dezelfde structuur. De sleutel om vertakkende recursie te laten werken is ervoor zorgen dat de schildpad *eindigt* op plaats waar ze *begon*, en dat ze in dezelfde *richting* eindigt.
 :::
 
@@ -285,7 +293,9 @@ We herhalen het nog een keer, de sleutel tot geluk voor recursief tekenen is de 
 
 Maak je geen zorgen over de precieze hoek die je gebruikt voor de aftakkingen of hoeveel je de `trunklength` korter maakt in subtakken, etc. Ontwerp jouw boom door hier keuzes voor te maken die er mooi uitzien. En door `t.left(90); svtree(100, 5)` aan te roepen krijg je een meer traditionele, omhoog wijzende boom!
 
-:::{admonition,tip} Meerdere opdrachten op één regel
+:::{admonition} Meerdere opdrachten op één regel
+:class: tip
+
 Je kan op de IPython prompt meerdere opdrachten in één keer uitvoeren door ze te scheiden met een puntkomma (`;`), bijvoorbeeld `t.left(90); svtree(100, 5)`. Je zegt hier in één regel "draai 90 graden naar links en roep direct daarna `svtree` aan met de parameters `100` en `5`"
 :::
 

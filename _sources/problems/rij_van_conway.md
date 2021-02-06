@@ -45,11 +45,15 @@ In [3]: next(312211)
 Out[3]: 13112221
 ```
 
-:::{admonition,danger} Waarschuwing
+:::{admonition} Waarschuwing
+:class: danger
+
 Je functie `next` moet een `int` als uitvoer geven! (Anders kom je niet door onze controle!) Gebruik `int(s)` als je dat nodig hebt!!
 :::
 
-:::{admonition,tip} Tips
+:::{admonition} Tips
+:class: tip
+
 * Je kan een integer `x` naar een string omzetten, bijvoorbeeld met `str(x)`
 * Je kan een string `s` naar een integer omzetten, bijvoorbeeld met `int(s)`
 * `next` moet een integer (`int`) teruggeven, maar onthoud dat je met deze twee functies van en naar strings kan converteren!

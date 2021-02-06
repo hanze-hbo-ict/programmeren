@@ -30,7 +30,9 @@ Je kan de functie `rs()` aanroepen elke keer dat je een nieuwe, willekeurige sta
 
 Een voordeel om dit in als functie te hebben is dat het hierdoor makkelijk wordt later aan te passen wat een "willekeurige stap" betekent, zonder andere code te hoeven aanpassen!
 
-:::{admonition,question} Header
+:::{admonition} Header
+:class: question
+
 Met *header* wordt bedoeld alles wat algemeen is en bovenin jouw bestand wordt beschreven, bijvoorbeeld een commentaar of eventuele import statements van Python modules die jouw functies gaan gebruiken. Vergelijk dit verder met de kop-lijf-staart structuur van een tekst (hoewel Python bestanden geen staart hebben!).
 :::
 
@@ -174,7 +176,9 @@ Out[2]: 11
 
 Ook hier gebruik je recursie om `rwsteps` voor dit probleem te implementeren.
 
-:::{admonition,tip} Recursie toepassen
+:::{admonition} Recursie toepassen
+:class: tip
+
 Dit probleem kan lastig zijn omdat je *zowel* een willekeurige stap moet zetten *als* het totaal aantal stappen moet bijhouden!
 
 Eén manier om dit te doen is om de regel `rest_of_steps = rwsteps(newstart, low, hi)` te gebruiken voor de recursieve aanroep, waarbij `newstart` een geschikte waarde toegekend heeft gekregen op de regel erboven, en `rest_of_steps` op een geschikte manier gebruikt wordt in de returnwaarde eronder...

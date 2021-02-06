@@ -19,7 +19,9 @@ Elke week wordt er een kort fragment van een nieuwsartikel gelezen (sommige nieu
 
 We vragen je een antwoord te schrijven op elk artikel. Het mag kort zijn (4 tot 5 zinnen is genoeg), maar we hopen dat je reageert op een deel van het artikel dat je interessant vindt en dat je goed over je antwoord nadenkt.
 
-:::{admonition,warning} Waarschuwing!
+:::{admonition} Waarschuwing!
+:class: warning
+
 Je kan **geen** bestanden in het Microsoft Word, RTF (rich text format) of een formaat anders dan platte tekst inleveren. Het is **erg** handig om `.txt`-bestanden met platte tekst te kunnen maken. Zie de het werken met [platte tekst](/support/platte_tekst/) hoe dit moet.
 :::
 

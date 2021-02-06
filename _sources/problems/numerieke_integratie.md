@@ -106,7 +106,9 @@ Out[4]: [0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5]
 
 Lees deze drie functies van ieder één regel en zorg dat je echt begrijpt hoe ze werken!
 
-:::{admonition,notice} Integer- en floating-pointdeling
+:::{admonition} Integer- en floating-pointdeling
+:class: notice
+
 Merk op dat de aanroepen van `lc_idiv(10)` en `lc_fdiv(10)` *verschillende* lijsten teruggeven. De eerste gebruikt *integer*deling (de resultaten worden omlaag afgerond) en de tweede *floating-point*deling (dus de resultaten blijven een kommagetal).
 :::
 
@@ -207,7 +209,9 @@ Out[5]: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
 
 Zoals de naam al aangeeft zal de functie een lijst van linkergrenzen (en dit zijn breuken, of *fracties*) op gelijke afstand van elkaar en met elk een waarde tussen `0` en `1` teruggeven. Dat wil zeggen, als `n` 5 is dan zal de lijst 5 waarden moet bevatten, namelijk `0/5`, `1/5`, `2/5`, `3/5` en `4/5`.
 
-:::{admonition,tip} Gebruik `lc_fdiv` als begin
+:::{admonition} Gebruik `lc_fdiv` als begin
+:class: tip
+
 Kopieer en plak de voorbeeldfunctie `lc_fdiv` en pas deze aan om `unitfracs` te schrijven. Je hoeft maar een *enkel* karakter aan te passen in deze code! Vergeet niet de docstring van `unitfracs` aan te passen om aan te geven wat de functie doet.
 :::
 
@@ -232,7 +236,9 @@ Schrijf `scaledfracs(low, hi, n)`. De functie geeft een lijst met `n` linkergren
 
 Schrijf ook `assert` statements om de voorbeelden hierboven te testen.
 
-:::{admonition,tip} Hoe `scaledfracs` uit te werken
+:::{admonition} Hoe `scaledfracs` uit te werken
+:class: tip
+
 De functie `scaledfracs` is lastig om uit te werken, we geven je extra uitleg en tips. Om te beginnen, *gebruik* `unitfracs`, de functie die al hebt geschreven. De volgende regel geeft een idee hoe je dit zou kunnen doen:
 
 ```python
@@ -276,7 +282,9 @@ Out[2]: [0.0, 4.0, 16.0, 36.0, 64.0]
 
 Deze functie `sqfracs` lijkt heel erg op `scaledfracs`, alleen is elke waarde *gekwadrateerd*.
 
-:::{admonition,tip} Gebruik `scaledfracs`
+:::{admonition} Gebruik `scaledfracs`
+:class: tip
+
 Gebruik hier `scaledfracs` hier. `sqfracs` kan `scaledfracs` op dezelfde manier gebruiken als de manier waarop `scaledfracs` gebruikmaakt van `unitfracs`! Bekijk dit stukje code:
 
 ```python
@@ -355,7 +363,9 @@ assert integrate(sq, 0, 10, 4) == 2.5 * sum([0, 2.5*2.5, 5*5, 7.5*7.5])
 
 Deze keer gaan we "test-driven development" gebruiken, waarin je *eerst* de tests schrijft en daarna zorgt dat je functie aan de tests voldoet. Daarom hebben we de `assert` statements hierboven toegevoegd! Merk op dat de tweede `assert` een voorbeeld is van hoe je kan testen ook als je niet weet wat het numerieke antwoord is!
 
-:::{admonition,tip} Hoe `integrate` uit te werken
+:::{admonition} Hoe `integrate` uit te werken
+:class: tip
+
 Om te beginnen, gebruik GEEN list comprehensions, er wordt hier geen lijst gemaakt. Gebruik in plaats daarvan `f_of_fracs` om een lijst van hoogtes te maken.
 
 Onthoud dat het resultaat van `f_of_fracs` een grote lijst `y`-waarden is! Je moet deze `y`-waarden (hoogtes) vermenigvuldigen met de breedtes van de rechthoeken. Maar alle breedtes zijn hetzelfde! Je kan dus eerst de hoogtes optellen en daarna vermenigvuldigen met de breedte!

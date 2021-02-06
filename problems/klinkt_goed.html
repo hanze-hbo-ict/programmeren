@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Klinkt goed! &#8212; Programmeren</title>
     
-  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
     
   <link rel="stylesheet"
@@ -31,12 +31,12 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -1307,8 +1307,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>De functie krijgt een lijst <code class="docutils literal notranslate"><span class="pre">L</span></code> en een floating-point getal <code class="docutils literal notranslate"><span class="pre">chance_of_replacing</span></code> mee. <code class="docutils literal notranslate"><span class="pre">replace_some</span></code> moet onafhankelijk van elkaar elk element in L vervangen (of niet vervangen) door gebruik te maken van de hulpfunctie <code class="docutils literal notranslate"><span class="pre">randomize</span></code>.</p>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Gebruik <code class="docutils literal notranslate"><span class="pre">randomize</span></code></p>
+<p>:class: tip</p>
 <p>Gebruik <code class="docutils literal notranslate"><span class="pre">randomize</span></code> in een list comprehension, meer hoef je niet te doen! Bedenk hoe je onderstaand statement kan aanvullen (en vergeet niet om <code class="docutils literal notranslate"><span class="pre">lc</span></code> terug te geven):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">lc</span> <span class="o">=</span> <span class="p">[</span><span class="n">randomize</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">L</span><span class="p">]</span>
 </pre></div>
@@ -1402,8 +1403,9 @@ bestanden die je hebt uitgepakt kopiëren naar de map waarin je aan het werk ben
 <span class="c1"># ... aantal regels uitvoer ...</span>
 </pre></div>
 </div>
-<div class="info admonition">
+<div class="admonition">
 <p class="admonition-title"> Hoe werkt deze code?</p>
+<p>:class: info</p>
 <ol>
 <li><p>De geluidsdata wordt in <em>twee</em> onderdelen teruggegeven door de aanroep naar <code class="docutils literal notranslate"><span class="pre">read_wav</span></code>, via de regels</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">read_wav</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">sound_data</span><span class="p">)</span>
@@ -1469,8 +1471,9 @@ bestanden die je hebt uitgepakt kopiëren naar de map waarin je aan het werk ben
 </div>
 <p>zodat <code class="docutils literal notranslate"><span class="pre">reverse</span></code> een <code class="docutils literal notranslate"><span class="pre">filename</span></code> accepteert, net als <code class="docutils literal notranslate"><span class="pre">flipflop</span></code>. Kopieer en plak <code class="docutils literal notranslate"><span class="pre">flipflop</span></code> om hiermee te beginnen!</p>
 <p>Net als bij <code class="docutils literal notranslate"><span class="pre">flipflop</span></code> moet de sampling rate niet veranderen, maar de functie moet een <em>omgekeerde</em> lijst van geluidssamples maken en deze vervolgens op dezelfde manier verwerken als de twee bovenstaande voorbeelden. Dat wil zeggen dat je ze naar het bestand <code class="docutils literal notranslate"><span class="pre">out.wav</span></code> wilt schrijven en vervolgens dat bestand wilt afspelen.</p>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Een lijst omdraaien</p>
+<p>:class: tip</p>
 <p>Vergeet niet dat je in Python <code class="docutils literal notranslate"><span class="pre">samps[::-1]</span></code> kan schrijven om de lijst <code class="docutils literal notranslate"><span class="pre">samps</span></code> om te draaien!</p>
 </div>
 <p>Zie het volgende voorbeeld:</p>
@@ -1488,8 +1491,9 @@ bestanden die je hebt uitgepakt kopiëren naar de map waarin je aan het werk ben
 </pre></div>
 </div>
 <p>zodat <code class="docutils literal notranslate"><span class="pre">volume</span></code> een <code class="docutils literal notranslate"><span class="pre">filename</span></code> accepteert zoals gebruikelijk en een floating-point waarde <code class="docutils literal notranslate"><span class="pre">scale_factor</span></code>. Vervolgens moet <code class="docutils literal notranslate"><span class="pre">volume</span></code> op de gebruikelijke manier het geluid verwerken, waarbij het uitvoerbestand en het afgespeelde geluid de amplitude (volume) wordt geschaald met de schaalfactor <code class="docutils literal notranslate"><span class="pre">scale_factor</span></code>. Met andere woorden, elke sample moet worden vermenigvuldigd met <code class="docutils literal notranslate"><span class="pre">scale_factor</span></code>.</p>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Gebruik de hulpfunctie <code class="docutils literal notranslate"><span class="pre">scale</span></code></p>
+<p>:class: tip</p>
 <p>Gebruik de hulpfunctie <code class="docutils literal notranslate"><span class="pre">scale</span></code> die je eerder hebt geschreven. Wat je nodig hebt is</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">newsamps</span> <span class="o">=</span> <span class="n">scale</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
 </pre></div>
@@ -1560,8 +1564,9 @@ bestanden die je hebt uitgepakt kopiëren naar de map waarin je aan het werk ben
 <li><p>Als bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">time_delay</span></code> een waarde <code class="docutils literal notranslate"><span class="pre">0.1</span></code> heeft en de sampling rate <code class="docutils literal notranslate"><span class="pre">22050</span></code>, dan moet je <code class="docutils literal notranslate"><span class="pre">2205</span></code> samples wachten</p></li>
 <li><p>Of, als <code class="docutils literal notranslate"><span class="pre">time_delay</span></code> een waarde <code class="docutils literal notranslate"><span class="pre">0.25</span></code> heeft en de sampling rate <code class="docutils literal notranslate"><span class="pre">44100</span></code>, dan is het aantal samples dat je moet wachten <code class="docutils literal notranslate"><span class="pre">11025</span></code></p></li>
 </ul>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Stilte toevoegen</p>
+<p>:class: tip</p>
 <p>De meest gemakkelijke manier om een “wachttijd” aan samples toe te voegen is om een “lege ruimte” of “leeg geluid” aan het begin
 van <code class="docutils literal notranslate"><span class="pre">samps</span></code> toe te voegen, en dit kan je doen door een lijst nullen aan het begin van <code class="docutils literal notranslate"><span class="pre">samps</span></code> te plaatsen! Bijvoorbeeld,</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">samps2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">42</span> <span class="o">+</span> <span class="n">samps</span>
@@ -1671,8 +1676,9 @@ kunnen doen om hiervoor te compenseren zonder het akkoord <em>te stil</em> te ma
 <p>Uitdaging: Gebruik de bovenstaande frequentietabel om het akkoord te veranderen van een A-mineur naar een A-majoor akkoord. Of maak jouw eigen akkoord…</p>
 <p>Maar hoe zit het met het creëren van een <em>C mineur septiem</em> (of overmatig) akkoord?</p>
 <p>Inderdaad, je zou grotere akkoorden kunnen maken met willekeurig veel tonen… of andere ongewone/onbelangrijke/inspirerende/verstorende algoritmisch gegenereerde geluidseffecten. We moedigen je zeker aan om dingen uit te proberen! Het is niet vreselijk moeilijk om iets te schrijven dat echte muziek speelt!</p>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Verder uitbreiden</p>
+<p>:class: tip</p>
 <p>Het kan helpen om functies als <code class="docutils literal notranslate"><span class="pre">a_flat(duration)</span></code> of <code class="docutils literal notranslate"><span class="pre">cm7(duration)</span></code> te hebben, en dan iets te schrijven dat daarop voortbouwt.</p>
 </div>
 </div>
@@ -1738,7 +1744,7 @@ kunnen doen om hiervoor te compenseren zonder het akkoord <em>te stil</em> te ma
     </div>
 
     
-  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
     

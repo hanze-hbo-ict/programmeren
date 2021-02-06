@@ -25,7 +25,9 @@ Je klasse `Board` heeft minstens drie instantievariabelen:
 
 Merk op dat de tweedimensionale lijst een tweedimensionale lijst van *karakters* is; dit zijn gewoon strings van lengte 1. Je moet een leeg veld laten voorstellen door `' '`, een spatieteken; niet de lege string. Je moet de stenen van speler X laten voorstellen door een `'X'` (de hoofdletter x) en je moet de stenen van speler O laten voorstellen door een `'O'` (de hoofdletter o).
 
-:::{admonition,danger} Waarschuwing
+:::{admonition} Waarschuwing
+:class: danger
+
 Een **heel** moeilijk te vinden bug treedt op als je het ***nulteken*** `'0'` gebruikt in plaats van het teken `'O'` (hoofdletter o) om één van de spelers voor te stellen. Het probleem treedt op als door jou, of tijdens het nakijken, de waardes in het bord vergeleken worden met de verkeerde karakters! Zorg ervoor dat je consistent bent in het gebruik van de hoofdletter o.
 :::
 
@@ -100,7 +102,9 @@ zoals te zien in dit grotere voorbeeld met 5 rijen en 15 kolommen (5 bij 15):
  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4
 ```
 
-:::{admonition,tip} Eén string, meerdere regels?
+:::{admonition} Eén string, meerdere regels?
+:class: tip
+
 De string `'\n'` stelt het *newline*-karakter voor in Python. Je kan dus meerdere regels in een enkele string zetten door `'\n'` toe te voegen. Bijvoorbeeld met
 
 ```ipython
@@ -119,7 +123,9 @@ Merk op dat `'\n'` ook *in* een string gebruikt kan worden. In dit geval voegt h
 
 De methode `add_move(self, col, ox)` krijgt twee argumenten mee: het eerste, `col`, geeft de kolom aan waaraan de steen moet worden toegevoegd. Het tweede argument, `ox`, is een string van 1 karakter die de steen aangeeft die aan het bord moet worden toegevoegd. Dat wil zeggen, `ox` moet `'X'` of `'O'` zijn (hoofdletter O dus, niet nul).
 
-:::{admonition,notice} Onthoud dat de stenen van bovenaf in het bord vallen!
+:::{admonition} Onthoud dat de stenen van bovenaf in het bord vallen!
+:class: notice
+
 Je code moet dus het geschikte rijnummer vinden die beschikbaar is in kolom `col` en de steen in die rij toevoegen. Je hoeft in `add_move` **niet** te controleren of `col` een geldig kolomnummer is en of er ruimte is in kolom `col`. Die controles zijn wel belangrijk: ze worden in een toekomstige methode, `allows_move`, gedaan.
 :::
 
@@ -279,13 +285,17 @@ Out[7]:
 
 De methode `wins_for(self, ox)` controleert of iemand het spel gewonnen heeft. Het argument `ox` van deze methode is een steen van 1 karakter: `'X'` of `'O'`. De methode moet `True` teruggeven als er vier stenen van het type `ox` op een rij zijn op het bord. Ze moet anders `False` teruggeven.
 
-:::{admonition,danger} Let op
+:::{admonition} Let op
+:class: danger
+
 Je moet controleren of de speler horizontaal, verticaal of diagonaal gewonnen heeft (en er zijn twee verschillende richtingen voor een diagonale overwinning).
 
 Eén mogelijke manier om dit aan te pakken is om je functies uit week 9 te gebruiken in een paar geneste lussen om alle mogelijke manieren om te winnen te controleren. [Hier is een pagina met een aanzet voor deze strategie](../support/wins_for.md)
 :::
 
-:::{admonition,warning} Waarschuwing
+:::{admonition} Waarschuwing
+:class: warning
+
 De in-een-rij-functies moeten ***buiten*** de klasse staan; ze zijn globaal, en geen onderdeel van de klasse `Board`!
 :::
 
@@ -306,7 +316,9 @@ Let op de backslashes; deze vertellen Python dat de coderegel doorloopt naar de 
 
 Let ook op de "`- 3`" die ervoor zorgt dat de code niet buiten de grenzen loopt. Andere richtingen zullen andere condities nodig hebben om binnen de grenzen te blijven.
 
-:::{admonition,warning} Waarschuwing
+:::{admonition} Waarschuwing
+:class: warning
+
 Het is beter om de stenen *niet* expliciet te gaan tellen om te zien of je er vier hebt. Het probleem is dan dat je elke steen in de goede volgorde moet bezoeken. Verticaal en horizontaal is dat nog niet zo lastig, maar elke steen in diagonale volgorde bezoeken is lastig en bovendien niet zo praktisch. Het is makkelijker om alle vier stenen tegelijk te controleren, zoals in het voorbeeld hierboven.
 :::
 

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Numerieke integratie &#8212; Programmeren</title>
     
-  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
     
   <link rel="stylesheet"
@@ -31,12 +31,12 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -1141,8 +1141,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>Lees deze drie functies van ieder één regel en zorg dat je echt begrijpt hoe ze werken!</p>
-<div class="notice admonition">
+<div class="admonition">
 <p class="admonition-title"> Integer- en floating-pointdeling</p>
+<p>:class: notice</p>
 <p>Merk op dat de aanroepen van <code class="docutils literal notranslate"><span class="pre">lc_idiv(10)</span></code> en <code class="docutils literal notranslate"><span class="pre">lc_fdiv(10)</span></code> <em>verschillende</em> lijsten teruggeven. De eerste gebruikt <em>integer</em>deling (de resultaten worden omlaag afgerond) en de tweede <em>floating-point</em>deling (dus de resultaten blijven een kommagetal).</p>
 </div>
 </div>
@@ -1220,8 +1221,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>Zoals de naam al aangeeft zal de functie een lijst van linkergrenzen (en dit zijn breuken, of <em>fracties</em>) op gelijke afstand van elkaar en met elk een waarde tussen <code class="docutils literal notranslate"><span class="pre">0</span></code> en <code class="docutils literal notranslate"><span class="pre">1</span></code> teruggeven. Dat wil zeggen, als <code class="docutils literal notranslate"><span class="pre">n</span></code> 5 is dan zal de lijst 5 waarden moet bevatten, namelijk <code class="docutils literal notranslate"><span class="pre">0/5</span></code>, <code class="docutils literal notranslate"><span class="pre">1/5</span></code>, <code class="docutils literal notranslate"><span class="pre">2/5</span></code>, <code class="docutils literal notranslate"><span class="pre">3/5</span></code> en <code class="docutils literal notranslate"><span class="pre">4/5</span></code>.</p>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Gebruik <code class="docutils literal notranslate"><span class="pre">lc_fdiv</span></code> als begin</p>
+<p>:class: tip</p>
 <p>Kopieer en plak de voorbeeldfunctie <code class="docutils literal notranslate"><span class="pre">lc_fdiv</span></code> en pas deze aan om <code class="docutils literal notranslate"><span class="pre">unitfracs</span></code> te schrijven. Je hoeft maar een <em>enkel</em> karakter aan te passen in deze code! Vergeet niet de docstring van <code class="docutils literal notranslate"><span class="pre">unitfracs</span></code> aan te passen om aan te geven wat de functie doet.</p>
 </div>
 <p>Schrijf ten slotte ten minste drie <code class="docutils literal notranslate"><span class="pre">assert</span></code> statements om tests te implementeren, je mag een aantal van de voorbeelden hierboven gebruiken.</p>
@@ -1241,8 +1243,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p>Schrijf <code class="docutils literal notranslate"><span class="pre">scaledfracs(low,</span> <span class="pre">hi,</span> <span class="pre">n)</span></code>. De functie geeft een lijst met <code class="docutils literal notranslate"><span class="pre">n</span></code> linkergrenzen terug die evenredig verdeeld zijn over een interval dat van <code class="docutils literal notranslate"><span class="pre">low</span></code> tot <code class="docutils literal notranslate"><span class="pre">hi</span></code> loopt.</p>
 <p>Schrijf ook <code class="docutils literal notranslate"><span class="pre">assert</span></code> statements om de voorbeelden hierboven te testen.</p>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Hoe <code class="docutils literal notranslate"><span class="pre">scaledfracs</span></code> uit te werken</p>
+<p>:class: tip</p>
 <p>De functie <code class="docutils literal notranslate"><span class="pre">scaledfracs</span></code> is lastig om uit te werken, we geven je extra uitleg en tips. Om te beginnen, <em>gebruik</em> <code class="docutils literal notranslate"><span class="pre">unitfracs</span></code>, de functie die al hebt geschreven. De volgende regel geeft een idee hoe je dit zou kunnen doen:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="p">[</span><span class="o">...</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">unitfracs</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
 </pre></div>
@@ -1275,8 +1278,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>Deze functie <code class="docutils literal notranslate"><span class="pre">sqfracs</span></code> lijkt heel erg op <code class="docutils literal notranslate"><span class="pre">scaledfracs</span></code>, alleen is elke waarde <em>gekwadrateerd</em>.</p>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Gebruik <code class="docutils literal notranslate"><span class="pre">scaledfracs</span></code></p>
+<p>:class: tip</p>
 <p>Gebruik hier <code class="docutils literal notranslate"><span class="pre">scaledfracs</span></code> hier. <code class="docutils literal notranslate"><span class="pre">sqfracs</span></code> kan <code class="docutils literal notranslate"><span class="pre">scaledfracs</span></code> op dezelfde manier gebruiken als de manier waarop <code class="docutils literal notranslate"><span class="pre">scaledfracs</span></code> gebruikmaakt van <code class="docutils literal notranslate"><span class="pre">unitfracs</span></code>! Bekijk dit stukje code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">scaledfracs</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">hi</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
 </pre></div>
@@ -1343,8 +1347,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>Deze keer gaan we “test-driven development” gebruiken, waarin je <em>eerst</em> de tests schrijft en daarna zorgt dat je functie aan de tests voldoet. Daarom hebben we de <code class="docutils literal notranslate"><span class="pre">assert</span></code> statements hierboven toegevoegd! Merk op dat de tweede <code class="docutils literal notranslate"><span class="pre">assert</span></code> een voorbeeld is van hoe je kan testen ook als je niet weet wat het numerieke antwoord is!</p>
-<div class="tip admonition">
+<div class="admonition">
 <p class="admonition-title"> Hoe <code class="docutils literal notranslate"><span class="pre">integrate</span></code> uit te werken</p>
+<p>:class: tip</p>
 <p>Om te beginnen, gebruik GEEN list comprehensions, er wordt hier geen lijst gemaakt. Gebruik in plaats daarvan <code class="docutils literal notranslate"><span class="pre">f_of_fracs</span></code> om een lijst van hoogtes te maken.</p>
 <p>Onthoud dat het resultaat van <code class="docutils literal notranslate"><span class="pre">f_of_fracs</span></code> een grote lijst <code class="docutils literal notranslate"><span class="pre">y</span></code>-waarden is! Je moet deze <code class="docutils literal notranslate"><span class="pre">y</span></code>-waarden (hoogtes) vermenigvuldigen met de breedtes van de rechthoeken. Maar alle breedtes zijn hetzelfde! Je kan dus eerst de hoogtes optellen en daarna vermenigvuldigen met de breedte!</p>
 <p>Gebruik de ingebouwde Python functie <code class="docutils literal notranslate"><span class="pre">sum</span></code>. <code class="docutils literal notranslate"><span class="pre">sum(L)</span></code> geeft de som van de elementen in <code class="docutils literal notranslate"><span class="pre">L</span></code> terug. Een paar voorbeelden van hoe <code class="docutils literal notranslate"><span class="pre">sum</span></code> werkt:</p>
@@ -1468,7 +1473,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     </div>
 
     
-  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
     

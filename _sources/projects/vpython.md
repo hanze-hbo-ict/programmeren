@@ -83,7 +83,9 @@ Hier zijn een paar tips die handig kunnen zijn:
 * Vergeet niet dat de [naslagpagina](http://vpython.org/contents/docs/index.html) van VPython de volledige documentatie bevat.
 * [Dit bestand `vpython_events.py` is een voorbeeld van een manier om beweging, toetsaanslagen en muisevents te verwerken.](../assets/vpython_events.py)
 
-  :::{admonition,warning} Opmerking
+  :::{admonition} Opmerking
+  :class: warning
+
   Deze code werkt niet in GlowScript, maar er zitten wel een paar handige ideeën in.
   :::
 

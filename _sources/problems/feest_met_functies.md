@@ -62,7 +62,9 @@ def mult(n, m):
 
 Let op dat de docstring op hetzelfde niveau moet worden ingesprongen als de body (de hoofdtekst) van de functie, Python doet hier anders heel moeilijk over!
 
-:::{admonition,question} docstrings
+:::{admonition} docstrings
+:class: question
+
 Waarom docstrings schrijven? Code wordt vaker gelezen dan geschreven en het is een manier om "aantekeningen" voor jezelf te maken maar ook voor anderen die jouw code misschien ooit gaan lezen!
 
 Er zijn verschillende manieren om Python docstrings te schrijven en hier zijn geen harde regels voor ... Bijvoorbeeld, Google heeft een geheel eigen [syntax en stijl](http://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings) opgesteld waar docstrings aan moeten voldoen.
@@ -98,7 +100,9 @@ assert flipside("a") == "a"
 assert flipside("") == ""
 ```
 
-:::{admonition,question} Assertions
+:::{admonition} Assertions
+:class: question
+
 Het `assert` keyword staat voor een *aanname*. Je vraagt hier Python om bijvoorbeeld aan te nemen dat de returnwaarde van de functie `flipside(s)` waar de parameter `s` een waarde "zijkant" heeft gelijk is aan de string "kantzij". Als dit niet het geval is zal Python het programma beëindigen met een `AssertionError` die jou zal vertellen welke assert statement niet is geslaagd.
 :::
 
@@ -138,7 +142,9 @@ assert mult(0, 0) == 0
 
 De functie `dot(L, k)` moet het *inwendig product* (*inproduct* of *dot product*) van de lijsten `L` en `k` teruggeven. Als de twee lijsten niet even lang zijn, moet `dot` de waarde `0.0` teruggeven. Als de lijsten beide leeg zijn, moet `dot` ook `0.0` teruggeven. Je mag ervan uitgaan dat de lijsten alleen maar getallen bevatten en je mag de vermenigvuldigingsoperator `*` gebruiken bij deze opgave!
 
-:::{admonition,question} Inwendig product (inproduct)
+:::{admonition} Inwendig product (inproduct)
+:class: question
+
 Wat is het inproduct? Het inproduct van twee lijsten (die in deze context dan *vectoren* genoemd worden) is de som van de producten van de elementen die op dezelfde positie staan in de twee vectoren. Bijvoorbeeld, het inproduct van de lijsten `[5, 3]` en `[6, 4]` zal `5 * 6` plus `3 * 4` zijn wat gelijk staat aan `42`.
 :::
 
@@ -198,7 +204,9 @@ Out[6]: 5
 
 Let op, in het laatste voorbeeld is het eerste argument van `ind` een string met een enkele spatie en *niet* een lege string!
 
-:::{admonition,tip} Controleren of een element voorkomt
+:::{admonition} Controleren of een element voorkomt
+:class: tip
+
 Je kan controleren of een element in een sequentie voorkomt met het keyword `in`
 
 ```python
@@ -273,7 +281,9 @@ Schrijf nu zelf een aantal tests voor `letter_score`, de functie zal ook worden 
 
 `scrabble_score` moet een string `s` meekrijgen, die alleen maar kleine letters bevat, en de Scrabble score van de string teruggeeft. Je mag negeren dat in het echte spel sommige tegels maar beperkt beschikbaar zijn.
 
-:::{admonition,tip} `letter_score`
+:::{admonition} `letter_score`
+:class: tip
+
 Gebruik de functie `letter_score` die je eerder hebt uitgewerkt en pas recursie toe. Vergelijk dit met het voorbeeld `vwl` dat eerder is besproken, maar bedenk dat je *verschillende* waardes moet toevoegen voor elke letter. Zie de [voorbeelden van recursie](/examples/recursie.md) voor de functie `vwl`.
 :::
 
@@ -380,7 +390,9 @@ Er zijn drie bonusopgaven:
 - Oefenen op CodingBat met [Python-lijsten](http://codingbat.com/python/List-1)
 - Een functie schrijven om tekst om te zetten naar potjeslatijn (ook met strings)
 
-:::{admonition,tip} CodingBat
+:::{admonition} CodingBat
+:class: tip
+
 Maak een account aan op CodingBat zodat je voor jezelf kan bijhouden welke opgaven je al wel of niet hebt gemaakt. Voor alle CodingBat opgaven geldt een onbeperkt aantal pogingen, dat wil zeggen dat je ze zo vaak mag maken als je wilt.
 :::
 
@@ -436,7 +448,9 @@ Out[3]: 'oghurtyee'
 
 **Tests?** Die mag je zelf schrijven!
 
-:::{admonition,tip} Hoe recursie te gebruiken
+:::{admonition} Hoe recursie te gebruiken
+:class: tip
+
 Eén manier om recursie te gebruiken bij het uitwerken van deze functie is om een hulpfunctie
 
 ```python

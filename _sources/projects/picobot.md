@@ -148,7 +148,9 @@ De klasse `Program` heeft natuurlijk een constructor `__init__(self)` nodig; dez
 
 Daarnaast heeft de klasse een methode `__repr__(self)` nodig die de stringrepresentatie van het programma **teruggeeft**; Python verwacht dat deze methode een string teruggeeft! Als je een nieuwe regel wilt beginnen in een string, kan je `\n` gebruiken.
 
-:::{admonition,notice} Belangrijk!
+:::{admonition} Belangrijk!
+:class: notice
+
 Vergeet niet dat `__repr__` een string moet **teruggeven** in plaats van de string af te drukken!
 :::
 
@@ -169,7 +171,9 @@ sorted_keys = sorted(keys)
 
 Dit maakt een **gesorteerde** lijst met sleutels, met de naam `sorted_keys`. Top!
 
-:::{admonition,danger} Net zo belangrijk!
+:::{admonition} Net zo belangrijk!
+:class: danger
+
 Je methode `__repr__` moet het hele Picobot-programma zo teruggeven ***dat je deze direct kan kopiëren en plakken*** in e [Picobot-simulator](../assets/picobot.html). Elke regel moet dus als volgt geformatteerd worden:
 
 ```
@@ -183,11 +187,15 @@ Je methode `__repr__` moet het hele Picobot-programma zo teruggeven ***dat je de
 
 De klasse moet een methode `randomize(self)` bevatten, die een willekeurige volledige set regels genereert voor de dictionary `self.rules` van het programma. Onthoud dat de dictionary leeg begint. Deze methode maakt willekeurige regels, één voor elke combinatie van de `NUM_STATES` mogelijke toestanden; in het begin zijn dit er 5; en de 9 mogelijke omgevingen. Merk op dat er voor 5 toestanden en 9 omgevingen 45 willekeurig gegenereerde regels zijn.
 
-:::{admonition,tip} Sleutels van `rules`
+:::{admonition} Sleutels van `rules`
+:class: tip
+
 De sleutels (begintoestand, omgeving) van de dictionary zijn ***niet*** willekeurig! Je kan gewoon door alle mogelijke toestanden en alle mogelijke omgevingen lussen. Voor elke combinatie moet je *wel* een willekeurige nieuwe toestand en een willekeurige verplaatsing genereren. Een uitdaging is dat de verplaatsing *geldig moet zijn, dus **niet** tegen een muur aan*!
 :::
 
-:::{admonition,tip} Geldige verplaatsingen
+:::{admonition} Geldige verplaatsingen
+:class: tip
+
 Om ervoor te zorgen dat je alleen een geldige verplaatsing kiest voor een gegeven omgeving `pattern` kan je een while-lus die op deze lijkt gebruiken:
 
 ```python
@@ -212,13 +220,17 @@ De methode `mutate(self)` moet willekeurig één regel kiezen uit `self.rules` e
 
 De methode `crossover(self, other)` is een methode die een object `other` van het type `Program` meekrijgt. Het moet een nieuw "kind", ook van het type `Program` teruggeven die *sommige* regels van `self` en de rest van `other` bevat. Merk op dat de programma's `self` en `other` precies evenveel regels bevatten! Als we bijvoorbeed 5 toestanden hebben, zijn er omdat er maar 9 mogelijke omgevingen zijn precies 45 regels in het programma.
 
-:::{admonition,tip} Effectieve crossovers
+:::{admonition} Effectieve crossovers
+:class: tip
+
 De **effectiefste** manier om de crossover uit te voeren is om een willekeurige "crossover-toestand" te kiezen, van 1 tot en met 3. Stel dat toestand 2 gekozen is. Het kind krijgt dan alle regels van één ouder uit toestanden 0, 1 en 2 en krijgt alle regels van de *andere* ouder uit de overgebleven toestanden, 3 en 4.
 
 Het blijkt dat als je elke regel van een willekeurige ouder kiest, de "genetische code" te veel gehusseld wordt waardoor de kinderen de goede eigenschappen van de ouders niet bewaren.
 :::
 
-:::{admonition,danger} Veel voorkomende fout
+:::{admonition} Veel voorkomende fout
+:class: danger
+
 Een veel voorkomende fout is om het programma van één van de ouders te *wijzigen*, in plaats van een nieuw kind van het type `Program` terug te geven. Dit is niet alleen biologisch een slecht idee, maar zal hier ook niet werken! Waarom niet? Stel je voor dat paren het genoom van een ouder zou aanpassen. Als een ouder een hoge fitness heeft, heeft hij waarschijnlijk meerdere kinderen, die hopelijk veel van de goede eigenschappen van de ouder erven. Als het genoom van de ouder echter *verandert* de eerste keer dat hij paart, is het erg waarschijnlijk dat zijn fitness kleiner wordt! Zijn verdere kinderen hebben daardoor vermoedelijk een lagere fitness dan de eerste.
 :::
 
@@ -268,7 +280,9 @@ class World:
         self.room = [[' '] * WIDTH for row in range(HEIGHT)]
 ```
 
-:::{admonition,notice} `self.room`
+:::{admonition} `self.room`
+:class: notice
+
 Die lege list is niet de uiteindelijke waarde voor `self.room`! Deze verandert nog!
 :::
 
@@ -277,7 +291,9 @@ Je kan terugkijken naar de implementatie van de klasse `Board` uit Vier op een r
 Je moet bovendien zorgen dat de ***buitenrand*** van `self.room` muren bevat, misschien met het karakter `'W'`, of
 wat je maar wilt. Als je je ASCII-weergave extra mooi wilt maken kan je `'-'` voor horizontale muren, `'|'` voor verticale muren en `+` voor kruisingen gebruiken!
 
-:::{admonition,tip} Tip
+:::{admonition} Tip
+:class: tip
+
 Als je een eenvoudigere aanpak kiest, waarin alle muren een `'+'` zijn, dan wordt alles veel makkelijker door **de plustekens in de ruimte zelf te zetten** met code als deze in je constructor `__init__`, *nadat* je de ruimte met lege spaties gemaakt hebt:
 
 ```python
@@ -332,7 +348,9 @@ Stel je als voorbeeld voor dat `p` een Picobot-programma is en we `evaluate_fitn
 
 Na alle 42 tests neemt de code het gemiddelde van het percentage van bezochte cellen van alle pogingen.
 
-:::{admonition,notice} Opmerking
+:::{admonition} Opmerking
+:class: notice
+
 De ruimte bevat 529 cellen (23 bij 23 lege cellen), dus zelfs een programma met relatief hoge fitness heeft een stuk meer dan 529 stappen nodig heeft om een groot deel van de ruimte te vullen, omdat het onwaarschijnlijk is dat het programma erg efficiënt zal zijn. Dat is waarom je misschien 1000 `steps` gebruikt, of zelfs een nog hoger aantal, in plaats van 529.
 :::
 
@@ -342,7 +360,9 @@ De **hoofdfunctie** moet naar het onderwerp, genetische algoritmes, vernoemd wor
 
 Deze functie `genetic_algorithm(pop_size, num_gens)` moet `pop_size` willekeurige Picobot-programma's genereren als de beginpopulatie (200 is hier een goede waarde voor). Daarna moet de fitness van al deze programma's geëvalueerd worden, en moet je de programma's met de hoogste fitness kiezen. Deze programma's overleven en dienen bovendien als "ouders" voor de volgende generatie.
 
-:::{admonition,tip} List-of-lists
+:::{admonition} List-of-lists
+:class: tip
+
 Je kan een lijst met paren met (fitness, programma) sorteren. Stel dat dit de lijst `programs =  [(.4, prog1), (.2, prog2), (.3, prog3)]` is, dan kan je
 
 ```python
@@ -352,13 +372,17 @@ sorted_programs = sorted(programs)
 aanroepen en zal je zien dat `sorted_programs` gelijk wordt aan `[(.2, prog2), (.3, prog3), (.4, prog1)]`
 :::
 
-:::{admonition,tip} Het aantal overlevende programma's
+:::{admonition} Het aantal overlevende programma's
+:class: tip
+
 10% van de populatie (bijvoorbeeld 20 van de 200) is een goede keuze voor het aantal overlevende programma's, maar je mag hier natuurlijk mee experimenteren.
 :::
 
 De overlevende programma's moeten **bewaard** blijven als onderdeel van de volgende generatie; die moet vervolgens aangevuld worden met "kinderen", nieuwe programma's.
 
-:::{admonition,tip} Kinderen maken
+:::{admonition} Kinderen maken
+:class: tip
+
 Om deze kinderen te maken kan je bijvoorbeeld deze aanpak gebruiken:
 * Twee willekeurige ouders kiezen uit de programma's met hoge fitness.
 * `crossover` gebruiken om een programma te maken die een "kind" is deze twee ouders.
@@ -371,7 +395,9 @@ Je hebt nu een nieuwe populatie, hopelijk met hogere fitness, dus kan je nu het 
 
 Aan het eind moet je programma het beste programma uit de laatste generatie teruggeven (en als je wilt afdrukken). Je kan dan dat programma kopiëren en plakken in de Picobot-simulator om hem uit te voeren!
 
-:::{admonition,tip} Programma's bewaren
+:::{admonition} Programma's bewaren
+:class: tip
+
 Je kan het handig vinden om het beste programma van elke generatie op te slaan in een bestand (dat is minder onoverzichtelijk en makkelijker te bewaren). Hier is een stukje code om dit makkelijker te maken:
 
 ```python
@@ -426,11 +452,15 @@ Ongeacht of je je programma's in bestanden opslaat of op het scherm afdrukt moet
    ... rest van het programma overgeslagen ...
   ```
 
-:::{admonition,notice} Hulpfuncties
+:::{admonition} Hulpfuncties
+:class: notice
+
 Als je een aantal hulpfuncties wilt schrijven hiervoor mag dat natuurlijk!
 :::
 
-:::{admonition,tip} Keuzes voor de parameters
+:::{admonition} Keuzes voor de parameters
+:class: tip
+
 Als je wilt kan je wat lezen over hoe je de programma's met de hoogste fitness kan kiezen om die zich te laten voortplanten en de [keuzes voor de parameters](../support/picobot-parameters.md) die daar bij horen (maar het staat je natuurlijk vrij om er mee te experimenteren en andere te kiezen).
 :::
 

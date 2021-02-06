@@ -216,7 +216,9 @@ def replace_some(L, chance_of_replacing):
 
 De functie krijgt een lijst `L` en een floating-point getal `chance_of_replacing` mee. `replace_some` moet onafhankelijk van elkaar elk element in L vervangen (of niet vervangen) door gebruik te maken van de hulpfunctie `randomize`.
 
-:::{admonition,tip} Gebruik `randomize`
+:::{admonition} Gebruik `randomize`
+:class: tip
+
 Gebruik `randomize` in een list comprehension, meer hoef je niet te doen! Bedenk hoe je onderstaand statement kan aanvullen (en vergeet niet om `lc` terug te geven):
 
 ```python
@@ -329,7 +331,9 @@ In [3]: change_speed("swnotry.wav", 22050) # Yoda op normale snelheid
 # ... aantal regels uitvoer ...
 ```
 
-:::{admonition,info} Hoe werkt deze code?
+:::{admonition} Hoe werkt deze code?
+:class: info
+
 1.  De geluidsdata wordt in *twee* onderdelen teruggegeven door de aanroep naar `read_wav`, via de regels
 
     ```python
@@ -409,7 +413,9 @@ zodat `reverse` een `filename` accepteert, net als `flipflop`. Kopieer en plak `
 
 Net als bij `flipflop` moet de sampling rate niet veranderen, maar de functie moet een *omgekeerde* lijst van geluidssamples maken en deze vervolgens op dezelfde manier verwerken als de twee bovenstaande voorbeelden. Dat wil zeggen dat je ze naar het bestand `out.wav` wilt schrijven en vervolgens dat bestand wilt afspelen.
 
-:::{admonition,tip} Een lijst omdraaien
+:::{admonition} Een lijst omdraaien
+:class: tip
+
 Vergeet niet dat je in Python `samps[::-1]` kan schrijven om de lijst `samps` om te draaien!
 :::
 
@@ -433,7 +439,9 @@ def volume(filename, scale_factor):
 
 zodat `volume` een `filename` accepteert zoals gebruikelijk en een floating-point waarde `scale_factor`. Vervolgens moet `volume` op de gebruikelijke manier het geluid verwerken, waarbij het uitvoerbestand en het afgespeelde geluid de amplitude (volume) wordt geschaald met de schaalfactor `scale_factor`. Met andere woorden, elke sample moet worden vermenigvuldigd met `scale_factor`.
 
-:::{admonition,tip} Gebruik de hulpfunctie `scale`
+:::{admonition} Gebruik de hulpfunctie `scale`
+:class: tip
+
 Gebruik de hulpfunctie `scale` die je eerder hebt geschreven. Wat je nodig hebt is
 
 ```python
@@ -532,7 +540,9 @@ Om de geluiden te verschuiven kan je de sampling rate gebruiken om het aantal sa
 
 - Of, als `time_delay` een waarde `0.25` heeft en de sampling rate `44100`, dan is het aantal samples dat je moet wachten `11025`
 
-:::{admonition,tip} Stilte toevoegen
+:::{admonition} Stilte toevoegen
+:class: tip
+
 De meest gemakkelijke manier om een "wachttijd" aan samples toe te voegen is om een "lege ruimte" of "leeg geluid" aan het begin
 van `samps` toe te voegen, en dit kan je doen door een lijst nullen aan het begin van `samps` te plaatsen! Bijvoorbeeld,
 
@@ -674,7 +684,9 @@ Maar hoe zit het met het creëren van een *C mineur septiem* (of overmatig) akko
 
 Inderdaad, je zou grotere akkoorden kunnen maken met willekeurig veel tonen... of andere ongewone/onbelangrijke/inspirerende/verstorende algoritmisch gegenereerde geluidseffecten. We moedigen je zeker aan om dingen uit te proberen! Het is niet vreselijk moeilijk om iets te schrijven dat echte muziek speelt!
 
-:::{admonition,tip} Verder uitbreiden
+:::{admonition} Verder uitbreiden
+:class: tip
+
 Het kan helpen om functies als `a_flat(duration)` of `cm7(duration)` te hebben, en dan iets te schrijven dat daarop voortbouwt.
 :::
 

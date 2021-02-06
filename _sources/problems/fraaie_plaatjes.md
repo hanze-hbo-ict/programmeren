@@ -162,7 +162,9 @@ Schrijf de functie `mirror_vert`, die de afbeelding over de horizontale as (d.w.
 
 *`in.png` verticaal gespiegeld*
 
-:::{admonition,warning} Waarschuwing
+:::{admonition} Waarschuwing
+:class: warning
+
 Je kan geen kopie maken van een lijst met `list1 = list2`, omdat Python in plaats van een nieuw object te maken, gewoon een nieuwe verwijzing naar de oude lijst zal maken. Het slicen van lijsten maakt echter wel nieuwe kopieën van lijsten, dus bedenk hoe je twee slices, elk half zo groot als de originele lijst, kan combineren om de afbeelding te spiegelen.
 :::
 

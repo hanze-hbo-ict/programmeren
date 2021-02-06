@@ -14,7 +14,9 @@ Schrijf een functie `encipher(s, n)` die als argumenten een string `s` en een (n
 Bij dit probleem mag je ervan uitgaan dat hoofdletters "geroteerd" worden naar hoofdletters, kleine letters naar kleine letters en dat alle andere tekens *niet* veranderd worden. Als we bijvoorbeeld de letter
 `'y'` 3 posities willen verschuiven, krijgen we de `'b'` en als we de letter `'Y'` 3 posities willen verschuiven krijgen we `'B'`.
 
-:::{admonition,tip} Karakters in het alfabet
+:::{admonition} Karakters in het alfabet
+:class: tip
+
 In Python kan je de test `if "a" <= c <= "z":` gebruiken om te controleren of een karakter `c` tussen de `'a'` en `'z'` in het alfabet zit.
 :::
 
@@ -22,7 +24,9 @@ Je mag `encipher` schrijven hoe je wilt, mits je functioneel programmeren gebrui
 
 We raden je aan een hulpfunctie te schrijven die een enkel karakter `n` plaatsen roteert, terug naar het begin als dat nodig is. Deze hulpfunctie zou je kunnen gebruiken om de karakters in de string één voor ééń te versleutelen. Je moet zelf bepalen hoe je dat doet!
 
-:::{admonition,tip} Een hulpfunctie `rot(c, n)`
+:::{admonition} Een hulpfunctie `rot(c, n)`
+:class: tip
+
 Schrijf een functie `rot(c, n)` die een enkel karakter `c` `n` plaatsen voorwaarts roteert in het alfabet. De functie `rot13(c)` die je eerder hebt gezien lijkt heel erg op `rot(c, n)`!
 
 Bedenk dat je soms terug naar het begin van het alfabet moet en dat tekens die geen letter zijn *niet* veranderen. Controleer vervolgens met `assert` statements of de functie `rot(c, n)` werkt:
@@ -106,7 +110,9 @@ Omgekeerd krijgt `decipher(s)` een string `s` met een (Nederlandstalige) tekst d
 
 Wees bewust dat sommige strings meer dan één "ontsleuteling" kunnen hebben. Bovendien is het moeilijk of soms zelfs onmogelijk om hele korte strings goed te ontsleutelen. De functie `decipher` hoeft dus ook niet *perfect* te zijn, maar moet wel vrijwel altijd werken met langere stukken Nederlandse tekst, bijvoorbeeld zinnen van 8 of meer woorden. Het is dus geen probleem als een enkel woord of een korte zinnen niet goed worden ontsleuteld.
 
-:::{admonition,tip} Lists of lists
+:::{admonition} Lists of lists
+:class: tip
+
 Het is handig om te beginnen met het genereren van *alle mogelijke versleutelingen*, bijvoorbeeld via:
 
 ```python
@@ -214,7 +220,9 @@ def letter_prob(c):
     return 1.0
 ```
 
-:::{admonition,tip} Beslissingen
+:::{admonition} Beslissingen
+:class: tip
+
 Voor `decipher` zal jouw programma alle 26 mogelijke rotaties van de string `s` die als argument is meegegeven moeten "bekijken" en dan beslissen welke de "beste" is...
 :::
 
@@ -250,7 +258,9 @@ In [3]: blsort(L)
 Out[3]: [0, 0, 0, 1, 1, 1, 1]
 ```
 
-:::{admonition,notice} Binaire eenvoud
+:::{admonition} Binaire eenvoud
+:class: notice
+
 Dit probleem is veel *makkelijker* dan gewoon sorteren! Maak gebruik van het feit dat de lijst `L` alleen maar `0` of `1` kan bevatten.
 :::
 
@@ -288,7 +298,9 @@ zulke hulpfuncties toe te voegen als je dat handig vindt. Het zou kunnen dat je 
 
 Merk op dat als `s` of `t` een lege string is, de Lingo-score `0` moet zijn!
 
-:::{admonition,tip} Wel of niet
+:::{admonition} Wel of niet
+:class: tip
+
 Op enig moment zul je moeten testen of een karakter zich wel of niet in een string bevindt. De regel `if s[0] in t:` zou een handige test kunnen zijn!
 :::
 
@@ -347,7 +359,9 @@ In [9]: exact_change(42, [])
 Out[9]: False
 ```
 
-:::{admonition,tip} Use it or lose it
+:::{admonition} Use it or lose it
+:class: tip
+
 Dit probleem kan net zoals `lcs`, hieronder, worden opgelost door *twee* keer recursie toe te passen en beide resultaten een naam te geven.
 
 -   Voor het eerste geval kan je proberen het probleem op te lossen *zonder* de eerste munt, dit is het *lose-it* geval!
@@ -400,7 +414,9 @@ Out[5]: 'abcd'
 
 Als meerdere resultaten van gelijke lengte mogelijk zijn dan maakt het niet uit welke je teruggeeft, in het laatste voorbeeld hierboven zou `'efgh'` ook een goed antwoord zijn geweest.
 
-:::{admonition,tip} Use it or lose it or lose it
+:::{admonition} Use it or lose it or lose it
+:class: tip
+
 Gebruik de volgende strategie:
 
 -   Als de eerste twee karakters gelijk zijn, gebruik ze dan!
