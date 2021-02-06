@@ -59,7 +59,7 @@ De eerste link bevat een aantal afbeeldingen en verhalen die beschrijven hoe het
 
 Deze link geeft een diepere kijk op een aantal van de vrouwen die de ENIAC programmeerden:
 
-* [The Women of ENIAC](../assets/womenOfENIAC.pdf)
+* [The Women of ENIAC](assets/womenOfENIAC.pdf)
 
 En de laatste link is naar de volledige tekst van *The Education of a Computer* van Hopper:
 

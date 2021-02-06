@@ -277,7 +277,9 @@ Nu moet je nog bedenken wat het *correcte* aantal nullen is... hiervoor heb je d
 
 Gebruik de functie `increment` om de functie `count(s, n)` te schrijven, die een binaire string van 8 tekens accepteert als argument en vervolgens `n` keer doortelt vanaf `s`, terwijl hij wordt afgedrukt.
 
-:::{admonitin,notice} Opmerkingen
+:::{admonition} Opmerkingen
+:class: notice
+
 -   Dit betekent dat jouw functie in totaal `n+1` binaire strings zal afdrukken.
 
 -   Je moet de Python `print` functie gebruiken, omdat er niets wordt teruggegeven. We printen alleen naar het scherm.

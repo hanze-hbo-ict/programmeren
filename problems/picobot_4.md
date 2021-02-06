@@ -5,7 +5,7 @@ csa-chapter: 2
 csa-level: mastery
 ---
 
-### Picobot IV
+# Picobot IV
 
 ```{include} ../class/problems/picobot_4.md
 ```

@@ -4,8 +4,11 @@ author: Hanze University of Applied Sciences
 logo: images/mascot.png
 copyright: ""
 exclude_patterns: ["LICENSE.md", "README.md"]
+only_build_toc_files: true
+jupyter_execute_notebooks: force
 
 latex:
+  latex_engine: xelatex
   latex_documents:
     targetname: book.tex
 html:
@@ -39,5 +42,12 @@ repository:
 sphinx:
   config:
     html_show_copyright: false
-    myst_admonition_enable: true
-    myst_deflist_enable: true
+    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+parse:
+  myst_enable_extensions:
+    - colon_fence
+    - deflist
+
+bibtex_bibfiles:
+  - references.bib

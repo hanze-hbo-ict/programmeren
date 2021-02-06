@@ -124,7 +124,7 @@ Bedenk voordat je de functie uitvoert of `lc_idiv(10)` nog hetzelfde of anders d
 
 Typ nu `run wk3ex3.py` in IPython en probeer `lc_idiv(10)`. Komt dit overeen met wat je verwachtte? Je hoeft hier niets over op te schrijven, maar wees er zeker van dat duidelijk is waarom deze nieuwe uitvoer is zoals het is!
 
-Zie verder voorbeelden van [list comprehensions](../support/list_comprehension.md) voor meer oefeningen!
+Zie verder voorbeelden van [list comprehensions](/practice/2_list_comprehension) voor meer oefeningen!
 
 ## Integreren
 
@@ -311,7 +311,7 @@ Out[3]: [0.0, 1.0]
 # wat je misschien zelf ziet...
 ```
 
-Merk op dat `f_of_fracs` als eerste argument een *functie* accepteert, dat kan in Python (zie ook [list comprehensions](../support/list_comprehension.md) voor voorbeelden hoe je functies als argument kan doorgeven).
+Merk op dat `f_of_fracs` als eerste argument een *functie* accepteert, dat kan in Python (zie ook [list comprehensions](/practice/2_list_comprehension) voor voorbeelden hoe je functies als argument kan doorgeven).
 
 Je kan `sqfracs` kopiëren en plakken als *basis* voor deze functie, je hoeft maar een paar tekens aan te passen! Gebruik net als in de eerdere delen van deze opgave de voorbeelden hierboven om ten minste drie `assert` statements voor `f_of_fracs` te schrijven.
 

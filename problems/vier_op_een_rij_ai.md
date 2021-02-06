@@ -1,6 +1,6 @@
 # AI voor Vier op een rij
 
-```{include} ../class/problems/vier_op_een_rij_md.md
+```{include} ../class/problems/vier_op_een_rij.md
 ```
 
 ## Overzicht

@@ -50,7 +50,7 @@ Out[1]: [39, 42, 45]
 
 List comprehensions zijn een flexibele manier om een functie (of handeling, bijvoorbeeld een berekening) uit te voeren (te "mappen") op alle elementen van een lijst.
 
-Als je denkt dat je list comprehensions begrijpt, kan je doorgaan! Als je nog meer oefening wilt doen kan je meer voorbeelden van [list comprehensions](../support/list_comprehension.md) bekijken.
+Als je denkt dat je list comprehensions begrijpt, kan je doorgaan! Als je nog meer oefening wilt doen kan je meer voorbeelden van [list comprehensions](/practice/2_list_comprehension) bekijken.
 
 ### Functie 1: `scale`
 
@@ -396,7 +396,7 @@ def flipflop(filename):
     play("out.wav")
 ```
 
-Let op het middelste gedeelte van deze code, waar de nieuwe geluidssamples gemaakt worden op basis van de oude. In dit geval is `newsamps` een "geflipflopde" versie van de oude `samps`. Merk verder op dat deze code precies hetzelfde is als de opdracht `flipside` uit [week 2](../week2/wk2ex2.md): `flipflop` plaatst de tweede helft van het geluid *voor* de eerste helft!
+Let op het middelste gedeelte van deze code, waar de nieuwe geluidssamples gemaakt worden op basis van de oude. In dit geval is `newsamps` een "geflipflopde" versie van de oude `samps`. Merk verder op dat deze code precies hetzelfde is als de opdracht `flipside` uit [fijne functies](fijne_functies.md): `flipflop` plaatst de tweede helft van het geluid *voor* de eerste helft!
 
 Bij het schrijven van jouw geluidsbewerkende functies kan je `flipflop` als startpunt gebruiken.
 

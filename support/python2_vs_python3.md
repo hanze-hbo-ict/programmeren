@@ -9,7 +9,9 @@ Python 3 is de nieuwste versie (maar bestaat al sinds 2008!) en Python 2 wordt s
 
 Als je al eerder in Python 2 geprogrammeerd hebt dan is de overstap naar Python 3 niet *heel* groot, maar er zijn een aantal belangrijke verschillen. **Deze lijst is in volgorde van meest naar minder voorkomend.**
 
-:::{admonition,info} In detail
+:::{admonition} In detail
+:class: info
+
 Zie voor een meer compleet overzicht [The key differences between Python 2.7.x and Python 3.x with examples](http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html).
 :::
 

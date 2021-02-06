@@ -1,4 +1,4 @@
-## Vier vieren
+# Vier vieren
 
 ![Vier vieren](images/vier_vieren/four_fours.png)
 
@@ -73,4 +73,8 @@ print("Nul is", 4 + 4 - 4 - 4)
 
 * Misschien vind je de vier-vierenpuzzle verslavend, frustrerend, of allebei!
 
-  **Tip:** vergeet `sqrt` en `factorial` niet!
+:::{admonition} Tip
+:class: tip
+
+Vergeet `sqrt` en `factorial` niet!
+:::
