@@ -20,10 +20,9 @@ Wekelijks wordt aan een aantal opgaven gewerkt. Practicumopgaven worden tijdens 
 
 ![CS for All](../images/cs_for_all.jpg)
 
-Deze cursus maakt gebruik van het boek *CS for All*.{cite}`alvarado2019cs`
+Deze cursus maakt gebruik van het boek *CS for All*{cite}`alvarado2019cs`.
 
 ## Verwijzingen
 
-```{bibliography} /references.bib
-:style: unsrt
+```{bibliography}
 ```

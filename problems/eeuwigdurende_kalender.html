@@ -83,8 +83,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
@@ -333,11 +331,6 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
   <i class="fas fa-chevron-down">
   </i>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="python_turtles.html">
-   Practicum
-  </a>
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../class/opgaven_3.html">
@@ -700,33 +693,6 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
   <i class="fas fa-chevron-down">
   </i>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Projecten
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/vpython.html">
-   VPython
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/connectfour.html">
-   Vier op een rij
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/textid.html">
-   TextID
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/picobot.html">
-   Picobot
-  </a>
  </li>
 </ul>
 <p class="caption collapsible-parent">
@@ -1215,9 +1181,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>De methode <strong>weet niet</strong> hoe de variabele heet die de methode aanroept! Sterker, in het derde voorbeeld hierboven is er <em>geen</em> variabelenaam!</p>
 <p>Het antwoord hierop is <code class="docutils literal notranslate"><span class="pre">self</span></code>. De variabele <code class="docutils literal notranslate"><span class="pre">self</span></code> bevat <strong>het object dat de methode aanroept</strong>, met inbegrip van alle instantievariabelen.</p>
 <p>Dit is waarom <code class="docutils literal notranslate"><span class="pre">self</span></code> altijd het eerste argument is van alle methodes in de klasse <code class="docutils literal notranslate"><span class="pre">Date</span></code> (en van elke andere klasse die je schrijft!): omdat <code class="docutils literal notranslate"><span class="pre">self</span></code> de manier is waarmee de methode toegang heeft tot de individuele instantievariabelen van het object dat de methode heeft aangeroepen.</p>
-<div class="admonition">
-<p class="admonition-title"> Opmerking</p>
-<p>:class: notice</p>
+<div class="notice admonition">
+<p class="admonition-title">Opmerking</p>
 <p>Dit betekent dat een methode altijd op zijn minst één argument heeft, namelijk <code class="docutils literal notranslate"><span class="pre">self</span></code>. Deze waarde wordt echter <strong>impliciet</strong> meegegeven als de methode wordt aangeroepen. De variabele <code class="docutils literal notranslate"><span class="pre">self</span></code> <em>is het object dat de methode aanroept!</em></p>
 <p>Als voorbeeld wordt <code class="docutils literal notranslate"><span class="pre">is_leap_year</span></code> in het voorbeeld hierboven aangeroepen met <code class="docutils literal notranslate"><span class="pre">Date(1,</span> <span class="pre">1,</span> <span class="pre">1900).is_leap_year()</span></code>, en geeft Python automatisch <code class="docutils literal notranslate"><span class="pre">self</span></code>, in dit geval het object <code class="docutils literal notranslate"><span class="pre">Date(1,</span> <span class="pre">1,</span> <span class="pre">1900)</span></code>, als het eerste argument aan de methode <code class="docutils literal notranslate"><span class="pre">is_leap_year</span></code> mee.</p>
 </div>
@@ -1390,9 +1355,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="de-methode-is-before">
 <h3>De methode <code class="docutils literal notranslate"><span class="pre">is_before</span></code><a class="headerlink" href="#de-methode-is-before" title="Permalink to this headline">¶</a></h3>
 <p>Voeg de methode <code class="docutils literal notranslate"><span class="pre">is_before(self,</span> <span class="pre">d2)</span></code> toe aan je klasse <code class="docutils literal notranslate"><span class="pre">Date</span></code>. Deze methode moet <code class="docutils literal notranslate"><span class="pre">True</span></code> teruggeven als het object dat de methode aanroept een kalenderdatum bevat die <em><strong>eerder</strong></em> is dan die van het argument <code class="docutils literal notranslate"><span class="pre">d2</span></code> (dit zal altijd een object van het type <code class="docutils literal notranslate"><span class="pre">Date</span></code> zijn). Als <code class="docutils literal notranslate"><span class="pre">self</span></code> en <code class="docutils literal notranslate"><span class="pre">d2</span></code> dezelfde datum voorstellen, moet de methode <code class="docutils literal notranslate"><span class="pre">False</span></code> teruggeven. Ook als <code class="docutils literal notranslate"><span class="pre">self</span></code> <em>later</em> is dan <code class="docutils literal notranslate"><span class="pre">d2</span></code> moet de methode <code class="docutils literal notranslate"><span class="pre">False</span></code> teruggeven.</p>
-<div class="admonition">
-<p class="admonition-title"> Tip</p>
-<p>:class: tip</p>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
 <p>Er zijn meerdere manieren om dit aan te pakken (sommige staan misschien in je aantekeningen!) Een mogelijke aanpak is om eerst de jaren te vergelijken: <code class="docutils literal notranslate"><span class="pre">self.year</span> <span class="pre">&lt;</span> <span class="pre">d2.year</span></code>, daarna de maanden, daarna de dagen. Maar <em>vergelijk de maanden <strong>alleen</strong> als de jaren gelijk zijn</em>. Er is een soortgelijke voorwaarde voor de dagen (vergelijk ze alleen als de maanden en de jaren <em>beide</em> gelijk zijn).</p>
 </div>
 <p>Om je methode <code class="docutils literal notranslate"><span class="pre">is_before</span></code> te testen, kan je zelf een aantal testgevallen maken.
@@ -1429,9 +1393,8 @@ Hier zijn een paar voorbeelden om mee te beginnen:</p>
 <p>Voeg de methode <code class="docutils literal notranslate"><span class="pre">tomorrow(self)</span></code> toe aan je klasse <code class="docutils literal notranslate"><span class="pre">Date</span></code>. Je hebt misschien college-aantekeningen om hierbij te helpen). Deze methode moet <strong>NIETS TERUGGEVEN</strong>! In plaats daarvan moet ze het aanroepende object <strong>veranderen</strong> zodat het een kalenderdag voorstelt die een dag later is dan degene die het eerst voorstelde. Dit betekent dat <code class="docutils literal notranslate"><span class="pre">self.day</span></code> sowieso verandert. Bovendien veranderen <code class="docutils literal notranslate"><span class="pre">self.month</span></code> en <code class="docutils literal notranslate"><span class="pre">self.year</span></code> misschien.</p>
 <p>Je kan “goochelen” met je types en <code class="docutils literal notranslate"><span class="pre">fdays</span> <span class="pre">=</span> <span class="pre">28</span> <span class="pre">+</span> <span class="pre">self.is_leap_year()</span></code> gebruiken… of je kan deze truc vermijden, zodat de rest van de wereld je code ook nog begrijpt en een gewone <code class="docutils literal notranslate"><span class="pre">if</span></code>-<code class="docutils literal notranslate"><span class="pre">else</span></code> schrijven om hetzelfde effect te verkrijgen. Vergeet niet dat code voor mensen is en niet voor de computer! Die zou liever assembly lezen…</p>
 <p>Daarnaast is een lijst <code class="docutils literal notranslate"><span class="pre">dim</span> <span class="pre">=</span> <span class="pre">[0,</span> <span class="pre">31,</span> <span class="pre">fdays,</span> <span class="pre">31,</span> <span class="pre">30,</span> <span class="pre">31,</span> <span class="pre">30,</span> <span class="pre">31,</span> <span class="pre">31,</span> <span class="pre">30,</span> <span class="pre">31,</span> <span class="pre">30,</span> <span class="pre">31]</span></code> van het aantal dagen in elke maand handig om te gebruiken! Het maakt het makkelijk om te zien hoeveel dagen er in een gegeven maand (<code class="docutils literal notranslate"><span class="pre">self.month</span></code>) zijn</p>
-<div class="admonition">
-<p class="admonition-title"> Waarom staat er een 0 aan het begin?</p>
-<p>:class: notice</p>
+<div class="notice admonition">
+<p class="admonition-title">Waarom staat er een 0 aan het begin?</p>
 <p>Zie je waarom de 0 aan het begin handig is? Bedenk nog eens hoe lijsten geïndexeerd worden…</p>
 </div>
 <p>Om je methode <code class="docutils literal notranslate"><span class="pre">tomorrow</span></code> te testen, kan je zelf een aantal testgevallen maken. Hier zijn een aantal willekeurige gevallen om mee te beginnen:</p>
@@ -1490,9 +1453,8 @@ Hier zijn een paar voorbeelden om mee te beginnen:</p>
 <div class="section" id="de-methode-add-n-days">
 <h3>De methode <code class="docutils literal notranslate"><span class="pre">add_n_days</span></code><a class="headerlink" href="#de-methode-add-n-days" title="Permalink to this headline">¶</a></h3>
 <p>Voeg de methode <code class="docutils literal notranslate"><span class="pre">add_n_days(self,</span> <span class="pre">n)</span></code> toe aan je klasse <code class="docutils literal notranslate"><span class="pre">Date</span></code>. Deze methode hoeft alleen maar niet-negatieve integers als waarde voor het argument <code class="docutils literal notranslate"><span class="pre">n</span></code> te kunnen verwerken. Deze methode moet net zoals de methode <code class="docutils literal notranslate"><span class="pre">tomorrow</span></code> niets teruggeven. In plaats daarvan moet het het aanroepende object <em><strong>veranderen</strong></em> zodat dit een datum <code class="docutils literal notranslate"><span class="pre">n</span></code> kalenderdagen <em>na</em> de oorspronkelijke datum voorstelt.</p>
-<div class="admonition">
-<p class="admonition-title"> Let op</p>
-<p>:class: warning</p>
+<div class="warning admonition">
+<p class="admonition-title">Let op</p>
 <p>Kopieer hiervoor geen code uit de methode <code class="docutils literal notranslate"><span class="pre">tomorrow</span></code>!</p>
 <p>Bedenk <em><strong>in plaats daarvan</strong></em> hoe je de methode <code class="docutils literal notranslate"><span class="pre">tomorrow</span></code> zou kunnen <em><strong>aanroepen</strong></em> in een <code class="docutils literal notranslate"><span class="pre">for</span></code>-lus om dit te implementeren!</p>
 </div>
@@ -1537,14 +1499,12 @@ Hier zijn een paar voorbeelden om mee te beginnen:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">__iadd__(self,</span> <span class="pre">n)</span></code> voor <code class="docutils literal notranslate"><span class="pre">add_n_days(self,</span> <span class="pre">n)</span></code>; hiermee kan je <code class="docutils literal notranslate"><span class="pre">d</span> <span class="pre">+=</span> <span class="pre">1</span></code> of <code class="docutils literal notranslate"><span class="pre">d</span> <span class="pre">+=</span> <span class="pre">1000</span></code> gebruiken</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">__isub__(self,</span> <span class="pre">n)</span></code> voor <code class="docutils literal notranslate"><span class="pre">sub_n_days(self,</span> <span class="pre">n)</span></code>; hiermee kan je <code class="docutils literal notranslate"><span class="pre">d</span> <span class="pre">-=</span> <span class="pre">1</span></code> of <code class="docutils literal notranslate"><span class="pre">d</span> <span class="pre">-=</span> <span class="pre">1000</span></code> gebruiken</p></li>
 </ul>
-<div class="admonition">
-<p class="admonition-title"> <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">self</span></code></p>
-<p>:class: tip</p>
+<div class="tip admonition">
+<p class="admonition-title"><code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">self</span></code></p>
 <p>Merk op dat om deze operators goed te laten werken, je <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">self</span></code> moet toevoegen aan het eind van beide functies. (dit heeft te maken met de interne werking van Python…)</p>
 </div>
-<div class="admonition">
-<p class="admonition-title"> Nog meer operators</p>
-<p>:class: notice</p>
+<div class="notice admonition">
+<p class="admonition-title">Nog meer operators</p>
 <p>De <a class="reference external" href="https://docs.python.org/3/reference/datamodel.html#emulating-numeric-types">Python-handleiding</a> kan je vertellen welke operators je nog meer kan herdefiniëren.</p>
 </div>
 </div>
@@ -1557,9 +1517,8 @@ Hier zijn een paar voorbeelden om mee te beginnen:</p>
 </div>
 <p>De operator voor aftrekken is <code class="docutils literal notranslate"><span class="pre">__sub__</span></code>; implementeer deze ook, naast de methode <code class="docutils literal notranslate"><span class="pre">diff</span></code>.</p>
 <p>Datums zijn complexer dan getallen!! Het implementeren van <code class="docutils literal notranslate"><span class="pre">diff</span></code> is dus nog niet zo simpel. Zie hieronder voor meer tips.</p>
-<div class="admonition">
-<p class="admonition-title"> Belangrijk</p>
-<p>:class: warning</p>
+<div class="warning admonition">
+<p class="admonition-title">Belangrijk</p>
 <p>Deze methode moet <code class="docutils literal notranslate"><span class="pre">self</span></code> en <code class="docutils literal notranslate"><span class="pre">d2</span></code> <strong>niet</strong> veranderen!</p>
 <p>In plaats daarvan moet je <em><strong>kopieën</strong></em> maken van <code class="docutils literal notranslate"><span class="pre">self</span></code> en <code class="docutils literal notranslate"><span class="pre">d2</span></code>; hierdoor worden de oorspronkelijke waardes niet aangepast.</p>
 </div>
@@ -1585,7 +1544,7 @@ Hier zijn een paar voorbeelden om mee te beginnen:</p>
 <li><p>Je kan de methodes <code class="docutils literal notranslate"><span class="pre">tomorrow</span></code> en <code class="docutils literal notranslate"><span class="pre">yesterday</span></code> die je al geschreven hebt gebruiken; in combinatie met <code class="docutils literal notranslate"><span class="pre">while</span></code>-lussen!</p></li>
 <li><p>De test voor de <code class="docutils literal notranslate"><span class="pre">while</span></code>-lus zou iets kunnen zijn als <code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">day1.is_before(day2):</span></code> of het kan <code class="docutils literal notranslate"><span class="pre">is_after</span></code> gebruiken…</p></li>
 <li><p>Gebruik een telvariabele om het aantal keer dat je door de lus gaat voordat je klaar bent bij te houden: dit is je antwoord (misschien met een minteken)!</p></li>
-<li><p>Je kan nog een keer kijken naar je uitwerking van de functie <code class="docutils literal notranslate"><span class="pre">while_pi</span></code> uit <span class="xref myst">week 9</span>.</p></li>
+<li><p>Je kan nog een keer kijken naar je uitwerking van de functie <code class="docutils literal notranslate"><span class="pre">while_pi</span></code> uit <a class="reference internal" href="rij_van_conway.html"><span class="doc std std-doc">de rij van Conway</span></a>.</p></li>
 </ul>
 <p>Om je methode <code class="docutils literal notranslate"><span class="pre">diff</span></code> te testen, moet je een aantal gevallen testen. Hier zijn twee paren datums die relatief dicht bij elkaar liggen:</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">d</span> <span class="o">=</span> <span class="n">Date</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">2020</span><span class="p">)</span>       <span class="c1"># nu...</span>
@@ -1628,9 +1587,8 @@ Je kan andere verschillen controleren op https://www.timeanddate.com/date/durati
 <div class="section" id="de-methode-dow">
 <h3>De methode <code class="docutils literal notranslate"><span class="pre">dow</span></code><a class="headerlink" href="#de-methode-dow" title="Permalink to this headline">¶</a></h3>
 <p>Voeg de methode <code class="docutils literal notranslate"><span class="pre">dow(self)</span></code> toe aan je klasse <code class="docutils literal notranslate"><span class="pre">Date</span></code>. Deze methode moet een string teruggeven die de dag van de week (<code class="docutils literal notranslate"><span class="pre">dow</span></code>, <em>day of week</em>) teruggeeft van het <code class="docutils literal notranslate"><span class="pre">Date</span></code>-object dat de methode aanroept. Dat wil zeggen dat de methode één van de volgende strings teruggeeft: <code class="docutils literal notranslate"><span class="pre">Monday</span></code>, <code class="docutils literal notranslate"><span class="pre">Tuesday</span></code>, <code class="docutils literal notranslate"><span class="pre">Wednesday</span></code>, <code class="docutils literal notranslate"><span class="pre">Thursday</span></code>, <code class="docutils literal notranslate"><span class="pre">Friday</span></code>, <code class="docutils literal notranslate"><span class="pre">Saturday</span></code> of <code class="docutils literal notranslate"><span class="pre">Sunday</span></code>.</p>
-<div class="admonition">
-<p class="admonition-title"> Tips</p>
-<p>:class: tip</p>
+<div class="tip admonition">
+<p class="admonition-title">Tips</p>
 <p>Hoe zou het kunnen helpen om de <code class="docutils literal notranslate"><span class="pre">diff</span></code> vanaf een <em><strong>bekende</strong></em> dag te vinden, zoals de uitzonderlijk populaire trouwdag, <em>zondag</em> 10 oktober 2010?</p>
 <p>Hoe zou de modulusoperator (<code class="docutils literal notranslate"><span class="pre">%</span></code>) kunnen helpen?</p>
 </div>

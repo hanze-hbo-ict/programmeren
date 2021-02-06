@@ -83,8 +83,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
@@ -333,11 +331,6 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
   <i class="fas fa-chevron-down">
   </i>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/python_turtles.html">
-   Practicum
-  </a>
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../class/opgaven_3.html">
@@ -700,33 +693,6 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
   <i class="fas fa-chevron-down">
   </i>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Projecten
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/vpython.html">
-   VPython
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/connectfour.html">
-   Vier op een rij
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/textid.html">
-   TextID
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/picobot.html">
-   Picobot
-  </a>
  </li>
 </ul>
 <p class="caption collapsible-parent">
@@ -1201,16 +1167,16 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="sequentieel-denken">
 <h3>Sequentieel denken<a class="headerlink" href="#sequentieel-denken" title="Permalink to this headline">¶</a></h3>
 <p><strong>faculteit</strong></p>
-<p>wiskunde: <span class="math notranslate nohighlight">\(5! = 120\)</span></p>
+<p>wiskunde: $5! = 120$</p>
 <p>informatica: <code class="docutils literal notranslate"><span class="pre">fac(5)</span> <span class="pre">=</span> <span class="pre">5</span> <span class="pre">*</span> <span class="pre">4</span> <span class="pre">*</span> <span class="pre">3</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">1</span></code></p>
-<p>Laten we het geheugen even opfrissen wat de faculteit van een getal ook alweer is. Stel je 42 aliens voor en je zou willen weten op hoeveel manieren je deze aliens op een rij kan zetten. Je weet misschien het antwoord, dit is 42 x 41 x 41 … 3 x 2 x 1, of ook wel bekend als de <em>42 faculteit</em> en (wiskundig) geschreven als <span class="math notranslate nohighlight">\(42!\)</span>. Sequentieel denken en daarmee dit probleem oplossen (uitschrijven) als <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">*</span> <span class="pre">4</span> <span class="pre">*</span> <span class="pre">3</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">1</span></code> is heel natuurlijk voor mensen, zo hebben we het als oplossing geleerd!</p>
+<p>Laten we het geheugen even opfrissen wat de faculteit van een getal ook alweer is. Stel je 42 aliens voor en je zou willen weten op hoeveel manieren je deze aliens op een rij kan zetten. Je weet misschien het antwoord, dit is 42 x 41 x 41 … 3 x 2 x 1, of ook wel bekend als de <em>42 faculteit</em> en (wiskundig) geschreven als $42!$. Sequentieel denken en daarmee dit probleem oplossen (uitschrijven) als <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">*</span> <span class="pre">4</span> <span class="pre">*</span> <span class="pre">3</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">1</span></code> is heel natuurlijk voor mensen, zo hebben we het als oplossing geleerd!</p>
 <p><code class="docutils literal notranslate"><span class="pre">fac(N)</span> <span class="pre">=</span> <span class="pre">N</span> <span class="pre">*</span> <span class="pre">(N-1)</span> <span class="pre">*</span> <span class="pre">...</span> <span class="pre">*</span> <span class="pre">3</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">1</span></code></p>
 <p>Maar zou je <code class="docutils literal notranslate"><span class="pre">fac(5)</span></code> als een meer algemene versie van zichzelf kunnen schrijven? Dat kan, laten we daar een begin mee maken en je zal zien dat een zichzelf herhalend (terugkerend?) patroon gaat ontstaan, net als bij het aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;i❤️aliens&quot;</span></code>…</p>
 </div>
 <div class="section" id="recursief-denken">
 <h3>Recursief denken<a class="headerlink" href="#recursief-denken" title="Permalink to this headline">¶</a></h3>
 <p><strong>faculteit</strong></p>
-<p>wiskunde: <span class="math notranslate nohighlight">\(5! = 120\)</span></p>
+<p>wiskunde: $5! = 120$</p>
 <p>informatica: <code class="docutils literal notranslate"><span class="pre">fac(5)</span> <span class="pre">=</span> <span class="pre">5</span> <span class="pre">*</span> <span class="pre">4</span> <span class="pre">*</span> <span class="pre">3</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">1</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">fac(5)</span> <span class="pre">=</span> <span class="pre">5</span> <span class="pre">*</span> <span class="pre">fac(4)</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">fac(N)</span> <span class="pre">=</span> <span class="pre">N</span> <span class="pre">*</span> <span class="pre">fac(N</span> <span class="pre">-</span> <span class="pre">1)</span></code></p>
@@ -1411,16 +1377,14 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <p>Er is hier meer uitgeschreven dan je zou verwachten! Want, wat moet je doen in het geval dat de exponent <code class="docutils literal notranslate"><span class="pre">p</span></code> een negatief getal is? Is dit een base- of recursive case?!?</p>
-<p>Een machtsverheffing met grondtal <span class="math notranslate nohighlight">\(b\)</span> en negatieve exponent <span class="math notranslate nohighlight">\(p\)</span></p>
-<div class="math notranslate nohighlight">
-\[
+<p>Een machtsverheffing met grondtal $b$ en negatieve exponent $p$</p>
+<p>$$
 {b^{⁻p}}
-\]</div>
+$$</p>
 <p>kan herschreven kan worden als</p>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 \frac{1}{b^p}
-\]</div>
+$$</p>
 <p>Misschien moet je hier wat wiskundige kennis afstoffen! We gaan niet verder op de achtergrond in en nemen dit ter kennisgeving aan… Het roept wel een andere vraag op, namelijk hoe we Python een negatief getal kunnen laten omzetten naar de positieve waarde? Of, meer in het algemeen, de omkering van een willekeuringe waarde (met andere woorden, de <em>logische negatie</em> van een waarde)?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

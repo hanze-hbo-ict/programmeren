@@ -83,8 +83,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
@@ -106,7 +104,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <meta property="og:url"         content="https://misja.github.io/programmeren/topics/8_ontwerp_algoritmen.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Ontwerp van algoritmen" />
-<meta property="og:description" content="Ontwerp van algoritmen  Use it or lose it!  ## Recursie  Het blijft lastig ...  ![simpsons](images/8/simpsons.gif)    File &#34;&lt;ipython-input-1-8e64fb3fb9d4&gt;&#34;, lin" />
+<meta property="og:description" content="Ontwerp van algoritmen  Use it or lose it!  Recursie  Het blijft lastig …  simpsons  Ook voor mij blijft het een lastig onderwerp. Hoewel ik inmiddels al jaren " />
 <meta property="og:image"       content="https://misja.github.io/programmeren/_static/mascot.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -333,11 +331,6 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
   <i class="fas fa-chevron-down">
   </i>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/python_turtles.html">
-   Practicum
-  </a>
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../class/opgaven_3.html">
@@ -704,33 +697,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  Projecten
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/vpython.html">
-   VPython
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/connectfour.html">
-   Vier op een rij
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/textid.html">
-   TextID
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/picobot.html">
-   Picobot
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
   Voorbeelden
  </span>
 </p>
@@ -917,24 +883,31 @@ commentsRunWhenDOMLoaded(addUtterances);
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#zelfgelijkenis">
-   Zelfgelijkenis
+  <a class="reference internal nav-link" href="#recursie">
+   Recursie
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#het-eerste-geval-en-de-rest">
-   Het eerste geval en de rest
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#de-uitdaging">
-   De uitdaging
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#het-doel">
-   Het doel
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zelfgelijkenis">
+     Zelfgelijkenis
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#het-eerste-geval-en-de-rest">
+     Het eerste geval en de rest
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-uitdaging">
+     De uitdaging
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#het-doel">
+     Het doel
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vooruitblik">
@@ -1201,54 +1174,34 @@ commentsRunWhenDOMLoaded(addUtterances);
   <div class="section" id="ontwerp-van-algoritmen">
 <h1>Ontwerp van algoritmen<a class="headerlink" href="#ontwerp-van-algoritmen" title="Permalink to this headline">¶</a></h1>
 <p><em>Use it or lose it!</em></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Recursie</span>
-
-<span class="n">Het</span> <span class="n">blijft</span> <span class="n">lastig</span> <span class="o">...</span>
-
-<span class="o">![</span>simpsons<span class="o">](</span>images/8/simpsons.gif<span class="o">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-1-8e64fb3fb9d4&gt;&quot;</span><span class="gt">, line </span><span class="mi">3</span>
-    <span class="n">Het</span> <span class="n">blijft</span> <span class="n">lastig</span> <span class="o">...</span>
-        <span class="o">^</span>
-<span class="ne">SyntaxError</span>: invalid syntax
-</pre></div>
-</div>
-</div>
-</div>
+<div class="section" id="recursie">
+<h2>Recursie<a class="headerlink" href="#recursie" title="Permalink to this headline">¶</a></h2>
+<p>Het blijft lastig …</p>
+<p><img alt="simpsons" src="../_images/simpsons.gif" /></p>
 <p>Ook voor mij blijft het een lastig onderwerp. Hoewel ik inmiddels al jaren recursie gebruik, nog steeds heb ik het vaak mis en moet ik weer terug naar de tekentafel om verder te zoeken naar de juiste zelfgelijkenis.</p>
 <div class="section" id="zelfgelijkenis">
-<h2>Zelfgelijkenis<a class="headerlink" href="#zelfgelijkenis" title="Permalink to this headline">¶</a></h2>
+<h3>Zelfgelijkenis<a class="headerlink" href="#zelfgelijkenis" title="Permalink to this headline">¶</a></h3>
 <p>De oplossing van een probleem hangt af van oplossingen van kleinere identieke problemen</p>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 5! = 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1
-\]</div>
-<div class="math notranslate nohighlight">
-\[
+$$</p>
+<p>$$
 5! = 5 \cdot (4 \cdot 3 \cdot 2 \cdot 1)
-\]</div>
-<div class="math notranslate nohighlight">
-\[
+$$</p>
+<p>$$
 5! = 5 \cdot 4!
-\]</div>
-<div class="math notranslate nohighlight">
-\[
+$$</p>
+<p>$$
 n! = n \cdot (n - 1)!
-\]</div>
+$$</p>
 <p>Het is een <em>algemene</em> oplossingsstrategie die <em>niet</em> specifiek is voor informatica!</p>
 <p>Faculteit, oftwel op hoeveel mogelijke manieren kunnen we een aantal aliens op een rij zetten? Het is een goed voorbeeld van hoe we zelfgelijkenis zouden kunnen ontdekken en waar we op zoek gaan naar de <em>abstracte</em> en meest algemene vorm van het probleem. Het opdelen naar een eerste geval en een rest is altijd een goed begin.</p>
 </div>
 <div class="section" id="het-eerste-geval-en-de-rest">
-<h2>Het eerste geval en de rest<a class="headerlink" href="#het-eerste-geval-en-de-rest" title="Permalink to this headline">¶</a></h2>
-<div class="math notranslate nohighlight">
-\[
+<h3>Het eerste geval en de rest<a class="headerlink" href="#het-eerste-geval-en-de-rest" title="Permalink to this headline">¶</a></h3>
+<p>$$
 n! = n \cdot (n - 1)!
-\]</div>
+$$</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">1</span>
@@ -1259,15 +1212,16 @@ n! = n \cdot (n - 1)!
 <p>Je hebt veder kennisgemaakt met een functies, condities, types en collecties. Maar ook met operatoren voor handelingen op data (bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">//</span></code> en <code class="docutils literal notranslate"><span class="pre">%</span></code>) en vergelijkingen van data (bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">==</span></code>, <code class="docutils literal notranslate"><span class="pre">!=</span></code>, ‘&gt;’ en ‘&lt;=’). Met deze beperkte kennis van Python syntax en semantiek heb je al snel  algoritmen voor interessante problemen kunnen schrijven!</p>
 </div>
 <div class="section" id="de-uitdaging">
-<h2>De uitdaging<a class="headerlink" href="#de-uitdaging" title="Permalink to this headline">¶</a></h2>
+<h3>De uitdaging<a class="headerlink" href="#de-uitdaging" title="Permalink to this headline">¶</a></h3>
 <p>De zelfgelijkenis van een probleem kunnen aanwijzen</p>
 <p><img alt="of de hoofdpijn" src="../_images/paracetamol.png" /></p>
 <p>Laten we het een “uitdaging” noemen maar het is bekend dat recursie voor hoofdpijn en slapeloze nachten kan zorgen!</p>
 </div>
 <div class="section" id="het-doel">
-<h2>Het doel<a class="headerlink" href="#het-doel" title="Permalink to this headline">¶</a></h2>
+<h3>Het doel<a class="headerlink" href="#het-doel" title="Permalink to this headline">¶</a></h3>
 <p>Het ontwerpen en implementeren van algoritmen voor het oplossen van problemen</p>
 <p>Denk terug aan het begin waar we probeerden duidelijk te maken wat informatica nu precies is? Programmeren is uiteindelijk maar een klein onderdeel van informatica, de nadruk ligt op het bedenken van recepten om van een bepaalde input tot een gewenste input te komen. Hier zijn oplossingsstrategiën voor nodig en recursie is daar één van, later zullen we andere benaderingen gaan ontdekken (die misschien ook voor minder hoofdpijn gaan zorgen).</p>
+</div>
 </div>
 <div class="section" id="vooruitblik">
 <h2>Vooruitblik<a class="headerlink" href="#vooruitblik" title="Permalink to this headline">¶</a></h2>
@@ -1276,7 +1230,7 @@ n! = n \cdot (n - 1)!
 <div class="section" id="vpool">
 <h3>vPool<a class="headerlink" href="#vpool" title="Permalink to this headline">¶</a></h3>
 <p>De interactie van objecten in een driedimensionale ruimte</p>
-<p><img alt="vPool" src="../_images/pool1.png" /></p>
+<p><img alt="vPool" src="../_images/pool.png" /></p>
 </div>
 <div class="section" id="connect-four">
 <h3>Connect Four<a class="headerlink" href="#connect-four" title="Permalink to this headline">¶</a></h3>

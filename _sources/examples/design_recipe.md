@@ -30,7 +30,9 @@ Wat moet met het resultaat van de functie gebeuren:
 - wordt het naar een bestand geschreven;
 - wordt het naar bijvoorbeeld een speaker, robot of andere machine op het internet verstuurd?
 
-:::{admonition,info} Over input en output
+:::{admonition} Over input en output
+:class: info
+
 Het beslissen of functies moeten worden ontworpen met parameters en returnwaarden, of met printinstructies of andere directe interacties, is een vraag die meer verdieping vereist dan in deze module kan worden aangeboden.
 
 In de meeste gevallen zal het probleem je dus expliciet vertellen wat je moet doen (bv. "neem een getal als parameter en geef het terug als vierkantswortel" of "vraag de gebruiker om een getal in te voeren en vervolgens de vierkantswortel van dat getal af te drukken"). Lees het probleem altijd zorgvuldig door om deze belangrijke informatie te vinden.
@@ -89,7 +91,7 @@ In het algemeen is het aan te raden om elke functie met parameters en returnwaar
 
     ```{code-block} python
     ---
-    emphasize-lines: 2,
+    emphasize-lines: 2
     ---
     def fahrenheit_to_celsius(degrees):
         """Convert degrees Fahrenheit to Celsius
@@ -133,7 +135,7 @@ In het algemeen is het aan te raden om elke functie met parameters en returnwaar
 
     ```{code-block} python
     ---
-    emphasize-lines: 20,21
+    emphasize-lines: 20
     ---
     def fahrenheit_to_celsius(degrees):
         """Convert degrees Fahrenheit to Celsius
@@ -165,7 +167,9 @@ In het algemeen is het aan te raden om elke functie met parameters en returnwaar
     $ python3 -m doctest mijn_bestand.py
     ```
 
-    :::{admonition,warning} Uitvoeren van tests
+    :::{admonition} Uitvoeren van tests
+    :class: warning
+
     In dit voorbeeld wordt verondersteld dat jouw functie in het bestand ``mijn_bestand.py`` is geschreven.
     [TODO over doctest en test alternatieven. Wordt testen/debuggen integraal onderdeel van de module?]
     [doctest](https://docs.python.org/3/library/doctest.html)

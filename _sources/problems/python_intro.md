@@ -90,9 +90,7 @@ We gaan nu je vensters herschikken zodat je efficiënter kan gebruiken; als je a
 * Hier is een voorbeeld van een Mac-omgeving:
 
   ![Mac-omgeving](images/python_intro/edit2.png)
-* en een Windows-omgeving:
 
-  ![Windows-omgeving](TODO)
 * Neem even een kijkje in de menu's van VSCode. Je kan bijkvoorbeeld in *View* de optie *Hide Status Bar* en *Hide Activity Bar* kiezen, maar het kleurenschema veranderen is nog leuker!
 * **Kleurenschema!** Besteed niet te veel tijd hieraan, maar voel je vrij om je favoriete kleurenschema te kiezen voor VSCode (menu's: File/Code ... Preferences ... Color Theme). Dit is erg leuk, misschien zelfs [te leuk](https://code.visualstudio.com/docs/getstarted/themes)...
 

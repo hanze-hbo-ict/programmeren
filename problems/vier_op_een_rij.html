@@ -83,8 +83,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
@@ -333,11 +331,6 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
   <i class="fas fa-chevron-down">
   </i>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="python_turtles.html">
-   Practicum
-  </a>
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../class/opgaven_3.html">
@@ -704,33 +697,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  Projecten
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/vpython.html">
-   VPython
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/connectfour.html">
-   Vier op een rij
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/textid.html">
-   TextID
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/picobot.html">
-   Picobot
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
   Voorbeelden
  </span>
 </p>
@@ -1060,9 +1026,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>Een variabele <code class="docutils literal notranslate"><span class="pre">width</span></code> waarin het aantal kolommen op het bord wordt opgeslagen</p></li>
 </ul>
 <p>Merk op dat de tweedimensionale lijst een tweedimensionale lijst van <em>karakters</em> is; dit zijn gewoon strings van lengte 1. Je moet een leeg veld laten voorstellen door <code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">'</span></code>, een spatieteken; niet de lege string. Je moet de stenen van speler X laten voorstellen door een <code class="docutils literal notranslate"><span class="pre">'X'</span></code> (de hoofdletter x) en je moet de stenen van speler O laten voorstellen door een <code class="docutils literal notranslate"><span class="pre">'O'</span></code> (de hoofdletter o).</p>
-<div class="admonition">
-<p class="admonition-title"> Waarschuwing</p>
-<p>:class: danger</p>
+<div class="danger admonition">
+<p class="admonition-title">Waarschuwing</p>
 <p>Een <strong>heel</strong> moeilijk te vinden bug treedt op als je het <em><strong>nulteken</strong></em> <code class="docutils literal notranslate"><span class="pre">'0'</span></code> gebruikt in plaats van het teken <code class="docutils literal notranslate"><span class="pre">'O'</span></code> (hoofdletter o) om één van de spelers voor te stellen. Het probleem treedt op als door jou, of tijdens het nakijken, de waardes in het bord vergeleken worden met de verkeerde karakters! Zorg ervoor dat je consistent bent in het gebruik van de hoofdletter o.</p>
 </div>
 <p>Je moet een aantal methodes implementeren in de klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code>. Vergeet niet de tips over hoe je ze kan testen te gebruiken nadat je ze geschreven hebt! De eerste twee methodes zijn in het college behandeld en zijn hieronder gegeven zodat je ze kan kopiëren en plakken.</p>
@@ -1128,9 +1093,8 @@ zoals te zien in dit grotere voorbeeld met 5 rijen en 15 kolommen (5 bij 15):</p
  <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span>
 </pre></div>
 </div>
-<div class="admonition">
-<p class="admonition-title"> Eén string, meerdere regels?</p>
-<p>:class: tip</p>
+<div class="tip admonition">
+<p class="admonition-title">Eén string, meerdere regels?</p>
 <p>De string <code class="docutils literal notranslate"><span class="pre">'\n'</span></code> stelt het <em>newline</em>-karakter voor in Python. Je kan dus meerdere regels in een enkele string zetten door <code class="docutils literal notranslate"><span class="pre">'\n'</span></code> toe te voegen. Bijvoorbeeld met</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span>In [1]: s = &#39;Dit is de bovenste regel.&#39;
 In [2]: s += &#39;\n&#39;
@@ -1146,9 +1110,8 @@ Dit is de tweede regel!
 <div class="section" id="de-methode-add-move">
 <h3>De methode <code class="docutils literal notranslate"><span class="pre">add_move</span></code><a class="headerlink" href="#de-methode-add-move" title="Permalink to this headline">¶</a></h3>
 <p>De methode <code class="docutils literal notranslate"><span class="pre">add_move(self,</span> <span class="pre">col,</span> <span class="pre">ox)</span></code> krijgt twee argumenten mee: het eerste, <code class="docutils literal notranslate"><span class="pre">col</span></code>, geeft de kolom aan waaraan de steen moet worden toegevoegd. Het tweede argument, <code class="docutils literal notranslate"><span class="pre">ox</span></code>, is een string van 1 karakter die de steen aangeeft die aan het bord moet worden toegevoegd. Dat wil zeggen, <code class="docutils literal notranslate"><span class="pre">ox</span></code> moet <code class="docutils literal notranslate"><span class="pre">'X'</span></code> of <code class="docutils literal notranslate"><span class="pre">'O'</span></code> zijn (hoofdletter O dus, niet nul).</p>
-<div class="admonition">
-<p class="admonition-title"> Onthoud dat de stenen van bovenaf in het bord vallen!</p>
-<p>:class: notice</p>
+<div class="notice admonition">
+<p class="admonition-title">Onthoud dat de stenen van bovenaf in het bord vallen!</p>
 <p>Je code moet dus het geschikte rijnummer vinden die beschikbaar is in kolom <code class="docutils literal notranslate"><span class="pre">col</span></code> en de steen in die rij toevoegen. Je hoeft in <code class="docutils literal notranslate"><span class="pre">add_move</span></code> <strong>niet</strong> te controleren of <code class="docutils literal notranslate"><span class="pre">col</span></code> een geldig kolomnummer is en of er ruimte is in kolom <code class="docutils literal notranslate"><span class="pre">col</span></code>. Die controles zijn wel belangrijk: ze worden in een toekomstige methode, <code class="docutils literal notranslate"><span class="pre">allows_move</span></code>, gedaan.</p>
 </div>
 <p>Hier is een reeks zetten om <code class="docutils literal notranslate"><span class="pre">add_move</span></code> mee te testen; probeer ze uit!</p>
@@ -1296,15 +1259,13 @@ je klasse <code class="docutils literal notranslate"><span class="pre">Board</sp
 <div class="section" id="de-methode-wins-for">
 <h3>De methode <code class="docutils literal notranslate"><span class="pre">wins_for</span></code><a class="headerlink" href="#de-methode-wins-for" title="Permalink to this headline">¶</a></h3>
 <p>De methode <code class="docutils literal notranslate"><span class="pre">wins_for(self,</span> <span class="pre">ox)</span></code> controleert of iemand het spel gewonnen heeft. Het argument <code class="docutils literal notranslate"><span class="pre">ox</span></code> van deze methode is een steen van 1 karakter: <code class="docutils literal notranslate"><span class="pre">'X'</span></code> of <code class="docutils literal notranslate"><span class="pre">'O'</span></code>. De methode moet <code class="docutils literal notranslate"><span class="pre">True</span></code> teruggeven als er vier stenen van het type <code class="docutils literal notranslate"><span class="pre">ox</span></code> op een rij zijn op het bord. Ze moet anders <code class="docutils literal notranslate"><span class="pre">False</span></code> teruggeven.</p>
-<div class="admonition">
-<p class="admonition-title"> Let op</p>
-<p>:class: danger</p>
+<div class="danger admonition">
+<p class="admonition-title">Let op</p>
 <p>Je moet controleren of de speler horizontaal, verticaal of diagonaal gewonnen heeft (en er zijn twee verschillende richtingen voor een diagonale overwinning).</p>
 <p>Eén mogelijke manier om dit aan te pakken is om je functies uit week 9 te gebruiken in een paar geneste lussen om alle mogelijke manieren om te winnen te controleren. <span class="xref myst">Hier is een pagina met een aanzet voor deze strategie</span></p>
 </div>
-<div class="admonition">
-<p class="admonition-title"> Waarschuwing</p>
-<p>:class: warning</p>
+<div class="warning admonition">
+<p class="admonition-title">Waarschuwing</p>
 <p>De in-een-rij-functies moeten <em><strong>buiten</strong></em> de klasse staan; ze zijn globaal, en geen onderdeel van de klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code>!</p>
 </div>
 <p>Als je opgave 2 van week 9 niet gedaan hebt, kan je ook een aanpak kiezen waarbij je deze functies niet nodig hebt. Hierbij is het nodig om te bedenken welke stenen als een mogelijk <em>“anker”</em> zouden kunnen dienen om een reeks van vier op een rij te beginnen. Alle “ankers” die een horizontale rij kunnen beginnen (van links naar rechts) moeten bijvoorbeeld vallen in kolommen die <em>minstens vier plaatsen van het eind van het bord af liggen</em>. Die begrenzing kan je helpen om te voorkomen dat je code buiten de grenzen van de array loopt. Hier is wat begincode om deze techniek toe te lichten (maar deze controleert nu nog alleen op horizontale overwinningen):</p>
@@ -1320,9 +1281,8 @@ je klasse <code class="docutils literal notranslate"><span class="pre">Board</sp
 </div>
 <p>Let op de backslashes; deze vertellen Python dat de coderegel doorloopt naar de volgende regel in het bestand.</p>
 <p>Let ook op de “<code class="docutils literal notranslate"><span class="pre">-</span> <span class="pre">3</span></code>” die ervoor zorgt dat de code niet buiten de grenzen loopt. Andere richtingen zullen andere condities nodig hebben om binnen de grenzen te blijven.</p>
-<div class="admonition">
-<p class="admonition-title"> Waarschuwing</p>
-<p>:class: warning</p>
+<div class="warning admonition">
+<p class="admonition-title">Waarschuwing</p>
 <p>Het is beter om de stenen <em>niet</em> expliciet te gaan tellen om te zien of je er vier hebt. Het probleem is dan dat je elke steen in de goede volgorde moet bezoeken. Verticaal en horizontaal is dat nog niet zo lastig, maar elke steen in diagonale volgorde bezoeken is lastig en bovendien niet zo praktisch. Het is makkelijker om alle vier stenen tegelijk te controleren, zoals in het voorbeeld hierboven.</p>
 </div>
 <p>Dit is een belangrijke methode die goed getest moet worden! Hier is een voorbeeldreeks om mee te testen:</p>

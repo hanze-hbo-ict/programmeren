@@ -83,8 +83,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
@@ -333,11 +331,6 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
   <i class="fas fa-chevron-down">
   </i>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="python_turtles.html">
-   Practicum
-  </a>
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../class/opgaven_3.html">
@@ -704,33 +697,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  Projecten
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/vpython.html">
-   VPython
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/connectfour.html">
-   Vier op een rij
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/textid.html">
-   TextID
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/picobot.html">
-   Picobot
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
   Voorbeelden
  </span>
 </p>
@@ -1039,16 +1005,14 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Schrijf een functie <code class="docutils literal notranslate"><span class="pre">encipher(s,</span> <span class="pre">n)</span></code> die als argumenten een string <code class="docutils literal notranslate"><span class="pre">s</span></code> en een (niet negatieve) integer ‘n’ met een waarde tussen <code class="docutils literal notranslate"><span class="pre">0</span></code> en <code class="docutils literal notranslate"><span class="pre">25</span></code> verwacht. De functie <code class="docutils literal notranslate"><span class="pre">encipher</span></code> moet een nieuwe string teruggeven waarin de letters in <code class="docutils literal notranslate"><span class="pre">s</span></code> met <code class="docutils literal notranslate"><span class="pre">n</span></code> letters voorwaarts zijn “geroteerd” in het alfabet, en terug naar het begin van het alfabet als dat nodig is.</p>
 <p>Bij dit probleem mag je ervan uitgaan dat hoofdletters “geroteerd” worden naar hoofdletters, kleine letters naar kleine letters en dat alle andere tekens <em>niet</em> veranderd worden. Als we bijvoorbeeld de letter
 <code class="docutils literal notranslate"><span class="pre">'y'</span></code> 3 posities willen verschuiven, krijgen we de <code class="docutils literal notranslate"><span class="pre">'b'</span></code> en als we de letter <code class="docutils literal notranslate"><span class="pre">'Y'</span></code> 3 posities willen verschuiven krijgen we <code class="docutils literal notranslate"><span class="pre">'B'</span></code>.</p>
-<div class="admonition">
-<p class="admonition-title"> Karakters in het alfabet</p>
-<p>:class: tip</p>
+<div class="tip admonition">
+<p class="admonition-title">Karakters in het alfabet</p>
 <p>In Python kan je de test <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">&quot;a&quot;</span> <span class="pre">&lt;=</span> <span class="pre">c</span> <span class="pre">&lt;=</span> <span class="pre">&quot;z&quot;:</span></code> gebruiken om te controleren of een karakter <code class="docutils literal notranslate"><span class="pre">c</span></code> tussen de <code class="docutils literal notranslate"><span class="pre">'a'</span></code> en <code class="docutils literal notranslate"><span class="pre">'z'</span></code> in het alfabet zit.</p>
 </div>
 <p>Je mag <code class="docutils literal notranslate"><span class="pre">encipher</span></code> schrijven hoe je wilt, mits je functioneel programmeren gebruikt. Je mag dus elke combinatie van <em>conditionele statements</em>, <em>recursie</em> en <em>list comprehensions</em> gebruiken.</p>
 <p>We raden je aan een hulpfunctie te schrijven die een enkel karakter <code class="docutils literal notranslate"><span class="pre">n</span></code> plaatsen roteert, terug naar het begin als dat nodig is. Deze hulpfunctie zou je kunnen gebruiken om de karakters in de string één voor ééń te versleutelen. Je moet zelf bepalen hoe je dat doet!</p>
-<div class="admonition">
-<p class="admonition-title"> Een hulpfunctie <code class="docutils literal notranslate"><span class="pre">rot(c,</span> <span class="pre">n)</span></code></p>
-<p>:class: tip</p>
+<div class="tip admonition">
+<p class="admonition-title">Een hulpfunctie <code class="docutils literal notranslate"><span class="pre">rot(c,</span> <span class="pre">n)</span></code></p>
 <p>Schrijf een functie <code class="docutils literal notranslate"><span class="pre">rot(c,</span> <span class="pre">n)</span></code> die een enkel karakter <code class="docutils literal notranslate"><span class="pre">c</span></code> <code class="docutils literal notranslate"><span class="pre">n</span></code> plaatsen voorwaarts roteert in het alfabet. De functie <code class="docutils literal notranslate"><span class="pre">rot13(c)</span></code> die je eerder hebt gezien lijkt heel erg op <code class="docutils literal notranslate"><span class="pre">rot(c,</span> <span class="pre">n)</span></code>!</p>
 <p>Bedenk dat je soms terug naar het begin van het alfabet moet en dat tekens die geen letter zijn <em>niet</em> veranderen. Controleer vervolgens met <code class="docutils literal notranslate"><span class="pre">assert</span></code> statements of de functie <code class="docutils literal notranslate"><span class="pre">rot(c,</span> <span class="pre">n)</span></code> werkt:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">rot</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;c&quot;</span>
@@ -1121,9 +1085,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2>De functie <code class="docutils literal notranslate"><span class="pre">decipher(s)</span></code><a class="headerlink" href="#de-functie-decipher-s" title="Permalink to this headline">¶</a></h2>
 <p>Omgekeerd krijgt <code class="docutils literal notranslate"><span class="pre">decipher(s)</span></code> een string <code class="docutils literal notranslate"><span class="pre">s</span></code> met een (Nederlandstalige) tekst die al versleuteld is. De functie <code class="docutils literal notranslate"><span class="pre">decipher</span></code> moet, voorzover mogelijk, de <em>originele</em> tekst teruggeven, dit zal een rotatie (mogelijk ook <code class="docutils literal notranslate"><span class="pre">0</span></code>) zijn van het argument <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
 <p>Wees bewust dat sommige strings meer dan één “ontsleuteling” kunnen hebben. Bovendien is het moeilijk of soms zelfs onmogelijk om hele korte strings goed te ontsleutelen. De functie <code class="docutils literal notranslate"><span class="pre">decipher</span></code> hoeft dus ook niet <em>perfect</em> te zijn, maar moet wel vrijwel altijd werken met langere stukken Nederlandse tekst, bijvoorbeeld zinnen van 8 of meer woorden. Het is dus geen probleem als een enkel woord of een korte zinnen niet goed worden ontsleuteld.</p>
-<div class="admonition">
-<p class="admonition-title"> Lists of lists</p>
-<p>:class: tip</p>
+<div class="tip admonition">
+<p class="admonition-title">Lists of lists</p>
 <p>Het is handig om te beginnen met het genereren van <em>alle mogelijke versleutelingen</em>, bijvoorbeeld via:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">26</span><span class="p">)]</span>
 </pre></div>
@@ -1218,9 +1181,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <span class="k">return</span> <span class="mf">1.0</span>
 </pre></div>
 </div>
-<div class="admonition">
-<p class="admonition-title"> Beslissingen</p>
-<p>:class: tip</p>
+<div class="tip admonition">
+<p class="admonition-title">Beslissingen</p>
 <p>Voor <code class="docutils literal notranslate"><span class="pre">decipher</span></code> zal jouw programma alle 26 mogelijke rotaties van de string <code class="docutils literal notranslate"><span class="pre">s</span></code> die als argument is meegegeven moeten “bekijken” en dan beslissen welke de “beste” is…</p>
 </div>
 </div>
@@ -1246,9 +1208,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
-<div class="admonition">
-<p class="admonition-title"> Binaire eenvoud</p>
-<p>:class: notice</p>
+<div class="notice admonition">
+<p class="admonition-title">Binaire eenvoud</p>
 <p>Dit probleem is veel <em>makkelijker</em> dan gewoon sorteren! Maak gebruik van het feit dat de lijst <code class="docutils literal notranslate"><span class="pre">L</span></code> alleen maar <code class="docutils literal notranslate"><span class="pre">0</span></code> of <code class="docutils literal notranslate"><span class="pre">1</span></code> kan bevatten.</p>
 </div>
 </div>
@@ -1277,9 +1238,8 @@ te houden of de letters op dezelfde plek staan. Merk op dat alhoewel Lingo tradi
 <p>Er zijn meerdere manieren om dit probleem op te lossen, een aantal daarvan gebruikt kleinere hulpfuncties. Het staat je vrij om
 zulke hulpfuncties toe te voegen als je dat handig vindt. Het zou kunnen dat je al nuttige hulpfuncties bent tegengekomen die hier van toepassing kunnen zijn.</p>
 <p>Merk op dat als <code class="docutils literal notranslate"><span class="pre">s</span></code> of <code class="docutils literal notranslate"><span class="pre">t</span></code> een lege string is, de Lingo-score <code class="docutils literal notranslate"><span class="pre">0</span></code> moet zijn!</p>
-<div class="admonition">
-<p class="admonition-title"> Wel of niet</p>
-<p>:class: tip</p>
+<div class="tip admonition">
+<p class="admonition-title">Wel of niet</p>
 <p>Op enig moment zul je moeten testen of een karakter zich wel of niet in een string bevindt. De regel <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">s[0]</span> <span class="pre">in</span> <span class="pre">t:</span></code> zou een handige test kunnen zijn!</p>
 </div>
 <p>Een paar voorbeelden:</p>
@@ -1331,9 +1291,8 @@ zulke hulpfuncties toe te voegen als je dat handig vindt. Het zou kunnen dat je 
 <span class="n">Out</span><span class="p">[</span><span class="mi">9</span><span class="p">]:</span> <span class="kc">False</span>
 </pre></div>
 </div>
-<div class="admonition">
-<p class="admonition-title"> Use it or lose it</p>
-<p>:class: tip</p>
+<div class="tip admonition">
+<p class="admonition-title">Use it or lose it</p>
 <p>Dit probleem kan net zoals <code class="docutils literal notranslate"><span class="pre">lcs</span></code>, hieronder, worden opgelost door <em>twee</em> keer recursie toe te passen en beide resultaten een naam te geven.</p>
 <ul>
 <li><p>Voor het eerste geval kan je proberen het probleem op te lossen <em>zonder</em> de eerste munt, dit is het <em>lose-it</em> geval!</p>
@@ -1376,9 +1335,8 @@ zulke hulpfuncties toe te voegen als je dat handig vindt. Het zou kunnen dat je 
 </pre></div>
 </div>
 <p>Als meerdere resultaten van gelijke lengte mogelijk zijn dan maakt het niet uit welke je teruggeeft, in het laatste voorbeeld hierboven zou <code class="docutils literal notranslate"><span class="pre">'efgh'</span></code> ook een goed antwoord zijn geweest.</p>
-<div class="admonition">
-<p class="admonition-title"> Use it or lose it or lose it</p>
-<p>:class: tip</p>
+<div class="tip admonition">
+<p class="admonition-title">Use it or lose it or lose it</p>
 <p>Gebruik de volgende strategie:</p>
 <ul>
 <li><p>Als de eerste twee karakters gelijk zijn, gebruik ze dan!</p></li>

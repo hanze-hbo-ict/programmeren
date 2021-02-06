@@ -488,7 +488,7 @@ Wat bedoelen we hiermee?
 * Je kan de methodes `tomorrow` en `yesterday` die je al geschreven hebt gebruiken; in combinatie met `while`-lussen!
 * De test voor de `while`-lus zou iets kunnen zijn als `while day1.is_before(day2):` of het kan `is_after` gebruiken...
 * Gebruik een telvariabele om het aantal keer dat je door de lus gaat voordat je klaar bent bij te houden: dit is je antwoord (misschien met een minteken)!
-* Je kan nog een keer kijken naar je uitwerking van de functie `while_pi` uit [week 9](../week9/wk9ex3.md).
+* Je kan nog een keer kijken naar je uitwerking van de functie `while_pi` uit [de rij van Conway](rij_van_conway.md).
 
 Om je methode `diff` te testen, moet je een aantal gevallen testen. Hier zijn twee paren datums die relatief dicht bij elkaar liggen:
 

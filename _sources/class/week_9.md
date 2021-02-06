@@ -8,8 +8,7 @@
 
 ## Boek
 
-Hoofdstuk 5 uit *CS for All*.{cite}`alvarado2019cs`
+Hoofdstuk 5 uit *CS for All*{cite}`alvarado2019cs`.
 
-```{bibliography} /references.bib
-:style: unsrt
+```{bibliography}
 ```

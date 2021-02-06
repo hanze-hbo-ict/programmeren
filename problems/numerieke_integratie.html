@@ -83,8 +83,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
@@ -333,11 +331,6 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
   <i class="fas fa-chevron-down">
   </i>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="python_turtles.html">
-   Practicum
-  </a>
  </li>
  <li class="toctree-l1 current active collapsible-parent">
   <a class="reference internal" href="../class/opgaven_3.html">
@@ -700,33 +693,6 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
   <i class="fas fa-chevron-down">
   </i>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Projecten
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/vpython.html">
-   VPython
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/connectfour.html">
-   Vier op een rij
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/textid.html">
-   TextID
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/picobot.html">
-   Picobot
-  </a>
  </li>
 </ul>
 <p class="caption collapsible-parent">
@@ -1141,9 +1107,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>Lees deze drie functies van ieder één regel en zorg dat je echt begrijpt hoe ze werken!</p>
-<div class="admonition">
-<p class="admonition-title"> Integer- en floating-pointdeling</p>
-<p>:class: notice</p>
+<div class="notice admonition">
+<p class="admonition-title">Integer- en floating-pointdeling</p>
 <p>Merk op dat de aanroepen van <code class="docutils literal notranslate"><span class="pre">lc_idiv(10)</span></code> en <code class="docutils literal notranslate"><span class="pre">lc_fdiv(10)</span></code> <em>verschillende</em> lijsten teruggeven. De eerste gebruikt <em>integer</em>deling (de resultaten worden omlaag afgerond) en de tweede <em>floating-point</em>deling (dus de resultaten blijven een kommagetal).</p>
 </div>
 </div>
@@ -1155,7 +1120,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p>Bedenk voordat je de functie uitvoert of <code class="docutils literal notranslate"><span class="pre">lc_idiv(10)</span></code> nog hetzelfde of anders dan daarvoor. Zal het <code class="docutils literal notranslate"><span class="pre">assert</span></code> statement hierboven nog slagen, of zal het een fout geven?</p>
 <p>Typ nu <code class="docutils literal notranslate"><span class="pre">run</span> <span class="pre">wk3ex3.py</span></code> in IPython en probeer <code class="docutils literal notranslate"><span class="pre">lc_idiv(10)</span></code>. Komt dit overeen met wat je verwachtte? Je hoeft hier niets over op te schrijven, maar wees er zeker van dat duidelijk is waarom deze nieuwe uitvoer is zoals het is!</p>
-<p>Zie verder voorbeelden van <span class="xref myst">list comprehensions</span> voor meer oefeningen!</p>
+<p>Zie verder voorbeelden van <a class="reference internal" href="../practice/2_list_comprehension.html"><span class="doc std std-doc">list comprehensions</span></a> voor meer oefeningen!</p>
 </div>
 </div>
 <div class="section" id="integreren">
@@ -1221,9 +1186,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>Zoals de naam al aangeeft zal de functie een lijst van linkergrenzen (en dit zijn breuken, of <em>fracties</em>) op gelijke afstand van elkaar en met elk een waarde tussen <code class="docutils literal notranslate"><span class="pre">0</span></code> en <code class="docutils literal notranslate"><span class="pre">1</span></code> teruggeven. Dat wil zeggen, als <code class="docutils literal notranslate"><span class="pre">n</span></code> 5 is dan zal de lijst 5 waarden moet bevatten, namelijk <code class="docutils literal notranslate"><span class="pre">0/5</span></code>, <code class="docutils literal notranslate"><span class="pre">1/5</span></code>, <code class="docutils literal notranslate"><span class="pre">2/5</span></code>, <code class="docutils literal notranslate"><span class="pre">3/5</span></code> en <code class="docutils literal notranslate"><span class="pre">4/5</span></code>.</p>
-<div class="admonition">
-<p class="admonition-title"> Gebruik <code class="docutils literal notranslate"><span class="pre">lc_fdiv</span></code> als begin</p>
-<p>:class: tip</p>
+<div class="tip admonition">
+<p class="admonition-title">Gebruik <code class="docutils literal notranslate"><span class="pre">lc_fdiv</span></code> als begin</p>
 <p>Kopieer en plak de voorbeeldfunctie <code class="docutils literal notranslate"><span class="pre">lc_fdiv</span></code> en pas deze aan om <code class="docutils literal notranslate"><span class="pre">unitfracs</span></code> te schrijven. Je hoeft maar een <em>enkel</em> karakter aan te passen in deze code! Vergeet niet de docstring van <code class="docutils literal notranslate"><span class="pre">unitfracs</span></code> aan te passen om aan te geven wat de functie doet.</p>
 </div>
 <p>Schrijf ten slotte ten minste drie <code class="docutils literal notranslate"><span class="pre">assert</span></code> statements om tests te implementeren, je mag een aantal van de voorbeelden hierboven gebruiken.</p>
@@ -1243,9 +1207,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p>Schrijf <code class="docutils literal notranslate"><span class="pre">scaledfracs(low,</span> <span class="pre">hi,</span> <span class="pre">n)</span></code>. De functie geeft een lijst met <code class="docutils literal notranslate"><span class="pre">n</span></code> linkergrenzen terug die evenredig verdeeld zijn over een interval dat van <code class="docutils literal notranslate"><span class="pre">low</span></code> tot <code class="docutils literal notranslate"><span class="pre">hi</span></code> loopt.</p>
 <p>Schrijf ook <code class="docutils literal notranslate"><span class="pre">assert</span></code> statements om de voorbeelden hierboven te testen.</p>
-<div class="admonition">
-<p class="admonition-title"> Hoe <code class="docutils literal notranslate"><span class="pre">scaledfracs</span></code> uit te werken</p>
-<p>:class: tip</p>
+<div class="tip admonition">
+<p class="admonition-title">Hoe <code class="docutils literal notranslate"><span class="pre">scaledfracs</span></code> uit te werken</p>
 <p>De functie <code class="docutils literal notranslate"><span class="pre">scaledfracs</span></code> is lastig om uit te werken, we geven je extra uitleg en tips. Om te beginnen, <em>gebruik</em> <code class="docutils literal notranslate"><span class="pre">unitfracs</span></code>, de functie die al hebt geschreven. De volgende regel geeft een idee hoe je dit zou kunnen doen:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="p">[</span><span class="o">...</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">unitfracs</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
 </pre></div>
@@ -1278,9 +1241,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>Deze functie <code class="docutils literal notranslate"><span class="pre">sqfracs</span></code> lijkt heel erg op <code class="docutils literal notranslate"><span class="pre">scaledfracs</span></code>, alleen is elke waarde <em>gekwadrateerd</em>.</p>
-<div class="admonition">
-<p class="admonition-title"> Gebruik <code class="docutils literal notranslate"><span class="pre">scaledfracs</span></code></p>
-<p>:class: tip</p>
+<div class="tip admonition">
+<p class="admonition-title">Gebruik <code class="docutils literal notranslate"><span class="pre">scaledfracs</span></code></p>
 <p>Gebruik hier <code class="docutils literal notranslate"><span class="pre">scaledfracs</span></code> hier. <code class="docutils literal notranslate"><span class="pre">sqfracs</span></code> kan <code class="docutils literal notranslate"><span class="pre">scaledfracs</span></code> op dezelfde manier gebruiken als de manier waarop <code class="docutils literal notranslate"><span class="pre">scaledfracs</span></code> gebruikmaakt van <code class="docutils literal notranslate"><span class="pre">unitfracs</span></code>! Bekijk dit stukje code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">scaledfracs</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">hi</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
 </pre></div>
@@ -1303,7 +1265,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="c1"># wat je misschien zelf ziet...</span>
 </pre></div>
 </div>
-<p>Merk op dat <code class="docutils literal notranslate"><span class="pre">f_of_fracs</span></code> als eerste argument een <em>functie</em> accepteert, dat kan in Python (zie ook <span class="xref myst">list comprehensions</span> voor voorbeelden hoe je functies als argument kan doorgeven).</p>
+<p>Merk op dat <code class="docutils literal notranslate"><span class="pre">f_of_fracs</span></code> als eerste argument een <em>functie</em> accepteert, dat kan in Python (zie ook <a class="reference internal" href="../practice/2_list_comprehension.html"><span class="doc std std-doc">list comprehensions</span></a> voor voorbeelden hoe je functies als argument kan doorgeven).</p>
 <p>Je kan <code class="docutils literal notranslate"><span class="pre">sqfracs</span></code> kopiëren en plakken als <em>basis</em> voor deze functie, je hoeft maar een paar tekens aan te passen! Gebruik net als in de eerdere delen van deze opgave de voorbeelden hierboven om ten minste drie <code class="docutils literal notranslate"><span class="pre">assert</span></code> statements voor <code class="docutils literal notranslate"><span class="pre">f_of_fracs</span></code> te schrijven.</p>
 </div>
 </div>
@@ -1347,9 +1309,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>Deze keer gaan we “test-driven development” gebruiken, waarin je <em>eerst</em> de tests schrijft en daarna zorgt dat je functie aan de tests voldoet. Daarom hebben we de <code class="docutils literal notranslate"><span class="pre">assert</span></code> statements hierboven toegevoegd! Merk op dat de tweede <code class="docutils literal notranslate"><span class="pre">assert</span></code> een voorbeeld is van hoe je kan testen ook als je niet weet wat het numerieke antwoord is!</p>
-<div class="admonition">
-<p class="admonition-title"> Hoe <code class="docutils literal notranslate"><span class="pre">integrate</span></code> uit te werken</p>
-<p>:class: tip</p>
+<div class="tip admonition">
+<p class="admonition-title">Hoe <code class="docutils literal notranslate"><span class="pre">integrate</span></code> uit te werken</p>
 <p>Om te beginnen, gebruik GEEN list comprehensions, er wordt hier geen lijst gemaakt. Gebruik in plaats daarvan <code class="docutils literal notranslate"><span class="pre">f_of_fracs</span></code> om een lijst van hoogtes te maken.</p>
 <p>Onthoud dat het resultaat van <code class="docutils literal notranslate"><span class="pre">f_of_fracs</span></code> een grote lijst <code class="docutils literal notranslate"><span class="pre">y</span></code>-waarden is! Je moet deze <code class="docutils literal notranslate"><span class="pre">y</span></code>-waarden (hoogtes) vermenigvuldigen met de breedtes van de rechthoeken. Maar alle breedtes zijn hetzelfde! Je kan dus eerst de hoogtes optellen en daarna vermenigvuldigen met de breedte!</p>
 <p>Gebruik de ingebouwde Python functie <code class="docutils literal notranslate"><span class="pre">sum</span></code>. <code class="docutils literal notranslate"><span class="pre">sum(L)</span></code> geeft de som van de elementen in <code class="docutils literal notranslate"><span class="pre">L</span></code> terug. Een paar voorbeelden van hoe <code class="docutils literal notranslate"><span class="pre">sum</span></code> werkt:</p>

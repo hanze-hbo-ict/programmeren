@@ -83,8 +83,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
@@ -333,11 +331,6 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
   <i class="fas fa-chevron-down">
   </i>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/python_turtles.html">
-   Practicum
-  </a>
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../class/opgaven_3.html">
@@ -704,33 +697,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  Projecten
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/vpython.html">
-   VPython
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/connectfour.html">
-   Vier op een rij
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/textid.html">
-   TextID
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/picobot.html">
-   Picobot
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
   Voorbeelden
  </span>
 </p>
@@ -1065,17 +1031,16 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p>Je hebt inmiddels al functies gebruikt, bijvoorbeeld de functie <code class="docutils literal notranslate"><span class="pre">len(x)</span></code>. Deze functie accepteert een <em>parameter</em> (een waarde, de <em>input</em>) en geeft een resultaat terug (<em>output</em>). We weten of zien niet welke handelingen <code class="docutils literal notranslate"><span class="pre">len(x)</span></code> verricht, we weten alleen dat het een waarde terugggeeft. Laten we Python functies eens vergelijken met wat je al kent van andere disciplines, bijvoorbeeld wiskunde.</p>
 <p><img alt="Google googol" src="../_images/google_googol.png" /></p>
-<p><a class="reference external" href="https://nl.wikipedia.org/wiki/Googol">Googol</a> is de wiskundige aanduiding van een getal met de waarde <span class="math notranslate nohighlight">\(10^{100}\)</span> (uitgeschreven een 1 gevolgd door 100 nullen). Dit is meer dan het aantal deeltjes in het waarneembaar heelal, maar minder dan het geschat <a class="reference external" href="https://en.wikipedia.org/wiki/Shannon_number">mogelijk aantal zetten in een schaakspel</a> (<span class="math notranslate nohighlight">\(10^{120}\)</span>)!</p>
+<p><a class="reference external" href="https://nl.wikipedia.org/wiki/Googol">Googol</a> is de wiskundige aanduiding van een getal met de waarde $10^{100}$ (uitgeschreven een 1 gevolgd door 100 nullen). Dit is meer dan het aantal deeltjes in het waarneembaar heelal, maar minder dan het geschat <a class="reference external" href="https://en.wikipedia.org/wiki/Shannon_number">mogelijk aantal zetten in een schaakspel</a> ($10^{120}$)!</p>
 <p>En als iemand in het verleden niet een spelfout had gemaakt dan zocht je nu met Googol in plaats van <a class="reference external" href="https://google.com">Google</a> … Laten we onze eigen “googoler” functie maken die <em>elk</em> getal tot de macht 100 kan verheffen.</p>
 </div>
 <div class="section" id="structuur-versus-procedure">
 <h2>Structuur versus procedure<a class="headerlink" href="#structuur-versus-procedure" title="Permalink to this headline">¶</a></h2>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 g(x) = x^{100}
-\]</div>
+$$</p>
 <p>Definieert een <strong>structuur</strong>: wat het <em>is</em> (en wat logischerwijs volgt)</p>
-<p>Functies ken je uit de wiskunde en je zou een “googolige” machtsverheffing kunnen <em>beschrijven</em> als een functie. We beschrijven hier dat voor elke parameter <span class="math notranslate nohighlight">\(x\)</span> je deze als <span class="math notranslate nohighlight">\(x^{100}\)</span> terugkrijgt. Dit is de syntax die wiskudigen hebben bedacht om een <em>structuur</em> te beschrijven en wat daar logischerwijs uit zou moeten volgen.</p>
+<p>Functies ken je uit de wiskunde en je zou een “googolige” machtsverheffing kunnen <em>beschrijven</em> als een functie. We beschrijven hier dat voor elke parameter $x$ je deze als $x^{100}$ terugkrijgt. Dit is de syntax die wiskudigen hebben bedacht om een <em>structuur</em> te beschrijven en wat daar logischerwijs uit zou moeten volgen.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">100</span>
 </pre></div>
@@ -1195,26 +1160,22 @@ flipside(s)
     <span class="sd">&quot;&quot;&quot;verdubbelt x?</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span>
-    
-<span class="n">a_dbl_pr</span> <span class="o">=</span> <span class="n">dbl_pr</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="o">+</span> <span class="mi">20</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>40
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a_dbl_pr</span> <span class="o">=</span> <span class="n">dbl_pr</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="o">+</span> <span class="mi">20</span>
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="n">f85fb4a1e955</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> 
-<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">a_dbl_pr</span> <span class="o">=</span> <span class="n">dbl_pr</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="o">+</span> <span class="mi">20</span>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+&lt;ipython-input-5-f85fb4a1e955&gt; in &lt;module&gt;
+      4     print(2 * x)
+      5 
+----&gt; 6 a_dbl_pr = dbl_pr(20) + 20
 
-<span class="ne">TypeError</span>: unsupported operand type(s) for +: &#39;NoneType&#39; and &#39;int&#39;
+TypeError: unsupported operand type(s) for +: &#39;NoneType&#39; and &#39;int&#39;
 </pre></div>
-</div>
-</div>
 </div>
 <p>Dit geeft een fout op regel 6, waar we bij het resultaat van de functie 20 willen optellen. Waarom deze fout terwijl we wél een resultaat op scherm zien (40)? De verklaring is dat een functie zonder <code class="docutils literal notranslate"><span class="pre">return</span></code> niets teruggeeft en dat “niets” (verassend genoeg!) wél een waarde heeft, een waarde <code class="docutils literal notranslate"><span class="pre">None</span></code> (met type <code class="docutils literal notranslate"><span class="pre">NoneType</span></code>). <code class="docutils literal notranslate"><span class="pre">None</span></code> (“geen”) representeert het niets en Python zegt ons hier dat we 20 <em>niet</em> bij niets kunnen optellen!</p>
 <p>Het <em>niets</em> is voor Python blijkbaar wel “iets” (<code class="docutils literal notranslate"><span class="pre">None</span></code>)!</p>
@@ -1248,6 +1209,11 @@ flipside(s)
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> toplap ~ toplap
+</pre></div>
+</div>
+</div>
 </div>
 <p>Voeg <code class="docutils literal notranslate"><span class="pre">assert</span></code> statements toe, waar <em>assert</em> een aanname betekent. Bijvoorbeeld, lees</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">flipside</span><span class="p">(</span><span class="s1">&#39;huiswerk&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;werkhuis&#39;</span>
@@ -1261,6 +1227,11 @@ flipside(s)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">dbl_pr</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="o">==</span> <span class="kc">None</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>40
 </pre></div>
 </div>
 </div>

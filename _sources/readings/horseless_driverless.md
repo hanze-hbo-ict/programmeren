@@ -1,6 +1,6 @@
 # From horseless to driverless
 
-```{include} ../class/readings/horeseless_driverless.md
+```{include} ../class/readings/horseless_driverless.md
 ```
 
 Deze week bekijken we in het practicum een simpele simulatie van "kunstmatig leven": Game of Life van Conway. Zelfs als we even voorbijgaan aan het feit dat de regels hiervan meestal door een computer worden gesimuleerd, kunnen we Game of Life zien als een berekening; maar wel een ander soort berekening dan we normaal zien: een kunstmatig ecosysteem van onafhankelijke onderdelen die met elkaar interacteren.

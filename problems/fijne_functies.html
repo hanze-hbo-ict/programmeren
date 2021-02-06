@@ -83,8 +83,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
@@ -333,11 +331,6 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
   <i class="fas fa-chevron-down">
   </i>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="python_turtles.html">
-   Practicum
-  </a>
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../class/opgaven_3.html">
@@ -704,33 +697,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  Projecten
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/vpython.html">
-   VPython
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/connectfour.html">
-   Vier op een rij
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/textid.html">
-   TextID
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/picobot.html">
-   Picobot
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
   Voorbeelden
  </span>
 </p>
@@ -1067,9 +1033,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="mi">99</span><span class="p">]</span>
 </pre></div>
 </div>
-<div class="admonition">
-<p class="admonition-title"> Tot het eind!</p>
-<p>:class: info</p>
+<div class="info admonition">
+<p class="admonition-title">Tot het eind!</p>
 <p>Let op dat <code class="docutils literal notranslate"><span class="pre">range</span></code>, zoals bij vrijwel alles in Python, <em>tot</em> het eindpunt telt (en niet tot <em>en met</em>)!</p>
 </div>
 </div>
@@ -1106,9 +1071,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>De functie <code class="docutils literal notranslate"><span class="pre">dir</span></code> is vaak handig, het laat alles zien wat zich in een specifieke Python <em>module</em> bevindt. Zo bevat de speciale module <code class="docutils literal notranslate"><span class="pre">__builtins__</span></code> alle <em>ingebouwde</em> functies.</p>
-<div class="admonition">
-<p class="admonition-title"> Dubbele underscores</p>
-<p>:class: info</p>
+<div class="info admonition">
+<p class="admonition-title">Dubbele underscores</p>
 <p>Let op dat je twee <em>underscores</em> typt bij <code class="docutils literal notranslate"><span class="pre">__builitins__</span></code>, zowel voor als na de kleine letters, de underscore <code class="docutils literal notranslate"><span class="pre">_</span></code> is Shift-minteken op de meeste toetsenborden.</p>
 </div>
 <p>Als je goed kijkt naar de grote lijst die <code class="docutils literal notranslate"><span class="pre">dir(__builtins__)</span></code> teruggeeft zul je de functie <code class="docutils literal notranslate"><span class="pre">sum</span></code> vinden die je net hebt gebruikt. Je zal echter ook een aantal andere belangrijke functies <em>niet</em> tegenkomen, bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">sin</span></code> of <code class="docutils literal notranslate"><span class="pre">cos</span></code> of <code class="docutils literal notranslate"><span class="pre">sqrt</span></code>. Deze functies (en vele anderen) kan je vinden in de module <code class="docutils literal notranslate"><span class="pre">math</span></code>. Er zijn in Python veel modules met functies beschikbaar die je direct kan gebruiken, en nog veel meer die je kan downloaden.</p>
@@ -1144,9 +1108,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>Zonder <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">math</span> <span class="pre">import</span> <span class="pre">*</span></code> zou je in dit geval <code class="docutils literal notranslate"><span class="pre">math.cos(math.pi)</span></code> moeten hebben geschreven.</p>
-<div class="admonition">
-<p class="admonition-title"> import *</p>
-<p>:class: warning</p>
+<div class="warning admonition">
+<p class="admonition-title">import *</p>
 <p>Het is niet <em>altijd</em> een goed idee om dit te doen, zeker niet als je veel modules gebruikt. Sommige modules kunnen dezelfde functienaam gebruiken en in dat geval zal de ene import de andere vervangen …</p>
 </div>
 </li>
@@ -1194,9 +1157,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>Je zal zien dat Python de docstring als hulp teruggeeft! Het hulpsysteem van de taal is gebouwd op docstrings! Deze manier van zelfdocumentatie in Python is belangrijk om jouw functies inzichtelijk te maken, zowel voor anderen als voor jezelf.</p>
-<div class="admonition">
-<p class="admonition-title"> Inspringen (indentatie)</p>
-<p>:class: warning</p>
+<div class="warning admonition">
+<p class="admonition-title">Inspringen (indentatie)</p>
 <p>De eerste driedubbele aanhalingstekens <em>moeten</em> ingesprongen worden direct onder de signatuur. De afsluitende driedubbele aanhalingstekens van de docstring springen op hetzelfde niveau en an alle volgende code binnen de functie (de functie “body”).</p>
 </div>
 </div>
@@ -1244,9 +1206,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="mf">4.2</span>
 </pre></div>
 </div>
-<div class="admonition">
-<p class="admonition-title"> Tip</p>
-<p>:class: tip</p>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
 <p>Als je niet zeker weet hoe je moet beginnen, kan je naar het eerste voorbeeld hierboven kijken. Hierbij geldt dat</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>low is 1.0
 hi is 9.0
@@ -1268,9 +1229,8 @@ fraction is 0.25
 <div class="section" id="checkend-s">
 <h3><code class="docutils literal notranslate"><span class="pre">checkend(s)</span></code><a class="headerlink" href="#checkend-s" title="Permalink to this headline">¶</a></h3>
 <p>Schrijf een functie <code class="docutils literal notranslate"><span class="pre">checkend(s)</span></code> die als parameter een string <code class="docutils literal notranslate"><span class="pre">s</span></code> accepteert en <code class="docutils literal notranslate"><span class="pre">True</span></code> teruggeeft als het eerste karakter van <code class="docutils literal notranslate"><span class="pre">s</span></code> gelijk is aan het laatste karakter van <code class="docutils literal notranslate"><span class="pre">s</span></code>. Anders zal het <code class="docutils literal notranslate"><span class="pre">False</span></code> teruggeven. De functie <code class="docutils literal notranslate"><span class="pre">checkends</span></code> hoeft niet te werken met een lege string <code class="docutils literal notranslate"><span class="pre">s</span></code> (een string met waarde <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>).</p>
-<div class="admonition">
-<p class="admonition-title"> boolean waarden</p>
-<p>:class: warning</p>
+<div class="warning admonition">
+<p class="admonition-title">boolean waarden</p>
 <p>De functie moet <em>geen</em> strings teruggeven! In plaats daarvan moet het een <em>boolean</em> teruggeven, dus <code class="docutils literal notranslate"><span class="pre">True</span></code> of <code class="docutils literal notranslate"><span class="pre">False</span></code>, zonder aanhalingstekens.</p>
 <p>In de editor zul je zien dat booleans een andere kleur krijgen (in het standaardkleurenschema van VSCode worden ze blauw) om aan te geven dat Python ze herkent als waarden van het type <code class="docutils literal notranslate"><span class="pre">bool</span></code>. Als je er per ongeluk strings van hebt gemaakt (<code class="docutils literal notranslate"><span class="pre">&quot;True&quot;</span></code> in plaats van <code class="docutils literal notranslate"><span class="pre">True</span></code>) dan worden ze oranje in VSCode.</p>
 <p>Voor alle duidelijkheid, booleans en strings zijn twee heel     verschillende dingen! Voor <code class="docutils literal notranslate"><span class="pre">True</span></code> en <code class="docutils literal notranslate"><span class="pre">False</span></code> heb je vrijwel altijd de booleans, dus zonder aanhalingstekens, nodig.</p>
@@ -1291,9 +1251,8 @@ string met <em>een enkele spatie</em> is, dat is niet hetzelfde als de lege stri
 </pre></div>
 </div>
 <p>Zorg dat het laatste voorbeeld (de string met een enkele spatie) ook werkt in jouw functie. Zoals eerder gezegd, een lege string hoeft <em>niet</em> te werken.</p>
-<div class="admonition">
-<p class="admonition-title"> Vergelijken</p>
-<p>:class: tip</p>
+<div class="tip admonition">
+<p class="admonition-title">Vergelijken</p>
 <p>Je kan in deze functie gebruikmaken van een <code class="docutils literal notranslate"><span class="pre">if</span></code>-<code class="docutils literal notranslate"><span class="pre">else</span></code>-constructie, hier is een begin:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="o">...</span><span class="p">:</span>
     <span class="k">return</span> <span class="kc">True</span>
@@ -1310,9 +1269,8 @@ string met <em>een enkele spatie</em> is, dat is niet hetzelfde als de lege stri
 <p>Schrijf een functie <code class="docutils literal notranslate"><span class="pre">flipside(s)</span></code> die als arument een string <code class="docutils literal notranslate"><span class="pre">s</span></code> accepteert en een string teruggeeft waarvan de eerste helft de
 tweede helft van <code class="docutils literal notranslate"><span class="pre">s</span></code> is en de tweede helft de eerste helft van <code class="docutils literal notranslate"><span class="pre">s</span></code>. De functie zal argument <code class="docutils literal notranslate"><span class="pre">s</span></code> dus <em>gespiegeld</em> teruggeven.</p>
 <p>Als <code class="docutils literal notranslate"><span class="pre">len(s)</span></code> (de lengte van <code class="docutils literal notranslate"><span class="pre">s</span></code>) oneven is, dan geldt dat <em>eerste helft</em> van <code class="docutils literal notranslate"><span class="pre">s</span></code> één karakter korter is dan de tweede helft. De tweede helft van de string die teruggegeven wordt zal in dit geval één karakter korter zijn dan de eerste helft. Na de onderstaande voorbeelden kan je ook een tip vinden.</p>
-<div class="admonition">
-<p class="admonition-title"> Lengte bepalen</p>
-<p>:class: info</p>
+<div class="info admonition">
+<p class="admonition-title">Lengte bepalen</p>
 <p>Het kan hier handig zijn de ingebouwde functie <code class="docutils literal notranslate"><span class="pre">len(s)</span></code> te gebruiken, die de lengte van het argument, een string <code class="docutils literal notranslate"><span class="pre">s</span></code>, teruggeeft. De functie <code class="docutils literal notranslate"><span class="pre">len</span></code> kan je ook gebruiken voor andere typen, bijvoorbeeld lijsten (lists).</p>
 </div>
 <p>Voorbeelden:</p>
@@ -1323,9 +1281,8 @@ tweede helft van <code class="docutils literal notranslate"><span class="pre">s<
 <span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">kantzij</span>
 </pre></div>
 </div>
-<div class="admonition">
-<p class="admonition-title"> Integerdeling</p>
-<p>:class: tip</p>
+<div class="tip admonition">
+<p class="admonition-title">Integerdeling</p>
 <p>Deze functie is eenvoudiger als je op de eerste regel een variabele maakt die gelijk is aan <code class="docutils literal notranslate"><span class="pre">len(s)</span> <span class="pre">//</span> <span class="pre">2</span></code>, bijvoorbeeld,</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">flipside</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Put your docstring here</span>

@@ -87,7 +87,7 @@ Schrijf `rwpos` zodat het de *positie* van de slaapwandelaar na `nsteps` willeke
 
 ### Zo maar een voorbeeld
 
-Bekijk het *raad het getal* voorbeeld in het [random voorbeeld](../support/random.md), je kan dit gebruiken als een begin.
+Bekijk het *raad het getal* voorbeeld in het [random voorbeeld](/support/random.md), je kan dit gebruiken als een begin.
 
 ### Debuggen
 
