@@ -90,6 +90,8 @@ commentsRunWhenDOMLoaded(addUtterances);
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://misja.github.io/programmeren/topics/9b_binaire_getallen.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -697,6 +699,33 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
+  Projecten
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/vpython.html">
+   VPython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/connectfour.html">
+   Vier op een rij
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/textid.html">
+   TextID
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/picobot.html">
+   Picobot
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
   Voorbeelden
  </span>
 </p>
@@ -1062,7 +1091,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>Van rechts naar links <em>representeert</em> elk binair cijfer een steeds grotere macht van 2.</p></li>
 </ul>
 <p><img alt="101010" src="../_images/101010.png" /></p>
-<p>$$101010_2 = 1 \cdot 32 + 0 \cdot 16 + 1 \cdot 8 + 0 \cdot 4 + 1 \cdot 2 + 0 \cdot 1 = 42$$</p>
+<div class="math notranslate nohighlight">
+\[101010_2 = 1 \cdot 32 + 0 \cdot 16 + 1 \cdot 8 + 0 \cdot 4 + 1 \cdot 2 + 0 \cdot 1 = 42\]</div>
 <div class="section" id="binaire-cijfers">
 <h3>Binaire “cijfers”<a class="headerlink" href="#binaire-cijfers" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -1098,13 +1128,14 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="section" id="een-algoritme">
 <h3>Een algoritme!<a class="headerlink" href="#een-algoritme" title="Permalink to this headline">¶</a></h3>
-<p>$$
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{aligned}
-141 &amp;=; … + a_3 \cdot 8 + a_2 \cdot 4 + a_1 \cdot 2 + 1 \cdot 1 \
-140 &amp;=; … + a_3 \cdot 8 + a_2 \cdot 4 + a_1 \cdot 2 \
-70 &amp;=; … + a_3 \cdot 4 + a_2 \cdot 2 + a_1 \cdot 1 \
+141 &amp;=\; ... + a_3 \cdot 8 + a_2 \cdot 4 + a_1 \cdot 2 + 1 \cdot 1 \\
+140 &amp;=\; ... + a_3 \cdot 8 + a_2 \cdot 4 + a_1 \cdot 2 \\
+70 &amp;=\; ... + a_3 \cdot 4 + a_2 \cdot 2 + a_1 \cdot 1 \\
 \end{aligned}
-$$</p>
+\end{split}\]</div>
 <p><img alt="Recursie!" src="../_images/simpsons.gif" /></p>
 </div>
 <div class="section" id="het-algoritme-uitwerken">
@@ -1359,17 +1390,18 @@ $$</p>
 <li><p><strong>Halveer</strong> (zonder rest) steeds de linkerkolom en <strong>verdubbel</strong> de rechterkolom</p></li>
 <li><p>Tel alleen de <strong>rechter</strong>waarden bij elkaar op waarbij de <strong>linker</strong>waarde <strong>oneven</strong> is.</p></li>
 </ul>
-<p>$$
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{array}{ccccc}
-21 &amp; \times &amp; 6 &amp; = &amp; 126 \
+21 &amp; \times &amp; 6 &amp; = &amp; 126 \\
 \hline
-\textbf{21} &amp; &amp; 6 &amp; &amp; 6 \
-10 &amp; &amp; 12 &amp; &amp; \
-\textbf{5} &amp; &amp; 24 &amp; &amp; 24 \
-2 &amp; &amp; 48 &amp; &amp; \
-\textbf{1} &amp; &amp; 96 &amp; &amp; 96 \
+\textbf{21} &amp; &amp; 6 &amp; &amp; 6 \\
+10 &amp; &amp; 12 &amp; &amp; \\
+\textbf{5} &amp; &amp; 24 &amp; &amp; 24 \\
+2 &amp; &amp; 48 &amp; &amp; \\
+\textbf{1} &amp; &amp; 96 &amp; &amp; 96 \\
 \end{array}
-$$</p>
+\end{split}\]</div>
 <ul class="simple">
 <li><p>Waarom werkt dit? (Hint: het heeft met binaire getallen te maken! 🙃)</p></li>
 <li><p>Stof tot nadenken!</p></li>

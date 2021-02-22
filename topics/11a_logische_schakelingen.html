@@ -90,6 +90,8 @@ commentsRunWhenDOMLoaded(addUtterances);
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://misja.github.io/programmeren/topics/11a_logische_schakelingen.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -697,6 +699,33 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
+  Projecten
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/vpython.html">
+   VPython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/connectfour.html">
+   Vier op een rij
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/textid.html">
+   TextID
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/picobot.html">
+   Picobot
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
   Voorbeelden
  </span>
 </p>
@@ -1243,15 +1272,16 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-<p>$$
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{array}{r}
-1\phantom{0}\
-\phantom{0}11\
-+;\phantom{0}11\
+1\phantom{0}\\
+\phantom{0}11\\
++\;\phantom{0}11\\
 \hline
 110
 \end{array}
-$$</p>
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">add_b</span><span class="p">(</span><span class="s2">&quot;11&quot;</span><span class="p">,</span> <span class="s2">&quot;11&quot;</span><span class="p">)</span>
@@ -1919,13 +1949,15 @@ $$</p>
 </table>
 <p><strong>B</strong>: (NOT x) AND y</p>
 <p>Dit komt overeen met de volgende minterm expressie voor <strong>B</strong></p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \bar{x}y
-$$</p>
+\]</div>
 <p>Zet de minterm expressie voor <strong>B</strong> om naar een circuit</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \bar{x}y
-$$</p>
+\]</div>
 <p><img alt="Minterm B" src="../_images/minterm_and_b.png" /></p>
 <table class="colwidths-auto table">
 <thead>
@@ -1965,37 +1997,43 @@ $$</p>
 </table>
 <p><strong>C</strong>: x AND (NOT y)</p>
 <p>Dit komt overeen met de volgende minterm expressie voor <strong>C</strong></p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 x\bar{y}
-$$</p>
+\]</div>
 <p>Zet de minterm expressie voor <strong>C</strong> om naar een circuit</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 x\bar{y}
-$$</p>
+\]</div>
 <p><img alt="Minterm C" src="../_images/minterm_and_c.png" /></p>
 <p><strong>Stap 3</strong></p>
 <p>Combineer de minterm expressies met OR</p>
 <p>((NOT x) AND y) OR (x AND (NOT y))</p>
 <p>Dit komt overeen met de volgende volledige expressie voor de functie</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \bar{x}y + x\bar{y}
-$$</p>
+\]</div>
 <p>Vul de minterm expressie aan tot een volledig circuit</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \bar{x}y + x\bar{y}
-$$</p>
+\]</div>
 <p><img alt="Minterm OR" src="../_images/minterm_b_or_c.png" /></p>
 </div>
 <div class="section" id="bewijs">
 <h2>Bewijs<a class="headerlink" href="#bewijs" title="Permalink to this headline">¶</a></h2>
 <p>De minterm expressie voor de functie is</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \bar{x}y + x\bar{y}
-$$</p>
+\]</div>
 <p>wat ook geschreven kan worden als</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 (\bar{x} \cdot y) + (x \cdot \bar{y})
-$$</p>
+\]</div>
 <p>waar de vermenigvuldiging de AND is en de optelling de OR</p>
 <p>Is dit voldoende voor de andere gevallen (output gelijk aan 0)?</p>
 <table class="colwidths-auto table">
@@ -2012,31 +2050,31 @@ $$</p>
 <td><p><strong>x</strong></p></td>
 <td><p><strong>y</strong></p></td>
 <td><p><strong>fn(x, y)</strong></p></td>
-<td><p>$\bar{x}y + x\bar{y}$</p></td>
+<td><p><span class="math notranslate nohighlight">\(\bar{x}y + x\bar{y}\)</span></p></td>
 </tr>
 <tr class="row-odd"><td><p>A</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
-<td><p>$1 \cdot 0 + 0 \cdot 1 = 0$</p></td>
+<td><p><span class="math notranslate nohighlight">\(1 \cdot 0 + 0 \cdot 1 = 0\)</span></p></td>
 </tr>
 <tr class="row-even"><td><p><strong>B</strong></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
-<td><p>$1 \cdot 1 + 0 \cdot 0 = 1$</p></td>
+<td><p><span class="math notranslate nohighlight">\(1 \cdot 1 + 0 \cdot 0 = 1\)</span></p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>C</strong></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
-<td><p>$0 \cdot 0 + 1 \cdot 1 = 1$</p></td>
+<td><p><span class="math notranslate nohighlight">\(0 \cdot 0 + 1 \cdot 1 = 1\)</span></p></td>
 </tr>
 <tr class="row-even"><td><p>D</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
-<td><p>$0 \cdot 1 + 1 \cdot 0 = 0$</p></td>
+<td><p><span class="math notranslate nohighlight">\(0 \cdot 1 + 1 \cdot 0 = 0\)</span></p></td>
 </tr>
 </tbody>
 </table>
@@ -2123,16 +2161,18 @@ $$</p>
 </tbody>
 </table>
 <p>Op basis van de waarheidstabel kan de volgende minterm expressie worden afgeleid voor <strong>A</strong>, <strong>B</strong> en <strong>D</strong> (de outputs met waarde 1)</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \bar{x}\bar{y} + \bar{x}y + xy
-$$</p>
+\]</div>
 </div>
 <div class="section" id="circuit">
 <h3>Circuit<a class="headerlink" href="#circuit" title="Permalink to this headline">¶</a></h3>
 <p>Op basis van de expressie</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \bar{x}\bar{y} + \bar{x}y + xy
-$$</p>
+\]</div>
 <p>kan het volgende circuit worden opgesteld</p>
 <p><img alt="Minterm GTE function" src="../_images/minterm_gte_function.png" /></p>
 </div>

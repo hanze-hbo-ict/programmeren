@@ -90,6 +90,8 @@ commentsRunWhenDOMLoaded(addUtterances);
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://misja.github.io/programmeren/topics/5a_simulatie.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -697,6 +699,33 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
+  Projecten
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/vpython.html">
+   VPython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/connectfour.html">
+   Vier op een rij
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/textid.html">
+   TextID
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/picobot.html">
+   Picobot
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
   Voorbeelden
  </span>
 </p>
@@ -1091,7 +1120,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>of 1 karakter uit een string</p>
-<p>De kans op <code class="docutils literal notranslate"><span class="pre">&quot;r&quot;</span></code> is $\frac{1}{4}$, op <code class="docutils literal notranslate"><span class="pre">&quot;o&quot;</span></code> $\frac{1}{2}$ en op <code class="docutils literal notranslate"><span class="pre">&quot;s&quot;</span></code> $\frac{1}{4}$ …</p>
+<p>De kans op <code class="docutils literal notranslate"><span class="pre">&quot;r&quot;</span></code> is <span class="math notranslate nohighlight">\(\frac{1}{4}\)</span>, op <code class="docutils literal notranslate"><span class="pre">&quot;o&quot;</span></code> <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span> en op <code class="docutils literal notranslate"><span class="pre">&quot;s&quot;</span></code> <span class="math notranslate nohighlight">\(\frac{1}{4}\)</span> …</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;slapen&#39;</span><span class="p">,</span> <span class="s1">&#39;eten&#39;</span><span class="p">,</span> <span class="s1">&#39;netflix&#39;</span><span class="p">,</span> <span class="s1">&#39;studeren&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
@@ -1226,14 +1255,16 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>Je ziet hier een aantal aanvullingen, bijvoorbeeld het printen van de keus, een halve seconde pauzeren na de keus en het tellen en teruggeven van het aantal keer dat is gekozen. Maar wat valt te zeggen over het te <em>verwachten</em> aantal pogingen? Ook dit probleem kan <em>recursief</em> worden benaderd!</p>
-<p>De kans dat de eerste keer het getal wordt geraden is $\frac{1}{100}$ en $\frac{99}{100}$ dat het <em>niet</em> wordt geraden (en weer opnieuw moet worden begonnen, maar we hebben al een eerste poging gedaan). Laat $E$ nu het te verwachten aantal pogingen zijn voor het raden van het juiste getal, op basis van de bovenstaande (recursieve) redenatie komen we dan tot een EERSTE geval $1\cdot\frac{1}{100}$ en een REST $(E + 1)\cdot\frac{99}{100}$ ($E + 1$ omdat de recursieve aanroep moet weten dat het EERSTE geval, een <em>eerste</em> poging, al is gedaan voor het verhogen van de telling). We kunnen dit nu schrijven als</p>
-<p>$$
+<p>De kans dat de eerste keer het getal wordt geraden is <span class="math notranslate nohighlight">\(\frac{1}{100}\)</span> en <span class="math notranslate nohighlight">\(\frac{99}{100}\)</span> dat het <em>niet</em> wordt geraden (en weer opnieuw moet worden begonnen, maar we hebben al een eerste poging gedaan). Laat <span class="math notranslate nohighlight">\(E\)</span> nu het te verwachten aantal pogingen zijn voor het raden van het juiste getal, op basis van de bovenstaande (recursieve) redenatie komen we dan tot een EERSTE geval <span class="math notranslate nohighlight">\(1\cdot\frac{1}{100}\)</span> en een REST <span class="math notranslate nohighlight">\((E + 1)\cdot\frac{99}{100}\)</span> (<span class="math notranslate nohighlight">\(E + 1\)</span> omdat de recursieve aanroep moet weten dat het EERSTE geval, een <em>eerste</em> poging, al is gedaan voor het verhogen van de telling). We kunnen dit nu schrijven als</p>
+<div class="math notranslate nohighlight">
+\[
 E = 1\cdot\frac{1}{100} + (E + 1)\cdot\frac{99}{100}
-$$</p>
+\]</div>
 <p>en dit is een vergelijking die kan worden <a class="reference external" href="https://mathsolver.microsoft.com/nl/solve-problem/E%20%3D%20%201%20%60cdot%20%20%20%60frac%7B%201%20%20%7D%7B%20100%20%20%7D%20%20%2B%20%60left(%20E%2B1%20%20%60right)%20%20%20%60cdot%20%20%20%60frac%7B%2099%20%20%7D%7B%20100%20%20%7D">opgelost</a> tot</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 E = 100
-$$</p>
+\]</div>
 <p>We kunnen dus 100 pogingen <em>verwachten</em>, maar wat betekent dit getal nu? In het geval dat we deze funtie een oneindig aantal keer zouden uitvoeren zal het gemiddeld aantal pogingen uitkomen op 100 (het gemiddelde van alle mogelijke uitkomsten).</p>
 </div>
 </div>
@@ -1260,13 +1291,13 @@ $$</p>
 <div class="section" id="oplossing">
 <h3>Oplossing<a class="headerlink" href="#oplossing" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
-<li><p>$\frac{2}{4} = \frac{1}{2}$</p></li>
-<li><p>$\frac{3}{9} = \frac{1}{3}$ (<code class="docutils literal notranslate"><span class="pre">[0,1,2,3,4]</span> <span class="pre">+</span> <span class="pre">[4,2,4,2]</span></code> is <code class="docutils literal notranslate"><span class="pre">[0,1,2,3,4,4,2,4,2]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">','</span></code> (kans is $\frac{3}{7}$)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'1,2,3,4'</span></code> (kans is $\frac{1}{1}$)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">','</span></code> (kans is $\frac{3}{9}$)</p></li>
-<li><p>even getal (kans is $\frac{3}{5}$)</p></li>
-<li><p>$\frac{1}{42}$ (in totaal 42 stappen van 0,5 ($\frac{20,5 + 0,5}{0,5}$) , waarvan één stap groter dan 0)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{2}{4} = \frac{1}{2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{3}{9} = \frac{1}{3}\)</span> (<code class="docutils literal notranslate"><span class="pre">[0,1,2,3,4]</span> <span class="pre">+</span> <span class="pre">[4,2,4,2]</span></code> is <code class="docutils literal notranslate"><span class="pre">[0,1,2,3,4,4,2,4,2]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">','</span></code> (kans is <span class="math notranslate nohighlight">\(\frac{3}{7}\)</span>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'1,2,3,4'</span></code> (kans is <span class="math notranslate nohighlight">\(\frac{1}{1}\)</span>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">','</span></code> (kans is <span class="math notranslate nohighlight">\(\frac{3}{9}\)</span>)</p></li>
+<li><p>even getal (kans is <span class="math notranslate nohighlight">\(\frac{3}{5}\)</span>)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{1}{42}\)</span> (in totaal 42 stappen van 0,5 (<span class="math notranslate nohighlight">\(\frac{20,5 + 0,5}{0,5}\)</span>) , waarvan één stap groter dan 0)</p></li>
 </ol>
 <p>Syntax</p>
 <ol class="simple">
@@ -1283,7 +1314,7 @@ $$</p>
 <p><img alt="Casino Monte Carlo" src="../_images/casino-royale-bond.jpg" /></p>
 <p>Bond, James Bond (bekend van <a class="reference external" href="https://nl.wikipedia.org/wiki/Casino_Royale_(2006)">Casino Royale</a> )</p>
 <p><img alt="Dartboard" src="../_images/500px-Dartboard_unlabeled.svg.png" /></p>
-<p>In het boek wordt een methode beschreven voor een simulatie met dartboard om de waarde van $\pi$ (<a class="reference external" href="https://nl.wikipedia.org/wiki/Pi_(wiskunde)">pi</a>) te bepalen. Maar, wat heeft dit te maken met Monte Carlo?!?</p>
+<p>In het boek wordt een methode beschreven voor een simulatie met dartboard om de waarde van <span class="math notranslate nohighlight">\(\pi\)</span> (<a class="reference external" href="https://nl.wikipedia.org/wiki/Pi_(wiskunde)">pi</a>) te bepalen. Maar, wat heeft dit te maken met Monte Carlo?!?</p>
 <p>(Als je het boek niet hebt dan geeft de volgende video een goede uitleg. Misschien is dit iets om zelf uit te proberen!)</p>
 <p><img alt="Stanislaw Ulam" src="../_images/stan_ulam.jpg" /></p>
 <p>Ulam, Stan Ulam (bekend van <a class="reference external" href="https://nl.wikipedia.org/wiki/Monte-Carlosimulatie">Monte Carlo simulaties</a>)</p>
@@ -1325,7 +1356,7 @@ $$</p>
 </div>
 </div>
 <p>Let op waar de dobbelstenen in de code worden geworpen, kan je zien hoe de worp voor beide wordt gesimuleerd? <code class="docutils literal notranslate"><span class="pre">choice([1,2,3,4,5,6])</span></code> en <code class="docutils literal notranslate"><span class="pre">choice(list(range(1,7)))</span></code> geven natuurlijk hetzelfde resultaat, de computer zal het meest blij zijn met de eerste variant omdat het efficënter is. In het eerste geval is de list als argument voor <code class="docutils literal notranslate"><span class="pre">choice</span></code> al <em>gedefinieerd</em>, in het tweede geval moet het steeds weer worden <em>gegenereerd</em> (aangemaakt).</p>
-<p>Bij elke worp zijn $6 \times 6 = 36$ mogelijke combinaties van ogen mogelijk. 6 van deze mogelijkheden zijn gelijke paren. De kans op een gelijk paar ogen is dus $\frac{6}{36}$ wat gelijk is aan $\frac{1}{6}$ en deze simulatie komt daar héél dichtbij!</p>
+<p>Bij elke worp zijn <span class="math notranslate nohighlight">\(6 \times 6 = 36\)</span> mogelijke combinaties van ogen mogelijk. 6 van deze mogelijkheden zijn gelijke paren. De kans op een gelijk paar ogen is dus <span class="math notranslate nohighlight">\(\frac{6}{36}\)</span> wat gelijk is aan <span class="math notranslate nohighlight">\(\frac{1}{6}\)</span> en deze simulatie komt daar héél dichtbij!</p>
 </div>
 <div class="section" id="monte-carlo-monty-hall">
 <h3>Monte Carlo Monty Hall<a class="headerlink" href="#monte-carlo-monty-hall" title="Permalink to this headline">¶</a></h3>

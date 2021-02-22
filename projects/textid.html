@@ -1,0 +1,1717 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tekstidentificatie &#8212; Programmeren</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "misja/programmeren");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://misja.github.io/programmeren/projects/textid.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="De evolutie van Picobot" href="picobot.html" />
+    <link rel="prev" title="Vier op een rij" href="connectfour.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://misja.github.io/programmeren/projects/textid.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Tekstidentificatie" />
+<meta property="og:description" content="Tekstidentificatie  In dit project ga je Python gebruiken om een statistisch model van tekst te maken waarmee je een auteur of stijl kan “herkennen”, met een ve" />
+<meta property="og:image"       content="https://misja.github.io/programmeren/_static/mascot.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/mascot.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Programmeren</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/syllabus.html">
+   Programmeren
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Opmerkingen
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/feedback.html">
+   Anoniem feedbackformulier
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Week 1
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/week_1.html">
+   Onderwerpen
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/1a_introductie.html">
+     Introductie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/1b_condities.html">
+     Condities
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/2a_programmeren.html">
+     Programmeren
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/2b_picobot.html">
+     Picobot
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/python_intro.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/opgaven_1.html">
+   Opgaven
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/guugu_yimithirr.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/rochambeau.html">
+     Rochambeau
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/interactieve_fictie.html">
+     Interactieve fictie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/picobot_1.html">
+     Picobot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/picobot_2.html">
+     Picobot II: Picobot Strikes Back
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/picobot_3.html">
+     Picobot III: Return of the Picobot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/picobot_4.html">
+     Picobot IV: The Picobot Menace
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Week 2
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/week_2.html">
+   Onderwerpen
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/3a_data.html">
+     Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/3b_strings_en_lists.html">
+     Strings en lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/4a_functies.html">
+     Functies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/4b_recursie.html">
+     Recursie
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/sequenties_en_data.html">
+   Practicum I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/fijne_functies.html">
+   Practicum II
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/opgaven_2.html">
+   Opgaven
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/end_of_theory.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/feest_met_functies.html">
+     Feest met functies
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Week 3
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/week_3.html">
+   Onderwerpen
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/5a_simulatie.html">
+     Simulatie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/5b_turtle_recursie.html">
+     Turtle en recursie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/6a_list_comprehension.html">
+     List comprehension
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/opgaven_3.html">
+   Opgaven
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/computer_wins_jeopardy.html">
+     De computer wint
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/slaapwandelende_student.html">
+     Slaapwandelende student
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/numerieke_integratie.html">
+     Numerieke integratie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/turtles_tot_het_einde.html">
+     Turtles all the way down
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Week 4
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/week_4.html">
+   Onderwerpen
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/7a_data_based_design.html">
+     Data based design
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/7b_rekenen_met_taal.html">
+     Rekenen met taal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/8_ontwerp_algoritmen.html">
+     Ontwerp van algoritmen
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/klinkt_goed.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/opgaven_4.html">
+   Opgaven
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/universum_simulatie.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/caesar_op_orde.html">
+     Caesar op orde
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Week 5
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/week_5.html">
+   Onderwerpen
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/9a_talstelsels.html">
+     Talstalsels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/9b_binaire_getallen.html">
+     Binaire getallen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/10_bewerkingen_met_bits.html">
+     Bewerkingen met bits
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/decimaal_en_verder.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/opgaven_5.html">
+   Opgaven
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/bug_and_crash.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/wisselende_stelsels.html">
+     Wisselende stelsels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/fraaie_plaatjes.html">
+     Fraaie plaatjes
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Week 6
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/week_6.html">
+   Onderwerpen
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/11a_logische_schakelingen.html">
+     Logische schakelingen
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/optellingen_schakelen.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/opgaven_6.html">
+   Opgaven
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/just_add_water.html">
+     Leesopgave
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Week 7
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_7.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/hmmm_assembly.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/opgaven_7.html">
+   Opgaven
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/hijacked_minds.html">
+     Leesopave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/macht_van_hmmm.html">
+     De macht van hmmm
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Week 8
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_8.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/mandelbrot.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/opgaven_8.html">
+   Opgaven
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/algoritmen_discrimineren.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/pythonbat_lussen.html">
+     PythonBat lussen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/pi_pijlen.html">
+     Pi met pijltjes
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Week 9
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_9.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/boter_kaas_eieren.html">
+   Practicum
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/opgaven_9.html">
+   Opgaven
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/horseless_driverless.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/rij_van_conway.html">
+     Lees en huiver
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/game_of_life.html">
+     Game of Life
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Week 10
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/week_10.html">
+   Onderwerpen
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/19_objecten.html">
+     Objecten en klassen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/20_dictionaries.html">
+     Dictionaries
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../class/opgaven_10.html">
+   Opgaven
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/an_algorithm_wrote_this.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/eeuwigdurende_kalender.html">
+     Eeuwigdurende kalender
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/tekst_genereren.html">
+     Teksten genereren
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/vier_op_een_rij.html">
+     Vier op een rij
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/vier_op_een_rij_ai.html">
+     Vier op een rij AI
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Projecten
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="vpython.html">
+   VPython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="connectfour.html">
+   Vier op een rij
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   TextID
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="picobot.html">
+   Picobot
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Voorbeelden
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/recursie.html">
+   Recursie
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/design_recipe.html">
+   Functie ontwerp
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Oefening
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../practice/1_recursie.html">
+   Recursie
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../practice/2_list_comprehension.html">
+   List comprehension
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../practice/3a_toets.html">
+   Zelftoets
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../practice/3b_toets_uitwerking.html">
+     Uitwerking
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/platte_tekst.html">
+   Tekstbestanden
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python_browser.html">
+   Python in de browser
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python2_vs_python3.html">
+   Python 2 versus Python 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/software.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/hmmm.html">
+   Hmmmm assembly
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/projects/textid.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Fprojects/textid.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/projects/textid.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#achtergrond">
+   Achtergrond
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#de-klasse-textmodel">
+   De klasse
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     TextModel
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-methode-repr">
+     De methode
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       __repr__
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-methode-read-text-from-file-self-filename">
+     De methode
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       read_text_from_file(self,
+      </span>
+      <span class="pre">
+       filename)
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-methode-make-sentence-lengths">
+     De methode
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       make_sentence_lengths
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-methode-clean-string">
+     De methode
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       clean_string
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-methode-make-word-lengths">
+     De methode
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       make_word_lengths
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-methode-make-words">
+     De methode
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       make_words
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-methode-make-stems">
+     De methode
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       make_stems
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#je-eigen-teksteigenschap">
+     Je eigen teksteigenschap
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#het-bouwen-van-een-model-door-textmodel-testen">
+     Het bouwen van een model door
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       TextModel
+      </span>
+     </code>
+     testen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-methode-normalize-dictionary">
+     De methode
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       normalize_dictionary
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-methode-smallest-value">
+     De methode
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       smallest_value
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-methode-compare-dictionaries">
+     De methode
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       compare_dictionaries
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-methode-create-all-dictionaries">
+     De methode
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       create_all_dictionaries
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-methode-compare-text-with-two-models">
+     De methode
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       compare_text_with_two_models
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ten-slotte-je-eigen-teksten-en-analyse">
+   Ten slotte: je eigen teksten en analyse
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inleveren">
+   Inleveren
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#begin">
+     Begin
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#milestone">
+     Milestone
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oplevering">
+     Oplevering
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="tekstidentificatie">
+<h1>Tekstidentificatie<a class="headerlink" href="#tekstidentificatie" title="Permalink to this headline">¶</a></h1>
+<p>In dit project ga je Python gebruiken om een statistisch model van tekst te maken waarmee je een auteur of stijl kan “herkennen”, met een verschillende mate van succes, aan de hand van stukken tekst!</p>
+<div class="section" id="achtergrond">
+<h2>Achtergrond<a class="headerlink" href="#achtergrond" title="Permalink to this headline">¶</a></h2>
+<p>Statistische modellen zijn één manier om in een getal te vangen hoe erg twee stukken tekst op elkaar lijken. Zulke modellen zijn bijvoorbeeld in de zomer van 2013 gebruikt als bewijs dat het boek <em>Koekoeksjong</em> (<em>The Cuckoo’s Calling</em>) door J.K. Rowling geschreven was (onder de naam Robert Galbraith). Details over dat verthaal en de analyse die gedaan is kan je <a class="reference external" href="https://www.scientificamerican.com/article/how-a-computer-program-helped-show-jk-rowling-write-a-cuckoos-calling/">op deze link vinden</a>.</p>
+<p>De vergelijkende analyse van deze werken gebruikte simpele modellen; misschien zelfs verbazingwekkend simpel; van de “stijl van een auteur”, met bijvoorbeeld de verdeling van woordlengtes in een tekst. De vijf “teksteigenschappen” die we je vragen te implementeren voor dit project zijn:</p>
+<ul class="simple">
+<li><p>De verdeling van woorden die de auteur gebruikt.</p></li>
+<li><p>De verdeling van woordlengtes (zoals hierboven benoemd).</p></li>
+<li><p>De verdeling van gebruikte woordstammen (“loopt” en “lopen” hebben bijvoorbeeld dezelfde stam).</p></li>
+<li><p>De verdeling van gebruikte zinslengtes (in aantal woorden).</p></li>
+</ul>
+<p>Je moet bovendien ten minste één extra “teksteigenschap” die je zelf ontworpen hebt toevoegen:</p>
+<ul class="simple">
+<li><p>Je kan bijvoorbeeld leestekens op een bepaalde manier gebruiken.</p></li>
+<li><p>Of je kan iets anders over de tekst berekenen; bijvoorbeeld het aantal woorden die op “heid” eindigen, iets over de hoofdletters, of iets anders dat je kan berekenen of tellen met Python…</p></li>
+</ul>
+<p>Hier kan je een artikel vinden over een <a class="reference external" href="https://mentalfloss.com/article/75602/what-famous-novels-look-stripped-everything-punctuation">leestekenanalyse</a> van een aantal teksten…</p>
+<p>Misschien de <em>bekendste en succesvolste toepassing</em> van dit soort tekstanalyse is het <a class="reference external" href="https://nl.wikipedia.org/wiki/Spamfilter">herkennen en filteren van e-mailspam</a>.</p>
+</div>
+<div class="section" id="de-klasse-textmodel">
+<h2>De klasse <code class="docutils literal notranslate"><span class="pre">TextModel</span></code><a class="headerlink" href="#de-klasse-textmodel" title="Permalink to this headline">¶</a></h2>
+<p>Om je tekstherkenningssysteem te maken maak je een klasse <code class="docutils literal notranslate"><span class="pre">TextModel</span></code>, die een aantal dictionary’s bevat.
+Elk van deze dictionary’s beschrijft één “eigenschap” voor het herkennen van tekst.</p>
+<p>Hier is wat begincode die een model maakt met de volgende vier dictionary’s, die allemaal leeg beginnen:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">words</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">word_lengths</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stems</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sentence_lengths</span></code></p></li>
+</ul>
+<p>Vergeet niet nog een extra dictionary toe te voegen voor je eigen teksteigenschap! Je mag hiervoor best leestekens gebruiken, en ook andere opties zijn goed.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="c1"># textmodel.py</span>
+<span class="c1">#</span>
+<span class="c1"># Opdracht: Tekstidentificatie</span>
+<span class="c1">#</span>
+<span class="c1"># Naam:</span>
+<span class="c1">#</span>
+
+
+<span class="k">class</span> <span class="nc">TextModel</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;A class supporting complex models of text.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create an empty TextModel.&quot;&quot;&quot;</span>
+        <span class="c1">#</span>
+        <span class="c1"># Maak dictionary&#39;s voor elke eigenschap</span>
+        <span class="c1">#</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">words</span> <span class="o">=</span> <span class="p">{}</span>             <span class="c1"># Om woorden te tellen</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">word_lengths</span> <span class="o">=</span> <span class="p">{}</span>      <span class="c1"># Om woordlengtes te tellen</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stems</span> <span class="o">=</span> <span class="p">{}</span>             <span class="c1"># Om stammen te tellen</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sentence_lengths</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># Om zinslengtes te tellen</span>
+        <span class="c1">#</span>
+        <span class="c1"># Maak een eigen dictionary</span>
+        <span class="c1">#</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">my_feature</span> <span class="o">=</span> <span class="p">{}</span>        <span class="c1"># Om ... te tellen</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Display the contents of a TextModel.&quot;&quot;&quot;</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Woorden:</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">words</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39;Woordlengtes:</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">word_lengths</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39;Stammen:</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">stems</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39;Zinslengtes:</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sentence_lengths</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39;MIJN EIGENSCHAP:</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">my_feature</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">s</span>
+
+    <span class="c1"># Voeg hier andere methodes toe.</span>
+    <span class="c1"># Je hebt in het bijzonder methodes nodig die het model vullen.</span>
+
+
+<span class="c1"># Hier kan je dingen testen...</span>
+<span class="n">tm</span> <span class="o">=</span> <span class="n">TextModel</span><span class="p">()</span>
+<span class="c1"># Zet hier aanroepen neer die het model vullen met informatie</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;TextModel:&#39;</span><span class="p">,</span> <span class="n">tm</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We geven hieronder meer details, en een aantal tests om te zorgen dat je methodes werken.</p>
+<div class="section" id="de-methode-repr">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">__repr__</span></code><a class="headerlink" href="#de-methode-repr" title="Permalink to this headline">¶</a></h3>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">__repr__(self)</span></code> geeft een overzicht terug van alle dictionary’s in het model, zodat je ermee kan testen en
+kan controleren dat ze werken.</p>
+<p>Deze methode staat al in de begincode hierboven.</p>
+</div>
+<div class="section" id="de-methode-read-text-from-file-self-filename">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">read_text_from_file(self,</span> <span class="pre">filename)</span></code><a class="headerlink" href="#de-methode-read-text-from-file-self-filename" title="Permalink to this headline">¶</a></h3>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">read_text_from_file(self,</span> <span class="pre">filename)</span></code> moet een bestandsnaam (een string) meekrijgen en de inhoud van dat bestand als één hele lange string toekennen aan de variabele <code class="docutils literal notranslate"><span class="pre">self.text</span></code>.</p>
+<p>Hier is een voorbeeld dat je kan proberen; sla deze tekst op in een bestand met de naam <code class="docutils literal notranslate"><span class="pre">test.txt</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Dit is een korte zin. Dit is geen korte zin, omdat
+deze zin meer dan 10 woorden en een getal bevat! Dit is
+geen vraag, of wel?
+</pre></div>
+</div>
+<p>Je kan vervolgens deze code gebruiken om de methode te testen.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tm</span> <span class="o">=</span> <span class="n">TextModel</span><span class="p">()</span>
+<span class="c1"># zorg dat deze tekst in een bestand genaamd test.txt staat</span>
+<span class="n">test_text</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;Dit is een korte zin. Dit is geen korte zin, omdat</span>
+<span class="s2">deze zin meer dan 10 woorden en een getal bevat! Dit is</span>
+<span class="s2">geen vraag, of wel?&quot;&quot;&quot;</span>
+
+<span class="n">tm</span><span class="o">.</span><span class="n">read_text_from_file</span><span class="p">(</span><span class="s1">&#39;test.txt&#39;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">tm</span><span class="o">.</span><span class="n">text</span> <span class="o">==</span> <span class="n">test_text</span>
+</pre></div>
+</div>
+<p>Dit zou niets moeten afdrukken; als je code niet werkt krijg je een <code class="docutils literal notranslate"><span class="pre">AssertionError</span></code>!</p>
+</div>
+<div class="section" id="de-methode-make-sentence-lengths">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">make_sentence_lengths</span></code><a class="headerlink" href="#de-methode-make-sentence-lengths" title="Permalink to this headline">¶</a></h3>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">make_sentence_lengths(self)</span></code> moet de tekst in <code class="docutils literal notranslate"><span class="pre">self.text</span></code> gebruiken om de dictionary <code class="docutils literal notranslate"><span class="pre">self.sentence_lengths</span></code> te vullen.</p>
+<p>Je kan hier voorbouwen op de code die je eerder hebt geschreven voor de <span class="xref myst">Markov-opgave</span> om het einde van zinnen te herkennen.</p>
+<p>Je kan onderstaande code gebruiken om je resultaten te controleren.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tm</span> <span class="o">=</span> <span class="n">TextModel</span><span class="p">()</span>
+<span class="n">tm</span><span class="o">.</span><span class="n">read_text_from_file</span><span class="p">(</span><span class="s1">&#39;test.txt&#39;</span><span class="p">)</span>
+<span class="n">tm</span><span class="o">.</span><span class="n">make_sentence_lengths</span><span class="p">()</span>
+<span class="k">assert</span> <span class="n">tm</span><span class="o">.</span><span class="n">sentence_lengths</span> <span class="o">==</span> <span class="p">{</span><span class="mi">16</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Dit moet geen uitvoer geven, omdat er in dit voorbeeld één zin met 16 woorden, één met 5 woorden en één met 6 woorden is.</p>
+<div class="notice admonition">
+<p class="admonition-title">Opmerking</p>
+<p>De volgorde van de sleutels in de dictionary is niet belangrijk; het maakt voor de <code class="docutils literal notranslate"><span class="pre">assert</span></code> niet uit welke volgorde ze hebben.</p>
+</div>
+</div>
+<div class="section" id="de-methode-clean-string">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">clean_string</span></code><a class="headerlink" href="#de-methode-clean-string" title="Permalink to this headline">¶</a></h3>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">clean_string(self,</span> <span class="pre">s)</span></code> krijgt een string <code class="docutils literal notranslate"><span class="pre">s</span></code> mee en geeft een opgeschoonde versie ervan terug zonder
+leestekens en zonder hoofdletters.</p>
+<p>Je kan <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">s.lower()</span></code> gebruiken om hoofdletters te vervangen; hoe je leestekens weghaalt mag je zelf bepalen; gebruik hier echter <strong>geen</strong> recursie, maar lussen (recursie loopt op grote strings uit het geheugen!)</p>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p>Je kan <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">string</span></code> gebruiken, en dan deze lus gebruiken:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">string</span><span class="o">.</span><span class="n">punctuation</span>
+</pre></div>
+</div>
+<p>In deze lus krijgt <code class="docutils literal notranslate"><span class="pre">p</span></code> opeenvolgende de waarde van alle mogelijke leestekens, dus je kan <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">s.replace(p,</span> <span class="pre">'')</span></code> gebruiken om elk leesteken te vervangen door de lege string!</p>
+<p>Probeer dit wel eerst op een korte string, als je deze aanpak wilt gebruiken…</p>
+</div>
+<p>Je kan onderstaande code gebruiken om je resultaten te controleren.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tm</span> <span class="o">=</span> <span class="n">TextModel</span><span class="p">()</span>
+<span class="n">tm</span><span class="o">.</span><span class="n">read_text_from_file</span><span class="p">(</span><span class="s1">&#39;test.txt&#39;</span><span class="p">)</span>
+<span class="n">clean_text</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;dit is een korte zin dit is geen korte zin omdat</span>
+<span class="s2">deze zin meer dan 10 woorden en een getal bevat dit is</span>
+<span class="s2">geen vraag of wel&quot;&quot;&quot;</span>
+<span class="n">clean_s</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">clean_string</span><span class="p">(</span><span class="n">tm</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">clean_s</span> <span class="o">==</span> <span class="n">clean_text</span>
+</pre></div>
+</div>
+<p>Dit moet wederom geen uitvoer geven. Merk op dat het <em>niet</em> handig is om getallen te verwijderen!</p>
+</div>
+<div class="section" id="de-methode-make-word-lengths">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">make_word_lengths</span></code><a class="headerlink" href="#de-methode-make-word-lengths" title="Permalink to this headline">¶</a></h3>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">make_word_lengths(self)</span></code> lijkt op de methode <code class="docutils literal notranslate"><span class="pre">make_sentence_lengths</span></code>, alleen wordt hier een dictionary gemaakt van de woordlengtes (dit is wat Sarah Pavis gebruikte om J.K. Rowling te herkennen!)</p>
+<p>Zorg dat je hiervoor de <strong>opgeschoonde</strong> string gebruikt, zonder leestekens!</p>
+<p>Je kan onderstaande code gebruiken om je resultaten te controleren.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tm</span> <span class="o">=</span> <span class="n">TextModel</span><span class="p">()</span>
+<span class="n">tm</span><span class="o">.</span><span class="n">read_text_from_file</span><span class="p">(</span><span class="s1">&#39;test.txt&#39;</span><span class="p">)</span>
+<span class="n">tm</span><span class="o">.</span><span class="n">make_word_lengths</span><span class="p">()</span>
+<span class="k">assert</span> <span class="n">tm</span><span class="o">.</span><span class="n">word_lengths</span> <span class="o">==</span> <span class="p">{</span><span class="mi">2</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Ook hier geldt dat de volgorde van de sleutels niet uitmaakt, <em>maar de sleutel-waardeparen moeten wel hetzelfde zijn</em>!</p>
+</div>
+<div class="section" id="de-methode-make-words">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">make_words</span></code><a class="headerlink" href="#de-methode-make-words" title="Permalink to this headline">¶</a></h3>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">make_words(self)</span></code> lijkt op de methode <code class="docutils literal notranslate"><span class="pre">make_word_lengths</span></code>, alleen wordt hier een dictionary gemaakt van de woorden zelf (opgeschoond!) Gebruik dus ook hiervoor de <strong>opgeschoonde</strong> string.</p>
+<p>Je kan onderstaande code gebruiken om je resultaten te controleren.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tm</span> <span class="o">=</span> <span class="n">TextModel</span><span class="p">()</span>
+<span class="n">tm</span><span class="o">.</span><span class="n">read_text_from_file</span><span class="p">(</span><span class="s1">&#39;test.txt&#39;</span><span class="p">)</span>
+<span class="n">tm</span><span class="o">.</span><span class="n">make_words</span><span class="p">()</span>
+<span class="k">assert</span> <span class="n">tm</span><span class="o">.</span><span class="n">words</span> <span class="o">==</span> <span class="p">{</span>
+  <span class="s1">&#39;dit&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;een&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;korte&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;zin&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;geen&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+  <span class="s1">&#39;omdat&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;deze&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;meer&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;dan&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;woorden&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="s1">&#39;en&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;getal&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;bevat&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;vraag&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;of&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;wel&#39;</span><span class="p">:</span> <span class="mi">1</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Ook hier mag de volgorde van je sleutel-waardeparen anders zijn, maar moeten het <em>wel</em> dezelfde paren zijn!</p>
+</div>
+<div class="section" id="de-methode-make-stems">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">make_stems</span></code><a class="headerlink" href="#de-methode-make-stems" title="Permalink to this headline">¶</a></h3>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">make_stems(self)</span></code> lijkt op de methode <code class="docutils literal notranslate"><span class="pre">make_words</span></code>, alleen wordt hier een dictionary gemaakt van de
+stammen van de woorden zelf (opgeschoond!) Ook hier moet je de <strong>opgeschoonde</strong> string hiervoor gebruiken.</p>
+<p>Je kan onderstaande code gebruiken om je resultaten te controleren.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tm</span> <span class="o">=</span> <span class="n">TextModel</span><span class="p">()</span>
+<span class="n">tm</span><span class="o">.</span><span class="n">read_text_from_file</span><span class="p">(</span><span class="s1">&#39;test.txt&#39;</span><span class="p">)</span>
+<span class="n">tm</span><span class="o">.</span><span class="n">make_stems</span><span class="p">()</span>
+<span class="k">assert</span> <span class="n">tm</span><span class="o">.</span><span class="n">stems</span> <span class="o">==</span> <span class="p">{</span>
+  <span class="s1">&#39;dit&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;een&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;kort&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;zin&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;gen&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+  <span class="s1">&#39;omdat&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;dez&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;mer&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;dan&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;woord&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="s1">&#39;en&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;getal&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;bevat&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;vrag&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;of&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;wel&#39;</span><span class="p">:</span> <span class="mi">1</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Je resultaat zou hier wel kunnen afwijken, als je een andere <em>stemmer</em> (algoritme om stammen van woorden te bepalen)
+gebruikt. Dat is prima, als het resultaat maar redelijk is (zodat niet elk woord dezelfde stam heeft!) is je stemmer
+goed. (Je kan ook proberen een aantal verschillende vormen van dezelfde woorden aan het bestand toe te
+voegen…)</p>
+<p>Om <code class="docutils literal notranslate"><span class="pre">make_stems</span></code> te implementeren, moet je een functie schrijven die woorden als invoer krijgt en
+stammen als uitvoer geeft. Je mag hierbij:</p>
+<ul class="simple">
+<li><p>Je eigen schrijven (het moet ten minste tien stemmingregels bevatten. <em>Je hoeft niet alle mogelijke regels te implementeren</em>; dat zou ook niet kunnen, daar zijn te veel uitzonderingen voor!)</p></li>
+<li><p>Online een stemming-bibliotheek zoeken en die in je project gebruiken</p></li>
+<li><p>Of <span class="xref myst">deze stemmer</span> gebaseerd op de Nederlandse stemmer in <em>Snowball</em>, een bibliotheek van stemmers. Deze is ook niet perfect, maar een redelijke kandidaat om te gebruiken.</p></li>
+<li><p>Als je deze wilt gebruiken, voeg dan deze code toe bovenaan je bestand. Je kan dan <code class="docutils literal notranslate"><span class="pre">create_stem(w)</span></code> aanroepen, waar <code class="docutils literal notranslate"><span class="pre">w</span></code> het woord is waarvan je de stam wilt hebben!</p></li>
+</ul>
+</div>
+<div class="section" id="je-eigen-teksteigenschap">
+<h3>Je eigen teksteigenschap<a class="headerlink" href="#je-eigen-teksteigenschap" title="Permalink to this headline">¶</a></h3>
+<p>Ook voor je eigen teksteigenschap moet je een methode maken; deze is niet nodig voor de milestone, maar als je toch bezig bent, kan je deze misschien ook al wel maken…!</p>
+<p>Deze methode lijkt op de methode <code class="docutils literal notranslate"><span class="pre">make_words</span></code>, maar is voor de eigenschap die je zelf gekozen hebt. Als voorbeeld gebruiken we hier <code class="docutils literal notranslate"><span class="pre">make_punctuation</span></code>, maar je kan andere eigenschappen gebruiken, afhankelijk van de teksten die je wilt gaan vergelijken. Zorg wel dat als de tekst redelijk groot is, er ten minste twee sleutels in de dictionary zitten, anders is de eigenschap niet zo geschikt om mee te vergelijken!</p>
+<p>Hier is een test die voor leestekens werkt; deze kan je aanpassen en gebruiken voor je eigen analyse!</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tm</span> <span class="o">=</span> <span class="n">TextModel</span><span class="p">()</span>
+<span class="n">tm</span><span class="o">.</span><span class="n">read_text_from_file</span><span class="p">(</span><span class="s1">&#39;test.txt&#39;</span><span class="p">)</span>
+<span class="n">tm</span><span class="o">.</span><span class="n">make_punctuation</span><span class="p">()</span>
+<span class="k">assert</span> <span class="n">tm</span><span class="o">.</span><span class="n">punctuation</span> <span class="o">==</span> <span class="p">{</span><span class="s1">&#39;!&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;?&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;,&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="het-bouwen-van-een-model-door-textmodel-testen">
+<h3>Het bouwen van een model door <code class="docutils literal notranslate"><span class="pre">TextModel</span></code> testen<a class="headerlink" href="#het-bouwen-van-een-model-door-textmodel-testen" title="Permalink to this headline">¶</a></h3>
+<p>Je kan hier een aantal tests vinden die je kan gebruiken om te kijken of je code voldoet aan de eisen die we aan de milestone stellen. Je kan deze vanuit de terminal uitvoeren, of ze onderaan je bestand plakken en dan je bestand uitvoeren; dit is makkelijker!</p>
+<p>Merk op dat je geen dictionary met leestekens hoeft te maken! Je moet echter wel <strong>een andere</strong> dictionary maken  naast de standaard vier: stammen, woorden, woordlengtes en zinlengtes. (En, als je leestekens fijn vindt, mag je die ook gebruiken!)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># zet de tekst tussen de triple quotes in een bestand genaamd test.txt</span>
+<span class="n">test_text</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;Dit is een korte zin. Dit is geen korte zin, omdat</span>
+<span class="s2">deze zin meer dan 10 woorden en een getal bevat! Dit is</span>
+<span class="s2">geen vraag, of wel?&quot;&quot;&quot;</span>
+
+<span class="n">tm</span> <span class="o">=</span> <span class="n">TextModel</span><span class="p">()</span>
+<span class="n">tm</span><span class="o">.</span><span class="n">read_text_from_file</span><span class="p">(</span><span class="s1">&#39;test.txt&#39;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">tm</span><span class="o">.</span><span class="n">text</span> <span class="o">==</span> <span class="n">test_text</span>
+
+<span class="c1"># maak alle dictionary&#39;s</span>
+<span class="n">tm</span><span class="o">.</span><span class="n">make_sentence_lengths</span><span class="p">()</span>
+<span class="n">tm</span><span class="o">.</span><span class="n">make_word_lengths</span><span class="p">()</span>
+<span class="n">tm</span><span class="o">.</span><span class="n">make_words</span><span class="p">()</span>
+<span class="n">tm</span><span class="o">.</span><span class="n">make_stems</span><span class="p">()</span>
+<span class="n">tm</span><span class="o">.</span><span class="n">make_punctuation</span><span class="p">()</span>
+
+<span class="c1"># alle dictionary&#39;s bekijken!</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Het model bevat deze dictionary</span><span class="se">\&#39;</span><span class="s1">s:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tm</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Dit zijn de resultaten die je kan verwachten bij dit voorbeeld: controleer dat in ieder geval
+de zinlengtes, woordlengtes en woorden hetzelfde zijn!</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Het model bevat deze dictionary&#39;s:
+Woorden:
+{&#39;woorden&#39;: 1, &#39;is&#39;: 3, &#39;vraag&#39;: 1, &#39;en&#39;: 1, &#39;zin&#39;: 3, &#39;of&#39;: 1, &#39;wel&#39;: 1, &#39;omdat&#39;: 1, &#39;deze&#39;: 1, &#39;een&#39;: 2, &#39;geen&#39;: 2, &#39;korte&#39;: 2, &#39;dit&#39;: 3, &#39;bevat&#39;: 1, &#39;10&#39;: 1, &#39;getal&#39;: 1, &#39;meer&#39;: 1, &#39;dan&#39;: 1}
+
+Woordlengtes:
+{2: 6, 3: 10, 4: 4, 5: 6, 7: 1}
+
+Stammen:
+{&#39;dez&#39;: 1, &#39;mer&#39;: 1, &#39;kort&#39;: 2, &#39;vrag&#39;: 1, &#39;zin&#39;: 3, &#39;gen&#39;: 2, &#39;of&#39;: 1, &#39;een&#39;: 2, &#39;en&#39;: 1, &#39;wel&#39;: 1, &#39;omdat&#39;: 1, &#39;dit&#39;: 3, &#39;bevat&#39;: 1, &#39;is&#39;: 3, &#39;woord&#39;: 1, &#39;10&#39;: 1, &#39;getal&#39;: 1, &#39;dan&#39;: 1}
+
+Zinslengtes:
+{16: 1, 5: 1, 6: 1}
+
+Leestekens:
+{&#39;.&#39;: 1, &#39;,&#39;: 2, &#39;!&#39;: 1, &#39;?&#39;: 1}
+</pre></div>
+</div>
+<p>Je hoeft het niet precies zo af te drukken, dit is puur om te testen!</p>
+</div>
+<div class="section" id="de-methode-normalize-dictionary">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">normalize_dictionary</span></code><a class="headerlink" href="#de-methode-normalize-dictionary" title="Permalink to this headline">¶</a></h3>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">normalize_dictionary(self,</span> <span class="pre">d)</span></code> krijgt één van de dictionary’s uit het model mee en geeft een genormaliseerde versie terug, dat wil zeggen, een versie waar de som van alle waardes exact <code class="docutils literal notranslate"><span class="pre">1.0</span></code> is. Deze moet je teruggeven, niet afdrukken!</p>
+<div class="notice admonition">
+<p class="admonition-title">Complexere methodes</p>
+<p>Deze methode, en de volgende zijn algoritmisch complexer, dus we beschrijven ze in meer detail.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p>Je kan <code class="docutils literal notranslate"><span class="pre">d.values()</span></code> gebruiken om een lijst van alle waardes in een dictionary <code class="docutils literal notranslate"><span class="pre">d</span></code> te krijgen.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Belangrijkere tip</p>
+<p>Je kan door alle <em>sleutels</em> van een dictionary <code class="docutils literal notranslate"><span class="pre">d</span></code> lussen met:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+    <span class="c1"># doe iets met de sleutel k en de waarde d[k]</span>
+</pre></div>
+</div>
+</div>
+<p>Hier is een voorbeeld om de methode <code class="docutils literal notranslate"><span class="pre">normalize_dictionary</span></code> te testen:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tm</span> <span class="o">=</span> <span class="n">TextModel</span><span class="p">()</span>
+<span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<span class="n">nd</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">normalize_dictionary</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">nd</span> <span class="o">==</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mf">0.625</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mf">0.125</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mf">0.25</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Dit moet wederom geen uitvoer geven.</p>
+</div>
+<div class="section" id="de-methode-smallest-value">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">smallest_value</span></code><a class="headerlink" href="#de-methode-smallest-value" title="Permalink to this headline">¶</a></h3>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">smallest_value(self,</span> <span class="pre">nd1,</span> <span class="pre">nd2)</span></code> krijgt twee dictionary’s <code class="docutils literal notranslate"><span class="pre">nd1</span></code> en <code class="docutils literal notranslate"><span class="pre">nd2</span></code> mee uit het model en geeft de kleinste positieve <em>waarde</em> terug die in de dictionary’s samen voorkomt.</p>
+<div class="notice admonition">
+<p class="admonition-title">Positieve waarde</p>
+<p>Een positieve waarde is een waarde die groter is dan 0; 0 is dus <strong>geen</strong> positieve waarde.</p>
+</div>
+<p>Als je deze gaat gebruiken zullen de invoerdictionary’s vermoedelijk genormaliseerd zijn, vandaar de namen <code class="docutils literal notranslate"><span class="pre">nd1</span></code> en <code class="docutils literal notranslate"><span class="pre">nd2</span></code>, maar de methode moet ook werken als ze niet genormaliseerd zijn. Geef het resultaat terug, en druk het niet af!</p>
+<p>Hier is een voorbeeld om de methode <code class="docutils literal notranslate"><span class="pre">normalize_dictionary</span></code> te testen:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tm</span> <span class="o">=</span> <span class="n">TextModel</span><span class="p">()</span>
+<span class="n">d1</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<span class="n">nd1</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">normalize_dictionary</span><span class="p">(</span><span class="n">d1</span><span class="p">)</span>
+<span class="n">d2</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+<span class="n">nd2</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">normalize_dictionary</span><span class="p">(</span><span class="n">d2</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">nd1</span> <span class="o">==</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mf">0.625</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mf">0.125</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mf">0.25</span><span class="p">}</span>
+<span class="k">assert</span> <span class="n">nd2</span> <span class="o">==</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mf">0.9375</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="mf">0.0625</span><span class="p">}</span>
+<span class="k">assert</span> <span class="n">tm</span><span class="o">.</span><span class="n">smallest_value</span><span class="p">(</span><span class="n">nd1</span><span class="p">,</span> <span class="n">nd2</span><span class="p">)</span> <span class="o">==</span> <span class="mf">0.0625</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="de-methode-compare-dictionaries">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">compare_dictionaries</span></code><a class="headerlink" href="#de-methode-compare-dictionaries" title="Permalink to this headline">¶</a></h3>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">compare_dictionaries(self,</span> <span class="pre">d,</span> <span class="pre">nd1,</span> <span class="pre">nd2)</span></code> is het belangrijkste onderdeel van dit project. De method <code class="docutils literal notranslate"><span class="pre">compare_dictionaries</span></code> moet <strong>twee kansen</strong> berekenen: de kans dat de dictionary <code class="docutils literal notranslate"><span class="pre">d</span></code> voortkomt uit de verdeling van de gegevens in de genormaliseerde dictionary <code class="docutils literal notranslate"><span class="pre">nd1</span></code>, en dezelfde kans, maar dan voor <code class="docutils literal notranslate"><span class="pre">nd2</span></code>.</p>
+<p>Met “kans” bedoelen we hier iets wat we de <a class="reference external" href="https://en.wikipedia.org/wiki/Log_probability">log-waarschijnlijkheid</a> noemen. We laten de berekening hiervan zien aan de hand van een gedetailleerd voorbeeld: als je de ongenormaliseerde dictionary <code class="docutils literal notranslate"><span class="pre">d</span> <span class="pre">=</span> <span class="pre">{&quot;a&quot;:</span> <span class="pre">2,</span> <span class="pre">&quot;b&quot;:</span> <span class="pre">1,</span> <span class="pre">&quot;c&quot;:</span> <span class="pre">1,</span> <span class="pre">&quot;d&quot;:</span> <span class="pre">1,</span> <span class="pre">&quot;e&quot;:</span> <span class="pre">1}</span></code> wilt vergelijken met de genormaliseerde dictionary <code class="docutils literal notranslate"><span class="pre">nd1</span> <span class="pre">=</span> <span class="pre">{&quot;a&quot;:</span> <span class="pre">0.625,</span> <span class="pre">&quot;b&quot;:</span> <span class="pre">0.125,</span> <span class="pre">&quot;c&quot;:</span> <span class="pre">0.25}</span></code> en de genormaliseerde dictionary <code class="docutils literal notranslate"><span class="pre">nd2</span> <span class="pre">=</span> <span class="pre">{&quot;a&quot;:</span> <span class="pre">0.9375,</span> <span class="pre">&quot;d&quot;:</span> <span class="pre">0.0625}</span></code> dan moet je voor de vergelijking met <code class="docutils literal notranslate"><span class="pre">nd1</span></code> het volgende berekenen:</p>
+<ul class="simple">
+<li><p>Begin met <code class="docutils literal notranslate"><span class="pre">total</span> <span class="pre">=</span> <span class="pre">0.0</span></code></p></li>
+<li><p>Definieer een kleine waarde, <code class="docutils literal notranslate"><span class="pre">epsilon</span></code>, om gelijk te zijn aan de <strong>helft</strong> van de kleinste waarde in <code class="docutils literal notranslate"><span class="pre">nd1</span></code> en <code class="docutils literal notranslate"><span class="pre">nd2</span></code>
+samen (gebruik hier de methode <code class="docutils literal notranslate"><span class="pre">smallest_value</span></code> voor) en gebruik dan een lus om de rest te berekenen:</p>
+<ul>
+<li><p>Voor de twee <code class="docutils literal notranslate"><span class="pre">'a'</span></code>’s voeg je <code class="docutils literal notranslate"><span class="pre">total</span> <span class="pre">+=</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">math.log2(0.625)</span></code> toe</p></li>
+<li><p>Voor de ene <code class="docutils literal notranslate"><span class="pre">'b'</span></code> voeg je <code class="docutils literal notranslate"><span class="pre">total</span> <span class="pre">+=</span> <span class="pre">1</span> <span class="pre">*</span> <span class="pre">math.log2(0.125)</span></code> toe</p></li>
+<li><p>Voor de ene <code class="docutils literal notranslate"><span class="pre">'c'</span></code> voeg je <code class="docutils literal notranslate"><span class="pre">total</span> <span class="pre">+=</span> <span class="pre">1</span> <span class="pre">*</span> <span class="pre">math.log2(0.25)</span></code> toe</p></li>
+<li><p>Voor de ene <code class="docutils literal notranslate"><span class="pre">'d'</span></code> voeg je <code class="docutils literal notranslate"><span class="pre">total</span> <span class="pre">+=</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">math.log2(epsilon)</span></code> toe (<code class="docutils literal notranslate"><span class="pre">epsilon</span></code> was de helft van de kleinste waarde)</p></li>
+<li><p>Voor de ene <code class="docutils literal notranslate"><span class="pre">'e'</span></code> voeg je <code class="docutils literal notranslate"><span class="pre">total</span> <span class="pre">+=</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">math.log2(epsilon)</span></code> toe (weer met die kleine waarde)</p></li>
+<li><p>Dit moet uitkomen op <code class="docutils literal notranslate"><span class="pre">-16.356...</span></code> (zie hieronder)</p></li>
+</ul>
+</li>
+</ul>
+<p>De functie moet beide log-waarschijnlijkheden als een lijst teruggeven, bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">[log1,</span> <span class="pre">log2]</span></code> (de eerste is de log-waarschijnlijkheden voor <code class="docutils literal notranslate"><span class="pre">nd1</span></code> en de tweede voor <code class="docutils literal notranslate"><span class="pre">nd2</span></code>).</p>
+<div class="notice admonition">
+<p class="admonition-title">Logaritmes</p>
+<p><code class="docutils literal notranslate"><span class="pre">math.log2</span></code> is een functie die de logaritme met grondtal 2 berekent. De intuïtieve manier om hier als programmeur over na te denken is dat dit ongeveer hetzelfde is als de lengte van het getal in bits, dus binair geschreven. Als een getal dus twee keer zo groot wordt, wordt dit logaritme 1 meer. Omdat deze functie niet berekent kan worden voor het getal <code class="docutils literal notranslate"><span class="pre">0</span></code> gebruiken we als een waarde niet voorkomt in de modeldictionary een kleine, in principe arbitrair gekozen waarde, namelijk de helft van de kleinste waarde die voorkomt in beide modeldictionary’s <code class="docutils literal notranslate"><span class="pre">d1</span></code> en <code class="docutils literal notranslate"><span class="pre">d2</span></code> samen.</p>
+</div>
+<div class="danger admonition">
+<p class="admonition-title">Normaliseren</p>
+<p>Je moet zorgen dat <code class="docutils literal notranslate"><span class="pre">nd1</span></code> en <code class="docutils literal notranslate"><span class="pre">nd2</span></code> allebei <em><strong>genormaliseerd</strong></em> zijn voordat de log-waarschijnlijkheden berekend worden; aan de andere kant hoeft <code class="docutils literal notranslate"><span class="pre">d</span></code> <em>niet</em> genormaliseerd te worden (sterker, hij <em>moet</em> niet genormaliseerd zijn).</p>
+</div>
+<div class="notice admonition">
+<p class="admonition-title">Opmerkingen</p>
+<p>Gebruik als een sleutel <code class="docutils literal notranslate"><span class="pre">k</span></code> wel in <code class="docutils literal notranslate"><span class="pre">d</span></code> maar niet in <code class="docutils literal notranslate"><span class="pre">nd1</span></code> voorkomt een log-waarschijnlijkheid gelijk aan <code class="docutils literal notranslate"><span class="pre">math.log2(epsilon)</span></code>; hetzelfde geldt als <code class="docutils literal notranslate"><span class="pre">k</span></code> niet in <code class="docutils literal notranslate"><span class="pre">nd2</span></code> voorkomt…</p>
+</div>
+<p>Hier is een voorbeeld om je methide <code class="docutils literal notranslate"><span class="pre">compare_dictionaries</span></code> mee te testen:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tm</span> <span class="o">=</span> <span class="n">TextModel</span><span class="p">()</span>
+<span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+<span class="n">d1</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<span class="n">nd1</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">normalize_dictionary</span><span class="p">(</span><span class="n">d1</span><span class="p">)</span>
+<span class="n">d2</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+<span class="n">nd2</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">normalize_dictionary</span><span class="p">(</span><span class="n">d2</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">nd1</span> <span class="o">==</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mf">0.625</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mf">0.125</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mf">0.25</span><span class="p">}</span>
+<span class="k">assert</span> <span class="n">nd2</span> <span class="o">==</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mf">0.9375</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="mf">0.0625</span><span class="p">}</span>
+<span class="n">list_of_log_probs</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">compare_dictionaries</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">nd1</span><span class="p">,</span> <span class="n">nd2</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">list_of_log_probs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mf">16.356143810225277</span>
+<span class="k">assert</span> <span class="n">list_of_log_probs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mf">19.18621880878296</span>
+</pre></div>
+</div>
+<p>Deze getallen zijn gecontroleerd, dus we weten <em>echt</em> zeker dat ze kloppen!</p>
+<div class="notice admonition">
+<p class="admonition-title">Hoe moet je deze negatieve getallen interpreteren?</p>
+<p>De log-waarschijnlijkheid kan je het best zien als een “truc” om hele kleine kansen inzichtelijk te maken. De twee getallen hierboven, ongeveer -16.4 en -19.2, betekenen dat</p>
+<ul class="simple">
+<li><p>De kans dat je <code class="docutils literal notranslate"><span class="pre">d</span></code> krijgt door willekeurige keuzes te maken uit model <code class="docutils literal notranslate"><span class="pre">nd1</span></code> ongeveer <strong>2<sup>-16.4</sup></strong> is (dat is ongeveer 0.00001156, oftwel 0.001156%)</p></li>
+<li><p>De kans dat je <code class="docutils literal notranslate"><span class="pre">d</span></code> krijgt door willekeurige keuzes te maken uit model <code class="docutils literal notranslate"><span class="pre">nd2</span></code> ongeveer <strong>2<sup>-19.2</sup></strong> is (dat is ongeveer 0.00000166, oftwel 0.000166%)</p></li>
+</ul>
+<p>Deze getallen zijn allebei heel erg klein, maar de eerste kans is ongeveer zeven keer groter dan de tweede! Anders gezegd, ondanks dat ze allebei negatief zijn <em>“wint” de grotere waarschijnlijkheid toch nog</em>; in zoverre dat die (vaak veel) waarschijnlijker is.</p>
+</div>
+</div>
+<div class="section" id="de-methode-create-all-dictionaries">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">create_all_dictionaries</span></code><a class="headerlink" href="#de-methode-create-all-dictionaries" title="Permalink to this headline">¶</a></h3>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">create_all_dictionaries(self)</span></code> is een kleine, handige functie die eenvoudigweg alle dictionary’s vult aan de hand van de string in <code class="docutils literal notranslate"><span class="pre">self.text</span></code>. We geven je hier een versie die je kan gebruiken.</p>
+<p>Je moet het misschien een beetje aanpassen, voornamelijk door je eigen eigenschap toe te voegen!</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_all_dictionaries</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Create out all five of self&#39;s</span>
+<span class="sd">       dictionaries in full.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">make_sentence_lengths</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">make_word_lengths</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">make_words</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">make_stems</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">make_my_feature</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Hier zijn drie voorbeelden om dit mee te testen; voer deze tests ook uit, aangezien je deze drie modellen ook in
+het laatste voorbeld gaat gebruiken! Maak hiervoor drie bestanden.</p>
+<ol>
+<li><p>Maak een bestand <code class="docutils literal notranslate"><span class="pre">train1.txt</span></code> met dit kleine stukje tekst:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Dit is een korte zin. Dit is geen korte zin, omdat
+deze zin meer dan 10 woorden en een getal bevat! Dit is
+geen vraag, of wel?
+</pre></div>
+</div>
+</li>
+<li><p>Maak een bestand <code class="docutils literal notranslate"><span class="pre">train2.txt</span></code> met dit kleine stukje tekst:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Vele jaren later, staande voor het vuurpeloton, moest kolonel
+Aureliano Buendía denken aan die lang vervlogen middag, toen
+zijn vader hem meenam om kennis te maken met het ijs.
+</pre></div>
+</div>
+</li>
+<li><p>Maak een bestand <code class="docutils literal notranslate"><span class="pre">unknown.txt</span></code> met dit kleine stukje tekst:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Deze zin bevat een jaar met ijs! Winter is ijzig, of niet?
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Voer daarna deze voorbeeldcommando’s uit, of plak ze in onderdaan je bestand <code class="docutils literal notranslate"><span class="pre">textmodel.py</span></code> (of hoe je het bestand ook genoemd hebt!):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39; +++++++++++ Model 1 +++++++++++ &#39;</span><span class="p">)</span>
+<span class="n">tm1</span> <span class="o">=</span> <span class="n">TextModel</span><span class="p">()</span>
+<span class="n">tm1</span><span class="o">.</span><span class="n">read_text_from_file</span><span class="p">(</span><span class="s1">&#39;train1.txt&#39;</span><span class="p">)</span>
+<span class="n">tm1</span><span class="o">.</span><span class="n">create_all_dictionaries</span><span class="p">()</span>  <span class="c1"># deze is hierboven gegeven</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tm1</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; +++++++++++ Model 2+++++++++++ &#39;</span><span class="p">)</span>
+<span class="n">tm2</span> <span class="o">=</span> <span class="n">TextModel</span><span class="p">()</span>
+<span class="n">tm2</span><span class="o">.</span><span class="n">read_text_from_file</span><span class="p">(</span><span class="s1">&#39;train2.txt&#39;</span><span class="p">)</span>
+<span class="n">tm2</span><span class="o">.</span><span class="n">create_all_dictionaries</span><span class="p">()</span>  <span class="c1"># deze is hierboven gegeven</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tm2</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; +++++++++++ Onbekende tekst +++++++++++ &#39;</span><span class="p">)</span>
+<span class="n">tm_unknown</span> <span class="o">=</span> <span class="n">TextModel</span><span class="p">()</span>
+<span class="n">tm_unknown</span><span class="o">.</span><span class="n">read_text_from_file</span><span class="p">(</span><span class="s1">&#39;unknown.txt&#39;</span><span class="p">)</span>
+<span class="n">tm_unknown</span><span class="o">.</span><span class="n">create_all_dictionaries</span><span class="p">()</span>  <span class="c1"># deze is hierboven gegeven</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tm_unknown</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Controleer of je uitvoer op onderstaand voorbeeld lijkt. <em>Het hoeft niet precis overeen te komen</em>; kleine verschillen in hoe je stemming, zinnen tellen of strings opschonen hebt gebouwd kan het resultaat wat veranderen:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>+++++++++++ Model 1 +++++++++++
+Woorden:
+{&#39;geen&#39;: 2, &#39;een&#39;: 2, &#39;of&#39;: 1, &#39;is&#39;: 3, &#39;korte&#39;: 2, &#39;bevat&#39;: 1, &#39;deze&#39;: 1, &#39;vraag&#39;: 1, &#39;en&#39;: 1, &#39;zin&#39;: 3, &#39;10&#39;: 1, &#39;getal&#39;: 1, &#39;dan&#39;: 1, &#39;meer&#39;: 1, &#39;omdat&#39;: 1, &#39;wel&#39;: 1, &#39;woorden&#39;: 1, &#39;dit&#39;: 3}
+
+Woordlengtes:
+{2: 6, 3: 10, 4: 4, 5: 6, 7: 1}
+
+Stammen:
+{&#39;bevat&#39;: 1, &#39;woord&#39;: 1, &#39;een&#39;: 2, &#39;mer&#39;: 1, &#39;is&#39;: 3, &#39;getal&#39;: 1, &#39;of&#39;: 1, &#39;kort&#39;: 2, &#39;zin&#39;: 3, &#39;10&#39;: 1, &#39;gen&#39;: 2, &#39;dez&#39;: 1, &#39;dan&#39;: 1, &#39;en&#39;: 1, &#39;omdat&#39;: 1, &#39;wel&#39;: 1, &#39;vrag&#39;: 1, &#39;dit&#39;: 3}
+
+Zinslengtes:
+{16: 1, 5: 1, 6: 1}
+
+Leestekens:
+{&#39;,&#39;: 2, &#39;?&#39;: 1, &#39;!&#39;: 1, &#39;.&#39;: 1}
++++++++++++ Model 2+++++++++++
+Woorden:
+{&#39;vuurpeloton&#39;: 1, &#39;denken&#39;: 1, &#39;die&#39;: 1, &#39;buendía&#39;: 1, &#39;hem&#39;: 1, &#39;middag&#39;: 1, &#39;meenam&#39;: 1, &#39;voor&#39;: 1, &#39;te&#39;: 1, &#39;kennis&#39;: 1, &#39;aureliano&#39;: 1, &#39;aan&#39;: 1, &#39;kolonel&#39;: 1, &#39;toen&#39;: 1, &#39;vader&#39;: 1, &#39;het&#39;: 2, &#39;lang&#39;: 1, &#39;maken&#39;: 1, &#39;staande&#39;: 1, &#39;jaren&#39;: 1, &#39;met&#39;: 1, &#39;vervlogen&#39;: 1, &#39;ijs&#39;: 1, &#39;moest&#39;: 1, &#39;zijn&#39;: 1, &#39;vele&#39;: 1, &#39;later&#39;: 1, &#39;om&#39;: 1}
+
+Woordlengtes:
+{2: 2, 3: 7, 4: 5, 5: 5, 6: 4, 7: 3, 9: 2, 11: 1}
+
+Stammen:
+{&#39;om&#39;: 1, &#39;jar&#39;: 1, &#39;vuurpeloton&#39;: 1, &#39;die&#39;: 1, &#39;buendia&#39;: 1, &#39;hem&#39;: 1, &#39;middag&#39;: 1, &#39;meenam&#39;: 1, &#39;vervlog&#39;: 1, &#39;te&#39;: 1, &#39;kennis&#39;: 1, &#39;aureliano&#39;: 1, &#39;aan&#39;: 1, &#39;kolonel&#39;: 1, &#39;toen&#39;: 1, &#39;vader&#39;: 1, &#39;het&#39;: 2, &#39;lang&#39;: 1, &#39;vel&#39;: 1, &#39;denk&#39;: 1, &#39;staand&#39;: 1, &#39;ijs&#39;: 1, &#39;mak&#39;: 1, &#39;moest&#39;: 1, &#39;met&#39;: 1, &#39;zijn&#39;: 1, &#39;later&#39;: 1, &#39;vor&#39;: 1}
+
+Zinslengtes:
+{29: 1}
+
+Leestekens:
+{&#39;,&#39;: 3, &#39;.&#39;: 1}
++++++++++++ Onbekende tekst +++++++++++
+Woorden:
+{&#39;met&#39;: 1, &#39;een&#39;: 1, &#39;winter&#39;: 1, &#39;is&#39;: 1, &#39;ijzig&#39;: 1, &#39;ijs&#39;: 1, &#39;of&#39;: 1, &#39;jaar&#39;: 1, &#39;zin&#39;: 1, &#39;deze&#39;: 1, &#39;bevat&#39;: 1, &#39;niet&#39;: 1}
+
+Woordlengtes:
+{2: 2, 3: 4, 4: 3, 5: 2, 6: 1}
+
+Stammen:
+{&#39;met&#39;: 1, &#39;jar&#39;: 1, &#39;een&#39;: 1, &#39;winter&#39;: 1, &#39;is&#39;: 1, &#39;ijzig&#39;: 1, &#39;ijs&#39;: 1, &#39;of&#39;: 1, &#39;zin&#39;: 1, &#39;bevat&#39;: 1, &#39;dez&#39;: 1, &#39;niet&#39;: 1}
+
+Zinslengtes:
+{5: 1, 7: 1}
+
+Leestekens:
+{&#39;,&#39;: 1, &#39;?&#39;: 1, &#39;!&#39;: 1}
+</pre></div>
+</div>
+<p>Je gaat hierna het onbekende model <code class="docutils literal notranslate"><span class="pre">tm_unknown</span></code> vergelijken met de getrainde modellen <code class="docutils literal notranslate"><span class="pre">tm1</span></code> en <code class="docutils literal notranslate"><span class="pre">tm2</span></code>.</p>
+</div>
+<div class="section" id="de-methode-compare-text-with-two-models">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">compare_text_with_two_models</span></code><a class="headerlink" href="#de-methode-compare-text-with-two-models" title="Permalink to this headline">¶</a></h3>
+<p>De <code class="docutils literal notranslate"><span class="pre">compare_text_with_two_models(self,</span> <span class="pre">model1,</span> <span class="pre">model2)</span></code> methode moet de methode <code class="docutils literal notranslate"><span class="pre">compare_dictionaries</span></code> die hierboven beschreven is aanroepen voor elk van de teksteigenschapdictionary’s in <code class="docutils literal notranslate"><span class="pre">self</span></code> en die vergelijken met de corresponderende (genormaliseerde!) dictionary’s in <code class="docutils literal notranslate"><span class="pre">model1</span></code> en <code class="docutils literal notranslate"><span class="pre">model2</span></code>. Merk op dat deze drie objecten <strong>allemaal</strong> van de klasse <code class="docutils literal notranslate"><span class="pre">TextModel</span></code> zijn.</p>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">compare_text_with_two_models</span></code> moet:</p>
+<ul class="simple">
+<li><p>De vergelijkingsresultaten met log-waarschijnlijkheden van de vijf dictionary’s afdrukken; hoe je dit precies wilt vormgeven en afdrukken mag je zelf bepalen (hieronder kan je een voorbeeld zien).</p></li>
+<li><p>Een systeem implementeren om te bepalen op welk van de twee modellen <code class="docutils literal notranslate"><span class="pre">self</span></code> meer lijkt, bijvoorbeeld door te kijken naar de meerderheid van de vijf dictionary’s, of een gewogen som van de log-waarschijnlijkheden… Dit gedeelte van het algoritme mag je zelf invullen (hieronder is een aanpak gebruikt die naar de meerderheid kijkt.)</p></li>
+<li><p>Een “winnaar” bepalen, namelijk het model waar <code class="docutils literal notranslate"><span class="pre">self</span></code> meer op lijkt.</p></li>
+</ul>
+<p>Hier mag je wel de resultaten afdrukken omdat er geen andere functies zijn die ze nog verder zullen gebruiken! (Je mag ze natuurlijk <em>ook</em> teruggeven als je zelf nog extra analyses wilt doen!)</p>
+<p>Hier is een voorbeeld; het gebruikt de drie modellen uit het vorige voorbeeld:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">tm1</span></code> (deze wordt gebruikt als <code class="docutils literal notranslate"><span class="pre">model1</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tm2</span></code> (deze wordt gebruikt als <code class="docutils literal notranslate"><span class="pre">model2</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tm_unknown</span></code> (deze wordt <code class="docutils literal notranslate"><span class="pre">self</span></code> omdat hierop <code class="docutils literal notranslate"><span class="pre">compare_text_with_two_models</span></code> wordt aangeroepen)</p></li>
+</ul>
+<p>Dit voorbeeld vergelijkt de vijf dictionary’s in <code class="docutils literal notranslate"><span class="pre">tm_unknown</span></code> met de vijf (genormaliseerde!) dictionary’s in <code class="docutils literal notranslate"><span class="pre">tm1</span></code> en <code class="docutils literal notranslate"><span class="pre">tm2</span></code>. Toegegeven, onze voorbeelden hebben veel te weinig tekst voor een <em>echte</em> vergelijking, maar ze hebben wel de goede hoeveelheid tekst om te debuggen en te zorgen dat alles goed werkt!</p>
+<p>Hier is het voorbeeld dat je kan uitvoeren:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># de hoofdvergelijkingsmethode</span>
+<span class="n">tm_unknown</span><span class="o">.</span><span class="n">compare_text_with_two_models</span><span class="p">(</span><span class="n">tm1</span><span class="p">,</span> <span class="n">tm2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>En hier is een voorbeeld van mogelijke resultaten; hoe het er bij jouw uitziet, de keuzes van het model en wat andere details kunnen natuurlijk anders zijn:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Vergelijkingsresultaten:
+
+            naam        model1        model2
+            ----        ------        ------
+           words        -59.51        -68.30
+    word_lengths        -28.53        -31.46
+sentence_lengths         -4.17         -5.17
+           stems        -59.51        -67.30
+     punctuation         -5.97         -7.06
+
+--&gt;  Model 1 wint op 5 features
+--&gt;  Model 2 wint op 0 features
+
++++++     Model 1 komt beter overeen!     +++++
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="ten-slotte-je-eigen-teksten-en-analyse">
+<h2>Ten slotte: je eigen teksten en analyse<a class="headerlink" href="#ten-slotte-je-eigen-teksten-en-analyse" title="Permalink to this headline">¶</a></h2>
+<p>Ten slotte vragen we je in dit project om je tekstanalysesysteem te <strong>gebruiken</strong>! Doe dit door:</p>
+<ol class="simple">
+<li><p>Op zijn minst twee verschillende tekstmodellen te maken. Dit noemen we de “getrainde” modellen. Je moet één of meer teksten vinden om elk model te trainen. Als je meerdere teksten hebt, kan je ze allemaal in een enkel bestand zetten om ze te verwerken. Je kan bijvoorbeeld Shakespeare en J.K. Rowling vergelijken; er zijn veel andere vergelijkingen mogelijk! Je twee (of meer) getrainde modellen moeten een behoorlijke hoeveelheid tekst hebben. (Modellen die gebaseerd zijn op te weinig brontekst zijn meestal “fragiel”, of “breekbaar”; ze zijn te veel gebaseerd op de eigenaardigheden van die ene brontekst.)</p></li>
+<li><p>Ten minste twee andere “testteksten” kiezen die vergeleken worden met de twee getrainde modellen. Je kan hier je eigen tekst voor schrijven, of <em>andere</em> teksten gebruiken van dezelfde schrijver als één of beide van de getrainde modellen, of nog iets heel anders. Deze “testteksten” of “onbekende teksten” mogen korter zijn dan de teksten die je gebruikt voor de getrainde modellen.</p></li>
+<li><p>Vergelijk je twee “testteksten” met de twee getrainde modellen (je krijgt dus vier vergelijkingen) en schrijf een
+kort verslagje over de resultaten, hoe je tot deze resultaten gekomen bent (inclusief hoe je hebt bepaald welk model wint als niet alle dictionary’s het daar over eens waren) en of je die resultaten <em>verwachtte</em>…!</p></li>
+</ol>
+<div class="warning admonition">
+<p class="admonition-title">Foutmelding</p>
+<p>Als je een foutmelding krijgt die lijkt op deze: <code class="docutils literal notranslate"><span class="pre">codec</span> <span class="pre">can't</span> <span class="pre">encode</span> <span class="pre">character</span> <span class="pre">...</span> <span class="pre">in</span> <span class="pre">...</span> <span class="pre">position</span></code>, dan heb je misschien een andere <em>encoding</em> nodig in <code class="docutils literal notranslate"><span class="pre">read_text_from_file</span></code>; vermoedelijk moet je dan de aanroep naar <code class="docutils literal notranslate"><span class="pre">open</span></code> zo aanpassen: <code class="docutils literal notranslate"><span class="pre">open(filename,</span> <span class="pre">encoding='utf-8')</span></code></p>
+</div>
+<p>Extra’s zijn natuurlijk welkom, bijvoorbeeld,</p>
+<ul class="simple">
+<li><p>Meer getrainde modellen of meer testteksten gebruiken.</p></li>
+<li><p>Meer eigenschappen gebruiken of je eigenschappen zorgvuldig kiezen voor de teksten die je aan het onderzoeken bent.</p></li>
+<li><p>Andere creatieve extra’s die specifiek zijn voor jouw analyse.</p></li>
+</ul>
+</div>
+<div class="section" id="inleveren">
+<h2>Inleveren<a class="headerlink" href="#inleveren" title="Permalink to this headline">¶</a></h2>
+<p>Je moet dit project in drie stappen inleveren: het begin in week 11, de milestone in week 12 en ten slotte de oplevering.</p>
+<div class="section" id="begin">
+<h3>Begin<a class="headerlink" href="#begin" title="Permalink to this headline">¶</a></h3>
+<p>Het begin, <code class="docutils literal notranslate"><span class="pre">begin.py</span></code>, moet aan de volgende eisen voldoen:</p>
+<ul class="simple">
+<li><p>Het bevat een klasse <code class="docutils literal notranslate"><span class="pre">TextModel</span></code> met een werkende constructor en <code class="docutils literal notranslate"><span class="pre">__repr__</span></code></p></li>
+<li><p>Deze klasse bevat een werkende methode <code class="docutils literal notranslate"><span class="pre">read_text_from_file</span></code></p></li>
+<li><p>Deze klasse bevat de werkende teksteigenschapmethode <code class="docutils literal notranslate"><span class="pre">make_sentence_lengths</span></code></p></li>
+</ul>
+<p>Lever dit bestand, samen met je uitleg hierover in <code class="docutils literal notranslate"><span class="pre">begin.txt</span></code>, in Gradescope in als onderdeel van het huiswerk van week 11.</p>
+</div>
+<div class="section" id="milestone">
+<h3>Milestone<a class="headerlink" href="#milestone" title="Permalink to this headline">¶</a></h3>
+<p>De milestone, <code class="docutils literal notranslate"><span class="pre">milestone.py</span></code>, moet aan de volgende eisen voldoen:</p>
+<ul class="simple">
+<li><p>Het bevat een klasse <code class="docutils literal notranslate"><span class="pre">TextModel</span></code> met een werkende constructor en <code class="docutils literal notranslate"><span class="pre">__repr__</span></code></p></li>
+<li><p>Deze klasse bevat twee werkende methodes <code class="docutils literal notranslate"><span class="pre">read_text_from_file</span></code> en <code class="docutils literal notranslate"><span class="pre">clean_string</span></code></p></li>
+<li><p>Deze klasse bevat de werkende teksteigenschapmethode <code class="docutils literal notranslate"><span class="pre">make_sentence_lengths</span></code>, <code class="docutils literal notranslate"><span class="pre">make_word_lengths</span></code>, <code class="docutils literal notranslate"><span class="pre">make_words</span></code> en <code class="docutils literal notranslate"><span class="pre">make_stems</span></code></p></li>
+</ul>
+<p>Je hoeft je zelfbedachte teksteigenschap nog niet te bouwen, en je hoeft twee modellen ook nog niet te kunnen vergelijken, maar als het wel zo is, des te beter!</p>
+<p>Lever dit bestand, samen met je uitleg hierover in <code class="docutils literal notranslate"><span class="pre">milestone.txt</span></code>, in Gradescope in als onderdeel van het huiswerk van week 12.</p>
+</div>
+<div class="section" id="oplevering">
+<h3>Oplevering<a class="headerlink" href="#oplevering" title="Permalink to this headline">¶</a></h3>
+<p>Voor de oplevering, het laatste inlevermoment voor dit project, moet je het volledige tekstidentificatiesysteem afmaken. We zullen je programma testen met de hierboven beschreven functie <code class="docutils literal notranslate"><span class="pre">compare_text_with_two_models</span></code>.</p>
+<p>De oplevering, <code class="docutils literal notranslate"><span class="pre">oplevering.py</span></code>, moet een complete uitwerking van het project bevatten. Lever dit bestand, samen met je uitleg hierover in <code class="docutils literal notranslate"><span class="pre">oplevering.txt</span></code> en de tekstbestanden die je gebruikt hebt voor je analyse, in Gradescope in. In de uitleg moet je in ieder geval je zelfbedachte teksteigenschap toelichten, en de gestelde tekstanalysevragen beantwoorden.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "misja/programmeren",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./projects"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="connectfour.html" title="previous page">Vier op een rij</a>
+    <a class='right-next' id="next-link" href="picobot.html" title="next page">De evolutie van Picobot</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Hanze University of Applied Sciences<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
