@@ -19,7 +19,7 @@ Het belangrijkste idee achter een genetisch algoritme is om te beginnen met een 
 
 Kijk nog even terug naar de opgaven in week 1 van Programmeren I om je geheugen op te frissen wat betreft de logica van Picobot, en de syntax van de regels.
 
-Je kan ook meteen naar de [Picobot-simulator](../assets/picobot.html) gaan.
+Je kan ook meteen naar de [Picobot-simulator](https://www.cs.hmc.edu/picobot/) gaan.
 
 ## Het project
 
@@ -174,7 +174,7 @@ Dit maakt een **gesorteerde** lijst met sleutels, met de naam `sorted_keys`. Top
 :::{admonition} Net zo belangrijk!
 :class: danger
 
-Je methode `__repr__` moet het hele Picobot-programma zo teruggeven ***dat je deze direct kan kopiëren en plakken*** in e [Picobot-simulator](../assets/picobot.html). Elke regel moet dus als volgt geformatteerd worden:
+Je methode `__repr__` moet het hele Picobot-programma zo teruggeven ***dat je deze direct kan kopiëren en plakken*** in e [Picobot-simulator](https://www.cs.hmc.edu/picobot/). Elke regel moet dus als volgt geformatteerd worden:
 
 ```
 2 Nxxx -> W 3
