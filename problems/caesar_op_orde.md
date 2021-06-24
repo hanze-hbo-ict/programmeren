@@ -1,7 +1,10 @@
 # Caesar op orde!
 
-```{include} ../class/problems/caesar_op_orde.md
-```
+| Naam         | Beschrijving                                                   |
+|--------------|----------------------------------------------------------------|
+| Onderwerp    | Rekenen met taal, decipher                                     |
+| Bestandsnaam | `wk4ex2.py`                                                    |
+| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 In deze opgave ga je een aantal functies schrijven met behulp van *functioneel programmeren*, dat wil zeggen, conditionele statements, recursie en/of list comprehensions.
 

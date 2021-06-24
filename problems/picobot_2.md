@@ -7,8 +7,11 @@ csa-level: proficiency
 
 # Picobot II
 
-```{include} ../class/problems/picobot_2.md
-```
+| Naam         | Beschrijving                                                   |
+|--------------|----------------------------------------------------------------|
+| Onderwerp    | Picobot door een doolhof laten bewegen                         |
+| Bestandsnaam | `wk1ex4.txt`                                                   |
+| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 Heb je Picobot de lege kamer kunnen laten verkennen? Dan is het nu tijd voor andere omgevingen, waaronder een doolhof!
 

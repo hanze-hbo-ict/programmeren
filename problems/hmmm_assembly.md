@@ -1,8 +1,11 @@
 # Hmmm... Assembly!
 
-(30 punten; bestandsnamen: `wk7ex1a.hmmm`, `wk7ex1b.hmmm` en `wk7ex1c.py`)
-
-Er zijn twee opgaven en drie bestanden voor dit Hmmm-practicum. Ze staan allemaal in `hmmm`.
+| Naam         | Beschrijving                                                     |
+|--------------|------------------------------------------------------------------|
+| Onderwerp    | Kennismaken met `hmmm` en assemblytaal                           |
+| Bestandsnaam | `wk7ex1a.hmmm`, `wk7ex1b.hmmm`, `wk7ex1c.py`                     |
+| Inleveren    | Lever jouw bestanden met de juiste bestandsnaam in op GradeScope |
+| Opmerking    | Let op, deze opgave bestaat uit drie bestanden                   |
 
 ## Inleiding
 
@@ -26,7 +29,7 @@ Alhoewel het Hmmm-model geen fysieke computer is, is het ontwerp ervan fundament
 
 Waarom gebruiken we geen "echte" computer? Het is op dit moment niet de moeite waard om de instructieset van een echte processor te leren: ze bevatten allemaal veel dingen die niet essentieel zijn. (dan valt DNA nog wel mee!) Veel van die details zijn machine-specifiek: ze zijn niet van toepassing op andere computers.
 
-De instructies in Hmmm zijn een subset die van toepassing zijn op ***alle processoren***.
+De instructies in Hmmm zijn een subset die van toepassing zijn op **alle processoren**.
 
 Hmmm heeft ongeveer 20 instructies. Moderne computes hebben tussen de twee en twintig keer zoveel instructies. Bij Computerarchitectuur, een vak voor studenten met als major Software Engineering of Network & Security Engineeering, maak je kennis met een "echte" assemblytaal die op Hmmm lijkt maar een grotere (en meer gecompliceerde) verzameling instructies heeft.
 
@@ -221,17 +224,17 @@ Daarom is het nauwkeuriger om random number generators *pseudo-*random number ge
 
 Onze random number generator genereert een rij van willekeurige getallen, <code>X<sub>0</sub></code>, <code>X<sub>1</sub></code>, <code>X<sub>2</sub></code>, ..., <code>X<sub>n</sub></code>, <code>X<sub>n+1</sub></code>, ..., gedefinieerd door de volgende wiskundige relatie:
 
-<pre lang="text">
-X<sub>n+1</sub> = (a X<sub>n</sub> + c) % m
-</pre>
+$$
+X_{n+1} = (a X_n + c) \div m
+$$
 
 waarbij we de volgende waardes kunnen kiezen
 
-* `a`, een vermenigvuldigingsfactor
-* `c`, een optelwaarde ("offset")
-* `m`, een deler, maar alleen de "mod" of rest na deling wordt gebruikt!
-* <code>X<sub>0</sub></code>, een "seedwaarde" of startwaarde, waarbij geldt dat
-  <code>0 ≤ X<sub>0</sub> ≤ m</code>, dat wil zeggen, van `0` tot en met `m`.
+* $a$, een vermenigvuldigingsfactor
+* $c$, een optelwaarde ("offset")
+* $m$, een deler, maar alleen de "mod" of rest na deling wordt gebruikt!
+* $X_0$, een "seedwaarde" of startwaarde, waarbij geldt dat
+  $0 \leq X_0 \leq m$, dat wil zeggen, van $0$ tot en met $m$.
 
 In een normale random number generator worden deze waardes automatisch gekozen. Vaak wordt dit gedaan aan de hand van het aantal milliseconden op de klok van de computer.
 
@@ -280,9 +283,9 @@ De opgave is om dit LCG-algoritme te implementeren in Hmmm.
 
 Dit is de samenvatting in een enkele zin: je progamma moet `N` pseudorandom getallen genereren en afdrukken, door gebruik te maken van onze formule:
 
-<pre lang="text">
-X<sub>n+1</sub> = (a X<sub>n</sub> + c) % m
-</pre>
+$$
+X_{n+1} = (a X_n + c) \div m
+$$
 
 #### Details
 
@@ -517,5 +520,3 @@ Nadat je je programma hebt gecontroleerd om te zien dat het inderdaad 100 versch
 ## Je CV bijwerken!
 
 Gefeliciteerd! Je kan nu Hmmm offcieel op je CV zetten, naast Logisim (en Picobot!)
-
-Vergeet niet om de bestanden `wk7ex1a.hmmm`, `wk7ex1b.hmmm` en `wk7ex1c.py` in te leveren in Gradescope!

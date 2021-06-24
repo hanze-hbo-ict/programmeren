@@ -1,7 +1,10 @@
 # Lussen in PythonBat!
 
-```{include} ../class/problems/pythonbat_lussen.md
-```
+| Naam         | Beschrijving                                                   |
+|--------------|----------------------------------------------------------------|
+| Onderwerp    | Lussen oefenen met CodingBat                                   |
+| Bestandsnaam | `wk8ex2.py`                                                    |
+| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 In deze opgave ga je oefenen met de lussen van Python: `for` en `while`.
 

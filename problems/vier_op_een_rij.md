@@ -1,7 +1,10 @@
 # Vier op een rij: de klasse `Board`
 
-```{include} ../class/problems/vier_op_een_rij.md
-```
+| Naam         | Vier op een rij                                                |
+|--------------|----------------------------------------------------------------|
+| Onderwerp    | Een eerste kunstmatige intelligentie                           |
+| Bestandsnaam | `wk10ex2.py`                                                   |
+| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 Voor deze opgave moet je met een nieuw bestand `wk10ex2.py` beginnen.
 

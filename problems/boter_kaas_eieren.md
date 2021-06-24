@@ -1,7 +1,10 @@
 # Boter, kaas en eieren + N op een rij...
 
-```{include} ../class/problems/boter_kaas_eieren.md
-```
+| Naam         | Beschrijving                                                   |
+|--------------|----------------------------------------------------------------|
+| Onderwerp    | Boter, kaas en eieren en N Op een rij                          |
+| Bestandsnaam | `wk9ex2.py`                                                    |
+| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 In deze opgave moet je acht kleine functies, die allemaal erg op elkaar lijken, schrijven die tweedimensionale gegevens in Python verwerken, dat wil zeggen, lijsten-van-lijsten verwerken.
 
@@ -43,11 +46,11 @@ def print_2d(a):
 
 
 # een paar tests voor print_2d
-a = [['X', ' ', 'O'], ['O', 'X', 'O']]
+a = [["X", " ", "O"], ["O", "X", "O"]]
 print("2-row, 3-col a is")
 print_2d(a)
 
-a = [['X', 'O'], [' ', 'X'], ['O', 'O'], ['O', 'X']]
+a = [["X", "O"], [" ", "X"], ["O", "O"], ["O", "X"]]
 print("4-row, 2-col a is")
 print_2d(a)
 
@@ -72,13 +75,13 @@ def create_a(rows, cols, s):
 
 
 # een paar tests voor create_a:
-a = [['X', ' ', 'O'], ['O', 'X', 'O']]
-new_a = create_a(2, 3, 'X OOXO')
+a = [["X", " ", "O"], ["O", "X", "O"]]
+new_a = create_a(2, 3, "X OOXO")
 assert new_a == a
 print("Is new_a == a? moet True zijn:", new_a == a)
 
-a = [['X', 'O'], [' ', 'X'], ['O', 'O'], ['O', 'X']]
-new_a = create_a(4, 2, 'XO XOOOX')
+a = [["X", "O"], [" ", "X"], ["O", "O"], ["O", "X"]]
+new_a = create_a(4, 2, "XO XOOOX")
 assert new_a == a
 ```
 
@@ -89,13 +92,13 @@ Probeer het bestand uit door het op de command line van ipython uit te voeren.
 
 Merk op dat alle tweedimensionele data in deze opgave lijsten van lijsten van losse karakters zijn:
 
-* De algehele structuur, meestal `a` genoemd, is een lijst van rijen
-* Elke rij is een lijst gegevenselementen
-* Elk gegevenselement is een string met een enkel karakter
-* Sterker nog, we beperken ons tot slechts drie strings:
-    * `'X'`, een hoofdletter X,
-    * `'O'`, een hoofdletter O,
-    * en `' '`, het spatieteken (dit is *niet* de lege string!).
+-   De algehele structuur, meestal `a` genoemd, is een lijst van rijen
+-   Elke rij is een lijst gegevenselementen
+-   Elk gegevenselement is een string met een enkel karakter
+-   Sterker nog, we beperken ons tot slechts drie strings:
+    *   `'X'`, een hoofdletter X,
+    *   `'O'`, een hoofdletter O,
+    *   en `' '`, het spatieteken (dit is *niet* de lege string!).
 :::
 
 ## Drie op een rij
@@ -173,32 +176,32 @@ Hier zijn vier tests voor elke functie; plak deze in je bestand en controleer da
 
 ```python
 # tests voor in_a_row_3_east
-a = create_a(3, 4, 'XXOXXXOOOOOO')
-assert not in_a_row_3_east('X', 0, 0, a)
-assert in_a_row_3_east('O', 2, 1, a)
-assert not in_a_row_3_east('X', 2, 1, a)
-assert not in_a_row_3_east('O', 2, 2, a)
+a = create_a(3, 4, "XXOXXXOOOOOO")
+assert not in_a_row_3_east("X", 0, 0, a)
+assert in_a_row_3_east("O", 2, 1, a)
+assert not in_a_row_3_east("X", 2, 1, a)
+assert not in_a_row_3_east("O", 2, 2, a)
 
 # tests voor in_a_row_3_south
-a = create_a(4, 4, 'XXOXXXOXXOO OOOX')
-assert in_a_row_3_south('X', 0, 0, a)
-assert not in_a_row_3_south('O', 2, 2, a)
-assert not in_a_row_3_south('X', 1, 3, a)
-assert not in_a_row_3_south('O', 42, 42, a)
+a = create_a(4, 4, "XXOXXXOXXOO OOOX")
+assert in_a_row_3_south("X", 0, 0, a)
+assert not in_a_row_3_south("O", 2, 2, a)
+assert not in_a_row_3_south("X", 1, 3, a)
+assert not in_a_row_3_south("O", 42, 42, a)
 
 # tests voor in_a_row_3_southeast
-a = create_a(4, 4, 'XOOXXXOXX XOOOOX')
-assert in_a_row_3_southeast('X', 1, 1, a)
-assert not in_a_row_3_southeast('X', 1, 0, a)
-assert in_a_row_3_southeast('O', 0, 1, a)
-assert not in_a_row_3_southeast('X', 2, 2, a)
+a = create_a(4, 4, "XOOXXXOXX XOOOOX")
+assert in_a_row_3_southeast("X", 1, 1, a)
+assert not in_a_row_3_southeast("X", 1, 0, a)
+assert in_a_row_3_southeast("O", 0, 1, a)
+assert not in_a_row_3_southeast("X", 2, 2, a)
 
 # tests voor in_a_row_3_northeast
-a = create_a(4, 4, 'XOXXXXOXXOXOOOOX')
-assert in_a_row_3_northeast('X', 2, 0, a)
-assert in_a_row_3_northeast('O', 3, 0, a)
-assert not in_a_row_3_northeast('O', 3, 1, a)
-assert not in_a_row_3_northeast('X', 3, 3, a)
+a = create_a(4, 4, "XOXXXXOXXOXOOOOX")
+assert in_a_row_3_northeast("X", 2, 0, a)
+assert in_a_row_3_northeast("O", 3, 0, a)
+assert not in_a_row_3_northeast("O", 3, 1, a)
+assert not in_a_row_3_northeast("X", 3, 3, a)
 ```
 
 ## Van 3 naar N: N op een rij

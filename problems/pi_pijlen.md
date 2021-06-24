@@ -1,7 +1,10 @@
 # Pi met pijltjes
 
-```{include} ../class/problems/pi_pijlen.md
-```
+| Naam         | Beschrijving                                                   |
+|--------------|----------------------------------------------------------------|
+| Onderwerp    | Pi bepalen door middel van simulatie                           |
+| Bestandsnaam | `wk8ex3.py`                                                    |
+| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 ![Dartboard](images/pi_pijlen/500px-Dartboard.png)
 

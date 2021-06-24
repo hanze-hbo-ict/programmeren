@@ -1,7 +1,10 @@
 # Tekst genereren met Markovprocessen
 
-```{include} ../class/problems/tekst_genereren.md
-```
+| Naam         | Beschrijving                                                   |
+|--------------|----------------------------------------------------------------|
+| Onderwerp    | Het genereren van tekst met Markovprocessen                    |
+| Bestandsnaam | `wk10ex3.py`                                                   |
+| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 ## Een begin maken
 
@@ -282,7 +285,7 @@ Voor het laatste deel van deze opdracht moet je een interessant tekstbestand vin
 
 Voeg onderin je bestand een triple-quoted string (commentaar) toe met:
 
-* De naam van het bronbestand (en auteur, als die er is) die je gebruikt hebt om je essay te genereren (je hoeft de brontekst zelf ***niet*** toe te voegen!).
+* De naam van het bronbestand (en auteur, als die er is) die je gebruikt hebt om je essay te genereren (je hoeft de brontekst zelf **niet** toe te voegen!).
 * Minstens 500 woorden gegenereerde tekst.
 * Wijs ons bovenaan de string graag op erg mooie stukjes proza die je hebt gegenereerd. 🙂
 

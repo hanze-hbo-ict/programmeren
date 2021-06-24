@@ -1,7 +1,10 @@
 # A Bug and a Crash
 
-```{include} ../class/readings/bug_and_crash.md
-```
+| Naam         | Beschrijving                                                   |
+|--------------|----------------------------------------------------------------|
+| Onderwerp    | Onverwachte fouten met tellen                                  |
+| Bestandsnaam | `wk5ex0.txt`                                                   |
+| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 ![Ariane 5 crash](images/Explosion_of_first_Ariane_5_flight_June_4_1996.jpg)
 

@@ -1,7 +1,11 @@
 # Fraaie plaatjes
 
-```{include} ../class/problems/fraaie_plaatjes.md
-```
+| Naam         | Beschrijving                                                   |
+|--------------|----------------------------------------------------------------|
+| Onderwerp    | Afbeeldingen bewerken                                          |
+| Bestandsnaam | `wk5ex3.py`                                                    |
+| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
+| Opmerking    | **Dit is een bonusopgave**                                     |
 
 Deze optionele bonusopgave introduceert enkele ideeën voor beeldverwerking met behulp van Python list comprehensions en functies en ga je programma's schrijven die afbeeldingen algoritmisch bewerken.
 

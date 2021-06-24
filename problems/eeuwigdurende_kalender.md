@@ -1,7 +1,10 @@
 # Eeuwigdurende kalender
 
-```{include} ../class/problems/eeuwigdurende_kalender.md
-```
+| Naam         | Beschrijving                                                   |
+|--------------|----------------------------------------------------------------|
+| Onderwerp    | Een eeuwigdurende kalender                                     |
+| Bestandsnaam | `wk10ex1.py`                                                   |
+| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 Een eeuwigdurende kalender kan je de weekdag vertellen waarop een willekeurige datum valt. Als je bijvoorbeeld geboren bent op 13 juni 1997 kan je aflezen dat je op een vrijdag geboren bent (vrijdag de dertiende, zelfs!)
 

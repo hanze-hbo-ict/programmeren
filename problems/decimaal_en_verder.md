@@ -1,7 +1,10 @@
 # Van decimaal naar binair en verder!
 
-```{include} ../class/problems/decimaal_en_verder.md
-```
+| Naam         | Beschrijving                                                   |
+|--------------|----------------------------------------------------------------|
+| Onderwerp    | Van decimaal naar binair: talstelsels                          |
+| Bestandsnaam | `wk5ex1.py`                                                    |
+| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 Dit probleem gaat over het omzetten van getallen naar en van grondtal 10 (*decimaal*, wat de *meeste* mensen gebruiken) en van en naar grondtal 2 (*binair*, waar vrijwel alle computers mee werken).
 

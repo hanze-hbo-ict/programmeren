@@ -1,7 +1,10 @@
 # Just add water
 
-```{include} ../class/readings/just_add_water.md
-```
+| Naam         | Beschrijving                                                   |
+|--------------|----------------------------------------------------------------|
+| Onderwerp    | Rekenen met water                                              |
+| Bestandsnaam | `wk6ex0.txt`                                                   |
+| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 ![Water droplet](images/water_droplet.png)
 
@@ -25,8 +28,8 @@ Als deze link niet werkt, kun je hier een gecachete pdf-versie vinden:
 
 Schrijf, nadat je bovenstaande vragen gelezen hebt, een reactie die de onderstaande vragen beantwoordt. Lever dit in als een *plain text*-bestand `wk6ex0.txt`.
 
-1. Het artikel claimt dat de waterdruppelcomputer "universeel" is. Welke functionaliteit, op schakelingniveau, hebben de onderzoekers moeten laten zien om te kunnen beweren dat hun computer universeel is, dat wil zeggen, dat hun computer *alles* kan berekenen dat een normale computer ook kan?
+1.  Het artikel claimt dat de waterdruppelcomputer "universeel" is. Welke functionaliteit, op schakelingniveau, hebben de onderzoekers moeten laten zien om te kunnen beweren dat hun computer universeel is, dat wil zeggen, dat hun computer *alles* kan berekenen dat een normale computer ook kan?
 
-2. Het artikel vergelijkt de waterdruppelcomputer met onze normale siliciumcomputers door op te merken dat de druppelcomputer werkt door het verplaatsen van fysieke materie (water in plaats van electronen, in ieder geval). Voor zover biologische wezens "een soort computer" zijn (daar kunnen de meningen nog over verdeeld zijn), is de manier waarop ze berekeningen uitvoeren via het verplaatsen van materie, het verplaatsen van electronen, of een andere soort van fysieke interactie? Dit is ***geen*** vraag over neurowetenschap, en er is ook geen goed of fout antwoord. Het is een perspectiefvraag: wat denk jij dat het materiaal is dat biologsische computers manipuleren?
+2.  Het artikel vergelijkt de waterdruppelcomputer met onze normale siliciumcomputers door op te merken dat de druppelcomputer werkt door het verplaatsen van fysieke materie (water in plaats van electronen, in ieder geval). Voor zover biologische wezens "een soort computer" zijn (daar kunnen de meningen nog over verdeeld zijn), is de manier waarop ze berekeningen uitvoeren via het verplaatsen van materie, het verplaatsen van electronen, of een andere soort van fysieke interactie? Dit is ***geen*** vraag over neurowetenschap, en er is ook geen goed of fout antwoord. Het is een perspectiefvraag: wat denk jij dat het materiaal is dat biologsische computers manipuleren?
 
 Ook hiervoor geldt dat je niet heel veel hoeft te schrijven: een alinea met iets van 4 of 5 zinnen is genoeg. Je antwoord moet *wel* laten zien dat je zorgvuldig over hebt nagedacht over de ideeën uit het artikel.

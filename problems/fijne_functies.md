@@ -5,8 +5,11 @@ csa-level: 2
 
 # Fijne functies
 
-```{include} ../class/problems/fijne_functies.md
-```
+| Naam         | Beschrijving                                                   |
+|--------------|----------------------------------------------------------------|
+| Onderwerp    | Functies gebruiken en zelf schrijven                           |
+| Bestandsnaam | `wk2ex2.py`                                                    |
+| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 In deze opgave ga je oefenen met het schrijven van functies (de fundamentele bouwstenen van software) en het toepassen van onder andere string- en lijstbewerkingen.
 

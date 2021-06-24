@@ -6,8 +6,11 @@ csa-chapter: 1
 
 # Guugu Yimithirr
 
-```{include} ../class/readings/guugu_yimithirr.md
-```
+| Naam         | Beschrijving                                                   |
+|--------------|----------------------------------------------------------------|
+| Onderwerp    | Denken over taal, ruimte, oriëntatie en expressie              |
+| Bestandsnaam | `wk1ex0.txt`                                                   |
+| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 ![Kompas](images/compass_rose.png)
 
