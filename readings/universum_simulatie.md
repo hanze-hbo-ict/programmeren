@@ -1,7 +1,10 @@
 # Is the Universe a Simulation?
 
-```{include} ../class/readings/universum_simulatie.md
-```
+| Naam         | Beschrijving                                                   |
+|--------------|----------------------------------------------------------------|
+| Onderwerp    | Is het universum een simulatie?                                |
+| Bestandsnaam | `wk4ex0.txt`                                                   |
+| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 In de opgaven van deze week wordt de vaardigheid om algoritmes te ontwerpen en gebruiken geoefend.
 
