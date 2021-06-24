@@ -1,13 +1,14 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="nl">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bewerkingen met bits &#8212; Programmeren</title>
     
-  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -19,14 +20,10 @@
 
     
       
-  <link rel="stylesheet"
-    href="../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -36,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -81,8 +78,9 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
+    <script src="../_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
@@ -94,26 +92,17 @@ commentsRunWhenDOMLoaded(addUtterances);
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://misja.github.io/programmeren/topics/10_bewerkingen_met_bits.html" />
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Van decimaal naar binair en verder!" href="../problems/decimaal_en_verder.html" />
+    <link rel="search" title="Zoeken" href="../search.html" />
+    <link rel="next" title="Week 5" href="../class/opgaven_5.html" />
     <link rel="prev" title="Binaire getallen" href="9b_binaire_getallen.html" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
-
-
-<!-- Opengraph tags -->
-<meta property="og:url"         content="https://misja.github.io/programmeren/topics/10_bewerkingen_met_bits.html" />
-<meta property="og:type"        content="article" />
-<meta property="og:title"       content="Bewerkingen met bits" />
-<meta property="og:description" content="Bewerkingen met bits  Afbeeldingen en compressie  Tot hoeveel kan je tellen?          Binair  Decimaal  1 bit  1  1  2 bits  11  3  3 bits  111  7  4 bits  1111" />
-<meta property="og:image"       content="https://misja.github.io/programmeren/_static/mascot.png" />
-
-<meta name="twitter:card" content="summary" />
-
-
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -122,49 +111,54 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../index.html">
-  
-  <img src="../_static/mascot.png" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">Programmeren</h1>
-  
-</a>
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/mascot.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Programmeren</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../about/syllabus.html">
    Programmeren
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Opmerkingen
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../about/feedback.html">
    Anoniem feedbackformulier
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Week 1
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/week_1.html">
    Onderwerpen
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="1a_introductie.html">
      Introductie
@@ -186,19 +180,22 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/python_intro.html">
-   Practicum
-  </a>
- </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/opgaven_1.html">
    Opgaven
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/python_intro.html">
+     Practicum
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../readings/guugu_yimithirr.html">
      Leesopgave
@@ -235,21 +232,24 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Week 2
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/week_2.html">
    Onderwerpen
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="3a_data.html">
      Data
@@ -271,24 +271,27 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/sequenties_en_data.html">
-   Practicum I
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/fijne_functies.html">
-   Practicum II
-  </a>
- </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/opgaven_2.html">
    Opgaven
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/sequenties_en_data.html">
+     Practicum I
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/fijne_functies.html">
+     Practicum II
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../readings/end_of_theory.html">
      Leesopgave
@@ -300,21 +303,24 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Week 3
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/week_3.html">
    Onderwerpen
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="5a_simulatie.html">
      Simulatie
@@ -331,17 +337,25 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/opgaven_3.html">
    Opgaven
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/python_turtles.html">
+     Practicum
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../readings/computer_wins_jeopardy.html">
-     De computer wint
+     Leesopgave
     </a>
    </li>
    <li class="toctree-l2">
@@ -360,21 +374,24 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Week 4
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/week_4.html">
    Onderwerpen
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="7a_data_based_design.html">
      Data based design
@@ -391,19 +408,22 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/klinkt_goed.html">
-   Practicum
-  </a>
- </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/opgaven_4.html">
    Opgaven
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/klinkt_goed.html">
+     Practicum
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../readings/universum_simulatie.html">
      Leesopgave
@@ -415,24 +435,27 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Week 5
  </span>
 </p>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active collapsible-parent">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../class/week_5.html">
    Onderwerpen
   </a>
-  <ul class="current collapse-ul">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="9a_talstelsels.html">
-     Talstalsels
+     Talstelsels
     </a>
    </li>
    <li class="toctree-l2">
@@ -446,19 +469,22 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/decimaal_en_verder.html">
-   Practicum
-  </a>
- </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/opgaven_5.html">
    Opgaven
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/decimaal_en_verder.html">
+     Practicum
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../readings/bug_and_crash.html">
      Leesopgave
@@ -475,71 +501,95 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Week 6
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/week_6.html">
    Onderwerpen
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="11a_logische_schakelingen.html">
      Logische schakelingen
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/optellingen_schakelen.html">
-   Practicum
-  </a>
- </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/opgaven_6.html">
    Opgaven
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/optellingen_schakelen.html">
+     Practicum
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../readings/just_add_water.html">
      Leesopgave
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/vermenigvuldigingswaanzin.html">
+     Vermenigvuldigingswaanzin
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/eerlijke_verdeling.html">
+     Een eerlijke verdeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/geheugenproblemen.html">
+     Geheugenproblemen
+    </a>
+   </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Week 7
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../class/week_7.html">
    Onderwerpen
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/hmmm_assembly.html">
-   Practicum
-  </a>
- </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/opgaven_7.html">
    Opgaven
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/hmmm_assembly.html">
+     Practicum
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../readings/hijacked_minds.html">
      Leesopave
@@ -550,32 +600,55 @@ commentsRunWhenDOMLoaded(addUtterances);
      De macht van hmmm
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/feest_met_fibonacci.html">
+     Feest met Fibonacci
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/macht_van_recursie.html">
+     De macht van recursie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/een_lus_om_python.html">
+     Een lusje om Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/fibonacci_recursief.html">
+     Fibonacci recursief
+    </a>
+   </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Week 8
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../class/week_8.html">
    Onderwerpen
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/mandelbrot.html">
-   Practicum
-  </a>
- </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/opgaven_8.html">
    Opgaven
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/mandelbrot.html">
+     Practicum
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../readings/algoritmen_discrimineren.html">
      Leesopgave
@@ -591,32 +664,45 @@ commentsRunWhenDOMLoaded(addUtterances);
      Pi met pijltjes
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/tr_investeringen.html">
+     TR Investeringen B.V.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/ascii_art.html">
+     ASCII Art
+    </a>
+   </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Week 9
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../class/week_9.html">
    Onderwerpen
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/boter_kaas_eieren.html">
-   Practicum
-  </a>
- </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/opgaven_9.html">
    Opgaven
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/boter_kaas_eieren.html">
+     Practicum
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../readings/horseless_driverless.html">
      Leesopgave
@@ -633,21 +719,24 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Week 10
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/week_10.html">
    Onderwerpen
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="19_objecten.html">
      Objecten en klassen
@@ -659,22 +748,25 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/opgaven_10.html">
    Opgaven
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../readings/an_algorithm_wrote_this.html">
-     Leesopgave
+    <a class="reference internal" href="../problems/eeuwigdurende_kalender.html">
+     Practicum
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../problems/eeuwigdurende_kalender.html">
-     Eeuwigdurende kalender
+    <a class="reference internal" href="../readings/an_algorithm_wrote_this.html">
+     Leesopgave
     </a>
    </li>
    <li class="toctree-l2">
@@ -687,22 +779,59 @@ commentsRunWhenDOMLoaded(addUtterances);
      Vier op een rij
     </a>
    </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 11
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_11.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../class/opgaven_11.html">
+   Opaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/buitenaards_python.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/chess_championship.html">
+     Leesopgave
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../problems/vier_op_een_rij_ai.html">
-     Vier op een rij AI
+     AI voor vier op een rij
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/project_1.html">
+   Project: Begin
+  </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Projecten
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../projects/vpython.html">
    VPython
@@ -724,12 +853,12 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Voorbeelden
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../examples/recursie.html">
    Recursie
@@ -741,12 +870,12 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Oefening
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../practice/1_recursie.html">
    Recursie
@@ -757,27 +886,30 @@ commentsRunWhenDOMLoaded(addUtterances);
    List comprehension
   </a>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../practice/3a_toets.html">
    Zelftoets
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+  <label for="toctree-checkbox-19">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../practice/3b_toets_uitwerking.html">
      Uitwerking
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Python
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../support/platte_tekst.html">
    Tekstbestanden
@@ -805,6 +937,7 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
 </ul>
 
+    </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
@@ -820,23 +953,23 @@ commentsRunWhenDOMLoaded(addUtterances);
           
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
-    </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
+                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
@@ -844,15 +977,15 @@ commentsRunWhenDOMLoaded(addUtterances);
         
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="../_sources/topics/10_bewerkingen_met_bits.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
-        <!-- Source interaction buttons -->
+            <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
@@ -860,26 +993,26 @@ commentsRunWhenDOMLoaded(addUtterances);
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
             href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                data-toggle="tooltip" data-placement="left" title="Bronopslagplaats"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
             href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/10_bewerkingen_met_bits.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+                title="Open een probleem"><i class="fas fa-lightbulb"></i>open probleem</button></a>
         <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/topics/10_bewerkingen_met_bits.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+                title="bewerk deze pagina"><i class="fas fa-pencil-alt"></i>suggereren bewerken</button></a>
     </div>
 </div>
 
+            <!-- Full screen (wrap in <a> to have style consistency -->
 
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
+        title="Volledig scherm"><i
+            class="fas fa-expand"></i></button></a>
 
-        <!-- Launch buttons -->
+            <!-- Launch buttons -->
 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
@@ -887,7 +1020,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <div class="dropdown-buttons">
         
         <a class="binder-button" href="https://mybinder.org/v2/gh/misja/programmeren/master?urlpath=lab/tree/topics/10_bewerkingen_met_bits.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Lancering Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
@@ -895,22 +1028,22 @@ commentsRunWhenDOMLoaded(addUtterances);
         
         
         <button type="button" class="btn btn-secondary topbarbtn"
-            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+            onclick="initThebeSBT()" title="Lancering Thebe" data-toggle="tooltip" data-placement="left"><i
                 class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
         
     </div>
 </div>
 
-    </div>
-
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
         </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhoud
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tot-hoeveel-kan-je-tellen">
    Tot hoeveel kan je tellen?
@@ -1101,8 +1234,8 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
 </ul>
 
-        </nav>
-        
+            </nav>
+        </div>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -1111,10 +1244,10 @@ commentsRunWhenDOMLoaded(addUtterances);
               <div>
                 
   <div class="section" id="bewerkingen-met-bits">
-<h1>Bewerkingen met bits<a class="headerlink" href="#bewerkingen-met-bits" title="Permalink to this headline">¶</a></h1>
+<h1>Bewerkingen met bits<a class="headerlink" href="#bewerkingen-met-bits" title="Permalink naar deze titel">¶</a></h1>
 <p>Afbeeldingen en compressie</p>
 <div class="section" id="tot-hoeveel-kan-je-tellen">
-<h2>Tot hoeveel kan je tellen?<a class="headerlink" href="#tot-hoeveel-kan-je-tellen" title="Permalink to this headline">¶</a></h2>
+<h2>Tot hoeveel kan je tellen?<a class="headerlink" href="#tot-hoeveel-kan-je-tellen" title="Permalink naar deze titel">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
@@ -1168,13 +1301,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Het patroon dat je ziet is dat met elke extra bit de waarde wordt verdubbeld, waar de maximale waarde wordt bepaald door <span class="math notranslate nohighlight">\(2^n - 1\)</span>.</p>
 </div>
 <div class="section" id="sheep-overflow">
-<h2>Sheep overflow<a class="headerlink" href="#sheep-overflow" title="Permalink to this headline">¶</a></h2>
+<h2>Sheep overflow<a class="headerlink" href="#sheep-overflow" title="Permalink naar deze titel">¶</a></h2>
 <p>Of eigenlijk een <em>integer</em> overflow!</p>
 <p><img alt="can sleep" src="../_images/cant_sleep.png" /></p>
 <p>Hoeveel <strike>schapen</strike> bits kunnen hier maximaal worden geteld?</p>
 <p>Afhankelijk van onder andere de taal en het systeem kan, wanneer de <em>hoogst</em> mogelijke waarde wordt bereikt, deze waarde overgaan (overflowen) naar de <em>laagst</em> mogelijke waarde die kan worden bewaard. In dit geval is sprake van een <em>signed integer</em>, een integer waarde die zowel positief als negatief kan zijn. De aantallen impliceren een 16 bit ruimte (van -32768 tot en met 32767 betekent 65535 mogelijke waarden). Terzijde, met één schaap per seconde, hoe lang werden hier schapen geteld tot de overflow?</p>
 <div class="section" id="python">
-<h3>Python?<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h3>
+<h3>Python?<a class="headerlink" href="#python" title="Permalink naar deze titel">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">max_sheep</span> <span class="o">=</span> <span class="mi">32767</span>
@@ -1197,7 +1330,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Gelukkig, integers zijn voor Python groter dan 16 bits! Maar hoe groot kunnen integers dan wél zijn?</p>
 </div>
 <div class="section" id="googol">
-<h3>Googol!<a class="headerlink" href="#googol" title="Permalink to this headline">¶</a></h3>
+<h3>Googol!<a class="headerlink" href="#googol" title="Permalink naar deze titel">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="mi">100</span>
@@ -1236,7 +1369,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="section" id="ariane-5">
-<h2>Ariane 5<a class="headerlink" href="#ariane-5" title="Permalink to this headline">¶</a></h2>
+<h2>Ariane 5<a class="headerlink" href="#ariane-5" title="Permalink naar deze titel">¶</a></h2>
 <p><img alt="Arianne 1996" src="../_images/Explosion_of_first_Ariane_5_flight_June_4_19961.jpg" /></p>
 <p><code class="docutils literal notranslate"><span class="pre">HumanError</span></code></p>
 <p>Geen <code class="docutils literal notranslate"><span class="pre">IndexError</span></code> of <code class="docutils literal notranslate"><span class="pre">TypeEror</span></code> maar een <code class="docutils literal notranslate"><span class="pre">HumanError</span></code>. Door een software fout werd een 64 bit waarde (nieuw in Ariane 5!) omgezet naar een 16 bit waarde (wat in Ariane 4 werd gebruikt…). In 1996 moest na 37 seconden de eerste vlucht van Ariane 5 worden afgebroken omdat een integer overflow error de navigatie onbruikbaar maakte.</p>
@@ -1248,25 +1381,25 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p><code class="docutils literal notranslate"><span class="pre">HumanError</span></code></p>
 <p>Een heel serieuze waarschuwing in 2015! Dit zou heel goed een 32 bit signed integer overflow kunnen zijn geweest. 2<sup>31</sup> is het aantal seconden in 248 dagen vermenigvuldigd met 100, dus waarschijnlijk ging het hier om een teller die tijd tot honderdsten van seconden nauwkeurig bijhoudt.</p>
 <div class="section" id="weneverthoughterror">
-<h3><code class="docutils literal notranslate"><span class="pre">WeNeverThoughtError</span></code><a class="headerlink" href="#weneverthoughterror" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">WeNeverThoughtError</span></code><a class="headerlink" href="#weneverthoughterror" title="Permalink naar deze titel">¶</a></h3>
 <p><img alt="Youtube 32bit" src="../_images/youtube_gangnam_32bit.png" /></p>
 <p><img alt="Youtube" src="../_images/youtube_bigger_numbers.png" /></p>
 <p>PSY <a class="reference external" href="https://en.wikipedia.org/wiki/Gangnam_Style">Gangnam Style</a>, de <a class="reference external" href="https://www.youtube.com/watch?v=9bZkp7q19f0">video</a> met nu bijna 4 miljard views. Tot voor de Youtube upgrade naar 64 bits bleef de teller staan op het maximaal aantal views dat met 32 bits mogelijk is. Zie verder ook deze <a class="reference external" href="https://www.youtube.com/watch?v=51Mfh6gPL2U">blast from the past</a>!</p>
 </div>
 </div>
 <div class="section" id="afbeeldingen-zijn-ook-bits">
-<h2>Afbeeldingen zijn ook bits<a class="headerlink" href="#afbeeldingen-zijn-ook-bits" title="Permalink to this headline">¶</a></h2>
+<h2>Afbeeldingen zijn ook bits<a class="headerlink" href="#afbeeldingen-zijn-ook-bits" title="Permalink naar deze titel">¶</a></h2>
 <p><img alt="Kirkjufell" src="../_images/iceland-waterfall.png" /></p>
 <p>Al zou je dit soms vergeten … een afbeelding van de Kirkjufell berg, IJsland.</p>
 <div class="section" id="representatie">
-<h3>Representatie<a class="headerlink" href="#representatie" title="Permalink to this headline">¶</a></h3>
+<h3>Representatie<a class="headerlink" href="#representatie" title="Permalink naar deze titel">¶</a></h3>
 <p>Pixels en kleuren</p>
 <p><img alt="RGB" src="../_images/640px-LCD_RGB.jpg" /></p>
 <p>Een fijne psychedelische afbeelding! Dit is iets wat je zou kunnen zien als je met een vergrootglas jouw beeldscherm gaat bekijken. Let ook op dat dit een rasterpatroon is met rijen en kolommen van
 pixels.</p>
 </div>
 <div class="section" id="kleurkanalen">
-<h3>Kleurkanalen<a class="headerlink" href="#kleurkanalen" title="Permalink to this headline">¶</a></h3>
+<h3>Kleurkanalen<a class="headerlink" href="#kleurkanalen" title="Permalink naar deze titel">¶</a></h3>
 <p>Een pixel is een samenstelling van hoeveelheden</p>
 <ul class="simple">
 <li><p><font color="red">Rood</font></p></li>
@@ -1290,7 +1423,7 @@ pixels.</p>
 <p>Welke handeling is hier toegepast?</p>
 </div>
 <div class="section" id="bits">
-<h3>Bits<a class="headerlink" href="#bits" title="Permalink to this headline">¶</a></h3>
+<h3>Bits<a class="headerlink" href="#bits" title="Permalink naar deze titel">¶</a></h3>
 <ul class="simple">
 <li><p><font color="red">Rood</font> 255 maximaal</p></li>
 <li><p><font color="green">Groen</font> 255 maximal</p></li>
@@ -1299,7 +1432,7 @@ pixels.</p>
 <p>Hoeveel bits is een <em>enkel</em> kleurkanaal (rood, groen of blauw)?</p>
 </div>
 <div class="section" id="een-pixel">
-<h3>Een pixel<a class="headerlink" href="#een-pixel" title="Permalink to this headline">¶</a></h3>
+<h3>Een pixel<a class="headerlink" href="#een-pixel" title="Permalink naar deze titel">¶</a></h3>
 <p>Is een list!</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">R</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="n">B</span><span class="p">]</span>
 </pre></div>
@@ -1309,7 +1442,7 @@ pixels.</p>
 </div>
 </div>
 <div class="section" id="een-rij-pixels">
-<h3>Een rij pixels<a class="headerlink" href="#een-rij-pixels" title="Permalink to this headline">¶</a></h3>
+<h3>Een rij pixels<a class="headerlink" href="#een-rij-pixels" title="Permalink naar deze titel">¶</a></h3>
 <p>Is een <code class="docutils literal notranslate"><span class="pre">LoL</span></code>!</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="p">[</span><span class="mi">39</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">39</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="o">...</span> <span class="p">]</span>
 </pre></div>
@@ -1317,7 +1450,7 @@ pixels.</p>
 <p>De breedte van de afbeelding…</p>
 </div>
 <div class="section" id="een-afbeelding">
-<h3>Een afbeelding<a class="headerlink" href="#een-afbeelding" title="Permalink to this headline">¶</a></h3>
+<h3>Een afbeelding<a class="headerlink" href="#een-afbeelding" title="Permalink naar deze titel">¶</a></h3>
 <p>Is een … <code class="docutils literal notranslate"><span class="pre">LoLoL</span></code>?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
     <span class="p">[</span> <span class="p">[</span><span class="mi">39</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">39</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="o">...</span> <span class="p">],</span>
@@ -1330,7 +1463,7 @@ pixels.</p>
 </div>
 </div>
 <div class="section" id="compressie">
-<h2>Compressie<a class="headerlink" href="#compressie" title="Permalink to this headline">¶</a></h2>
+<h2>Compressie<a class="headerlink" href="#compressie" title="Permalink naar deze titel">¶</a></h2>
 <p>Te veel bits!</p>
 <p><img alt="Office original" src="../_images/office_original.png" /></p>
 <p><img alt="iOS resize" src="../_images/ios_resize.png" /></p>
@@ -1338,13 +1471,13 @@ pixels.</p>
 <p><img alt="Office alien" src="../_images/office_alien.png" /></p>
 <p>… gooi 98% van het <em>oppervlakte</em> weg?</p>
 <div class="section" id="informatiereductie">
-<h3>Informatiereductie<a class="headerlink" href="#informatiereductie" title="Permalink to this headline">¶</a></h3>
+<h3>Informatiereductie<a class="headerlink" href="#informatiereductie" title="Permalink naar deze titel">¶</a></h3>
 <p>Hoe <em>kan</em> je 98% van data verwijderen?</p>
 <p><img alt="Office" src="../_images/office.png" /></p>
 <p><img alt="Office detail" src="../_images/office_detail.png" /></p>
 </div>
 <div class="section" id="compressietypen">
-<h3>Compressietypen<a class="headerlink" href="#compressietypen" title="Permalink to this headline">¶</a></h3>
+<h3>Compressietypen<a class="headerlink" href="#compressietypen" title="Permalink naar deze titel">¶</a></h3>
 <p>Lossless</p>
 <ul class="simple">
 <li><p><em>geen</em> verlies van informatie of kwaliteit</p></li>
@@ -1360,7 +1493,7 @@ pixels.</p>
 </div>
 </div>
 <div class="section" id="afbeeldingen-zijn-bits">
-<h2>Afbeeldingen zijn bits<a class="headerlink" href="#afbeeldingen-zijn-bits" title="Permalink to this headline">¶</a></h2>
+<h2>Afbeeldingen zijn bits<a class="headerlink" href="#afbeeldingen-zijn-bits" title="Permalink naar deze titel">¶</a></h2>
 <p>In het bijzonder <em>binaire</em> afbeeldingen!</p>
 <p><img alt="Patroon 1" src="../_images/pattern_11.png" /></p>
 <p>Een 8x8 binaire afbeelding encoderen</p>
@@ -1381,7 +1514,7 @@ pixels.</p>
 <p>Dit zijn veel bits! Hoe zouden we dit kunnen comprimeren? Daar hebben we een strategie voor nodig!</p>
 </div>
 <div class="section" id="de-strategie">
-<h2>De strategie<a class="headerlink" href="#de-strategie" title="Permalink to this headline">¶</a></h2>
+<h2>De strategie<a class="headerlink" href="#de-strategie" title="Permalink naar deze titel">¶</a></h2>
 <p><strong>Run-length encoding (RLE)</strong></p>
 <p>Een <em>strategie</em> voor het (lossless) comprimeren van data</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">alliiiiiieeeensssssssssssssssss</span>
@@ -1414,13 +1547,13 @@ pixels.</p>
 <p>De bovenstaande 8x8 <em>binaire</em> afbeelding als een reeks bits waar 0 staat voor wit en 1 voor zwart.</p>
 </div>
 <div class="section" id="lossless-compressie">
-<h2>Lossless compressie<a class="headerlink" href="#lossless-compressie" title="Permalink to this headline">¶</a></h2>
+<h2>Lossless compressie<a class="headerlink" href="#lossless-compressie" title="Permalink naar deze titel">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;0000000000000000111111111111111100000000000000000000000000001111&quot;</span>
 </pre></div>
 </div>
 <p>Hoe kan een reeks meer efficient, maar nog steeds <strong>binair</strong>, worden weergegeven?</p>
 <div class="section" id="encodering">
-<h3>Encodering<a class="headerlink" href="#encodering" title="Permalink to this headline">¶</a></h3>
+<h3>Encodering<a class="headerlink" href="#encodering" title="Permalink naar deze titel">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;0000000000000000|1111111111111111|0000000000000000000000000000|1111&quot;</span>
 </pre></div>
 </div>
@@ -1430,7 +1563,7 @@ pixels.</p>
 </div>
 </div>
 <div class="section" id="de-eerste-reeks">
-<h3>De eerste reeks<a class="headerlink" href="#de-eerste-reeks" title="Permalink to this headline">¶</a></h3>
+<h3>De eerste reeks<a class="headerlink" href="#de-eerste-reeks" title="Permalink naar deze titel">¶</a></h3>
 <p>16 keer 0</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;0000000000000000&quot;</span>
 </pre></div>
@@ -1444,7 +1577,7 @@ pixels.</p>
 </div>
 </div>
 <div class="section" id="de-gehele-reeks">
-<h3>De gehele reeks<a class="headerlink" href="#de-gehele-reeks" title="Permalink to this headline">¶</a></h3>
+<h3>De gehele reeks<a class="headerlink" href="#de-gehele-reeks" title="Permalink naar deze titel">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;0000000000000000|1111111111111111|0000000000000000000000000000|1111&quot;</span>
 </pre></div>
 </div>
@@ -1472,7 +1605,7 @@ pixels.</p>
 </div>
 </div>
 <div class="section" id="encodering-met-vaste-lengte">
-<h2>Encodering met vaste lengte<a class="headerlink" href="#encodering-met-vaste-lengte" title="Permalink to this headline">¶</a></h2>
+<h2>Encodering met vaste lengte<a class="headerlink" href="#encodering-met-vaste-lengte" title="Permalink naar deze titel">¶</a></h2>
 <p>Een beter algoritme: blokken met vaste lengte!</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;0000000000000000|1111111111111111|0000000000000000000000000000|1111&quot;</span>
 </pre></div>
@@ -1485,7 +1618,7 @@ pixels.</p>
 </pre></div>
 </div>
 <div class="section" id="padding">
-<h3>Padding<a class="headerlink" href="#padding" title="Permalink to this headline">¶</a></h3>
+<h3>Padding<a class="headerlink" href="#padding" title="Permalink naar deze titel">¶</a></h3>
 <p>Wat te doen met de lege <code class="docutils literal notranslate"><span class="pre">*</span></code> plekken? <em>Vullen met nullen</em>!</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;00010000&quot;</span> <span class="o">+</span> <span class="s2">&quot;10010000&quot;</span> <span class="o">+</span> <span class="s2">&quot;00011100&quot;</span> <span class="o">+</span> <span class="s2">&quot;10000100&quot;</span>
 </pre></div>
@@ -1497,7 +1630,7 @@ pixels.</p>
 <p>Vullen met nullen, of soms ook wel voorloopnullen genoemd.</p>
 </div>
 <div class="section" id="nullen-vullen">
-<h3>Nullen vullen<a class="headerlink" href="#nullen-vullen" title="Permalink to this headline">¶</a></h3>
+<h3>Nullen vullen<a class="headerlink" href="#nullen-vullen" title="Permalink naar deze titel">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span> <span class="o">*</span> <span class="s2">&quot;0&quot;</span>
@@ -1514,7 +1647,7 @@ pixels.</p>
 </div>
 </div>
 <div class="section" id="id1">
-<h2>Tot hoeveel kan je tellen<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2>Tot hoeveel kan je tellen<a class="headerlink" href="#id1" title="Permalink naar deze titel">¶</a></h2>
 <p>In een 8 bits blok is het <em>eerst bit</em> de “initiële pixel” en de resterende <em>7 bits</em> om het aantal herhalingen aan te geven</p>
 <ul class="simple">
 <li><p>Wat is de langste herhaling die met 7 bits kan worden vastgelegd?</p></li>
@@ -1526,7 +1659,7 @@ pixels.</p>
 <p>Begin vanaf de 128e pixel een nieuw 8 bits blok!</p>
 </div>
 <div class="section" id="de-functie">
-<h2>De functie<a class="headerlink" href="#de-functie" title="Permalink to this headline">¶</a></h2>
+<h2>De functie<a class="headerlink" href="#de-functie" title="Permalink naar deze titel">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compress</span><span class="p">(</span><span class="n">I</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Returns the RLE of the input binary image, I</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -1542,9 +1675,9 @@ pixels.</p>
 </div>
 </div>
 <div class="section" id="quiz">
-<h2>Quiz<a class="headerlink" href="#quiz" title="Permalink to this headline">¶</a></h2>
+<h2>Quiz<a class="headerlink" href="#quiz" title="Permalink naar deze titel">¶</a></h2>
 <div class="section" id="vraag-1">
-<h3>Vraag 1<a class="headerlink" href="#vraag-1" title="Permalink to this headline">¶</a></h3>
+<h3>Vraag 1<a class="headerlink" href="#vraag-1" title="Permalink naar deze titel">¶</a></h3>
 <p>De volgende reeks bits</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;0000000000000000000000000000000000000000001111111111111111111111111111111&quot;</span>
 </pre></div>
@@ -1555,13 +1688,13 @@ pixels.</p>
 </ul>
 </div>
 <div class="section" id="oplossing">
-<h3>Oplossing<a class="headerlink" href="#oplossing" title="Permalink to this headline">¶</a></h3>
+<h3>Oplossing<a class="headerlink" href="#oplossing" title="Permalink naar deze titel">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;00101010|10011111&quot;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="vraag-2">
-<h3>Vraag 2<a class="headerlink" href="#vraag-2" title="Permalink to this headline">¶</a></h3>
+<h3>Vraag 2<a class="headerlink" href="#vraag-2" title="Permalink naar deze titel">¶</a></h3>
 <p>Een hulpfunctie voor het vinden van het EERSTE geval</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">front_num</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Returns the # of times the first</span>
@@ -1583,7 +1716,7 @@ pixels.</p>
 </div>
 </div>
 <div class="section" id="id2">
-<h3>Oplossing<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h3>Oplossing<a class="headerlink" href="#id2" title="Permalink naar deze titel">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">front_num</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
@@ -1613,7 +1746,7 @@ pixels.</p>
 </div>
 </div>
 <div class="section" id="beste-en-slechtste-compressie">
-<h2>Beste en slechtste compressie<a class="headerlink" href="#beste-en-slechtste-compressie" title="Permalink to this headline">¶</a></h2>
+<h2>Beste en slechtste compressie<a class="headerlink" href="#beste-en-slechtste-compressie" title="Permalink naar deze titel">¶</a></h2>
 <p><img alt="Pattern 4" src="../_images/pattern_4.png" /></p>
 <p>Tot hoeveel bits kan deze 8x8 binaire afbeelding worden gecomprimeerd?</p>
 <p>Deze afbeelding kan tot een enkel blok worden gecomprimeerd (een enkel blok van 8 bits).</p>
@@ -1622,7 +1755,7 @@ pixels.</p>
 <p>Deze afbeelding kan niet efficiënt worden gecomprimeerd en zal 512 bits groot zijn (8x8 blokken van elk 8 bits).</p>
 </div>
 <div class="section" id="alles-bits">
-<h2>Alles bits!<a class="headerlink" href="#alles-bits" title="Permalink to this headline">¶</a></h2>
+<h2>Alles bits!<a class="headerlink" href="#alles-bits" title="Permalink naar deze titel">¶</a></h2>
 <p>Afbeeldingen, tekst, geluid, data</p>
 <p>Zelfs de string <code class="docutils literal notranslate"><span class="pre">vier*twee</span></code> wordt gerepresenteerd als een sequentie van bits…</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;vier*twee&quot;</span>
@@ -1657,25 +1790,25 @@ pixels.</p>
 
               </div>
               
-        </div>
-    </div>
-    
-    
-    <div class='prev-next-bottom'>
         
+        <div class='prev-next-bottom'>
+            
     <a class='left-prev' id="prev-link" href="9b_binaire_getallen.html" title="previous page">Binaire getallen</a>
-    <a class='right-next' id="next-link" href="../problems/decimaal_en_verder.html" title="next page">Van decimaal naar binair en verder!</a>
+    <a class='right-next' id="next-link" href="../class/opgaven_5.html" title="next page">Week 5</a>
 
+        </div>
+        
+        </div>
     </div>
     <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         
-          By Hanze University of Applied Sciences<br/>
+          Door Hanzehogeschool Groningen<br/>
         
           <div class="extra_footer">
             <div>
-<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
     Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
 </div>
 
@@ -1688,11 +1821,9 @@ pixels.</p>
 
       </div>
     </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
-    
-  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
-
-
-    
+  
   </body>
 </html>

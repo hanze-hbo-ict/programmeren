@@ -7,8 +7,12 @@ csa-level: mastery
 
 # Picobot III
 
-```{include} ../class/problems/picobot_3.md
-```
+| Naam         | Beschrijving                                                   |
+|--------------|----------------------------------------------------------------|
+| Onderwerp    | Picobot een ruitvormige ruimte laten doorlopen                 |
+| Bestandsnaam | `wk1ex5.txt`                                                   |
+| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
+| Opmering     | **Dit is een bonusopgave**                                     |
 
 ![Picobot diamant](images/picobot/picobotDiamond.png)
 

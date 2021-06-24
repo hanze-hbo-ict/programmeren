@@ -2,8 +2,11 @@
 
 <!-- elektrisch schema, een circuitdiagram of schakelschema -->
 
-```{include} ../class/problems/optellingen_schakelen.md
-```
+| Naam         | Beschrijving                                                   |
+|--------------|----------------------------------------------------------------|
+| Onderwerp    | Schakelingen ontwerpen                                         |
+| Bestandsnaam | `wk6ex1-4.circ`                                                |
+| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 Deze week ga je verschillende logische schakelingen ontwerpen met behulp van *Logisim Evolution*, een programma om schakelingen te ontwerpen.
 
@@ -21,7 +24,7 @@ Download de volgende bestanden:
 Voor Logisim zal je Java geïnstalleerd moeten hebben. Als je dit nog niet hebt kan je het downloaden van de [OpenJDK](https://adoptopenjdk.net/) website:
 
 -   kies versie 11 of hoger
--   bij download kan je kiezen voor een JVM (Java Virtual Machine): HotSpot is een prima keus
+-   bij download kan je kiezen voor een JVM (Java Virtual Machine): HotSpot is een goede keus
 -   indien gevraagd, kies bij installatie om `JAVA_HOME` aan het pad toe te voegen!
 -   indien gevraagd, *negeer* bij installatie de optie om Oracle licentiesleutels toe te voegen!
 

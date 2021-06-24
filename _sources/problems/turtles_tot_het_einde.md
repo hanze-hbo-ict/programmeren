@@ -1,7 +1,11 @@
 # Turtles all the way down!
 
-```{include} ../class/problems/turtles_tot_het_einde.md
-```
+| Naam         | Beschrijving                                                   |
+|--------------|----------------------------------------------------------------|
+| Onderwerp    | Recursieve kunst met turtle                                    |
+| Bestandsnaam | `wk3ex4.py`                                                    |
+| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
+| Opmerking    | **Dit is een bonusopgave**                                     |
 
 Je kan maximaal 10 bonuspunten verdienen met het ontwerpen en implementeren van je eigen turtle-gebaseerde kunstwerken in Python.
 

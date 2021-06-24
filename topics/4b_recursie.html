@@ -1,13 +1,14 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="nl">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recursie &#8212; Programmeren</title>
     
-  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -19,14 +20,10 @@
 
     
       
-  <link rel="stylesheet"
-    href="../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -36,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -81,8 +78,9 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
+    <script src="../_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
@@ -94,26 +92,17 @@ commentsRunWhenDOMLoaded(addUtterances);
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://misja.github.io/programmeren/topics/4b_recursie.html" />
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Sequenties en data" href="../problems/sequenties_en_data.html" />
+    <link rel="search" title="Zoeken" href="../search.html" />
+    <link rel="next" title="Week 2" href="../class/opgaven_2.html" />
     <link rel="prev" title="Functies" href="4a_functies.html" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
-
-
-<!-- Opengraph tags -->
-<meta property="og:url"         content="https://misja.github.io/programmeren/topics/4b_recursie.html" />
-<meta property="og:type"        content="article" />
-<meta property="og:title"       content="Recursie" />
-<meta property="og:description" content="Recursie  Om recursie te kunnen begrijpen moet je eerst recursie kunnen begrijpen.  – student, anoniem  Of: het antwoord op het probleem is het antwoord op het " />
-<meta property="og:image"       content="https://misja.github.io/programmeren/_static/mascot.png" />
-
-<meta name="twitter:card" content="summary" />
-
-
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -122,49 +111,54 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../index.html">
-  
-  <img src="../_static/mascot.png" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">Programmeren</h1>
-  
-</a>
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/mascot.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Programmeren</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../about/syllabus.html">
    Programmeren
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Opmerkingen
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../about/feedback.html">
    Anoniem feedbackformulier
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Week 1
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/week_1.html">
    Onderwerpen
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="1a_introductie.html">
      Introductie
@@ -186,19 +180,22 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/python_intro.html">
-   Practicum
-  </a>
- </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/opgaven_1.html">
    Opgaven
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/python_intro.html">
+     Practicum
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../readings/guugu_yimithirr.html">
      Leesopgave
@@ -235,21 +232,24 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Week 2
  </span>
 </p>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active collapsible-parent">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../class/week_2.html">
    Onderwerpen
   </a>
-  <ul class="current collapse-ul">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="3a_data.html">
      Data
@@ -271,24 +271,27 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/sequenties_en_data.html">
-   Practicum I
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/fijne_functies.html">
-   Practicum II
-  </a>
- </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/opgaven_2.html">
    Opgaven
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/sequenties_en_data.html">
+     Practicum I
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/fijne_functies.html">
+     Practicum II
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../readings/end_of_theory.html">
      Leesopgave
@@ -300,21 +303,24 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Week 3
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/week_3.html">
    Onderwerpen
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="5a_simulatie.html">
      Simulatie
@@ -331,17 +337,25 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/opgaven_3.html">
    Opgaven
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/python_turtles.html">
+     Practicum
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../readings/computer_wins_jeopardy.html">
-     De computer wint
+     Leesopgave
     </a>
    </li>
    <li class="toctree-l2">
@@ -360,21 +374,24 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Week 4
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/week_4.html">
    Onderwerpen
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="7a_data_based_design.html">
      Data based design
@@ -391,19 +408,22 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/klinkt_goed.html">
-   Practicum
-  </a>
- </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/opgaven_4.html">
    Opgaven
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/klinkt_goed.html">
+     Practicum
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../readings/universum_simulatie.html">
      Leesopgave
@@ -415,24 +435,27 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Week 5
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/week_5.html">
    Onderwerpen
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="9a_talstelsels.html">
-     Talstalsels
+     Talstelsels
     </a>
    </li>
    <li class="toctree-l2">
@@ -446,19 +469,22 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/decimaal_en_verder.html">
-   Practicum
-  </a>
- </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/opgaven_5.html">
    Opgaven
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/decimaal_en_verder.html">
+     Practicum
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../readings/bug_and_crash.html">
      Leesopgave
@@ -475,71 +501,95 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Week 6
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/week_6.html">
    Onderwerpen
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="11a_logische_schakelingen.html">
      Logische schakelingen
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/optellingen_schakelen.html">
-   Practicum
-  </a>
- </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/opgaven_6.html">
    Opgaven
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/optellingen_schakelen.html">
+     Practicum
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../readings/just_add_water.html">
      Leesopgave
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/vermenigvuldigingswaanzin.html">
+     Vermenigvuldigingswaanzin
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/eerlijke_verdeling.html">
+     Een eerlijke verdeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/geheugenproblemen.html">
+     Geheugenproblemen
+    </a>
+   </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Week 7
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../class/week_7.html">
    Onderwerpen
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/hmmm_assembly.html">
-   Practicum
-  </a>
- </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/opgaven_7.html">
    Opgaven
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/hmmm_assembly.html">
+     Practicum
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../readings/hijacked_minds.html">
      Leesopave
@@ -550,32 +600,55 @@ commentsRunWhenDOMLoaded(addUtterances);
      De macht van hmmm
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/feest_met_fibonacci.html">
+     Feest met Fibonacci
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/macht_van_recursie.html">
+     De macht van recursie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/een_lus_om_python.html">
+     Een lusje om Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/fibonacci_recursief.html">
+     Fibonacci recursief
+    </a>
+   </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Week 8
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../class/week_8.html">
    Onderwerpen
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/mandelbrot.html">
-   Practicum
-  </a>
- </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/opgaven_8.html">
    Opgaven
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/mandelbrot.html">
+     Practicum
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../readings/algoritmen_discrimineren.html">
      Leesopgave
@@ -591,32 +664,45 @@ commentsRunWhenDOMLoaded(addUtterances);
      Pi met pijltjes
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/tr_investeringen.html">
+     TR Investeringen B.V.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/ascii_art.html">
+     ASCII Art
+    </a>
+   </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Week 9
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../class/week_9.html">
    Onderwerpen
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/boter_kaas_eieren.html">
-   Practicum
-  </a>
- </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/opgaven_9.html">
    Opgaven
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/boter_kaas_eieren.html">
+     Practicum
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../readings/horseless_driverless.html">
      Leesopgave
@@ -633,21 +719,24 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Week 10
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/week_10.html">
    Onderwerpen
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="19_objecten.html">
      Objecten en klassen
@@ -659,22 +748,25 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/opgaven_10.html">
    Opgaven
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../readings/an_algorithm_wrote_this.html">
-     Leesopgave
+    <a class="reference internal" href="../problems/eeuwigdurende_kalender.html">
+     Practicum
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../problems/eeuwigdurende_kalender.html">
-     Eeuwigdurende kalender
+    <a class="reference internal" href="../readings/an_algorithm_wrote_this.html">
+     Leesopgave
     </a>
    </li>
    <li class="toctree-l2">
@@ -687,22 +779,59 @@ commentsRunWhenDOMLoaded(addUtterances);
      Vier op een rij
     </a>
    </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 11
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_11.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../class/opgaven_11.html">
+   Opaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/buitenaards_python.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/chess_championship.html">
+     Leesopgave
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../problems/vier_op_een_rij_ai.html">
-     Vier op een rij AI
+     AI voor vier op een rij
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/project_1.html">
+   Project: Begin
+  </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Projecten
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../projects/vpython.html">
    VPython
@@ -724,12 +853,12 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Voorbeelden
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../examples/recursie.html">
    Recursie
@@ -741,12 +870,12 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Oefening
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../practice/1_recursie.html">
    Recursie
@@ -757,27 +886,30 @@ commentsRunWhenDOMLoaded(addUtterances);
    List comprehension
   </a>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../practice/3a_toets.html">
    Zelftoets
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+  <label for="toctree-checkbox-19">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../practice/3b_toets_uitwerking.html">
      Uitwerking
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Python
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../support/platte_tekst.html">
    Tekstbestanden
@@ -805,6 +937,7 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
 </ul>
 
+    </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
@@ -820,23 +953,23 @@ commentsRunWhenDOMLoaded(addUtterances);
           
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
-    </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
+                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
@@ -844,15 +977,15 @@ commentsRunWhenDOMLoaded(addUtterances);
         
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="../_sources/topics/4b_recursie.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
-        <!-- Source interaction buttons -->
+            <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
@@ -860,26 +993,26 @@ commentsRunWhenDOMLoaded(addUtterances);
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
             href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                data-toggle="tooltip" data-placement="left" title="Bronopslagplaats"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
             href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/4b_recursie.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+                title="Open een probleem"><i class="fas fa-lightbulb"></i>open probleem</button></a>
         <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/topics/4b_recursie.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+                title="bewerk deze pagina"><i class="fas fa-pencil-alt"></i>suggereren bewerken</button></a>
     </div>
 </div>
 
+            <!-- Full screen (wrap in <a> to have style consistency -->
 
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
+        title="Volledig scherm"><i
+            class="fas fa-expand"></i></button></a>
 
-        <!-- Launch buttons -->
+            <!-- Launch buttons -->
 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
@@ -887,7 +1020,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <div class="dropdown-buttons">
         
         <a class="binder-button" href="https://mybinder.org/v2/gh/misja/programmeren/master?urlpath=lab/tree/topics/4b_recursie.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Lancering Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
@@ -895,22 +1028,22 @@ commentsRunWhenDOMLoaded(addUtterances);
         
         
         <button type="button" class="btn btn-secondary topbarbtn"
-            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+            onclick="initThebeSBT()" title="Lancering Thebe" data-toggle="tooltip" data-placement="left"><i
                 class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
         
     </div>
 </div>
 
-    </div>
-
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
         </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhoud
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#een-oplossing-die-zichzelf-herhaalt">
    Een oplossing die zichzelf herhaalt
@@ -1150,8 +1283,8 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
 </ul>
 
-        </nav>
-        
+            </nav>
+        </div>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -1160,7 +1293,7 @@ commentsRunWhenDOMLoaded(addUtterances);
               <div>
                 
   <div class="section" id="recursie">
-<h1>Recursie<a class="headerlink" href="#recursie" title="Permalink to this headline">¶</a></h1>
+<h1>Recursie<a class="headerlink" href="#recursie" title="Permalink naar deze titel">¶</a></h1>
 <blockquote>
 <div><p>Om recursie te kunnen begrijpen moet je eerst recursie kunnen begrijpen.</p>
 <p>– student, anoniem</p>
@@ -1169,7 +1302,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p><img alt="mind, blown ... recursive" src="../_images/mind_blown_recursive.gif" /></p>
 <p>Zet je schrap want dit onderwerp gaat voor hoofpijn én verassende inzichten zorgen, kies je <a class="reference external" href="https://giphy.com/explore/mind-blown">favoriet</a>…</p>
 <div class="section" id="een-oplossing-die-zichzelf-herhaalt">
-<h2>Een oplossing die zichzelf herhaalt<a class="headerlink" href="#een-oplossing-die-zichzelf-herhaalt" title="Permalink to this headline">¶</a></h2>
+<h2>Een oplossing die zichzelf herhaalt<a class="headerlink" href="#een-oplossing-die-zichzelf-herhaalt" title="Permalink naar deze titel">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">numis</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Tel het aantal i&#39;s in s</span>
 <span class="sd">    input s: een string</span>
@@ -1187,14 +1320,14 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Terzijde, weet je nog dat je het eerste karakter en het restant van een string kan lezen met <code class="docutils literal notranslate"><span class="pre">s[0]</span></code> en <code class="docutils literal notranslate"><span class="pre">s[1:]</span></code>?</p>
 </div>
 <div class="section" id="paradigmas">
-<h2>Paradigmas<a class="headerlink" href="#paradigmas" title="Permalink to this headline">¶</a></h2>
+<h2>Paradigmas<a class="headerlink" href="#paradigmas" title="Permalink naar deze titel">¶</a></h2>
 <p>Verschillende manieren om dit probleem dit op te lossen:</p>
 <p><strong>sequentieeel</strong> (iteratief)</p>
 <p><strong>zelfgelijkend</strong> (recursief)</p>
 <p>Het <code class="docutils literal notranslate"><span class="pre">numis(s)</span></code> probleem valt op meer dan één manier op te lossen en we komen daarmee aan bij het bestaan van verschillende <a class="reference external" href="https://nl.wikipedia.org/wiki/Programmeerparadigma">programmeerparadigmas</a>, dat wil zeggen technieken en benaderingen voor het oplossen van een probleem. We gaan eerst recursie verkennen, een <em>iteratieve</em> benadering komt later.</p>
 <p>Als je al eerder (meer of minder) hebt geprogrammeerd zal je iteratieve constructies wellicht kennen als <em>lussen</em> (bijvoobeeld “while” of “for each” lussen), deze benadering gaan we nu dus <em>niet</em> gebruiken!</p>
 <div class="section" id="sequentieel-denken">
-<h3>Sequentieel denken<a class="headerlink" href="#sequentieel-denken" title="Permalink to this headline">¶</a></h3>
+<h3>Sequentieel denken<a class="headerlink" href="#sequentieel-denken" title="Permalink naar deze titel">¶</a></h3>
 <p><strong>faculteit</strong></p>
 <p>wiskunde: <span class="math notranslate nohighlight">\(5! = 120\)</span></p>
 <p>informatica: <code class="docutils literal notranslate"><span class="pre">fac(5)</span> <span class="pre">=</span> <span class="pre">5</span> <span class="pre">*</span> <span class="pre">4</span> <span class="pre">*</span> <span class="pre">3</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">1</span></code></p>
@@ -1203,7 +1336,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Maar zou je <code class="docutils literal notranslate"><span class="pre">fac(5)</span></code> als een meer algemene versie van zichzelf kunnen schrijven? Dat kan, laten we daar een begin mee maken en je zal zien dat een zichzelf herhalend (terugkerend?) patroon gaat ontstaan, net als bij het aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;i❤️aliens&quot;</span></code>…</p>
 </div>
 <div class="section" id="recursief-denken">
-<h3>Recursief denken<a class="headerlink" href="#recursief-denken" title="Permalink to this headline">¶</a></h3>
+<h3>Recursief denken<a class="headerlink" href="#recursief-denken" title="Permalink naar deze titel">¶</a></h3>
 <p><strong>faculteit</strong></p>
 <p>wiskunde: <span class="math notranslate nohighlight">\(5! = 120\)</span></p>
 <p>informatica: <code class="docutils literal notranslate"><span class="pre">fac(5)</span> <span class="pre">=</span> <span class="pre">5</span> <span class="pre">*</span> <span class="pre">4</span> <span class="pre">*</span> <span class="pre">3</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">1</span></code></p>
@@ -1211,7 +1344,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p><code class="docutils literal notranslate"><span class="pre">fac(N)</span> <span class="pre">=</span> <span class="pre">N</span> <span class="pre">*</span> <span class="pre">fac(N</span> <span class="pre">-</span> <span class="pre">1)</span></code></p>
 </div>
 <div class="section" id="dit-is-correct">
-<h3>Dit is correct…<a class="headerlink" href="#dit-is-correct" title="Permalink to this headline">¶</a></h3>
+<h3>Dit is correct…<a class="headerlink" href="#dit-is-correct" title="Permalink naar deze titel">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fac</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">N</span> <span class="o">*</span> <span class="n">fac</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
@@ -1227,7 +1360,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p><img alt="Noodstop" src="../_images/noodstop.jpg" /></p>
 </div>
 <div class="section" id="is-het-correct">
-<h3>Is het correct?<a class="headerlink" href="#is-het-correct" title="Permalink to this headline">¶</a></h3>
+<h3>Is het correct?<a class="headerlink" href="#is-het-correct" title="Permalink naar deze titel">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fac</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">N</span> <span class="o">*</span> <span class="n">fac</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
@@ -1237,7 +1370,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="section" id="id1">
-<h2>Recursief denken<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2>Recursief denken<a class="headerlink" href="#id1" title="Permalink naar deze titel">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fac</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">N</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># base case </span>
         <span class="k">return</span> <span class="mi">1</span>
@@ -1248,7 +1381,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Je kan testen op de <em>base case</em>, in het geval van een faculteit is dit bereikt als N gelijk is aan 0. Maar als je naar de laatste regel kijkt (<code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">*</span> <span class="pre">fac(N-1)</span></code>),  hoe kan iets (<code class="docutils literal notranslate"><span class="pre">N</span></code>) vermenigvudigd worden met iets dat nog niet is uitgevoerd (<code class="docutils literal notranslate"><span class="pre">fac(N-1)</span></code>)?</p>
 </div>
 <div class="section" id="recursief-handelen">
-<h2>Recursief handelen<a class="headerlink" href="#recursief-handelen" title="Permalink to this headline">¶</a></h2>
+<h2>Recursief handelen<a class="headerlink" href="#recursief-handelen" title="Permalink naar deze titel">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fac</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">N</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># base case</span>
         <span class="k">return</span> <span class="mi">1</span>
@@ -1259,7 +1392,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p>Deze uitwerking is meer in de buurt van wat achter schermen gebeurt. In het geval <code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">*</span> <span class="pre">fac(N</span> <span class="pre">-</span> <span class="pre">1)</span></code> wordt door de computer de recursieve aanroep (<code class="docutils literal notranslate"><span class="pre">fac(N</span> <span class="pre">-</span> <span class="pre">1)</span></code>) eerst aangeroepen om vervolgens daar <code class="docutils literal notranslate"><span class="pre">N</span></code> mee te vermenigvuldigen. Je kan dit goed vergelijken met het eerst zetten van een variabele (<code class="docutils literal notranslate"><span class="pre">rest</span></code> in dit geval) die later wordt gebruikt om het antwoord te berekenen (<code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">*</span> <span class="pre">rest</span></code>).</p>
 <div class="section" id="stapelen">
-<h3>Stapelen<a class="headerlink" href="#stapelen" title="Permalink to this headline">¶</a></h3>
+<h3>Stapelen<a class="headerlink" href="#stapelen" title="Permalink naar deze titel">¶</a></h3>
 <p>Recursief stapelen!</p>
 <p>Recursieve aanroepen van functies worden gestapeld, zoals je al eerder hebt gezien! Van onder naar boven worden de frames van de stack gehaald en resultaten naar het bovenliggend frame doorgegeven.</p>
 <p><img alt="prob 3 step 18" src="../_images/prob_3_step_18.png" /></p>
@@ -1276,13 +1409,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="section" id="de-uitdaging">
-<h2>De uitdaging<a class="headerlink" href="#de-uitdaging" title="Permalink to this headline">¶</a></h2>
+<h2>De uitdaging<a class="headerlink" href="#de-uitdaging" title="Permalink naar deze titel">¶</a></h2>
 <p><img alt="Varen" src="../_images/varen_blad.jpg" /></p>
 <p>De uitdaging van het oplossen van recursief handelen is om zowel het <em>geheel</em> als de <em>zelfgelijkende delen</em> te zien!</p>
 <p>Je komt trouwens veel voorbeelden van recursie in de natuur tegen, later zie je meer voorbeelden!</p>
 </div>
 <div class="section" id="id2">
-<h2>Recursie<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2>Recursie<a class="headerlink" href="#id2" title="Permalink naar deze titel">¶</a></h2>
 <p>Recursie als een paradigma voor het oplossen van problemen</p>
 <ul class="simple">
 <li><p>een base case, en</p></li>
@@ -1291,9 +1424,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Recursie is een belangrijk patroon, of <em>paradigma</em> voor het oplossen van problemen. Bedenk dat er altijd een <em>base case</em> en een <em>zelfgelijkend ontwerp</em> aanwezig moet zijn. Zelfgelijkend is in dit geval dat we dezelfde oplossing steeds kunnen toepassen op een deel van het probleem.</p>
 </div>
 <div class="section" id="recursief-ontwerp">
-<h2>Recursief ontwerp<a class="headerlink" href="#recursief-ontwerp" title="Permalink to this headline">¶</a></h2>
+<h2>Recursief ontwerp<a class="headerlink" href="#recursief-ontwerp" title="Permalink naar deze titel">¶</a></h2>
 <div class="section" id="faculteit-fac-x">
-<h3>Faculteit: <code class="docutils literal notranslate"><span class="pre">fac(x)</span></code><a class="headerlink" href="#faculteit-fac-x" title="Permalink to this headline">¶</a></h3>
+<h3>Faculteit: <code class="docutils literal notranslate"><span class="pre">fac(x)</span></code><a class="headerlink" href="#faculteit-fac-x" title="Permalink naar deze titel">¶</a></h3>
 <p><strong><code class="docutils literal notranslate"><span class="pre">fac(5)</span></code></strong>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">fac(5)</span></code> is de waarde van <code class="docutils literal notranslate"><span class="pre">5*4*3*2*1</span></code> en is gelijk aan</p></li>
@@ -1324,7 +1457,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Terzijde, Python zal jou tegen een eindeloze recursie beschermen omdat het standaard een maximale diepte (het aantal frames) heeft geconfigureerd voor de recursieve aanroep van een functie (3000 is de limiet). Een stack overflow fout zal je dus niet snel zien en de limiet kan je aanpassen, als het nodig is!</p>
 </div>
 <div class="section" id="optelling-plusone-n">
-<h3>Optelling: <code class="docutils literal notranslate"><span class="pre">plusone(n)</span></code><a class="headerlink" href="#optelling-plusone-n" title="Permalink to this headline">¶</a></h3>
+<h3>Optelling: <code class="docutils literal notranslate"><span class="pre">plusone(n)</span></code><a class="headerlink" href="#optelling-plusone-n" title="Permalink naar deze titel">¶</a></h3>
 <p><strong><code class="docutils literal notranslate"><span class="pre">plusone(5)</span></code></strong>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">plusone(5)</span></code> is de waarde van <code class="docutils literal notranslate"><span class="pre">1+1+1+1+1</span></code> en is gelijk aan</p></li>
@@ -1346,7 +1479,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p>De <code class="docutils literal notranslate"><span class="pre">...</span></code> zie je hier in de code terug. Wat moet voor de base- en recursieve case worden ingevuld? Denk hier terug aan aan <code class="docutils literal notranslate"><span class="pre">fac(x)</span></code>, hetzelfde patroon zal je hier moeten volgen!</p>
 <div class="section" id="oplossing">
-<h4>Oplossing<a class="headerlink" href="#oplossing" title="Permalink to this headline">¶</a></h4>
+<h4>Oplossing<a class="headerlink" href="#oplossing" title="Permalink naar deze titel">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plusone</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -1367,7 +1500,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="section" id="machtverheffing-pow-b-p">
-<h3>Machtverheffing: <code class="docutils literal notranslate"><span class="pre">pow(b,</span> <span class="pre">p)</span></code><a class="headerlink" href="#machtverheffing-pow-b-p" title="Permalink to this headline">¶</a></h3>
+<h3>Machtverheffing: <code class="docutils literal notranslate"><span class="pre">pow(b,</span> <span class="pre">p)</span></code><a class="headerlink" href="#machtverheffing-pow-b-p" title="Permalink naar deze titel">¶</a></h3>
 <p><strong><code class="docutils literal notranslate"><span class="pre">pow(2,</span> <span class="pre">5)</span></code></strong>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">pow(2,</span> <span class="pre">5)</span></code> is de waarde van <code class="docutils literal notranslate"><span class="pre">2*2*2*2*2</span></code> en is gelijk aan</p></li>
@@ -1386,7 +1519,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p>Ook hier kan je een base- en recursive case ontdekken. Laten we het uitschrijven:</p>
 <div class="section" id="id3">
-<h4>Oplossing<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<h4>Oplossing<a class="headerlink" href="#id3" title="Permalink naar deze titel">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">pow</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
@@ -1434,7 +1567,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Dit probleem komt zo vaak voor dat het ook in syntax is geïmplementeerd! Probeer in dit geval ook eens als <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">=</span> <span class="pre">5</span></code>. We kunnen dit nu gaan toepassen op de recursieve case in het geval exponent <code class="docutils literal notranslate"><span class="pre">p</span></code> een <em>negatieve</em> waarde heeft.</p>
 </div>
 <div class="section" id="id4">
-<h4>Oplossing<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<h4>Oplossing<a class="headerlink" href="#id4" title="Permalink naar deze titel">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">pow</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
@@ -1458,7 +1591,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="section" id="voordelen-van-recursie">
-<h2>Voordelen van recursie<a class="headerlink" href="#voordelen-van-recursie" title="Permalink to this headline">¶</a></h2>
+<h2>Voordelen van recursie<a class="headerlink" href="#voordelen-van-recursie" title="Permalink naar deze titel">¶</a></h2>
 <p>Het kan <em>zelfstandig</em> in één keer een <em>willekeurige</em> diepte ingaan</p>
 <p>De functie heeft aan zichzelf genoeg en met één aanroep (van ons) lost het zichzelf tot elke willekeurige diepte op!</p>
 <p><img alt="Romanesco broccoli" src="../_images/romanesco.jpg" /></p>
@@ -1469,11 +1602,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Misschien, maar gelukkig heeft ons lichaam wél de <em>base case</em> goed gedefinieerd!</p>
 </div>
 <div class="section" id="python-is-in">
-<h2>Python is <code class="docutils literal notranslate"><span class="pre">in</span></code><a class="headerlink" href="#python-is-in" title="Permalink to this headline">¶</a></h2>
+<h2>Python is <code class="docutils literal notranslate"><span class="pre">in</span></code><a class="headerlink" href="#python-is-in" title="Permalink naar deze titel">¶</a></h2>
 <p>Bevind een element zich in een sequentie (een list, een string, …)?</p>
 <p>Dit probleem zal je vaak gaan tegenkomen: bijvoorbeeld bij de vraag of “i” een klinker is? Klinkers zijn de karakters a, e, i, o en u. Dit kan je als een sequentie schrijven, bijvoorbeeld als string <code class="docutils literal notranslate"><span class="pre">&quot;aeiou&quot;</span></code> of als list <code class="docutils literal notranslate"><span class="pre">[&quot;a&quot;,</span> <span class="pre">&quot;e&quot;,</span> <span class="pre">&quot;i&quot;,</span> <span class="pre">&quot;o&quot;,</span> <span class="pre">&quot;u&quot;]</span></code>. Python kent  de <code class="docutils literal notranslate"><span class="pre">in</span></code> operator om te testen of een element zich in een sequentie bevindt, bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">&quot;i&quot;</span> <span class="pre">in</span> <span class="pre">&quot;aeiou&quot;</span></code>. Een paar voorbeelden:</p>
 <div class="section" id="is-in-string">
-<h3>is <code class="docutils literal notranslate"><span class="pre">in</span></code> string<a class="headerlink" href="#is-in-string" title="Permalink to this headline">¶</a></h3>
+<h3>is <code class="docutils literal notranslate"><span class="pre">in</span></code> string<a class="headerlink" href="#is-in-string" title="Permalink naar deze titel">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;i&quot;</span> <span class="ow">in</span> <span class="s2">&quot;team&quot;</span>
@@ -1512,7 +1645,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="section" id="is-in-list">
-<h3>is <code class="docutils literal notranslate"><span class="pre">in</span></code> list<a class="headerlink" href="#is-in-list" title="Permalink to this headline">¶</a></h3>
+<h3>is <code class="docutils literal notranslate"><span class="pre">in</span></code> list<a class="headerlink" href="#is-in-list" title="Permalink naar deze titel">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">42</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">41</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">42</span><span class="p">]</span>
@@ -1541,9 +1674,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="section" id="meer-voorbeelden">
-<h2>Meer voorbeelden<a class="headerlink" href="#meer-voorbeelden" title="Permalink to this headline">¶</a></h2>
+<h2>Meer voorbeelden<a class="headerlink" href="#meer-voorbeelden" title="Permalink naar deze titel">¶</a></h2>
 <div class="section" id="aantal-klinkers-vwl-s">
-<h3>Aantal klinkers: <code class="docutils literal notranslate"><span class="pre">vwl(s)</span></code><a class="headerlink" href="#aantal-klinkers-vwl-s" title="Permalink to this headline">¶</a></h3>
+<h3>Aantal klinkers: <code class="docutils literal notranslate"><span class="pre">vwl(s)</span></code><a class="headerlink" href="#aantal-klinkers-vwl-s" title="Permalink naar deze titel">¶</a></h3>
 <p><strong><code class="docutils literal notranslate"><span class="pre">vwl(&quot;zaaiuien&quot;)</span></code></strong></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">vwl(&quot;zaaiuien&quot;)</span></code> is het aantal klinkers in “zaaiuien” en is gelijk aan</p></li>
@@ -1563,7 +1696,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <div class="section" id="id5">
-<h4>Oplossing<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<h4>Oplossing<a class="headerlink" href="#id5" title="Permalink naar deze titel">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">vwl</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
@@ -1589,7 +1722,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="section" id="alleen-klinkers-keepvwl-s">
-<h3>Alleen klinkers: <code class="docutils literal notranslate"><span class="pre">keepvwl(s)</span></code><a class="headerlink" href="#alleen-klinkers-keepvwl-s" title="Permalink to this headline">¶</a></h3>
+<h3>Alleen klinkers: <code class="docutils literal notranslate"><span class="pre">keepvwl(s)</span></code><a class="headerlink" href="#alleen-klinkers-keepvwl-s" title="Permalink naar deze titel">¶</a></h3>
 <p><strong><code class="docutils literal notranslate"><span class="pre">keepvwl(&quot;pluto&quot;)</span></code></strong></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">keepvwl(&quot;pluto&quot;)</span></code> is “pluto” zonder medeklinkers en is gelijk aan</p></li>
@@ -1609,7 +1742,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <div class="section" id="id6">
-<h4>Oplossing<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<h4>Oplossing<a class="headerlink" href="#id6" title="Permalink naar deze titel">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">keepvwl</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
@@ -1635,7 +1768,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="section" id="het-hoogste-getal-max-l">
-<h3>Het hoogste getal: <code class="docutils literal notranslate"><span class="pre">max(L)</span></code><a class="headerlink" href="#het-hoogste-getal-max-l" title="Permalink to this headline">¶</a></h3>
+<h3>Het hoogste getal: <code class="docutils literal notranslate"><span class="pre">max(L)</span></code><a class="headerlink" href="#het-hoogste-getal-max-l" title="Permalink naar deze titel">¶</a></h3>
 <p><strong><code class="docutils literal notranslate"><span class="pre">max([7,</span> <span class="pre">5,</span> <span class="pre">9,</span> <span class="pre">2])</span></code></strong></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">max([7,</span> <span class="pre">5,</span> <span class="pre">9,</span> <span class="pre">2])</span></code> geeft het hoogste getal terug en is</p></li>
@@ -1658,7 +1791,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <div class="section" id="id7">
-<h4>Oplossing<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<h4>Oplossing<a class="headerlink" href="#id7" title="Permalink naar deze titel">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">max</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
@@ -1695,13 +1828,13 @@ M is 9 en L[0] is 7
 <p>Als we steeds de functie <code class="docutils literal notranslate"><span class="pre">max</span></code> met het restant van <code class="docutils literal notranslate"><span class="pre">L</span></code> aanroepen dan zal het laatste restant 1 element bevatten (de waarde 2) en dit is de base case! <code class="docutils literal notranslate"><span class="pre">L[0]</span></code> is in dit geval 9 en dit is het één na laatste element. De lijst wordt van achteren naar voren doorlopen en je ziet hier de stack in actie!</p>
 </div>
 <div class="section" id="spring-eerst-kijk-later">
-<h4>Spring eerst, kijk later<a class="headerlink" href="#spring-eerst-kijk-later" title="Permalink to this headline">¶</a></h4>
+<h4>Spring eerst, kijk later<a class="headerlink" href="#spring-eerst-kijk-later" title="Permalink naar deze titel">¶</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">max(L)</span></code> is een goed voorbeeld van een <em>spring eerst</em> (recursie) en <em>kijk later</em> (test) strategie!</p>
 <p>Denk ook hier weer aan de stack, werk door tot en met de base case, in dit geval door eerst de recursieve aanroep te doen (<code class="docutils literal notranslate"><span class="pre">M</span> <span class="pre">=</span> <span class="pre">max(L[1:])</span></code>) voordat je gaat controleren (<code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">L[0]</span> <span class="pre">&gt;</span> <span class="pre">M</span></code> etc.).</p>
 </div>
 </div>
 <div class="section" id="dichtst-bij-0-zeroest-l">
-<h3>Dichtst bij 0: <code class="docutils literal notranslate"><span class="pre">zeroest(L)</span></code><a class="headerlink" href="#dichtst-bij-0-zeroest-l" title="Permalink to this headline">¶</a></h3>
+<h3>Dichtst bij 0: <code class="docutils literal notranslate"><span class="pre">zeroest(L)</span></code><a class="headerlink" href="#dichtst-bij-0-zeroest-l" title="Permalink naar deze titel">¶</a></h3>
 <p><strong><code class="docutils literal notranslate"><span class="pre">zeroest([-7,</span> <span class="pre">5,</span> <span class="pre">9,</span> <span class="pre">2])</span></code></strong></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">zeroest([-7,</span> <span class="pre">5,</span> <span class="pre">9,</span> <span class="pre">2])</span></code> geeft getal het dichtst bij 0 terug en is</p></li>
@@ -1724,7 +1857,7 @@ M is 9 en L[0] is 7
 </pre></div>
 </div>
 <div class="section" id="id8">
-<h4>Oplossing<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<h4>Oplossing<a class="headerlink" href="#id8" title="Permalink naar deze titel">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">zeroest</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
@@ -1777,25 +1910,25 @@ M is 9 en L[0] is 7
 
               </div>
               
-        </div>
-    </div>
-    
-    
-    <div class='prev-next-bottom'>
         
+        <div class='prev-next-bottom'>
+            
     <a class='left-prev' id="prev-link" href="4a_functies.html" title="previous page">Functies</a>
-    <a class='right-next' id="next-link" href="../problems/sequenties_en_data.html" title="next page">Sequenties en data</a>
+    <a class='right-next' id="next-link" href="../class/opgaven_2.html" title="next page">Week 2</a>
 
+        </div>
+        
+        </div>
     </div>
     <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         
-          By Hanze University of Applied Sciences<br/>
+          Door Hanzehogeschool Groningen<br/>
         
           <div class="extra_footer">
             <div>
-<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
     Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
 </div>
 
@@ -1808,11 +1941,9 @@ M is 9 en L[0] is 7
 
       </div>
     </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
-    
-  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
-
-
-    
+  
   </body>
 </html>

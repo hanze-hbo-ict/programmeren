@@ -1,7 +1,10 @@
 # Numerieke integratie
 
-```{include} ../class/problems/numerieke_integratie.md
-```
+| Naam         | Beschrijving                                                   |
+|--------------|----------------------------------------------------------------|
+| Onderwerp    | Beter dan wiskundigen oppervlakten berekenen                   |
+| Bestandsnaam | `wk3ex3.py`                                                    |
+| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 In deze opgave schrijf je een Python programma dat de oppervlakten onder willekeurige wiskundige functies kan berekenen (wiskundigen noemen dit *integralen*).
 

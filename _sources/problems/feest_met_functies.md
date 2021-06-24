@@ -1,7 +1,10 @@
 # Feest met functies
 
-```{include} ../class/problems/feest_met_functies.md
-```
+| Naam         | Beschrijving                                                   |
+|--------------|----------------------------------------------------------------|
+| Onderwerp    | Recursieve functies                                            |
+| Bestandsnaam | `wk2ex3.py`                                                    |
+| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 In deze opgave ga je een aantal functies uitwerken door middel van recursie.
 

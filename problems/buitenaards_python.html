@@ -1,0 +1,1742 @@
+
+<!DOCTYPE html>
+
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buitenaards Python &#8212; Programmeren</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "misja/programmeren");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://misja.github.io/programmeren/problems/buitenaards_python.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Zoeken" href="../search.html" />
+    <link rel="next" title="Chess-Championship Results Show Powerful Role of Computers" href="../readings/chess_championship.html" />
+    <link rel="prev" title="Week 11" href="../class/opgaven_11.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/mascot.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Programmeren</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/syllabus.html">
+   Programmeren
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Opmerkingen
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/feedback.html">
+   Anoniem feedbackformulier
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../class/week_1.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/1a_introductie.html">
+     Introductie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/1b_condities.html">
+     Condities
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/2a_programmeren.html">
+     Programmeren
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/2b_picobot.html">
+     Picobot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../class/opgaven_1.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="python_intro.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/guugu_yimithirr.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rochambeau.html">
+     Rochambeau
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="interactieve_fictie.html">
+     Interactieve fictie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="picobot_1.html">
+     Picobot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="picobot_2.html">
+     Picobot II: Picobot Strikes Back
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="picobot_3.html">
+     Picobot III: Return of the Picobot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="picobot_4.html">
+     Picobot IV: The Picobot Menace
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../class/week_2.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/3a_data.html">
+     Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/3b_strings_en_lists.html">
+     Strings en lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/4a_functies.html">
+     Functies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/4b_recursie.html">
+     Recursie
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../class/opgaven_2.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sequenties_en_data.html">
+     Practicum I
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fijne_functies.html">
+     Practicum II
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/end_of_theory.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="feest_met_functies.html">
+     Feest met functies
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 3
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../class/week_3.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/5a_simulatie.html">
+     Simulatie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/5b_turtle_recursie.html">
+     Turtle en recursie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/6a_list_comprehension.html">
+     List comprehension
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../class/opgaven_3.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="python_turtles.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/computer_wins_jeopardy.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="slaapwandelende_student.html">
+     Slaapwandelende student
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="numerieke_integratie.html">
+     Numerieke integratie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="turtles_tot_het_einde.html">
+     Turtles all the way down
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 4
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../class/week_4.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/7a_data_based_design.html">
+     Data based design
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/7b_rekenen_met_taal.html">
+     Rekenen met taal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/8_ontwerp_algoritmen.html">
+     Ontwerp van algoritmen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../class/opgaven_4.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="klinkt_goed.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/universum_simulatie.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="caesar_op_orde.html">
+     Caesar op orde
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 5
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../class/week_5.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/9a_talstelsels.html">
+     Talstelsels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/9b_binaire_getallen.html">
+     Binaire getallen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/10_bewerkingen_met_bits.html">
+     Bewerkingen met bits
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../class/opgaven_5.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="decimaal_en_verder.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/bug_and_crash.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="wisselende_stelsels.html">
+     Wisselende stelsels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fraaie_plaatjes.html">
+     Fraaie plaatjes
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 6
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../class/week_6.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/11a_logische_schakelingen.html">
+     Logische schakelingen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../class/opgaven_6.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="optellingen_schakelen.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/just_add_water.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="vermenigvuldigingswaanzin.html">
+     Vermenigvuldigingswaanzin
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="eerlijke_verdeling.html">
+     Een eerlijke verdeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="geheugenproblemen.html">
+     Geheugenproblemen
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 7
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_7.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../class/opgaven_7.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="hmmm_assembly.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/hijacked_minds.html">
+     Leesopave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="macht_van_hmmm.html">
+     De macht van hmmm
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="feest_met_fibonacci.html">
+     Feest met Fibonacci
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="macht_van_recursie.html">
+     De macht van recursie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="een_lus_om_python.html">
+     Een lusje om Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fibonacci_recursief.html">
+     Fibonacci recursief
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 8
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_8.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../class/opgaven_8.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mandelbrot.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/algoritmen_discrimineren.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pythonbat_lussen.html">
+     PythonBat lussen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pi_pijlen.html">
+     Pi met pijltjes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="tr_investeringen.html">
+     TR Investeringen B.V.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ascii_art.html">
+     ASCII Art
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 9
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_9.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../class/opgaven_9.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="boter_kaas_eieren.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/horseless_driverless.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rij_van_conway.html">
+     Lees en huiver
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="game_of_life.html">
+     Game of Life
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../class/week_10.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/19_objecten.html">
+     Objecten en klassen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../topics/20_dictionaries.html">
+     Dictionaries
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../class/opgaven_10.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="eeuwigdurende_kalender.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/an_algorithm_wrote_this.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="tekst_genereren.html">
+     Teksten genereren
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="vier_op_een_rij.html">
+     Vier op een rij
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 11
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_11.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../class/opgaven_11.html">
+   Opaven
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/chess_championship.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="vier_op_een_rij_ai.html">
+     AI voor vier op een rij
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/project_1.html">
+   Project: Begin
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Projecten
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/vpython.html">
+   VPython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/connectfour.html">
+   Vier op een rij
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/textid.html">
+   TextID
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/picobot.html">
+   Picobot
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Voorbeelden
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/recursie.html">
+   Recursie
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/design_recipe.html">
+   Functie ontwerp
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Oefening
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../practice/1_recursie.html">
+   Recursie
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../practice/2_list_comprehension.html">
+   List comprehension
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../practice/3a_toets.html">
+   Zelftoets
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+  <label for="toctree-checkbox-19">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../practice/3b_toets_uitwerking.html">
+     Uitwerking
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/platte_tekst.html">
+   Tekstbestanden
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python_browser.html">
+   Python in de browser
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python2_vs_python3.html">
+   Python 2 versus Python 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/software.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/hmmm.html">
+   Hmmmm assembly
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
+                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/problems/buitenaards_python.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Bronopslagplaats"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Fproblems/buitenaards_python.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open een probleem"><i class="fas fa-lightbulb"></i>open probleem</button></a>
+        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/problems/buitenaards_python.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="bewerk deze pagina"><i class="fas fa-pencil-alt"></i>suggereren bewerken</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
+        title="Volledig scherm"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhoud
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#documentatie">
+   Documentatie
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vpython-uitvoeren-in-de-browser">
+   VPython uitvoeren in de browser
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-kleur-aanpassen">
+     De kleur aanpassen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-grootte-aanpassen">
+     De grootte aanpassen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-richting-aanpassen">
+     De richting aanpassen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#een-physics-simulatie-in-vpython">
+   Een physics-simulatie in VPython
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-achtergrondkleur-en-schermgrootte-aanpassen">
+     De achtergrondkleur en schermgrootte aanpassen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-klasse-van-het-bewegende-object-veranderen">
+     De klasse van het bewegende object veranderen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#verander-het-universum-of-in-ieder-geval-de-natuurwetten">
+     Verander het universum! (Of in ieder geval de
+     <em>
+      natuurwetten
+     </em>
+     …)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#botsingen-en-interacties-maken">
+     Botsingen en interacties maken
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-event-handlers-aanpassen">
+     De event handlers aanpassen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#een-eigen-spel-in-vpython">
+   Een eigen spel in VPython
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#probeer-het-spel-uit">
+     Probeer het spel uit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#maak-je-eigen-muren-en-botsingen">
+     Maak je eigen muren en botsingen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#een-hulpfunctie-voor-botsingen-met-de-arena">
+     Een hulpfunctie voor botsingen met de arena
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bedenk-zelf-een-interactie-of-spel">
+   Bedenk zelf een interactie of spel!
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compound-objecten">
+     Compound-objecten
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#andere-handige-functies">
+     Andere handige functies
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inleveren">
+   Inleveren
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="buitenaards-python">
+<h1>Buitenaards Python<a class="headerlink" href="#buitenaards-python" title="Permalink naar deze titel">¶</a></h1>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Naam</p></th>
+<th class="head"><p>Beschrijving</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Onderwerp</p></td>
+<td><p>Objecten en 3D modellen</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bestandsnaam</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">wk11ex1.py</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Inleveren</p></td>
+<td><p>Lever jouw bestand met de juiste bestandsnaam in op GradeScope</p></td>
+</tr>
+</tbody>
+</table>
+<p>In deze opgave ga je een variant van Python verkennen, die VPython of Glowscript VPython heet, die:</p>
+<ul class="simple">
+<li><p>Object-georiënteerd is (alles is georganiseerd met objecten en klassen),</p></li>
+<li><p>Web-gebaseerd is (alles wordt uitgevoerd op een publieke website), en</p></li>
+<li><p>Grafisch is (je gaat 3D-modellen bouwen en hun gedrag programmeren)</p></li>
+</ul>
+<p>Het doel van dit practicum is de module VPython te verkennen om een 3D-interactie te begrijpen, en uit te breiden. Als je het leuk vindt om met VPython te werken kan je ook overwegen om het <a class="reference internal" href="../projects/vpython.html"><span class="doc std std-doc">project</span></a> over VPython te doen in de komende weken. In dit project maak je een spel of interactie naar je eigen ontwerp.</p>
+<div class="section" id="documentatie">
+<h2>Documentatie<a class="headerlink" href="#documentatie" title="Permalink naar deze titel">¶</a></h2>
+<p>Hieronder hebben we een aantal handige links verzameld:</p>
+<ul class="simple">
+<li><p>https://www.glowscript.org/: De startpagina waar je inlogt en je programma’s kan vinden</p></li>
+<li><p>https://www.glowscript.org/docs/VPythonDocs/index.html: Documentatie voor alle objecten, scenes en andere functionaliteiten van VPython en GlowScript.</p></li>
+<li><p>https://www.glowscript.org/#/user/GlowScriptDemos/folder/Examples/: Voorbeelden (de linkertab die standaard geselecteerd is is voor GlowScript-voorbeelden, dus die heb je nodig).</p></li>
+</ul>
+<p>Je kan altijd nog terugkomen naar deze links; we gaan eerst met een voorbeeld beginnen…</p>
+</div>
+<div class="section" id="vpython-uitvoeren-in-de-browser">
+<h2>VPython uitvoeren in de browser<a class="headerlink" href="#vpython-uitvoeren-in-de-browser" title="Permalink naar deze titel">¶</a></h2>
+<p>Open <a class="reference external" href="https://www.glowscript.org/">Glowscript</a> in je browser. Je hebt een Google-account nodig om in te loggen. Maak als je bent ingelogd een nieuw programma aan en plak deze code erin:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">GlowScript</span> <span class="mf">2.8</span> <span class="n">VPython</span>
+<span class="c1"># Je hebt de regel hierboven nodig voor VPython in de browser</span>
+
+<span class="c1"># Het meest eenvoudige VPython-programma:</span>
+<span class="n">box</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">))</span>
+
+<span class="c1"># Je kan de kleur aan passen: de drie getallen zijn</span>
+<span class="c1">#   rood, groen, blauw    elk van 0.0 tot en met 1.0</span>
+
+<span class="c1"># Voeg daarna een tweede parameter toe:   size=vector(2.0, 1.0, 0.1)</span>
+<span class="c1">#       De volgorde van deze getallen: lengte, hoogte, diepte</span>
+
+<span class="c1"># Daarna een derde parameter:  axis=vector(2, 5, 1)</span>
+<span class="c1">#       De volgorde van deze drie getallen: x, y, z</span>
+</pre></div>
+</div>
+<p>Je kan het programma nu uitvoeren. Je kan</p>
+<ul class="simple">
+<li><p>De kubus draaien (rechtermuisknop, of Command-klik op een Mac)</p></li>
+<li><p>In- en uitzoomen op de kubus (met het scrollwiel of door te slepen met twee vingers)</p></li>
+</ul>
+<div class="section" id="de-kleur-aanpassen">
+<h3>De kleur aanpassen<a class="headerlink" href="#de-kleur-aanpassen" title="Permalink naar deze titel">¶</a></h3>
+<p>De kleur wordt opgegeven als een “vector”; je kan dit zien aan de constructor <code class="docutils literal notranslate"><span class="pre">vector(...)</span></code>. De volgorde van de drie elementen van de vector is <strong>rood, groen, blauw</strong>, en ieder element is een getal van <code class="docutils literal notranslate"><span class="pre">0.0</span></code> tot en met <code class="docutils literal notranslate"><span class="pre">1.0</span></code>. Probeer eens wat andere kleuren uit!</p>
+</div>
+<div class="section" id="de-grootte-aanpassen">
+<h3>De grootte aanpassen<a class="headerlink" href="#de-grootte-aanpassen" title="Permalink naar deze titel">¶</a></h3>
+<p>Naast de kleur kan je ook het formaat van de kubus aanpassen. Dit doe je door middel van de parameter <code class="docutils literal notranslate"><span class="pre">size</span></code>; kopieer deze uit het voorbeeld, en plak deze in de aanroep van <code class="docutils literal notranslate"><span class="pre">box</span></code> (er moet wel een komma tussen de twee parameters, zoals gebruikelijk). Dit komt er dan als volgt uit te zien:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">box</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Ook hier zie je dat size een <code class="docutils literal notranslate"><span class="pre">vector</span></code> is; de volgorde hier is <strong>lengte, hoogte, diepte</strong>. Probeer ook het formaat van de kubus aan te passen!</p>
+</div>
+<div class="section" id="de-richting-aanpassen">
+<h3>De richting aanpassen<a class="headerlink" href="#de-richting-aanpassen" title="Permalink naar deze titel">¶</a></h3>
+<p>Je kan ook de richting van de kubus aanpassen, door middel van de parameter <code class="docutils literal notranslate"><span class="pre">axis</span></code>; kopieer deze ook uit het voorbeeld naar de aanroep van <code class="docutils literal notranslate"><span class="pre">box</span></code>. Nu ziet de aanroep er zo uit:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">box</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Experimenteer hier ook mee; de volgorde van de parameters van <code class="docutils literal notranslate"><span class="pre">vector</span></code> is <strong>x, y, z</strong>. Door deze richting aan te passen bepaal je ook hoe de lengte van <code class="docutils literal notranslate"><span class="pre">size</span></code> geïnterpreteerd wordt, maar dit kan je eventueel aanpassen met de paramter <code class="docutils literal notranslate"><span class="pre">up</span></code>. Je kan hier meer informatie over vinden op de <a class="reference external" href="https://www.glowscript.org/docs/VPythonDocs/box.html">naslagpagina voor box()</a>.</p>
+<p>Hierna gaan je een animatie maken met een beetje physics…</p>
+</div>
+</div>
+<div class="section" id="een-physics-simulatie-in-vpython">
+<h2>Een physics-simulatie in VPython<a class="headerlink" href="#een-physics-simulatie-in-vpython" title="Permalink naar deze titel">¶</a></h2>
+<p>Maak een nieuw programma en plak de volgende (lange!) code erin:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">GlowScript</span> <span class="mf">2.8</span> <span class="n">VPython</span>
+<span class="c1">#</span>
+<span class="c1"># physics_starter.py</span>
+<span class="c1">#</span>
+<span class="c1"># Een interactie met 3D graphics bouwen met Python</span>
+<span class="c1">#   Documentatie: https://www.glowscript.org/docs/VPythonDocs/index.html</span>
+<span class="c1">#   Voorbeelden:  https://www.glowscript.org/#/user/GlowScriptDemos/folder/Examples/</span>
+<span class="c1">#</span>
+
+<span class="n">scene</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s1">&#39;keydown&#39;</span><span class="p">,</span> <span class="n">keydown_fun</span><span class="p">)</span>      <span class="c1"># Functie voor toetsaanslagen</span>
+<span class="n">scene</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="n">click_fun</span><span class="p">)</span>          <span class="c1"># Functie voor muiskliks</span>
+<span class="n">scene</span><span class="o">.</span><span class="n">background</span> <span class="o">=</span> <span class="mf">0.8</span><span class="o">*</span><span class="n">vector</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Lichtgrijs (0.8 van 1.0)</span>
+<span class="n">scene</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="mi">640</span>                       <span class="c1"># Maak het 3D-scherm groter</span>
+<span class="n">scene</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="mi">480</span>
+
+
+<span class="c1"># +++ Begin van het AANMAKEN van OBJECTEN</span>
+
+
+<span class="c1"># We maken de grond door middel van een box (VPython&#39;s rechthoekige vorm)</span>
+<span class="c1"># https://www.glowscript.org/docs/VPythonDocs/box.html</span>
+<span class="c1"># Merk op dat we deze keer het object dat door &quot;box&quot; wordt gemaakt opslaan in</span>
+<span class="c1"># een variabele met de naam &quot;ground&quot;.</span>
+<span class="n">ground</span> <span class="o">=</span> <span class="n">box</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="n">pos</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="mf">.4</span><span class="o">*</span><span class="n">vector</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+<span class="c1"># Laat de x- en z-as zien (om inzicht te verkrijgen)</span>
+<span class="c1"># https://www.glowscript.org/docs/VPythonDocs/label.html</span>
+<span class="n">x_axis</span> <span class="o">=</span> <span class="n">arrow</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">.5</span><span class="p">))</span>  <span class="c1"># donkerblauw</span>
+<span class="n">x_axis_label</span> <span class="o">=</span> <span class="n">label</span><span class="p">(</span><span class="n">pos</span><span class="o">=</span><span class="n">vec</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">.5</span><span class="p">))</span>
+<span class="c1"># x_axis_text = text(pos=vec(7, 0, 0), text=&#39;x&#39;, color=vector(0, 0, .5))</span>
+<span class="n">z_axis</span> <span class="o">=</span> <span class="n">arrow</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>  <span class="c1"># donkergroen</span>
+<span class="n">z_axis_label</span> <span class="o">=</span> <span class="n">label</span><span class="p">(</span><span class="n">pos</span><span class="o">=</span><span class="n">vec</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+
+<span class="c1"># Maak een bol, die we gaan laten bewegen.</span>
+<span class="c1"># https://www.glowscript.org/docs/VPythonDocs/sphere.html</span>
+<span class="c1"># Ook nu slaan we de bol op als &quot;ball&quot; zodat we deze later kunnen aanpassen.</span>
+<span class="n">ball</span> <span class="o">=</span> <span class="n">sphere</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mf">1.0</span><span class="o">*</span><span class="n">vector</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">))</span>   <span class="c1"># ball is een object van de klasse sphere</span>
+<span class="n">ball</span><span class="o">.</span><span class="n">vel</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mf">4.2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>           <span class="c1"># Dit is de beginsnelheid</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;snelheid is nu:&quot;</span><span class="p">,</span> <span class="n">ball</span><span class="o">.</span><span class="n">vel</span><span class="p">)</span>     <span class="c1"># Afdrukken werkt gewoon</span>
+
+
+<span class="c1"># +++ Eind van het AANMAKEN van OBJECTEN</span>
+
+
+<span class="c1"># +++ Begin van de ANIMATIE</span>
+
+<span class="c1"># Andere constanten</span>
+<span class="n">RATE</span> <span class="o">=</span> <span class="mi">30</span>                 <span class="c1"># Het aantal keer dat de while-lus per seconde wordt uitgevoerd</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">1.0</span><span class="o">/</span><span class="n">RATE</span>             <span class="c1"># De tijdstap per keer dat de while-lus wordt uitgevoerd</span>
+<span class="n">scene</span><span class="o">.</span><span class="n">autoscale</span> <span class="o">=</span> <span class="kc">False</span>   <span class="c1"># Voorkomen dat het beeld automatisch wordt aangepast</span>
+<span class="n">scene</span><span class="o">.</span><span class="n">forward</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># De scene vanuit de lucht wordt bekeken...</span>
+<span class="n">origin</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># Het is handig om een naam te hebben voor de oorsprong</span>
+
+<span class="c1"># Dit is de &quot;event loop&quot; (&quot;gebeurtenissenlus&quot;) of &quot;animatielus&quot;</span>
+<span class="c1"># Elke keer dat deze lus uitgevoerd wordt beweegt alles één tijdstap van dt seconden</span>
+<span class="c1">#</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+
+    <span class="n">rate</span><span class="p">(</span><span class="n">RATE</span><span class="p">)</span>   <span class="c1"># Maximaal aantal keer per seconden dat de while-lus uitgevoerd wordt</span>
+
+    <span class="c1"># +++ Begin van het UITVOEREN van de PHYSICS -- werk alle posities elke tijdstap bij</span>
+
+
+    <span class="n">ball</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="n">ball</span><span class="o">.</span><span class="n">pos</span> <span class="o">+</span> <span class="n">ball</span><span class="o">.</span><span class="n">vel</span><span class="o">*</span><span class="n">dt</span>      <span class="c1"># verplaatsing = snelheid*tijd</span>
+
+
+    <span class="c1"># +++ Eind van het UITVOEREN van de PHYSICS -- zorg dat alle objecten goed zijn bijgewerkt!</span>
+
+
+    <span class="c1"># +++ Begin van BOTSINGEN -- zorg voor botsingen &amp; doe het &quot;goede&quot;</span>
+
+
+    <span class="c1"># Als de bol te ver verplaats is, stel dan een nieuwe positie en willekeurige snelheid in</span>
+    <span class="k">if</span> <span class="n">mag</span><span class="p">(</span><span class="n">ball</span><span class="o">.</span><span class="n">pos</span> <span class="o">-</span> <span class="n">origin</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mf">10.0</span><span class="p">:</span>      <span class="c1"># mag == lengte van een vector</span>
+        <span class="n">ball</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>         <span class="c1"># Stel ball.pos (de positie) opnieuw in</span>
+        <span class="n">ball</span><span class="o">.</span><span class="n">vel</span> <span class="o">=</span> <span class="mf">4.2</span><span class="o">*</span><span class="n">vector</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>     <span class="c1"># Stel een willekeurige snelheid in</span>
+        <span class="n">ball</span><span class="o">.</span><span class="n">vel</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mf">0.0</span>                   <span class="c1"># Zet de y-waarde op nul (geen verticale snelheid)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;snelheid is nu:&quot;</span><span class="p">,</span> <span class="n">ball</span><span class="o">.</span><span class="n">vel</span><span class="p">)</span>
+
+
+    <span class="c1"># +++ Einde van BOTSINGEN</span>
+
+
+
+<span class="c1"># +++ Begin van het AFHANDELEN van EVENTS -- aparte functies voor</span>
+<span class="c1">#                                          toetsaanslagen and muiskliks...</span>
+
+
+<span class="k">def</span> <span class="nf">keydown_fun</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This function is called each time a key is pressed.&quot;&quot;&quot;</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;toets ingedrukt:&quot;</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>    <span class="c1"># Druk af welke toets is ingedrukt...</span>
+
+    <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="s1">&#39;cC&#39;</span><span class="p">:</span>               <span class="c1"># Kies een nieuwe kleur voor de bol...</span>
+        <span class="n">ball</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">randcolor</span><span class="p">()</span>  <span class="c1"># Zo kan je je eigen functie aanroepen...</span>
+
+    <span class="k">elif</span> <span class="n">key</span> <span class="ow">in</span> <span class="s1">&#39;rR&#39;</span><span class="p">:</span>             <span class="c1"># Stel de snelheid can de bol opnieuw in...</span>
+        <span class="n">ball</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>         <span class="c1"># Stel ball.pos (de positie) opnieuw in</span>
+        <span class="n">ball</span><span class="o">.</span><span class="n">vel</span> <span class="o">=</span> <span class="mf">4.2</span><span class="o">*</span><span class="n">vector</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>     <span class="c1"># Stel een willekeurige snelheid in</span>
+        <span class="n">ball</span><span class="o">.</span><span class="n">vel</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mf">0.0</span>                   <span class="c1"># Zet de y-waarde op nul (geen verticale snelheid)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;snelheid is nu:&quot;</span><span class="p">,</span> <span class="n">ball</span><span class="o">.</span><span class="n">vel</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">click_fun</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This function is called each time the mouse is clicked.&quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;event is&quot;</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">event</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">which</span><span class="p">)</span>
+
+
+<span class="c1"># +++ Einde van het AFHANDELEN van EVENTS</span>
+
+
+
+<span class="c1"># +++ Andere functies kan je hier neerzetten...</span>
+
+
+<span class="k">def</span> <span class="nf">randcolor</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Returns a vector of (r, g, b), randomly selected from 0.0 to 1.0.&quot;&quot;&quot;</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">random</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>    <span class="c1"># Dit is een anders dan random.uniform van Python</span>
+    <span class="n">g</span> <span class="o">=</span> <span class="n">random</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>    <span class="c1"># Maar maar een klein beetje...</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">random</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">vector</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># Een kleur is een tuple met drie elementen</span>
+    <span class="c1"># Zie het volgende voorbeeld van implementaties van choice en randint</span>
+</pre></div>
+</div>
+<p>Probeer maar!</p>
+<p>Kijk dan of je kan vinden waar de verschillende functionaliteiten terugkomen in de code. Lees de broncode, waar je\ een aantal zaken kan zien:</p>
+<ul class="simple">
+<li><p>Een paar algemene variabelen voor de scene en de achtergrond (gebaseerd op <code class="docutils literal notranslate"><span class="pre">scene</span></code>).</p></li>
+<li><p>Twee objecten, <code class="docutils literal notranslate"><span class="pre">ground</span></code> en <code class="docutils literal notranslate"><span class="pre">ball</span></code>, van respectievelijke de klassen <code class="docutils literal notranslate"><span class="pre">box</span></code> en <code class="docutils literal notranslate"><span class="pre">sphere</span></code>.</p></li>
+<li><p>Een paar variabelen om met de animatie te helpen.</p></li>
+<li><p>De animatielus of “event loop” met <code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">True</span></code>.</p></li>
+<li><p>Wat physics (posities bijwerken en controles op botsingen)</p></li>
+<li><p>Twee functies die events afhandelen: één voor toetsaanslagen, één voor muiskliks.</p>
+<ul>
+<li><p>Probeer wat toetsen in het 3D-scherm om te zien wat er afgedrukt wordt…</p></li>
+</ul>
+</li>
+<li><p>Eén extra functie (die een willekeurige kleur genereert).</p></li>
+</ul>
+<p>!!! danger “Event loop”
+Je programma mag maar één event loop, een lus met <code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">True</span></code>, hebben. Als je probeert om een andere <code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">True</span></code> binnen de eerste te zetten, zal je programma “vast” komen te zitten in de binnenste lus en dus niet goed werken (de gebeurtenissen en graphics in de buitenste lus worden niet bijgewerkt).</p>
+<p>Maak nu onderstaande aanpassingen aan de code en probeer ze uit, zodat je de code beter snapt
+en weet hoe elk gedeelte van dit programma werkt:</p>
+<div class="section" id="de-achtergrondkleur-en-schermgrootte-aanpassen">
+<h3>De achtergrondkleur en schermgrootte aanpassen<a class="headerlink" href="#de-achtergrondkleur-en-schermgrootte-aanpassen" title="Permalink naar deze titel">¶</a></h3>
+<p>Pas de waarde van <code class="docutils literal notranslate"><span class="pre">scene.background</span></code> aan om de achtergrondkleur te veranderen, en de waarde van <code class="docutils literal notranslate"><span class="pre">scene.width</span></code> en <code class="docutils literal notranslate"><span class="pre">scene.height</span></code> aan om de schermgrootte aan te passen. Probeer ze alledrie!</p>
+<div class="tip admonition">
+<p class="admonition-title">Handigheidje</p>
+<p>De expressie <code class="docutils literal notranslate"><span class="pre">0.42</span> <span class="pre">*</span> <span class="pre">vector(1,</span> <span class="pre">1,</span> <span class="pre">1)</span></code> is een snelle manier om <code class="docutils literal notranslate"><span class="pre">vector(0.42,</span> <span class="pre">0.42,</span> <span class="pre">0.42)</span></code>, oftewel donker grijs, te krijgen…</p>
+</div>
+<div class="danger admonition">
+<p class="admonition-title">Python-fouten</p>
+<p>Frustrerend genoeg negeert de browser-Python fouten soms gewoon; dan is het debuggen een stuk lastiger! Test daarom één verandering per keer, en test het vaak!</p>
+</div>
+</div>
+<div class="section" id="de-klasse-van-het-bewegende-object-veranderen">
+<h3>De klasse van het bewegende object veranderen<a class="headerlink" href="#de-klasse-van-het-bewegende-object-veranderen" title="Permalink naar deze titel">¶</a></h3>
+<p>Verander de <em>klasse</em> van het bewegende object van <code class="docutils literal notranslate"><span class="pre">sphere</span></code> naar <code class="docutils literal notranslate"><span class="pre">box</span></code>; pas de naam van het object niet aan! Hierdoor blijft de rest van de code gewoon werken. Probeer ook vooral de kleur, beginpositie, beginsnelheid, richting, grootte etc. aan te passen!</p>
+<div class="tip admonition">
+<p class="admonition-title">Andere vormen</p>
+<p>Probeer twee of meer andere vormen! De documentatie van Glowscript bevat een <a class="reference external" href="https://www.glowscript.org/docs/VPythonDocs/primitives.html">overzicht van de vormen</a>. In het linkerdropdownmenu op deze pagina kan je een vorm kiezen, en je krijgt dan de details van die vorm, oftwel <em>klasse</em> te zien…</p>
+</div>
+</div>
+<div class="section" id="verander-het-universum-of-in-ieder-geval-de-natuurwetten">
+<h3>Verander het universum! (Of in ieder geval de <em>natuurwetten</em>…)<a class="headerlink" href="#verander-het-universum-of-in-ieder-geval-de-natuurwetten" title="Permalink naar deze titel">¶</a></h3>
+<p>Pas de instellingen voorafgaand aan de animatielus (“event loop”) nu nog even <strong>niet</strong> aan! Je ziet dat hier een aantal instellingen zijn:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">RATE</span></code> is het aantal frames per second dat getoond wordt (de browser gaat dit in ieder geval proberen te halen).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scene.autoscale</span> <span class="pre">=</span> <span class="pre">False</span></code> betekent dat je handmatig moet zoomen (<code class="docutils literal notranslate"><span class="pre">True</span></code> zoomt automatisch, maar dit is eerder vervelend dan handig).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scene.forward</span></code> is de vector met de richting van de camera; die staat voor nu wel goed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">origin</span></code> is een handig punt, dus die hebben we een naam gegeven (dit is optioneel, maar kan handig zijn).</p></li>
+</ul>
+<p>Voeg <strong>wel</strong> wrijving toe, <strong>na</strong> de regel die de verplaatsing bepaalt met <code class="docutils literal notranslate"><span class="pre">ball.pos</span> <span class="pre">=</span> <span class="pre">ball.pos</span> <span class="pre">+</span> <span class="pre">ball.vel</span> <span class="pre">*</span> <span class="pre">dt</span></code>.
+Hiervoor moet je een extra tegel toevoegen die de vector <code class="docutils literal notranslate"><span class="pre">ball.vel</span></code> aanpast:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ball</span><span class="o">.</span><span class="n">vel</span> <span class="o">=</span> <span class="n">ball</span><span class="o">.</span><span class="n">vel</span> <span class="o">*</span> <span class="mf">0.98</span>
+</pre></div>
+</div>
+<p>Bekijk wat er gebeurt: je hebt nu wrijving in de wereld geprogrammeerd! Je kan de wrijving ook <em>omkeren</em>, dat wil zeggen, zorgen dat de bal juist steeds sneller beweegt:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ball</span><span class="o">.</span><span class="n">vel</span> <span class="o">=</span> <span class="n">ball</span><span class="o">.</span><span class="n">vel</span> <span class="o">*</span> <span class="mf">1.05</span>
+</pre></div>
+</div>
+<p>Je hebt de complete vrijheid om je natuurwetten zo in te richten als je wilt! Je mag de wrijving laten staan of weghalen voor de volgende opgaves, hoe je maar wilt.</p>
+</div>
+<div class="section" id="botsingen-en-interacties-maken">
+<h3>Botsingen en interacties maken<a class="headerlink" href="#botsingen-en-interacties-maken" title="Permalink naar deze titel">¶</a></h3>
+<p>We gaan nu de code die botsingen berekent bekijken en veranderen. Je ziet in de eerste plaats de functie <code class="docutils literal notranslate"><span class="pre">mag</span></code>; deze functie berekent de lengte (<em>magnitude</em>) van een vector aan de hand van de stelling van Pythagoras (dit heet ook wel “Euclidische afstand”). We berekenen met <code class="docutils literal notranslate"><span class="pre">mag(ball.pos</span> <span class="pre">-</span> <span class="pre">origin)</span></code> dus de totale <em><strong>afstand</strong></em> van <code class="docutils literal notranslate"><span class="pre">ball.pos</span></code> naar <code class="docutils literal notranslate"><span class="pre">origin</span></code>. Kijk eens wat er gebeurt als je het getal waarmee vergeleken wordt van <code class="docutils literal notranslate"><span class="pre">10.0</span></code> in <code class="docutils literal notranslate"><span class="pre">20.0</span></code> verandert!</p>
+<p>Probeer nu de positie waarop de bal wordt teruggezet te veranderen, en de snelheid waarmee de bal wordt teruggezet groter te maken. Kijk ook eens wat er gebeurt als je de regel <code class="docutils literal notranslate"><span class="pre">ball.vel.y</span> <span class="pre">=</span> <span class="pre">0.0</span></code> in commentaar zet; <em>spacy</em>!</p>
+</div>
+<div class="section" id="de-event-handlers-aanpassen">
+<h3>De event handlers aanpassen<a class="headerlink" href="#de-event-handlers-aanpassen" title="Permalink naar deze titel">¶</a></h3>
+<p>Lees eerst de onderste drie functies. Je ziet nu bijvoorbeeld dat <code class="docutils literal notranslate"><span class="pre">keydown_fun</span></code> de variabele <code class="docutils literal notranslate"><span class="pre">ball</span></code> gebruikt <em>maar dat die niet wordt meegegeven aan de functie</em>! We noemen <code class="docutils literal notranslate"><span class="pre">ball</span></code> ook wel een <strong>globale</strong> variabele, wat betekent dat deze automatisch beschikbaar is in alle functies die gedefinieerd zijn nadat de variabele gedefinieerd is.</p>
+<p>Probeer ook eens te veranderen wat er afgedrukt wordt in <code class="docutils literal notranslate"><span class="pre">keydown_fun</span></code>; je ziet dat je hier volledige controle hebt. Je kan bijvoorbeeld proberen het <code class="docutils literal notranslate"><span class="pre">print</span></code>-statement zo aan te passen dat je kan <em>zien</em> wat de r-, g- en b-waardes van de nieuwe kleur zijn.</p>
+<p>De andere twee functies zijn op zich goed, maar als je andere dingen wilt proberen kan dat natuurlijk… Vergeet dan niet vaak te testen!</p>
+<p>Ok, je hebt nu een idee van hoe VPython physics en interacties tussen objecten ondersteund en kunt hier aan sleutelen…</p>
+<p>Je gaat hierna een eigen interactie (of spel…) maken. Laten we eerst echter beginnen met een wat uitgebreider beginpunt in het volgende deel…</p>
+</div>
+</div>
+<div class="section" id="een-eigen-spel-in-vpython">
+<h2>Een eigen spel in VPython<a class="headerlink" href="#een-eigen-spel-in-vpython" title="Permalink naar deze titel">¶</a></h2>
+<p>Maak weer een nieuw programma en plak de volgende (opnieuw lange) code erin:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">GlowScript</span> <span class="mf">2.8</span> <span class="n">VPython</span>
+<span class="c1">#</span>
+<span class="c1"># game_starter.py</span>
+<span class="c1">#</span>
+<span class="c1"># Een interactie met 3D graphics bouwen met Python</span>
+<span class="c1">#   Documentatie: https://www.glowscript.org/docs/VPythonDocs/index.html</span>
+<span class="c1">#   Voorbeelden:  https://www.glowscript.org/#/user/GlowScriptDemos/folder/Examples/</span>
+<span class="c1">#</span>
+
+<span class="n">scene</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s1">&#39;keydown&#39;</span><span class="p">,</span> <span class="n">keydown_fun</span><span class="p">)</span>        <span class="c1"># Functie voor toetsaanslagen</span>
+<span class="n">scene</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="n">click_fun</span><span class="p">)</span>            <span class="c1"># Functie voor muiskliks</span>
+<span class="n">scene</span><span class="o">.</span><span class="n">background</span> <span class="o">=</span> <span class="mf">0.8</span> <span class="o">*</span> <span class="n">vector</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Lichtgrijs (0.8 van 1.0)</span>
+<span class="n">scene</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="mi">640</span>                         <span class="c1"># Maak het 3D-scherm groter</span>
+<span class="n">scene</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="mi">480</span>
+
+
+<span class="c1"># +++ Begin van het AANMAKEN van OBJECTEN</span>
+<span class="c1"># Deze functies maken &quot;container&quot;-objecten, ofwel &quot;compounds&quot;</span>
+
+
+<span class="k">def</span> <span class="nf">make_alien</span><span class="p">(</span><span class="n">starting_position</span><span class="p">,</span> <span class="n">starting_vel</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)):</span>
+    <span class="sd">&quot;&quot;&quot;The lines below make a new &quot;frame&quot;, which is a container with a</span>
+<span class="sd">       local coordinate system.</span>
+<span class="sd">       The arguments to make_alien allow for any initial starting position</span>
+<span class="sd">       and initial starting velocity, with a default starting velocity</span>
+<span class="sd">       of vector(0, 0, 0).</span>
+
+<span class="sd">       Compounds can have any number of components.  Here are the</span>
+<span class="sd">       alien&#39;s components:</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">alien_body</span> <span class="o">=</span> <span class="n">sphere</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mf">1.0</span> <span class="o">*</span> <span class="n">vector</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">pos</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="o">.</span><span class="n">green</span><span class="p">)</span>
+    <span class="n">alien_eye1</span> <span class="o">=</span> <span class="n">sphere</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mf">0.3</span> <span class="o">*</span> <span class="n">vector</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">pos</span><span class="o">=</span><span class="mf">.42</span> <span class="o">*</span> <span class="n">vector</span><span class="p">(</span><span class="mf">.7</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="mf">.2</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="o">.</span><span class="n">white</span><span class="p">)</span>
+    <span class="n">alien_eye2</span> <span class="o">=</span> <span class="n">sphere</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mf">0.3</span> <span class="o">*</span> <span class="n">vector</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">pos</span><span class="o">=</span><span class="mf">.42</span> <span class="o">*</span> <span class="n">vector</span><span class="p">(</span><span class="mf">.2</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="mf">.7</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="o">.</span><span class="n">white</span><span class="p">)</span>
+    <span class="n">alien_hat</span> <span class="o">=</span> <span class="n">cylinder</span><span class="p">(</span><span class="n">pos</span><span class="o">=</span><span class="mf">0.42</span> <span class="o">*</span> <span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">.9</span><span class="p">,</span> <span class="o">-</span><span class="mf">.2</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="mf">.02</span><span class="p">,</span> <span class="mf">.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">.02</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="o">.</span><span class="n">magenta</span><span class="p">)</span>
+    <span class="n">alien_objects</span> <span class="o">=</span> <span class="p">[</span><span class="n">alien_body</span><span class="p">,</span> <span class="n">alien_eye1</span><span class="p">,</span> <span class="n">alien_eye2</span><span class="p">,</span> <span class="n">alien_hat</span><span class="p">]</span>  <span class="c1"># maak een lijst die we &quot;aan elkaar plakken&quot; met een compound</span>
+    <span class="c1"># we gaan nu een compound maken -- we noemen hem com_alien:</span>
+    <span class="n">com_alien</span> <span class="o">=</span> <span class="n">compound</span><span class="p">(</span><span class="n">alien_objects</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">starting_position</span><span class="p">)</span>
+    <span class="n">com_alien</span><span class="o">.</span><span class="n">vel</span> <span class="o">=</span> <span class="n">starting_vel</span>   <span class="c1"># stel de beginsnelheid in</span>
+    <span class="k">return</span> <span class="n">com_alien</span>
+
+
+<span class="c1"># We maken de grond door middel van een box (VPython&#39;s rechthoekige vorm)</span>
+<span class="c1"># https://www.glowscript.org/docs/VPythonDocs/box.html</span>
+<span class="n">ground</span> <span class="o">=</span> <span class="n">box</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="n">pos</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="mf">.4</span><span class="o">*</span><span class="n">vector</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+<span class="c1"># We maken twee muren, ook met een box</span>
+<span class="n">wall_a</span> <span class="o">=</span> <span class="n">box</span><span class="p">(</span><span class="n">pos</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">.2</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">))</span>  <span class="c1"># geel</span>
+<span class="n">wall_b</span> <span class="o">=</span> <span class="n">box</span><span class="p">(</span><span class="n">pos</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">.2</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="o">.</span><span class="n">blue</span><span class="p">)</span>   <span class="c1"># blauw</span>
+
+<span class="c1"># Een bal die we kunnen besturen</span>
+<span class="n">ball</span> <span class="o">=</span> <span class="n">sphere</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mf">1.0</span><span class="o">*</span><span class="n">vector</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">))</span>   <span class="c1"># ball is een object van de klasse sphere</span>
+<span class="n">ball</span><span class="o">.</span><span class="n">vel</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>     <span class="c1"># dit is de beginsnelheid</span>
+
+<span class="c1"># We maken twee aliens met twee aanroepen naar de functie make_alien (hierboven)</span>
+<span class="n">alien</span> <span class="o">=</span> <span class="n">make_alien</span><span class="p">(</span><span class="n">starting_position</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">),</span> <span class="n">starting_vel</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">alien2</span> <span class="o">=</span> <span class="n">make_alien</span><span class="p">(</span><span class="n">starting_position</span><span class="o">=</span><span class="n">vector</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">))</span>  <span class="c1"># geen startsnelheid</span>
+
+
+<span class="c1"># +++ Eind van het AANMAKEN van OBJECTEN</span>
+
+
+<span class="c1"># +++ Begin van de ANIMATIE</span>
+
+<span class="c1"># Andere constanten</span>
+<span class="n">RATE</span> <span class="o">=</span> <span class="mi">30</span>                <span class="c1"># Het aantal keer dat de while-lus per seconde wordt uitgevoerd</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">1.0</span><span class="o">/</span><span class="n">RATE</span>            <span class="c1"># De tijdstap per keer dat de while-lus wordt uitgevoerd</span>
+<span class="n">scene</span><span class="o">.</span><span class="n">autoscale</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># Voorkomen dat het beeld automatisch wordt aangepast</span>
+<span class="n">scene</span><span class="o">.</span><span class="n">forward</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># De scene vanuit de lucht wordt bekeken...</span>
+
+<span class="c1"># Dit is de &quot;event loop&quot; (&quot;gebeurtenissenlus&quot;) of &quot;animatielus&quot;</span>
+<span class="c1"># Elke keer dat deze lus uitgevoerd wordt beweegt alles één tijdstap van dt seconden</span>
+<span class="c1">#</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+
+    <span class="n">rate</span><span class="p">(</span><span class="n">RATE</span><span class="p">)</span>   <span class="c1"># Maximaal aantal keer per seconden dat de while-lus uitgevoerd wordt</span>
+
+    <span class="c1"># +++ Begin van het UITVOEREN van de PHYSICS -- werk alle posities elke tijdstap bij</span>
+
+    <span class="n">alien</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="n">alien</span><span class="o">.</span><span class="n">pos</span> <span class="o">+</span> <span class="n">alien</span><span class="o">.</span><span class="n">vel</span><span class="o">*</span><span class="n">dt</span>   <span class="c1"># Werk de positie van de alien bij</span>
+    <span class="n">ball</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="n">ball</span><span class="o">.</span><span class="n">pos</span> <span class="o">+</span> <span class="n">ball</span><span class="o">.</span><span class="n">vel</span><span class="o">*</span><span class="n">dt</span>      <span class="c1"># Werk de positie van de bal bij</span>
+
+    <span class="c1"># +++ Eind van het UITVOEREN van de PHYSICS -- zorg dat alle objecten goed zijn bijgewerkt!</span>
+
+
+    <span class="c1"># +++ Begin van BOTSINGEN -- zorg voor botsingen &amp; doe het &quot;goede&quot;</span>
+
+    <span class="c1"># Als de bal wall_a raakt</span>
+    <span class="k">if</span> <span class="n">ball</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">z</span> <span class="o">&lt;</span> <span class="n">wall_a</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">z</span><span class="p">:</span>  <span class="c1"># Geraakt -- vergelijk de z-positie</span>
+        <span class="n">ball</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">wall_a</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">z</span>  <span class="c1"># Zorg dat de bal binnen de grenzen blijft</span>
+        <span class="n">ball</span><span class="o">.</span><span class="n">vel</span><span class="o">.</span><span class="n">z</span> <span class="o">*=</span> <span class="o">-</span><span class="mf">1.0</span>        <span class="c1"># Draai de z-snelheid om</span>
+
+    <span class="c1"># Als de ball wall_b raakt</span>
+    <span class="k">if</span> <span class="n">ball</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">wall_b</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">x</span><span class="p">:</span>  <span class="c1"># Geraakt -- vergelijk de x-positie</span>
+        <span class="n">ball</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">wall_b</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">x</span>  <span class="c1"># Zorg dat de bal binnen de grenzen blijft</span>
+        <span class="n">ball</span><span class="o">.</span><span class="n">vel</span><span class="o">.</span><span class="n">x</span> <span class="o">*=</span> <span class="o">-</span><span class="mf">1.0</span>        <span class="c1"># Draai de x-snelheid om</span>
+
+
+    <span class="c1"># Geef de alien verticale snelheid als de bal de alien raakt</span>
+    <span class="k">if</span> <span class="n">mag</span><span class="p">(</span><span class="n">ball</span><span class="o">.</span><span class="n">pos</span> <span class="o">-</span> <span class="n">alien</span><span class="o">.</span><span class="n">pos</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">1.0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Op naar de sterren, en daar voorbij!&quot;</span><span class="p">)</span>
+        <span class="n">alien</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">gray</span><span class="p">(</span><span class="mf">.8</span><span class="p">)</span>
+        <span class="n">alien</span><span class="o">.</span><span class="n">vel</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="c1"># Als de alien te ver loopt, stel deze dan willekeurige opnieuw in -- maar alleen</span>
+    <span class="c1"># als deze niet verticaal beweegt.</span>
+    <span class="k">if</span> <span class="n">mag</span><span class="p">(</span><span class="n">alien</span><span class="o">.</span><span class="n">pos</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">alien</span><span class="o">.</span><span class="n">vel</span><span class="o">.</span><span class="n">y</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">alien</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">choice</span><span class="p">([</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+        <span class="n">alien</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">choice</span><span class="p">([</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+        <span class="n">alien</span><span class="o">.</span><span class="n">vel</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">vector</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>  <span class="c1"># Willekeurige vector uit de module</span>
+        <span class="n">alien</span><span class="o">.</span><span class="n">vel</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mf">0.0</span>              <span class="c1"># Geen verticale snelheid</span>
+
+    <span class="c1"># +++ Einde van BOTSINGEN</span>
+
+
+<span class="c1"># +++ Begin van het AFHANDELEN van EVENTS -- aparte functies voor</span>
+<span class="c1">#                                          toetsaanslagen and muiskliks...</span>
+
+
+<span class="k">def</span> <span class="nf">keydown_fun</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This function is called each time a key is pressed.&quot;&quot;&quot;</span>
+    <span class="n">ball</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">randcolor</span><span class="p">()</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span>
+    <span class="n">ri</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;toets:&quot;</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">ri</span><span class="p">)</span>  <span class="c1"># Drukt de ingedrukte toets af</span>
+
+    <span class="n">amt</span> <span class="o">=</span> <span class="mf">0.42</span>              <span class="c1"># Hoeveel de snelheid per toetsaanslag wordt aangepast</span>
+    <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;up&#39;</span> <span class="ow">or</span> <span class="n">key</span> <span class="ow">in</span> <span class="s1">&#39;wWiI&#39;</span><span class="p">:</span>
+        <span class="n">ball</span><span class="o">.</span><span class="n">vel</span> <span class="o">=</span> <span class="n">ball</span><span class="o">.</span><span class="n">vel</span> <span class="o">+</span> <span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="n">amt</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;left&#39;</span> <span class="ow">or</span> <span class="n">key</span> <span class="ow">in</span> <span class="s1">&#39;aAjJ&#39;</span><span class="p">:</span>
+        <span class="n">ball</span><span class="o">.</span><span class="n">vel</span> <span class="o">=</span> <span class="n">ball</span><span class="o">.</span><span class="n">vel</span> <span class="o">+</span> <span class="n">vector</span><span class="p">(</span><span class="o">-</span><span class="n">amt</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;down&#39;</span> <span class="ow">or</span> <span class="n">key</span> <span class="ow">in</span> <span class="s1">&#39;sSkK&#39;</span><span class="p">:</span>
+        <span class="n">ball</span><span class="o">.</span><span class="n">vel</span> <span class="o">=</span> <span class="n">ball</span><span class="o">.</span><span class="n">vel</span> <span class="o">+</span> <span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">amt</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;right&#39;</span> <span class="ow">or</span> <span class="n">key</span> <span class="ow">in</span> <span class="s2">&quot;dDlL&quot;</span><span class="p">:</span>
+        <span class="n">ball</span><span class="o">.</span><span class="n">vel</span> <span class="o">=</span> <span class="n">ball</span><span class="o">.</span><span class="n">vel</span> <span class="o">+</span> <span class="n">vector</span><span class="p">(</span><span class="n">amt</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">key</span> <span class="ow">in</span> <span class="s1">&#39; rR&#39;</span><span class="p">:</span>
+        <span class="n">ball</span><span class="o">.</span><span class="n">vel</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># Opnieuw beginne! via de spatiebalk, &quot; &quot;</span>
+        <span class="n">ball</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">click_fun</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This function is called each time the mouse is clicked.&quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;event is&quot;</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">event</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">which</span><span class="p">)</span>
+
+
+<span class="c1"># +++ Einde van het AFHANDELEN van EVENTS</span>
+
+
+
+<span class="c1"># +++ Andere functies kan je hier neerzetten...</span>
+
+
+<span class="k">def</span> <span class="nf">choice</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Implements Python&#39;s choice using the random() function.&quot;&quot;&quot;</span>
+    <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>              <span class="c1"># Haal de lengte op</span>
+    <span class="n">random_index</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">length</span> <span class="o">*</span> <span class="n">random</span><span class="p">())</span>  <span class="c1"># Kies een willekeurige index</span>
+    <span class="k">return</span> <span class="n">L</span><span class="p">[</span><span class="n">random_index</span><span class="p">]</span>       <span class="c1"># Geef dat element terug</span>
+
+
+<span class="k">def</span> <span class="nf">randint</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">hi</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Implements Python&#39;s randint using the random() function.</span>
+<span class="sd">       returns an int from low to hi _inclusive_ (so, it&#39;s not 100% Pythonic)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">hi</span> <span class="o">&lt;</span> <span class="n">low</span><span class="p">:</span>
+        <span class="n">low</span><span class="p">,</span> <span class="n">hi</span> <span class="o">=</span> <span class="n">hi</span><span class="p">,</span> <span class="n">low</span>                   <span class="c1"># Draai ze om als ze verkeerd om staan!</span>
+    <span class="n">length</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">hi</span><span class="p">)</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">low</span><span class="p">)</span> <span class="o">+</span> <span class="mf">1.</span>        <span class="c1"># Bereken het verschil en voeg 1 toe</span>
+    <span class="n">rand_value</span> <span class="o">=</span> <span class="n">length</span> <span class="o">*</span> <span class="n">random</span><span class="p">()</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">low</span><span class="p">)</span>  <span class="c1"># Kies een willekeurige waarde</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">rand_value</span><span class="p">)</span>                  <span class="c1"># Geef het integergedeelte terug</span>
+
+
+<span class="k">def</span> <span class="nf">randcolor</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Returns a vector of (r, g, b) random from 0.0 to 1.0.&quot;&quot;&quot;</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">random</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+    <span class="n">g</span> <span class="o">=</span> <span class="n">random</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">random</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">vector</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># Een kleur is een tuple met drie elementen</span>
+</pre></div>
+</div>
+<p>Dit is een behoorlijk lang stuk code! Laten we de code stukje voor stukje bekijken en aanpassen, zodat je kan zien hoe het werkt en hoe je het kan gebruiken.</p>
+<p>Probeer het eerst uit, en probeer een gevoel te krijgen voor hoe de gebruikte coördinaten werken:</p>
+<p><img alt="Coördinatenstelsel" src="../_images/axes_annotated.png" /></p>
+<div class="section" id="probeer-het-spel-uit">
+<h3>Probeer het spel uit<a class="headerlink" href="#probeer-het-spel-uit" title="Permalink naar deze titel">¶</a></h3>
+<p>We slaan eerst de bovenste instellingen van <code class="docutils literal notranslate"><span class="pre">scene</span></code> en de functie <code class="docutils literal notranslate"><span class="pre">make_alien</span></code> over… Hier komen we later op terug. Scroll door naar de regels waar deze objecten gemaakt worden:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ground</span></code> en <code class="docutils literal notranslate"><span class="pre">ball</span></code>, zoals eerder</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">wall_a</span></code> en <code class="docutils literal notranslate"><span class="pre">wall_b</span></code> zijn nieuwe objecten, allebei zijn ze een box, met aparte kleuren (geel en blauw)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">alien</span></code> en <code class="docutils literal notranslate"><span class="pre">alien2</span></code> zijn nieuwe objecten die <em>samengesteld</em> zijn uit andere objecten; tof! We bespreken samenvoegen later…</p></li>
+</ul>
+<p>Probeer het spel nu uit: gebruik de pijltjestoetsen (of <code class="docutils literal notranslate"><span class="pre">ijkl</span></code> of <code class="docutils literal notranslate"><span class="pre">wasd</span></code>) om de <code class="docutils literal notranslate"><span class="pre">ball</span></code> snelheid te geven. Je ziet dat de computer de <code class="docutils literal notranslate"><span class="pre">alien</span></code> bestuurt, maar jij kan de <code class="docutils literal notranslate"><span class="pre">ball</span></code> besturen. Het doel van het spel is de alien met de bal te raken; als dat lukt, stijgt de alien op en drukt een bericht af…</p>
+<p>Meer is er nog niet! <em>Ja, dit spel heeft nog wat werk nodig!!</em> Laten we dus maar beginnen…</p>
+</div>
+<div class="section" id="maak-je-eigen-muren-en-botsingen">
+<h3>Maak je eigen muren en botsingen<a class="headerlink" href="#maak-je-eigen-muren-en-botsingen" title="Permalink naar deze titel">¶</a></h3>
+<p>Probeer eerst uit te zoeken hoe de code die de muren maakt werkt. Maak dan twee extra muren om de “tafel” of “arena” af te maken; gebruik hier duidelijke kleuren voor!</p>
+<p>Lees daarna de code die de botsingen met de muren regelt, en zoek uit hoe deze werkt. Je ziet dat de positie van de bal <em>aangepast</em> wordt zodat deze niet langer “achter de muur” is na een botsing. Als je dat niet zou doen, kan de bal “vast komen te zitten” in de muur… Voeg vervolgens code toe voor botsingen met de twee <em>nieuwe</em> muren.</p>
+<p>Probeer het spel weer uit! Het spel speelt zich nu grotendeels vanzelf: de bal kan rondstuiteren door de arena en komt uiteindelijk de alien tegen…</p>
+<div class="tip admonition">
+<p class="admonition-title">Ongedaan maken?</p>
+<p>Je zult merken dat er in de editor van Glowscript geen functie voor “ongedaan maken” is; kopieer daarom regelmatig het hele programma naar een bestand op je computer (met je teksteditor, bijvoorbeeld VSCode). Het is belangrijk om een werkende versie te hebben waar je op kan terugvallen; dit is bovendien hoe je straks je programma gaat inleveren!</p>
+</div>
+</div>
+<div class="section" id="een-hulpfunctie-voor-botsingen-met-de-arena">
+<h3>Een hulpfunctie voor botsingen met de arena<a class="headerlink" href="#een-hulpfunctie-voor-botsingen-met-de-arena" title="Permalink naar deze titel">¶</a></h3>
+<p>De code voor botsingen met de muren van de arena is nu nog specifiek voor het object <code class="docutils literal notranslate"><span class="pre">ball</span></code>. We gaan hier nu een aparte hulpfunctie voor maken, zodat deze code door <strong>alle</strong> bewegende objecten gebruikt kan worden.</p>
+<div class="tip admonition">
+<p class="admonition-title">Don’t repeat yourself</p>
+<p>“Don’t repeat yourself” is een programmeursmantra; het wordt ook wel het <em>DRY</em>-principe genoemd. Goede programmeurs zijn een beetje lui: ze willen liever niet dezelfde code herhalen, dus maken ze er een hulpfunctie voor!</p>
+</div>
+<p>Je ziet dat de code die deze botsingen nu regelt de variabele <code class="docutils literal notranslate"><span class="pre">ball</span></code> gebruikt om te kijken of de muren geraakt zijn; we gaan daar een <em>argument</em> van de functie van maken! Je kan dit doen door de code voor de botsingen met de arena (dit zijn vermoedelijk vier <code class="docutils literal notranslate"><span class="pre">if</span></code>-statements) te verplaatsen naar het gedeelte met “andere functies” onderaan het bestand. Voeg daarna een functie-signature met docstring toe boven deze regels:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">arena_collide</span><span class="p">(</span><span class="n">ball</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Arena collisions!</span>
+<span class="sd">       Ball must have a .vel field and a .pos field.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>Voeg nu een aanroep <code class="docutils literal notranslate"><span class="pre">arena_collide(ball)</span></code> toe waar je de originele regels hebt weggeknipt, zodat de code die je verplaatst hebt nog wel op de goede plek wordt aangeroepen. Je kan nu ook de regel <code class="docutils literal notranslate"><span class="pre">arena_collide(alien)</span></code> toevoegen; probeer dit eens! Hiervoor is het wel nodig dat je het stuk code dat de alien verplaatst <em><strong>weghaalt of in commentaar zet</strong></em>. Dit begint met dit commentaar: <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">Als</span> <span class="pre">de</span> <span class="pre">alien</span> <span class="pre">te</span> <span class="pre">ver</span> <span class="pre">loopt,</span> <span class="pre">stel</span> <span class="pre">deze</span> <span class="pre">dan</span> <span class="pre">willekeurige</span> <span class="pre">opnieuw</span> <span class="pre">in</span></code>. Zowel de alien als de bal moeten nu rondstuiteren… yay!</p>
+</div>
+</div>
+<div class="section" id="bedenk-zelf-een-interactie-of-spel">
+<h2>Bedenk zelf een interactie of spel!<a class="headerlink" href="#bedenk-zelf-een-interactie-of-spel" title="Permalink naar deze titel">¶</a></h2>
+<p>Je hebt nu een scala aan 3D objecten die je allemaal kan onderwerpen aan physics, botsingen en toetsaanslagen… De rest van de opdracht is om een aantal aanpassingen te maken aan de startcode om je eigen spel of interactie te maken. Wat het spel doet en hoe het eruit ziet mag je helemaal zelf bedenken; maar je moet ten minste <em><strong>TWEE</strong></em> van de onderstaande opties toevoegen (of meer; je kan VPython als <span class="xref myst">project</span> kiezen, als je dat wilt):</p>
+<ul class="simple">
+<li><p>Voeg één of meer extra niet-bewegende objecten toe aan het “speelveld” (bomen, ruimteschepen, bedenk het maar…).</p></li>
+<li><p>Maak ten minste één nieuw object dat <em>uit zichzelf beweegt</em> (meer aliens; of andere dingen?!).</p></li>
+<li><p>Voeg een extra interactie toe tussen de nieuwe objecten en het door de gebruiker bestuurde object (botsen of stuiteren, bijvoorbeeld).</p></li>
+<li><p>Breid het bestaande <code class="docutils literal notranslate"><span class="pre">compound</span></code>-object (hiermee behandel je meerdere objecten als één object) uit of voeg een nieuwe toe (zie hieronder).</p></li>
+<li><p>Verander het door de gebruiker bestuurde object (of voeg een extra bestuurbaar object toe, met een manier om tussen de objecten te wisselen…). Dit kan lastig zijn, maar wel leuk!</p></li>
+</ul>
+<p>Vergeet niet regelmatig te testen, en zo vaak als je kan verdragen het hele programma naar een bestand op je computer te kopiëren!</p>
+<div class="section" id="compound-objecten">
+<h3>Compound-objecten<a class="headerlink" href="#compound-objecten" title="Permalink naar deze titel">¶</a></h3>
+<p>Je kan in VPython samengestelde of <code class="docutils literal notranslate"><span class="pre">compound</span></code>-objecten bouwen; als je wilt proberen deze zelf te bouwen of een bestaande uit te breiden, kijk dan naar de functie <code class="docutils literal notranslate"><span class="pre">make_alien</span></code> bovenaan het bestand. Deze functie maakt een aantal onderdelen <em>in hun eigen coördinatensysteem</em>.</p>
+<p>Eerst maakt ze maakt een lijst met deze onderdelen en roept dan <code class="docutils literal notranslate"><span class="pre">com_alien</span> <span class="pre">=</span> <span class="pre">compound(alien_objects,</span> <span class="pre">pos=starting_position)</span></code> aan. Dit maak een object aan met de naam <code class="docutils literal notranslate"><span class="pre">com_alien</span></code>, die van de klasse (of type) <code class="docutils literal notranslate"><span class="pre">compound</span></code> is, en plakt vervoplgens alle onderdelen aan elkaar vast en geeft ze een <strong>gedeeld bestaan</strong>; ze kunnen niet langer los van elkaar verplaatst worden, maar <em>het geheel</em> kan wel verplaatst worden.</p>
+<p>Probeer eens je eigen karakter te maken; het kan een variatie op de alien zijn (een derde oog, misschien? of nog meer detail…), maar ook iets compleet anders…</p>
+<div class="notice admonition">
+<p class="admonition-title">Beginpositie</p>
+<p>Merk op dat door de vector <code class="docutils literal notranslate"><span class="pre">starting_position</span></code> mee te geven, deze enkele functie zoveel verschillende samengestelde objecten kan maken als je maar wilt. Deze techniek wordt gedemonstreerd door de twee aliens in het oorspronkelijke programma…</p>
+</div>
+</div>
+<div class="section" id="andere-handige-functies">
+<h3>Andere handige functies<a class="headerlink" href="#andere-handige-functies" title="Permalink naar deze titel">¶</a></h3>
+<p><span class="xref myst">Deze pagina bevat een aantal functies die je misschien wilt gebruiken, proberen of aanpassen…</span>. Hij bevat nu:</p>
+<ul class="simple">
+<li><p>Een functie <code class="docutils literal notranslate"><span class="pre">wall_collide(wall,</span> <span class="pre">object)</span></code> voor muren onder elke hoek in het <em>xz</em>-vlak. De y-componenten worden genegeerd, maar je zou de functie kunnen aanpassen om hier ook rekening mee te houden als je wilt.</p></li>
+</ul>
+<p>Als je andere handige functies gemaakt hebt, laat het ons weten, dan voegen we ze toe!</p>
+</div>
+</div>
+<div class="section" id="inleveren">
+<h2>Inleveren<a class="headerlink" href="#inleveren" title="Permalink naar deze titel">¶</a></h2>
+<p>Gefeliciteerd! Je hebt de 3D-interactie (of spel) van dit practicum gemaakt. Kopieer nu alle code van je spel of interactie naar een tekstbestand en sla het op je computer op als <code class="docutils literal notranslate"><span class="pre">wk11ex1.py</span></code>. Je kan zelf voor de zekerheid ook kopieën bewaren met andere namen (het kan leuk zijn om kopieën van verschillende versies te bewaren…). Maak daarna <strong>twee respresentatieve screenshots</strong> van je interactie of spel, en lever alle drie de bestanden samen in in Gradescope.</p>
+<p>Cool! Als je VPython en GlowScript leuk vond is het goed om te weten dat één van de mogelijke projecten <a class="reference internal" href="../projects/vpython.html"><span class="doc std std-doc">het bouwen van een uitgebreidere interactie</span></a> (of spel) is …</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "misja/programmeren",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./problems"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../class/opgaven_11.html" title="previous page">Week 11</a>
+    <a class='right-next' id="next-link" href="../readings/chess_championship.html" title="next page">Chess-Championship Results Show Powerful Role of Computers</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          Door Hanzehogeschool Groningen<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
+    Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

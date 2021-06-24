@@ -1,13 +1,14 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="nl">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mandelbrot &#8212; Programmeren</title>
     
-  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -19,14 +20,10 @@
 
     
       
-  <link rel="stylesheet"
-    href="../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -36,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -81,8 +78,9 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
+    <script src="../_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
@@ -92,26 +90,17 @@ commentsRunWhenDOMLoaded(addUtterances);
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://misja.github.io/programmeren/problems/mandelbrot.html" />
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Week 8" href="../class/opgaven_8.html" />
-    <link rel="prev" title="Week 8" href="../class/week_8.html" />
-
+    <link rel="search" title="Zoeken" href="../search.html" />
+    <link rel="next" title="When Algorithms Discriminate" href="../readings/algoritmen_discrimineren.html" />
+    <link rel="prev" title="Week 8" href="../class/opgaven_8.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
-
-
-<!-- Opengraph tags -->
-<meta property="og:url"         content="https://misja.github.io/programmeren/problems/mandelbrot.html" />
-<meta property="og:type"        content="article" />
-<meta property="og:title"       content="Mandelbrot" />
-<meta property="og:description" content="Mandelbrot      Naam  Beschrijving  Onderwerp  De mandelbrotset en afbeeldingen  Bestandsnaam  wk8ex1.py  Inleveren  Lever jouw bestand met de juiste bestandsna" />
-<meta property="og:image"       content="https://misja.github.io/programmeren/_static/mascot.png" />
-
-<meta name="twitter:card" content="summary" />
-
-
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -120,49 +109,54 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../index.html">
-  
-  <img src="../_static/mascot.png" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">Programmeren</h1>
-  
-</a>
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/mascot.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Programmeren</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../about/syllabus.html">
    Programmeren
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Opmerkingen
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../about/feedback.html">
    Anoniem feedbackformulier
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Week 1
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/week_1.html">
    Onderwerpen
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../topics/1a_introductie.html">
      Introductie
@@ -184,19 +178,22 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="python_intro.html">
-   Practicum
-  </a>
- </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/opgaven_1.html">
    Opgaven
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="python_intro.html">
+     Practicum
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../readings/guugu_yimithirr.html">
      Leesopgave
@@ -233,21 +230,24 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Week 2
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/week_2.html">
    Onderwerpen
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../topics/3a_data.html">
      Data
@@ -269,24 +269,27 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="sequenties_en_data.html">
-   Practicum I
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="fijne_functies.html">
-   Practicum II
-  </a>
- </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/opgaven_2.html">
    Opgaven
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sequenties_en_data.html">
+     Practicum I
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fijne_functies.html">
+     Practicum II
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../readings/end_of_theory.html">
      Leesopgave
@@ -298,21 +301,24 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Week 3
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/week_3.html">
    Onderwerpen
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../topics/5a_simulatie.html">
      Simulatie
@@ -329,17 +335,25 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/opgaven_3.html">
    Opgaven
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="python_turtles.html">
+     Practicum
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../readings/computer_wins_jeopardy.html">
-     De computer wint
+     Leesopgave
     </a>
    </li>
    <li class="toctree-l2">
@@ -358,21 +372,24 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Week 4
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/week_4.html">
    Onderwerpen
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../topics/7a_data_based_design.html">
      Data based design
@@ -389,19 +406,22 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="klinkt_goed.html">
-   Practicum
-  </a>
- </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/opgaven_4.html">
    Opgaven
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="klinkt_goed.html">
+     Practicum
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../readings/universum_simulatie.html">
      Leesopgave
@@ -413,24 +433,27 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Week 5
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/week_5.html">
    Onderwerpen
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../topics/9a_talstelsels.html">
-     Talstalsels
+     Talstelsels
     </a>
    </li>
    <li class="toctree-l2">
@@ -444,19 +467,22 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="decimaal_en_verder.html">
-   Practicum
-  </a>
- </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/opgaven_5.html">
    Opgaven
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="decimaal_en_verder.html">
+     Practicum
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../readings/bug_and_crash.html">
      Leesopgave
@@ -473,71 +499,95 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Week 6
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/week_6.html">
    Onderwerpen
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../topics/11a_logische_schakelingen.html">
      Logische schakelingen
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="optellingen_schakelen.html">
-   Practicum
-  </a>
- </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/opgaven_6.html">
    Opgaven
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="optellingen_schakelen.html">
+     Practicum
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../readings/just_add_water.html">
      Leesopgave
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="vermenigvuldigingswaanzin.html">
+     Vermenigvuldigingswaanzin
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="eerlijke_verdeling.html">
+     Een eerlijke verdeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="geheugenproblemen.html">
+     Geheugenproblemen
+    </a>
+   </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Week 7
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../class/week_7.html">
    Onderwerpen
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="hmmm_assembly.html">
-   Practicum
-  </a>
- </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/opgaven_7.html">
    Opgaven
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="hmmm_assembly.html">
+     Practicum
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../readings/hijacked_minds.html">
      Leesopave
@@ -548,32 +598,55 @@ commentsRunWhenDOMLoaded(addUtterances);
      De macht van hmmm
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="feest_met_fibonacci.html">
+     Feest met Fibonacci
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="macht_van_recursie.html">
+     De macht van recursie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="een_lus_om_python.html">
+     Een lusje om Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fibonacci_recursief.html">
+     Fibonacci recursief
+    </a>
+   </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Week 8
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../class/week_8.html">
    Onderwerpen
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Practicum
-  </a>
- </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../class/opgaven_8.html">
    Opgaven
   </a>
-  <ul class="collapse-ul">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Practicum
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../readings/algoritmen_discrimineren.html">
      Leesopgave
@@ -589,32 +662,45 @@ commentsRunWhenDOMLoaded(addUtterances);
      Pi met pijltjes
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="tr_investeringen.html">
+     TR Investeringen B.V.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ascii_art.html">
+     ASCII Art
+    </a>
+   </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Week 9
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../class/week_9.html">
    Onderwerpen
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="boter_kaas_eieren.html">
-   Practicum
-  </a>
- </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/opgaven_9.html">
    Opgaven
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="boter_kaas_eieren.html">
+     Practicum
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../readings/horseless_driverless.html">
      Leesopgave
@@ -631,21 +717,24 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Week 10
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/week_10.html">
    Onderwerpen
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../topics/19_objecten.html">
      Objecten en klassen
@@ -657,22 +746,25 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../class/opgaven_10.html">
    Opgaven
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../readings/an_algorithm_wrote_this.html">
-     Leesopgave
+    <a class="reference internal" href="eeuwigdurende_kalender.html">
+     Practicum
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="eeuwigdurende_kalender.html">
-     Eeuwigdurende kalender
+    <a class="reference internal" href="../readings/an_algorithm_wrote_this.html">
+     Leesopgave
     </a>
    </li>
    <li class="toctree-l2">
@@ -685,22 +777,59 @@ commentsRunWhenDOMLoaded(addUtterances);
      Vier op een rij
     </a>
    </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 11
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week_11.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../class/opgaven_11.html">
+   Opaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="buitenaards_python.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/chess_championship.html">
+     Leesopgave
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="vier_op_een_rij_ai.html">
-     Vier op een rij AI
+     AI voor vier op een rij
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/project_1.html">
+   Project: Begin
+  </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Projecten
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../projects/vpython.html">
    VPython
@@ -722,12 +851,12 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Voorbeelden
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../examples/recursie.html">
    Recursie
@@ -739,12 +868,12 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Oefening
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../practice/1_recursie.html">
    Recursie
@@ -755,27 +884,30 @@ commentsRunWhenDOMLoaded(addUtterances);
    List comprehension
   </a>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../practice/3a_toets.html">
    Zelftoets
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+  <label for="toctree-checkbox-19">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../practice/3b_toets_uitwerking.html">
      Uitwerking
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Python
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../support/platte_tekst.html">
    Tekstbestanden
@@ -803,6 +935,7 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
 </ul>
 
+    </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
@@ -818,23 +951,23 @@ commentsRunWhenDOMLoaded(addUtterances);
           
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
-    </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
+                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
@@ -842,15 +975,15 @@ commentsRunWhenDOMLoaded(addUtterances);
         
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="../_sources/problems/mandelbrot.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
-        <!-- Source interaction buttons -->
+            <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
@@ -858,37 +991,37 @@ commentsRunWhenDOMLoaded(addUtterances);
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
             href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                data-toggle="tooltip" data-placement="left" title="Bronopslagplaats"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
             href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Fproblems/mandelbrot.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+                title="Open een probleem"><i class="fas fa-lightbulb"></i>open probleem</button></a>
         <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/problems/mandelbrot.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+                title="bewerk deze pagina"><i class="fas fa-pencil-alt"></i>suggereren bewerken</button></a>
     </div>
 </div>
 
+            <!-- Full screen (wrap in <a> to have style consistency -->
 
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
+        title="Volledig scherm"><i
+            class="fas fa-expand"></i></button></a>
 
-        <!-- Launch buttons -->
+            <!-- Launch buttons -->
 
-    </div>
-
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
         </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhoud
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inleiding-op-for-lussen">
    Inleiding op
@@ -1090,8 +1223,8 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
 </ul>
 
-        </nav>
-        
+            </nav>
+        </div>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -1100,7 +1233,7 @@ commentsRunWhenDOMLoaded(addUtterances);
               <div>
                 
   <div class="section" id="mandelbrot">
-<h1>Mandelbrot<a class="headerlink" href="#mandelbrot" title="Permalink to this headline">¶</a></h1>
+<h1>Mandelbrot<a class="headerlink" href="#mandelbrot" title="Permalink naar deze titel">¶</a></h1>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Naam</p></th>
@@ -1117,9 +1250,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 <tr class="row-even"><td><p>Inleveren</p></td>
 <td><p>Lever jouw bestand met de juiste bestandsnaam in op GradeScope</p></td>
 </tr>
-<tr class="row-odd"><td><p>Punten</p></td>
-<td><p>30</p></td>
-</tr>
 </tbody>
 </table>
 <p><img alt="Mandelbrot" src="../_images/640px-Mandel_zoom_00_mandelbrot_set.jpg" /></p>
@@ -1130,11 +1260,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>Een idee te krijgen van wiskunde en andere vakgebieden die fractaal modelleren toepassen</p></li>
 </ul>
 <div class="section" id="inleiding-op-for-lussen">
-<h2>Inleiding op <code class="docutils literal notranslate"><span class="pre">for</span></code>-lussen<a class="headerlink" href="#inleiding-op-for-lussen" title="Permalink to this headline">¶</a></h2>
+<h2>Inleiding op <code class="docutils literal notranslate"><span class="pre">for</span></code>-lussen<a class="headerlink" href="#inleiding-op-for-lussen" title="Permalink naar deze titel">¶</a></h2>
 <p>Omdat je afbeeldingen gaat maken in dit practicum heb je wat extra code nodig om mee te beginnen; download <a class="reference external" href="https://github.com/misja/programmeren/raw/master/problems/assets/wk8ex1.zip">wk8ex1.zip</a> en pak het uit.</p>
 <p>Om wat inzicht in lussen te krijgen, schrijf je eerst twee korte functies in <code class="docutils literal notranslate"><span class="pre">wk8ex1.py</span></code>:</p>
 <div class="section" id="de-functie-mult">
-<h3>De functie <code class="docutils literal notranslate"><span class="pre">mult</span></code><a class="headerlink" href="#de-functie-mult" title="Permalink to this headline">¶</a></h3>
+<h3>De functie <code class="docutils literal notranslate"><span class="pre">mult</span></code><a class="headerlink" href="#de-functie-mult" title="Permalink naar deze titel">¶</a></h3>
 <p>Schrijf een functie genaamd <code class="docutils literal notranslate"><span class="pre">mult(c,</span> <span class="pre">n)</span></code> die het product <code class="docutils literal notranslate"><span class="pre">c</span></code> keer <code class="docutils literal notranslate"><span class="pre">n</span></code> teruggeeft, maar zonder gebruik te maken van vermenigvuldigen. In plaats daarvan moet de functie een waarde (genaamd <code class="docutils literal notranslate"><span class="pre">result</span></code>) eerst op 0 zetten en daarna herhaaldelijk de waarde van <code class="docutils literal notranslate"><span class="pre">c</span></code> <em>optellen</em> bij <code class="docutils literal notranslate"><span class="pre">result</span></code>. Ze moet een <code class="docutils literal notranslate"><span class="pre">for</span></code>-lus gebruiken om te zorgen dat <code class="docutils literal notranslate"><span class="pre">c</span></code> het goede aantal keer wordt opgeteld. Nadat de lus klaar is, moet de functie het resultaat teruggeven.</p>
 <p>De waarde van <code class="docutils literal notranslate"><span class="pre">n</span></code> is een positieve integer. Om je te helpen is hier een deel van de functie dat de waarde van <code class="docutils literal notranslate"><span class="pre">result</span></code> op 0 zet en de lus bevat:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mult</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
@@ -1158,7 +1288,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="section" id="de-functie-update">
-<h3>De functie <code class="docutils literal notranslate"><span class="pre">update</span></code><a class="headerlink" href="#de-functie-update" title="Permalink to this headline">¶</a></h3>
+<h3>De functie <code class="docutils literal notranslate"><span class="pre">update</span></code><a class="headerlink" href="#de-functie-update" title="Permalink naar deze titel">¶</a></h3>
 <p>De volgende functie bevat de basisstap van de mandelbrotverzameling, namelijk <code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">=</span> <span class="pre">z</span> <span class="pre">**</span> <span class="pre">2</span> <span class="pre">+</span> <span class="pre">c</span></code> voor een gegeven constante <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p>
 <p>Schrijf hiervoor een functie genaamd <code class="docutils literal notranslate"><span class="pre">update(c,</span> <span class="pre">n)</span></code> waar je een nieuwe waarde <code class="docutils literal notranslate"><span class="pre">z</span></code> op 0 laat beginnen en dan herhaaldelijk de waarde van <code class="docutils literal notranslate"><span class="pre">z</span></code> bijwerkt met behulp van de toekenning <code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">=</span> <span class="pre">z</span> <span class="pre">**</span> <span class="pre">2</span> <span class="pre">+</span> <span class="pre">c</span></code>; laat dit <code class="docutils literal notranslate"><span class="pre">n</span></code> keer herhaald worden. Aan het eind moet de functie de laatste waarde van <code class="docutils literal notranslate"><span class="pre">z</span></code> teruggeven. De waarde van <code class="docutils literal notranslate"><span class="pre">n</span></code> is een positieve integer. Hieronder zie je de signature en de docstring:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
@@ -1186,7 +1316,7 @@ bij het bouwen van de mandelbrotverzameling.</p>
 </div>
 </div>
 <div class="section" id="inleiding-op-de-mandelbrotverzameling">
-<h2>Inleiding op de mandelbrotverzameling<a class="headerlink" href="#inleiding-op-de-mandelbrotverzameling" title="Permalink to this headline">¶</a></h2>
+<h2>Inleiding op de mandelbrotverzameling<a class="headerlink" href="#inleiding-op-de-mandelbrotverzameling" title="Permalink naar deze titel">¶</a></h2>
 <p><a class="reference external" href="https://www.youtube.com/watch?v=FFftmWSzgmk">What’s so special about the Mandelbrot Set?</a> geeft een goede, eerste inleiding in  mandelbrotverzameling.</p>
 <p>De <em>mandelbrotverzameling</em> is een verzameling punten op het complexe vlak die een interessante eigenschap delen die het makkelijkst is uit te leggen aan de hand van het volgende proces:</p>
 <ul class="simple">
@@ -1200,13 +1330,13 @@ bij het bouwen van de mandelbrotverzameling.</p>
 <p>Je weet misschien dat het met normale getallen niet mogelijk is om de wortel van een negatief getal te nemen. Dit is voor wiskundigen een onwenselijke situatie, dus hebben ze een stelsel getallen bedacht waarbij dit wel kan. We noemen deze getallen “complexe getallen”. Waar je de normale getallen op een getallenlijn kan zetten, kan je de complexe getallen op een getallen<em>vlak</em> zetten, met een <em>x</em>- en een <em>y</em>-as. Elk complex getal kan je dus aangeven als een combinatie van een <em>x</em>- en een <em>y</em>-coördinaat. De <em>x</em>-waarde noemen we <strong>reëel</strong> en de <em>y</em>-waarde <strong>imaginair</strong>, en je schrijft dit als <em>c</em> = <em>x</em> + <em>iy</em>; <em>i</em> is de eenheid van imaginaire getallen, en is het antwoord op de vraag wat de wortel van -1 is.</p>
 <p>Je kan je afvragen of dit nog nut buiten de wiskunde heeft; en het antwoord hierop is ja: het blijkt dat bij de berekeneningen over sommige natuurkundige processen je tijdens de berekening imaginaire getallen krijgt, maar als je dat dan allemaal netjes doorrekent, je toch weer op “echte” getallen uitkomt, die bovendien blijken te kloppen met wat we in de werkelijkheid zien.</p>
 </div>
-<p>De mandelbrotverzameling is de verzameling van alle complexe getallen <em>c</em> waarvoor geldt dat dit proces <em><strong>niet</strong></em> <em>divergeert</em> naar oneindigheid naar mate <em>n</em> groter wordt. In andere woorden, voor een gegeven <em>c</em>, als <em>z<sub>n</sub></em> divergeert naar oneindigheid (dat wil zeggen, als je <em>z<sub>n</sub></em> onbeperkt groot kan maken door <em>n</em> steeds groter te kiezen), dan hoort <em>c</em> <em>niet</em> in de verzameling; anders wel.</p>
+<p>De mandelbrotverzameling is de verzameling van alle complexe getallen <em>c</em> waarvoor geldt dat dit proces <strong>niet</strong> <em>divergeert</em> naar oneindigheid naar mate <em>n</em> groter wordt. In andere woorden, voor een gegeven <em>c</em>, als <em>z<sub>n</sub></em> divergeert naar oneindigheid (dat wil zeggen, als je <em>z<sub>n</sub></em> onbeperkt groot kan maken door <em>n</em> steeds groter te kiezen), dan hoort <em>c</em> <em>niet</em> in de verzameling; anders wel.</p>
 <p>Je zou kunnen denken dat dit voor alle waardes van <em>c</em> zo is, maar dat blijkt niet zo te zijn: in sommige gevallen blijft de waarde bijvoorbeeld rond een bepaald punt cirkelen, of komt het getal juist steeds dichter bij 0.</p>
 <p>Er zijn andere, equivalente definities van de mandelbrotverzameling. De mandelbrotverzameling bestaat bij voorbeeld precies uit die punten in het complexe vlak waarvoor de bijbehorende <em>Juliaverzameling</em> verbonden is. Toegegeven, dit zou vereisen dat we definiëren wat Juliaverzamelingen zijn, wat we hier niet zullen doen…</p>
 <p>De mandelbrotverzameling is een <em>fractal</em>, wat betekent dat zijn grens zo complex is dat deze niet goed benaderd kan worden door ééndimensionale lijnstukken, ongeacht hoe ver je inzoomt. Er zijn <a class="reference external" href="https://nl.wikipedia.org/wiki/Mandelbrotverzameling">veel beschikbare referenties</a>.</p>
 </div>
 <div class="section" id="de-functie-in-mset">
-<h2>De functie <code class="docutils literal notranslate"><span class="pre">in_mset</span></code><a class="headerlink" href="#de-functie-in-mset" title="Permalink to this headline">¶</a></h2>
+<h2>De functie <code class="docutils literal notranslate"><span class="pre">in_mset</span></code><a class="headerlink" href="#de-functie-in-mset" title="Permalink naar deze titel">¶</a></h2>
 <p>De volgende taak is om een functie genaamd <code class="docutils literal notranslate"><span class="pre">in_mset(c,</span> <span class="pre">n)</span></code> te schrijven die als argumenten een complex getal <code class="docutils literal notranslate"><span class="pre">c</span></code> en een integer <code class="docutils literal notranslate"><span class="pre">n</span></code> heeft.</p>
 <p>Deze functie geeft een boolean terug:</p>
 <ul class="simple">
@@ -1215,7 +1345,7 @@ bij het bouwen van de mandelbrotverzameling.</p>
 </ul>
 <p>Eerst introduceren we de ingebouwde ondersteuning voor complexe getallen in Python.</p>
 <div class="section" id="python-en-complexe-getallen">
-<h3>Python en complexe getallen<a class="headerlink" href="#python-en-complexe-getallen" title="Permalink to this headline">¶</a></h3>
+<h3>Python en complexe getallen<a class="headerlink" href="#python-en-complexe-getallen" title="Permalink naar deze titel">¶</a></h3>
 <p>In Python wordt een complex getal gerepresenteerd door middel van zijn reële deel <code class="docutils literal notranslate"><span class="pre">x</span></code> en zijn imaginaire deel <code class="docutils literal notranslate"><span class="pre">y</span></code>. De wiskundige notatie hiervoor zou <em>x</em> + <em>yi</em> zijn, maar in Python wordt de imaginaire eenheid weergegeven als <code class="docutils literal notranslate"><span class="pre">1.0j</span></code> of <code class="docutils literal notranslate"><span class="pre">1j</span></code>, zodat</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">*</span><span class="mi">1</span><span class="n">j</span>
 </pre></div>
@@ -1249,7 +1379,7 @@ bij het bouwen van de mandelbrotverzameling.</p>
 </div>
 </div>
 <div class="section" id="in-mset-ontwerpen">
-<h3><code class="docutils literal notranslate"><span class="pre">in_mset</span></code> ontwerpen<a class="headerlink" href="#in-mset-ontwerpen" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">in_mset</span></code> ontwerpen<a class="headerlink" href="#in-mset-ontwerpen" title="Permalink naar deze titel">¶</a></h3>
 <p>Om te bepalen of een getal <code class="docutils literal notranslate"><span class="pre">c</span></code> wel of geen onderdeel van de mandelbrotverzameling is, moet je</p>
 <ul class="simple">
 <li><p>Beginnen met <em>z</em><sub>0</sub> = 0 + 0<em>j</em> en dan</p></li>
@@ -1267,7 +1397,7 @@ bij het bouwen van de mandelbrotverzameling.</p>
 <p>Er is geen gelijksoortige regel die ons vertelt dat de reeks met zekerheid <em>niet</em> divergeert, maar het is <em>heel waarschijnlijk</em> dat ze begrendsd is als <code class="docutils literal notranslate"><span class="pre">abs(z)</span></code> niet groter dan 2 wordt na een redelijk aantal iteraties, en <code class="docutils literal notranslate"><span class="pre">n</span></code> is dat “redelijke” nummer, beginnend bij 25.</p>
 </div>
 <div class="section" id="in-mset-schrijven">
-<h3><code class="docutils literal notranslate"><span class="pre">in_mset</span></code> schrijven<a class="headerlink" href="#in-mset-schrijven" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">in_mset</span></code> schrijven<a class="headerlink" href="#in-mset-schrijven" title="Permalink naar deze titel">¶</a></h3>
 <p>Je kan het beste je functie <code class="docutils literal notranslate"><span class="pre">update</span></code> <strong>kopiëren</strong> en de naam veranderen in <code class="docutils literal notranslate"><span class="pre">in_mset</span></code>. Roep de functie <code class="docutils literal notranslate"><span class="pre">update</span></code> <strong>niet</strong> direct aan in <code class="docutils literal notranslate"><span class="pre">in_mset</span></code>, en laat de oude functie <code class="docutils literal notranslate"><span class="pre">update</span></code> in je bestand staan!</p>
 <p>Om je op weg te helpen is hier de signature en een docstring voor <code class="docutils literal notranslate"><span class="pre">in_mset</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">in_mset</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
@@ -1332,9 +1462,9 @@ bij het bouwen van de mandelbrotverzameling.</p>
 </div>
 </div>
 <div class="section" id="afbeeldingen-maken-met-python">
-<h2>Afbeeldingen maken met Python<a class="headerlink" href="#afbeeldingen-maken-met-python" title="Permalink to this headline">¶</a></h2>
+<h2>Afbeeldingen maken met Python<a class="headerlink" href="#afbeeldingen-maken-met-python" title="Permalink naar deze titel">¶</a></h2>
 <div class="section" id="een-begin-maken">
-<h3>Een begin maken<a class="headerlink" href="#een-begin-maken" title="Permalink to this headline">¶</a></h3>
+<h3>Een begin maken<a class="headerlink" href="#een-begin-maken" title="Permalink naar deze titel">¶</a></h3>
 <p>Probeer om te beginnen deze code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">png</span> <span class="kn">import</span> <span class="o">*</span>   <span class="c1"># Je hebt deze regel misschien al bovenaan je bestand...</span>
 
@@ -1381,7 +1511,7 @@ bij het bouwen van de mandelbrotverzameling.</p>
 <p>Je kan afbeeldingen ook in- en uitzoomen met de menu-opties of snelkoppelingen.</p>
 </div>
 <div class="section" id="een-gedachtenexperiment-over-afbeeldingen">
-<h3>Een gedachtenexperiment over afbeeldingen<a class="headerlink" href="#een-gedachtenexperiment-over-afbeeldingen" title="Permalink to this headline">¶</a></h3>
+<h3>Een gedachtenexperiment over afbeeldingen<a class="headerlink" href="#een-gedachtenexperiment-over-afbeeldingen" title="Permalink naar deze titel">¶</a></h3>
 <p>Schrijf, voordat je bovenstaande code aanpast, <strong>een kort commentaar</strong> onder de functie <code class="docutils literal notranslate"><span class="pre">test</span></code> in je bestand <code class="docutils literal notranslate"><span class="pre">wk8ex1.py</span></code> dat beschrijft hoe de afbeelding zal veranderen als je de regel</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">col</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">row</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
 </pre></div>
@@ -1394,7 +1524,7 @@ bij het bouwen van de mandelbrotverzameling.</p>
 <p>Om te oefenen kan je proberen om andere patronen in je afbeelding te maken door de functies <code class="docutils literal notranslate"><span class="pre">test</span></code> en <code class="docutils literal notranslate"><span class="pre">we_want_this_pixel</span></code> op de bijpassende manier aan te passen.</p>
 </div>
 <div class="section" id="een-paar-opmerkingen-over-hoe-de-functie-test-werkt">
-<h3>Een paar opmerkingen over hoe de functie <code class="docutils literal notranslate"><span class="pre">test</span></code> werkt…<a class="headerlink" href="#een-paar-opmerkingen-over-hoe-de-functie-test-werkt" title="Permalink to this headline">¶</a></h3>
+<h3>Een paar opmerkingen over hoe de functie <code class="docutils literal notranslate"><span class="pre">test</span></code> werkt…<a class="headerlink" href="#een-paar-opmerkingen-over-hoe-de-functie-test-werkt" title="Permalink naar deze titel">¶</a></h3>
 <p>Er zijn drie regels in de functie <code class="docutils literal notranslate"><span class="pre">test</span></code> waar we nader naar kijken:</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">image</span> <span class="pre">=</span> <span class="pre">PNGImage(width,</span> <span class="pre">height)</span></code> Deze regel code maakt een variabele van het type <code class="docutils literal notranslate"><span class="pre">PNGImage</span></code> met de gegeven hoogte en breedte. De variabele <code class="docutils literal notranslate"><span class="pre">image</span></code> bevat <em>de hele afbeelding</em>! Dit lijkt op de manier waarop een enkele variabele, vaak met de naam <code class="docutils literal notranslate"><span class="pre">L</span></code>, een onbeperkt grote lijst kan bevatten. Als informatie samengenomen wordt in een lijst of andere structuur noemen we dit een <em>software-object</em> of gewoon <em>object</em>.</p>
@@ -1406,9 +1536,9 @@ bij het bouwen van de mandelbrotverzameling.</p>
 </div>
 </div>
 <div class="section" id="van-pixelcoordinaten-naar-complexe-coordinaten">
-<h2>Van pixelcoördinaten naar complexe coördinaten<a class="headerlink" href="#van-pixelcoordinaten-naar-complexe-coordinaten" title="Permalink to this headline">¶</a></h2>
+<h2>Van pixelcoördinaten naar complexe coördinaten<a class="headerlink" href="#van-pixelcoordinaten-naar-complexe-coordinaten" title="Permalink naar deze titel">¶</a></h2>
 <div class="section" id="het-probleem">
-<h3>Het probleem<a class="headerlink" href="#het-probleem" title="Permalink to this headline">¶</a></h3>
+<h3>Het probleem<a class="headerlink" href="#het-probleem" title="Permalink naar deze titel">¶</a></h3>
 <p>Uitendelijk moeten de mandelbrotverzameling tekenen in het complexe vlak. Als we echter punten in de afbeelding tekenen, moeten we <em>pixels</em> in hun eigen coördinatensysteem manipuleren.</p>
 <p>Zoals het voorbeeld <code class="docutils literal notranslate"><span class="pre">test_image()</span></code> laat zien, beginnen pixelcoördinaten bij (0, 0) (in de linkeronderhoek) en lopen ze tot (breedte - 1, hoogte - 1) in de rechterbovenhoek. In het voorbeeld hierboven was <code class="docutils literal notranslate"><span class="pre">width</span></code> 300 en <code class="docutils literal notranslate"><span class="pre">height</span></code> 200, zodat we een vrij kleine afbeelding krijgen die snel gegenereerd wordt.</p>
 <p>De mandelbrotverzameling bestaat echter in het gebied</p>
@@ -1420,7 +1550,7 @@ bij het bouwen van de mandelbrotverzameling.</p>
 <p>We moeten dus de integerwaarde <code class="docutils literal notranslate"><span class="pre">col</span></code> van elke pixel omzetten naar een floating-pointwaarde <code class="docutils literal notranslate"><span class="pre">x</span></code>. Bovendien moeten we de integerwaarde <code class="docutils literal notranslate"><span class="pre">row</span></code> van elke pixel omzetten naar een floating-pointwaarde <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
 </div>
 <div class="section" id="de-oplossing">
-<h3>De oplossing<a class="headerlink" href="#de-oplossing" title="Permalink to this headline">¶</a></h3>
+<h3>De oplossing<a class="headerlink" href="#de-oplossing" title="Permalink naar deze titel">¶</a></h3>
 <p>Eén functie, genaamd <code class="docutils literal notranslate"><span class="pre">scale</span></code>, zal gebruikt worden om coördinaten in het algemeen om te zetten.</p>
 <p>Je moet dus deze functie <code class="docutils literal notranslate"><span class="pre">scale</span></code> schrijven:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">scale</span><span class="p">(</span><span class="n">pix</span><span class="p">,</span> <span class="n">pix_max</span><span class="p">,</span> <span class="n">float_min</span><span class="p">,</span> <span class="n">float_max</span><span class="p">)</span>
@@ -1450,7 +1580,7 @@ Het is in feite slechts wat rekenwerk. Je moet jezelf bedenken</p>
 Je hebt een vrijwel dezelfde functie (<code class="docutils literal notranslate"><span class="pre">interp</span></code>) geschreven in het vorige blok, tijdens het practicum van week 3.</p>
 </div>
 <div class="section" id="een-begin-van-de-functie-scale">
-<h3>Een begin van de functie <code class="docutils literal notranslate"><span class="pre">scale</span></code><a class="headerlink" href="#een-begin-van-de-functie-scale" title="Permalink to this headline">¶</a></h3>
+<h3>Een begin van de functie <code class="docutils literal notranslate"><span class="pre">scale</span></code><a class="headerlink" href="#een-begin-van-de-functie-scale" title="Permalink naar deze titel">¶</a></h3>
 <p>Om deze omzetting tussen pixelcoördinaten en complexe coördinaten te berekenen schrijf je een functie
 die als volgt begint:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">scale</span><span class="p">(</span><span class="n">pix</span><span class="p">,</span> <span class="n">pix_max</span><span class="p">,</span> <span class="n">float_min</span><span class="p">,</span> <span class="n">float_max</span><span class="p">):</span>
@@ -1501,10 +1631,10 @@ dit er concreet uitziet:</p>
 </div>
 </div>
 <div class="section" id="de-mandelbrotverzameling-weergeven-in-zwart-wit-mset">
-<h2>De mandelbrotverzameling weergeven in zwart-wit: <code class="docutils literal notranslate"><span class="pre">mset</span></code><a class="headerlink" href="#de-mandelbrotverzameling-weergeven-in-zwart-wit-mset" title="Permalink to this headline">¶</a></h2>
+<h2>De mandelbrotverzameling weergeven in zwart-wit: <code class="docutils literal notranslate"><span class="pre">mset</span></code><a class="headerlink" href="#de-mandelbrotverzameling-weergeven-in-zwart-wit-mset" title="Permalink naar deze titel">¶</a></h2>
 <p>In dit gedeelte ga je de onderdelen uit de bovenstaande paragrafen samenvoegen in een functie met de naam <code class="docutils literal notranslate"><span class="pre">mset()</span></code> die de verzameling punten op het complexe vlak die onderdeel zijn van de mandelbrotverzameling berekent en er een bitmapafbeelding van maakt, met als formaat <code class="docutils literal notranslate"><span class="pre">width</span></code> bij <code class="docutils literal notranslate"><span class="pre">height</span></code>.</p>
 <div class="section" id="x-en-y-bereik">
-<h3>x- en y-bereik<a class="headerlink" href="#x-en-y-bereik" title="Permalink to this headline">¶</a></h3>
+<h3>x- en y-bereik<a class="headerlink" href="#x-en-y-bereik" title="Permalink naar deze titel">¶</a></h3>
 <p>Om ons te richten op het interessante gedeelte van het complexe vlak, begrenzen we de bereiken van <code class="docutils literal notranslate"><span class="pre">x</span></code> en <code class="docutils literal notranslate"><span class="pre">y</span></code> tot</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>-2.0 ≤ x- of reële coördinaat ≤ +1.0
 -1.0  y- of imaginaire coördinaat ≤ +1.0
@@ -1555,9 +1685,9 @@ mandelbrotverzameling is, bijvoorbeeld zoals deze afbeelding:</p>
 </div>
 </div>
 <div class="section" id="mset-uitbreiden">
-<h2><code class="docutils literal notranslate"><span class="pre">mset</span></code> uitbreiden<a class="headerlink" href="#mset-uitbreiden" title="Permalink to this headline">¶</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">mset</span></code> uitbreiden<a class="headerlink" href="#mset-uitbreiden" title="Permalink naar deze titel">¶</a></h2>
 <div class="section" id="kleuren-veranderen">
-<h3>Kleuren veranderen…<a class="headerlink" href="#kleuren-veranderen" title="Permalink to this headline">¶</a></h3>
+<h3>Kleuren veranderen…<a class="headerlink" href="#kleuren-veranderen" title="Permalink naar deze titel">¶</a></h3>
 <p>Je hoeft niet alleen zwart en wit te gebruiken!</p>
 <p>De methode <code class="docutils literal notranslate"><span class="pre">image.plot_point</span></code> kan een optioneel derde argument meekrijgen die de <em>kleur</em> van het punt dat je wil tekenen bevat. Hier is een voorbeeld:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">image</span><span class="o">.</span><span class="n">plot_point</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
@@ -1577,7 +1707,7 @@ mandelbrotverzameling is, bijvoorbeeld zoals deze afbeelding:</p>
 <p>Je kan de afbeelding ook gerust vergroten; het zal langer duren om de afbeelding te maken, maar je kan meer detail zien in het resultaat!</p>
 </div>
 <div class="section" id="geen-magische-constanten">
-<h3>Geen magische constanten!<a class="headerlink" href="#geen-magische-constanten" title="Permalink to this headline">¶</a></h3>
+<h3>Geen magische constanten!<a class="headerlink" href="#geen-magische-constanten" title="Permalink naar deze titel">¶</a></h3>
 <p><em>Magische constanten</em> zijn gewoon letterlijke getalswaarden die je in je code geschreven hebt. Ze worden <em>magisch</em> genoemd omdat als iemand je code probeert te lezen, de waarde en het nut ervan uit een hoge hoed getrokken lijkt te zijn. Je functie <code class="docutils literal notranslate"><span class="pre">mset</span></code> roept bijvoorbeeld misschien <code class="docutils literal notranslate"><span class="pre">in_mset(c,</span> <span class="pre">25)</span></code> aan (dat deed die van ons wel). Iemand die je code (en deze opgave) niet eerder gezien heeft heeft geen idee waar die <code class="docutils literal notranslate"><span class="pre">25</span></code> voor staat en waarom je die gekozen hebt.</p>
 <p>Om je code zo flexibel en uitbreidbaar mogelijk te houden, is het een goed idee om het gebruik van deze “magische constanten” te voorkomen voor belangrijke waardes op verschillende plekken in je functies. Het is beter om alle magische constanten te verzamelen aan het begin van de functie (na de docstring) en ze handige namen te geven om hun doel te laten zien. Het is gebruikelijk, maar niet verplicht, om hoofdletters te gebruiken voor deze waardes. Je code kan bijvoorbeeld onderstaande regel bevatten:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">NUM_ITER</span> <span class="o">=</span> <span class="mi">25</span>  <span class="c1"># aantal updates</span>
@@ -1600,23 +1730,23 @@ mandelbrotverzameling is, bijvoorbeeld zoals deze afbeelding:</p>
 <p>In het volgende deel zal je deze waardes aanpassen om in te zoomen op de mandelbrotverzameling.</p>
 </div>
 <div class="section" id="inzoomen">
-<h3>Inzoomen!<a class="headerlink" href="#inzoomen" title="Permalink to this headline">¶</a></h3>
+<h3>Inzoomen!<a class="headerlink" href="#inzoomen" title="Permalink naar deze titel">¶</a></h3>
 <p>In dit deel kun je gewoon je functie <code class="docutils literal notranslate"><span class="pre">mset</span></code> uitvoeren met wat andere waardes voor <code class="docutils literal notranslate"><span class="pre">XMAX</span></code>, <code class="docutils literal notranslate"><span class="pre">XMIN</span></code>, <code class="docutils literal notranslate"><span class="pre">YMAX</span></code> en <code class="docutils literal notranslate"><span class="pre">YMIN</span></code> om afbeeldingen te maken van verschillende delen van de mandelbrotverzameling.</p>
 <p>Je kan bijvoorbeeld deze waardes proberen:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">NUM_ITER</span> <span class="o">=</span> <span class="mi">25</span>
 <span class="n">XMIN</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.3</span>
 <span class="n">XMAX</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span>
-<span class="n">YMIN</span> <span class="o">=</span> <span class="o">.</span><span class="mi">1</span>
-<span class="n">YMAX</span> <span class="o">=</span> <span class="o">.</span><span class="mi">3</span>
+<span class="n">YMIN</span> <span class="o">=</span> <span class="mf">.1</span>
+<span class="n">YMAX</span> <span class="o">=</span> <span class="mf">.3</span>
 </pre></div>
 </div>
 <p>Probeer daarna dit bereik opnieuw, maar nu met <code class="docutils literal notranslate"><span class="pre">NUM_ITER</span> <span class="pre">=</span> <span class="pre">50</span></code>; je zal zien dat de verzameling minder punten bevat omdat er meer tijd is om te ontsnappen!</p>
 <p>Een ander interessant bereik is dat van de “oneindige sneeuwpoppen”:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">NUM_ITER</span> <span class="o">=</span> <span class="mi">25</span>
 <span class="n">XMIN</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.2</span>
-<span class="n">XMAX</span> <span class="o">=</span> <span class="o">-.</span><span class="mi">6</span>
-<span class="n">YMIN</span> <span class="o">=</span> <span class="o">-.</span><span class="mi">5</span>
-<span class="n">YMAX</span> <span class="o">=</span> <span class="o">-.</span><span class="mi">1</span>
+<span class="n">XMAX</span> <span class="o">=</span> <span class="o">-</span><span class="mf">.6</span>
+<span class="n">YMIN</span> <span class="o">=</span> <span class="o">-</span><span class="mf">.5</span>
+<span class="n">YMAX</span> <span class="o">=</span> <span class="o">-</span><span class="mf">.1</span>
 </pre></div>
 </div>
 <div class="notice admonition">
@@ -1627,15 +1757,15 @@ mandelbrotverzameling is, bijvoorbeeld zoals deze afbeelding:</p>
 <p>Het werkt wel met andere verhoudingen, maar om natuurlijke schaling te behouden zou je dan ook de hoogte en breedte van de afbeelding op de juiste manier moeten aanpassen. Of je kan de hoogte en breedte <em>berekenen</em>, maar dat is niet verplicht voor dit practicum.</p>
 </div>
 <div class="section" id="inleveren">
-<h3>Inleveren<a class="headerlink" href="#inleveren" title="Permalink to this headline">¶</a></h3>
+<h3>Inleveren<a class="headerlink" href="#inleveren" title="Permalink naar deze titel">¶</a></h3>
 <p>Je hebt nu dit practicum, <code class="docutils literal notranslate"><span class="pre">wk8ex1.py</span></code>, voltooid; vergeet niet dit in te leveren in Gradescope!</p>
 </div>
 </div>
 <div class="section" id="nog-niet-genoeg-mandelbrot">
-<h2>Nog niet genoeg Mandelbrot?<a class="headerlink" href="#nog-niet-genoeg-mandelbrot" title="Permalink to this headline">¶</a></h2>
+<h2>Nog niet genoeg Mandelbrot?<a class="headerlink" href="#nog-niet-genoeg-mandelbrot" title="Permalink naar deze titel">¶</a></h2>
 <p>Als je verschillende <em>ontsnappingssnelheden</em> wilt visualiseren, de resolutie wilt aanpassen of misschien een andere afbeelding wilt <em>vermandelbrotten</em>, kan je in de volgende paragrafen zie hoe je je mandelbrotverzamelingprogramma kan uitbreiden. Ze zijn <strong>volledig</strong> optioneel, maar wel leuk!</p>
 <div class="section" id="ontsnappingssnelheden-visualiseren">
-<h3>Ontsnappingssnelheden <em>visualiseren</em><a class="headerlink" href="#ontsnappingssnelheden-visualiseren" title="Permalink to this headline">¶</a></h3>
+<h3>Ontsnappingssnelheden <em>visualiseren</em><a class="headerlink" href="#ontsnappingssnelheden-visualiseren" title="Permalink naar deze titel">¶</a></h3>
 <p>Deze uitbreidingen zijn optioneel (maar leuk!); in de eerste kan je zien hoe snel de verschillende punten in en/of rond de mandelbrotverzameling naar oneindig ontsnappen.</p>
 <p>Afbeeldingen van fractals gebruiken vaak kleuren om weer te geven <em>hoe snel</em> punten naar oneindig divergeren als ze geen onderdeel zijn van de fractal zelf. Maak voor deze opgave een nieuwe versie van <code class="docutils literal notranslate"><span class="pre">mset</span></code> met de naam <code class="docutils literal notranslate"><span class="pre">mset_color</span></code>. Je kan de bestaande code kopiëren en plakken, omdat het gedrag in de basis hetzelfde is. Je gaat echter <code class="docutils literal notranslate"><span class="pre">mset_color</span></code> aanpassen zodat punten die <em>sneller</em> naar oneindig ontsnappen in andere kleuren getekend worden.</p>
 <p>Laat dus je functie <code class="docutils literal notranslate"><span class="pre">mset_color</span></code> de mandelbrotverzameling tekenen zoals eerst. Gebruik hiernaast echter minimaal drie verschillende kleuren om te tonen hoe snel punten buiten de verzameling divergeren; dit is hun “ontsnappingssnelheid”. Deze aanpassing zal ook een aanpassing vereisen aan de hulpfunctie <code class="docutils literal notranslate"><span class="pre">in_mset</span></code>. Het beste is om deze te kopiëren, plakken en hernoemen zodat je de nieuwe versie kan aanpassen zonder de oude te veranderen, zodat ook de code die je voor het practicum moet inleveren nog werkt.</p>
@@ -1643,7 +1773,7 @@ mandelbrotverzameling is, bijvoorbeeld zoals deze afbeelding:</p>
 <p>Kies één van deze methodes, of ontwerp je eigen methode, om <code class="docutils literal notranslate"><span class="pre">mset_color</span></code> te implementeren.</p>
 </div>
 <div class="section" id="een-andere-afbeelding-vermandelbrotten">
-<h3>Een andere afbeelding vermandelbrotten<a class="headerlink" href="#een-andere-afbeelding-vermandelbrotten" title="Permalink to this headline">¶</a></h3>
+<h3>Een andere afbeelding vermandelbrotten<a class="headerlink" href="#een-andere-afbeelding-vermandelbrotten" title="Permalink naar deze titel">¶</a></h3>
 <p>De PNG-module kan ook afbeeldingen lezen. (Ze is echter niet heel snel in het omzetten ervan naar Pythonlijsten…)</p>
 <p>Het resultaat hiervan is dat je de pixels uit een andere afbeelding kan gebruiken om de weergave van de punten die wel (of geen) onderdeel zijn van de mandelbrotverzameling te bepalen, zoals,</p>
 <p><img alt="Vermandelbrotte alien" src="../_images/mbtify.png" /></p>
@@ -1700,25 +1830,25 @@ mandelbrotverzameling is, bijvoorbeeld zoals deze afbeelding:</p>
 
               </div>
               
-        </div>
-    </div>
-    
-    
-    <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="../class/week_8.html" title="previous page">Week 8</a>
-    <a class='right-next' id="next-link" href="../class/opgaven_8.html" title="next page">Week 8</a>
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../class/opgaven_8.html" title="previous page">Week 8</a>
+    <a class='right-next' id="next-link" href="../readings/algoritmen_discrimineren.html" title="next page">When Algorithms Discriminate</a>
 
+        </div>
+        
+        </div>
     </div>
     <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         
-          By Hanze University of Applied Sciences<br/>
+          Door Hanzehogeschool Groningen<br/>
         
           <div class="extra_footer">
             <div>
-<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
     Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
 </div>
 
@@ -1731,11 +1861,9 @@ mandelbrotverzameling is, bijvoorbeeld zoals deze afbeelding:</p>
 
       </div>
     </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
-    
-  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
-
-
-    
+  
   </body>
 </html>

@@ -1,7 +1,10 @@
 # Sequenties en data
 
-```{include} ../class/problems/sequenties_en_data.md
-```
+| Naam         | Beschrijving                                                   |
+|--------------|----------------------------------------------------------------|
+| Onderwerp    | List slicing en indexering                                     |
+| Bestandsnaam | `wk2ex1.py`                                                    |
+| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 Je gaat in deze opdracht het volgende oefenen:
 

@@ -1,7 +1,11 @@
 # AI voor Vier op een rij
 
-```{include} ../class/problems/vier_op_een_rij.md
-```
+| Naam         | Beschrijving                                                   |
+|--------------|----------------------------------------------------------------|
+| Onderwerp    | Meer kunstmatige intelligentie voor vier op een rij            |
+| Bestandsnaam | `wk11ex2.py`                                                   |
+| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
+| Opmerking    | **Dit is een bonusopgave**                                     |
 
 ## Overzicht
 
@@ -169,10 +173,6 @@ Je mag zelf kiezen of de computer `'X'` of `'O'` speelt.
 
 Als de computer van je wint, gefeliciteerd! Je hebt een AI gemaakt die slimmer is gebleken dan zijn
 schrijver, hoe gevaarlijk dat ook moge zijn op de langere termijn!
-
-## Inleveren
-
-Vergeet niet je bestand `wk11ex2.py` op de gebruikelijke manier in te leveren.
 
 ## Bonusopgaven
 

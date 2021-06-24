@@ -1,7 +1,11 @@
 # Game of Life
 
-```{include} ../class/problems/game_of_life.md
-```
+| Naam         | Beschrijving                                                   |
+|--------------|----------------------------------------------------------------|
+| Onderwerp    | De evolutie van leven                                          |
+| Bestandsnaam | `wk9ex1.py`                                                    |
+| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
+| Opmerking    | **Dit is een bonusopgave**                                     |
 
 ## John Conway's Game of Life
 
@@ -85,7 +89,7 @@ Out[2]: [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]
 
 Je hebt ongetwijfeld gemerkt dat als Python een tweedimensionale lijst afdrukt, het de tweedimensionale structuur compleet negeert en alles platslaat naar een enkele regel (misschien met regelafbreking, als dat nodig is). Om je bord tweedimensionaal af te drukken met ASCII-tekens (we zullen het grafisch weergeven als het helemaal werkt) kan je deze functie kopiëren naar je bestand.
 
-***Let op: er mist één regel!*** Misschien zie je het al...
+**Let op: er mist één regel!** Misschien zie je het al...
 
 ```python
 def print_board(a):
@@ -105,8 +109,10 @@ In [2]: print_board(a)
 
 **Voeg één regel toe* zodat `print_board` onze *tweedimensionale* array tweedimensionaal weergeeft!
 
-!!! tip "`print()`"
-    De betreffende regel is `print()`; een leeg print-statement. *Waar moet deze regel staan?!*
+:::{admonition} `print()`
+:class: tip
+De betreffende regel is `print()`; een leeg print-statement. *Waar moet deze regel staan?!*
+:::
 
 Vergeet niet je verbeterde `print_board` te testen:
 

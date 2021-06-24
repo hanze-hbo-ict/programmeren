@@ -1,7 +1,10 @@
 # Mandelbrot
 
-```{include} ../class/problems/mandelbrot.md
-```
+| Naam         | Beschrijving                                                   |
+|--------------|----------------------------------------------------------------|
+| Onderwerp    | De mandelbrotset en afbeeldingen                               |
+| Bestandsnaam | `wk8ex1.py`                                                    |
+| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 ![Mandelbrot](images/mandelbrot/640px-Mandel_zoom_00_mandelbrot_set.jpg)
 
@@ -96,7 +99,7 @@ Je weet misschien dat het met normale getallen niet mogelijk is om de wortel van
 Je kan je afvragen of dit nog nut buiten de wiskunde heeft; en het antwoord hierop is ja: het blijkt dat bij de berekeneningen over sommige natuurkundige processen je tijdens de berekening imaginaire getallen krijgt, maar als je dat dan allemaal netjes doorrekent, je toch weer op "echte" getallen uitkomt, die bovendien blijken te kloppen met wat we in de werkelijkheid zien.
 :::
 
-De mandelbrotverzameling is de verzameling van alle complexe getallen *c* waarvoor geldt dat dit proces ***niet*** *divergeert* naar oneindigheid naar mate *n* groter wordt. In andere woorden, voor een gegeven *c*, als *z<sub>n</sub>* divergeert naar oneindigheid (dat wil zeggen, als je *z<sub>n</sub>* onbeperkt groot kan maken door *n* steeds groter te kiezen), dan hoort *c* *niet* in de verzameling; anders wel.
+De mandelbrotverzameling is de verzameling van alle complexe getallen *c* waarvoor geldt dat dit proces **niet** *divergeert* naar oneindigheid naar mate *n* groter wordt. In andere woorden, voor een gegeven *c*, als *z<sub>n</sub>* divergeert naar oneindigheid (dat wil zeggen, als je *z<sub>n</sub>* onbeperkt groot kan maken door *n* steeds groter te kiezen), dan hoort *c* *niet* in de verzameling; anders wel.
 
 Je zou kunnen denken dat dit voor alle waardes van *c* zo is, maar dat blijkt niet zo te zijn: in sommige gevallen blijft de waarde bijvoorbeeld rond een bepaald punt cirkelen, of komt het getal juist steeds dichter bij 0.
 

@@ -1,7 +1,10 @@
 # If an Algorithm Wrote This, How Would You Even Know?
 
-```{include} ../class/readings/an_algorithm_wrote_this.md
-```
+| Naam         | Beschrijving                                                   |
+|--------------|----------------------------------------------------------------|
+| Onderwerp    | Kunstmatig gegenereerde teksten                                |
+| Bestandsnaam | `wk10ex0.txt`                                                  |
+| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 Deze week ga je een algoritme schrijven om nieuwe tekst te genereren. Toegegeven, het zal geen hele goede proza maken, maar het resultaat kan soms grappig, of zelfs inzichtelijk, zijn.
 

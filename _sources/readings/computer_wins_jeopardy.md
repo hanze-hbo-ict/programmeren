@@ -1,7 +1,11 @@
 # Computer Wins on 'Jeopardy'
 
-```{include} ../class/readings/computer_wins_jeopardy.md
-```
+| Naam         | Beschrijving                                                   |
+|--------------|----------------------------------------------------------------|
+| Onderwerp    | Slimme computers?                                              |
+| Bestandsnaam | `wk3ex0.txt`                                                   |
+| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
+
 ## Het artikel
 
 Het artikel van deze week gaat over het software- (en hardware-)systeem *Watson* van IBM, dat twee menselijke kampioenen van het TV-programma Jeopardy verslagen heeft!

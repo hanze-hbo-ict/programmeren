@@ -7,8 +7,11 @@ csa-level: proficiency
 
 # Picobot
 
-```{include} ../class/problems/picobot_1.md
-```
+| Naam         | Beschrijving                                                   |
+|--------------|----------------------------------------------------------------|
+| Onderwerp    | Een eerste kennismaking met Picobot                            |
+| Bestandsnaam | `wk1ex3.txt`                                                   |
+| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 In dit probleem maak je kennis met Picobot, een eenvoudige "robot". Zijn doel is om een omgeving volledig te verkennen en geen pixel mag onbezocht blijven!
 

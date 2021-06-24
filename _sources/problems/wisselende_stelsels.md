@@ -1,7 +1,10 @@
 # Wisselende stelsels
 
-```{include} ../class/problems/wisselende_stelsels.md
-```
+| Naam         | Beschrijving                                                   |
+|--------------|----------------------------------------------------------------|
+| Onderwerp    | Getallen omzetten naar verschillende grondtallen               |
+| Bestandsnaam | `wk5ex2.py`                                                    |
+| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 De volgende problemen hebben allemaal te maken met de weergave van grondtallen en het converteren of het berekenen ervan.
 

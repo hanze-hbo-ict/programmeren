@@ -1,7 +1,10 @@
 # Terminal, teksteditors en Python
 
-```{include} ../class/problems/python_intro.md
-```
+| Naam         | Beschrijving                                                    |
+|--------------|-----------------------------------------------------------------|
+| Onderwerp    | Een eerste kennismaking met de terminal, teksteditors en Python |
+| Bestandsnaam | `wk1ex1.py`                                                     |
+| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope  |
 
 Het **doel** van deze opgave is om:
 

@@ -7,8 +7,11 @@ csa-level: proficiency
 
 # Interactieve fictie
 
-```{include} ../class/problems/interactieve_fictie.md
-```
+| Naam         | Beschrijving                                                   |
+|--------------|----------------------------------------------------------------|
+| Onderwerp    | Schrijf interactieve fictie in Python                          |
+| Bestandsnaam | `wk1ex2b.py`                                                   |
+| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 In deze opgave ga je interactieve fictie in Python schrijven, en met *interactieve* fictie bedoelen we een *kies-je-eigen-avontuur* programma!
 
