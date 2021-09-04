@@ -23,26 +23,26 @@ Als je eerder klaar bent, kan je met iets anders aan de slag, maar je mag ook ve
 
 We gebruiken bij Programmeren I software die je misschien nog niet hebt. Je hebt de volgende programma's nodig:
 
-* **Python**; wij gebruiken de versie die Anaconda Python heet (Anaconda-versie 2020.02, die bevat Python-versie 3.7). *Je hebt Python 3.x nodig*.
-* **Een teksteditor**; geen tekstverwerker; om je Python-bestanden te bewerken. We raden VSCode aan, een gratis, veel gebruikte tekstverwerker die beschikbaar is voor alle besturingssystemen (Mac, Windows en Linux). *Als je al een favoriete teksteditor hebt, kan je die ook gebruiken.*
+* **Python**; wij gebruiken de versie die Anaconda Python heet (Anaconda-versie 2021.05, die bevat Python-versie 3.8). *Je hebt Python 3.x nodig*.
+* **Een teksteditor**; geen tekstverwerker; om je Python-bestanden te bewerken. We raden [VSCode]() aan, een gratis, veel gebruikte tekstverwerker die beschikbaar is voor alle besturingssystemen (Mac, Windows en Linux). *Als je al een favoriete teksteditor hebt, kan je die ook gebruiken.*
 
 ### Downloaden en installeren
 
 **Voor Mac-gebruikers:**
 
-* Download [Anaconda Python 2020.02 (met Python 3.7)](https://repo.anaconda.com/archive/Anaconda3-2020.02-MacOSX-x86_64.pkg)
+* Download [Anaconda Python](https://repo.anaconda.com/archive/Anaconda3-2021.05-MacOSX-x86_64.pkg)
 
   Installeer VSCode ***WEL*** als er om gevraagd wordt; de andere defaults staan goed.
 
 **Voor Windows-gebruikers:**
 
-* Download [Anaconda Python 2019.03 (met Python 3.7)](https://repo.anaconda.com/archive/Anaconda3-2020.02-Windows-x86_64.exe)
+* Download [Anaconda Python](https://repo.anaconda.com/archive/Anaconda3-2021.05-Windows-x86_64.exe)
 
   Installeer VSCode ***WEL*** als er om gevraagd wordt; de andere defaults staan goed.
 
 **Voor Linux-gebruikers:**
 
-* Download [Anaconda Python 2019.03 (met Python 3.7)](https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh), vermoedelijk staan alle defaults goed.
+* Download [Anaconda Python](https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh), vermoedelijk staan alle defaults goed.
 * Als hierbij VSCode niet geïnstalleerd wordt, [kan je de teksteditor VSCode hier vinden](https://code.visualstudio.com/download) en deze installeren: ook hier zullen de defaults goed staan.
 * Je hebt geen terminalprogramma nodig. De ingebouwde `Terminal` van Linux, of de terminal van VSCode zijn afdoende.
 
@@ -50,7 +50,7 @@ We gebruiken bij Programmeren I software die je misschien nog niet hebt. Je hebt
 
 Geen probleem; als je Anaconda Python installeert, zou deze zonder problemen tegelijk met je andere Python-versies op je computer moeten kunnen staan.
 
-We gebruiken in dit vak Python 3. De installatie van Anaconda bevat ook een aantal handige extra bibliotheken.
+Let op, we gebruiken in dit vak Python 3. De installatie van Anaconda bevat ook een aantal handige extra bibliotheken.
 
 Als je eerder met Python 2 gewerkt hebt,
 [vat deze pagina de verschillen tussen Python 2 en Python 3 samen](/support/python2_vs_python3.md). (Korte versie: het is grotendeels hetzelfde...)

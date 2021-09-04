@@ -474,6 +474,7 @@ Na 20 generaties zou je een maximale fitness van 80% tot 90% moeten zien, soms z
 
 Je moet dit project in drie stappen inleveren: het begin in week 11, de milestone in week 12 en ten slotte de oplevering.
 
+(picobot-start)=
 ### Begin
 
 Het begin, `begin.py`, moet aan de volgende eisen voldoen:
@@ -483,6 +484,7 @@ Het begin, `begin.py`, moet aan de volgende eisen voldoen:
 
 Lever dit bestand, samen met je uitleg hierover in `begin.txt`, in Gradescope in als onderdeel van het huiswerk van week 11.
 
+(picobot-milestone)=
 ### Milestone
 
 De milestone, `milestone.py`, moet aan de volgende eisen voldoen:
