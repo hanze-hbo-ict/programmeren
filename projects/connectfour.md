@@ -487,6 +487,7 @@ Vergeet niet een beschrijving bij te voegen met daarin informatie over hoe we je
 
 Je moet dit project in drie stappen inleveren: het begin in week 11, de milestone in week 12 en ten slotte de oplevering.
 
+(connectfour-start)=
 ### Begin
 
 Het begin, `begin.py`, moet aan de volgende eisen voldoen:
@@ -496,6 +497,7 @@ Het begin, `begin.py`, moet aan de volgende eisen voldoen:
 
 Lever dit bestand, samen met je uitleg hierover in `begin.txt`, in Gradescope in als onderdeel van het huiswerk van week 11.
 
+(connectfour-milestone)=
 ### Milestone
 
 De milestone, `milestone.py`, moet aan de volgende eisen voldoen:

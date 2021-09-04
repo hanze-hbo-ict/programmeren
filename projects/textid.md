@@ -121,7 +121,7 @@ Dit zou niets moeten afdrukken; als je code niet werkt krijg je een `AssertionEr
 
 De methode `make_sentence_lengths(self)` moet de tekst in `self.text` gebruiken om de dictionary `self.sentence_lengths` te vullen.
 
-Je kan hier voorbouwen op de code die je eerder hebt geschreven voor de [Markov-opgave](../week10/wk10ex3.md) om het einde van zinnen te herkennen.
+Je kan hier voorbouwen op de code die je eerder hebt geschreven voor de [Markov-opgave](/problems/tekst_genereren.md) om het einde van zinnen te herkennen.
 
 Je kan onderstaande code gebruiken om je resultaten te controleren.
 
@@ -623,6 +623,7 @@ Extra's zijn natuurlijk welkom, bijvoorbeeld,
 
 Je moet dit project in drie stappen inleveren: het begin in week 11, de milestone in week 12 en ten slotte de oplevering.
 
+(textid-start)=
 ### Begin
 
 Het begin, `begin.py`, moet aan de volgende eisen voldoen:
@@ -633,6 +634,7 @@ Het begin, `begin.py`, moet aan de volgende eisen voldoen:
 
 Lever dit bestand, samen met je uitleg hierover in `begin.txt`, in Gradescope in als onderdeel van het huiswerk van week 11.
 
+(textid-milestone)=
 ### Milestone
 
 De milestone, `milestone.py`, moet aan de volgende eisen voldoen:

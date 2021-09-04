@@ -1,6 +1,10 @@
 # TR Investeringen BV
 
-(25 punten en maximaal 5 bonuspunten; bestandsnaam `wk8ex4.py`)
+| Naam         | Beschrijving                                                   |
+|--------------|----------------------------------------------------------------|
+| Onderwerp    | Slim investeren met Python                                     |
+| Bestandsnaam | `wk8ex4.py`                                                    |
+| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 ```{warning}
 Je mag **geen** gebruik maken van de ingebouwde functies `sum`, `min` of `max` in deze opgave. Schrijf in plaats daarvan bij het bouwen van de verschillende menu-opties hulpfuncties die de gegevens op de juiste manier kunnen verwerken. Als je deze functies *echt* wilt gebruiken, schrijf dan je eigen versies hiervan. (voorbeelden hiervan worden tijdens het college behandeld)

@@ -1,6 +1,6 @@
 ![](../images/header.jpg)
 
-![](../images/itan_logo_black_wordmark.png)
+![](../images/itan_logo_black_wordmark.png) ![](../images/hanze_logo_black_wordmark.png)
 
 # Programmeren
 
@@ -21,8 +21,3 @@ Wekelijks wordt aan een aantal opgaven gewerkt. Practicumopgaven worden tijdens 
 ![CS for All](../images/cs_for_all.jpg)
 
 Deze cursus maakt gebruik van het boek *CS for All*{cite}`alvarado2019cs`.
-
-## Verwijzingen
-
-```{bibliography}
-```

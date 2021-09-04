@@ -131,6 +131,7 @@ Als je code wilt voor realistische "elastische" botsingen, kan je [dit codevoorb
 
 Je moet dit project in drie stappen inleveren: het begin in week 11, de milestone in week 12 en ten slotte de oplevering.
 
+(vpython-start)=
 ### Begin
 
 Het begin, `begin.py`, moet aan de volgende eisen voldoen:
@@ -145,6 +146,7 @@ Daarnaast moet de uitleg, `begin.txt`, aan de volgende eisen voldoen:
 
 Lever deze twee bestanden in Gradescope in als onderdeel van het huiswerk van week 11.
 
+(vpython-milestone)=
 ### Milestone
 
 De milestone, `milestone.py`, moet aan de volgende eisen voldoen:

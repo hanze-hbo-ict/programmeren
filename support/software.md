@@ -37,8 +37,6 @@ We volgen de aanbevelingen van Microsoft voor [Python op Windows](https://docs.m
 
 ![Python Installer](images/python_installer.png)
 
-![Windows Store](images/windows_store_python.png)
-
 :::{admonition} WSL
 :class: info
 
