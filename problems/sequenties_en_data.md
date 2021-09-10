@@ -173,7 +173,7 @@ Let op het volgende om jouw bestand in IPython te kunnen uitvoeren:
 
 Een geschiedenis wordt bijgehouden van alles wat je al eerder op de command line hebt getypt en zo kan je eerdere commandos terughalen met pijltje omhoog.
 
-Een ander hulpmiddel dat je op de command line kan gebruiken is *Tab completion*, dat wil zeggen, laat de shell voorzover mogelijk het commando aanvullen zolang het uniek is. Bijvoorbeeld, je wilt jouw bestand `mijn_bestand.py` laten uitvoeren in IPython, dan zal je waarschijnlijk aan `run mijn<Tab>` genoeg hebben om het door de shell te laten aanvullen tot `run mijn_bestand.py` (`<Tab>` is natuurlijk de tab-toets op jouw toetsenbord!).
+Een ander hulpmiddel dat je op de command line kan gebruiken is *Tab completion*, dat wil zeggen, laat de shell voorzover mogelijk het commando aanvullen zolang het uniek is. Bijvoorbeeld, je wilt jouw bestand `wk2ex1.py` laten uitvoeren in IPython, dan zal je waarschijnlijk aan `run wk2ex<Tab>` genoeg hebben om het door de shell te laten aanvullen tot `run wk2ex1.py` (`<Tab>` is natuurlijk de tab-toets op jouw toetsenbord!).
 :::
 
 ### Lijsten maken en bewerken

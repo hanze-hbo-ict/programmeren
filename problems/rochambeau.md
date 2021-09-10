@@ -66,7 +66,7 @@ def rps():
 
 ## En verder!
 
-Voer in ipython vanuit de juiste directory het bestand uit met `run  mijn_bestand.py` (wijzig `mijn_bestand.py` natuurlijk in de naam van jouw bestand).
+Voer in ipython vanuit de juiste directory het bestand uit met `run  wk1ex2a.py`.
 
 -   Met `run` wordt het bestand door ipython ingelezen. Elke keer dat je het bestand wijzigt zal je dit steeds weer moeten uitvoeren, je kan het commando terughalen met pijltje omhoog (dit scheelt typwerk!).
 -   Als het bestand succesvol is ingelezen, typ dan `rps()` om de functie `rps` uit te voeren.
