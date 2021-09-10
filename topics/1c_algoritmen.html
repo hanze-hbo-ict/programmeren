@@ -1,0 +1,1495 @@
+
+<!DOCTYPE html>
+
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Algoritmen &#8212; Programmeren</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "misja/programmeren");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://misja.github.io/programmeren/topics/1c_algoritmen.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Zoeken" href="../search.html" />
+    <link rel="next" title="Programmeren" href="2a_programmeren.html" />
+    <link rel="prev" title="Condities" href="1b_condities.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/mascot.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Programmeren</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/syllabus.html">
+   Programmeren
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Opmerkingen
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/feedback.html">
+   Anoniem feedbackformulier
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/faq.html">
+   Veelgestelde vragen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/references.html">
+   Literatuur
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 1
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../course/week_1.html">
+   Onderwerpen
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="1a_introductie.html">
+     Introductie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1b_condities.html">
+     Condities
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Algoritmen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2a_programmeren.html">
+     Programmeren
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2b_picobot.html">
+     Picobot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/opgaven_1.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/python_intro.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/guugu_yimithirr.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/rochambeau.html">
+     Rochambeau
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/interactieve_fictie.html">
+     Interactieve fictie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/picobot_1.html">
+     Picobot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/picobot_2.html">
+     Picobot II: Picobot Strikes Back
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/picobot_3.html">
+     Picobot III: Return of the Picobot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/picobot_4.html">
+     Picobot IV: The Picobot Menace
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/week_2.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3a_data.html">
+     Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3b_strings_en_lists.html">
+     Strings en lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="4a_functies.html">
+     Functies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="4b_recursie.html">
+     Recursie
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/opgaven_2.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/sequenties_en_data.html">
+     Practicum I
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/fijne_functies.html">
+     Practicum II
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/end_of_theory.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/feest_met_functies.html">
+     Feest met functies
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 3
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/week_3.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5a_simulatie.html">
+     Simulatie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5b_turtle_recursie.html">
+     Turtle en recursie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="6a_list_comprehension.html">
+     List comprehension
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/opgaven_3.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/python_turtles.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/computer_wins_jeopardy.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/slaapwandelende_student.html">
+     Slaapwandelende student
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/numerieke_integratie.html">
+     Numerieke integratie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/turtles_tot_het_einde.html">
+     Turtles all the way down
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 4
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/week_4.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="7a_data_based_design.html">
+     Data based design
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="7b_rekenen_met_taal.html">
+     Rekenen met taal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="8_ontwerp_algoritmen.html">
+     Ontwerp van algoritmen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/opgaven_4.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/klinkt_goed.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/universum_simulatie.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/caesar_op_orde.html">
+     Caesar op orde
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 5
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/week_5.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="9a_talstelsels.html">
+     Talstelsels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="9b_binaire_getallen.html">
+     Binaire getallen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10_bewerkingen_met_bits.html">
+     Bewerkingen met bits
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/opgaven_5.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/decimaal_en_verder.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/bug_and_crash.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/wisselende_stelsels.html">
+     Wisselende stelsels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/fraaie_plaatjes.html">
+     Fraaie plaatjes
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 6
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/week_6.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="11a_logische_schakelingen.html">
+     Logische schakelingen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/opgaven_6.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/optellingen_schakelen.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/just_add_water.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/vermenigvuldigingswaanzin.html">
+     Vermenigvuldigingswaanzin
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/eerlijke_verdeling.html">
+     Een eerlijke verdeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/geheugenproblemen.html">
+     Geheugenproblemen
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 7
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../course/week_7.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/opgaven_7.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/hmmm_assembly.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/hijacked_minds.html">
+     Leesopave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/macht_van_hmmm.html">
+     De macht van hmmm
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/feest_met_fibonacci.html">
+     Feest met Fibonacci
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/macht_van_recursie.html">
+     De macht van recursie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/een_lus_om_python.html">
+     Een lusje om Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/fibonacci_recursief.html">
+     Fibonacci recursief
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 8
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../course/week_8.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/opgaven_8.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/mandelbrot.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/algoritmen_discrimineren.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/pythonbat_lussen.html">
+     PythonBat lussen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/pi_pijlen.html">
+     Pi met pijltjes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/tr_investeringen.html">
+     TR Investeringen B.V.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/ascii_art.html">
+     ASCII Art
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 9
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../course/week_9.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/opgaven_9.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/game_of_life.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/horseless_driverless.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/boter_kaas_eieren.html">
+     Boter kaas en eieren
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/rij_van_conway.html">
+     Lees en huiver
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/week_10.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="19_objecten.html">
+     Objecten en klassen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="20_dictionaries.html">
+     Dictionaries
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/opgaven_10.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/eeuwigdurende_kalender.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/an_algorithm_wrote_this.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/tekst_genereren.html">
+     Teksten genereren
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/vier_op_een_rij.html">
+     Vier op een rij
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 11
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../course/week_11.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/opgaven_11.html">
+   Opaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/buitenaards_python.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/chess_championship.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/vier_op_een_rij_ai.html">
+     AI voor vier op een rij
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 12
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../course/week_12.html">
+   Onderwerpen
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/opgaven_12.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+  <label for="toctree-checkbox-19">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/life_of_pi.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/finite_state_machines.html">
+     Finite state machines
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Projecten
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/vpython.html">
+   VPool
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/connectfour.html">
+   ConnectFour
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/textid.html">
+   TextID
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/picobot.html">
+   Picobot
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Voorbeelden
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/recursie.html">
+   Recursie
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/design_recipe.html">
+   Functie ontwerp
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Oefening
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../practice/1_recursie.html">
+   Recursie
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../practice/2_list_comprehension.html">
+   List comprehension
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../practice/3a_toets.html">
+   Zelftoets
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+  <label for="toctree-checkbox-20">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../practice/3b_toets_uitwerking.html">
+     Uitwerking
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/platte_tekst.html">
+   Tekstbestanden
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python_browser.html">
+   Python in de browser
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python2_vs_python3.html">
+   Python 2 versus Python 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/software.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/hmmm.html">
+   Hmmmm assembly
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
+                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/topics/1c_algoritmen.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Bronopslagplaats"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/1c_algoritmen.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open een probleem"><i class="fas fa-lightbulb"></i>open probleem</button></a>
+        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/topics/1c_algoritmen.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="bewerk deze pagina"><i class="fas fa-pencil-alt"></i>suggereren bewerken</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
+        title="Volledig scherm"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/misja/programmeren/master?urlpath=lab/tree/topics/1c_algoritmen.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lancering Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Lancering Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhoud
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#input">
+   Input
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kiezen">
+   Kiezen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#output">
+   Output
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#steen-papier-en-schaar">
+   Steen, papier en schaar
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rock-paper-scissors-lizard-spock">
+     Rock, Paper, Scissors, Lizard, Spock
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#het-probleem">
+   Het probleem
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Input
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Output
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condities">
+     Condities
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python">
+   Python
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Input
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     Output
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Condities
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#uitwerking">
+   Uitwerking
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="algoritmen">
+<h1>Algoritmen<a class="headerlink" href="#algoritmen" title="Permalink naar deze titel">¶</a></h1>
+<p><img alt="input, output" src="../_images/input_output1.png" /></p>
+<p>Bijna alle vragen zijn te beschrijven als een <em>input</em>-, <em>output</em> probleem, de uitdaging van programmeren is het bedenken <em>hoe</em> het kan worden opgelost.</p>
+<p>Een algoritme is een stappenplan, een recept, om van een bepaalde <em>input</em> tot een gewenste <em>output</em> te komen.</p>
+<p>Dit klinkt abstract! We gaan proberen het concreet te maken met een voorbeeld waar het doel is het spel steen, papier en schaar tegen een computer te spelen.</p>
+<p>Maar voordat we het spel kunnen gaan spelen moeten we eerst stilstaan bij wat <em>input</em> en <em>output</em> kan zijn…</p>
+<div class="section" id="input">
+<h2>Input<a class="headerlink" href="#input" title="Permalink naar deze titel">¶</a></h2>
+<ul class="simple">
+<li><p>met een gebruikersnaam en wachtwoord inloggen op een site</p></li>
+<li><p>het herkennen van dieren op een foto</p></li>
+<li><p>het plaatsen van een bestelling in een webwinkel</p></li>
+</ul>
+<p>Input heeft vele mogelijke vormen, je zou hier misschien meer voorbeelden kunnen bedenken? In alle gevallen zal de <em>input</em> het begin zijn van één of meer handelingen (<em>algoritme</em>) die nodig zijn om tot een gewenst resultaat  te komen (<em>output</em>).</p>
+<p><img alt="kiezen" src="../_images/AB-Vzw1.png" /></p>
+<p>Op basis van de input zal het algoritme (de website, de app) vaak keuzen moeten maken. Dit zijn dezelfde keuzen die jij ook vaak zal moeten maken, bijvoorbeeld als je voor een kruising staat: sla je links- of rechtsaf om thuis te komen?</p>
+</div>
+<div class="section" id="kiezen">
+<h2>Kiezen<a class="headerlink" href="#kiezen" title="Permalink naar deze titel">¶</a></h2>
+<ul class="simple">
+<li><p>is de combinatie van gebruikersnaam en wachtwoord geldig?</p></li>
+<li><p>is de afbeelding op de foto een hond of een kat (of anders)?</p></li>
+<li><p>staat voldoende saldo op de rekening voor een aankoop?</p></li>
+</ul>
+<p>Op basis van een input zal het algoritme een keuze moeten maken…</p>
+</div>
+<div class="section" id="output">
+<h2>Output<a class="headerlink" href="#output" title="Permalink naar deze titel">¶</a></h2>
+<ul class="simple">
+<li><p>de login is helaas ongeldig, probeer het opnieuw</p></li>
+<li><p>de afbeelding is van een kat</p></li>
+<li><p>onvoldoende saldo, deze aankoop wordt geannuleerd</p></li>
+</ul>
+<p>Dit zijn mogelijke uitkomsten, de keuzes die een algoritme maakt bepalen de output!</p>
+</div>
+<div class="section" id="steen-papier-en-schaar">
+<h2>Steen, papier en schaar<a class="headerlink" href="#steen-papier-en-schaar" title="Permalink naar deze titel">¶</a></h2>
+<p><img alt="RPS-3" src="../_images/RPS-3_NL2.png" /></p>
+<p>We gaan het spel steen, papier en schaar spelen tegen de computer. Het programma zal steeds moeten kiezen: wie is volgens de regels van het spel de winnaar?</p>
+<div class="section" id="rock-paper-scissors-lizard-spock">
+<h3>Rock, Paper, Scissors, Lizard, Spock<a class="headerlink" href="#rock-paper-scissors-lizard-spock" title="Permalink naar deze titel">¶</a></h3>
+<p><img alt="RPS-5" src="../_images/RPSLS.png" /></p>
+<p>Een variant met 5 opties (RPS-5)! Dit is een variant met de toevoeging van <em>lizard</em> en <em>Spock</em> (van de serie Star Trek), zoals te zien in een aflevering van de <a class="reference external" href="https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock">Big Bang Theory</a> - volg de link voor de spelregels.</p>
+<p><img alt="RPS Association" src="../_images/rps_association.png" /></p>
+<p><strong>The World Rock Paper Scissors Association: <a class="reference external" href="https://www.wrpsa.com">https://www.wrpsa.com</a></strong></p>
+<p>Als je dacht dat steen papier en schaar zomaar een spel is dan vergis je je! Er is zelfs een heuse <em>World Rock Paper Scissors Association</em> waar je met anderen het spel kan spelen en het is ook dé plek voor het bedenken van nieuwe varianten.</p>
+<p><img alt="RPS-15" src="../_images/RPS-15.png" /></p>
+<p>Een variant met 15 opties (RPS-15)! Als dit jouw ding is dan is <strong><a class="reference external" href="https://www.wrpsa.com">The World Rock Paper Scissors Association</a></strong> de plek om het te gaan spelen…</p>
+<p>Je ziet dat de <em>complexiteit</em> heel snel toeneemt maar het probleem blijft hetzelfde! Op basis van de <em>input</em> van de computer en een gebruiker zal het algoritme nog steeds dezelfde keuzen moeten maken om volgens de regels van het spel tot een <em>output</em> te komen.</p>
+</div>
+</div>
+<div class="section" id="het-probleem">
+<h2>Het probleem<a class="headerlink" href="#het-probleem" title="Permalink naar deze titel">¶</a></h2>
+<p><img alt="input, output" src="../_images/input_output1.png" /></p>
+<p>We gaan nu terug naar waar we mee zijn begonnen, hoe kunnen we steen, papier en schaar uitwerken als een <em>input</em>-, <em>output</em> probleem? Wat is de <em>input</em> en wat is de mogelijke <em>output</em> en misschien het meest belangrijk, <strong>hoe</strong> (met welk algoritme) komen we tot de output?</p>
+<div class="section" id="id1">
+<h3>Input<a class="headerlink" href="#id1" title="Permalink naar deze titel">¶</a></h3>
+<p>Een lijst van mogelijke opties: “steen”, “papier” of “schaar”</p>
+<ol class="simple">
+<li><p>Gebruiker: toetsenbord</p></li>
+<li><p>Computer: een willekeurige (random) keus uit de lijst</p></li>
+</ol>
+</div>
+<div class="section" id="id2">
+<h3>Output<a class="headerlink" href="#id2" title="Permalink naar deze titel">¶</a></h3>
+<p>Een tekst op het scherm, mogelijke uitkomsten:</p>
+<ol class="simple">
+<li><p>“Gelijkspel”</p></li>
+<li><p>“Ik win!” (de <em>computer</em> wint)</p></li>
+<li><p>“Jij wint…” (de <em>gebruiker</em> wint)</p></li>
+</ol>
+<p><img alt="RPS boom A" src="../_images/1a_decision_tree.png" /></p>
+<p>Als je kijkt naar de input zie je <code class="docutils literal notranslate"><span class="pre">comp</span></code> en <code class="docutils literal notranslate"><span class="pre">user</span></code>, waar <code class="docutils literal notranslate"><span class="pre">comp</span></code> verwijst naar de waarde die de computer heeft gekozen en <code class="docutils literal notranslate"><span class="pre">user</span></code> naar de waarde die de gebruiker heeft gekozen. Het met een <em>naam</em> verwijzen naar een waarde is iets dat je straks in Python ook terug zult zien komen!</p>
+<p>De mogelijke <em>output</em>s staan bij het spel altijd vast, daar zijn geen verwijzingen voor nodig want een output is in dit geval een vaste <em>tekst</em>. Let op, we gebruiken hier aanhalingstekens (“) om aan te geven dat het een <em>letterlijke</em> tekst betreft en het gebruik van aanhalingstekens om iets als tekst aan te duiden zal je ook in Python terugzien!</p>
+</div>
+<div class="section" id="condities">
+<h3>Condities<a class="headerlink" href="#condities" title="Permalink naar deze titel">¶</a></h3>
+<p>Kiezen: naar links of naar rechts?</p>
+<p>Het vergelijken van input!</p>
+<p><img alt="RPS boom B" src="../_images/1b_decision_tree.png" /></p>
+<p>Nu komen we terug op kiezen: een conditie (een voorwaarde, en soms ook een test genoemd) kan maar twee mogelijke uitkomsten hebben: <em>waar</em> (True) of <em>niet waar</em> (False).</p>
+<p>Laten we beginnen met de meest voor de hand liggende conditie, het geval dat de input van de computer gelijk is aan die van de gebruiker. Als de inputs gelijk zijn (de conditie is waar, of <em>True</em>) dan is het spel klaar en is de output duidelijk (“Gelijkspel”).</p>
+<p>Let op, <code class="docutils literal notranslate"><span class="pre">==</span></code> betekent hier <em>is gelijk aan</em> en dit is de eerste Python <em>syntax</em> waar je mee kennismaakt! Waarom geen enkele <code class="docutils literal notranslate"><span class="pre">=</span></code> zal je jezelf misschien afvragen? De enkele <code class="docutils literal notranslate"><span class="pre">=</span></code> wordt al voor iets anders  gebruikt zoals we straks zullen zien wanneer we het volledige algoritme in Python gaan schrijven!</p>
+<p>Maar wat als dit niet het geval is (de conditie is niet waar, of <em>False</em>)?</p>
+<p><img alt="RPS boom C" src="../_images/1c_decision_tree.png" /></p>
+<p>De inputs van de computer en gebruiker verschillen en nu moeten we op zoek naar de winnende combinaties. We kiezen het perspectief van de computer en gaan door met een eerstvolgende conditie, het geval dat de computer “steen” heeft gekozen. Nu kunnen we weer twee kanten op!</p>
+<p>In deze situatie kan de computer alleen maar winnen als de gebruiker “schaar” heeft gekozen, dus daar zullen we op moeten vergelijken, en dit is een nieuwe conditie die aan het diagram kan worden toegevoegd.</p>
+<p><img alt="RPS boom D" src="../_images/1d_decision_tree.png" /></p>
+<p>De nieuwe conditie (als de gebruiker “schaar” heeft gekozen) kent natuurlijk ook maar twee mogelijke uitkomsten. Indien dit waar is (True) heeft de computer gewonnen en is de output “Ik win!”, als dit niet waar is (False) dan is de output “Jij wint…” en is het einde van het spel (programma) bereikt.</p>
+<p>Wat moet nu volgen als de computer <em>niet</em> voor “steen” heeft gekozen? We zullen dan op dezelfde manier de andere mogelijke combinaties moeten langslopen (de computer heeft óf “papier” óf “schaar” gekozen).</p>
+<p><img alt="RPS boom" src="../_images/decision_tree1.png" /></p>
+<p>Hier zie je alle mogelijkheden verder uitgewerkt. Merk op dat de laatste conditie waar we de input van de computer testen (<code class="docutils literal notranslate"><span class="pre">comp</span> <span class="pre">==</span> <span class="pre">&quot;schaar&quot;</span></code>) alleen maar waar kan zijn, het is de enige optie die overblijft en moét daarom wel waar zijn.</p>
+<p>We hebben het probleem nu opgelost maar nu willen we dit laten uitvoeren door een computer. De computer zal ons diagram niet begrijpen en de oplossing zal vertaald moeten worden naar een vorm die een computer wél kan lezen en uitvoeren en hier is een <em>programeertaal</em> voor nodig.</p>
+<p>Eindelijk komen we nu toe aan Python!</p>
+<p>Terzijde, je ziet dat we veel tijd hebben besteed aan het uitdenken van het algoritme (het stappenplan, of recept) voor het spel steen, papier en schaar. Dit is natuurlijk logisch, want we moeten eerst een oplossing hebben voordat we het überhaupt kunnen schrijven in een programeertaal…</p>
+</div>
+</div>
+<div class="section" id="python">
+<h2>Python<a class="headerlink" href="#python" title="Permalink naar deze titel">¶</a></h2>
+<p><img alt="Python logo" src="../_images/python_logo.png" /></p>
+<p>Python heeft een eigen logo, twee pythons om elkaar heen geslingerd en misschien heb je het al eens eerder gezien? Maar als we naar de geschiedenis kijken verwijst de naam Python naar iets heel anders dan slangen!</p>
+<p><img alt="Guido van Rossum" src="../_images/guido.jpg" /></p>
+<p>De programmeertaal Python is in 1991 ontworpen door Guido van Rossum in de tijd dat hij werkte bij de Universiteit van Amsterdam. Guido is fan van het Britse comedygezelschap <a class="reference external" href="https://en.wikipedia.org/wiki/Monty_Python%27s_Flying_Circus">Monty Python’s Flying Circus</a> en dit was de inspiratie voor de naam Python.</p>
+<p><img alt="Monty Python's Flying Circus" src="../_images/python_flying_circus.jpg" /></p>
+<p>Python is inmiddels uitgegroeid tot één van de meest populaire programmeertalen en wordt tegenwoording voor een groot aantal toepassingen gebruikt, bijvoorbeeld voor webapplicaties, <a class="reference external" href="https://en.wikipedia.org/wiki/Machine_learning">machine learning</a>, <a class="reference external" href="https://twitter.com/ThePSF/status/1362516507918483458">missies naar Mars</a> en nu ook voor steen, papier en schaar!</p>
+<div class="section" id="id3">
+<h3>Input<a class="headerlink" href="#id3" title="Permalink naar deze titel">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Jouw keus? &quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Hoe kan de input van een gebruiker, in dit geval wat een gebruiker heeft getypt door een computer worden gelezen?</p>
+<p><code class="docutils literal notranslate"><span class="pre">input</span></code> is een <em>functie</em>. Een functie is een “verpakt” algoritme en in dit geval is het een algoritme dat de door de gebruiker getypte karakters (input) verzamelt en deze verzameling van karakters als <em>output</em> heeft.</p>
+<p>Een functie kan ook input accepteren, in dit geval is het de tekst: “Jouw keus? “. We zullen strak zien dat de functie <code class="docutils literal notranslate"><span class="pre">input</span></code> dit gebruikt om deze vriendelijke tekst op het scherm af te drukken (een output!) om de gebruiker om input te vragen.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">user</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Jouw keus? &quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Denk aan het uitgewerkte diagram, de input van de gebruiker hebben we meerdere keren nodig en we verwezen daar steeds naar via de naam <code class="docutils literal notranslate"><span class="pre">user</span></code>.</p>
+<p>Hier geven we de output van de functie <code class="docutils literal notranslate"><span class="pre">input</span></code> deze naam, lees dit als <em>ken het reusltaat (output) van de functie <code class="docutils literal notranslate"><span class="pre">input</span></code> toe aan de naam <code class="docutils literal notranslate"><span class="pre">user</span></code></em>.</p>
+<p>En let op, voor voor deze toekenning wordt een enkele <code class="docutils literal notranslate"><span class="pre">=</span></code> gebruikt!</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">comp</span> <span class="o">=</span> <span class="n">choice</span><span class="p">([</span><span class="s2">&quot;steen&quot;</span><span class="p">,</span> <span class="s2">&quot;papier&quot;</span><span class="p">,</span> <span class="s2">&quot;schaar&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>De input van de computer zal een keus zijn, een <em>willekeurige</em> keus uit de lijst van mogelijke opties “steen”, “papier” of “schaar”. Ook hier gebruiken we een functie, <code class="docutils literal notranslate"><span class="pre">choice</span></code>, en net als <code class="docutils literal notranslate"><span class="pre">input</span></code> accepteert het een input, in dit geval een lijst van mogelijke opties. De output van de functie <code class="docutils literal notranslate"><span class="pre">choice</span></code> kennen we toe aan de naam <code class="docutils literal notranslate"><span class="pre">comp</span></code>.</p>
+<p>Je ziet hier dat je met vierkante haken in Python een <em>lijst</em> van waarden kan uitdrukken, in dit geval de opties van het spel: <code class="docutils literal notranslate"><span class="pre">[&quot;steen&quot;,</span> <span class="pre">&quot;papier&quot;,</span> <span class="pre">&quot;schaar&quot;]</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
+</pre></div>
+</div>
+<p>De functies <code class="docutils literal notranslate"><span class="pre">print</span></code> en <code class="docutils literal notranslate"><span class="pre">input</span></code> kan je altijd gebruiken, maar dit is niet het geval voor <em>alle</em> Python functies, bijvoorbeeld de functie <code class="docutils literal notranslate"><span class="pre">choice</span></code>. In dit geval zal je Python moeten laten weten dat je deze functie wilt gaan gebruiken. Python heeft standaard een groot aantal <em>modules</em> met additionele functies en in dit geval zeggen we gebruik de functie <code class="docutils literal notranslate"><span class="pre">choice</span></code> uit de module <code class="docutils literal notranslate"><span class="pre">random</span></code>.</p>
+<p>Waarom kan je <code class="docutils literal notranslate"><span class="pre">print</span></code> en <code class="docutils literal notranslate"><span class="pre">input</span></code> altijd gebruiken zonder dat je ze hoeft te <em>importeren</em>, maar <code class="docutils literal notranslate"><span class="pre">choice</span></code> weer wel? Dit is een bewuste keuze, <code class="docutils literal notranslate"><span class="pre">print</span></code> en <code class="docutils literal notranslate"><span class="pre">input</span></code> worden zó vaak in programma’s gebruikt dat ze voor ons gemak altijd al worden geïmporteerd.</p>
+<p>Let op, import <em>statements</em> als deze plaats je altijd bovenaan jouw programma!</p>
+</div>
+<div class="section" id="id4">
+<h3>Output<a class="headerlink" href="#id4" title="Permalink naar deze titel">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ik win!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Voor de output van het algoritme gebruiken we weer een functie! De functie <code class="docutils literal notranslate"><span class="pre">print</span></code> zal de waarde die het als argument als input ontvangt op het scherm “printen”.</p>
+<p>De naam <code class="docutils literal notranslate"><span class="pre">print</span></code> heeft een historische betekenis want het verwijst nog naar de tijd dat output écht op papier werd geprint, dus vóór de tijd van beeldschermen!</p>
+</div>
+<div class="section" id="id5">
+<h3>Condities<a class="headerlink" href="#id5" title="Permalink naar deze titel">¶</a></h3>
+<p><em>Conditionele statements</em>: naar links of naar rechts?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">comp</span> <span class="o">==</span> <span class="n">user</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gelijkspel&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>statements kunnen andere statements bevatten!</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">comp</span> <span class="o">==</span> <span class="n">user</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gelijkspel&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">comp</span> <span class="o">==</span> <span class="s2">&quot;steen&quot;</span><span class="p">:</span>
+        <span class="o">...</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="o">...</span>
+</pre></div>
+</div>
+<p>De meest voor de hand liggende conditie om als eerste te testen is of de input van de gebruiker gelijk is aan de input van de computer. Eerder hebben de deze inputs namen gegeven die verwijzen naar de waarden (<code class="docutils literal notranslate"><span class="pre">comp</span></code> en <code class="docutils literal notranslate"><span class="pre">user</span></code>). Deze namen kunnen we gebruiken om een eerste conditie te schrijven als <code class="docutils literal notranslate"><span class="pre">comp</span> <span class="pre">==</span> <span class="pre">user</span></code>. Het dubbele <code class="docutils literal notranslate"><span class="pre">=</span></code> teken betekent hier <em>is gelijk aan</em>.</p>
+<p>Als (<code class="docutils literal notranslate"><span class="pre">if</span></code>) een conditie waar is (<code class="docutils literal notranslate"><span class="pre">True</span></code>) doe dan het volgende, doe anders (<code class="docutils literal notranslate"><span class="pre">else</span></code>) …</p>
+<p>Let trouwens op de inspringing na alles wat volgt achter de dubbele punt achter <code class="docutils literal notranslate"><span class="pre">if</span></code> en <code class="docutils literal notranslate"><span class="pre">else</span></code>, dit is verplichte Python syntax om om aan te geven dat alles wat volgt óf bij <code class="docutils literal notranslate"><span class="pre">if</span></code> óf bij <code class="docutils literal notranslate"><span class="pre">else</span></code> hoort. De <em>afspraak</em> is dat deze inspinging vier spaties groot is…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">comp</span> <span class="o">=</span> <span class="s2">&quot;steen&quot;</span>
+<span class="n">user</span> <span class="o">=</span> <span class="s2">&quot;steen&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Bijvoorbeeld, als zowel de computer als de gebruiker “steen” zou hebben gekozen dan kunnen we Python deze <em>expressie</em> laten testen.</p>
+<p>Let op, dit is een voorbeeld: we kennen in dit voorbeeld de waarden (“steen”) direct toe aan de namen <code class="docutils literal notranslate"><span class="pre">comp</span></code> en <code class="docutils literal notranslate"><span class="pre">user</span></code>, en gebruiken dus niet een input via de functies <code class="docutils literal notranslate"><span class="pre">input</span></code> en <code class="docutils literal notranslate"><span class="pre">choice</span></code>, dit gaan we straks doen!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">comp</span> <span class="o">==</span> <span class="n">user</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Dit is wat Python als resultaat teruggeeft. We hebben in de diagrammen <code class="docutils literal notranslate"><span class="pre">True</span></code> gebruikt om <em>waar</em> aan te geven maar Python geeft dus letterlijk <code class="docutils literal notranslate"><span class="pre">True</span></code> als waarde terug!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">comp</span> <span class="o">==</span> <span class="n">user</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gelijkspel&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gelijkspel
+</pre></div>
+</div>
+</div>
+</div>
+<p>Als in dit voorbeeld de conditie <code class="docutils literal notranslate"><span class="pre">comp</span> <span class="pre">==</span> <span class="pre">user</span></code> waar is dan zal de output “Gelijkspel” zijn, zoals verwacht. Dit begin gaan we verder gebruiken om het algoritme dat we hebben bedacht verder uit te werken in Python.</p>
+</div>
+</div>
+<div class="section" id="uitwerking">
+<h2>Uitwerking<a class="headerlink" href="#uitwerking" title="Permalink naar deze titel">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
+
+<span class="n">user</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Jouw keus? &quot;</span><span class="p">)</span>
+<span class="n">comp</span> <span class="o">=</span> <span class="n">choice</span><span class="p">([</span><span class="s2">&quot;steen&quot;</span><span class="p">,</span> <span class="s2">&quot;papier&quot;</span><span class="p">,</span> <span class="s2">&quot;schaar&quot;</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jouw keus is:&quot;</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mijn keus is:&quot;</span><span class="p">,</span> <span class="n">comp</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">comp</span> <span class="o">==</span> <span class="n">user</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gelijkspel&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">comp</span> <span class="o">==</span> <span class="s2">&quot;steen&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">user</span> <span class="o">==</span> <span class="s2">&quot;schaar&quot;</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ik win!&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jij wint...&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">comp</span> <span class="o">==</span> <span class="s2">&quot;papier&quot;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">user</span> <span class="o">==</span> <span class="s2">&quot;steen&quot;</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ik win!&quot;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jij wint...&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">comp</span> <span class="o">==</span> <span class="s2">&quot;schaar&quot;</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">user</span> <span class="o">==</span> <span class="s2">&quot;papier&quot;</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ik win!&quot;</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jij wint...&quot;</span><span class="p">)</span>
+
+            <span class="c1"># &quot;schaar&quot; is de laatste optie,</span>
+            <span class="c1"># er is geen else meer mogelijk</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "misja/programmeren",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./topics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="1b_condities.html" title="vorige pagina">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">vorige</p>
+                <p class="prevnext-title">Condities</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="2a_programmeren.html" title="volgende pagina">
+            <div class="prevnext-info">
+                <p class="prevnext-label">volgende</p>
+                <p class="prevnext-title">Programmeren</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          Door Harvey Mudd College / Hanze University of Applied Sciences<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
+    Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

@@ -106,7 +106,7 @@ Open een *terminal* in VSCode (of anders) en probeer het bovenstaande verhaal ui
 
 - `cd` naar de directory waar je jouw bestand hebt bewaard
 - ipython te starten (dit zou moeten kunnen door in de terminal `ipython` te typen)
-- vervolgens `run mijn_bestand.py` te typen (wijzig `mijn_bestand.py` natuurlijk in de naam van jouw bestand)
+- vervolgens `run wk1ex2b.py` te typen.
 - als het laden gelukt is, type je `adventure()` en drukt op enter
 
 :::{admonition} `cd` in ipython
@@ -121,7 +121,7 @@ Als je het eenmaal in ipython hebt geladen, probeer het dan minstens twee keer t
 
 - om het nogmaals te starten, hoef je alleen `adventure()` te typen en op enter te drukken (gebruik pijltje omhoog om het commando te herhalen)
 - `adventure()` is de functie die in het bestand is gedefinieerd
-- alleen als je dit bestand hebt *aangepast* moet je opnieuw `run mijn_bestand.py` typen
+- alleen als je dit bestand hebt *aangepast* moet je opnieuw `run wk1ex2b.py` typen
 
 :::{admonition} Nieuwe regel
 :class: info
