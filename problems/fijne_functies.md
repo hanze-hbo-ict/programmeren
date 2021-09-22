@@ -268,9 +268,9 @@ Out[2]: 42.0
 
 In de volgende functies ga je strings gebruiken, reeksen van karakters. Schrijf ze allemaal in jouw bestand. Test elke functie die je hebt geschreven *voordat* je doorgaat naar de volgende. Zorg er ook voor dat je voor elke functie een docstring toevoegt die (heel kort) vertelt wat deze doet.
 
-### `checkend(s)`
+### `checkends(s)`
 
-Schrijf een functie `checkend(s)` die als parameter een string `s` accepteert en `True` teruggeeft als het eerste karakter van `s` gelijk is aan het laatste karakter van `s`. Anders zal het `False` teruggeven. De functie `checkends` hoeft niet te werken met een lege string `s` (een string met waarde `""`).
+Schrijf een functie `checkends(s)` die als parameter een string `s` accepteert en `True` teruggeeft als het eerste karakter van `s` gelijk is aan het laatste karakter van `s`. Anders zal het `False` teruggeven. De functie `checkends` hoeft niet te werken met een lege string `s` (een string met waarde `""`).
 
 :::{admonition} boolean waarden
 :class: warning
