@@ -383,8 +383,8 @@ Met "kans" bedoelen we hier iets wat we de [log-waarschijnlijkheid](https://en.w
     * Voor de twee `'a'`'s voeg je `total += 2 * math.log2(0.625)` toe
     * Voor de ene `'b'` voeg je `total += 1 * math.log2(0.125)` toe
     * Voor de ene `'c'` voeg je `total += 1 * math.log2(0.25)` toe
-    * Voor de ene `'d'` voeg je `total += 2 * math.log2(epsilon)` toe (`epsilon` was de helft van de kleinste waarde)
-    * Voor de ene `'e'` voeg je `total += 2 * math.log2(epsilon)` toe (weer met die kleine waarde)
+    * Voor de ene `'d'` voeg je `total += 1 * math.log2(epsilon)` toe (`epsilon` was de helft van de kleinste waarde)
+    * Voor de ene `'e'` voeg je `total += 1 * math.log2(epsilon)` toe (weer met die kleine waarde)
     * Dit moet uitkomen op `-16.356...` (zie hieronder)
 
 De functie moet beide log-waarschijnlijkheden als een lijst teruggeven, bijvoorbeeld `[log1, log2]` (de eerste is de log-waarschijnlijkheden voor `nd1` en de tweede voor `nd2`).
