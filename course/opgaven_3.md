@@ -4,7 +4,7 @@
 
 |                |                                                                                                           | Punten |           |
 |----------------|-----------------------------------------------------------------------------------------------------------|--------|-----------|
-| **Practicum**  | [Python Turtles!](/problems/sequenties_en_data.md)<br>Tekenen met turtle                                  | 30     |           |
+| **Practicum**  | [Python Turtles!](/problems/python_turtles.md)<br>Tekenen met turtle                                      | 30     |           |
 | **Leesopgave** | [Computer wins Jeopardy!](/readings/computer_wins_jeopardy.md)<br>Slimme computers?                       | 5      |           |
 | **Huiswerk**   | [Slaapwandelende student](/problems/slaapwandelende_student.md)<br>Toevallige bewegingen                  | 35     | 10 bonus  |
 |                | [Numerieke integratie](/problems/numerieke_integratie.md)<br>Beter dan wiskundigen oppervlakten berekenen | 30     |           |
