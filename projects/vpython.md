@@ -125,7 +125,7 @@ for i in range(len(balls)):
 
 Op deze manier kan je een enkele functie (`collide`) schrijven om te controleren of twee ballen botsen, en dat dan gebruiken voor alle paren...
 
-Als je code wilt voor realistische "elastische" botsingen, kan je [dit codevoorbeeld](../support/vpython-collision.md) bekijken.
+Als je code wilt voor realistische "elastische" botsingen, kan je [dit codevoorbeeld](/support/vpython_collision) bekijken.
 
 ## Inleveren
 

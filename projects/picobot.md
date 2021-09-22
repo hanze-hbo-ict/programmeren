@@ -174,13 +174,13 @@ Dit maakt een **gesorteerde** lijst met sleutels, met de naam `sorted_keys`. Top
 :::{admonition} Net zo belangrijk!
 :class: danger
 
-Je methode `__repr__` moet het hele Picobot-programma zo teruggeven ***dat je deze direct kan kopiëren en plakken*** in e [Picobot-simulator](https://www.cs.hmc.edu/picobot/). Elke regel moet dus als volgt geformatteerd worden:
+Je methode `__repr__` moet het hele Picobot-programma zo teruggeven ***dat je deze direct kan kopiëren en plakken*** in de [Picobot-simulator](https://www.cs.hmc.edu/picobot/). Elke regel moet dus als volgt geformatteerd worden:
 
 ```
 2 Nxxx -> W 3
 ```
 
-[Hier is een link met voorbeeld-uitvoer die je als sjabloon kan gebruiken.](../support/picobot-example.md)
+Hier vind je [voorbeeld-uitvoer](/support/picobot_example) die je als sjabloon kan gebruiken.
 :::
 
 ### De methode `randomize`
@@ -461,7 +461,7 @@ Als je een aantal hulpfuncties wilt schrijven hiervoor mag dat natuurlijk!
 :::{admonition} Keuzes voor de parameters
 :class: tip
 
-Als je wilt kan je wat lezen over hoe je de programma's met de hoogste fitness kan kiezen om die zich te laten voortplanten en de [keuzes voor de parameters](../support/picobot-parameters.md) die daar bij horen (maar het staat je natuurlijk vrij om er mee te experimenteren en andere te kiezen).
+Als je wilt kan je wat lezen over hoe je de programma's met de hoogste fitness kan kiezen om die zich te laten voortplanten en de [keuzes voor de parameters](/support/picobot_parameters) die daar bij horen (maar het staat je natuurlijk vrij om er mee te experimenteren en andere te kiezen).
 :::
 
 ### Hoe snel en hoe "goed" moet mijn programma zijn?
