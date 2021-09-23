@@ -5,6 +5,7 @@
 ## Onderwerpen
 
 - [Logische schakelingen](/topics/11a_logische_schakelingen)
+- [Rekenen met schakelingen](/topics/11b_rekenen_met_schakelingen)
 
 ## Boek
 
