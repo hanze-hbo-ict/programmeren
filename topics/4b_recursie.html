@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e2363ea40746bee74734a24ffefccd78.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -1381,11 +1381,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>Stel je een functie voor die het aantal i’s in een string telt en dit als waarde teruggeeft. Dit is een lastig probleem, laten we proberen het eerst uit te schrijven zonder direct in Python te denken. Het resultaat van de functie zou het volgende moeten zijn:</p>
-<p>Totaal aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;i❤️aliens&quot;</span></code>?</p>
+<p>Totaal aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;i💙aliens&quot;</span></code>?</p>
 <p>Aliens zijn om van te houden, toch?!? Laat dit de string zijn die we willen gaan onderzoeken en je weet dat een string een opeenvolging van karakters is. We zullen karakter voor karakter moeten controleren (testen) of het gelijk is aan het karakter “i” (en ja, emoji zijn ook karakters :heart:). Karakter voor karakter betekent dat een eerste stap om dit probleem op te lossen de volgende zal zijn:</p>
-<p>Aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;i&quot;</span></code> + Aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;❤️aliens&quot;</span></code></p>
+<p>Aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;i&quot;</span></code> + Aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;💙aliens&quot;</span></code></p>
 <p>We nemen het eerst karakter, tellen het aantal i’s (dit kan voor een enkel karakter 0 of 1 zijn) en tellen daar het aantal i’s in het <em>restant</em> van de string bij op. We herhalen deze handeling voor het eerste karakter van het restant, en tellen daar natuurlijk het resultaat van het eerste karakter bij op:</p>
-<p>Aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;i&quot;</span></code> + Aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;❤️&quot;</span></code> + Aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;aliens&quot;</span></code></p>
+<p>Aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;i&quot;</span></code> + Aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;💙&quot;</span></code> + Aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;aliens&quot;</span></code></p>
 <p>Et cetera. Je zal hier een patroon zien, het probleem en oplossing herhaalt zich steeds: na het eerste karakter moeten we hetzelfde “recept” steeds weer herhalen voor het restant van de string.</p>
 <p>Terzijde, weet je nog dat je het eerste karakter en het restant van een string kan lezen met <code class="docutils literal notranslate"><span class="pre">s[0]</span></code> en <code class="docutils literal notranslate"><span class="pre">s[1:]</span></code>?</p>
 </div>
@@ -1403,7 +1403,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>informatica: <code class="docutils literal notranslate"><span class="pre">fac(5)</span> <span class="pre">=</span> <span class="pre">5</span> <span class="pre">*</span> <span class="pre">4</span> <span class="pre">*</span> <span class="pre">3</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">1</span></code></p>
 <p>Laten we het geheugen even opfrissen wat de faculteit van een getal ook alweer is. Stel je 42 aliens voor en je zou willen weten op hoeveel manieren je deze aliens op een rij kan zetten. Je weet misschien het antwoord, dit is 42 x 41 x 41 … 3 x 2 x 1, of ook wel bekend als de <em>42 faculteit</em> en (wiskundig) geschreven als <span class="math notranslate nohighlight">\(42!\)</span>. Sequentieel denken en daarmee dit probleem oplossen (uitschrijven) als <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">*</span> <span class="pre">4</span> <span class="pre">*</span> <span class="pre">3</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">1</span></code> is heel natuurlijk voor mensen, zo hebben we het als oplossing geleerd!</p>
 <p><code class="docutils literal notranslate"><span class="pre">fac(N)</span> <span class="pre">=</span> <span class="pre">N</span> <span class="pre">*</span> <span class="pre">(N-1)</span> <span class="pre">*</span> <span class="pre">...</span> <span class="pre">*</span> <span class="pre">3</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">1</span></code></p>
-<p>Maar zou je <code class="docutils literal notranslate"><span class="pre">fac(5)</span></code> als een meer algemene versie van zichzelf kunnen schrijven? Dat kan, laten we daar een begin mee maken en je zal zien dat een zichzelf herhalend (terugkerend?) patroon gaat ontstaan, net als bij het aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;i❤️aliens&quot;</span></code>…</p>
+<p>Maar zou je <code class="docutils literal notranslate"><span class="pre">fac(5)</span></code> als een meer algemene versie van zichzelf kunnen schrijven? Dat kan, laten we daar een begin mee maken en je zal zien dat een zichzelf herhalend (terugkerend?) patroon gaat ontstaan, net als bij het aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;i💙aliens&quot;</span></code>…</p>
 </div>
 <div class="section" id="recursief-denken">
 <h3>Recursief denken<a class="headerlink" href="#recursief-denken" title="Permalink naar deze titel">¶</a></h3>
