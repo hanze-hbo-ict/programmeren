@@ -4,7 +4,8 @@
 
 ## Onderwerpen
 
-Imperatief programmeren, lussen
+-   [Lussen](/topics/15_lussen)
+-   [Iteratief ontwerpen](/topics/16_iteratief_ontwerp)
 
 ## Boek
 

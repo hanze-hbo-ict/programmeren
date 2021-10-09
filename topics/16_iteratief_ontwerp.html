@@ -1,0 +1,2048 @@
+
+<!DOCTYPE html>
+
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iteratief ontwerpen &#8212; Programmeren</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "misja/programmeren");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://misja.github.io/programmeren/topics/16_iteratief_ontwerp.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Zoeken" href="../search.html" />
+    <link rel="next" title="Week 8" href="../course/opgaven_8.html" />
+    <link rel="prev" title="Lussen" href="15_lussen.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/mascot.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Programmeren</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/syllabus.html">
+   Programmeren
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Opmerkingen
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/feedback.html">
+   Anoniem feedbackformulier
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/faq.html">
+   Veelgestelde vragen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/references.html">
+   Literatuur
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/week_1.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1a_introductie.html">
+     Introductie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1b_condities.html">
+     Condities
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1c_algoritmen.html">
+     Algoritmen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2a_programmeren.html">
+     Programmeren
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2b_picobot.html">
+     Picobot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/opgaven_1.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/python_intro.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/guugu_yimithirr.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/rochambeau.html">
+     Rochambeau
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/interactieve_fictie.html">
+     Interactieve fictie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/picobot_1.html">
+     Picobot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/picobot_2.html">
+     Picobot II: Picobot Strikes Back
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/picobot_3.html">
+     Picobot III: Return of the Picobot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/picobot_4.html">
+     Picobot IV: The Picobot Menace
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/week_2.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3a_data.html">
+     Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3b_strings_en_lists.html">
+     Strings en lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="4a_functies.html">
+     Functies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="4b_recursie.html">
+     Recursie
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/opgaven_2.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/sequenties_en_data.html">
+     Practicum I
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/fijne_functies.html">
+     Practicum II
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/end_of_theory.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/feest_met_functies.html">
+     Feest met functies
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 3
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/week_3.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5a_simulatie.html">
+     Simulatie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5b_turtle_recursie.html">
+     Turtle en recursie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="6a_list_comprehension.html">
+     List comprehension
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/opgaven_3.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/python_turtles.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/computer_wins_jeopardy.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/slaapwandelende_student.html">
+     Slaapwandelende student
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/numerieke_integratie.html">
+     Numerieke integratie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/turtles_tot_het_einde.html">
+     Turtles all the way down
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 4
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/week_4.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="7a_data_based_design.html">
+     Data based design
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="7b_rekenen_met_taal.html">
+     Rekenen met taal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="8_ontwerp_algoritmen.html">
+     Ontwerp van algoritmen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/opgaven_4.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/klinkt_goed.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/universum_simulatie.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/caesar_op_orde.html">
+     Caesar op orde
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 5
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/week_5.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="9a_talstelsels.html">
+     Talstelsels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="9b_binaire_getallen.html">
+     Binaire getallen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10_bewerkingen_met_bits.html">
+     Bewerkingen met bits
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/opgaven_5.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/decimaal_en_verder.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/bug_and_crash.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/wisselende_stelsels.html">
+     Wisselende stelsels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/fraaie_plaatjes.html">
+     Fraaie plaatjes
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 6
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/week_6.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="11a_logische_schakelingen.html">
+     Logische schakelingen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="11b_rekenen_met_schakelingen.html">
+     Rekenen met schakelingen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/opgaven_6.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/optellingen_schakelen.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/just_add_water.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/vermenigvuldigingswaanzin.html">
+     Vermenigvuldigingswaanzin
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/eerlijke_verdeling.html">
+     Een eerlijke verdeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/geheugenproblemen.html">
+     Geheugenproblemen
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 7
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/week_7.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="13_hmmm_introductie.html">
+     Hmmm introductie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="14_hmmm_functies.html">
+     Hmmm functies
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/opgaven_7.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/hmmm_assembly.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/hijacked_minds.html">
+     Leesopave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/macht_van_hmmm.html">
+     De macht van hmmm
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/feest_met_fibonacci.html">
+     Feest met Fibonacci
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/macht_van_recursie.html">
+     De macht van recursie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/een_lus_om_python.html">
+     Een lusje om Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/fibonacci_recursief.html">
+     Fibonacci recursief
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 8
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../course/week_8.html">
+   Onderwerpen
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="15_lussen.html">
+     Lussen
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Iteratief ontwerpen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/opgaven_8.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/mandelbrot.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/algoritmen_discrimineren.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/pythonbat_lussen.html">
+     PythonBat lussen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/pi_pijlen.html">
+     Pi met pijltjes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/tr_investeringen.html">
+     TR Investeringen B.V.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/ascii_art.html">
+     ASCII Art
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 9
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/week_9.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="17_2d_arrays.html">
+     2D arrays
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="18_meer_2d.html">
+     Meer 2D
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/opgaven_9.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/game_of_life.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/horseless_driverless.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/boter_kaas_eieren.html">
+     Boter kaas en eieren
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/rij_van_conway.html">
+     Lees en huiver
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/week_10.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+  <label for="toctree-checkbox-19">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="19_objecten.html">
+     Objecten en klassen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="20_dictionaries.html">
+     Dictionaries
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/opgaven_10.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+  <label for="toctree-checkbox-20">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/eeuwigdurende_kalender.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/an_algorithm_wrote_this.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/tekst_genereren.html">
+     Teksten genereren
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/vier_op_een_rij.html">
+     Vier op een rij
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 11
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/week_11.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
+  <label for="toctree-checkbox-21">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="21_api_tuple.html">
+     API's en VPython
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="22a_kunstmatige_intelligentie.html">
+     Kunstmatige intelligentie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="22b_projecten.html">
+     Projecten
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/opgaven_11.html">
+   Opaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
+  <label for="toctree-checkbox-22">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/buitenaards_python.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/chess_championship.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/vier_op_een_rij_ai.html">
+     AI voor vier op een rij
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 12
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/week_12.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/>
+  <label for="toctree-checkbox-23">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="23_finite_state_machines.html">
+     Finite state machines
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="24_oneindigheid.html">
+     Oneindigheid
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../course/opgaven_12.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/>
+  <label for="toctree-checkbox-24">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../readings/life_of_pi.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problems/finite_state_machines.html">
+     Finite state machines
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Projecten
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/vpython.html">
+   VPool
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/connectfour.html">
+   ConnectFour
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/textid.html">
+   TextID
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/picobot.html">
+   Picobot
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Voorbeelden
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/recursie.html">
+   Recursie
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/design_recipe.html">
+   Functie ontwerp
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Oefening
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../practice/1_recursie.html">
+   Recursie
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../practice/2_list_comprehension.html">
+   List comprehension
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../practice/3a_toets.html">
+   Zelftoets
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/>
+  <label for="toctree-checkbox-25">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../practice/3b_toets_uitwerking.html">
+     Uitwerking
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/platte_tekst.html">
+   Tekstbestanden
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python_browser.html">
+   Python in de browser
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/python2_vs_python3.html">
+   Python 2 versus Python 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/software.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../support/hmmm.html">
+   Hmmmm assembly
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
+                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/topics/16_iteratief_ontwerp.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Bronopslagplaats"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/16_iteratief_ontwerp.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open een probleem"><i class="fas fa-lightbulb"></i>open probleem</button></a>
+        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/topics/16_iteratief_ontwerp.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="bewerk deze pagina"><i class="fas fa-pencil-alt"></i>suggereren bewerken</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
+        title="Volledig scherm"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/misja/programmeren/master?urlpath=lab/tree/topics/16_iteratief_ontwerp.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lancering Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Lancering Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhoud
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#herhalingen">
+   Herhalingen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simulaties">
+   Simulaties
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#verjaardagenparadox">
+   Verjaardagenparadox
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aanpak">
+     Aanpak?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hoe-lang-tot-een-herhaling">
+     Hoe lang tot een herhaling?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#een-verjaardag-is-maar-een-dag">
+     Een verjaardag is maar een dag
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#toevallige-verjaardagen">
+     Toevallige verjaardagen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#denken-in-lussen">
+   Denken in lussen
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#verschillen">
+     Verschillen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pi-met-pijltjes">
+   Pi met pijltjes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pithon">
+     Pithon?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pi-bepalen">
+     Pi bepalen?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#algoritme">
+     Algoritme
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hoe-werkt-dit">
+     Hoe werkt dit?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#for-of-while">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       for
+      </span>
+     </code>
+     of
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       while
+      </span>
+     </code>
+     ?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#simuleer">
+     Simuleer!
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#geneste-lussen">
+   Geneste lussen
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#seconden-tikken-weg">
+     Seconden tikken weg …
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tijd-vliegt">
+     Tijd vliegt!
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quiz">
+   Quiz
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oplossing">
+     Oplossing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tweedimensionale-structuren">
+   Tweedimensionale structuren
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-comprehension">
+     List comprehension
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#iteratief">
+     Iteratief
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#een-dozijn">
+     Een dozijn
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#syntax">
+     Syntax
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rijen-en-kolommen">
+     Rijen en kolommen
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="iteratief-ontwerpen">
+<h1>Iteratief ontwerpen<a class="headerlink" href="#iteratief-ontwerpen" title="Permalink naar deze titel">¶</a></h1>
+<p>Overal herhalingen</p>
+<p><img alt="Mandelbrot" src="../_images/mandelbrot_set.png" /></p>
+<p>Oneindige fractals … Zie <a class="reference external" href="https://xaos-project.github.io/">Xaos</a> voor de hypnotiserende ervaring!</p>
+<div class="section" id="herhalingen">
+<h2>Herhalingen<a class="headerlink" href="#herhalingen" title="Permalink naar deze titel">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">while</span></code> met ontsnapping!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
+
+<span class="k">def</span> <span class="nf">escape</span><span class="p">(</span><span class="n">hidden</span><span class="p">):</span>
+    <span class="n">guess</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="k">while</span> <span class="n">guess</span> <span class="o">!=</span> <span class="n">hidden</span><span class="p">:</span>
+        <span class="n">guess</span> <span class="o">=</span> <span class="n">choice</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">count</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="simulaties">
+<h2>Simulaties<a class="headerlink" href="#simulaties" title="Permalink naar deze titel">¶</a></h2>
+<p>Monte Carlo simulaties …</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">LC</span> <span class="o">=</span> <span class="p">[</span><span class="n">escape</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">LC</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">LC</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100.599
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="verjaardagenparadox">
+<h2>Verjaardagenparadox<a class="headerlink" href="#verjaardagenparadox" title="Permalink naar deze titel">¶</a></h2>
+<p>Wat is de kans dat iemand op dezelfde dag jarig is?</p>
+<p>Met hoeveel mensen bij elkaar is deze kans 50%?</p>
+<p>Kan dit worden gesimuleerd?</p>
+<div class="section" id="aanpak">
+<h3>Aanpak?<a class="headerlink" href="#aanpak" title="Permalink naar deze titel">¶</a></h3>
+<p>Vul één voor één een kamer met mensen tot twee dezelfde verjaardag hebben.</p>
+<p><strong>De ontsnapping?</strong></p>
+<p>Bijf de kamer vullen zolang (<code class="docutils literal notranslate"><span class="pre">while</span></code>) de verjaardagen in de kamer uniek zijn!</p>
+<p>De kamer? Een list!</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">until_a_repeat</span><span class="p">(</span><span class="n">high</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Fills a list of random values until a first repeat</span>
+<span class="sd">    </span>
+<span class="sd">    Argument: high, the random value upper boundary</span>
+<span class="sd">    Return value: the number of elements in the list.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="hoe-lang-tot-een-herhaling">
+<h3>Hoe lang tot een herhaling?<a class="headerlink" href="#hoe-lang-tot-een-herhaling" title="Permalink naar deze titel">¶</a></h3>
+<p>Sneller dan je denkt!</p>
+<p><img alt="Birthday paradox" src="../_images/birthday_paradox.png" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">unique</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns whether all elements in L are unique.</span>
+
+<span class="sd">     Argument: L, a list of any elements.</span>
+<span class="sd">     Return value: True, if all elements in L are unique,</span>
+<span class="sd">                or False, if there is any repeated element</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">elif</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">unique</span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Deze hulpfunctie wordt gegeven!</p>
+</div>
+<div class="section" id="een-verjaardag-is-maar-een-dag">
+<h3>Een verjaardag is maar een dag<a class="headerlink" href="#een-verjaardag-is-maar-een-dag" title="Permalink naar deze titel">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="n">bday</span> <span class="k">for</span> <span class="n">bday</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">365</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Zet 1 Januari op 0, en verder tot 31 december (364) …</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">unique</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="toevallige-verjaardagen">
+<h3>Toevallige verjaardagen<a class="headerlink" href="#toevallige-verjaardagen" title="Permalink naar deze titel">¶</a></h3>
+<p>Simulatie met random!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> simulate.py
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">LC</span> <span class="o">=</span> <span class="p">[</span><span class="n">until_a_repeat</span><span class="p">(</span><span class="mi">365</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">LC</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[14, 18, 9, 58, 31, 15, 51, 18, 4, 24]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">min</span><span class="p">(</span><span class="n">LC</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">max</span><span class="p">(</span><span class="n">LC</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>71
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">LC</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">LC</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24.008
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="denken-in-lussen">
+<h2>Denken in lussen<a class="headerlink" href="#denken-in-lussen" title="Permalink naar deze titel">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">for</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">42</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">while</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">42</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">*=</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<div class="section" id="verschillen">
+<h3>Verschillen<a class="headerlink" href="#verschillen" title="Permalink naar deze titel">¶</a></h3>
+<p>Wat zijn de verschillen in ontwerp tussen deze twee Python lussen?</p>
+<p><code class="docutils literal notranslate"><span class="pre">for</span></code> — eindige herhaling</p>
+<p>Voor een bestaande list of bekend aantal herhalingen</p>
+<p><code class="docutils literal notranslate"><span class="pre">while</span></code> — oneindige herhaling</p>
+<p>Voor een onbekend aantal herhalingen</p>
+</div>
+</div>
+<div class="section" id="pi-met-pijltjes">
+<h2>Pi met pijltjes<a class="headerlink" href="#pi-met-pijltjes" title="Permalink naar deze titel">¶</a></h2>
+<p>Pi of <span class="math notranslate nohighlight">\(\pi\)</span> is een <em>constante</em>: de verhouding tussen de omtrek en de diameter van een cirkel</p>
+<div class="section" id="pithon">
+<h3>Pithon?<a class="headerlink" href="#pithon" title="Permalink naar deze titel">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.141592653589793
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="pi-bepalen">
+<h3>Pi bepalen?<a class="headerlink" href="#pi-bepalen" title="Permalink naar deze titel">¶</a></h3>
+<p>Kan <span class="math notranslate nohighlight">\(\pi\)</span> worden bepaald door middel van een simulatie?</p>
+<p><img alt="Dartboard" src="../_images/dartboard.png" /></p>
+<p><img alt="Pie box" src="../_images/pie_box.png" /></p>
+</div>
+<div class="section" id="algoritme">
+<h3>Algoritme<a class="headerlink" href="#algoritme" title="Permalink naar deze titel">¶</a></h3>
+<ul class="simple">
+<li><p>gooi een aantal pijlen willekeurig (random!) op het vlak</p></li>
+<li><p>tel het aantal pijlen dat is geland in de cirkel</p></li>
+<li><p>bereken <span class="math notranslate nohighlight">\(\pi\)</span> als volgt</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\pi = 4 \times \dfrac{\text{Pijlen in cirkel}}{\text{Pijlen totaal}}
+\]</div>
+<p><img alt="Pi Turtle 10000" src="../_images/pi_turtle.gif" /></p>
+</div>
+<div class="section" id="hoe-werkt-dit">
+<h3>Hoe werkt dit?<a class="headerlink" href="#hoe-werkt-dit" title="Permalink naar deze titel">¶</a></h3>
+<p>Verhoudingen!</p>
+<div class="math notranslate nohighlight">
+\[
+\dfrac{\text{Pijlen in cirkel}}{\text{Pijlen totaal}} \approx \dfrac{\text{Oppervlakte cirkel}}{\text{Oppervlakte vierkant}}
+\]</div>
+<p>Gegeven: het oppervlakte van een cirkel is gelijk aan <span class="math notranslate nohighlight">\(\pi \cdot r^2\)</span></p>
+<p><em>Oppervlakte cirkel</em></p>
+<p>Straal <span class="math notranslate nohighlight">\(r\)</span> is in dit geval 0.5, de oppervlakte van de cirkel is dus <span class="math notranslate nohighlight">\(\pi \cdot 0.25\)</span>, of <span class="math notranslate nohighlight">\(\dfrac{\pi}{4}\)</span></p>
+<p><em>Oppervlakte vierkant</em></p>
+<p>De breedte van het vierkant is 1 dus de oppervlakte van het vierkant is 1</p>
+<div class="math notranslate nohighlight">
+\[
+\dfrac{\text{Oppervlakte cirkel}}{\text{Oppervlakte vierkant}} = \frac{\dfrac{\pi}{4}}{1}
+\]</div>
+<p>wat kan worden vereenvoudigd tot</p>
+<div class="math notranslate nohighlight">
+\[
+\dfrac{\text{Oppervlakte cirkel}}{\text{Oppervlakte vierkant}} = \dfrac{\pi}{4}
+\]</div>
+<p>en vervolgens vereenvoudigd kan worden tot</p>
+<div class="math notranslate nohighlight">
+\[
+\dfrac{\text{Oppervlakte cirkel}}{\text{Oppervlakte vierkant}} \times 4 = \pi
+\]</div>
+</div>
+<div class="section" id="for-of-while">
+<h3><code class="docutils literal notranslate"><span class="pre">for</span></code> of <code class="docutils literal notranslate"><span class="pre">while</span></code>?<a class="headerlink" href="#for-of-while" title="Permalink naar deze titel">¶</a></h3>
+<p>Welke functie zal welk type lus gebruiken?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pi_one</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">e</span></code> = hoe dichtbij we bij π moeten komen</p>
+<p><code class="docutils literal notranslate"><span class="pre">while</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pi_two</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">n</span></code> = het aantal pijltjes dat gegooid moet worden</p>
+<p><code class="docutils literal notranslate"><span class="pre">for</span></code></p>
+</div>
+<div class="section" id="simuleer">
+<h3>Simuleer!<a class="headerlink" href="#simuleer" title="Permalink naar deze titel">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">for_pi</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Calculate pi with a for loop</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">for_pi</span><span class="p">(</span><span class="mi">100000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.13824
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="geneste-lussen">
+<h2>Geneste lussen<a class="headerlink" href="#geneste-lussen" title="Permalink naar deze titel">¶</a></h2>
+<p>Zijn heel erg bekend!</p>
+<p><img alt="Swiss Clock" src="../_images/SBB_railway_clock_animated.gif" /></p>
+<div class="section" id="seconden-tikken-weg">
+<h3>Seconden tikken weg …<a class="headerlink" href="#seconden-tikken-weg" title="Permalink naar deze titel">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">minute</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">60</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">second</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">60</span><span class="p">):</span>
+        <span class="n">tick</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="tijd-vliegt">
+<h3>Tijd vliegt!<a class="headerlink" href="#tijd-vliegt" title="Permalink naar deze titel">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">84</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">month</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">12</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">day</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">month</span><span class="p">,</span> <span class="n">year</span><span class="p">)):</span>
+            <span class="k">for</span> <span class="n">hour</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">24</span><span class="p">):</span>
+                <span class="k">for</span> <span class="n">minute</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">60</span><span class="p">):</span>
+                    <span class="k">for</span> <span class="n">second</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">60</span><span class="p">):</span>
+                        <span class="n">tick</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="quiz">
+<h2>Quiz<a class="headerlink" href="#quiz" title="Permalink naar deze titel">¶</a></h2>
+<p>Wat zal worden geprint?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="oplossing">
+<h3>Oplossing<a class="headerlink" href="#oplossing" title="Permalink naar deze titel">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 0
+0 1
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tweedimensionale-structuren">
+<h2>Tweedimensionale structuren<a class="headerlink" href="#tweedimensionale-structuren" title="Permalink naar deze titel">¶</a></h2>
+<p>Rijen en kolommen</p>
+<p>Let op, als over “arrays” wordt gesproken (2D arrays): dit is wat je kent als lists!</p>
+<p><img alt="Vermenigvuldigingstabel" src="../_images/mul_table1.png" /></p>
+<div class="section" id="list-comprehension">
+<h3>List comprehension<a class="headerlink" href="#list-comprehension" title="Permalink naar deze titel">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mul_table</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns a multiplication table for n</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">[[</span><span class="n">x</span> <span class="o">*</span> <span class="n">y</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mul_table</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1, 2, 3, 4, 5],
+ [2, 4, 6, 8, 10],
+ [3, 6, 9, 12, 15],
+ [4, 8, 12, 16, 20],
+ [5, 10, 15, 20, 25]]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="iteratief">
+<h3>Iteratief<a class="headerlink" href="#iteratief" title="Permalink naar deze titel">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mul_table</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns a multiplication table for n</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">table</span> <span class="o">=</span> <span class="p">[]</span>                     <span class="c1"># start with an empty table</span>
+    
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>      <span class="c1"># for every row in this table ...</span>
+        <span class="n">row</span> <span class="o">=</span> <span class="p">[]</span>                   <span class="c1"># start with an empty row</span>
+        
+        <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>  <span class="c1"># for every column in this row ...</span>
+            <span class="n">row</span> <span class="o">+=</span> <span class="p">[</span><span class="n">x</span> <span class="o">*</span> <span class="n">y</span><span class="p">]</span>         <span class="c1"># add the column value to the row</span>
+            
+        <span class="n">table</span> <span class="o">+=</span> <span class="p">[</span><span class="n">row</span><span class="p">]</span>             <span class="c1"># add the row to the table</span>
+        
+    <span class="k">return</span> <span class="n">table</span>                   <span class="c1"># return table</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mul_table</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1, 2, 3, 4, 5],
+ [2, 4, 6, 8, 10],
+ [3, 6, 9, 12, 15],
+ [4, 8, 12, 16, 20],
+ [5, 10, 15, 20, 25]]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="een-dozijn">
+<h3>Een dozijn<a class="headerlink" href="#een-dozijn" title="Permalink naar deze titel">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dozen</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Eggs by the dozen!</span>
+<span class="sd">    &quot;&quot;&quot;</span>    
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">row</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        
+        <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">12</span><span class="p">):</span>  <span class="c1"># fixed, dozen is always 12!</span>
+            <span class="n">row</span> <span class="o">+=</span> <span class="s2">&quot;🥚&quot;</span>
+            
+        <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dozen</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dozen</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚
+🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚
+🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚
+🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚
+🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚
+🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚
+🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚
+🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚
+🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚
+🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚
+🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚
+🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="syntax">
+<h3>Syntax<a class="headerlink" href="#syntax" title="Permalink naar deze titel">¶</a></h3>
+<p>En semantiek…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">row</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+<span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">12</span><span class="p">):</span>
+    <span class="n">row</span> <span class="o">+=</span> <span class="s2">&quot;🥚&quot;</span>
+        
+<span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">12</span> <span class="o">*</span> <span class="s2">&quot;🥚&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚🥚
+</pre></div>
+</div>
+</div>
+</div>
+<p><img alt="Python ASCII" src="../_images/python_ascii.png" /></p>
+<p>Python <a class="reference external" href="https://en.wikipedia.org/wiki/ASCII_art">ASCII Art</a>!</p>
+</div>
+<div class="section" id="rijen-en-kolommen">
+<h3>Rijen en kolommen<a class="headerlink" href="#rijen-en-kolommen" title="Permalink naar deze titel">¶</a></h3>
+<p>En nieuwe regels …</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>############
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>####
+####
+####
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go"> ____                          _ </span>
+<span class="go">/ ___| _   _  ___ ___ ___  ___| |</span>
+<span class="go">\___ \| | | |/ __/ __/ _ \/ __| |</span>
+<span class="go"> ___) | |_| | (_| (_|  __/\__ \_|</span>
+<span class="go">|____/ \__,_|\___\___\___||___(_)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "misja/programmeren",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./topics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="15_lussen.html" title="vorige pagina">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">vorige</p>
+                <p class="prevnext-title">Lussen</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../course/opgaven_8.html" title="volgende pagina">
+            <div class="prevnext-info">
+                <p class="prevnext-label">volgende</p>
+                <p class="prevnext-title">Week 8</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Door Harvey Mudd College / Hanze University of Applied Sciences<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
+    Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
