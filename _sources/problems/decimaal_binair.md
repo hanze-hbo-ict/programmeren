@@ -273,7 +273,7 @@ Out[4]: '00000000'
 Nu moet je nog bedenken wat het *correcte* aantal nullen is... hiervoor heb je de functie `len` nodig!
 :::
 
-### Functie 4: `count(s, n)`
+### Functie 5: `count(s, n)`
 
 Gebruik de functie `increment` om de functie `count(s, n)` te schrijven, die een binaire string van 8 tekens accepteert als argument en vervolgens `n` keer doortelt vanaf `s`, terwijl hij wordt afgedrukt.
 
