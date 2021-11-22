@@ -11,7 +11,8 @@
 
 Begin met het downloaden van de beginbestanden in [wk7ex1.zip via deze link](https://github.com/misja/programmeren/raw/master/problems/assets/wk7ex1.zip)
 
-Je kan de [documentatie van Hmmm, alle instructies in de Hmmm-taal, hier vinden](/support/hmmm)
+Bekijk ook de [documentatie van Hmmm, alle instructies in de Hmmm-taal](/support/hmmm) en de
+<a href="../assets/hmmm/index.html">Hmmm-simulator</a>.
 
 Dit practicum gaat over het programmeren in assemblytaal op een klein model van een computer genaamd Hmmm, de "Harvey Mudd Miniature Machine".
 
