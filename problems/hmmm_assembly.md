@@ -291,7 +291,7 @@ $$
 #### Details
 
 Je programma moet als volgt werken: De gebruiker geeft **vijf** getallen als invoer in de
-onderstaande volgorde. Deze invoer wordt al geregeld door `wk6ex1b.hmmm`:
+onderstaande volgorde. Deze invoer wordt al geregeld door `wk7ex1b.hmmm`:
 
 * Als eerste geeft de gebruiker het getal `a` op, de vermenigvuldigingsfactor in het LCG-algoritme.
 * Als tweede geeft de gebruiker het getal `c` op, de optelwaarde in het LCG-algoritme.
@@ -424,7 +424,7 @@ Kijk of je, met deze feiten in het achterhoofd, de ***kleinste*** waardes van `c
 
 Het is *niet* essentieel dat je deze zonder hulp vindt; als je het niet zeker weet, vraag het dan!
 
-Hoe je de getallen ook vind, **probeer ze uit** met `wk7pr1b.hmmm`. *Lijkt het alsof alle 100 mogelijke getallen geproduceerd worden?*
+Hoe je de getallen ook vind, **probeer ze uit** met `wk7ex1b.hmmm`. *Lijkt het alsof alle 100 mogelijke getallen geproduceerd worden?*
 
 Je gaat dit hierna toetsen.
 
