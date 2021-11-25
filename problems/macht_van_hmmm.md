@@ -12,7 +12,7 @@ Zorg dat je dit bestand `wk7ex2.hmmm` in *dezelfde* map `wk7ex1` laat staan, omd
 
 Je programma moet eerst **twee** niet-negatieve getallen vragen van de gebruiker. Daarna moet het programma het resultaat berekenen als je de eerste invoer tot de macht van de tweede invoer verheft. Daarna moet het dat resultaat printen en `halt`en.
 
-Aangezien het tweede faculteitvoorbeeld in het college recursief was, maar deze opgave over lussen gaat, kan je beter het **eerste** faculteitvoorbeeld dat in het college behandled is gebruiken als richtlijn hoe je programma moet werken. Hier is dat voorbeeld uit het college:
+Aangezien het tweede faculteitvoorbeeld in het college recursief was, maar deze opgave over lussen gaat, kan je beter het **eerste** faculteitvoorbeeld dat in het college behandeld is gebruiken als richtlijn hoe je programma moet werken. Hier is dat voorbeeld uit het college:
 
 ```asm
 00 read   r1         # Plaats getal van de gebruiker in r1
