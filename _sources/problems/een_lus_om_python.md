@@ -140,7 +140,7 @@ def count_guesses(hidden):
     return num_guesses
 ```
 
-Gebruik `count_guesses` als voorveeld om een variant te schrijven die we `until_a_repeat(high)` gaan noemen.
+Gebruik `count_guesses` als voorbeeld om een variant te schrijven die we `until_a_repeat(high)` gaan noemen.
 
 -   Deze functie houdt een lijst `L` bij van alle getallen die geraden zijn. Begin met `L = []`!
 -   We blijven getallen raden zolang alle elementen van `L` uniek zijn (dus zolang er geen herhalingen zijn).

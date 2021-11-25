@@ -107,7 +107,7 @@ Overweeg om van de eerste regel
 
 te maken en dan verder te gaan met de faculteitscode. Hierdoor kan het grondtal in `r2` blijven en (nadat de andere regels doorgenummerd zijn) kan de macht in `r1` staan. Dit is handig!
 
-Als je dit doeft hoef je bovendien de rest van de code niet te hernummeren dankzij de `nop`!
+Als je dit doet hoef je bovendien de rest van de code niet te hernummeren dankzij de `nop`!
 :::
 
 ### Testen en inleveren
