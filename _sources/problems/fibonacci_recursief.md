@@ -13,7 +13,7 @@ In deze opgave schrijf je deze Fibonacci-generator opnieuw, maar nu *recursief*.
 
 Begin met het maken van een bestand `wk7ex6.hmmm`; je kan hier één van de Hmmmm-programma's van een eerdere opgave voor gebruiken.
 
-We kunnen de Fibonacci-reeks niet alleen sequentieel uitdrukken, maar ook *recursief*, door middel van de volgenmde wiskundige *recurrente betrekking*":
+We kunnen de Fibonacci-reeks niet alleen sequentieel uitdrukken, maar ook *recursief*, door middel van de volgende wiskundige *recurrente betrekking*:
 
 ```python
 fib(1) = 1
@@ -67,7 +67,7 @@ Soms zullen er meerdere regels Hmmm-code nodig zijn om een enkele regel Python-c
 ::: {admonition} Belangrijk
 :class: warning
 
-Bedenk goed welke "belangrijke gegevens" je op de stack moet zetten om ze te bewaren. De functie `main` heeft maar één belangriojk gegeven als `fib` aangeroepen wordt, de waarde van `r1`. Bedenk dat `r1` gebruikt wordt door deze af te drukken nadat de aanroep naar `fib` geweest is, dus het is belangrijk dat deze opgeslagen wordt voor de functieaanroep. De recursieve aanroep van regel 9 heeft twee belangrijke gegevens, welke zijn dat? De recursieve aanroep op regel 11 heeft zelfs **drie** belangrijke gegevens!
+Bedenk goed welke "belangrijke gegevens" je op de stack moet zetten om ze te bewaren. De functie `main` heeft maar één belangrijk gegeven als `fib` aangeroepen wordt, de waarde van `r1`. Bedenk dat `r1` gebruikt wordt door deze af te drukken nadat de aanroep naar `fib` geweest is, dus het is belangrijk dat deze opgeslagen wordt voor de functieaanroep. De recursieve aanroep van regel 9 heeft twee belangrijke gegevens, welke zijn dat? De recursieve aanroep op regel 11 heeft zelfs **drie** belangrijke gegevens!
 :::
 
 ## Stappenplan voor dit (lastige) probleem
