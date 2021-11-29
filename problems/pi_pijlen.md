@@ -14,7 +14,7 @@ Zie ook [Calculating Pi with Darts](https://www.youtube.com/watch?v=M34TO71SKGk)
 
 ## Pi met pijltjes berekenen: achtergrond
 
-Stel je een cirkel voor die ingeschreven is in een vierkant die het gebied met `-1 ≤ x ≤ 1` en `-1 ≤ y ≤ -1` beslaat. De oppervlakte van de ingeschreven cirkel, waarvan de straal `1.0` is, moet dan π zijn: de oppervlaktre van een cirkel is immers gelijk aan π*r*<sup>2</sup>, en de straal *r* is hier `1.0`.
+Stel je een cirkel voor die ingeschreven is in een vierkant die het gebied met `-1 ≤ x ≤ 1` en `-1 ≤ y ≤ -1` beslaat. De oppervlakte van de ingeschreven cirkel, waarvan de straal `1.0` is, moet dan π zijn: de oppervlakte van een cirkel is immers gelijk aan π*r*<sup>2</sup>, en de straal *r* is hier `1.0`.
 
 :::{admonition} Ingeschreven cirkel
 :class: notice
