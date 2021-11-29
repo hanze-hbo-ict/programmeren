@@ -134,7 +134,7 @@ In [1]: print_striped_diamond(7, ".", "%")
 
 ## De functie `print_crazy_striped_diamond`
 
-Schrijf ten slotte (en dit is 5 punten waard *bovenop* de 8 voor de vorige figuren) een functie genaamd `print_crazy_striped_diamond(width, sym1, sym2, sym1_width, sym2_width)` die een "gestreepte ruit" van `sym1` en `sym2` afdrukt waarbij de strepen verschillende breedtes kunnen hebben. `sym1_width` bepaalt de breedte van de streep gemaakt van symbool 1 en `symWidth2` bepaalt de breedte van de streep gemaakt van symbool 2.
+Schrijf ten slotte (en dit is 5 punten waard *bovenop* de 8 voor de vorige figuren) een functie genaamd `print_crazy_striped_diamond(width, sym1, sym2, sym1_width, sym2_width)` die een "gestreepte ruit" van `sym1` en `sym2` afdrukt waarbij de strepen verschillende breedtes kunnen hebben. `sym1_width` bepaalt de breedte van de streep gemaakt van symbool 1 en `sym2_width` bepaalt de breedte van de streep gemaakt van symbool 2.
 
 Bijvoorbeeld:
 

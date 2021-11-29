@@ -219,9 +219,9 @@ In [5]: print("{0: >4} : € {1: >6}".format(11, 27042))
 
 De *formatteerstring*, te weten `"{0: >4} : $ {1: >6}"`, zegt in het kort drie dingen:
 
-* Druk het te formatteren argument #`0` rechtsuitgelijnd af in een ruimte met een breedte van 3
+* Druk het te formatteren argument #`0` rechtsuitgelijnd af in een ruimte met een breedte van 4
 * Druk daarna een spatie, een dubbele punt, een spatie, een euroteken en een spatie af (allemaal precies zoals opgegeven)
-* Druk daarna het te formatteren argument #`1` rechtsuitgelijnd af in een ruimte met een breedte van 4.
+* Druk daarna het te formatteren argument #`1` rechtsuitgelijnd af in een ruimte met een breedte van 6.
 
 Merk op dat het `.format(input0, input1)` na de formatteerstring de te formatteren waardes opgeeft!
 
