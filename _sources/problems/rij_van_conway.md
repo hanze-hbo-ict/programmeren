@@ -3,12 +3,12 @@
 | Naam         | Beschrijving                                                   |
 |--------------|----------------------------------------------------------------|
 | Onderwerp    | Lees en zeg, of lees en huiver                                 |
-| Bestandsnaam | `wk9ex3.py`                                                    |
+| Bestandsnaam | `wk8ex4.py`                                                    |
 | Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 ## De Rij van Conway of Lees-en-Huiver
 
-In deze opgave ga je de wiskundig interessante [Rij van Conway](https://nl.wikipedia.org/wiki/Rij_van_Conway) (ja, dezelfde Conway!), ook wel bekend onder de Engelse naam Look-and-Say, implementeren. Je code moet in een bestand met de naam `wk9ex3.py` gezet worden.
+In deze opgave ga je de wiskundig interessante [Rij van Conway](https://nl.wikipedia.org/wiki/Rij_van_Conway) (ja, dezelfde Conway!), ook wel bekend onder de Engelse naam Look-and-Say, implementeren.
 
 Dit is een vreemde wiskundige rij die als volgt begint:
 
