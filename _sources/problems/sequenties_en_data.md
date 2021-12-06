@@ -154,7 +154,7 @@ print(answer0)
 :::{admonition} Opmerkingen bij deze code
 :class: notice
 
-- let op dat je het bestand opslaat als platte tekst met een `.py` bestandsextensie (zie werken met [platte tekst](../support/platte_tekst.md))
+- let op dat je het bestand opslaat als platte tekst met een `.py` bestandsextensie (zie werken met [platte tekst](/support/plain_text/index))
 - in de code worden *twee* lists gedefiniëerd, één met de naam `e` en een ander met de naam `pi`
 - wanneer je de code uitvoert zal de regel `answer0 = e[0:2] + pi[-2:]` de waarde van de variabele `answer0` definiëren. Met andere woorden, vanaf deze regel is in het programma de naam `answer0` bekend die verwijst naar het resultaat van de expressie `e[0:2] + pi[-2:]`!
 - vervolgens drukt de code de waarde van de variabele `answer0` af.

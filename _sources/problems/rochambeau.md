@@ -37,7 +37,7 @@ Begin met een leeg bestand in VSCode of een andere tekstverwerker.
 :::{admonition} Bestandsextensies
 :class: warning
 
-Vergeet niet het bestand de extensie `.py` te geven wanneer je het opslaat. Tekstverwerkers (*editors*) als VSCode herkennen het dan als een Python bestand en kunnen er vervolgens extra dingen mee doen, bijvoorbeeld het toepassen van *syntax highlighting* (het kleuren van onderdelen in de code). Zie verder het werken met [tekstbestanden](/support/platte_tekst/) voor meer informatie over tekst, bestandsextensies en andere tips.
+Vergeet niet het bestand de extensie `.py` te geven wanneer je het opslaat. Tekstverwerkers (*editors*) als VSCode herkennen het dan als een Python bestand en kunnen er vervolgens extra dingen mee doen, bijvoorbeeld het toepassen van *syntax highlighting* (het kleuren van onderdelen in de code). Zie verder het werken met [tekstbestanden](/support/plain_text/index) voor meer informatie over tekst, bestandsextensies en andere tips.
 :::
 
 Kopiëer en plak het volgende in het bestand, dit is het begin van de code die je in de opdracht verder gaat uitwerken:
