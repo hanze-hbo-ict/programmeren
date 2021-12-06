@@ -16,7 +16,7 @@ Game of Life is een *cellulaire automaat* uitgevonden door de in 2020 overleden 
 3. Een dode cel met precies 3 levende buren komt weer tot leven
 4. Alle andere cellen blijven in dezelfde toestand
 
-Alhoewel deze regels simpel lijken leiden ze tot complexe en interessante patronen. Meer informatie en een aantal interessante patronen kan je vinden op [https://nl.wikipedia.org/wiki/Game_of_Life].
+Alhoewel deze regels simpel lijken leiden ze tot complexe en interessante patronen. Meer informatie en een aantal interessante patronen kan je vinden op [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life).
 
 In dit practicum ga je een Pythonprogramma implementeren om Game of Life te spelen.
 
