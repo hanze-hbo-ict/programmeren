@@ -5,7 +5,7 @@
 | Onderwerp    | De evolutie van leven                                          |
 | Bestandsnaam | `wk9ex1.py`                                                    |
 | Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
-| Opmerking    | **Dit is een bonusopgave**                                     |
+| Opmerking    |                                                                |
 
 ## John Conway's Game of Life
 
