@@ -365,7 +365,7 @@ van de twee je wilt gebruiken.
 
 Kopiëren is een simpele manier om een nieuwe "generatie" array-elementen te maken die kan afhangen van een vorige generatie.
 
-Nu ga je een functie schrijven die een generatie cellen *veranderd* in een nieuwe generatie.
+Nu ga je een functie schrijven die een generatie cellen *verandert* in een nieuwe generatie.
 
 Om dit te doen, schrijf je een functie `inner_reverse(a)` die een oude tweedimensionale array `a` (een oude "generatie") meekrijgt en dan een nieuwe generatie `new_a` met dezelfde afmetingen maakt, met behulp van `create_board` of `copy`.
 
