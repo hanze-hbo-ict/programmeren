@@ -116,12 +116,12 @@ Tot slot heb je een editor nodig, Visual Studio Code (VSCode) is een flexibele t
 :::{admonition} Andere editors
 :class: notice
 
-Wij adviseren Visual Studio Code voor als je nog *geen* editor hebt geïnstalleerd. Het is dus niet verplicht, je kan jouw eigen editor blijven gebruiken als je wilt! Zie verder ook [platte tekst](platte_tekst) voor meer suggesties voor het bewerken van tekstbestanden.
+Wij adviseren Visual Studio Code voor als je nog *geen* editor hebt geïnstalleerd. Het is dus niet verplicht, je kan jouw eigen editor blijven gebruiken als je wilt! Zie verder ook [platte tekst](/support/plain_text/index) voor meer suggesties voor het bewerken van tekstbestanden.
 :::
 
 ### Configuratie
 
-Configuratie van VSCode zal vanzelf gaan: de eerste keer dat je Python code schrijft en opslaat met een `.py` bestandsextensie (zie ook werken met [platte tekst](platte_tekst)) zal VSCode jou vragen of je de Python uitbreiding voor VSCode wilt installeren. Hier kies je natuurlijk voor :)
+Configuratie van VSCode zal vanzelf gaan: de eerste keer dat je Python code schrijft en opslaat met een `.py` bestandsextensie (zie ook werken met [platte tekst](/support/plain_text/index)) zal VSCode jou vragen of je de Python uitbreiding voor VSCode wilt installeren. Hier kies je natuurlijk voor :)
 
 :::{admonition} macOS
 :class: warning

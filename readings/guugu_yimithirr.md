@@ -25,7 +25,7 @@ We vragen je een antwoord te schrijven op elk artikel. Het mag kort zijn (4 tot 
 :::{admonition} Waarschuwing!
 :class: warning
 
-Je kan **geen** bestanden in het Microsoft Word, RTF (rich text format) of een formaat anders dan platte tekst inleveren. Het is **erg** handig om `.txt`-bestanden met platte tekst te kunnen maken. Zie de het werken met [platte tekst](/support/platte_tekst/) hoe dit moet.
+Je kan **geen** bestanden in het Microsoft Word, RTF (rich text format) of een formaat anders dan platte tekst inleveren. Het is **erg** handig om `.txt`-bestanden met platte tekst te kunnen maken. Zie de het werken met [platte tekst](/support/plain_text/index) hoe dit moet.
 :::
 
 ## Het artikel
