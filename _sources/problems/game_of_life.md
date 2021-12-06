@@ -30,7 +30,7 @@ Zoals altijd is het belangrijk om het probleem in kleine onderdelen op te delen 
 * De regels van "Game of Life" implementeren
 * (Optioneel) De simulatie starten en stoppen
 
-Voordat je begint moet je een schema ontwerpen om je gegevens bij te houden. In beginsel zijn de gegevens die je mmoet bijhouden de toestand van alle cellen op het bord. Om dit te doen, kan je de gegevens in een tweedimensionale array met integerwaardes bijhouden, waar `0` een lege cel (uit) voorstelt en `1` een levende cel (aan) voorstelt.
+Voordat je begint moet je een schema ontwerpen om je gegevens bij te houden. In beginsel zijn de gegevens die je moet bijhouden de toestand van alle cellen op het bord. Om dit te doen, kan je de gegevens in een tweedimensionale array met integerwaardes bijhouden, waar `0` een lege cel (uit) voorstelt en `1` een levende cel (aan) voorstelt.
 
 ### Begincode
 
