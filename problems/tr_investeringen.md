@@ -3,7 +3,7 @@
 | Naam         | Beschrijving                                                   |
 |--------------|----------------------------------------------------------------|
 | Onderwerp    | Slim investeren met Python                                     |
-| Bestandsnaam | `wk8ex4.py`                                                    |
+| Bestandsnaam | `wk9ex3.py`                                                    |
 | Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 ```{warning}
