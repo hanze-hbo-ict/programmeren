@@ -1,0 +1,1397 @@
+
+<!DOCTYPE html>
+
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Versiebeheer met Git &#8212; Programmeren</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "misja/programmeren");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://misja.github.io/programmeren/support/scm/index.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Zoeken" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="nl">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/mascot.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Programmeren</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../about/syllabus.html">
+   Programmeren
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Opmerkingen
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../about/feedback.html">
+   Anoniem feedbackformulier
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../about/faq.html">
+   Veelgestelde vragen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../about/references.html">
+   Literatuur
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../course/week_1.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/1a_introductie.html">
+     Introductie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/1b_condities.html">
+     Condities
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/1c_algoritmen.html">
+     Algoritmen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/2a_programmeren.html">
+     Programmeren
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/2b_picobot.html">
+     Picobot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../course/opgaven_1.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/python_intro.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../readings/guugu_yimithirr.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/rochambeau.html">
+     Rochambeau
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/interactieve_fictie.html">
+     Interactieve fictie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/picobot_1.html">
+     Picobot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/picobot_2.html">
+     Picobot II: Picobot Strikes Back
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/picobot_3.html">
+     Picobot III: Return of the Picobot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/picobot_4.html">
+     Picobot IV: The Picobot Menace
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../course/week_2.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/3a_data.html">
+     Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/3b_strings_en_lists.html">
+     Strings en lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/4a_functies.html">
+     Functies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/4b_recursie.html">
+     Recursie
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../course/opgaven_2.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/sequenties_en_data.html">
+     Practicum I
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/fijne_functies.html">
+     Practicum II
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../readings/end_of_theory.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/feest_met_functies.html">
+     Feest met functies
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 3
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../course/week_3.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/5a_simulatie.html">
+     Simulatie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/5b_turtle_recursie.html">
+     Turtle en recursie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/6a_list_comprehension.html">
+     List comprehension
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../course/opgaven_3.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/python_turtles.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../readings/computer_wins_jeopardy.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/slaapwandelende_student.html">
+     Slaapwandelende student
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/numerieke_integratie.html">
+     Numerieke integratie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/turtles_tot_het_einde.html">
+     Turtles all the way down
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 4
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../course/week_4.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/7a_data_based_design.html">
+     Data based design
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/7b_rekenen_met_taal.html">
+     Rekenen met taal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/8_ontwerp_algoritmen.html">
+     Ontwerp van algoritmen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../course/opgaven_4.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/klinkt_goed.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../readings/universum_simulatie.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/caesar_op_orde.html">
+     Caesar op orde
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 5
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../course/week_5.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/9a_talstelsels.html">
+     Talstelsels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/9b_binaire_getallen.html">
+     Binaire getallen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/10_bewerkingen_met_bits.html">
+     Bewerkingen met bits
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../course/opgaven_5.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/decimaal_en_verder.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../readings/bug_and_crash.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/wisselende_stelsels.html">
+     Wisselende stelsels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/fraaie_plaatjes.html">
+     Fraaie plaatjes
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 6
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../course/week_6.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/11a_logische_schakelingen.html">
+     Logische schakelingen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/11b_rekenen_met_schakelingen.html">
+     Rekenen met schakelingen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/12a_ontwerpen_met_schakelingen.html">
+     Ontwerpen met schakelingen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../course/opgaven_6.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/optellingen_schakelen.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../readings/just_add_water.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/vermenigvuldigingswaanzin.html">
+     Vermenigvuldigingswaanzin
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/eerlijke_verdeling.html">
+     Een eerlijke verdeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/geheugenproblemen.html">
+     Geheugenproblemen
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 7
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../course/week_7.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/13_hmmm_introductie.html">
+     Hmmm introductie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/14_hmmm_functies.html">
+     Hmmm functies
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../course/opgaven_7.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/hmmm_assembly.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../readings/hijacked_minds.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/macht_van_hmmm.html">
+     De macht van hmmm
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/feest_met_fibonacci.html">
+     Feest met Fibonacci
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/macht_van_recursie.html">
+     De macht van recursie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/een_lus_om_python.html">
+     Een lusje om Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/fibonacci_recursief.html">
+     Fibonacci recursief
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 8
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../course/week_8.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/15_lussen.html">
+     Lussen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/16_iteratief_ontwerp.html">
+     Iteratief ontwerpen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../course/opgaven_8.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/mandelbrot.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../readings/algoritmen_discrimineren.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/pythonbat_lussen.html">
+     PythonBat lussen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/rij_van_conway.html">
+     Lees en huiver
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/pi_pijlen.html">
+     Pi met pijltjes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/ascii_art.html">
+     ASCII Art
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 9
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../course/week_9.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/17_2d_arrays.html">
+     2D arrays
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/18_meer_2d.html">
+     Meer 2D
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../course/opgaven_9.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/game_of_life.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../readings/horseless_driverless.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/boter_kaas_eieren.html">
+     Boter kaas en eieren
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/tr_investeringen.html">
+     TR Investeringen B.V.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../course/week_10.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+  <label for="toctree-checkbox-19">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/19_objecten.html">
+     Objecten en klassen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/20_dictionaries.html">
+     Dictionaries
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../course/opgaven_10.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+  <label for="toctree-checkbox-20">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/eeuwigdurende_kalender.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../readings/an_algorithm_wrote_this.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/tekst_genereren.html">
+     Teksten genereren
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/vier_op_een_rij.html">
+     Vier op een rij
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 11
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../course/week_11.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
+  <label for="toctree-checkbox-21">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/21_api_tuple.html">
+     API's en VPython
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/22a_kunstmatige_intelligentie.html">
+     Kunstmatige intelligentie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/22b_projecten.html">
+     Projecten
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../course/opgaven_11.html">
+   Opaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
+  <label for="toctree-checkbox-22">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/buitenaards_python.html">
+     Practicum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../readings/chess_championship.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/vier_op_een_rij_ai.html">
+     AI voor vier op een rij
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 12
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../course/week_12.html">
+   Onderwerpen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/>
+  <label for="toctree-checkbox-23">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/23_finite_state_machines.html">
+     Finite state machines
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../topics/24_oneindigheid.html">
+     Oneindigheid
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../course/opgaven_12.html">
+   Opgaven
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/>
+  <label for="toctree-checkbox-24">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../readings/life_of_pi.html">
+     Leesopgave
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../problems/finite_state_machines.html">
+     Finite state machines
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Projecten
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../projects/vpython.html">
+   VPool
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../projects/connectfour.html">
+   ConnectFour
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../projects/textid.html">
+   TextID
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../projects/picobot.html">
+   Picobot
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Voorbeelden
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../examples/recursie.html">
+   Recursie
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../examples/design_recipe.html">
+   Functie ontwerp
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Oefening
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../practice/1_recursie.html">
+   Recursie
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../practice/2_list_comprehension.html">
+   List comprehension
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../practice/3a_toets.html">
+   Zelftoets
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/>
+  <label for="toctree-checkbox-25">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../practice/3b_toets_uitwerking.html">
+     Uitwerking
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../plain_text/index.html">
+   Tekstbestanden
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python_browser.html">
+   Python in de browser
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../software.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../hmmm.html">
+   Hmmmm assembly
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
+                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/support/scm/index.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Bronopslagplaats"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Fsupport/scm/index.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open een probleem"><i class="fas fa-lightbulb"></i>open probleem</button></a>
+        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/support/scm/index.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="bewerk deze pagina"><i class="fas fa-pencil-alt"></i>suggereren bewerken</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
+        title="Volledig scherm"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhoud
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installeren">
+   Installeren
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#windows">
+   Windows
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#windows-terminal">
+     Windows Terminal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#git-installeren">
+     Git installeren
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#macos">
+   macOS
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linux">
+   Linux
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configuratie">
+   Configuratie
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#macos-en-linux">
+     macOS en Linux
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grafische-omgeving">
+   Grafische omgeving
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="versiebeheer-met-git">
+<h1>Versiebeheer met Git<a class="headerlink" href="#versiebeheer-met-git" title="Permalink naar deze titel">¶</a></h1>
+<p><img alt="Git branches" src="../../_images/git_branches.png" /></p>
+<p><a class="reference external" href="https://git-scm.com/">Git</a> is een veelgebruikt hulpmiddel voor het bijhouden van wijzigingen in broncode (of andere verzamelingen van bestanden en mappen). Het bijhouden van deze wijzigingen is niet alleen handig voor jezelf, maar ook als je gaat samenwerken met anderen.</p>
+<div class="section" id="installeren">
+<h2>Installeren<a class="headerlink" href="#installeren" title="Permalink naar deze titel">¶</a></h2>
+<p>Git is software die je moet installeren. Misschien heb je het al geïnstalleerd, lees dan in ieder geval de installatiestappen door want ze kunnen misschien nog wat tips bevatten!</p>
+</div>
+<div class="section" id="windows">
+<h2>Windows<a class="headerlink" href="#windows" title="Permalink naar deze titel">¶</a></h2>
+<div class="section" id="windows-terminal">
+<h3>Windows Terminal<a class="headerlink" href="#windows-terminal" title="Permalink naar deze titel">¶</a></h3>
+<p>Deze stap is niet noodzakelijk, maar we raden je aan om eerst een moderne terminal omgeving op te zetten omdat je Git vaak op een command line zal gaan gebruiken. Editors als VScode hebben vaak al een ingebouwde (moderne) terminal, maar jouw systeem misschien nog niet.</p>
+<p>Waarom <em>modern</em>? De standaard terminal van Windows is oud en dateert uit de vorige eeuw. Microsoft is deze omgeving aan het vernieuwen, onder andere met een nieuwe terminal applicatie (<em>Windows Terminal</em>) die je kan installeren via <a class="reference external" href="https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701">Microsoft Store</a>. Je zal straks zien dat je deze terminal als <em>standaard</em> kan instellen (wat ook de samenwerking met Git zal vergemakkelijken!).</p>
+<p><img alt="Terminal open settings" src="../../_images/windows_terminal_open_settings.png" /></p>
+<p>Start na installatie Windows Terminal, want je zal een paar dingen willen aanpassen via <em>Settings</em>!</p>
+<p><img alt="Terminal settings" src="../../_images/windows_terminal_settings.png" /></p>
+<p>Kies voor Windows Terminal als <em>Default Terminal application</em> en vanaf nu zal de oude (antieke!) terminal omgeving <strong>niet</strong> meer worden gebruikt!</p>
+<p>Onderaan dit scherm vind je ook de optie <em>Launch size</em> waarmee je de standaard grootte van de terminal kan instellen, wij raden 80 kolommen en 24 rijen aan.</p>
+<div class="admonition note">
+<p class="admonition-title">Notitie</p>
+<p>De waarde 80 voor het aantal kolommen heeft een historische achtergrond, dit was het aantal kolommen van een <a class="reference external" href="https://en.wikipedia.org/wiki/Punched_card#IBM_80-column_format_and_character_codes">IBM ponskaart</a>. Nog steeds wordt deze breedte vaak aangehouden voor terminals en soms ook in editors (als het punt waar tekst moet gaan omlopen naar een volgende regel).</p>
+</div>
+<p>Verken verder welke opties je nog meer kan instellen om Windows Terminal naar jouw smaak aan te passen, bijvoorbeeld met een kleurenthema zoals wij hebben gedaan.</p>
+</div>
+<div class="section" id="git-installeren">
+<h3>Git installeren<a class="headerlink" href="#git-installeren" title="Permalink naar deze titel">¶</a></h3>
+<p>Ga naar <a class="reference external" href="https://git-scm.com/download/windows">https://git-scm.com/download/windows</a> en download Git voor jouw systeem. Tijdens de installatie kan je voor vrijwel alles de standaard opties kiezen, maar bij een paar stappen moet je even opletten!</p>
+<p><img alt="Install components" src="../../_images/1_components.png" /></p>
+<ul class="simple">
+<li><p><em>Git GUI Here</em> hoef je <strong>niet</strong> te kiezen</p></li>
+<li><p>Ook <em>Git Bash Here</em> is <strong>niet</strong> noodzakelijk (maar mag je laten staan)</p></li>
+<li><p>Selecteer <strong>wel</strong> <em>Add a Git Bash Profile to Windows Terminal</em></p></li>
+<li><p>Optioneel kan je kiezen voor <em>Check daily for Git for Windows updates</em></p></li>
+</ul>
+<p><img alt="Install editor nano" src="../../_images/2_editor.png" /></p>
+<p>Editors als VSCode hebben Git ondersteuning geïntegreerd en daar zal je het meest mee gaan werken. Een mogelijke andere situatie zal zijn dat je Git direct via de terminal gebruikt en dan is het handig om een editor te hebben die je in de terminal kan gebruiken. We raden hier <em>Nano</em> aan, een eenvoudige en makkelijk te gebruiken editor.</p>
+<p><img alt="Default branch name" src="../../_images/3_default_branch_name.png" /></p>
+<p>Kies hier voor <em>Override the default branch name for new repositories</em> en vul de naam “main” in.</p>
+<p><img alt="Path environment" src="../../_images/4_path_environment.png" /></p>
+<p>De bovenstaande stap is belangrijk, kies er voor om Git op de command line te kunnen gebruiken!</p>
+<p><img alt="Terminal emulator" src="../../_images/7_terminal_emulator.png" /></p>
+<p>Kies bij deze optie voor <em>Use Window’s default console window</em>. Je zal lezen dat Git deze optie afraadt, maar deze redenen gelden niet meer omdat je eerder Windows Terminal als standaard console (terminal) hebt ingesteld.</p>
+<p><img alt="Credential manager" src="../../_images/8_credential_manager.png" /></p>
+<p>Tot slot, kies voor <em>Git Credential Manager</em>, deze optie is van belang voor het onthouden van gebruikersnaam en wachtwoord als je online diensten als <a class="reference external" href="https://github.com/">GitHub</a> gaat gebruiken.</p>
+</div>
+</div>
+<div class="section" id="macos">
+<h2>macOS<a class="headerlink" href="#macos" title="Permalink naar deze titel">¶</a></h2>
+<p>Er zijn verschillende manieren om Git op een Mac te installeren. De meest eenvoudige is waarschijnlijk om de <a class="reference external" href="https://developer.apple.com/download/all/?q=command%20line%20tools">Xcode Command Line Tools</a> te installeren, op Mavericks (10.9) of hoger kun je dit eenvoudig doen door Git vanuit de Terminal app aan te roepen met bijvoorbeeld</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git config --list
+</pre></div>
+</div>
+<p>Als je Git nog niet hebt geïnstalleerd zal het je vragen om het te installeren met de XCode Command Line Tools.</p>
+<p>Als je een meer up-to-date versie wilt kan je Git ook direct downloaden en installeren via <a class="reference external" href="https://git-scm.com/download/mac">https://git-scm.com/download/mac</a>.</p>
+</div>
+<div class="section" id="linux">
+<h2>Linux<a class="headerlink" href="#linux" title="Permalink naar deze titel">¶</a></h2>
+<p>Git zal waarschijnlijk al op jouw systeem aanwezig zijn, controleer dit door Git het aan te roepen in een terminal</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git --version
+</pre></div>
+</div>
+<p>Gebruik jouw package manager (apt, rpm) om Git te installeren als het ontbreekt, bijvoorbeeld</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo apt-get install git
+</pre></div>
+</div>
+</div>
+<div class="section" id="configuratie">
+<h2>Configuratie<a class="headerlink" href="#configuratie" title="Permalink naar deze titel">¶</a></h2>
+<p>Het eerste (en enige) wat je na installatie nog moet doen is het instellen van jouw naam en emailadres. Dit is belangrijk omdat Git bij iedere <em>commit</em> (het vaststellen van wijzigingen in jouw code) deze informatie gaat gebruiken. Open een terminal en typ het volgende</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git config --global user.name <span class="s2">&quot;Jouw Naam&quot;</span>
+<span class="gp">$ </span>git config --global user.email jouw@naam.com
+</pre></div>
+</div>
+<p>Gebruik hier natuurlijk jouw werkelijke <em>naam</em> en <em>emailadres</em>! Je kan deze regels meerdere keren uitvoeren, bijvoorbeeld om het emailadres te wijzigen. Controleer vervolgens of de instellingen corrrect zijn</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git config --list
+<span class="go">user.name=Jouw Naam</span>
+<span class="go">user.email=jouw@naam.com</span>
+<span class="go">init.defaultbranch=main</span>
+<span class="go">color.status=auto</span>
+<span class="go">color.branch=auto</span>
+<span class="go">color.interactive=auto</span>
+<span class="go">color.diff=auto</span>
+<span class="go">...</span>
+</pre></div>
+</div>
+<p>Let op, jouw uitvoer kan verschillen maar je zal in ieder geval de opties <code class="docutils literal notranslate"><span class="pre">user.name</span></code> en <code class="docutils literal notranslate"><span class="pre">user.email</span></code> terugzien die je eerder hebt gezet. Je kan ook controleren wat Git denkt dat de waarde van een specifieke optie is door <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">&lt;optie&gt;</span></code> te typen</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git config user.name
+</pre></div>
+</div>
+<div class="section" id="macos-en-linux">
+<h3>macOS en Linux<a class="headerlink" href="#macos-en-linux" title="Permalink naar deze titel">¶</a></h3>
+<p>Controleer of de optie <code class="docutils literal notranslate"><span class="pre">init.defaultbranch</span></code> is gezet en gelijk is aan “main”. Wijzig het als volgt als dit niet het geval is</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git config --global init.defaultbranch main
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Notitie</p>
+<p>Diensten als <a class="reference external" href="https://github.com">GitHub</a> en <a class="reference external" href="https://gitlab.com">GitLab</a> gebruiken inmiddels standaard “main” voor de hoofdbranch (in plaats van het oorspronkelijke “master”). Git zal deze naam ook op termijn gaan gebruiken en we lopen met deze optie alvast vooruit op ontwikkelingen.</p>
+</div>
+</div>
+</div>
+<div class="section" id="grafische-omgeving">
+<h2>Grafische omgeving<a class="headerlink" href="#grafische-omgeving" title="Permalink naar deze titel">¶</a></h2>
+<p>Git is een command line applicatie, omgevingen als VSCode weten van Git en hebben daar vaak een eenvoudige grafische interface voor. Het is waarschijnlijk dat jouw installatie (Windows of Linux) naast <code class="docutils literal notranslate"><span class="pre">git</span></code> (of <code class="docutils literal notranslate"><span class="pre">git.exe</span></code> voor Windows) ook <code class="docutils literal notranslate"><span class="pre">gitk</span></code> bevat, een eenvoudige grafische interface voor Git. macOS gebruikers zullen een ander alternatief moeten gebruiken.</p>
+<p>Een populaire grafische omgeving voor Git is <a class="reference external" href="https://desktop.github.com/">GitHub Desktop</a> voor macOS en Windows, Linux gebruikers kunnen versies voor verschillende distributies vinden op <a class="reference external" href="https://github.com/shiftkey/desktop/releases">https://github.com/shiftkey/desktop/</a>. Andere gafische interfaces kan je op Git <a class="reference external" href="https://git-scm.com/downloads/guis/">GUI Clients</a> vinden.</p>
+<div class="admonition important">
+<p class="admonition-title">Belangrijk</p>
+<p>We raden je aan eerst goed te begrijpen hoe Git werkt en dit eerst met de command line te oefenen, pas dan zal je ook de grafische interfaces beter begrijpen en ze efficiënt kunnen gaan gebruiken!</p>
+</div>
+<p>Git is nu klaar voor gebruik!</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "misja/programmeren",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./support/scm"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Door Harvey Mudd College / Hanze University of Applied Sciences<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
+    Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
