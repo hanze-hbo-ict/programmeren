@@ -82,10 +82,13 @@ digraph {
         </tr>
     </table>>]
 
-    width_value [shape=circle, label=<<font face="monospace">7</font>>]
-    height_value [shape=circle, label=<<font face="monospace">6</font>>]
+    width_value [shape=none, label=<<font face="monospace">7</font>>]
+    height_value [shape=none, label=<<font face="monospace">6</font>>]
 
-    board -> data -> cells
-    board -> width -> width_value
-    board -> height -> height_value
+    board -> data [arrowhead=none]
+    data -> cells
+    board -> width [arrowhead=none]
+    width -> width_value
+    board -> height [arrowhead=none]
+    height-> height_value
 }
