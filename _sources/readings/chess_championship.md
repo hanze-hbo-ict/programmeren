@@ -11,7 +11,7 @@ Het artikel van deze week beschrijft sommige van de veranderingen die schaken do
 ## Het artikel
 
 Lees het [artikel van de Wall Street Journal, *Chess-Championship Results Show Powerful Role of Computers*](http://online.wsj.com/articles/SB10001424052702304337404579209980222399924).
-Als je niet bij het origineel kan kan je [hier een lokaal opgeslagen kopie](../assets/chess_human_and_computer.pdf) vinden.
+Als je niet bij het origineel kan kan je [hier een lokaal opgeslagen kopie](https://github.com/misja/programmeren/raw/master/readings//assets/chess_human_and_computer.pdf) vinden.
 
 ## De vragen
 
