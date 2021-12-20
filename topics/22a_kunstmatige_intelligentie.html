@@ -1454,7 +1454,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>De kans dat deze woorden in deze aantallen samen voorkomen is voor “love” (3x) en “thou” (1x)</p>
 <div class="math notranslate nohighlight">
 \[
-0.5 \times 0.5 \times 0.5 \times 0.42 \times ?
+0.5 \times 0.5 \times 0.5 \times 0.42 \times \cdots?
 \]</div>
 <p>Wat te kiezen voor de ontbrekende woorden “potter” (2x) en “spam (4x)”?</p>
 <div class="section" id="ontbrekende-waarden">
@@ -1504,28 +1504,28 @@ commentsRunWhenDOMLoaded(addUtterances);
 \]</div>
 <p>naar
 $<span class="math notranslate nohighlight">\(
-3 \times log_{2}0.5 + log_{2}0.42 + 6 \times log_{2}0.012 = -29.48
+3 \times log_{2}0.5 + log_{2}0.42 + 6 \times log_{2}0.012 = -42.53
 \)</span>$</p>
 </div>
 <div class="section" id="python">
 <h3>Python?<a class="headerlink" href="#python" title="Permalink naar deze titel">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">log</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">log2</span>
 
-<span class="n">score</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">log</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">+</span> <span class="n">log</span><span class="p">(</span><span class="mf">0.42</span><span class="p">)</span> <span class="o">+</span> <span class="mi">6</span> <span class="o">*</span> <span class="n">log</span><span class="p">(</span><span class="mf">0.012</span><span class="p">)</span>
+<span class="n">galbraith</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">log2</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">+</span> <span class="n">log2</span><span class="p">(</span><span class="mf">0.42</span><span class="p">)</span> <span class="o">+</span> <span class="mi">6</span> <span class="o">*</span> <span class="n">log2</span><span class="p">(</span><span class="mf">0.012</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">score</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">galbraith</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-29.48403388454938
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-42.53646947064155
 </pre></div>
 </div>
 </div>
@@ -1548,15 +1548,34 @@ $<span class="math notranslate nohighlight">\(
 <p>De score voor J.K. Rowling</p>
 <div class="math notranslate nohighlight">
 \[
-3 \times log_{2}0.025 + 2 \times log_{2}0.7 + 5 \times log_{2}0.012 = -33.89
+3 \times log_{2}0.025 + 2 \times log_{2}0.7 + 5 \times log_{2}0.012 = -48.9
 \]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rowling</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">log2</span><span class="p">(</span><span class="mf">0.025</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">log2</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">log2</span><span class="p">(</span><span class="mf">0.012</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rowling</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-48.89903955002626
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="de-winnaar">
 <h3>De winnaar<a class="headerlink" href="#de-winnaar" title="Permalink naar deze titel">¶</a></h3>
 <p>Het model met de beste (hoogste) score!</p>
 <ul class="simple">
-<li><p>Robert Galbraith: −29.48 (de (veel?) betere match)</p></li>
-<li><p>J.K. Rowling: −33.89</p></li>
+<li><p>Robert Galbraith: −42.53 (de (veel?) betere match)</p></li>
+<li><p>J.K. Rowling: −48.9</p></li>
 </ul>
 </div>
 </div>
