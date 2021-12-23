@@ -1469,7 +1469,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 \[
 0.5 \times 0.5 \times 0.5 \times 0.42 \times 1 \times 1 \times 1 \times 1 \times 1 \times 1 = 0.525
 \]</div>
-<p>Een waarde 0 is in in ieder geval niet nuttig. Maar waarom is vooral dit geen goed idee om 1 te gebruiken?</p>
+<p>Een waarde 0 is in in ieder geval niet nuttig. Maar waarom is het vooral geen goed idee om 1 te gebruiken?</p>
 </div>
 <div class="section" id="oplossing">
 <h4>Oplossing<a class="headerlink" href="#oplossing" title="Permalink naar deze titel">¶</a></h4>
@@ -1492,12 +1492,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 0.5 \times 0.5 \times 0.5 \times 0.42 \times 0.012 \times 0.012 \times 0.012 \times 0.012 \times 0.012 \times 0.012 = 1.57\text{e-}13
 \]</div>
 <p>De kleinste waarde is <span class="math notranslate nohighlight">\(0.025\)</span> (“love”) en deze waarde gedeeld door twee is ongeveer gelijk aan <span class="math notranslate nohighlight">\(0.012\)</span>. Dit is niet de enige manier om met 0-waarden om te gaan, een andere veelgebruikte techniek is <a class="reference external" href="https://en.wikipedia.org/wiki/Additive_smoothing">Laplace smoothing</a>.</p>
-<p>De uikomst <span class="math notranslate nohighlight">\(1.57\text{e-}13\)</span> is geschreven in een wetenschappelijke notatie en staat voor voor <span class="math notranslate nohighlight">\(1.57 \cdot 10^{-13}\)</span>. Dit zijn heel veel getallen achter de komma, we kunnen hier een andere vorm gebruiken!</p>
+<p>De uikomst <span class="math notranslate nohighlight">\(1.57\text{e-}13\)</span> is geschreven in een wetenschappelijke notatie en staat voor voor <span class="math notranslate nohighlight">\(1.57 \cdot 10^{-13}\)</span>. Dit zijn héél veel getallen achter de komma, we kunnen hier een andere vorm gebruiken!</p>
 </div>
 </div>
 <div class="section" id="logaritme">
 <h3>Logaritme<a class="headerlink" href="#logaritme" title="Permalink naar deze titel">¶</a></h3>
-<p>Gebruik het <a class="reference external" href="https://en.wikipedia.org/wiki/Binary_logarithm">logaritme</a> van de waarden, van</p>
+<p>Gebruik de <a class="reference external" href="https://en.wikipedia.org/wiki/Binary_logarithm">logaritme</a> van de waarden</p>
+<p>van</p>
 <div class="math notranslate nohighlight">
 \[
 0.5 \times 0.5 \times 0.5 \times 0.42 \times 0.012 \times 0.012 \times 0.012 \times 0.012 \times 0.012 \times 0.012 = 1.57\text{e-}13
@@ -1575,7 +1576,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h3>De winnaar<a class="headerlink" href="#de-winnaar" title="Permalink naar deze titel">¶</a></h3>
 <p>Het model met de beste (hoogste) score!</p>
 <ul class="simple">
-<li><p>Robert Galbraith: −42.53 (de (veel?) betere match)</p></li>
+<li><p>Robert Galbraith: −42.53, de (veel?) betere match</p></li>
 <li><p>J.K. Rowling: −48.9</p></li>
 </ul>
 </div>
@@ -1676,7 +1677,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">rules</span><span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;NEXX&quot;</span><span class="p">)]</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;W&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Een dictionary is een geschikt type waar de “huidige staat” en “omgeving” de sleutel is en <em>richting</em> en <em>nieuwe staat</em> als waarde, beide als tuples.</p>
+<p>Een dictionary is een geschikt type waar de “huidige staat” en “omgeving” de sleutel is en <em>richting</em> en <em>nieuwe staat</em> als waarde, beide als tuples. De regel staat vast, en  om deze reden is een tuple een geschikt type om een onveranderlijke verzameling van waarden mee vast te leggen (een tuple is <em>immutable</em>).</p>
+<p>Een dictionary vereist dat een sleutel overanderlijk is en zal om deze reden lists <em>niet</em> als sleutel accepteren (want deze zijn <em>mutable</em>), maar tuples wél!</p>
 <p>Een Picobot wereld (de ruimte en de positie van Picobot)</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">World</span><span class="p">:</span>
     <span class="o">...</span>
