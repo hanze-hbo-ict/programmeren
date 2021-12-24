@@ -10,8 +10,8 @@ In deze opgave ga je oefenen met de lussen van Python: `for` en `while`.
 
 Er staan 12 lusproblemen op de twee PythonBat-pagina's:
 
-* Zes "medium list problems" om lussen te gebruiken op [http://codingbat.com/python/List-2]
-* Zes "medium python string problems" om lussen te gebruiken op [http://codingbat.com/python/String-2]
+* Zes "medium list problems" om lussen te gebruiken op [CodingBat](http://codingbat.com/python/List-2)
+* Zes "medium python string problems" om lussen te gebruiken op [CodingBat](http://codingbat.com/python/String-2)
 
 Als je bijvoorbeeld de pagina met ["medium python string problems"](http://codingbat.com/python/String-2) opent, zie je dat het eerste probleem `double_char` heet. De pagina zegt
 
