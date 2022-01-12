@@ -80,7 +80,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe,.cell"
@@ -1130,7 +1130,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -1186,7 +1186,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Inhoud
@@ -1380,7 +1380,204 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Hmmm</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Inhoud </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#abstracties">
+   Abstracties
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#geheugen">
+   Geheugen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#soorten-geheugen">
+   Soorten geheugen
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#registers">
+     Registers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#algemeen-geheugen">
+     Algemeen geheugen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#harde-schijf">
+     Harde schijf
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solid-state-disk">
+     Solid state disk
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lang-geleden">
+     Lang geleden …
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#historisch">
+   Historisch
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-de-machine">
+   In de machine
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#von-neumann-architectuur">
+     Von Neumann architectuur
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-von-neumann-bottleneck">
+     De von Neumann bottleneck
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#machinetaal">
+     Machinetaal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#assembleertaal-assembly">
+     Assembleertaal (assembly)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instructies">
+   Instructies
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fetch-execution-cycle">
+     Fetch-Execution Cycle
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#assembly">
+   Assembly
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data">
+   Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#harvey-mudd-miniature-machine">
+   Harvey mudd miniature machine
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quiz">
+   Quiz
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wat-is-de-output">
+   Wat is de output?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hmmmm-syntax">
+   Hmmmm syntax
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wat-ontbreekt">
+   Wat ontbreekt?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#herhalingen">
+     Herhalingen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condities">
+     Condities
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jump">
+   Jump!
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jumps-in-hmmm">
+   Jumps in Hmmm
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#onvoorwaardelijke-jump">
+     Onvoorwaardelijke jump
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conditionele-jump">
+     Conditionele jump
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Quiz
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oplossing">
+     Oplossing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Quiz
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Oplossing
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="hmmm">
@@ -1502,28 +1699,28 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="assembly">
 <h2>Assembly<a class="headerlink" href="#assembly" title="Permalink naar deze titel">¶</a></h2>
 <p>Optelling</p>
-<div class="highlight-asm notranslate"><div class="highlight"><pre><span></span><span class="nf">add</span> <span class="no">r2</span> <span class="no">r2</span> <span class="no">r2</span>
+<div class="highlight-asm notranslate"><div class="highlight"><pre><span></span><span class="nf">add</span><span class="w"> </span><span class="no">r2</span><span class="w"> </span><span class="no">r2</span><span class="w"> </span><span class="no">r2</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">r2</span> <span class="o">=</span> <span class="n">r2</span> <span class="o">+</span> <span class="n">r2</span>  <span class="c1"># Python</span>
 </pre></div>
 </div>
 <p>Aftrekking</p>
-<div class="highlight-asm notranslate"><div class="highlight"><pre><span></span><span class="nf">sub</span> <span class="no">r2</span> <span class="no">r1</span> <span class="no">r4</span>
+<div class="highlight-asm notranslate"><div class="highlight"><pre><span></span><span class="nf">sub</span><span class="w"> </span><span class="no">r2</span><span class="w"> </span><span class="no">r1</span><span class="w"> </span><span class="no">r4</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">r2</span> <span class="o">=</span> <span class="n">r1</span> <span class="o">-</span> <span class="n">r4</span>  <span class="c1"># Python</span>
 </pre></div>
 </div>
 <p>Vermenigvuldiging</p>
-<div class="highlight-asm notranslate"><div class="highlight"><pre><span></span><span class="nf">mul</span> <span class="no">r7</span> <span class="no">r6</span> <span class="no">r2</span>
+<div class="highlight-asm notranslate"><div class="highlight"><pre><span></span><span class="nf">mul</span><span class="w"> </span><span class="no">r7</span><span class="w"> </span><span class="no">r6</span><span class="w"> </span><span class="no">r2</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">r7</span> <span class="o">=</span> <span class="n">r6</span> <span class="o">*</span> <span class="n">r2</span>  <span class="c1"># Python</span>
 </pre></div>
 </div>
 <p>Deling</p>
-<div class="highlight-asm notranslate"><div class="highlight"><pre><span></span><span class="nf">div</span> <span class="no">r1</span> <span class="no">r1</span> <span class="no">r2</span>
+<div class="highlight-asm notranslate"><div class="highlight"><pre><span></span><span class="nf">div</span><span class="w"> </span><span class="no">r1</span><span class="w"> </span><span class="no">r1</span><span class="w"> </span><span class="no">r2</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">r1</span> <span class="o">=</span> <span class="n">r1</span> <span class="o">//</span> <span class="n">r2</span>  <span class="c1"># Python</span>
@@ -1533,15 +1730,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="data">
 <h2>Data<a class="headerlink" href="#data" title="Permalink naar deze titel">¶</a></h2>
 <p>Variabelen</p>
-<div class="highlight-asm notranslate"><div class="highlight"><pre><span></span><span class="nf">setn</span> <span class="no">r1</span> <span class="mi">42</span>
+<div class="highlight-asm notranslate"><div class="highlight"><pre><span></span><span class="nf">setn</span><span class="w"> </span><span class="no">r1</span><span class="w"> </span><span class="mi">42</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">r1</span> <span class="o">=</span> <span class="mi">42</span>  <span class="c1"># Python</span>
 </pre></div>
 </div>
 <p>Input / output</p>
-<div class="highlight-asm notranslate"><div class="highlight"><pre><span></span><span class="nf">read</span> <span class="no">r1</span>
-<span class="nf">write</span> <span class="no">r1</span>
+<div class="highlight-asm notranslate"><div class="highlight"><pre><span></span><span class="nf">read</span><span class="w"> </span><span class="no">r1</span><span class="w"></span>
+<span class="nf">write</span><span class="w"> </span><span class="no">r1</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">r1</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>  <span class="c1"># Python</span>
@@ -1640,26 +1837,26 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2>Jumps in Hmmm<a class="headerlink" href="#jumps-in-hmmm" title="Permalink naar deze titel">¶</a></h2>
 <div class="section" id="onvoorwaardelijke-jump">
 <h3>Onvoorwaardelijke jump<a class="headerlink" href="#onvoorwaardelijke-jump" title="Permalink naar deze titel">¶</a></h3>
-<div class="highlight-asm notranslate"><div class="highlight"><pre><span></span><span class="nf">jumpn</span> <span class="mi">42</span>
+<div class="highlight-asm notranslate"><div class="highlight"><pre><span></span><span class="nf">jumpn</span><span class="w"> </span><span class="mi">42</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Spring naar regel 42</p>
 </div>
 <div class="section" id="conditionele-jump">
 <h3>Conditionele jump<a class="headerlink" href="#conditionele-jump" title="Permalink naar deze titel">¶</a></h3>
-<div class="highlight-asm notranslate"><div class="highlight"><pre><span></span><span class="nf">jeqzn</span> <span class="no">r1</span> <span class="mi">42</span>
+<div class="highlight-asm notranslate"><div class="highlight"><pre><span></span><span class="nf">jeqzn</span><span class="w"> </span><span class="no">r1</span><span class="w"> </span><span class="mi">42</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Spring naar regel 42 als <code class="docutils literal notranslate"><span class="pre">r1</span> <span class="pre">==</span> <span class="pre">0</span></code></p>
-<div class="highlight-asm notranslate"><div class="highlight"><pre><span></span><span class="nf">jgtzn</span> <span class="no">r1</span> <span class="mi">42</span> 
+<div class="highlight-asm notranslate"><div class="highlight"><pre><span></span><span class="nf">jgtzn</span><span class="w"> </span><span class="no">r1</span><span class="w"> </span><span class="mi">42</span><span class="w"> </span>
 </pre></div>
 </div>
 <p>Spring naar regel 42 als <code class="docutils literal notranslate"><span class="pre">r1</span> <span class="pre">&gt;</span> <span class="pre">0</span></code></p>
-<div class="highlight-asm notranslate"><div class="highlight"><pre><span></span><span class="nf">jltzn</span> <span class="no">r1</span> <span class="mi">42</span>
+<div class="highlight-asm notranslate"><div class="highlight"><pre><span></span><span class="nf">jltzn</span><span class="w"> </span><span class="no">r1</span><span class="w"> </span><span class="mi">42</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Spring naar regel 42 als <code class="docutils literal notranslate"><span class="pre">r1</span> <span class="pre">&lt;</span> <span class="pre">0</span></code></p>
-<div class="highlight-asm notranslate"><div class="highlight"><pre><span></span><span class="nf">jnezn</span> <span class="no">r1</span> <span class="mi">42</span>
+<div class="highlight-asm notranslate"><div class="highlight"><pre><span></span><span class="nf">jnezn</span><span class="w"> </span><span class="no">r1</span><span class="w"> </span><span class="mi">42</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Spring naar regel 42 als <code class="docutils literal notranslate"><span class="pre">r1</span> <span class="pre">!=</span> <span class="pre">0</span></code></p>
@@ -1745,8 +1942,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="../course/week_7.html" title="vorige pagina">
         <i class="fas fa-angle-left"></i>
@@ -1763,25 +1960,23 @@ commentsRunWhenDOMLoaded(addUtterances);
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          Door Harvey Mudd College / Hanze University of Applied Sciences<br/>
-        
-          <div class="extra_footer">
-            <div>
+  <p>
+    
+      Door Harvey Mudd College / Hanze University of Applied Sciences<br/>
+    
+      <div class="extra_footer">
+        <div>
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
     Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
 </div>
 
-          </div>
-      </p>
-    </div>
-  </footer>
+      </div>
+  </p>
+</footer>
 </main>
 
 

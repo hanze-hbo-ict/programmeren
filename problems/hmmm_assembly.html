@@ -80,7 +80,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
@@ -1132,7 +1132,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -1168,7 +1168,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Inhoud
@@ -1341,7 +1341,183 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Hmmm… Assembly!</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Inhoud </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inleiding">
+   Inleiding
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introductie-in-assemblytaal">
+   Introductie in assemblytaal
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#waarom-programmeren-we-in-assembly">
+     Waarom programmeren we in assembly?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#wat-is-het-verschil-tussen-registers-en-geheugen">
+     Wat is het verschil tussen registers en geheugen?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#een-nadere-blik-op-de-hmmm-instructies">
+     Een nadere blik op de Hmmm-instructies
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hmmm-downloaden-en-uitvoeren">
+   Hmmm downloaden en uitvoeren
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#probeer-het-uit">
+     Probeer het uit!
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nog-een-voorbeeld-proberen-voorbeeld1">
+     Nog een voorbeeld proberen,
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       voorbeeld1
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aftellen-tot-de-derde-macht">
+   Aftellen tot de derde macht
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#commentaar">
+     Commentaar
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#randohmmm-getallen-genereren">
+   RandoHmmm getallen genereren
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-wiskunde-achter-het-genereren-van-willekeurige-getallen">
+     De wiskunde achter het genereren van willekeurige getallen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hoe-onze-random-number-generator-werkt">
+     Hoe onze random number generator werkt…
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-randohmmm-number-generator-schrijven">
+     De RandoHmmm number generator schrijven
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#details">
+       Details
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#je-generator-controleren">
+       Je generator controleren
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#goede-invoerwaardes-kiezen-voor-het-genereren-van-willekeurige-getallen">
+     Goede invoerwaardes kiezen voor het genereren van willekeurige getallen
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#in-de-praktijk">
+       In de praktijk
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#in-theorie">
+       In theorie
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unique-schrijven">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       unique
+      </span>
+     </code>
+     schrijven
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unique-testen">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       unique
+      </span>
+     </code>
+     testen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#waardes-genereren-en-testen">
+     100 waardes genereren en testen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-functie-test-gebruiken">
+     De functie
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       test
+      </span>
+     </code>
+     gebruiken
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#afronden">
+     Afronden…
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#je-cv-bijwerken">
+   Je CV bijwerken!
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="hmmm-assembly">
@@ -1406,7 +1582,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h3>Een nadere blik op de Hmmm-instructies<a class="headerlink" href="#een-nadere-blik-op-de-hmmm-instructies" title="Permalink naar deze titel">¶</a></h3>
 <p>Elke instructie vertelt de computer in principe wat te doen met zijn registers (getallen optellen, etc.). Als de instructie voltooid is, haalt de computer de volgende instructie uit het geheugen. We spreken af dat het programma vanaf geheugenadres 0 in het geheugen wordt gezet.</p>
 <p>Zoals bij de meeste computers “werken” de instructies van Hmmm op <em>registers</em>. Als je naar de collegeslides kijkt, zal je zien dat er instructies zijn zoals <code class="docutils literal notranslate"><span class="pre">add</span></code>, die drie registers meekrijgen als argument, bijvoorbeeld:</p>
-<div class="highlight-asm notranslate"><div class="highlight"><pre><span></span><span class="nf">add</span> <span class="no">r3</span> <span class="no">r1</span> <span class="no">r2</span>
+<div class="highlight-asm notranslate"><div class="highlight"><pre><span></span><span class="nf">add</span><span class="w"> </span><span class="no">r3</span><span class="w"> </span><span class="no">r1</span><span class="w"> </span><span class="no">r2</span><span class="w"></span>
 </pre></div>
 </div>
 <p>De waardes in de rechtertwee registers, <code class="docutils literal notranslate"><span class="pre">r1</span></code> en <code class="docutils literal notranslate"><span class="pre">r2</span></code>, worden opgeteld en het resultaat wordt opgeslagen in het linkerregister <code class="docutils literal notranslate"><span class="pre">r3</span></code>.</p>
@@ -1874,8 +2050,8 @@ van <code class="docutils literal notranslate"><span class="pre">m</span></code>
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="../course/opgaven_7.html" title="vorige pagina">
         <i class="fas fa-angle-left"></i>
@@ -1892,25 +2068,23 @@ van <code class="docutils literal notranslate"><span class="pre">m</span></code>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          Door Harvey Mudd College / Hanze University of Applied Sciences<br/>
-        
-          <div class="extra_footer">
-            <div>
+  <p>
+    
+      Door Harvey Mudd College / Hanze University of Applied Sciences<br/>
+    
+      <div class="extra_footer">
+        <div>
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
     Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
 </div>
 
-          </div>
-      </p>
-    </div>
-  </footer>
+      </div>
+  </p>
+</footer>
 </main>
 
 

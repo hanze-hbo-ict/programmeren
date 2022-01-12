@@ -80,7 +80,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe,.cell"
@@ -1130,7 +1130,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -1186,7 +1186,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Inhoud
@@ -1392,7 +1392,216 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>2D Arrays</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Inhoud </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eendimensionale-arrays">
+   Eendimensionale arrays
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#handelingen-op-data">
+     Handelingen op data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tweedimensionale-arrays">
+   Tweedimensionale arrays
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#while-true">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       while
+      </span>
+      <span class="pre">
+       True
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#indices">
+     Indices
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data">
+   Data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lists">
+     Lists
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#indentiteit">
+     Indentiteit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#waarde-en-identiteit">
+     Waarde en identiteit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#verwijzingen">
+     Verwijzingen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mutabiliteit">
+     Mutabiliteit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mutable">
+     Mutable
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#immutable">
+     Immutable
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#functies">
+     Functies?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#shallow-versus-deep-copy">
+   Shallow versus deep copy
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#shallow-copy">
+     Shallow copy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lists-en-shallow-copy">
+     Lists en shallow copy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#deep-copy">
+     Deep copy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#slicing-is-ook-diep">
+     Slicing is ook diep!
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-comprehension">
+     List comprehension
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quiz">
+   Quiz
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vraag-1">
+     Vraag 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#antwoord">
+     Antwoord
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vraag-2">
+     Vraag 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Antwoord
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vraag-3">
+     Vraag 3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Antwoord
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#staat">
+   Staat
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#overgang-van-staat">
+     Overgang van staat
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#boter-kaas-en-eieren">
+     Boter kaas en eieren
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conway-s-game-of-life">
+   Conway’s Game of Life
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#regels">
+     Regels
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#patronen">
+     Patronen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Staat
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="d-arrays">
@@ -1422,7 +1631,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[15, 20, 3, 16, 22, 34, 33, 7, 36, 20]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[26, 41, 10, 25, 22, 28, 15, 25, 4, 8]
 </pre></div>
 </div>
 </div>
@@ -1434,7 +1643,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24.268
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24.683
 </pre></div>
 </div>
 </div>
@@ -1601,7 +1810,7 @@ id(obj, /)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>139969348149376
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140410871887552
 </pre></div>
 </div>
 </div>
@@ -1614,7 +1823,7 @@ id(obj, /)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>139969420951920
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140410996736368
 </pre></div>
 </div>
 </div>
@@ -1626,7 +1835,7 @@ id(obj, /)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>139969420953104
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140410996737552
 </pre></div>
 </div>
 </div>
@@ -1638,7 +1847,7 @@ id(obj, /)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>139969418904112
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140410994689328
 </pre></div>
 </div>
 </div>
@@ -1685,7 +1894,7 @@ id(obj, /)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>139969348260048
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140410872201936
 </pre></div>
 </div>
 </div>
@@ -1697,7 +1906,7 @@ id(obj, /)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>139969348259040
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140410872201488
 </pre></div>
 </div>
 </div>
@@ -1728,7 +1937,7 @@ id(obj, /)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>139969348360896
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140410872081152
 </pre></div>
 </div>
 </div>
@@ -1741,7 +1950,7 @@ id(obj, /)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>139969348360896
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140410872081152
 </pre></div>
 </div>
 </div>
@@ -1770,7 +1979,7 @@ id(obj, /)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>139969348024560
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140410872251632
 </pre></div>
 </div>
 </div>
@@ -1783,7 +1992,7 @@ id(obj, /)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>139969348325744
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140410872076528
 </pre></div>
 </div>
 </div>
@@ -1796,7 +2005,7 @@ id(obj, /)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>139969420952080
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140410996736528
 </pre></div>
 </div>
 </div>
@@ -1809,7 +2018,7 @@ id(obj, /)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>139969420952112
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140410996736560
 </pre></div>
 </div>
 </div>
@@ -1842,10 +2051,10 @@ id(obj, /)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>main VOOR: y is 139969348483584 en heeft de waarde Pizza salami ananas
-fav VOOR: x is 139969348483584 en heeft de waarde x Pizza salami ananas
-fav NA: x is 139969348485024 en heeft de waarde x Pizza quattro formaggi
-main NA: y is 139969348483584 en heeft de waarde Pizza salami ananas
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>main VOOR: y is 140410872225248 en heeft de waarde Pizza salami ananas
+fav VOOR: x is 140410872225248 en heeft de waarde x Pizza salami ananas
+fav NA: x is 140410872225088 en heeft de waarde x Pizza quattro formaggi
+main NA: y is 140410872225248 en heeft de waarde Pizza salami ananas
 </pre></div>
 </div>
 </div>
@@ -2300,8 +2509,8 @@ main NA: y is 139969348483584 en heeft de waarde Pizza salami ananas
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="../course/week_9.html" title="vorige pagina">
         <i class="fas fa-angle-left"></i>
@@ -2318,25 +2527,23 @@ main NA: y is 139969348483584 en heeft de waarde Pizza salami ananas
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          Door Harvey Mudd College / Hanze University of Applied Sciences<br/>
-        
-          <div class="extra_footer">
-            <div>
+  <p>
+    
+      Door Harvey Mudd College / Hanze University of Applied Sciences<br/>
+    
+      <div class="extra_footer">
+        <div>
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
     Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
 </div>
 
-          </div>
-      </p>
-    </div>
-  </footer>
+      </div>
+  </p>
+</footer>
 </main>
 
 

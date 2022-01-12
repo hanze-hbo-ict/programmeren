@@ -80,7 +80,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe,.cell"
@@ -1130,7 +1130,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -1166,14 +1166,24 @@ commentsRunWhenDOMLoaded(addUtterances);
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
         </div>
     </div>
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Feest met Fibonacci</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="feest-met-fibonacci">
@@ -1201,7 +1211,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="tip admonition">
 <p class="admonition-title">Een register kopiëren</p>
 <p>Het zal waarschijnlijk nodig blijken om de inhoud van een register <code class="docutils literal notranslate"><span class="pre">rX</span></code> in een ander register <code class="docutils literal notranslate"><span class="pre">rY</span></code> kopieëren tijdens dit programma. Bekijk de Hmmm <a class="reference internal" href="../support/hmmm.html"><span class="doc std std-doc">documentatie</span></a>; het commando om <code class="docutils literal notranslate"><span class="pre">r1</span></code> naar <code class="docutils literal notranslate"><span class="pre">r2</span></code> te kopiëren, dat wil zeggen, <code class="docutils literal notranslate"><span class="pre">r2</span> <span class="pre">=</span> <span class="pre">r1</span></code> in Python, is</p>
-<div class="highlight-asm notranslate"><div class="highlight"><pre><span></span><span class="nf">copy</span> <span class="no">r2</span> <span class="no">r1</span>
+<div class="highlight-asm notranslate"><div class="highlight"><pre><span></span><span class="nf">copy</span><span class="w"> </span><span class="no">r2</span><span class="w"> </span><span class="no">r1</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Merk op dat deze instructie gegevens van rechts naar links verplaatst; dit lijkt op het toekenningsstatement in Python, immers, <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">x</span></code> kent de waarde van <code class="docutils literal notranslate"><span class="pre">x</span></code> toe aan <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
@@ -1245,8 +1255,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="macht_van_hmmm.html" title="vorige pagina">
         <i class="fas fa-angle-left"></i>
@@ -1263,25 +1273,23 @@ commentsRunWhenDOMLoaded(addUtterances);
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          Door Harvey Mudd College / Hanze University of Applied Sciences<br/>
-        
-          <div class="extra_footer">
-            <div>
+  <p>
+    
+      Door Harvey Mudd College / Hanze University of Applied Sciences<br/>
+    
+      <div class="extra_footer">
+        <div>
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
     Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
 </div>
 
-          </div>
-      </p>
-    </div>
-  </footer>
+      </div>
+  </p>
+</footer>
 </main>
 
 
