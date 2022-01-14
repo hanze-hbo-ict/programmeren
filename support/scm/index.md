@@ -12,6 +12,10 @@ Git is software die je moet installeren. Misschien heb je het al geïnstalleerd,
 
 ### Windows Terminal
 
+```{important}
+Let op, het volgende geldt *alleen* als je Microsoft Windows 11 of hoger gebruikt. Sla deze stap over als dit niet het geval is en ga verder met [](git-install).
+```
+
 Deze stap is niet noodzakelijk, maar we raden je aan om eerst een moderne terminal omgeving op te zetten omdat je Git vaak op een command line zal gaan gebruiken. Editors als VScode hebben vaak al een ingebouwde (moderne) terminal, maar jouw systeem misschien nog niet.
 
 Waarom *modern*? De standaard terminal van Windows is oud en dateert uit de vorige eeuw. Microsoft is deze omgeving aan het vernieuwen, onder andere met een nieuwe terminal applicatie (*Windows Terminal*) die je kan installeren via [Microsoft Store](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701). Je zal straks zien dat je deze terminal als *standaard* kan instellen (wat ook de samenwerking met Git zal vergemakkelijken!).
@@ -32,6 +36,7 @@ De waarde 80 voor het aantal kolommen heeft een historische achtergrond, dit was
 
 Verken verder welke opties je nog meer kan instellen om Windows Terminal naar jouw smaak aan te passen, bijvoorbeeld met een kleurenthema zoals wij hebben gedaan.
 
+(git-install)=
 ### Git installeren
 
 Ga naar [https://git-scm.com/download/windows](https://git-scm.com/download/windows) en download Git voor jouw systeem. Tijdens de installatie kan je voor vrijwel alles de standaard opties kiezen, maar bij een paar stappen moet je even opletten!
