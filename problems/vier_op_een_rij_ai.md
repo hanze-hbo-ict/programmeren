@@ -5,7 +5,7 @@
 | Onderwerp    | Meer kunstmatige intelligentie voor vier op een rij            |
 | Bestandsnaam | `wk11ex2.py`                                                   |
 | Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
-| Opmerking    | **Dit is een bonusopgave**                                     |
+| Opmerking    |                                                                |
 
 ## Overzicht
 
