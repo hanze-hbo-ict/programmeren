@@ -4,11 +4,13 @@
 <html lang="nl">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Terminal, teksteditors en Python &#8212; Programmeren</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,31 +20,30 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/save_state.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -78,15 +79,15 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
+    <script src="../_static/save_state.js"></script>
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://misja.github.io/programmeren/problems/python_intro.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -100,7 +101,21 @@ commentsRunWhenDOMLoaded(addUtterances);
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -109,9 +124,10 @@ commentsRunWhenDOMLoaded(addUtterances);
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -126,17 +142,18 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../about/syllabus.html">
-   Programmeren
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about/syllabus.html">
+                    Programmeren
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Opmerkingen
  </span>
@@ -1092,92 +1109,197 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
-                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/problems/python_intro.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Bronopslagplaats"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Fproblems/python_intro.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open een probleem"><i class="fas fa-lightbulb"></i>open probleem</button></a>
-        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/problems/python_intro.md"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="bewerk deze pagina"><i class="fas fa-pencil-alt"></i>suggereren bewerken</button></a>
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
-        title="Volledig scherm"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Inhoud
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/misja/programmeren"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Fproblems/python_intro.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/edit/master/problems/python_intro.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/problems/python_intro.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#de-software-installeren">
    De software installeren
@@ -1329,12 +1451,11 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Terminal, teksteditors en Python</h1>
@@ -1343,7 +1464,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> Inhoud </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -1502,11 +1623,12 @@ commentsRunWhenDOMLoaded(addUtterances);
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="terminal-teksteditors-en-python">
-<h1>Terminal, teksteditors en Python<a class="headerlink" href="#terminal-teksteditors-en-python" title="Permalink naar deze titel">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="terminal-teksteditors-en-python">
+<h1>Terminal, teksteditors en Python<a class="headerlink" href="#terminal-teksteditors-en-python" title="Permalink naar deze titel">#</a></h1>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Naam</p></th>
@@ -1536,18 +1658,18 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul class="simple">
 <li><p><a class="reference internal" href="rochambeau.html"><span class="doc std std-doc">Rochambeau</span></a></p></li>
 </ul>
-<div class="section" id="de-software-installeren">
-<h2>De software installeren<a class="headerlink" href="#de-software-installeren" title="Permalink naar deze titel">¶</a></h2>
-<div class="section" id="welke-software-gebruiken-we">
-<h3>Welke software gebruiken we?<a class="headerlink" href="#welke-software-gebruiken-we" title="Permalink naar deze titel">¶</a></h3>
+<section id="de-software-installeren">
+<h2>De software installeren<a class="headerlink" href="#de-software-installeren" title="Permalink naar deze titel">#</a></h2>
+<section id="welke-software-gebruiken-we">
+<h3>Welke software gebruiken we?<a class="headerlink" href="#welke-software-gebruiken-we" title="Permalink naar deze titel">#</a></h3>
 <p>We gebruiken bij Programmeren I software die je misschien nog niet hebt. Je hebt de volgende programma’s nodig:</p>
 <ul class="simple">
 <li><p><strong>Python</strong>; wij gebruiken de versie die Anaconda Python heet (Anaconda-versie 2021.05, die bevat Python-versie 3.8). <em>Je hebt Python 3.x nodig</em>.</p></li>
 <li><p><strong>Een teksteditor</strong>; geen tekstverwerker; om je Python-bestanden te bewerken. We raden <span class="xref myst">VSCode</span> aan, een gratis, veel gebruikte tekstverwerker die beschikbaar is voor alle besturingssystemen (Mac, Windows en Linux). <em>Als je al een favoriete teksteditor hebt, kan je die ook gebruiken.</em></p></li>
 </ul>
-</div>
-<div class="section" id="downloaden-en-installeren">
-<h3>Downloaden en installeren<a class="headerlink" href="#downloaden-en-installeren" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="downloaden-en-installeren">
+<h3>Downloaden en installeren<a class="headerlink" href="#downloaden-en-installeren" title="Permalink naar deze titel">#</a></h3>
 <p><strong>Voor Mac-gebruikers:</strong></p>
 <ul>
 <li><p>Download <a class="reference external" href="https://repo.anaconda.com/archive/Anaconda3-2021.05-MacOSX-x86_64.pkg">Anaconda Python</a></p>
@@ -1566,23 +1688,23 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>Als hierbij VSCode niet geïnstalleerd wordt, <a class="reference external" href="https://code.visualstudio.com/download">kan je de teksteditor VSCode hier vinden</a> en deze installeren: ook hier zullen de defaults goed staan.</p></li>
 <li><p>Je hebt geen terminalprogramma nodig. De ingebouwde <code class="docutils literal notranslate"><span class="pre">Terminal</span></code> van Linux, of de terminal van VSCode zijn afdoende.</p></li>
 </ul>
-</div>
-<div class="section" id="wacht-ik-heb-python-al">
-<h3>Wacht, ik heb Python al…<a class="headerlink" href="#wacht-ik-heb-python-al" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="wacht-ik-heb-python-al">
+<h3>Wacht, ik heb Python al…<a class="headerlink" href="#wacht-ik-heb-python-al" title="Permalink naar deze titel">#</a></h3>
 <p>Geen probleem; als je Anaconda Python installeert, zou deze zonder problemen tegelijk met je andere Python-versies op je computer moeten kunnen staan.</p>
 <p>Let op, we gebruiken in dit vak Python 3. De installatie van Anaconda bevat ook een aantal handige extra bibliotheken.</p>
 <p>Als je eerder met Python 2 gewerkt hebt,
 <span class="xref myst">vat deze pagina de verschillen tussen Python 2 en Python 3 samen</span>. (Korte versie: het is grotendeels hetzelfde…)</p>
-</div>
-<div class="section" id="python-in-je-browser-uitvoeren">
-<h3>Python in je browser uitvoeren<a class="headerlink" href="#python-in-je-browser-uitvoeren" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="python-in-je-browser-uitvoeren">
+<h3>Python in je browser uitvoeren<a class="headerlink" href="#python-in-je-browser-uitvoeren" title="Permalink naar deze titel">#</a></h3>
 <p>Nu de 21e eeuw goed op gang gekomen is, kan je ook Python helemaal in je browser draaien. Dit werkt niet voor elke opgave die je in dit vak krijgt, maar hier zijn een paar opties voor <a class="reference internal" href="../support/python_browser.html"><span class="doc std std-doc">Python in de browser</span></a></p>
-</div>
-</div>
-<div class="section" id="vscode-als-editor-gebruiken">
-<h2>VSCode als editor gebruiken<a class="headerlink" href="#vscode-als-editor-gebruiken" title="Permalink naar deze titel">¶</a></h2>
-<div class="section" id="probeer-vscode-een-teksteditor">
-<h3>Probeer VSCode, een <em>teksteditor</em>.<a class="headerlink" href="#probeer-vscode-een-teksteditor" title="Permalink naar deze titel">¶</a></h3>
+</section>
+</section>
+<section id="vscode-als-editor-gebruiken">
+<h2>VSCode als editor gebruiken<a class="headerlink" href="#vscode-als-editor-gebruiken" title="Permalink naar deze titel">#</a></h2>
+<section id="probeer-vscode-een-teksteditor">
+<h3>Probeer VSCode, een <em>teksteditor</em>.<a class="headerlink" href="#probeer-vscode-een-teksteditor" title="Permalink naar deze titel">#</a></h3>
 <ul>
 <li><p>Teksteditors zijn niet hetzelfde als tekstverwerkers.</p>
 <ul class="simple">
@@ -1614,10 +1736,10 @@ Deze optie kan je hier vinden:</p>
 </li>
 </ul>
 <p>We gaan nu je vensters herschikken zodat je efficiënter kan gebruiken; als je aan het programmeren bent kan het <em>erg veel</em> helpen als je zorgt dat de goede vensters tegelijk zichtbaar zijn!</p>
-</div>
-</div>
-<div class="section" id="vensters-herschikken-dit-is-belangrijk">
-<h2>Vensters herschikken! (Dit is belangrijk!)<a class="headerlink" href="#vensters-herschikken-dit-is-belangrijk" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="vensters-herschikken-dit-is-belangrijk">
+<h2>Vensters herschikken! (Dit is belangrijk!)<a class="headerlink" href="#vensters-herschikken-dit-is-belangrijk" title="Permalink naar deze titel">#</a></h2>
 <ul>
 <li><p>Probeer je vensters zo te herschikken en in grootte aan te passen zodat je tegelijk je browser (met deze instructies) en je teksteditor, naast elkaar, kan zien.</p>
 <ul class="simple">
@@ -1632,9 +1754,9 @@ Deze optie kan je hier vinden:</p>
 <li><p><strong>Kleurenschema!</strong> Besteed niet te veel tijd hieraan, maar voel je vrij om je favoriete kleurenschema te kiezen voor VSCode (menu’s: File/Code … Preferences … Color Theme). Dit is erg leuk, misschien zelfs <a class="reference external" href="https://code.visualstudio.com/docs/getstarted/themes">te leuk</a>…</p></li>
 </ul>
 <p>Hierna ga je een <em>terminalvenster</em> openen…</p>
-</div>
-<div class="section" id="het-terminalvenster">
-<h2>Het terminalvenster!<a class="headerlink" href="#het-terminalvenster" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="het-terminalvenster">
+<h2>Het terminalvenster!<a class="headerlink" href="#het-terminalvenster" title="Permalink naar deze titel">#</a></h2>
 <p><em>Terminalvenster?</em></p>
 <p>De meeste interacties die we met computers hebben zijn via vensters die door het besturingssysteem aangeboden worden. Het besturingssysteem (of <em>OS</em>, kort voor <em>operating system</em>), is meestal Windows of Mac OS, maar er zijn vele andere, waarvan Linux de meest voorkomende is. Het besturingsysteem dat je gebruikt voorziet in een <em>venstersysteem</em> waardoor je een muis kan gebruiken, op een gebruikersvriendelijke manier kan interacteren met de computer, en zelfs films kan bekijken. De klik-en-sleepinterface van moderne venstersystemen is zeker heel erg handig!</p>
 <p><em><strong>Echter</strong></em>, de grafische interface is ook een gordijn, dat de gebruiker afschermt van wat er echt gebeurt met de bestanden op het systeem. Het is een krachtige en nuttige vaardigheid om een duidelijk idee te hebben van hoe bestanden gebruikt worden <em>achter</em> het gordijn van het venstersysteem. De terminal is een programma dat “achter” het gordijn kijkt. Hij gebruikt tekstcommando’s op de zogeheten “command line” (of commandoregel) om bestanden en acties op je computer aan te spreken.</p>
@@ -1650,9 +1772,9 @@ Deze optie kan je hier vinden:</p>
 <li><p>De command line</p></li>
 </ul>
 <p>Als dit de eerste keer is dat je de terminal gebruikt, goed bezig!</p>
-</div>
-<div class="section" id="ipython-opstarten">
-<h2>IPython opstarten…<a class="headerlink" href="#ipython-opstarten" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="ipython-opstarten">
+<h2>IPython opstarten…<a class="headerlink" href="#ipython-opstarten" title="Permalink naar deze titel">#</a></h2>
 <p>In het volgende deel laten we zien hoe je de command line kan gebruiken; dit is erg handig!</p>
 <p>Start eerst <code class="docutils literal notranslate"><span class="pre">ipython</span></code>.</p>
 <p>Doe dit door eerst te zorgen dat het terminalvenster de focus heeft, en type dan</p>
@@ -1675,9 +1797,9 @@ Deze optie kan je hier vinden:</p>
 <li><p>als je er niet uit komt, kan je het aan je docent vragen!</p></li>
 </ul>
 <p>Voor in de toekomst kan het handig zijn om de locatie van <code class="docutils literal notranslate"><span class="pre">ipython</span></code> en <code class="docutils literal notranslate"><span class="pre">ipython3</span></code> toe te voegen aan het “PATH” van Windows; <a class="reference external" href="https://www.java.com/nl/download/help/path.xml">deze link legt uit hoe dat moet</a>. De locatie die je moet toevoegen is <code class="docutils literal notranslate"><span class="pre">C:\Users\gebruiker\Anaconda3\scripts\</span></code>, waarbij je <code class="docutils literal notranslate"><span class="pre">gebruiker</span></code> moet vervangen door je eigen gebruikersnaam. Vraag het gerust als je hulp nodig hebt hierbij!</p>
-</div>
-<div class="section" id="de-terminal-en-de-command-line">
-<h2>De terminal en de command-line<a class="headerlink" href="#de-terminal-en-de-command-line" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="de-terminal-en-de-command-line">
+<h2>De terminal en de command-line<a class="headerlink" href="#de-terminal-en-de-command-line" title="Permalink naar deze titel">#</a></h2>
 <p>Alles wat je kan doen met de vensters van je besturingssyteem kan je ook met de terminal en de command-line doen. (Sterker, je kan nog veel <em>meer</em> met de command line doen…)</p>
 <p>Bij dit vak heb je drie terminalcommando’s nodig. We behandelen ze alledrie kort. Hier is een kort overzicht:</p>
 <ul class="simple">
@@ -1685,9 +1807,9 @@ Deze optie kan je hier vinden:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">ls</span></code>; kort voor <em>list (files)</em>. Het drukt een lijst af van alle bestanden in de huidige locatie.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cd</span></code>; kort voor <em>change directory</em>. Het laat je van map naar map door je computer navigeren.</p></li>
 </ul>
-</div>
-<div class="section" id="pwd">
-<h2>pwd<a class="headerlink" href="#pwd" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="pwd">
+<h2>pwd<a class="headerlink" href="#pwd" title="Permalink naar deze titel">#</a></h2>
 <p>Eerst zie je de <em>prompt</em>. De prompt is het stukje tekst aan de linkerkant dat wacht totdat je wat op de command line typt:</p>
 <p><img alt="Prompt" src="../_images/pwd1.png" /></p>
 <p>Het commando <code class="docutils literal notranslate"><span class="pre">pwd</span></code> is een afkorting van <em>print working directory</em>`*. Het drukt je huidige locatie (map) af. Probeer het:</p>
@@ -1703,9 +1825,9 @@ Deze optie kan je hier vinden:</p>
 <p>In dit voorbeeld is de gebruiker in een submap met de naam <code class="docutils literal notranslate"><span class="pre">misja</span></code>, in een map met de naam <code class="docutils literal notranslate"><span class="pre">home</span></code> op de harde schijf. Dit is een voorbeeld van een “home directory”.</p>
 <p>Je zit waarschijnlijk in je eigen home directory (en je zal de volledige padnaam zien).</p>
 <p>Hierna gaan we kijken wat we hier kunnen vinden met het commando <code class="docutils literal notranslate"><span class="pre">ls</span></code>…</p>
-</div>
-<div class="section" id="ls-het-list-commando">
-<h2>ls: het <em>list</em>-commando<a class="headerlink" href="#ls-het-list-commando" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="ls-het-list-commando">
+<h2>ls: het <em>list</em>-commando<a class="headerlink" href="#ls-het-list-commando" title="Permalink naar deze titel">#</a></h2>
 <p><strong>Het commando <code class="docutils literal notranslate"><span class="pre">ls</span></code></strong> staat voor <em>list</em>.</p>
 <p>Als je <code class="docutils literal notranslate"><span class="pre">ls</span></code> uitvoert maakt dit een lijst van alle bestanden en mappen in je huidige directory. Een voorbeelduitvoer van <code class="docutils literal notranslate"><span class="pre">ls</span></code> is:</p>
 <p><img alt="ls" src="../_images/ls1.png" /></p>
@@ -1714,9 +1836,9 @@ Deze optie kan je hier vinden:</p>
 <p><img alt="ls" src="../_images/ls1_win.png" /></p>
 <p>Probeer het commando om een lijst van de namen van bestanden en submappen in je huidige directory te zien in de terminal.</p>
 <p>Hierna ga je door de directory’s heen “bewegen” met <code class="docutils literal notranslate"><span class="pre">cd</span></code>…</p>
-</div>
-<div class="section" id="cd-het-change-directory-commando">
-<h2>cd: het <em>change-directory</em>-commando<a class="headerlink" href="#cd-het-change-directory-commando" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="cd-het-change-directory-commando">
+<h2>cd: het <em>change-directory</em>-commando<a class="headerlink" href="#cd-het-change-directory-commando" title="Permalink naar deze titel">#</a></h2>
 <p><strong>Het commando <code class="docutils literal notranslate"><span class="pre">cd</span></code></strong> is het belangrijkste. Het staat voor <em>change directory</em>.</p>
 <p>Het commando <code class="docutils literal notranslate"><span class="pre">cd</span></code> laat je van je huidige map naar andere mappen (directory’s) op je computer navigeren. Om het te gebruiken, moet je weten waar je heen wilt gaan!</p>
 <p>Je kan bijvoorbeeld het bureaublad (desktop) proberen… typ dus <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">Desktop</span></code> in. Hier is een voorbeeld:</p>
@@ -1727,16 +1849,16 @@ Deze optie kan je hier vinden:</p>
 <p><img alt="ls" src="../_images/cd3.png" /></p>
 <p>Je eigen resultaten kunnen natuurlijk anders zijn…</p>
 <p>Je gaat je nu “omhoog” verplaatsen in de directorystructuur…</p>
-</div>
-<div class="section" id="cd-een-map-omhoog-gaan">
-<h2>cd ..: een map “omhoog” gaan<a class="headerlink" href="#cd-een-map-omhoog-gaan" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="cd-een-map-omhoog-gaan">
+<h2>cd ..: een map “omhoog” gaan<a class="headerlink" href="#cd-een-map-omhoog-gaan" title="Permalink naar deze titel">#</a></h2>
 <p>Ok, je bent nu naar het bureaublad ge-<code class="docutils literal notranslate"><span class="pre">cd</span></code>’d, <em>maar hoe ga je terug?!</em></p>
 <p>De speciale directorynaam met twee punten achter elkaar <code class="docutils literal notranslate"><span class="pre">..</span></code> betekent “één directory <em>omhoog</em>”.</p>
 <p>Als je dus <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">..</span></code> intypt en op return drukt ben je terug in de map die je bureaublad <em>bevat</em>. Probeer maar:</p>
 <p><img alt="cd .." src="../_images/cd4.png" /></p>
 <p>Probeer daarna <code class="docutils literal notranslate"><span class="pre">pwd</span></code> en <code class="docutils literal notranslate"><span class="pre">ls</span></code>. Misschien valt het je op dat twee van de genoemde mappen <code class="docutils literal notranslate"><span class="pre">..</span></code> (één directory “omhoog”) en <code class="docutils literal notranslate"><span class="pre">.</span></code>, die verwijst naar de huidige directory, zijn.</p>
-<div class="section" id="oefenen">
-<h3>Oefenen!<a class="headerlink" href="#oefenen" title="Permalink naar deze titel">¶</a></h3>
+<section id="oefenen">
+<h3>Oefenen!<a class="headerlink" href="#oefenen" title="Permalink naar deze titel">#</a></h3>
 <p>Probeer deze commando’s, maar dan voor je eigen computer. Misschien wordt de directory niet zonder meer getoond. Gebruik in dat geval <code class="docutils literal notranslate"><span class="pre">pwd</span></code>!</p>
 <p><img alt="Commando's" src="../_images/cd5.png" /></p>
 <p>Dat is alles! Je kan nu de command line gebruiken. Er zijn een paar <em>erg</em> handige shortcuts die de command line <em>veel</em> efficiënter maken; efficiënter dan de drag-en-drop-vensterinterface! Een paar voorbeelden:</p>
@@ -1745,10 +1867,10 @@ Deze optie kan je hier vinden:</p>
 <li><p><em>pijltje omhoog</em> en <em>pijltje omlaag</em> De pijltje-omhoog- en pijltje-omlaag-toetsen onthouden wat je eerder gedaan hebt. Nadat je een commando hebt gebruikt, kan je deze met pijltje-omhoog terughalen. Je kan het ook bewerken (pijltje-links en pijltje-rechts werken hier ook) als je een fout maakt.</p></li>
 </ul>
 <p>Ok! We zijn nu klaar voor Python. We gaan dat doen met <em><strong>ipython</strong></em>.</p>
-</div>
-</div>
-<div class="section" id="python">
-<h2>Python!<a class="headerlink" href="#python" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="python">
+<h2>Python!<a class="headerlink" href="#python" title="Permalink naar deze titel">#</a></h2>
 <p>Python is een programmeertaal, en wordt soms een scripttaal genoemd. Scripttalen hebben een interactive command line.</p>
 <p>Sterker nog, je hebt zojuist de command line van Python gebruikt!</p>
 <p>Je kan experimenteren met Python via de command line van ipython.</p>
@@ -1794,9 +1916,9 @@ kan je het vragen om een <em>googolplex</em>, tien tot de macht googol, te laten
 </ul>
 <p>Dit idee uitbreiden is de volgende, en belangrijkste, uitdaging van het practicum van deze week</p>
 <p>Eerst gaan we kijken hoe we een <em>bestand</em> kunnen gebruiken om onze Python-code in op te slaan, zodat je deze kan inleveren…</p>
-</div>
-<div class="section" id="python-in-een-bestand-uitvoeren">
-<h2>Python in een <em>bestand</em> uitvoeren<a class="headerlink" href="#python-in-een-bestand-uitvoeren" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="python-in-een-bestand-uitvoeren">
+<h2>Python in een <em>bestand</em> uitvoeren<a class="headerlink" href="#python-in-een-bestand-uitvoeren" title="Permalink naar deze titel">#</a></h2>
 <p>We hebben al een teksteditor open staan!</p>
 <p>Maak dus in een nieuwe tab een nieuw, leeg bestand (via het menu <em>File</em> en daaronder <em>New File</em>)</p>
 <p>Plak (of typ) onderstaande code in het nieuwe bestand</p>
@@ -1851,9 +1973,9 @@ de instructies op deze pagina te volgen</a></p></li>
 </ul>
 </li>
 </ul>
-</div>
-<div class="section" id="de-opgave-vier-vieren">
-<h2>De opgave: Vier vieren!<a class="headerlink" href="#de-opgave-vier-vieren" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="de-opgave-vier-vieren">
+<h2>De opgave: Vier vieren!<a class="headerlink" href="#de-opgave-vier-vieren" title="Permalink naar deze titel">#</a></h2>
 <ul>
 <li><p>Het <strong>vier-vierenprobleem!</strong> Voeg nu een aantal regels toe die lijken op die met nul om de waardes van <code class="docutils literal notranslate"><span class="pre">0</span></code> tot en met <code class="docutils literal notranslate"><span class="pre">20</span></code> te berekenen met <em><strong>precies vier vieren</strong></em>. (Je kan ook een voldoende halen als je er een aantal overslaat waar je niet uitkomt!) Je mag alle rekenkundige bewerkingen van Python gebruiken:</p>
 <ul class="simple">
@@ -1916,9 +2038,9 @@ de instructies op deze pagina te volgen</a></p></li>
 </ul>
 </li>
 </ul>
-</div>
-<div class="section" id="je-bestand-wk1ex1-py-inleveren">
-<h2>Je bestand <code class="docutils literal notranslate"><span class="pre">wk1ex1.py</span></code> inleveren<a class="headerlink" href="#je-bestand-wk1ex1-py-inleveren" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="je-bestand-wk1ex1-py-inleveren">
+<h2>Je bestand <code class="docutils literal notranslate"><span class="pre">wk1ex1.py</span></code> inleveren<a class="headerlink" href="#je-bestand-wk1ex1-py-inleveren" title="Permalink naar deze titel">#</a></h2>
 <ul class="simple">
 <li><p>Als je je resultaten hebt kan je je bestand <code class="docutils literal notranslate"><span class="pre">wk1ex1.py</span></code> inleveren.</p></li>
 <li><p>Bij dit vak lever je je uitwerkingen in via <a class="reference external" href="https://www.gradescope.com">GradeScope</a>.</p></li>
@@ -1938,9 +2060,9 @@ de instructies op deze pagina te volgen</a></p></li>
 </ul>
 </li>
 </ul>
-</div>
-<div class="section" id="een-interactief-programma-uitvoeren">
-<h2>Een <em>interactief</em> programma uitvoeren<a class="headerlink" href="#een-interactief-programma-uitvoeren" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="een-interactief-programma-uitvoeren">
+<h2>Een <em>interactief</em> programma uitvoeren<a class="headerlink" href="#een-interactief-programma-uitvoeren" title="Permalink naar deze titel">#</a></h2>
 <p>Het practicum is nog niet af! Om je voor te bereiden op de rest van het huiswerk, kan je proberen dit langere, <em>interactive</em> Python-programma uit te voeren.</p>
 <p>Maak een nieuw bestand aan met de naam <code class="docutils literal notranslate"><span class="pre">wk1ex2a.py</span></code> en plak de volgende startcode er in:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>  <span class="c1"># includes a library named time</span>
@@ -1985,8 +2107,8 @@ de instructies op deze pagina te volgen</a></p></li>
 <p><img alt="rps()" src="../_images/run1.png" /></p>
 </li>
 </ul>
-<div class="section" id="omgaan-met-fouten">
-<h3>Omgaan met fouten!<a class="headerlink" href="#omgaan-met-fouten" title="Permalink naar deze titel">¶</a></h3>
+<section id="omgaan-met-fouten">
+<h3>Omgaan met fouten!<a class="headerlink" href="#omgaan-met-fouten" title="Permalink naar deze titel">#</a></h3>
 <ul class="simple">
 <li><p><em><strong>Om te zien hoe Python met fouten omgaat</strong></em>, kan je één van de twee gelijktekens <code class="docutils literal notranslate"><span class="pre">=</span></code> weghalen in de regel met <code class="docutils literal notranslate"><span class="pre">elif</span></code></p>
 <ul>
@@ -2011,17 +2133,17 @@ de instructies op deze pagina te volgen</a></p></li>
 </ul>
 </li>
 </ul>
-</div>
-</div>
-<div class="section" id="de-opdracht-is-klaar">
-<h2>De opdracht is klaar!<a class="headerlink" href="#de-opdracht-is-klaar" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="de-opdracht-is-klaar">
+<h2>De opdracht is klaar!<a class="headerlink" href="#de-opdracht-is-klaar" title="Permalink naar deze titel">#</a></h2>
 <ul class="simple">
 <li><p>Als alles goed werkt ben je klaar met deze opdracht!</p></li>
 <li><p>Als je eerder klaar bent, kan je met andere dingen aan de slag.</p></li>
 <li><p>Je mag ook verder gaan met de rest van de opdrachten.</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -2045,9 +2167,11 @@ de instructies op deze pagina te volgen</a></p></li>
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../course/opgaven_1.html" title="vorige pagina">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -2063,30 +2187,34 @@ de instructies op deze pagina te volgen</a></p></li>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
-    
-      Door Harvey Mudd College / Hanze University of Applied Sciences<br/>
-    
-      <div class="extra_footer">
-        <div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Harvey Mudd College / Hanze University of Applied Sciences<br/>
+  
+    <div class="extra_footer">
+      <div>
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
     Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
 </div>
 
-      </div>
-  </p>
-</footer>
-</main>
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

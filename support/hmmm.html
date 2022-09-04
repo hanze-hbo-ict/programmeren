@@ -4,11 +4,13 @@
 <html lang="nl">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>HMMM documentatie &#8212; Programmeren</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,31 +20,30 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/save_state.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -78,15 +79,15 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
+    <script src="../_static/save_state.js"></script>
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://misja.github.io/programmeren/support/hmmm.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -100,7 +101,21 @@ commentsRunWhenDOMLoaded(addUtterances);
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -109,9 +124,10 @@ commentsRunWhenDOMLoaded(addUtterances);
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -126,17 +142,18 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../about/syllabus.html">
-   Programmeren
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about/syllabus.html">
+                    Programmeren
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Opmerkingen
  </span>
@@ -1092,92 +1109,197 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
-                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/support/hmmm.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Bronopslagplaats"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Fsupport/hmmm.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open een probleem"><i class="fas fa-lightbulb"></i>open probleem</button></a>
-        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/support/hmmm.md"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="bewerk deze pagina"><i class="fas fa-pencil-alt"></i>suggereren bewerken</button></a>
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
-        title="Volledig scherm"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Inhoud
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/misja/programmeren"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Fsupport/hmmm.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/edit/master/support/hmmm.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/support/hmmm.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#overzicht-van-instructies-in-hmmm">
    Overzicht van instructies in Hmmm
@@ -1294,12 +1416,11 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>HMMM documentatie</h1>
@@ -1308,7 +1429,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> Inhoud </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -1432,15 +1553,16 @@ commentsRunWhenDOMLoaded(addUtterances);
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="hmmm-documentatie">
-<h1>HMMM documentatie<a class="headerlink" href="#hmmm-documentatie" title="Permalink naar deze titel">¶</a></h1>
-<div class="section" id="overzicht-van-instructies-in-hmmm">
-<h2>Overzicht van instructies in Hmmm<a class="headerlink" href="#overzicht-van-instructies-in-hmmm" title="Permalink naar deze titel">¶</a></h2>
-<div class="section" id="systeeminstructies">
-<h3>Systeeminstructies<a class="headerlink" href="#systeeminstructies" title="Permalink naar deze titel">¶</a></h3>
+  <section class="tex2jax_ignore mathjax_ignore" id="hmmm-documentatie">
+<h1>HMMM documentatie<a class="headerlink" href="#hmmm-documentatie" title="Permalink naar deze titel">#</a></h1>
+<section id="overzicht-van-instructies-in-hmmm">
+<h2>Overzicht van instructies in Hmmm<a class="headerlink" href="#overzicht-van-instructies-in-hmmm" title="Permalink naar deze titel">#</a></h2>
+<section id="systeeminstructies">
+<h3>Systeeminstructies<a class="headerlink" href="#systeeminstructies" title="Permalink naar deze titel">#</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Instructie</p></th>
@@ -1467,9 +1589,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="registerwaardes-instellen">
-<h3>Registerwaardes instellen<a class="headerlink" href="#registerwaardes-instellen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="registerwaardes-instellen">
+<h3>Registerwaardes instellen<a class="headerlink" href="#registerwaardes-instellen" title="Permalink naar deze titel">#</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Instructie</p></th>
@@ -1492,9 +1614,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="berekeningen">
-<h3>Berekeningen<a class="headerlink" href="#berekeningen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="berekeningen">
+<h3>Berekeningen<a class="headerlink" href="#berekeningen" title="Permalink naar deze titel">#</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Instructie</p></th>
@@ -1529,9 +1651,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="sprongen">
-<h3>Sprongen!<a class="headerlink" href="#sprongen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="sprongen">
+<h3>Sprongen!<a class="headerlink" href="#sprongen" title="Permalink naar deze titel">#</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Instructie</p></th>
@@ -1570,9 +1692,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="interacteren-met-het-geheugen-ram">
-<h3>Interacteren met het geheugen (RAM)<a class="headerlink" href="#interacteren-met-het-geheugen-ram" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="interacteren-met-het-geheugen-ram">
+<h3>Interacteren met het geheugen (RAM)<a class="headerlink" href="#interacteren-met-het-geheugen-ram" title="Permalink naar deze titel">#</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Instructie</p></th>
@@ -1607,54 +1729,54 @@ commentsRunWhenDOMLoaded(addUtterances);
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="section" id="introductie">
-<h2>Introductie<a class="headerlink" href="#introductie" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="introductie">
+<h2>Introductie<a class="headerlink" href="#introductie" title="Permalink naar deze titel">#</a></h2>
 <p>Hmmm is een 16-bits gesimuleerde assemblytaal met 26-instructies en kan maximaal tot 2<sup>8</sup> = 256 16-bits woorden in geheugen hebben. Hmmm is geschreven in Python, en het is bedoeld als een introductie in programmaren in assembly in het algemeen. Programma’s geschreven in Hmmm bestaan uit genummerde regels met één instructie per regel, en commentaar.</p>
 <p>Hmmm is geïmplementeerd als een enkel programma geschreven in Python. Standaard zal <code class="docutils literal notranslate"><span class="pre">hmmm</span></code> een bestand assembleren en uitvoeren dat geschreven is in de assemblytaal Hmmm. Er zijn opties om een programma te assembleren zonder het uit te voeren, om een eerder geassembleerd programma uit te voeren en om een ingebouwde debugger aan te roepen.</p>
-</div>
-<div class="section" id="hmmm-installeren">
-<h2>Hmmm installeren<a class="headerlink" href="#hmmm-installeren" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="hmmm-installeren">
+<h2>Hmmm installeren<a class="headerlink" href="#hmmm-installeren" title="Permalink naar deze titel">#</a></h2>
 <p>Je kan de broncode van Hmmm <span class="xref myst">hier</span> vinden. Je hebt hiervoor alleen een werkende versie van Python 3 nodig. Download het bestand <code class="docutils literal notranslate"><span class="pre">hmmm</span></code> en sla het op in een directory waar je ook je hmmm-programma’s gaat schrijven.</p>
-</div>
-<div class="section" id="hmmm-gebruiken">
-<h2>Hmmm gebruiken<a class="headerlink" href="#hmmm-gebruiken" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="hmmm-gebruiken">
+<h2>Hmmm gebruiken<a class="headerlink" href="#hmmm-gebruiken" title="Permalink naar deze titel">#</a></h2>
 <p>Je kan aanwijzingen over hoe je Hmmm kan gebruiken vinden in de collegeslides en de opdrachten.</p>
-</div>
-<div class="section" id="overzicht">
-<h2>Overzicht<a class="headerlink" href="#overzicht" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="overzicht">
+<h2>Overzicht<a class="headerlink" href="#overzicht" title="Permalink naar deze titel">#</a></h2>
 <p>Om een Hmmm-programma te assembleren (compileren) en uit te voeren typ je simpelweg “<code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">hmmm</span></code>” op de prompt van de terminal. Hmmm vraagt om een invoerbestand, assembleert dit en als dat gelukt is wordt het programma ook uitgevoerd. (Op een Mac kan je dit wat verkorten door “<code class="docutils literal notranslate"><span class="pre">./hmmm</span> </code><em>bestandsnaam.hmmm</em>” te typen waar <em>bestandsnaam.hmmm</em> de naam van je Hmmm-programma is.)</p>
-</div>
-<div class="section" id="extra-opties">
-<h2>Extra opties<a class="headerlink" href="#extra-opties" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="extra-opties">
+<h2>Extra opties<a class="headerlink" href="#extra-opties" title="Permalink naar deze titel">#</a></h2>
 <p>Hmmm accepteert de opties -h, –help, -d en -o. -h en –help drukken een uitleg af van alle opties. -d roept de debugger van Hmmm aan. Als -o gegeven is, gevolgd door een bestandsnaam, dan wordt het programma geassembleerd en weggeschreven naar het genoemde bestand; Hmmm kan later worden aangeroepen om dat bestand uit te voeren. Bijvoorbeeld:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python hmmm program.hmmm -o program.hb</span>
 <span class="go">python hmmm -d program.hb</span>
 </pre></div>
 </div>
 <p>In de debugmodus kan je “h” of “help” typen op de prompt van de debugger om uitleg over debugcommando’s te krijgen; je kan ook de paragraaf over <a class="reference external" href="#diagnostische-functies">diagnostische functies</a> raadplegen.</p>
-</div>
-<div class="section" id="bestandsextensies-en-types">
-<h2>Bestandsextensies- en types<a class="headerlink" href="#bestandsextensies-en-types" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="bestandsextensies-en-types">
+<h2>Bestandsextensies- en types<a class="headerlink" href="#bestandsextensies-en-types" title="Permalink naar deze titel">#</a></h2>
 <p>De assembler en de simulator stellen beide geen eisen aan bestandsextensies. Het is echter gebruikelijk dat bestanden met de extensie ‘hmmm’ Hmmm-assemblycode bevatten, en bestanden met de extensie ‘hb’ geassembleerde Hmmm-binary’s bevatten. (Omdat Hmmm alleen maar een simulator is zijn de binaire bestanden in feite tektbestanden die je met een gewone teksteditor kan lezen en bewerken.)</p>
-</div>
-<div class="section" id="codeformaat">
-<h2>Codeformaat<a class="headerlink" href="#codeformaat" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="codeformaat">
+<h2>Codeformaat<a class="headerlink" href="#codeformaat" title="Permalink naar deze titel">#</a></h2>
 <p>Elke regel Hmmm-code bevat een regelnummer, een instructie en mogelijk één of meer argumenten. De regelnummers moeten bij 0 beginnen en opeenvolgende integers zijn, en ze moeten aan het begin van de regel staan zonder voorafgaande tekens. Na het regelnummer moet er minstens één spatie of tab staan voor de instructie. Het regelnummer correspondeert rechtstreeks met het geheugenadres van de regel; lege geheugenruimte begint meteen na de laatste regel van het programma.</p>
 <p>De instructies bestaan uit een enkel woord bestaande uit een aantal kleine letters. Na de instructie volgen afhankelijk van de instructiem nul of meer argumenten. Deze worden gescheiden van de instructie door spaties, tabs en/of ‘(‘-tekens.</p>
 <p>Elk argument is een register of een getal. Registers worden aan gegeven met een ‘r’ gevolgd door het nummer van het register, bijvoorbeeld ‘r3’. Getallen moeten in 8 bits passen. (Hun decimale waarde moet afhankelijk van de instructie vallen in het bereik van -128 tot en met 127 of van 0 tot en met 255. Dit is omdat nummers via de zogeheten “twos-complement”-methode worden opgeslagen.) Elk argument wordt gescheiden van zijn voorganger door spaties, tabs en/of komma’s, en de regel kan worden afgesloten met spaties, tabs en/of commentaar.</p>
 <p>In de paragraaf met <a class="reference external" href="#voorbeelden">voorbeelden</a> kan je voorbeelden vinden van goede en foute syntax.</p>
 <p>Commentaar in Hmmm is hetzelfde als in Python: een ‘#’-teken begint commentaar dat eindigt aan het einde van de regel. Commentaar mag zowel op lege regels als op regels met instructies staan. Commentaar op regels die verder leeg zijn krijgt geen regelnummer, en telt niet voor het regelnummer van de volgende regel. Regels mogen ook helemaal leeg zijn.</p>
-</div>
-<div class="section" id="machine-indeling">
-<h2>Machine-indeling<a class="headerlink" href="#machine-indeling" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="machine-indeling">
+<h2>Machine-indeling<a class="headerlink" href="#machine-indeling" title="Permalink naar deze titel">#</a></h2>
 <p>Hmmm simuleert een computer met 16 16-bit-registers en 256 16-bit-geheugenwoorden. Het programma wordt in het geheugen geladen vanaf geheugenadres 0, dus een programma van 12 regels heeft 244 vrije geheugenwoorden over vanaf adres 12 (adressen 0 tot en met 11 worden door de programmainstructies gevolgd). De programmacounter begint op adres 0 en wordt elke cycle met 1 verhoogd. Deze kan ook aangepast door de verschillende <strong>jump</strong>-instructies. Elke cycle leest de simulator de instructie op het geheugenadres die aangewezen wordt door de programmacounter en voert deze uit. Dit gaat door totdat een <strong>halt</strong>-instructie wordt uitgevoerd.</p>
 <p>15 van de 16 registers zijn in principe hardwarematig allemaal hetzelfde (maar zie de conventies hieronder). Het enige speciale register is r0. Als deze gelezen wordt, bevat het altijd een 0. Elke waarde die in dit register geschreven wordt
 wordt weggegooid.</p>
-</div>
-<div class="section" id="de-instructieset-van-hmmm">
-<h2>De instructieset van Hmmm<a class="headerlink" href="#de-instructieset-van-hmmm" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="de-instructieset-van-hmmm">
+<h2>De instructieset van Hmmm<a class="headerlink" href="#de-instructieset-van-hmmm" title="Permalink naar deze titel">#</a></h2>
 <p>Er zijn 26 verschillende instructies in Hmmm, die allemaal tussen de 0 en 3 argumenten hebben. Drie van de instructies, loadn, setn en addn, krijgen een potentieel negatief getal als argument tussen -127 en 127. De instructies load, store, call en jump krijgen een niet-negatief argument mee tussen 0 en 255. Alle andere instructieargumenten zijn registers. In de code hieronder worden registerargumenten weergegeven als ‘rX’, ‘rY’ en ‘rZ’, en numerieke argumenten als ‘#’. In echte code kan elk van de 16 registers gebruikt worden voor ‘rX’, ‘rY’ of ‘rZ’. De beschikbare instructies zijn:</p>
 <table class="colwidths-auto table">
 <thead>
@@ -1770,19 +1892,19 @@ wordt weggegooid.</p>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="invoer-en-uitvoer">
-<h2>Invoer en uitvoer<a class="headerlink" href="#invoer-en-uitvoer" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="invoer-en-uitvoer">
+<h2>Invoer en uitvoer<a class="headerlink" href="#invoer-en-uitvoer" title="Permalink naar deze titel">#</a></h2>
 <p>Hmmm ondersteunt erg versimpelde I/O via de instructies <strong>read</strong> en <strong>write</strong>.</p>
 <p>De instructie <strong>read</strong> vraagt de gebruiker om een getal en zet het getal in het gegeven register. Het controleert op de grenzen van de mogelijke invoer en vraagt de gebruiker opnieuw als het getal niet goed was. Het kan ook gebruikt worden om het programma te onderbreken door ‘q’ in te voeren in plaats van een getal. Dit stopt meteen de uitvoering van het programma. De instructie <strong>write</strong> drukt simpelweg het gegeven register af op het scherm van de gebruiker</p>
-</div>
-<div class="section" id="het-programma-stoppen">
-<h2>Het programma stoppen<a class="headerlink" href="#het-programma-stoppen" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="het-programma-stoppen">
+<h2>Het programma stoppen<a class="headerlink" href="#het-programma-stoppen" title="Permalink naar deze titel">#</a></h2>
 <p>De instructie <strong>halt</strong> stopt het programma, en is het equivalent van een <strong>jump</strong> naar regel -1. Dd gebruiker kan op elk punt tijdens het uitvoeren van het programma op ctrl-C drukken om het te stopen, en het programma stopt ook door ‘q’ op de debugprompt of de invoerprompt op te geven. Het programma stopt ook door ctrl-D te gebruiken op een willekeurige
 prompt.</p>
-</div>
-<div class="section" id="diagnostische-functies">
-<h2>Diagnostische functies<a class="headerlink" href="#diagnostische-functies" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="diagnostische-functies">
+<h2>Diagnostische functies<a class="headerlink" href="#diagnostische-functies" title="Permalink naar deze titel">#</a></h2>
 <p>Het simulatorprogramma bevat een debugmodus die handig is om fouten in het programma op te sporen. Deze kan aangeroepen worden met de opties -d en –debug.</p>
 <p>De debugmodus drukt informatie af na het uitvoeren van elke instructie, en toont welke instructie net is uitgevoerd en waar deze in het geheugen gevonden is (wat de programmacounter was). Het drukt ook een debugprompt af. Invoer die niet herkend wordt op deze prompt laat de simulator één instructie van het programma uitvoeren. Herkende commando’s zijn onder andere ‘c’ of ‘continue’, ‘d’ of ‘dump’, ‘h’ of ‘help’, ‘p’ of ‘print’, ‘q’ of ‘quit’ en ‘r’ of ‘run’.</p>
 <table class="colwidths-auto table">
@@ -1821,11 +1943,11 @@ prompt.</p>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="voorbeelden">
-<h2>Voorbeelden<a class="headerlink" href="#voorbeelden" title="Permalink naar deze titel">¶</a></h2>
-<div class="section" id="goede-code">
-<h3>Goede code<a class="headerlink" href="#goede-code" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="voorbeelden">
+<h2>Voorbeelden<a class="headerlink" href="#voorbeelden" title="Permalink naar deze titel">#</a></h2>
+<section id="goede-code">
+<h3>Goede code<a class="headerlink" href="#goede-code" title="Permalink naar deze titel">#</a></h3>
 <p>Dit is een programma dat goed geschreven en van commentaar voorzien is. Het leest twee getallen, drukt het eerste af, en geeft het eerste gedeeld door het tweede terug, of 0 als het tweede getal 0 is.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># program title</span>
 <span class="c1"># author and date</span>
@@ -1864,9 +1986,9 @@ Enter number (q to quit): 6
 7
 </pre></div>
 </div>
-</div>
-<div class="section" id="slechte-code">
-<h3>Slechte code<a class="headerlink" href="#slechte-code" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="slechte-code">
+<h3>Slechte code<a class="headerlink" href="#slechte-code" title="Permalink naar deze titel">#</a></h3>
 <p>Dit is hetzelfde programma, en werkt hetzelfde. Deze code is echter van lage kwaliteit.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span> 0  read r1
 1   write r1
@@ -1902,9 +2024,9 @@ Enter number (q to quit): 7
 6
 </pre></div>
 </div>
-</div>
-<div class="section" id="foutieve-syntax">
-<h3>Foutieve syntax<a class="headerlink" href="#foutieve-syntax" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="foutieve-syntax">
+<h3>Foutieve syntax<a class="headerlink" href="#foutieve-syntax" title="Permalink naar deze titel">#</a></h3>
 <p>Dit is hetzelfde programma voor de derde keer, nu aangepast om ongeldige syntax te tonen. Dit programma kan niet geassembleerd worden.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span># program title
 # program title
@@ -1978,9 +2100,9 @@ SYNTAX ERROR ON LINE 9:
 </pre></div>
 </div>
 <p>Alhoewel dit misschien niet duidelijk is aan de hand van het voorbeeld hierboven wordt het assembleren van een regel afgebroken als er een fout wordt aangetroffen. Als een regel dus meerdere fouten heeft, wordt maar een enkele fout gerapporteerd. Als die fout opgelost is, wordt de volgende fout gerapporteerd als die er nog steeds is.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -2004,9 +2126,11 @@ SYNTAX ERROR ON LINE 9:
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="software.html" title="vorige pagina">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -2022,30 +2146,34 @@ SYNTAX ERROR ON LINE 9:
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
-    
-      Door Harvey Mudd College / Hanze University of Applied Sciences<br/>
-    
-      <div class="extra_footer">
-        <div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Harvey Mudd College / Hanze University of Applied Sciences<br/>
+  
+    <div class="extra_footer">
+      <div>
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
     Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
 </div>
 
-      </div>
-  </p>
-</footer>
-</main>
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

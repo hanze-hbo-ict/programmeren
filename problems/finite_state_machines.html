@@ -4,11 +4,13 @@
 <html lang="nl">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Finite state machines &#8212; Programmeren</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,31 +20,30 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/save_state.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -78,15 +79,15 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
+    <script src="../_static/save_state.js"></script>
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://misja.github.io/programmeren/problems/finite_state_machines.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -100,7 +101,21 @@ commentsRunWhenDOMLoaded(addUtterances);
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -109,9 +124,10 @@ commentsRunWhenDOMLoaded(addUtterances);
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -126,17 +142,18 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../about/syllabus.html">
-   Programmeren
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about/syllabus.html">
+                    Programmeren
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Opmerkingen
  </span>
@@ -1092,92 +1109,197 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
-                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/problems/finite_state_machines.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Bronopslagplaats"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Fproblems/finite_state_machines.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open een probleem"><i class="fas fa-lightbulb"></i>open probleem</button></a>
-        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/problems/finite_state_machines.md"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="bewerk deze pagina"><i class="fas fa-pencil-alt"></i>suggereren bewerken</button></a>
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
-        title="Volledig scherm"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Inhoud
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/misja/programmeren"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Fproblems/finite_state_machines.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/edit/master/problems/finite_state_machines.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/problems/finite_state_machines.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#jflap">
    JFLAP
@@ -1300,12 +1422,11 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Finite state machines</h1>
@@ -1314,7 +1435,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> Inhoud </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -1444,11 +1565,12 @@ commentsRunWhenDOMLoaded(addUtterances);
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="finite-state-machines">
-<h1>Finite state machines<a class="headerlink" href="#finite-state-machines" title="Permalink naar deze titel">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="finite-state-machines">
+<h1>Finite state machines<a class="headerlink" href="#finite-state-machines" title="Permalink naar deze titel">#</a></h1>
 <p><img alt="" src="../_images/turing_machine.jpg" /></p>
 <p>En Turingmachines!</p>
 <table class="colwidths-auto table">
@@ -1476,8 +1598,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 <p>Pak het bestand <code class="docutils literal notranslate"><span class="pre">wk12ex1.zip</span></code> uit en controleer dat je <strong>zowel</strong> de tests als de startbestanden hebt:</p>
 <p><img alt="Finder" src="../_images/jf0.png" /></p>
-<div class="section" id="jflap">
-<h2>JFLAP<a class="headerlink" href="#jflap" title="Permalink naar deze titel">¶</a></h2>
+<section id="jflap">
+<h2>JFLAP<a class="headerlink" href="#jflap" title="Permalink naar deze titel">#</a></h2>
 <p>We gaan deze “machines” maken in de softwaresimulator JFLAP. Als je Logisim kon laten werken op je systeem, dan zal JFLAP ook werken.</p>
 <p>We hebben een versie hiervan, met de naam <code class="docutils literal notranslate"><span class="pre">JFLAP_Thin.jar</span></code>, beschikbaar gesteld; je kan de link hierboven vinden.</p>
 <p>Vergeet niet, voordat je begint, het zipbestand <code class="docutils literal notranslate"><span class="pre">wk12ex1.zip</span></code> <strong>uit te pakken</strong>. Je kan in Windows de bestanden <strong>wel</strong> bekijken als ze gezipt zijn, maar je kan ze <strong>niet</strong> gebruiken tot je ze daadwerkelijk uitpakt. Nadat je de map <code class="docutils literal notranslate"><span class="pre">wk12ex1</span></code> hebt uitgepakt kan je JFLAP starten en één van de bestanden in die map openen.</p>
@@ -1490,9 +1612,9 @@ Het kan zijn dat je Mac je niet toestaat JFLAP te openen door te dubbelklikken; 
 Het kan zijn dat je JFLAP van de command line moet draaien; <code class="docutils literal notranslate"><span class="pre">cd</span></code> hiervoor in de terminal naar de map waar <code class="docutils literal notranslate"><span class="pre">JFLAP_Thin.jar</span></code> in staat, en voer vanuit die locatie het commando <code class="docutils literal notranslate"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">JFLAP_Thin.jar</span></code> uit. Overleg even met je docent als dit ook niet werkt.</p>
 <p>!!! tip “Tutorial”
 Er is ook een stap-voor-stapuitleg en tutorial beschikbaar op https://www.cs.duke.edu/csed/jflap/tutorial/.</p>
-</div>
-<div class="section" id="een-finite-state-machine-testen">
-<h2>Een finite state machine <em>testen</em><a class="headerlink" href="#een-finite-state-machine-testen" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="een-finite-state-machine-testen">
+<h2>Een finite state machine <em>testen</em><a class="headerlink" href="#een-finite-state-machine-testen" title="Permalink naar deze titel">#</a></h2>
 <p>In het bestand met de naam <code class="docutils literal notranslate"><span class="pre">week12ex1a.jff</span></code> vind je een reeds geïmplementeerde, deterministische finite state machine die bitstrings accepteert waarvan <em>de derde bit een <code class="docutils literal notranslate"><span class="pre">1</span></code> is</em>. Dat wil zeggen, de derde bit van links, oftewel de derde bit die de machine tegenkomt, is een <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
 <p>Hier is een afbeelding van de gegeven machine:</p>
 <p><img alt="Deel 0" src="../_images/jf1.png" /></p>
@@ -1503,8 +1625,8 @@ Als je twee verschillende tekens wilt gebruiken voor een transitie van de ene st
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Als je een komma of een ander scheidingsteken gebuikt om de transitie in te voeren, denkt JFLAP dat je de **gehele** tekst wil gebruiken voor de transitie, in plaats van de **individuele tekens**. JFLAP ondersteunt transities met meerdere tekens, maar die zijn hier niet van toepassing.
 </pre></div>
 </div>
-<div class="section" id="testen-in-batch-mode">
-<h3>Testen in Batch mode!<a class="headerlink" href="#testen-in-batch-mode" title="Permalink naar deze titel">¶</a></h3>
+<section id="testen-in-batch-mode">
+<h3>Testen in Batch mode!<a class="headerlink" href="#testen-in-batch-mode" title="Permalink naar deze titel">#</a></h3>
 <p>Als je klaar bent om te gaan testen, <strong>sla dan je bestand op</strong> en sluit het af. Je moet het bestand wel sluiten, <em>maar niet de hele applicatie.</em> Je komt terug op het hoofdmenu van JFLAP:</p>
 <p><img alt="Menu" src="../_images/jf2.png" /></p>
 <p>Kies dan onder het menu <em>Batch</em> de optie <em>Batch Test</em>:</p>
@@ -1524,13 +1646,13 @@ Als je twee verschillende tekens wilt gebruiken voor een transitie van de ene st
 </ul>
 <p><img alt="Batch mode" src="../_images/jf8.png" /></p>
 <p>Dat is alles! Nu kan je al je JFLAP-machines testen met behulp van <em><strong>Batch mode</strong></em>… het is belangrijk dat je dit echt doet!</p>
-</div>
-</div>
-<div class="section" id="opgaven">
-<h2>Opgaven<a class="headerlink" href="#opgaven" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="opgaven">
+<h2>Opgaven<a class="headerlink" href="#opgaven" title="Permalink naar deze titel">#</a></h2>
 <p>In de volgende opgaven ga je je eigen finite state machines maken!</p>
-<div class="section" id="ten-minste-twee-0-en-en-maximaal-een-1">
-<h3>Ten minste twee <code class="docutils literal notranslate"><span class="pre">0</span></code>’en en maximaal één <code class="docutils literal notranslate"><span class="pre">1</span></code><a class="headerlink" href="#ten-minste-twee-0-en-en-maximaal-een-1" title="Permalink naar deze titel">¶</a></h3>
+<section id="ten-minste-twee-0-en-en-maximaal-een-1">
+<h3>Ten minste twee <code class="docutils literal notranslate"><span class="pre">0</span></code>’en en maximaal één <code class="docutils literal notranslate"><span class="pre">1</span></code><a class="headerlink" href="#ten-minste-twee-0-en-en-maximaal-een-1" title="Permalink naar deze titel">#</a></h3>
 <p>Het doel van deze opgave is om in het bestand <code class="docutils literal notranslate"><span class="pre">wk12ex1b.jff</span></code> een deterministische finite state machine te maken die precies die bitstrings accepteert met <strong>ten minste twee</strong> <code class="docutils literal notranslate"><span class="pre">0</span></code>’en en <strong>maximaal één</strong> <code class="docutils literal notranslate"><span class="pre">1</span></code>. Je mag zoveel states gebruiken als je wilt, maar minder states is zeker beter! Als tip zie je hier het begin van een mogelijke oplossing (De aanpak hier is om “nullen” naar rechts te tellen en “enen” naar benenden…).</p>
 <p><img alt="Deel 1" src="../_images/jf9.png" /></p>
 <p>Hier zijn drie voorbeelden van strings die geaccepteerd moeten worden:</p>
@@ -1548,9 +1670,9 @@ Als je twee verschillende tekens wilt gebruiken voor een transitie van de ene st
 <p>Deze machine vereist ten minste <em>zeven</em> states. Het is geen probleem als je er meer gebruikt.</p>
 <p>!!! notice “Testen”
 Vergeet niet je machine in Batch mode te testen met de tests in <code class="docutils literal notranslate"><span class="pre">wk12ex1b-tests.txt</span></code>!</p>
-</div>
-<div class="section" id="eerste-en-laatste-bit-gelijk">
-<h3>Eerste en laatste bit gelijk<a class="headerlink" href="#eerste-en-laatste-bit-gelijk" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="eerste-en-laatste-bit-gelijk">
+<h3>Eerste en laatste bit gelijk<a class="headerlink" href="#eerste-en-laatste-bit-gelijk" title="Permalink naar deze titel">#</a></h3>
 <p>Het doel van deze opgave is om in het bestand <code class="docutils literal notranslate"><span class="pre">wk12ex1c.jff</span></code> een deterministische finite state machine te maken die precies die bitstrings accepteert waarvan de eerste en laatste bit <strong>gelijk</strong> zijn. Je mag zoveel states gebruiken als je wilt, maar minder states is zeker beter! Hier zijn drie voorbeelden van strings die geaccepteerd moeten worden:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">01010</span>
 <span class="mi">1</span>
@@ -1566,9 +1688,9 @@ Vergeet niet je machine in Batch mode te testen met de tests in <code class="doc
 <p>Deze machine vereist ten minste <em>vijf</em> states, maar meer is ook goed!</p>
 <p>!!! notice “Testen”
 Vergeet niet je machine in Batch mode te testen met de tests in <code class="docutils literal notranslate"><span class="pre">wk12ex1c-tests.txt</span></code>!</p>
-</div>
-<div class="section" id="aantal-0-en-een-veelvoud-van-twee-of-drie">
-<h3>Aantal <code class="docutils literal notranslate"><span class="pre">0</span></code>’en een veelvoud van twee of drie<a class="headerlink" href="#aantal-0-en-een-veelvoud-van-twee-of-drie" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="aantal-0-en-een-veelvoud-van-twee-of-drie">
+<h3>Aantal <code class="docutils literal notranslate"><span class="pre">0</span></code>’en een veelvoud van twee of drie<a class="headerlink" href="#aantal-0-en-een-veelvoud-van-twee-of-drie" title="Permalink naar deze titel">#</a></h3>
 <p>Het doel van deze opgave is om in het bestand <code class="docutils literal notranslate"><span class="pre">wk12ex1d.jff</span></code> een deterministische finite state machine te maken die precies die bitstrings accepteert waarvan het <strong>aantal</strong> <code class="docutils literal notranslate"><span class="pre">0</span></code>’en een veelvoud van <strong>twee</strong>, een veelvoud van <strong>drie</strong> of een veelvoud van zowel <strong>twee</strong> als <strong>drie</strong> is. Alle <code class="docutils literal notranslate"><span class="pre">1</span></code>-bits worden <strong>genegeerd</strong>. Je mag ook hier zoveel states gebruiken als je wilt, maar het is aardig om te kijken hoe klein je de machine kan maken! Hier zijn drie voorbeelden van strings die geaccepteerd moeten worden:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">111</span>
 <span class="mi">0111011111110</span>
@@ -1584,10 +1706,10 @@ Vergeet niet je machine in Batch mode te testen met de tests in <code class="doc
 <p>Deze machine vereist ten minste <em>zes</em> states, maar meer is ook goed!.</p>
 <p>!!! notice “Testen”
 Vergeet niet je machine in Batch mode te testen met de tests in <code class="docutils literal notranslate"><span class="pre">wk12ex1d-tests.txt</span></code>!</p>
-</div>
-</div>
-<div class="section" id="twee-na-laatste-bit-een-1">
-<h2>Twee-na-laatste bit een <code class="docutils literal notranslate"><span class="pre">1</span></code><a class="headerlink" href="#twee-na-laatste-bit-een-1" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="twee-na-laatste-bit-een-1">
+<h2>Twee-na-laatste bit een <code class="docutils literal notranslate"><span class="pre">1</span></code><a class="headerlink" href="#twee-na-laatste-bit-een-1" title="Permalink naar deze titel">#</a></h2>
 <p>Het doel van deze opgave is om in het bestand <code class="docutils literal notranslate"><span class="pre">wk12ex1e.jff</span></code> een deterministische finite state machine te maken die precies die bitstrings accepteert waarvan de <strong>twee-na-laatste</strong> bit een <code class="docutils literal notranslate"><span class="pre">1</span></code> is. Dit voorbeeld is tijdens het college besproken, maar het is wat lastig. Het minimale aantal states waarmee deze machine gebouwd kan worden is <em>acht</em>. Grotere machines zijn ook goed. Hier zijn drie voorbeelden van strings die geaccepteerd moeten worden:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0101</span>
 <span class="mi">100</span>
@@ -1603,16 +1725,16 @@ Vergeet niet je machine in Batch mode te testen met de tests in <code class="doc
 <p>Deze machine vereist ten minste <strong>acht</strong> states, maar meer is ook goed!</p>
 <p>!!! notice “Testen”
 Vergeet niet je machine in Batch mode te testen met de tests in <code class="docutils literal notranslate"><span class="pre">wk12ex1e-tests.txt</span></code>!</p>
-<div class="section" id="inleveren">
-<h3>Inleveren<a class="headerlink" href="#inleveren" title="Permalink naar deze titel">¶</a></h3>
+<section id="inleveren">
+<h3>Inleveren<a class="headerlink" href="#inleveren" title="Permalink naar deze titel">#</a></h3>
 <p>Je bent nu klaar! Vergeet niet al je <code class="docutils literal notranslate"><span class="pre">.jff</span></code>-bestanden samen in te leveren in Gradescope. Zorg dat, als je een zip-bestand gebruikt, de bestanden niet <strong>in een map</strong> in het zip-bestand zitten!</p>
-</div>
-</div>
-<div class="section" id="bonusopgaven">
-<h2>Bonusopgaven<a class="headerlink" href="#bonusopgaven" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="bonusopgaven">
+<h2>Bonusopgaven<a class="headerlink" href="#bonusopgaven" title="Permalink naar deze titel">#</a></h2>
 <p>Er zijn drie uitdagende bonusopgaven om finite state machines te maken en twee om Turingmachines te maken, die ieder 6 bonuspunten waard zijn.</p>
-<div class="section" id="eerste-en-laatste-twee-bits-gelijk">
-<h3>Eerste en laatste twee bits gelijk<a class="headerlink" href="#eerste-en-laatste-twee-bits-gelijk" title="Permalink naar deze titel">¶</a></h3>
+<section id="eerste-en-laatste-twee-bits-gelijk">
+<h3>Eerste en laatste twee bits gelijk<a class="headerlink" href="#eerste-en-laatste-twee-bits-gelijk" title="Permalink naar deze titel">#</a></h3>
 <p>Het doel van deze opgave is om in het bestand <code class="docutils literal notranslate"><span class="pre">wk12ex1f.jff</span></code> een deterministische finite state machine te maken (<em>geen Turingmachine</em>; dat doen we later pas) die precies die bitstrings accepteert waarvan de <strong>eerste twee</strong> bits gelijk zijn aan de <strong>laatste twee</strong> bits. De <strong>volgorde</strong> van de bits is hier van belang. Hier zijn drie voorbeelden van strings die geaccepteerd moeten worden:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">010000010101</span>
 <span class="mi">10111110010</span>
@@ -1627,9 +1749,9 @@ Vergeet niet je machine in Batch mode te testen met de tests in <code class="doc
 </div>
 <p>Elke string met minder dan twee bits moet verworpen worden; elke string met precies twee bits moet geaccepteerd worden; langere strings worden geaccepteerd of verworpen aan de hand van de gegeven criteria.</p>
 <p>Het maakt niet uit hoeveel states je gebruikt! De kleinst mogelijke oplossing bestaat uit <em>vijftien</em> states, en het kan niet kleiner dan dat gedaan worden!</p>
-</div>
-<div class="section" id="binair-getal-deelbaar-door-drie">
-<h3>Binair getal deelbaar door drie<a class="headerlink" href="#binair-getal-deelbaar-door-drie" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="binair-getal-deelbaar-door-drie">
+<h3>Binair getal deelbaar door drie<a class="headerlink" href="#binair-getal-deelbaar-door-drie" title="Permalink naar deze titel">#</a></h3>
 <p>Het doel van deze opgave is om in het bestand <code class="docutils literal notranslate"><span class="pre">wk12ex1g.jff</span></code> een deterministische finite state machine te maken (<em>geen Turingmachine</em>; dat doen we later pas) die precies die bitstrings accepteert die, <em>als je ze leest als een binair getal</em>, precies deelbaar zijn door <strong>drie</strong>! De lege string zien we als <code class="docutils literal notranslate"><span class="pre">0</span></code>. Omdat <code class="docutils literal notranslate"><span class="pre">0</span></code> precies deelbaar is door drie, moeten zowel de string <code class="docutils literal notranslate"><span class="pre">0</span></code> als de lege string geaccepteerd worden door je finite state machine in <code class="docutils literal notranslate"><span class="pre">wk12ex1g.jff</span></code>. Voorloopnullen worden genegeerd, die veranderen de waarde van het getal immers niet.</p>
 <p>Hier zijn drie voorbeelden van strings die <strong>geaccepteerd</strong> moeten worden (met wat commentaar erbij!):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">01001</span>       <span class="c1"># negen</span>
@@ -1660,9 +1782,9 @@ De sleutel is dat *dezelfde relaties ook gelden voor de resten na deling*!
 </pre></div>
 </div>
 <p>Het is de moeite waard om over alle gevallen na te denken. Als je de interacties helemaal begrijpt, kan je ook de volgende uitdaging aan…</p>
-</div>
-<div class="section" id="binair-getal-deelbaar-door-zeven">
-<h3>Binair getal deelbaar door zeven<a class="headerlink" href="#binair-getal-deelbaar-door-zeven" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="binair-getal-deelbaar-door-zeven">
+<h3>Binair getal deelbaar door zeven<a class="headerlink" href="#binair-getal-deelbaar-door-zeven" title="Permalink naar deze titel">#</a></h3>
 <p>Het doel van deze opgave is om in het bestand <code class="docutils literal notranslate"><span class="pre">wk12ex1h.jff</span></code> een deterministische finite state machine te maken (nog steeds <em>geen Turingmachine</em>) die precies die bitstrings accepteert die, <em>als je ze leest als een binair getal</em>, precies deelbaar zijn door <strong>zeven</strong>! Net als hierhoven wordt de lege string gezien als <code class="docutils literal notranslate"><span class="pre">0</span></code>. Omdat <code class="docutils literal notranslate"><span class="pre">0</span></code> precies deelbaar is door zeven, moeten zowel de string <code class="docutils literal notranslate"><span class="pre">0</span></code> als de lege string geaccepteerd worden door je finite state machine in <code class="docutils literal notranslate"><span class="pre">wk12ex1h.jff</span></code>. Voorloopnullen worden net als in de vorige opgave genegeerd.</p>
 <p>Hier zijn drie voorbeelden van strings die <strong>geaccepteerd</strong> moeten worden (met wat commentaar erbij!):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">111</span>        <span class="c1"># zeven</span>
@@ -1683,24 +1805,24 @@ De sleutel is dat *dezelfde relaties ook gelden voor de resten na deling*!
 <p>Wat in elk van deze gevallen gebeurt is dat we de string interpreteren als een binair getal en dan, als dat nummer deelbaar is door zeven, dat de string geaccepteerd moet worden. Als het niet deelbaar is door zeven moet de string verworpen worden.</p>
 <p>!!! tip “Zeven states!”
 Je hebt maar zeven states nodig voor deze machine! Het idee lijkt heel erg op dat van de vorige!</p>
-</div>
-<div class="section" id="turingmachine-voor-palindromen">
-<h3>Turingmachine voor palindromen<a class="headerlink" href="#turingmachine-voor-palindromen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="turingmachine-voor-palindromen">
+<h3>Turingmachine voor palindromen<a class="headerlink" href="#turingmachine-voor-palindromen" title="Permalink naar deze titel">#</a></h3>
 <p>!!! notice “Turingmachines”
 We bespreken Turingmachines pas in het <em>tweede</em> college van deze week…</p>
 <p>Maak in het bestand <code class="docutils literal notranslate"><span class="pre">wk12ex1i.jff</span></code> een <em>Turingmachine</em> die precies die bitstrings accepteert die een <strong>palindroom</strong> zijn (die dus hetzelfde zijn of je ze nou vooruit of achteruit leest). De palindromen zelf bestaan alleen uit 0’en en 1’en en zullen geen spaties bevatten. Je kan hierdoor de lege ruimtes in de tape gebruiken om te weten wanneer de Turingmachine het einde van de invoerstring bereikt heeft aan de linker- of rechterkant.</p>
 <p>Het is onmogelijk om met een finite state machine palindromen te identificeren: dit is een voorbeeld van een probleem waarvoor het krachtigere model van de Turingmachine nodig is.</p>
-</div>
-<div class="section" id="turingmachine-die-aantal-0-en-en-1-en-vergelijkt">
-<h3>Turingmachine die aantal <code class="docutils literal notranslate"><span class="pre">0</span></code>’en en <code class="docutils literal notranslate"><span class="pre">1</span></code>’en vergelijkt<a class="headerlink" href="#turingmachine-die-aantal-0-en-en-1-en-vergelijkt" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="turingmachine-die-aantal-0-en-en-1-en-vergelijkt">
+<h3>Turingmachine die aantal <code class="docutils literal notranslate"><span class="pre">0</span></code>’en en <code class="docutils literal notranslate"><span class="pre">1</span></code>’en vergelijkt<a class="headerlink" href="#turingmachine-die-aantal-0-en-en-1-en-vergelijkt" title="Permalink naar deze titel">#</a></h3>
 <p>Maak in het bestand <code class="docutils literal notranslate"><span class="pre">wk12ex1j.jff</span></code> een <em>Turingmachine</em> die precies die bitstrings accepteert met een gelijk aantal <code class="docutils literal notranslate"><span class="pre">0</span></code>’en en <code class="docutils literal notranslate"><span class="pre">1</span></code>’en, <em>ongeacht de volgorde</em>. De invoerstring bevat geen spaties. De strings <code class="docutils literal notranslate"><span class="pre">010101100111101000</span></code> en <code class="docutils literal notranslate"><span class="pre">110001</span></code> moeten dus geaccepteerd worden, maar de strings <code class="docutils literal notranslate"><span class="pre">011</span></code> en <code class="docutils literal notranslate"><span class="pre">1</span></code> moeten verworpen worden.</p>
 <p>!!! tip “Mogelijke strategie”
 Een mogelijke strategie is om corresponderende <code class="docutils literal notranslate"><span class="pre">0</span></code>’en en <code class="docutils literal notranslate"><span class="pre">1</span></code>’en te wissen. Dit zou echter spaties kunnen creëren in de invoerstring! In plaats van ze te wissen, zou je dus kunnen overwegen om “gebruikte” tekens te veranderen in een ander niet-leeg teken, bijvoorbeeld een <code class="docutils literal notranslate"><span class="pre">2</span></code>, die je dan kan negeren bij de verdere verwerking.</p>
 <p>Aangezien finite state machines niet kunnen “tellen”, is dit nog een probleem dat een Turingmachine vereist; het is niet mogelijk dit te bepalen met alleen maar een finite state machine.</p>
 <p>Succes met JFLAP!</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1724,9 +1846,11 @@ Een mogelijke strategie is om corresponderende <code class="docutils literal not
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../readings/life_of_pi.html" title="vorige pagina">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1742,30 +1866,34 @@ Een mogelijke strategie is om corresponderende <code class="docutils literal not
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
-    
-      Door Harvey Mudd College / Hanze University of Applied Sciences<br/>
-    
-      <div class="extra_footer">
-        <div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Harvey Mudd College / Hanze University of Applied Sciences<br/>
+  
+    <div class="extra_footer">
+      <div>
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
     Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
 </div>
 
-      </div>
-  </p>
-</footer>
-</main>
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

@@ -4,11 +4,13 @@
 <html lang="nl">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Feest met functies &#8212; Programmeren</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,31 +20,30 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/save_state.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -78,15 +79,15 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
+    <script src="../_static/save_state.js"></script>
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://misja.github.io/programmeren/problems/feest_met_functies.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -100,7 +101,21 @@ commentsRunWhenDOMLoaded(addUtterances);
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -109,9 +124,10 @@ commentsRunWhenDOMLoaded(addUtterances);
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -126,17 +142,18 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../about/syllabus.html">
-   Programmeren
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about/syllabus.html">
+                    Programmeren
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Opmerkingen
  </span>
@@ -1092,92 +1109,197 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
-                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/problems/feest_met_functies.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Bronopslagplaats"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Fproblems/feest_met_functies.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open een probleem"><i class="fas fa-lightbulb"></i>open probleem</button></a>
-        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/problems/feest_met_functies.md"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="bewerk deze pagina"><i class="fas fa-pencil-alt"></i>suggereren bewerken</button></a>
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
-        title="Volledig scherm"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Inhoud
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/misja/programmeren"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Fproblems/feest_met_functies.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/edit/master/problems/feest_met_functies.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/problems/feest_met_functies.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#een-begin">
    Een begin
@@ -1317,12 +1439,11 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Feest met functies</h1>
@@ -1331,7 +1452,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> Inhoud </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -1478,11 +1599,12 @@ commentsRunWhenDOMLoaded(addUtterances);
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="feest-met-functies">
-<h1>Feest met functies<a class="headerlink" href="#feest-met-functies" title="Permalink naar deze titel">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="feest-met-functies">
+<h1>Feest met functies<a class="headerlink" href="#feest-met-functies" title="Permalink naar deze titel">#</a></h1>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Naam</p></th>
@@ -1502,8 +1624,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </tbody>
 </table>
 <p>In deze opgave ga je een aantal functies uitwerken door middel van recursie.</p>
-<div class="section" id="een-begin">
-<h2>Een begin<a class="headerlink" href="#een-begin" title="Permalink naar deze titel">¶</a></h2>
+<section id="een-begin">
+<h2>Een begin<a class="headerlink" href="#een-begin" title="Permalink naar deze titel">#</a></h2>
 <p>Maak een nieuw tekstbestand aan met behulp van VSCode of een andere tekstverwerker. Je kan de onderstaande code gebruiken als begin:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">leng</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;leng returns the length of s</span>
@@ -1516,12 +1638,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>In de bovenstaande code zie je de functie <code class="docutils literal notranslate"><span class="pre">leng</span></code> die we al eerder hebben behandeld en je terug kan vinden in de <a class="reference internal" href="../examples/recursie.html"><span class="doc std std-doc">voorbeelden van recursie</span></a>. Het bestand ga je verder aanvullen met functies die je in deze opgave gaat uitwerken.</p>
-</div>
-<div class="section" id="recursie-toepassen">
-<h2>Recursie toepassen<a class="headerlink" href="#recursie-toepassen" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="recursie-toepassen">
+<h2>Recursie toepassen<a class="headerlink" href="#recursie-toepassen" title="Permalink naar deze titel">#</a></h2>
 <p>In deze opgave moeten de functies <code class="docutils literal notranslate"><span class="pre">mult</span></code>, <code class="docutils literal notranslate"><span class="pre">dot</span></code>, <code class="docutils literal notranslate"><span class="pre">ind</span></code>, <code class="docutils literal notranslate"><span class="pre">scrabble_score</span></code> en <code class="docutils literal notranslate"><span class="pre">transcribe</span></code> worden uitgewerkt met behulp van recursie. Gebruik de functies <code class="docutils literal notranslate"><span class="pre">power</span></code>, <code class="docutils literal notranslate"><span class="pre">mymax</span></code>, <code class="docutils literal notranslate"><span class="pre">leng</span></code> en <code class="docutils literal notranslate"><span class="pre">vwl</span></code> die je al eerder hebt gezien (en terug kan vinden in de <a class="reference internal" href="../examples/recursie.html"><span class="doc std std-doc">voorbeelden van recursie</span></a>) als basis voor het ontwerp van jouw functies.</p>
-<div class="section" id="recursie-visualiseren">
-<h3>Recursie visualiseren<a class="headerlink" href="#recursie-visualiseren" title="Permalink naar deze titel">¶</a></h3>
+<section id="recursie-visualiseren">
+<h3>Recursie visualiseren<a class="headerlink" href="#recursie-visualiseren" title="Permalink naar deze titel">#</a></h3>
 <p>Je kan <a class="reference external" href="http://www.pythontutor.com/visualize.html">Python Tutor</a> gebruiken om beter inzicht te verkrijgen in hoe recursie werkt. Let op, om de aanroep van de functie in Python Tutor te visualiseren moet je de recursieve functie definiëren (schrijven) én de functie ook aanroepen, bijvoorbeeld direct onder de functie.</p>
 <p>Hier is een voorbeeld die je in Python Tutor kan gebruiken en uitproberen (ook deze functie kan je terugvinden in de <a class="reference internal" href="../examples/recursie.html"><span class="doc std std-doc">voorbeelden van recursie</span></a>):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mylen</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
@@ -1535,9 +1657,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;test is&quot;</span><span class="p">,</span> <span class="n">test</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="docstrings">
-<h3>Docstrings<a class="headerlink" href="#docstrings" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="docstrings">
+<h3>Docstrings<a class="headerlink" href="#docstrings" title="Permalink naar deze titel">#</a></h3>
 <p>Zorg er ook voor dat voor elke functie een docstring wordt opgenomen die aangeeft wat de argumenten van de functie betekenen en wat de returnwaarde ervan is, d.w.z. wat de functie <em>doet</em>. Hier is een voorbeeld van een docstring voor de functie <code class="docutils literal notranslate"><span class="pre">mult</span></code> die je verder ook als sjabloon voor de andere functies die je gaat uitwerken kan gebruiken:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mult</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
 <span class="hll">    <span class="sd">&quot;&quot;&quot;mult returns the product of its two arguments</span>
@@ -1554,9 +1676,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Er zijn verschillende manieren om Python docstrings te schrijven en hier zijn geen harde regels voor … Bijvoorbeeld, Google heeft een geheel eigen <a class="reference external" href="http://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings">syntax en stijl</a> opgesteld waar docstrings aan moeten voldoen.</p>
 <p>We moeten dus een keus maken hoe we docstrings vormgeven: de syntax die wij gebruiken is een conventie (afspraak) die ook in andere grotere Python projecten en gereedschappen wordt gebruikt, bijvoorbeeld <a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a> en <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a>.</p>
 </div>
-</div>
-<div class="section" id="testen">
-<h3>Testen<a class="headerlink" href="#testen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="testen">
+<h3>Testen<a class="headerlink" href="#testen" title="Permalink naar deze titel">#</a></h3>
 <p>Test jouw functies! Het is héél verleidelijk om een functie te schrijven en verder aan te nemen dat alles werkt, maar tot je hebt getest weet je niet zeker of alles in orde is! Kleine (of grote!) fouten zijn snel gemaakt en kunnen ervoor zorgen dat de code niet kan worden uitgevoerd (<em>syntax</em> fouten) of een resultaat geeft dat jij niet zo hebt bedoeld (<em>functionele</em> fouten) …</p>
 <p>Voor de opdrachten geven we jou een aantal tests die je aan jouw uitwerkingen kan toevoegen. Als je vervolgens jouw bestand uitvoert worden de tests ook uitgevoerd en kan je (visueel, in ieder geval) controleren of er tests zijn die niet werken.</p>
 <p>Hier is een voorbeeld dat je al eerder hebt gezien, de functie <code class="docutils literal notranslate"><span class="pre">flipside(s)</span></code>. Plak dit in jouw bestand en voer het uit:</p>
@@ -1587,12 +1709,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">flipside</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;ergfout&quot;</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="opgaven">
-<h2>Opgaven<a class="headerlink" href="#opgaven" title="Permalink naar deze titel">¶</a></h2>
-<div class="section" id="mult-n-m">
-<h3><code class="docutils literal notranslate"><span class="pre">mult(n,</span> <span class="pre">m)</span></code><a class="headerlink" href="#mult-n-m" title="Permalink naar deze titel">¶</a></h3>
+</section>
+</section>
+<section id="opgaven">
+<h2>Opgaven<a class="headerlink" href="#opgaven" title="Permalink naar deze titel">#</a></h2>
+<section id="mult-n-m">
+<h3><code class="docutils literal notranslate"><span class="pre">mult(n,</span> <span class="pre">m)</span></code><a class="headerlink" href="#mult-n-m" title="Permalink naar deze titel">#</a></h3>
 <p>De functie <code class="docutils literal notranslate"><span class="pre">mult(n,</span> <span class="pre">m)</span></code> moet het product (de vermenigvuldiging) van de twee gehele getallen <code class="docutils literal notranslate"><span class="pre">n</span></code> en <code class="docutils literal notranslate"><span class="pre">m</span></code> als resultaat teruggeven. Omdat het een beetje te gemakkelijk zou zijn om de vermenigvuldigingsoperator <code class="docutils literal notranslate"><span class="pre">*</span></code> te gebruiken mag je <strong>alleen</strong> maar gebruik maken van <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code> (om negatieve getallen te maken), in combinatie met recursie. Gebruik de <a class="reference external" href="/examples/recursie.md#powerb-p"><code class="docutils literal notranslate"><span class="pre">power</span></code></a> functie die eerder is behandeld als voorbeeld. Een mogelijke uitvoer kan zijn:</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">mult</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
 <span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="mi">42</span>
@@ -1611,9 +1733,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="k">assert</span> <span class="n">mult</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="dot-l-k">
-<h3><code class="docutils literal notranslate"><span class="pre">dot(L,</span> <span class="pre">k)</span></code><a class="headerlink" href="#dot-l-k" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="dot-l-k">
+<h3><code class="docutils literal notranslate"><span class="pre">dot(L,</span> <span class="pre">k)</span></code><a class="headerlink" href="#dot-l-k" title="Permalink naar deze titel">#</a></h3>
 <p>De functie <code class="docutils literal notranslate"><span class="pre">dot(L,</span> <span class="pre">k)</span></code> moet het <em>inwendig product</em> (<em>inproduct</em> of <em>dot product</em>) van de lijsten <code class="docutils literal notranslate"><span class="pre">L</span></code> en <code class="docutils literal notranslate"><span class="pre">k</span></code> teruggeven. Als de twee lijsten niet even lang zijn, moet <code class="docutils literal notranslate"><span class="pre">dot</span></code> de waarde <code class="docutils literal notranslate"><span class="pre">0.0</span></code> teruggeven. Als de lijsten beide leeg zijn, moet <code class="docutils literal notranslate"><span class="pre">dot</span></code> ook <code class="docutils literal notranslate"><span class="pre">0.0</span></code> teruggeven. Je mag ervan uitgaan dat de lijsten alleen maar getallen bevatten en je mag de vermenigvuldigingsoperator <code class="docutils literal notranslate"><span class="pre">*</span></code> gebruiken bij deze opgave!</p>
 <div class="question admonition">
 <p class="admonition-title">Inwendig product (inproduct)</p>
@@ -1642,9 +1764,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="k">assert</span> <span class="n">dot</span><span class="p">([],</span> <span class="p">[])</span> <span class="o">==</span> <span class="mf">0.0</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="ind-e-l">
-<h3><code class="docutils literal notranslate"><span class="pre">ind(e,</span> <span class="pre">L)</span></code><a class="headerlink" href="#ind-e-l" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="ind-e-l">
+<h3><code class="docutils literal notranslate"><span class="pre">ind(e,</span> <span class="pre">L)</span></code><a class="headerlink" href="#ind-e-l" title="Permalink naar deze titel">#</a></h3>
 <p>Schrijf de functie <code class="docutils literal notranslate"><span class="pre">ind(e,</span> <span class="pre">L)</span></code>, die een sequentie <code class="docutils literal notranslate"><span class="pre">L</span></code> en een element <code class="docutils literal notranslate"><span class="pre">e</span></code> accepteert. <code class="docutils literal notranslate"><span class="pre">L</span></code> kan een string of een lijst zijn.</p>
 <p>De functie <code class="docutils literal notranslate"><span class="pre">ind</span></code> moet de positie of <em>index</em> teruggeven waarop <code class="docutils literal notranslate"><span class="pre">e</span></code> voor het eerst voorkomt in <code class="docutils literal notranslate"><span class="pre">L</span></code>. De index begint bij <code class="docutils literal notranslate"><span class="pre">0</span></code>, zoals gebruikelijk bij lijsten. Als <code class="docutils literal notranslate"><span class="pre">e</span></code> <em>geen</em> element van <code class="docutils literal notranslate"><span class="pre">L</span></code> is, dan moet <code class="docutils literal notranslate"><span class="pre">ind(e,</span> <span class="pre">L)</span></code> een integer teruggeven die gelijk is aan <code class="docutils literal notranslate"><span class="pre">len(L)</span></code>. Je mag hier de Python functie <code class="docutils literal notranslate"><span class="pre">index</span></code> <strong>niet</strong> gebruiken. Hier zijn een paar voorbeelden van mogelijke uitvoer:</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">ind</span><span class="p">(</span><span class="mi">42</span><span class="p">,</span> <span class="p">[</span><span class="mi">55</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">100</span><span class="p">])</span>
@@ -1692,9 +1814,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="k">assert</span> <span class="n">ind</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;nader onderzoek&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="letter-score-let">
-<h3><code class="docutils literal notranslate"><span class="pre">letter_score(let)</span></code><a class="headerlink" href="#letter-score-let" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="letter-score-let">
+<h3><code class="docutils literal notranslate"><span class="pre">letter_score(let)</span></code><a class="headerlink" href="#letter-score-let" title="Permalink naar deze titel">#</a></h3>
 <p>De functie <code class="docutils literal notranslate"><span class="pre">letter_score(let)</span></code> krijgt één argument mee, een string met een <em>enkele</em> letter en geeft de waarde van deze letter op de Scrabble tegel terug. Als het argument niet een letter van <code class="docutils literal notranslate"><span class="pre">'a'</span></code> tot en met <code class="docutils literal notranslate"><span class="pre">'z'</span></code> is moet de functie <code class="docutils literal notranslate"><span class="pre">0</span></code> teruggeven.</p>
 <p>Let op, <code class="docutils literal notranslate"><span class="pre">letter_score</span></code> heeft <strong>geen</strong> recursie nodig. Je hebt recursie <em>wel</em> nodig in de volgende opgave <code class="docutils literal notranslate"><span class="pre">scrabble_score(s)</span></code> …</p>
 <p>Om deze functie te schrijven heb je onderstaande waardes van de Scrabble tegels nodig.</p>
@@ -1721,9 +1843,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>Schrijf nu zelf een aantal tests voor <code class="docutils literal notranslate"><span class="pre">letter_score</span></code>, de functie zal ook worden ook getest als onderdeel van de volgende functie! Test wel de functie <code class="docutils literal notranslate"><span class="pre">letter_score</span></code> afzonderlijk anders zal de functie <code class="docutils literal notranslate"><span class="pre">scrabble_score</span></code> je flink wat problemen kunnen geven!</p>
-</div>
-<div class="section" id="scrabble-score-s">
-<h3><code class="docutils literal notranslate"><span class="pre">scrabble_score(s)</span></code><a class="headerlink" href="#scrabble-score-s" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="scrabble-score-s">
+<h3><code class="docutils literal notranslate"><span class="pre">scrabble_score(s)</span></code><a class="headerlink" href="#scrabble-score-s" title="Permalink naar deze titel">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">scrabble_score</span></code> moet een string <code class="docutils literal notranslate"><span class="pre">s</span></code> meekrijgen, die alleen maar kleine letters bevat, en de Scrabble score van de string teruggeeft. Je mag negeren dat in het echte spel sommige tegels maar beperkt beschikbaar zijn.</p>
 <div class="tip admonition">
 <p class="admonition-title"><code class="docutils literal notranslate"><span class="pre">letter_score</span></code></p>
@@ -1752,9 +1874,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="k">assert</span> <span class="n">scrabble_score</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="transcribe-s">
-<h3><code class="docutils literal notranslate"><span class="pre">transcribe(s)</span></code><a class="headerlink" href="#transcribe-s" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="transcribe-s">
+<h3><code class="docutils literal notranslate"><span class="pre">transcribe(s)</span></code><a class="headerlink" href="#transcribe-s" title="Permalink naar deze titel">#</a></h3>
 <p>In een bijzonder moleculair proces dat <em>transcriptie</em> wordt genoemd creëren jouw cellen boodschapper-RNA moleculen die de volgorde van de nucleotiden in jouw DNA weerspiegelen. Het RNA wordt dan gebruikt om eiwitten te creëren die het werk van de cel doen, zie verder <a class="reference external" href="https://nl.wikipedia.org/wiki/Transcriptie_%28biologie%29">transcriptie van DNA naar RNA</a> voor meer informatie over dit biologisch wonder!</p>
 <p>Schrijf een recursieve functie <code class="docutils literal notranslate"><span class="pre">transcribe(s)</span></code>, die een string <code class="docutils literal notranslate"><span class="pre">s</span></code> als argument accepteert die DNA-nucleotiden bevat. Dit zijn de hoofdletters <code class="docutils literal notranslate"><span class="pre">A</span></code>, <code class="docutils literal notranslate"><span class="pre">C</span></code>, <code class="docutils literal notranslate"><span class="pre">G</span></code> en <code class="docutils literal notranslate"><span class="pre">T</span></code>.</p>
 <p>Er kunnen ook andere karakters voorkomen in de string, maar die moeten door de functie <code class="docutils literal notranslate"><span class="pre">transcribe</span></code> worden genegeerd en verdwijnen uit het resultaat (dit zouden spaties of andere tekens kunnen zijn die geen DNA-nucleotide voorstellen).</p>
@@ -1806,10 +1928,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="k">assert</span> <span class="n">transcribe</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>         <span class="o">==</span> <span class="s1">&#39;&#39;</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="extra-opgaven">
-<h2>Extra opgaven<a class="headerlink" href="#extra-opgaven" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="extra-opgaven">
+<h2>Extra opgaven<a class="headerlink" href="#extra-opgaven" title="Permalink naar deze titel">#</a></h2>
 <p>In deze opgaven laten we je <a class="reference external" href="http://codingbat.com/python">CodingBat</a> zien, een heel handige site waar je kan oefenen met Python functies. Verder is er een (niet eenvoudige!) uitdaging om strings naar “potjeslatijn” te vertalen…</p>
 <p>Er zijn drie bonusopgaven:</p>
 <ul class="simple">
@@ -1821,21 +1943,21 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p class="admonition-title">CodingBat</p>
 <p>Maak een account aan op CodingBat zodat je voor jezelf kan bijhouden welke opgaven je al wel of niet hebt gemaakt. Voor alle CodingBat opgaven geldt een onbeperkt aantal pogingen, dat wil zeggen dat je ze zo vaak mag maken als je wilt.</p>
 </div>
-<div class="section" id="codingbat-en-python-strings">
-<h3>CodingBat en Python <em>strings</em><a class="headerlink" href="#codingbat-en-python-strings" title="Permalink naar deze titel">¶</a></h3>
+<section id="codingbat-en-python-strings">
+<h3>CodingBat en Python <em>strings</em><a class="headerlink" href="#codingbat-en-python-strings" title="Permalink naar deze titel">#</a></h3>
 <p>Maak <strong>alle</strong> Python <em>string</em> opgaven op de <a class="reference external" href="http://codingbat.com/python/String-1">CodingBat String-1</a> pagina. Je kan deze opgaven zo vaak maken als je wilt.</p>
-</div>
-<div class="section" id="codingbat-en-python-lists">
-<h3>CodingBat en Python <em>lists</em><a class="headerlink" href="#codingbat-en-python-lists" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="codingbat-en-python-lists">
+<h3>CodingBat en Python <em>lists</em><a class="headerlink" href="#codingbat-en-python-lists" title="Permalink naar deze titel">#</a></h3>
 <p>Maak <strong>alle</strong> Python <em>list</em> opgaven op de <a class="reference external" href="http://codingbat.com/python/List-1">CodingBat List-1</a> pagina. Je kan deze opgaven zo vaak maken als je wilt.</p>
-</div>
-<div class="section" id="potjeslatijn">
-<h3>Potjeslatijn<a class="headerlink" href="#potjeslatijn" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="potjeslatijn">
+<h3>Potjeslatijn<a class="headerlink" href="#potjeslatijn" title="Permalink naar deze titel">#</a></h3>
 <p>In deze opgave ga je twee functies schrijven die een vertaling kunnen maken van Nederlands naar <a class="reference external" href="https://nl.wikipedia.org/wiki/Potjeslatijn">potjeslatijn</a>. Dit probleem is gebaseerd op <a class="reference external" href="https://www.google.com/?hl=xx-piglatin">Google Pig Latin</a><a class="footnote-reference brackets" href="#easter-egg" id="id1">1</a>:</p>
 <p><img alt="Google Pig Latin" src="../_images/google_pig_latin.png" /></p>
 <p>Zorg ervoor dat je de functies de juiste namen geeft en zorgvuldig test. Neem in elke functie een docstring op, die moet aangeven wat de functie berekent (teruggeeft) en wat de argumenten zijn en wat ze betekenen.</p>
-<div class="section" id="opwarmen">
-<h4>Opwarmen<a class="headerlink" href="#opwarmen" title="Permalink naar deze titel">¶</a></h4>
+<section id="opwarmen">
+<h4>Opwarmen<a class="headerlink" href="#opwarmen" title="Permalink naar deze titel">#</a></h4>
 <p>Schrijf de functie <code class="docutils literal notranslate"><span class="pre">piglet_latin(s)</span></code> die een string <code class="docutils literal notranslate"><span class="pre">s</span></code> als argument accepteert. <code class="docutils literal notranslate"><span class="pre">s</span></code> is een enkel woord dat bestaat uit kleine letters.
 <code class="docutils literal notranslate"><span class="pre">piglet_latin</span></code> moet dan de vertaling van <code class="docutils literal notranslate"><span class="pre">s</span></code> in potjes-Latijn teruggeven volgens de volgende <em>drie</em> regels:</p>
 <ul>
@@ -1848,9 +1970,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </li>
 </ul>
 <p>Vergeet niet om tests te schrijven met <code class="docutils literal notranslate"><span class="pre">assert</span></code>! Dit is nog niet de complete versie van potjes-Latijn, omdat woorden die beginnen met meerdere medeklinkers nog niet goed verwerkt worden, Zo geeft <code class="docutils literal notranslate"><span class="pre">piglet_latin('straat')</span></code> bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">'traatsee'</span></code> terug.</p>
-</div>
-<div class="section" id="de-echte-uitdaging">
-<h4>De echte uitdaging<a class="headerlink" href="#de-echte-uitdaging" title="Permalink naar deze titel">¶</a></h4>
+</section>
+<section id="de-echte-uitdaging">
+<h4>De echte uitdaging<a class="headerlink" href="#de-echte-uitdaging" title="Permalink naar deze titel">#</a></h4>
 <p>Schrijf een functie <code class="docutils literal notranslate"><span class="pre">pig_latin(s)</span></code> die de bovenstaande regels volgt en ook meer dan één eerste medeklinker correct behandelt in de vertaling naar potjes-Latijn. Dat wil zeggen dat <code class="docutils literal notranslate"><span class="pre">pig_latin</span></code> alle eerste medeklinkers naar het einde van het woord verplaatst alvorens <code class="docutils literal notranslate"><span class="pre">'ee'</span></code> toe te voegen. (Het kan handig zijn om hier een hulpfunctie voor te gebruiken, zie de hint hieronder).</p>
 <p>Ook moet <code class="docutils literal notranslate"><span class="pre">pig_latin</span></code> een eerste <code class="docutils literal notranslate"><span class="pre">'y'</span></code> als medeklinker <strong>of</strong> als klinker behandelen, afhankelijk van de vraag of de <code class="docutils literal notranslate"><span class="pre">y</span></code> gevolgd wordt door een klinker, respectievelijk een medeklinker. Bijvoorbeeld, <code class="docutils literal notranslate"><span class="pre">'yoghurt'</span></code> heeft een initiële <code class="docutils literal notranslate"><span class="pre">y</span></code> die als medeklinker fungeert. Het woord <code class="docutils literal notranslate"><span class="pre">'ypsilon'</span></code> heeft echter een <code class="docutils literal notranslate"><span class="pre">y</span></code> in het begin die als klinker telt. Hier zijn enkele aanvullende voorbeelden:</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">pig_latin</span><span class="p">(</span><span class="s1">&#39;straat&#39;</span><span class="p">)</span>
@@ -1881,10 +2003,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 <dd><p>Google Pig Latin is een <em>easter egg</em> en zo zijn er meer van deze verborgen grappen en functies op Google te vinden. Typ bijvoorbeeld “recursie” en zie met welke suggestie Google komt … of typ “What is the Answer to Life, the Universe and Everything” en ontdek waarom wij het getal 42 vaak in voorbeelden gebruiken!</p>
 </dd>
 </dl>
-</div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1908,9 +2030,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../readings/end_of_theory.html" title="vorige pagina">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1926,30 +2050,34 @@ commentsRunWhenDOMLoaded(addUtterances);
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
-    
-      Door Harvey Mudd College / Hanze University of Applied Sciences<br/>
-    
-      <div class="extra_footer">
-        <div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Harvey Mudd College / Hanze University of Applied Sciences<br/>
+  
+    <div class="extra_footer">
+      <div>
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
     Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
 </div>
 
-      </div>
-  </p>
-</footer>
-</main>
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

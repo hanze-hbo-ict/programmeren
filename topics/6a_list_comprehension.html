@@ -4,11 +4,13 @@
 <html lang="nl">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>List comprehension &#8212; Programmeren</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,31 +20,30 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/save_state.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -78,15 +79,15 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
+    <script src="../_static/save_state.js"></script>
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://misja.github.io/programmeren/topics/6a_list_comprehension.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -100,7 +101,21 @@ commentsRunWhenDOMLoaded(addUtterances);
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -109,9 +124,10 @@ commentsRunWhenDOMLoaded(addUtterances);
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -126,17 +142,18 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../about/syllabus.html">
-   Programmeren
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about/syllabus.html">
+                    Programmeren
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Opmerkingen
  </span>
@@ -1092,112 +1109,244 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
-                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/topics/6a_list_comprehension.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Bronopslagplaats"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/6a_list_comprehension.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open een probleem"><i class="fas fa-lightbulb"></i>open probleem</button></a>
-        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/topics/6a_list_comprehension.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="bewerk deze pagina"><i class="fas fa-pencil-alt"></i>suggereren bewerken</button></a>
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
-        title="Volledig scherm"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/misja/programmeren/master?urlpath=lab/tree/topics/6a_list_comprehension.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Lancering Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <button type="button" class="btn btn-secondary topbarbtn"
-            onclick="initThebeSBT()" title="Lancering Thebe" data-toggle="tooltip" data-placement="left"><i
-                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Inhoud
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/misja/programmeren/master?urlpath=lab/tree/topics/6a_list_comprehension.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/misja/programmeren"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/6a_list_comprehension.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/edit/master/topics/6a_list_comprehension.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/topics/6a_list_comprehension.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#functioneel-programmeren">
    Functioneel programmeren
@@ -1478,12 +1627,11 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>List comprehension</h1>
@@ -1492,7 +1640,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> Inhoud </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -1780,11 +1928,12 @@ commentsRunWhenDOMLoaded(addUtterances);
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="list-comprehension">
-<h1>List comprehension<a class="headerlink" href="#list-comprehension" title="Permalink naar deze titel">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="list-comprehension">
+<h1>List comprehension<a class="headerlink" href="#list-comprehension" title="Permalink naar deze titel">#</a></h1>
 <p><img alt="Fixing problems" src="../_images/fixing_problems.jpg" /></p>
 <p>We gaan door met recursie en functies …</p>
 <div class="cell docutils container">
@@ -1803,8 +1952,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p><img alt="Escher handen" src="../_images/escher_handen.png" /></p>
 <p><a class="reference external" href="https://www.rijksmuseum.nl/nl/collectie/RP-P-1949-188">Tekenende handen</a> van <a class="reference external" href="https://nl.wikipedia.org/wiki/Maurits_Cornelis_Escher">M.C. Escher</a>. Tekende de rechterhand eerst de linkerhand? Of tekende de linkerhand de rechterhand die vervolgens de linkerhand tekende?</p>
 <p>Verwarring alom met recursie… het is een lastig onderwerp!</p>
-<div class="section" id="functioneel-programmeren">
-<h2>Functioneel programmeren<a class="headerlink" href="#functioneel-programmeren" title="Permalink naar deze titel">¶</a></h2>
+<section id="functioneel-programmeren">
+<h2>Functioneel programmeren<a class="headerlink" href="#functioneel-programmeren" title="Permalink naar deze titel">#</a></h2>
 <ul class="simple">
 <li><p>representatie door middel van lijststructuren (data)</p></li>
 <li><p>gebruik maken van zelfgelijkendheid (recursie)</p></li>
@@ -1812,18 +1961,18 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 <p>Met deze combinatie kunnen problemen worden verkend of opgelost.</p>
 <p>Je hebt nu kennisgemaakt met een drietal bouwstenen en het gecombineerd gebruik valt onder de noemer <em>functioneel programmeren</em>. Functioneel programmeren is een <em>programeerparadigma</em>, een manier van werken of aanpak voor het oplossen of verkennen van problemen. Je gaat later nog met twee andere programeerparadigmas kennis maken: imperatief- en object georiënteerd programmeren.</p>
-</div>
-<div class="section" id="rekenkundig-compleet">
-<h2>Rekenkundig compleet<a class="headerlink" href="#rekenkundig-compleet" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="rekenkundig-compleet">
+<h2>Rekenkundig compleet<a class="headerlink" href="#rekenkundig-compleet" title="Permalink naar deze titel">#</a></h2>
 <p>We zijn rekenkundig compleet. Wat nu?</p>
 <ul class="simple">
 <li><p>Python efficiënt laten werken</p></li>
 <li><p>nieuwe bouwstenen!</p></li>
 </ul>
 <p>Met rekenkundig compleet bedoelen we dat met de combinatie van data, functies en recursie de computer data kunnen laten representeren en daar handelingen op uit kunnen laten voeren voor alle <em>oplosbare</em> problemen.</p>
-</div>
-<div class="section" id="efficientie">
-<h2>Efficiëntie<a class="headerlink" href="#efficientie" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="efficientie">
+<h2>Efficiëntie<a class="headerlink" href="#efficientie" title="Permalink naar deze titel">#</a></h2>
 <p>Functioneel programmeren is conceptueel beknopt, maar is het efficiënt voor de computer?</p>
 <blockquote>
 <div><p>functioneel <strong>versus</strong> sequentieel of procedureel</p>
@@ -1833,9 +1982,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Een sequentiële- of procedurele- in plaats van functionele benadering is efficiënter voor de computer en dit gaan we nu verkennen met iets dat je al kent: lists!</p>
 <p><img alt="Meaning of comprehension" src="../_images/comprehension_meaning.png" /></p>
 <p>Wat is <em>comprehension</em> in <a class="reference external" href="https://english.stackexchange.com/questions/406684/what-is-the-meaning-of-comprehension-in-the-term-list-comprehension">list comprehension</a> is een goede vraag, een andere vraag is wat de beste vertaling in het Nederlands zou zijn. Wij weten het niet en daarom zullen wij blijven spreken over <em>list comprehension</em>… Wát het is en doet ga je nu zien!</p>
-</div>
-<div class="section" id="data-en-functies">
-<h2>Data en functies<a class="headerlink" href="#data-en-functies" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="data-en-functies">
+<h2>Data en functies<a class="headerlink" href="#data-en-functies" title="Permalink naar deze titel">#</a></h2>
 <p><em>De compositie van data en functies</em></p>
 <p>Data</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
@@ -1850,8 +1999,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <span class="o">...</span>
 </pre></div>
 </div>
-<div class="section" id="sum-l">
-<h3><code class="docutils literal notranslate"><span class="pre">sum(L)</span></code><a class="headerlink" href="#sum-l" title="Permalink naar deze titel">¶</a></h3>
+<section id="sum-l">
+<h3><code class="docutils literal notranslate"><span class="pre">sum(L)</span></code><a class="headerlink" href="#sum-l" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; input: L, a list of #s</span>
 <span class="sd">        output: L&#39;s sum</span>
@@ -1863,10 +2012,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>Hier zie je een recursieve implementatie van de ingebouwde Python functie <code class="docutils literal notranslate"><span class="pre">sum</span></code>. Om ons recursieve geheugen op te frissen, laten we nu proberen een recursieve implementatie te maken van de functie <code class="docutils literal notranslate"><span class="pre">range</span></code>.</p>
-</div>
-</div>
-<div class="section" id="quiz">
-<h2>Quiz<a class="headerlink" href="#quiz" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="quiz">
+<h2>Quiz<a class="headerlink" href="#quiz" title="Permalink naar deze titel">#</a></h2>
 <p>Een recursive implementatie van de ingebouwde Python functie <code class="docutils literal notranslate"><span class="pre">range</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
 </pre></div>
@@ -1874,8 +2023,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 </pre></div>
 </div>
-<div class="section" id="range-low-hi">
-<h3><code class="docutils literal notranslate"><span class="pre">range(low,</span> <span class="pre">hi)</span></code><a class="headerlink" href="#range-low-hi" title="Permalink naar deze titel">¶</a></h3>
+<section id="range-low-hi">
+<h3><code class="docutils literal notranslate"><span class="pre">range(low,</span> <span class="pre">hi)</span></code><a class="headerlink" href="#range-low-hi" title="Permalink naar deze titel">#</a></h3>
 <p>Wat is de recursive case?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">range</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">hi</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; input: low and hi, integers</span>
@@ -1891,9 +2040,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="oplossing">
-<h3>Oplossing<a class="headerlink" href="#oplossing" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="oplossing">
+<h3>Oplossing<a class="headerlink" href="#oplossing" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">range</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">hi</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; input: low and hi, integers</span>
 <span class="sd">    output: a list from low upto hi</span>
@@ -1904,13 +2053,13 @@ commentsRunWhenDOMLoaded(addUtterances);
         <span class="k">return</span> <span class="p">[</span><span class="n">low</span><span class="p">]</span> <span class="o">+</span> <span class="nb">range</span><span class="p">(</span><span class="n">low</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">hi</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="uitdaging">
-<h3>Uitdaging<a class="headerlink" href="#uitdaging" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="uitdaging">
+<h3>Uitdaging<a class="headerlink" href="#uitdaging" title="Permalink naar deze titel">#</a></h3>
 <p>De Python functie <code class="docutils literal notranslate"><span class="pre">range</span></code> accepteert een derde parameter (<code class="docutils literal notranslate"><span class="pre">step</span></code>) dat het aantal stappen bepaalt dat per keer moet worden genomen (in deze oplossing is dit 1). Hoe zou je de recursieve functie <code class="docutils literal notranslate"><span class="pre">range</span></code> uitbreiden met een derde parameter <code class="docutils literal notranslate"><span class="pre">step</span></code>?</p>
-</div>
-<div class="section" id="id1">
-<h3>Oplossing<a class="headerlink" href="#id1" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="id1">
+<h3>Oplossing<a class="headerlink" href="#id1" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">range</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">hi</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; input: low and hi, integers</span>
 <span class="sd">    output: a list from low upto hi</span>
@@ -1922,10 +2071,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>Je ziet hier een andere syntax voor de parameter <code class="docutils literal notranslate"><span class="pre">step</span></code> (<code class="docutils literal notranslate"><span class="pre">step=1</span></code>)! Deze syntax voor <code class="docutils literal notranslate"><span class="pre">step</span></code> wordt een <em>named</em> of <em>keyword</em> parameter genoemd en met deze syntax zeg je dat het argument optioneel is: als het niet als <em>extra</em> argument wordt meegegeven naast de verplichte <em>positionele</em> argumenten (<code class="docutils literal notranslate"><span class="pre">low</span></code> en <code class="docutils literal notranslate"><span class="pre">hi</span></code>) dan is de waarde standaard 1. Named parameters moeten altijd na de positionele parameters volgen (bijvoorbeeld, <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">range(step=1,</span> <span class="pre">low,</span> <span class="pre">hi)</span></code> zal een <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code> geven).</p>
-</div>
-</div>
-<div class="section" id="resultaat">
-<h2>Resultaat<a class="headerlink" href="#resultaat" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="resultaat">
+<h2>Resultaat<a class="headerlink" href="#resultaat" title="Permalink naar deze titel">#</a></h2>
 <p>Onze recursieve functies <code class="docutils literal notranslate"><span class="pre">sum</span></code> en <code class="docutils literal notranslate"><span class="pre">range</span></code> in actie</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1939,9 +2088,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="data-en-functies-combineren">
-<h2>Data en functies combineren<a class="headerlink" href="#data-en-functies-combineren" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="data-en-functies-combineren">
+<h2>Data en functies combineren<a class="headerlink" href="#data-en-functies-combineren" title="Permalink naar deze titel">#</a></h2>
 <p><em>Verdubbel alle waarden in een list</em></p>
 <p>Data</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
@@ -1958,18 +2107,18 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">dbl</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]]</span>
 </pre></div>
 </div>
-<div class="section" id="variaties">
-<h3>Variaties<a class="headerlink" href="#variaties" title="Permalink naar deze titel">¶</a></h3>
+<section id="variaties">
+<h3>Variaties<a class="headerlink" href="#variaties" title="Permalink naar deze titel">#</a></h3>
 <p>Variaties op het toepassen van een functie op de elementen in een list zijn mogelijk</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">L1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">dbl</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">)))</span>
 <span class="n">L2</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="o">*</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">)]</span>
 </pre></div>
 </div>
 <p>Vaak zul je zien (of zelf hebben bedacht) dat meerdere oplossingen mogelijk zijn. In het geval <code class="docutils literal notranslate"><span class="pre">L2</span></code> kan je je afvragen of een functie nodig is, omdat het hier om gaat om een heel eenvoudige expressie (<code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">*</span> <span class="pre">2</span></code>) die niet de moeite is deze als functie te schrijven. <code class="docutils literal notranslate"><span class="pre">L1</span></code> gebruikt de ingebouwde functie <a class="reference external" href="https://docs.python.org/3/library/functions.html#map"><code class="docutils literal notranslate"><span class="pre">map</span></code></a>, die een functie toepast op elk element in een collectie.</p>
-</div>
-</div>
-<div class="section" id="terzijde-over-namen">
-<h2>Terzijde, over namen<a class="headerlink" href="#terzijde-over-namen" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="terzijde-over-namen">
+<h2>Terzijde, over namen<a class="headerlink" href="#terzijde-over-namen" title="Permalink naar deze titel">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
 
 <span class="k">def</span> <span class="nf">dbl</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -1988,9 +2137,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>In de voorgaande voorbeelden zag je vaak <code class="docutils literal notranslate"><span class="pre">x</span></code> worden gebruikt als naam voor een waarde in zowel de list comprehension als parameter in de functie <code class="docutils literal notranslate"><span class="pre">dbl</span></code>. Staan ze elkaar niet in de weg, zul je je misschien afvragen? Dit is niet het geval en dit heeft te maken met de <em>scope</em> (het bereik, of de context) van een naam.</p>
 <p>De <code class="docutils literal notranslate"><span class="pre">x</span></code> die wordt gebruikt wordt is een heel andere dan de <code class="docutils literal notranslate"><span class="pre">x</span></code> in de functie. Zie een functie dan ook als een kleine, op zichzelf staande wereld die maar beperkt van de buitenwereld kan weten.</p>
 <p><code class="docutils literal notranslate"><span class="pre">x</span></code> zal in dit geval 10 printen en <code class="docutils literal notranslate"><span class="pre">y</span></code> (het resultaat van de functie) 20.</p>
-</div>
-<div class="section" id="id2">
-<h2>List comprehension<a class="headerlink" href="#id2" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="id2">
+<h2>List comprehension<a class="headerlink" href="#id2" title="Permalink naar deze titel">#</a></h2>
 <p>List</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 </pre></div>
@@ -2003,9 +2152,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="iteratie">
-<h2>Iteratie<a class="headerlink" href="#iteratie" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="iteratie">
+<h2>Iteratie<a class="headerlink" href="#iteratie" title="Permalink naar deze titel">#</a></h2>
 <p>Stap één voor één over waarden en pas een expressie toe</p>
 <blockquote>
 <div><p>[ <strong>expressie</strong> voor elke <strong>waarde</strong> in <strong>collectie</strong> ]</p>
@@ -2014,9 +2163,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">x</span></code> neemt elke waarde in de list aan waar de expressie <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">x</span></code> op wordt toegepast en op deze manier wordt iteratief wordt een nieuwe list opgebouwd. Hier wordt geen recursie meer toegepast maar wordt <em>sequentieel</em> de data doorlopen en <em>handelingen</em> op toegepast.</p>
-</div>
-<div class="section" id="conditioneel">
-<h2>Conditioneel<a class="headerlink" href="#conditioneel" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="conditioneel">
+<h2>Conditioneel<a class="headerlink" href="#conditioneel" title="Permalink naar deze titel">#</a></h2>
 <p>Stap <em>voorwaardelijk</em> één voor één over waarden en pas een expressie toe</p>
 <blockquote>
 <div><p>[ <strong>expressie</strong> voor elke <strong>waarde</strong> in <strong>collectie</strong> als &lt;<strong>test</strong>&gt; ]</p>
@@ -2025,73 +2174,73 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>Een list comprehension kan worden uitgebreid met een conditie waar de expressie zal worden toegepast alleen als de test slaagt voor de waarde van <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
-</div>
-<div class="section" id="id3">
-<h2>Quiz<a class="headerlink" href="#id3" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="id3">
+<h2>Quiz<a class="headerlink" href="#id3" title="Permalink naar deze titel">#</a></h2>
 <p>Wat is het resultaat van de volgende list comprehensions</p>
-<div class="section" id="vraag-1">
-<h3>Vraag 1<a class="headerlink" href="#vraag-1" title="Permalink naar deze titel">¶</a></h3>
+<section id="vraag-1">
+<h3>Vraag 1<a class="headerlink" href="#vraag-1" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">n</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span>
 </pre></div>
 </div>
-<div class="section" id="antwoord">
-<h4>Antwoord<a class="headerlink" href="#antwoord" title="Permalink naar deze titel">¶</a></h4>
+<section id="antwoord">
+<h4>Antwoord<a class="headerlink" href="#antwoord" title="Permalink naar deze titel">#</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="vraag-2">
-<h3>Vraag 2<a class="headerlink" href="#vraag-2" title="Permalink naar deze titel">¶</a></h3>
+</section>
+</section>
+<section id="vraag-2">
+<h3>Vraag 2<a class="headerlink" href="#vraag-2" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">42</span> <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
 </pre></div>
 </div>
-<div class="section" id="id4">
-<h4>Antwoord<a class="headerlink" href="#id4" title="Permalink naar deze titel">¶</a></h4>
+<section id="id4">
+<h4>Antwoord<a class="headerlink" href="#id4" title="Permalink naar deze titel">#</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">42</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">42</span><span class="p">]</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="vraag-3">
-<h3>Vraag 3<a class="headerlink" href="#vraag-3" title="Permalink naar deze titel">¶</a></h3>
+</section>
+</section>
+<section id="vraag-3">
+<h3>Vraag 3<a class="headerlink" href="#vraag-3" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">z</span> <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
 </pre></div>
 </div>
-<div class="section" id="id5">
-<h4>Antwoord<a class="headerlink" href="#id5" title="Permalink naar deze titel">¶</a></h4>
+<section id="id5">
+<h4>Antwoord<a class="headerlink" href="#id5" title="Permalink naar deze titel">#</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="vraag-4">
-<h3>Vraag 4<a class="headerlink" href="#vraag-4" title="Permalink naar deze titel">¶</a></h3>
+</section>
+</section>
+<section id="vraag-4">
+<h3>Vraag 4<a class="headerlink" href="#vraag-4" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;elk&quot;</span><span class="p">,</span> <span class="s2">&quot;ook&quot;</span><span class="p">,</span> <span class="s2">&quot;vlo&quot;</span><span class="p">]]</span>
 </pre></div>
 </div>
-<div class="section" id="id6">
-<h4>Antwoord<a class="headerlink" href="#id6" title="Permalink naar deze titel">¶</a></h4>
+<section id="id6">
+<h4>Antwoord<a class="headerlink" href="#id6" title="Permalink naar deze titel">#</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s2">&quot;l&quot;</span><span class="p">,</span> <span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="s2">&quot;l&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="vraag-5">
-<h3>Vraag 5<a class="headerlink" href="#vraag-5" title="Permalink naar deze titel">¶</a></h3>
+</section>
+</section>
+<section id="vraag-5">
+<h3>Vraag 5<a class="headerlink" href="#vraag-5" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">a</span> <span class="o">*</span> <span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="k">if</span> <span class="n">a</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
-<div class="section" id="id7">
-<h4>Antwoord<a class="headerlink" href="#id7" title="Permalink naar deze titel">¶</a></h4>
+<section id="id7">
+<h4>Antwoord<a class="headerlink" href="#id7" title="Permalink naar deze titel">#</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">42</span><span class="p">]</span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="syntax">
-<h2>Syntax!<a class="headerlink" href="#syntax" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+</section>
+<section id="syntax">
+<h2>Syntax!<a class="headerlink" href="#syntax" title="Permalink naar deze titel">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">x</span> <span class="o">*</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]]</span>
 </pre></div>
 </div>
@@ -2099,9 +2248,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Maar de handeling die we willen uitvoeren is eenvoudig, namelijk het vermenigvuldigen van elke waarde in een lijst.</p>
 <p>We weten nu ook dat het op deze wijze sequentieel toepassen van een expressie op elk element van een collectie (bijvoorbeeld een list) efficiënter is dan een recursive oplossing (althans voor de computer!). Maar je zal je misschien afvragen of deze syntax wel efficiënter is voor <em>jou</em> want het lijkt op het eerste gezicht moelijk te begrijpen.</p>
 <p>We kunnen je verzekeren dat met oefening je deze notatie op een gegeven moment zal ook gaan waarderen al is het alleen maar omdat je complexe bewerkingen in een enkele regel kan schrijven.</p>
-</div>
-<div class="section" id="miljoen-keer-simuleren">
-<h2>Miljoen keer simuleren<a class="headerlink" href="#miljoen-keer-simuleren" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="miljoen-keer-simuleren">
+<h2>Miljoen keer simuleren<a class="headerlink" href="#miljoen-keer-simuleren" title="Permalink naar deze titel">#</a></h2>
 <p>Iteratie in plaats recursie?</p>
 <p>Kan je je nog herinneren dat we recursie hebben toegepast om simulaties uit te voeren? Lees anders het onderwerp <a class="reference internal" href="5a_simulatie.html"><span class="doc std std-doc">simulaties</span></a> nog een keer door. Voor het herhaald uitvoeren van functies  gebruikten we toen recursie, bijvoorbeeld om te tellen hoe vaak een gelijk aantal ogen wordt gegooid met twee dobbelstenen of om te tellen hoeveel pogingen gemiddeld nodig zijn om een getal te raden.</p>
 <p>We hebben nu met list comprehension een techniek gezien om een expressie (bijvoorbeeld een functie) iteratief toe te passen op elk elementen in een collectie, zouden we deze techniek kunnen toepassen om de herhaling in simulaties zonder recursie toe te passen?</p>
@@ -2126,8 +2275,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <p>Dit is dezelfde functie die je eerder hebt gezien om een getal te raden, maar zonder de print statements waar de computer ons enthousiast liet weten (printen!) dat het het getal had geraden. De functie geeft het aantal keer dat nodig is om een om een getal te raden terug op basis van steeds een <em>random</em> keus van de computer.</p>
-<div class="section" id="combineren">
-<h3>Combineren<a class="headerlink" href="#combineren" title="Permalink naar deze titel">¶</a></h3>
+<section id="combineren">
+<h3>Combineren<a class="headerlink" href="#combineren" title="Permalink naar deze titel">#</a></h3>
 <blockquote>
 <div><p>[ <strong>expressie</strong> voor elke <strong>waarde</strong> in <strong>collectie</strong> ]</p>
 </div></blockquote>
@@ -2151,7 +2300,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[249, 8, 417, 42, 51, 73, 152, 10, 79, 43]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[6, 178, 59, 187, 63, 263, 207, 267, 103, 14]
 </pre></div>
 </div>
 </div>
@@ -2164,15 +2313,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gemiddeld aantal keer raden 100.458
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gemiddeld aantal keer raden 102.798
 </pre></div>
 </div>
 </div>
 </div>
 <p>De functie <code class="docutils literal notranslate"><span class="pre">sum</span></code> hebben we eerder geschreven in combinatie me de ingebouwde functie <code class="docutils literal notranslate"><span class="pre">len</span></code> kan het gemiddelde aantal keer raden worden berekend van deze simulatie!</p>
-</div>
-<div class="section" id="dubbele-ogen">
-<h3>Dubbele ogen<a class="headerlink" href="#dubbele-ogen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="dubbele-ogen">
+<h3>Dubbele ogen<a class="headerlink" href="#dubbele-ogen" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
@@ -2201,7 +2350,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>86
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>101
 </pre></div>
 </div>
 </div>
@@ -2220,7 +2369,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[109, 92, 97, 101, 96, 103, 101, 106, 97, 103]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[112, 113, 119, 104, 106, 97, 98, 114, 101, 106]
 </pre></div>
 </div>
 </div>
@@ -2232,14 +2381,14 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gemiddeld dubbele ogen (/600): 100.363
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gemiddeld dubbele ogen (/600): 99.871
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="wisselen-van-deur">
-<h3>Wisselen van deur<a class="headerlink" href="#wisselen-van-deur" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="wisselen-van-deur">
+<h3>Wisselen van deur<a class="headerlink" href="#wisselen-van-deur" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
@@ -2278,7 +2427,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>196
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>199
 </pre></div>
 </div>
 </div>
@@ -2297,7 +2446,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[199, 200, 191, 190, 196, 213, 203, 190, 207, 196]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[206, 188, 199, 191, 218, 208, 207, 195, 183, 204]
 </pre></div>
 </div>
 </div>
@@ -2309,20 +2458,20 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gemiddeld aantal spam (/300) 199.721
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gemiddeld aantal spam (/300) 200.262
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="de-winnaar">
-<h2>De winnaar?<a class="headerlink" href="#de-winnaar" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="de-winnaar">
+<h2>De winnaar?<a class="headerlink" href="#de-winnaar" title="Permalink naar deze titel">#</a></h2>
 <p><img alt="Python" src="../_images/python_logo1.png" /> <img alt="Excel" src="../_images/excel_logo.png" /></p>
 <p>Je hebt gezien dat we met Python efficiënt en met verassend weinig code simulaties kunnen laten uitvoeren. Deze flexibiliteit is onder andere waarom Python zo populair is in data science.</p>
-</div>
-<div class="section" id="lcs-gebruiken">
-<h2>LCs gebruiken<a class="headerlink" href="#lcs-gebruiken" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="lcs-gebruiken">
+<h2>LCs gebruiken<a class="headerlink" href="#lcs-gebruiken" title="Permalink naar deze titel">#</a></h2>
 <p>Scrabble score</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2398,8 +2547,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <p>Goede score!</p>
-<div class="section" id="oneliners">
-<h3>Oneliners<a class="headerlink" href="#oneliners" title="Permalink naar deze titel">¶</a></h3>
+<section id="oneliners">
+<h3>Oneliners<a class="headerlink" href="#oneliners" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">len</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
     <span class="n">LC</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">L</span><span class="p">]</span>
     <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">LC</span><span class="p">)</span>
@@ -2410,10 +2559,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>List comprehesion maakt het mogelijk om met een heel compacte syntax oplossingen te schrijven. Bedenk wel dat dit niet altijd de leesbaarheid ten goede komt en het is geen probleem om het in stukjes uit te schrijven, bijvoorbeeld door het gebruik van een variabele (<code class="docutils literal notranslate"><span class="pre">LC</span></code> in de eerste variant).</p>
-</div>
-</div>
-<div class="section" id="condities">
-<h2>Condities<a class="headerlink" href="#condities" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="condities">
+<h2>Condities<a class="headerlink" href="#condities" title="Permalink naar deze titel">#</a></h2>
 <p>List comprehension met condities</p>
 <blockquote>
 <div><p>[ <strong>expressie</strong> voor elke <strong>waarde</strong> in <strong>collectie</strong> als &lt;<strong>test</strong>&gt;]</p>
@@ -2481,11 +2630,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="id8">
-<h2>Quiz<a class="headerlink" href="#id8" title="Permalink naar deze titel">¶</a></h2>
-<div class="section" id="even-getallen-tellen">
-<h3>Even getallen tellen<a class="headerlink" href="#even-getallen-tellen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="id8">
+<h2>Quiz<a class="headerlink" href="#id8" title="Permalink naar deze titel">#</a></h2>
+<section id="even-getallen-tellen">
+<h3>Even getallen tellen<a class="headerlink" href="#even-getallen-tellen" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">nodds</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
     <span class="n">LC</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">L</span> <span class="o">...</span><span class="p">]</span>
     <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">LC</span><span class="p">)</span>
@@ -2499,8 +2648,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nodds</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">42</span><span class="p">])</span> <span class="o">==</span> <span class="mi">3</span>
 </pre></div>
 </div>
-<div class="section" id="id9">
-<h4>Oplossing<a class="headerlink" href="#id9" title="Permalink naar deze titel">¶</a></h4>
+<section id="id9">
+<h4>Oplossing<a class="headerlink" href="#id9" title="Permalink naar deze titel">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">nodds</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
@@ -2522,10 +2671,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="zelfde-waarden-in-twee-lijsten">
-<h3>Zelfde waarden in twee lijsten<a class="headerlink" href="#zelfde-waarden-in-twee-lijsten" title="Permalink naar deze titel">¶</a></h3>
+</section>
+</section>
+<section id="zelfde-waarden-in-twee-lijsten">
+<h3>Zelfde waarden in twee lijsten<a class="headerlink" href="#zelfde-waarden-in-twee-lijsten" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">lingo</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">W</span><span class="p">):</span>
     <span class="n">LC</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="o">...</span> <span class="k">if</span> <span class="o">...</span><span class="p">]</span>
     <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">LC</span><span class="p">)</span>
@@ -2540,8 +2689,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>Tip: de <code class="docutils literal notranslate"><span class="pre">in</span></code> expressie kan hier handig zijn (<code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">in</span> <span class="pre">W</span></code>)</p>
-<div class="section" id="id10">
-<h4>Oplossing<a class="headerlink" href="#id10" title="Permalink naar deze titel">¶</a></h4>
+<section id="id10">
+<h4>Oplossing<a class="headerlink" href="#id10" title="Permalink naar deze titel">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">lingo</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">W</span><span class="p">):</span>
@@ -2563,10 +2712,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="positieve-delers">
-<h3>Positieve delers<a class="headerlink" href="#positieve-delers" title="Permalink naar deze titel">¶</a></h3>
+</section>
+</section>
+<section id="positieve-delers">
+<h3>Positieve delers<a class="headerlink" href="#positieve-delers" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ndivs</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
     <span class="n">LC</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="o">...</span> <span class="k">if</span> <span class="o">...</span><span class="p">]</span>
     <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">LC</span><span class="p">)</span>
@@ -2582,8 +2731,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p>(de positieve delers van 12 zijn <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">6,</span> <span class="pre">12]</span></code>)</p>
 <p>Tip: gebruik <code class="docutils literal notranslate"><span class="pre">range</span></code> om een reeks getallen van 1 <em>tot en met</em> <code class="docutils literal notranslate"><span class="pre">N</span></code> te genereren</p>
-<div class="section" id="id11">
-<h4>Oplossing<a class="headerlink" href="#id11" title="Permalink naar deze titel">¶</a></h4>
+<section id="id11">
+<h4>Oplossing<a class="headerlink" href="#id11" title="Permalink naar deze titel">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ndivs</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
@@ -2605,10 +2754,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="priemgetallen">
-<h3>Priemgetallen<a class="headerlink" href="#priemgetallen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+</section>
+<section id="priemgetallen">
+<h3>Priemgetallen<a class="headerlink" href="#priemgetallen" title="Permalink naar deze titel">#</a></h3>
 <p>Een uitdaging!</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">primes_up_to</span><span class="p">(</span><span class="n">P</span><span class="p">):</span>
     <span class="n">LC</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="o">...</span> <span class="k">if</span> <span class="o">...</span><span class="p">]</span>
@@ -2625,8 +2774,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p>Ter herinnering, een priemgetal is een heel getal dat precies door twee getallen kan worden gedeeld en waarmee je met de deling een heel getal overhoudt. Een priemgetal is altijd deelbaar door 1 en deelbaar door zichzelf.</p>
 <p>Bijvoorbeeld het getal 5 heeft precies 2 delers, namelijk 1 en 5. Het getal 4 is geen priemgetal, 4 heeft namelijk 3 delers (1, 2 en 4). Tip: je kan in de conditie de functie <code class="docutils literal notranslate"><span class="pre">ndivs</span></code> gebruiken als in <code class="docutils literal notranslate"><span class="pre">ndivs(x)</span> <span class="pre">==</span> <span class="pre">2</span></code>.</p>
-<div class="section" id="id12">
-<h4>Oplossing<a class="headerlink" href="#id12" title="Permalink naar deze titel">¶</a></h4>
+<section id="id12">
+<h4>Oplossing<a class="headerlink" href="#id12" title="Permalink naar deze titel">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">primes_up_to</span><span class="p">(</span><span class="n">P</span><span class="p">):</span>
@@ -2649,14 +2798,14 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <p>Dit is een goed voorbeeld van een probleem in kleinere stukken opbreken. De functie <code class="docutils literal notranslate"><span class="pre">ndivs</span></code> heeft een heel specifieke taak, maar in gecombineerd met het gebruik in <code class="docutils literal notranslate"><span class="pre">primes_up_to</span></code> kom je tot een krachtige oplossing. Dit principe van <em>verdeel en heers</em> wordt ook <em>compositie</em> genoemd.</p>
-</div>
-</div>
-</div>
-<div class="section" id="in-de-herhaling">
-<h2>In de herhaling<a class="headerlink" href="#in-de-herhaling" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+</section>
+<section id="in-de-herhaling">
+<h2>In de herhaling<a class="headerlink" href="#in-de-herhaling" title="Permalink naar deze titel">#</a></h2>
 <div><iframe width="560" height="315" src="https://www.youtube.com/embed/AhSvKGTh28Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><p>Deze video herhaalt alles wat we tot nu met list comprehension hebben gedaan. Je zal ook een ander gebruik zien van <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">x</span> <span class="pre">in</span> <span class="pre">...</span></code> die een <em>for each</em> lus wordt genoemd. Met een sequentiële benadering van herhaling hebben we alvast een begin gemaakt dit concept te verkennen en we komen hier later uitgebreid op terug als we <em>imperatief</em> programmeren gaan verkennen, een ander programmeerparadigma.</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -2680,9 +2829,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="5b_turtle_recursie.html" title="vorige pagina">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -2698,30 +2849,34 @@ commentsRunWhenDOMLoaded(addUtterances);
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
-    
-      Door Harvey Mudd College / Hanze University of Applied Sciences<br/>
-    
-      <div class="extra_footer">
-        <div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Harvey Mudd College / Hanze University of Applied Sciences<br/>
+  
+    <div class="extra_footer">
+      <div>
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
     Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
 </div>
 
-      </div>
-  </p>
-</footer>
-</main>
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

@@ -4,11 +4,13 @@
 <html lang="nl">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Iteratief ontwerpen &#8212; Programmeren</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,31 +20,30 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/save_state.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -78,18 +79,18 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
+    <script src="../_static/save_state.js"></script>
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://misja.github.io/programmeren/topics/16_iteratief_ontwerp.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Zoeken" href="../search.html" />
@@ -102,7 +103,21 @@ commentsRunWhenDOMLoaded(addUtterances);
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -111,9 +126,10 @@ commentsRunWhenDOMLoaded(addUtterances);
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -128,17 +144,18 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../about/syllabus.html">
-   Programmeren
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about/syllabus.html">
+                    Programmeren
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Opmerkingen
  </span>
@@ -1094,112 +1111,244 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
-                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/topics/16_iteratief_ontwerp.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Bronopslagplaats"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/16_iteratief_ontwerp.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open een probleem"><i class="fas fa-lightbulb"></i>open probleem</button></a>
-        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/topics/16_iteratief_ontwerp.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="bewerk deze pagina"><i class="fas fa-pencil-alt"></i>suggereren bewerken</button></a>
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
-        title="Volledig scherm"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/misja/programmeren/master?urlpath=lab/tree/topics/16_iteratief_ontwerp.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Lancering Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <button type="button" class="btn btn-secondary topbarbtn"
-            onclick="initThebeSBT()" title="Lancering Thebe" data-toggle="tooltip" data-placement="left"><i
-                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Inhoud
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/misja/programmeren/master?urlpath=lab/tree/topics/16_iteratief_ontwerp.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/misja/programmeren"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/16_iteratief_ontwerp.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/edit/master/topics/16_iteratief_ontwerp.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/topics/16_iteratief_ontwerp.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#herhalingen">
    Herhalingen
@@ -1360,12 +1509,11 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Iteratief ontwerpen</h1>
@@ -1374,7 +1522,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> Inhoud </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -1542,16 +1690,17 @@ commentsRunWhenDOMLoaded(addUtterances);
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="iteratief-ontwerpen">
-<h1>Iteratief ontwerpen<a class="headerlink" href="#iteratief-ontwerpen" title="Permalink naar deze titel">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="iteratief-ontwerpen">
+<h1>Iteratief ontwerpen<a class="headerlink" href="#iteratief-ontwerpen" title="Permalink naar deze titel">#</a></h1>
 <p>Overal herhalingen</p>
 <p><img alt="Mandelbrot" src="../_images/mandelbrot_set.png" /></p>
 <p>Oneindige fractals … Zie <a class="reference external" href="https://xaos-project.github.io/">Xaos</a> voor de hypnotiserende ervaring!</p>
-<div class="section" id="herhalingen">
-<h2>Herhalingen<a class="headerlink" href="#herhalingen" title="Permalink naar deze titel">¶</a></h2>
+<section id="herhalingen">
+<h2>Herhalingen<a class="headerlink" href="#herhalingen" title="Permalink naar deze titel">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">while</span></code> met ontsnapping!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1570,9 +1719,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="simulaties">
-<h2>Simulaties<a class="headerlink" href="#simulaties" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="simulaties">
+<h2>Simulaties<a class="headerlink" href="#simulaties" title="Permalink naar deze titel">#</a></h2>
 <p>Monte Carlo simulaties …</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1588,19 +1737,19 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>96.234
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>97.498
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="verjaardagenparadox">
-<h2>Verjaardagenparadox<a class="headerlink" href="#verjaardagenparadox" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="verjaardagenparadox">
+<h2>Verjaardagenparadox<a class="headerlink" href="#verjaardagenparadox" title="Permalink naar deze titel">#</a></h2>
 <p>Wat is de kans dat iemand op dezelfde dag jarig is?</p>
 <p>Met hoeveel mensen bij elkaar is deze kans 50%?</p>
 <p>Kan dit worden gesimuleerd?</p>
-<div class="section" id="aanpak">
-<h3>Aanpak?<a class="headerlink" href="#aanpak" title="Permalink naar deze titel">¶</a></h3>
+<section id="aanpak">
+<h3>Aanpak?<a class="headerlink" href="#aanpak" title="Permalink naar deze titel">#</a></h3>
 <p>Vul één voor één een kamer met mensen tot twee dezelfde verjaardag hebben.</p>
 <p><strong>De ontsnapping?</strong></p>
 <p>Bijf de kamer vullen zolang (<code class="docutils literal notranslate"><span class="pre">while</span></code>) de verjaardagen in de kamer uniek zijn!</p>
@@ -1613,9 +1762,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="sd">    &quot;&quot;&quot;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="hoe-lang-tot-een-herhaling">
-<h3>Hoe lang tot een herhaling?<a class="headerlink" href="#hoe-lang-tot-een-herhaling" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="hoe-lang-tot-een-herhaling">
+<h3>Hoe lang tot een herhaling?<a class="headerlink" href="#hoe-lang-tot-een-herhaling" title="Permalink naar deze titel">#</a></h3>
 <p>Sneller dan je denkt!</p>
 <p><img alt="Birthday paradox" src="../_images/birthday_paradox.png" /></p>
 <div class="cell docutils container">
@@ -1638,9 +1787,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <p>Deze hulpfunctie wordt gegeven!</p>
-</div>
-<div class="section" id="een-verjaardag-is-maar-een-dag">
-<h3>Een verjaardag is maar een dag<a class="headerlink" href="#een-verjaardag-is-maar-een-dag" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="een-verjaardag-is-maar-een-dag">
+<h3>Een verjaardag is maar een dag<a class="headerlink" href="#een-verjaardag-is-maar-een-dag" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="n">bday</span> <span class="k">for</span> <span class="n">bday</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">365</span><span class="p">)]</span>
@@ -1673,9 +1822,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="toevallige-verjaardagen">
-<h3>Toevallige verjaardagen<a class="headerlink" href="#toevallige-verjaardagen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="toevallige-verjaardagen">
+<h3>Toevallige verjaardagen<a class="headerlink" href="#toevallige-verjaardagen" title="Permalink naar deze titel">#</a></h3>
 <p>Simulatie met random!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1698,7 +1847,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[16, 14, 18, 18, 23, 35, 36, 27, 27, 24]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[14, 22, 20, 29, 10, 13, 24, 40, 5, 32]
 </pre></div>
 </div>
 </div>
@@ -1734,15 +1883,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24.491
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24.666
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="denken-in-lussen">
-<h2>Denken in lussen<a class="headerlink" href="#denken-in-lussen" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="denken-in-lussen">
+<h2>Denken in lussen<a class="headerlink" href="#denken-in-lussen" title="Permalink naar deze titel">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">for</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">42</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -1756,20 +1905,20 @@ commentsRunWhenDOMLoaded(addUtterances);
     <span class="n">x</span> <span class="o">*=</span> <span class="mi">2</span>
 </pre></div>
 </div>
-<div class="section" id="verschillen">
-<h3>Verschillen<a class="headerlink" href="#verschillen" title="Permalink naar deze titel">¶</a></h3>
+<section id="verschillen">
+<h3>Verschillen<a class="headerlink" href="#verschillen" title="Permalink naar deze titel">#</a></h3>
 <p>Wat zijn de verschillen in ontwerp tussen deze twee Python lussen?</p>
 <p><code class="docutils literal notranslate"><span class="pre">for</span></code> — eindige herhaling</p>
 <p>Voor een bestaande list of bekend aantal herhalingen</p>
 <p><code class="docutils literal notranslate"><span class="pre">while</span></code> — oneindige herhaling</p>
 <p>Voor een onbekend aantal herhalingen</p>
-</div>
-</div>
-<div class="section" id="pi-met-pijltjes">
-<h2>Pi met pijltjes<a class="headerlink" href="#pi-met-pijltjes" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="pi-met-pijltjes">
+<h2>Pi met pijltjes<a class="headerlink" href="#pi-met-pijltjes" title="Permalink naar deze titel">#</a></h2>
 <p>Pi of <span class="math notranslate nohighlight">\(\pi\)</span> is een <em>constante</em>: de verhouding tussen de omtrek en de diameter van een cirkel</p>
-<div class="section" id="pithon">
-<h3>Pithon?<a class="headerlink" href="#pithon" title="Permalink naar deze titel">¶</a></h3>
+<section id="pithon">
+<h3>Pithon?<a class="headerlink" href="#pithon" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
@@ -1789,15 +1938,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="pi-bepalen">
-<h3>Pi bepalen?<a class="headerlink" href="#pi-bepalen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="pi-bepalen">
+<h3>Pi bepalen?<a class="headerlink" href="#pi-bepalen" title="Permalink naar deze titel">#</a></h3>
 <p>Kan <span class="math notranslate nohighlight">\(\pi\)</span> worden bepaald door middel van een simulatie?</p>
 <p><img alt="Dartboard" src="../_images/dartboard.png" /></p>
 <p><img alt="Pie box" src="../_images/pie_box.png" /></p>
-</div>
-<div class="section" id="algoritme">
-<h3>Algoritme<a class="headerlink" href="#algoritme" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="algoritme">
+<h3>Algoritme<a class="headerlink" href="#algoritme" title="Permalink naar deze titel">#</a></h3>
 <ul class="simple">
 <li><p>gooi een aantal pijlen willekeurig (random!) op het vlak</p></li>
 <li><p>tel het aantal pijlen dat is geland in de cirkel</p></li>
@@ -1808,9 +1957,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 \pi = 4 \times \dfrac{\text{Pijlen in cirkel}}{\text{Pijlen totaal}}
 \]</div>
 <p><img alt="Pi Turtle 10000" src="../_images/pi_turtle.gif" /></p>
-</div>
-<div class="section" id="hoe-werkt-dit">
-<h3>Hoe werkt dit?<a class="headerlink" href="#hoe-werkt-dit" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="hoe-werkt-dit">
+<h3>Hoe werkt dit?<a class="headerlink" href="#hoe-werkt-dit" title="Permalink naar deze titel">#</a></h3>
 <p>Verhoudingen!</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1835,9 +1984,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 \[
 \dfrac{\text{Oppervlakte cirkel}}{\text{Oppervlakte vierkant}} \times 4 = \pi
 \]</div>
-</div>
-<div class="section" id="for-of-while">
-<h3><code class="docutils literal notranslate"><span class="pre">for</span></code> of <code class="docutils literal notranslate"><span class="pre">while</span></code>?<a class="headerlink" href="#for-of-while" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="for-of-while">
+<h3><code class="docutils literal notranslate"><span class="pre">for</span></code> of <code class="docutils literal notranslate"><span class="pre">while</span></code>?<a class="headerlink" href="#for-of-while" title="Permalink naar deze titel">#</a></h3>
 <p>Welke functie zal welk type lus gebruiken?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pi_one</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
 </pre></div>
@@ -1849,9 +1998,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">n</span></code> = het aantal pijltjes dat gegooid moet worden</p>
 <p><code class="docutils literal notranslate"><span class="pre">for</span></code></p>
-</div>
-<div class="section" id="simuleer">
-<h3>Simuleer!<a class="headerlink" href="#simuleer" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="simuleer">
+<h3>Simuleer!<a class="headerlink" href="#simuleer" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">for_pi</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Calculate pi with a for loop</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -1865,27 +2014,27 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.14308
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.138
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="geneste-lussen">
-<h2>Geneste lussen<a class="headerlink" href="#geneste-lussen" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="geneste-lussen">
+<h2>Geneste lussen<a class="headerlink" href="#geneste-lussen" title="Permalink naar deze titel">#</a></h2>
 <p>Zijn heel erg bekend!</p>
 <p><img alt="Swiss Clock" src="../_images/SBB_railway_clock_animated.gif" /></p>
-<div class="section" id="seconden-tikken-weg">
-<h3>Seconden tikken weg …<a class="headerlink" href="#seconden-tikken-weg" title="Permalink naar deze titel">¶</a></h3>
+<section id="seconden-tikken-weg">
+<h3>Seconden tikken weg …<a class="headerlink" href="#seconden-tikken-weg" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">minute</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">60</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">second</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">60</span><span class="p">):</span>
         <span class="n">tick</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="tijd-vliegt">
-<h3>Tijd vliegt!<a class="headerlink" href="#tijd-vliegt" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="tijd-vliegt">
+<h3>Tijd vliegt!<a class="headerlink" href="#tijd-vliegt" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">84</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">month</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">12</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">day</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">month</span><span class="p">,</span> <span class="n">year</span><span class="p">)):</span>
@@ -1895,18 +2044,18 @@ commentsRunWhenDOMLoaded(addUtterances);
                         <span class="n">tick</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="quiz">
-<h2>Quiz<a class="headerlink" href="#quiz" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="quiz">
+<h2>Quiz<a class="headerlink" href="#quiz" title="Permalink naar deze titel">#</a></h2>
 <p>Wat zal worden geprint?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="section" id="oplossing">
-<h3>Oplossing<a class="headerlink" href="#oplossing" title="Permalink naar deze titel">¶</a></h3>
+<section id="oplossing">
+<h3>Oplossing<a class="headerlink" href="#oplossing" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
@@ -1922,15 +2071,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="tweedimensionale-structuren">
-<h2>Tweedimensionale structuren<a class="headerlink" href="#tweedimensionale-structuren" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="tweedimensionale-structuren">
+<h2>Tweedimensionale structuren<a class="headerlink" href="#tweedimensionale-structuren" title="Permalink naar deze titel">#</a></h2>
 <p>Rijen en kolommen</p>
 <p>Let op, als over “arrays” wordt gesproken (2D arrays): dit is wat je kent als lists!</p>
 <p><img alt="Vermenigvuldigingstabel" src="../_images/mul_table1.png" /></p>
-<div class="section" id="list-comprehension">
-<h3>List comprehension<a class="headerlink" href="#list-comprehension" title="Permalink naar deze titel">¶</a></h3>
+<section id="list-comprehension">
+<h3>List comprehension<a class="headerlink" href="#list-comprehension" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mul_table</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -1957,9 +2106,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="iteratief">
-<h3>Iteratief<a class="headerlink" href="#iteratief" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="iteratief">
+<h3>Iteratief<a class="headerlink" href="#iteratief" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mul_table</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -1996,9 +2145,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="een-dozijn">
-<h3>Een dozijn<a class="headerlink" href="#een-dozijn" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="een-dozijn">
+<h3>Een dozijn<a class="headerlink" href="#een-dozijn" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dozen</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -2050,9 +2199,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="syntax">
-<h3>Syntax<a class="headerlink" href="#syntax" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="syntax">
+<h3>Syntax<a class="headerlink" href="#syntax" title="Permalink naar deze titel">#</a></h3>
 <p>En semantiek…</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2085,9 +2234,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p><img alt="Python ASCII" src="../_images/python_ascii.png" /></p>
 <p>Python <a class="reference external" href="https://en.wikipedia.org/wiki/ASCII_art">ASCII Art</a>!</p>
-</div>
-<div class="section" id="rijen-en-kolommen">
-<h3>Rijen en kolommen<a class="headerlink" href="#rijen-en-kolommen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="rijen-en-kolommen">
+<h3>Rijen en kolommen<a class="headerlink" href="#rijen-en-kolommen" title="Permalink naar deze titel">#</a></h3>
 <p>En nieuwe regels …</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2152,9 +2301,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="go">|____/ \__,_|\___\___\___||___(_)</span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -2178,9 +2327,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="15_lussen.html" title="vorige pagina">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -2196,30 +2347,34 @@ commentsRunWhenDOMLoaded(addUtterances);
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
-    
-      Door Harvey Mudd College / Hanze University of Applied Sciences<br/>
-    
-      <div class="extra_footer">
-        <div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Harvey Mudd College / Hanze University of Applied Sciences<br/>
+  
+    <div class="extra_footer">
+      <div>
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
     Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
 </div>
 
-      </div>
-  </p>
-</footer>
-</main>
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

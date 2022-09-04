@@ -4,11 +4,13 @@
 <html lang="nl">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Strings &#8212; Programmeren</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,31 +20,30 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/save_state.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -78,15 +79,15 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
+    <script src="../_static/save_state.js"></script>
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://misja.github.io/programmeren/topics/3b_strings_en_lists.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -100,7 +101,21 @@ commentsRunWhenDOMLoaded(addUtterances);
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -109,9 +124,10 @@ commentsRunWhenDOMLoaded(addUtterances);
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -126,17 +142,18 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../about/syllabus.html">
-   Programmeren
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about/syllabus.html">
+                    Programmeren
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Opmerkingen
  </span>
@@ -1092,112 +1109,244 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
-                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/topics/3b_strings_en_lists.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Bronopslagplaats"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/3b_strings_en_lists.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open een probleem"><i class="fas fa-lightbulb"></i>open probleem</button></a>
-        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/topics/3b_strings_en_lists.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="bewerk deze pagina"><i class="fas fa-pencil-alt"></i>suggereren bewerken</button></a>
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
-        title="Volledig scherm"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/misja/programmeren/master?urlpath=lab/tree/topics/3b_strings_en_lists.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Lancering Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <button type="button" class="btn btn-secondary topbarbtn"
-            onclick="initThebeSBT()" title="Lancering Thebe" data-toggle="tooltip" data-placement="left"><i
-                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Inhoud
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/misja/programmeren/master?urlpath=lab/tree/topics/3b_strings_en_lists.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/misja/programmeren"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/3b_strings_en_lists.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/edit/master/topics/3b_strings_en_lists.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/topics/3b_strings_en_lists.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#getallen">
    Getallen
@@ -1334,12 +1483,11 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Strings</h1>
@@ -1348,7 +1496,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> Inhoud </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -1492,19 +1640,20 @@ commentsRunWhenDOMLoaded(addUtterances);
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="strings">
-<h1>Strings<a class="headerlink" href="#strings" title="Permalink naar deze titel">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="strings">
+<h1>Strings<a class="headerlink" href="#strings" title="Permalink naar deze titel">#</a></h1>
 <p>Tekstuele data en collecties</p>
-<div class="section" id="getallen">
-<h2>Getallen<a class="headerlink" href="#getallen" title="Permalink naar deze titel">¶</a></h2>
+<section id="getallen">
+<h2>Getallen<a class="headerlink" href="#getallen" title="Permalink naar deze titel">#</a></h2>
 <p>Zijn getallen voldoende om alles te kunnen representeren? Ja en nee!</p>
 <p>We lopen nu vooruit op wat verder komen gaat, maar met getallen kunnen we heel veel representeren, in ieder geval in de computer! Maar voor ons is dit niet voldoende, bijvoorbeeld tekst of collecties (verzamelingen) van data.</p>
-</div>
-<div class="section" id="sequenties">
-<h2>Sequenties<a class="headerlink" href="#sequenties" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="sequenties">
+<h2>Sequenties<a class="headerlink" href="#sequenties" title="Permalink naar deze titel">#</a></h2>
 <ul class="simple">
 <li><p>lijsten met getallen</p></li>
 <li><p><em>strings</em>, lijsten met karakters</p></li>
@@ -1513,9 +1662,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Verzamelingen van data zijn heel natuurlijk, denk bijvoorbeeld aan een reeksen van dagelijkse temperaturen (het werk van het <a class="reference external" href="https://knmi.nl/">KNMI</a>) of verkoopcijfers van een winkel om bijvoorbeeld de maand- of jaaromzet te kunnen berekenen. De volgorde maakt in al deze gevallen uit: het heeft <em>betekenis</em>.</p>
 <p><img alt="character string" src="../_images/letter_beads.jpg" /></p>
 <p>Tekst (wat je nu leest) is een opeenvolging van karakters en het datatype om tekstuele data te representeren is een <em>string</em>. Vergelijk het met een draad waar je individuele karakters aan vast rijgt.</p>
-</div>
-<div class="section" id="strings-tekstuele-data">
-<h2><code class="docutils literal notranslate"><span class="pre">str</span></code>ings: tekstuele data<a class="headerlink" href="#strings-tekstuele-data" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="strings-tekstuele-data">
+<h2><code class="docutils literal notranslate"><span class="pre">str</span></code>ings: tekstuele data<a class="headerlink" href="#strings-tekstuele-data" title="Permalink naar deze titel">#</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
@@ -1595,16 +1744,16 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="lists">
-<h2>Lists<a class="headerlink" href="#lists" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="lists">
+<h2>Lists<a class="headerlink" href="#lists" title="Permalink naar deze titel">#</a></h2>
 <p>Verzamelingen van alle mogelijke data.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">47</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>Net als bij strings (draden?) gebruiken we ook hier de Engelse term <em>lists</em> (en niet lijsten). Je ziet hier een lijst met 6 elementen die aan de variabele M wordt toegekend. Met de vierkante haken geef je Python aan dat je hier een list bedoelt, elementen in de lijst scheid je met komma’s.</p>
-<div class="section" id="lengte">
-<h3>Lengte<a class="headerlink" href="#lengte" title="Permalink naar deze titel">¶</a></h3>
+<section id="lengte">
+<h3>Lengte<a class="headerlink" href="#lengte" title="Permalink naar deze titel">#</a></h3>
 <p>De lengte van een lijst</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1621,9 +1770,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <p>Een list is een sequentie en net als bij een string kan je de lengte (het aantal elementen) opvragen met <code class="docutils literal notranslate"><span class="pre">len(x)</span></code>.</p>
-</div>
-<div class="section" id="index">
-<h3>Index<a class="headerlink" href="#index" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="index">
+<h3>Index<a class="headerlink" href="#index" title="Permalink naar deze titel">#</a></h3>
 <p>De elementen in de lijst zijn geïndexeerd, ze hebben een vaste positie.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -1650,9 +1799,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </tbody>
 </table>
 <p>In een sequentie staat elk element op een vaste positie en we beginnen altijd te tellen vanaf 0.</p>
-</div>
-<div class="section" id="positie">
-<h3>Positie<a class="headerlink" href="#positie" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="positie">
+<h3>Positie<a class="headerlink" href="#positie" title="Permalink naar deze titel">#</a></h3>
 <p>Het element op index positie 0 opvragen</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1669,9 +1818,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <p>De syntax lijkt wat eigenaardig omdat je hier wéér vierkante haken moet gebruiken, deze keer achter de varabele naam om het karakter op deze positie op te vragen.</p>
-</div>
-<div class="section" id="slicing">
-<h3>Slicing<a class="headerlink" href="#slicing" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="slicing">
+<h3>Slicing<a class="headerlink" href="#slicing" title="Permalink naar deze titel">#</a></h3>
 <p>Een opeenvolgende selectie van elementen opvragen</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1688,9 +1837,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <p>Slicing, alsof je een puntje uit een taart snijdt! De eerste positie is de <em>start</em> index (0), de tweede de <em>stop</em> index (3). Stop is <strong>tot</strong> de index (en niet <em>tot en met</em>). Slicing geeft als resultaat altijd hetzelfde type terug (een list in dit geval). We zullen straks zien dat je ook strings kan slicen en dan zal het een substring teruggeven.</p>
-</div>
-<div class="section" id="alle-data">
-<h3>Alle data<a class="headerlink" href="#alle-data" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="alle-data">
+<h3>Alle data<a class="headerlink" href="#alle-data" title="Permalink naar deze titel">#</a></h3>
 <p>Een list kan alle datatypen bevatten</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.14</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">40</span><span class="p">],</span> <span class="s1">&#39;derde&#39;</span><span class="p">,</span> <span class="mi">42</span><span class="p">]</span>
 </pre></div>
@@ -1711,10 +1860,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <p>Alleen de elementen van de lijst zelf worden geteld!</p>
-</div>
-</div>
-<div class="section" id="strings-en-indexering">
-<h2>Strings en indexering<a class="headerlink" href="#strings-en-indexering" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="strings-en-indexering">
+<h2>Strings en indexering<a class="headerlink" href="#strings-en-indexering" title="Permalink naar deze titel">#</a></h2>
 <p>String indexering met <code class="docutils literal notranslate"><span class="pre">[]</span></code></p>
 <table class="colwidths-auto table">
 <thead>
@@ -1735,8 +1884,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </tbody>
 </table>
 <p>Goed nieuws! Net als lists zijn strings geïndexeerd en ook hier begint tellen bij 0!</p>
-<div class="section" id="id1">
-<h3>Positie<a class="headerlink" href="#id1" title="Permalink naar deze titel">¶</a></h3>
+<section id="id1">
+<h3>Positie<a class="headerlink" href="#id1" title="Permalink naar deze titel">#</a></h3>
 <p>Het karakter op index positie 0 opvragen</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1753,9 +1902,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <p>Exact detzelfde syntax en werking als bij lists!</p>
-</div>
-<div class="section" id="negatieve-indices">
-<h3>Negatieve indices<a class="headerlink" href="#negatieve-indices" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="negatieve-indices">
+<h3>Negatieve indices<a class="headerlink" href="#negatieve-indices" title="Permalink naar deze titel">#</a></h3>
 <p>Negatieve indicess tellen van achteren naar voren!</p>
 <table class="colwidths-auto table">
 <thead>
@@ -1796,9 +1945,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <p>Negatieve indices introduceren we nu voor strings, maar je kan misschien al raden dat dit op dezelfde manier ook bij lists werkt!</p>
-</div>
-<div class="section" id="id2">
-<h3>Slicing<a class="headerlink" href="#id2" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="id2">
+<h3>Slicing<a class="headerlink" href="#id2" title="Permalink naar deze titel">#</a></h3>
 <p>Een substring opvragen:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1844,9 +1993,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <p>De substring is in dit geval de hele string! Python vult voor jou het begin en einde in op bais van de lengte van de string. Bedenk dat dit een <em>kopie</em> van de string is, denk hier terug aan geheugenadressen: de waarden zijn hetzelfde, maar de identiteit is anders. Probeer dit zelf en vergelijk <code class="docutils literal notranslate"><span class="pre">id(s)</span></code> met <code class="docutils literal notranslate"><span class="pre">id(s[:])</span></code>.</p>
-</div>
-<div class="section" id="stappen">
-<h3>Stappen<a class="headerlink" href="#stappen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="stappen">
+<h3>Stappen<a class="headerlink" href="#stappen" title="Permalink naar deze titel">#</a></h3>
 <p>Met hoeveel stappen door de sequentie lopen (<em>skip-slicing</em>)</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[start:stop:step]
 </pre></div>
@@ -1881,9 +2030,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="achteruit-lopen">
-<h3>Achteruit lopen<a class="headerlink" href="#achteruit-lopen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="achteruit-lopen">
+<h3>Achteruit lopen<a class="headerlink" href="#achteruit-lopen" title="Permalink naar deze titel">#</a></h3>
 <p>Stappen kunnen ook negatief zijn!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1900,8 +2049,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <p>Als je goed oplet zie je dat we met een negatieve stap de string hebben omgedraaid! Python gebruikers willen graag opscheppen met deze “truc” om een string om te draaien en misschien hebben ze wel gelijk!</p>
-<div class="section" id="opgelet">
-<h4>Opgelet<a class="headerlink" href="#opgelet" title="Permalink naar deze titel">¶</a></h4>
+<section id="opgelet">
+<h4>Opgelet<a class="headerlink" href="#opgelet" title="Permalink naar deze titel">#</a></h4>
 <p>Let op: bij een negatieve staprichting moet de start- en stopindex omgekeerd zijn!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1918,13 +2067,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <p>Omdat de staprichting wijzigt, wijzigt ook op welke index moet worden begonnen en tot welke index moet worden gelopen.</p>
-</div>
-</div>
-</div>
-<div class="section" id="quiz">
-<h2>Quiz<a class="headerlink" href="#quiz" title="Permalink naar deze titel">¶</a></h2>
-<div class="section" id="vraag-1">
-<h3>Vraag 1<a class="headerlink" href="#vraag-1" title="Permalink naar deze titel">¶</a></h3>
+</section>
+</section>
+</section>
+<section id="quiz">
+<h2>Quiz<a class="headerlink" href="#quiz" title="Permalink naar deze titel">#</a></h2>
+<section id="vraag-1">
+<h3>Vraag 1<a class="headerlink" href="#vraag-1" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pi</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
 
 <span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;pi&#39;</span><span class="p">,</span> <span class="s2">&quot;isn&#39;t&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">]]</span>
@@ -1938,8 +2087,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>Welk puntje (“slice”) <code class="docutils literal notranslate"><span class="pre">pi</span></code> is gelijk aan <code class="docutils literal notranslate"><span class="pre">[3,1,4]</span></code>? (hint, neem het aantal elementen als stop waarde <code class="docutils literal notranslate"><span class="pre">[0,3]</span></code>)</p></li>
 <li><p>Welk puntje <code class="docutils literal notranslate"><span class="pre">pi</span></code> is <code class="docutils literal notranslate"><span class="pre">[3,4,5]</span></code>?</p></li>
 </ol>
-<div class="section" id="antwoord">
-<h4>Antwoord<a class="headerlink" href="#antwoord" title="Permalink naar deze titel">¶</a></h4>
+<section id="antwoord">
+<h4>Antwoord<a class="headerlink" href="#antwoord" title="Permalink naar deze titel">#</a></h4>
 <ol class="simple">
 <li><p>6</p></li>
 <li><p>3</p></li>
@@ -1948,10 +2097,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p><code class="docutils literal notranslate"><span class="pre">pi[:3]</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pi[::2]</span></code></p></li>
 </ol>
-</div>
-</div>
-<div class="section" id="vraag-2">
-<h3>Vraag 2<a class="headerlink" href="#vraag-2" title="Permalink naar deze titel">¶</a></h3>
+</section>
+</section>
+<section id="vraag-2">
+<h3>Vraag 2<a class="headerlink" href="#vraag-2" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;pi&#39;</span><span class="p">,</span> <span class="s2">&quot;isn&#39;t&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">]]</span>
 
 <span class="n">M</span> <span class="o">=</span> <span class="s1">&#39;You need parentheses for chemistry !&#39;</span>
@@ -1967,8 +2116,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>Wat is <code class="docutils literal notranslate"><span class="pre">What</span> <span class="pre">is</span> <span class="pre">M[9:15]</span></code>?</p></li>
 <li><p>Wat is <code class="docutils literal notranslate"><span class="pre">M[::5]</span></code></p></li>
 </ol>
-<div class="section" id="id3">
-<h4>Antwoord<a class="headerlink" href="#id3" title="Permalink naar deze titel">¶</a></h4>
+<section id="id3">
+<h4>Antwoord<a class="headerlink" href="#id3" title="Permalink naar deze titel">#</a></h4>
 <ol class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">'pi'</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'i'</span></code></p></li>
@@ -1978,10 +2127,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p><code class="docutils literal notranslate"><span class="pre">'parent'</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Yeah</span> <span class="pre">cs!'</span></code></p></li>
 </ol>
-</div>
-</div>
-<div class="section" id="vraag-3">
-<h3>Vraag 3<a class="headerlink" href="#vraag-3" title="Permalink naar deze titel">¶</a></h3>
+</section>
+</section>
+<section id="vraag-3">
+<h3>Vraag 3<a class="headerlink" href="#vraag-3" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pi</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -1989,8 +2138,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>Wat is <code class="docutils literal notranslate"><span class="pre">pi[0]</span> <span class="pre">*</span> <span class="pre">(pi[1]</span> <span class="pre">+</span> <span class="pre">pi[2])</span></code>?</p></li>
 <li><p>Wat is <code class="docutils literal notranslate"><span class="pre">pi[0]</span> <span class="pre">*</span> <span class="pre">(pi[1:2]</span> <span class="pre">+</span> <span class="pre">pi[2:3])</span></code>?</p></li>
 </ol>
-<div class="section" id="id4">
-<h4>Antwoord<a class="headerlink" href="#id4" title="Permalink naar deze titel">¶</a></h4>
+<section id="id4">
+<h4>Antwoord<a class="headerlink" href="#id4" title="Permalink naar deze titel">#</a></h4>
 <ol class="simple">
 <li><p>In stappen:</p>
 <ol class="simple">
@@ -2006,10 +2155,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ol>
 </li>
 </ol>
-</div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -2033,9 +2182,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="3a_data.html" title="vorige pagina">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -2051,30 +2202,34 @@ commentsRunWhenDOMLoaded(addUtterances);
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
-    
-      Door Harvey Mudd College / Hanze University of Applied Sciences<br/>
-    
-      <div class="extra_footer">
-        <div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Harvey Mudd College / Hanze University of Applied Sciences<br/>
+  
+    <div class="extra_footer">
+      <div>
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
     Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
 </div>
 
-      </div>
-  </p>
-</footer>
-</main>
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

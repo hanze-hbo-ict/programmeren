@@ -4,11 +4,13 @@
 <html lang="nl">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Rekenen met taal &#8212; Programmeren</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,31 +20,30 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/save_state.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -78,18 +79,18 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
+    <script src="../_static/save_state.js"></script>
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://misja.github.io/programmeren/topics/7b_rekenen_met_taal.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Zoeken" href="../search.html" />
@@ -102,7 +103,21 @@ commentsRunWhenDOMLoaded(addUtterances);
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -111,9 +126,10 @@ commentsRunWhenDOMLoaded(addUtterances);
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -128,17 +144,18 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../about/syllabus.html">
-   Programmeren
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about/syllabus.html">
+                    Programmeren
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Opmerkingen
  </span>
@@ -1094,112 +1111,244 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
-                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/topics/7b_rekenen_met_taal.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Bronopslagplaats"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/7b_rekenen_met_taal.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open een probleem"><i class="fas fa-lightbulb"></i>open probleem</button></a>
-        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/topics/7b_rekenen_met_taal.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="bewerk deze pagina"><i class="fas fa-pencil-alt"></i>suggereren bewerken</button></a>
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
-        title="Volledig scherm"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/misja/programmeren/master?urlpath=lab/tree/topics/7b_rekenen_met_taal.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Lancering Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <button type="button" class="btn btn-secondary topbarbtn"
-            onclick="initThebeSBT()" title="Lancering Thebe" data-toggle="tooltip" data-placement="left"><i
-                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Inhoud
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/misja/programmeren/master?urlpath=lab/tree/topics/7b_rekenen_met_taal.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/misja/programmeren"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/7b_rekenen_met_taal.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/edit/master/topics/7b_rekenen_met_taal.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/topics/7b_rekenen_met_taal.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#taal">
    Taal
@@ -1404,12 +1553,11 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Rekenen met taal</h1>
@@ -1418,7 +1566,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> Inhoud </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -1630,41 +1778,42 @@ commentsRunWhenDOMLoaded(addUtterances);
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="rekenen-met-taal">
-<h1>Rekenen met taal<a class="headerlink" href="#rekenen-met-taal" title="Permalink naar deze titel">¶</a></h1>
-<div class="section" id="taal">
-<h2>Taal<a class="headerlink" href="#taal" title="Permalink naar deze titel">¶</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="rekenen-met-taal">
+<h1>Rekenen met taal<a class="headerlink" href="#rekenen-met-taal" title="Permalink naar deze titel">#</a></h1>
+<section id="taal">
+<h2>Taal<a class="headerlink" href="#taal" title="Permalink naar deze titel">#</a></h2>
 <p>🌍 ideeën, meningen</p>
 <p>👄 natuurlijke taal, woorden, zinnen</p>
 <p>🐍 strings (Python)</p>
 <p>💻 getallen, bits (computer)</p>
-<div class="section" id="van-strings-naat-bits">
-<h3>Van <code class="docutils literal notranslate"><span class="pre">str</span></code>ings naat bits<a class="headerlink" href="#van-strings-naat-bits" title="Permalink naar deze titel">¶</a></h3>
+<section id="van-strings-naat-bits">
+<h3>Van <code class="docutils literal notranslate"><span class="pre">str</span></code>ings naat bits<a class="headerlink" href="#van-strings-naat-bits" title="Permalink naar deze titel">#</a></h3>
 <p>Van 🐍 strings naar 💻 bits gaan we straks naar kijken</p>
-</div>
-<div class="section" id="van-strings-naar-natuurlijk-taal">
-<h3>Van <code class="docutils literal notranslate"><span class="pre">str</span></code>ings naar natuurlijk taal<a class="headerlink" href="#van-strings-naar-natuurlijk-taal" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="van-strings-naar-natuurlijk-taal">
+<h3>Van <code class="docutils literal notranslate"><span class="pre">str</span></code>ings naar natuurlijk taal<a class="headerlink" href="#van-strings-naar-natuurlijk-taal" title="Permalink naar deze titel">#</a></h3>
 <p>Van 🐍 strings naar 👄 natuurlijke taal</p>
 <blockquote>
 <div><p>kan je bepalen hoe “Nederlandstalig” een string is?</p>
 </div></blockquote>
 <p>Natural language processing (NLP)</p>
 <p>We gaan straks zien hoe we <em>rekenkundig</em> Nederlandstaligheid kunnen bepalen.</p>
-</div>
-<div class="section" id="en-verder">
-<h3>En verder<a class="headerlink" href="#en-verder" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="en-verder">
+<h3>En verder<a class="headerlink" href="#en-verder" title="Permalink naar deze titel">#</a></h3>
 <p>Van 🐍 strings naar 👄 natuurlijke taal en 🌍 grote ideeën</p>
 <p>Openstaande vragen in kunstmatige intelligentie (AI)</p>
 <p>Als we taal rekenkundig kunnen benaderen, wat zijn dan de mogelijkheden? Hiermee komen we op het gebied van bijvoorbeeld kunstmatige intelligentie (AI).</p>
 <p><img alt="The Guardian GPT3" src="../_images/guardian_gpt3.png" /></p>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/GPT-3">GPT-3</a> is een voolbeeld van een kunstmatige intelligentie. Het volledig door AI geschreven artikel kan je vinden in <a class="reference external" href="https://www.theguardian.com/commentisfree/2020/sep/08/robot-wrote-this-article-gpt-3">The Guardian</a>. Andere GPT-3 voorbeelden kan je zien op <a class="reference external" href="https://gpt3examples.com/">https://gpt3examples.com/</a>.</p>
-</div>
-</div>
-<div class="section" id="caesarcijfer">
-<h2>Caesarcijfer<a class="headerlink" href="#caesarcijfer" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="caesarcijfer">
+<h2>Caesarcijfer<a class="headerlink" href="#caesarcijfer" title="Permalink naar deze titel">#</a></h2>
 <p><img alt="Julius Caesar" src="../_images/jcaesar-bust.jpg" /></p>
 <p>Het <a class="reference external" href="https://nl.wikipedia.org/wiki/Caesarcijfer">Caesarcijfer</a> is vernoemd naar de Romein Julius Caesar. Hij gebruikte een versleuteling van berichten op basis van een rotatie van karakters. De sleutel is het aantal stappen van de rotatie.</p>
 <p><img alt="Caesar cijfer" src="../_images/caesar_cipher.png" /></p>
@@ -1677,8 +1826,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>De <em>ontvanger</em> van het versleuteld bericht “KRL” heeft dezelfde startpositie. De sleutel (rotatie) is bekend want deze is met de <em>verzender</em> afgesproken.</p>
 <p><img alt="Caesar cijfer decrypt" src="../_images/caesar_cipher_decipher_3.png" /></p>
 <p>Hoe kan de ontvanger het bericht nu ontcijferen? Door de rotatie in de omgekeerde richting toe te passen (tegen de klok in)! Kan je het versleuteld bericht “KRL” op basis van deze omgekeerde rotatie ontcijferen?</p>
-<div class="section" id="encipher">
-<h3><code class="docutils literal notranslate"><span class="pre">encipher</span></code><a class="headerlink" href="#encipher" title="Permalink naar deze titel">¶</a></h3>
+<section id="encipher">
+<h3><code class="docutils literal notranslate"><span class="pre">encipher</span></code><a class="headerlink" href="#encipher" title="Permalink naar deze titel">#</a></h3>
 <p>Versleutelen</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">encipher</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
     <span class="o">...</span>
@@ -1711,9 +1860,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="s1">&#39;Caesarcijfer? Ik heb liever Caesarsalade.&#39;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="decipher">
-<h3><code class="docutils literal notranslate"><span class="pre">decipher</span></code><a class="headerlink" href="#decipher" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="decipher">
+<h3><code class="docutils literal notranslate"><span class="pre">decipher</span></code><a class="headerlink" href="#decipher" title="Permalink naar deze titel">#</a></h3>
 <p>Ontijferen</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">decipher</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="o">...</span>
@@ -1735,10 +1884,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p>Een Nederlandse frequentieverdeling is niet gelijk aan Latijn. Wat we hier hadden willen zien was “Et tu Brute?”, Caesar’s beroemde <a class="reference external" href="https://en.wikipedia.org/wiki/Et_tu,_Brute%3F">laatste woorden</a>.</p>
 <p>Maar dan nog zou het de vraag zijn of het kon worden gevonden, de tekst is wellicht ook te kort.</p>
-</div>
-</div>
-<div class="section" id="ascii">
-<h2>ASCII<a class="headerlink" href="#ascii" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="ascii">
+<h2>ASCII<a class="headerlink" href="#ascii" title="Permalink naar deze titel">#</a></h2>
 <p>American Standard Code for Information Interchange</p>
 <p><img alt="ASCII" src="../_images/ascii_0.png" /></p>
 <p>Laten we eerst kijken hoe karakters worden gerepresenteerd door een computer. De computer kent alleen maar bytes (8 opeenvolgende bits) dus hoe kan het karakters als A, B en C opslaan? Dit kan een computer niet en er is een vertaaltabel nodig om van bits naar karakters te komen en vice versa. De <a class="reference external" href="https://nl.wikipedia.org/wiki/ASCII_(tekenset)">ASCII</a> tekenset is zo’n vertaaltabel.</p>
@@ -1749,21 +1898,21 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p><img alt="Binary box" src="../_images/box_binary.png" /></p>
 <p>Denk terug aan de “dozen” die we hebben gebruikt om een voorstelling te maken van wat zich in het geheugen van een computer afspeelt en met wat we nu weten kunnen we dit beeld gaan aanpassen. De “inhoud” van een doos zijn de bits, zoveel is nu wel duidelijk. De inhoud van verschillende dozen kan hetzelfde zijn maar het type bepaalt de representatie, bijvoorbeeld of het integer met waarde 67 of een string met waarde “C” is.</p>
 <p>De naam van een waarde (variabele) maakt dus ook niet uit, je weet inmiddels dat je (bijna) elke naam voor een variabele mag kiezen en het is niets meer dan een verwijzing naar de waarde die voor jou betekenis heeft (en je zult misschien hebben gemerkt dat het kiezen van een betekenisvolle naam niet altijd eenvoudig is!).</p>
-<div class="section" id="beperkingen">
-<h3>Beperkingen<a class="headerlink" href="#beperkingen" title="Permalink naar deze titel">¶</a></h3>
+<section id="beperkingen">
+<h3>Beperkingen<a class="headerlink" href="#beperkingen" title="Permalink naar deze titel">#</a></h3>
 <ul class="simple">
 <li><p>ASCII 8 bits betekent maximaal 256 mogelijke karakters</p></li>
 </ul>
 <p>Maar de 🌍 is groter dan 256 karakters,ñïㅌtwååя?</p>
 <p>Historisch gezien was de byte het aantal bits dat werd gebruikt om een enkel karakter van de tekst in een computer te coderen. Het was begin jaren 60 van de vorige eeuw dat dit werd bepaald en dit zie je in ASCII terug, het is een oude tekenset!</p>
-</div>
-<div class="section" id="ascii-unicode">
-<h3>ASCII ⊂ Unicode<a class="headerlink" href="#ascii-unicode" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="ascii-unicode">
+<h3>ASCII ⊂ Unicode<a class="headerlink" href="#ascii-unicode" title="Permalink naar deze titel">#</a></h3>
 <p>Een moderne encodering met ASCII als subset</p>
 <p>Tegenwoording wordt van andere tekensets gebruik gemaakt. Unicode is een moderne variant die ASCII als subset heeft. Dit betekent dat 67 nog steeds naar C verwijst, maar 128077 naar 👍. Unicode gebruikt een byte op een veel slimmere manier om optimaal van de mogelijke adresruimte gebruik te maken. De meest gebruikte variant is tegenwoordig <a class="reference external" href="https://nl.wikipedia.org/wiki/UTF-8">UTF-8</a> hoewel ook <a class="reference external" href="https://nl.wikipedia.org/wiki/UTF-16">UTF-16</a> en UTF-32 bestaan (16 en 32 bits).</p>
-</div>
-<div class="section" id="chr-en-ord">
-<h3><code class="docutils literal notranslate"><span class="pre">chr</span></code> en <code class="docutils literal notranslate"><span class="pre">ord</span></code><a class="headerlink" href="#chr-en-ord" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="chr-en-ord">
+<h3><code class="docutils literal notranslate"><span class="pre">chr</span></code> en <code class="docutils literal notranslate"><span class="pre">ord</span></code><a class="headerlink" href="#chr-en-ord" title="Permalink naar deze titel">#</a></h3>
 <p>Zet een getal om naar een karakter</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1790,9 +1939,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="vergelijken">
-<h3>Vergelijken<a class="headerlink" href="#vergelijken" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="vergelijken">
+<h3>Vergelijken<a class="headerlink" href="#vergelijken" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;w&quot;</span><span class="p">)</span>
@@ -1830,18 +1979,18 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <p>Weet je nog dat Python een mening had? Het is om deze reden dat <code class="docutils literal notranslate"><span class="pre">w</span></code>erk &gt; <code class="docutils literal notranslate"><span class="pre">e</span></code>ten!</p>
-</div>
-<div class="section" id="mini-quiz">
-<h3>Mini quiz<a class="headerlink" href="#mini-quiz" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="mini-quiz">
+<h3>Mini quiz<a class="headerlink" href="#mini-quiz" title="Permalink naar deze titel">#</a></h3>
 <p>Wat is</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;U&quot;</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
 </pre></div>
 </div>
 <p>Zie de <a class="reference external" href="https://nl.wikipedia.org/wiki/ASCII_(tekenset)">ASCII tabel</a>, de decimale waarde van U is 85.</p>
 <p>Het antwoord op “The Answer to the Ultimate Question of Life, the Universe, and Everything” is een verwijzing naar “*”, het wildcard karakter? Zijn we hier iets op het spoor …?</p>
-</div>
-<div class="section" id="uitproberen">
-<h3>Uitproberen<a class="headerlink" href="#uitproberen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="uitproberen">
+<h3>Uitproberen<a class="headerlink" href="#uitproberen" title="Permalink naar deze titel">#</a></h3>
 <p>Andere leuke karakters om uit te proberen</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">chr</span><span class="p">(</span><span class="mi">156265</span><span class="p">)</span>
 <span class="nb">chr</span><span class="p">(</span><span class="mi">9835</span><span class="p">)</span>
@@ -1851,10 +2000,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p>Windows gebruikers let op: voer dit in een VSCode terminal uit met python of IPython. De standaard Windows terminal is te oud om bijvoorbeeld emoji te tonen (hogere getallen). Microsoft werkt aan een nieuwe, <a class="reference external" href="https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab">moderne terminal</a> om onder andere dit probleem te verhelpen (welkom in de 21e eeuw Microsoft!).</p>
 <p><img alt="Windows Unicode" src="../_images/windows_unicode.png" /></p>
-</div>
-</div>
-<div class="section" id="rot13">
-<h2>Rot13<a class="headerlink" href="#rot13" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="rot13">
+<h2>Rot13<a class="headerlink" href="#rot13" title="Permalink naar deze titel">#</a></h2>
 <p><em>Rotate by 13 places</em></p>
 <p>Waarom 13? Bij gebruik van het alfabet is dertien de waarde waarbij codering en decodering gelijkwaardig zijn (het alfabet telt 26 karakters). Het werd vaak gebruikt op fora om gevoelige posts of spoilers te versleutelen.</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">8</span><span class="p">]:</span> <span class="n">rot13</span><span class="p">(</span><span class="s2">&quot;Don&#39;t Panic.&quot;</span><span class="p">)</span>
@@ -1938,8 +2087,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </table>
 <p>Met een rotatie 3 zou het karakter Z verschuiven naar positie 28, maar dit valt buiten het bereik. Een modulo bewerking <code class="docutils literal notranslate"><span class="pre">28</span> <span class="pre">%</span> <span class="pre">26</span></code> levert 2 op en daarmee kom je op het karakter met index positie 2 (C) en zo is de cirkel rond!</p>
 <p>We gaan <code class="docutils literal notranslate"><span class="pre">rot13</span></code> op een andere manier uitwerken, als uitdaging kan je proberen een modulo bewerking toe te passen om “door te draaien” ;)</p>
-<div class="section" id="het-doel">
-<h3>Het doel<a class="headerlink" href="#het-doel" title="Permalink naar deze titel">¶</a></h3>
+<section id="het-doel">
+<h3>Het doel<a class="headerlink" href="#het-doel" title="Permalink naar deze titel">#</a></h3>
 <p>Een karakter verschuiven met 13 posities en doordraaien indien nodig</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">rot13</span><span class="p">(</span><span class="s2">&quot;n&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;a&quot;</span>
 <span class="k">assert</span> <span class="n">rot13</span><span class="p">(</span><span class="s2">&quot;W&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;J&quot;</span>
@@ -1950,9 +2099,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="k">assert</span> <span class="n">rot13</span><span class="p">(</span><span class="s2">&quot;&lt;&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;&lt;&quot;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="een-begin">
-<h3>Een begin<a class="headerlink" href="#een-begin" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="een-begin">
+<h3>Een begin<a class="headerlink" href="#een-begin" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rot13</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
@@ -1985,9 +2134,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul class="simple">
 <li><p>Wat zou moeten gebeuren als <code class="docutils literal notranslate"><span class="pre">c</span></code> geen karakter in het alfabet is?</p></li>
 </ul>
-</div>
-<div class="section" id="uitwerking">
-<h3>Uitwerking<a class="headerlink" href="#uitwerking" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="uitwerking">
+<h3>Uitwerking<a class="headerlink" href="#uitwerking" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rot13</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
@@ -2012,10 +2161,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="id1">
-<h2><code class="docutils literal notranslate"><span class="pre">decipher</span></code><a class="headerlink" href="#id1" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="id1">
+<h2><code class="docutils literal notranslate"><span class="pre">decipher</span></code><a class="headerlink" href="#id1" title="Permalink naar deze titel">#</a></h2>
 <p>Een bericht ontcijferen <em>zonder</em> bekende rotatie</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">10</span><span class="p">]:</span> <span class="n">decipher</span><span class="p">(</span><span class="s2">&quot;Bzdrzqbhiedq? Hj gda khdudq Bzdrzqrzkzcd.&quot;</span><span class="p">)</span>
 <span class="n">Out</span><span class="p">[</span><span class="mi">10</span><span class="p">]:</span> <span class="s1">&#39;Caesarcijfer? Ik heb liever Caesarsalade.&#39;</span>
@@ -2023,15 +2172,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p>Welke <em>strategie</em>, welk <em>algoritme</em>?</p>
 <p>Encryptie wordt overal toegepast, of het nu gaat om het beschermen van jouw betaalgegevens of om meeluisteren met een chat of gesprek onmogelijk te maken. Toch hoor je vaak over versleutelingen die “gekraakt” zijn. Hoe zou je een substitutieversleuteling als een Caesarcijfer kunnen breken? Wat zouden geschikte benaderingen (strategie) en bijbehorende handelingen (algoritme) kunnen zijn om dit probleem op te lossen?</p>
-<div class="section" id="een-bericht">
-<h3>Een bericht<a class="headerlink" href="#een-bericht" title="Permalink naar deze titel">¶</a></h3>
+<section id="een-bericht">
+<h3>Een bericht<a class="headerlink" href="#een-bericht" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">decipher</span><span class="p">(</span><span class="s2">&quot;jgddcp qnnc xqicnc&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>We hebben een versleuteld bericht uit het verleden ontvangen maar helaas is de sleutel (de rotatie) niet bekend … hoe zou je dit bericht geautomatiseerd kunnen ontcijferen? We hebben weinig informatie, laten we aannemen dat het bericht in het Nederlands is opgesteld…</p>
-</div>
-<div class="section" id="taalherkenning">
-<h3>Taalherkenning<a class="headerlink" href="#taalherkenning" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="taalherkenning">
+<h3>Taalherkenning<a class="headerlink" href="#taalherkenning" title="Permalink naar deze titel">#</a></h3>
 <p>Welke rotatie is het meest Nederlandstalig?</p>
 <table class="colwidths-auto table">
 <thead>
@@ -2121,9 +2270,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </tbody>
 </table>
 <p>Voor het versleutelde bericht kan je elke rotatie toepassen zodat je tot een lijst van 26 mogelijke ontcijferingen komt. Maar welk element van deze lijst is het meest … Nederlandstalig?</p>
-</div>
-<div class="section" id="nederlandstaligheid-meten">
-<h3>Nederlandstaligheid meten<a class="headerlink" href="#nederlandstaligheid-meten" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="nederlandstaligheid-meten">
+<h3>Nederlandstaligheid meten<a class="headerlink" href="#nederlandstaligheid-meten" title="Permalink naar deze titel">#</a></h3>
 <p>Hoog</p>
 <blockquote>
 <div><p>Denkend aan Holland zie ik breede rivieren traag door oneindig laagland gaan.</p>
@@ -2140,9 +2289,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div></blockquote>
 <p>Dit lijkt op het bericht dat we hebben ontvangen en heeft niet veel met Nederlands te maken!</p>
 <p>Voor elke mogelijke rotatie van het versleuteld bericht zal je een maat moeten hebben om te bepalen welke de <code class="docutils literal notranslate"><span class="pre">max</span></code> is, oftwel wat de meest Nederlandstalige ontcijfering is.</p>
-</div>
-<div class="section" id="aantal-klinkers">
-<h3>Aantal klinkers<a class="headerlink" href="#aantal-klinkers" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="aantal-klinkers">
+<h3>Aantal klinkers<a class="headerlink" href="#aantal-klinkers" title="Permalink naar deze titel">#</a></h3>
 <p>Is dit een mogelijke maat?</p>
 <table class="colwidths-auto table">
 <thead>
@@ -2260,14 +2409,14 @@ commentsRunWhenDOMLoaded(addUtterances);
 </table>
 <p>Een mogelijke strategie zou het tellen van het aantal klinkers voor elke rotatie kunnen zijn. Dit is misschien een intuïtief ingegeven strategie, het gebruik van klinkers is immers een kenmerk van een taal. In dit geval hebben we een <code class="docutils literal notranslate"><span class="pre">max</span></code> gevonden maar hoe Nederlandstalig is deze <code class="docutils literal notranslate"><span class="pre">max</span></code>? Is dit het oorspronkelijke bericht?</p>
 <p>Je kan je afvragen in hoeverre dit een goede maat is. Bijvoorbeeld, <code class="docutils literal notranslate"><span class="pre">aaaa</span> <span class="pre">eeeee</span> <span class="pre">iii</span></code> zou een absolute <code class="docutils literal notranslate"><span class="pre">max</span></code> zijn, maar is het ook betenisvol? Waarschijnlijk niet en daarmee is het een niet heel betrouwbare maat en zullen we op zoek moeten naar iets beters.</p>
-</div>
-<div class="section" id="letterfrequentie">
-<h3>Letterfrequentie<a class="headerlink" href="#letterfrequentie" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="letterfrequentie">
+<h3>Letterfrequentie<a class="headerlink" href="#letterfrequentie" title="Permalink naar deze titel">#</a></h3>
 <p>Het <em>vaak</em> worden klinkers én medeklinkers in een taal gebruikt?</p>
 <p>Talen verschillen van elkaar en wat is nu één van de kenmerken waar zij zich van elkaar onderscheiden? Syntax! Dit uit zich in het gebruik van klinkers en medeklinkers waar karakters in de ene taal vaker zullen worden gebruikt dan in een andere taal.</p>
-</div>
-<div class="section" id="kansen">
-<h3>Kansen<a class="headerlink" href="#kansen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="kansen">
+<h3>Kansen<a class="headerlink" href="#kansen" title="Permalink naar deze titel">#</a></h3>
 <p>De frequentieverdeling van karakters: wat is de kans dat de letter G wordt gebruikt?</p>
 <ul class="simple">
 <li><p>Nederlands: 3.17%</p></li>
@@ -2278,9 +2427,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Stel dat je een pagina van <a class="reference external" href="https://nos.nl/">NOS</a>, <a class="reference external" href="https://bbc.com/">BBC</a> of <a class="reference external" href="https://www.france.tv/">FRANCE.TV</a> op scherm hebt en je zou met de ogen dicht een punt op de pagina aanwijzen, wat is de kans dat je een “a”, “i” of “g” aanwijst? Deze kans zal verschillen omdat het gebruik van klinkers en medeklinkers per taal verschilt.</p>
 <p>Deze letterfrequenties zijn bekend op basis van tellingen van héél veel teksten per taal. Een frequentieverdeling van karakters voor Nederlands kan je bijvoorbeeld vinden op <a class="reference external" href="https://www.sttmedia.com/characterfrequency-nederlands">WordCreator</a>.</p>
 <p>Het vakgebied dat zich onder andere met deze maten bezig houdt is <a class="reference external" href="https://en.wikipedia.org/wiki/Computational_linguistics"><em>computational linguistics</em></a> (computationele taalkunde). Dit is een interdisciplinair vakgebied waar de computationele modellering van taalkundige verschijnselen centraal staat.</p>
-</div>
-<div class="section" id="opeenvolging">
-<h3>Opeenvolging<a class="headerlink" href="#opeenvolging" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="opeenvolging">
+<h3>Opeenvolging<a class="headerlink" href="#opeenvolging" title="Permalink naar deze titel">#</a></h3>
 <p>De kans dat de letter A wordt gebruikt is 7.76% (NL)</p>
 <p>Wat is de kans dat G (3.17%) wordt opgevolgd door A?</p>
 <div class="math notranslate nohighlight">
@@ -2402,17 +2551,17 @@ commentsRunWhenDOMLoaded(addUtterances);
 </tbody>
 </table>
 <p>Deze notatie van getallen zal je misschien vaker zien. Voor decimale getallen zal Python vaak de wetenschappelijke notatie gebruiken om de precicie aan te duiden. In dit geval staat <code class="docutils literal notranslate"><span class="pre">6.3e-15</span></code> gelijk aan <span class="math notranslate nohighlight">\(6.3\cdot{10}^{-15}\)</span>.</p>
-</div>
-<div class="section" id="het-max-bericht">
-<h3>Het <code class="docutils literal notranslate"><span class="pre">max</span></code> bericht<a class="headerlink" href="#het-max-bericht" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="het-max-bericht">
+<h3>Het <code class="docutils literal notranslate"><span class="pre">max</span></code> bericht<a class="headerlink" href="#het-max-bericht" title="Permalink naar deze titel">#</a></h3>
 <blockquote>
 <div><p><em>Alea iacta est</em></p>
 <p>–Julius Caesar</p>
 </div></blockquote>
 <p><a class="reference external" href="https://onzetaal.nl/taaladvies/alea-iacta-est-de-teerling-is-geworpen/">Alea iacta est</a> of “de teerling is geworpen” is een uitspraak van Julius Caesar. Het is blijkbaar Nederlandstalig genoeg voor onze strategie! Voor Nedelandstalige teksten zal het preciezer werken en merk daarbij op dat de lengte van een bericht ook van belang is.</p>
-</div>
-<div class="section" id="strategie-en-algoritme">
-<h3>Strategie en algoritme<a class="headerlink" href="#strategie-en-algoritme" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="strategie-en-algoritme">
+<h3>Strategie en algoritme<a class="headerlink" href="#strategie-en-algoritme" title="Permalink naar deze titel">#</a></h3>
 <p><em>Strategie</em></p>
 <p>Letterfrequentie is een goede maat voor Nederlandstaligheid</p>
 <p><em>Algoritme</em></p>
@@ -2421,10 +2570,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>bepaal op basis van letterfrequenties de kans op de lettercombinatie per rotatie</p></li>
 <li><p>vind de <code class="docutils literal notranslate"><span class="pre">max</span></code> kans van alle rotaties</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="quiz">
-<h2>Quiz<a class="headerlink" href="#quiz" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="quiz">
+<h2>Quiz<a class="headerlink" href="#quiz" title="Permalink naar deze titel">#</a></h2>
 <p>Van een woord naar een opeenvolging van letters: n-gram</p>
 <p>Weer een kleine quiz om list slicing en recursie te oefenen!</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ngram</span><span class="p">(</span><span class="s2">&quot;alien&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;l&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;n&quot;</span><span class="p">]</span>  <span class="c1"># 1-gram (unigram)</span>
@@ -2446,8 +2595,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 </pre></div>
 </div>
-<div class="section" id="oplossing">
-<h3>Oplossing<a class="headerlink" href="#oplossing" title="Permalink naar deze titel">¶</a></h3>
+<section id="oplossing">
+<h3>Oplossing<a class="headerlink" href="#oplossing" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ngram</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
         <span class="k">return</span> <span class="p">[]</span>
@@ -2455,9 +2604,9 @@ commentsRunWhenDOMLoaded(addUtterances);
         <span class="k">return</span> <span class="p">[</span><span class="n">w</span><span class="p">[:</span><span class="n">n</span><span class="p">]]</span> <span class="o">+</span> <span class="n">ngram</span><span class="p">(</span><span class="n">w</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">n</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -2481,9 +2630,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="7a_data_based_design.html" title="vorige pagina">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -2499,30 +2650,34 @@ commentsRunWhenDOMLoaded(addUtterances);
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
-    
-      Door Harvey Mudd College / Hanze University of Applied Sciences<br/>
-    
-      <div class="extra_footer">
-        <div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Harvey Mudd College / Hanze University of Applied Sciences<br/>
+  
+    <div class="extra_footer">
+      <div>
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
     Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
 </div>
 
-      </div>
-  </p>
-</footer>
-</main>
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

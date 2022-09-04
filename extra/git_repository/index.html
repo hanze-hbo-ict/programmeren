@@ -4,11 +4,13 @@
 <html lang="nl">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Kennismaken met Git &#8212; Programmeren</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,31 +20,30 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/save_state.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -78,15 +79,15 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
+    <script src="../../_static/save_state.js"></script>
     <script src="../../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://misja.github.io/programmeren/extra/git_repository/index.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -99,7 +100,21 @@ commentsRunWhenDOMLoaded(addUtterances);
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -108,9 +123,10 @@ commentsRunWhenDOMLoaded(addUtterances);
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -125,17 +141,18 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../about/syllabus.html">
-   Programmeren
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../about/syllabus.html">
+                    Programmeren
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Opmerkingen
  </span>
@@ -1091,92 +1108,197 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
-                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/extra/git_repository/index.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Bronopslagplaats"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Fextra/git_repository/index.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open een probleem"><i class="fas fa-lightbulb"></i>open probleem</button></a>
-        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/extra/git_repository/index.md"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="bewerk deze pagina"><i class="fas fa-pencil-alt"></i>suggereren bewerken</button></a>
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
-        title="Volledig scherm"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Inhoud
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/misja/programmeren"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Fextra/git_repository/index.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/edit/master/extra/git_repository/index.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/extra/git_repository/index.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#git-gebruiken">
    Git gebruiken
@@ -1337,12 +1459,11 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Kennismaken met Git</h1>
@@ -1351,7 +1472,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> Inhoud </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -1519,25 +1640,30 @@ commentsRunWhenDOMLoaded(addUtterances);
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="kennismaken-met-git">
-<h1>Kennismaken met Git<a class="headerlink" href="#kennismaken-met-git" title="Permalink naar deze titel">¶</a></h1>
-<div class="figure align-default" id="xkcd-documents">
+  <section class="tex2jax_ignore mathjax_ignore" id="kennismaken-met-git">
+<h1>Kennismaken met Git<a class="headerlink" href="#kennismaken-met-git" title="Permalink naar deze titel">#</a></h1>
+<figure class="align-default" id="xkcd-documents">
 <img alt="../../_images/documents.png" src="../../_images/documents.png" />
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text"><em>Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Untitled.doc</em> – <a class="reference external" href="https://xkcd.com/1459/">XKCD Documents</a></span><a class="headerlink" href="#xkcd-documents" title="Permallink naar deze afbeelding">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text"><em>Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Untitled.doc</em> – <a class="reference external" href="https://xkcd.com/1459/">XKCD Documents</a></span><a class="headerlink" href="#xkcd-documents" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
 <p>Versiebeheerystemen als <a class="reference external" href="https://git-scm.com/">Git</a> zijn hulpmiddelen die worden gebruikt om wijzigingen in code (of andere verzamelingen van bestanden en directories) bij te houden. Ze zijn bijzonder nuttig, bijvoorbeeld om oude momentopnames van een te project bekijken, een logboek bij te houden van waarom bepaalde wijzigingen zijn gemaakt en nog veel meer.</p>
 <p>Maar in het bijzonder als je met gaat samenwerken zal je snel merken dat het een onmisbaar hulpmiddel is om te zien wat anderen hebben gewijzigd, deze wijzigingen in jouw versie op te nemen en mogelijke conflicten op te lossen bij gelijktijdige ontwikkeling (zonder elkaars werk te overschrijven).</p>
 <p>Git zal je eerst moeten installeren, zie <a class="reference internal" href="../../support/scm/index.html"><span class="doc std std-doc">versiebeheer met Git</span></a> als je dit nog niet hebt gedaan.</p>
-<div class="section" id="git-gebruiken">
-<h2>Git gebruiken<a class="headerlink" href="#git-gebruiken" title="Permalink naar deze titel">¶</a></h2>
+<section id="git-gebruiken">
+<h2>Git gebruiken<a class="headerlink" href="#git-gebruiken" title="Permalink naar deze titel">#</a></h2>
 <p>Git is een <em>command line</em> applicatie en jouw eerste kennismaking zal ook op de command line zijn, en dit is niet zonder reden … Hoewel Git versiebeheer heel erg vergemakkelijkt en veel handelingen voor jou op de achtergrond uitvoert zal het jou nog steeds veel vragen over wát je wilt uitvoeren (en je daarom ook weer kennis moet hebben van wat Git op de achtergrond gaat uitvoeren).</p>
-<div class="figure align-default" id="xkcd-git">
+<figure class="align-default" id="xkcd-git">
 <img alt="../../_images/git.png" src="../../_images/git.png" />
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text"><em>If that doesn’t fix it, git.txt contains the phone number of a friend of mine who understands git. Just wait through a few minutes of ‘It’s really pretty simple, just think of branches as…’ and eventually you’ll learn the commands that will fix everything.</em> – <a class="reference external" href="https://xkcd.com/1597/">XKCD Git</a></span><a class="headerlink" href="#xkcd-git" title="Permallink naar deze afbeelding">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text"><em>If that doesn’t fix it, git.txt contains the phone number of a friend of mine who understands git. Just wait through a few minutes of ‘It’s really pretty simple, just think of branches as…’ and eventually you’ll learn the commands that will fix everything.</em> – <a class="reference external" href="https://xkcd.com/1597/">XKCD Git</a></span><a class="headerlink" href="#xkcd-git" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
 <p>Git wordt om deze reden ook wel een <a class="reference external" href="https://en.wikipedia.org/wiki/Leaky_abstraction"><em>leaky abstraction</em></a> genoemd waarmee wordt bedoeld dat hoewel het de details van versiebeheer voor zijn rekening neemt jij nog steeds de bijzonderheden van deze details moet weten. Dit betekent dat je in de volgende oefeningen met veel Git commando’s kennis gaat maken (misschien zelfs teveel, zie de bovenstaande <a class="reference internal" href="#xkcd-git"><span class="std std-ref">XKCD Git</span></a> scène…).</p>
 <div class="admonition-vscode-en-git admonition">
 <p class="admonition-title">VSCode en Git</p>
@@ -1545,57 +1671,39 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p>In de volgende oefeningen ga je een directory met een aantal bestanden aanmaken en deze verzameling van bestanden wordt een <em>project</em> dat je met Git gaat beheren.</p>
 <!-- in een tweede deel ga je in dit project met anderen samenwerken  -->
-</div>
-<div class="section" id="een-nieuw-project">
-<h2>Een nieuw project<a class="headerlink" href="#een-nieuw-project" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="een-nieuw-project">
+<h2>Een nieuw project<a class="headerlink" href="#een-nieuw-project" title="Permalink naar deze titel">#</a></h2>
 <p>Maak een nieuwe directory aan, bijvoorbeeld met de naam <code class="docutils literal notranslate"><span class="pre">my_project</span></code> en <code class="docutils literal notranslate"><span class="pre">cd</span></code> daar vervolgens naar toe</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir my_project</span>
 <span class="go">cd my_project/</span>
 </pre></div>
 </div>
 <p>Dit wordt jouw <em>working directory</em>, de plek waar je bestanden gaat toevoegen,  wijzigen of verwijderen en je gaat Git gebruiken om al deze handelingen te volgen en vast te leggen in <em>versies</em> van jouw project.</p>
-<div class="section" id="versiebeheer-met-git">
-<h3>Versiebeheer met Git<a class="headerlink" href="#versiebeheer-met-git" title="Permalink naar deze titel">¶</a></h3>
+<section id="versiebeheer-met-git">
+<h3>Versiebeheer met Git<a class="headerlink" href="#versiebeheer-met-git" title="Permalink naar deze titel">#</a></h3>
 <p>Deze directory (die nu nog leeg is) ga je nu onder versiebeheer brengen met Git</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git init</span>
 </pre></div>
 </div>
 <p>Git zal hier iets zeggen als <em>Initialized empty Git repository in […]</em>.</p>
 <p>Controleer nu de inhoud van deze directory, je zal zien dat een <code class="docutils literal notranslate"><span class="pre">.git</span></code> directory is aangemaakt.</p>
-<div class="tabbed-set docutils">
-<input checked="checked" id="14baff54-0370-45d1-bde0-3dc23d14f8d9" name="657e874f-f954-4a5b-bc86-554fc490edf7" type="radio">
-</input><label class="tabbed-label" for="14baff54-0370-45d1-bde0-3dc23d14f8d9">
-Windows</label><div class="tabbed-content docutils">
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ls</span>
-</pre></div>
-</div>
-</div>
-<input id="0b9d7703-dede-4bd4-bfb2-fabd9d24b834" name="657e874f-f954-4a5b-bc86-554fc490edf7" type="radio">
-</input><label class="tabbed-label" for="0b9d7703-dede-4bd4-bfb2-fabd9d24b834">
-macOS/Linux</label><div class="tabbed-content docutils">
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ls -a</span>
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Notitie</p>
-<p>Bestanden en directories die beginnen met een punt (<code class="docutils literal notranslate"><span class="pre">.</span></code>) zijn op UNIX systemen <em>verborgen bestanden</em> en worden niet getoond met <code class="docutils literal notranslate"><span class="pre">ls</span></code>. Gebruik <code class="docutils literal notranslate"><span class="pre">ls</span></code> in combinatie met de vlag <code class="docutils literal notranslate"><span class="pre">-a</span></code> (“all”) om ze wél te tonen.</p>
-</div>
-</div>
-</div>
 <p>In de directory <code class="docutils literal notranslate"><span class="pre">.git</span></code> zal Git een adminstratie bijhouden van alle wijzigingen die jij gaat maken. Git doet dit niet automatisch, jij zal Git steeds moeten gaan vertellen <em>wat</em> het moet doen!</p>
-<div class="section" id="vscode-en-versiebeheer">
-<h4>VSCode en versiebeheer<a class="headerlink" href="#vscode-en-versiebeheer" title="Permalink naar deze titel">¶</a></h4>
+<section id="vscode-en-versiebeheer">
+<h4>VSCode en versiebeheer<a class="headerlink" href="#vscode-en-versiebeheer" title="Permalink naar deze titel">#</a></h4>
 <p>Je hebt zojuist een directory met Git onder versiebeheer gebracht met <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code>. Deze en alle volgende Git handelingen kan je in VSCode links onder <em>Source Control</em> <img alt="SCM icon" src="../../_images/vscode-source-control.png" /> vinden.</p>
-<div class="figure align-default" id="vscode-git-init">
+<figure class="align-default" id="vscode-git-init">
 <img alt="../../_images/vscode_git_0.png" src="../../_images/vscode_git_0.png" />
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">VSCode <em>Source Control</em></span><a class="headerlink" href="#vscode-git-init" title="Permallink naar deze afbeelding">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">VSCode <em>Source Control</em></span><a class="headerlink" href="#vscode-git-init" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
 <p>VSCode zal daar de optie <em>Initialize Repository</em> tonen waarmee het op de achtergrond <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code> voor jou uitvoert. Let op, je ziet deze optie alleen als er nog <em>geen</em> Git repository is geinitialiseerd!</p>
-</div>
-</div>
-</div>
-<div class="section" id="bestanden-toevoegen">
-<h2>Bestanden toevoegen<a class="headerlink" href="#bestanden-toevoegen" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+</section>
+<section id="bestanden-toevoegen">
+<h2>Bestanden toevoegen<a class="headerlink" href="#bestanden-toevoegen" title="Permalink naar deze titel">#</a></h2>
 <p>Kopiëer het volgende en sla het op in het tekstbestand <code class="docutils literal notranslate"><span class="pre">a.txt</span></code></p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>a1
 a2
@@ -1628,18 +1736,20 @@ nothing added to commit but untracked files present (use &quot;git add&quot; to 
 </pre></div>
 </div>
 <p>Git geeft hier aan dat zowel <code class="docutils literal notranslate"><span class="pre">a.txt</span></code> als <code class="docutils literal notranslate"><span class="pre">b.txt</span></code> <em>untracked</em> zijn, ze worden nog niet door Git gevolgd en het zal nog geen wijzingen bijhouden.</p>
-<div class="section" id="vscode-en-git">
-<h3>VSCode en Git<a class="headerlink" href="#vscode-en-git" title="Permalink naar deze titel">¶</a></h3>
+<section id="vscode-en-git">
+<h3>VSCode en Git<a class="headerlink" href="#vscode-en-git" title="Permalink naar deze titel">#</a></h3>
 <p>Als je na de bovenstaande handelingen in VSCode onder <em>Source Control</em> kijkt zal je herkennen wat je zojuist in de melding van Git hebt gezien.</p>
-<div class="figure align-default" id="vscode-git-untracked">
+<figure class="align-default" id="vscode-git-untracked">
 <img alt="../../_images/vscode_git_1.png" src="../../_images/vscode_git_1.png" />
-<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">VSCode Git <em>untracked files</em></span><a class="headerlink" href="#vscode-git-untracked" title="Permallink naar deze afbeelding">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">VSCode Git <em>untracked files</em></span><a class="headerlink" href="#vscode-git-untracked" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
 <p>Onder <em>Changes</em> zie je de bestanden <code class="docutils literal notranslate"><span class="pre">a.txt</span></code> en <code class="docutils literal notranslate"><span class="pre">b.txt</span></code> en zie je naast de bestanden de letter <strong>U</strong>, wat <em>untracked</em> aangeeft.</p>
-</div>
-</div>
-<div class="section" id="wijzigingen-opslaan">
-<h2>Wijzigingen opslaan<a class="headerlink" href="#wijzigingen-opslaan" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="wijzigingen-opslaan">
+<h2>Wijzigingen opslaan<a class="headerlink" href="#wijzigingen-opslaan" title="Permalink naar deze titel">#</a></h2>
 <p>Je hebt zojuist de bestanden <code class="docutils literal notranslate"><span class="pre">a.txt</span></code> en <code class="docutils literal notranslate"><span class="pre">b.txt</span></code> opgeslagen. Git heeft een ander idee bij wat “opslaan” is zoals je net hebt gedaan, het ligt iets genuanceerder!</p>
 <p>Het Git equivalent voor opslaan is een <em>commit</em>. Wanneer we het hebben over het opslaan van een bestand dan bedoelen we meestal de handeling die een nieuw bestand wegschrijft, of een bestaand bestand overschrijft met de gewijzigde inhoud. Een Git <em>commit</em> is echter een handeling die betrekking heeft op een <em>verzameling</em> van bestanden en directories en legt een bepaalde staat van dat moment vast (het maakt een “snapshot”, een momentopname).</p>
 <p>Je zou nu misschien verwachten dat er een Git commando is om een <em>snapshot</em> te maken van de huidige toestand van jouw <em>working directory</em> (de directory waar je aan het werken bent), maar dit is niet niet het geval!</p>
@@ -1649,9 +1759,9 @@ nothing added to commit but untracked files present (use &quot;git add&quot; to 
 <li><p>Je bent een fout opgespoord en je hebt naast de oplossing (de <em>bugfix</em>) ook veel print statements hier en daar toegevoegd tijdens het testen. Je wilt alleen de oplossing (de <em>bugfix</em>) in een commit opnemen en niet de willekeurige print statements.</p></li>
 </ul>
 <p>Git ondersteunt zulke scenario’s door jou te laten specificeren <em>welke</em> wijzigingen moeten worden meegenomen in een volgende snapshot via een mechanisme dat de <em>staging area</em> heet.</p>
-</div>
-<div class="section" id="staging-area">
-<h2>Staging area<a class="headerlink" href="#staging-area" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="staging-area">
+<h2>Staging area<a class="headerlink" href="#staging-area" title="Permalink naar deze titel">#</a></h2>
 <p><img alt="Git staging" src="../../_images/git_staging_3.png" /></p>
 <p>De <em>staging area</em> is waar je bestanden en directories voor Git klaarzet die je later als een snapshot wilt vastleggen in een <em>commit</em>.</p>
 <p>Vergelijk jezelf hier met een regisseur die een scène inricht om daar later een opname van te maken. Twee Git commando’s zijn in deze fase van belang</p>
@@ -1667,8 +1777,8 @@ nothing added to commit but untracked files present (use &quot;git add&quot; to 
 <p class="admonition-title">Notitie</p>
 <p>Git <code class="docutils literal notranslate"><span class="pre">add</span></code> en <code class="docutils literal notranslate"><span class="pre">reset</span></code> zijn <em>administratieve</em> handelingen voor Git, het zal met deze commando’s jouw bestanden niet wijzigen (door ze bijvoorbeeld te kopiëren of verwijderen).</p>
 </div>
-<div class="section" id="git-add">
-<h3><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code><a class="headerlink" href="#git-add" title="Permalink naar deze titel">¶</a></h3>
+<section id="git-add">
+<h3><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code><a class="headerlink" href="#git-add" title="Permalink naar deze titel">#</a></h3>
 <p>Voeg nu het bestand <code class="docutils literal notranslate"><span class="pre">a.txt</span></code> toe aan de staging area met <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git add a.txt</span>
 </pre></div>
@@ -1704,9 +1814,9 @@ Untracked files:
 </li>
 </ul>
 </div>
-</div>
-<div class="section" id="git-reset">
-<h3><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">reset</span></code><a class="headerlink" href="#git-reset" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="git-reset">
+<h3><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">reset</span></code><a class="headerlink" href="#git-reset" title="Permalink naar deze titel">#</a></h3>
 <p>Met <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">reset</span></code> kan je een bestand uit de staging area halen, mocht het nodig zijn.</p>
 <p>Probeer dit met het bestand <code class="docutils literal notranslate"><span class="pre">a.txt</span></code> dat je zojuist hebt toegevoegd</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git reset a.txt</span>
@@ -1720,29 +1830,35 @@ Untracked files:
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="vscode-en-staging">
-<h3>VSCode en staging<a class="headerlink" href="#vscode-en-staging" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="vscode-en-staging">
+<h3>VSCode en staging<a class="headerlink" href="#vscode-en-staging" title="Permalink naar deze titel">#</a></h3>
 <p>Je hebt zojuist een bestand aan de staging area toegevoegd en daar weer uitgehaald (en weer opnieuw aan toegevoegd), hoe worden deze handelingen met VSCode uitgevoerd?</p>
-<div class="figure align-default" id="vscode-git-stage-changes">
+<figure class="align-default" id="vscode-git-stage-changes">
 <img alt="../../_images/vscode_git_1b.png" src="../../_images/vscode_git_1b.png" />
-<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">VSCode Git <em>stage changes</em></span><a class="headerlink" href="#vscode-git-stage-changes" title="Permallink naar deze afbeelding">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">VSCode Git <em>stage changes</em></span><a class="headerlink" href="#vscode-git-stage-changes" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
 <p>Als je met de muis over een bestand in <em>Changes</em> zweeft zullen extra opties zichtbaar worden. Onder deze opties zie je <strong>+</strong>, en als je daar vervolgens op klikt zal VSCode <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> aanroepen voor dat bestand en het in de staging area plaatsen.</p>
-<div class="figure align-default" id="vscode-git-staged-changes">
+<figure class="align-default" id="vscode-git-staged-changes">
 <img alt="../../_images/vscode_git_2.png" src="../../_images/vscode_git_2.png" />
-<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">VSCode Git <em>staged changes</em></span><a class="headerlink" href="#vscode-git-staged-changes" title="Permallink naar deze afbeelding">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">VSCode Git <em>staged changes</em></span><a class="headerlink" href="#vscode-git-staged-changes" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
 <p>VSCode zal bestanden die zich in de staging area bevinden tonen onder <em>Staged Changes</em>. Je zal daar naast een bestand <strong>A</strong> zien wat voor <em>added</em> staat en dit komt overeen met wat Git jou eerder liet zien voor bestanden voor <em>Changes to be committed</em>.</p>
-<div class="figure align-default" id="vscode-git-unstage-changes">
+<figure class="align-default" id="vscode-git-unstage-changes">
 <img alt="../../_images/vscode_git_2b.png" src="../../_images/vscode_git_2b.png" />
-<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">VSCode Git <em>unstage changes</em></span><a class="headerlink" href="#vscode-git-unstage-changes" title="Permallink naar deze afbeelding">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">VSCode Git <em>unstage changes</em></span><a class="headerlink" href="#vscode-git-unstage-changes" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
 <p>Net als bij bestanden in <em>Changes</em> kan je ook met de muis over bestanden in <em>Staged Changes</em> zweven om extra opties zichtbaar te maken. Je zal dan een optie <strong>-</strong> zien en met een klik daar op zal VSCode <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">reset</span></code> voor dat bestand uitvoeren en het voor jou uit de staging area halen.</p>
-</div>
-</div>
-<div class="section" id="repository">
-<h2>Repository<a class="headerlink" href="#repository" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="repository">
+<h2>Repository<a class="headerlink" href="#repository" title="Permalink naar deze titel">#</a></h2>
 <p><img alt="Git flow" src="../../_images/git_repository_3.png" /></p>
 <p>De <em>repository</em> is uiteindelijk waar de wijzigingen die jij hebt klaargezet worden bewaard door middel van een <em>commit</em>. Dit proces zal je vele malen gaan herhalen en zo zal je met Git een geschiedenis gaan opbouwen van jouw project.</p>
 <p>Dit is hét moment dat je de snapshot gaat maken, drie Git commando’s zijn in deze fase van belang</p>
@@ -1757,8 +1873,8 @@ Untracked files:
 <p>Toon het logboek van commits</p>
 </li>
 </ul>
-<div class="section" id="git-commit">
-<h3><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code><a class="headerlink" href="#git-commit" title="Permalink naar deze titel">¶</a></h3>
+<section id="git-commit">
+<h3><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code><a class="headerlink" href="#git-commit" title="Permalink naar deze titel">#</a></h3>
 <p>Nu is het tijd voor de allereerste commit! Voer het volgende Git command uit</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git commit -m &quot;a.txt toegevoegd&quot;</span>
 </pre></div>
@@ -1776,9 +1892,9 @@ Untracked files:
 </div>
 <p>Dit bericht is wat cryptisch! Op de eerste regel herken je in ieder geval jouw <em>commit message</em> (“a.txt toegevoegd”) en verder zie je een code <code class="docutils literal notranslate"><span class="pre">92ac06d</span></code>. Deze code is de <em>hash</em> waarde van deze commit en dit is een unieke waarde die de commit identificeert, en zal om deze reden voor jou een andere waarde hebben. Het belang van deze hash zal je later terugzien.</p>
 <p>Op de tweede regel lees je dat één bestand (<code class="docutils literal notranslate"><span class="pre">a.txt</span></code>) is aangepast te opzichte van de vorige commit. Deze was er natuurlijk niet dus wat Git betreft is één nieuw bestand toegevoegd met 4 regels aan inhoud (de vier regels van <code class="docutils literal notranslate"><span class="pre">.txt</span></code>, “a1” tot en met “a4”).</p>
-</div>
-<div class="section" id="git-log">
-<h3><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code><a class="headerlink" href="#git-log" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="git-log">
+<h3><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code><a class="headerlink" href="#git-log" title="Permalink naar deze titel">#</a></h3>
 <p>Na deze eerste commit zullen nog vele commits volgen, met <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code> kan je een overzicht vragen van de commits tot nu toe.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git log</span>
 </pre></div>
@@ -1796,23 +1912,25 @@ Date:   Wed Dec 15 22:55:09 2021 +0100
 </pre></div>
 </div>
 <p>Met de optie <code class="docutils literal notranslate"><span class="pre">--oneline</span></code> kan je een beknopte geschiedenis opvragen, je zal zien dat in de uitvoer alleen de <em>verkorte</em> hash en de commit message wordt getoond (als het aantal commits groter wordt dan kan worden getoond kan je er met de  <code class="docutils literal notranslate"><span class="pre">&lt;spatie&gt;</span></code>-toets doorheen stappen, typ <code class="docutils literal notranslate"><span class="pre">q</span></code> om het bladeren te stoppen).</p>
-</div>
-<div class="section" id="vscode-en-commits">
-<h3>VSCode en commits<a class="headerlink" href="#vscode-en-commits" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="vscode-en-commits">
+<h3>VSCode en commits<a class="headerlink" href="#vscode-en-commits" title="Permalink naar deze titel">#</a></h3>
 <p>Het zal je misschien zijn opgevallen dat onder <em>Source Control</em> je altijd een veld ziet met <em>Ctrl+Enter to commit on ‘main’</em>.</p>
-<div class="figure align-default" id="vscode-git-commit">
+<figure class="align-default" id="vscode-git-commit">
 <img alt="../../_images/vscode_git_3.png" src="../../_images/vscode_git_3.png" />
-<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Git <em>commit</em></span><a class="headerlink" href="#vscode-git-commit" title="Permallink naar deze afbeelding">¶</a></p>
-</div>
-</div>
-<div class="section" id="head">
-<h3>HEAD<a class="headerlink" href="#head" title="Permalink naar deze titel">¶</a></h3>
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Git <em>commit</em></span><a class="headerlink" href="#vscode-git-commit" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="head">
+<h3>HEAD<a class="headerlink" href="#head" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="Git Sequence" src="../../_images/01-git-sequence.png" /></p>
 <p>Je ziet in de log ook <code class="docutils literal notranslate"><span class="pre">HEAD</span> <span class="pre">-&gt;</span> <span class="pre">main</span></code> staan, maar wat betekent dit? <code class="docutils literal notranslate"><span class="pre">main</span></code> is de naam van de hoofdlijn van de ontwikkeling (waar je op dit moment commits aan toegevoegt). HEAD is een “alias” en zal altijd verwijzen naar de laatste commit in een huidige lijn, of <em>branch</em> (een vertakking) zoals het vaker wordt genoemd.</p>
 <p>Kort gezegd betekent <code class="docutils literal notranslate"><span class="pre">HEAD</span> <span class="pre">-&gt;</span> <span class="pre">main</span></code> dat je op dit moment naar de geschiedenis van de branch <code class="docutils literal notranslate"><span class="pre">main</span></code> kijkt omdat HEAD op dit moment verwijst naar de laatste commit in deze branch. Dit impliceert dat er misschien ook meerdere branches kunnen zijn en dat is ook zo (maar daar gaan we nu nog niet bij stilstaan)!</p>
-</div>
-<div class="section" id="git-checkout">
-<h3><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span></code><a class="headerlink" href="#git-checkout" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="git-checkout">
+<h3><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span></code><a class="headerlink" href="#git-checkout" title="Permalink naar deze titel">#</a></h3>
 <p>Je hebt nu een eerste commit gemaakt waarmee je de status van jouw project op dit moment hebt vastgelegd. Dit betekent dat je nu ook een punt hebt om naar terug te keren, mocht het nodig zijn. Je zou je kunnen voorstellen dat je te maken krijgt met de volgende scenario’s</p>
 <ul class="simple">
 <li><p>Na de commit ben je verder gaan werken want je gaat nu de functionaliteit verder uitbreiden. Maar je loopt tegen een hardnekkige fout aan die je niet kan oplossen. Je weet dat in de vorige commit alles in orde was en wilt deze versie weer als uitgangspunt nemen.</p></li>
@@ -1849,10 +1967,10 @@ Date:   Sun Dec 26 22:34:24 2021 +0100
     a.txt toegevoegd
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="meer-bestanden">
-<h2>Meer bestanden<a class="headerlink" href="#meer-bestanden" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="meer-bestanden">
+<h2>Meer bestanden<a class="headerlink" href="#meer-bestanden" title="Permalink naar deze titel">#</a></h2>
 <p>Je hebt inmiddels al een tweetal <em>commits</em> gemaakt die een geschiedenis van wijzigingen vastleggen. In de praktijk zal je meer bestanden en directories gaan toevoegen en we willen je nog op één laatste Git comando wijzen dat handig kan zijn in deze fase én een speciaal bestand dat zorgt dat Git sommige directories en bestanden “vergeet” …</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code></p>
@@ -1862,8 +1980,8 @@ Date:   Sun Dec 26 22:34:24 2021 +0100
 <p>Beschrijft welke directories of bestanden <em>niet</em> onderdeel zijn van de repository en door Git moeten worden genegeerd</p>
 </li>
 </ul>
-<div class="section" id="git-diff">
-<h3><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code><a class="headerlink" href="#git-diff" title="Permalink naar deze titel">¶</a></h3>
+<section id="git-diff">
+<h3><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code><a class="headerlink" href="#git-diff" title="Permalink naar deze titel">#</a></h3>
 <p>Eén van de eerder beschreven scenario’s was het geval dat je wijzigingen in een bestand zou willen terugdraaien naar een vorige commit. Dit is een rigoureuze keuze want het zal betekenen dat <em>alle</em> wijzigingen worden teruggedraaid. Misschien zal je eerst willen kijken <em>wat</em> de verschillen zijn ten opzichte van laatste commit zijn voordat je de keuze maakt.</p>
 <p>Pas <code class="docutils literal notranslate"><span class="pre">b.txt</span></code> aan en voeg daar één regel aan toe, de inhoud van het bestand zal nu als volgt zijn</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>b1
@@ -1891,17 +2009,21 @@ index 64993b7..7e43a98 100644
 </div>
 <p>Weer een cryptisch bericht van Git! Git vergelijkt hier twee toestanden (<em>a</em>, de situatie van de repository en <em>b</em>, de situatie van de working directory), wat in ieder geval herkenbaar is de regel die je zojuist hebt toegevoegd (<code class="docutils literal notranslate"><span class="pre">+b5</span></code>, zou je een regel hebben verwijderd dan zal je dit met een <code class="docutils literal notranslate"><span class="pre">-</span></code> hebben zien aangegeven).</p>
 <p>Dit is typisch voorbeeld waar een grafische interface meer inzicht kan bieden!</p>
-<div class="figure align-default" id="vscode-git-modified">
+<figure class="align-default" id="vscode-git-modified">
 <img alt="../../_images/vscode_git_4.png" src="../../_images/vscode_git_4.png" />
-<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">VSCode <em>file modified</em></span><a class="headerlink" href="#vscode-git-modified" title="Permallink naar deze afbeelding">¶</a></p>
-</div>
-<div class="figure align-default" id="vscode-git-diff">
+<figcaption>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">VSCode <em>file modified</em></span><a class="headerlink" href="#vscode-git-modified" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="vscode-git-diff">
 <img alt="../../_images/vscode_git_4b.png" src="../../_images/vscode_git_4b.png" />
-<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Git <em>diff</em></span><a class="headerlink" href="#vscode-git-diff" title="Permallink naar deze afbeelding">¶</a></p>
-</div>
-</div>
-<div class="section" id="gitignore">
-<h3><code class="docutils literal notranslate"><span class="pre">.gitignore</span></code><a class="headerlink" href="#gitignore" title="Permalink naar deze titel">¶</a></h3>
+<figcaption>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Git <em>diff</em></span><a class="headerlink" href="#vscode-git-diff" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="gitignore">
+<h3><code class="docutils literal notranslate"><span class="pre">.gitignore</span></code><a class="headerlink" href="#gitignore" title="Permalink naar deze titel">#</a></h3>
 <p>In een project zullen vaak bestanden of directories aanwezig zijn die specifiek zijn voor <em>jouw</em> situatie. Misschien houd je een apart betand bij voor jezelf (bijvoorbeeld een TODO lijst, of fragmenten van code of andere ideëen die later wilt gebruiken), maar ook zal vaak jouw omgeving soms bestanden aanmaken die niet relevant zijn voor het project, bijvoorbeeld de projectspecifieke configuratie van jouw editor, of extra bestanden die Python aanmaakt als het jouw code uitvoert.</p>
 <div class="admonition important">
 <p class="admonition-title">Belangrijk</p>
@@ -1928,9 +2050,9 @@ __pycache__/
 TODO.txt
 </pre></div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1954,9 +2076,11 @@ TODO.txt
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../../support/scm/index.html" title="vorige pagina">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1965,30 +2089,34 @@ TODO.txt
         </div>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
-    
-      Door Harvey Mudd College / Hanze University of Applied Sciences<br/>
-    
-      <div class="extra_footer">
-        <div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Harvey Mudd College / Hanze University of Applied Sciences<br/>
+  
+    <div class="extra_footer">
+      <div>
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
     Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
 </div>
 
-      </div>
-  </p>
-</footer>
-</main>
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

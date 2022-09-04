@@ -4,11 +4,13 @@
 <html lang="nl">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>2D Arrays &#8212; Programmeren</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,31 +20,30 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/save_state.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -78,15 +79,15 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
+    <script src="../_static/save_state.js"></script>
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://misja.github.io/programmeren/topics/17_2d_arrays.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -100,7 +101,21 @@ commentsRunWhenDOMLoaded(addUtterances);
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -109,9 +124,10 @@ commentsRunWhenDOMLoaded(addUtterances);
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -126,17 +142,18 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../about/syllabus.html">
-   Programmeren
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about/syllabus.html">
+                    Programmeren
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Opmerkingen
  </span>
@@ -1092,112 +1109,244 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
-                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/topics/17_2d_arrays.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Bronopslagplaats"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/17_2d_arrays.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open een probleem"><i class="fas fa-lightbulb"></i>open probleem</button></a>
-        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/topics/17_2d_arrays.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="bewerk deze pagina"><i class="fas fa-pencil-alt"></i>suggereren bewerken</button></a>
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
-        title="Volledig scherm"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/misja/programmeren/master?urlpath=lab/tree/topics/17_2d_arrays.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Lancering Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <button type="button" class="btn btn-secondary topbarbtn"
-            onclick="initThebeSBT()" title="Lancering Thebe" data-toggle="tooltip" data-placement="left"><i
-                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Inhoud
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/misja/programmeren/master?urlpath=lab/tree/topics/17_2d_arrays.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/misja/programmeren"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/17_2d_arrays.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/edit/master/topics/17_2d_arrays.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/topics/17_2d_arrays.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#eendimensionale-arrays">
    Eendimensionale arrays
@@ -1391,12 +1540,11 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>2D Arrays</h1>
@@ -1405,7 +1553,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> Inhoud </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -1606,14 +1754,15 @@ commentsRunWhenDOMLoaded(addUtterances);
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="d-arrays">
-<h1>2D Arrays<a class="headerlink" href="#d-arrays" title="Permalink naar deze titel">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="d-arrays">
+<h1>2D Arrays<a class="headerlink" href="#d-arrays" title="Permalink naar deze titel">#</a></h1>
 <p>Waar leeft data?</p>
-<div class="section" id="eendimensionale-arrays">
-<h2>Eendimensionale arrays<a class="headerlink" href="#eendimensionale-arrays" title="Permalink naar deze titel">¶</a></h2>
+<section id="eendimensionale-arrays">
+<h2>Eendimensionale arrays<a class="headerlink" href="#eendimensionale-arrays" title="Permalink naar deze titel">#</a></h2>
 <p>Zijn lists!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1636,7 +1785,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[36, 14, 48, 29, 21, 16, 19, 24, 21, 6]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[16, 24, 38, 31, 7, 26, 15, 15, 24, 31]
 </pre></div>
 </div>
 </div>
@@ -1648,13 +1797,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24.805
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24.742
 </pre></div>
 </div>
 </div>
 </div>
-<div class="section" id="handelingen-op-data">
-<h3>Handelingen op data<a class="headerlink" href="#handelingen-op-data" title="Permalink naar deze titel">¶</a></h3>
+<section id="handelingen-op-data">
+<h3>Handelingen op data<a class="headerlink" href="#handelingen-op-data" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="p">[</span><span class="mi">88</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">79</span><span class="p">]</span>
@@ -1694,10 +1843,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="tweedimensionale-arrays">
-<h2>Tweedimensionale arrays<a class="headerlink" href="#tweedimensionale-arrays" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="tweedimensionale-arrays">
+<h2>Tweedimensionale arrays<a class="headerlink" href="#tweedimensionale-arrays" title="Permalink naar deze titel">#</a></h2>
 <p>Zijn overal! (en zijn <code class="docutils literal notranslate"><span class="pre">LoL</span></code>’s)</p>
 <p><img alt="Scores" src="../_images/score_sheet.png" /></p>
 <p>Denk bijvoorbeeld aan spreadsheets …</p>
@@ -1710,8 +1859,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="p">]</span>
 </pre></div>
 </div>
-<div class="section" id="while-true">
-<h3><code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">True</span></code><a class="headerlink" href="#while-true" title="Permalink naar deze titel">¶</a></h3>
+<section id="while-true">
+<h3><code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">True</span></code><a class="headerlink" href="#while-true" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="Nyan Cat" src="../_images/nyan_cat.gif" /></p>
 <p>Of natuurlijk <a class="reference external" href="http://www.nyan.cat">afbeeldingen</a>!</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
@@ -1722,9 +1871,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="p">]</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="indices">
-<h3>Indices<a class="headerlink" href="#indices" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="indices">
+<h3>Indices<a class="headerlink" href="#indices" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="2D indices" src="../_images/ex_1a3.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1765,18 +1914,18 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p><img alt="2D indices B" src="../_images/ex_1b3.png" /></p>
 <p><img alt="Schaakbord" src="../_images/chess_rank_file.jpg" /></p>
 <p>Dit lijkt veel op hoe velden op een schaakbord worden aangegeven, maar daar worden rijen (8 tot en met 1) en kolommen (a tot en met h) anders benoemd.</p>
-</div>
-</div>
-<div class="section" id="data">
-<h2>Data<a class="headerlink" href="#data" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Permalink naar deze titel">#</a></h2>
 <ul class="simple">
 <li><p>string</p></li>
 <li><p>integer / float</p></li>
 <li><p>list</p></li>
 </ul>
 <p>2D arrays zijn <em>lijsten van lijsten</em>, <code class="docutils literal notranslate"><span class="pre">LoL</span></code>’s</p>
-<div class="section" id="lists">
-<h3>Lists<a class="headerlink" href="#lists" title="Permalink naar deze titel">¶</a></h3>
+<section id="lists">
+<h3>Lists<a class="headerlink" href="#lists" title="Permalink naar deze titel">#</a></h3>
 <p>Lists zijn containers, ze bevatten <em>verwijzingen</em> naar data</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1786,9 +1935,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <p><img alt="List references" src="../_images/list_references.png" /></p>
-</div>
-<div class="section" id="indentiteit">
-<h3>Indentiteit<a class="headerlink" href="#indentiteit" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="indentiteit">
+<h3>Indentiteit<a class="headerlink" href="#indentiteit" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
@@ -1815,7 +1964,7 @@ id(obj, /)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140409090931968
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140282637233472
 </pre></div>
 </div>
 </div>
@@ -1828,7 +1977,7 @@ id(obj, /)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140409163432304
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140282690158960
 </pre></div>
 </div>
 </div>
@@ -1840,7 +1989,7 @@ id(obj, /)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140409163433488
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140282690160144
 </pre></div>
 </div>
 </div>
@@ -1852,14 +2001,14 @@ id(obj, /)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140409161385264
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140282688138288
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="waarde-en-identiteit">
-<h3>Waarde en identiteit<a class="headerlink" href="#waarde-en-identiteit" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="waarde-en-identiteit">
+<h3>Waarde en identiteit<a class="headerlink" href="#waarde-en-identiteit" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;Astronaut wordt snel oud tijdens een reis naar Mars&quot;</span>
@@ -1899,7 +2048,7 @@ id(obj, /)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140409005310784
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140282638136832
 </pre></div>
 </div>
 </div>
@@ -1911,28 +2060,28 @@ id(obj, /)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140409005310000
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140282638136160
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="verwijzingen">
-<h3>Verwijzingen<a class="headerlink" href="#verwijzingen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="verwijzingen">
+<h3>Verwijzingen<a class="headerlink" href="#verwijzingen" title="Permalink naar deze titel">#</a></h3>
 <p><em>by reference</em></p>
 <p>Lists bevatten verwijzingen naar <em>geheugenadressen</em>, niet de waarden zelf!</p>
 <p><em>by value</em></p>
 <p>Getallen en strings verwijzen naar de <em>waarde</em></p>
-</div>
-<div class="section" id="mutabiliteit">
-<h3>Mutabiliteit<a class="headerlink" href="#mutabiliteit" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="mutabiliteit">
+<h3>Mutabiliteit<a class="headerlink" href="#mutabiliteit" title="Permalink naar deze titel">#</a></h3>
 <p><em>mutable</em> (veranderlijk)</p>
 <p>Lists kunnen worden aangepast</p>
 <p><em>immutable</em> (onveranderlijk)</p>
 <p>Getallen en strings kunnen <em>niet</em> worden aangepast</p>
-</div>
-<div class="section" id="mutable">
-<h3>Mutable<a class="headerlink" href="#mutable" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="mutable">
+<h3>Mutable<a class="headerlink" href="#mutable" title="Permalink naar deze titel">#</a></h3>
 <p>Lists</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1942,7 +2091,7 @@ id(obj, /)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140409090929152
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140282637182464
 </pre></div>
 </div>
 </div>
@@ -1955,7 +2104,7 @@ id(obj, /)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140409090929152
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140282637182464
 </pre></div>
 </div>
 </div>
@@ -1972,9 +2121,9 @@ id(obj, /)
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="immutable">
-<h3>Immutable<a class="headerlink" href="#immutable" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="immutable">
+<h3>Immutable<a class="headerlink" href="#immutable" title="Permalink naar deze titel">#</a></h3>
 <p>Strings en getallen</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1984,7 +2133,7 @@ id(obj, /)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140409005177968
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140282637386288
 </pre></div>
 </div>
 </div>
@@ -1997,7 +2146,7 @@ id(obj, /)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140409005171888
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140282637185904
 </pre></div>
 </div>
 </div>
@@ -2010,7 +2159,7 @@ id(obj, /)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140409163432464
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140282690159120
 </pre></div>
 </div>
 </div>
@@ -2023,14 +2172,14 @@ id(obj, /)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140409163432496
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140282690159152
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="functies">
-<h3>Functies?<a class="headerlink" href="#functies" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="functies">
+<h3>Functies?<a class="headerlink" href="#functies" title="Permalink naar deze titel">#</a></h3>
 <p><em>by copy</em></p>
 <p>Functies ontvangen parameters als <em>kopie</em></p>
 <div class="cell docutils container">
@@ -2056,21 +2205,21 @@ id(obj, /)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>main VOOR: y is 140409005268368 en heeft de waarde Pizza salami ananas
-fav VOOR: x is 140409005268368 en heeft de waarde x Pizza salami ananas
-fav NA: x is 140409005264048 en heeft de waarde x Pizza quattro formaggi
-main NA: y is 140409005268368 en heeft de waarde Pizza salami ananas
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>main VOOR: y is 140282637354928 en heeft de waarde Pizza salami ananas
+fav VOOR: x is 140282637354928 en heeft de waarde x Pizza salami ananas
+fav NA: x is 140282637360768 en heeft de waarde x Pizza quattro formaggi
+main NA: y is 140282637354928 en heeft de waarde Pizza salami ananas
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="shallow-versus-deep-copy">
-<h2>Shallow versus deep copy<a class="headerlink" href="#shallow-versus-deep-copy" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="shallow-versus-deep-copy">
+<h2>Shallow versus deep copy<a class="headerlink" href="#shallow-versus-deep-copy" title="Permalink naar deze titel">#</a></h2>
 <p>De ene kopie is de andere niet!</p>
-<div class="section" id="shallow-copy">
-<h3>Shallow copy<a class="headerlink" href="#shallow-copy" title="Permalink naar deze titel">¶</a></h3>
+<section id="shallow-copy">
+<h3>Shallow copy<a class="headerlink" href="#shallow-copy" title="Permalink naar deze titel">#</a></h3>
 <blockquote>
 <div><p>Assignment statements in Python do not copy objects, they create bindings between a target and an object.</p>
 <p><a class="reference external" href="https://docs.python.org/3/library/copy.html">https://docs.python.org/3/library/copy.html</a></p>
@@ -2127,9 +2276,9 @@ main NA: y is 140409005268368 en heeft de waarde Pizza salami ananas
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="lists-en-shallow-copy">
-<h3>Lists en shallow copy<a class="headerlink" href="#lists-en-shallow-copy" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="lists-en-shallow-copy">
+<h3>Lists en shallow copy<a class="headerlink" href="#lists-en-shallow-copy" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="s2">&quot;hi&quot;</span><span class="p">]</span>
@@ -2176,9 +2325,9 @@ main NA: y is 140409005268368 en heeft de waarde Pizza salami ananas
 </div>
 </div>
 <p>Lists zijn mutable en de shadow copy <code class="docutils literal notranslate"><span class="pre">M</span></code> verwijst nog steeds naar <code class="docutils literal notranslate"><span class="pre">L</span></code> en een aanpassing van <code class="docutils literal notranslate"><span class="pre">M</span></code> zal niet leiden tot een nieuwe list (zoals je wel zag gebeuren bij strings en integers).</p>
-</div>
-<div class="section" id="deep-copy">
-<h3>Deep copy<a class="headerlink" href="#deep-copy" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="deep-copy">
+<h3>Deep copy<a class="headerlink" href="#deep-copy" title="Permalink naar deze titel">#</a></h3>
 <p>Deep copy is alleen relevant voor containertypes als lists!</p>
 <blockquote>
 <div><p>A deep copy constructs a new compound object and then, recursively, inserts copies into it of the objects found in the original.</p>
@@ -2238,9 +2387,9 @@ main NA: y is 140409005268368 en heeft de waarde Pizza salami ananas
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="slicing-is-ook-diep">
-<h3>Slicing is ook diep!<a class="headerlink" href="#slicing-is-ook-diep" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="slicing-is-ook-diep">
+<h3>Slicing is ook diep!<a class="headerlink" href="#slicing-is-ook-diep" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="s2">&quot;hi&quot;</span><span class="p">]</span>
@@ -2274,9 +2423,9 @@ main NA: y is 140409005268368 en heeft de waarde Pizza salami ananas
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="list-comprehension">
-<h3>List comprehension<a class="headerlink" href="#list-comprehension" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="list-comprehension">
+<h3>List comprehension<a class="headerlink" href="#list-comprehension" title="Permalink naar deze titel">#</a></h3>
 <p>List comprehension creëert een nieuwe lijst</p>
 <p>List comprehension als <em>strategie</em> om mutabiliteit te vermijden!</p>
 <div class="cell docutils container">
@@ -2312,12 +2461,12 @@ main NA: y is 140409005268368 en heeft de waarde Pizza salami ananas
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="quiz">
-<h2>Quiz<a class="headerlink" href="#quiz" title="Permalink naar deze titel">¶</a></h2>
-<div class="section" id="vraag-1">
-<h3>Vraag 1<a class="headerlink" href="#vraag-1" title="Permalink naar deze titel">¶</a></h3>
+</section>
+</section>
+<section id="quiz">
+<h2>Quiz<a class="headerlink" href="#quiz" title="Permalink naar deze titel">#</a></h2>
+<section id="vraag-1">
+<h3>Vraag 1<a class="headerlink" href="#vraag-1" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">conform1</span><span class="p">(</span><span class="n">fav</span><span class="p">):</span>
@@ -2333,9 +2482,9 @@ main NA: y is 140409005268368 en heeft de waarde Pizza salami ananas
 </div>
 </div>
 <p>Wat wordt geprint voor <code class="docutils literal notranslate"><span class="pre">fav</span></code> in de functie <code class="docutils literal notranslate"><span class="pre">main1</span></code>?</p>
-</div>
-<div class="section" id="antwoord">
-<h3>Antwoord<a class="headerlink" href="#antwoord" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="antwoord">
+<h3>Antwoord<a class="headerlink" href="#antwoord" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">main1</span><span class="p">()</span>
@@ -2348,9 +2497,9 @@ main NA: y is 140409005268368 en heeft de waarde Pizza salami ananas
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="vraag-2">
-<h3>Vraag 2<a class="headerlink" href="#vraag-2" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="vraag-2">
+<h3>Vraag 2<a class="headerlink" href="#vraag-2" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">conform2</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
@@ -2366,9 +2515,9 @@ main NA: y is 140409005268368 en heeft de waarde Pizza salami ananas
 </div>
 </div>
 <p>Wat wordt geprint voor <code class="docutils literal notranslate"><span class="pre">L</span></code> in de functie <code class="docutils literal notranslate"><span class="pre">main2</span></code>?</p>
-</div>
-<div class="section" id="id1">
-<h3>Antwoord<a class="headerlink" href="#id1" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="id1">
+<h3>Antwoord<a class="headerlink" href="#id1" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">main2</span><span class="p">()</span>
@@ -2381,9 +2530,9 @@ main NA: y is 140409005268368 en heeft de waarde Pizza salami ananas
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="vraag-3">
-<h3>Vraag 3<a class="headerlink" href="#vraag-3" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="vraag-3">
+<h3>Vraag 3<a class="headerlink" href="#vraag-3" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">conform3</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
@@ -2399,9 +2548,9 @@ main NA: y is 140409005268368 en heeft de waarde Pizza salami ananas
 </div>
 </div>
 <p>Wat wordt geprint voor <code class="docutils literal notranslate"><span class="pre">L</span></code> in de functie <code class="docutils literal notranslate"><span class="pre">main3</span></code>?</p>
-</div>
-<div class="section" id="id2">
-<h3>Antwoord<a class="headerlink" href="#id2" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="id2">
+<h3>Antwoord<a class="headerlink" href="#id2" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">main3</span><span class="p">()</span>
@@ -2414,22 +2563,22 @@ main NA: y is 140409005268368 en heeft de waarde Pizza salami ananas
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="staat">
-<h2>Staat<a class="headerlink" href="#staat" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="staat">
+<h2>Staat<a class="headerlink" href="#staat" title="Permalink naar deze titel">#</a></h2>
 <p>Waarom is mutabiliteit belangrijk?</p>
 <p>Mutabiliteit betekent dat <em>staat</em> kan worden gewijzigd!</p>
 <p><img alt="stack 1c" src="../_images/ex_1c2.png" /></p>
 <p>Een gewijzigde staat is een probleem dat je eerder hebt gezien. Met <code class="docutils literal notranslate"><span class="pre">pushr</span></code> en <code class="docutils literal notranslate"><span class="pre">popr</span></code> kon een voorgaande staat worden bewaard om later weer terug te zetten.</p>
-<div class="section" id="overgang-van-staat">
-<h3>Overgang van staat<a class="headerlink" href="#overgang-van-staat" title="Permalink naar deze titel">¶</a></h3>
+<section id="overgang-van-staat">
+<h3>Overgang van staat<a class="headerlink" href="#overgang-van-staat" title="Permalink naar deze titel">#</a></h3>
 <p>Soms is een volgende staat een logisch vervolg op de vorige staat (en is mutabiliteit ok!)</p>
 <p><img alt="Google boter kaas eieren" src="../_images/google_tic_tac_toe.png" /></p>
 <p>Typ “boter kaas en eieren” en speel tegen Google.</p>
-</div>
-<div class="section" id="boter-kaas-en-eieren">
-<h3>Boter kaas en eieren<a class="headerlink" href="#boter-kaas-en-eieren" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="boter-kaas-en-eieren">
+<h3>Boter kaas en eieren<a class="headerlink" href="#boter-kaas-en-eieren" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span>
@@ -2455,14 +2604,14 @@ main NA: y is 140409005268368 en heeft de waarde Pizza salami ananas
 <span class="p">]</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="conway-s-game-of-life">
-<h2>Conway’s Game of Life<a class="headerlink" href="#conway-s-game-of-life" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="conway-s-game-of-life">
+<h2>Conway’s Game of Life<a class="headerlink" href="#conway-s-game-of-life" title="Permalink naar deze titel">#</a></h2>
 <p><img alt="Game of Life" src="../_images/Game_of_life_glider_gun.png" /></p>
 <p>Een tweedimensionaal raster met vierkante “cellen” die “levend” of “dood” kunnen zijn, en die zich volgens vastgestelde regels ontwikkelen en daarbij allerlei patronen kunnen vormen.</p>
-<div class="section" id="regels">
-<h3>Regels<a class="headerlink" href="#regels" title="Permalink naar deze titel">¶</a></h3>
+<section id="regels">
+<h3>Regels<a class="headerlink" href="#regels" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="Isolatie" src="../_images/Isolatie.png" /></p>
 <ol class="simple">
 <li><p>Een cel met minder dan twee levende buren sterft (vanwege isolatie)</p></li>
@@ -2479,18 +2628,18 @@ main NA: y is 140409005268368 en heeft de waarde Pizza salami ananas
 <ol class="simple">
 <li><p>Alle andere cellen blijven in dezelfde toestand</p></li>
 </ol>
-</div>
-<div class="section" id="patronen">
-<h3>Patronen<a class="headerlink" href="#patronen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="patronen">
+<h3>Patronen<a class="headerlink" href="#patronen" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="Game of Life" src="../_images/Gospers_glider_gun.gif" /></p>
-</div>
-<div class="section" id="id3">
-<h3>Staat<a class="headerlink" href="#id3" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="id3">
+<h3>Staat<a class="headerlink" href="#id3" title="Permalink naar deze titel">#</a></h3>
 <p>De vorige staat is nodig om de nieuwe staat te bepalen</p>
 <p>Mutabiliteit is hier belangrijk!</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -2514,9 +2663,11 @@ main NA: y is 140409005268368 en heeft de waarde Pizza salami ananas
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../course/week_9.html" title="vorige pagina">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -2532,30 +2683,34 @@ main NA: y is 140409005268368 en heeft de waarde Pizza salami ananas
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
-    
-      Door Harvey Mudd College / Hanze University of Applied Sciences<br/>
-    
-      <div class="extra_footer">
-        <div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Harvey Mudd College / Hanze University of Applied Sciences<br/>
+  
+    <div class="extra_footer">
+      <div>
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
     Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
 </div>
 
-      </div>
-  </p>
-</footer>
-</main>
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

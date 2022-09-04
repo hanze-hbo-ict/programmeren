@@ -4,11 +4,13 @@
 <html lang="nl">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Hmmm &#8212; Programmeren</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,31 +20,30 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/save_state.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -78,15 +79,15 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
+    <script src="../_static/save_state.js"></script>
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://misja.github.io/programmeren/topics/13_hmmm_introductie.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -100,7 +101,21 @@ commentsRunWhenDOMLoaded(addUtterances);
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -109,9 +124,10 @@ commentsRunWhenDOMLoaded(addUtterances);
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -126,17 +142,18 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../about/syllabus.html">
-   Programmeren
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about/syllabus.html">
+                    Programmeren
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Opmerkingen
  </span>
@@ -1092,112 +1109,244 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
-                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/topics/13_hmmm_introductie.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Bronopslagplaats"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/13_hmmm_introductie.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open een probleem"><i class="fas fa-lightbulb"></i>open probleem</button></a>
-        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/topics/13_hmmm_introductie.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="bewerk deze pagina"><i class="fas fa-pencil-alt"></i>suggereren bewerken</button></a>
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
-        title="Volledig scherm"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/misja/programmeren/master?urlpath=lab/tree/topics/13_hmmm_introductie.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Lancering Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <button type="button" class="btn btn-secondary topbarbtn"
-            onclick="initThebeSBT()" title="Lancering Thebe" data-toggle="tooltip" data-placement="left"><i
-                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Inhoud
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/misja/programmeren/master?urlpath=lab/tree/topics/13_hmmm_introductie.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/misja/programmeren"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/13_hmmm_introductie.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/edit/master/topics/13_hmmm_introductie.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/topics/13_hmmm_introductie.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#abstracties">
    Abstracties
@@ -1379,12 +1528,11 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Hmmm</h1>
@@ -1393,7 +1541,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> Inhoud </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -1582,14 +1730,15 @@ commentsRunWhenDOMLoaded(addUtterances);
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="hmmm">
-<h1>Hmmm<a class="headerlink" href="#hmmm" title="Permalink naar deze titel">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="hmmm">
+<h1>Hmmm<a class="headerlink" href="#hmmm" title="Permalink naar deze titel">#</a></h1>
 <p>Hoe worden programma’s uitgevoerd?</p>
-<div class="section" id="abstracties">
-<h2>Abstracties<a class="headerlink" href="#abstracties" title="Permalink naar deze titel">¶</a></h2>
+<section id="abstracties">
+<h2>Abstracties<a class="headerlink" href="#abstracties" title="Permalink naar deze titel">#</a></h2>
 <p>Van hardware naar software</p>
 <ul class="simple">
 <li><p>transistoren / schakelingen</p></li>
@@ -1601,63 +1750,63 @@ commentsRunWhenDOMLoaded(addUtterances);
     <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="geheugen">
-<h2>Geheugen<a class="headerlink" href="#geheugen" title="Permalink naar deze titel">¶</a></h2>
-</div>
-<div class="section" id="soorten-geheugen">
-<h2>Soorten geheugen<a class="headerlink" href="#soorten-geheugen" title="Permalink naar deze titel">¶</a></h2>
-<div class="section" id="registers">
-<h3>Registers<a class="headerlink" href="#registers" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="geheugen">
+<h2>Geheugen<a class="headerlink" href="#geheugen" title="Permalink naar deze titel">#</a></h2>
+</section>
+<section id="soorten-geheugen">
+<h2>Soorten geheugen<a class="headerlink" href="#soorten-geheugen" title="Permalink naar deze titel">#</a></h2>
+<section id="registers">
+<h3>Registers<a class="headerlink" href="#registers" title="Permalink naar deze titel">#</a></h3>
 <p>Onderdeel van de Central Processing Unit (CPU)</p>
 <p><img alt="8-bit flip flop" src="topics/images/13/4-Bit%20Register.png" /></p>
 <p>4 gated latches vormen een 4 bit register</p>
 <p>Geheugen opgebouwd uit logische schakelingen.</p>
 <p>100 registers met 64 bits elk is ongeveer 10000 bits in totaal.</p>
 <p><img alt="CPU" src="../_images/intel_cpu.png" /></p>
-</div>
-<div class="section" id="algemeen-geheugen">
-<h3>Algemeen geheugen<a class="headerlink" href="#algemeen-geheugen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="algemeen-geheugen">
+<h3>Algemeen geheugen<a class="headerlink" href="#algemeen-geheugen" title="Permalink naar deze titel">#</a></h3>
 <p>Random Access Memory (RAM)</p>
 <p><img alt="RAM" src="../_images/1136px-Samsung-1GB-DDR2-Laptop-RAM.jpg" /></p>
 <p>Geheugen opgebouwd uit transistoren.</p>
 <p>10GB geheugen is ongeveer 100 miljard bits.</p>
-</div>
-<div class="section" id="harde-schijf">
-<h3>Harde schijf<a class="headerlink" href="#harde-schijf" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="harde-schijf">
+<h3>Harde schijf<a class="headerlink" href="#harde-schijf" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="HDD" src="../_images/hdd-4tb.jpg" /></p>
 <p>Permanent geheugen op basis van gemagnetiseerd oppervlak</p>
 <p>4TB geheugen is ongeveer 42 biljoen bits (of meer)</p>
-</div>
-<div class="section" id="solid-state-disk">
-<h3>Solid state disk<a class="headerlink" href="#solid-state-disk" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="solid-state-disk">
+<h3>Solid state disk<a class="headerlink" href="#solid-state-disk" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="SSD" src="../_images/ssd-4tb.png" /></p>
 <p>Permanent geheugen gebouwd uit logische schakelingen!</p>
 <p><em><a class="reference external" href="https://en.wikipedia.org/wiki/Flash_memory">Flash memory</a></em>, op basis van NOR of NAND schakelingen.</p>
-</div>
-<div class="section" id="lang-geleden">
-<h3>Lang geleden …<a class="headerlink" href="#lang-geleden" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="lang-geleden">
+<h3>Lang geleden …<a class="headerlink" href="#lang-geleden" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="5Mb 1956" src="../_images/hdd_5Mb_1956.png" /></p>
 <p>De IBM <a class="reference external" href="https://www.ibm.com/ibm/history/ibm100/us/en/icons/ramac/">RAMAC 305</a> (1956). 5 MB geheugen met een gewicht van 1000 kg.</p>
-</div>
-</div>
-<div class="section" id="historisch">
-<h2>Historisch<a class="headerlink" href="#historisch" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="historisch">
+<h2>Historisch<a class="headerlink" href="#historisch" title="Permalink naar deze titel">#</a></h2>
 <blockquote>
 <div><p>640K ought to be enough for anybody</p>
 <p>– Bill Gates (betwist)</p>
 </div></blockquote>
-</div>
-<div class="section" id="in-de-machine">
-<h2>In de machine<a class="headerlink" href="#in-de-machine" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="in-de-machine">
+<h2>In de machine<a class="headerlink" href="#in-de-machine" title="Permalink naar deze titel">#</a></h2>
 <p><em>Registers (CPU)</em></p>
 <p>Programma’s worden hier opgehaald en instructies worden één voor één uitgevoerd</p>
 <p><em>Werkgeheugen (RAM)</em></p>
 <p>Programma’s die worden uitgevoerd zijn hier opgeslagen</p>
 <p><em>Opslag (harde schijf)</em></p>
 <p>Permanente opslag van data</p>
-<div class="section" id="von-neumann-architectuur">
-<h3>Von Neumann architectuur<a class="headerlink" href="#von-neumann-architectuur" title="Permalink naar deze titel">¶</a></h3>
+<section id="von-neumann-architectuur">
+<h3>Von Neumann architectuur<a class="headerlink" href="#von-neumann-architectuur" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="CPU architecture" src="../_images/622px-ABasicComputer.png" /></p>
 <p>CPU</p>
 <ul class="simple">
@@ -1669,40 +1818,40 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>groter, maar langzaam geheugen</p></li>
 <li><p>geen berekeningen</p></li>
 </ul>
-</div>
-<div class="section" id="de-von-neumann-bottleneck">
-<h3>De von Neumann bottleneck<a class="headerlink" href="#de-von-neumann-bottleneck" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="de-von-neumann-bottleneck">
+<h3>De von Neumann bottleneck<a class="headerlink" href="#de-von-neumann-bottleneck" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="CPU" src="../_images/cpu.png" /></p>
 <ul class="simple">
 <li><p>programmainstructies worden samen met data opgeslagen in RAM</p></li>
 <li><p>Instructies en data worden tussen RAM en CPU heen en weer verplaatst</p></li>
 </ul>
-</div>
-<div class="section" id="machinetaal">
-<h3>Machinetaal<a class="headerlink" href="#machinetaal" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="machinetaal">
+<h3>Machinetaal<a class="headerlink" href="#machinetaal" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="CPU machine code" src="../_images/cpu_1.png" /></p>
 <p>Programma’s worden opgeslagen in het geheugen in machinetaal.</p>
-</div>
-<div class="section" id="assembleertaal-assembly">
-<h3>Assembleertaal (assembly)<a class="headerlink" href="#assembleertaal-assembly" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="assembleertaal-assembly">
+<h3>Assembleertaal (assembly)<a class="headerlink" href="#assembleertaal-assembly" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="CPU assembly" src="../_images/cpu_1a.png" /></p>
 <p>Assembly is een voor mensen leesbare machinetaal.</p>
-</div>
-</div>
-<div class="section" id="instructies">
-<h2>Instructies<a class="headerlink" href="#instructies" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="instructies">
+<h2>Instructies<a class="headerlink" href="#instructies" title="Permalink naar deze titel">#</a></h2>
 <p>Combinatie van data en handelingen</p>
 <p>Machinetaal</p>
 <p><tt><font color="red">0000 0001</font> 0000 0001</tt></p>
 <p>Assembly</p>
 <p><tt><font color="blue">read</font> r1</tt></p>
-<div class="section" id="fetch-execution-cycle">
-<h3>Fetch-Execution Cycle<a class="headerlink" href="#fetch-execution-cycle" title="Permalink naar deze titel">¶</a></h3>
+<section id="fetch-execution-cycle">
+<h3>Fetch-Execution Cycle<a class="headerlink" href="#fetch-execution-cycle" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="Execution cycle" src="../_images/execution_cycle.png" /></p>
-</div>
-</div>
-<div class="section" id="assembly">
-<h2>Assembly<a class="headerlink" href="#assembly" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="assembly">
+<h2>Assembly<a class="headerlink" href="#assembly" title="Permalink naar deze titel">#</a></h2>
 <p>Optelling</p>
 <div class="highlight-asm notranslate"><div class="highlight"><pre><span></span><span class="nf">add</span><span class="w"> </span><span class="no">r2</span><span class="w"> </span><span class="no">r2</span><span class="w"> </span><span class="no">r2</span><span class="w"></span>
 </pre></div>
@@ -1731,9 +1880,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">r1</span> <span class="o">=</span> <span class="n">r1</span> <span class="o">//</span> <span class="n">r2</span>  <span class="c1"># Python</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="data">
-<h2>Data<a class="headerlink" href="#data" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Permalink naar deze titel">#</a></h2>
 <p>Variabelen</p>
 <div class="highlight-asm notranslate"><div class="highlight"><pre><span></span><span class="nf">setn</span><span class="w"> </span><span class="no">r1</span><span class="w"> </span><span class="mi">42</span><span class="w"></span>
 </pre></div>
@@ -1750,9 +1899,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="nb">print</span><span class="p">(</span><span class="n">r1</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="harvey-mudd-miniature-machine">
-<h2>Harvey mudd miniature machine<a class="headerlink" href="#harvey-mudd-miniature-machine" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="harvey-mudd-miniature-machine">
+<h2>Harvey mudd miniature machine<a class="headerlink" href="#harvey-mudd-miniature-machine" title="Permalink naar deze titel">#</a></h2>
 <p>Hmmm is een simulatie met</p>
 <ul class="simple">
 <li><p>16 registers</p></li>
@@ -1768,15 +1917,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p><img alt="x86 instructies" src="../_images/x86_instructies.png" /></p>
 <p>Een deel van de Intel <a class="reference external" href="https://en.wikipedia.org/wiki/X86_instruction_listings">x86 instructieset</a>.</p>
 <p>Hmmm heeft een subset aan instructies die gelijk is aan alle “echte” assemby talen.</p>
-</div>
-<div class="section" id="quiz">
-<h2>Quiz<a class="headerlink" href="#quiz" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="quiz">
+<h2>Quiz<a class="headerlink" href="#quiz" title="Permalink naar deze titel">#</a></h2>
 <p><img alt="Quiz" src="../_images/quiz_1.png" /></p>
 <p><code class="docutils literal notranslate"><span class="pre">read</span> <span class="pre">r1</span></code> op adresregel 0 vraagt de gebruiker om input en zal deze waarde laten bewaren in <code class="docutils literal notranslate"><span class="pre">r1</span></code> (Algemeen register 1). Je ziet dat de gebruiker hier 21 heeft ingevoerd. Op adresregel 1 wordt nogmaals om input van de gebruiker gevraagd en deze waarde zal in <code class="docutils literal notranslate"><span class="pre">r2</span></code> worden bewaard.</p>
 <p>Als de gebruiker hier 2 zal invoeren, wat is dan het resultaat op basis van de volgende set van instructies (adresregels 2 tot en met 4)?</p>
-</div>
-<div class="section" id="wat-is-de-output">
-<h2>Wat is de output?<a class="headerlink" href="#wat-is-de-output" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="wat-is-de-output">
+<h2>Wat is de output?<a class="headerlink" href="#wat-is-de-output" title="Permalink naar deze titel">#</a></h2>
 <p><img alt="Ex 1" src="../_images/ex_1.png" /></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
 </pre></div>
@@ -1797,9 +1946,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">z</span> <span class="o">=</span> <span class="n">z</span> <span class="o">-</span> <span class="mi">1</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="hmmmm-syntax">
-<h2>Hmmmm syntax<a class="headerlink" href="#hmmmm-syntax" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="hmmmm-syntax">
+<h2>Hmmmm syntax<a class="headerlink" href="#hmmmm-syntax" title="Permalink naar deze titel">#</a></h2>
 <div class="highlight-asm notranslate"><div class="highlight"><pre><span></span>00 read r1
 01 setn r2 9
 02 sub r3 r1 r2
@@ -1810,45 +1959,45 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>Regelnummers zijn onderdeel van de syntax!</p>
-</div>
-<div class="section" id="wat-ontbreekt">
-<h2>Wat ontbreekt?<a class="headerlink" href="#wat-ontbreekt" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="wat-ontbreekt">
+<h2>Wat ontbreekt?<a class="headerlink" href="#wat-ontbreekt" title="Permalink naar deze titel">#</a></h2>
 <p>De instructies worden regel voor regel (lineair) uitgevoerd…</p>
-<div class="section" id="herhalingen">
-<h3>Herhalingen<a class="headerlink" href="#herhalingen" title="Permalink naar deze titel">¶</a></h3>
+<section id="herhalingen">
+<h3>Herhalingen<a class="headerlink" href="#herhalingen" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)])</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="condities">
-<h3>Condities<a class="headerlink" href="#condities" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="condities">
+<h3>Condities<a class="headerlink" href="#condities" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
     <span class="o">...</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="o">...</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="jump">
-<h2>Jump!<a class="headerlink" href="#jump" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="jump">
+<h2>Jump!<a class="headerlink" href="#jump" title="Permalink naar deze titel">#</a></h2>
 <p><img alt="jumpn" src="../_images/jump.png" /></p>
 <p>Wat doet dit programma?</p>
 <p>Met <code class="docutils literal notranslate"><span class="pre">jumpn</span></code> wordt de eerstvolgende adreslocatie gezet zet die moet worden uitgevoerd, in dit geval de instructie op locatie 1.</p>
 <p>De initiële waarde die wordt gezet in <code class="docutils literal notranslate"><span class="pre">r1</span></code> is 42 (de input van de gebruiker). De instructie op lokatie 2 zal deze waarde printen. De instructie op lokatie 3 telt 1 bij de waarde in <code class="docutils literal notranslate"><span class="pre">r1</span></code> op en laat deze waarde bewaren in <code class="docutils literal notranslate"><span class="pre">r1</span></code> (de vorige waarde wordt overschreven). Op lokatie 3 volgt de instructie om de instructie op lokatie 1 weer te gaan uitvoeren…</p>
 <p>Dit programma zal steeds de waarde in <code class="docutils literal notranslate"><span class="pre">r1</span></code> printen en vanwege de <code class="docutils literal notranslate"><span class="pre">jumpn</span></code> zal lokatie 4 nooit worden bereikt, wat het einde van het programma aangeeft. Met andere woorden, dit programma zal <em>eindeloos</em> vanaf 42 blijven doortellen!</p>
-</div>
-<div class="section" id="jumps-in-hmmm">
-<h2>Jumps in Hmmm<a class="headerlink" href="#jumps-in-hmmm" title="Permalink naar deze titel">¶</a></h2>
-<div class="section" id="onvoorwaardelijke-jump">
-<h3>Onvoorwaardelijke jump<a class="headerlink" href="#onvoorwaardelijke-jump" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="jumps-in-hmmm">
+<h2>Jumps in Hmmm<a class="headerlink" href="#jumps-in-hmmm" title="Permalink naar deze titel">#</a></h2>
+<section id="onvoorwaardelijke-jump">
+<h3>Onvoorwaardelijke jump<a class="headerlink" href="#onvoorwaardelijke-jump" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-asm notranslate"><div class="highlight"><pre><span></span><span class="nf">jumpn</span><span class="w"> </span><span class="mi">42</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Spring naar regel 42</p>
-</div>
-<div class="section" id="conditionele-jump">
-<h3>Conditionele jump<a class="headerlink" href="#conditionele-jump" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="conditionele-jump">
+<h3>Conditionele jump<a class="headerlink" href="#conditionele-jump" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-asm notranslate"><div class="highlight"><pre><span></span><span class="nf">jeqzn</span><span class="w"> </span><span class="no">r1</span><span class="w"> </span><span class="mi">42</span><span class="w"></span>
 </pre></div>
 </div>
@@ -1865,10 +2014,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>Spring naar regel 42 als <code class="docutils literal notranslate"><span class="pre">r1</span> <span class="pre">!=</span> <span class="pre">0</span></code></p>
-</div>
-</div>
-<div class="section" id="id1">
-<h2>Quiz<a class="headerlink" href="#id1" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="id1">
+<h2>Quiz<a class="headerlink" href="#id1" title="Permalink naar deze titel">#</a></h2>
 <div class="highlight-asm notranslate"><div class="highlight"><pre><span></span>0 read r1
 1 jgtzn r1 7
 2 setn r2 -1
@@ -1888,14 +2037,14 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>42</p></li>
 </ol>
 <p>B. Met welke (ingebouwde) Python functie komt dit overeen?</p>
-<div class="section" id="oplossing">
-<h3>Oplossing<a class="headerlink" href="#oplossing" title="Permalink naar deze titel">¶</a></h3>
+<section id="oplossing">
+<h3>Oplossing<a class="headerlink" href="#oplossing" title="Permalink naar deze titel">#</a></h3>
 <p>A. 6</p>
 <p>B. <code class="docutils literal notranslate"><span class="pre">abs</span></code></p>
-</div>
-</div>
-<div class="section" id="id2">
-<h2>Quiz<a class="headerlink" href="#id2" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="id2">
+<h2>Quiz<a class="headerlink" href="#id2" title="Permalink naar deze titel">#</a></h2>
 <div class="highlight-asm notranslate"><div class="highlight"><pre><span></span>0 read r1
 1 read r2
 2 sub r3 r1 r2
@@ -1913,17 +2062,17 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p><em>r1</em> is <strong>5</strong> en <em>r2</em> is <strong>42</strong></p></li>
 </ol>
 <p>B. Met welke (ingebouwde) Python functie komt dit overeen?</p>
-<div class="section" id="id3">
-<h3>Oplossing<a class="headerlink" href="#id3" title="Permalink naar deze titel">¶</a></h3>
+<section id="id3">
+<h3>Oplossing<a class="headerlink" href="#id3" title="Permalink naar deze titel">#</a></h3>
 <p>A. Uitkomst</p>
 <ol class="simple">
 <li><p>5</p></li>
 <li><p>5</p></li>
 </ol>
 <p>B. <code class="docutils literal notranslate"><span class="pre">min</span></code></p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1947,9 +2096,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../course/week_7.html" title="vorige pagina">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1965,30 +2116,34 @@ commentsRunWhenDOMLoaded(addUtterances);
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
-    
-      Door Harvey Mudd College / Hanze University of Applied Sciences<br/>
-    
-      <div class="extra_footer">
-        <div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Harvey Mudd College / Hanze University of Applied Sciences<br/>
+  
+    <div class="extra_footer">
+      <div>
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
     Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
 </div>
 
-      </div>
-  </p>
-</footer>
-</main>
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

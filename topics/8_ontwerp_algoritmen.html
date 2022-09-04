@@ -4,11 +4,13 @@
 <html lang="nl">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Ontwerp van algoritmen &#8212; Programmeren</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,31 +20,30 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/save_state.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -78,18 +79,18 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
+    <script src="../_static/save_state.js"></script>
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://misja.github.io/programmeren/topics/8_ontwerp_algoritmen.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Zoeken" href="../search.html" />
@@ -102,7 +103,21 @@ commentsRunWhenDOMLoaded(addUtterances);
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -111,9 +126,10 @@ commentsRunWhenDOMLoaded(addUtterances);
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -128,17 +144,18 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../about/syllabus.html">
-   Programmeren
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about/syllabus.html">
+                    Programmeren
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Opmerkingen
  </span>
@@ -1094,112 +1111,244 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
-                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/topics/8_ontwerp_algoritmen.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Bronopslagplaats"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/8_ontwerp_algoritmen.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open een probleem"><i class="fas fa-lightbulb"></i>open probleem</button></a>
-        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/topics/8_ontwerp_algoritmen.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="bewerk deze pagina"><i class="fas fa-pencil-alt"></i>suggereren bewerken</button></a>
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
-        title="Volledig scherm"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/misja/programmeren/master?urlpath=lab/tree/topics/8_ontwerp_algoritmen.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Lancering Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <button type="button" class="btn btn-secondary topbarbtn"
-            onclick="initThebeSBT()" title="Lancering Thebe" data-toggle="tooltip" data-placement="left"><i
-                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Inhoud
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/misja/programmeren/master?urlpath=lab/tree/topics/8_ontwerp_algoritmen.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/misja/programmeren"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/8_ontwerp_algoritmen.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/edit/master/topics/8_ontwerp_algoritmen.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/topics/8_ontwerp_algoritmen.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#recursie">
    Recursie
@@ -1480,12 +1629,11 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Ontwerp van algoritmen</h1>
@@ -1494,7 +1642,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> Inhoud </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -1782,19 +1930,20 @@ commentsRunWhenDOMLoaded(addUtterances);
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="ontwerp-van-algoritmen">
-<h1>Ontwerp van algoritmen<a class="headerlink" href="#ontwerp-van-algoritmen" title="Permalink naar deze titel">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="ontwerp-van-algoritmen">
+<h1>Ontwerp van algoritmen<a class="headerlink" href="#ontwerp-van-algoritmen" title="Permalink naar deze titel">#</a></h1>
 <p><em>Use it or lose it!</em></p>
-<div class="section" id="recursie">
-<h2>Recursie<a class="headerlink" href="#recursie" title="Permalink naar deze titel">¶</a></h2>
+<section id="recursie">
+<h2>Recursie<a class="headerlink" href="#recursie" title="Permalink naar deze titel">#</a></h2>
 <p>Het blijft lastig …</p>
 <p><img alt="simpsons" src="../_images/simpsons.gif" /></p>
 <p>Ook voor mij blijft het een lastig onderwerp. Hoewel ik inmiddels al jaren recursie gebruik, nog steeds heb ik het vaak mis en moet ik weer terug naar de tekentafel om verder te zoeken naar de juiste zelfgelijkenis.</p>
-<div class="section" id="zelfgelijkenis">
-<h3>Zelfgelijkenis<a class="headerlink" href="#zelfgelijkenis" title="Permalink naar deze titel">¶</a></h3>
+<section id="zelfgelijkenis">
+<h3>Zelfgelijkenis<a class="headerlink" href="#zelfgelijkenis" title="Permalink naar deze titel">#</a></h3>
 <p>De oplossing van een probleem hangt af van oplossingen van kleinere identieke problemen</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1814,9 +1963,9 @@ n! = n \cdot (n - 1)!
 \]</div>
 <p>Het is een <em>algemene</em> oplossingsstrategie die <em>niet</em> specifiek is voor informatica!</p>
 <p>Faculteit, oftwel op hoeveel mogelijke manieren kunnen we een aantal aliens op een rij zetten? Het is een goed voorbeeld van hoe we zelfgelijkenis zouden kunnen ontdekken en waar we op zoek gaan naar de <em>abstracte</em> en meest algemene vorm van het probleem. Het opdelen naar een eerste geval en een rest is altijd een goed begin.</p>
-</div>
-<div class="section" id="het-eerste-geval-en-de-rest">
-<h3>Het eerste geval en de rest<a class="headerlink" href="#het-eerste-geval-en-de-rest" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="het-eerste-geval-en-de-rest">
+<h3>Het eerste geval en de rest<a class="headerlink" href="#het-eerste-geval-en-de-rest" title="Permalink naar deze titel">#</a></h3>
 <div class="math notranslate nohighlight">
 \[
 n! = n \cdot (n - 1)!
@@ -1829,82 +1978,82 @@ n! = n \cdot (n - 1)!
 </pre></div>
 </div>
 <p>Je hebt veder kennisgemaakt met een functies, condities, types en collecties. Maar ook met operatoren voor handelingen op data (bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">//</span></code> en <code class="docutils literal notranslate"><span class="pre">%</span></code>) en vergelijkingen van data (bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">==</span></code>, <code class="docutils literal notranslate"><span class="pre">!=</span></code>, ‘&gt;’ en ‘&lt;=’). Met deze beperkte kennis van Python syntax en semantiek heb je al snel  algoritmen voor interessante problemen kunnen schrijven!</p>
-</div>
-<div class="section" id="de-uitdaging">
-<h3>De uitdaging<a class="headerlink" href="#de-uitdaging" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="de-uitdaging">
+<h3>De uitdaging<a class="headerlink" href="#de-uitdaging" title="Permalink naar deze titel">#</a></h3>
 <p>De zelfgelijkenis van een probleem kunnen aanwijzen</p>
 <p><img alt="of de hoofdpijn" src="../_images/paracetamol.png" /></p>
 <p>Laten we het een “uitdaging” noemen maar het is bekend dat recursie voor hoofdpijn en slapeloze nachten kan zorgen!</p>
-</div>
-<div class="section" id="het-doel">
-<h3>Het doel<a class="headerlink" href="#het-doel" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="het-doel">
+<h3>Het doel<a class="headerlink" href="#het-doel" title="Permalink naar deze titel">#</a></h3>
 <p>Het ontwerpen en implementeren van algoritmen voor het oplossen van problemen</p>
 <p>Denk terug aan het begin waar we probeerden duidelijk te maken wat informatica nu precies is? Programmeren is uiteindelijk maar een klein onderdeel van informatica, de nadruk ligt op het bedenken van recepten om van een bepaalde input tot een gewenste input te komen. Hier zijn oplossingsstrategiën voor nodig en recursie is daar één van, later zullen we andere benaderingen gaan ontdekken (die misschien ook voor minder hoofdpijn gaan zorgen).</p>
-</div>
-</div>
-<div class="section" id="vooruitblik">
-<h2>Vooruitblik<a class="headerlink" href="#vooruitblik" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="vooruitblik">
+<h2>Vooruitblik<a class="headerlink" href="#vooruitblik" title="Permalink naar deze titel">#</a></h2>
 <p>Interessante problemen: projecten</p>
 <p>Als het doel het ontwerpen en implementeren van algoritmen voor het oplossen van problemen is, wat zijn dan interessante (lastig op te lossen) problemen?</p>
-<div class="section" id="vpool">
-<h3>vPool<a class="headerlink" href="#vpool" title="Permalink naar deze titel">¶</a></h3>
+<section id="vpool">
+<h3>vPool<a class="headerlink" href="#vpool" title="Permalink naar deze titel">#</a></h3>
 <p>De interactie van objecten in een driedimensionale ruimte</p>
 <p><img alt="vPool" src="../_images/pool2.png" /></p>
-</div>
-<div class="section" id="connect-four">
-<h3>Connect Four<a class="headerlink" href="#connect-four" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="connect-four">
+<h3>Connect Four<a class="headerlink" href="#connect-four" title="Permalink naar deze titel">#</a></h3>
 <p>Een kunstmatige intelligentie (AI) voor het spelen van vier op een rij</p>
 <p><img alt="Connect Four" src="../_images/connect41.png" /></p>
-</div>
-<div class="section" id="textid">
-<h3>TextID<a class="headerlink" href="#textid" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="textid">
+<h3>TextID<a class="headerlink" href="#textid" title="Permalink naar deze titel">#</a></h3>
 <p>Het classificeren van tekst op basis van een statistisch model</p>
 <p><img alt="Text classification" src="../_images/text_classification1.png" /></p>
-</div>
-<div class="section" id="picobot">
-<h3>Picobot<a class="headerlink" href="#picobot" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="picobot">
+<h3>Picobot<a class="headerlink" href="#picobot" title="Permalink naar deze titel">#</a></h3>
 <p>Een zelflerende Picobot op basis van genetische algoritmen</p>
 <p><img alt="Picobot animatie" src="../_images/picobot_animated1.gif" /></p>
-</div>
-</div>
-<div class="section" id="ontwerpen-van-wat">
-<h2>Ontwerpen van wat?<a class="headerlink" href="#ontwerpen-van-wat" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="ontwerpen-van-wat">
+<h2>Ontwerpen van wat?<a class="headerlink" href="#ontwerpen-van-wat" title="Permalink naar deze titel">#</a></h2>
 <p><strike>Code (syntax)</strike></p>
 <p>Algoritmen! (ideeën)</p>
-</div>
-<div class="section" id="algoritmen">
-<h2>Algoritmen<a class="headerlink" href="#algoritmen" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="algoritmen">
+<h2>Algoritmen<a class="headerlink" href="#algoritmen" title="Permalink naar deze titel">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rem_all</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">L</span><span class="p">):</span>
     <span class="s2">&quot;&quot;&quot;Returns sequence L with all e&#39;s rmovd</span>
 <span class="s2">    ...</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="top-down">
-<h2>Top down<a class="headerlink" href="#top-down" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="top-down">
+<h2>Top down<a class="headerlink" href="#top-down" title="Permalink naar deze titel">#</a></h2>
 <p><img alt="rem_all design 0" src="../_images/design_rem_all_0.png" /></p>
-<div class="section" id="visualiseren">
-<h3>Visualiseren<a class="headerlink" href="#visualiseren" title="Permalink naar deze titel">¶</a></h3>
+<section id="visualiseren">
+<h3>Visualiseren<a class="headerlink" href="#visualiseren" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="rem_all design 1" src="../_images/design_rem_all_1.png" /></p>
-</div>
-<div class="section" id="opdelen">
-<h3>Opdelen<a class="headerlink" href="#opdelen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="opdelen">
+<h3>Opdelen<a class="headerlink" href="#opdelen" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="rem_all design 2" src="../_images/design_rem_all_2.png" /></p>
-</div>
-<div class="section" id="bouwen">
-<h3>Bouwen<a class="headerlink" href="#bouwen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="bouwen">
+<h3>Bouwen<a class="headerlink" href="#bouwen" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="rem_all design 3" src="../_images/design_rem_all_3.png" /></p>
-</div>
-<div class="section" id="combineren">
-<h3>Combineren<a class="headerlink" href="#combineren" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="combineren">
+<h3>Combineren<a class="headerlink" href="#combineren" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="rem_all design 4" src="../_images/design_rem_all_4.png" /></p>
-</div>
-<div class="section" id="testen">
-<h3>Testen<a class="headerlink" href="#testen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="testen">
+<h3>Testen<a class="headerlink" href="#testen" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="rem_all design 5" src="../_images/design_rem_all_5.png" /></p>
-</div>
-<div class="section" id="combineren-en-testen">
-<h3>Combineren en testen<a class="headerlink" href="#combineren-en-testen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="combineren-en-testen">
+<h3>Combineren en testen<a class="headerlink" href="#combineren-en-testen" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">letter_score</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Scrabble letterscore</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -1921,10 +2070,10 @@ n! = n \cdot (n - 1)!
 <span class="k">assert</span> <span class="n">scrabble_score</span><span class="p">(</span><span class="s2">&quot;quiz&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">21</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="use-it-or-lose-it">
-<h2>Use it or lose it!<a class="headerlink" href="#use-it-or-lose-it" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="use-it-or-lose-it">
+<h2>Use it or lose it!<a class="headerlink" href="#use-it-or-lose-it" title="Permalink naar deze titel">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rem_all</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">L</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Returns sequence L with all e&#39;s rmovd</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -1942,8 +2091,8 @@ n! = n \cdot (n - 1)!
 </pre></div>
 </div>
 <p><img alt="rem_all" src="../_images/rem_all.png" /></p>
-<div class="section" id="een-bekend-patroon">
-<h3>Een bekend patroon<a class="headerlink" href="#een-bekend-patroon" title="Permalink naar deze titel">¶</a></h3>
+<section id="een-bekend-patroon">
+<h3>Een bekend patroon<a class="headerlink" href="#een-bekend-patroon" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">max</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Find max value in L</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -1959,12 +2108,12 @@ n! = n \cdot (n - 1)!
 </pre></div>
 </div>
 <p>We hopen dat je het <em>use it or lose it!</em> patroon inmiddels herkent? Denk bijvoorbeeld aan de recursieve implementatie van de ingebouwde functie <code class="docutils literal notranslate"><span class="pre">max</span></code>, een oude bekende! Denk ook terug aan andere voorbeelden of opgaven waar steeds een vergelijkbare keus werd gemaakt.</p>
-</div>
-</div>
-<div class="section" id="quiz">
-<h2>Quiz<a class="headerlink" href="#quiz" title="Permalink naar deze titel">¶</a></h2>
-<div class="section" id="van-rem-all-naar-rem-one">
-<h3>Van <code class="docutils literal notranslate"><span class="pre">rem_all</span></code> naar <code class="docutils literal notranslate"><span class="pre">rem_one</span></code><a class="headerlink" href="#van-rem-all-naar-rem-one" title="Permalink naar deze titel">¶</a></h3>
+</section>
+</section>
+<section id="quiz">
+<h2>Quiz<a class="headerlink" href="#quiz" title="Permalink naar deze titel">#</a></h2>
+<section id="van-rem-all-naar-rem-one">
+<h3>Van <code class="docutils literal notranslate"><span class="pre">rem_all</span></code> naar <code class="docutils literal notranslate"><span class="pre">rem_one</span></code><a class="headerlink" href="#van-rem-all-naar-rem-one" title="Permalink naar deze titel">#</a></h3>
 <p>Verwijder <code class="docutils literal notranslate"><span class="pre">e</span></code> <strong>één</strong> keer uit <code class="docutils literal notranslate"><span class="pre">L</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rem_one</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">L</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Returns sequence L with one e rmoved</span>
@@ -1983,9 +2132,9 @@ n! = n \cdot (n - 1)!
 </pre></div>
 </div>
 <p>Deze <code class="docutils literal notranslate"><span class="pre">rem_one</span></code> werkt nog als <code class="docutils literal notranslate"><span class="pre">rem_all</span></code>. Eén onderdeel moet worden aangepast, welke is het?</p>
-</div>
-<div class="section" id="oplossing">
-<h3>Oplossing<a class="headerlink" href="#oplossing" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="oplossing">
+<h3>Oplossing<a class="headerlink" href="#oplossing" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rem_one</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">L</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Returns sequence L with one e rmoved</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -1998,9 +2147,9 @@ n! = n \cdot (n - 1)!
 </pre></div>
 </div>
 <p>Als <code class="docutils literal notranslate"><span class="pre">L[0]</span></code> niet gelijk is aan <code class="docutils literal notranslate"><span class="pre">e</span></code>, gebruik het dan. Maar als sprake is van een <em>lose it</em>  situatie dan zal dit maar één keer moeten gebeuren. Een herhaling (recursie) is in dit geval dus niet nodig en het volstaat om de rest van <code class="docutils literal notranslate"><span class="pre">L</span></code> direct terug te geven.</p>
-</div>
-<div class="section" id="van-rem-one-naar-rem-up-to">
-<h3>Van <code class="docutils literal notranslate"><span class="pre">rem_one</span></code> naar <code class="docutils literal notranslate"><span class="pre">rem_up_to</span></code><a class="headerlink" href="#van-rem-one-naar-rem-up-to" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="van-rem-one-naar-rem-up-to">
+<h3>Van <code class="docutils literal notranslate"><span class="pre">rem_one</span></code> naar <code class="docutils literal notranslate"><span class="pre">rem_up_to</span></code><a class="headerlink" href="#van-rem-one-naar-rem-up-to" title="Permalink naar deze titel">#</a></h3>
 <p>Verwijder alles uit <code class="docutils literal notranslate"><span class="pre">L</span></code> <strong>tot en met</strong> de  eerste <code class="docutils literal notranslate"><span class="pre">e</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rem_up_to</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">L</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Returns sequence L up to the first e moved</span>
@@ -2019,9 +2168,9 @@ n! = n \cdot (n - 1)!
 </pre></div>
 </div>
 <p>Deze <code class="docutils literal notranslate"><span class="pre">rem_up_to</span></code> werkt nog als <code class="docutils literal notranslate"><span class="pre">rem_one</span></code>. Eén onderdeel moet worden aangepast, welke is het?</p>
-</div>
-<div class="section" id="id1">
-<h3>Oplossing<a class="headerlink" href="#id1" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="id1">
+<h3>Oplossing<a class="headerlink" href="#id1" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rem_up_to</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">L</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Returns sequence L up to the first e moved</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -2034,10 +2183,10 @@ n! = n \cdot (n - 1)!
 </pre></div>
 </div>
 <p>In dit geval hebben we geen nut meer voor een <em>use it</em> geval <code class="docutils literal notranslate"><span class="pre">L[0]</span></code>, want alles tot een met (de <em>use it</em>’s moeten juist worden verwijderd). Misschien is het in dit geval toepasselijker te spreken over <em>forget it</em>!</p>
-</div>
-</div>
-<div class="section" id="lcs">
-<h2>LCS<a class="headerlink" href="#lcs" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="lcs">
+<h2>LCS<a class="headerlink" href="#lcs" title="Permalink naar deze titel">#</a></h2>
 <p>Het string-matching probleem in biologie:</p>
 <ul class="simple">
 <li><p>‘HUMAN’</p></li>
@@ -2045,17 +2194,17 @@ n! = n \cdot (n - 1)!
 </ul>
 <p>Wat is de langst gemeenschappelijke opeenvolging van karakters?</p>
 <p>In biologie is dit een werkelijk probleem waar het gaat om het vergelijken van DNA-sequenties.</p>
-<div class="section" id="fylogenie">
-<h3>Fylogenie<a class="headerlink" href="#fylogenie" title="Permalink naar deze titel">¶</a></h3>
+<section id="fylogenie">
+<h3>Fylogenie<a class="headerlink" href="#fylogenie" title="Permalink naar deze titel">#</a></h3>
 <p>De studie van relaties tussen verschillende groepen organismen en hun evolutionaire ontwikkeling.</p>
 <p><img alt="Fylogenie" src="../_images/phylogeny_nucleotide.png" /></p>
 <p>Op basis van genetische overeenkomsten (gemeenschappelijke DNA subsequenties) kan worden bepaald hoe dicht bij of ver weg organismen evolutionair van elkaar staan.</p>
 <p><img alt="" src="../_images/RPLP0_90_ClustalW_aln.png" /></p>
 <p>Hoe kunnen de best gemeenschappelijke subsequenties worden gevonden binnen deze genomen? Dit is een algoritmisch probleem waar het lose it or use it principe kan worden toegepast.</p>
-</div>
-</div>
-<div class="section" id="subsequenties">
-<h2>Subsequenties<a class="headerlink" href="#subsequenties" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="subsequenties">
+<h2>Subsequenties<a class="headerlink" href="#subsequenties" title="Permalink naar deze titel">#</a></h2>
 <p><em>Use it or lose it!</em></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">subseq</span><span class="p">(</span><span class="s2">&quot;alg&quot;</span><span class="p">,</span> <span class="s2">&quot;magical&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
 </pre></div>
@@ -2071,8 +2220,8 @@ n! = n \cdot (n - 1)!
 <li><p>Zijn er nog andere functies die we nodig hebben?</p></li>
 </ul>
 <p>Dit zijn de vragen die je jezelf af zal moeten vragen als je een probleen gaat opsplitsen in kleinere delen. Bijvoorbeeld in dit geval, als <code class="docutils literal notranslate"><span class="pre">s[0]</span></code> overeenkomt met <code class="docutils literal notranslate"><span class="pre">sbig[0]</span></code>, wat blijft er over na een eerse behandeling?</p>
-<div class="section" id="base-case">
-<h3>Base case<a class="headerlink" href="#base-case" title="Permalink naar deze titel">¶</a></h3>
+<section id="base-case">
+<h3>Base case<a class="headerlink" href="#base-case" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">subseq</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">sbig</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Returns True if s is a subsequence of sbig;</span>
 <span class="sd">    False otherwise. Both are strings.</span>
@@ -2085,9 +2234,9 @@ n! = n \cdot (n - 1)!
 </pre></div>
 </div>
 <p>Wat zou je hier identificeren als de “it” in <em>use it or lose it</em>? <code class="docutils literal notranslate"><span class="pre">s[0]</span></code> is het eerste geval dat overeen moet komen met een opeenvolgend karakter in <code class="docutils literal notranslate"><span class="pre">sbig</span></code>, laat dit de <em>it</em> zijn!</p>
-</div>
-<div class="section" id="recursieve-stappen">
-<h3>Recursieve stappen<a class="headerlink" href="#recursieve-stappen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="recursieve-stappen">
+<h3>Recursieve stappen<a class="headerlink" href="#recursieve-stappen" title="Permalink naar deze titel">#</a></h3>
 <p>Combineren met <em>use it or lose it!</em></p>
 <p>Indien <em>it</em> <strong>niet</strong> gelijk</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">sbig</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -2105,9 +2254,9 @@ n! = n \cdot (n - 1)!
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">subseq</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">sbig</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="de-handelingen">
-<h3>De handelingen<a class="headerlink" href="#de-handelingen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="de-handelingen">
+<h3>De handelingen<a class="headerlink" href="#de-handelingen" title="Permalink naar deze titel">#</a></h3>
 <p>Is “ctg” een subsequentie van “tacggta”?</p>
 <ol class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">subseq(&quot;ctg&quot;,</span> <span class="pre">&quot;tacggta&quot;)</span></code> use it!</p></li>
@@ -2120,9 +2269,9 @@ n! = n \cdot (n - 1)!
 <li><p>Base case <code class="docutils literal notranslate"><span class="pre">s[0]</span> <span class="pre">not</span> <span class="pre">in</span> <span class="pre">sbig</span></code> =&gt; <code class="docutils literal notranslate"><span class="pre">False</span></code></p></li>
 </ol>
 <p>“ctg” is <em>geen</em> subsequentie van “tacggta”</p>
-</div>
-<div class="section" id="volledig">
-<h3>Volledig<a class="headerlink" href="#volledig" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="volledig">
+<h3>Volledig<a class="headerlink" href="#volledig" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">subseq</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">sbig</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Returns True if s is a subsequence of sbig;</span>
 <span class="sd">    False otherwise. Both are strings.</span>
@@ -2142,10 +2291,10 @@ n! = n \cdot (n - 1)!
         <span class="k">return</span> <span class="n">subseq</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">sbig</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>  <span class="c1"># lose it!</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="optimalisatie">
-<h2>Optimalisatie<a class="headerlink" href="#optimalisatie" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="optimalisatie">
+<h2>Optimalisatie<a class="headerlink" href="#optimalisatie" title="Permalink naar deze titel">#</a></h2>
 <p><em>Use it or lose it</em> to the <code class="docutils literal notranslate"><span class="pre">max</span></code> (of <code class="docutils literal notranslate"><span class="pre">min</span></code>)!</p>
 <ul class="simple">
 <li><p>De kortse route tussen twee punten</p></li>
@@ -2154,13 +2303,13 @@ n! = n \cdot (n - 1)!
 <li><p>Een kast zo efficiënt mogelijk inruimen</p></li>
 <li><p>…</p></li>
 </ul>
-<div class="section" id="het-knapzak-probleem">
-<h3>Het knapzak probleem<a class="headerlink" href="#het-knapzak-probleem" title="Permalink naar deze titel">¶</a></h3>
+<section id="het-knapzak-probleem">
+<h3>Het knapzak probleem<a class="headerlink" href="#het-knapzak-probleem" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="Kikker op reis" src="../_images/kikker_op_reis.png" /></p>
 <p>Kikker gaat op reis en kan maar tot een maximaal gewicht aan handige dingen meenemen in zijn knapzak. Dit wordt ook een <em>subset-sum</em> probleem genoemd.</p>
-</div>
-<div class="section" id="id2">
-<h3>Base case<a class="headerlink" href="#id2" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="id2">
+<h3>Base case<a class="headerlink" href="#id2" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">subset</span><span class="p">(</span><span class="n">capacity</span><span class="p">,</span> <span class="n">items</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Given a capacity and a list of positive-number items,</span>
 <span class="sd">    subset returns the largest sum that can be made from the </span>
@@ -2170,9 +2319,9 @@ n! = n \cdot (n - 1)!
         <span class="k">return</span> <span class="mi">0</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id3">
-<h3>Het eerste geval en de rest<a class="headerlink" href="#id3" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="id3">
+<h3>Het eerste geval en de rest<a class="headerlink" href="#id3" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">subset</span><span class="p">(</span><span class="n">capacity</span><span class="p">,</span> <span class="n">items</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Given a capacity and a list of positive-number items,</span>
 <span class="sd">    subset returns the largest sum that can be made from the </span>
@@ -2185,9 +2334,9 @@ n! = n \cdot (n - 1)!
     <span class="n">rest</span> <span class="o">=</span> <span class="n">items</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="max-capacity-reached">
-<h3><code class="docutils literal notranslate"><span class="pre">max</span></code> capacity reached :)<a class="headerlink" href="#max-capacity-reached" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="max-capacity-reached">
+<h3><code class="docutils literal notranslate"><span class="pre">max</span></code> capacity reached :)<a class="headerlink" href="#max-capacity-reached" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">subset</span><span class="p">(</span><span class="n">capacity</span><span class="p">,</span> <span class="n">items</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Given a capacity and a list of positive-number items,</span>
 <span class="sd">    subset returns the largest sum that can be made from the </span>
@@ -2204,9 +2353,9 @@ n! = n \cdot (n - 1)!
 </pre></div>
 </div>
 <p>Op basis van een eerste waarde en de rest kan gelijk al een eerst besluit worden genomen: we zijn klaar als het eerste geval gelijk is aan de capaciteit!</p>
-</div>
-<div class="section" id="max-capacity-exceeded">
-<h3><code class="docutils literal notranslate"><span class="pre">max</span></code> capacity exceeded!<a class="headerlink" href="#max-capacity-exceeded" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="max-capacity-exceeded">
+<h3><code class="docutils literal notranslate"><span class="pre">max</span></code> capacity exceeded!<a class="headerlink" href="#max-capacity-exceeded" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">subset</span><span class="p">(</span><span class="n">capacity</span><span class="p">,</span> <span class="n">items</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Given a capacity and a list of positive-number items,</span>
 <span class="sd">    subset returns the largest sum that can be made from the </span>
@@ -2226,16 +2375,16 @@ n! = n \cdot (n - 1)!
 </pre></div>
 </div>
 <p>Het is ook mogelijk dat het eerste geval <code class="docutils literal notranslate"><span class="pre">first</span></code> de capaciteit overschrijdt. We hebben in dit geval niets aan <code class="docutils literal notranslate"><span class="pre">first</span></code> en kunnen het maar beter vergeten en het probleem herhalen met de <code class="docutils literal notranslate"><span class="pre">rest</span></code>.</p>
-</div>
-<div class="section" id="max-capacity-not-reached">
-<h3><code class="docutils literal notranslate"><span class="pre">max</span></code> capacity not reached…<a class="headerlink" href="#max-capacity-not-reached" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="max-capacity-not-reached">
+<h3><code class="docutils literal notranslate"><span class="pre">max</span></code> capacity not reached…<a class="headerlink" href="#max-capacity-not-reached" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">first</span> <span class="o">&lt;</span> <span class="n">capacity</span><span class="p">:</span>
     <span class="o">...</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="een-lastige-keus">
-<h3>Een lastige keus<a class="headerlink" href="#een-lastige-keus" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="een-lastige-keus">
+<h3>Een lastige keus<a class="headerlink" href="#een-lastige-keus" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">capacity</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">items</span> <span class="o">=</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
 </pre></div>
@@ -2249,9 +2398,9 @@ n! = n \cdot (n - 1)!
 <p>Het is beter om <code class="docutils literal notranslate"><span class="pre">items[0]</span></code> <strong>wel</strong> te gebruiken</p>
 <p>Maar in dit geval is het verstandiger om 4 wél te gebruiken (use it) om vervolgens 8 niet te gebruiken (lose it) en tot slot 6 wel te gebruiken (use it).</p>
 <p>Hoe kan je nu tussen deze twee mogelijkheden kiezen, of beter, hoe zou je een algemene oplossing voor dit probleem kunnen vinden?</p>
-</div>
-<div class="section" id="de-makkelijke-keus">
-<h3>De makkelijke keus<a class="headerlink" href="#de-makkelijke-keus" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="de-makkelijke-keus">
+<h3>De makkelijke keus<a class="headerlink" href="#de-makkelijke-keus" title="Permalink naar deze titel">#</a></h3>
 <p>Gebruik beide en kies de beste uitkomst!</p>
 <p><em>Use it!</em></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">useit</span> <span class="o">=</span> <span class="n">first</span> <span class="o">+</span> <span class="n">subset</span><span class="p">(</span><span class="n">capacity</span> <span class="o">-</span> <span class="n">first</span><span class="p">,</span> <span class="n">rest</span><span class="p">)</span>
@@ -2265,9 +2414,9 @@ n! = n \cdot (n - 1)!
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">max</span><span class="p">(</span><span class="n">useit</span><span class="p">,</span> <span class="n">loseit</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="to-the-max">
-<h3>To the <code class="docutils literal notranslate"><span class="pre">max</span></code><a class="headerlink" href="#to-the-max" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="to-the-max">
+<h3>To the <code class="docutils literal notranslate"><span class="pre">max</span></code><a class="headerlink" href="#to-the-max" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">subset</span><span class="p">(</span><span class="n">capacity</span><span class="p">,</span> <span class="n">items</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Given a capacity and a list of positive-number items,</span>
 <span class="sd">    subset returns the largest sum that can be made from the </span>
@@ -2291,9 +2440,9 @@ n! = n \cdot (n - 1)!
         <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">useit</span><span class="p">,</span> <span class="n">loseit</span><span class="p">)</span>        <span class="c1"># lose it!</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="hoe-werkt-dit">
-<h3>Hoe werkt dit?<a class="headerlink" href="#hoe-werkt-dit" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="hoe-werkt-dit">
+<h3>Hoe werkt dit?<a class="headerlink" href="#hoe-werkt-dit" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">first</span> <span class="o">&lt;</span> <span class="n">capacity</span><span class="p">:</span>
     <span class="n">useit</span> <span class="o">=</span> <span class="n">first</span> <span class="o">+</span> <span class="n">subset</span><span class="p">(</span><span class="n">capacity</span> <span class="o">-</span> <span class="n">first</span><span class="p">,</span> <span class="n">rest</span><span class="p">)</span>
     <span class="n">loseit</span> <span class="o">=</span> <span class="n">subset</span><span class="p">(</span><span class="n">capacity</span><span class="p">,</span> <span class="n">rest</span><span class="p">)</span>
@@ -2302,9 +2451,9 @@ n! = n \cdot (n - 1)!
 </div>
 <p><img alt="subset" src="../_images/subset.png" /></p>
 <p>Zowel <code class="docutils literal notranslate"><span class="pre">useit</span></code> als <code class="docutils literal notranslate"><span class="pre">loseit</span></code> worden op de stack geplaatst, maar onderweg gebeurt dit natuurlijk vaker tot alle mogelijkeden zijn uitgeput (de base case is bereikt). Recursie zie je hier heel goed terugkomen in de vertakkingen en met <code class="docutils literal notranslate"><span class="pre">max(useit,</span> <span class="pre">loseit)</span></code> wordt het een beslisboom. Probeer van boven naar beneden en weer terug omhoog de <code class="docutils literal notranslate"><span class="pre">useit</span></code> en <code class="docutils literal notranslate"><span class="pre">loseit</span></code> aanroepen en tussentijdse resultaten te volgen.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -2328,9 +2477,11 @@ n! = n \cdot (n - 1)!
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="7b_rekenen_met_taal.html" title="vorige pagina">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -2346,30 +2497,34 @@ n! = n \cdot (n - 1)!
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
-    
-      Door Harvey Mudd College / Hanze University of Applied Sciences<br/>
-    
-      <div class="extra_footer">
-        <div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Harvey Mudd College / Hanze University of Applied Sciences<br/>
+  
+    <div class="extra_footer">
+      <div>
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
     Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
 </div>
 
-      </div>
-  </p>
-</footer>
-</main>
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

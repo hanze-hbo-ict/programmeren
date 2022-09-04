@@ -4,11 +4,13 @@
 <html lang="nl">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>De evolutie van Picobot &#8212; Programmeren</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,31 +20,30 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/save_state.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -78,15 +79,15 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
+    <script src="../_static/save_state.js"></script>
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://misja.github.io/programmeren/projects/picobot.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -100,7 +101,21 @@ commentsRunWhenDOMLoaded(addUtterances);
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -109,9 +124,10 @@ commentsRunWhenDOMLoaded(addUtterances);
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -126,17 +142,18 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../about/syllabus.html">
-   Programmeren
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about/syllabus.html">
+                    Programmeren
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Opmerkingen
  </span>
@@ -1092,92 +1109,197 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
-                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/projects/picobot.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Bronopslagplaats"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Fprojects/picobot.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open een probleem"><i class="fas fa-lightbulb"></i>open probleem</button></a>
-        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/projects/picobot.md"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="bewerk deze pagina"><i class="fas fa-pencil-alt"></i>suggereren bewerken</button></a>
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
-        title="Volledig scherm"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Inhoud
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/misja/programmeren"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Fprojects/picobot.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/edit/master/projects/picobot.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/projects/picobot.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#genetische-algoritmes">
    Genetische algoritmes
@@ -1444,12 +1566,11 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>De evolutie van Picobot</h1>
@@ -1458,7 +1579,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> Inhoud </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -1732,15 +1853,16 @@ commentsRunWhenDOMLoaded(addUtterances);
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="de-evolutie-van-picobot">
-<h1>De evolutie van Picobot<a class="headerlink" href="#de-evolutie-van-picobot" title="Permalink naar deze titel">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="de-evolutie-van-picobot">
+<h1>De evolutie van Picobot<a class="headerlink" href="#de-evolutie-van-picobot" title="Permalink naar deze titel">#</a></h1>
 <p>In de eerste week van Programmeren I hebben we Picobot, een virtuele robot, geprogrammeerd. In dit project ga je een Python-programma schrijven die zelf Picobot-programma’s <strong>schrijft</strong>!</p>
 <p>Sterker nog, je Python-software zal automatisch steeds betere Picobot-programma’s laten “evolueren” aan de hand van een opp de natuur geïnspireerde technologie die we een “genetisch algoritme” noemen. Je gebruikt technieken die we bij de colleges over object-georiënteerd programmeren in Python hebben behandeld. Hierdoor zal het eindresultaat relatief kort en elegant zijn!</p>
-<div class="section" id="genetische-algoritmes">
-<h2>Genetische algoritmes<a class="headerlink" href="#genetische-algoritmes" title="Permalink naar deze titel">¶</a></h2>
+<section id="genetische-algoritmes">
+<h2>Genetische algoritmes<a class="headerlink" href="#genetische-algoritmes" title="Permalink naar deze titel">#</a></h2>
 <p>Het belangrijkste idee achter een genetisch algoritme is om te beginnen met een <em><strong>populatie</strong></em> van <em>willekeurige</em> Picobot-programma’s.</p>
 <ul class="simple">
 <li><p>Je code bepaalt dan de <em>“fitness”</em> (“geschiktheid”) van elk van de Picobot-programma’s door het een aantal stappen uit te laten voeren en dan te bepalen welk percentage van de ruimte het opvult; dit leidt tot een kommagetal tussen 0.0 en 1.0.</p></li>
@@ -1750,14 +1872,14 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>Op deze manier heb je een volgende generatie van programma’s gemaakt. De volgende generatie is even groot als de vorige generatie, maar heeft hopelijk een hogere fitness.</p></li>
 <li><p>Je zal dit proces een aantal keer herhalen; als laatste kies je het programma met de hoogste fitness uit de laatste generatie en <em>dat</em> is je volledig geëvolueerde Picobot-programma!</p></li>
 </ul>
-</div>
-<div class="section" id="picobot">
-<h2>Picobot<a class="headerlink" href="#picobot" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="picobot">
+<h2>Picobot<a class="headerlink" href="#picobot" title="Permalink naar deze titel">#</a></h2>
 <p>Kijk nog even terug naar de opgaven in week 1 van Programmeren I om je geheugen op te frissen wat betreft de logica van Picobot, en de syntax van de regels.</p>
 <p>Je kan ook meteen naar de <a class="reference external" href="https://www.cs.hmc.edu/picobot/">Picobot-simulator</a> gaan.</p>
-</div>
-<div class="section" id="het-project">
-<h2>Het project<a class="headerlink" href="#het-project" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="het-project">
+<h2>Het project<a class="headerlink" href="#het-project" title="Permalink naar deze titel">#</a></h2>
 <p>De code die je schrijft komt in een bestand met de naam <code class="docutils literal notranslate"><span class="pre">begin.py</span></code>, <code class="docutils literal notranslate"><span class="pre">milestone.py</span></code> of <code class="docutils literal notranslate"><span class="pre">oplevering.py</span></code>, afhankelijk van de fase van je project. Vergeet niet bovenaan het bestand de volgende zaken te vermelden:</p>
 <ul class="simple">
 <li><p>De namen van je team</p></li>
@@ -1779,8 +1901,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p>Die laatste is een limiet op het aantal toestanden in je Picobot-programma’s; meer hierover later. Je mag ook andere globale constanten gebruiken; het is gebruikelijk om deze namen te geven die uit alleen maar hoofdletters bestaan (bovendien veranderen ze niet tijdens het uitvoeren van het programma).</p>
 <p>Een ander <strong>groot</strong> voordeel van deze globale constanten is dat je ze kan wijzigen, en omdat je ze door de hele code gebruikt, zal die enkele aanpassing overal doorwerken (als je elke individuele <code class="docutils literal notranslate"><span class="pre">25</span></code> moet aanpassen zou dat foutgevoelig zijn; je kan er één missen; en bovendien veel tijd kosten!)</p>
-<div class="section" id="de-klasses-program-en-world">
-<h3>De klasses <code class="docutils literal notranslate"><span class="pre">Program</span></code> en <code class="docutils literal notranslate"><span class="pre">World</span></code><a class="headerlink" href="#de-klasses-program-en-world" title="Permalink naar deze titel">¶</a></h3>
+<section id="de-klasses-program-en-world">
+<h3>De klasses <code class="docutils literal notranslate"><span class="pre">Program</span></code> en <code class="docutils literal notranslate"><span class="pre">World</span></code><a class="headerlink" href="#de-klasses-program-en-world" title="Permalink naar deze titel">#</a></h3>
 <p>Je programma heeft twee basiscomponenten nodig:</p>
 <ul class="simple">
 <li><p>De eerste is een Picobot-programma (of verzameling regels) en</p></li>
@@ -1793,10 +1915,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 <p>Je hoeft geen aparte klasse voor Picobot zelf te hebben; die zal simpelweg een onderdeel worden van <code class="docutils literal notranslate"><span class="pre">World</span></code> van hierboven.</p>
 <p>Je mag ook andere klassen die je zelf ontworpen hebt toevoegen, zeker als je andere functionaliteiten toevoegt, maar deze twee zijn het fundament.</p>
-</div>
-</div>
-<div class="section" id="de-klasse-program">
-<h2>De klasse <code class="docutils literal notranslate"><span class="pre">Program</span></code><a class="headerlink" href="#de-klasse-program" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="de-klasse-program">
+<h2>De klasse <code class="docutils literal notranslate"><span class="pre">Program</span></code><a class="headerlink" href="#de-klasse-program" title="Permalink naar deze titel">#</a></h2>
 <p>Je klasse <code class="docutils literal notranslate"><span class="pre">Program</span></code> begint als volgt:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Program</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -1818,23 +1940,23 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>Dit is natuurlijk maar een voorbeeld van een Picobot-regel; deze specifieke regel zit misschien niet eens in het programma.</p>
-<div class="section" id="lege-ruimte-om-mee-te-beginnen">
-<h3>Lege ruimte (om mee te beginnen)<a class="headerlink" href="#lege-ruimte-om-mee-te-beginnen" title="Permalink naar deze titel">¶</a></h3>
+<section id="lege-ruimte-om-mee-te-beginnen">
+<h3>Lege ruimte (om mee te beginnen)<a class="headerlink" href="#lege-ruimte-om-mee-te-beginnen" title="Permalink naar deze titel">#</a></h3>
 <p>Begin voor dit project met de lege Picobot-ruimte. (Programma’s evalueren om het doolhof op te lossen is moeilijker; die en andere Picobot-werelden zijn een optioneel bonusgedeelte van het project.)</p>
-</div>
-<div class="section" id="begin-met-maar-5-toestanden">
-<h3>Begin met maar 5 toestanden<a class="headerlink" href="#begin-met-maar-5-toestanden" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="begin-met-maar-5-toestanden">
+<h3>Begin met maar 5 toestanden<a class="headerlink" href="#begin-met-maar-5-toestanden" title="Permalink naar deze titel">#</a></h3>
 <p>Het is slim om het aantal toestanden die je Picobot-programma’s (objecten van de klasse <code class="docutils literal notranslate"><span class="pre">Program</span></code>) gebruiken te beperken.</p>
 <p>De ervaring leert dat 5 toestanden een goede waarde is om mee te beginnen. Voor moeilijkere omgevingen kunnen meer toestanden handig zijn. Maar voor eenvoudigere omgevingen vergroten meer toestanden alleen maar de zoekruimte (de verzameling mogelijke Picobot-programma’s) en kost het alleen maar meer tijd om programma’s te evolueren zonder dat ze betere resultaten geven.</p>
-</div>
-<div class="section" id="geen-wildcards">
-<h3>Geen wildcards!<a class="headerlink" href="#geen-wildcards" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="geen-wildcards">
+<h3>Geen wildcards!<a class="headerlink" href="#geen-wildcards" title="Permalink naar deze titel">#</a></h3>
 <p>Gebruik in ieder geval om te beginnen het wildcardkarakter <code class="docutils literal notranslate"><span class="pre">*</span></code> niet in je Picobot-regels.</p>
 <p>De wildcard maakt zowel je Picobot-simulator als het evolueren van programma’s een stuk moeilijker, omdat hij veel regels vertegenwoordigd met een enkele regel. In plaats daar van moeten al je Picobot-programma’s volledig gespecificeerde omgevingen bevatten.</p>
 <p>Gelukkig is dit haalbaar, omdat er maar 9 mogelijke omgevingen zijn in de lege ruimte.</p>
-</div>
-<div class="section" id="mogelijke-omgevingen">
-<h3>Mogelijke <em>omgevingen</em><a class="headerlink" href="#mogelijke-omgevingen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="mogelijke-omgevingen">
+<h3>Mogelijke <em>omgevingen</em><a class="headerlink" href="#mogelijke-omgevingen" title="Permalink naar deze titel">#</a></h3>
 <p>Picobot hoeft in de lege ruimte alleen deze 9 omgevingen te overwegen (waarom?):</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>xxxx
 Nxxx
@@ -1850,13 +1972,13 @@ xxWx
 <p>Daarnaast beperken we Picobot-programma’s tot het gebruik van exact 5 toestanden: 0, 1, 2, 3 en 4. (In ieder geval om mee te beginnen.)</p>
 <p>Dat is wat de globale constante <code class="docutils literal notranslate"><span class="pre">NUM_STATES</span></code> aan het begin van het programma betekent.</p>
 <p>Een volledig gespecificeerd Picobot-programma heeft dus precies 5 * 9 = 45 regels, één voor elke combinatie van toestand en omgeving. Voor elke combinatie hebben we een sleutel <code class="docutils literal notranslate"><span class="pre">(toestand,</span> <span class="pre">omgeving)</span></code> en een bijbehorende waarde <code class="docutils literal notranslate"><span class="pre">(verplaatsing,</span> <span class="pre">nieuweToestand)</span></code>.</p>
-</div>
-<div class="section" id="de-constructor-init">
-<h3>De constructor <code class="docutils literal notranslate"><span class="pre">__init__</span></code><a class="headerlink" href="#de-constructor-init" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="de-constructor-init">
+<h3>De constructor <code class="docutils literal notranslate"><span class="pre">__init__</span></code><a class="headerlink" href="#de-constructor-init" title="Permalink naar deze titel">#</a></h3>
 <p>De klasse <code class="docutils literal notranslate"><span class="pre">Program</span></code> heeft natuurlijk een constructor <code class="docutils literal notranslate"><span class="pre">__init__(self)</span></code> nodig; deze kent gewoon de lege dictionary toe aan <code class="docutils literal notranslate"><span class="pre">self.rules</span></code>, zoals je hierboven kan zien.</p>
-</div>
-<div class="section" id="de-methode-repr">
-<h3>De methode <code class="docutils literal notranslate"><span class="pre">__repr__</span></code><a class="headerlink" href="#de-methode-repr" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="de-methode-repr">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">__repr__</span></code><a class="headerlink" href="#de-methode-repr" title="Permalink naar deze titel">#</a></h3>
 <p>Daarnaast heeft de klasse een methode <code class="docutils literal notranslate"><span class="pre">__repr__(self)</span></code> nodig die de stringrepresentatie van het programma <strong>teruggeeft</strong>; Python verwacht dat deze methode een string teruggeeft! Als je een nieuwe regel wilt beginnen in een string, kan je <code class="docutils literal notranslate"><span class="pre">\n</span></code> gebruiken.</p>
 <div class="notice admonition">
 <p class="admonition-title">Belangrijk!</p>
@@ -1881,9 +2003,9 @@ xxWx
 </div>
 <p>Hier vind je <a class="reference internal" href="../support/picobot_example.html"><span class="doc std std-doc">voorbeeld-uitvoer</span></a> die je als sjabloon kan gebruiken.</p>
 </div>
-</div>
-<div class="section" id="de-methode-randomize">
-<h3>De methode <code class="docutils literal notranslate"><span class="pre">randomize</span></code><a class="headerlink" href="#de-methode-randomize" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="de-methode-randomize">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">randomize</span></code><a class="headerlink" href="#de-methode-randomize" title="Permalink naar deze titel">#</a></h3>
 <p>De klasse moet een methode <code class="docutils literal notranslate"><span class="pre">randomize(self)</span></code> bevatten, die een willekeurige volledige set regels genereert voor de dictionary <code class="docutils literal notranslate"><span class="pre">self.rules</span></code> van het programma. Onthoud dat de dictionary leeg begint. Deze methode maakt willekeurige regels, één voor elke combinatie van de <code class="docutils literal notranslate"><span class="pre">NUM_STATES</span></code> mogelijke toestanden; in het begin zijn dit er 5; en de 9 mogelijke omgevingen. Merk op dat er voor 5 toestanden en 9 omgevingen 45 willekeurig gegenereerde regels zijn.</p>
 <div class="tip admonition">
 <p class="admonition-title">Sleutels van <code class="docutils literal notranslate"><span class="pre">rules</span></code></p>
@@ -1899,18 +2021,18 @@ xxWx
 </div>
 <p>Hierbij is het wel van belang dat je mogelijke verplaatsingen en je omgevingen allemaal hoofdletters gebruiken voor de mogelijke waarden, maar dat zou geen probleem moeten zijn. Deze <code class="docutils literal notranslate"><span class="pre">while</span></code>-lus blijft willekeurig een waarde kiezen voor <code class="docutils literal notranslate"><span class="pre">movedir</span></code> totdat de waarde <em>wel</em> geldig is!</p>
 </div>
-</div>
-<div class="section" id="de-methode-get-move">
-<h3>De methode <code class="docutils literal notranslate"><span class="pre">get_move</span></code><a class="headerlink" href="#de-methode-get-move" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="de-methode-get-move">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">get_move</span></code><a class="headerlink" href="#de-methode-get-move" title="Permalink naar deze titel">#</a></h3>
 <p>De methode <code class="docutils literal notranslate"><span class="pre">get_move(self,</span> <span class="pre">state,</span> <span class="pre">surroundings)</span></code> krijgt een integertoestand en een omgeving (bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">&quot;xExx&quot;</span></code>) mee en moet een tuple teruggeven die de volgende verplaatsing en de nieuwe toestand bevat. Deze methode kan gewoon de dictionary <code class="docutils literal notranslate"><span class="pre">self.rules</span></code> gebruiken om dit te bereiken.</p>
-</div>
-<div class="section" id="de-methode-mutate">
-<h3>De methode <code class="docutils literal notranslate"><span class="pre">mutate</span></code><a class="headerlink" href="#de-methode-mutate" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="de-methode-mutate">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">mutate</span></code><a class="headerlink" href="#de-methode-mutate" title="Permalink naar deze titel">#</a></h3>
 <p>De methode <code class="docutils literal notranslate"><span class="pre">mutate(self)</span></code> moet willekeurig één regel kiezen uit <code class="docutils literal notranslate"><span class="pre">self.rules</span></code> en moet de waarde (de verplaatsing en de toestand) aanpassen voor die regel. Als het programma bijvoorbeeld een regel bevat die de <code class="docutils literal notranslate"><span class="pre">(toestand,</span> <span class="pre">omgeving)</span> <span class="pre">(0,</span> <span class="pre">&quot;xExx&quot;)</span></code> heeft gekoppeld aan de <code class="docutils literal notranslate"><span class="pre">(verplaatsing,</span> <span class="pre">nieuwe_toestand)</span> <span class="pre">(&quot;N&quot;,</span> <span class="pre">1)</span></code>, zou deze vervangen kunnen worden met een nieuwe willekeurig gekozen <code class="docutils literal notranslate"><span class="pre">(verplaatsing,</span> <span class="pre">nieuwe_toestand)</span></code> zoals <code class="docutils literal notranslate"><span class="pre">(&quot;S&quot;,</span> <span class="pre">2)</span></code>. Merk op dat het niet geldig zou zijn om naar “E” te verplaatsen in dit geval, omdat het patroon laat zien dat er een muur naar het oosten is; je code moet willekeurig één van de geldige richtingen kiezen om naar te verplaatsen. (Een extra detail is dat de verandere regel niet hetzelfde moet zijn als de
 originele…)</p>
-</div>
-<div class="section" id="de-methode-crossover">
-<h3>De methode <code class="docutils literal notranslate"><span class="pre">crossover</span></code><a class="headerlink" href="#de-methode-crossover" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="de-methode-crossover">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">crossover</span></code><a class="headerlink" href="#de-methode-crossover" title="Permalink naar deze titel">#</a></h3>
 <p>De methode <code class="docutils literal notranslate"><span class="pre">crossover(self,</span> <span class="pre">other)</span></code> is een methode die een object <code class="docutils literal notranslate"><span class="pre">other</span></code> van het type <code class="docutils literal notranslate"><span class="pre">Program</span></code> meekrijgt. Het moet een nieuw “kind”, ook van het type <code class="docutils literal notranslate"><span class="pre">Program</span></code> teruggeven die <em>sommige</em> regels van <code class="docutils literal notranslate"><span class="pre">self</span></code> en de rest van <code class="docutils literal notranslate"><span class="pre">other</span></code> bevat. Merk op dat de programma’s <code class="docutils literal notranslate"><span class="pre">self</span></code> en <code class="docutils literal notranslate"><span class="pre">other</span></code> precies evenveel regels bevatten! Als we bijvoorbeed 5 toestanden hebben, zijn er omdat er maar 9 mogelijke omgevingen zijn precies 45 regels in het programma.</p>
 <div class="tip admonition">
 <p class="admonition-title">Effectieve crossovers</p>
@@ -1921,9 +2043,9 @@ originele…)</p>
 <p class="admonition-title">Veel voorkomende fout</p>
 <p>Een veel voorkomende fout is om het programma van één van de ouders te <em>wijzigen</em>, in plaats van een nieuw kind van het type <code class="docutils literal notranslate"><span class="pre">Program</span></code> terug te geven. Dit is niet alleen biologisch een slecht idee, maar zal hier ook niet werken! Waarom niet? Stel je voor dat paren het genoom van een ouder zou aanpassen. Als een ouder een hoge fitness heeft, heeft hij waarschijnlijk meerdere kinderen, die hopelijk veel van de goede eigenschappen van de ouder erven. Als het genoom van de ouder echter <em>verandert</em> de eerste keer dat hij paart, is het erg waarschijnlijk dat zijn fitness kleiner wordt! Zijn verdere kinderen hebben daardoor vermoedelijk een lagere fitness dan de eerste.</p>
 </div>
-</div>
-<div class="section" id="handige-hulpmethodes">
-<h3>Handige hulpmethodes<a class="headerlink" href="#handige-hulpmethodes" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="handige-hulpmethodes">
+<h3>Handige hulpmethodes<a class="headerlink" href="#handige-hulpmethodes" title="Permalink naar deze titel">#</a></h3>
 <p>Het kan bij het schrijven van het genetische algoritme handig zijn om lijsten met <code class="docutils literal notranslate"><span class="pre">(fitnesswaarde,</span> <span class="pre">programma)</span></code>-paren te sorteren. Je hebt bijvoorbeeld een lijst van lengte 200 met de vorm: <code class="docutils literal notranslate"><span class="pre">[(fitness0,</span> <span class="pre">programma0),</span> <span class="pre">(fitness1,</span> <span class="pre">programma1),</span> <span class="pre">...,</span> <span class="pre">(fitness199,</span> <span class="pre">programma199)]</span></code> die je willen sorteren op basis van de <em>floating-pointwaarde van de fitness</em>. De ingebouwde functie <code class="docutils literal notranslate"><span class="pre">sorted</span></code> werkt hier heel goed, <em>behalve als twee fitnesswaardes exact gelijk zijn</em>, wat zeker zal gebeuren! De functie <code class="docutils literal notranslate"><span class="pre">sorted</span></code> zal dan proberen de volgorde te bepalen door de programma’s te sorteren, bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">programma0</span></code> en <code class="docutils literal notranslate"><span class="pre">programma1</span></code>. Het probleem is dat het sorteren van programma’s niet gedefinieerd is.</p>
 <p>Om het sorteren van programma’s te definiëren kan je deze definities van <code class="docutils literal notranslate"><span class="pre">__gt__</span></code> en <code class="docutils literal notranslate"><span class="pre">__lt__</span></code>, de groter-dan- en kleiner-dan-operatoren, in je klasse <code class="docutils literal notranslate"><span class="pre">Program</span></code> plakken. Ze vergelijken niet echt twee programma’s; ze geven willekeurig <code class="docutils literal notranslate"><span class="pre">True</span></code> of <code class="docutils literal notranslate"><span class="pre">False</span></code> terug; maar dat is alles wat je nodig hebt om <code class="docutils literal notranslate"><span class="pre">sorted</span></code> te laten werken op lijsten zoals hierboven beschreven.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="fm">__gt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
@@ -1936,10 +2058,10 @@ originele…)</p>
 </pre></div>
 </div>
 <p>(Als je het fijn vindt mag je ook “echte” vergelijkingsoperatoren definiëren voor <code class="docutils literal notranslate"><span class="pre">Program</span></code>, maar dat is niet nodig.)</p>
-</div>
-</div>
-<div class="section" id="de-klasse-world">
-<h2>De klasse <code class="docutils literal notranslate"><span class="pre">World</span></code><a class="headerlink" href="#de-klasse-world" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="de-klasse-world">
+<h2>De klasse <code class="docutils literal notranslate"><span class="pre">World</span></code><a class="headerlink" href="#de-klasse-world" title="Permalink naar deze titel">#</a></h2>
 <p>Het andere fundamentele onderdeel van je programma is een klasse <code class="docutils literal notranslate"><span class="pre">World</span></code> die een complete Picobot-wereld kan representeren (en ook de positie van Picobot en zijn acties in de wereld). Voor dit project hoeft je klasse <code class="docutils literal notranslate"><span class="pre">World</span></code> alleen een lege ruimte van 25 bij 25 te bevatten en te simuleren.</p>
 <p>Picobot, de “robot” die in één cel in de ruimte staat, hoeft geen eigen klasse te hebben: hij kan gewoon gesimuleerd worden vanuit de klasse <code class="docutils literal notranslate"><span class="pre">World</span></code>!</p>
 <p>De klasse <code class="docutils literal notranslate"><span class="pre">World</span></code> heeft een aantal gegevens nodig om de toestand van de wereld bij te houden en Picobot daarin te simuleren:</p>
@@ -1980,37 +2102,37 @@ wat je maar wilt. Als je je ASCII-weergave extra mooi wilt maken kan je <code cl
 </div>
 <p>In essentie slaat een object van type <code class="docutils literal notranslate"><span class="pre">World</span></code> een kaart van de ruimte <code class="docutils literal notranslate"><span class="pre">self.room</span></code>, het programma <code class="docutils literal notranslate"><span class="pre">self.prog</span></code> waarmee de ruimte verkend zal worden, en de huidige toestand, rij en kolom van Picobot <code class="docutils literal notranslate"><span class="pre">self.state</span></code>, <code class="docutils literal notranslate"><span class="pre">self.prow</span></code> en <code class="docutils literal notranslate"><span class="pre">self.pcol</span></code> op. Andere informatie opslaan is ook goed.</p>
 <p>Daarnaast heeft de klasse <code class="docutils literal notranslate"><span class="pre">World</span></code> natuurlijk een aantal methodes nodig; je mag deze in beginsel zelf kiezen, maar een aantal methodes heb je sowieso nodig.</p>
-<div class="section" id="id1">
-<h3>De methode <code class="docutils literal notranslate"><span class="pre">__repr__</span></code><a class="headerlink" href="#id1" title="Permalink naar deze titel">¶</a></h3>
+<section id="id1">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">__repr__</span></code><a class="headerlink" href="#id1" title="Permalink naar deze titel">#</a></h3>
 <p>De methode <code class="docutils literal notranslate"><span class="pre">__repr__(self)</span></code> geeft een string terug die de ruimte toont met een spatie voor lege cellen die nog niet bezocht zijn, de muren met welk teken je ook gekozen hebt, de positie van Picobot in de ruimte met een hoofdletter “P” en het karakter <code class="docutils literal notranslate"><span class="pre">o</span></code> (de kleine letter o) voor lege maar eerder bezochte posities in de ruimte. Deze methode is cruciaal voor het debuggen van je Picobot-simulator.</p>
-</div>
-<div class="section" id="de-methode-get-current-surroundings">
-<h3>De methode <code class="docutils literal notranslate"><span class="pre">get_current_surroundings</span></code><a class="headerlink" href="#de-methode-get-current-surroundings" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="de-methode-get-current-surroundings">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">get_current_surroundings</span></code><a class="headerlink" href="#de-methode-get-current-surroundings" title="Permalink naar deze titel">#</a></h3>
 <p>De methode <code class="docutils literal notranslate"><span class="pre">get_current_surroundings(self)</span></code> geeft een omgevingsstring zoals <code class="docutils literal notranslate"><span class="pre">&quot;xExx&quot;</span></code> terug voor de huidige positie van Picobot die in de variabelen <code class="docutils literal notranslate"><span class="pre">self.prow</span></code> en <code class="docutils literal notranslate"><span class="pre">self.pcol</span></code> staat.</p>
-</div>
-<div class="section" id="de-methode-step">
-<h3>De methode <code class="docutils literal notranslate"><span class="pre">step</span></code><a class="headerlink" href="#de-methode-step" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="de-methode-step">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">step</span></code><a class="headerlink" href="#de-methode-step" title="Permalink naar deze titel">#</a></h3>
 <p>De methode <code class="docutils literal notranslate"><span class="pre">step(self)</span></code> verplaatst Picobot één stap. Hierbij werk je <code class="docutils literal notranslate"><span class="pre">self.room</span></code>, de toestand, de rij en de kolom van Picobot bij, allemaal aan de hand van het programma <code class="docutils literal notranslate"><span class="pre">self.prog</span></code>. Deze methode geeft niets terug! In plaats daarvan gebruikt ze de waardes <code class="docutils literal notranslate"><span class="pre">self.prow</span></code> en <code class="docutils literal notranslate"><span class="pre">self.pcol</span></code> van Picobot om de huidige omgeving te bepalen (aan de hand van <code class="docutils literal notranslate"><span class="pre">get_current_surroundings</span></code>). Ze gebruikt dan die omgeving en <code class="docutils literal notranslate"><span class="pre">self.state</span></code> om het programma, <code class="docutils literal notranslate"><span class="pre">self.prog</span></code> te vragen de verplaatsing en nieuwe toestand te bepalen. Dit kan gedaan worden via de methode <code class="docutils literal notranslate"><span class="pre">get_move</span></code> van het programma, zoals hierboven beschreven is in de klasse <code class="docutils literal notranslate"><span class="pre">Program</span></code></p>
 <p>Ten slotte moet de methode <code class="docutils literal notranslate"><span class="pre">step</span></code> de positie en toestand van Picobot bijwerken, en ook de ruimte bijwerken (door bijvoorbeeld een cel als leeg maar bezocht te markeren en een andere te markeren als de huidige positie van de <code class="docutils literal notranslate"><span class="pre">P</span></code> van Picobot).</p>
-</div>
-<div class="section" id="de-methode-run">
-<h3>De methode <code class="docutils literal notranslate"><span class="pre">run</span></code><a class="headerlink" href="#de-methode-run" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="de-methode-run">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">run</span></code><a class="headerlink" href="#de-methode-run" title="Permalink naar deze titel">#</a></h3>
 <p>Maak ook een methode <code class="docutils literal notranslate"><span class="pre">run(self,</span> <span class="pre">steps)</span></code> die het aantal stappen (<code class="docutils literal notranslate"><span class="pre">steps</span></code>) meekrijgt die uitgevoerd moeten worden. De methode <code class="docutils literal notranslate"><span class="pre">run</span></code> moet simpelweg dat aantal stappen uitvoeren met behulp van de method <code class="docutils literal notranslate"><span class="pre">run</span></code>. Dit is een Picobot-simulator!</p>
-</div>
-<div class="section" id="de-methode-fraction-visited-cells">
-<h3>De methode <code class="docutils literal notranslate"><span class="pre">fraction_visited_cells</span></code><a class="headerlink" href="#de-methode-fraction-visited-cells" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="de-methode-fraction-visited-cells">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">fraction_visited_cells</span></code><a class="headerlink" href="#de-methode-fraction-visited-cells" title="Permalink naar deze titel">#</a></h3>
 <p>Je hebt een methode <code class="docutils literal notranslate"><span class="pre">fraction_visited_cells(self)</span></code> nodig die een floating-pointgetal teruggeeft met het percentage (als kommagetal van <code class="docutils literal notranslate"><span class="pre">0.0</span></code> tot <code class="docutils literal notranslate"><span class="pre">1.0</span></code>) van de cellen in <code class="docutils literal notranslate"><span class="pre">self.room</span></code> die gemarkeerd zijn als <em>bezocht</em> (inclusief de huidige positie van Picobot). Dit is niet het aantal stappen, omdat cellen vaker bezocht kunnen worden. In plaats daarvan is dit het aantal unieke posities in de ruimte van Picobot waar hij tijdens het uitvoeren geweest is. Dit is de <strong>fitness-score</strong> voor een Picobot-programma!</p>
-</div>
-</div>
-<div class="section" id="wat-nu">
-<h2>Wat nu?<a class="headerlink" href="#wat-nu" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="wat-nu">
+<h2>Wat nu?<a class="headerlink" href="#wat-nu" title="Permalink naar deze titel">#</a></h2>
 <p>Je hebt nu al het grootste deel van het programma geschreven! De rest kan je schrijven in een aantal korte functies (buiten de klassen <code class="docutils literal notranslate"><span class="pre">Program</span></code> en <code class="docutils literal notranslate"><span class="pre">World</span></code>).</p>
-<div class="section" id="een-willekeurige-populatie">
-<h3>Een willekeurige populatie<a class="headerlink" href="#een-willekeurige-populatie" title="Permalink naar deze titel">¶</a></h3>
+<section id="een-willekeurige-populatie">
+<h3>Een willekeurige populatie<a class="headerlink" href="#een-willekeurige-populatie" title="Permalink naar deze titel">#</a></h3>
 <p>Je hebt bijvoorbeeld een erg korte functie nodig die de grootte van een populatie meekrijgt en een populate (een Python-lijst) met dat aantal willekeurige Picobot-programma’s teruggeeft.</p>
-</div>
-<div class="section" id="een-fitness-evaluatiefunctie-evaluate-fitness">
-<h3>Een fitness-evaluatiefunctie <code class="docutils literal notranslate"><span class="pre">evaluate_fitness</span></code><a class="headerlink" href="#een-fitness-evaluatiefunctie-evaluate-fitness" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="een-fitness-evaluatiefunctie-evaluate-fitness">
+<h3>Een fitness-evaluatiefunctie <code class="docutils literal notranslate"><span class="pre">evaluate_fitness</span></code><a class="headerlink" href="#een-fitness-evaluatiefunctie-evaluate-fitness" title="Permalink naar deze titel">#</a></h3>
 <p>Een erg korte fitness-evaluatiefunctie die de fitness van een gegeven Picobot-programma bepaalt. Deze functie krijgt de naam <code class="docutils literal notranslate"><span class="pre">evaluate_fitness(program,</span> <span class="pre">trials,</span> <span class="pre">steps)</span></code>. De argumenten zijn een Picobot-programma <code class="docutils literal notranslate"><span class="pre">program</span></code>, een positieve integer <code class="docutils literal notranslate"><span class="pre">trials</span></code> die het aantal willekeurige beginposities die getest moeten worden, en een positieve integer <code class="docutils literal notranslate"><span class="pre">steps</span></code> die het aantal stappen dat de simulatie mag nemen aangeeft. De functie geeft de fitness (een floating-pointgetal tussen 0.0 en 1.0) terug die overeenkomt met het percentage van de cellen die dit Picobot-programma bezoekt, gemiddeld over het aantal <code class="docutils literal notranslate"><span class="pre">trials</span></code>. Je kan hiervoor <code class="docutils literal notranslate"><span class="pre">fraction_visited_cells</span></code> gebruiken.</p>
 <p>Stel je als voorbeeld voor dat <code class="docutils literal notranslate"><span class="pre">p</span></code> een Picobot-programma is en we <code class="docutils literal notranslate"><span class="pre">evaluate_fitness(p,</span> <span class="pre">42,</span> <span class="pre">1000)</span></code> uitvoeren. Deze functie kiest dan een willekeurige startpositie voor Picobot, voert het gegeven programma 1000 stappen lang uit, en berekent het percentage bezochte cellen. Daarna wist het de ruimte, kiest een nieuwe startpositie en doet het nog een keer; 42 keer in totaal.</p>
 <p>Na alle 42 tests neemt de code het gemiddelde van het percentage van bezochte cellen van alle pogingen.</p>
@@ -2018,9 +2140,9 @@ wat je maar wilt. Als je je ASCII-weergave extra mooi wilt maken kan je <code cl
 <p class="admonition-title">Opmerking</p>
 <p>De ruimte bevat 529 cellen (23 bij 23 lege cellen), dus zelfs een programma met relatief hoge fitness heeft een stuk meer dan 529 stappen nodig heeft om een groot deel van de ruimte te vullen, omdat het onwaarschijnlijk is dat het programma erg efficiënt zal zijn. Dat is waarom je misschien 1000 <code class="docutils literal notranslate"><span class="pre">steps</span></code> gebruikt, of zelfs een nog hoger aantal, in plaats van 529.</p>
 </div>
-</div>
-<div class="section" id="de-hoofdfunctie-genetic-algorithm">
-<h3>De hoofdfunctie <code class="docutils literal notranslate"><span class="pre">genetic_algorithm</span></code><a class="headerlink" href="#de-hoofdfunctie-genetic-algorithm" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="de-hoofdfunctie-genetic-algorithm">
+<h3>De hoofdfunctie <code class="docutils literal notranslate"><span class="pre">genetic_algorithm</span></code><a class="headerlink" href="#de-hoofdfunctie-genetic-algorithm" title="Permalink naar deze titel">#</a></h3>
 <p>De <strong>hoofdfunctie</strong> moet naar het onderwerp, genetische algoritmes, vernoemd worden: <code class="docutils literal notranslate"><span class="pre">genetic_algorithm(pop_size,</span> <span class="pre">num_gens)</span></code>.</p>
 <p>Deze functie <code class="docutils literal notranslate"><span class="pre">genetic_algorithm(pop_size,</span> <span class="pre">num_gens)</span></code> moet <code class="docutils literal notranslate"><span class="pre">pop_size</span></code> willekeurige Picobot-programma’s genereren als de beginpopulatie (200 is hier een goede waarde voor). Daarna moet de fitness van al deze programma’s geëvalueerd worden, en moet je de programma’s met de hoogste fitness kiezen. Deze programma’s overleven en dienen bovendien als “ouders” voor de volgende generatie.</p>
 <div class="tip admonition">
@@ -2108,27 +2230,27 @@ wat je maar wilt. Als je je ASCII-weergave extra mooi wilt maken kan je <code cl
 <p class="admonition-title">Keuzes voor de parameters</p>
 <p>Als je wilt kan je wat lezen over hoe je de programma’s met de hoogste fitness kan kiezen om die zich te laten voortplanten en de <a class="reference internal" href="../support/picobot_parameters.html"><span class="doc std std-doc">keuzes voor de parameters</span></a> die daar bij horen (maar het staat je natuurlijk vrij om er mee te experimenteren en andere te kiezen).</p>
 </div>
-</div>
-<div class="section" id="hoe-snel-en-hoe-goed-moet-mijn-programma-zijn">
-<h3>Hoe snel en hoe “goed” moet mijn programma zijn?<a class="headerlink" href="#hoe-snel-en-hoe-goed-moet-mijn-programma-zijn" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="hoe-snel-en-hoe-goed-moet-mijn-programma-zijn">
+<h3>Hoe snel en hoe “goed” moet mijn programma zijn?<a class="headerlink" href="#hoe-snel-en-hoe-goed-moet-mijn-programma-zijn" title="Permalink naar deze titel">#</a></h3>
 <p>Met de parameterwaardes die hierboven genoemd zijn moet het uitvoeren van <code class="docutils literal notranslate"><span class="pre">genetic_algorithm(200,</span> <span class="pre">20)</span></code> ongeveer 60 secondes per generatie duren. Je beginpopulatie heeft vermoedelijk een gemiddelde fitness van ongeveer 1% tot 2%. De gemiddelde fitness moet elke generatie langzaam toenemen; er kunnen hier misschien een paar uitzonderingen op zijn. De maximale fitness neemt normaal gesproken toe, maar ook hier kan die af en toe afnemen.</p>
 <p>Na 20 generaties zou je een maximale fitness van 80% tot 90% moeten zien, soms zelfs nog hoger.</p>
-</div>
-</div>
-<div class="section" id="inleveren">
-<h2>Inleveren<a class="headerlink" href="#inleveren" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="inleveren">
+<h2>Inleveren<a class="headerlink" href="#inleveren" title="Permalink naar deze titel">#</a></h2>
 <p>Je moet dit project in drie stappen inleveren: het begin in week 11, de milestone in week 12 en ten slotte de oplevering.</p>
-<div class="section" id="begin">
-<span id="picobot-start"></span><h3>Begin<a class="headerlink" href="#begin" title="Permalink naar deze titel">¶</a></h3>
+<section id="begin">
+<span id="picobot-start"></span><h3>Begin<a class="headerlink" href="#begin" title="Permalink naar deze titel">#</a></h3>
 <p>Het begin, <code class="docutils literal notranslate"><span class="pre">begin.py</span></code>, moet aan de volgende eisen voldoen:</p>
 <ul class="simple">
 <li><p>Het bevat een klasse <code class="docutils literal notranslate"><span class="pre">Program</span></code> met een werkende constructor en <code class="docutils literal notranslate"><span class="pre">__repr__</span></code></p></li>
 <li><p>Deze klasse bevat een werkende methode <code class="docutils literal notranslate"><span class="pre">randomize</span></code></p></li>
 </ul>
 <p>Lever dit bestand, samen met je uitleg hierover in <code class="docutils literal notranslate"><span class="pre">begin.txt</span></code>, in Gradescope in als onderdeel van het huiswerk van week 11.</p>
-</div>
-<div class="section" id="milestone">
-<span id="picobot-milestone"></span><h3>Milestone<a class="headerlink" href="#milestone" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="milestone">
+<span id="picobot-milestone"></span><h3>Milestone<a class="headerlink" href="#milestone" title="Permalink naar deze titel">#</a></h3>
 <p>De milestone, <code class="docutils literal notranslate"><span class="pre">milestone.py</span></code>, moet aan de volgende eisen voldoen:</p>
 <ul class="simple">
 <li><p>Het bevat een klasse <code class="docutils literal notranslate"><span class="pre">Program</span></code> met een werkende constructor en <code class="docutils literal notranslate"><span class="pre">__repr__</span></code></p></li>
@@ -2138,9 +2260,9 @@ wat je maar wilt. Als je je ASCII-weergave extra mooi wilt maken kan je <code cl
 </ul>
 <p>Dit betekent dat je een Picobot-simulator gebouwd hebt; in ieder geval in ASCII. Het genetisch algoritme hoeft nog niet af te zijn voor de milestone, maar als het wel zo is, des te beter!</p>
 <p>Lever dit bestand, samen met je uitleg hierover in <code class="docutils literal notranslate"><span class="pre">milestone.txt</span></code>, in Gradescope in als onderdeel van het huiswerk van week 12.</p>
-</div>
-<div class="section" id="oplevering">
-<h3>Oplevering<a class="headerlink" href="#oplevering" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="oplevering">
+<h3>Oplevering<a class="headerlink" href="#oplevering" title="Permalink naar deze titel">#</a></h3>
 <p>Voor de oplevering, het laatste inlevermoment voor dit project, moet je het genetisch algoritme dat Picobot-programma’s evolueert afmaken. We zullen je programma testen met de hierboven beschreven functie <code class="docutils literal notranslate"><span class="pre">genetic_algorithm</span></code>.</p>
 <p>Test je programma zorgvuldig. Het kan zijn dat je tot de conclusie komt dat je crossover-mechanisme (voor het paren van programma’s) niet erg effectief is. Dan moet je experimenteren met andere manieren om crossover te regelen.</p>
 <p>De oplevering, <code class="docutils literal notranslate"><span class="pre">oplevering.py</span></code>, moet een complete uitwerking van het project bevatten. Lever dit bestand, samen met je uitleg hierover in <code class="docutils literal notranslate"><span class="pre">oplevering.txt</span></code>, in Gradescope in. In de uitleg moet je in ieder geval het volgende beschrijven:</p>
@@ -2154,19 +2276,19 @@ wat je maar wilt. Als je je ASCII-weergave extra mooi wilt maken kan je <code cl
 <li><p>Hoe goed je best geëvolueerde Picobot-programma werkt en <em>hoe</em> het werkt.</p></li>
 <li><p>Voeg ook het Picobot-programma met de hoogste fitness toe, en de fitnesswaarde, zodat we het kunnen uitvoeren!</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="optionele-bonusuitbreidingen">
-<h2>Optionele bonusuitbreidingen<a class="headerlink" href="#optionele-bonusuitbreidingen" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="optionele-bonusuitbreidingen">
+<h2>Optionele bonusuitbreidingen<a class="headerlink" href="#optionele-bonusuitbreidingen" title="Permalink naar deze titel">#</a></h2>
 <p>Als je de genetische-algoritmeaspecten van het probleem verder wilt verkennen, kan je deze extra vragen nog onderzoeken:</p>
 <ul class="simple">
 <li><p>Hoe goed kan je een programma evolueren om het <em>doolhof</em> op te lossen (met een andere ruimte in <code class="docutils literal notranslate"><span class="pre">World</span></code>…)? Het doolhof is erg moeilijk om op te lossen op deze manier; je kan de ruitvormige ruimte gebruiken als tussenweg.</p></li>
 <li><p>Het is mogelijk om een programma met behoorlijke fitness te evolueren <em>helemaal zonder crossover</em>! Het idee is dat je het programma met de hoogste fitness bewaart en mutatie gebruikt om de volgende generatie te maken. Dit werkt, maar duurt normaal gesproken langer.</p></li>
 </ul>
 <p>Ontwerp en implementeer de noodzakelijke software-ondersteuning om te testen <em>hoeveel groter de populatie moet zijn</em> of <em>hoeveel meer generaties je nodig hebt</em> (of allebei) om een programma te evolueren met alleen mutatie dat een even hoge fitness heeft als een programma dat met mutatie en crossover geëvolueerd is.</p>
-</div>
-<div class="section" id="hulp-bij-het-debuggen">
-<h2>Hulp bij het debuggen…<a class="headerlink" href="#hulp-bij-het-debuggen" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="hulp-bij-het-debuggen">
+<h2>Hulp bij het debuggen…<a class="headerlink" href="#hulp-bij-het-debuggen" title="Permalink naar deze titel">#</a></h2>
 <p>Het kan erg lastig zijn om een Python-programma te debuggen die Picobot-programma’s evolueert…</p>
 <p>Hier is een stukje code dat hierbij kan helpen…</p>
 <p>Dit is een methode <code class="docutils literal notranslate"><span class="pre">working</span></code> voor de klasse <code class="docutils literal notranslate"><span class="pre">Program</span></code> die lijkt op <code class="docutils literal notranslate"><span class="pre">randomize</span></code>. Het verschil is dat
@@ -2210,8 +2332,8 @@ handig om te zorgen dat <code class="docutils literal notranslate"><span class="
             <span class="bp">self</span><span class="o">.</span><span class="n">rules</span><span class="p">[(</span><span class="n">st</span><span class="p">,</span> <span class="n">surr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">val</span>
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -2235,9 +2357,11 @@ handig om te zorgen dat <code class="docutils literal notranslate"><span class="
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="textid.html" title="vorige pagina">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -2253,30 +2377,34 @@ handig om te zorgen dat <code class="docutils literal notranslate"><span class="
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
-    
-      Door Harvey Mudd College / Hanze University of Applied Sciences<br/>
-    
-      <div class="extra_footer">
-        <div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Harvey Mudd College / Hanze University of Applied Sciences<br/>
+  
+    <div class="extra_footer">
+      <div>
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
     Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
 </div>
 
-      </div>
-  </p>
-</footer>
-</main>
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

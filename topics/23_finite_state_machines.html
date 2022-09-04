@@ -4,11 +4,13 @@
 <html lang="nl">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Finite state machines &#8212; Programmeren</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,31 +20,30 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/save_state.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -78,15 +79,15 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
+    <script src="../_static/save_state.js"></script>
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://misja.github.io/programmeren/topics/23_finite_state_machines.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -100,7 +101,21 @@ commentsRunWhenDOMLoaded(addUtterances);
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -109,9 +124,10 @@ commentsRunWhenDOMLoaded(addUtterances);
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -126,17 +142,18 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../about/syllabus.html">
-   Programmeren
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about/syllabus.html">
+                    Programmeren
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Opmerkingen
  </span>
@@ -1092,112 +1109,244 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
-                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/topics/23_finite_state_machines.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Bronopslagplaats"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/23_finite_state_machines.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open een probleem"><i class="fas fa-lightbulb"></i>open probleem</button></a>
-        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/topics/23_finite_state_machines.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="bewerk deze pagina"><i class="fas fa-pencil-alt"></i>suggereren bewerken</button></a>
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
-        title="Volledig scherm"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/misja/programmeren/master?urlpath=lab/tree/topics/23_finite_state_machines.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Lancering Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <button type="button" class="btn btn-secondary topbarbtn"
-            onclick="initThebeSBT()" title="Lancering Thebe" data-toggle="tooltip" data-placement="left"><i
-                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Inhoud
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/misja/programmeren/master?urlpath=lab/tree/topics/23_finite_state_machines.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/misja/programmeren"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/23_finite_state_machines.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/edit/master/topics/23_finite_state_machines.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/topics/23_finite_state_machines.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#toepassingen-van-computers">
    Toepassingen van computers
@@ -1359,12 +1508,11 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Finite state machines</h1>
@@ -1373,7 +1521,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> Inhoud </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -1542,64 +1690,65 @@ commentsRunWhenDOMLoaded(addUtterances);
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="finite-state-machines">
-<h1>Finite state machines<a class="headerlink" href="#finite-state-machines" title="Permalink naar deze titel">¶</a></h1>
-<div class="section" id="toepassingen-van-computers">
-<h2>Toepassingen van computers<a class="headerlink" href="#toepassingen-van-computers" title="Permalink naar deze titel">¶</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="finite-state-machines">
+<h1>Finite state machines<a class="headerlink" href="#finite-state-machines" title="Permalink naar deze titel">#</a></h1>
+<section id="toepassingen-van-computers">
+<h2>Toepassingen van computers<a class="headerlink" href="#toepassingen-van-computers" title="Permalink naar deze titel">#</a></h2>
 <ul class="simple">
 <li><p>Simulaties</p></li>
 <li><p>Graphics</p></li>
 <li><p>Websites</p></li>
 <li><p>…</p></li>
 </ul>
-<div class="section" id="bouwstenen">
-<h3>Bouwstenen<a class="headerlink" href="#bouwstenen" title="Permalink naar deze titel">¶</a></h3>
+<section id="bouwstenen">
+<h3>Bouwstenen<a class="headerlink" href="#bouwstenen" title="Permalink naar deze titel">#</a></h3>
 <ul class="simple">
 <li><p>Functies</p></li>
 <li><p>Schakelingen</p></li>
 <li><p>Objecten</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="wat-kan-een-computer-allemaal-berekenen">
-<h2>Wat <em>kan</em> een computer allemaal berekenen?<a class="headerlink" href="#wat-kan-een-computer-allemaal-berekenen" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="wat-kan-een-computer-allemaal-berekenen">
+<h2>Wat <em>kan</em> een computer allemaal berekenen?<a class="headerlink" href="#wat-kan-een-computer-allemaal-berekenen" title="Permalink naar deze titel">#</a></h2>
 <ul class="simple">
 <li><p>Wat is een computer?</p></li>
 <li><p>Wat is berekenen?</p></li>
 </ul>
-</div>
-<div class="section" id="informatica">
-<h2>Informatica<a class="headerlink" href="#informatica" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="informatica">
+<h2>Informatica<a class="headerlink" href="#informatica" title="Permalink naar deze titel">#</a></h2>
 <ul class="simple">
 <li><p><strong>Bewijzen</strong> wat een computer kan berekenen</p></li>
 <li><p>En wat <strong>niet</strong>!</p></li>
 </ul>
-</div>
-<div class="section" id="wat-is-een-computer">
-<h2>Wat is een computer?<a class="headerlink" href="#wat-is-een-computer" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="wat-is-een-computer">
+<h2>Wat is een computer?<a class="headerlink" href="#wat-is-een-computer" title="Permalink naar deze titel">#</a></h2>
 <ul class="simple">
 <li><p>Computer zijn <strong>state machines</strong>.</p></li>
 </ul>
-<div class="section" id="welke-state-machine-is-dit">
-<h3>Welke state machine is dit?<a class="headerlink" href="#welke-state-machine-is-dit" title="Permalink naar deze titel">¶</a></h3>
+<section id="welke-state-machine-is-dit">
+<h3>Welke state machine is dit?<a class="headerlink" href="#welke-state-machine-is-dit" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="State machine" src="../_images/life.png" /></p>
-</div>
-<div class="section" id="game-of-life">
-<h3>Game of Life!<a class="headerlink" href="#game-of-life" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="game-of-life">
+<h3>Game of Life!<a class="headerlink" href="#game-of-life" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="Game of Life" src="../_images/life2.png" /></p>
-</div>
-<div class="section" id="onderliggende-idee-toestanden">
-<h3>Onderliggende idee: toestanden<a class="headerlink" href="#onderliggende-idee-toestanden" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="onderliggende-idee-toestanden">
+<h3>Onderliggende idee: toestanden<a class="headerlink" href="#onderliggende-idee-toestanden" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="0 NEWx -&gt; S 1" src="../_images/picobot.png" /></p>
 <ul class="simple">
 <li><p>De <strong>state</strong> of <strong>toestand</strong> van een berekening is alle <strong>interne</strong> informatie die nodig is om de volgende stap te bepalen</p></li>
 </ul>
-</div>
-<div class="section" id="toestanden-zijn-subtaken">
-<h3>Toestanden zijn subtaken<a class="headerlink" href="#toestanden-zijn-subtaken" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="toestanden-zijn-subtaken">
+<h3>Toestanden zijn subtaken<a class="headerlink" href="#toestanden-zijn-subtaken" title="Permalink naar deze titel">#</a></h3>
 <pre>
 <span style="color: blue;">0 x*** -> N 0
 0 N*** -> x 1</span>
@@ -1607,10 +1756,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 1 ***S -> x 0</span>
 </pre>
 <p><img alt="State machine" src="../_images/picobot2.png" /></p>
-</div>
-</div>
-<div class="section" id="wat-is-een-berekening">
-<h2>Wat is een berekening?<a class="headerlink" href="#wat-is-een-berekening" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="wat-is-een-berekening">
+<h2>Wat is een berekening?<a class="headerlink" href="#wat-is-een-berekening" title="Permalink naar deze titel">#</a></h2>
 <ul class="simple">
 <li><p>Een bewust overgang van de ene toestand naar de andere</p></li>
 </ul>
@@ -1618,8 +1767,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul class="simple">
 <li><p>Door een waarde te schrijven <em>verandert</em> de toestand van het geheugen</p></li>
 </ul>
-<div class="section" id="computer">
-<h3>Computer<a class="headerlink" href="#computer" title="Permalink naar deze titel">¶</a></h3>
+<section id="computer">
+<h3>Computer<a class="headerlink" href="#computer" title="Permalink naar deze titel">#</a></h3>
 <ul class="simple">
 <li><p>Een computer heeft ook een toestand: de inhoud van het geheugen en de registers.</p></li>
 </ul>
@@ -1628,10 +1777,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>Een <strong>eindig</strong> aantal toestanden (waarom?)</p></li>
 <li><p>Een computer is dus een <strong>finite state machine</strong></p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="id1">
-<h2>Finite state machines<a class="headerlink" href="#id1" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="id1">
+<h2>Finite state machines<a class="headerlink" href="#id1" title="Permalink naar deze titel">#</a></h2>
 <p><img alt="Finite state machine" src="../_images/fsm1.png" /></p>
 <ul class="simple">
 <li><p><strong>Begintoestand:</strong> open pijltje</p></li>
@@ -1639,8 +1788,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p><strong>Transities (overgangen):</strong> pijlen tussen toestanden</p></li>
 <li><p><strong>Invoer:</strong> een string (bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">01011</span></code>)</p></li>
 </ul>
-<div class="section" id="berekening">
-<h3>Berekening<a class="headerlink" href="#berekening" title="Permalink naar deze titel">¶</a></h3>
+<section id="berekening">
+<h3>Berekening<a class="headerlink" href="#berekening" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="Finite state machine" src="../_images/fsm1.png" /></p>
 <ul class="simple">
 <li><p><strong>Invoer:</strong> <code class="docutils literal notranslate"><span class="pre">01011</span></code></p></li>
@@ -1648,9 +1797,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>In welke <strong>toestand</strong> eindigt de machine?</p></li>
 <li><p>Wat <strong>betekenen</strong> de toestanden?</p></li>
 </ul>
-</div>
-<div class="section" id="accepteren-en-afwijzen">
-<h3>Accepteren en afwijzen<a class="headerlink" href="#accepteren-en-afwijzen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="accepteren-en-afwijzen">
+<h3>Accepteren en afwijzen<a class="headerlink" href="#accepteren-en-afwijzen" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="Finite state machine" src="../_images/fsm1.png" /></p>
 <ul class="simple">
 <li><p><strong>Toestand 0:</strong> <em>even</em> aantal <code class="docutils literal notranslate"><span class="pre">1</span></code>’en gezien</p></li>
@@ -1659,9 +1808,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>Dit heet een <strong>beslissingsprobleem</strong></p></li>
 </ul>
 <p><img alt="JFLAP" src="../_images/jflap.png" /></p>
-</div>
-<div class="section" id="quiz">
-<h3>Quiz<a class="headerlink" href="#quiz" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="quiz">
+<h3>Quiz<a class="headerlink" href="#quiz" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="Finite state machine" src="../_images/fsm2.png" /></p>
 <ul class="simple">
 <li><p>Hoe zou je de invoer die door deze machine <strong>afgewezen</strong> wordt kunnen beschrijven?</p></li>
@@ -1678,24 +1827,24 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 </li>
 </ul>
-</div>
-<div class="section" id="finite-state-machines-zijn-overal">
-<h3>Finite state machines zijn overal!<a class="headerlink" href="#finite-state-machines-zijn-overal" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="finite-state-machines-zijn-overal">
+<h3>Finite state machines zijn overal!<a class="headerlink" href="#finite-state-machines-zijn-overal" title="Permalink naar deze titel">#</a></h3>
 <img alt="Verkoopautomaat" src="../_images/vending.jpg" />
 <p><img alt="Finite state machine" src="../_images/fsm_vending.png" /></p>
 <img alt="Cijferslot" src="../_images/lock.jpg" />
 <p><img alt="Finite state machine" src="../_images/fsm_lock.png" /></p>
-</div>
-<div class="section" id="ook-in-ai-in-spellen">
-<h3>Ook in AI in spellen<a class="headerlink" href="#ook-in-ai-in-spellen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="ook-in-ai-in-spellen">
+<h3>Ook in AI in spellen<a class="headerlink" href="#ook-in-ai-in-spellen" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="AI" src="../_images/fsm_ai.png" /></p>
-</div>
-<div class="section" id="en-in-zelfrijdende-auto-s">
-<h3>En in zelfrijdende auto’s<a class="headerlink" href="#en-in-zelfrijdende-auto-s" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="en-in-zelfrijdende-auto-s">
+<h3>En in zelfrijdende auto’s<a class="headerlink" href="#en-in-zelfrijdende-auto-s" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="Zelfrijdende auto" src="../_images/sdc.jpg" /></p>
-</div>
-<div class="section" id="id2">
-<h3>Quiz<a class="headerlink" href="#id2" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="id2">
+<h3>Quiz<a class="headerlink" href="#id2" title="Permalink naar deze titel">#</a></h3>
 <p>Pas deze finite state machine aan zodat deze alle strings <strong>accepteert</strong> waar ten minste twee <code class="docutils literal notranslate"><span class="pre">1</span></code>’en in voorkomen; ze hoeven niet naast elkaar te staan. Je hebt nog ten minste 1 nieuwe toestand nodig.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">0101</span></code>, <code class="docutils literal notranslate"><span class="pre">00010110</span></code>, <code class="docutils literal notranslate"><span class="pre">111011</span></code> en <code class="docutils literal notranslate"><span class="pre">11</span></code> worden <em>geaccepteerd</em>.</p></li>
@@ -1717,10 +1866,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p><code class="docutils literal notranslate"><span class="pre">101</span></code>, <code class="docutils literal notranslate"><span class="pre">0000</span></code> en <code class="docutils literal notranslate"><span class="pre">111011101111</span></code> worden <em>afgewezen</em>.</p></li>
 </ul>
 <p><img alt="Finite state machine" src="../_images/fsm_quiz3.png" /></p>
-</div>
-</div>
-<div class="section" id="kan-je-alles-berekenen-met-een-fsm">
-<h2>Kan je <em>alles</em> berekenen met een FSM?<a class="headerlink" href="#kan-je-alles-berekenen-met-een-fsm" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="kan-je-alles-berekenen-met-een-fsm">
+<h2>Kan je <em>alles</em> berekenen met een FSM?<a class="headerlink" href="#kan-je-alles-berekenen-met-een-fsm" title="Permalink naar deze titel">#</a></h2>
 <ul class="simple">
 <li><p>Zijn er beslissingsproblemen die een finite state machine niet kan oplossen?</p></li>
 </ul>
@@ -1735,15 +1884,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>Je zou een <em>oneindig</em> aantal toestanden nodig hebben!</p></li>
 <li><p>Dat is dus geen <strong>finite</strong> state machine meer.</p></li>
 </ul>
-<div class="section" id="een-krachtiger-model">
-<h3>Een krachtiger model<a class="headerlink" href="#een-krachtiger-model" title="Permalink naar deze titel">¶</a></h3>
+<section id="een-krachtiger-model">
+<h3>Een krachtiger model<a class="headerlink" href="#een-krachtiger-model" title="Permalink naar deze titel">#</a></h3>
 <ul class="simple">
 <li><p>We hebben een krachtiger model nodig</p></li>
 <li><p>Wat kunnen we toevoegen om dit model krachtiger te maken?</p></li>
 </ul>
-</div>
-<div class="section" id="geheugen">
-<h3>Geheugen!<a class="headerlink" href="#geheugen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="geheugen">
+<h3>Geheugen!<a class="headerlink" href="#geheugen" title="Permalink naar deze titel">#</a></h3>
 <ul class="simple">
 <li><p>Met deze uitbreiding heet dit een Turingmachine</p></li>
 </ul>
@@ -1751,33 +1900,33 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>Een computer heeft ook geheugen, maar dit werd eerder toch een finite state machine genoemd</p></li>
 <li><p>Wat voor soort geheugen zou een Turingmachine dan nodig hebben?</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="turingmachine">
-<h2>Turingmachine<a class="headerlink" href="#turingmachine" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="turingmachine">
+<h2>Turingmachine<a class="headerlink" href="#turingmachine" title="Permalink naar deze titel">#</a></h2>
 <p><img alt="Tape" src="../_images/tmtape.png" /></p>
 <p><img alt="Turingmachine" src="../_images/tm.png" /></p>
 <ul class="simple">
 <li><p><strong>Transities:</strong> Lezen; Schrijven, Bewegen</p></li>
 </ul>
-<div class="section" id="transities">
-<h3>Transities<a class="headerlink" href="#transities" title="Permalink naar deze titel">¶</a></h3>
+<section id="transities">
+<h3>Transities<a class="headerlink" href="#transities" title="Permalink naar deze titel">#</a></h3>
 <ul class="simple">
 <li><p><strong>Lezen:</strong> Welk teken staat nu bij de lees/schrijfkop?</p></li>
 <li><p><strong>Schrijven:</strong> Vervang dat teken door dit teken</p></li>
 <li><p><strong>Bewegen:</strong> De lees/schrijfkop gaat naar <strong>L</strong>inks of <strong>R</strong>echts (of blijft <strong>S</strong>taan)</p></li>
 </ul>
 <p>Zie ook <a class="reference external" href="https://youtu.be/dNRDvLACg5Q">deze video</a> van Computerphile over Turingmachines.</p>
-</div>
-<div class="section" id="alan-turing">
-<h3>Alan Turing<a class="headerlink" href="#alan-turing" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="alan-turing">
+<h3>Alan Turing<a class="headerlink" href="#alan-turing" title="Permalink naar deze titel">#</a></h3>
 <img alt="Alan Turing" src="../_images/turing.jpg" />
 <ul class="simple">
 <li><p>Brits wiskundige en codebreker (Enigma)</p></li>
 </ul>
-</div>
-<div class="section" id="turingcompleetheid">
-<h3>Turingcompleetheid<a class="headerlink" href="#turingcompleetheid" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="turingcompleetheid">
+<h3>Turingcompleetheid<a class="headerlink" href="#turingcompleetheid" title="Permalink naar deze titel">#</a></h3>
 <ul class="simple">
 <li><p>Alle computers die we nu kunnen bedenken kunnen alleen berekenen wat een Turingmachine kan berekenen</p></li>
 <li><p>Als een programmeertaal dit ook kan, noemen we die taal <strong>Turingcompleet</strong></p></li>
@@ -1788,13 +1937,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul class="simple">
 <li><p>Maar een Turingmachine is niet erg efficiënt!</p></li>
 </ul>
-</div>
-<div class="section" id="kan-een-turingmachine-dan-alles-berekenen">
-<h3>Kan een Turingmachine dan <em>alles</em> berekenen?<a class="headerlink" href="#kan-een-turingmachine-dan-alles-berekenen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="kan-een-turingmachine-dan-alles-berekenen">
+<h3>Kan een Turingmachine dan <em>alles</em> berekenen?<a class="headerlink" href="#kan-een-turingmachine-dan-alles-berekenen" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="Nee" src="../_images/no.jpg" /></p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1818,9 +1967,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../course/week_12.html" title="vorige pagina">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1836,30 +1987,34 @@ commentsRunWhenDOMLoaded(addUtterances);
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
-    
-      Door Harvey Mudd College / Hanze University of Applied Sciences<br/>
-    
-      <div class="extra_footer">
-        <div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Harvey Mudd College / Hanze University of Applied Sciences<br/>
+  
+    <div class="extra_footer">
+      <div>
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
     Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
 </div>
 
-      </div>
-  </p>
-</footer>
-</main>
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

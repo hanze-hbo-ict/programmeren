@@ -4,11 +4,13 @@
 <html lang="nl">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Waar staan we nu? &#8212; Programmeren</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,31 +20,30 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/save_state.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -78,18 +79,18 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
+    <script src="../_static/save_state.js"></script>
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://misja.github.io/programmeren/topics/9a_talstelsels.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Zoeken" href="../search.html" />
@@ -102,7 +103,21 @@ commentsRunWhenDOMLoaded(addUtterances);
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -111,9 +126,10 @@ commentsRunWhenDOMLoaded(addUtterances);
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -128,17 +144,18 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../about/syllabus.html">
-   Programmeren
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about/syllabus.html">
+                    Programmeren
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Opmerkingen
  </span>
@@ -1094,112 +1111,244 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
-                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/topics/9a_talstelsels.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Bronopslagplaats"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/9a_talstelsels.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open een probleem"><i class="fas fa-lightbulb"></i>open probleem</button></a>
-        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/topics/9a_talstelsels.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="bewerk deze pagina"><i class="fas fa-pencil-alt"></i>suggereren bewerken</button></a>
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
-        title="Volledig scherm"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/misja/programmeren/master?urlpath=lab/tree/topics/9a_talstelsels.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Lancering Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <button type="button" class="btn btn-secondary topbarbtn"
-            onclick="initThebeSBT()" title="Lancering Thebe" data-toggle="tooltip" data-placement="left"><i
-                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Inhoud
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/misja/programmeren/master?urlpath=lab/tree/topics/9a_talstelsels.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/misja/programmeren"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/9a_talstelsels.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/edit/master/topics/9a_talstelsels.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/topics/9a_talstelsels.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#maar-hoe-is-dit-fysiek-geimplementeerd">
    Maar hoe is dit
@@ -1358,12 +1507,11 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Waar staan we nu?</h1>
@@ -1372,7 +1520,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> Inhoud </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -1538,11 +1686,12 @@ commentsRunWhenDOMLoaded(addUtterances);
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="waar-staan-we-nu">
-<h1>Waar staan we nu?<a class="headerlink" href="#waar-staan-we-nu" title="Permalink naar deze titel">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="waar-staan-we-nu">
+<h1>Waar staan we nu?<a class="headerlink" href="#waar-staan-we-nu" title="Permalink naar deze titel">#</a></h1>
 <ul class="simple">
 <li><p>We bouwen nu programma’s op door middel van <em>compositie</em></p></li>
 <li><p>Hierdoor worden onze programma’s steeds krachtiger</p></li>
@@ -1551,17 +1700,17 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul class="simple">
 <li><p>Dit heet <strong>software-architectuur</strong></p></li>
 </ul>
-<div class="section" id="maar-hoe-is-dit-fysiek-geimplementeerd">
-<h2>Maar hoe is dit <em>fysiek</em> geïmplementeerd?<a class="headerlink" href="#maar-hoe-is-dit-fysiek-geimplementeerd" title="Permalink naar deze titel">¶</a></h2>
+<section id="maar-hoe-is-dit-fysiek-geimplementeerd">
+<h2>Maar hoe is dit <em>fysiek</em> geïmplementeerd?<a class="headerlink" href="#maar-hoe-is-dit-fysiek-geimplementeerd" title="Permalink naar deze titel">#</a></h2>
 <p><img alt="Compositie van decipher" src="../_images/softwarearch.png" /></p>
 <p><img alt="Representatie van decipher" src="../_images/computerarch.png" /></p>
 <ul class="simple">
 <li><p>We kijken nu naar hoe de computer dingen <em>representeert</em></p></li>
 <li><p>Dit heet <strong>computer-architectuur</strong></p></li>
 </ul>
-</div>
-<div class="section" id="hoe-zijn-gegevens-opgeslagen">
-<h2>Hoe zijn gegevens opgeslagen?<a class="headerlink" href="#hoe-zijn-gegevens-opgeslagen" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="hoe-zijn-gegevens-opgeslagen">
+<h2>Hoe zijn gegevens opgeslagen?<a class="headerlink" href="#hoe-zijn-gegevens-opgeslagen" title="Permalink naar deze titel">#</a></h2>
 <p><img alt="ASCII" src="../_images/ascii1.png" /></p>
 <ul class="simple">
 <li><p><em>Dezelfde</em> bits kunnen een andere waarde <em>representeren</em>, afhankelijk van het <em>type</em>!</p></li>
@@ -1571,51 +1720,51 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>8 bits = 1 byte = 1 plaats in het geheugen</p></li>
 <li><p>Beide geheugenplaatsen bevatten <em>dezelfde</em> bits</p></li>
 </ul>
-</div>
-<div class="section" id="wat-is-42-eigenlijk">
-<h2>Wat <em>is</em> 42 eigenlijk?<a class="headerlink" href="#wat-is-42-eigenlijk" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="wat-is-42-eigenlijk">
+<h2>Wat <em>is</em> 42 eigenlijk?<a class="headerlink" href="#wat-is-42-eigenlijk" title="Permalink naar deze titel">#</a></h2>
 <p><img alt="42" src="../_images/what-is-42.jpg" /></p>
-</div>
-<div class="section" id="tientallig-stelsel">
-<h2>Tientallig stelsel<a class="headerlink" href="#tientallig-stelsel" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="tientallig-stelsel">
+<h2>Tientallig stelsel<a class="headerlink" href="#tientallig-stelsel" title="Permalink naar deze titel">#</a></h2>
 <p><img alt="42" src="../_images/42.png" /></p>
 <div class="math notranslate nohighlight">
 \[42 = 4 \cdot 10 + 2 \cdot 1\]</div>
 <p><img alt="123" src="../_images/123.png" /></p>
 <div class="math notranslate nohighlight">
 \[123 = 1 \cdot 100 + 2 \cdot 10 + 3 \cdot 1\]</div>
-<div class="section" id="het-verschil-tussen-semantiek-en-syntax">
-<h3>Het verschil tussen semantiek en syntax<a class="headerlink" href="#het-verschil-tussen-semantiek-en-syntax" title="Permalink naar deze titel">¶</a></h3>
-<div class="section" id="semantiek-of-waarde">
-<h4>Semantiek (of waarde)<a class="headerlink" href="#semantiek-of-waarde" title="Permalink naar deze titel">¶</a></h4>
+<section id="het-verschil-tussen-semantiek-en-syntax">
+<h3>Het verschil tussen semantiek en syntax<a class="headerlink" href="#het-verschil-tussen-semantiek-en-syntax" title="Permalink naar deze titel">#</a></h3>
+<section id="semantiek-of-waarde">
+<h4>Semantiek (of waarde)<a class="headerlink" href="#semantiek-of-waarde" title="Permalink naar deze titel">#</a></h4>
 <p><img alt="Zaagblad" src="../_images/saw.jpg" /></p>
-</div>
-<div class="section" id="syntax">
-<h4>Syntax<a class="headerlink" href="#syntax" title="Permalink naar deze titel">¶</a></h4>
+</section>
+<section id="syntax">
+<h4>Syntax<a class="headerlink" href="#syntax" title="Permalink naar deze titel">#</a></h4>
 <p><img alt="42" src="../_images/42-syntax.png" /></p>
-</div>
-</div>
-<div class="section" id="wat-als-we-de-syntax-veranderen">
-<h3>Wat als we de syntax veranderen?<a class="headerlink" href="#wat-als-we-de-syntax-veranderen" title="Permalink naar deze titel">¶</a></h3>
-<div class="section" id="id1">
-<h4>Semantiek (of waarde)<a class="headerlink" href="#id1" title="Permalink naar deze titel">¶</a></h4>
+</section>
+</section>
+<section id="wat-als-we-de-syntax-veranderen">
+<h3>Wat als we de syntax veranderen?<a class="headerlink" href="#wat-als-we-de-syntax-veranderen" title="Permalink naar deze titel">#</a></h3>
+<section id="id1">
+<h4>Semantiek (of waarde)<a class="headerlink" href="#id1" title="Permalink naar deze titel">#</a></h4>
 <p><img alt="Zaagblad" src="../_images/saw.jpg" /></p>
-</div>
-<div class="section" id="id2">
-<h4>Syntax<a class="headerlink" href="#id2" title="Permalink naar deze titel">¶</a></h4>
+</section>
+<section id="id2">
+<h4>Syntax<a class="headerlink" href="#id2" title="Permalink naar deze titel">#</a></h4>
 <p><img alt="101010" src="../_images/101010-syntax.png" /></p>
 <p><img alt="There are 10 types of people: those who understand binary, and those who don't" src="../_images/binary.jpg" /></p>
-</div>
-</div>
-<div class="section" id="tientallig-stelsel-decimaal">
-<h3>Tientallig stelsel (decimaal)<a class="headerlink" href="#tientallig-stelsel-decimaal" title="Permalink naar deze titel">¶</a></h3>
+</section>
+</section>
+<section id="tientallig-stelsel-decimaal">
+<h3>Tientallig stelsel (decimaal)<a class="headerlink" href="#tientallig-stelsel-decimaal" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="42" src="../_images/42.png" /></p>
 <ul class="simple">
 <li><p>Grondtal <strong>10</strong></p></li>
 </ul>
-</div>
-<div class="section" id="tweetallig-stelsel-binair">
-<h3>Tweetallig stelsel (binair)<a class="headerlink" href="#tweetallig-stelsel-binair" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="tweetallig-stelsel-binair">
+<h3>Tweetallig stelsel (binair)<a class="headerlink" href="#tweetallig-stelsel-binair" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="101010" src="../_images/101010.png" /></p>
 <ul class="simple">
 <li><p>Grondtal <strong>2</strong></p></li>
@@ -1625,20 +1774,20 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul class="simple">
 <li><p>Elke kolom naar links is de volgende macht van het grondtal (dus steeds <em>keer</em> het grondtal)</p></li>
 </ul>
-</div>
-<div class="section" id="decimaal">
-<h3>Decimaal<a class="headerlink" href="#decimaal" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="decimaal">
+<h3>Decimaal<a class="headerlink" href="#decimaal" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="123" src="../_images/123.png" /></p>
-</div>
-<div class="section" id="binair">
-<h3>Binair<a class="headerlink" href="#binair" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="binair">
+<h3>Binair<a class="headerlink" href="#binair" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="1111011" src="../_images/1111011.png" /></p>
 <div class="math notranslate nohighlight">
 \[1111011_2 = 1 \cdot 64 + 1 \cdot 32 + 1 \cdot 16 + 1 \cdot 8 + 0 \cdot 4 + 1 \cdot 2 + 1 \cdot 1 = 123\]</div>
-</div>
-</div>
-<div class="section" id="quiz">
-<h2>Quiz<a class="headerlink" href="#quiz" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="quiz">
+<h2>Quiz<a class="headerlink" href="#quiz" title="Permalink naar deze titel">#</a></h2>
 <ol class="simple">
 <li><p>Converteer het binaire getal 110011 naar decimaal</p></li>
 <li><p>Converteer het binaire getal 10001000 naar decimaal</p></li>
@@ -1654,23 +1803,23 @@ commentsRunWhenDOMLoaded(addUtterances);
 101_{10} &amp;= 64 + 32 + 4 + 1 = 1100101_2
 \end{aligned}
 \end{split}\]</div>
-</div>
-<div class="section" id="rekenen-met-talstelsels">
-<h2>Rekenen met talstelsels<a class="headerlink" href="#rekenen-met-talstelsels" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="rekenen-met-talstelsels">
+<h2>Rekenen met talstelsels<a class="headerlink" href="#rekenen-met-talstelsels" title="Permalink naar deze titel">#</a></h2>
 <ul class="simple">
 <li><p>Hoe <em>werkt</em> rekenen eigenlijk?</p></li>
 <li><p>We bekijken twee bewerkingen: optellen en vermenigvuldigen</p></li>
 </ul>
-</div>
-<div class="section" id="tientallig-rekenen">
-<h2>Tientallig rekenen<a class="headerlink" href="#tientallig-rekenen" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="tientallig-rekenen">
+<h2>Tientallig rekenen<a class="headerlink" href="#tientallig-rekenen" title="Permalink naar deze titel">#</a></h2>
 <p><img alt="Optellen" src="../_images/optellen.jpg" /> <img alt="Tafels" src="../_images/tafels.jpg" /></p>
 <ul class="simple">
 <li><p>We gebruiken <em>opzoektabellen</em> om de berekeningen voor 1 cijfer te kunnen doen, en <em>algoritmes</em> voor langere getallen</p></li>
 </ul>
-</div>
-<div class="section" id="optellen">
-<h2>Optellen<a class="headerlink" href="#optellen" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="optellen">
+<h2>Optellen<a class="headerlink" href="#optellen" title="Permalink naar deze titel">#</a></h2>
 <ul class="simple">
 <li><p>Welk <em>algoritme</em> gebruiken we voor optellen?</p></li>
 </ul>
@@ -1684,9 +1833,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 1271
 \end{array}
 \end{split}\]</div>
-</div>
-<div class="section" id="vermenigvuldigen">
-<h2>Vermenigvuldigen<a class="headerlink" href="#vermenigvuldigen" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="vermenigvuldigen">
+<h2>Vermenigvuldigen<a class="headerlink" href="#vermenigvuldigen" title="Permalink naar deze titel">#</a></h2>
 <ul class="simple">
 <li><p>Welk <em>algoritme</em> gebruiken we voor vermenigvuldigen?</p></li>
 </ul>
@@ -1702,9 +1851,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 22218
 \end{array}
 \end{split}\]</div>
-</div>
-<div class="section" id="tweetallig-rekenen">
-<h2>Tweetallig rekenen<a class="headerlink" href="#tweetallig-rekenen" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="tweetallig-rekenen">
+<h2>Tweetallig rekenen<a class="headerlink" href="#tweetallig-rekenen" title="Permalink naar deze titel">#</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>+</p></th>
@@ -1745,9 +1894,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p><strong>Dezelfde</strong> aanpak, allen zijn de tabellen wat kleiner! 🥳</p></li>
 <li><p>Welke getallen komen in de tabel te staan?</p></li>
 </ul>
-</div>
-<div class="section" id="id3">
-<h2>Tweetallig rekenen<a class="headerlink" href="#id3" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="id3">
+<h2>Tweetallig rekenen<a class="headerlink" href="#id3" title="Permalink naar deze titel">#</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>+</p></th>
@@ -1787,9 +1936,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul class="simple">
 <li><p>Die 10 is binair, lees dus 2 decimaal!</p></li>
 </ul>
-</div>
-<div class="section" id="id4">
-<h2>Quiz<a class="headerlink" href="#id4" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="id4">
+<h2>Quiz<a class="headerlink" href="#id4" title="Permalink naar deze titel">#</a></h2>
 <p>Tel de binaire getallen 101101 en 1110 op <em>zonder</em> ze om te rekenen naar decimaal</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -1801,9 +1950,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 111011
 \end{array}
 \end{split}\]</div>
-</div>
-<div class="section" id="id5">
-<h2>Quiz<a class="headerlink" href="#id5" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="id5">
+<h2>Quiz<a class="headerlink" href="#id5" title="Permalink naar deze titel">#</a></h2>
 <p>Vermenigvuldig de binaire getalen 101101 en 1110 <em>zonder</em> ze om te rekenen naar decimaal</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -1819,9 +1968,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 1001110110
 \end{array}
 \end{split}\]</div>
-</div>
-<div class="section" id="verder-dan-binair">
-<h2>Verder dan binair!<a class="headerlink" href="#verder-dan-binair" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="verder-dan-binair">
+<h2>Verder dan binair!<a class="headerlink" href="#verder-dan-binair" title="Permalink naar deze titel">#</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Grondtal</p></th>
@@ -1848,18 +1997,18 @@ commentsRunWhenDOMLoaded(addUtterances);
 </tr>
 </tbody>
 </table>
-<div class="section" id="waarom-1120">
-<h3>Waarom 1120?<a class="headerlink" href="#waarom-1120" title="Permalink naar deze titel">¶</a></h3>
+<section id="waarom-1120">
+<h3>Waarom 1120?<a class="headerlink" href="#waarom-1120" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="1120" src="../_images/ternary.png" /></p>
 <div class="math notranslate nohighlight">
 \[
 1120_3 = 1 \cdot 27 + 1 \cdot 9 + 2 \cdot 3 + 0 \cdot 1 = 42
 \]</div>
 <p><img alt="To infinity and beyond!" src="../_images/to-infinity-and-beyond.jpg" /></p>
-</div>
-</div>
-<div class="section" id="id6">
-<h2>Quiz<a class="headerlink" href="#id6" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="id6">
+<h2>Quiz<a class="headerlink" href="#id6" title="Permalink naar deze titel">#</a></h2>
 <p>Welke van deze getallen is <em>niet</em> 42?</p>
 <ul class="simple">
 <li><p>222</p></li>
@@ -1868,9 +2017,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>46</p></li>
 <li><p>39</p></li>
 </ul>
-</div>
-<div class="section" id="id7">
-<h2>Quiz<a class="headerlink" href="#id7" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="id7">
+<h2>Quiz<a class="headerlink" href="#id7" title="Permalink naar deze titel">#</a></h2>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
@@ -1883,9 +2032,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul class="simple">
 <li><p>54 is geen 42 😞</p></li>
 </ul>
-</div>
-<div class="section" id="and-beyond">
-<h2>42 and beyond!<a class="headerlink" href="#and-beyond" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="and-beyond">
+<h2>42 and beyond!<a class="headerlink" href="#and-beyond" title="Permalink naar deze titel">#</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Grondtal</p></th>
@@ -1988,8 +2137,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul class="simple">
 <li><p>De <strong>Telefol</strong> uit Papua Nieuw Guinea gebruiken een 27-tallig (heptavigesimaal) stelsel (!)</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -2013,9 +2162,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../course/week_5.html" title="vorige pagina">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -2031,30 +2182,34 @@ commentsRunWhenDOMLoaded(addUtterances);
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
-    
-      Door Harvey Mudd College / Hanze University of Applied Sciences<br/>
-    
-      <div class="extra_footer">
-        <div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Harvey Mudd College / Hanze University of Applied Sciences<br/>
+  
+    <div class="extra_footer">
+      <div>
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
     Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
 </div>
 
-      </div>
-  </p>
-</footer>
-</main>
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

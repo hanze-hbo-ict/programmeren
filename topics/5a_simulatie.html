@@ -4,11 +4,13 @@
 <html lang="nl">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Simulatie &#8212; Programmeren</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,31 +20,30 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/save_state.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -78,18 +79,18 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
+    <script src="../_static/save_state.js"></script>
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://misja.github.io/programmeren/topics/5a_simulatie.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Zoeken" href="../search.html" />
@@ -102,7 +103,21 @@ commentsRunWhenDOMLoaded(addUtterances);
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -111,9 +126,10 @@ commentsRunWhenDOMLoaded(addUtterances);
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -128,17 +144,18 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../about/syllabus.html">
-   Programmeren
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about/syllabus.html">
+                    Programmeren
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Opmerkingen
  </span>
@@ -1094,112 +1111,244 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
-                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/topics/5a_simulatie.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Bronopslagplaats"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/5a_simulatie.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open een probleem"><i class="fas fa-lightbulb"></i>open probleem</button></a>
-        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/topics/5a_simulatie.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="bewerk deze pagina"><i class="fas fa-pencil-alt"></i>suggereren bewerken</button></a>
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
-        title="Volledig scherm"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/misja/programmeren/master?urlpath=lab/tree/topics/5a_simulatie.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Lancering Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <button type="button" class="btn btn-secondary topbarbtn"
-            onclick="initThebeSBT()" title="Lancering Thebe" data-toggle="tooltip" data-placement="left"><i
-                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Inhoud
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/misja/programmeren/master?urlpath=lab/tree/topics/5a_simulatie.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/misja/programmeren"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/5a_simulatie.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/edit/master/topics/5a_simulatie.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/topics/5a_simulatie.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#recursie">
    Recursie
@@ -1307,12 +1456,11 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Simulatie</h1>
@@ -1321,7 +1469,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> Inhoud </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -1436,18 +1584,19 @@ commentsRunWhenDOMLoaded(addUtterances);
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="simulatie">
-<h1>Simulatie<a class="headerlink" href="#simulatie" title="Permalink naar deze titel">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="simulatie">
+<h1>Simulatie<a class="headerlink" href="#simulatie" title="Permalink naar deze titel">#</a></h1>
 <p>Over kansen en kiezen!</p>
-<div class="section" id="recursie">
-<h2>Recursie<a class="headerlink" href="#recursie" title="Permalink naar deze titel">¶</a></h2>
+<section id="recursie">
+<h2>Recursie<a class="headerlink" href="#recursie" title="Permalink naar deze titel">#</a></h2>
 <p>Jij zorgt voor het EERSTE geval, recursie zorgt voor de REST</p>
 <p>Een korte herhaling van recursie en één van de belangrijkste lessen als het gaan om het ontwerp van recursieve functies: naast het bepalen van de base case(s) zorg jij voor het eerste geval en recursie zorgt voor de rest. Laten we dit nog een keer bekijken.</p>
-<div class="section" id="inwendig-product">
-<h3>Inwendig product<a class="headerlink" href="#inwendig-product" title="Permalink naar deze titel">¶</a></h3>
+<section id="inwendig-product">
+<h3>Inwendig product<a class="headerlink" href="#inwendig-product" title="Permalink naar deze titel">#</a></h3>
 <p>Of in het Engels: <em>dot product</em></p>
 <ol class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2]</span> <span class="pre">*</span> <span class="pre">[3,</span> <span class="pre">4]</span></code></p></li>
@@ -1476,16 +1625,16 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>Als de base cases zijn gedefieerd dan zorg jij voor het <em>eerste</em> geval <code class="docutils literal notranslate"><span class="pre">L[0]</span> <span class="pre">*</span> <span class="pre">K[0]</span></code> en recursie zorgt voor de <em>rest</em> <code class="docutils literal notranslate"><span class="pre">dot(L[1:],</span> <span class="pre">K[1:])</span></code>. Het is een product, dus jouw geval en de rest moeten wel met elkaar gecombineerd worden (<code class="docutils literal notranslate"><span class="pre">+</span></code>).</p>
-</div>
-</div>
-<div class="section" id="visualiseren">
-<h2>Visualiseren<a class="headerlink" href="#visualiseren" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="visualiseren">
+<h2>Visualiseren<a class="headerlink" href="#visualiseren" title="Permalink naar deze titel">#</a></h2>
 <p>Een hulpmiddel voor het visualiseren van de stack: <a class="reference external" href="http://www.pythontutor.com/">pythontutor.com</a></p>
 <p><img alt="pythontutor.org" src="../_images/pythontutor_dot.png" /></p>
 <p>Gebruik <a class="reference external" href="http://www.pythontutor.com/">pythontutor.com</a> voor het verkennen van een probleem of (visueel) testen van jouw oplossing! Het <code class="docutils literal notranslate"><span class="pre">dot</span></code> voorbeeld kan je gelijk <a class="reference external" href="https://pythontutor.com/visualize.html#code=def%20dot%28L,%20K%29%3A%0A%20%20%20%20if%20len%28L%29%20%3D%3D%200%20or%20len%28K%29%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20return%200.0%0A%20%20%20%20%0A%20%20%20%20elif%20len%28L%29%20%21%3D%20len%28K%29%3A%0A%20%20%20%20%20%20%20%20return%200.0%0A%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20return%20L%5B0%5D%20*%20K%5B0%5D%20%2B%20dot%28L%5B1%3A%5D,%20K%5B1%3A%5D%29%0A%0Adot%28%5B3,%202,%204%5D,%20%5B4,%207,%204%5D%29&amp;cumulative=false&amp;heapPrimitives=nevernest&amp;mode=edit&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">uitproberen</a>.</p>
-</div>
-<div class="section" id="toeval-en-keus">
-<h2>Toeval en keus<a class="headerlink" href="#toeval-en-keus" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="toeval-en-keus">
+<h2>Toeval en keus<a class="headerlink" href="#toeval-en-keus" title="Permalink naar deze titel">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
 </pre></div>
 </div>
@@ -1500,8 +1649,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>Alleen de functie <code class="docutils literal notranslate"><span class="pre">choice</span></code> is nu beschikbaar …</p>
-<div class="section" id="import">
-<h3>Import<a class="headerlink" href="#import" title="Permalink naar deze titel">¶</a></h3>
+<section id="import">
+<h3>Import<a class="headerlink" href="#import" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
 
 <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
@@ -1521,9 +1670,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>In dit geval zal jouw functie <code class="docutils literal notranslate"><span class="pre">choice</span></code> worden aanroepen, het “overschrijft” de functie <code class="docutils literal notranslate"><span class="pre">choice</span></code> die je eerder met het import statement uit de module random hebt geïmporteerd. In dit geval kan het handig zijn om alleen de module random te importeren en via <code class="docutils literal notranslate"><span class="pre">random.choice</span></code> de oorspronkelijke functie te kunnen aanroepen (als dat nodig is).</p>
-</div>
-<div class="section" id="gebruik">
-<h3>Gebruik<a class="headerlink" href="#gebruik" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="gebruik">
+<h3>Gebruik<a class="headerlink" href="#gebruik" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">choice</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1537,9 +1686,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>of 1 element uit een list</p>
-</div>
-<div class="section" id="reeksen-maken">
-<h3>Reeksen maken<a class="headerlink" href="#reeksen-maken" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="reeksen-maken">
+<h3>Reeksen maken<a class="headerlink" href="#reeksen-maken" title="Permalink naar deze titel">#</a></h3>
 <p>Kan je ook eigen reeksen maken?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1579,9 +1728,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="een-inclusieve-reeks">
-<h3>Een inclusieve reeks<a class="headerlink" href="#een-inclusieve-reeks" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="een-inclusieve-reeks">
+<h3>Een inclusieve reeks<a class="headerlink" href="#een-inclusieve-reeks" title="Permalink naar deze titel">#</a></h3>
 <p>Een willekeurig getal uit de reeks 0 <strong>tot en met</strong> 99?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1597,9 +1746,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="een-precieze-keus">
-<h3>Een precieze keus<a class="headerlink" href="#een-precieze-keus" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="een-precieze-keus">
+<h3>Een precieze keus<a class="headerlink" href="#een-precieze-keus" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">uniform</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">hi</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1619,10 +1768,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <p>Helaas, geen <code class="docutils literal notranslate"><span class="pre">42.0</span></code>. Python <code class="docutils literal notranslate"><span class="pre">float</span></code> waarden hebben 16 decimale posities aan precisie en die worden in dit geval allemaal gebruikt!</p>
-</div>
-</div>
-<div class="section" id="een-random-functie">
-<h2>Een random functie<a class="headerlink" href="#een-random-functie" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="een-random-functie">
+<h2>Een random functie<a class="headerlink" href="#een-random-functie" title="Permalink naar deze titel">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="k">def</span> <span class="nf">guess</span><span class="p">(</span><span class="n">hidden</span><span class="p">):</span>
@@ -1637,17 +1786,17 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>De <em>docstring</em> verraadt al wat deze functie doet, de computer moet een getal raden dat wij hebben gekozen (een getal tussen 0 en 99), dit is de waarde van de parameter <code class="docutils literal notranslate"><span class="pre">hidden</span></code>. Als je de functie uitvoert zien we niet veel, alleen dat de computer op een gegeven moment het getal heeft gevonden. Laten we een paar aanpassingen maken.</p>
-<div class="section" id="uitbreidingen">
-<h3>Uitbreidingen<a class="headerlink" href="#uitbreidingen" title="Permalink naar deze titel">¶</a></h3>
+<section id="uitbreidingen">
+<h3>Uitbreidingen<a class="headerlink" href="#uitbreidingen" title="Permalink naar deze titel">#</a></h3>
 <ul class="simple">
 <li><p>print steeds de keuze?</p></li>
 <li><p>het aantal pogingen als returnwaarde?</p></li>
 <li><p>dit gaat snel, kan het vertraagd worden?</p></li>
 <li><p>het te verwachten aantal pogingen?!?</p></li>
 </ul>
-</div>
-<div class="section" id="recursief-pogingen-tellen">
-<h3>Recursief pogingen tellen<a class="headerlink" href="#recursief-pogingen-tellen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="recursief-pogingen-tellen">
+<h3>Recursief pogingen tellen<a class="headerlink" href="#recursief-pogingen-tellen" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">import</span> <span class="nn">time</span>
 
@@ -1678,10 +1827,10 @@ E = 1\cdot\frac{1}{100} + (E + 1)\cdot\frac{99}{100}
 E = 100
 \]</div>
 <p>We kunnen dus 100 pogingen <em>verwachten</em>, maar wat betekent dit getal nu? In het geval dat we deze funtie een oneindig aantal keer zouden uitvoeren zal het gemiddeld aantal pogingen uitkomen op 100 (het gemiddelde van alle mogelijke uitkomsten).</p>
-</div>
-</div>
-<div class="section" id="quiz">
-<h2>Quiz<a class="headerlink" href="#quiz" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="quiz">
+<h2>Quiz<a class="headerlink" href="#quiz" title="Permalink naar deze titel">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
 </pre></div>
 </div>
@@ -1700,8 +1849,8 @@ E = 100
 <li><p><code class="docutils literal notranslate"><span class="pre">choice([list(range(5))])</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">choice[list(range(5))]</span></code></p></li>
 </ol>
-<div class="section" id="oplossing">
-<h3>Oplossing<a class="headerlink" href="#oplossing" title="Permalink naar deze titel">¶</a></h3>
+<section id="oplossing">
+<h3>Oplossing<a class="headerlink" href="#oplossing" title="Permalink naar deze titel">#</a></h3>
 <ol class="simple">
 <li><p><span class="math notranslate nohighlight">\(\frac{2}{4} = \frac{1}{2}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\frac{3}{9} = \frac{1}{3}\)</span> (<code class="docutils literal notranslate"><span class="pre">[0,1,2,3,4]</span> <span class="pre">+</span> <span class="pre">[4,2,4,2]</span></code> is <code class="docutils literal notranslate"><span class="pre">[0,1,2,3,4,4,2,4,2]</span></code>)</p></li>
@@ -1717,10 +1866,10 @@ E = 100
 <li><p>is correct! (en geeft altijd <code class="docutils literal notranslate"><span class="pre">[0,1,2,3,4]</span></code> terug)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">choice</span></code> is een functie, dus ronde haken voor openen en sluiten: <code class="docutils literal notranslate"><span class="pre">choice(list(range(5)))</span></code></p></li>
 </ol>
-</div>
-</div>
-<div class="section" id="twee-monte-carlo-s">
-<h2>Twee Monte Carlo’s<a class="headerlink" href="#twee-monte-carlo-s" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="twee-monte-carlo-s">
+<h2>Twee Monte Carlo’s<a class="headerlink" href="#twee-monte-carlo-s" title="Permalink naar deze titel">#</a></h2>
 <p><img alt="Casino Monte Carlo" src="../_images/casino_monte_carlo.jpg" /></p>
 <p>Het casino van Monte Carlo, als je een gokje wilt wagen!</p>
 <p><img alt="Casino Monte Carlo" src="../_images/casino-royale-bond.jpg" /></p>
@@ -1733,11 +1882,11 @@ E = 100
 <p>Ulam, Stan Ulam (bekend van <a class="reference external" href="https://nl.wikipedia.org/wiki/Monte-Carlosimulatie">Monte Carlo simulaties</a>)</p>
 <p>Bij het spelen van solitaire tijdens zijn herstel na een operatie had Stan Ulam gedacht aan het spelen van honderden spelletjes om de kans op een succesvolle uitkomst statistisch in te schatten. Ulam was betrokken bij <a class="reference external" href="https://en.wikipedia.org/wiki/ENIAC">ENIAC</a>, de eerste elektronische computer voor algemeen gebruik en collega <a class="reference external" href="https://nl.wikipedia.org/wiki/John_von_Neumann">John von Neumann</a> stelde in maart 1947 voor een vergelijkbaar probleem op ENIAC uit te werken.</p>
 <p>Waarom een “Monte Carlo” simulatie? Het is vernoemd naar <a class="reference external" href="https://nl.wikipedia.org/wiki/Monte_Carlo_(Monaco)">Monte Carlo</a>, waar je in het casino kan aanschuiven om verschillende gokspellen te spelen. De kans om te winnen kan je berekenen, maar ook simuleren met <code class="docutils literal notranslate"><span class="pre">random</span></code>izatie!.</p>
-</div>
-<div class="section" id="monte-carlo-in-actie">
-<h2>Monte Carlo in actie<a class="headerlink" href="#monte-carlo-in-actie" title="Permalink naar deze titel">¶</a></h2>
-<div class="section" id="dobbelen">
-<h3>Dobbelen<a class="headerlink" href="#dobbelen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="monte-carlo-in-actie">
+<h2>Monte Carlo in actie<a class="headerlink" href="#monte-carlo-in-actie" title="Permalink naar deze titel">#</a></h2>
+<section id="dobbelen">
+<h3>Dobbelen<a class="headerlink" href="#dobbelen" title="Permalink naar deze titel">#</a></h3>
 <p><img alt="Dubbel 6" src="../_images/dice-61.png" /></p>
 <p>Hoeveel dubbel paar ogen gooi je als je N keer werpt?</p>
 <div class="cell docutils container">
@@ -1770,9 +1919,9 @@ E = 100
 </div>
 <p>Let op waar de dobbelstenen in de code worden geworpen, kan je zien hoe de worp voor beide wordt gesimuleerd? <code class="docutils literal notranslate"><span class="pre">choice([1,2,3,4,5,6])</span></code> en <code class="docutils literal notranslate"><span class="pre">choice(list(range(1,7)))</span></code> geven natuurlijk hetzelfde resultaat, de computer zal het meest blij zijn met de eerste variant omdat het efficënter is. In het eerste geval is de list als argument voor <code class="docutils literal notranslate"><span class="pre">choice</span></code> al <em>gedefinieerd</em>, in het tweede geval moet het steeds weer worden <em>gegenereerd</em> (aangemaakt).</p>
 <p>Bij elke worp zijn <span class="math notranslate nohighlight">\(6 \times 6 = 36\)</span> mogelijke combinaties van ogen mogelijk. 6 van deze mogelijkheden zijn gelijke paren. De kans op een gelijk paar ogen is dus <span class="math notranslate nohighlight">\(\frac{6}{36}\)</span> wat gelijk is aan <span class="math notranslate nohighlight">\(\frac{1}{6}\)</span> en deze simulatie komt daar héél dichtbij!</p>
-</div>
-<div class="section" id="monte-carlo-monty-hall">
-<h3>Monte Carlo Monty Hall<a class="headerlink" href="#monte-carlo-monty-hall" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="monte-carlo-monty-hall">
+<h3>Monte Carlo Monty Hall<a class="headerlink" href="#monte-carlo-monty-hall" title="Permalink naar deze titel">#</a></h3>
 <p>Het <a class="reference external" href="https://nl.wikipedia.org/wiki/Driedeurenprobleem">driedeurenprobleem</a></p>
 <p><img alt="Let's make a deal" src="../_images/monty_hall.jpg" /></p>
 <p>In de jaren 60 van de vorige eeuw kon in de spelshow “Let’s Make a Deal”, gepresenteerd door <a class="reference external" href="https://nl.wikipedia.org/wiki/Monty_Hall">Monty Hall</a>, een auto worden gewonnen door één van de drie deuren te kiezen (achter de andere twee deuren stond een geit!).</p>
@@ -1829,18 +1978,18 @@ Bij wisselen winnen we 404 keer
 <p><img alt="A few minutes later, the goat from behind door C drives away in the car." src="../_images/xkcd_monty_hall.png" /></p>
 <p>Maar als je liever een geit wint?</p>
 <p>Een uitdaging, hoe zou je de simulatie schrijven als je liever een geit (of, pmfp) wint?!?</p>
-</div>
-<div class="section" id="dichter-bij-huis">
-<h3>Dichter bij huis<a class="headerlink" href="#dichter-bij-huis" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="dichter-bij-huis">
+<h3>Dichter bij huis<a class="headerlink" href="#dichter-bij-huis" title="Permalink naar deze titel">#</a></h3>
 <p>Een scenario:</p>
 <blockquote>
 <div><p>Een overwerkte student gaat op pad na een “late-night” ontbijt (of lunch, wie zal het zeggen). De student strompelt willekeurig steeds een stap richting huis of naar de campus …</p>
 </div></blockquote>
 <p>Zodra de student thuis of op de campus aankomt is de reis voorbij.</p>
 <p>Als de student steeds willekeurige stappen neem óf naar huis óf naar de campus, waar komt de student dan uiteindelijk terecht? Dit scenario kan worden uitgewerkt in een programma en is een voorbeeld van een “<a class="reference external" href="https://nl.wikipedia.org/wiki/Toevalsbeweging">random walk</a>”!</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1864,9 +2013,11 @@ Bij wisselen winnen we 404 keer
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../course/week_3.html" title="vorige pagina">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1882,30 +2033,34 @@ Bij wisselen winnen we 404 keer
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
-    
-      Door Harvey Mudd College / Hanze University of Applied Sciences<br/>
-    
-      <div class="extra_footer">
-        <div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Harvey Mudd College / Hanze University of Applied Sciences<br/>
+  
+    <div class="extra_footer">
+      <div>
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
     Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
 </div>
 
-      </div>
-  </p>
-</footer>
-</main>
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

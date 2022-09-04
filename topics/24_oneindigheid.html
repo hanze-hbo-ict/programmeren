@@ -4,11 +4,13 @@
 <html lang="nl">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Oneindigheid &#8212; Programmeren</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,31 +20,30 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/save_state.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -78,18 +79,18 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
+    <script src="../_static/save_state.js"></script>
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://misja.github.io/programmeren/topics/24_oneindigheid.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Zoeken" href="../search.html" />
@@ -102,7 +103,21 @@ commentsRunWhenDOMLoaded(addUtterances);
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -111,9 +126,10 @@ commentsRunWhenDOMLoaded(addUtterances);
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -128,17 +144,18 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../about/syllabus.html">
-   Programmeren
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about/syllabus.html">
+                    Programmeren
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Opmerkingen
  </span>
@@ -1094,112 +1111,244 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
-                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/topics/24_oneindigheid.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/misja/programmeren"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Bronopslagplaats"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/24_oneindigheid.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open een probleem"><i class="fas fa-lightbulb"></i>open probleem</button></a>
-        <a class="edit-button" href="https://github.com/misja/programmeren/edit/master/topics/24_oneindigheid.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="bewerk deze pagina"><i class="fas fa-pencil-alt"></i>suggereren bewerken</button></a>
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
-        title="Volledig scherm"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/misja/programmeren/master?urlpath=lab/tree/topics/24_oneindigheid.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Lancering Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <button type="button" class="btn btn-secondary topbarbtn"
-            onclick="initThebeSBT()" title="Lancering Thebe" data-toggle="tooltip" data-placement="left"><i
-                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Inhoud
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/misja/programmeren/master?urlpath=lab/tree/topics/24_oneindigheid.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/misja/programmeren"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/24_oneindigheid.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/misja/programmeren/edit/master/topics/24_oneindigheid.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/topics/24_oneindigheid.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#programma-s-berekenen-functies">
    Programma’s berekenen functies
@@ -1315,12 +1464,11 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Oneindigheid</h1>
@@ -1329,7 +1477,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> Inhoud </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -1452,11 +1600,12 @@ commentsRunWhenDOMLoaded(addUtterances);
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="oneindigheid">
-<h1>Oneindigheid<a class="headerlink" href="#oneindigheid" title="Permalink naar deze titel">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="oneindigheid">
+<h1>Oneindigheid<a class="headerlink" href="#oneindigheid" title="Permalink naar deze titel">#</a></h1>
 <ul class="simple">
 <li><p>Oneindig soorten oneindigheid!</p></li>
 </ul>
@@ -1464,8 +1613,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul class="simple">
 <li><p>Of in ieder geval twee…</p></li>
 </ul>
-<div class="section" id="programma-s-berekenen-functies">
-<h2>Programma’s berekenen functies<a class="headerlink" href="#programma-s-berekenen-functies" title="Permalink naar deze titel">¶</a></h2>
+<section id="programma-s-berekenen-functies">
+<h2>Programma’s berekenen functies<a class="headerlink" href="#programma-s-berekenen-functies" title="Permalink naar deze titel">#</a></h2>
 <div class="math notranslate nohighlight">
 \[
 f(x) = 2x
@@ -1475,8 +1624,8 @@ f(x) = 2x
     <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span>
 </pre></div>
 </div>
-<div class="section" id="ander-voorbeeld">
-<h3>Ander voorbeeld<a class="headerlink" href="#ander-voorbeeld" title="Permalink naar deze titel">¶</a></h3>
+<section id="ander-voorbeeld">
+<h3>Ander voorbeeld<a class="headerlink" href="#ander-voorbeeld" title="Permalink naar deze titel">#</a></h3>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 f(x) = \left\{ \begin{aligned}
@@ -1489,18 +1638,18 @@ f(x) = \left\{ \begin{aligned}
     <span class="k">return</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="hoeveel-functies-zijn-er">
-<h2>Hoeveel functies zijn er?<a class="headerlink" href="#hoeveel-functies-zijn-er" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="hoeveel-functies-zijn-er">
+<h2>Hoeveel functies zijn er?<a class="headerlink" href="#hoeveel-functies-zijn-er" title="Permalink naar deze titel">#</a></h2>
 <ul class="simple">
 <li><p>Kan je voor elke functie een programma schrijven?</p></li>
 <li><p>Zijn er meer functies dan programma’s?</p></li>
 <li><p>Zijn er meer programma’s dan functies?</p></li>
 </ul>
-</div>
-<div class="section" id="er-zijn-oneindig-veel-functies">
-<h2>Er zijn oneindig veel functies<a class="headerlink" href="#er-zijn-oneindig-veel-functies" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="er-zijn-oneindig-veel-functies">
+<h2>Er zijn oneindig veel functies<a class="headerlink" href="#er-zijn-oneindig-veel-functies" title="Permalink naar deze titel">#</a></h2>
 <ul class="simple">
 <li><p>We bekijken nu even alleen functies die een positieve <code class="docutils literal notranslate"><span class="pre">int</span></code> als invoer krijgen en <code class="docutils literal notranslate"><span class="pre">0</span></code> of <code class="docutils literal notranslate"><span class="pre">1</span></code> als uitvoer geven (dus <strong>beslissingsproblemen</strong>)</p></li>
 </ul>
@@ -1536,9 +1685,9 @@ f(x) = \left\{ \begin{aligned}
 <ul class="simple">
 <li><p>Maar dit kan natuurlijk voor elk getal, niet alleen 1, en er zijn oneindig veel getallen</p></li>
 </ul>
-</div>
-<div class="section" id="er-zijn-oneindig-veel-programma-s">
-<h2>Er zijn oneindig veel programma’s<a class="headerlink" href="#er-zijn-oneindig-veel-programma-s" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="er-zijn-oneindig-veel-programma-s">
+<h2>Er zijn oneindig veel programma’s<a class="headerlink" href="#er-zijn-oneindig-veel-programma-s" title="Permalink naar deze titel">#</a></h2>
 <ul class="simple">
 <li><p>We tellen alle programma’s, ook met syntaxfouten</p></li>
 <li><p>Twee programma’s die er anders uitzien maar hetzelfde berekenen tellen allebei</p></li>
@@ -1564,15 +1713,15 @@ f(x) = \left\{ \begin{aligned}
 <li><p>Dit kan natuurlijk ook voor elk getal, niet alleen voor 1</p></li>
 <li><p>We doen even alsof de computer oneindig veel geheugen heeft</p></li>
 </ul>
-</div>
-<div class="section" id="er-zijn-meer-functies-dan-programma-s">
-<h2>Er zijn meer functies dan programma’s<a class="headerlink" href="#er-zijn-meer-functies-dan-programma-s" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="er-zijn-meer-functies-dan-programma-s">
+<h2>Er zijn meer functies dan programma’s<a class="headerlink" href="#er-zijn-meer-functies-dan-programma-s" title="Permalink naar deze titel">#</a></h2>
 <ul class="simple">
 <li><p>Maar ze zijn allebei oneindig?</p></li>
 <li><p>Toch zijn er meer functies!</p></li>
 </ul>
-<div class="section" id="programma-s-lijken-op-natuurlijke-getallen">
-<h3>Programma’s “lijken” op natuurlijke getallen<a class="headerlink" href="#programma-s-lijken-op-natuurlijke-getallen" title="Permalink naar deze titel">¶</a></h3>
+<section id="programma-s-lijken-op-natuurlijke-getallen">
+<h3>Programma’s “lijken” op natuurlijke getallen<a class="headerlink" href="#programma-s-lijken-op-natuurlijke-getallen" title="Permalink naar deze titel">#</a></h3>
 <ul class="simple">
 <li><p>Natuurlijke getallen zijn integers die niet negatief zijn.</p></li>
 <li><p>Bij elk programma “hoort” een integer.</p></li>
@@ -1597,9 +1746,9 @@ f(x) = \left\{ \begin{aligned}
     <span class="k">return</span> <span class="n">int_to_program</span><span class="p">(</span><span class="n">i</span> <span class="o">//</span> <span class="mi">256</span><span class="p">)</span> <span class="o">+</span> <span class="nb">chr</span><span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">256</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="functies-lijken-op-reele-getallen">
-<h3>Functies “lijken” op reële getallen<a class="headerlink" href="#functies-lijken-op-reele-getallen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="functies-lijken-op-reele-getallen">
+<h3>Functies “lijken” op reële getallen<a class="headerlink" href="#functies-lijken-op-reele-getallen" title="Permalink naar deze titel">#</a></h3>
 <ul class="simple">
 <li><p>Reële getallen zijn kommagetallen</p></li>
 <li><p>We beperken ons hier tot getallen van 0 tot 1</p></li>
@@ -1641,17 +1790,17 @@ r_6 = 0{,}00000000\ldots_2 &amp; \text{hoort bij} &amp;
 f_6(x) = \text{ ?}
 \end{array}
 \end{split}\]</div>
-</div>
-</div>
-<div class="section" id="meer-integers-of-meer-kommagetallen">
-<h2>Meer integers of meer kommagetallen?<a class="headerlink" href="#meer-integers-of-meer-kommagetallen" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="meer-integers-of-meer-kommagetallen">
+<h2>Meer integers of meer kommagetallen?<a class="headerlink" href="#meer-integers-of-meer-kommagetallen" title="Permalink naar deze titel">#</a></h2>
 <ul class="simple">
 <li><p>Er zijn meer kommagetallen dan integers</p></li>
 <li><p>Maar ze zijn allebei oneindig?</p></li>
 <li><p>Niet alle oneindigheden zijn gelijk!</p></li>
 </ul>
-<div class="section" id="bijecties">
-<h3>Bijecties<a class="headerlink" href="#bijecties" title="Permalink naar deze titel">¶</a></h3>
+<section id="bijecties">
+<h3>Bijecties<a class="headerlink" href="#bijecties" title="Permalink naar deze titel">#</a></h3>
 <ul class="simple">
 <li><p>Twee verzamelingen (bijvoorbeeld programma’s en integers) zijn even groot als je een één-op-éénrelatie kan vinden tussen de twee verzamelingen</p></li>
 <li><p>Dit heet een <strong>bijectie</strong>.</p></li>
@@ -1683,9 +1832,9 @@ f_6(x) = \text{ ?}
         <span class="k">return</span> <span class="o">-</span><span class="n">p</span> <span class="o">//</span> <span class="mi">2</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="positieve-integers-en-reele-getallen">
-<h3>Positieve integers en reële getallen<a class="headerlink" href="#positieve-integers-en-reele-getallen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="positieve-integers-en-reele-getallen">
+<h3>Positieve integers en reële getallen<a class="headerlink" href="#positieve-integers-en-reele-getallen" title="Permalink naar deze titel">#</a></h3>
 <ul class="simple">
 <li><p>Kunnen we een bijectie vinden tussen de positieve integers en de reële getallen van 0 tot 1?</p></li>
 <li><p>Dus: kunnen we alle reële getallen in een lijst zetten?</p></li>
@@ -1707,9 +1856,9 @@ f_6(x) = \text{ ?}
 <li><p>Waarom is dit geen bijectie?</p></li>
 </ul>
 <p>Aan de ene kant wordt het getal <span class="math notranslate nohighlight">\(0{,}1\)</span> op 1 afgebeeld, maar ook op 10 (immers, <span class="math notranslate nohighlight">\(0{,}10 = 0{,}1\)</span>), maar belangrijker, getallen als <span class="math notranslate nohighlight">\(\frac{1}{9} = 0,1111\ldots\)</span> worden helemaal niet afgebeeld: dan zou je een integer moeten hebben met een oneindig aantal getallen, maar die bestaan niet. Integers worden wel oneindig groot, maar elke integer kan je schrijven met een eindig aantal cijfers.</p>
-</div>
-<div class="section" id="cantor-s-diagonaalargument">
-<h3>Cantor’s diagonaalargument<a class="headerlink" href="#cantor-s-diagonaalargument" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="cantor-s-diagonaalargument">
+<h3>Cantor’s diagonaalargument<a class="headerlink" href="#cantor-s-diagonaalargument" title="Permalink naar deze titel">#</a></h3>
 <img alt="Georg Cantor" src="../_images/cantor.jpg" />
 <ul class="simple">
 <li><p>Georg Cantor bewees dat, hoe je je lijst ook maakt, er altijd reële getallen missen!</p></li>
@@ -1731,9 +1880,9 @@ f_6(x) = \text{ ?}
 <li><p>De lijst is dus niet volledig.</p></li>
 </ul>
 <p>Zie ook <a class="reference external" href="https://youtu.be/elvOZm0d4H0">deze video</a> van Numberphile over het diagonaalargument van Cantor.</p>
-</div>
-<div class="section" id="aftelbaar-en-overaftelbaar">
-<h3>Aftelbaar en overaftelbaar<a class="headerlink" href="#aftelbaar-en-overaftelbaar" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="aftelbaar-en-overaftelbaar">
+<h3>Aftelbaar en overaftelbaar<a class="headerlink" href="#aftelbaar-en-overaftelbaar" title="Permalink naar deze titel">#</a></h3>
 <ul class="simple">
 <li><p>Er zijn dus echt meer reële getallen dan integers.</p></li>
 <li><p>Integers noemen we <em>aftelbaar</em>.</p></li>
@@ -1744,10 +1893,10 @@ f_6(x) = \text{ ?}
 <li><p>Ongeacht wat voor computer we zouden kunnen bedenken.</p></li>
 </ul>
 <p><img alt="Mind blown" src="../_images/mind_blown.gif" /></p>
-</div>
-</div>
-<div class="section" id="complexiteit-van-getallen">
-<h2>“Complexiteit” van getallen<a class="headerlink" href="#complexiteit-van-getallen" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="complexiteit-van-getallen">
+<h2>“Complexiteit” van getallen<a class="headerlink" href="#complexiteit-van-getallen" title="Permalink naar deze titel">#</a></h2>
 <ul class="simple">
 <li><p>Een voorbeeld van een functie die je niet kan berekenen.</p></li>
 <li><p>Hoe <em>complex</em> is een getal?</p></li>
@@ -1757,8 +1906,8 @@ f_6(x) = \text{ ?}
 <li><p>Laten we <strong>“complexiteit”</strong> definiëren als de lengte van de kortste functie dat dat getal kan berekenen.</p></li>
 <li><p>Dit wordt wel <em>Kolmogorov-complexiteit</em> genoemd</p></li>
 </ul>
-<div class="section" id="een-functie-voor-kolmogorov-complexiteit">
-<h3>Een functie voor Kolmogorov-complexiteit<a class="headerlink" href="#een-functie-voor-kolmogorov-complexiteit" title="Permalink naar deze titel">¶</a></h3>
+<section id="een-functie-voor-kolmogorov-complexiteit">
+<h3>Een functie voor Kolmogorov-complexiteit<a class="headerlink" href="#een-functie-voor-kolmogorov-complexiteit" title="Permalink naar deze titel">#</a></h3>
 <img alt="Andrej Kolmogorov" src="../_images/kolmogorov.jpg" />
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">complexity(x)</span></code>: complexiteit van <code class="docutils literal notranslate"><span class="pre">x</span></code></p></li>
@@ -1785,9 +1934,9 @@ f_6(x) = \text{ ?}
 100005 &amp; \rightarrow &amp; 23
 \end{array}
 \end{split}\]</div>
-</div>
-<div class="section" id="quiz">
-<h3>Quiz<a class="headerlink" href="#quiz" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="quiz">
+<h3>Quiz<a class="headerlink" href="#quiz" title="Permalink naar deze titel">#</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">complexity(42)</span> <span class="pre">==</span> <span class="pre">16</span> <span class="pre">+</span> <span class="pre">2</span> <span class="pre">==</span> <span class="pre">18</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">complexity(9001)</span> <span class="pre">==</span> <span class="pre">16</span> <span class="pre">+</span> <span class="pre">?</span></code></p></li>
@@ -1799,9 +1948,9 @@ f_6(x) = \text{ ?}
 <li><p><code class="docutils literal notranslate"><span class="pre">complexity(31415926...)</span> <span class="pre">==</span> <span class="pre">16</span> <span class="pre">+</span> <span class="pre">?</span></code> (een biljoen cijfers van π)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">complexity(74682437...)</span> <span class="pre">==</span> <span class="pre">16</span> <span class="pre">+</span> <span class="pre">?</span></code> (duizend willekeurige cijfers)</p></li>
 </ul>
-</div>
-<div class="section" id="oplossingen">
-<h3>Oplossingen<a class="headerlink" href="#oplossingen" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="oplossingen">
+<h3>Oplossingen<a class="headerlink" href="#oplossingen" title="Permalink naar deze titel">#</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">complexity(42)</span> <span class="pre">==</span> <span class="pre">16</span> <span class="pre">+</span> <span class="pre">2</span> <span class="pre">==</span> <span class="pre">18</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">complexity(9001)</span> <span class="pre">==</span> <span class="pre">16</span> <span class="pre">+</span> <span class="pre">4</span> <span class="pre">==</span> <span class="pre">20</span></code></p></li>
@@ -1818,9 +1967,9 @@ f_6(x) = \text{ ?}
 </pre></div>
 </div>
 <p>Dit is een gecomprimeerde versie van de functie <code class="docutils literal notranslate"><span class="pre">for_pi</span></code> die je eerdr geschreven hebt.</p>
-</div>
-<div class="section" id="is-deze-functie-berekenbaar">
-<h3>Is deze functie berekenbaar?<a class="headerlink" href="#is-deze-functie-berekenbaar" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="is-deze-functie-berekenbaar">
+<h3>Is deze functie berekenbaar?<a class="headerlink" href="#is-deze-functie-berekenbaar" title="Permalink naar deze titel">#</a></h3>
 <ul class="simple">
 <li><p>De functie is duidelijk beschreven en heeft duidelijke invoer en uitvoer</p></li>
 <li><p>Maar niet berekenbaar! Elke implementatie bevat een bug</p></li>
@@ -1838,9 +1987,9 @@ f_6(x) = \text{ ?}
 <ul class="simple">
 <li><p>Bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">complexity(42)</span> <span class="pre">==</span> <span class="pre">18</span> <span class="pre">!=</span> <span class="pre">54</span></code> (en natuurlijk een heleboel andere bugs)</p></li>
 </ul>
-</div>
-<div class="section" id="poging-2">
-<h3>Poging 2<a class="headerlink" href="#poging-2" title="Permalink naar deze titel">¶</a></h3>
+</section>
+<section id="poging-2">
+<h3>Poging 2<a class="headerlink" href="#poging-2" title="Permalink naar deze titel">#</a></h3>
 <ul class="simple">
 <li><p>Laten we kijken naar de lengte:</p></li>
 </ul>
@@ -1886,10 +2035,10 @@ f_6(x) = \text{ ?}
 <li><p>De functie <code class="docutils literal notranslate"><span class="pre">complexity</span></code> heeft dus een bug!</p></li>
 <li><p>Deze bewijsmethode heet <em>bewijs uit het ongerijmde</em>.</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="het-halting-problem">
-<h2>Het halting problem<a class="headerlink" href="#het-halting-problem" title="Permalink naar deze titel">¶</a></h2>
+</section>
+</section>
+<section id="het-halting-problem">
+<h2>Het halting problem<a class="headerlink" href="#het-halting-problem" title="Permalink naar deze titel">#</a></h2>
 <ul class="simple">
 <li><p>We willen weten of een bepaald programma in een eindeloze lus zal raken, of omgekeerd, of het programma zal stoppen</p></li>
 </ul>
@@ -1918,9 +2067,9 @@ f_6(x) = \text{ ?}
 <li><p>De functie <code class="docutils literal notranslate"><span class="pre">halt_checker</span></code> werkt dus niet goed, ongeacht hoe die functie werkt.</p></li>
 </ul>
 <p>Zie ook <a class="reference external" href="https://youtu.be/macM_MtS_w4">deze video</a> van Computerphile over het halting problem.</p>
-</div>
-<div class="section" id="ben-je-er-nog">
-<h2>Ben je er nog?<a class="headerlink" href="#ben-je-er-nog" title="Permalink naar deze titel">¶</a></h2>
+</section>
+<section id="ben-je-er-nog">
+<h2>Ben je er nog?<a class="headerlink" href="#ben-je-er-nog" title="Permalink naar deze titel">#</a></h2>
 <ul class="simple">
 <li><p>Waarom is dit belangrijk?</p></li>
 <li><p>Eindeloze lussen kunnen niet (altijd) herkend worden</p></li>
@@ -1932,8 +2081,8 @@ f_6(x) = \text{ ?}
 <li><p>Goed voor je baanzekerheid!</p></li>
 </ul>
 <p><img alt="Let's party!" src="../_images/lets-party.jpg" /></p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1957,9 +2106,11 @@ f_6(x) = \text{ ?}
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="23_finite_state_machines.html" title="vorige pagina">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1975,30 +2126,34 @@ f_6(x) = \text{ ?}
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
-    
-      Door Harvey Mudd College / Hanze University of Applied Sciences<br/>
-    
-      <div class="extra_footer">
-        <div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Harvey Mudd College / Hanze University of Applied Sciences<br/>
+  
+    <div class="extra_footer">
+      <div>
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
     Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
 </div>
 
-      </div>
-  </p>
-</footer>
-</main>
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>
