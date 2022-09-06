@@ -32,7 +32,7 @@ Je kan **geen** bestanden in het Microsoft Word, RTF (rich text format) of een f
 
 Het artikel van deze week bespreekt twee fundamentele aspecten van informatica: *taal* en *gedachten*. Het vertelt ook het verbazingwekkende verhaal van de Picobot-achtige natuurlijke taal Guugu Yimithirr!
 
-Hier is een deel van het artikel: [Does Your Language Shape How You Think?](https://github.com/misja/programmeren/raw/master/readings/assets/language_shapes.pdf){cite}`deutscher_does_2010`
+Hier is een deel van het artikel: [Does Your Language Shape How You Think?](https://github.com/hanze-hbo-ict/programmeren/raw/master/readings/assets/language_shapes.pdf){cite}`deutscher_does_2010`
 
 Als je de ideeën in dit artikel je interesseren dan kan je het [volledige artikel](http://www.nytimes.com/2010/08/29/magazine/29language-t.html) in de New York Times lezen over de manieren waarop taal menselijke gedachten kan beïnvloeden. Het bevat ook andere (niet geografische) voorbeelden. Een vergelijkbaar artikel in het Nederlands kan je lezen in NRC, [Het noorden kwijt](https://www.nrc.nl/nieuws/1999/12/18/het-noorden-kwijt-7475120-a317573).{cite}`vanmaris_noorden_1999`
 
