@@ -69,7 +69,7 @@ Tot slot zal je misschien van `vim` hebben gehoord. Hoewel `vim` populair is rad
 <!-- het staat BABA vrij hier eventueel commentaar aan toe te voegen ; -->
 
 ```{margin}
-![mascot](../images/mascot_small.png)
+![mascot](/images/mascot_small.png)
 <br/>Dit lijkt een samenvatting van leren programmeren!
 ```
 
