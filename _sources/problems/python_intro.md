@@ -30,7 +30,7 @@ We gebruiken bij Programmeren I software die je misschien nog niet hebt. Je hebt
 
 **Voor Mac-gebruikers:**
 
-* Download [Anaconda Python](https://repo.anaconda.com/archive/Anaconda3-2022.05-MacOSX-x86_64.pkg)
+* Download [Anaconda Python](https://repo.anaconda.com/archive/Anaconda3-202.05-MacOSX-x86_64.pkg)
 
 :::{admonition} Let op als je een een M1 hebt!
 Nieuwere Macs hebben een M1 processor en je zal daar een  [Anaconda Python voor ARM64](https://repo.anaconda.com/archive/Anaconda3-2022.05-MacOSX-arm64.pkg) voor moeten downloaden en installeren.
