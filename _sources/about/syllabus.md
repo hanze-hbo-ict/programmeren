@@ -6,12 +6,6 @@
 
 Welkom bij programmeren!
 
-:::{admonition} Let op
-:class: notice
-
-Deze cursus zal wekelijks worden aangevuld met opdrachten en andere relevante informatie. Dit is werk in uitvoering!
-:::
-
 ## Opdrachten
 
 Wekelijks wordt aan een aantal opgaven gewerkt. Practicumopgaven worden tijdens de bijeenkomsten gemaakt, andere opgaven zijn huiswerkopgaven. Zowel practicum- als huiswerkopgaven worden ingeleverd in [GradeScope](https://www.gradescope.com/).
