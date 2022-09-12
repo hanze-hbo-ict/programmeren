@@ -21,47 +21,44 @@ Als je eerder klaar bent, kan je met iets anders aan de slag, maar je mag ook ve
 
 ### Welke software gebruiken we?
 
-We gebruiken bij Programmeren I software die je misschien nog niet hebt. Je hebt de volgende programma's nodig:
+We gebruiken bij Programmeren software die je misschien nog niet hebt. Je hebt de volgende programma's nodig:
 
-* **Python**; wij gebruiken de versie die Anaconda Python heet (Anaconda-versie 2022.05, die bevat Python-versie 3.9). *Je hebt Python 3.x nodig*.
-* **Een teksteditor**; geen tekstverwerker; om je Python-bestanden te bewerken. We raden [VSCode]() aan, een gratis, veel gebruikte tekstverwerker die beschikbaar is voor alle besturingssystemen (Mac, Windows en Linux). *Als je al een favoriete teksteditor hebt, kan je die ook gebruiken.*
+* **Python**; wij gebruiken de laatste versie van [python.org](https://python.org) (versie 3.10).
+* **Een teksteditor**; geen tekstverwerker; om je Python-bestanden te bewerken. We raden [VSCode](https://code.visualstudio.com/) aan, een gratis, veel gebruikte tekstverwerker die beschikbaar is voor alle besturingssystemen (Mac, Windows en Linux). *Als je al een favoriete teksteditor hebt, kan je die ook gebruiken.*
 
 ### Downloaden en installeren
 
 **Voor Mac-gebruikers:**
 
-* Download [Anaconda Python](https://repo.anaconda.com/archive/Anaconda3-202.05-MacOSX-x86_64.pkg)
-
-:::{admonition} Let op als je een een M1 hebt!
-Nieuwere Macs hebben een M1 processor en je zal daar een  [Anaconda Python voor ARM64](https://repo.anaconda.com/archive/Anaconda3-2022.05-MacOSX-arm64.pkg) voor moeten downloaden en installeren.
-:::
-
-  Installeer VSCode ***WEL*** als er om gevraagd wordt; de andere standaard opties staan goed.
+Sinds macOS 11.0 ("Big Sur") is Python versie 3 op macOS standaard geïnstalleerd maar dit is vaak een oudere versie. We raden je aan de laatste versie van [python.org](https://www.python.org/downloads/macos/) te downloaden en te installeren.
 
 **Voor Windows-gebruikers:**
 
-* Download [Anaconda Python](https://repo.anaconda.com/archive/Anaconda3-2022.05-Windows-x86_64.exe)
+Download en installeer de Python van [python.org](https://www.python.org/downloads/windows/).
 
-  Installeer VSCode ***WEL*** als er om gevraagd wordt; de andere defaults staan goed.
+```{caution}
+Tijdens het installeren zal worden gevraagd of je Python aan `PATH` zou willen toevoegen, kies hier voor.
+
+![Python Installer](images/python_intro/python_installer.png)
+```
 
 **Voor Linux-gebruikers:**
 
-* Download [Anaconda Python](https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh), vermoedelijk staan alle defaults goed.
-* Als hierbij VSCode niet geïnstalleerd wordt, [kan je de teksteditor VSCode hier vinden](https://code.visualstudio.com/download) en deze installeren: ook hier zullen de defaults goed staan.
-* Je hebt geen terminalprogramma nodig. De ingebouwde `Terminal` van Linux, of de terminal van VSCode zijn afdoende.
+Linux gebruikers hebben het gemakkelijker, als je een up-to-date distributie als bijvoorbeeld Ubuntu, Mint of Arch hebt dan zal je ook een recente Python versie standaard al geïnstalleerd hebben. Controleer dit als volgt op een terminal:
+
+```console
+$ python3 --version
+```
 
 ### Wacht, ik heb Python al...
 
-Geen probleem; als je Anaconda Python installeert, zou deze zonder problemen tegelijk met je andere Python-versies op je computer moeten kunnen staan.
+Geen probleem! Zorg er in ieder geval voor dat het een recente versie is.
 
-Let op, we gebruiken in dit vak Python 3. De installatie van Anaconda bevat ook een aantal handige extra bibliotheken.
+## VSCode installeren
 
-Als je eerder met Python 2 gewerkt hebt,
-[vat deze pagina de verschillen tussen Python 2 en Python 3 samen](/support/python2_vs_python3.md). (Korte versie: het is grotendeels hetzelfde...)
+Visual Studio Code (VSCode) is een gratis teksteditor, met hulpmiddelen voor het bewerken van software broncode, bijvoorbeeld Python.
 
-### Python in je browser uitvoeren
-
-Nu de 21e eeuw goed op gang gekomen is, kan je ook Python helemaal in je browser draaien. Dit werkt niet voor elke opgave die je in dit vak krijgt, maar hier zijn een paar opties voor [Python in de browser](/support/python_browser.md)
+Download en installeer VSCode van [https://code.visualstudio.com/](https://code.visualstudio.com/).
 
 ## VSCode als editor gebruiken
 
@@ -129,6 +126,40 @@ De bovenste helft is nog steeds de teksteditor.
 
 Als dit de eerste keer is dat je de terminal gebruikt, goed bezig!
 
+## De `ipython` module installeren
+
+In deze cursus gebruiken we een interface die bekend staat als *ipython* (of *interactieve python*) voor het werken met Python. Laten we ipython nu installeren, dit is de laatste stap!
+
+Je hebt als het goed is al een *terminal* open in VSCode, typ daar nu het volgende:
+
+```text
+pip3 install ipython
+```
+
+Als het goed is zal je nu allerlei dingen zien gebeuren en krijg je de *prompt* op een gegeven moment weer terug (de knipperende cursor).
+
+Hoe weet je nu zeker of dit goed is gegaan? Typ het volgende nu in de terminal:
+
+```text
+ipython
+```
+
+Het is gelukt als het even duurt en je vervolgens de `In [1]:` IPython prompt ziet. Maak je geen zorgen als dit niet werkt, vraag de practicumdocent om hulp. Een aantal dingen kunnen aan de hand zijn:
+
+- In het bijzonder op Windows kan het `pip` en niet `pip3` zijn wat je moet gebruiken
+- Op sommige systemen kunnen zoveel Python versies geïnstalleerd zijn dat het in de war raakt en niet weet welke `pip3` je bedoelt
+
+```{info}
+Het werkt, maar wat is hier nu gebeurd?
+
+De laatste stap die je hebt genomen is gebruikelijk voor Python (maar ook andere programeertalen). Python heeft standaard een groot aantal *modules* (of *blibliotheken*), bijvoorbeeld voor het kunnen lezen van spreadsheets of webpagina's of bijzondere rekenkundige handelingen uit te voeren.
+
+- Maar soms heb je meer nodig en je zou deze willen installeren en gebruiken
+- Dus je installeert de extra module een dit wordt meestal gedaan op de command-line, of terminal.
+- Het commando `pip` is Python's standaard installatieprogramma (`pip3` is gewoon een recente versie) die dit voor jou doet
+- Er zijn nog veel meer bibliotheken en deze maken Python echt krachtig en voor veel problemen te gebruiken. We zullen er later meer installeren, als dat nodig is.
+```
+
 ## IPython opstarten...
 
 In het volgende deel laten we zien hoe je de command line kan gebruiken; dit is erg handig!
@@ -142,21 +173,6 @@ ipython
 ```
 
 op de prompt van de terminal. Elk terminalcommando wordt pas uitgevoerd nadat je op enter drukt, dus doe dat nu.
-
-Als ipython niet gevonden wordt, dan
-
-* kan het zijn dat het niet geïnstalleerd is; de instructies hiervoor vind je een stukje omhoog...
-* kan het zijn dat je Windows gebruikt en Windows niet kan vinden waar ipython geïnstalleerd was (dit komt vaker voor)
-* als je denkt dat dit het probleem is, kan je onderstaand commando kopiëren of overtypen:
-
-  ```
-  C:\Users\gebruiker\Anaconda3\scripts\ipython3.exe
-  ```
-
-    * ... vervang wel `gebruiker` door je Windows-gebruikersnaam
-* als je er niet uit komt, kan je het aan je docent vragen!
-
-Voor in de toekomst kan het handig zijn om de locatie van `ipython` en `ipython3` toe te voegen aan het "PATH" van Windows; [deze link legt uit hoe dat moet](https://www.java.com/nl/download/help/path.xml). De locatie die je moet toevoegen is `C:\Users\gebruiker\Anaconda3\scripts\`, waarbij je `gebruiker` moet vervangen door je eigen gebruikersnaam. Vraag het gerust als je hulp nodig hebt hierbij!
 
 ## De terminal en de command-line
 
