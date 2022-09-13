@@ -2,13 +2,13 @@
 
 ## Is programmeerervaring nodig?
 
-Nee, we verwachten bij dit vak geen enkele ervaring, je zou het moeten kunnen volgen zonder voorafgaande programmeerkennis. Het is dan natuurlijk wel ten zeerste aan te raden dat je alle hoorcolleges en practica volgt en dat je de tijd neemt om alle opdrachten zorgvuldig te maken. Tijdens de hoorcolleges en de practica is verder alle ruimte om vragen stellen!
+Nee, we verwachten bij dit vak geen enkele ervaring, je zou het moeten kunnen volgen zonder voorafgaande programmeerkennis. Het is dan natuurlijk wel ten zeerste aan te raden dat je alle hoorcolleges en practica volgt en dat je de tijd neemt om alle opdrachten zorgvuldig te maken. Tijdens de hoorcolleges en practica is verder alle ruimte om vragen stellen!
 
 ## Welk boek wordt gebruikt?
 
 We gebruiken het boek van Alvarado en Dodds, *CS for All* {cite}`alvarado2019cs`. Dit boek kan via [Studystore](https://www.studystore.nl/) of anders besteld worden. Je kan het ook online via [Redshelf](https://www.redshelf.com/) kopen. We weten van een link naar een wat oudere onlineversie via de Wayback Machine en die versie zal vermoedelijk in grote lijnen overeenkomen met het boek, maar dat kan natuurlijk niet worden gegarandeerd.
 
-We hopen dat je het boek blijft lezen, het vat steeds samen wat we tijdens de hoorcollege's en opgaven behandelen. Daarnaast behandelt ook andere interessante problemen waar wij verder geen tijd voor hebben, bijvoorbeeld hoe een spellchecker werkt of een *music recommender* systeem als Spotify. We weten zeker dat je dit boek na deze cursus ook af en toe nog zal openslaan!
+We hopen dat je het boek blijft lezen, het vat steeds samen wat we tijdens de hoorcollege's en opgaven behandelen. Daarnaast behandelt ook andere interessante problemen waar wij verder geen tijd voor hebben, bijvoorbeeld hoe een spellchecker werkt of een *music recommender* systeem als Spotify. We weten zeker dat je dit boek na deze cursus ook nog af en toe zal openslaan!
 
 ## Welke software is nodig?
 
@@ -38,7 +38,7 @@ Per week kan je 100 punten verdienen met de opdrachten, met bonusopgaven kan je 
 
 ## Hoe lever ik de opdrachten in?
 
-Je levert de opdrachten in via Gradescope. In het algemeen moet je een enkel bestand inleveren, meestal een Python-bestand. De precieze bestandsnaam kan je vinden in de opdracht, hier zal het ook staan als je nog andere bestanden moet inleveren. Je zal een mail hebben ontvangen met informatie over je Gradescope-account, controleer in ieder geval je spambox als dit niet het geval is, neem anders contact op met [Misja Hoebe](m.n.hoebe@pl.hanze.nl) om toegang te regelen.
+Je levert de opdrachten in via Gradescope. In het algemeen moet je een enkel bestand inleveren, meestal een Python-bestand. De precieze bestandsnaam kan je vinden in de opdracht, hier zal het ook staan als je nog andere bestanden moet inleveren. Je zal een mail hebben ontvangen met informatie over je Gradescope-account, controleer in ieder geval je spambox als dit niet het geval is, neem anders contact op met [Misja Hoebe](mailto:m.n.hoebe@pl.hanze.nl) om toegang te regelen.
 
 ## Waarom zegt GradeScope dat ik -/15 punten heb bij de Autograder?
 
