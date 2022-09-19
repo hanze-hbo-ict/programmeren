@@ -16,8 +16,8 @@ Download de volgende bestanden:
 
 <!-- https://github.com/reds-heig/logisim-evolution/releases/download/v3.3.1/logisim-evolution-3.3.1.jar -->
 
--   Het Java-applicatiebestand: [logisim-evolution-3.3.4-all.jar](https://github.com/misja/programmeren/raw/master/problems/assets/logisim-evolution-3.3.4-all.jar)
--   Het startbestand (pakt dit uit en gebruik het!): [wk6ex1-4.circ.zip](https://github.com/misja/programmeren/raw/master/problems/assets/wk6ex1-4.circ.zip)
+-   Het Java-applicatiebestand: [logisim-evolution-3.3.4-all.jar](https://github.com/hanze-hbo-ict/programmeren/raw/master/problems/assets/logisim-evolution-3.3.4-all.jar)
+-   Het startbestand (pakt dit uit en gebruik het!): [wk6ex1-4.circ.zip](https://github.com/hanze-hbo-ict/programmeren/raw/master/problems/assets/wk6ex1-4.circ.zip)
 
 ### Java
 

@@ -14,7 +14,7 @@ De tekst van deze week is een artikel uit de *Economist* waarin over een soortge
 
 * [From horseless to driverless](http://worldif.economist.com/article/11/what-if-autonomous-vehicles-rule-the-world-from-horseless-to-driverless)
   in *The World If*, Economist, 2015.
-* [From horseless to driverless (pdf)](https://github.com/misja/programmeren/raw/master/readings/assets/if_autonomous_cars.pdf) Dit is een lokale PDF-kopie voor het geval de bovenstaande link niet werkt.
+* [From horseless to driverless (pdf)](https://github.com/hanze-hbo-ict/programmeren/raw/master/readings/assets/if_autonomous_cars.pdf) Dit is een lokale PDF-kopie voor het geval de bovenstaande link niet werkt.
 
 ## Antwoord
 

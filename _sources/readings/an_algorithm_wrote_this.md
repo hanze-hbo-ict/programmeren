@@ -14,7 +14,7 @@ Met wat meer inspanning kunnen algoritmes echter tekst genereren die moeilijk te
 
 [If an Algorithm Wrote This, How Would You Even Know?](http://www.nytimes.com/2015/03/08/opinion/sunday/if-an-algorithm-wrote-this-how-would-you-even-know.html?action=click&pgtype=Homepage&version=Moth-Visible&module=inside-nyt-region&region=inside-nyt-region&WT.nav=inside-nyt-region&_r=1) uit de New York Times van 7 maart 2015.
 
-Als de link niet werkt is hier een lokaal opgeslagen kopie: [algorithmic_authoring.pdf](https://github.com/misja/programmeren/raw/master/readings/assets/algorithmic_authoring.pdf)
+Als de link niet werkt is hier een lokaal opgeslagen kopie: [algorithmic_authoring.pdf](https://github.com/hanze-hbo-ict/programmeren/raw/master/readings/assets/algorithmic_authoring.pdf)
 
 **De aanwijzing: *Probeer gedichten die door mensen en computers geschreven zijn te onderscheiden...***
 

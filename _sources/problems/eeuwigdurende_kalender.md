@@ -12,7 +12,7 @@ In dit practicum ga je een klasse `Date` schrijven waarmee je objecten van het t
 
 ## De klasse `Date`
 
-Download eerst het startbestand [`wk10ex1.py`](https://github.com/misja/programmeren/raw/master/problems/assets/wk10ex1.py). Kijk even rustig naar hoe het bestand er nu uitziet...
+Download eerst het startbestand [`wk10ex1.py`](https://github.com/hanze-hbo-ict/programmeren/raw/master/problems/assets/wk10ex1.py). Kijk even rustig naar hoe het bestand er nu uitziet...
 
 Merk op dat deze klasse `Date` drie **instantievariabelen** bevat:
 

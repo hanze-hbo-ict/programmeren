@@ -9,7 +9,7 @@
 
 ## Inleiding
 
-Begin met het downloaden van de beginbestanden in [wk7ex1.zip via deze link](https://github.com/misja/programmeren/raw/master/problems/assets/wk7ex1.zip)
+Begin met het downloaden van de beginbestanden in [wk7ex1.zip via deze link](https://github.com/hanze-hbo-ict/programmeren/raw/master/problems/assets/wk7ex1.zip)
 
 Bekijk ook de [documentatie van Hmmm, alle instructies in de Hmmm-taal](/support/hmmm) en de
 <a href="../assets/hmmm/index.html">Hmmm-simulator</a>.
@@ -84,7 +84,7 @@ Laten we beginnen met Hmmm!
 
 Om Hmmm uit te voeren, moet je het volgende zipbestand downloaden:
 
-* [wk7ex1.zip](https://github.com/misja/programmeren/raw/master/problems/assets/wk7ex1.zip), de map met alle benodigde bestanden, inclusief `wk7ex1.hmmm` en `wk7ex1b.hmmm`.
+* [wk7ex1.zip](https://github.com/hanze-hbo-ict/programmeren/raw/master/problems/assets/wk7ex1.zip), de map met alle benodigde bestanden, inclusief `wk7ex1.hmmm` en `wk7ex1b.hmmm`.
 
 Pak dat bestand uit en je krijgt een map `wk7ex1` met een aantal bestanden erin.
 

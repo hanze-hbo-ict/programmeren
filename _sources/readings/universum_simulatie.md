@@ -15,7 +15,7 @@ Het artikel is geschreven door een wiskundige van UC Berkeley, [Edward Frenkel](
 ## Het artikel
 
 * [Is the Universe a Simulation](http://www.nytimes.com/2014/02/16/opinion/sunday/is-the-universe-a-simulation.html?_r=0) van Edward Frenkel
-* Als de link niet werkt kan je hier een [pdf-versie](https://github.com/misja/programmeren/raw/master/readings/assets/is_this_all_for_real.pdf) vinden.
+* Als de link niet werkt kan je hier een [pdf-versie](https://github.com/hanze-hbo-ict/programmeren/raw/master/readings/assets/is_this_all_for_real.pdf) vinden.
 
 ## Aanwijzingen
 

@@ -10,7 +10,7 @@
 
 De tekst van deze week is een artikel over het oneindige in het dagelijks leven (en de pogingen die in vroeger tijden gedaan zijn om het idee van oneindigheid te rijmen). Cantor in de New York Times?!
 
-Lees dit artikel in de New York Times [*The Life of Pi, and Other Infinities*](http://www.nytimes.com/2013/01/01/science/the-life-of-pi-and-other-infinities.html?emc=eta1&_r=0&pagewanted=print). Als je deze pagina niet kan lezen, is hier [een lokale kopie](https://github.com/misja/programmeren/raw/master/readings/assets/cantor_in_the_NYT.pdf).
+Lees dit artikel in de New York Times [*The Life of Pi, and Other Infinities*](http://www.nytimes.com/2013/01/01/science/the-life-of-pi-and-other-infinities.html?emc=eta1&_r=0&pagewanted=print). Als je deze pagina niet kan lezen, is hier [een lokale kopie](https://github.com/hanze-hbo-ict/programmeren/raw/master/readings/assets/cantor_in_the_NYT.pdf).
 
 ## De vragen
 
