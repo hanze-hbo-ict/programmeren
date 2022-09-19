@@ -15,7 +15,7 @@ De Ariane-5-bug was een softwarefout in de controlesystemen van een Europese rak
 ## Het artikel
 
 * [A bug and a crash](http://www.around.com/ariane.html) door James Gleick
-* Als de link niet werkt kan je hier een [pdf-versie](https://github.com/misja/programmeren/raw/master/readings/assets/gleick_article.pdf) vinden.
+* Als de link niet werkt kan je hier een [pdf-versie](https://github.com/hanze-hbo-ict/programmeren/raw/master/readings/assets/gleick_article.pdf) vinden.
 
 ## Aanwijzingen
 

@@ -36,7 +36,7 @@ Voordat je begint moet je een schema ontwerpen om je gegevens bij te houden. In 
 
 Begin ermee het zip-bestand op onderstaande link te downloaden:
 
-[wk9ex1.zip](https://github.com/misja/programmeren/raw/master/problems/assets/wk9ex1.zip)
+[wk9ex1.zip](https://github.com/hanze-hbo-ict/programmeren/raw/master/problems/assets/wk9ex1.zip)
 
 Het is het makkelijkst om dit zip-bestand op het bureaublad uit te pakken. Het bevat wat ondersteunende code om je levensgeneraties grafisch weer te geven, maar dat is het laatste deel van het practicum. Eerst ga je de basisfunctionaliteit implementeren om tweedimensionale arrays te maken, te wijzigen en te laten evolueren volgens de regels van Life.
 

@@ -11,7 +11,7 @@ Deze optionele bonusopgave introduceert enkele ideeën voor beeldverwerking met 
 
 ## Voorbereiding
 
-Download [Python plaatjes](https://github.com/misja/programmeren/raw/master/problems/assets/wk5ex3.zip).
+Download [Python plaatjes](https://github.com/hanze-hbo-ict/programmeren/raw/master/problems/assets/wk5ex3.zip).
 
 Dit bestand moet ergens uitgepakt worden. Het bevat een aantal bestanden die allemaal in **dezelfde** map moeten staan:
 

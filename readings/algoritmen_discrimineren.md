@@ -13,7 +13,7 @@ In de tekst van deze week laten we wat van de problemen zien die kunnen optreden
 ## Het artikel
 
 * [When Algorithms Discriminate](http://www.nytimes.com/2015/07/10/upshot/when-algorithms-discriminate.html?_r=0)
-* Hier is een [lokaal opgeslagen kopie](https://github.com/misja/programmeren/raw/master/readings//assets/whenAlgorithmsDiscriminate.pdf), als bovenstaande link niet werkt.
+* Hier is een [lokaal opgeslagen kopie](https://github.com/hanze-hbo-ict/programmeren/raw/master/readings//assets/whenAlgorithmsDiscriminate.pdf), als bovenstaande link niet werkt.
 
 ## De vraag (kies er één om te beantwoorden)
 

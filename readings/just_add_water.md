@@ -22,7 +22,7 @@ In het artikel van deze week krijg je een korte blik op een alternatief voor sil
 
 Als deze link niet werkt, kun je hier een gecachete pdf-versie vinden:
 
-* [lokaal opgeslagen pdf-versie](https://github.com/misja/programmeren/raw/master/readings/assets/water_computer.pdf)
+* [lokaal opgeslagen pdf-versie](https://github.com/hanze-hbo-ict/programmeren/raw/master/readings/assets/water_computer.pdf)
 
 ## De vragen
 

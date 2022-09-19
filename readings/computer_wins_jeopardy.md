@@ -12,7 +12,7 @@ Het artikel van deze week gaat over het software- (en hardware-)systeem *Watson*
 
 [Hier is het artikel uit de New York Times, van 16 februari 2011](http://www.nytimes.com/2011/02/17/science/17jeopardy-watson.html?_r=1&scp=12&sq=computer%20science&st=cse)
 
-[Hier is een PDF-versie, als de link hierboven niet werkt](https://github.com/misja/programmeren/raw/master/readings/assets/watson.pdf)
+[Hier is een PDF-versie, als de link hierboven niet werkt](https://github.com/hanze-hbo-ict/programmeren/raw/master/readings/assets/watson.pdf)
 
 Je kan daarna, als het werkt, een paar minuten spelen met een ["Watson-achtige" applicatie via deze link](http://www.nytimes.com/interactive/2010/06/16/magazine/watson-trivia-game.html?ref=science).
 
