@@ -101,7 +101,7 @@ Fouten zijn onvermijdelijk! Deze fouten worden in Python ook wel *exceptions* ge
 
 Wat we hiermee bedoelen is dat een fout de perfecte gelegenheid is om:
 
-1. jouw beeld van hoe een computer werkt te helpen verbeteren (de "gedachtegang van de computer")
+1. jouw beeld van hoe een computer werkt te helpen verbeteren (de "gedachtengang van de computer")
 2. de code (software) die je schrijft (of jouw begrip daarvan) te helpen verbeteren
 3. jouw *debugging* vaardigheden te verbeteren (foutmeldingen begrijpen en fouten kunnen opsporen)
 
