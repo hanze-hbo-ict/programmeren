@@ -119,7 +119,7 @@ assert flipside("") == "ergfout"
 
 ### `mult(n, m)`
 
-De functie `mult(n, m)` moet het product (de vermenigvuldiging) van de twee gehele getallen `n` en `m` als resultaat teruggeven. Omdat het een beetje te gemakkelijk zou zijn om de vermenigvuldigingsoperator `*` te gebruiken mag je **alleen** maar gebruik maken van `+`, `-` (om negatieve getallen te maken), in combinatie met recursie. Gebruik de [`power`](examples/recursie.html#power-b-p) functie die eerder is behandeld als voorbeeld. Een mogelijke uitvoer kan zijn:
+De functie `mult(n, m)` moet het product (de vermenigvuldiging) van de twee gehele getallen `n` en `m` als resultaat teruggeven. Omdat het een beetje te gemakkelijk zou zijn om de vermenigvuldigingsoperator `*` te gebruiken mag je **alleen** maar gebruik maken van `+`, `-` (om negatieve getallen te maken), in combinatie met recursie. Gebruik de [`power`](/extra/examples/recursie.html#power-b-p) functie die eerder is behandeld als voorbeeld. Een mogelijke uitvoer kan zijn:
 
 ```ipython
 In [1]: mult(6, 7)
