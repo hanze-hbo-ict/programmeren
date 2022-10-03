@@ -12,7 +12,7 @@ csa-level: mastery
 | Onderwerp    | Picobot een grot laten verkennen                               |
 | Bestandsnaam | `wk1ex6.txt`                                                   |
 | Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
-| Opmering     | **Dit is een bonusopgave**                                     |
+| Opmerking     | **Dit is een bonusopgave**                                     |
 
 ![Picobot grot](images/picobot/picobotExCr.png)
 
