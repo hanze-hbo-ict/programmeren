@@ -50,7 +50,7 @@ Ja, heel graag zelfs! Je mag de meeste opdrachten als duo maken, je mag zelf je 
 
 ## Hoe wordt dit vak beoordeeld?
 
-Je maakt een schriftelijk tentamen waarbij vaardigheden die behandeld zijn tijdens het vak aan bod komen. Dit tentamen moet je met een voldoende afronden.
+Je maakt een tentamen waarbij vaardigheden die behandeld zijn tijdens het vak aan bod komen. Dit tentamen moet je met een voldoende afronden.
 
 ## Hoe kan ik herkansen?
 
