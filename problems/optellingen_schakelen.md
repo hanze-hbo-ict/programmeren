@@ -21,10 +21,10 @@ Download de volgende bestanden:
 
 ### Java
 
-Voor Logisim zal je Java geïnstalleerd moeten hebben. Als je dit nog niet hebt kan je het downloaden van de [OpenJDK](https://adoptopenjdk.net/) website:
+Voor Logisim zal je Java geïnstalleerd moeten hebben. Als je dit nog niet hebt kan je het downloaden van de [Adoptium](https://adoptium.net/temurin/releases/) website:
 
--   kies versie 11 of hoger
--   bij download kan je kiezen voor een JVM (Java Virtual Machine): HotSpot is een goede keus
+-   kies versie 11 of hoger voor jouw systeem
+-   bij architectuur is x64 een goede keuze (voor nieuwere Macs kies je arm)
 -   indien gevraagd, kies bij installatie om `JAVA_HOME` aan het pad toe te voegen!
 -   indien gevraagd, *negeer* bij installatie de optie om Oracle licentiesleutels toe te voegen!
 
