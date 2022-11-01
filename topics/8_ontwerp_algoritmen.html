@@ -1594,7 +1594,7 @@ title="Print to PDF"
        max
       </span>
      </code>
-     capacity exceeded!
+     capacity exceeded :(
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -1891,7 +1891,7 @@ title="Print to PDF"
        max
       </span>
      </code>
-     capacity exceeded!
+     capacity exceeded :(
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -2362,7 +2362,7 @@ n! = n \cdot (n - 1)!
 <p>Op basis van een eerste waarde en de rest kan gelijk al een eerst besluit worden genomen: we zijn klaar als het eerste geval gelijk is aan de capaciteit!</p>
 </section>
 <section id="max-capacity-exceeded">
-<h3><code class="docutils literal notranslate"><span class="pre">max</span></code> capacity exceeded!<a class="headerlink" href="#max-capacity-exceeded" title="Permalink naar deze titel">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">max</span></code> capacity exceeded :(<a class="headerlink" href="#max-capacity-exceeded" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">subset</span><span class="p">(</span><span class="n">capacity</span><span class="p">,</span> <span class="n">items</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Given a capacity and a list of positive-number items,</span>
 <span class="sd">    subset returns the largest sum that can be made from the </span>
@@ -2375,7 +2375,7 @@ n! = n \cdot (n - 1)!
     <span class="n">rest</span> <span class="o">=</span> <span class="n">items</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
     
     <span class="k">if</span> <span class="n">first</span> <span class="o">==</span> <span class="n">capacity</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">first</span>  <span class="c1"># use the first - and are done</span>
+        <span class="k">return</span> <span class="n">first</span>  <span class="c1"># use the first and we&#39;re done</span>
 
     <span class="k">if</span> <span class="n">first</span> <span class="o">&gt;</span> <span class="n">capacity</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">subset</span><span class="p">(</span><span class="n">capacity</span><span class="p">,</span> <span class="n">rest</span><span class="p">)</span>  <span class="c1"># forget the first completely</span>
@@ -2397,13 +2397,13 @@ n! = n \cdot (n - 1)!
 </pre></div>
 </div>
 <p>Het is beter om <code class="docutils literal notranslate"><span class="pre">items[0]</span></code> <strong>niet</strong> te gebruiken</p>
-<p>In dit geval is het verstandiger om 8 te laten vallen (los it) om vervolgens 4 én 6 te gebruiken (use it).</p>
+<p>In dit geval is het verstandiger om 8 te laten vallen (<em>lose it</em>) om vervolgens 4 én 6 te gebruiken (<em>use it</em>).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">capacity</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">items</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>Het is beter om <code class="docutils literal notranslate"><span class="pre">items[0]</span></code> <strong>wel</strong> te gebruiken</p>
-<p>Maar in dit geval is het verstandiger om 4 wél te gebruiken (use it) om vervolgens 8 niet te gebruiken (lose it) en tot slot 6 wel te gebruiken (use it).</p>
+<p>Maar in dit geval is het verstandiger om 4 wél te gebruiken (<em>use it</em>) om vervolgens 8 niet te gebruiken (<em>lose it</em>) en tot slot 6 wel te gebruiken (<em>use it</em>).</p>
 <p>Hoe kan je nu tussen deze twee mogelijkheden kiezen, of beter, hoe zou je een algemene oplossing voor dit probleem kunnen vinden?</p>
 </section>
 <section id="de-makkelijke-keus">
@@ -2436,7 +2436,7 @@ n! = n \cdot (n - 1)!
     <span class="n">rest</span> <span class="o">=</span> <span class="n">items</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
     
     <span class="k">if</span> <span class="n">first</span> <span class="o">==</span> <span class="n">capacity</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">first</span>  <span class="c1"># use the first - and are done</span>
+        <span class="k">return</span> <span class="n">first</span>  <span class="c1"># use the first and we&#39;re done</span>
 
     <span class="k">if</span> <span class="n">first</span> <span class="o">&gt;</span> <span class="n">capacity</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">subset</span><span class="p">(</span><span class="n">capacity</span><span class="p">,</span> <span class="n">rest</span><span class="p">)</span>  <span class="c1"># forget the first completely</span>
