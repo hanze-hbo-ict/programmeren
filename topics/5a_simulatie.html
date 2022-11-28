@@ -26,8 +26,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -1699,7 +1699,7 @@ title="Print to PDF"
 <p>Kan je ook eigen reeksen maken?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>list(range(5))
 </pre></div>
 </div>
 </div>
@@ -1712,7 +1712,7 @@ title="Print to PDF"
 <p>Lees dit als “ik wil de waarden van <code class="docutils literal notranslate"><span class="pre">range(5)</span></code> als een list”. Let op dat <code class="docutils literal notranslate"><span class="pre">range(5)</span></code>  5 <em>elementen</em> oplevert!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>list(range(1,5))
 </pre></div>
 </div>
 </div>
@@ -1725,7 +1725,7 @@ title="Print to PDF"
 <p>Dit begint op de list slicing syntax te lijken met een start en stop positie! Zou het ook de step kennen?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>list(range(0, 10, 2))
 </pre></div>
 </div>
 </div>
@@ -1741,9 +1741,9 @@ title="Print to PDF"
 <p>Een willekeurig getal uit de reeks 0 <strong>tot en met</strong> 99?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from random import choice
 
-<span class="n">choice</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)))</span>
+choice(list(range(100)))
 </pre></div>
 </div>
 </div>
@@ -1762,9 +1762,9 @@ title="Print to PDF"
 <p>Kies een random <em>float</em> waarde tussen low en hi</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">uniform</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from random import uniform
 
-<span class="n">uniform</span><span class="p">(</span><span class="mf">41.9</span><span class="p">,</span> <span class="mf">42.1</span><span class="p">)</span>
+uniform(41.9, 42.1)
 </pre></div>
 </div>
 </div>
@@ -1898,23 +1898,23 @@ E = 100
 <p>Hoeveel dubbel paar ogen gooi je als je N keer werpt?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from random import *
 
-<span class="k">def</span> <span class="nf">count_doubles</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Tel aantal dubbele ogen bij N worpen</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="n">N</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>    <span class="c1"># base case</span>
-        <span class="k">return</span> <span class="mi">0</span>  <span class="c1"># 0 worpen, 0 dubbele ogen...</span>
+def count_doubles(N):
+    &quot;&quot;&quot;Tel aantal dubbele ogen bij N worpen
+    &quot;&quot;&quot;
+    if N == 0:    # base case
+        return 0  # 0 worpen, 0 dubbele ogen...
 
-    <span class="n">d1</span> <span class="o">=</span> <span class="n">choice</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>     <span class="c1"># eerste dobbelsteen</span>
-    <span class="n">d2</span> <span class="o">=</span> <span class="n">choice</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">)))</span>  <span class="c1"># tweede dobbelsteen</span>
+    d1 = choice([1,2,3,4,5,6])     # eerste dobbelsteen
+    d2 = choice(list(range(1,7)))  # tweede dobbelsteen
 
-    <span class="k">if</span> <span class="n">d1</span> <span class="o">!=</span> <span class="n">d2</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">0</span> <span class="o">+</span> <span class="n">count_doubles</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># niet gelijk</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">count_doubles</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># gelijk! tel 1 op</span>
+    if d1 != d2:
+        return 0 + count_doubles(N - 1)  # niet gelijk
+    else:
+        return 1 + count_doubles(N - 1)  # gelijk! tel 1 op
 
-<span class="n">count_doubles</span><span class="p">(</span><span class="mi">600</span><span class="p">)</span>
+count_doubles(600)
 </pre></div>
 </div>
 </div>
@@ -1940,36 +1940,36 @@ E = 100
 <p>In plaats van een auto wordt onze prijs <a class="reference external" href="https://nl.wikipedia.org/wiki/Spam_(vlees)">SPAM</a>, ook wel bekend van jouw <a class="reference external" href="https://nl.wikipedia.org/wiki/Spam_(post)">mailbox</a>. SPAM is … een ingeblikt gekookt vleesproduct en een anonieme variant (Potted Meat Food Product, of misschien <a class="reference external" href="https://www.urbandictionary.com/define.php?term=PMFP">PMFP</a>) wordt de geit.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from random import *
 
-<span class="k">def</span> <span class="nf">MCMH</span><span class="p">(</span><span class="n">init</span><span class="p">,</span> <span class="n">sors</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Speel Let&#39;s Make a Deal N keer</span>
-<span class="sd">    </span>
-<span class="sd">    Geeft het aantal keer dat *Spam!* wordt gewonnen</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="n">N</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># base case</span>
-        <span class="k">return</span> <span class="mi">0</span>
+def MCMH(init, sors, N):
+    &quot;&quot;&quot;Speel Let&#39;s Make a Deal N keer
+    
+    Geeft het aantal keer dat *Spam!* wordt gewonnen
+    &quot;&quot;&quot;
+    if N == 0:  # base case
+        return 0
 
-    <span class="n">prz_door</span> <span class="o">=</span> <span class="n">choice</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>  <span class="c1"># de deur met de prijs!</span>
+    prz_door = choice([1,2,3])  # de deur met de prijs!
 
-    <span class="k">if</span> <span class="n">init</span> <span class="o">==</span> <span class="n">prz_door</span><span class="p">:</span> 
-        <span class="k">if</span> <span class="n">sors</span> <span class="o">==</span> <span class="s1">&#39;stay&#39;</span><span class="p">:</span>
-            <span class="n">result</span> <span class="o">=</span> <span class="s1">&#39;Spam!&#39;</span>
-        <span class="k">else</span><span class="p">:</span> 
-            <span class="n">result</span> <span class="o">=</span> <span class="s1">&#39;pmfp.&#39;</span>
-    <span class="k">else</span><span class="p">:</span> 
-        <span class="k">if</span> <span class="n">sors</span> <span class="o">==</span> <span class="s1">&#39;switch&#39;</span><span class="p">:</span>
-            <span class="n">result</span> <span class="o">=</span> <span class="s1">&#39;Spam!&#39;</span>
-        <span class="k">else</span><span class="p">:</span> 
-            <span class="n">result</span> <span class="o">=</span> <span class="s1">&#39;pmfp.&#39;</span>      
+    if init == prz_door: 
+        if sors == &#39;stay&#39;:
+            result = &#39;Spam!&#39;
+        else: 
+            result = &#39;pmfp.&#39;
+    else: 
+        if sors == &#39;switch&#39;:
+            result = &#39;Spam!&#39;
+        else: 
+            result = &#39;pmfp.&#39;      
 
-    <span class="k">if</span> <span class="n">result</span> <span class="o">==</span> <span class="s1">&#39;Spam!&#39;</span><span class="p">:</span>  
-        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">MCMH</span><span class="p">(</span><span class="n">init</span><span class="p">,</span> <span class="n">sors</span><span class="p">,</span> <span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">0</span> <span class="o">+</span> <span class="n">MCMH</span><span class="p">(</span><span class="n">init</span><span class="p">,</span> <span class="n">sors</span><span class="p">,</span> <span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    if result == &#39;Spam!&#39;:  
+        return 1 + MCMH(init, sors, N-1)
+    else:
+        return 0 + MCMH(init, sors, N-1)
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bij blijven winnen we&#39;</span><span class="p">,</span> <span class="n">MCMH</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;stay&#39;</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s1">&#39;keer&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bij wisselen winnen we&#39;</span><span class="p">,</span> <span class="n">MCMH</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;switch&#39;</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s1">&#39;keer&#39;</span><span class="p">)</span>
+print(&#39;Bij blijven winnen we&#39;, MCMH(1, &#39;stay&#39;, 600), &#39;keer&#39;)
+print(&#39;Bij wisselen winnen we&#39;, MCMH(1, &#39;switch&#39;, 600), &#39;keer&#39;)
 </pre></div>
 </div>
 </div>

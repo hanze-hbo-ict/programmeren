@@ -27,7 +27,7 @@ Dit bestand moet ergens uitgepakt worden. Het bevat een aantal bestanden die all
 Voor dit probleem ga je gebruik maken van een Python module die `png`-afbeeldingen leest en schrijft. Gelukkig hebben zowel macOS, Linux als Windows ingebouwde programma's (Preview, EoG, Paint) die bijna elke afbeelding omzetten naar het "portable network graphics" formaat (oftewel PNG).
 
 ````{important}
-Voor deze opgave zal je [Pillow](https://pillow.readthedocs.io/) nodig hebben, een Python module voor het bewerken van afbeeldingen waar onze `png.py` module gebruik van maakt. Installeer deze als volgt
+Voor deze opgave zal je [Pillow](https://pillow.readthedocs.io/) nodig hebben, een Python module voor het bewerken van afbeeldingen waar onze `png.py` module weer gebruik van maakt. Installeer het als volgt als je deze nog niet hebt
 
 ```text
 pip install Pillow

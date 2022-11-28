@@ -26,8 +26,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -1450,9 +1450,9 @@ title="Print to PDF"
 <p>Bij deze opgave gaat het om het definiëren van variabelen.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">c</span> <span class="o">=</span> <span class="mi">299792458</span>
-<span class="n">e</span> <span class="o">=</span> <span class="n">m</span> <span class="o">*</span> <span class="n">c</span> <span class="o">**</span> <span class="mi">2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>m = 10
+c = 299792458
+e = m * c ** 2
 </pre></div>
 </div>
 </div>
@@ -1500,29 +1500,29 @@ title="Print to PDF"
 <p>Karakters hebben een numerieke representatie (denk aan ASCII) en Python zal op basis van deze numerieke waarde sorteren. Als de eerste karakters gelijk zijn (bijvoorbeeld “H” bij “HUIS” en “HAARD”) zal Python het volgende karakter nemen om verder te sorteren (“U” en “A”).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s2">&quot;ALLEENSTAAND&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;FIETS&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;GROETEN&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;ROBOTICA&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;KLUS&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;TAKENPAKKET&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;XYLOFOON&quot;</span><span class="p">,</span>
-<span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>words = [
+    &quot;ALLEENSTAAND&quot;,
+    &quot;FIETS&quot;,
+    &quot;GROETEN&quot;,
+    &quot;ROBOTICA&quot;,
+    &quot;KLUS&quot;,
+    &quot;TAKENPAKKET&quot;,
+    &quot;XYLOFOON&quot;,
+]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lengths</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="s2">&quot;HANZE&quot;</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="s2">&quot;TENTAMEN&quot;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>lengths = [len(x) for x in words if x &gt; &quot;HANZE&quot; and x &lt; &quot;TENTAMEN&quot;]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lengths</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>lengths
 </pre></div>
 </div>
 </div>
@@ -1535,7 +1535,7 @@ title="Print to PDF"
 <p>Als een kleine variatie op deze opgave, bedenk dat je een <code class="docutils literal notranslate"><span class="pre">LoL</span></code> strategie kan volgen om naast de lengte van het woord ook het woord zelf op te nemen in het resultaat:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="s2">&quot;HANZE&quot;</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="s2">&quot;TENTAMEN&quot;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>[[len(x), x] for x in words if x &gt; &quot;HANZE&quot; and x &lt; &quot;TENTAMEN&quot;]
 </pre></div>
 </div>
 </div>
@@ -1551,13 +1551,13 @@ title="Print to PDF"
 <p>Deze opgave gaat over het kunnen identificeren van base- en recursive case(s). In dit geval kunnen twee base cases en één recursieve case worden bepaald.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">manhattan</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># base case</span>
-        <span class="k">return</span> <span class="mi">0</span>
-    <span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># base case</span>
-        <span class="k">return</span> <span class="mi">1</span>
-    <span class="k">else</span><span class="p">:</span>  <span class="c1"># recursive case</span>
-        <span class="k">return</span> <span class="n">manhattan</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="o">+</span> <span class="n">manhattan</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def manhattan(x, y):
+    if x &lt; 0 or y &lt; 0:  # base case
+        return 0
+    elif x == 0 or y == 0: # base case
+        return 1
+    else:  # recursive case
+        return manhattan(x - 1, y) + manhattan(x, y - 1)
 </pre></div>
 </div>
 </div>
@@ -1568,9 +1568,9 @@ title="Print to PDF"
 <p>Deze opgave gaat over het gebruik van list of lists (<code class="docutils literal notranslate"><span class="pre">LoL</span></code>’s). In de extra <em>list comprehension</em> opgaven kan je een opgave <code class="docutils literal notranslate"><span class="pre">mul_table</span></code> vinden met een beschijving van hoe je per rij paarsgewijs <code class="docutils literal notranslate"><span class="pre">x</span></code> en <code class="docutils literal notranslate"><span class="pre">y</span></code> kan zetten om te komen tot een vermenigvuldigingstabel. Dit probleem volgt hetzelfde principe.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">manhattan_table</span><span class="p">(</span><span class="n">size</span><span class="p">):</span>
-    <span class="n">table</span> <span class="o">=</span> <span class="p">[[</span><span class="n">manhattan</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">)]</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">)]</span>
-    <span class="k">return</span> <span class="n">table</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def manhattan_table(size):
+    table = [[manhattan(x, y) for x in range(size)] for y in range(size)]
+    return table
 </pre></div>
 </div>
 </div>
@@ -1581,24 +1581,24 @@ title="Print to PDF"
 <p>Use it or lose it! Dit is een klassiek optimalisatieprobleem waar je uit een set van boeken moet kiezen welke combinatie het beste een boekenplank vult. In het boek onder hoofdstuk 2 vind je bij “Use It or Lose It” de beschrijving van dit algoritme.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">bookcase</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">books</span><span class="p">):</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">books</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def bookcase(size, books):
+    if len(books) == 0:
+        return 0
 
-    <span class="n">first</span> <span class="o">=</span> <span class="n">books</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">rest</span> <span class="o">=</span> <span class="n">books</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+    first = books[0]
+    rest = books[1:]
 
-    <span class="k">if</span> <span class="n">first</span> <span class="o">&gt;</span> <span class="n">size</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">bookcase</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">rest</span><span class="p">)</span>
+    if first &gt; size:
+        return bookcase(size, rest)
 
-    <span class="k">if</span> <span class="n">first</span> <span class="o">==</span> <span class="n">size</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">size</span>
+    if first == size:
+        return size
 
-    <span class="k">if</span> <span class="n">first</span> <span class="o">&lt;</span> <span class="n">size</span><span class="p">:</span>
-        <span class="n">use_it</span> <span class="o">=</span> <span class="n">first</span> <span class="o">+</span> <span class="n">bookcase</span><span class="p">(</span><span class="n">size</span> <span class="o">-</span> <span class="n">first</span><span class="p">,</span> <span class="n">rest</span><span class="p">)</span>
-        <span class="n">lose_it</span> <span class="o">=</span> <span class="n">bookcase</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">rest</span><span class="p">)</span>
+    if first &lt; size:
+        use_it = first + bookcase(size - first, rest)
+        lose_it = bookcase(size, rest)
 
-        <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">use_it</span><span class="p">,</span> <span class="n">lose_it</span><span class="p">)</span>
+        return max(use_it, lose_it)
 </pre></div>
 </div>
 </div>

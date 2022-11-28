@@ -26,8 +26,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -1624,7 +1624,7 @@ title="Print to PDF"
 <p>Input en output</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="s2">&quot;huiswerk&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>len(&quot;huiswerk&quot;)
 </pre></div>
 </div>
 </div>
@@ -1661,14 +1661,14 @@ g(x) = x^{100}
 <h2>Binnen een functie<a class="headerlink" href="#binnen-een-functie" title="Permalink naar deze titel">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">flipside</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; flipside(s): spiegel s!</span>
-<span class="sd">    input s: een string</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
-    <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="n">x</span><span class="p">:]</span> <span class="o">+</span> <span class="n">s</span><span class="p">[:</span><span class="n">x</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def flipside(s):
+    &quot;&quot;&quot; flipside(s): spiegel s!
+    input s: een string
+    &quot;&quot;&quot;
+    x = len(s) // 2
+    return s[x:] + s[:x]
 
-<span class="n">flipside</span><span class="p">(</span><span class="s2">&quot;automaat&quot;</span><span class="p">)</span>
+flipside(&quot;automaat&quot;)
 </pre></div>
 </div>
 </div>
@@ -1689,7 +1689,7 @@ g(x) = x^{100}
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">flipside</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>help(flipside)
 </pre></div>
 </div>
 </div>
@@ -1749,12 +1749,12 @@ flipside(s)
 <p>Je hebt eerder kennisgemaakt met <code class="docutils literal notranslate"><span class="pre">print(x)</span></code> en deze functie geeft iets terug, althans zo lijkt het! <code class="docutils literal notranslate"><span class="pre">return</span></code> geeft een resultaat van een functie terug, wat is nu het verschil met <code class="docutils literal notranslate"><span class="pre">print(x)</span></code>?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dbl</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;verdubbelt x?</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def dbl(x):
+    &quot;&quot;&quot;verdubbelt x?
+    &quot;&quot;&quot;
+    return 2 * x
 
-<span class="n">a_dbl</span> <span class="o">=</span> <span class="n">dbl</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="o">+</span> <span class="mi">20</span>
+a_dbl = dbl(20) + 20
 </pre></div>
 </div>
 </div>
@@ -1762,10 +1762,10 @@ flipside(s)
 <p>Dit is een eenvoudige functie die een waarde verdubbelt en het resultaat teruggeeft met <code class="docutils literal notranslate"><span class="pre">return</span></code>. Nu een variant met <code class="docutils literal notranslate"><span class="pre">print(x)</span></code> in plaats van <code class="docutils literal notranslate"><span class="pre">return</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dbl_pr</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;verdubbelt x?</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def dbl_pr(x):
+    &quot;&quot;&quot;verdubbelt x?
+    &quot;&quot;&quot;
+    print(2 * x)
 </pre></div>
 </div>
 </div>
@@ -1797,21 +1797,21 @@ TypeError: unsupported operand type(s) for +: &#39;NoneType&#39; and &#39;int&#3
 <h3>Testen<a class="headerlink" href="#testen" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1: functie definitie</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># 1: functie definitie
 
-<span class="k">def</span> <span class="nf">flipside</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; flipside(s): spiegel s!</span>
-<span class="sd">    input s: een string</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
-    <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="n">x</span><span class="p">:]</span> <span class="o">+</span> <span class="n">s</span><span class="p">[:</span><span class="n">x</span><span class="p">]</span>
+def flipside(s):
+    &quot;&quot;&quot; flipside(s): spiegel s!
+    input s: een string
+    &quot;&quot;&quot;
+    x = len(s) // 2
+    return s[x:] + s[:x]
 
-<span class="c1"># 2: Tests</span>
+# 2: Tests
 
-<span class="k">assert</span> <span class="n">flipside</span><span class="p">(</span><span class="s1">&#39;huiswerk&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;werkhuis&#39;</span>
-<span class="k">assert</span> <span class="n">flipside</span><span class="p">(</span><span class="s1">&#39;popster&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;sterpop&#39;</span>
+assert flipside(&#39;huiswerk&#39;) == &#39;werkhuis&#39;
+assert flipside(&#39;popster&#39;) == &#39;sterpop&#39;
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; toplap ~&quot;</span><span class="p">,</span> <span class="n">flipside</span><span class="p">(</span><span class="s1">&#39;laptop&#39;</span><span class="p">))</span> <span class="c1"># print het resultaat naar het scherm</span>
+print(&quot; toplap ~&quot;, flipside(&#39;laptop&#39;)) # print het resultaat naar het scherm
 </pre></div>
 </div>
 </div>
@@ -1832,7 +1832,7 @@ TypeError: unsupported operand type(s) for +: &#39;NoneType&#39; and &#39;int&#3
 <p><code class="docutils literal notranslate"><span class="pre">None</span></code> is iets dat <em>niets</em> representeert, kan je dit ook testen?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">dbl_pr</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="o">==</span> <span class="kc">None</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>assert dbl_pr(20) == None
 </pre></div>
 </div>
 </div>
