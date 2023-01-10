@@ -1488,7 +1488,7 @@ title="Print to PDF"
 <section id="macos">
 <h2>macOS<a class="headerlink" href="#macos" title="Permalink naar deze titel">#</a></h2>
 <p>Er zijn verschillende manieren om Git op een Mac te installeren. De meest eenvoudige is waarschijnlijk om de <a class="reference external" href="https://developer.apple.com/download/all/?q=command%20line%20tools">Xcode Command Line Tools</a> te installeren, op Mavericks (10.9) of hoger kun je dit eenvoudig doen door Git vanuit de Terminal app aan te roepen met bijvoorbeeld</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git config --list
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>config<span class="w"> </span>--list
 </pre></div>
 </div>
 <p>Als je Git nog niet hebt geïnstalleerd zal het je vragen om het te installeren met de XCode Command Line Tools.</p>
@@ -1497,23 +1497,23 @@ title="Print to PDF"
 <section id="linux">
 <h2>Linux<a class="headerlink" href="#linux" title="Permalink naar deze titel">#</a></h2>
 <p>Git zal waarschijnlijk al op jouw systeem aanwezig zijn, controleer dit door Git het aan te roepen in een terminal</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git --version
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>--version
 </pre></div>
 </div>
 <p>Gebruik jouw package manager (apt, rpm) om Git te installeren als het ontbreekt, bijvoorbeeld</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo apt-get install git
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>git
 </pre></div>
 </div>
 </section>
 <section id="configuratie">
 <h2>Configuratie<a class="headerlink" href="#configuratie" title="Permalink naar deze titel">#</a></h2>
 <p>Het eerste (en enige) wat je na installatie nog moet doen is het instellen van jouw naam en emailadres. Dit is belangrijk omdat Git bij iedere <em>commit</em> (het vaststellen van wijzigingen in jouw code) deze informatie gaat gebruiken. Open een terminal en typ het volgende</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git config --global user.name <span class="s2">&quot;Jouw Naam&quot;</span>
-<span class="gp">$ </span>git config --global user.email jouw@naam.com
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Jouw Naam&quot;</span>
+<span class="gp">$ </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span>jouw@naam.com
 </pre></div>
 </div>
 <p>Gebruik hier natuurlijk jouw werkelijke <em>naam</em> en <em>emailadres</em>! Je kan deze regels meerdere keren uitvoeren, bijvoorbeeld om het emailadres te wijzigen. Controleer vervolgens of de instellingen corrrect zijn</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git config --list
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>config<span class="w"> </span>--list
 <span class="go">user.name=Jouw Naam</span>
 <span class="go">user.email=jouw@naam.com</span>
 <span class="go">init.defaultbranch=main</span>
@@ -1525,13 +1525,13 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>Let op, jouw uitvoer kan verschillen maar je zal in ieder geval de opties <code class="docutils literal notranslate"><span class="pre">user.name</span></code> en <code class="docutils literal notranslate"><span class="pre">user.email</span></code> terugzien die je eerder hebt gezet. Je kan ook controleren wat Git denkt dat de waarde van een specifieke optie is door <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">&lt;optie&gt;</span></code> te typen</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git config user.name
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>config<span class="w"> </span>user.name
 </pre></div>
 </div>
 <section id="macos-en-linux">
 <h3>macOS en Linux<a class="headerlink" href="#macos-en-linux" title="Permalink naar deze titel">#</a></h3>
 <p>Controleer of de optie <code class="docutils literal notranslate"><span class="pre">init.defaultbranch</span></code> is gezet en gelijk is aan “main”. Wijzig het als volgt als dit niet het geval is</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git config --global init.defaultbranch main
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>init.defaultbranch<span class="w"> </span>main
 </pre></div>
 </div>
 <div class="admonition note">

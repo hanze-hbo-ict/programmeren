@@ -1923,7 +1923,7 @@ title="Print to PDF"
 <p>Wat we typen …</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>s = &quot;Astronaut wordt snel oud tijdens een reis naar Mars&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Astronaut wordt snel oud tijdens een reis naar Mars&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -1931,7 +1931,7 @@ title="Print to PDF"
 <p>en wat er eigenlijk gebeurt</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>s = str(&quot;Astronaut wordt snel oud tijdens een reis naar Mars&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="s2">&quot;Astronaut wordt snel oud tijdens een reis naar Mars&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1939,7 +1939,7 @@ title="Print to PDF"
 <p>De variabele <code class="docutils literal notranslate"><span class="pre">s</span></code> is een <em>object</em>, het is een <em>instantie</em> van de <em>klasse</em> <code class="docutils literal notranslate"><span class="pre">str</span></code>. Het lijkt op de aanroep van een functie, en dat is het ook! Het roept de <em>constructor</em> methode van de klasse aan met de waarde voor de nieuwe instantie. Meer hier over later!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>type(s)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1951,7 +1951,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>s.split()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1964,7 +1964,7 @@ title="Print to PDF"
 <p>Naast dat het een waarde representeert (een reeks karakters) <em>kan</em> het ook dingen doen! Bijvoorbeeld zichzelf als een list van afzonderlijke strings, gesplitst op spaties (standaard als geen parameter aan <code class="docutils literal notranslate"><span class="pre">split</span></code> wordt meegegeven op <em>welk</em> karakter moet worden gesplitst).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>dir(s)[-10:]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">s</span><span class="p">)[</span><span class="o">-</span><span class="mi">10</span><span class="p">:]</span>
 </pre></div>
 </div>
 </div>
@@ -2028,41 +2028,41 @@ title="Print to PDF"
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Student:
-    &quot;&quot;&quot;A class representing students
-    &quot;&quot;&quot;
-    def __init__(self, name, yr):
-        &quot;&quot;&quot;The constructor
-        &quot;&quot;&quot;
-        self.name = name
-        self.year = yr
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A class representing students</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">yr</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The constructor</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">=</span> <span class="n">yr</span>
         
-    def __repr__(self):
-        &quot;&quot;&quot;For printing
-        &quot;&quot;&quot;
-        return self.name + &quot; &quot; + str(self.year)
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;For printing</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">year</span><span class="p">)</span>
     
-    def defer(self, num_yrs):
-        &quot;&quot;&quot;Defer study for num_years
-        &quot;&quot;&quot;
-        self.year += num_yrs 
+    <span class="k">def</span> <span class="nf">defer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num_yrs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Defer study for num_years</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">+=</span> <span class="n">num_yrs</span> 
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = Student(&quot;Peter Been&quot;, 2021)
-b = Student(&quot;Jasper Klein&quot;, 2021)
-c = Student(&quot;Linda Buitendijk&quot;, 2022)
-d = Student(&quot;Myrthe Zomer&quot;, 2021)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s2">&quot;Peter Been&quot;</span><span class="p">,</span> <span class="mi">2021</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s2">&quot;Jasper Klein&quot;</span><span class="p">,</span> <span class="mi">2021</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s2">&quot;Linda Buitendijk&quot;</span><span class="p">,</span> <span class="mi">2022</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s2">&quot;Myrthe Zomer&quot;</span><span class="p">,</span> <span class="mi">2021</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(b)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2074,7 +2074,7 @@ d = Student(&quot;Myrthe Zomer&quot;, 2021)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>b.name
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="o">.</span><span class="n">name</span>
 </pre></div>
 </div>
 </div>
@@ -2086,7 +2086,7 @@ d = Student(&quot;Myrthe Zomer&quot;, 2021)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>dir(b)[-10:]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">b</span><span class="p">)[</span><span class="o">-</span><span class="mi">10</span><span class="p">:]</span>
 </pre></div>
 </div>
 </div>
@@ -2108,14 +2108,14 @@ d = Student(&quot;Myrthe Zomer&quot;, 2021)
 <p>Ook hier laten we maar de laatste 10 zien, je ziet hier de velden <code class="docutils literal notranslate"><span class="pre">name</span></code> en <code class="docutils literal notranslate"><span class="pre">year</span></code> terug, en ook de methode <code class="docutils literal notranslate"><span class="pre">defer</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>b.defer(1)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="o">.</span><span class="n">defer</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>b.year
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="o">.</span><span class="n">year</span>
 </pre></div>
 </div>
 </div>
@@ -2127,7 +2127,7 @@ d = Student(&quot;Myrthe Zomer&quot;, 2021)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(b)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2148,31 +2148,31 @@ d = Student(&quot;Myrthe Zomer&quot;, 2021)
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Date:
-    &quot;&quot;&quot;Date is a user-defined data structure --
-       a class that stores and manipulates dates
-    &quot;&quot;&quot;
-    def __init__(self, day, month, year):
-        &quot;&quot;&quot;The constructor for objects of type Date
-        &quot;&quot;&quot;
-        self.day = day
-        self.month = month
-        self.year = year
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Date</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Date is a user-defined data structure --</span>
+<span class="sd">       a class that stores and manipulates dates</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The constructor for objects of type Date</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">day</span> <span class="o">=</span> <span class="n">day</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">month</span> <span class="o">=</span> <span class="n">month</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">=</span> <span class="n">year</span>
 
-    def __repr__(self):
-        &quot;&quot;&quot;This method returns a string representation for the
-           object of type Dat that calls it (named self)
-        &quot;&quot;&quot;
-        return f&quot;{self.day:02d}/{self.month:02d}/{self.year:04d}&quot;
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;This method returns a string representation for the</span>
+<span class="sd">           object of type Dat that calls it (named self)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">day</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">month</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">year</span><span class="si">:</span><span class="s2">04d</span><span class="si">}</span><span class="s2">&quot;</span>
     
-    def is_leap_year(self):
-        &quot;&quot;&quot;Returns True if self, the calling object, is
-           in a leap year; False otherwise
-        &quot;&quot;&quot;
-        if self.year % 400 == 0: return True
-        if self.year % 100 == 0: return False
-        if self.year % 4 == 0: return True
-        return False
+    <span class="k">def</span> <span class="nf">is_leap_year</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns True if self, the calling object, is</span>
+<span class="sd">           in a leap year; False otherwise</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">%</span> <span class="mi">400</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="kc">False</span>
 </pre></div>
 </div>
 </div>
@@ -2181,26 +2181,26 @@ d = Student(&quot;Myrthe Zomer&quot;, 2021)
 <h3>Een object <code class="docutils literal notranslate"><span class="pre">d</span></code><a class="headerlink" href="#een-object-d" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>d = Date(11, 12, 2013)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">Date</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">2013</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>id(d)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">id</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140674536749664
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140260344661568
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>type(d)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2214,7 +2214,7 @@ d = Student(&quot;Myrthe Zomer&quot;, 2021)
 <section id="stap-voor-stap">
 <h3>Stap voor stap<a class="headerlink" href="#stap-voor-stap" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Date</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Date is a user-defined data structure --</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Date is a user-defined data structure --</span>
 <span class="sd">       a class that stores and manipulates dates</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 </pre></div>
@@ -2222,7 +2222,7 @@ d = Student(&quot;Myrthe Zomer&quot;, 2021)
 <p>Dit is het begin van een nieuw type <code class="docutils literal notranslate"><span class="pre">Date</span></code> aangeven door het <code class="docutils literal notranslate"><span class="pre">class</span></code> <em>keyword</em></p>
 <p>Let op de dubbele punt, dit betekent dat alles wat volgt ingesprongen moet worden omdat het bij de klasse hoort.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;The constructor for objects of type Date</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The constructor for objects of type Date</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">day</span> <span class="o">=</span> <span class="n">day</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">month</span> <span class="o">=</span> <span class="n">month</span>
@@ -2232,7 +2232,7 @@ d = Student(&quot;Myrthe Zomer&quot;, 2021)
 <p>Dit is de <em>constructor</em> voor <code class="docutils literal notranslate"><span class="pre">Date</span></code> objecten. Dit is de plek voor waar input data wordt toegekend aan de (data) velden.</p>
 <p>De velden zijn de informatie die in elk <code class="docutils literal notranslate"><span class="pre">Date</span></code> object aanwezig zijn.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;This method returns a string representation for the</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;This method returns a string representation for the</span>
 <span class="sd">           object of type Dat that calls it (named self)</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">day</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">month</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">year</span><span class="si">:</span><span class="s2">04d</span><span class="si">}</span><span class="s2">&quot;</span>
@@ -2245,15 +2245,15 @@ d = Student(&quot;Myrthe Zomer&quot;, 2021)
 <p>Strings formatteren, handig!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>klassen = 12
-studenten = 25
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">klassen</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">studenten</span> <span class="o">=</span> <span class="mi">25</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>f&quot;{klassen} klassen met {studenten} studenten is in totaal {klassen * studenten}&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">klassen</span><span class="si">}</span><span class="s2"> klassen met </span><span class="si">{</span><span class="n">studenten</span><span class="si">}</span><span class="s2"> studenten is in totaal </span><span class="si">{</span><span class="n">klassen</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">studenten</span><span class="si">}</span><span class="s2">&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -2265,14 +2265,14 @@ studenten = 25
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x = 1
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>f&quot;{x:02d}&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -2285,7 +2285,7 @@ studenten = 25
 <p><code class="docutils literal notranslate"><span class="pre">02d</span></code> formatteert de integer <code class="docutils literal notranslate"><span class="pre">x</span></code> tot een string met een minimale breedte van 2 posities, en “zero-padding” (voorloopmullen) links, indien nodig.</p>
 <p><img alt="Schrikkeljaar" src="../_images/schrikkeljaar.png" /></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="nf">is_leap_year</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns True if self, the calling object, is</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns True if self, the calling object, is</span>
 <span class="sd">           in a leap year; False otherwise</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">%</span> <span class="mi">400</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -2307,14 +2307,14 @@ studenten = 25
 <p>Het is hier misschien ook van belang om stil te staan bij het feit dat programmeertalen niet zomaar zijn ontstaan, het is mensenwerk en wij bouwen weer voort op het werk van anderen!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>wd = Date(11, 12, 2013)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wd</span> <span class="o">=</span> <span class="n">Date</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">2013</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(wd)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">wd</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2326,7 +2326,7 @@ studenten = 25
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>wd.is_leap_year()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wd</span><span class="o">.</span><span class="n">is_leap_year</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -2338,14 +2338,14 @@ studenten = 25
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>d = Date(11, 12, 2020)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">Date</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">2020</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(d)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2357,7 +2357,7 @@ studenten = 25
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>d.is_leap_year()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">is_leap_year</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -2375,23 +2375,23 @@ studenten = 25
 <p>De anatomie van een klasse</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Date:                                                        # (1)
-    def __init__(self, day, month, year):                          # (2)
-        self.day = day                                             # (3)
-        self.month = month                                         # (4)
-        self.year = year                                           # (5)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Date</span><span class="p">:</span>                                                        <span class="c1"># (1)</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>                          <span class="c1"># (2)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">day</span> <span class="o">=</span> <span class="n">day</span>                                             <span class="c1"># (3)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">month</span> <span class="o">=</span> <span class="n">month</span>                                         <span class="c1"># (4)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">=</span> <span class="n">year</span>                                           <span class="c1"># (5)</span>
 
-    def __repr__(self):                                            # (6)
-        return f&quot;{self.day:02d}/{self.month:02d}/{self.year:04d}&quot;  # (7)
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>                                            <span class="c1"># (6)</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">day</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">month</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">year</span><span class="si">:</span><span class="s2">04d</span><span class="si">}</span><span class="s2">&quot;</span>  <span class="c1"># (7)</span>
     
-    def is_leap_year(self):                                        # (8)
-        if self.year % 400 == 0: return True
-        if self.year % 100 == 0: return False
-        if self.year % 4 == 0: return True
-        return False
-                                                                   # (9)
-wd = Date(11, 12, 2013)                                            # (10)
-ny = Date(1, 1, 2021)                                              # (11)
+    <span class="k">def</span> <span class="nf">is_leap_year</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>                                        <span class="c1"># (8)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">%</span> <span class="mi">400</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="kc">False</span>
+                                                                   <span class="c1"># (9)</span>
+<span class="n">wd</span> <span class="o">=</span> <span class="n">Date</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">2013</span><span class="p">)</span>                                            <span class="c1"># (10)</span>
+<span class="n">ny</span> <span class="o">=</span> <span class="n">Date</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2021</span><span class="p">)</span>                                              <span class="c1"># (11)</span>
 </pre></div>
 </div>
 </div>
@@ -2424,7 +2424,7 @@ ny = Date(1, 1, 2021)                                              # (11)
 <p>Als alles een object is …</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>21 &lt; 42 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">21</span> <span class="o">&lt;</span> <span class="mi">42</span> 
 </pre></div>
 </div>
 </div>
@@ -2436,7 +2436,7 @@ ny = Date(1, 1, 2021)                                              # (11)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&quot;🥚&quot; &gt; &quot;🐔&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;🥚&quot;</span> <span class="o">&gt;</span> <span class="s2">&quot;🐔&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -2448,15 +2448,15 @@ ny = Date(1, 1, 2021)                                              # (11)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>history = Date(1, 1, 1970)
-epoch = Date(1, 1, 1970)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">history</span> <span class="o">=</span> <span class="n">Date</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1970</span><span class="p">)</span>
+<span class="n">epoch</span> <span class="o">=</span> <span class="n">Date</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1970</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>epoch == history
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">epoch</span> <span class="o">==</span> <span class="n">history</span>
 </pre></div>
 </div>
 </div>
@@ -2516,15 +2516,15 @@ epoch = Date(1, 1, 1970)
 <h3>What’s the <code class="docutils literal notranslate"><span class="pre">diff</span></code>?<a class="headerlink" href="#what-s-the-diff" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>%run date2.py
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> date2.py
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>epoch = Date(1, 1, 1970)
-today = Date(6, 12, 2020)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">epoch</span> <span class="o">=</span> <span class="n">Date</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1970</span><span class="p">)</span>
+<span class="n">today</span> <span class="o">=</span> <span class="n">Date</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">2020</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2532,7 +2532,7 @@ today = Date(6, 12, 2020)
 <p>Via een methode</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>today.diff(epoch)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">today</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">epoch</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2544,7 +2544,7 @@ today = Date(6, 12, 2020)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>epoch.diff(today)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">epoch</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">today</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2559,8 +2559,8 @@ today = Date(6, 12, 2020)
 <h3>Where’s the <code class="docutils literal notranslate"><span class="pre">dow</span></code>?<a class="headerlink" href="#where-s-the-dow" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sm1 = Date(28, 10, 1929)
-sm2 = Date(19, 10, 1987)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sm1</span> <span class="o">=</span> <span class="n">Date</span><span class="p">(</span><span class="mi">28</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1929</span><span class="p">)</span>
+<span class="n">sm2</span> <span class="o">=</span> <span class="n">Date</span><span class="p">(</span><span class="mi">19</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1987</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2568,7 +2568,7 @@ sm2 = Date(19, 10, 1987)
 <p>Gebruikt een <em>named</em> object</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sm1.dow()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sm1</span><span class="o">.</span><span class="n">dow</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -2580,7 +2580,7 @@ sm2 = Date(19, 10, 1987)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sm2.dow()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sm2</span><span class="o">.</span><span class="n">dow</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -2593,7 +2593,7 @@ sm2 = Date(19, 10, 1987)
 <p>Zonder naam, <em>unnamed</em>!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>Date(1,1,1).dow()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Date</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">dow</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -2605,7 +2605,7 @@ sm2 = Date(19, 10, 1987)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>Date(1,1,2021).dow()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Date</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2021</span><span class="p">)</span><span class="o">.</span><span class="n">dow</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -2620,7 +2620,7 @@ sm2 = Date(19, 10, 1987)
 <h3>unnamed?<a class="headerlink" href="#unnamed" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>str(&quot;Astronaut wordt snel oud tijdens een reis naar Mars&quot;).split()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span><span class="p">(</span><span class="s2">&quot;Astronaut wordt snel oud tijdens een reis naar Mars&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -2632,7 +2632,7 @@ sm2 = Date(19, 10, 1987)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&quot;Astronaut wordt snel oud tijdens een reis naar Mars&quot;.split()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Astronaut wordt snel oud tijdens een reis naar Mars&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -2648,14 +2648,14 @@ sm2 = Date(19, 10, 1987)
 <h2>Het <code class="docutils literal notranslate"><span class="pre">==</span></code> probleem<a class="headerlink" href="#het-probleem" title="Permalink naar deze titel">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>wd = Date(11, 12, 2013)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wd</span> <span class="o">=</span> <span class="n">Date</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">2013</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>wd
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wd</span>
 </pre></div>
 </div>
 </div>
@@ -2667,14 +2667,14 @@ sm2 = Date(19, 10, 1987)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>wd2 = Date(11, 12, 2013)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wd2</span> <span class="o">=</span> <span class="n">Date</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">2013</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>wd2
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wd2</span>
 </pre></div>
 </div>
 </div>
@@ -2686,7 +2686,7 @@ sm2 = Date(19, 10, 1987)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>wd == wd2
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wd</span> <span class="o">==</span> <span class="n">wd2</span>
 </pre></div>
 </div>
 </div>
@@ -2700,24 +2700,24 @@ sm2 = Date(19, 10, 1987)
 <h3>Waarde versus identiteit<a class="headerlink" href="#waarde-versus-identiteit" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>id(wd)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">id</span><span class="p">(</span><span class="n">wd</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140674484809360
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140260345112576
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>id(wd2)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">id</span><span class="p">(</span><span class="n">wd2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140674484808352
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140260345113104
 </pre></div>
 </div>
 </div>
@@ -2729,50 +2729,50 @@ sm2 = Date(19, 10, 1987)
 <p>Laten we een eigen test voor gelijkwaardigheid schrijven!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Date:
-    def __init__(self, day, month, year):
-        &quot;&quot;&quot;The constructor for objects of type Date
-        &quot;&quot;&quot;
-        self.day = day
-        self.month = month
-        self.year = year
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Date</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The constructor for objects of type Date</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">day</span> <span class="o">=</span> <span class="n">day</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">month</span> <span class="o">=</span> <span class="n">month</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">=</span> <span class="n">year</span>
 
-    def __repr__(self):
-        return f&quot;{self.day:02d}/{self.month:02d}/{self.year:04d}&quot;
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">day</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">month</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">year</span><span class="si">:</span><span class="s2">04d</span><span class="si">}</span><span class="s2">&quot;</span>
     
-    def is_leap_year(self):
-        if self.year % 400 == 0: return True
-        if self.year % 100 == 0: return False
-        if self.year % 4 == 0: return True
-        return False
+    <span class="k">def</span> <span class="nf">is_leap_year</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">%</span> <span class="mi">400</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="kc">False</span>
 
-    def equals(self, other):
-        &quot;&quot;&quot;Returns True if they represent
-           the same date; False otherwise
-        &quot;&quot;&quot;
-        if (
-            self.year == other.year
-            and self.month == other.month
-            and self.day == other.day
-        ):
-            return True
-        else:
-            return False
+    <span class="k">def</span> <span class="nf">equals</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns True if they represent</span>
+<span class="sd">           the same date; False otherwise</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">year</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">month</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">month</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">day</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">day</span>
+        <span class="p">):</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>wd = Date(11, 12, 2013)
-wd2 = Date(11, 12, 2013)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wd</span> <span class="o">=</span> <span class="n">Date</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">2013</span><span class="p">)</span>
+<span class="n">wd2</span> <span class="o">=</span> <span class="n">Date</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">2013</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>wd.equals(wd2)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wd</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">wd2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2784,7 +2784,7 @@ wd2 = Date(11, 12, 2013)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>wd2.equals(wd)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wd2</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">wd</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2797,7 +2797,7 @@ wd2 = Date(11, 12, 2013)
 <p>Maar …</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>wd == wd2
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wd</span> <span class="o">==</span> <span class="n">wd2</span>
 </pre></div>
 </div>
 </div>
@@ -2813,50 +2813,50 @@ wd2 = Date(11, 12, 2013)
 <p>Vertel Python wat wij met gelijkwaardigeid bedoelen!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Date:
-    def __init__(self, day, month, year):
-        &quot;&quot;&quot;The constructor for objects of type Date
-        &quot;&quot;&quot;
-        self.day = day
-        self.month = month
-        self.year = year
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Date</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The constructor for objects of type Date</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">day</span> <span class="o">=</span> <span class="n">day</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">month</span> <span class="o">=</span> <span class="n">month</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">=</span> <span class="n">year</span>
 
-    def __repr__(self):
-        return f&quot;{self.day:02d}/{self.month:02d}/{self.year:04d}&quot;
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">day</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">month</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">year</span><span class="si">:</span><span class="s2">04d</span><span class="si">}</span><span class="s2">&quot;</span>
     
-    def is_leap_year(self):
-        if self.year % 400 == 0: return True
-        if self.year % 100 == 0: return False
-        if self.year % 4 == 0: return True
-        return False
+    <span class="k">def</span> <span class="nf">is_leap_year</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">%</span> <span class="mi">400</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="kc">False</span>
 
-    def __eq__(self, other):
-        &quot;&quot;&quot;Returns True if they represent
-           the same date; False otherwise
-        &quot;&quot;&quot;
-        if (
-            self.year == other.year
-            and self.month == other.month
-            and self.day == other.day
-        ):
-            return True
-        else:
-            return False
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns True if they represent</span>
+<span class="sd">           the same date; False otherwise</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">year</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">month</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">month</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">day</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">day</span>
+        <span class="p">):</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>wd = Date(11, 12, 2013)
-wd2 = Date(11, 12, 2013)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wd</span> <span class="o">=</span> <span class="n">Date</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">2013</span><span class="p">)</span>
+<span class="n">wd2</span> <span class="o">=</span> <span class="n">Date</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">2013</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>wd == wd2
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wd</span> <span class="o">==</span> <span class="n">wd2</span>
 </pre></div>
 </div>
 </div>
@@ -2872,38 +2872,38 @@ wd2 = Date(11, 12, 2013)
 <p>De methode <code class="docutils literal notranslate"><span class="pre">equals</span></code> blijven gebruiken maar ook Python vertellen over gelijkwaardigheid (<code class="docutils literal notranslate"><span class="pre">__eq__</span></code>)?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Date:
-    def __init__(self, day, month, year):
-        &quot;&quot;&quot;The constructor for objects of type Date
-        &quot;&quot;&quot;
-        self.day = day
-        self.month = month
-        self.year = year
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Date</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The constructor for objects of type Date</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">day</span> <span class="o">=</span> <span class="n">day</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">month</span> <span class="o">=</span> <span class="n">month</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">=</span> <span class="n">year</span>
 
-    def __repr__(self):
-        return f&quot;{self.day:02d}/{self.month:02d}/{self.year:04d}&quot;
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">day</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">month</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">year</span><span class="si">:</span><span class="s2">04d</span><span class="si">}</span><span class="s2">&quot;</span>
     
-    def is_leap_year(self):
-        if self.year % 400 == 0: return True
-        if self.year % 100 == 0: return False
-        if self.year % 4 == 0: return True
-        return False
+    <span class="k">def</span> <span class="nf">is_leap_year</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">%</span> <span class="mi">400</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="kc">False</span>
 
-    def equals(self, other):
-        &quot;&quot;&quot;Returns True if they represent
-           the same date; False otherwise
-        &quot;&quot;&quot;
-        if (
-            self.year == other.year
-            and self.month == other.month
-            and self.day == other.day
-        ):
-            return True
-        else:
-            return False
+    <span class="k">def</span> <span class="nf">equals</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns True if they represent</span>
+<span class="sd">           the same date; False otherwise</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">year</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">month</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">month</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">day</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">day</span>
+        <span class="p">):</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
         
-    def __eq__(self, other):
-        return self.equals(other)
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2930,7 +2930,7 @@ wd2 = Date(11, 12, 2013)
     <span class="o">...</span>
     
     <span class="k">def</span> <span class="nf">tomorrow</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Moves the self date ahead 1 day</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Moves the self date ahead 1 day</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">DIM</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">]</span>
         
@@ -2951,7 +2951,7 @@ wd2 = Date(11, 12, 2013)
     <span class="o">...</span>
     
     <span class="k">def</span> <span class="nf">tomorrow</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Moves the self date ahead 1 day</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Moves the self date ahead 1 day</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_leap_year</span><span class="p">():</span>
             <span class="n">fdays</span> <span class="o">=</span> <span class="mi">29</span>

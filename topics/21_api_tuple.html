@@ -1773,51 +1773,51 @@ title="Print to PDF"
 <h2>Unieke woorden tellen<a class="headerlink" href="#unieke-woorden-tellen" title="Permalink naar deze titel">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def get_text(filename):
-    &quot;&quot;&quot;Read from filename
-    &quot;&quot;&quot;
-    with open(filename) as f:
-        text = f.read()
-    return text
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_text</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Read from filename</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">text</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def vocab_count(text):
-    &quot;&quot;&quot;Count unique words in a text
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">vocab_count</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Count unique words in a text</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        text (str): The string to split and count</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        dict: A dictionary with word counts</span>
+
+<span class="sd">    Example usage:</span>
+
+<span class="sd">    &gt;&gt;&gt; text = &quot;An example text to serve as an example&quot;</span>
+<span class="sd">    &gt;&gt;&gt; vocab_count(text)</span>
+<span class="sd">    {&#39;An&#39;: 1, &#39;example&#39;: 2, &#39;text&#39;: 1, &#39;to&#39;: 1, &#39;serve&#39;: 1, &#39;as&#39;: 1, &#39;an&#39;: 1}</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">LoW</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
     
-    Args:
-        text (str): The string to split and count
+    <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">LoW</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">w</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+            <span class="n">d</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">d</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
 
-    Returns:
-        dict: A dictionary with word counts
-
-    Example usage:
-
-    &gt;&gt;&gt; text = &quot;An example text to serve as an example&quot;
-    &gt;&gt;&gt; vocab_count(text)
-    {&#39;An&#39;: 1, &#39;example&#39;: 2, &#39;text&#39;: 1, &#39;to&#39;: 1, &#39;serve&#39;: 1, &#39;as&#39;: 1, &#39;an&#39;: 1}
-    &quot;&quot;&quot;
-    LoW = text.split()
-    d = {}
-    
-    for w in LoW:
-        if w not in d:
-            d[w] = 1
-        else:
-            d[w] += 1
-
-    return d
+    <span class="k">return</span> <span class="n">d</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>text = get_text(&quot;data/a.txt&quot;)
-vocab_count(text)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="n">get_text</span><span class="p">(</span><span class="s2">&quot;data/a.txt&quot;</span><span class="p">)</span>
+<span class="n">vocab_count</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1844,7 +1844,7 @@ vocab_count(text)
 <p>Niet alleen voor jezelf!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>help(vocab_count)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">vocab_count</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1882,21 +1882,21 @@ vocab_count(text)
 <p><img alt="collections.Counter" src="../_images/collections_counter.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from collections import Counter
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>c = Counter(text)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>c
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span>
 </pre></div>
 </div>
 </div>
@@ -1933,14 +1933,14 @@ vocab_count(text)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>c = Counter(text.split())
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>c
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span>
 </pre></div>
 </div>
 </div>
@@ -1965,7 +1965,7 @@ vocab_count(text)
 <p><img alt="Counter most_common" src="../_images/counter_most_common.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>c.most_common(3)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1987,8 +1987,8 @@ vocab_count(text)
 <h3>Positionele parameters<a class="headerlink" href="#positionele-parameters" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def f(x, y):
-    return 10 * x + y
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
 </pre></div>
 </div>
 </div>
@@ -1996,7 +1996,7 @@ vocab_count(text)
 <p><code class="docutils literal notranslate"><span class="pre">x</span></code> en <code class="docutils literal notranslate"><span class="pre">y</span></code> zijn <em>positionele</em> argumenten, de volgorde is van belang</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>f(4, 2)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2011,8 +2011,8 @@ vocab_count(text)
 <h3>Default en <em>named</em> parameters<a class="headerlink" href="#default-en-named-parameters" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def f(x=3, y=17):
-    return 10 * x + y
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">17</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
 </pre></div>
 </div>
 </div>
@@ -2020,7 +2020,7 @@ vocab_count(text)
 <p>Named parameters of ook wel <em>keyword</em> arguments genoemd. <code class="docutils literal notranslate"><span class="pre">x</span></code> en <code class="docutils literal notranslate"><span class="pre">y</span></code> hebben hier <em>default</em> (standaard) waarden (3 en 17). Omdat default waarden zijn gezet zijn parameters in de functie-aanroep niet nodig.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>f()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -2033,7 +2033,7 @@ vocab_count(text)
 <p>Argumenten overschrijven de default argumenten.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>f(3, 1)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2046,7 +2046,7 @@ vocab_count(text)
 <p>In dit geval is het argument <code class="docutils literal notranslate"><span class="pre">x</span></code> gelijk aan 3, voor <code class="docutils literal notranslate"><span class="pre">y</span></code> zal de default waarde worden gebruikt.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>f(3)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2059,7 +2059,7 @@ vocab_count(text)
 <p>Omdat het <em>named</em> argumenten zijn kunnen ze ook expliciet met naam en waarde worden aangeroepen.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>f(y=4, x=2)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2074,15 +2074,15 @@ vocab_count(text)
 <h3>Positionele én named parameters<a class="headerlink" href="#positionele-en-named-parameters" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def f(x, y=17):
-    return 10 * x + y
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">17</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>f()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -2100,8 +2100,8 @@ vocab_count(text)
 <p>Python geeft hier aan dat een waarde voor het positionele argument ontbreekt. Waarden voor positionele argumenten zijn verplicht!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def f(x=3, y):
-    return 10 * x + y
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
 </pre></div>
 </div>
 </div>
@@ -2179,14 +2179,14 @@ vocab_count(text)
 <p>Tuples lijken op lists</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>T = (42, 2)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">T</span> <span class="o">=</span> <span class="p">(</span><span class="mi">42</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>T[0]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -2198,8 +2198,8 @@ vocab_count(text)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for x in T:
-    print(x)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">T</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2215,7 +2215,7 @@ vocab_count(text)
 <p>In tegenstelling tot lists!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>T[1] = 42
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">T</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">42</span>
 </pre></div>
 </div>
 </div>
@@ -2235,11 +2235,11 @@ vocab_count(text)
 <h3>Verrassingen<a class="headerlink" href="#verrassingen" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>width = 4
-s = &quot; &quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">width</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span>
 
-for col in range(width):
-    s += str(col), &quot; &quot;
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">width</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">col</span><span class="p">),</span> <span class="s2">&quot; &quot;</span>
 </pre></div>
 </div>
 </div>
@@ -2258,18 +2258,18 @@ for col in range(width):
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>width = 4
-s = &quot; &quot;,
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">width</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="p">,</span>
 
-for col in range(width):
-    s += str(col), &quot; &quot;
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">width</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">col</span><span class="p">),</span> <span class="s2">&quot; &quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>s
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span>
 </pre></div>
 </div>
 </div>
@@ -2281,7 +2281,7 @@ for col in range(width):
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>(&quot; &quot;,) + (0, &quot; &quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2296,15 +2296,15 @@ for col in range(width):
 <h3>Verloren komma’s<a class="headerlink" href="#verloren-komma-s" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def mul(x, y):
-    return x * y,
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span><span class="p">,</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>assert mul(2, 2) == 4
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">mul</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span>
 </pre></div>
 </div>
 </div>
@@ -2321,14 +2321,14 @@ for col in range(width):
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x = mul(2, 2)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">mul</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>type(x)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2340,7 +2340,7 @@ for col in range(width):
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span>
 </pre></div>
 </div>
 </div>
@@ -2355,33 +2355,33 @@ for col in range(width):
 <h3>Meerdere returnwaarden<a class="headerlink" href="#meerdere-returnwaarden" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>L = [25, 26, 21, 18, 15, 20, 25, 28, 34, 40, 35]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">35</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def f(L):
-    profit = L[1] - L[0]
-    buy_day = 0
-    sell_day = 1
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+    <span class="n">profit</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">buy_day</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">sell_day</span> <span class="o">=</span> <span class="mi">1</span>
     
-    for b in range(len(L)):
-        for s in range(b + 1, len(L)):
-            if L[s] - L[b] &gt; profit:
-                profit = L[s] - L[b]
-                buy_day = b
-                sell_day = s
+    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)):</span>
+        <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">b</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">L</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">-</span> <span class="n">L</span><span class="p">[</span><span class="n">b</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">profit</span><span class="p">:</span>
+                <span class="n">profit</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">-</span> <span class="n">L</span><span class="p">[</span><span class="n">b</span><span class="p">]</span>
+                <span class="n">buy_day</span> <span class="o">=</span> <span class="n">b</span>
+                <span class="n">sell_day</span> <span class="o">=</span> <span class="n">s</span>
 
-    return buy_day, sell_day, profit
+    <span class="k">return</span> <span class="n">buy_day</span><span class="p">,</span> <span class="n">sell_day</span><span class="p">,</span> <span class="n">profit</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>f(L)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2394,7 +2394,7 @@ for col in range(width):
 <p>Tuple unpacking, dit is handig!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>buy_day, sell_day, profit = f(L)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">buy_day</span><span class="p">,</span> <span class="n">sell_day</span><span class="p">,</span> <span class="n">profit</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2402,7 +2402,7 @@ for col in range(width):
 <p>En herinner je je f-strings nog?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(f&quot;buy on day {buy_day}, sell on day {sell_day} and your profit will be {profit}!&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;buy on day </span><span class="si">{</span><span class="n">buy_day</span><span class="si">}</span><span class="s2">, sell on day </span><span class="si">{</span><span class="n">sell_day</span><span class="si">}</span><span class="s2"> and your profit will be </span><span class="si">{</span><span class="n">profit</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

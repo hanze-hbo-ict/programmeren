@@ -1787,7 +1787,7 @@ title="Print to PDF"
 <h2>Stap 1: Een tweedimensionaal “bord” met cellen maken: <code class="docutils literal notranslate"><span class="pre">create_one_row</span></code> en <code class="docutils literal notranslate"><span class="pre">create_board</span></code><a class="headerlink" href="#stap-1-een-tweedimensionaal-bord-met-cellen-maken-create-one-row-en-create-board" title="Permalink naar deze titel">#</a></h2>
 <p>In het bestand <code class="docutils literal notranslate"><span class="pre">wk9ex1.py</span></code> zie je deze voorbeeldfunctie:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_one_row</span><span class="p">(</span><span class="n">width</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Returns one row of zeros of width &quot;width&quot;.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns one row of zeros of width &quot;width&quot;.</span>
 <span class="sd">       You might use this in your create_board(width, height) function.&quot;&quot;&quot;</span>
     <span class="n">row</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">width</span><span class="p">):</span>
@@ -1802,7 +1802,7 @@ title="Print to PDF"
 <p>Zorg dat je de functie <code class="docutils literal notranslate"><span class="pre">create_one_row</span></code> <strong>niet opnieuw</strong> implementeert!</p>
 <p><strong>Gebruik</strong> in plaats daarvan <code class="docutils literal notranslate"><span class="pre">create_one_row</span></code> in je functie <code class="docutils literal notranslate"><span class="pre">create_board</span></code> op een zelfde manier waarop <code class="docutils literal notranslate"><span class="pre">0</span></code> gebruikt wordt om individuele elementen toe te voegen in <code class="docutils literal notranslate"><span class="pre">create_one_row</span></code>. Hier zie je een sjabloon; je kan dit kopiëren en plakken en dan de delen die nodig zijn om het te voltooien invullen:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_board</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Returns a 2D array with &quot;height&quot; rows and &quot;width&quot; columns.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns a 2D array with &quot;height&quot; rows and &quot;width&quot; columns.&quot;&quot;&quot;</span>
     <span class="n">a</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">height</span><span class="p">):</span>
         <span class="n">a</span> <span class="o">+=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span>        <span class="c1"># gebruik de bovenstaande functie zodat ... één rij is!!</span>
@@ -1825,7 +1825,7 @@ title="Print to PDF"
 <p>Je hebt ongetwijfeld gemerkt dat als Python een tweedimensionale lijst afdrukt, het de tweedimensionale structuur compleet negeert en alles platslaat naar een enkele regel (misschien met regelafbreking, als dat nodig is). Om je bord tweedimensionaal af te drukken met ASCII-tekens (we zullen het grafisch weergeven als het helemaal werkt) kan je deze functie kopiëren naar je bestand.</p>
 <p><strong>Let op: er mist één regel!</strong> Misschien zie je het al…</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_board</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;This function prints the 2D list-of-lists a.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;This function prints the 2D list-of-lists a.&quot;&quot;&quot;</span>
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>               <span class="c1"># row is de hele rij</span>
         <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">row</span><span class="p">:</span>         <span class="c1"># col is het individuele element</span>
             <span class="nb">print</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>  <span class="c1"># druk dat element af</span>
@@ -1858,7 +1858,7 @@ title="Print to PDF"
 <h3>De functie <code class="docutils literal notranslate"><span class="pre">diagonalize</span></code><a class="headerlink" href="#de-functie-diagonalize" title="Permalink naar deze titel">#</a></h3>
 <p>Om te oefenen met het lussen over tweedimensionale arrays, kan je deze functie genaamd <code class="docutils literal notranslate"><span class="pre">diagonalize(width,</span> <span class="pre">height)</span></code> naar je bestand kopiëren:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">diagonalize</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Creates an empty board and then modifies it</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Creates an empty board and then modifies it</span>
 <span class="sd">       so that it has a diagonal strip of &quot;on&quot; cells.</span>
 <span class="sd">       But do that only in the *interior* of the 2D array.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -1991,7 +1991,7 @@ title="Print to PDF"
 <h2><code class="docutils literal notranslate"><span class="pre">copy(a)</span></code>, een “deep” copier, schrijven…<a class="headerlink" href="#copy-a-een-deep-copier-schrijven" title="Permalink naar deze titel">#</a></h2>
 <p>Begin met deze code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">copy</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Returns a DEEP copy of the 2D array a.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns a DEEP copy of the 2D array a.&quot;&quot;&quot;</span>
     <span class="n">height</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
     <span class="n">width</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
     <span class="n">new_a</span> <span class="o">=</span> <span class="n">create_board</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
@@ -2152,7 +2152,7 @@ buren van een paar cellen, om te testen of <code class="docutils literal notrans
 </div>
 <p>Hier is een beginsignature voor <code class="docutils literal notranslate"><span class="pre">next_life_generation</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">next_life_generation</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Makes a copy of a and then advances one</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Makes a copy of a and then advances one</span>
 <span class="sd">       generation of Conway&#39;s Game of Life within</span>
 <span class="sd">       the *inner cells* of that copy.</span>
 <span class="sd">       The outer edge always stays at 0.</span>

@@ -1923,7 +1923,7 @@ title="Print to PDF"
 <p>Zet een getal om naar een karakter</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>chr(67)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">chr</span><span class="p">(</span><span class="mi">67</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1936,7 +1936,7 @@ title="Print to PDF"
 <p>Zet een karakter om naar een getal</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ord(&quot;C&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;C&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1951,7 +1951,7 @@ title="Print to PDF"
 <h3>Vergelijken<a class="headerlink" href="#vergelijken" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ord(&quot;w&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;w&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1963,7 +1963,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ord(&quot;e&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1975,7 +1975,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&quot;w&quot; &gt; &quot;e&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;w&quot;</span> <span class="o">&gt;</span> <span class="s2">&quot;e&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -2111,20 +2111,20 @@ title="Print to PDF"
 <h3>Een begin<a class="headerlink" href="#een-begin" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def rot13(c):
-    &quot;&quot;&quot;Roteer c met 13 karakters
-    
-    &quot;Draai door&quot; indien nodig, negeer NIET alfabetische karakters
-    &quot;&quot;&quot;
-    if &quot;a&quot; &lt;= c &lt;= &quot;z&quot;:
-        if ord(c) + 13 &lt;= ord(&quot;z&quot;):
-            return chr(ord(c) + 13)
-        else:
-            return ...
-    elif &quot;A&quot; &lt;= c &lt;= &quot;Z&quot;:  # hoofdletter test
-        ...
-    else:
-        return ...
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rot13</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Roteer c met 13 karakters</span>
+<span class="sd">    </span>
+<span class="sd">    &quot;Draai door&quot; indien nodig, negeer NIET alfabetische karakters</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="s2">&quot;a&quot;</span> <span class="o">&lt;=</span> <span class="n">c</span> <span class="o">&lt;=</span> <span class="s2">&quot;z&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">+</span> <span class="mi">13</span> <span class="o">&lt;=</span> <span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;z&quot;</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">+</span> <span class="mi">13</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="o">...</span>
+    <span class="k">elif</span> <span class="s2">&quot;A&quot;</span> <span class="o">&lt;=</span> <span class="n">c</span> <span class="o">&lt;=</span> <span class="s2">&quot;Z&quot;</span><span class="p">:</span>  <span class="c1"># hoofdletter test</span>
+        <span class="o">...</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">...</span>
 </pre></div>
 </div>
 </div>
@@ -2146,24 +2146,24 @@ title="Print to PDF"
 <h3>Uitwerking<a class="headerlink" href="#uitwerking" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def rot13(c):
-    &quot;&quot;&quot;Roteer c met 13 karakters
-    
-    &quot;Draai door&quot; indien nodig en negeer NIET alfabetische karakters
-    &quot;&quot;&quot;
-    if &quot;a&quot; &lt;= c &lt;= &quot;z&quot;:
-        if ord(c) + 13 &lt;= ord(&quot;z&quot;):
-            return chr(ord(c) + 13)
-        else:
-            return chr(ord(c) + 13 - 26)
-    elif &quot;A&quot; &lt;= c &lt;= &quot;Z&quot;:
-        # upper-case test!
-        if ord(c) + 13 &lt;= ord(&quot;Z&quot;):
-            return chr(ord(c) + 13)
-        else:
-            return chr(ord(c) + 13 - 26)
-    else:
-        return c
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rot13</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Roteer c met 13 karakters</span>
+<span class="sd">    </span>
+<span class="sd">    &quot;Draai door&quot; indien nodig en negeer NIET alfabetische karakters</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="s2">&quot;a&quot;</span> <span class="o">&lt;=</span> <span class="n">c</span> <span class="o">&lt;=</span> <span class="s2">&quot;z&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">+</span> <span class="mi">13</span> <span class="o">&lt;=</span> <span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;z&quot;</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">+</span> <span class="mi">13</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">+</span> <span class="mi">13</span> <span class="o">-</span> <span class="mi">26</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="s2">&quot;A&quot;</span> <span class="o">&lt;=</span> <span class="n">c</span> <span class="o">&lt;=</span> <span class="s2">&quot;Z&quot;</span><span class="p">:</span>
+        <span class="c1"># upper-case test!</span>
+        <span class="k">if</span> <span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">+</span> <span class="mi">13</span> <span class="o">&lt;=</span> <span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;Z&quot;</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">+</span> <span class="mi">13</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">+</span> <span class="mi">13</span> <span class="o">-</span> <span class="mi">26</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">c</span>
 </pre></div>
 </div>
 </div>
@@ -2590,7 +2590,7 @@ title="Print to PDF"
 </div>
 <p>De kans dat een letter wordt gebruikt is een maat voor een taal. Om karakters te tellen in tekst moeten woorden worden opgebroken in opeenvolgende karakters, zogenaamde <a class="reference external" href="https://en.wikipedia.org/wiki/N-gram"><em>n-gram</em></a>s. In het geval van een enkel karakter spreek je van een <em>unigram</em>, langere opeenvolgingen geven meer informatie, bijvoorbeeld een bi- of trigram (twee of drie opeenvolgende karakters).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ngram</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Breek een woord op in steeds n opeenvolgende delen</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Breek een woord op in steeds n opeenvolgende delen</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>  <span class="c1"># base case</span>
         <span class="k">return</span> <span class="o">...</span>

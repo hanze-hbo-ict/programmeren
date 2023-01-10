@@ -1773,38 +1773,38 @@ title="Print to PDF"
 <p>Zijn lists!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>%run simulate.py
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> simulate.py
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>LC = [until_a_repeat(365) for _ in range(1000)]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">LC</span> <span class="o">=</span> <span class="p">[</span><span class="n">until_a_repeat</span><span class="p">(</span><span class="mi">365</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">)]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>LC[:10]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">LC</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[47, 10, 25, 27, 21, 14, 22, 10, 7, 17]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[23, 5, 9, 5, 13, 10, 18, 16, 28, 25]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sum(LC) / len(LC)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">LC</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">LC</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24.147
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24.714
 </pre></div>
 </div>
 </div>
@@ -1813,34 +1813,34 @@ title="Print to PDF"
 <h3>Handelingen op data<a class="headerlink" href="#handelingen-op-data" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>scores = [88, 82, 91, 79, 83, 79, 86, 92, 77, 88, 93, 82, 85, 86, 92, 79]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="p">[</span><span class="mi">88</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">79</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def compute_sum(L):
-    sum_values = 0
-    for i in range(len(L)):
-        sum_values += L[i]
-    return sum_values
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_sum</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+    <span class="n">sum_values</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)):</span>
+        <span class="n">sum_values</span> <span class="o">+=</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">sum_values</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def compute_avg(L):
-    sum_list = compute_sum(L)
-    return sum_list / len(L)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_avg</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+    <span class="n">sum_list</span> <span class="o">=</span> <span class="n">compute_sum</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">sum_list</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>compute_avg(scores)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">compute_avg</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1884,19 +1884,19 @@ title="Print to PDF"
 <p><img alt="2D indices" src="../_images/ex_1a3.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>L = [
-    [3, 2, 6, 8],
-    [9, 2, 5, 7],
-    [0, 3, 2, 3],
-    [1, 2, 3, 4]
-]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>L[3]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1908,7 +1908,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>L[3][3]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1936,7 +1936,7 @@ title="Print to PDF"
 <p>Lists zijn containers, ze bevatten <em>verwijzingen</em> naar data</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>L = [5, 42, &quot;hi&quot;]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="s2">&quot;hi&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1947,7 +1947,7 @@ title="Print to PDF"
 <h3>Indentiteit<a class="headerlink" href="#indentiteit" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>help(id)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1966,12 +1966,12 @@ id(obj, /)
 <p>Het geheugenadres van <code class="docutils literal notranslate"><span class="pre">L</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>id(L)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">id</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140170876516736
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140406466744512
 </pre></div>
 </div>
 </div>
@@ -1979,36 +1979,36 @@ id(obj, /)
 <p>De geheugenadressen van de elementen van <code class="docutils literal notranslate"><span class="pre">L</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>id(L[0])  # 5
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">id</span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># 5</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140170932224368
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140406517383536
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>id(L[1])  # 42
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">id</span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># 42</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140170932225552
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140406517384720
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>id(L[2])  # &quot;hi&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">id</span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>  <span class="c1"># &quot;hi&quot;</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140170930203184
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140406515362672
 </pre></div>
 </div>
 </div>
@@ -2018,15 +2018,15 @@ id(obj, /)
 <h3>Waarde en identiteit<a class="headerlink" href="#waarde-en-identiteit" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = &quot;Astronaut wordt snel oud tijdens een reis naar Mars&quot;
-b = &quot;Astronaut wordt snel oud tijdens een reis naar Mars&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;Astronaut wordt snel oud tijdens een reis naar Mars&quot;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;Astronaut wordt snel oud tijdens een reis naar Mars&quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a == b
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span>
 </pre></div>
 </div>
 </div>
@@ -2038,7 +2038,7 @@ b = &quot;Astronaut wordt snel oud tijdens een reis naar Mars&quot;
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a is b
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="ow">is</span> <span class="n">b</span>
 </pre></div>
 </div>
 </div>
@@ -2050,24 +2050,24 @@ b = &quot;Astronaut wordt snel oud tijdens een reis naar Mars&quot;
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>id(a)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140170824401280
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140406466421888
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>id(b)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140170824400944
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140406466421104
 </pre></div>
 </div>
 </div>
@@ -2092,33 +2092,33 @@ b = &quot;Astronaut wordt snel oud tijdens een reis naar Mars&quot;
 <p>Lists</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>L = [11, 21]
-id(L)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">21</span><span class="p">]</span>
+<span class="nb">id</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140170876319168
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140406431714304
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>L[0] = 42
-id(L)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="nb">id</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140170876319168
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140406431714304
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>L
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span>
 </pre></div>
 </div>
 </div>
@@ -2134,52 +2134,52 @@ id(L)
 <p>Strings en getallen</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>s = &quot;hallo &quot;
-id(s)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;hallo &quot;</span>
+<span class="nb">id</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140170824260208
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140406431734512
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>s += &quot;wereld&quot;
-id(s)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot;wereld&quot;</span>
+<span class="nb">id</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140170876356592
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140406466746224
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x = 10
-id(x)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140170932224528
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140406517383696
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x += 1
-id(x)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140170932224560
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140406517383728
 </pre></div>
 </div>
 </div>
@@ -2191,31 +2191,31 @@ id(x)
 <p>Functies ontvangen parameters als <em>kopie</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def fav(x):
-    print(&quot;fav VOOR: x is&quot;, id(x), &quot;en heeft de waarde x&quot;, x)
-    x = &quot;Pizza quattro formaggi&quot;
-    print(&quot;fav NA: x is&quot;, id(x), &quot;en heeft de waarde x&quot;, x)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fav</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;fav VOOR: x is&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="s2">&quot;en heeft de waarde x&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;Pizza quattro formaggi&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;fav NA: x is&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="s2">&quot;en heeft de waarde x&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
     
-def main():
-    y = &quot;Pizza salami ananas&quot;  # bah
-    print(&quot;main VOOR: y is&quot;, id(y), &quot;en heeft de waarde&quot;, y)
-    fav(y)
-    print(&quot;main NA: y is&quot;, id(y), &quot;en heeft de waarde&quot;, y)
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;Pizza salami ananas&quot;</span>  <span class="c1"># bah</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;main VOOR: y is&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="s2">&quot;en heeft de waarde&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    <span class="n">fav</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;main NA: y is&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="s2">&quot;en heeft de waarde&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>main()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">main</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>main VOOR: y is 140170824369776 en heeft de waarde Pizza salami ananas
-fav VOOR: x is 140170824369776 en heeft de waarde x Pizza salami ananas
-fav NA: x is 140170824378816 en heeft de waarde x Pizza quattro formaggi
-main NA: y is 140170824369776 en heeft de waarde Pizza salami ananas
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>main VOOR: y is 140406431909168 en heeft de waarde Pizza salami ananas
+fav VOOR: x is 140406431909168 en heeft de waarde x Pizza salami ananas
+fav NA: x is 140406431908688 en heeft de waarde x Pizza quattro formaggi
+main NA: y is 140406431909168 en heeft de waarde Pizza salami ananas
 </pre></div>
 </div>
 </div>
@@ -2234,15 +2234,15 @@ main NA: y is 140170824369776 en heeft de waarde Pizza salami ananas
 <p>Wat <em>create bindings</em> hier betekent laten we in het midden, duidelijk is dat geen kopie wordt gecreëerd maar iets van een verwijzing die later eenvoudig te verbreken valt.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x = &quot;regen&quot;
-y = x
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;regen&quot;</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x is y
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="ow">is</span> <span class="n">y</span>
 </pre></div>
 </div>
 </div>
@@ -2254,14 +2254,14 @@ y = x
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>y = &quot;zonneschijn&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;zonneschijn&quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x is y
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="ow">is</span> <span class="n">y</span>
 </pre></div>
 </div>
 </div>
@@ -2273,7 +2273,7 @@ y = x
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(&quot;Na&quot;, x, &quot;komt&quot;, y)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Na&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot;komt&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2288,28 +2288,28 @@ y = x
 <h3>Lists en shallow copy<a class="headerlink" href="#lists-en-shallow-copy" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>L = [5, 42, &quot;hi&quot;]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="s2">&quot;hi&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>M = L
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">L</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>M[0] = 60
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">60</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>M[0]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -2321,7 +2321,7 @@ y = x
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>L[0]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -2343,28 +2343,28 @@ y = x
 <p>Een <em>deep copy</em> creëert een nieuwe container, eventuele wijzigingen zijn vervolgens alleen van toepassing op de kopie, niet het origineel.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from copy import deepcopy
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>L = [5, 42, &quot;hi&quot;]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="s2">&quot;hi&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>M = deepcopy(L)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>M is L
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="ow">is</span> <span class="n">L</span>
 </pre></div>
 </div>
 </div>
@@ -2376,7 +2376,7 @@ y = x
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>M[0] = 60
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">60</span>
 </pre></div>
 </div>
 </div>
@@ -2384,7 +2384,7 @@ y = x
 <p>Wat is de waarde van <code class="docutils literal notranslate"><span class="pre">L[0]</span></code>?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>L[0]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -2399,28 +2399,28 @@ y = x
 <h3>Slicing is ook diep!<a class="headerlink" href="#slicing-is-ook-diep" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>L = [5, 42, &quot;hi&quot;]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="s2">&quot;hi&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>M = L[:]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">L</span><span class="p">[:]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>M[0] = 60
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">60</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>L[0]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -2437,28 +2437,28 @@ y = x
 <p>List comprehension als <em>strategie</em> om mutabiliteit te vermijden!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>L = [5, 42, &quot;hi&quot;]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="s2">&quot;hi&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>M = [x for x in L]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">L</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>M[0] = 60
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">60</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>L[0]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -2476,14 +2476,14 @@ y = x
 <h3>Vraag 1<a class="headerlink" href="#vraag-1" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def conform1(fav):
-    fav = 42
-    return fav
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">conform1</span><span class="p">(</span><span class="n">fav</span><span class="p">):</span>
+    <span class="n">fav</span> <span class="o">=</span> <span class="mi">42</span>
+    <span class="k">return</span> <span class="n">fav</span>
 
-def main1():
-    fav = 7
-    conform1(fav)
-    print(fav)
+<span class="k">def</span> <span class="nf">main1</span><span class="p">():</span>
+    <span class="n">fav</span> <span class="o">=</span> <span class="mi">7</span>
+    <span class="n">conform1</span><span class="p">(</span><span class="n">fav</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">fav</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2494,7 +2494,7 @@ def main1():
 <h3>Antwoord<a class="headerlink" href="#antwoord" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>main1()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">main1</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -2509,14 +2509,14 @@ def main1():
 <h3>Vraag 2<a class="headerlink" href="#vraag-2" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def conform2(L):
-    L = [42, 42]
-    return L
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">conform2</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+    <span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">42</span><span class="p">,</span> <span class="mi">42</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">L</span>
 
-def main2():
-    L = [7, 11]
-    conform2(L)
-    print(L)
+<span class="k">def</span> <span class="nf">main2</span><span class="p">():</span>
+    <span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
+    <span class="n">conform2</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2527,7 +2527,7 @@ def main2():
 <h3>Antwoord<a class="headerlink" href="#id1" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>main2()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">main2</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -2542,14 +2542,14 @@ def main2():
 <h3>Vraag 3<a class="headerlink" href="#vraag-3" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def conform3(L):
-    L[0] = 42
-    L[1] = 42
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">conform3</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+    <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">42</span>
+    <span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">42</span>
     
-def main3():
-    L = [7, 11]
-    conform3(L)
-    print(L)
+<span class="k">def</span> <span class="nf">main3</span><span class="p">():</span>
+    <span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
+    <span class="n">conform3</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2560,7 +2560,7 @@ def main3():
 <h3>Antwoord<a class="headerlink" href="#id2" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>main3()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">main3</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -2588,18 +2588,18 @@ def main3():
 <h3>Boter kaas en eieren<a class="headerlink" href="#boter-kaas-en-eieren" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>L = [
-    [&quot;&quot;, &quot;&quot;, &quot;&quot;],
-    [&quot;&quot;, &quot;&quot;, &quot;&quot;],
-    [&quot;&quot;, &quot;&quot;, &quot;&quot;]
-]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">]</span>
+<span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>L[0][0] = &quot;X&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;X&quot;</span>
 </pre></div>
 </div>
 </div>

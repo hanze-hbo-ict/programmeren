@@ -1660,14 +1660,14 @@ title="Print to PDF"
 <h2>Functies in Python<a class="headerlink" href="#functies-in-python" title="Permalink naar deze titel">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def main():
-    x = int(input())
-    y = fun(x)
-    print(y)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">fun</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 
-def fun(x):
-    y = x * (x - 1)
-    return y
+<span class="k">def</span> <span class="nf">fun</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">y</span>
 </pre></div>
 </div>
 </div>
@@ -1784,15 +1784,15 @@ def fun(x):
 <p>Functies roepen functies aan</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def fac(n):
-    print(&quot;factorial called with&quot;, n)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fac</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;factorial called with&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
     
-    if n == 0:  # base case
-        return 1
-    else:  # recursive case
-        smaller = fac(n - 1)
-        result = n * smaller
-        return result
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># base case</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>  <span class="c1"># recursive case</span>
+        <span class="n">smaller</span> <span class="o">=</span> <span class="n">fac</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="n">smaller</span>
+        <span class="k">return</span> <span class="n">result</span>
 </pre></div>
 </div>
 </div>
@@ -1800,7 +1800,7 @@ def fun(x):
 <p>Faculteit, <span class="math notranslate nohighlight">\(5!\)</span> is gelijk aan <span class="math notranslate nohighlight">\(5 \cdot 4 \cdot 3 \cdot 2 \cdot 1\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>fac(5)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fac</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1884,19 +1884,19 @@ factorial called with 0
 <p>Recursieve functies</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def main():
-    x = int(input())
-    y = fac(x)
-    print(y)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">fac</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 
-def fac(n):
-    if n == 0:  # base case
-        return 1
-    else:  # recursive case
-        smaller = fac(n - 1)
-        result = n * smaller
+<span class="k">def</span> <span class="nf">fac</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># base case</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>  <span class="c1"># recursive case</span>
+        <span class="n">smaller</span> <span class="o">=</span> <span class="n">fac</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="n">smaller</span>
 
-        return result
+        <span class="k">return</span> <span class="n">result</span>
 </pre></div>
 </div>
 </div>
@@ -1959,26 +1959,26 @@ def fac(n):
 <h3>Blokken herhalen<a class="headerlink" href="#blokken-herhalen" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def fac(x):
-    print(&quot;x is&quot;, x)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fac</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x is&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
 
-    if x == 0:
-        print(&quot;x:&quot;, x, &quot; bc: 1&quot;)
-        return 1
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x:&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot; bc: 1&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">1</span>
 
-    else:
-        print(&quot;Next: fac(&quot;, x - 1, &quot;)&quot;)
-        smaller = fac(x - 1)
-        result = x * smaller
-        print(&quot;x:&quot;, x, &quot; r:&quot;, result)
-        return result
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Next: fac(&quot;</span><span class="p">,</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;)&quot;</span><span class="p">)</span>
+        <span class="n">smaller</span> <span class="o">=</span> <span class="n">fac</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">smaller</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x:&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot; r:&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>fac(3)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fac</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2037,7 +2037,7 @@ x: 3  r: 6
 <h2>En verder<a class="headerlink" href="#en-verder" title="Permalink naar deze titel">#</a></h2>
 <p>De macht van recursie!</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">power</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Return base b to the power of n</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return base b to the power of n</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">1</span>

@@ -1828,14 +1828,14 @@ title="Print to PDF"
 <h3>Python?<a class="headerlink" href="#python" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>max_sheep = 32767
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">max_sheep</span> <span class="o">=</span> <span class="mi">32767</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>max_sheep + 1
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">max_sheep</span> <span class="o">+</span> <span class="mi">1</span>
 </pre></div>
 </div>
 </div>
@@ -1851,16 +1851,16 @@ title="Print to PDF"
 <h3>Googol!<a class="headerlink" href="#googol" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>g = 10**100
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="mi">100</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import sys
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 
-sys.maxsize
+<span class="n">sys</span><span class="o">.</span><span class="n">maxsize</span>
 </pre></div>
 </div>
 </div>
@@ -1873,7 +1873,7 @@ sys.maxsize
 <p>Met <code class="docutils literal notranslate"><span class="pre">sys.maxsize</span></code> vraag je de woord grootte op en je zal zien dat deze gelijk is aan 64 bits (althans, op mijn systeem).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>g &gt; sys.maxsize
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">&gt;</span> <span class="n">sys</span><span class="o">.</span><span class="n">maxsize</span>
 </pre></div>
 </div>
 </div>
@@ -2152,7 +2152,7 @@ pixels.</p>
 <h3>Nullen vullen<a class="headerlink" href="#nullen-vullen" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>4 * &quot;0&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span> <span class="o">*</span> <span class="s2">&quot;0&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -2180,7 +2180,7 @@ pixels.</p>
 <section id="de-functie">
 <h2>De functie<a class="headerlink" href="#de-functie" title="Permalink naar deze titel">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compress</span><span class="p">(</span><span class="n">I</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Returns the RLE of the input binary image, I</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns the RLE of the input binary image, I</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 </pre></div>
 </div>
@@ -2216,7 +2216,7 @@ pixels.</p>
 <h3>Vraag 2<a class="headerlink" href="#vraag-2" title="Permalink naar deze titel">#</a></h3>
 <p>Een hulpfunctie voor het vinden van het EERSTE geval</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">front_num</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Returns the # of times the first</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns the # of times the first</span>
 <span class="sd">       element of the input s appears</span>
 <span class="sd">       consecutively at the start of s</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -2238,26 +2238,26 @@ pixels.</p>
 <h3>Oplossing<a class="headerlink" href="#id2" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def front_num(s):
-    &quot;&quot;&quot;Returns the # of times the first
-       element of the input s appears
-       consecutively at the start of s
-    &quot;&quot;&quot;
-    if len(s) &lt;= 1:     # base case
-        return len(s)
-    elif s[0] == s[1]:  # recursive case
-        # add 1 to the rest
-        return 1 + front_num(s[1:])
-    else:               # not a sequence
-        return 1
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">front_num</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns the # of times the first</span>
+<span class="sd">       element of the input s appears</span>
+<span class="sd">       consecutively at the start of s</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>     <span class="c1"># base case</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>  <span class="c1"># recursive case</span>
+        <span class="c1"># add 1 to the rest</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">front_num</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+    <span class="k">else</span><span class="p">:</span>               <span class="c1"># not a sequence</span>
+        <span class="k">return</span> <span class="mi">1</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>assert front_num(&quot;1111010&quot;) == 4
-assert front_num(&quot;00110010&quot;) == 2
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">front_num</span><span class="p">(</span><span class="s2">&quot;1111010&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span>
+<span class="k">assert</span> <span class="n">front_num</span><span class="p">(</span><span class="s2">&quot;00110010&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
 </pre></div>
 </div>
 </div>

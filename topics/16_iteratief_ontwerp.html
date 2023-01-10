@@ -1711,17 +1711,17 @@ title="Print to PDF"
 <p><code class="docutils literal notranslate"><span class="pre">while</span></code> met ontsnapping!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from random import choice
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
 
-def escape(hidden):
-    guess = 0
-    count = 0
+<span class="k">def</span> <span class="nf">escape</span><span class="p">(</span><span class="n">hidden</span><span class="p">):</span>
+    <span class="n">guess</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
     
-    while guess != hidden:
-        guess = choice(range(100))
-        count += 1
+    <span class="k">while</span> <span class="n">guess</span> <span class="o">!=</span> <span class="n">hidden</span><span class="p">:</span>
+        <span class="n">guess</span> <span class="o">=</span> <span class="n">choice</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
 
-    return count
+    <span class="k">return</span> <span class="n">count</span>
 </pre></div>
 </div>
 </div>
@@ -1732,19 +1732,19 @@ def escape(hidden):
 <p>Monte Carlo simulaties …</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>LC = [escape(42) for _ in range(1000)]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">LC</span> <span class="o">=</span> <span class="p">[</span><span class="n">escape</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">)]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sum(LC) / len(LC)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">LC</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">LC</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>101.187
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>95.699
 </pre></div>
 </div>
 </div>
@@ -1762,7 +1762,7 @@ def escape(hidden):
 <p>Bijf de kamer vullen zolang (<code class="docutils literal notranslate"><span class="pre">while</span></code>) de verjaardagen in de kamer uniek zijn!</p>
 <p>De kamer? Een list!</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">until_a_repeat</span><span class="p">(</span><span class="n">high</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Fills a list of random values until a first repeat</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Fills a list of random values until a first repeat</span>
 <span class="sd">    </span>
 <span class="sd">    Argument: high, the random value upper boundary</span>
 <span class="sd">    Return value: the number of elements in the list.</span>
@@ -1776,19 +1776,19 @@ def escape(hidden):
 <p><img alt="Birthday paradox" src="../_images/birthday_paradox.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def unique(L):
-    &quot;&quot;&quot;Returns whether all elements in L are unique.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">unique</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns whether all elements in L are unique.</span>
 
-     Argument: L, a list of any elements.
-     Return value: True, if all elements in L are unique,
-                or False, if there is any repeated element
-    &quot;&quot;&quot;
-    if len(L) == 0:
-        return True
-    elif L[0] in L[1:]:
-        return False
-    else:
-        return unique(L[1:])
+<span class="sd">     Argument: L, a list of any elements.</span>
+<span class="sd">     Return value: True, if all elements in L are unique,</span>
+<span class="sd">                or False, if there is any repeated element</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">elif</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">unique</span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
 </pre></div>
 </div>
 </div>
@@ -1799,14 +1799,14 @@ def escape(hidden):
 <h3>Een verjaardag is maar een dag<a class="headerlink" href="#een-verjaardag-is-maar-een-dag" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>L = [bday for bday in range(365)]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="n">bday</span> <span class="k">for</span> <span class="n">bday</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">365</span><span class="p">)]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>L[:10]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1819,7 +1819,7 @@ def escape(hidden):
 <p>Zet 1 Januari op 0, en verder tot 31 december (364) …</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>unique(L)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">unique</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1835,33 +1835,33 @@ def escape(hidden):
 <p>Simulatie met random!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>%run simulate.py
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> simulate.py
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>LC = [until_a_repeat(365) for _ in range(1000)]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">LC</span> <span class="o">=</span> <span class="p">[</span><span class="n">until_a_repeat</span><span class="p">(</span><span class="mi">365</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">)]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>LC[:10]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">LC</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[40, 51, 24, 7, 25, 37, 18, 28, 27, 61]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[22, 29, 51, 8, 34, 29, 28, 28, 22, 17]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>min(LC)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">min</span><span class="p">(</span><span class="n">LC</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1873,24 +1873,24 @@ def escape(hidden):
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>max(LC)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">max</span><span class="p">(</span><span class="n">LC</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>86
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>63
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sum(LC) / len(LC)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">LC</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">LC</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24.481
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24.457
 </pre></div>
 </div>
 </div>
@@ -1928,14 +1928,14 @@ def escape(hidden):
 <h3>Pithon?<a class="headerlink" href="#pithon" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import math
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>math.pi
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">math</span><span class="o">.</span><span class="n">pi</span>
 </pre></div>
 </div>
 </div>
@@ -2009,19 +2009,19 @@ def escape(hidden):
 <section id="simuleer">
 <h3>Simuleer!<a class="headerlink" href="#simuleer" title="Permalink naar deze titel">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">for_pi</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Calculate pi with a for loop</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculate pi with a for loop</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="o">...</span>
 </pre></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for_pi(100000)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">for_pi</span><span class="p">(</span><span class="mi">100000</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.13916
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.14188
 </pre></div>
 </div>
 </div>
@@ -2065,9 +2065,9 @@ def escape(hidden):
 <h3>Oplossing<a class="headerlink" href="#oplossing" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for x in range(0, 1):
-    for y in range(x, 2):
-        print(x, y)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2089,17 +2089,17 @@ def escape(hidden):
 <h3>List comprehension<a class="headerlink" href="#list-comprehension" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def mul_table(n):
-    &quot;&quot;&quot;Returns a multiplication table for n
-    &quot;&quot;&quot;
-    return [[x * y for x in range(1, n + 1)] for y in range(1, n + 1)]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mul_table</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns a multiplication table for n</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">[[</span><span class="n">x</span> <span class="o">*</span> <span class="n">y</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>mul_table(5)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mul_table</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2118,27 +2118,27 @@ def escape(hidden):
 <h3>Iteratief<a class="headerlink" href="#iteratief" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def mul_table(n):
-    &quot;&quot;&quot;Returns a multiplication table for n
-    &quot;&quot;&quot;
-    table = []                     # start with an empty table
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mul_table</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns a multiplication table for n</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">table</span> <span class="o">=</span> <span class="p">[]</span>                     <span class="c1"># start with an empty table</span>
     
-    for x in range(1, n + 1):      # for every row in this table ...
-        row = []                   # start with an empty row
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>      <span class="c1"># for every row in this table ...</span>
+        <span class="n">row</span> <span class="o">=</span> <span class="p">[]</span>                   <span class="c1"># start with an empty row</span>
         
-        for y in range(1, n + 1):  # for every column in this row ...
-            row += [x * y]         # add the column value to the row
+        <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>  <span class="c1"># for every column in this row ...</span>
+            <span class="n">row</span> <span class="o">+=</span> <span class="p">[</span><span class="n">x</span> <span class="o">*</span> <span class="n">y</span><span class="p">]</span>         <span class="c1"># add the column value to the row</span>
             
-        table += [row]             # add the row to the table
+        <span class="n">table</span> <span class="o">+=</span> <span class="p">[</span><span class="n">row</span><span class="p">]</span>             <span class="c1"># add the row to the table</span>
         
-    return table                   # return table
+    <span class="k">return</span> <span class="n">table</span>                   <span class="c1"># return table</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>mul_table(5)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mul_table</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2157,23 +2157,23 @@ def escape(hidden):
 <h3>Een dozijn<a class="headerlink" href="#een-dozijn" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def dozen(n):
-    &quot;&quot;&quot;Eggs by the dozen!
-    &quot;&quot;&quot;    
-    for x in range(n):
-        row = &quot;&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dozen</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Eggs by the dozen!</span>
+<span class="sd">    &quot;&quot;&quot;</span>    
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">row</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
         
-        for y in range(12):  # fixed, dozen is always 12!
-            row += &quot;🥚&quot;
+        <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">12</span><span class="p">):</span>  <span class="c1"># fixed, dozen is always 12!</span>
+            <span class="n">row</span> <span class="o">+=</span> <span class="s2">&quot;🥚&quot;</span>
             
-        print(row)
+        <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>dozen(1)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dozen</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2185,7 +2185,7 @@ def escape(hidden):
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>dozen(12)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dozen</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2212,12 +2212,12 @@ def escape(hidden):
 <p>En semantiek…</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>row = &quot;&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">row</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 
-for y in range(12):
-    row += &quot;🥚&quot;
+<span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">12</span><span class="p">):</span>
+    <span class="n">row</span> <span class="o">+=</span> <span class="s2">&quot;🥚&quot;</span>
         
-print(row)
+<span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2229,7 +2229,7 @@ print(row)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(12 * &quot;🥚&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">12</span> <span class="o">*</span> <span class="s2">&quot;🥚&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2247,9 +2247,9 @@ print(row)
 <p>En nieuwe regels …</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for row in range(3):
-    for col in range(4):
-        print(&quot;#&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2272,9 +2272,9 @@ print(row)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for row in range(3):
-    for col in range(4):
-        print(&quot;#&quot;, end=&quot;&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2286,10 +2286,10 @@ print(row)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for row in range(3):
-    for col in range(4):
-        print(&quot;#&quot;, end=&quot;&quot;)
-    print()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>

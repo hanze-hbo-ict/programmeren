@@ -1871,7 +1871,7 @@ title="Print to PDF"
 <section id="een-oplossing-die-zichzelf-herhaalt">
 <h2>Een oplossing die zichzelf herhaalt<a class="headerlink" href="#een-oplossing-die-zichzelf-herhaalt" title="Permalink naar deze titel">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">numis</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Tel het aantal i&#39;s in s</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Tel het aantal i&#39;s in s</span>
 <span class="sd">    input s: een string</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="o">...</span>
@@ -2006,16 +2006,16 @@ title="Print to PDF"
 <p>Dit is het voorbeeld dat we net in detail hebben bekeken, tot en met hoe het stapelt…</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def fac(x):
-    &quot;&quot;&quot;faculteit, recursief!    
-    &quot;&quot;&quot;
-    if x == 0:  # base case
-        return 1
-    else:       # recursive case
-        return x * fac(x-1)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fac</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;faculteit, recursief!    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># base case</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>       <span class="c1"># recursive case</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">fac</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 
-assert fac(0) == 1    # test de base case
-assert fac(5) == 120  # test de oplossing  
+<span class="k">assert</span> <span class="n">fac</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>    <span class="c1"># test de base case</span>
+<span class="k">assert</span> <span class="n">fac</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">120</span>  <span class="c1"># test de oplossing  </span>
 </pre></div>
 </div>
 </div>
@@ -2036,7 +2036,7 @@ assert fac(5) == 120  # test de oplossing
 </ul>
 <p>Een ander voorbeeld. <code class="docutils literal notranslate"><span class="pre">plusone(n)</span></code> telt <code class="docutils literal notranslate"><span class="pre">n</span></code> door 1-en op te tellen. Als <code class="docutils literal notranslate"><span class="pre">n</span></code> gelijk is aan 5 dan worden 5 1-en bij elkaar opgeteld. Hoe kan je dit recursief oplossen? Denk altijd aan eerst aan de base case, in welk geval is is geen recursie meer mogelijk? Wat moet in dit geval voor de <code class="docutils literal notranslate"><span class="pre">...</span></code> moeten worden ingevuld voor de base en recursieve case?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plusone</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Geeft n terug door 1-en op te tellen!</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Geeft n terug door 1-en op te tellen!</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># base case</span>
         <span class="k">return</span> <span class="o">...</span>
@@ -2049,16 +2049,16 @@ assert fac(5) == 120  # test de oplossing
 <h4>Oplossing<a class="headerlink" href="#oplossing" title="Permalink naar deze titel">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def plusone(n):
-    &quot;&quot;&quot;Geeft n terug door 1-en op te tellen!
-    &quot;&quot;&quot;
-    if n == 0:  # base case
-        return 0
-    else:       # recursive case
-        return 1 + plusone(n-1)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plusone</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Geeft n terug door 1-en op te tellen!</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># base case</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>       <span class="c1"># recursive case</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">plusone</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 
-assert plusone(0) == 0  # test de base case
-assert plusone(5) == 5  # test de oplossing
+<span class="k">assert</span> <span class="n">plusone</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>  <span class="c1"># test de base case</span>
+<span class="k">assert</span> <span class="n">plusone</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span>  <span class="c1"># test de oplossing</span>
 </pre></div>
 </div>
 </div>
@@ -2076,7 +2076,7 @@ assert plusone(5) == 5  # test de oplossing
 <p>De base case:</p>
 <p><code class="docutils literal notranslate"><span class="pre">pow(2,</span> <span class="pre">0)</span></code> moet … teruggeven</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">pow</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;b**p, recursief!</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;b**p, recursief!</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">p</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># base case</span>
         <span class="k">return</span> <span class="o">...</span>
@@ -2089,18 +2089,18 @@ assert plusone(5) == 5  # test de oplossing
 <h4>Oplossing<a class="headerlink" href="#id3" title="Permalink naar deze titel">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def pow(b, p):
-    &quot;&quot;&quot;b**p, recursief!
-    &quot;&quot;&quot;
-    if p == 0:  # base case
-        return 1.0
-    elif p &lt; 0: # tweede base case? of een recursive case?
-        ...
-    else:       # recursive case
-        return b * pow(b, p-1)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">pow</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;b**p, recursief!</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">p</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># base case</span>
+        <span class="k">return</span> <span class="mf">1.0</span>
+    <span class="k">elif</span> <span class="n">p</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># tweede base case? of een recursive case?</span>
+        <span class="o">...</span>
+    <span class="k">else</span><span class="p">:</span>       <span class="c1"># recursive case</span>
+        <span class="k">return</span> <span class="n">b</span> <span class="o">*</span> <span class="nb">pow</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">p</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 
-assert pow(2, 0) == 1.0   # test de base case
-assert pow(2, 5) == 32.0  # test de oplossing
+<span class="k">assert</span> <span class="nb">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mf">1.0</span>   <span class="c1"># test de base case</span>
+<span class="k">assert</span> <span class="nb">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mf">32.0</span>  <span class="c1"># test de oplossing</span>
 </pre></div>
 </div>
 </div>
@@ -2119,9 +2119,9 @@ assert pow(2, 5) == 32.0  # test de oplossing
 <p>Misschien moet je hier wat wiskundige kennis afstoffen! We gaan niet verder op de achtergrond in en nemen dit ter kennisgeving aan… Het roept wel een andere vraag op, namelijk hoe we Python een negatief getal kunnen laten omzetten naar de positieve waarde? Of, meer in het algemeen, de omkering van een willekeuringe waarde (met andere woorden, de <em>logische negatie</em> van een waarde)?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>p = -5
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5</span>
 
--p
+<span class="o">-</span><span class="n">p</span>
 </pre></div>
 </div>
 </div>
@@ -2137,19 +2137,19 @@ assert pow(2, 5) == 32.0  # test de oplossing
 <h4>Oplossing<a class="headerlink" href="#id4" title="Permalink naar deze titel">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def pow(b, p):
-    &quot;&quot;&quot;b**p, recursief!
-    &quot;&quot;&quot;
-    if p == 0:   # base case
-        return 1.0
-    elif p &lt; 0:  # recursive case (p negatief)
-        return 1.0 / pow(b, -p)
-    else:        # resursive case (p positief)
-        return b * pow(b, p-1)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">pow</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;b**p, recursief!</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">p</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>   <span class="c1"># base case</span>
+        <span class="k">return</span> <span class="mf">1.0</span>
+    <span class="k">elif</span> <span class="n">p</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># recursive case (p negatief)</span>
+        <span class="k">return</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="nb">pow</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="o">-</span><span class="n">p</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>        <span class="c1"># resursive case (p positief)</span>
+        <span class="k">return</span> <span class="n">b</span> <span class="o">*</span> <span class="nb">pow</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">p</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 
-assert pow(2, 0) == 1.0       # test de base case
-assert pow(2, 5) == 32.0      # test de oplossing
-assert pow(2, -5) == 0.03125  # test de oplossing
+<span class="k">assert</span> <span class="nb">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mf">1.0</span>       <span class="c1"># test de base case</span>
+<span class="k">assert</span> <span class="nb">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mf">32.0</span>      <span class="c1"># test de oplossing</span>
+<span class="k">assert</span> <span class="nb">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mf">0.03125</span>  <span class="c1"># test de oplossing</span>
 </pre></div>
 </div>
 </div>
@@ -2176,7 +2176,7 @@ assert pow(2, -5) == 0.03125  # test de oplossing
 <h3>is <code class="docutils literal notranslate"><span class="pre">in</span></code> string<a class="headerlink" href="#is-in-string" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&quot;i&quot; in &quot;team&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;i&quot;</span> <span class="ow">in</span> <span class="s2">&quot;team&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -2188,7 +2188,7 @@ assert pow(2, -5) == 0.03125  # test de oplossing
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&quot;i&quot; in &quot;alien&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;i&quot;</span> <span class="ow">in</span> <span class="s2">&quot;alien&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -2200,7 +2200,7 @@ assert pow(2, -5) == 0.03125  # test de oplossing
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>3*&quot;i&quot; in &quot;aliiien&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span><span class="o">*</span><span class="s2">&quot;i&quot;</span> <span class="ow">in</span> <span class="s2">&quot;aliiien&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -2215,7 +2215,7 @@ assert pow(2, -5) == 0.03125  # test de oplossing
 <h3>is <code class="docutils literal notranslate"><span class="pre">in</span></code> list<a class="headerlink" href="#is-in-list" title="Permalink naar deze titel">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>42 in [41, 42, 42]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">42</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">41</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">42</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -2227,7 +2227,7 @@ assert pow(2, -5) == 0.03125  # test de oplossing
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>42 in [[42], &quot;42&quot;]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">42</span> <span class="ow">in</span> <span class="p">[[</span><span class="mi">42</span><span class="p">],</span> <span class="s2">&quot;42&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -2252,7 +2252,7 @@ assert pow(2, -5) == 0.03125  # test de oplossing
 <p>De base case:</p>
 <p><code class="docutils literal notranslate"><span class="pre">vwl(&quot;&quot;)</span></code> moet … teruggeven</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">vwl</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Tel het aantal klinkers in s</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Tel het aantal klinkers in s</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
         <span class="o">...</span>
@@ -2266,22 +2266,22 @@ assert pow(2, -5) == 0.03125  # test de oplossing
 <h4>Oplossing<a class="headerlink" href="#id5" title="Permalink naar deze titel">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def vwl(s):
-    &quot;&quot;&quot;Tel het aantal klinkers in s
-    &quot;&quot;&quot;
-    if s == &quot;&quot;:
-        return 0
-    elif s[0] in &quot;aeiou&quot;:
-        return 1 + vwl(s[1:])
-    else:
-        return vwl(s[1:])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">vwl</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Tel het aantal klinkers in s</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">elif</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="s2">&quot;aeiou&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">vwl</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">vwl</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>vwl(&quot;zaaiuien&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vwl</span><span class="p">(</span><span class="s2">&quot;zaaiuien&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2303,7 +2303,7 @@ assert pow(2, -5) == 0.03125  # test de oplossing
 <p>De base case:</p>
 <p><code class="docutils literal notranslate"><span class="pre">keepvwl(&quot;&quot;)</span></code> moet … teruggeven</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">keepvwl</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Geef ALLEEN de klinkers in s terug</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Geef ALLEEN de klinkers in s terug</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
         <span class="k">return</span> <span class="o">...</span>
@@ -2317,22 +2317,22 @@ assert pow(2, -5) == 0.03125  # test de oplossing
 <h4>Oplossing<a class="headerlink" href="#id6" title="Permalink naar deze titel">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def keepvwl(s):
-    &quot;&quot;&quot;Geef ALLEEN de klinkers in s terug
-    &quot;&quot;&quot;
-    if s == &quot;&quot;:
-        return &quot;&quot;
-    elif s[0] in &quot;aeiou&quot;:
-        return s[0] + keepvwl(s[1:])
-    else:
-        return keepvwl(s[1:])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">keepvwl</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Geef ALLEEN de klinkers in s terug</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">elif</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="s2">&quot;aeiou&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">keepvwl</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">keepvwl</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>keepvwl(&quot;pluto&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">keepvwl</span><span class="p">(</span><span class="s2">&quot;pluto&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2354,7 +2354,7 @@ assert pow(2, -5) == 0.03125  # test de oplossing
 <p>De base case:</p>
 <p>als <code class="docutils literal notranslate"><span class="pre">len(L)</span> <span class="pre">==</span> <span class="pre">1</span></code> dan moet <code class="docutils literal notranslate"><span class="pre">max(L)</span></code> … teruggeven</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">max</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Geef de grootste waarde van L terug</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Geef de grootste waarde van L terug</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">return</span> <span class="o">...</span>
@@ -2371,27 +2371,27 @@ assert pow(2, -5) == 0.03125  # test de oplossing
 <h4>Oplossing<a class="headerlink" href="#id7" title="Permalink naar deze titel">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def max(L):
-    &quot;&quot;&quot;Geef de grootste waarde van L terug
-    &quot;&quot;&quot;
-    if len(L) == 1:
-        return L[0]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">max</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Geef de grootste waarde van L terug</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     
-    M = max(L[1:])  # De max van de REST van L
+    <span class="n">M</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>  <span class="c1"># De max van de REST van L</span>
     
-    print(&quot;M is&quot;, M, &quot;en L[0] is&quot;, L[0])  # test, print M en L[0]
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;M is&quot;</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="s2">&quot;en L[0] is&quot;</span><span class="p">,</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># test, print M en L[0]</span>
     
-    if L[0] &gt; M:
-        return L[0]
-    else:
-        return M
+    <span class="k">if</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">M</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">M</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>max([7, 5, 9, 2])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">max</span><span class="p">([</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -2425,7 +2425,7 @@ M is 9 en L[0] is 7
 <p>De base case:</p>
 <p>als <code class="docutils literal notranslate"><span class="pre">len(L)</span> <span class="pre">==</span> <span class="pre">1</span></code> dan moet <code class="docutils literal notranslate"><span class="pre">zeroest(L)</span></code> … teruggeven</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">zeroest</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Geef het getal in L het dichtst bij 0 terug</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Geef het getal in L het dichtst bij 0 terug</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">return</span> <span class="o">...</span>
@@ -2442,25 +2442,25 @@ M is 9 en L[0] is 7
 <h4>Oplossing<a class="headerlink" href="#id8" title="Permalink naar deze titel">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def zeroest(L):
-    &quot;&quot;&quot;Return L&#39;s element nearest to 0
-    &quot;&quot;&quot;
-    if len(L) == 1:
-        return L[0]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">zeroest</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return L&#39;s element nearest to 0</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     
-    Z = zeroest(L[1:])  # The zeroest of the REST of L
+    <span class="n">Z</span> <span class="o">=</span> <span class="n">zeroest</span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>  <span class="c1"># The zeroest of the REST of L</span>
     
-    if abs(L[0]) &lt; abs(Z):
-        return L[0]
-    else:
-        return Z
+    <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">&lt;</span> <span class="nb">abs</span><span class="p">(</span><span class="n">Z</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">Z</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>zeroest([-7, 5, 9, 2])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zeroest</span><span class="p">([</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>

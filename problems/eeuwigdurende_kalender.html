@@ -1938,7 +1938,7 @@ title="Print to PDF"
 <h3>De methode <code class="docutils literal notranslate"><span class="pre">copy</span></code><a class="headerlink" href="#de-methode-copy" title="Permalink naar deze titel">#</a></h3>
 <p>Eerst gaan we een nieuwe methode, <code class="docutils literal notranslate"><span class="pre">copy(self)</span></code> toevoegen aan de klasse <code class="docutils literal notranslate"><span class="pre">Date</span></code>. Je kan hiervoor onderstaande code kopiëren en plakken.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Returns a new object with the same day, month, year</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns a new object with the same day, month, year</span>
 <span class="sd">       as the calling object (self).</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">dnew</span> <span class="o">=</span> <span class="n">Date</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">day</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">year</span><span class="p">)</span>
@@ -1988,7 +1988,7 @@ title="Print to PDF"
 <h3>De methode <code class="docutils literal notranslate"><span class="pre">equals</span></code><a class="headerlink" href="#de-methode-equals" title="Permalink naar deze titel">#</a></h3>
 <p>Voeg ook de methode <code class="docutils literal notranslate"><span class="pre">equals(self,</span> <span class="pre">d2)</span></code> toe aan de klasse <code class="docutils literal notranslate"><span class="pre">Date</span></code>, met behulp van deze code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">equals</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">d2</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Decides if self and d2 represent the same calendar date,</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Decides if self and d2 represent the same calendar date,</span>
 <span class="sd">       whether or not they are the in the same place in memory.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="n">d2</span><span class="o">.</span><span class="n">year</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">month</span> <span class="o">==</span> <span class="n">d2</span><span class="o">.</span><span class="n">month</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">day</span> <span class="o">==</span> <span class="n">d2</span><span class="o">.</span><span class="n">day</span><span class="p">:</span>
@@ -2029,7 +2029,7 @@ title="Print to PDF"
 <p>In Python kan je ook standaardoperators definiëren voor je eigen klassen en objecten!</p>
 <p>Omdat bijvoorbeeld het gedrag van de functie <code class="docutils literal notranslate"><span class="pre">equals</span></code> hierboven hetzelfde is als hoe we <em><strong>zouden willen</strong></em> dat de dubbel-gelijk-aan-operator, <code class="docutils literal notranslate"><span class="pre">==</span></code>, werkt, kunnen we dit gedrag definiëren door een methode <code class="docutils literal notranslate"><span class="pre">__eq__</span></code> toe te voegen. Merk op dat de naam <em><strong>twee</strong></em> underscores heeft aan weerszijden van <code class="docutils literal notranslate"><span class="pre">eq</span></code>. Dit geeft aan dat deze methode voor Python een speciale betekenis heeft, net zoals <code class="docutils literal notranslate"><span class="pre">__init__</span></code> en <code class="docutils literal notranslate"><span class="pre">__repr__</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">d2</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Overrides the == operator so that it declares two of the same dates</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Overrides the == operator so that it declares two of the same dates</span>
 <span class="sd">        in history as ==.  This way, we don&#39;t need to use the awkward</span>
 <span class="sd">        d.equals(d2) syntax...</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -2322,7 +2322,7 @@ Je kan andere verschillen controleren op https://www.timeanddate.com/date/durati
 <p>Kort gezegd wordt een dictionary <code class="docutils literal notranslate"><span class="pre">d</span></code> geïnitialiseerd met de code <code class="docutils literal notranslate"><span class="pre">d</span> <span class="pre">=</span> <span class="pre">{}</span></code> (let op de accolades), maar de werking lijkt heel erg op een gewone lijst. Het grote verschil is dat je <em>strings</em> kan gebruiken om de lijst te indexeren!
 Hierdoor zijn dictionaries erg geschikt om te tellen hoe vaak een string voorkomt. Hier is een voorbeeld van precies die manier van gebruiken:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ny_counter</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;Looking ahead to 100 years of NY celebrations...&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Looking ahead to 100 years of NY celebrations...&quot;&quot;&quot;</span>
 
     <span class="n">dowd</span> <span class="o">=</span> <span class="p">{}</span>              <span class="c1"># dowd is een dictionary van weekdagen</span>
     <span class="n">dowd</span><span class="p">[</span><span class="s2">&quot;Sunday&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>     <span class="c1"># een waarde van 0 voor Sunday</span>
