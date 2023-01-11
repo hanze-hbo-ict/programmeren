@@ -12,7 +12,7 @@ En Turingmachines!
 
 Voor deze opgave moet je beginnen met het downloaden van deze twee bestanden:
 
-* De applicatie JFLAP [`JFLAP_Thin.jar`](problems/assets/JFLAP_Thhttps://github.com/misja/programmeren/raw/master/in.jar)
+* De applicatie JFLAP [`JFLAP_Thin.jar`](https://github.com/misja/programmeren/raw/master/problems/assets/JFLAP_Thin.jar)
 * Het zipbestand [`wk12ex1.zip`](https://github.com/hanze-hbo-ict/programmeren/raw/master/problems/assets/wk12ex1.zip); dit bevat een startbestand voor elk van de opgaven van deze week, en een complete oplossing van de eerste opgave als voorbeeld.
 
 Pak het bestand `wk12ex1.zip` uit en controleer dat je **zowel** de tests als de startbestanden hebt:
