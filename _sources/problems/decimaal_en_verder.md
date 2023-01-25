@@ -322,8 +322,7 @@ In [2]: count("11111110", 5)
 
 ## Ternaire getallen
 
-!!! quote
-    Er zijn 10 soorten mensen in de wereld: zij die ternaire getallen kennen, zij die dat niet kennen, en zij die denken dat dit een binaire grap is.
+> Er zijn 10 soorten mensen in de wereld: zij die ternaire getallen kennen, zij die dat niet kennen, en zij die denken dat dit een binaire grap is.
 
 De volgende functies gaan over ternaire getallen, oftewel waarden in grondtal 3. Je gaat twee varianten zien, "gewone" ternaire en "gebalanceerde" ternaire getallen.
 
