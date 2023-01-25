@@ -410,7 +410,7 @@ In [2]: balanced_ternary_to_num("++-0+")
 Out[2]: 100
 ```
 
-Gebruik hier (met aanpassingen) de functie `num_to_ternary` die je eerder hebt geschreven!
+Gebruik hier (met aanpassingen) de functie `ternary_to_num` die je eerder hebt geschreven!
 
 ### Functie 9: `num_to_balanced_ternary(n)`
 
@@ -426,7 +426,7 @@ In [4]: num_to_balanced_ternary(100)
 Out[4]: '++-0+'
 ```
 
-Gebruik hier (met aanpassingen) de functie `ternary_to_num` die je eerder hebt geschreven!
+Gebruik hier (met aanpassingen) de functie `num_to_ternary` die je eerder hebt geschreven!
 
 ## Verleden, heden en toekomst
 
