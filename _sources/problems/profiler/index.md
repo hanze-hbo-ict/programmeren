@@ -95,7 +95,7 @@ Je ziet hier dat je Python het programma `dna.py` gaat laten uitvoeren en dat je
 -   Jouw programma moet als eerste commandoregelargument de naam van een CSV-bestand met de STR-tellingen voor een lijst van individuen vragen en als tweede commandoregelargument de naam van een tekstbestand met de te identificeren DNA-sequentie.
     -   Als het programma wordt uitgevoerd met het verkeerde aantal commandoregel-argumenten, moet het programma een foutmelding naar keuze (met print) afdrukken. Als het juiste aantal argumenten is opgegeven mag je aannemen dat het eerste argument inderdaad de bestandsnaam is van een geldig CSV-bestand en dat het tweede argument de bestandsnaam is van een geldig tekstbestand.
 -   Voor elk van de STR's zal jouw programma de langste reeks opeenvolgende herhalingen van de STR in de te identificeren DNA-sequentie moeten berekenen. Merk op dat we een hulpfunctie `longest_match` voor je hebben gedefinieerd die precies dat doet!
--   Als de STR-tellingen exact overeenkomen met één van de personen in het CSV-bestand, moet uw programma de naam van het overeenkomende personen afdrukken.
+-   Als de STR-tellingen exact overeenkomen met één van de personen in het CSV-bestand, moet jouw programma de naam van het overeenkomende personen afdrukken.
 -   Je kunt ervan uitgaan dat de STR-tellingen niet met meer dan één persoon overeenkomen.
 -   Als de STR-tellingen niet exact overeenkomen met één van de personen in het CSV-bestand zal jouw programma "No match" moeten afdrukken.
 
@@ -113,7 +113,7 @@ Hoe kan je de commandline argumenten die worden meegegeven in jouw programma geb
 
 Het eerste element zal altijd de naam van de bestand zijn dat wordt uitgevoerd (`dna.py`) en de volgende elementen de verdere waarden die op de commandline worden meegegeven en dit zijn de bestanden die je zult moeten inlezen.
 
-## Betanden lezen
+## Bestanden lezen
 
 Het eerste argument dat jouw programma zal moeten accepteren is een CSV-bestand (*comma separated values*) wat dat de STR-tellingen voor een lijst van personen bevat. Een CSV-bestand is een tekstbestand waar waarden door komma's gescheiden worden. Het is een eenvoudig formaat dat je ook in Excel zou kan openen.
 
