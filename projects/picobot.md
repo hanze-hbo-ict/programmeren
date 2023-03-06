@@ -25,7 +25,6 @@ Je kan ook meteen naar de [Picobot-simulator](https://www.cs.hmc.edu/picobot/) g
 
 De code die je schrijft komt in een bestand met de naam `begin.py`, `milestone.py` of `oplevering.py`, afhankelijk van de fase van je project. Vergeet niet bovenaan het bestand de volgende zaken te vermelden:
 
-* De namen van je team
 * Een korte beschrijving van het project
 * De datum
 
