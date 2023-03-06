@@ -4,42 +4,50 @@
 <html lang="nl">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Kunstmatige intelligentie &#8212; Programmeren</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=4ec06e9971c5264fbd345897d5258098f11cc577" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=8bf782fb4ee92b3d3646425e50f299c4e1fd152d"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -81,7 +89,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script src="../_static/save_state.js"></script>
     <script src="../_static/translations.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -91,62 +99,831 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'topics/22a_kunstmatige_intelligentie';</script>
     <link rel="canonical" href="https:///hanze-hbo-ict.github.io/programmeren/topics/22a_kunstmatige_intelligentie.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Zoeken" href="../search.html" />
     <link rel="next" title="Projecten" href="22b_projecten.html" />
     <link rel="prev" title="API’s en VPython" href="21_api_tuple.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="nl">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="nl">
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="light">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../about/syllabus.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../_static/mascot.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/mascot.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
         
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../about/feedback.html">
+                        Anoniem feedbackformulier
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../about/faq.html">
+                        Veelgestelde vragen
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../about/references.html">
+                        Literatuur
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/week_1.html">
+                        Onderwerpen
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/opgaven_1.html">
+                        Opgaven
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/week_2.html">
+                        Onderwerpen
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/opgaven_2.html">
+                        Opgaven
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/week_3.html">
+                        Onderwerpen
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/opgaven_3.html">
+                        Opgaven
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/week_4.html">
+                        Onderwerpen
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/opgaven_4.html">
+                        Opgaven
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/week_5.html">
+                        Onderwerpen
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/opgaven_5.html">
+                        Opgaven
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/week_6.html">
+                        Onderwerpen
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/opgaven_6.html">
+                        Opgaven
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/week_7.html">
+                        Onderwerpen
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/opgaven_7.html">
+                        Opgaven
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/week_8.html">
+                        Onderwerpen
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/opgaven_8.html">
+                        Opgaven
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/week_9.html">
+                        Onderwerpen
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/opgaven_9.html">
+                        Opgaven
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/week_10.html">
+                        Onderwerpen
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/opgaven_10.html">
+                        Opgaven
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../course/week_11.html">
+                        Onderwerpen
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/opgaven_11.html">
+                        Opaven
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/week_12.html">
+                        Onderwerpen
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/opgaven_12.html">
+                        Opgaven
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../projects/vpython.html">
+                        VPool
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../projects/connectfour.html">
+                        ConnectFour
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../projects/textid.html">
+                        TextID
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../projects/picobot.html">
+                        Picobot
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../extra/examples/recursie.html">
+                        Recursie
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../extra/examples/design_recipe.html">
+                        Functie ontwerp
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../extra/practice/1_recursie.html">
+                        Recursie
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../extra/practice/2_list_comprehension.html">
+                        List comprehension
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../extra/practice/3a_toets.html">
+                        Zelftoets
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../support/plain_text/index.html">
+                        Tekstbestanden
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../support/python_browser.html">
+                        Python in de browser
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../support/hmmm.html">
+                        Hmmm assembly
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../extra/git_scm/index.html">
+                        Versiebeheer met Git
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../extra/git_repository/index.html">
+                        Kennismaken met Git
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../problems/dna.html">
+                        Extra opgave PGM1 (DNA)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../problems/profiler/index.html">
+                        Extra opgave PGM2 (STR)
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
       
       
-      <img src="../_static/mascot.png" class="logo" alt="logo">
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
       
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
       
-      <h1 class="site-logo" id="site-title">Programmeren</h1>
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../about/feedback.html">
+                        Anoniem feedbackformulier
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../about/faq.html">
+                        Veelgestelde vragen
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../about/references.html">
+                        Literatuur
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/week_1.html">
+                        Onderwerpen
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/opgaven_1.html">
+                        Opgaven
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/week_2.html">
+                        Onderwerpen
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/opgaven_2.html">
+                        Opgaven
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/week_3.html">
+                        Onderwerpen
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/opgaven_3.html">
+                        Opgaven
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/week_4.html">
+                        Onderwerpen
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/opgaven_4.html">
+                        Opgaven
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/week_5.html">
+                        Onderwerpen
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/opgaven_5.html">
+                        Opgaven
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/week_6.html">
+                        Onderwerpen
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/opgaven_6.html">
+                        Opgaven
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/week_7.html">
+                        Onderwerpen
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/opgaven_7.html">
+                        Opgaven
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/week_8.html">
+                        Onderwerpen
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/opgaven_8.html">
+                        Opgaven
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/week_9.html">
+                        Onderwerpen
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/opgaven_9.html">
+                        Opgaven
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/week_10.html">
+                        Onderwerpen
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/opgaven_10.html">
+                        Opgaven
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../course/week_11.html">
+                        Onderwerpen
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/opgaven_11.html">
+                        Opaven
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/week_12.html">
+                        Onderwerpen
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../course/opgaven_12.html">
+                        Opgaven
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../projects/vpython.html">
+                        VPool
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../projects/connectfour.html">
+                        ConnectFour
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../projects/textid.html">
+                        TextID
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../projects/picobot.html">
+                        Picobot
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../extra/examples/recursie.html">
+                        Recursie
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../extra/examples/design_recipe.html">
+                        Functie ontwerp
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../extra/practice/1_recursie.html">
+                        Recursie
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../extra/practice/2_list_comprehension.html">
+                        List comprehension
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../extra/practice/3a_toets.html">
+                        Zelftoets
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../support/plain_text/index.html">
+                        Tekstbestanden
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../support/python_browser.html">
+                        Python in de browser
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../support/hmmm.html">
+                        Hmmm assembly
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../extra/git_scm/index.html">
+                        Versiebeheer met Git
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../extra/git_repository/index.html">
+                        Kennismaken met Git
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../problems/dna.html">
+                        Extra opgave PGM1 (DNA)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../problems/profiler/index.html">
+                        Extra opgave PGM2 (STR)
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+  
+
+
+<a class="navbar-brand logo" href="../about/syllabus.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../_static/mascot.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/mascot.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    </div>
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -155,1522 +932,612 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Opmerkingen
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Opmerkingen</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../about/feedback.html">
-   Anoniem feedbackformulier
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../about/faq.html">
-   Veelgestelde vragen
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../about/references.html">
-   Literatuur
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../about/feedback.html">Anoniem feedbackformulier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/faq.html">Veelgestelde vragen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/references.html">Literatuur</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Week 1
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../course/week_1.html">
-   Onderwerpen
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="1a_introductie.html">
-     Introductie
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="1b_condities.html">
-     Condities
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="1c_algoritmen.html">
-     Algoritmen
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="2a_programmeren.html">
-     Programmeren
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="2b_picobot.html">
-     Picobot
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../course/opgaven_1.html">
-   Opgaven
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/python_intro.html">
-     Practicum
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../readings/guugu_yimithirr.html">
-     Leesopgave
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/rochambeau.html">
-     Rochambeau
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/interactieve_fictie.html">
-     Interactieve fictie
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/picobot_1.html">
-     Picobot
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/picobot_2.html">
-     Picobot II: Picobot Strikes Back
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/picobot_3.html">
-     Picobot III: Return of the Picobot
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/picobot_4.html">
-     Picobot IV: The Picobot Menace
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_1.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="1a_introductie.html">Introductie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1b_condities.html">Condities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1c_algoritmen.html">Algoritmen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2a_programmeren.html">Programmeren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2b_picobot.html">Picobot</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Week 2
- </span>
-</p>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_1.html">Opgaven</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/python_intro.html">Practicum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../readings/guugu_yimithirr.html">Leesopgave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/rochambeau.html">Rochambeau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/interactieve_fictie.html">Interactieve fictie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/picobot_1.html">Picobot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/picobot_2.html">Picobot II: Picobot Strikes Back</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/picobot_3.html">Picobot III: Return of the Picobot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/picobot_4.html">Picobot IV: The Picobot Menace</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../course/week_2.html">
-   Onderwerpen
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3a_data.html">
-     Data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3b_strings_en_lists.html">
-     Strings en lists
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="4a_functies.html">
-     Functies
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="4b_recursie.html">
-     Recursie
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../course/opgaven_2.html">
-   Opgaven
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/sequenties_en_data.html">
-     Practicum I
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/fijne_functies.html">
-     Practicum II
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../readings/end_of_theory.html">
-     Leesopgave
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/feest_met_functies.html">
-     Feest met functies
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_2.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="3a_data.html">Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3b_strings_en_lists.html">Strings en lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4a_functies.html">Functies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4b_recursie.html">Recursie</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Week 3
- </span>
-</p>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_2.html">Opgaven</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/sequenties_en_data.html">Practicum I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/fijne_functies.html">Practicum II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../readings/end_of_theory.html">Leesopgave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/feest_met_functies.html">Feest met functies</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 3</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../course/week_3.html">
-   Onderwerpen
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="5a_simulatie.html">
-     Simulatie
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="5b_turtle_recursie.html">
-     Turtle en recursie
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="6a_list_comprehension.html">
-     List comprehension
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../course/opgaven_3.html">
-   Opgaven
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/python_turtles.html">
-     Practicum
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../readings/computer_wins_jeopardy.html">
-     Leesopgave
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/slaapwandelende_student.html">
-     Slaapwandelende student
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/numerieke_integratie.html">
-     Numerieke integratie
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/turtles_tot_het_einde.html">
-     Turtles all the way down
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_3.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="5a_simulatie.html">Simulatie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5b_turtle_recursie.html">Turtle en recursie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6a_list_comprehension.html">List comprehension</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Week 4
- </span>
-</p>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_3.html">Opgaven</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/python_turtles.html">Practicum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../readings/computer_wins_jeopardy.html">Leesopgave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/slaapwandelende_student.html">Slaapwandelende student</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/numerieke_integratie.html">Numerieke integratie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/turtles_tot_het_einde.html">Turtles all the way down</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 4</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../course/week_4.html">
-   Onderwerpen
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="7a_data_based_design.html">
-     Data based design
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="7b_rekenen_met_taal.html">
-     Rekenen met taal
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="8_ontwerp_algoritmen.html">
-     Ontwerp van algoritmen
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../course/opgaven_4.html">
-   Opgaven
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/klinkt_goed.html">
-     Practicum
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../readings/universum_simulatie.html">
-     Leesopgave
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/caesar_op_orde.html">
-     Caesar op orde
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_4.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="7a_data_based_design.html">Data based design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7b_rekenen_met_taal.html">Rekenen met taal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_ontwerp_algoritmen.html">Ontwerp van algoritmen</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Week 5
- </span>
-</p>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_4.html">Opgaven</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/klinkt_goed.html">Practicum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../readings/universum_simulatie.html">Leesopgave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/caesar_op_orde.html">Caesar op orde</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 5</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../course/week_5.html">
-   Onderwerpen
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="9a_talstelsels.html">
-     Talstelsels
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="9b_binaire_getallen.html">
-     Binaire getallen
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="10_bewerkingen_met_bits.html">
-     Bewerkingen met bits
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../course/opgaven_5.html">
-   Opgaven
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-  <label for="toctree-checkbox-10">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/decimaal_en_verder.html">
-     Practicum
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../readings/bug_and_crash.html">
-     Leesopgave
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/wisselende_stelsels.html">
-     Wisselende stelsels
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/fraaie_plaatjes.html">
-     Fraaie plaatjes
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_5.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="9a_talstelsels.html">Talstelsels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9b_binaire_getallen.html">Binaire getallen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_bewerkingen_met_bits.html">Bewerkingen met bits</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Week 6
- </span>
-</p>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_5.html">Opgaven</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/decimaal_en_verder.html">Practicum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../readings/bug_and_crash.html">Leesopgave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/wisselende_stelsels.html">Wisselende stelsels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/fraaie_plaatjes.html">Fraaie plaatjes</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 6</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../course/week_6.html">
-   Onderwerpen
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-  <label for="toctree-checkbox-11">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="11a_logische_schakelingen.html">
-     Logische schakelingen
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="11b_rekenen_met_schakelingen.html">
-     Rekenen met schakelingen
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="12a_ontwerpen_met_schakelingen.html">
-     Ontwerpen met schakelingen
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../course/opgaven_6.html">
-   Opgaven
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-  <label for="toctree-checkbox-12">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/optellingen_schakelen.html">
-     Practicum
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../readings/just_add_water.html">
-     Leesopgave
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/vermenigvuldigingswaanzin.html">
-     Vermenigvuldigingswaanzin
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/eerlijke_verdeling.html">
-     Een eerlijke verdeling
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/geheugenproblemen.html">
-     Geheugenproblemen
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_6.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="11a_logische_schakelingen.html">Logische schakelingen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11b_rekenen_met_schakelingen.html">Rekenen met schakelingen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12a_ontwerpen_met_schakelingen.html">Ontwerpen met schakelingen</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Week 7
- </span>
-</p>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_6.html">Opgaven</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/optellingen_schakelen.html">Practicum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../readings/just_add_water.html">Leesopgave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/vermenigvuldigingswaanzin.html">Vermenigvuldigingswaanzin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/eerlijke_verdeling.html">Een eerlijke verdeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/geheugenproblemen.html">Geheugenproblemen</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 7</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../course/week_7.html">
-   Onderwerpen
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-  <label for="toctree-checkbox-13">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="13_hmmm_introductie.html">
-     Hmmm introductie
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="14_hmmm_functies.html">
-     Hmmm functies
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../course/opgaven_7.html">
-   Opgaven
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-  <label for="toctree-checkbox-14">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/hmmm_assembly.html">
-     Practicum
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../readings/hijacked_minds.html">
-     Leesopgave
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/macht_van_hmmm.html">
-     De macht van hmmm
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/feest_met_fibonacci.html">
-     Feest met Fibonacci
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/macht_van_recursie.html">
-     De macht van recursie
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/een_lus_om_python.html">
-     Een lusje om Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/fibonacci_recursief.html">
-     Fibonacci recursief
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_7.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="13_hmmm_introductie.html">Hmmm introductie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="14_hmmm_functies.html">Hmmm functies</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Week 8
- </span>
-</p>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_7.html">Opgaven</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/hmmm_assembly.html">Practicum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../readings/hijacked_minds.html">Leesopgave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/macht_van_hmmm.html">De macht van hmmm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/feest_met_fibonacci.html">Feest met Fibonacci</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/macht_van_recursie.html">De macht van recursie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/een_lus_om_python.html">Een lusje om Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/fibonacci_recursief.html">Fibonacci recursief</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 8</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../course/week_8.html">
-   Onderwerpen
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
-  <label for="toctree-checkbox-15">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="15_lussen.html">
-     Lussen
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="16_iteratief_ontwerp.html">
-     Iteratief ontwerpen
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../course/opgaven_8.html">
-   Opgaven
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
-  <label for="toctree-checkbox-16">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/mandelbrot.html">
-     Practicum
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../readings/algoritmen_discrimineren.html">
-     Leesopgave
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/pythonbat_lussen.html">
-     PythonBat lussen
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/rij_van_conway.html">
-     Lees en huiver
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/pi_pijlen.html">
-     Pi met pijltjes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/ascii_art.html">
-     ASCII Art
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_8.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="15_lussen.html">Lussen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="16_iteratief_ontwerp.html">Iteratief ontwerpen</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Week 9
- </span>
-</p>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_8.html">Opgaven</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/mandelbrot.html">Practicum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../readings/algoritmen_discrimineren.html">Leesopgave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/pythonbat_lussen.html">PythonBat lussen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/rij_van_conway.html">Lees en huiver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/pi_pijlen.html">Pi met pijltjes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/ascii_art.html">ASCII Art</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 9</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../course/week_9.html">
-   Onderwerpen
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
-  <label for="toctree-checkbox-17">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="17_2d_arrays.html">
-     2D arrays
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="18_meer_2d.html">
-     Meer 2D
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../course/opgaven_9.html">
-   Opgaven
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
-  <label for="toctree-checkbox-18">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/game_of_life.html">
-     Practicum
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../readings/horseless_driverless.html">
-     Leesopgave
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/boter_kaas_eieren.html">
-     Boter kaas en eieren
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/tr_investeringen.html">
-     TR Investeringen B.V.
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_9.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="17_2d_arrays.html">2D arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="18_meer_2d.html">Meer 2D</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Week 10
- </span>
-</p>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_9.html">Opgaven</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/game_of_life.html">Practicum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../readings/horseless_driverless.html">Leesopgave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/boter_kaas_eieren.html">Boter kaas en eieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/tr_investeringen.html">TR Investeringen B.V.</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 10</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../course/week_10.html">
-   Onderwerpen
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
-  <label for="toctree-checkbox-19">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="19_objecten.html">
-     Objecten en klassen
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="20_dictionaries.html">
-     Dictionaries
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../course/opgaven_10.html">
-   Opgaven
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
-  <label for="toctree-checkbox-20">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/eeuwigdurende_kalender.html">
-     Practicum
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../readings/an_algorithm_wrote_this.html">
-     Leesopgave
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/tekst_genereren.html">
-     Teksten genereren
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/vier_op_een_rij.html">
-     Vier op een rij
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_10.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="19_objecten.html">Objecten en klassen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="20_dictionaries.html">Dictionaries</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Week 11
- </span>
-</p>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_10.html">Opgaven</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/eeuwigdurende_kalender.html">Practicum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../readings/an_algorithm_wrote_this.html">Leesopgave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/tekst_genereren.html">Teksten genereren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/vier_op_een_rij.html">Vier op een rij</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 11</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../course/week_11.html">
-   Onderwerpen
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
-  <label for="toctree-checkbox-21">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="21_api_tuple.html">
-     API's en VPython
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Kunstmatige intelligentie
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="22b_projecten.html">
-     Projecten
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../course/opgaven_11.html">
-   Opaven
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
-  <label for="toctree-checkbox-22">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/buitenaards_python.html">
-     Practicum
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../readings/chess_championship.html">
-     Leesopgave
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/vier_op_een_rij_ai.html">
-     AI voor vier op een rij
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../course/week_11.html">Onderwerpen</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="21_api_tuple.html">API's en VPython</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Kunstmatige intelligentie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="22b_projecten.html">Projecten</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Week 12
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../course/week_12.html">
-   Onderwerpen
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/>
-  <label for="toctree-checkbox-23">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="23_finite_state_machines.html">
-     Finite state machines
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="24_oneindigheid.html">
-     Oneindigheid
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../course/opgaven_12.html">
-   Opgaven
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/>
-  <label for="toctree-checkbox-24">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../readings/life_of_pi.html">
-     Leesopgave
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../problems/finite_state_machines.html">
-     Finite state machines
-    </a>
-   </li>
-  </ul>
- </li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_11.html">Opaven</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/buitenaards_python.html">Practicum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../readings/chess_championship.html">Leesopgave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/vier_op_een_rij_ai.html">AI voor vier op een rij</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Projecten
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/vpython.html">
-   VPool
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/connectfour.html">
-   ConnectFour
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/textid.html">
-   TextID
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/picobot.html">
-   Picobot
-  </a>
- </li>
+</li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Voorbeelden
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 12</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../extra/examples/recursie.html">
-   Recursie
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../extra/examples/design_recipe.html">
-   Functie ontwerp
-  </a>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_12.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-23"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="23_finite_state_machines.html">Finite state machines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="24_oneindigheid.html">Oneindigheid</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Oefening
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../extra/practice/1_recursie.html">
-   Recursie
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../extra/practice/2_list_comprehension.html">
-   List comprehension
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../extra/practice/3a_toets.html">
-   Zelftoets
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/>
-  <label for="toctree-checkbox-25">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../extra/practice/3b_toets_uitwerking.html">
-     Uitwerking
-    </a>
-   </li>
-  </ul>
- </li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_12.html">Opgaven</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-24"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../readings/life_of_pi.html">Leesopgave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/finite_state_machines.html">Finite state machines</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Python
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../support/plain_text/index.html">
-   Tekstbestanden
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../support/python_browser.html">
-   Python in de browser
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../support/hmmm.html">
-   Hmmm assembly
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../extra/git_scm/index.html">
-   Versiebeheer met Git
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../extra/git_repository/index.html">
-   Kennismaken met Git
-  </a>
- </li>
+</li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Extra
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Projecten</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/dna.html">
-   Extra opgave PGM1 (DNA)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/profiler/index.html">
-   Extra opgave PGM2 (STR)
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/vpython.html">VPool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/connectfour.html">ConnectFour</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/textid.html">TextID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/picobot.html">Picobot</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Voorbeelden</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../extra/examples/recursie.html">Recursie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extra/examples/design_recipe.html">Functie ontwerp</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Oefening</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../extra/practice/1_recursie.html">Recursie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extra/practice/2_list_comprehension.html">List comprehension</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../extra/practice/3a_toets.html">Zelftoets</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../extra/practice/3b_toets_uitwerking.html">Uitwerking</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Python</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../support/plain_text/index.html">Tekstbestanden</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/python_browser.html">Python in de browser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/hmmm.html">Hmmm assembly</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extra/git_scm/index.html">Versiebeheer met Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extra/git_repository/index.html">Kennismaken met Git</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Extra</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../problems/dna.html">Extra opgave PGM1 (DNA)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/profiler/index.html">Extra opgave PGM2 (STR)</a></li>
 </ul>
 
     </div>
-</nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
+</nav>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  </div>
+  
 
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
 
-          
+  
+  <div id="rtd-footer-container"></div>
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
+      </div>
+      <main id="main-content" class="bd-main">
         
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
 
 
 
 <div class="col py-1 d-flex header-article-main">
     <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+        <label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" data-toggle="tooltip" data-placement="right" title="Toggle primary sidebar">
+            <span class="fa-solid fa-bars"></span>
+        </label>
     </div>
     <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/hanze-hbo-ict/programmeren/master?urlpath=lab/tree/topics/22a_kunstmatige_intelligentie.ipynb"
-   class="headerbtn"
+  <ul class="dropdown-menu">
+      <li><a href="https://mybinder.org/v2/gh/hanze-hbo-ict/programmeren/master?urlpath=lab/tree/topics/22a_kunstmatige_intelligentie.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
 title="Launch on Binder"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="../_static/images/logo_binder.svg">
   </span>
-<span class="headerbtn__text-container">Binder</span>
+<span class="btn__text-container">Binder</span>
 </a>
-
-      </li>
+</a>
       
       <li>
-        
 <button onclick="initThebeSBT()"
-  class="headerbtn headerbtn-launch-thebe"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
   data-toggle="tooltip"
 data-placement="left"
 title="Launch Thebe"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-play"></i>
   </span>
-<span class="headerbtn__text-container">Live Code</span>
+<span class="btn__text-container">Live Code</span>
 </button>
-
-      </li>
+</a>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
+  class="btn btn-sm"
   data-toggle="tooltip"
 data-placement="bottom"
 title="Fullscreen mode"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+
+<div class="dropdown dropdown-repository-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/hanze-hbo-ict/programmeren"
-   class="headerbtn"
+  <ul class="dropdown-menu">
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren" target="_blank"
+   class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
 title="Source repository"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fab fa-github"></i>
   </span>
-<span class="headerbtn__text-container">repository</span>
+<span class="btn__text-container">repository</span>
 </a>
-
-      </li>
+</a>
       
-      <li>
-        <a href="https://github.com/hanze-hbo-ict/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/22a_kunstmatige_intelligentie.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/issues/new?title=Issue%20on%20page%20%2Ftopics/22a_kunstmatige_intelligentie.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
 title="Open an issue"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-lightbulb"></i>
   </span>
-<span class="headerbtn__text-container">open issue</span>
+<span class="btn__text-container">open issue</span>
 </a>
-
-      </li>
+</a>
       
-      <li>
-        <a href="https://github.com/hanze-hbo-ict/programmeren/edit/master/topics/22a_kunstmatige_intelligentie.ipynb"
-   class="headerbtn"
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/edit/master/topics/22a_kunstmatige_intelligentie.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
 title="Edit this page"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-pencil-alt"></i>
   </span>
-<span class="headerbtn__text-container">suggest edit</span>
+<span class="btn__text-container">suggest edit</span>
 </a>
-
-      </li>
+</a>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/topics/22a_kunstmatige_intelligentie.ipynb"
-   class="headerbtn"
+  <ul class="dropdown-menu">
+      <li><a href="../_sources/topics/22a_kunstmatige_intelligentie.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
 title="Download source file"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
-
-      </li>
+</a>
       
       <li>
-        
 <button onclick="printPdf(this)"
-  class="headerbtn"
+  class="btn btn-sm dropdown-item"
   data-toggle="tooltip"
 data-placement="left"
 title="Print to PDF"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-file-pdf"></i>
   </span>
-<span class="headerbtn__text-container">.pdf</span>
+<span class="btn__text-container">.pdf</span>
 </button>
-
-      </li>
+</a>
       
-    </ul>
-  </div>
+  </ul>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary" data-toggle="tooltip" data-placement="left" title="Toggle secondary sidebar">
+            <span class="fa-solid fa-list"></span>
+        </label>
     </div>
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tekstclassificatie">
-   Tekstclassificatie
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#welke-auteur">
-     Welke auteur?
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#kansen">
-   Kansen!
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#modellen">
-     Modellen
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#modellen-vergelijken">
-     Modellen vergelijken?
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#naive-bayes-classification">
-     Naive Bayes classification
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#naiviteit">
-       Naïviteit
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#stappen">
-     Stappen
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#model-scores">
-     Model
-     <em>
-      scores
-     </em>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#ontbrekende-waarden">
-       Ontbrekende waarden
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#oplossing">
-       Oplossing
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#logaritme">
-     Logaritme
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#python">
-     Python?
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#de-winnaar">
-     De winnaar
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#genetische-algoritmen">
-   Genetische algoritmen
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#picobot">
-     Picobot
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#regels">
-     Regels
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#klassen">
-     Klassen
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#de-evolutie-van-picobot">
-   De evolutie van Picobot
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#evolutie">
-     Evolutie
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#fitness">
-     Fitness
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#combineren">
-     Combineren
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#herhalen">
-     Herhalen
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
-</div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Kunstmatige intelligentie</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tekstclassificatie">
-   Tekstclassificatie
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#welke-auteur">
-     Welke auteur?
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#kansen">
-   Kansen!
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#modellen">
-     Modellen
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#modellen-vergelijken">
-     Modellen vergelijken?
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#naive-bayes-classification">
-     Naive Bayes classification
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#naiviteit">
-       Naïviteit
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#stappen">
-     Stappen
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#model-scores">
-     Model
-     <em>
-      scores
-     </em>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#ontbrekende-waarden">
-       Ontbrekende waarden
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#oplossing">
-       Oplossing
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#logaritme">
-     Logaritme
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#python">
-     Python?
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#de-winnaar">
-     De winnaar
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#genetische-algoritmen">
-   Genetische algoritmen
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#picobot">
-     Picobot
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#regels">
-     Regels
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#klassen">
-     Klassen
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#de-evolutie-van-picobot">
-   De evolutie van Picobot
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#evolutie">
-     Evolutie
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#fitness">
-     Fitness
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#combineren">
-     Combineren
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#herhalen">
-     Herhalen
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-                        </nav>
-                    </div>
-                </div>
             </div>
-            <main id="main-content" role="main">
-                
-              <div>
-                
+            
+            
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Kunstmatige intelligentie</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tekstclassificatie">
+   Tekstclassificatie
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#welke-auteur">
+     Welke auteur?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kansen">
+   Kansen!
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modellen">
+     Modellen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modellen-vergelijken">
+     Modellen vergelijken?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#naive-bayes-classification">
+     Naive Bayes classification
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#naiviteit">
+       Naïviteit
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#stappen">
+     Stappen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-scores">
+     Model
+     <em>
+      scores
+     </em>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ontbrekende-waarden">
+       Ontbrekende waarden
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#oplossing">
+       Oplossing
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#logaritme">
+     Logaritme
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python">
+     Python?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-winnaar">
+     De winnaar
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#genetische-algoritmen">
+   Genetische algoritmen
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#picobot">
+     Picobot
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#regels">
+     Regels
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#klassen">
+     Klassen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#de-evolutie-van-picobot">
+   De evolutie van Picobot
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#evolutie">
+     Evolutie
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fitness">
+     Fitness
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#combineren">
+     Combineren
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#herhalen">
+     Herhalen
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+            <article class="bd-article" role="main">
+              
   <section class="tex2jax_ignore mathjax_ignore" id="kunstmatige-intelligentie">
-<h1>Kunstmatige intelligentie<a class="headerlink" href="#kunstmatige-intelligentie" title="Permalink naar deze titel">#</a></h1>
+<h1>Kunstmatige intelligentie<a class="headerlink" href="#kunstmatige-intelligentie" title="Permalink to this heading">#</a></h1>
 <p>Naive Bayes classificatie en genetische algoritmen</p>
 <section id="tekstclassificatie">
-<h2>Tekstclassificatie<a class="headerlink" href="#tekstclassificatie" title="Permalink naar deze titel">#</a></h2>
+<h2>Tekstclassificatie<a class="headerlink" href="#tekstclassificatie" title="Permalink to this heading">#</a></h2>
 <p><img alt="Spam" src="../_images/spam.jpg" /></p>
 <p>Spam of geen spam? Welk label kan je op een bericht plakken, spam of inbox?</p>
 <section id="welke-auteur">
-<h3>Welke auteur?<a class="headerlink" href="#welke-auteur" title="Permalink naar deze titel">#</a></h3>
+<h3>Welke auteur?<a class="headerlink" href="#welke-auteur" title="Permalink to this heading">#</a></h3>
 <p><img alt="The Cuckoo's Calling " src="../_images/Cuckoo.png" /></p>
 <p><img alt="Gailbraith / Rowling" src="../_images/galbraith_rowling.png" /></p>
 <p>Welke mogelijke auteur is de schrijver van een onbekende tekst? <a class="reference external" href="https://en.wikipedia.org/wiki/The_Cuckoo%27s_Calling">The Cuckoo’s Calling</a> van Robert Galbraith bleek geschreven door <a class="reference external" href="https://www.scientificamerican.com/article/how-a-computer-program-helped-show-jk-rowling-write-a-cuckoos-calling/">J.K. Rowling</a>!</p>
 </section>
 </section>
 <section id="kansen">
-<h2>Kansen!<a class="headerlink" href="#kansen" title="Permalink naar deze titel">#</a></h2>
+<h2>Kansen!<a class="headerlink" href="#kansen" title="Permalink to this heading">#</a></h2>
 <p><img alt="Dobbelstenen" src="../_images/dice-6.png" /></p>
 <p>Dit wordt een verhaal over kansen! De centrale vraag is, gegeven teksten die eerder zijn gezien (en waar de auteur, of het <em>label</em> van bekend is), wat kunnen we zeggen over de waarschijnlijkheid dat een auteur de schrijver is van een tekst die niet eerder is gezien?</p>
 <p><img alt="Bayes spam filter" src="../_images/bayesian_spam_filter.png" /></p>
 <section id="modellen">
-<h3>Modellen<a class="headerlink" href="#modellen" title="Permalink naar deze titel">#</a></h3>
+<h3>Modellen<a class="headerlink" href="#modellen" title="Permalink to this heading">#</a></h3>
 <p>Een model is een vereenvoudigde weergave van een werkelijkheid</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;love&quot;</span><span class="p">:</span> <span class="mi">50</span>
@@ -1683,7 +1550,7 @@ title="Print to PDF"
 <p>Het is niet het enige dat stijl kenmerkt, zo zijn meer kenmerken te bedenken (bijvoorbeeld het gebruik van punctuatie). Het is een vereenvoudigd maar informatief genoeg model van wat een auteur van andere auteurs onderscheidt. Wat het ene model van het andere onderscheid worden vaak “features” genoemd, in dit geval de tellingen van woordgebruik.</p>
 </section>
 <section id="modellen-vergelijken">
-<h3>Modellen vergelijken?<a class="headerlink" href="#modellen-vergelijken" title="Permalink naar deze titel">#</a></h3>
+<h3>Modellen vergelijken?<a class="headerlink" href="#modellen-vergelijken" title="Permalink to this heading">#</a></h3>
 <p>Tekst van Robert Galbraith</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>   <span class="c1"># Robert Galbraith, geen &quot;potter&quot; ...</span>
     <span class="s2">&quot;love&quot;</span><span class="p">:</span> <span class="mi">50</span>
@@ -1712,11 +1579,11 @@ title="Print to PDF"
 <p>Hoe zou je de “gelijkheid” van de nieuwe tekst met de twee bekende modellen kunnen scoren?</p>
 </section>
 <section id="naive-bayes-classification">
-<h3>Naive Bayes classification<a class="headerlink" href="#naive-bayes-classification" title="Permalink naar deze titel">#</a></h3>
+<h3>Naive Bayes classification<a class="headerlink" href="#naive-bayes-classification" title="Permalink to this heading">#</a></h3>
 <p><img alt="Theorema van Bayes" src="../_images/bayes_theorem.png" /></p>
 <p>Let niet teveel op de vergelijking, we gaan deze vereenvoudigd gebruiken!</p>
 <section id="naiviteit">
-<h4>Naïviteit<a class="headerlink" href="#naiviteit" title="Permalink naar deze titel">#</a></h4>
+<h4>Naïviteit<a class="headerlink" href="#naiviteit" title="Permalink to this heading">#</a></h4>
 <p>Aanname: elk woord in een zin is <em>onafhankelijk</em> van de ander</p>
 <blockquote>
 <div><p>this party was fun</p>
@@ -1730,7 +1597,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="stappen">
-<h3>Stappen<a class="headerlink" href="#stappen" title="Permalink naar deze titel">#</a></h3>
+<h3>Stappen<a class="headerlink" href="#stappen" title="Permalink to this heading">#</a></h3>
 <p>Normaliseer de modellen van de bekende auteurs</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>   <span class="c1"># Robert Galbraith</span>
     <span class="s2">&quot;love&quot;</span><span class="p">:</span> <span class="mf">0.5</span>    <span class="c1"># 50</span>
@@ -1748,7 +1615,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="model-scores">
-<h3>Model <em>scores</em><a class="headerlink" href="#model-scores" title="Permalink naar deze titel">#</a></h3>
+<h3>Model <em>scores</em><a class="headerlink" href="#model-scores" title="Permalink to this heading">#</a></h3>
 <p>Bereken een score per model voor de onbekende tekst</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>   <span class="c1"># Robert Galbraith</span>
     <span class="s2">&quot;love&quot;</span><span class="p">:</span> <span class="mf">0.5</span>
@@ -1772,7 +1639,7 @@ title="Print to PDF"
 \]</div>
 <p>Wat te kiezen voor de ontbrekende woorden “potter” (2x) en “spam (4x)”?</p>
 <section id="ontbrekende-waarden">
-<h4>Ontbrekende waarden<a class="headerlink" href="#ontbrekende-waarden" title="Permalink naar deze titel">#</a></h4>
+<h4>Ontbrekende waarden<a class="headerlink" href="#ontbrekende-waarden" title="Permalink to this heading">#</a></h4>
 <p>Gebruik 0 als waarde?</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1786,7 +1653,7 @@ title="Print to PDF"
 <p>Een waarde 0 is in in ieder geval niet nuttig. Maar waarom is het vooral geen goed idee om 1 te gebruiken?</p>
 </section>
 <section id="oplossing">
-<h4>Oplossing<a class="headerlink" href="#oplossing" title="Permalink naar deze titel">#</a></h4>
+<h4>Oplossing<a class="headerlink" href="#oplossing" title="Permalink to this heading">#</a></h4>
 <p>Gebruik de <em>helft</em> van de <em>kleinste waarde</em> voor beide modellen</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>   <span class="c1"># Robert Galbraith</span>
     <span class="s2">&quot;love&quot;</span><span class="p">:</span> <span class="mf">0.5</span>
@@ -1810,7 +1677,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="logaritme">
-<h3>Logaritme<a class="headerlink" href="#logaritme" title="Permalink naar deze titel">#</a></h3>
+<h3>Logaritme<a class="headerlink" href="#logaritme" title="Permalink to this heading">#</a></h3>
 <p>Gebruik de <a class="reference external" href="https://en.wikipedia.org/wiki/Binary_logarithm">logaritme</a> van de waarden</p>
 <p>van</p>
 <div class="math notranslate nohighlight">
@@ -1824,7 +1691,7 @@ title="Print to PDF"
 \]</div>
 </section>
 <section id="python">
-<h3>Python?<a class="headerlink" href="#python" title="Permalink naar deze titel">#</a></h3>
+<h3>Python?<a class="headerlink" href="#python" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">log2</span>
@@ -1887,7 +1754,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="de-winnaar">
-<h3>De winnaar<a class="headerlink" href="#de-winnaar" title="Permalink naar deze titel">#</a></h3>
+<h3>De winnaar<a class="headerlink" href="#de-winnaar" title="Permalink to this heading">#</a></h3>
 <p>Het model met de beste (hoogste) score!</p>
 <ul class="simple">
 <li><p>Robert Galbraith: −42.53, de (veel?) betere match</p></li>
@@ -1896,19 +1763,19 @@ title="Print to PDF"
 </section>
 </section>
 <section id="genetische-algoritmen">
-<h2>Genetische algoritmen<a class="headerlink" href="#genetische-algoritmen" title="Permalink naar deze titel">#</a></h2>
+<h2>Genetische algoritmen<a class="headerlink" href="#genetische-algoritmen" title="Permalink to this heading">#</a></h2>
 <p><img alt="Picobot Full Circle" src="../_images/picobot_full_circle.png" /></p>
 <p>De cirkel is nu rond, je bent begonnen met Picobot en kan er nu mee eindigen!</p>
 <section id="picobot">
-<h3>Picobot<a class="headerlink" href="#picobot" title="Permalink naar deze titel">#</a></h3>
+<h3>Picobot<a class="headerlink" href="#picobot" title="Permalink to this heading">#</a></h3>
 <p>Het idee:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Implementeer Picobot in Python</p></li>
 <li><p>Train Python om succesvolle Picobot programma’s te schrijven!</p></li>
 </ol>
 </section>
 <section id="regels">
-<h3>Regels<a class="headerlink" href="#regels" title="Permalink naar deze titel">#</a></h3>
+<h3>Regels<a class="headerlink" href="#regels" title="Permalink to this heading">#</a></h3>
 <p><img alt="Picobot rules" src="../_images/picobot_options.png" /></p>
 <p><img alt="Picobot full circle" src="../_images/picobot.gif" /></p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>0 xxxx -&gt; N 0
@@ -1931,11 +1798,11 @@ title="Print to PDF"
 1 NExx -&gt; W 0
 </pre></div>
 </div>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Huidige staat</p></th>
 <th class="head"><p>Omgeving</p></th>
-<th class="text-align:center head"><p>Stap</p></th>
+<th class="head text-center"><p>Stap</p></th>
 <th class="head"><p>Richting</p></th>
 <th class="head"><p>Nieuwe staat</p></th>
 </tr>
@@ -1943,7 +1810,7 @@ title="Print to PDF"
 <tbody>
 <tr class="row-even"><td><p><strong><code class="docutils literal notranslate"><span class="pre">0</span></code></strong></p></td>
 <td><p><strong><code class="docutils literal notranslate"><span class="pre">NExx</span></code></strong></p></td>
-<td class="text-align:center"><p><strong><code class="docutils literal notranslate"><span class="pre">-&gt;</span></code></strong></p></td>
+<td class="text-center"><p><strong><code class="docutils literal notranslate"><span class="pre">-&gt;</span></code></strong></p></td>
 <td><p><strong><code class="docutils literal notranslate"><span class="pre">S</span></code></strong></p></td>
 <td><p><strong><code class="docutils literal notranslate"><span class="pre">1</span></code></strong></p></td>
 </tr>
@@ -1978,7 +1845,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="klassen">
-<h3>Klassen<a class="headerlink" href="#klassen" title="Permalink naar deze titel">#</a></h3>
+<h3>Klassen<a class="headerlink" href="#klassen" title="Permalink to this heading">#</a></h3>
 <p>Een Picobot programma (een verzameling regels)</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Program</span><span class="p">:</span>
     <span class="o">...</span>
@@ -2008,7 +1875,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="de-evolutie-van-picobot">
-<h2>De evolutie van Picobot<a class="headerlink" href="#de-evolutie-van-picobot" title="Permalink naar deze titel">#</a></h2>
+<h2>De evolutie van Picobot<a class="headerlink" href="#de-evolutie-van-picobot" title="Permalink to this heading">#</a></h2>
 <p>Een voorbeeld van een een genetisch algoritme voor het optimaliseren van</p>
 <ul class="simple">
 <li><p><em>moeilijk te beschrijven</em> functies</p></li>
@@ -2016,22 +1883,22 @@ title="Print to PDF"
 </ul>
 <p><img alt="Genetic algorithm" src="../_images/genetic_algorithm.png" /></p>
 <section id="evolutie">
-<h3>Evolutie<a class="headerlink" href="#evolutie" title="Permalink naar deze titel">#</a></h3>
+<h3>Evolutie<a class="headerlink" href="#evolutie" title="Permalink to this heading">#</a></h3>
 <p>Begin met een populatie van ~200 <em>random</em> Picobot programma’s</p>
 <p><img alt="Evo 1a" src="../_images/evo_1a.png" /></p>
 </section>
 <section id="fitness">
-<h3>Fitness<a class="headerlink" href="#fitness" title="Permalink naar deze titel">#</a></h3>
+<h3>Fitness<a class="headerlink" href="#fitness" title="Permalink to this heading">#</a></h3>
 <p>Bepaal per Picobot programma de dekking als waarde tussen 0 en 1</p>
 <p><img alt="Evo 1b" src="../_images/evo_1b.png" /></p>
 </section>
 <section id="combineren">
-<h3>Combineren<a class="headerlink" href="#combineren" title="Permalink naar deze titel">#</a></h3>
+<h3>Combineren<a class="headerlink" href="#combineren" title="Permalink to this heading">#</a></h3>
 <p>Paar (<em>crossover</em>) en muteer de meest fitte 10-20% programma’s en begin weer met ~200 random Picobot programma’s</p>
 <p><img alt="Evo 1c" src="../_images/evo_1c.png" /></p>
 </section>
 <section id="herhalen">
-<h3>Herhalen<a class="headerlink" href="#herhalen" title="Permalink naar deze titel">#</a></h3>
+<h3>Herhalen<a class="headerlink" href="#herhalen" title="Permalink to this heading">#</a></h3>
 <p>Herhaal dit “survival of the fittest” proces voor meerdere generaties tot een meest optimale fit is gevonden!</p>
 </section>
 </section>
@@ -2057,56 +1924,231 @@ title="Print to PDF"
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
-              
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
+            </article>
+            
+
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="21_api_tuple.html" title="vorige pagina">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">vorige</p>
-            <p class="prev-next-title">API’s en VPython</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="22b_projecten.html" title="volgende pagina">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">volgende</p>
-        <p class="prev-next-title">Projecten</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+  <a class='left-prev' id="prev-link" href="21_api_tuple.html" title="vorige pagina">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">vorige</p>
+          <p class="prev-next-title">API’s en VPython</p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="22b_projecten.html" title="volgende pagina">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">volgende</p>
+      <p class="prev-next-title">Projecten</p>
+  </div>
+  <i class="fa-solid fa-angle-right"></i>
+  </a>
 </div>
             </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tekstclassificatie">
+   Tekstclassificatie
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#welke-auteur">
+     Welke auteur?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kansen">
+   Kansen!
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modellen">
+     Modellen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modellen-vergelijken">
+     Modellen vergelijken?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#naive-bayes-classification">
+     Naive Bayes classification
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#naiviteit">
+       Naïviteit
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#stappen">
+     Stappen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-scores">
+     Model
+     <em>
+      scores
+     </em>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ontbrekende-waarden">
+       Ontbrekende waarden
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#oplossing">
+       Oplossing
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#logaritme">
+     Logaritme
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python">
+     Python?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-winnaar">
+     De winnaar
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#genetische-algoritmen">
+   Genetische algoritmen
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#picobot">
+     Picobot
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#regels">
+     Regels
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#klassen">
+     Klassen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#de-evolutie-van-picobot">
+   De evolutie van Picobot
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#evolutie">
+     Evolutie
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fitness">
+     Fitness
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#combineren">
+     Combineren
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#herhalen">
+     Herhalen
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+</div>
+
+            </div>
+          
+          
         </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+<div class="bd-footer-content__inner container">
   
-    By Harvey Mudd College / Hanze University of Applied Sciences<br/>
+  <div class="footer-item">
+    
+<p class="component-author">
+By Harvey Mudd College / Hanze University of Applied Sciences
+</p>
+
+  </div>
   
-    <div class="extra_footer">
-      <div>
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+Laatste aanpassing op None.<br>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
     Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
 </div>
 
-    </div>
-</p>
-        </footer>
-    </div>
-    
 </div>
-
-
-      </div>
-    </div>
+  </div>
   
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+</div>
+          </div>
+        </footer>
+        
 
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
 
   </body>
 </html>
