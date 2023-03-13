@@ -141,7 +141,8 @@ Het begin, `begin.py`, moet aan de volgende eisen voldoen:
 
 Daarnaast moet de uitleg, `begin.txt`, aan de volgende eisen voldoen:
 
-* Het bevat de namen van de teamleden en een korte beschrijving van je plan voor het spel; één paragraaf is hier wel genoeg.
+* Een korte beschrijving van je plan voor het spel; één paragraaf is hier wel genoeg.
+* Een korte beschrijving van je code
 * Het bevat een URL bevatten waar we je spel kunnen spelen. De code die we op deze URL vinden moet overeenkomen met de code in `begin.py`; het is prima als dit nu nog gewoon je uitwerking van het practicum van week 11 is!
 
 Lever deze twee bestanden in Gradescope in als onderdeel van het huiswerk van week 11.
@@ -157,7 +158,8 @@ De milestone, `milestone.py`, moet aan de volgende eisen voldoen:
 
 Daarnaast moet de uitleg, `milestone.txt`, aan de volgende eisen voldoen:
 
-* Het bevat de namen van de teamleden en een korte beschrijving van je plan voor het spel; één paragraaf is hier wel genoeg. Geef ook een beschrijving van het doel van het spel **en hoe we het dat doel moeten bereiken!**
+* Het bevat een korte beschrijving van je plan voor het spel; één paragraaf is hier wel genoeg. Geef ook een beschrijving van het doel van het spel **en hoe we het dat doel moeten bereiken!**
+* Een korte beschrijving van je code
 * Het bevat een URL bevatten waar we je spel kunnen spelen. De code die we op deze URL vinden moet overeenkomen met de code in `milestone.py`.
 * Het moet bovendien aanwijzingen bevatten over hoe we het spel zoals het nu is kunnen spelen, bijvoorbeeld, "op "s" drukken doet dit, de muis laat de gebruiker dat doen, enz."
 
@@ -178,7 +180,8 @@ De oplevering, `oplevering.py`, moet aan de volgende eisen voldoen:
 
 Daarnaast moet de uitleg, `oplevering.txt`, aan de volgende eisen voldoen:
 
-* Het bevat de namen van de teamleden en een korte beschrijving van je plan voor het spel; één paragraaf is hier wel genoeg. Geef ook een beschrijving van het doel van het spel **en hoe we het dat doel moeten bereiken!**
+* Het bevat een korte beschrijving van je plan voor het spel; één paragraaf is hier wel genoeg. Geef ook een beschrijving van het doel van het spel **en hoe we het dat doel moeten bereiken!**
+* Een korte beschrijving van je code
 * Het bevat een URL bevatten waar we je spel kunnen spelen. De code die we op deze URL vinden moet overeenkomen met de code in `oplevering.py`.
 * Het moet ons ook vertellen hoe we het spel moeten gebruiken (zeker als er een "docentmodus" is)
 * Het moet aanwijzingen bevatten over hoe we het spel zoals het nu is kunnen spelen, bijvoorbeeld, "op "s" drukken doet dit, de muis laat de gebruiker dat doen, enz."
