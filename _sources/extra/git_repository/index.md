@@ -55,13 +55,15 @@ Git zal hier iets zeggen als *Initialized empty Git repository in [...]*.
 
 Controleer nu de inhoud van deze directory, je zal zien dat een `.git` directory is aangemaakt.
 
-````{tabbed} Windows
+`````{tab-set}
+
+````{tab-item} Windows
 ```console
 ls
 ```
 ````
 
-````{tabbed} macOS/Linux
+````{tab-item} macOS/Linux
 ```console
 ls -a
 ```
@@ -70,6 +72,7 @@ ls -a
 Bestanden en directories die beginnen met een punt (`.`) zijn op UNIX systemen *verborgen bestanden* en worden niet getoond met `ls`. Gebruik `ls` in combinatie met de vlag `-a` ("all") om ze wél te tonen.
 ```
 ````
+`````
 
 In de directory `.git` zal Git een adminstratie bijhouden van alle wijzigingen die jij gaat maken. Git doet dit niet automatisch, jij zal Git steeds moeten gaan vertellen *wat* het moet doen!
 
