@@ -183,7 +183,7 @@ Voor deze eerste opgave, die je straks inlevert als `wk7ex1a.hmmm`, is je opgave
 1. Eerst moet het de gebruiker vragen om invoer. Hmmm staat alleen integers toe van -32768 tot en met 32767. Voor deze opgave mag je ervan uitgaan dat de invoer ***positief*** is en kleiner dan 30.
 2. Hierna moet je Hmmm-programma de ***derde macht*** van de invoer berekenen. Het moet het resultaat printen. Je hebt hier *meerdere* vermenigvuldigingen voor nodig! Dit vereist meerdere instructies. Het kost in het algemeen *veel* meer Hmmm-instructies om iets te doen dan bijvoorbeeld regels Pythoncode.
 3. Hierna moet je programma ***naar beneden*** tellen vanaf de berekende waarde (de derde macht van de invoer), één integer per keer. Het moet elke waarde afdrukken totdat de waarde 0 is.
-4. Als deze aftelling bij nul is uitgekomen, moet het programma stopen. De laatste waarde die afgedrukt wordt moet `0` of `1` zijn. Beide zijn acceptabel als laatste waarde.
+4. Als deze aftelling bij nul is uitgekomen, moet het programma stoppen. De laatste waarde die afgedrukt wordt moet `0` of `1` zijn. Beide zijn acceptabel als laatste waarde.
 
 :::{admonition} Een aantal tips
 :class: tip

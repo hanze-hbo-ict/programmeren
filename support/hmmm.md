@@ -152,7 +152,7 @@ De instructie **read** vraagt de gebruiker om een getal en zet het getal in het 
 
 ## Het programma stoppen
 
-De instructie **halt** stopt het programma, en is het equivalent van een **jump** naar regel -1. Dd gebruiker kan op elk punt tijdens het uitvoeren van het programma op ctrl-C drukken om het te stopen, en het programma stopt ook door 'q' op de debugprompt of de invoerprompt op te geven. Het programma stopt ook door ctrl-D te gebruiken op een willekeurige
+De instructie **halt** stopt het programma, en is het equivalent van een **jump** naar regel -1. Dd gebruiker kan op elk punt tijdens het uitvoeren van het programma op ctrl-C drukken om het te stoppen, en het programma stopt ook door 'q' op de debugprompt of de invoerprompt op te geven. Het programma stopt ook door ctrl-D te gebruiken op een willekeurige
 prompt.
 
 ## Diagnostische functies
