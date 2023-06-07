@@ -6,6 +6,7 @@ copyright: "CC BY-NC-SA 4.0"
 exclude_patterns: ["LICENSE.md", "README.md"]
 only_build_toc_files: false
 jupyter_execute_notebooks: force
+myst_all_links_external: true
 
 latex:
   latex_engine: xelatex
@@ -45,7 +46,8 @@ sphinx:
     html_show_copyright: false
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
     html_extra_path: ["build"]
-
+  extra_extensions:
+    - sphinx_exercise
 parse:
   myst_enable_extensions:
     - colon_fence
