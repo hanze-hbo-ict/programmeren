@@ -1,10 +1,9 @@
-# If an Algorithm Wrote This, How Would You Even Know?
+---
+title: If an Algorithm Wrote This, How Would You Even Know?
+subject: Kunstmatig gegenereerde teksten
+---
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Kunstmatig gegenereerde teksten                                |
-| Bestandsnaam | `wk10ex0.txt`                                                  |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
+# If an Algorithm Wrote This, How Would You Even Know?
 
 Deze week ga je een algoritme schrijven om nieuwe tekst te genereren. Toegegeven, het zal geen hele goede proza maken, maar het resultaat kan soms grappig, of zelfs inzichtelijk, zijn.
 
@@ -14,15 +13,13 @@ Met wat meer inspanning kunnen algoritmes echter tekst genereren die moeilijk te
 
 [If an Algorithm Wrote This, How Would You Even Know?](http://www.nytimes.com/2015/03/08/opinion/sunday/if-an-algorithm-wrote-this-how-would-you-even-know.html?action=click&pgtype=Homepage&version=Moth-Visible&module=inside-nyt-region&region=inside-nyt-region&WT.nav=inside-nyt-region&_r=1) uit de New York Times van 7 maart 2015.
 
-Als de link niet werkt is hier een lokaal opgeslagen kopie: [algorithmic_authoring.pdf](https://github.com/hanze-hbo-ict/programmeren/raw/master/readings/assets/algorithmic_authoring.pdf)
+Als de link niet werkt is hier een lokaal opgeslagen kopie: [algorithmic_authoring.pdf](assets/algorithmic_authoring.pdf)
 
 **De aanwijzing: *Probeer gedichten die door mensen en computers geschreven zijn te onderscheiden...***
 
 In het artikel staat een link naar een quiz waar je kan kijken of stukjes tekst geschreven zijn door algoritmes of door mensen, maar die quiz is niet langer beschikbaar. Gebruik in plaats daarvan deze [rechtstreekse link naar een quiz over algoritmisch gegenereerde tekst](http://www.npr.org/sections/alltechconsidered/2016/06/27/480639265/human-or-machine-can-you-tell-who-wrote-these-poems).
 
 Doe de quiz (die uit zes gedichten bestaat, sommige geschreven door mensen, sommige door computers). Hoe ging het? In hoeverre vind je dat verhalen en gedichten genereren een positieve (of negatieve) ontwikkeling is? Zoals altijd zijn goed overwogen middenwegen (of een andere alternatieve kijk) erg welkom...
-
-Zoals met alle leesopdrachten is het ideale antwoord een aantal (5-7) zorgvuldig gekozen zinnen die op een weloverwogen manier het artikel beschouwen.
 
 ## Verder lezen
 

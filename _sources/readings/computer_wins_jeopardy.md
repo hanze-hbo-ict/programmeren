@@ -1,10 +1,9 @@
-# Computer Wins on 'Jeopardy'
+---
+title: Computer Wins on 'Jeopardy'
+subject: Slimme computers?
+---
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Slimme computers?                                              |
-| Bestandsnaam | `wk3ex0.txt`                                                   |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
+# Computer Wins on 'Jeopardy'
 
 ## Het artikel
 
@@ -12,7 +11,7 @@ Het artikel van deze week gaat over het software- (en hardware-)systeem *Watson*
 
 [Hier is het artikel uit de New York Times, van 16 februari 2011](http://www.nytimes.com/2011/02/17/science/17jeopardy-watson.html?_r=1&scp=12&sq=computer%20science&st=cse)
 
-[Hier is een PDF-versie, als de link hierboven niet werkt](https://github.com/hanze-hbo-ict/programmeren/raw/master/readings/assets/watson.pdf)
+[Hier is een PDF-versie, als de link hierboven niet werkt](assets/watson.pdf)
 
 Je kan daarna, als het werkt, een paar minuten spelen met een ["Watson-achtige" applicatie via deze link](http://www.nytimes.com/interactive/2010/06/16/magazine/watson-trivia-game.html?ref=science).
 
@@ -22,10 +21,8 @@ Als dit onderwerp je interesseert zou je ook kunnen lezen over [GPT-3](https://w
 
 ## De vragen
 
-Schrijf, nadat je het bovenstaande artikel gelezen hebt en Watson hebt gebruikt, een paragraaf die, in ieder geval ten dele, de onderstaande vragen beantwoord en lever dit in in een tekstbestand `wk3ex0.txt`.
+Probeer nadat je het bovenstaande artikel gelezen hebt en Watson hebt gebruikt, de onderstaande vragen te beantwoorden.
 
 * Wat is het meest interessante of belangrijke idee in dit artikel volgens jou; en waarom?
 * Wat is een toepassing waar (volgens jou) de technologie van Watson aan kan bijdragen? Of denk je dat de mogelijkheden van Watson maar weinig kunnen betekenen? Je kan hier webartikelen voor zoeken, of zelf hierover speculeren.
 * Beschrijf, ook als je niet de "Watson-achtige" applicatie hebt kunnen gebruiken, hoe jij de overeenkomsten en verschillen ziet tussen de manier van denken van Watson en die van mensen.
-
-Ook hier geldt weer dat je niet veel meer hoeft te schrijven dan een aantal zinnen. Een ideaal antwoord laat zien dat je kritisch hebt nagedacht over wat de auteur zegt in het artikel en dat je je eigen ideeën, achtergrond en ervaringen hebt meegenomen in je antwoord.

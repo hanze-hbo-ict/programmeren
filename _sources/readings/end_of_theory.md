@@ -1,21 +1,20 @@
-# The End of Theory
+---
+title: The End of Theory
+subject: De mogelijkheden en beperkingen van data
+---
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | De mogelijkheden en beperkingen van data                       |
-| Bestandsnaam | `wk2ex0.txt`                                                   |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
+# The End of Theory
 
 ## Het artikel
 
 Het artikel *The end of theory* komt uit [Wired](https://wired.com) en sluit aan bij het thema *data* en de mogelijkheden van data.
 
 - Hier is een directe link naar het [artikel](http://www.wired.com/science/discoveries/magazine/16-07/pb_theory) in *Wired*
-- Een [pdf-versie](https://github.com/hanze-hbo-ict/programmeren/raw/master/readings/assets/end_of_theory.pdf) is ook beschikbaar
+- Een [pdf-versie](assets/end_of_theory.pdf) is ook beschikbaar
 
-## Vragen
+## De vragen
 
-Kies één van de volgende vragen en schrijf in een paragraaf (4-6 zinnen is genoeg) jouw antwoord op de vraag, waar je voortbouwt op (of weerleg ) de ideeën uit het artikel...
+Kies één van de volgende vragen en en probeer een antwoord te geven waar je voortbouwt op (of weerlegt) de ideeën uit het artikel...
 
 1. Anderson heeft het over iemands "MySpace"-pagina. Dit is een duidelijke maar eenvoudige manier waaraan je kan zien dat dit artikel (van minstens tien jaar oud) verouderd is. Wat is een **diepere** manier waarop je kan zien dat de ideeën uit dit artikel laten zien verouderd zijn en uit 2008 komen? Vergelijk één van de ideeën met meer recente opinies, die van jezelf, anderen of beide kunnen zijn.
 

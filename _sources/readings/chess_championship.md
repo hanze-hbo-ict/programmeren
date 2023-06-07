@@ -1,21 +1,18 @@
+---
+title: Chess-Championship Results Show Powerful Role of Computers
+subject: Helpen computers mensen beter worden?
+---
+
 # Chess-Championship Results Show Powerful Role of Computers
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Helpen computers mensen beter worden?                          |
-| Bestandsnaam | `wk11ex0.txt`                                                  |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
-
-Het artikel van deze week beschrijft sommige van de veranderingen die schaken doorgemaakt heeft sinds computers beter zijn geworden in schaken dan mensen; meestal wordt het verslaan van de mensenlijke kampioen Garry Kasparov door Deep Blue, de machine van IBM, in 1997 beschouwd als het moment dat dit gebeurd is.
+Dit artikel beschrijft sommige van de veranderingen die schaken doorgemaakt heeft sinds computers beter zijn geworden in schaken dan mensen; meestal wordt het verslaan van de mensenlijke kampioen Garry Kasparov door Deep Blue, de machine van IBM, in 1997 beschouwd als het moment dat dit gebeurd is.
 
 ## Het artikel
 
 Lees het [artikel van de Wall Street Journal, *Chess-Championship Results Show Powerful Role of Computers*](http://online.wsj.com/articles/SB10001424052702304337404579209980222399924).
-Als je niet bij het origineel kan kan je [hier een lokaal opgeslagen kopie](https://github.com/hanze-hbo-ict/programmeren/raw/master/readings//assets/chess_human_and_computer.pdf) vinden.
+Als je niet bij het origineel kan kan je [hier een lokaal opgeslagen kopie](assets/chess_human_and_computer.pdf) vinden.
 
 ## De vragen
-
-Kies één van deze twee citaten als een beginpunt om een kort antwoord op het artikel te formuleren:
 
 * ***The net effect of the gain in computer skill is thus, ironically, a gain in human skill. Humans—at least the best ones—are getting better at playing chess.***
 
@@ -23,12 +20,6 @@ Kies één van deze twee citaten als een beginpunt om een kort antwoord op het a
 * ***When engines suggest surprising moves, or arrangements of pieces that look "ugly" to human sensibilities, they are often seeing more deeply into the game than their users.***
 
   Bekijk met dit citaat als uitgangspunt één of twee gebieden *buiten schaken* waarin onze intuïtie voor wat mooi is misschien ons succes onnodig in de weg staat. Of is het juist wel nodig?
-
-Zoals altijd is een kort, goed doordacht antwoord sterker dan een antwoord dat alleen maar lang is!
-
-## Inleveren
-
-Lever je bestand `wk11ex0.txt` in in Gradescope!
 
 ## Meer lezen
 
