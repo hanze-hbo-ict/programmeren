@@ -1,0 +1,927 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="nl" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>42EnIk &#8212; Programmeren</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "misja/programmeren");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../../_static/save_state.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'problems/dna_lcs/index';</script>
+    <link rel="canonical" href="https:///hanze-hbo-ict.github.io/programmeren/problems/dna_lcs/index.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Zoeken" href="../../search.html" />
+    <link rel="next" title="De vingerafdruk van DNA" href="../profiler/index.html" />
+    <link rel="prev" title="Kennismaken met Git" href="../../extra/git_repository/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="nl"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../about/syllabus.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/mascot.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/mascot.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../about/syllabus.html">
+                    Programmeren
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Opmerkingen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../about/feedback.html">Anoniem feedbackformulier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/faq.html">Veelgestelde vragen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/references.html">Literatuur</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../course/week_1.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/1a_introductie.html">Introductie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/1b_condities.html">Condities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/1c_algoritmen.html">Algoritmen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/2a_programmeren.html">Programmeren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/2b_picobot.html">Picobot</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../course/opgaven_1.html">Opgaven</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../python_intro/index.html">Practicum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../readings/guugu_yimithirr.html">Leesopgave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rochambeau/index.html">Rochambeau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactieve_fictie/index.html">Interactieve fictie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../picobot/1.html">Picobot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../picobot/2.html">Picobot II: Picobot Strikes Back</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../picobot/3.html">Picobot III: Return of the Picobot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../picobot/4.html">Picobot IV: The Picobot Menace</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../course/week_2.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/3a_data.html">Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/3b_strings_en_lists.html">Strings en lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/4a_functies.html">Functies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/4b_recursie.html">Recursie</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../course/opgaven_2.html">Opgaven</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../sequenties_en_data/index.html">Practicum I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fijne_functies/index.html">Practicum II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../readings/end_of_theory.html">Leesopgave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../feest_met_functies/index.html">Feest met functies</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../course/week_3.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/5a_simulatie.html">Simulatie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/5b_turtle_recursie.html">Turtle en recursie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/6a_list_comprehension.html">List comprehension</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../course/opgaven_3.html">Opgaven</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../python_turtles/index.html">Practicum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../readings/computer_wins_jeopardy.html">Leesopgave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../slaapwandelende_student/index.html">Slaapwandelende student</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../numerieke_integratie/index.html">Numerieke integratie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../turtles_tot_het_einde/index.html">Turtles all the way down</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../course/week_4.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/7a_data_based_design.html">Data based design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/7b_rekenen_met_taal.html">Rekenen met taal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/8_ontwerp_algoritmen.html">Ontwerp van algoritmen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../course/opgaven_4.html">Opgaven</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../klinkt_goed/index.html">Practicum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../readings/universum_simulatie.html">Leesopgave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../caesar_op_orde/index.html">Caesar op orde</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 5</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../course/week_5.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/9a_talstelsels.html">Talstelsels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/9b_binaire_getallen.html">Binaire getallen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/10_bewerkingen_met_bits.html">Bewerkingen met bits</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../course/opgaven_5.html">Opgaven</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../decimaal_en_verder/index.html">Practicum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../readings/bug_and_crash.html">Leesopgave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wisselende_stelsels/index.html">Wisselende stelsels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fraaie_plaatjes/index.html">Fraaie plaatjes</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 6</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../course/week_6.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/11a_logische_schakelingen.html">Logische schakelingen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/11b_rekenen_met_schakelingen.html">Rekenen met schakelingen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/12a_ontwerpen_met_schakelingen.html">Ontwerpen met schakelingen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../course/opgaven_6.html">Opgaven</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../optellingen_schakelen/index.html">Practicum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../readings/just_add_water.html">Leesopgave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vermenigvuldigingswaanzin/index.html">Vermenigvuldigingswaanzin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geheugenproblemen/index.html">Geheugenproblemen</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 7</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../course/week_7.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/13_hmmm_introductie.html">Hmmm introductie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/14_hmmm_functies.html">Hmmm functies</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../course/opgaven_7.html">Opgaven</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../hmmm_assembly/index.html">Practicum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../readings/hijacked_minds.html">Leesopgave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../macht_van_hmmm/index.html">De macht van hmmm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../feest_met_fibonacci/index.html">Feest met Fibonacci</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../macht_van_recursie/index.html">De macht van recursie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../een_lus_om_python/index.html">Een lusje om Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fibonacci_recursief/index.html">Fibonacci recursief</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 8</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../course/week_8.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/15_lussen.html">Lussen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/16_iteratief_ontwerp.html">Iteratief ontwerpen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../course/opgaven_8.html">Opgaven</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../mandelbrot/index.html">Practicum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../readings/algoritmen_discrimineren.html">Leesopgave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pythonbat_lussen/index.html">PythonBat lussen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rij_van_conway/index.html">Lees en huiver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pi_pijlen/index.html">Pi met pijltjes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ascii_art/index.html">ASCII Art</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 9</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../course/week_9.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/17_2d_arrays.html">2D arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/18_meer_2d.html">Meer 2D</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../course/opgaven_9.html">Opgaven</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../game_of_life/index.html">Practicum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../readings/horseless_driverless.html">Leesopgave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../boter_kaas_eieren/index.html">Boter kaas en eieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tr_investeringen/index.html">TR Investeringen B.V.</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 10</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../course/week_10.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/19_objecten.html">Objecten en klassen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/20_dictionaries.html">Dictionaries</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../course/opgaven_10.html">Opgaven</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../eeuwigdurende_kalender/index.html">Practicum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../readings/an_algorithm_wrote_this.html">Leesopgave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tekst_genereren/index.html">Teksten genereren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vier_op_een_rij/index.html">Vier op een rij</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 11</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../course/week_11.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/21_api_tuple.html">API's en VPython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/22a_kunstmatige_intelligentie.html">Kunstmatige intelligentie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/22b_projecten.html">Projecten</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../course/opgaven_11.html">Opaven</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../buitenaards_python/index.html">Practicum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../readings/chess_championship.html">Leesopgave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vier_op_een_rij_ai/index.html">AI voor vier op een rij</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 12</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../course/week_12.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-23"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/23_finite_state_machines.html">Finite state machines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../topics/24_oneindigheid.html">Oneindigheid</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../course/opgaven_12.html">Opgaven</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-24"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../readings/life_of_pi.html">Leesopgave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../finite_state_machines/index.html">Finite state machines</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Projecten</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../projects/vpython.html">VPool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/connectfour.html">ConnectFour</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/textid.html">TextID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/picobot.html">Picobot</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Voorbeelden</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../extra/examples/recursie.html">Recursie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extra/examples/design_recipe.html">Functie ontwerp</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Oefening</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../extra/practice/1_recursie.html">Recursie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extra/practice/2_list_comprehension.html">List comprehension</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../extra/practice/3a_toets.html">Zelftoets</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../extra/practice/3b_toets_uitwerking.html">Uitwerking</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Python</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../support/plain_text/index.html">Tekstbestanden</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support/python_browser.html">Python in de browser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support/hmmm.html">Hmmm assembly</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extra/git_scm/index.html">Versiebeheer met Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extra/git_repository/index.html">Kennismaken met Git</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Extra</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Extra opgave PGM1 (DNA)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../profiler/index.html">Extra opgave PGM2 (STR)</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Bronopslagplaats"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/edit/master/problems/dna_lcs/index.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/issues/new?title=Issue%20on%20page%20%2Fproblems/dna_lcs/index.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open een probleem"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download deze pagina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/problems/dna_lcs/index.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download het bronbestand"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Afdrukken naar pdf"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Volledig scherm"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>42EnIk</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Inhoud </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inleiding">Inleiding</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lcs">LCS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#global-sequence-alignment-deel-1">Global Sequence Alignment: Deel 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#global-sequence-alignment-deel-2">Global Sequence Alignment: Deel 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tot-slot">Tot slot</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <!-- 25 punten -->
+<section class="tex2jax_ignore mathjax_ignore" id="enik">
+<h1>42EnIk<a class="headerlink" href="#enik" title="Permalink to this heading">#</a></h1>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Naam</p></th>
+<th class="head"><p>Beschrijving</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Onderwerp</p></td>
+<td><p>DNA en Longest Common Subsequence (LCS)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bestandsnaam</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">dna.py</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Inleveren</p></td>
+<td><p>Lever jouw bestand met de juiste bestandsnaam in op GradeScope</p></td>
+</tr>
+</tbody>
+</table>
+<section id="inleiding">
+<h2>Inleiding<a class="headerlink" href="#inleiding" title="Permalink to this heading">#</a></h2>
+<p>Je bent aangenomen als stagiair bij het genetische testbedrijf 42EnIk. Klanten sturen 42EnIk een speekselmonster (à 45 euro), het speeksel wordt verwerkt en het DNA wordt geëxtraheerd. 42EnIk vergelijkt vervolgens gebieden van het DNA van de klant met verschillende “referentiesequenties”. Als bijvoorbeeld een bepaald gebied van je DNA gelijk is aan een bepaalde referentiesequentie, kan dat iets zeggen over je voorouders, immuniteit of aanleg voor een bepaalde ziekte, etc. De vergelijking tussen een gebied van jouw DNA en een referentiesequentie gebeurt met het algoritme voor de langste gemeenschappelijke reeks (<em>Longest Common Subsequence</em>, of LCS) dat je eerder hebt gezien (zie de opgave <a class="reference external" href="https://hanze-hbo-ict.github.io/programmeren/problems/caesar_op_orde.html"><em>Caesar op orde!</em></a>).</p>
+<div class="admonition note">
+<p class="admonition-title">Notitie</p>
+<p>Hoewel <a class="reference external" href="https://en.wikipedia.org/wiki/Edit_distance">edit-afstand</a> soms een betere afstandsmaat is dan LCS, blijkt dat als de twee te vergelijken sequenties dezelfde of een vergelijkbare lengte hebben (wat in dit geval meestal het geval zal zijn) de LCS zeer goed werkt.</p>
+</div>
+<p>Zorg ervoor dat je de functies die je gaat schrijven de juiste naam geeft en zorgvuldig test. Neem in elke functie een docstring op die moet aangeven wat de functie doet (teruggeeft) en eventueel wat de argumenten zijn en wat ze betekenen. Neem de gegeven assertions op om jouw oplossing te testen en vul deze eventueel aan zodat je zeker weet dat jouw oplossing correct is.</p>
+</section>
+<section id="lcs">
+<h2>LCS<a class="headerlink" href="#lcs" title="Permalink to this heading">#</a></h2>
+<p>Eerder heb je een LCS-functie geschreven die twee strings <code class="docutils literal notranslate"><span class="pre">s</span></code> en <code class="docutils literal notranslate"><span class="pre">t</span></code> accepteert en de langste gemeenschappelijke reeks van <code class="docutils literal notranslate"><span class="pre">s</span></code> en <code class="docutils literal notranslate"><span class="pre">t</span></code> teruggeeft. De onderstaande versie van deze functie geeft de <em>lengte</em> van de langste gemeenschappelijke reeks terug</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">lcs</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Find the length of the longest common</span>
+<span class="sd">       subsequence of s and t.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span> <span class="ow">or</span> <span class="n">t</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>  <span class="c1"># Base case</span>
+        <span class="k">return</span> <span class="mi">0</span>
+
+    <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>  <span class="c1"># Match</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">lcs</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>  <span class="c1"># 1 match point and then recurse</span>
+    <span class="k">else</span><span class="p">:</span>  <span class="c1"># No match</span>
+        <span class="n">lose_s</span> <span class="o">=</span> <span class="n">lcs</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>  <span class="c1"># Is this use-it-or-lose-it?</span>
+        <span class="n">lose_t</span> <span class="o">=</span> <span class="n">lcs</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">t</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">lose_s</span><span class="p">,</span> <span class="n">lose_t</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>en de volgende assertions testen deze functie:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">lcs</span><span class="p">(</span><span class="s2">&quot;mens&quot;</span><span class="p">,</span> <span class="s2">&quot;chimpansee&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span>  <span class="c1"># &quot;mns&quot;</span>
+<span class="k">assert</span> <span class="n">lcs</span><span class="p">(</span><span class="s2">&quot;gattaca&quot;</span><span class="p">,</span> <span class="s2">&quot;tacgaacta&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span>  <span class="c1"># &quot;gaaca&quot;</span>
+<span class="k">assert</span> <span class="n">lcs</span><span class="p">(</span><span class="s2">&quot;wow&quot;</span><span class="p">,</span> <span class="s2">&quot;wauw&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>  <span class="c1"># &quot;ww&quot;</span>
+<span class="k">assert</span> <span class="n">lcs</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;wauw&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>  <span class="c1"># &quot;&quot;</span>
+<span class="k">assert</span> <span class="n">lcs</span><span class="p">(</span><span class="s2">&quot;abcdefgh&quot;</span><span class="p">,</span> <span class="s2">&quot;efghabcd&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span>  <span class="c1"># &quot;abcd&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="global-sequence-alignment-deel-1">
+<h2>Global Sequence Alignment: Deel 1<a class="headerlink" href="#global-sequence-alignment-deel-1" title="Permalink to this heading">#</a></h2>
+<p>Hoewel de functie <code class="docutils literal notranslate"><span class="pre">lcs</span></code> de lengte van de langste gemeenschappelijke subsequentie berekent heeft 42EnIk meer nodig dan dat want ze willen hun klanten de <em>werkelijke</em> langste gemeenschappelijke subsequentie laten zien.</p>
+<p>Jouw taak is het schrijven van een geheel nieuwe functie <code class="docutils literal notranslate"><span class="pre">better_lcs(s,</span> <span class="pre">t)</span></code>, die twee strings <code class="docutils literal notranslate"><span class="pre">s</span></code> en <code class="docutils literal notranslate"><span class="pre">t</span></code> als argumenten accepteert en een <em>list</em> met drie items teruggeeft. Het eerste element van deze list is een getal dat de lengte aangeeft van de langste gemeenschappelijke subsequentie van deze twee strings, de volgende twee elementen zijn een kopie van <code class="docutils literal notranslate"><span class="pre">s</span></code> en een kopie van <code class="docutils literal notranslate"><span class="pre">t</span></code> maar let op, in de kopieën worden de symbolen die <em>niet</em> worden gebruikt in de langste gemeenschappelijke subsequentie vervangen door <code class="docutils literal notranslate"><span class="pre">#</span></code> symbolen.</p>
+<p>De volgende tests maken dit duidelijk, gebruik deze ook om jouw functie te testen:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># De LCS heeft lengte 0. Zowel &quot;x&quot; als &quot;y&quot;</span>
+<span class="c1"># worden niet in de LCS gebruikt.</span>
+<span class="k">assert</span> <span class="n">better_lcs</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;#&quot;</span><span class="p">,</span> <span class="s2">&quot;#&quot;</span><span class="p">]</span>
+
+<span class="c1"># De LCS heeft lengte 0. Geen van de vier letters in</span>
+<span class="c1"># spam worden gebruikt en geen van de (nul) letters in &quot;&quot;</span>
+<span class="k">assert</span> <span class="n">better_lcs</span><span class="p">(</span><span class="s2">&quot;spam&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;####&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">]</span>
+
+<span class="c1"># Geen enkele letter in beide strings wordt gebruikt</span>
+<span class="c1"># dus vervang alles met #</span>
+<span class="k">assert</span> <span class="n">better_lcs</span><span class="p">(</span><span class="s2">&quot;spa&quot;</span><span class="p">,</span> <span class="s2">&quot;m&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;###&quot;</span><span class="p">,</span> <span class="s2">&quot;#&quot;</span><span class="p">]</span>
+
+<span class="c1"># De &quot;ca&quot;  is gemeenschappelijk, maar de &quot;t&quot;</span>
+<span class="c1"># en &quot;r&quot; komen niet overeen</span>
+<span class="k">assert</span> <span class="n">better_lcs</span><span class="p">(</span><span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="s2">&quot;car&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;ca#&quot;</span><span class="p">,</span> <span class="s2">&quot;ca#&quot;</span><span class="p">]</span>
+
+<span class="c1"># De &quot;ca&quot; is nog steeds he langste gemeenschappelijke deel</span>
+<span class="k">assert</span> <span class="n">better_lcs</span><span class="p">(</span><span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="s2">&quot;lca&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;ca#&quot;</span><span class="p">,</span> <span class="s2">&quot;#ca&quot;</span><span class="p">]</span>
+
+<span class="c1"># &quot;human&quot; en &quot;chimpanzee&quot; hebben een LCS van lengte 4.</span>
+<span class="c1"># De &quot;u&quot; in &quot;human&quot; wordt niet gebruikt en veel letters</span>
+<span class="c1"># in &quot;chimpanzee&quot; ook niet.</span>
+<span class="k">assert</span> <span class="n">better_lcs</span><span class="p">(</span><span class="s2">&quot;human&quot;</span><span class="p">,</span> <span class="s2">&quot;chimpanzee&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;h#man&quot;</span><span class="p">,</span> <span class="s2">&quot;#h#m#an###&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Schrijf de functie <code class="docutils literal notranslate"><span class="pre">better_lcs</span></code> door de functie <code class="docutils literal notranslate"><span class="pre">lcs</span></code> te kopiëren en aan te passen. Houd het zo eenvoudig mogelijk en laat <code class="docutils literal notranslate"><span class="pre">better_lcs</span></code> <em>geen</em> hulpfuncties aanroepen. De ingebouwde functie <code class="docutils literal notranslate"><span class="pre">len</span></code> aanroepen is prima, maar <code class="docutils literal notranslate"><span class="pre">better_lcs</span></code> moet <code class="docutils literal notranslate"><span class="pre">lcs</span></code> <em>niet</em> aanroepen want dat zou het veel ingewikkelder maken dan nodig. Los dit net als bij de functie <code class="docutils literal notranslate"><span class="pre">lcs</span></code> ook <em>recursief</em> op, gebruik hier dus <em>geen</em> lussen.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Bedenk dat als je een string wilt maken van een aantal kopieën van bijvoorbeeld de string <code class="docutils literal notranslate"><span class="pre">&quot;spam&quot;</span></code> je <code class="docutils literal notranslate"><span class="pre">&quot;spam&quot;</span> <span class="pre">+</span> <span class="pre">&quot;spam&quot;</span> <span class="pre">+</span> <span class="pre">&quot;spam&quot;</span></code> of het equivalent <code class="docutils literal notranslate"><span class="pre">&quot;spam&quot;</span> <span class="pre">*</span> <span class="pre">3</span></code> kunt gebruiken. Hoewel je misschien geen 3 kopieën van <code class="docutils literal notranslate"><span class="pre">&quot;spam&quot;</span></code> wilt zal je waarschijnlijk wel een aantal <code class="docutils literal notranslate"><span class="pre">&quot;#&quot;</span></code> symbolen willen hebben!</p>
+</div>
+</section>
+<section id="global-sequence-alignment-deel-2">
+<h2>Global Sequence Alignment: Deel 2<a class="headerlink" href="#global-sequence-alignment-deel-2" title="Permalink to this heading">#</a></h2>
+<!-- vertaling controleren vanaf hier -->
+<p>Je gaat nu een iets andere versie van <code class="docutils literal notranslate"><span class="pre">better_lcs</span></code> schrijven, de functie <code class="docutils literal notranslate"><span class="pre">super_lcs</span></code> om sequenties uit te lijnen (<a class="reference external" href="https://nl.wikipedia.org/wiki/Sequentiealignering">sequentiealignering</a>). Begin met het kopiëren van <code class="docutils literal notranslate"><span class="pre">better_lcs</span></code> en pas het verder aan.</p>
+<p>Deze functie <code class="docutils literal notranslate"><span class="pre">super_lcs</span></code> zal ook een lijst met drie items teruggeven: de <em>lengte</em> van de langste gemeenschappelijke reeks, en <em>twee</em> strings. Deze twee strings zijn in wezen identiek aan de twee oorspronkelijke strings, behalve dat ze allebei <em>dezelfde</em> lengte hebben en een <code class="docutils literal notranslate"><span class="pre">-</span></code> (koppelteken) bevatten op elke plaats waar ze <em>niet</em> overeenkomen. Ook de functie <code class="docutils literal notranslate"><span class="pre">super_lcs</span></code> los je recursief op.</p>
+<p>Hier zijn enkele voorbeelden van de functie <code class="docutils literal notranslate"><span class="pre">super_lcs</span></code> in actie:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># De oplossing [0, &quot;-x&quot;, &quot;y-&quot;] is ook goed</span>
+<span class="k">assert</span> <span class="n">super_lcs</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;x-&quot;</span><span class="p">,</span> <span class="s2">&quot;-y&quot;</span><span class="p">]</span>
+
+<span class="c1"># Let hier op, dit is een base case...</span>
+<span class="c1"># Merk op dat de tweede string ---- is zodat het</span>
+<span class="c1"># dezelfde lengte als de eerste heeft</span>
+<span class="k">assert</span> <span class="n">super_lcs</span><span class="p">(</span><span class="s2">&quot;spam&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;spam&quot;</span><span class="p">,</span> <span class="s2">&quot;----&quot;</span><span class="p">]</span>
+
+<span class="c1"># De oplossing  [2, &quot;ca-t&quot;, &quot;car-&quot;] is ook goed</span>
+<span class="k">assert</span> <span class="n">super_lcs</span><span class="p">(</span><span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="s2">&quot;car&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;cat-&quot;</span><span class="p">,</span> <span class="s2">&quot;ca-r&quot;</span><span class="p">]</span>
+
+<span class="k">assert</span> <span class="n">super_lcs</span><span class="p">(</span><span class="s2">&quot;hi&quot;</span><span class="p">,</span> <span class="s2">&quot;schip&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;--hi-&quot;</span><span class="p">,</span> <span class="s2">&quot;schip&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Merk op dat de twee resultaatreeksen altijd dezelfde lengte hebben! Hierdoor kunnen we de eerste boven de ander schrijven en zien hoe ze op elkaar aansluiten.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>--hi-
+schip
+</pre></div>
+</div>
+<p>Je ziet dat een langste gemeenschappelijke reeks wordt gevonden overal waar de twee strings op dezelfde positie overeenkomen. Als twee strings op een bepaalde positie niet overeenkomen, heeft precies één van die strings een <code class="docutils literal notranslate"><span class="pre">-</span></code> op die positie. Merk ook op dat het geheel van de twee strings (in dit geval <code class="docutils literal notranslate"><span class="pre">hi</span></code> en <code class="docutils literal notranslate"><span class="pre">schip</span></code>) in de uitvoer verschijnt, maar met enkele toegevoegde <code class="docutils literal notranslate"><span class="pre">-</span></code> symbolen waar geen overeenkomst is.</p>
+<p>Hier volgt nog een voorbeeld waarbij twee DNA-fragmenten worden gebruikt:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">super_lcs</span><span class="p">(</span><span class="s2">&quot;ATTGC&quot;</span><span class="p">,</span> <span class="s2">&quot;GATC&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;-ATTGC&quot;</span><span class="p">,</span> <span class="s2">&quot;GAT--C&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>We zetten we deze twee uitvoerstrings boven elkaar om te zien wat hier gebeurt:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>-ATTGC
+GAT--C
+</pre></div>
+</div>
+<p>Je kan zien dat ATC een langste gemeenschappelijke reeks is. In het algemeen kunnen er verschillende gemeenschappelijke langste opeenvolgingen van gelijke lengte zijn, die resulteren in verschillende mogelijke correcte oplossingen. Jouw <code class="docutils literal notranslate"><span class="pre">super_lcs</span></code>-functie kan elke geldige oplossing rapporteren.</p>
+</section>
+<section id="tot-slot">
+<h2>Tot slot<a class="headerlink" href="#tot-slot" title="Permalink to this heading">#</a></h2>
+<p>De <code class="docutils literal notranslate"><span class="pre">super_lcs</span></code>-functie vindt een zogenaamde “globale uitlijning” (of <em>globale alignering</em>) van de twee DNA-strings. In het laatste voorbeeld hierboven geeft de oplossing</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>-ATTGC
+GAT--C
+</pre></div>
+</div>
+<p>aan dat deze twee DNA-strings geëvolueerd kunnen zijn uit een gemeenschappelijke voorouder die ATC had op index 1, 2 en 5 en andere onbekende nucleotiden elders. De twee strings “ATTGC” en “GATC” kunnen uit deze gemeenschappelijke voorouder zijn geëvolueerd, maar met enkele extra nucleotiden ingevoegd en andere verwijderd.</p>
+<!-- RNA folding sequel: https://www.cs.hmc.edu/twiki/bin/view/CS5/BlackRNANew --></section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "hanze-hbo-ict/programmeren",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./problems/dna_lcs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../extra/git_repository/index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">vorige</p>
+        <p class="prev-next-title">Kennismaken met Git</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../profiler/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">volgende</p>
+        <p class="prev-next-title">De vingerafdruk van DNA</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Inhoud
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inleiding">Inleiding</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lcs">LCS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#global-sequence-alignment-deel-1">Global Sequence Alignment: Deel 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#global-sequence-alignment-deel-2">Global Sequence Alignment: Deel 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tot-slot">Tot slot</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Door Harvey Mudd College / Hanze University of Applied Sciences
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
+    Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
