@@ -1,0 +1,71 @@
+digraph {
+    graph [pad="0.5", nodesep="0.5", ranksep="1"];
+    node [shape=plain]
+    rankdir=LR;
+
+    CPU_t [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+        <tr>
+            <td color="none"></td>
+            <td color="none">CPU</td>
+        </tr>
+        <tr>
+            <td color="none">R1</td>
+            <td port="r1" align="left" width="90%"><font point-size="10" face="monospace">2</font></td>
+        </tr>
+        <tr>
+            <td color="none">R2</td>
+            <td port="r2" align="left"></td>
+        </tr>
+        <tr>
+            <td color="none">R3</td>
+            <td port="r3" align="left"></td>
+        </tr>
+        <tr>
+            <td color="none">R15</td>
+            <td port="r15" align="left"><font point-size="10" face="monospace" color="red">70</font></td>
+        </tr>
+    </table>>]
+
+    RAM_t [label=<
+    <table align="right" border="0" cellborder="1" cellspacing="0">
+        <tr>
+            <td color="none" colspan="2">RAM</td>
+        </tr>
+        <tr>
+            <td port="r0" width="20%">0</td>
+            <td align="left" width="100%"><font point-size="10" face="monospace" color="blue">read r1</font></td>
+        </tr>
+
+        <tr>
+            <td port="r1">1</td>
+            <td align="left"><font point-size="10" face="monospace" color="red">setn r15 70</font></td>
+        </tr>
+        <tr>
+            <td port="r2">3</td>
+            <td align="left"><font point-size="10" face="monospace" color="blue">loadr r2 r15</font></td>
+        </tr>
+        <tr>
+            <td port="r3">4</td>
+            <td align="left"><font point-size="10" face="monospace" color="blue">mul r3 r1 r2</font></td>
+        </tr>
+        <tr>
+            <td port="r4">5</td>
+            <td align="left"><font point-size="10" face="monospace" color="blue">write r3</font></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td align="left"><font point-size="10" face="monospace" color="blue">halt</font></td>
+        </tr>
+        <tr>
+            <td color="none" colspan="2">...</td>
+        </tr>
+        <tr>
+            <td port="r70">70</td>
+            <td align="left"><font point-size="10" face="monospace" color="blue">42</font></td>
+        </tr>
+    </table>>]
+
+    RAM_t:r1 -> CPU_t:r15
+    CPU_t:r15 -> RAM_t:r70 [style=dashed, color=grey]
+}

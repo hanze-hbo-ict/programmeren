@@ -1,0 +1,48 @@
+digraph
+{
+    // 100dpi png rendering:
+    // dot -Tpng -Gdpi=100 -Nfontname=Helvetica -Efontname=Helvetica -o decision_tree.png decision_tree.dot
+
+    node [shape=oval]
+    comp [fillcolor="#196F3D", style=filled, label=<<font point-size="12" color="white"><b>comp</b></font>>]
+    user [fillcolor="#196F3D", style=filled, label=<<font point-size="12" color="white"><b>user</b></font>>]
+
+    is_draw [fillcolor=firebrick, style=filled, label=<<font point-size="12" color="white">"Gelijkspel"</font>>]
+    comp_win_rock [fillcolor=firebrick, style=filled, label=<<font point-size="12" color="white">"Ik win!"</font>>]
+    comp_win_paper [fillcolor=firebrick, style=filled, label=<<font point-size="12" color="white">"Ik win!"</font>>]
+    comp_win_scissors [fillcolor=firebrick, style=filled, label=<<font point-size="12" color="white">"Ik win!"</font>>]
+    user_win_rock [fillcolor=firebrick, style=filled, label=<<font point-size="12" color="white">"Jij wint..."</font>>]
+    user_win_paper [fillcolor=firebrick, style=filled, label=<<font point-size="12" color="white">"Jij wint..."</font>>]
+    user_win_scissors [fillcolor=firebrick, style=filled, label=<<font point-size="12" color="white">"Jij wint..."</font>>]
+
+    node [shape=diamond, fillcolor=lavender, style=filled]
+    draw [label=<<font point-size="12"><b>comp</b> == <b>user</b></font>>]
+    comp_rock [label=<<font point-size="12"><b>comp</b> == "steen"</font>>]
+    user_scissors [label=<<font point-size="12"><b>user</b> == "schaar"</font>>]
+    comp_paper [label=<<font point-size="12"><b>comp</b> == "papier"</font>>]
+    user_rock [label=<<font point-size="12"><b>user</b> == "steen"</font>>]
+    comp_scissors [label=<<font point-size="12"><b>comp</b> == "schaar"</font>>]
+    user_paper [label=<<font point-size="12"><b>user</b> == "papier"</font>>]
+
+    comp -> draw
+    user -> draw
+
+    draw -> is_draw [label=<<font point-size="12">True</font>>]
+    draw -> comp_rock [label=<<font point-size="12">False</font>>]
+
+    comp_rock -> comp_paper [label=<<font point-size="12">False</font>>]
+    comp_rock -> user_scissors [label=<<font point-size="12">True</font>>]
+
+    user_scissors -> comp_win_rock [label=<<font point-size="12">True</font>>]
+    user_scissors -> user_win_scissors [label=<<font point-size="12">False</font>>]
+
+    comp_paper -> user_rock [label=<<font point-size="12">True</font>>]
+    comp_paper -> comp_scissors [label=<<font point-size="12">False</font>>]
+
+    user_rock -> comp_win_paper [label=<<font point-size="12">True</font>>]
+    user_rock -> user_win_rock [label=<<font point-size="12">False</font>>]
+
+    comp_scissors -> user_paper [label=<<font point-size="12">True</font>>]
+    user_paper -> comp_win_scissors [label=<<font point-size="12">True</font>>]
+    user_paper -> user_win_paper [label=<<font point-size="12">False</font>>]
+}

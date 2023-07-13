@@ -1,0 +1,27 @@
+digraph
+{
+    rankdir=LR;
+
+    node [shape=box3d]
+    list [label=<<font face="monospace">L</font>>]
+    value_0 [label=<5<br/><font face="monospace" point-size="8">L[0]</font>>]
+    value_1 [label=<42<br/><font face="monospace" point-size="8">L[1]</font>>]
+    value_2 [label=<"hi"<br/><font face="monospace" point-size="8">L[2]</font>>]
+
+    node [shape=none margin=0.2]
+    mem_l [label=<<font face="monospace" point-size="10">10000001</font>>]
+    mem_0 [label=<<font face="monospace" point-size="10">10000010</font>>]
+    mem_1 [label=<<font face="monospace" point-size="10">10000011</font>>]
+    mem_2 [label=<<font face="monospace" point-size="10">10000100</font>>]
+
+
+    value_0 -> mem_0
+    value_1 -> mem_1
+    value_2 -> mem_2
+    list -> mem_l
+    {rank=same;list mem_l}
+
+    list -> value_0 [arrowhead=none]
+    list -> value_1 [arrowhead=none]
+    list -> value_2 [arrowhead=none]
+}

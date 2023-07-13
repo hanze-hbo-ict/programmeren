@@ -1,0 +1,14 @@
+// dot -Tpng -Gdpi=100 -Nfontname=Helvetica -Efontname=Helvetica -o cycle.png cycle.dot
+
+digraph G {
+    //splines = ortho;
+    node [shape=box] // [shape=box, width = 2.5, height = .75]
+    
+    syntax [label="door mens\ngetypte input"]
+    semantiek [label="door machine\ngeproduceerde output"]
+    intentie [label="door mens\ngewenste output"]
+    
+    syntax -> semantiek
+    semantiek -> intentie [label=<<b>?</b>> fontsize=18]
+    intentie:e -> syntax:e
+} 
