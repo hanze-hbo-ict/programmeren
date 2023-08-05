@@ -13,8 +13,6 @@ csa-level: Beginner
 | Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 
-Jeff en Nate komen van een land waar sommige mensen altijd de waarheid spreken en de rest altijd liegt. 
-
 ### Opdracht 1: 
 Fred, Wilma en Pebbles komen van een land waar sommige mensen altijd de waarheid spreken en de rest altijd liegt. 
 

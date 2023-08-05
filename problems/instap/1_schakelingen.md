@@ -31,7 +31,7 @@ De output van `fn(x,y)` moet 1 zijn indien `x == y`, anders 0. Met andere woorde
 
 
 ## Opdracht 2: x >= y
-De output van `fn(x,y,z)` moet 1 zijn indien `x >= y`, anders 0. Met andere woorden moet x groter of gelijk zijn aan y.   
+De output van `fn(x,y)` moet 1 zijn indien `x >= y`, anders 0. Met andere woorden moet x groter of gelijk zijn aan y.   
 
 **Stap 1:** Vul de waarheidstabel in.
 

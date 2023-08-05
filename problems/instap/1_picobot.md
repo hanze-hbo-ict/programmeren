@@ -16,7 +16,6 @@ csa-level: Beginner
 
 Picobot kan je vinden op [https://www.cs.hmc.edu/picobot/](https://www.cs.hmc.edu/picobot/)
 
-Meer informatie van Picobot staat in werkcollege 1. 
 
 ## Opgave
 

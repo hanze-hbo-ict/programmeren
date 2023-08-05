@@ -30,8 +30,8 @@ Kan de toerist vaststellen hoeveel ridders er in het café zijn? Zo ja hoeveel r
 
 
 ### Opdracht 3: 
-Dit raadsel, een variatie op een leugen/waarheidsprobleem, wordt wel de moeilijkste logische puzzel ooit genoemd. Je ontmoet drie goden op een bergtop. waarvan een altijd de waarheid verteld, een altijd liegt en een vertelt de waarheid of liegt willekeurig. We kunnen ze Truth, False en Random noemen. Ze begrijpen Engels, maar antwoorden in hun eigen taal, met ja of da voor ja en nee, maar je weet niet welke welke is. Je kunt drie vragen stellen aan een van de goden (en je kunt dezelfde god meer dan één vraag stellen), en ze zullen antwoorden met ja of da. Welke drie vragen stel je om erachter te komen wie wie is?
+Dit raadsel, een variatie op een leugen/waarheidsprobleem, wordt wel de moeilijkste logische puzzel ooit genoemd. Je ontmoet drie goden op een bergtop. waarvan een altijd de waarheid verteld, een altijd liegt en een vertelt de waarheid of liegt willekeurig. We kunnen ze Truth, False en Random noemen. Ze begrijpen Engels, maar antwoorden in hun eigen taal, met na of da voor ja en nee, maar je weet niet welke welke is. Je kunt drie vragen stellen aan een van de goden (en je kunt dezelfde god meer dan één vraag stellen), en ze zullen antwoorden met ja of da. Welke drie vragen stel je om erachter te komen wie wie is?
 
- <!--We know Ben isn’t telling the truth because if he was, there would be two knights; so Ben could be either the knave or the spy. Cody also can’t be the knight, because then his statement would be a lie. So that must mean Alex is the knight. Ben, therefore, must be the spy, since the spy sometimes tells the truth; leaving Cody as the knave.-->
+
 
 
