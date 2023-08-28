@@ -13,8 +13,6 @@ csa-level: Beginner
 | Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 
-Jeff en Nate komen van een land waar sommige mensen altijd de waarheid spreken en de rest altijd liegt. 
-
 ### Opdracht 1: 
 Een meisje ontmoet een leeuw en een eenhoorn in het bos. De leeuw liegt elke maandag, dinsdag en woensdag en de andere dagen spreekt hij de waarheid. De eenhoorn liegt op donderdag, vrijdag en zaterdag en de andere dagen van de week spreekt hij de waarheid. "Gisteren loog ik", zei de leeuw tegen het meisje. "Ik ook," zei de eenhoorn. Welke dag is het?
 

@@ -8,7 +8,7 @@ csa-level: Beginner
 | Naam         | Beschrijving                                                   |
 |--------------|----------------------------------------------------------------|
 | Onderwerp    | Outputs                                                        |
-| Leerdoel     | Vind de fout                                               |
+| Leerdoel     | Vind de fout                                                   |
 | Bestandsnaam | `wk2in2.txt`                                                   |
 | Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 

@@ -59,7 +59,7 @@ print("Hopelijk heb je de volgende keer meer geluk...")
 
 ## En verder!
 
-Voer in ipython vanuit de juiste directory het bestand uit met `python  wk2co1.py`.
+Voer in terminal vanuit de juiste directory het bestand uit met `python  wk2co1.py`.
 
 Werk de bovenstaande code nu verder uit tot een volledig programma dat:
 

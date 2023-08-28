@@ -102,8 +102,6 @@ Open een *terminal* in VSCode (of anders) en probeer het bovenstaande verhaal ui
 
 ### Herhalen
 
-Als je het eenmaal in ipython hebt geladen, probeer het dan minstens twee keer te spelen om de verschillende paden door het verhaal te zien.
-
 - Je kan nu je bestand bewerken, opnieuw opslaan en *pijltje omhoog* drukken om het opnieuw uit te voeren. Of type handmatig weer `python wk1ex2b.py`
 
 :::{admonition} Nieuwe regel
