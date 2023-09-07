@@ -5,25 +5,19 @@ csa-chapter: 1
 csa-level: proficiency
 ---
 
-#  Dolende Picobot
-
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Picobot door een doolhof laten bewegen                         |
-| Bestandsnaam | `wk1ex4.txt`                                                   |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
-
+# Dolende Picobot
 
 Picobot kan je vinden op [https://www.cs.hmc.edu/picobot/](https://www.cs.hmc.edu/picobot/)
 
-Meer informatie van Picobot staat in werkcollege 1. 
+Meer informatie over Picobot staat in werkcollege 1.
 
-## : De opdracht
+## De opdracht
+
 Klik op de pijlen naast MAP om de omgeving van Picobot te veranderen, de eerstvolgende omgeving is een doolhof waar Picobot volledig moet gaan doorlopen.
 
-![De omgeving wijzigen](images/picobot/pico4.png)
+![De omgeving wijzigen](../images/picobot/pico4.png)
 
-![Picobot doolhof](images/picobot/picobotMaze.png)
+![Picobot doolhof](../images/picobot/picobotMaze.png)
 
 Voor deze opdracht is het jouw taak om een verzameling regels te ontwerpen om Picobot een doolhof te laten doorlopen. Het doolhof is een ruimte waar de breedte van de gangen één vierkant is en *alle* muren aansluiten op de rand van de kamer. Jouw programma zou op deze manier moeten werken voor alle doolhoven zonder volledig ingesloten open ruimtes.
 

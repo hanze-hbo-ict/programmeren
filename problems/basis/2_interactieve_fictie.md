@@ -3,16 +3,10 @@ title: "Interactieve fictie"
 description: ""
 csa-chapter: 1
 csa-level: proficiency
+file: wk2ba2.py
 ---
 
 # Interactieve fictie
-
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Schrijf interactieve fictie in Python                          |
-| Leerdoel     | Werken met if-then-else.                                        |
-| Bestandsnaam | `wk2ba2.py`                                                   |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 In deze opgave ga je interactieve fictie in Python schrijven, en met *interactieve* fictie bedoelen we een *kies-je-eigen-avontuur* programma!
 

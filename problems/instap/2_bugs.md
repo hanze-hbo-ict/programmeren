@@ -3,20 +3,14 @@ title: "Picobot: Rondjes rennen"
 description: "Kennismaken met Picobot"
 csa-chapter: 1
 csa-level: Beginner
+file: wk2in2.txt
 ---
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Outputs                                                        |
-| Leerdoel     | Vind de fout                                                   |
-| Bestandsnaam | `wk2in2.txt`                                                   |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
-
+# Busreis
 
 ## Opdracht uit de herkansing van 2022-2023
 
-
-Tijdens een busreis worden studenten verdeelt over verschillende bussen aan de hand van hun achternaam. 
+Tijdens een busreis worden studenten verdeelt over verschillende bussen aan de hand van hun achternaam.
 
 |Bus	|Eerste letter achternaam|
 |1|	A t/m E|
@@ -28,13 +22,13 @@ Tijdens een busreis worden studenten verdeelt over verschillende bussen aan de h
 Student met de achternaam Niël komt in bus 3
 Student met de achternaam Hoebe komt in bus 2
 
-Gegeven is een variabele naam die staat voor de achternaam ( zonder voorvoegsels en met hoofdletter) van een student, deze toekenning hoef je niet te schrijven. Schrijf een conditionele statement (geen functie) om de juiste bus nummer af te drukken. Je hoeft de bus nummer dus niet een variabele op te slaan. 
+Gegeven is een variabele naam die staat voor de achternaam ( zonder voorvoegsels en met hoofdletter) van een student, deze toekenning hoef je niet te schrijven. Schrijf een conditionele statement (geen functie) om de juiste bus nummer af te drukken. Je hoeft de bus nummer dus niet een variabele op te slaan.
 
-## opgave
+## Opgave
 
 Deze opdracht is op veel manieren op te lossen. Hieronder staan een aantal oplossingen, maar er zit telkens een fout in. Welke fout is er gemaakt waardoor de code niet klopt? Maak geen gebruik van een interpeter.
 
-a. 
+a.
 
 ```python
 if naam[0] <= 'E':
@@ -50,7 +44,7 @@ else
 
 ```
 
-b. 
+b.
 
 ```python
 if naam[0] >= 'E':
@@ -65,7 +59,7 @@ else:
     print(5)
 
 ```
-c. 
+c.
 
 ```python
 if naam[0] <= 'E':
@@ -81,7 +75,7 @@ else:
             print(5)
 
 ```
-d. 
+d.
 ```python
 if naam[0] <= 'E':
     print(1)
@@ -96,7 +90,7 @@ elif naam[0] <= 'J':
 
 ```
 
-e. 
+e.
 ```python
 if naam[0] <= 'Z':
     print(5)
@@ -161,5 +155,5 @@ else:
 ```
 
 i.
-Geef een juiste oplossing voor dit probleem. 
+Geef een juiste oplossing voor dit probleem.
 

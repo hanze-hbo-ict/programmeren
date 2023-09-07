@@ -1,12 +1,8 @@
+---
+file: wk2ba3.py
+---
+
 # Sequenties en data
-
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Slice and dice                                 |
-| Leerdoel     | List slicing en indexering                                     |
-| Bestandsnaam | `wk2ba3.py`                                                    |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
-
 
 ## Opgave
 
