@@ -26,10 +26,10 @@ We gebruiken bij Programmeren software die je misschien nog niet hebt. Je hebt d
 `````{tab-set}
 
 ````{tab-item} Windows
-Download en installeer de Python van [python.org](https://www.python.org/downloads/windows/).
+Download en installeer Python van [python.org](https://www.python.org/downloads/windows/).
 
 ```{caution}
-Tijdens het installeren zal worden gevraagd of je Python aan `PATH` zou willen toevoegen, kies hier voor.
+Tijdens het installeren zal worden gevraagd of je Python aan `PATH` zou willen toevoegen, kies hier voor!
 
 ![Python Installer](images/0/python_installer.png)
 ```
