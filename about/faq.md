@@ -16,7 +16,7 @@ We gebruiken Python, versie 3. Je kan Python installeren zoals beschreven in de 
 
 ## Welke colleges zijn er?
 
-Elke week is er college aan het begin en aan het einde van de week, deze worden voor iedereen tegelijk gegeven. Daarnaast is er elke week per klas een practicum. Tijdens het practicum ga je bezig met de practicumopdracht van die week en is er gelegenheid voor het het stellen van vragen over de onderwerpen en opgaven. De practicumdocent kan ook extra informatie of een mini-college geven als dit nodig is.
+Elke week is er één college en deze wordt voor iedereen tegelijk gegeven. Daarnaast zijn er elke week twee practica. Tijdens het practicum ga je bezig met de practicumopdracht van die week en is er gelegenheid voor het het stellen van vragen over de onderwerpen en opgaven. De practicumdocent kan ook extra informatie of een mini-college geven als dit nodig is.
 
 ## Zijn colleges en practica verplicht?
 
@@ -26,27 +26,19 @@ Maak gebruik van de practica om een begin te maken met de opgaven en vooral ook 
 
 ## Waar staan de opdrachten?
 
-Je kan de opdrachten per week in het werkboek vinden. Op Blackboard vind je informatie over deadlines voor het inleveren van de opdrachten. In het algemeen is de deadline voor de practicum- en de leesopdracht de zondagavond na het practicum, en de deadline voor het huiswerk de zondagavond een week later.
-
-Na de deadline zal jouw opgave door jouw docent worden bekeken en krijg je indien nodig feedback. Na de deadline kan je nog steeds jouw opdrachten inleveren maar zullen niet meer worden beoordeeld. Maar let op, een groot aantal opdrachten wordt automatisch beoordeeld en zo zal je nog steeds feedback kunnen krijgen en kan je jouw oplossing verder verbeteren.
+Je kan de opdrachten per week in het werkboek vinden. Op Blackboard vind je meer praktische informatie, bijvoorbeeld eventuele mededelingen.
 
 ## Moet ik de opdrachten maken?
 
 Nee, de opdrachten zijn niet verplicht. We raden je wél aan ze te maken want naast dat ze een goede oefening zijn, zijn het allemaal opdrachten die een klein (of groter) probleem van het vakgebied behandelen. Ze helpen jou een beter begrip te krijgen van wat programmeren (of 'computer science') is en het helpt je de praktische vaardigheden op te doen en een manier van denken te ontwikkelen.
 
-Per week kan je 100 punten verdienen met de opdrachten, met bonusopgaven kan je dit puntenaantal verhogen.
+## Hoe kan ik opdrachten laten controleren?
 
-## Hoe lever ik de opdrachten in?
-
-Je levert de opdrachten in via Gradescope. In het algemeen moet je een enkel bestand inleveren, meestal een Python-bestand. De precieze bestandsnaam kan je vinden in de opdracht, hier zal het ook staan als je nog andere bestanden moet inleveren. Je zal een mail hebben ontvangen met informatie over je Gradescope-account, controleer in ieder geval je spambox als dit niet het geval is, neem anders contact op met [Misja Hoebe](mailto:m.n.hoebe@pl.hanze.nl) om toegang te regelen.
-
-## Waarom zegt GradeScope dat ik -/15 punten heb bij de Autograder?
-
-De scores moeten eerst nog nagekeken worden door een docent, pas als die de scores goedkeurt kan je zien hoeveel punten je in totaal hebt behaald, in sommige gevallen wordt de score voor een deel bepaald door de autograder en zal de docent aanvulende punten geven.
+Gebruik hier de practica voor waar jij jouw oplossingen kan bespreken. Ook worden wekeleijks inloopmomenten georganiseerd waar je tercht kan met al jouw vragen.
 
 ## Mag ik samenwerken?
 
-Ja, heel graag zelfs! Je mag de meeste opdrachten als duo maken, je mag zelf je duopartner kiezen zolang het maar binnen je klas is. Je mag de opdrachten niet in een grotere groep maken, en de opdrachten die je als duo maakt moet je ook echt samen achter een enkele computer, of via LiveShare of iets in die geest, maken. Een aantal opdrachten moet je individueel inleveren, dit staat bij die opdrachten aangegeven. In Gradescope kan je na het inleveren van je opdracht aangeven rechtsboven aangeven wie je duopartner is, je hoeft de opdracht dus maar één keer in te leveren.
+Ja, heel graag zelfs! Probeer dan ook momenten te vinden waar je samen achter het scherm zit om de opdrachten op te lossen. Op afstand zou dit ook kunnen met bijvoorbeeld [LiveShare](https://code.visualstudio.com/learn/collaboration/live-share).
 
 ## Hoe wordt dit vak beoordeeld?
 

@@ -1,0 +1,22 @@
+// dot -Tpng -Gdpi=100 -Nfontname=Helvetica -Efontname=Helvetica -o flow.png flow.dot
+
+digraph G {
+    node [shape=none]
+    user_input [label=< <font color="green4">vraag gebruiker<br/>naar naam</font> >]
+    user_value [label=< <font color="blue" face="Courier New Bold">name</font> >]
+    
+    result_1 [label=< <font color="green4">print bericht voor<br/>Bas of Marian</font> >]
+    result_2 [label=< <font color="green4">print bericht<br/>voor Alex</font> >]
+    result_other [label=< <font color="green4">print bericht<br/>voor anderen</font> >]
+
+    node [shape=diamond]
+    test_1 [label=< <font color="blue" face="Courier New Bold">name</font> gelijk aan<br/>'Bas' of 'Marian'? >]
+    test_2 [label=< <font color="blue" face="Courier New Bold">name</font> gelijk<br/>aan 'Alex'? >]
+    
+    user_input -> user_value
+    user_value -> test_1
+    test_1 -> result_1 [label="Ja"]
+    test_1 -> test_2 [label="Nee"]
+    test_2 -> result_2 [label="Ja"]
+    test_2 -> result_other [label="Nee"]
+}

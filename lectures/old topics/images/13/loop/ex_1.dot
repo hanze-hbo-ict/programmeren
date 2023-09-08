@@ -1,0 +1,88 @@
+digraph {
+    graph [pad="0.5", nodesep="0.5", ranksep="1"];
+    node [shape=plain]
+    rankdir=LR;
+
+    // labelloc=t
+    // label="Von Neumann architectuur"
+
+    CPU, RAM [shape=box, color=none, style=invis, height=0, margin=0, width=0]
+    CPU -> RAM [dir="both", style=invis]
+    { rank=same; CPU-> CPU_t [style=invis] }
+    { rank=same; RAM-> RAM_t [style=invis] }
+
+    CPU_t [label=<
+    <table border="0" cellborder="1" cellspacing="2">
+        <tr>
+            <td color="none">R1</td>
+            <td port="r0" align="left" width="90%"></td>
+        </tr>
+        <tr>
+            <td color="none" align="center" colspan="2">
+                <font point-size="10">Algemeen register 1</font>
+            </td>
+        </tr>
+        <tr>
+            <td color="none">R2</td>
+            <td align="left" port="r1"></td>
+        </tr>
+        <tr>
+            <td color="none" align="center" colspan="2">
+                <font point-size="10">Algemeen register 2</font>
+            </td>
+        </tr>
+        <tr>
+            <td color="none">R3</td>
+            <td align="left"></td>
+        </tr>
+        <tr>
+            <td color="none" align="center" colspan="2">
+                <font point-size="10">Algemeen register 3</font>
+            </td>
+        </tr>
+    </table>>]
+
+    RAM_t [label=<
+    <table align="right" border="0" cellborder="1" cellspacing="0">
+        <tr>
+            <td port="r0" width="20%">0</td>
+            <td align="left" width="100%"><font point-size="10" face="monospace" color="red">read r1</font></td>
+        </tr>
+        <tr>
+            <td port="r1">1</td>
+            <td align="left"><font point-size="10" face="monospace" color="blue">setn r2 9</font></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td align="left"><font point-size="10" face="monospace" color="blue">sub r3 r1 r2</font></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td align="left"><font point-size="10" face="monospace" color="blue">div r3 r3 r2</font></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td align="left"><font point-size="10" face="monospace" color="blue">addn r3 -1</font></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td align="left"><font point-size="10" face="monospace" color="blue">write r3</font></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td align="left"><font point-size="10" face="monospace" color="blue">halt</font></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td align="left"><font point-size="10" face="monospace" color="blue">halt</font></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td align="left"><font point-size="10" face="monospace" color="blue">halt</font></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td align="left"><font point-size="10" face="monospace" color="blue">halt</font></td>
+        </tr>
+    </table>>]
+}

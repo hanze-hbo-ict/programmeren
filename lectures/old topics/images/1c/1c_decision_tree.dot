@@ -1,0 +1,28 @@
+digraph
+{
+    // 100dpi png rendering:
+    // dot -Tpng -Gdpi=100 -Nfontname=Helvetica -Efontname=Helvetica -o 1c_decision_tree.png 1c_decision_tree.dot
+
+    node [shape=oval]
+    comp [fillcolor="#196F3D", style=filled, label=<<font point-size="12" color="white"><b>comp</b></font>>]
+    user [fillcolor="#196F3D", style=filled, label=<<font point-size="12" color="white"><b>user</b></font>>]
+
+    is_draw [fillcolor=firebrick, style=filled, label=<<font point-size="12" color="white">"Gelijkspel"</font>>]
+
+    node [shape=diamond, fillcolor=lavender, style=filled]
+    draw [label=<<font point-size="12"><b>comp</b> == <b>user</b></font>>]
+    comp_rock [label=<<font point-size="12"><b>comp</b> == "steen"</font>>]
+
+    node [shape=plaintext, fillcolor=none]
+    what_next_true [label=<<font point-size="18"><b>?</b></font>>]
+    what_next_false [label=<<font point-size="18"><b>?</b></font>>]
+
+    comp -> draw
+    user -> draw
+
+    draw -> is_draw [label=<<font point-size="12">True</font>>]
+    draw -> comp_rock [label=<<font point-size="12">False</font>>]
+
+    comp_rock -> what_next_true [label=<<font point-size="12">True</font>>]
+    comp_rock -> what_next_false [label=<<font point-size="12">False</font>>]
+}

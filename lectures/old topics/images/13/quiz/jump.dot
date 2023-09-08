@@ -1,0 +1,31 @@
+digraph {
+    graph [pad="0.5", nodesep="0.5", ranksep="1"];
+    node [shape=plain]
+    rankdir=LR;
+
+    RAM_t [label=<
+    <table align="right" border="0" cellborder="1" cellspacing="0">
+        <tr>
+            <td port="r0" width="20%">0</td>
+            <td align="left" width="100%"><font point-size="10" face="monospace" color="blue">setn r1 42</font></td>
+        </tr>
+        <tr>
+            <td port="r1">1</td>
+            <td align="left"><font point-size="10" face="monospace" color="blue">write r1</font></td>
+        </tr>
+        <tr>
+            <td port="r2">2</td>
+            <td align="left"><font point-size="10" face="monospace" color="blue">addn r1 1</font></td>
+        </tr>
+        <tr>
+            <td port="r3">3</td>
+            <td align="left"><font point-size="10" face="monospace" color="red">jumpn 1</font></td>
+        </tr>
+        <tr>
+            <td port="r4">4</td>
+            <td align="left"><font point-size="10" face="monospace" color="blue">halt</font></td>
+        </tr>
+    </table>>]
+
+    RAM_t:r3 -> RAM_t:r1;
+}
