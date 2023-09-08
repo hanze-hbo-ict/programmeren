@@ -1,13 +1,11 @@
-# Inleiding
+# Onderwerpen
 
 ![Schotel](/images/saucer.png)
 
-## Onderwerpen
+## Inleiding
 
-- [Introductie](/topics/1a_introductie)
-- [Condities](/topics/1b_condities)
-- [Programmeren](/topics/2a_programmeren)
-- [Picobot](/topics/2b_picobot)
+```{tableofcontents}
+```
 
 ## Boek
 

@@ -1,0 +1,994 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="nl" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Assembly &#8212; Programmeren</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "hanze-hbo-ict/programmeren");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../_static/save_state.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lectures/2_LMC_assembly';</script>
+    <link rel="canonical" href="https:///hanze-hbo-ict.github.io/programmeren/lectures/2_LMC_assembly.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Zoeken" href="../search.html" />
+    <link rel="next" title="Practicum" href="../course/practical_2.html" />
+    <link rel="prev" title="Computerarchitectuur" href="2_hardware.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="nl"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../about/syllabus.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/mascot.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/mascot.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about/syllabus.html">
+                    Programmeren
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Opmerkingen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../about/feedback.html">Anoniem feedbackformulier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/faq.html">Veelgestelde vragen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/references.html">Literatuur</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_1.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="1_introductie.html">Wat is informatica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_binaire_getallen.html">Binaire getallen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_logische_schakelingen.html">Logische schakelingen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_1.html">Practicum</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/0_install_python.html">Terminal, teksteditors en Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/1a_problemen_oplossen.html">Problemen oplossen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/1b_picobot.html">Picobot</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opstap_1.html">Opstap</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/1_logic_riddles.html">Wie spreekt de waarheid?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/1_schakelingen.html">Optellingen schakelen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/1_picobot.html">De lege kamer</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_1.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/1_logic_riddles.html">Logische puzzles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/1_picobot.html">De lege kamer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/1_schakelingen.html">Optellingen schakelen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_1.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/1_logic_riddles.html">Logische puzzles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/1_schakelingen.html">Optellingen schakelen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/1_picobot_1.html">Dolende Picobot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/1_picobot_2.html">Huis met kamers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/1_picobot_3.html">Kamer met meubels</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../course/week_2.html">Onderwerpen</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="2_hardware.html">Computerarchitectuur</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Assembly</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_2.html">Practicum</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/2a_var_con.html">Maximum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/2b_strings_en_lists.html">Strings</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opstap_2.html">Opstap</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/2_bugs.html">Busreis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/2_outputs.html">Outputs</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_2.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/2_LMC_assembly.html">Little man computer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/2_interactieve_fictie.html">Interactieve fictie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/2_sequenties_en_data.html">Sequenties en data</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_2.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/2_LMC_assembly.html">Little man computer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/2_rochambeau.html">Rochambeau</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Support</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../support/logisim.html">Logisim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/plain_text/index.html">Tekstbestanden</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/hanze-hbo-ict/programmeren/master?urlpath=lab/tree/lectures/2_LMC_assembly.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Bronopslagplaats"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/edit/master/lectures/2_LMC_assembly.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/issues/new?title=Issue%20on%20page%20%2Flectures/2_LMC_assembly.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open een probleem"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download deze pagina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/lectures/2_LMC_assembly.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download het bronbestand"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Afdrukken naar pdf"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Volledig scherm"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Assembly</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Inhoud </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#machinetaal">Machinetaal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assembleertaal-assembly">Assembleertaal (assembly)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructies">Instructies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lmc-assembly">LMC Assembly</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instuctieset">Instuctieset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ons-eerste-programma">Ons eerste programma</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jumps">Jumps</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="assembly">
+<h1>Assembly<a class="headerlink" href="#assembly" title="Permalink to this heading">#</a></h1>
+<p>Welke taal spreekt een computer?</p>
+<section id="machinetaal">
+<h2>Machinetaal<a class="headerlink" href="#machinetaal" title="Permalink to this heading">#</a></h2>
+<p><img alt="CPU machine code" src="../_images/cpu_1.png" /></p>
+<p>Programma’s worden opgeslagen in het geheugen in machinetaal. Een taal dat puur bestaat uit bits. Dit is de eerste generatie programmeer taal. Het is bijna onleesbaar voor ons mensen.</p>
+</section>
+<section id="assembleertaal-assembly">
+<h2>Assembleertaal (assembly)<a class="headerlink" href="#assembleertaal-assembly" title="Permalink to this heading">#</a></h2>
+<p><img alt="CPU assembly" src="../_images/cpu_1a.png" /></p>
+<p>Assembly is een voor mensen leesbare machinetaal. Het is de tweede generatie programmeer talen</p>
+<p>Derde generatie programmeer talen kunnen gebruikt worden om alles te programmeren wat mogelijk is. Als men het over programmeren heeft, valt het vaak in deze groep. Talen zoals Python, Java, C, C++, C#, Pascal en Basic vallen hieronder.</p>
+<p>Vierde generatie talen zijn programmeer talen met een specifiek doel. SQL bijvoorbeeld voor databases en HTML voor websites.</p>
+<p>Vijfde generatie talen zijn talen waarbij de programmeur regels opstelt waar de computer zich aan moet houden. De computer lost vervolgens zelf het probleem op. Logische programmeern talen zoals Prolog vallen hieronder.</p>
+</section>
+<section id="instructies">
+<h2>Instructies<a class="headerlink" href="#instructies" title="Permalink to this heading">#</a></h2>
+<p>Combinatie van data en handelingen</p>
+<p>Machinetaal</p>
+<p><tt><font color="red">0000 0001</font> 0000 0001</tt></p>
+<p>Assembly</p>
+<p><tt><font color="blue">load</font> r1</tt></p>
+</section>
+<section id="lmc-assembly">
+<h2>LMC Assembly<a class="headerlink" href="#lmc-assembly" title="Permalink to this heading">#</a></h2>
+<p>LMC staat voor Little Man Computer en is een versimpelt model voor een CPU met een bijpassende assembly taal.</p>
+<p><img alt="LMC" src="../_images/lmc.png" /></p>
+<p>Instructies komen aan de linkerkant. Door submit te drukken wordt het programma geladen in het RAM geheugen. Zodra het geladen is kan er op run gedrukt worden om het programma te draaien.</p>
+<p>De program counter houdt bij welke instructie de volgende is. De accumulator bewaart de uitkomst van de laatste uitgevoerde opdracht of berekening. Beide zijn speciale registerst binnen de LMC CPU.</p>
+</section>
+<section id="instuctieset">
+<h2>Instuctieset<a class="headerlink" href="#instuctieset" title="Permalink to this heading">#</a></h2>
+<p>LMC heeft maar een beperkte hoeveelheid instructies, het zijn er maar 9.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Code</p></th>
+<th class="head"><p>Naam</p></th>
+<th class="head"><p>Beschrijving</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>000</p></td>
+<td><p>HLT</p></td>
+<td><p>Stop</p></td>
+</tr>
+<tr class="row-odd"><td><p>1XX</p></td>
+<td><p>ADD XX</p></td>
+<td><p>Tel het getal in geheugen plaats XX op bij het getal die in de accumulator staat</p></td>
+</tr>
+<tr class="row-even"><td><p>2XX</p></td>
+<td><p>SUB XX</p></td>
+<td><p>Trek het getal in geheugen plaats XX af van het getal die in de accumulator staat</p></td>
+</tr>
+<tr class="row-odd"><td><p>3XX</p></td>
+<td><p>STA or STO XX</p></td>
+<td><p>Sla het getal in de accumulator op in geheugenplaats XX</p></td>
+</tr>
+<tr class="row-even"><td><p>5XX</p></td>
+<td><p>LDA XX</p></td>
+<td><p>Laad het getal in geheugen plaats XX naar de accumulator</p></td>
+</tr>
+<tr class="row-odd"><td><p>6XX</p></td>
+<td><p>BRA XX</p></td>
+<td><p>Spring naar instructie XX</p></td>
+</tr>
+<tr class="row-even"><td><p>7XX</p></td>
+<td><p>BRZ XX</p></td>
+<td><p>Spring naar instructie XX als het getal in de accumulator nul is</p></td>
+</tr>
+<tr class="row-odd"><td><p>8XX</p></td>
+<td><p>BRP XX</p></td>
+<td><p>Spring naar instructie XX als het getal in de accumulator groter of gelijk is aan nul</p></td>
+</tr>
+<tr class="row-even"><td><p>9XX</p></td>
+<td><p>INP or OUT</p></td>
+<td><p>Input or Output. Vraag om imput als XX gelijk is aan 01, Geeft output als XX gelijk is aan 02.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ons-eerste-programma">
+<h2>Ons eerste programma<a class="headerlink" href="#ons-eerste-programma" title="Permalink to this heading">#</a></h2>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Instructie</p></th>
+<th class="head"><p>Bijschrijving</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>inp</p></td>
+<td><p>vraag om input en bewaar deze in de accumulator</p></td>
+</tr>
+<tr class="row-odd"><td><p>sto 99</p></td>
+<td><p>Bewaar de waarde dat in de accumulator staat in register 99</p></td>
+</tr>
+<tr class="row-even"><td><p>inp</p></td>
+<td><p>Vraag om input en bewaar deze in de accumulator</p></td>
+</tr>
+<tr class="row-odd"><td><p>add 99</p></td>
+<td><p>Tel het getal in geheugen plaats 99 op bij het getal die in de accumulator staat</p></td>
+</tr>
+<tr class="row-even"><td><p>out</p></td>
+<td><p>Geef de waarde dat in de accumulator staat als output</p></td>
+</tr>
+<tr class="row-odd"><td><p>hlt</p></td>
+<td><p>einde programma</p></td>
+</tr>
+</tbody>
+</table>
+<p>Het draaien van een assembly programma kan je als volg noteren. Noteer de instructie in colomn 1. Wat er aan het einde van de instructie in de ALU staat noteer je in colomn 2. Als er iets in het geheugen wordt opgeslagen/verandert noteer je dat in colomn 3. Als er om input/output wordt gevraagd noteren we dat in colomn 4.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>instructie</p></th>
+<th class="head"><p>Accumulator</p></th>
+<th class="head"><p>Geheugen</p></th>
+<th class="head"><p>Input/Output</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>inp</p></td>
+<td><p>32</p></td>
+<td><p></p></td>
+<td><p>Input is 32</p></td>
+</tr>
+<tr class="row-odd"><td><p>sto 99</p></td>
+<td><p>32</p></td>
+<td><p>#99 = 32</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>inp</p></td>
+<td><p>14</p></td>
+<td><p></p></td>
+<td><p>input is 14</p></td>
+</tr>
+<tr class="row-odd"><td><p>add 99</p></td>
+<td><p>14 + 32 = 46</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>out</p></td>
+<td><p>46</p></td>
+<td><p></p></td>
+<td><p>output is 46</p></td>
+</tr>
+<tr class="row-odd"><td><p>hlt</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<section id="jumps">
+<h3>Jumps<a class="headerlink" href="#jumps" title="Permalink to this heading">#</a></h3>
+<p>Assembly heeft een jump instructie, ook wel branch genoemd of een Goto. Hiermee kan er aan gegeven worden naar welke instructie er gesprongen moet worden. Er kan vooruit en achteruit gesprongen worden in assembly.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>nummer</p></th>
+<th class="head"><p>Instructie</p></th>
+<th class="head"><p>Bijschrijving</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>00</p></td>
+<td><p>inp</p></td>
+<td><p>vraag om input en bewaar deze in de accumulator</p></td>
+</tr>
+<tr class="row-odd"><td><p>01</p></td>
+<td><p>sto 98</p></td>
+<td><p>Bewaar de waarde dat in de accumulator staat in register 98</p></td>
+</tr>
+<tr class="row-even"><td><p>02</p></td>
+<td><p>add 98</p></td>
+<td><p>Tel het getal in geheugen plaats 98 op bij het getal die in de accumulator staat</p></td>
+</tr>
+<tr class="row-odd"><td><p>03</p></td>
+<td><p>out</p></td>
+<td><p>Geef de waarde dat in de accumulator staat als output</p></td>
+</tr>
+<tr class="row-even"><td><p>04</p></td>
+<td><p>bra 02</p></td>
+<td><p>Jump naar instructie 2</p></td>
+</tr>
+<tr class="row-odd"><td><p>05</p></td>
+<td><p>hlt</p></td>
+<td><p>Einde programma</p></td>
+</tr>
+</tbody>
+</table>
+<p>Dit programma zal oneindig hetzelfde getal optellen. De jump op regel 04 wordt altijd uitgevoerd. Er bestaan ook voorwaardelijke jumps; een jump dat alleen wordt uitgevoerd als er aan een voorwaarde is voldaan. LMC kent twee voorwaardelijke jumps; BRZ waarbij de accumulator gelijk aan 0 moet zijn (BRanch if Zero) en BRP waarbij de accumulator gelijk aan 0 of hoger moet zijn (BRanch if Positive)</p>
+<p>Door het bijhouden van een counter kan een programma naar hlt jumpen zodra de counter 0 heeft bereikt. Het is dan wel nodig om op geheugenplaats 99 een 1 in te voeren voordat het programma gedraait wordt.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>nummer</p></th>
+<th class="head"><p>Instructie</p></th>
+<th class="head"><p>Bijschrijving</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>00</p></td>
+<td><p>inp</p></td>
+<td><p>Vraag om input en bewaar deze in de accumulator</p></td>
+</tr>
+<tr class="row-odd"><td><p>01</p></td>
+<td><p>sto 98</p></td>
+<td><p>Bewaar de waarde dat in de accumulator staat in register 98</p></td>
+</tr>
+<tr class="row-even"><td><p>02</p></td>
+<td><p>out</p></td>
+<td><p>Geef de waarde dat in de accumulator staat als output</p></td>
+</tr>
+<tr class="row-odd"><td><p>03</p></td>
+<td><p>brz 05</p></td>
+<td><p>Jump naar instructie 05 als de waarde op de accumualtor gelijk is aan 0</p></td>
+</tr>
+<tr class="row-even"><td><p>04</p></td>
+<td><p>sub 99</p></td>
+<td><p>Trek het getal in geheugen plaats 99 af van het getal die in de accumulator staat</p></td>
+</tr>
+<tr class="row-odd"><td><p>05</p></td>
+<td><p>bra 02</p></td>
+<td><p>Jump naar instructie 2</p></td>
+</tr>
+<tr class="row-even"><td><p>05</p></td>
+<td><p>hlt</p></td>
+<td><p>Einde programma</p></td>
+</tr>
+</tbody>
+</table>
+<p>Dit creeert dus een loop die zich een gegeven aantal keren herhaalt. Zo’n loop kan gebruikt worden om een vermeninigvuldiging in LMC te programmeren. Vermenigvuldigen is namelijk niks anders dan een gegeven aantal keer optellen. <span class="math notranslate nohighlight">\(5 * 2 = 2 + 2 + 2 + 2 + 2\)</span></p>
+<p>Wat belangrijk is bij het schrijven met Assembly is het gebruik van geheugen. Waar wordt wat opgeslagen. Het is onverstandig om Data op te slaan waar een instructie staat. In de voorbeelden wordt de data opgeslagen op de hoge nummers.</p>
+<p>Bij het schrijven van een vermenigvuldeging moet er dus ook nagedacht worden over geheugen. Waar wordt het antwoord bijgehouden en in welke register de counter? In onderstaand voorbeeld wordt het antwoord bijgehouden in register 96 en de counter in 97. Ook bij dit programma wordt er handmatig een 1 geplaats in register 99.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>nummer</p></th>
+<th class="head"><p>Instructie</p></th>
+<th class="head"><p>Bijschrijving</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>00</p></td>
+<td><p>inp</p></td>
+<td><p>vraag om input en bewaar deze in de accumulator</p></td>
+</tr>
+<tr class="row-odd"><td><p>01</p></td>
+<td><p>sto 98</p></td>
+<td><p>Bewaar de waarde dat in de accumulator staat in register 98</p></td>
+</tr>
+<tr class="row-even"><td><p>02</p></td>
+<td><p>inp</p></td>
+<td><p>Vraag om input en bewaar deze in de accumulator</p></td>
+</tr>
+<tr class="row-odd"><td><p>03</p></td>
+<td><p>sto 97</p></td>
+<td><p>Bewaar de waarde dat in de accumulator staat in register 98</p></td>
+</tr>
+<tr class="row-even"><td><p>04</p></td>
+<td><p>brz 12</p></td>
+<td><p>Als de waarde in de accumulator 0 is, jump naar instructie 12</p></td>
+</tr>
+<tr class="row-odd"><td><p>05</p></td>
+<td><p>lda 96</p></td>
+<td><p>Lees de waarde van 96 en sla deze op in de accumulator</p></td>
+</tr>
+<tr class="row-even"><td><p>06</p></td>
+<td><p>add 98</p></td>
+<td><p>Tel het getal in geheugen plaats 98 op bij het getal die in de accumulator staat</p></td>
+</tr>
+<tr class="row-odd"><td><p>07</p></td>
+<td><p>sto 96</p></td>
+<td><p>Bewaar de waarde dat in de accumulator staat in register 96</p></td>
+</tr>
+<tr class="row-even"><td><p>08</p></td>
+<td><p>lda 97</p></td>
+<td><p>Lees de waarde van register 97 en sla deze op in de accumulator</p></td>
+</tr>
+<tr class="row-odd"><td><p>09</p></td>
+<td><p>sub 99</p></td>
+<td><p>Trek het getal in geheugen plaats 99 af van het getal die in de accumulator staat</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>sto 97</p></td>
+<td><p>Bewaar de waarde dat in de accumulator staat in register 97</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>bra 04</p></td>
+<td><p>Jump naar instructie 4</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>lda 96</p></td>
+<td><p>lees de waarde van register 97 en sla deze op in de accumulator</p></td>
+</tr>
+<tr class="row-odd"><td><p>13</p></td>
+<td><p>out</p></td>
+<td><p>Geef de waarde dat in de accumulator staat als output</p></td>
+</tr>
+<tr class="row-even"><td><p>14</p></td>
+<td><p>hlt</p></td>
+<td><p>Einde programma</p></td>
+</tr>
+</tbody>
+</table>
+<p>Bij programmeren met Assembly is geheugen gebruik dus belangrijk. Daarnaast wordt Assembly code al snel onverzichtelijk als er veel jumps in het programma staan. Het wordt dan snel zogenaamde spaghetti code.
+Mede daardoor heeft men de derde generatie talen ontwikkeld. Gezien een computer deze talen niet kent is er een vertaler nodig om programmeer talen om te zetten in machinetaal.</p>
+<p>Met de komst van deze talen heeft de programmeur onder andere toegang tot variabelen en regelt de computer zelf waar de data wordt opgeslagen. Jumps zijn niet meer nodig, ook dat regelt de computer zelf. Jumps (a.k.a. Goto statements) gebruiken in een derde generatie taal wordt dan ook gezien als bad practice.</p>
+<p><img alt="Do not use Jumps" src="../_images/goto.png" /></p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "hanze-hbo-ict/programmeren",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./lectures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="2_hardware.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">vorige</p>
+        <p class="prev-next-title">Computerarchitectuur</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../course/practical_2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">volgende</p>
+        <p class="prev-next-title">Practicum</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Inhoud
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#machinetaal">Machinetaal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assembleertaal-assembly">Assembleertaal (assembly)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructies">Instructies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lmc-assembly">LMC Assembly</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instuctieset">Instuctieset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ons-eerste-programma">Ons eerste programma</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jumps">Jumps</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Door Harvey Mudd College / Hanze University of Applied Sciences
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
+    Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
