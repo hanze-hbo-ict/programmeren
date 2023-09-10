@@ -15,9 +15,9 @@ Meer informatie over Picobot staat in werkcollege 1.
 
 Klik op de pijlen naast MAP om de omgeving van Picobot te veranderen, de eerstvolgende omgeving is een doolhof waar Picobot volledig moet gaan doorlopen.
 
-![De omgeving wijzigen](../images/picobot/pico4.png)
+![De omgeving wijzigen](images/picobot/pico4.png)
 
-![Picobot doolhof](../images/picobot/picobotMaze.png)
+![Picobot doolhof](images/picobot/picobotMaze.png)
 
 Voor deze opdracht is het jouw taak om een verzameling regels te ontwerpen om Picobot een doolhof te laten doorlopen. Het doolhof is een ruimte waar de breedte van de gangen één vierkant is en *alle* muren aansluiten op de rand van de kamer. Jouw programma zou op deze manier moeten werken voor alle doolhoven zonder volledig ingesloten open ruimtes.
 
