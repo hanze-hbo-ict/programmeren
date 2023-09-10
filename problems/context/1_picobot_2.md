@@ -7,7 +7,7 @@ csa-level: mastery
 
 # Huis met kamers
 
-![Picobot huis met kamers](../images/picobot/picobotExCr.png)
+![Picobot huis met kamers](images/picobot/picobotExCr.png)
 
 Ontwerp een verzameling regels om Picobot een ruimte in de vorm van een huis te laten verkennen (er zijn geen beperkingen aan het aantal regels).
 
