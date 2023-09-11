@@ -8,7 +8,7 @@ Nee, we verwachten bij dit vak geen enkele ervaring, je zou het moeten kunnen vo
 
 We gebruiken het boek van Alvarado en Dodds, *CS for All* {cite}`alvarado2019cs`. Dit boek kan via [Studystore](https://www.studystore.nl/) of anders besteld worden. Je kan het ook online via [Redshelf](https://www.redshelf.com/) kopen. We weten van een link naar een wat oudere onlineversie via de Wayback Machine en die versie zal vermoedelijk in grote lijnen overeenkomen met het boek, maar dat kan natuurlijk niet worden gegarandeerd.
 
-We hopen dat je het boek blijft lezen, het vat steeds samen wat we tijdens de hoorcollege's en opgaven behandelen. Daarnaast behandelt ook andere interessante problemen waar wij verder geen tijd voor hebben, bijvoorbeeld hoe een spellchecker werkt of een *music recommender* systeem als Spotify. We weten zeker dat je dit boek na deze cursus ook nog af en toe zal openslaan!
+We hopen dat je het boek blijft lezen, het vat steeds samen wat we tijdens de hoorcolleges en opgaven behandelen. Daarnaast behandelt ook andere interessante problemen waar wij verder geen tijd voor hebben, bijvoorbeeld hoe een spellchecker werkt of een *music recommender* systeem als Spotify. We weten zeker dat je dit boek na deze cursus ook nog af en toe zal openslaan!
 
 ## Welke software is nodig?
 
@@ -20,13 +20,13 @@ Elke week is er één college en deze wordt voor iedereen tegelijk gegeven. Daar
 
 ## Zijn colleges en practica verplicht?
 
-Nee, aanwezigheid is bij de colleges en practica van Programmeren niet verplicht. Het wordt wél aangeraden de college's en practica te bezoeken. We behandelen veel onderwerpen en met elk college volgt een introductie van het onderwerp en kijken we terug op sommige opgaven van de week. En vaak worden ook hints gegeven die je direct kan gebruiken bij het maken van de opgaven!
+Nee, aanwezigheid is bij de colleges en practica van Programmeren niet verplicht. Het wordt wél aangeraden de colleges en practica te bezoeken. We behandelen veel onderwerpen en met elk college volgt een introductie van het onderwerp en kijken we terug op sommige opgaven van de week. En vaak worden ook hints gegeven die je direct kan gebruiken bij het maken van de opgaven!
 
 Maak gebruik van de practica om een begin te maken met de opgaven en vooral ook om vragen te stellen over andere opdrachten. Gebruik het ook als een vast moment om naar de campus te komen en anderen te treffen en samen te werken, dit kan je ook helpen om in een studieritme te komen.
 
 ## Waar staan de opdrachten?
 
-Je kan de opdrachten per week in het werkboek vinden. Op Blackboard vind je meer praktische informatie, bijvoorbeeld eventuele mededelingen.
+Je kan de opdrachten per week in het[werkboek](https://hanze-hbo-ict.github.io/programmeren/) vinden. Op Blackboard vind je meer praktische informatie, bijvoorbeeld eventuele mededelingen.
 
 ## Moet ik de opdrachten maken?
 
@@ -34,7 +34,7 @@ Nee, de opdrachten zijn niet verplicht. We raden je wél aan ze te maken want na
 
 ## Hoe kan ik opdrachten laten controleren?
 
-Gebruik hier de practica voor waar jij jouw oplossingen kan bespreken. Ook worden wekeleijks inloopmomenten georganiseerd waar je tercht kan met al jouw vragen.
+Gebruik hier de practica voor waar jij jouw oplossingen kan bespreken. Ook worden wekelijks inloopmomenten georganiseerd waar je terecht kan met al jouw vragen.
 
 ## Mag ik samenwerken?
 
@@ -46,4 +46,4 @@ Je maakt een tentamen waarbij vaardigheden die behandeld zijn tijdens het vak aa
 
 ## Hoe kan ik herkansen?
 
-Het tentamen kan in de volgende periode herkanst worden.
+Het tentamen kan je in de volgende periode herkansen.
