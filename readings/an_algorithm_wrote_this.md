@@ -1,6 +1,7 @@
 ---
 title: If an Algorithm Wrote This, How Would You Even Know?
-subject: Kunstmatig gegenereerde teksten
+description: Kunstmatig gegenereerde teksten
+points: 5
 ---
 
 # If an Algorithm Wrote This, How Would You Even Know?

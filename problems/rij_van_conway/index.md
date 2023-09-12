@@ -1,10 +1,11 @@
-# De Rij van Conway
+---
+title: De Rij van Conway
+description: Lees en zeg, of lees en huiver
+file: wk8ex4.py
+points: 25
+---
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Lees en zeg, of lees en huiver                                 |
-| Bestandsnaam | `wk8ex4.py`                                                    |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
+# De Rij van Conway
 
 ## De Rij van Conway of Lees-en-Huiver
 

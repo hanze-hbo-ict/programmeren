@@ -1,10 +1,11 @@
-# De macht van recursie!
+---
+title: De macht van recursie!
+description: Recursieve machtsverheffing in `hmmm`
+file: wk7ex4.hmmm
+points: 10
+---
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Recursieve machtsverheffing in `hmmm`                          |
-| Bestandsnaam | `wk7ex4.hmmm`                                                  |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
+# De macht van recursie!
 
 In de opgave [De macht van Hmmm!](macht_van_hmmm) heb je een programma geschreven om "`x` tot de macht van `y`" te berekenen via *iteratie*.
 

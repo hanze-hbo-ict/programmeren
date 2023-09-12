@@ -1,11 +1,11 @@
-# Game of Life
+---
+title: Game of Life
+description: De evolutie van leven
+file: wk9ex1.py
+points: 30
+---
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | De evolutie van leven                                          |
-| Bestandsnaam | `wk9ex1.py`                                                    |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
-| Opmerking    |                                                                |
+# Game of Life
 
 ## John Conway's Game of Life
 
@@ -18,7 +18,7 @@ Game of Life is een *cellulaire automaat* uitgevonden door de in 2020 overleden 
 
 Alhoewel deze regels simpel lijken leiden ze tot complexe en interessante patronen. Meer informatie en een aantal interessante patronen kan je vinden op [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life).
 
-In dit practicum ga je een Pythonprogramma implementeren om Game of Life te spelen.
+In dit practicum ga je een Python-programma implementeren om Game of Life te spelen.
 
 ### Nadenken over het leven
 
@@ -610,8 +610,7 @@ om het kleurschema van de Hanzehogeschool te gebruiken. De [lijst met kleuren](h
 Vereist meer dan alleen programmeren, helaas! (Alhoewel Python vond dat `werken` maximaal leven was!)
 
 Als je Game of Life vrolijk "leeft", dan heb je het practicum voltooid. We hopen dat je het
-leven nu in een ander licht ziet, of dat het in ieder geval levendig geweest is... Vergeet niet je
-bestand `wk9ex1.py` in te leveren in Gradescope!
+leven nu in een ander licht ziet, of dat het in ieder geval levendig geweest is...
 
 ## Optionele variaties op Game of Life
 

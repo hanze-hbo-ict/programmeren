@@ -1,10 +1,11 @@
-# Pi met pijltjes
+---
+title: Pi met pijltjes
+description: Pi bepalen door middel van simulatie
+file: wk8ex3.py
+points: 30
+---
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Pi bepalen door middel van simulatie                           |
-| Bestandsnaam | `wk8ex3.py`                                                    |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
+# Pi met pijltjes
 
 ![Dartboard](images/500px-Dartboard.png)
 

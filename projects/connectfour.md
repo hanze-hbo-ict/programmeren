@@ -495,8 +495,6 @@ Het begin, `begin.py`, moet aan de volgende eisen voldoen:
 * Het bevat een klasse `Player` met een werkende constructor en `__repr__`
 * Deze klasse bevat twee werkende methodes `opp_ch` en `score_board`
 
-Lever dit bestand, samen met je uitleg hierover in `begin.txt`, in Gradescope in als onderdeel van het huiswerk van week 11.
-
 (connectfour-milestone)=
 ### Milestone
 
@@ -506,10 +504,8 @@ De milestone, `milestone.py`, moet aan de volgende eisen voldoen:
 * Deze klasse bevat drie werkende methodes `opp_ch`, `score_board`, `tiebreak_move`
 * Deze klasse bevat het hart van het N-ply-lookahead-algoritme, de werkende methode `scores_for`
 
-Lever dit bestand, samen met je uitleg hierover in `milestone.txt`, in Gradescope in als onderdeel van het huiswerk van week 12.
-
 ### Oplevering
 
 Voor de oplevering, het laatste inlevermoment voor dit project, moet je je implementatie van de kunstmatige intelligentie afmaken. Je moet hierbij minimaal één van de hierboven genoemde uitbreidingen maken. We zullen je programma testen met de hierboven beschreven functie `play_game`.
 
-De oplevering, `oplevering.py`, moet een complete uitwerking van het project bevatten. Lever dit bestand, samen met je uitleg hierover in `oplevering.txt`, in Gradescope in. In de uitleg moet je beschrijven hoe we je spel moeten gebruiken! Als je ervoor gekozen hebt om een ander spel of een statische evaluatiefunctie te maken, beschrijf dan ook de regels van dat spel, of de keuzes die je gemaakt hebt in je evaluatiefunctie.
+De oplevering, `oplevering.py`, moet een complete uitwerking van het project bevatten. In de uitleg moet je beschrijven hoe we je spel moeten gebruiken! Als je ervoor gekozen hebt om een ander spel of een statische evaluatiefunctie te maken, beschrijf dan ook de regels van dat spel, of de keuzes die je gemaakt hebt in je evaluatiefunctie.

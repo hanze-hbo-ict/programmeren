@@ -1,11 +1,12 @@
 ---
 title: Chess-Championship Results Show Powerful Role of Computers
-subject: Helpen computers mensen beter worden?
+title: Helpen computers mensen beter worden?
+points: 5
 ---
 
 # Chess-Championship Results Show Powerful Role of Computers
 
-Dit artikel beschrijft sommige van de veranderingen die schaken doorgemaakt heeft sinds computers beter zijn geworden in schaken dan mensen; meestal wordt het verslaan van de mensenlijke kampioen Garry Kasparov door Deep Blue, de machine van IBM, in 1997 beschouwd als het moment dat dit gebeurd is.
+Dit artikel beschrijft sommige van de veranderingen die schaken doorgemaakt heeft sinds computers beter zijn geworden in schaken dan mensen; meestal wordt het verslaan van de menselijke kampioen Garry Kasparov door Deep Blue, de machine van IBM, in 1997 beschouwd als het moment dat dit gebeurd is.
 
 ## Het artikel
 

@@ -1,10 +1,11 @@
-# Feest met functies
+---
+title: Feest met functies
+description: Recursieve functies
+file: wk2ex3.py
+points: 50
+---
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Recursieve functies                                            |
-| Bestandsnaam | `wk2ex3.py`                                                    |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
+# Feest met functies
 
 In deze opgave ga je een aantal functies uitwerken door middel van recursie.
 

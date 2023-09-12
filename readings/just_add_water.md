@@ -1,6 +1,7 @@
 ---
 title: Just add water
-subject: Rekenen met water
+description: Rekenen met water
+points: 5
 ---
 
 # Just add water

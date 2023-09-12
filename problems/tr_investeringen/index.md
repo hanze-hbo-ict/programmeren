@@ -1,10 +1,11 @@
-# TR Investeringen BV
+---
+title: TR Investeringen BV
+description: Slim investeren met Python
+file: wk9ex3.py
+points: 30
+---
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Slim investeren met Python                                     |
-| Bestandsnaam | `wk9ex3.py`                                                    |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
+# TR Investeringen BV
 
 ```{warning}
 Je mag **geen** gebruik maken van de ingebouwde functies `sum`, `min` of `max` in deze opgave. Schrijf in plaats daarvan bij het bouwen van de verschillende menu-opties hulpfuncties die de gegevens op de juiste manier kunnen verwerken. Als je deze functies *echt* wilt gebruiken, schrijf dan je eigen versies hiervan. (voorbeelden hiervan worden tijdens het college behandeld)
@@ -368,6 +369,6 @@ Maak je keuze: 9
 Tot gisteren!
 ```
 
-## Bonusopgave: creatieve menu-opties
+## Extra opgave: creatieve menu-opties
 
-Als je wilt kan je voor maximaal 5 bonuspunten extra menu-opties toevoegen (met andere numerieke labels) die de lijst op een andere, eigen ontworpen manier verwerken. Dit hoeft niet serieus te zijn! In ieder geval worden de opties beoordeeld op wat ze doen en hoe makkelijk ze te gebruiken zijn.
+Als je wilt kan je voor maximaal 5 bonuspunten extra menu-opties toevoegen (met andere numerieke labels) die de lijst op een andere, eigen ontworpen manier verwerken.

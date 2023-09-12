@@ -1,10 +1,11 @@
-# Klinkt goed!
+---
+title: Klinkt goed!
+description: Geluid en list comprehension
+file: wk4ex1.py
+points: 35
+---
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Geluid en list comprehension                                   |
-| Bestandsnaam | `wk4ex1.py`                                                    |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
+# Klinkt goed!
 
 ## Voorbereiding
 

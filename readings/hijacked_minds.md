@@ -1,6 +1,7 @@
 ---
 title: Een keus uit twee teksten
-subject: Over de relatie tussen mens en technologie
+description: Over de relatie tussen mens en technologie
+points: 5
 ---
 
 # Een keus uit twee teksten

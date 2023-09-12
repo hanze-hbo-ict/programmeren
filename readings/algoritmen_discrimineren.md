@@ -1,6 +1,7 @@
 ---
 title: When Algorithms Discriminate
-subject: Vooringenomenheid in algoritmen
+description: Vooringenomenheid in algoritmen
+points: 5
 ---
 
 # When Algorithms Discriminate

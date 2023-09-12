@@ -1,10 +1,11 @@
-# Vier op een rij: de klasse `Board`
+---
+title: Vier op een rij
+description: Een eerste kunstmatige intelligentie
+file: wk10ex2.py
+points: 25
+---
 
-| Naam         | Vier op een rij                                                |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Een eerste kunstmatige intelligentie                           |
-| Bestandsnaam | `wk10ex2.py`                                                   |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
+# Vier op een rij
 
 Voor deze opgave moet je met een nieuw bestand `wk10ex2.py` beginnen.
 

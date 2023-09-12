@@ -1,6 +1,7 @@
 ---
 title: A Bug and a Crash
-subject: Onverwachte fouten met tellen
+description: Onverwachte fouten met tellen
+points: 5
 ---
 
 # A Bug and a Crash

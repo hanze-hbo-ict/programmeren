@@ -1,10 +1,11 @@
-# Feest met Fibonacci
+---
+title: Feest met Fibonacci
+description: Een Fibonacci-reeks in `hmmm`
+file: wk7ex3.hmmm
+points: 20
+---
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Een Fibonacci-reeks in `hmmm`                                  |
-| Bestandsnaam | `wk7ex3.hmmm`                                                  |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
+# Feest met Fibonacci
 
 De [Fibonacci-reeks](https://en.wikipedia.org/wiki/Fibonacci_number) is een van de meest bekende reeksen getallen in de wiskunde. Het eerste Fibonacci-getal is 1, het tweede Fibonacci-getal is 1, en in het algemeen is het volgende Fibonacci-getal in de reeks de som van de vorige twee. De eerste paar getallen in de reeks zijn 1, 1, 2, 3, 5, 8, 13, 21.
 
@@ -21,7 +22,7 @@ copy r2 r1
 Merk op dat deze instructie gegevens van rechts naar links verplaatst; dit lijkt op het toekenningsstatement in Python, immers, `y = x` kent de waarde van `x` toe aan `y`.
 :::
 
-Bij deze opgave mag je ervanuit gaan dat de invoer `n` altijd minimaal 2 is. Hier is een voorbeeld van invoer en uitvoer:
+Bij deze opgave mag je er vanuit gaan dat de invoer `n` altijd minimaal 2 is. Hier is een voorbeeld van invoer en uitvoer:
 
 ```console
 Enter number: 10

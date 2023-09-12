@@ -1,11 +1,11 @@
-# Fibonacci recursief
+---
+title: Fibonacci recursief
+description: Een recursieve Fibonacci-reeks in `hmmm`
+file: wk7ex6.py
+points: 8
+---
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Een recursieve Fibonacci-reeks in `hmmm`                       |
-| Bestandsnaam | `wk7ex6.py`                                                    |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
-| Opmerking    | **Dit is een bonusopgave**                                     |
+# Fibonacci recursief
 
 In de opgave [Feest met Fibonacci](feest_met_fibonacci) heb je een Hmmm-programma geschreven die door middel van een lus de Fibonacci-reeks, 1, 1, 2, 3, 5, 9, 13, 21, ..., afdrukte.
 

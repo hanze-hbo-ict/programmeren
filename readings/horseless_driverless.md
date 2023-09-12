@@ -1,6 +1,7 @@
 ---
 title: From horseless to driverless
-subject: Een mogelijke toekomst met zelfrijdende auto's
+description: Een mogelijke toekomst met zelfrijdende auto's
+points: 5
 ---
 
 # From horseless to driverless

@@ -1,6 +1,7 @@
 ---
 title: The End of Theory
 subject: De mogelijkheden en beperkingen van data
+points: 5
 ---
 
 # The End of Theory

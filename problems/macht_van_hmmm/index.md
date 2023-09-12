@@ -1,10 +1,11 @@
-# De macht van Hmmm!
+---
+title: De macht van Hmmm!
+description: Machtsverheffen in `hmmm`
+file: wk7ex2.hmmm
+points: 15
+---
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Machtsverheffen in `hmmm`                                      |
-| Bestandsnaam | `wk7ex2.hmmm`                                                  |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
+# De macht van Hmmm!
 
 In deze opgave maak je een Hmmm-programma in het bestand `wk7ex2.hmmm` in de map die je gedownload hebt voor de opgave [Hmmm... Assembly!](hmmm_assembly).
 

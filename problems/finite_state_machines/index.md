@@ -1,14 +1,15 @@
+---
+title: Finite state machines
+description: Toestanden, overgangen en acties
+file: wk12ex1a.jff - wk12ex1j.jff
+points: 50
+---
+
 # Finite state machines
 
 ![](images/turing_machine.jpg)
 
 En Turingmachines!
-
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Toestanden, overgangen en acties                               |
-| Bestandsnaam | `wk12ex1a.jff` t/m `wk12ex1j.jff`                              |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 Voor deze opgave moet je beginnen met het downloaden van deze twee bestanden:
 
@@ -194,13 +195,9 @@ Deze machine vereist ten minste **acht** states, maar meer is ook goed!
     Vergeet niet je machine in Batch mode te testen met de tests in `wk12ex1e-tests.txt`!
 
 
-### Inleveren
+## Extra opgaven
 
-Je bent nu klaar! Vergeet niet al je `.jff`-bestanden samen in te leveren in Gradescope. Zorg dat, als je een zip-bestand gebruikt, de bestanden niet **in een map** in het zip-bestand zitten!
-
-## Bonusopgaven
-
-Er zijn drie uitdagende bonusopgaven om finite state machines te maken en twee om Turingmachines te maken, die ieder 6 bonuspunten waard zijn.
+Er zijn drie uitdagende extra opgaven om finite state machines te maken en twee om Turingmachines te maken.
 
 ### Eerste en laatste twee bits gelijk
 

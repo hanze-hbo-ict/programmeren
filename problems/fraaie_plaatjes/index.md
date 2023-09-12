@@ -1,13 +1,13 @@
+---
+title: Fraaie plaatjes
+description: Afbeeldingen bewerken
+file: wk5ex3.py
+points: 10
+---
+
 # Fraaie plaatjes
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Afbeeldingen bewerken                                          |
-| Bestandsnaam | `wk5ex3.py`                                                    |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
-| Opmerking    | **Dit is een bonusopgave**                                     |
-
-Deze optionele bonusopgave introduceert enkele ideeën voor beeldverwerking met behulp van Python list comprehensions en functies en ga je programma's schrijven die afbeeldingen algoritmisch bewerken.
+Deze opgave introduceert enkele ideeën voor beeldverwerking met behulp van Python list comprehensions en functies en ga je programma's schrijven die afbeeldingen algoritmisch bewerken.
 
 ## Voorbereiding
 
@@ -194,6 +194,6 @@ Schrijf de functie `scale`, die de afbeelding verkleint naar de helft van de oor
 
 ## Meer transformaties
 
-Mocht je jouw eigen effecten willen creëren, dan willen we ze graag zien! Voeg zeker een commentaar of toe om uit te leggen wat je hebt gedaan. Laat je fantasie de vrije loop!
+Mocht je jouw eigen effecten willen creëren, dan willen we ze graag zien! Voeg zeker een commentaar aan jouw code toe om uit te leggen wat je hebt gedaan. Laat je fantasie de vrije loop!
 
 Voel je ook vrij om een paar afbeeldingen naar eigen keuze toe te voegen die je algoritmisch hebt aangepast...

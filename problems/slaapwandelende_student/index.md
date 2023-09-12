@@ -1,10 +1,11 @@
-# De slaapwandelende student
+---
+title: De slaapwandelende student
+description: Toevallige bewegingen
+file: wk3ex2.py
+points: 35
+---
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Toevallige bewegingen                                          |
-| Bestandsnaam | `wk3ex2.py`                                                    |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
+# De slaapwandelende student
 
 In deze opgave ga je functies schrijven om het gedrag van een slaapwandelende student te bestuderen, dit noemen we ook wel een "toevalsbeweging" of "random walk". De student loopt door een lange gang, maar omdat de student slaapt is elke stap in een willekeurige richting (links of rechts). Blijft de student eeuwig vastzitten in de gang? Of bereikt de student uiteindelijk de practicumruimte (of een bed)?
 

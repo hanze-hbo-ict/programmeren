@@ -1,11 +1,11 @@
-# Vermenigvuldigingswaanzin
+---
+title: Vermenigvuldigingswaanzin
+description: Vermenigvuldigen met schakelingen
+file: wk6ex1-4.circ
+points: 40
+---
 
-| Naam         | Beschrijving                                                                                          |
-|--------------|-------------------------------------------------------------------------------------------------------|
-| Onderwerp    | Vermenigvuldigen met schakelingen                                                                     |
-| Bestandsnaam | `wk6ex1-4.circ`                                                                                       |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope                                        |
-| Opmerking    | Dit is hetzelfde bestand dat je hebt gebruikt bij het [practicum](optellingen_schakelen.md) |
+# Vermenigvuldigingswaanzin
 
 In deze opgave ga je een *vermenigvuldigingsschakeling* (dit is een goed Scrabble-woord!) in Logisim Evolution bouwen. Om je antwoorden te controleren heb je een rekenmachine nodig die binair kan vermenigvuldigen. De standaard Windows en macOS rekenmachines kunnen dit, verder zijn er verschillende online rekenmachines waar je dit ook mee kan doen. Je zou zelfs een functie in Python kunnen schrijven die gebruik maakt van de omzetting in [verschillende grondtallen](wisselende_stelsels.md) uit een eerdere opgave.
 

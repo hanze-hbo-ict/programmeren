@@ -1,10 +1,11 @@
-# Python Turtles!
+---
+title: Python Turtles!
+description: Tekenen met turtle
+file: wk3ex1.py
+points: 30
+---
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Tekenen met turtle                                             |
-| Bestandsnaam | `wk3ex1.py`                                                    |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
+# Python Turtles!
 
 ## Het `tri` voorbeeld
 

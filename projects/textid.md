@@ -632,8 +632,6 @@ Het begin, `begin.py`, moet aan de volgende eisen voldoen:
 * Deze klasse bevat een werkende methode `read_text_from_file`
 * Deze klasse bevat de werkende teksteigenschapmethode `make_sentence_lengths`
 
-Lever dit bestand, samen met je uitleg hierover in `begin.txt`, in Gradescope in als onderdeel van het huiswerk van week 11.
-
 (textid-milestone)=
 ### Milestone
 
@@ -645,11 +643,9 @@ De milestone, `milestone.py`, moet aan de volgende eisen voldoen:
 
 Je hoeft je zelfbedachte teksteigenschap nog niet te bouwen, en je hoeft twee modellen ook nog niet te kunnen vergelijken, maar als het wel zo is, des te beter!
 
-Lever dit bestand, samen met je uitleg hierover in `milestone.txt`, in Gradescope in als onderdeel van het huiswerk van week 12.
-
 ### Oplevering
 
 Voor de oplevering, het laatste inlevermoment voor dit project, moet je het volledige tekstidentificatiesysteem afmaken. We zullen je programma testen met de hierboven beschreven functie `compare_text_with_two_models`.
 
-De oplevering, `oplevering.py`, moet een complete uitwerking van het project bevatten. Lever dit bestand, samen met je uitleg hierover in `oplevering.txt` en de tekstbestanden die je gebruikt hebt voor je analyse, in Gradescope in. In de uitleg moet je in ieder geval je zelfbedachte teksteigenschap toelichten, en de gestelde tekstanalysevragen beantwoorden.
+De oplevering, `oplevering.py`, moet een complete uitwerking van het project bevatten. In de uitleg moet je in ieder geval je zelfbedachte teksteigenschap toelichten, en de gestelde tekstanalysevragen beantwoorden.
 

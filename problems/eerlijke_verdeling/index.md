@@ -1,11 +1,11 @@
-# Een eerlijke verdeling
+---
+title: Een eerlijke verdeling
+description: Delen met schakelingen
+file: wk6ex1-4.circ
+points: 25
+---
 
-| Naam         | Beschrijving                                                                                          |
-|--------------|-------------------------------------------------------------------------------------------------------|
-| Onderwerp    | Delen met schakelingen                                                                                |
-| Bestandsnaam | `wk6ex1-4.circ`                                                                                       |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope                                        |
-| Opmerking    | Dit is hetzelfde bestand dat je hebt gebruikt bij het [practicum](/problems/optellingen_schakelen.md) |
+# Een eerlijke verdeling
 
 Net als bij de vorige opgaves moet deze opgave uitgevoerd worden in het bestand `wk6ex1-4.circ`, specifiek in de deelschakeling "Een_3bij2_deler".
 

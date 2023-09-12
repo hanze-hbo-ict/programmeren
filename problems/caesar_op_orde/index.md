@@ -1,10 +1,11 @@
-# Caesar op orde!
+---
+title: Caesar op orde!
+description: Taal ontcijferen
+file: wk4ex2.py
+points: 60
+---
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Taal ontcijferen                                               |
-| Bestandsnaam | `wk4ex2.py`                                                    |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
+# Caesar op orde!
 
 In deze opgave ga je een aantal functies schrijven met behulp van *functioneel programmeren*, dat wil zeggen, conditionele statements, recursie en/of list comprehensions.
 
@@ -444,14 +445,14 @@ Gebruik de volgende strategie:
 
 ## Bonusopgave
 
-Kan je nog geen genoeg krijgen van algoritmes? Hier is een optionele bonusopgave om het ontwerp van algoritmes te oefenen! Het bouwt voort op `exact_change`, maar is moeilijker omdat:
+Kan je nog geen genoeg krijgen van algoritmes? Hier is een optionele opgave om het ontwerp van algoritmes te oefenen! Het bouwt voort op `exact_change`, maar is moeilijker omdat:
 
 -   Het de gebruikte munten moet teruggeven
 -   Het ook `False` kan teruggeven, en je een aantal gevallen moet afhandelen *na* de recursie...
 
 ### De functie `make_change(target_amount, L)`
 
-Schrijf voor maximaal 7 bonuspunten de functie `make_change(target_amount, L)`, de argumenten zijn gelijk aan de functie `exact_change` die je eerder hebt geschreven. De functie moet bepalen welke waarden uit `L` gebruikt kunnen worden om `target_amount` te betalen.
+Schrijf de functie `make_change(target_amount, L)`, de argumenten zijn gelijk aan de functie `exact_change` die je eerder hebt geschreven. De functie moet bepalen welke waarden uit `L` gebruikt kunnen worden om `target_amount` te betalen.
 
 In plaats van `True` of `False` terug te geven zoals bij `exact_change` moet de functie `make_change` een *lijst* teruggeven van munten uit `L` die samen optellen tot `target_amount`. Als geen lijst kan worden samengesteld zal de functie `False` teruggeven. Als meer dan één lijst met waarden uit `L` mogelijk is mag de functie elk geldig antwoord teruggeven.
 

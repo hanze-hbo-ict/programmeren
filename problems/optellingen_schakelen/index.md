@@ -1,12 +1,13 @@
+---
+title: Optellingen schakelen
+description: Schakelingen ontwerpen
+file: wk6ex1-4.circ
+points: 30
+---
+
 # Optellingen schakelen
 
 <!-- elektrisch schema, een circuitdiagram of schakelschema -->
-
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Schakelingen ontwerpen                                         |
-| Bestandsnaam | `wk6ex1-4.circ`                                                |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 Deze week ga je verschillende logische schakelingen ontwerpen met behulp van *Logisim Evolution*, een programma om schakelingen te ontwerpen.
 

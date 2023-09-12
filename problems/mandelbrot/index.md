@@ -1,10 +1,11 @@
-# Mandelbrot
+---
+title: Mandelbrot
+description: De mandelbrotset en afbeeldingen
+file: wk8ex1.py
+points: 35
+---
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | De mandelbrotset en afbeeldingen                               |
-| Bestandsnaam | `wk8ex1.py`                                                    |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
+# Mandelbrot
 
 ![Mandelbrot](images/640px-Mandel_zoom_00_mandelbrot_set.jpg)
 
@@ -625,10 +626,6 @@ Merk op dat de *aspectratio* van de afbeelding 3:2 (horizontaal:vertikaal) is; a
 
 Het werkt wel met andere verhoudingen, maar om natuurlijke schaling te behouden zou je dan ook de hoogte en breedte van de afbeelding op de juiste manier moeten aanpassen. Of je kan de hoogte en breedte *berekenen*, maar dat is niet verplicht voor dit practicum.
 
-### Inleveren
-
-Je hebt nu dit practicum, `wk8ex1.py`, voltooid; vergeet niet dit in te leveren in Gradescope!
-
 ## Nog niet genoeg Mandelbrot?
 
 Als je verschillende *ontsnappingssnelheden* wilt visualiseren, de resolutie wilt aanpassen of misschien een andere afbeelding wilt *vermandelbrotten*, kan je in de volgende paragrafen zie hoe je je mandelbrotverzamelingprogramma kan uitbreiden. Ze zijn **volledig** optioneel, maar wel leuk!
@@ -682,6 +679,4 @@ De code hierboven produceert de volgende afbeelding:
 
 ![Alien](images/exampleImageProc.png)
 
-Probeer deze afbeelding, of een andere `png` die je wilt gebruiken, te *vermandelbrotten*...
-
-Als je dit gedaan hebt, en dit kan verbazingwekkend verslavend zijn, ben je klaar met het practicum!
+Probeer deze afbeelding, of een andere `png` die je wilt gebruiken, te *vermandelbrotten*... en dit kan verbazingwekkend verslavend zijn!

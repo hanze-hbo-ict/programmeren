@@ -1,11 +1,11 @@
-# Hmmm... Assembly!
+---
+title: Hmmm... Assembly!
+description: Kennismaken met `hmmm` en assemblytaal
+file: wk7ex1a.hmmm, wk7ex1b.hmmm, wk7ex1c.py
+points: 30
+---
 
-| Naam         | Beschrijving                                                     |
-|--------------|------------------------------------------------------------------|
-| Onderwerp    | Kennismaken met `hmmm` en assemblytaal                           |
-| Bestandsnaam | `wk7ex1a.hmmm`, `wk7ex1b.hmmm`, `wk7ex1c.py`                     |
-| Inleveren    | Lever jouw bestanden met de juiste bestandsnaam in op GradeScope |
-| Opmerking    | Let op, deze opgave bestaat uit drie bestanden                   |
+# Hmmm... Assembly!
 
 ## Inleiding
 
@@ -520,4 +520,4 @@ Nadat je je programma hebt gecontroleerd om te zien dat het inderdaad 100 versch
 
 ## Je CV bijwerken!
 
-Gefeliciteerd! Je kan nu Hmmm offcieel op je CV zetten, naast Logisim (en Picobot!)
+Gefeliciteerd! Je kan nu Hmmm officieel op je CV zetten, naast Logisim (en Picobot!)

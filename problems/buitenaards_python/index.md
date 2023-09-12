@@ -1,10 +1,11 @@
-# Buitenaards Python
+---
+title: Buitenaards Python
+description: Objecten en 3D modellen
+file: wk11ex1.py
+points: 30
+---
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Objecten en 3D modellen                                        |
-| Bestandsnaam | `wk11ex1.py`                                                   |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
+# Buitenaards Python
 
 In deze opgave ga je een variant van Python verkennen, die VPython of Glowscript VPython heet, die:
 
@@ -557,6 +558,6 @@ Als je andere handige functies gemaakt hebt, laat het ons weten, dan voegen we z
 
 ## Inleveren
 
-Gefeliciteerd! Je hebt de 3D-interactie (of spel) van dit practicum gemaakt. Kopieer nu alle code van je spel of interactie naar een tekstbestand en sla het op je computer op als `wk11ex1.py`. Je kan zelf voor de zekerheid ook kopieën bewaren met andere namen (het kan leuk zijn om kopieën van verschillende versies te bewaren...). Maak daarna **twee respresentatieve screenshots** van je interactie of spel, en lever alle drie de bestanden samen in in Gradescope.
+Gefeliciteerd! Je hebt de 3D-interactie (of spel) van dit practicum gemaakt. Kopieer nu alle code van je spel of interactie naar een tekstbestand en sla het op je computer op als `wk11ex1.py`. Je kan zelf voor de zekerheid ook kopieën bewaren met andere namen (het kan leuk zijn om kopieën van verschillende versies te bewaren...).
 
 Cool! Als je VPython en GlowScript leuk vond is het goed om te weten dat één van de mogelijke projecten [het bouwen van een uitgebreidere interactie](/projects/vpython.md) (of spel) is ...

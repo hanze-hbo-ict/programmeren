@@ -1,10 +1,11 @@
-# Lussen in PythonBat!
+---
+title: Lussen in PythonBat!
+description: Lussen oefenen met CodingBat
+file: wk8ex2.py
+points: 5
+---
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Lussen oefenen met CodingBat                                   |
-| Bestandsnaam | `wk8ex2.py`                                                    |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
+# Lussen in PythonBat!
 
 In deze opgave ga je oefenen met de lussen van Python: `for` en `while`.
 
@@ -61,9 +62,8 @@ Voor deze opgave moet je vijf PythonBat-opgaves naar keuze van de twee pagina's 
 * Je hoeft geen docstrings of asserts toe te voegen aan deze functies
 * Je functies moeten wel een `for`- of `while`-lus gebruiken!
 
-Lever dan je bestand `wk8ex2.py` in in Gradescope en je bent klaar!
 
-## Bonusopgave: Los de andere opgaves ook op!
+## Bonusopgave: Los de andere opgaven ook op!
 
 Je kan voor 6 bonuspunten de andere zes problemen ook oplossen.
 
@@ -71,4 +71,4 @@ We kijken ze alle 11 na, maar de score is gebaseerd op 5 punten.
 
 Het resultaat hiervan is dat alle functies die je buiten deze vijf oplost tellen als bonuspunten. Ze zijn bovendien een goede oefening om met lussen in Python te leren werken...
 
-Succes met deze opgaves! De twee volgende huiswerkopgaves laten uitgebreidere *toepassingen* van Pythonlussen zien.
+Succes met deze opgaves! De twee volgende huiswerkopgaven laten uitgebreidere *toepassingen* van Pythonlussen zien.

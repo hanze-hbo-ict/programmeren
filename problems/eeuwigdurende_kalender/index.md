@@ -1,10 +1,11 @@
-# Eeuwigdurende kalender
+---
+title: Eeuwigdurende kalender
+description: Een eeuwigdurende kalender
+file: wk10ex1.py
+points: 35
+---
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Een eeuwigdurende kalender                                     |
-| Bestandsnaam | `wk10ex1.py`                                                   |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
+# Eeuwigdurende kalender
 
 Een eeuwigdurende kalender kan je de weekdag vertellen waarop een willekeurige datum valt. Als je bijvoorbeeld geboren bent op 13 juni 1997 kan je aflezen dat je op een vrijdag geboren bent (vrijdag de dertiende, zelfs!)
 
@@ -568,8 +569,6 @@ Out[6]: 'Friday'
 ## Inleveren
 
 Gefeliciteerd; je hebt een klasse `Date` gemaakt waarvan de objecten de verschillen en dagen van de week kunnen berekenen voor alle kalenderdagen!
-
-Bovendien heb je dit practicum voltooid. Vergeet niet je code in `wk10ex1.py` in Gradescope in te leveren!
 
 Als je wilt, kun je nu gaan berekenen op welke weekdag je verjaardag, of nieuwjaarsdag, het meeste voorkomt in de komende eeuw...
 

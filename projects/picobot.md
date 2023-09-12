@@ -481,8 +481,6 @@ Het begin, `begin.py`, moet aan de volgende eisen voldoen:
 * Het bevat een klasse `Program` met een werkende constructor en `__repr__`
 * Deze klasse bevat een werkende methode `randomize`
 
-Lever dit bestand, samen met je uitleg hierover in `begin.txt`, in Gradescope in als onderdeel van het huiswerk van week 11.
-
 (picobot-milestone)=
 ### Milestone
 
@@ -495,15 +493,13 @@ De milestone, `milestone.py`, moet aan de volgende eisen voldoen:
 
 Dit betekent dat je een Picobot-simulator gebouwd hebt; in ieder geval in ASCII. Het genetisch algoritme hoeft nog niet af te zijn voor de milestone, maar als het wel zo is, des te beter!
 
-Lever dit bestand, samen met je uitleg hierover in `milestone.txt`, in Gradescope in als onderdeel van het huiswerk van week 12.
-
 ### Oplevering
 
 Voor de oplevering, het laatste inlevermoment voor dit project, moet je het genetisch algoritme dat Picobot-programma's evolueert afmaken. We zullen je programma testen met de hierboven beschreven functie `genetic_algorithm`.
 
 Test je programma zorgvuldig. Het kan zijn dat je tot de conclusie komt dat je crossover-mechanisme (voor het paren van programma's) niet erg effectief is. Dan moet je experimenteren met andere manieren om crossover te regelen.
 
-De oplevering, `oplevering.py`, moet een complete uitwerking van het project bevatten. Lever dit bestand, samen met je uitleg hierover in `oplevering.txt`, in Gradescope in. In de uitleg moet je in ieder geval het volgende beschrijven:
+De oplevering, `oplevering.py`, moet een complete uitwerking van het project bevatten. In de uitleg moet je in ieder geval het volgende beschrijven:
 
 * Hoe je je code hebt getest en parameters hebt gekozen voor je genetisch algoritme, bijvoorbeeld,
   * Welk percentage van elke populatie je hebt gekozen om mee te "paren"

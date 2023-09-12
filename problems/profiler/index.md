@@ -1,17 +1,13 @@
 ---
-bron: http://nifty.stanford.edu/2020/dna/
+title: De vingerafdruk van DNA
+description: DNA en Short Tandem Repeats (STR)
+source: http://nifty.stanford.edu/2020/dna/
 data: https://cs50.harvard.edu/x/2022/psets/6/dna/
 ---
 
 # De vingerafdruk van DNA
 
 ![DNA](images/dna_forensics.png)
-
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | DNA en Short Tandem Repeats (STR)                        |
-| Bestandsnaam | `dna.py`                                                       |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 ## Inleiding
 

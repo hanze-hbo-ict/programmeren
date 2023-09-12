@@ -1,6 +1,7 @@
 ---
 title: Is the Universe a Simulation?
-subject: Is het universum een simulatie?
+description: Is het universum een simulatie?
+points: 5
 ---
 
 # Is the Universe a Simulation?

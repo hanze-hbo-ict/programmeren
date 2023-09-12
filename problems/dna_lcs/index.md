@@ -1,19 +1,11 @@
 ---
-documentclass: article
-papersize: a4
-lang: nl
-colorlinks: true
+title: 42EnIk
+description: DNA en Longest Common Subsequence (LCS)
+file: dna.py
+points: 25
 ---
 
-<!-- 25 punten -->
-
 # 42EnIk
-
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | DNA en Longest Common Subsequence (LCS)                        |
-| Bestandsnaam | `dna.py`                                                       |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
 
 ## Inleiding
 

@@ -1,10 +1,11 @@
-# Terminal, teksteditors en Python
+---
+title: Terminal, teksteditors en Python
+description: Een eerste kennismaking met de terminal, teksteditors en Python
+file: wk1ex1.py
+points: 15
+---
 
-| Naam         | Beschrijving                                                    |
-|--------------|-----------------------------------------------------------------|
-| Onderwerp    | Een eerste kennismaking met de terminal, teksteditors en Python |
-| Bestandsnaam | `wk1ex1.py`                                                     |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope  |
+# Terminal, teksteditors en Python
 
 Het **doel** van deze opgave is om:
 
@@ -12,10 +13,6 @@ Het **doel** van deze opgave is om:
 * Om je kennis te laten maken met een command-line interface, het bewerken van tekstbestanden, en Python
 * Om een "Hallo"-programma te lezen, bewerken en uitvoeren in Python
 * Je uit te dagen om een aantal "vier-vieren"-problemen op te lossen in Python
-
-Als je eerder klaar bent, kan je met iets anders aan de slag, maar je mag ook verder gaan met de rest van opgaven:
-
-* [Rochambeau](rochambeau.md)
 
 ## De software installeren
 
@@ -442,17 +439,6 @@ Sla dit bestand op als `wk1ex1.py` ***op je bureaublad***
 * *Bonuskarma*: als je wilt, mag je verder gaan dan 20.
     * We willen dit niet te veel aanmoedigen (er zijn andere dingen om te doen!)
 
-## Je bestand `wk1ex1.py` inleveren
-
-* Als je je resultaten hebt kan je je bestand `wk1ex1.py` inleveren.
-* Bij dit vak lever je je uitwerkingen in via [GradeScope](https://www.gradescope.com).
-* De bestandsnaam maakt uit! Zorg ervoor dat je bestand `wk1ex1.py` heet.
-    * Dit is met het cijfer `1`, niet de kleine letter L
-* Geef het bij het inleveren aan als je met iemand hebt samengewerkt
-    * Deze opgave moet je alleen maken, zodat je in ieder geval zelf een werkende Python-installatie hebt.
-* **Belangrijk!** Als je een verbeterde versie wilt inleveren, kan dat tot aan de inleverdeadline.
-    * Alleen de nieuwste versie wordt beoordeeld.
-
 ## Een *interactief* programma uitvoeren
 
 Het practicum is nog niet af! Om je voor te bereiden op de rest van het huiswerk, kan je proberen dit langere, *interactive* Python-programma uit te voeren.
@@ -513,12 +499,3 @@ def rps():
     * De volgende huiswerkopgave is om dit programma aan te passen zodat het het spel steen, papier, schaar (of iets gelijkends) speeld.
     * ... en de opgave daarna breidt dat idee uit tot een compleet tekstavontuur
 * **Vragen? Problemen?** Vraag het ons! Of vraag het aan je buurman of buurvrouw, als je wilt.
-* Je hoeft dit bestand `wk1ex2a.py` *niet* in te leveren.
-    * Maar je bent nu *wel* klaar om dit interactieve programma uit te breiden naar het volledige spel steen, papier, schaar.
-    * Als je hiermee verder wilt gaan, ga dan naar de opgave over [Rochambeau](rochambeau.md)
-
-## De opdracht is klaar!
-
-* Als alles goed werkt ben je klaar met deze opdracht!
-* Als je eerder klaar bent, kan je met andere dingen aan de slag.
-* Je mag ook verder gaan met de rest van de opdrachten.

@@ -1,10 +1,11 @@
-# Sequenties en data
+---
+title: Sequenties en data
+description: List slicing en indexering
+file: wk2ex1.py
+points: 20
+---
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | List slicing en indexering                                     |
-| Bestandsnaam | `wk2ex1.py`                                                    |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
+# Sequenties en data
 
 Je gaat in deze opdracht het volgende oefenen:
 
@@ -267,7 +268,3 @@ De opgaven zijn als volgt (de eerste kijg je van ons):
 9.  Gebruik `h`, `s` of `g` om de string `legonoego` te maken en bewaar deze string in de variabele `answer9`. (Ons record: 7 bewerkingen)
 
 10. Gebruik `h`, `s` of `g` om de string `leggings` en bewaar deze string in de variabele `answer10`. (Ons record: 7 bewerkingen)
-
-Als je hier bent aangekomen, heb je de eerste helft van dit practicum voltooid! Je kan je bestand `wk2ex1.py` in GradeScope inleveren.
-
-Uitstekend! Nu door naar het volgende deel van het practicum

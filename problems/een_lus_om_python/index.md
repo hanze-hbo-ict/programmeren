@@ -1,12 +1,13 @@
+---
+title: Een lusje om Python
+description: Lussen in Python
+file: wk7ex5.py
+points: 20
+---
+
 # Een lusje om Python
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Lussen in Python                                               |
-| Bestandsnaam | `wk7ex5.py`                                                    |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
-
-Bij de laatste opgave van deze week vragen we je drie Python-programma's die **lussen** gebruiken te lezen en te wijzigen.
+In deze opgave vragen we je drie Python-programma's die **lussen** gebruiken te lezen en te wijzigen.
 
 Lussen zijn een krachtige controlestructuur voor *iteratie*, het herhaaldelijke uitvoeren van dezelfde actie.
 
@@ -215,6 +216,4 @@ In [3]: min(L)
 In [4]: 42 in L
 ```
 
-Je hoeft deze resultaten niet in te leveren, maar kijk eens of de resultaten zijn zoals je verwacht zou hebben.
-
-Soms is het lastig om te weten of de fout zit in je programma of in je verwachtingen!
+Zijn de resultaten zoals je verwacht? Soms is het lastig om te weten of de fout zit in je programma of in je verwachtingen!

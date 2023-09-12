@@ -1,6 +1,7 @@
 ---
 title: Guugu Yimithirr
 subject: Denken over taal, ruimte, oriëntatie en expressie
+points: 5
 csa-chapter: 1
 ---
 

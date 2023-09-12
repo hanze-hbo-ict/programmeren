@@ -1,18 +1,10 @@
+---
+title: Turtles all the way down!
+description: Recursieve kunst met turtle
+file: wk3ex4.py
+points: 10
+---
 # Turtles all the way down!
-
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Recursieve kunst met turtle                                    |
-| Bestandsnaam | `wk3ex4.py`                                                    |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
-| Opmerking    | **Dit is een bonusopgave**                                     |
-
-Je kan maximaal 10 bonuspunten verdienen met het ontwerpen en implementeren van je eigen turtle-gebaseerde kunstwerken in Python.
-
-Hiervoor lever je in:
-
-* Het bestand `wk3ex4.py` met je broncode
-* Screenshots (1 of meer afbeeldingen) van resultaten die je het mooist vond (of je het meest hebben verrast...)
 
 ## Recursief ontwerp
 
@@ -34,13 +26,3 @@ Elke compositie is toegestaan. Voor de volledige punten moet er wel *één* recu
 Je kan de `turtle` [documentatie](https://docs.python.org/3/library/turtle.html) gebruiken om een idee te krijgen van de mogelijkheden van `turtle`. De instellingen voor `fill` en `color` zijn bijzonder geschikt om te gebruiken...
 
 Veel plezier met `turtle`!
-
-## Screenshots en inleveren
-
-**Lees dit zorgvuldig!**
-
-Om je bonusopgave in te leveren, moet je
-
-* Screenshots maken van je ontwerp of plaatje (minimaal 1, en maximaal 5)
-    * Zorg dat ze niet te groot zijn; sla ze op als `jpg` of verklein ze zodat ze kleiner zijn dan 500kb (een halve megabyte).
-* Lever je screenshots en je bestand `wk3ex4.py` in GradeScope in.

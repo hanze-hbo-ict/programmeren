@@ -1,6 +1,7 @@
 ---
 title: Computer Wins on 'Jeopardy'
-subject: Slimme computers?
+description: Slimme computers?
+points: 5
 ---
 
 # Computer Wins on 'Jeopardy'

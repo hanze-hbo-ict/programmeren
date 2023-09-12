@@ -1,11 +1,11 @@
-# AI voor Vier op een rij
+---
+title: AI voor Vier op een rij
+description: Meer kunstmatige intelligentie voor vier op een rij
+file: wk11ex2.py
+points: 35
+---
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Meer kunstmatige intelligentie voor vier op een rij            |
-| Bestandsnaam | `wk11ex2.py`                                                   |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
-| Opmerking    |                                                                |
+# AI voor Vier op een rij
 
 ## Overzicht
 

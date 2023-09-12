@@ -1,10 +1,11 @@
-# Boter, kaas en eieren + N op een rij...
+---
+title: Boter, kaas en eieren en N op een rij
+description: Boter, kaas en eieren en N (vier?) een rij
+file: wk9ex2.py
+points: 35
+---
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Boter, kaas en eieren en N Op een rij                          |
-| Bestandsnaam | `wk9ex2.py`                                                    |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
+# Boter, kaas en eieren en N op een rij
 
 In deze opgave moet je acht kleine functies, die allemaal erg op elkaar lijken, schrijven die tweedimensionale gegevens in Python verwerken, dat wil zeggen, lijsten-van-lijsten verwerken.
 

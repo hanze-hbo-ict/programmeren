@@ -1,11 +1,11 @@
-# ASCII Art
+---
+title: ASCII Art
+description: Creatief met ASCII
+points: 13
+file: wk8ex5.py
+---
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Creatief met ASCII                                             |
-| Bestandsnaam | `wk8ex5.py`                                                    |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
-| Opmerking    | **Dit is een bonusopgave**                                     |
+# ASCII Art
 
 In deze opgave bekijk je een klassieke kunstvorm: ASCII art!
 
