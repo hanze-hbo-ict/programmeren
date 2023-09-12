@@ -4,10 +4,8 @@
 
 ## Onderwerpen
 
-- [Data](/topics/3a_data)
-- [Strings en lists](/topics/3b_strings_en_lists)
-- [Functies](/topics/4a_functies)
-- [Recursie](/topics/4b_recursie)
+```{tableofcontents}
+```
 
 ## Boek
 

@@ -4,9 +4,8 @@
 
 ## Onderwerpen
 
-- [Logische schakelingen](/topics/11a_logische_schakelingen)
-- [Rekenen met schakelingen](/topics/11b_rekenen_met_schakelingen)
-- [Ontwerpen met schakelinen](/topics/12a_ontwerpen_met_schakelingen)
+```{tableofcontents}
+```
 
 ## Boek
 

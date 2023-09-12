@@ -4,8 +4,8 @@
 
 ## Onderwerpen
 
-- [Klassen en objecten](/topics/19_objecten)
-- [Dictionaries](/topics/20_dictionaries)
+```{tableofcontents}
+```
 
 ## Boek
 
