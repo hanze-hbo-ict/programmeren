@@ -1,6 +1,7 @@
 ---
 title: The Life of Pi, and Other Infinities
-subject: Over de oneindigheid der dingen
+description: Over de oneindigheid der dingen
+points: 5
 ---
 
 # The Life of Pi, and Other Infinities
@@ -25,4 +26,4 @@ Geef een antwoord op zijn minst één van deze vragen, gebaseerd op de ideeën u
 
 ## Verder lezen
 
-[De constante van Chaitin](http://en.wikipedia.org/wiki/Chaitin%27s_constant): alle wiskundige kennis in een enkel reeël getal?
+[De constante van Chaitin](http://en.wikipedia.org/wiki/Chaitin%27s_constant): alle wiskundige kennis in een enkel reëel getal?
