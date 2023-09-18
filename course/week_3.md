@@ -1,12 +1,11 @@
-# Recursie
+# Onderwerpen
 
 ![Schotel](/images/saucer.png)
 
-## Onderwerpen
+## Functies
 
-- [Simulatie](/topics/5a_simulatie)
-- [Recursie met Turtle](/topics/5b_turtle_recursie)
-- [List comprehension](/topics/6a_list_comprehension)
+```{tableofcontents}
+```
 
 ## Boek
 

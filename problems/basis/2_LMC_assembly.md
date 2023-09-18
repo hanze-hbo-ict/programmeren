@@ -1,10 +1,11 @@
 ---
-file: wk2ba4.txt
+title: LMC Introductie
 ---
 
-# Little man computer
+# Little man computer introductie
 
-Deze opgave bestaat uit 5 opdrachten die gemaakt kunnen worden met behulp van het [LMC model](https://peterhigginson.co.uk/lmc/)
+Deze opgave bestaat uit 5 opdrachten die gemaakt kunnen worden met behulp van het LMC model :https://peterhigginson.co.uk/lmc/
+
 
 ## Opdracht 1
 
