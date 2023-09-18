@@ -10,26 +10,26 @@ Deze opgave bestaat uit 5 opdrachten die gemaakt kunnen worden met behulp van he
 
 a. Gegeven onderstaande tabel. In de eerste kolom staan de instructies. In de tweede kolom wordt de accumulator bijgehouden. In de derde kolom wordt veranderingen in het geheugen genoteerd. De laatste kolom wordt input en output aangegeven. Maak de tabel af
 
-|instructie| Accumulator|Geheugen|Input/Output|
-|---|---|---|---|
-|inp   |1           |           |Input is 1     |
-|sto 99|1           |#99 = 1    |               |
-|inp   |1           |           |input is 1     |
-|sto 98|1           |#98 = 1    |               |
-|add 99|1 + 1 = 2   |           |               |
-|out   |2           |           |Output is 2    |
-|sto 97|2           |#97 = 2    |               |
-|add 98|2 + 1 = 3   |           |               |
-|out   ||||
-|sto 96||||
-|add 97||||
-|out   ||||
-|sto 95||||
-|add 96||||
-|out   ||||
-|sto 94||||
-|add 95||||
-|out   ||||
+| instructie | Accumulator | Geheugen | Input/Output |
+| ---------- | ----------- | -------- | ------------ |
+| inp        | 1           |          | Input is 1   |
+| sto 99     | 1           | #99 = 1  |              |
+| inp        | 1           |          | input is 1   |
+| sto 98     | 1           | #98 = 1  |              |
+| add 99     | 1 + 1 = 2   |          |              |
+| out        | 2           |          | Output is 2  |
+| sto 97     | 2           | #97 = 2  |              |
+| add 98     | 2 + 1 = 3   |          |              |
+| out        |             |          |              |
+| sto 96     |             |          |              |
+| add 97     |             |          |              |
+| out        |             |          |              |
+| sto 95     |             |          |              |
+| add 96     |             |          |              |
+| out        |             |          |              |
+| sto 94     |             |          |              |
+| add 95     |             |          |              |
+| out        |             |          |              |
 
 b. Wat is de volgende getal in deze reeks?
 
@@ -43,48 +43,48 @@ Als we de reeks nog langer willen maken gaat het veel instructies kosten terwijl
 
 a.	Vul de tabel verder in.
 
-||instructie| Accumulator|Geheugen|Input/Output|
-|--- |---|---|---|---|
-|00|inp   |1           |           |Input is 3     |
-|01|sto 99|1           |#99 = 3    |               |
-|02|inp   |1           |           |input is 5     |
-|03|sto 98|1           |#98 = 5    |               |
-|04|add 99||||
-|05|out   ||||
-|06|sto 97||||
-|07|lda 98||||
-|08|sto 99||||
-|09|lda 97||||
-|10|sto 98||||
-|11|add 99||||
-|12|out   ||||
+|     | instructie | Accumulator | Geheugen | Input/Output |
+| --- | ---------- | ----------- | -------- | ------------ |
+| 00  | inp        | 1           |          | Input is 3   |
+| 01  | sto 99     | 1           | #99 = 3  |              |
+| 02  | inp        | 1           |          | input is 5   |
+| 03  | sto 98     | 1           | #98 = 5  |              |
+| 04  | add 99     |             |          |              |
+| 05  | out        |             |          |              |
+| 06  | sto 97     |             |          |              |
+| 07  | lda 98     |             |          |              |
+| 08  | sto 99     |             |          |              |
+| 09  | lda 97     |             |          |              |
+| 10  | sto 98     |             |          |              |
+| 11  | add 99     |             |          |              |
+| 12  | out        |             |          |              |
 
 De volgende stap is om een loop te gaan gebruiken zodat code herhaalt gaat worden. Om dat voor elkaar te krijgen kunnen we gebruik maken van een jump. Dat verteld de computer welke instructie de volgende stap is.
 
 b.	Vul de tabel verder in. Let op de jump opdracht en hoe de instructie nummer daarop reageert.
 
-||instructie| Accumulator|Geheugen|Input/Output|
-|--- |---|---|---|---|
-|00|inp   |1           |           |Input is 3     |
-|01|sto 99|1           |#99 = 3    |               |
-|02|inp   |1           |           |input is 5     |
-|03|sto 98|1           |#98 = 5    |               |
-|04|add 99||||
-|05|out   ||||
-|06|sto 97||||
-|07|lda 98||||
-|08|sto 99||||
-|09|lda 97||||
-|10|sto 98||||
-|11|bra **04**||||
-|**04**|add 99||||
-|05|out   ||||
-|06|sto 97||||
-|07|lda 98||||
-|08|sto 99||||
-|09|lda 97||||
-|10|sto 98||||
-|11|bra 04||||
+|        | instructie | Accumulator | Geheugen | Input/Output |
+| ------ | ---------- | ----------- | -------- | ------------ |
+| 00     | inp        | 1           |          | Input is 3   |
+| 01     | sto 99     | 1           | #99 = 3  |              |
+| 02     | inp        | 1           |          | input is 5   |
+| 03     | sto 98     | 1           | #98 = 5  |              |
+| 04     | add 99     |             |          |              |
+| 05     | out        |             |          |              |
+| 06     | sto 97     |             |          |              |
+| 07     | lda 98     |             |          |              |
+| 08     | sto 99     |             |          |              |
+| 09     | lda 97     |             |          |              |
+| 10     | sto 98     |             |          |              |
+| 11     | bra **04** |             |          |              |
+| **04** | add 99     |             |          |              |
+| 05     | out        |             |          |              |
+| 06     | sto 97     |             |          |              |
+| 07     | lda 98     |             |          |              |
+| 08     | sto 99     |             |          |              |
+| 09     | lda 97     |             |          |              |
+| 10     | sto 98     |             |          |              |
+| 11     | bra 04     |             |          |              |
 
 c.	copy & paste de onderstaande code op de website en druk op run om het programma te draaien. Waarom stopt het programma niet uit zichzelf?  (Je kan het programma laten stoppen met ‘STOP’)
 
@@ -123,21 +123,21 @@ Gegeven de onderstaande code:
 Maak onderstaande tabel af om te laten zien hoe de code werkt:
 
 
-||instructie| Accumulator|Geheugen|Input/Output|
-|--- |---|---|---|---|
-|00|inp   |1           |           |Input is 1     |
-|01|sto 99|1           |#99 = 1    |               |
-|02|inp   |1           |           |input is 3     |
-|03|sto 98|1           |#98 = 3    |               |
-|04|out   ||||
-|05|brz 08||||
-|06|sub 99||||
-|07|bra 04||||
-|04|out||||
-||||||
-||||||
-||||||
-|etc|etc|etc|etc|etc|
+|     | instructie | Accumulator | Geheugen | Input/Output |
+| --- | ---------- | ----------- | -------- | ------------ |
+| 00  | inp        | 1           |          | Input is 1   |
+| 01  | sto 99     | 1           | #99 = 1  |              |
+| 02  | inp        | 1           |          | input is 3   |
+| 03  | sto 98     | 1           | #98 = 3  |              |
+| 04  | out        |             |          |              |
+| 05  | brz 08     |             |          |              |
+| 06  | sub 99     |             |          |              |
+| 07  | bra 04     |             |          |              |
+| 04  | out        |             |          |              |
+|     |            |             |          |              |
+|     |            |             |          |              |
+|     |            |             |          |              |
+| etc | etc        | etc         | etc      | etc          |
 
 
 ## Opdracht 5

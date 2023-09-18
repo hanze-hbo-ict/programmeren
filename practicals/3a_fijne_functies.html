@@ -1,0 +1,970 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="nl" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Fijne functies &#8212; Programmeren</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=927b94d3fcb96560df09" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=927b94d3fcb96560df09" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=927b94d3fcb96560df09"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "hanze-hbo-ict/programmeren");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../_static/save_state.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'practicals/3a_fijne_functies';</script>
+    <link rel="canonical" href="https:///hanze-hbo-ict.github.io/programmeren/practicals/3a_fijne_functies.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Zoeken" href="../search.html" />
+    <link rel="next" title="Turtles!" href="3b_functie_calls.html" />
+    <link rel="prev" title="Practicum" href="../course/practical_3.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="nl"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../about/syllabus.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/mascot.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/mascot.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about/syllabus.html">
+                    Programmeren
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Opmerkingen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../about/feedback.html">Anoniem feedbackformulier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/faq.html">Veelgestelde vragen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/references.html">Literatuur</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_1.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/1_introductie.html">Wat is informatica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/1_binaire_getallen.html">Binaire getallen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/1_logische_schakelingen.html">Logische schakelingen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_1.html">Practicum</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="1a_problemen_oplossen.html">Problemen oplossen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1b_picobot.html">Picobot</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opstap_1.html">Opstap</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/1_logic_riddles.html">Wie spreekt de waarheid?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/1_schakelingen.html">Optellingen schakelen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/1_picobot.html">De lege kamer</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_1.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/1_logic_riddles.html">Logische puzzles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/1_picobot.html">De lege kamer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/1_schakelingen.html">Optellingen schakelen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_1.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/1_logic_riddles.html">Logische puzzles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/1_schakelingen.html">Optellingen schakelen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/1_picobot_1.html">Dolende Picobot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/1_picobot_2.html">Huis met kamers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/1_picobot_3.html">Kamer met meubels</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_2.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/2_hardware.html">Computerarchitectuur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/2_LMC_assembly.html">Assembly</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_2.html">Practicum</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/0_install_python.html">Terminal, teksteditors en Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2a_var_con.html">Maximum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2b_strings_en_lists.html">Strings</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opstap_2.html">Opstap</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/2_bugs.html">Busreis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/2_outputs.html">Outputs</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_2.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/2_interactieve_fictie.html">Interactieve fictie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/2_sequenties_en_data.html">Sequenties en data</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_2.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/2_LMC_assembly.html">Little man computer introductie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/2_LMC_assembly.html">Little man computer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/2_rochambeau.html">Rochambeau</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 3</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_3.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/3_functies.html">Functies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/3_main_functie.html">Main functie</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../course/practical_3.html">Practicum</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Fijne functies</a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="3b_functie_calls.html">Turtles!</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opstap_3.html">Opstap</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/3_functies.html">Outputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/3_recursie.html">Recursie</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_3.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/3_functies.html">Functies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/3_turtle.html">Turtle</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_3.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/3_functies.html">Rekenmachine</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Support</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../support/logisim.html">Logisim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/plain_text/index.html">Tekstbestanden</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/hanze-hbo-ict/programmeren/master?urlpath=lab/tree/practicals/3a_fijne_functies.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Bronopslagplaats"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/edit/master/practicals/3a_fijne_functies.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/issues/new?title=Issue%20on%20page%20%2Fpracticals/3a_fijne_functies.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open een probleem"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download deze pagina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/practicals/3a_fijne_functies.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download het bronbestand"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Afdrukken naar pdf"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Volledig scherm"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Fijne functies</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Inhoud </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Fijne functies</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#belangrijke-functies">Belangrijke functies</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#range">Range</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sum">Sum</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#choice">Choice</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports">Imports</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optie-1">Optie 1:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optie-2">Optie 2:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optie-3">Optie 3:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#handige-libraries">Handige libraries</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-1">Opdracht 1</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#signature-en-docstring">Signature en docstring</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2">Opdracht 2</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3">Opdracht 3</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-4">Opdracht 4</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="fijne-functies">
+<h1>Fijne functies<a class="headerlink" href="#fijne-functies" title="Permalink to this heading">#</a></h1>
+<p>Met functies worden grote programma’s opgedeelt in kleinere eenheden. Dt maakt het programmeren overzichtelijker. Functies die voor het ene programma zijn ontwikkeld, kunnen in andere programma’s  gebruikt worden. Een functie beschrijft het rekenproces dat op de parameters van de functie moet worden uitgevoerd.</p>
+<section id="belangrijke-functies">
+<h2>Belangrijke functies<a class="headerlink" href="#belangrijke-functies" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>range</p></li>
+<li><p>sum</p></li>
+<li><p>choice</p></li>
+</ul>
+<section id="range">
+<h3>Range<a class="headerlink" href="#range" title="Permalink to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">range</span></code> geeft een <em>iterator</em> met integers terug. Het maakt niet uit als je niet precies weet wat een iterator is, het belangrijkst is dat je ziet dat <code class="docutils literal notranslate"><span class="pre">list</span></code> de iterator omzet naar een <em>lijst</em> met integers:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>ouput: <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">...,</span> <span class="pre">99]</span></code></p>
+</section>
+<section id="sum">
+<h3>Sum<a class="headerlink" href="#sum" title="Permalink to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">sum</span></code> telt een lijst van getallen op, en <code class="docutils literal notranslate"><span class="pre">range</span></code> maakt een lijst met integers (of eigenlijk een iterator met integers, maar daar kan <code class="docutils literal notranslate"><span class="pre">sum</span></code> ook mee overweg):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">11</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>ouput: <code class="docutils literal notranslate"><span class="pre">52</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">11</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">l</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>ouput: <code class="docutils literal notranslate"><span class="pre">52</span></code></p>
+</section>
+<section id="choice">
+<h3>Choice<a class="headerlink" href="#choice" title="Permalink to this heading">#</a></h3>
+<p>Choice is een functie dat een random keuze kan maken uit een gegeven lijst. Het is alleen niet standaard beschikbaar zoals de functies <code class="docutils literal notranslate"><span class="pre">sum</span></code> en <code class="docutils literal notranslate"><span class="pre">range</span></code>. Om de functie te kunnen gebruiken moeten we het eerst importeren.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
+<span class="n">l</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+<span class="n">rand</span> <span class="o">=</span> <span class="n">choice</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="imports">
+<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this heading">#</a></h2>
+<p>Random is wat we noemen een library. Met het importeren van een library krijg te toegang tot alle functies die in deze library staan.</p>
+<section id="optie-1">
+<h3>Optie 1:<a class="headerlink" href="#optie-1" title="Permalink to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
+<span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In deze optie wordt de hele library toegevoegd. Om de functies te gebruiken die in deze library staan, noteren we eerst uit welke library ze komen en dan volgt de functie naam. Zo onstaan er geen problemen als er meerdere libraries worden geimporteerd en er functie namen overeenkomen.</p>
+</section>
+<section id="optie-2">
+<h3>Optie 2:<a class="headerlink" href="#optie-2" title="Permalink to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">uniform</span>
+
+<span class="n">choice</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
+<span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">random</span> <span class="pre">import</span> <span class="pre">choice</span></code> importeert een hele specifieke functie uit de library en niet de hele library. Scheelt in de grootte van het programma. Is vooral handig om te gebruiken als je maar een enkele functie uit de libary wil gebruiken.</p>
+</section>
+<section id="optie-3">
+<h3>Optie 3:<a class="headerlink" href="#optie-3" title="Permalink to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">choice</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
+<span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">random</span> <span class="pre">import</span> <span class="pre">*</span></code> importeert alle functies uit de library. Het is belangrijk om te weten welke functies dit zijn om te voorkomen dat er twee dezelfde functies in het programma staan. Bijvorbeeld van een andere library of in je eigen code.</p>
+</section>
+<section id="handige-libraries">
+<h3>Handige libraries<a class="headerlink" href="#handige-libraries" title="Permalink to this heading">#</a></h3>
+<p>math</p>
+<ul class="simple">
+<li><p>cos()</p></li>
+<li><p>sin()</p></li>
+<li><p>tan()</p></li>
+<li><p>sqrt()</p></li>
+<li><p>pi</p></li>
+</ul>
+<p>random</p>
+<ul class="simple">
+<li><p>choice()</p></li>
+<li><p>randint()</p></li>
+<li><p>uniform()</p></li>
+</ul>
+<p>time</p>
+<ul class="simple">
+<li><p>time()</p></li>
+<li><p>ctime()</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="opdracht-1">
+<h1>Opdracht 1<a class="headerlink" href="#opdracht-1" title="Permalink to this heading">#</a></h1>
+<p>a. Wat is de ouput van onderstaande programma?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Main functie. Roept de andere functies op om hun werk te doen. </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">dbl</span><span class="p">(</span><span class="mi">21</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">dbl</span><span class="p">(</span><span class="s2">&quot;wauw!&quot;</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">testing</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Test functie. Hier staan alle assertions om de functies te testen.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="n">dbl</span><span class="p">(</span><span class="mi">21</span><span class="p">)</span> <span class="o">==</span> <span class="mi">42</span>
+
+
+<span class="k">def</span> <span class="nf">dbl</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns twice the argument</span>
+<span class="sd">    :param x: The value to double</span>
+<span class="sd">    :type x: int, float or string</span>
+<span class="sd">    :rtype: int, float or string</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span>
+
+<span class="n">main</span><span class="p">()</span>
+<span class="n">testing</span><span class="p">()</span>
+
+</pre></div>
+</div>
+<p>b. Kopieer bovenstaande code in een nieuw bestand met de naam <code class="docutils literal notranslate"><span class="pre">wk3wc1.py</span></code>. Draai het programma om je antwoord bij <code class="docutils literal notranslate"><span class="pre">a</span></code> te checken.</p>
+<p>c. Om de functie <code class="docutils literal notranslate"><span class="pre">dbl()</span></code> te testen kunnen we gebruik maken van assertions inplaats van prints. Op deze manier doet python al het testen voor ons. Een voorbeeld van een assertion staat in de functie testing. Voeg zelf nog twee andere assertions toe om de <code class="docutils literal notranslate"><span class="pre">dbl</span></code> functie te testen.</p>
+<p>Met het gebruik van de main functie en test functie kunnen we de code overzichtelijk houden, vooral als straks het programma langer wordt. Het aansturen van het hele programma staat in de main functie en alle testen staan in de testing functie.</p>
+<section id="signature-en-docstring">
+<h2>Signature en docstring<a class="headerlink" href="#signature-en-docstring" title="Permalink to this heading">#</a></h2>
+<p>De eerste regel van een functie wordt de <em>signature</em> genoemd. De signature van een functie bevat het keyword <code class="docutils literal notranslate"><span class="pre">def</span></code> (een afkorting van “define”), de naam van de functie, en een lijst met argumenten voor de functie tussen haakjes. Let op de <em>dubbele punt</em> waar de signature mee wordt afgesloten.</p>
+<p>Direct onder de signature staat een string tussen drie dubbele aanhalingstekens <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span></code>, dit heet een <em>docstring</em> (een afkorting van “documentation string”). We verwachten dat je in al je functies een docstring schrijft, zelfs in eenvoudige functies zoals <code class="docutils literal notranslate"><span class="pre">dbl</span></code> zodat dit een gewoonte voor jou wordt.</p>
+<p>Een docstring moet de argumenten van de functie en het resultaat (de returnwaarde) beschrijven. Zoals je hierboven ziet kan je ook andere belangrijke informatie toevoegen. Docstring zijn de manier waarop <em>jouw</em> functies onderdeel worden van het ingebouwde hulpsysteem van Python.</p>
+<p>De eerste driedubbele aanhalingstekens <em>moeten</em> ingesprongen worden direct onder de signatuur. De afsluitende driedubbele aanhalingstekens van de docstring springen op hetzelfde niveau en an alle volgende code binnen de functie (de functie “body”).</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="opdracht-2">
+<h1>Opdracht 2<a class="headerlink" href="#opdracht-2" title="Permalink to this heading">#</a></h1>
+<p>Gegeven de functie <code class="docutils literal notranslate"><span class="pre">interp(low,</span> <span class="pre">hi,</span> <span class="pre">fraction)</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">interp</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">hi</span><span class="p">,</span> <span class="n">fraction</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">low</span> <span class="o">+</span> <span class="p">(</span><span class="n">hi</span> <span class="o">-</span> <span class="n">low</span><span class="p">)</span> <span class="o">*</span> <span class="n">fraction</span> 
+</pre></div>
+</div>
+<p>a. Wat is de doel van deze functie? Gebruik bij het antwoorden van deze vraag geen interpreter.<br />
+b. Kopieer deze functie naar je bestand. <code class="docutils literal notranslate"><span class="pre">wk3wc1.py</span></code>. Denk aan de locatie.<br />
+c. Voeg assertions toe in onze <code class="docutils literal notranslate"><span class="pre">testing</span></code> functie om je aannaame bij <code class="docutils literal notranslate"><span class="pre">a</span></code> te testen.<br />
+d. Voeg een doctring toe.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="opdracht-3">
+<h1>Opdracht 3<a class="headerlink" href="#opdracht-3" title="Permalink to this heading">#</a></h1>
+<p>a.<br />
+Schrijf een functie <code class="docutils literal notranslate"><span class="pre">convert_from_seconds(s)</span></code> die als argumment een (niet negatieve) integer <code class="docutils literal notranslate"><span class="pre">s</span></code> accepteert en een lijst met <em>vier</em> (niet negatieve) integers teruggeeft die het aantal seconden in een meer gebruikelijke vorm beschrijft, zodat:</p>
+<ul class="simple">
+<li><p>het eerste element het <em>aantal dagen</em> bevat</p></li>
+<li><p>het tweede element het <em>aantal uren</em> bevat</p></li>
+<li><p>het derde element het <em>aantal minuten</em> bevat</p></li>
+<li><p>het laatste element het <em>aantal seconden</em> bevat</p></li>
+</ul>
+<p>Je zal op het volgende moeten letten:</p>
+<ul class="simple">
+<li><p>0 ≤ seconden &lt; 60</p></li>
+<li><p>0 ≤ minuten &lt; 60</p></li>
+<li><p>0 ≤ uren &lt; 24</p></li>
+</ul>
+<p>Er is geen limiet op het aantal dagen. Een paar voorbeelden:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">:</span> <span class="n">convert_from_seconds</span><span class="p">(</span><span class="mi">610</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+
+<span class="n">In</span><span class="p">:</span> <span class="n">convert_from_seconds</span><span class="p">(</span><span class="mi">100000</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">40</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Tips:</p>
+<ol class="arabic simple">
+<li><p>Probeer, plan, programmeer. Voordat je meteen gaat programmeren, bedenk  welke stappen nodig zijn om het probleem op te lossen.</p></li>
+<li><p>Zorg voor een docstring!</p></li>
+<li><p>Vergeet de assertions niet!</p></li>
+</ol>
+<p>b.<br />
+Kopieer de volgende regel naar de main functie:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tijd</span> <span class="o">=</span> <span class="n">convert_from_seconds</span><span class="p">(</span><span class="mi">100000</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Voeg code toe aan de main functie zodat de dagen, uren, minutes en seconde worden geprint. Voorbeeld output:<br />
+“1 dagen”<br />
+“3 uren”<br />
+“46 minuten”<br />
+“40 seconden”</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="opdracht-4">
+<h1>Opdracht 4<a class="headerlink" href="#opdracht-4" title="Permalink to this heading">#</a></h1>
+<p>Schrijf een functie <code class="docutils literal notranslate"><span class="pre">checkends(s)</span></code> die als parameter een string <code class="docutils literal notranslate"><span class="pre">s</span></code> accepteert en <code class="docutils literal notranslate"><span class="pre">True</span></code> teruggeeft als het eerste karakter van <code class="docutils literal notranslate"><span class="pre">s</span></code> gelijk is aan het laatste karakter van <code class="docutils literal notranslate"><span class="pre">s</span></code>. Anders zal het <code class="docutils literal notranslate"><span class="pre">False</span></code> teruggeven. De functie <code class="docutils literal notranslate"><span class="pre">checkends</span></code> hoeft niet te werken met een lege string <code class="docutils literal notranslate"><span class="pre">s</span></code> (een string met waarde <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>).</p>
+<p>De functie moet <em>geen</em> strings teruggeven! In plaats daarvan moet het een <em>boolean</em> teruggeven, dus <code class="docutils literal notranslate"><span class="pre">True</span></code> of <code class="docutils literal notranslate"><span class="pre">False</span></code>, zonder aanhalingstekens.</p>
+<p>In de editor zul je zien dat booleans een andere kleur krijgen (in het standaardkleurenschema van VSCode worden ze blauw) om aan te geven dat Python ze herkent als waarden van het type <code class="docutils literal notranslate"><span class="pre">bool</span></code>. Als je er per ongeluk strings van hebt gemaakt (<code class="docutils literal notranslate"><span class="pre">&quot;True&quot;</span></code> in plaats van <code class="docutils literal notranslate"><span class="pre">True</span></code>) dan worden ze oranje in VSCode.</p>
+<p>Voor alle duidelijkheid, booleans en strings zijn twee hele verschillende dingen! Voor <code class="docutils literal notranslate"><span class="pre">True</span></code> en <code class="docutils literal notranslate"><span class="pre">False</span></code> heb je vrijwel altijd de booleans, dus zonder aanhalingstekens, nodig.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">:</span> <span class="n">checkends</span><span class="p">(</span><span class="s1">&#39;niet gelijk&#39;</span><span class="p">)</span>  
+<span class="n">Out</span><span class="p">:</span> <span class="kc">False</span>  
+
+<span class="n">In</span><span class="p">:</span> <span class="n">checkends</span><span class="p">(</span><span class="s1">&#39;kijk! wel gelijk&#39;</span><span class="p">)</span>  
+<span class="n">Out</span><span class="p">:</span> <span class="kc">True</span>  
+
+<span class="n">In</span><span class="p">:</span> <span class="n">checkends</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">)</span>  
+<span class="n">Out</span><span class="p">:</span> <span class="kc">True</span>  
+
+<span class="n">In</span><span class="p">:</span> <span class="n">checkends</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>  
+<span class="n">Out</span><span class="p">:</span> <span class="kc">True</span> 
+</pre></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "hanze-hbo-ict/programmeren",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./practicals"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../course/practical_3.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">vorige</p>
+        <p class="prev-next-title">Practicum</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="3b_functie_calls.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">volgende</p>
+        <p class="prev-next-title">Turtles!</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Inhoud
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Fijne functies</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#belangrijke-functies">Belangrijke functies</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#range">Range</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sum">Sum</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#choice">Choice</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports">Imports</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optie-1">Optie 1:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optie-2">Optie 2:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optie-3">Optie 3:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#handige-libraries">Handige libraries</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-1">Opdracht 1</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#signature-en-docstring">Signature en docstring</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2">Opdracht 2</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3">Opdracht 3</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-4">Opdracht 4</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Door Harvey Mudd College / Hanze University of Applied Sciences
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
+    Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=927b94d3fcb96560df09"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=927b94d3fcb96560df09"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
