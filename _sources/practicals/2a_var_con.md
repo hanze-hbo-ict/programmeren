@@ -225,7 +225,7 @@ a.
 ```python
 a = 5
 b = 2
-if (a < b):
+if a < b:
     print(a)
 print(b)
 ```
@@ -236,7 +236,7 @@ b.
 ```python
 a = 5
 b = 2
-if (a > b):
+if a > b:
     print(a)
 print(b)
 ```
@@ -247,7 +247,7 @@ c.
 ```python
 a = 5
 b = 2
-if (a == b):
+if a == b:
     print(a)
     print(b)
 ```
@@ -258,7 +258,7 @@ d.
 ```python
 a = 5
 b = 2
-if (a == b):
+if a == b:
     print(a)
    print(b)
 ```
@@ -284,7 +284,7 @@ a.
 ```python
 a = 5
 b = 2
-if (a < b):
+if a < b:
     print(a)
 else:
     print(b)
@@ -295,7 +295,7 @@ b.
 ```python
 a = 5
 b = 2
-if (a > b):
+if a > b:
     print(a)
 else:
     print(b)
@@ -306,7 +306,7 @@ c.
 ```python
 a = 5
 b = 2
-if (a > b):
+if a > b:
     print(a - b)
 else:
     print(b - a)
