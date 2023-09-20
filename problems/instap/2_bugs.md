@@ -12,12 +12,13 @@ file: wk2in2.txt
 
 Tijdens een busreis worden studenten verdeelt over verschillende bussen aan de hand van hun achternaam.
 
-|Bus	|Eerste letter achternaam|
-|1|	A t/m E|
-|2|	F t/m J|
-|3|	K t/m O|
-|4|	Q t/m U|
-|5|	V t/m Z|
+| Bus | Eerste letter achternaam |
+| --- | ------------------------ |
+| 1   | A t/m E                  |
+| 2   | F t/m J                  |
+| 3   | K t/m O                  |
+| 4   | Q t/m U                  |
+| 5   | V t/m Z                  |
 
 Student met de achternaam Niël komt in bus 3
 Student met de achternaam Hoebe komt in bus 2
