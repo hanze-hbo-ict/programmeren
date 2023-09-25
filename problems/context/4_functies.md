@@ -24,5 +24,3 @@ a. Schrijf een functie `aanwezig(l, c)` dat een lijst `l` en variabele `c` accep
 c. Schrijf een functie `tel(l, c)` dat een lijst `l` en variabele `c` accepteert en teruggeeft hoe vaak `c` in `l` zit.
 
 b. Schrijf een functie `vind(l, c)` dat een lijst `l` en variabele `c` accepteert en de eerste index teruggeeft waar `c` staat. Zit `c` niet in `l` dan geeft de functie -1 terug.
-
-

@@ -406,7 +406,7 @@ a.
 x = 42
 if x > 5 and x < 10:
     x = x * 2
-elif x < 20 :
+elif x < 20:
     x = x / 2
 print(x)
 ```
@@ -417,7 +417,7 @@ b.
 x = 2
 if x < 5:
     x = x * 2
-elif x < 10
+elif x < 10:
     x = x / 2
 print(x)
 ```
@@ -428,7 +428,7 @@ c.
 x = 6
 if x < 10:
     x = x * 2
-if x < 20
+if x < 20:
     x = x / 2
 print(x)
 ```
@@ -441,7 +441,7 @@ if x > 5 and x < 10:
     x = x * 2
 elif x < 5 or x > 10:
     x = x / 2
-else
+else:
     x = x + 2
 print(x)
 ```
@@ -454,7 +454,7 @@ if x > 5 and x < 10:
     x = x * 2
 elif x < 5 or x > 10:
     x = x / 2
-else
+else:
     x = x + 2
 print(x)
 ```
