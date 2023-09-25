@@ -2,20 +2,14 @@
 
 <!-- elektrisch schema, een circuitdiagram of schakelschema -->
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Schakelingen ontwerpen                                         |
-| Bestandsnaam | `wk6ex1-4.circ`                                                |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
-
-
-De opdracht is om een schakeling te maken dat 4 bits bij elkaar kan optellen. Dit ga je doen aan de hand van een aantal stappen. 
+De opdracht is om een schakeling te maken dat 4 bits bij elkaar kan optellen. Dit ga je doen aan de hand van een aantal stappen.
 
 ## Voorbereiding
 
-Check de logisim pagina om voor meer informatie over het instaleren van het programma Logisim dat gebruikt moet worden om de opdrachten te kunnen maken. 
+Check de logisim pagina om voor meer informatie over het instaleren van het programma Logisim dat gebruikt moet worden om de opdrachten te kunnen maken.
 
 ## De full adder
+
 *Dubbelklik* op de deelschakeling `FullAdder` in je bestand `wk6ex1-4.circ`, en je zult nu in de verkenner van het `FullAdder`-circuit moeten zijn. Je zult ook zien dat we de gelabelde in- en uitvoer al hebben toegevoegd. Gebruik deze in- en uitvoer, ze helpen ons bij het beoordelen van de opdracht.
 
 -   De invoer `X` en `Y` zijn de twee bits die moeten worden toegevoegd, en `CarryIn` is de carry van de vorige kolom.
@@ -32,7 +26,7 @@ Jouw taak is nu om een full adder (FA) te bouwen. Bedenk dat een volledige adder
 
 ### Opdracht 1
 
-Gegeven een schakeling die bij de "som"-bit zou kunnen horen. 
+Gegeven een schakeling die bij de "som"-bit zou kunnen horen.
 
 ![Full adder](images/optellingen_schakelen/som_schakeling.png)
 
@@ -41,9 +35,9 @@ Vul de waarheidstabel in en check of de gegeven schakeling klopt. Zo niet, pas d
 
 ### Opdracht 2
 
-Nu dat de schakeling voor de "som"-bit is gemaakt moet enkel nog die van de "carry out"-bit gemaakt worden. 
+Nu dat de schakeling voor de "som"-bit is gemaakt moet enkel nog die van de "carry out"-bit gemaakt worden.
 
-**Stap 1:** Maak de waarheidstabel en vul deze in. 
+**Stap 1:** Maak de waarheidstabel en vul deze in.
 
 |   | input | input | input | output   |
 |---|-------|-------|-------|----------|
@@ -53,7 +47,7 @@ Nu dat de schakeling voor de "som"-bit is gemaakt moet enkel nog die van de "car
 | C |    |    | |       |
 | D |    |    | |  etc...     |
 
-**Stap 2:** Op basis van de waarheidstabel maak je expressie voor de outputs met waarde 1. 
+**Stap 2:** Op basis van de waarheidstabel maak je expressie voor de outputs met waarde 1.
 
 **Stap 3:** Op basis van de expressies maak je een schakeling
 
@@ -87,14 +81,7 @@ Je kan de in- en uitvoerpins die gegeven zijn verplaatsen, maar behoud de relati
 Nog een laatste opmerking! Je hebt een 0 als carry-in nodig aan de rechterkant van jouw ripple-carry adder. Een manier om dit te doen is om een extra input toe te voegen en de waarde ervan op 0 te zetten. Dit is niet de beste oplossing, omdat we echt niet willen dat de gebruiker van onze ripple-carry adder deze carry-in waarde kan veranderen. Een betere keuze is om naar het verkenningsvenster te gaan, op de map "Bedrading" te klikken, daar het item "Constant" te kiezen en daar één van toe te voegen aan jouw schakeling. Klik er vervolgens op en je kunt de waarde van die constante in het eigenschappenscherm veranderen. Dit is nu een constante, onveranderlijke waarde die je schakeling kan gebruiken!
 :::
 
-
 ### Opdracht 3
 
-Bouw de 4-bit ripple-carry adder. 
-
-
-## Inleveren
-
-Test je schakeling en vergeet niet hem op te slaan! Als je hem instuurt zonder op te slaan lever je het oorspronkelijke, lege bestand in, in plaats van je uitwerking!
-
+Bouw de 4-bit ripple-carry adder.
 

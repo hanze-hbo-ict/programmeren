@@ -7,13 +7,7 @@ csa-level: mastery
 
 # Huis met kamers
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Picobot een grot laten verkennen                               |
-| Bestandsnaam | `wk1ex6.txt`                                                   |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
-
-![Picobot huis met kamers](images/picobot/picobotExCr.png)
+![Picobot huis met kamers](../images/picobot/picobotExCr.png)
 
 Ontwerp een verzameling regels om Picobot een ruimte in de vorm van een huis te laten verkennen (er zijn geen beperkingen aan het aantal regels).
 

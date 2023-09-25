@@ -3,19 +3,14 @@ title: "Picobot: Rondjes rennen"
 description: "Kennismaken met Picobot"
 csa-chapter: 1
 csa-level: Beginner
+file: wk2in1.txt
 ---
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Outputs                                                        |
-| Leerdoel     | Lezen van code                                                 |
-| Bestandsnaam | `wk2in1.txt`                                                   |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
+# Outputs
 
+Bepaal de outputs van onderstaande programma's zonder het gebruik van een interperter.
 
-Bepaal de outputs van onderstaande programma's zonder het gebruik van een interperter. 
-
-a. 
+a.
 
 ```python
 x = 8
@@ -25,7 +20,7 @@ print("staat buiten de if statement")
 
 ```
 
-b. 
+b.
 
 ```python
 x = 8
@@ -35,7 +30,7 @@ print("staat buiten de if statement")
 
 ```
 
-c. 
+c.
 
 ```python
 x = 8
@@ -47,7 +42,7 @@ print("staat buiten de if-else statement")
 
 ```
 
-d. 
+d.
 
 ```python
 x = 5
@@ -74,7 +69,7 @@ else:
     print("Brrr!")
 ```
 
-f. 
+f.
 
 ```python
 temp = 15.0
@@ -92,7 +87,7 @@ else:
 ```
 
 
-g. 
+g.
 
 ```python
 x = 5
@@ -103,7 +98,7 @@ elif x > 5:
 print(x)
 ```
 
-h. 
+h.
 
 ```python
 x = 4
@@ -116,7 +111,7 @@ else:
 print(x)
 ```
 
-i. 
+i.
 
 ```python
 naam = "Suzan"
@@ -132,7 +127,7 @@ else:
     print("groep 5")
 ```
 
-j. 
+j.
 
 ```python
 naam = "Emily"
@@ -148,7 +143,7 @@ else:
     print("groep 5")
 ```
 
-k. 
+k.
 
 ```python
 p = [3,1,4,1,5]
@@ -158,7 +153,7 @@ answer1 = c[5]
 print(answer0 * answer1)
 ```
 
-l. 
+l.
 
 ```python
 c = "computer"

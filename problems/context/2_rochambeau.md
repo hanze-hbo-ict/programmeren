@@ -3,16 +3,10 @@ title: "Steen, papier en schaar"
 description: "Werken met tekst, invoer en uitvoer en condities"
 csa-chapter: 1
 csa-level: proficiency
+file: wk2co1.py
 ---
 
 # Rochambeau
-
-| Naam         | Beschrijving                                                         |
-|--------------|----------------------------------------------------------------------|
-| Onderwerp    | Schrijf het spel steen, papier en schaar en speel tegen de computer  |
-| Leerdoel     | Probleem oplossen met behulp van input/output, variabelen en if-then-else|
-| Bestandsnaam | `wk2co1.py`                                                          |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope       |
 
 Rochambeau, roshambo, Jon Ken Pon of gewoon steen, papier en schaar? Het spel is onder [vele namen](https://www.wrpsa.com/why-do-people-call-rock-paper-scissors-roshambo/) bekend en er bestaat zelfs een heuse organisatie, de [Rock Paper Scissor Association](https://www.wrpsa.com/why-do-people-call-rock-paper-scissors-roshambo/)... In deze opgave ga je een programma schrijven om het spel tegen de computer te spelen!
 

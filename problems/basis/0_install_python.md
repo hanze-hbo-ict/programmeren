@@ -1,10 +1,9 @@
-# Terminal, teksteditors en Python
+---
+subject: Een eerste kennismaking met de terminal, teksteditors en Python
+file: wk1ex1.py
+---
 
-| Naam         | Beschrijving                                                    |
-|--------------|-----------------------------------------------------------------|
-| Onderwerp    | Een eerste kennismaking met de terminal, teksteditors en Python |
-| Bestandsnaam | `wk1ex1.py`                                                     |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope  |
+# Terminal, teksteditors en Python
 
 Het **doel** van deze opgave is om:
 
@@ -223,7 +222,7 @@ Dat is alles! Je kan nu de command line gebruiken. Er zijn een paar *erg* handig
 * *tab completion* Typ `cd Des` als je in je home directory staat en druk op de *tab*-toets. De command line zal je commando proberen aan te vullen. Ervaren (en luie!) gebruikers zullen lange namen bijna altijd met tab afmaken, in plaats van ze te typen. Het kan je veel tijd schelen!
 * *pijltje omhoog* en *pijltje omlaag* De pijltje-omhoog- en pijltje-omlaag-toetsen onthouden wat je eerder gedaan hebt. Nadat je een commando hebt gebruikt, kan je deze met pijltje-omhoog terughalen. Je kan het ook bewerken (pijltje-links en pijltje-rechts werken hier ook) als je een fout maakt.
 
-Ok! We zijn nu klaar voor Python. 
+Ok! We zijn nu klaar voor Python.
 
 ## Python in een *bestand* uitvoeren
 

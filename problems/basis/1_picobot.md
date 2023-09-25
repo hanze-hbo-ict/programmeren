@@ -7,13 +7,6 @@ csa-level: proficiency
 
 # De lege kamer
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Een eerste kennismaking met Picobot                            |
-| Bestandsnaam | `wk1ex3.txt`                                                   |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
-
-
 Picobot kan je vinden op [https://www.cs.hmc.edu/picobot/](https://www.cs.hmc.edu/picobot/)
 
 ## Opgave

@@ -1,9 +1,6 @@
-| Naam         | Beschrijving                                                    |
-|--------------|-----------------------------------------------------------------|
-| Onderwerp    | **vier-vierenprobleem!**                                        |
-| Leerdoel     | Rekenen met Python                                              |
-| Bestandsnaam | `wk2ba1.py`                                                     |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope  |
+---
+file: wk2ba1.py
+---
 
 # Vier vieren
 
@@ -44,7 +41,7 @@ from math import *
 print("Nul is", 4+4-4-4)
 ```
 
-Sla dit bestand op als `wk2ba1.py`. 
+Sla dit bestand op als `wk2ba1.py`.
 
  Om een bestand uit te voeren, moet je weer naar de terminal gaan.
     * Type `ls`( mac) of `dir` (windows) om de bestanden in de huidige directory te zien
