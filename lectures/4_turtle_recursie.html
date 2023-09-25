@@ -1,0 +1,956 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="nl" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Lijnenspel &#8212; Programmeren</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "hanze-hbo-ict/programmeren");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../_static/save_state.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lectures/4_turtle_recursie';</script>
+    <link rel="canonical" href="https:///hanze-hbo-ict.github.io/programmeren/lectures/4_turtle_recursie.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Zoeken" href="../search.html" />
+    <link rel="next" title="Practicum" href="../course/practical_4.html" />
+    <link rel="prev" title="Errors" href="4_errors.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="nl"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../about/syllabus.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/mascot.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/mascot.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about/syllabus.html">
+                    Programmeren
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Opmerkingen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../about/feedback.html">Anoniem feedbackformulier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/faq.html">Veelgestelde vragen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/references.html">Literatuur</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_1.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="1_introductie.html">Wat is informatica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_binaire_getallen.html">Binaire getallen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_logische_schakelingen.html">Logische schakelingen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_1.html">Practicum</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/1a_problemen_oplossen.html">Problemen oplossen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/1b_picobot.html">Picobot</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opstap_1.html">Opstap</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/1_logic_riddles.html">Wie spreekt de waarheid?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/1_schakelingen.html">Optellingen schakelen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/1_picobot.html">De lege kamer</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_1.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/1_logic_riddles.html">Logische puzzles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/1_picobot.html">De lege kamer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/1_schakelingen.html">Optellingen schakelen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_1.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/1_logic_riddles.html">Logische puzzles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/1_schakelingen.html">Optellingen schakelen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/1_picobot_1.html">Dolende Picobot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/1_picobot_2.html">Huis met kamers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/1_picobot_3.html">Kamer met meubels</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_2.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="2_hardware.html">Computerarchitectuur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_LMC_assembly.html">Assembly</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_2.html">Practicum</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/0_install_python.html">Terminal, teksteditors en Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/2a_var_con.html">Maximum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/2b_strings_en_lists.html">Strings</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opstap_2.html">Opstap</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/2_bugs.html">Busreis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/2_outputs.html">Outputs</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_2.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/2_interactieve_fictie.html">Interactieve fictie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/2_sequenties_en_data.html">Sequenties en data</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_2.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/2_LMC_assembly.html">Little man computer introductie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/2_LMC_assembly.html">Little man computer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/2_rochambeau.html">Rochambeau</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_3.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_functies.html">Functies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_main_functie.html">Main functie</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_3.html">Practicum</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/3a_fijne_functies.html">Fijne functies</a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../practicals/3b_functie_calls.html">Turtles!</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opstap_3.html">Opstap</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/3_functies.html">Outputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/3_recursie.html">Recursie</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_3.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/3_functies.html">Functies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/3_turtle.html">Turtle</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_3.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/3_functies.html">Rekenmachine</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 4</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../course/week_4.html">Onderwerpen</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="4_errors.html">Errors</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Lijnenspel</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_4.html">Practicum</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/4_recursie_unplugged.html">Unplugged recursie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/4_turtle.html">Turtles!</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opstap_4.html">Opstap</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/4_turtle.html">Turtle</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_4.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/4_turtle.html">Turtle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/4_midterm.html">Midterm</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_4.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/4_functies.html">Functies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/4_turtle.html">Recursieve turtles</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Support</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../support/logisim.html">Logisim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/plain_text/index.html">Tekstbestanden</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/hanze-hbo-ict/programmeren/master?urlpath=lab/tree/lectures/4_turtle_recursie.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Bronopslagplaats"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/edit/master/lectures/4_turtle_recursie.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/issues/new?title=Issue%20on%20page%20%2Flectures/4_turtle_recursie.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open een probleem"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download deze pagina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/lectures/4_turtle_recursie.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download het bronbestand"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Afdrukken naar pdf"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Volledig scherm"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lijnenspel</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Inhoud </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lijnen-trekken">Lijnen trekken</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lijnen-met-python">Lijnen met Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voorbeeld">Voorbeeld</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#random-lijnen">Random lijnen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#herhaling">Herhaling</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quiz">Quiz</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#oplossing">Oplossing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vervolg">Vervolg</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="lijnenspel">
+<h1>Lijnenspel<a class="headerlink" href="#lijnenspel" title="Permalink to this heading">#</a></h1>
+<p>Recursief lijnen trekken</p>
+<section id="lijnen-trekken">
+<h2>Lijnen trekken<a class="headerlink" href="#lijnen-trekken" title="Permalink to this heading">#</a></h2>
+<p><img alt="Etch-a_Sketch" src="../_images/etch-a-sketch.png" /></p>
+<p><a class="reference external" href="https://etchasketch.com/">Etch-A-Sketch</a>, misschien ken je het wel? Met twee draaiknoppen kan je op een scherm horizontale en verticale lijnen trekken en met wat oefeningen kan je ze ook laten buigen door beide knoppen tegelijkertijd te draaien.</p>
+<div><iframe width="560" height="315" src="https://www.youtube.com/embed/6TAsmUSpbhM" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<p>“Etch-a-Sketch has a lot of unique limitations and one of the big ones is that everything is connected by a single line.”</p>
+</section>
+<section id="lijnen-met-python">
+<h2>Lijnen met Python<a class="headerlink" href="#lijnen-met-python" title="Permalink to this heading">#</a></h2>
+<p>Kan het? Ja het kan!</p>
+<p><img alt="turtle benzene" src="../_images/turtle_benzene.png" /></p>
+</section>
+<section id="voorbeeld">
+<h2>Voorbeeld<a class="headerlink" href="#voorbeeld" title="Permalink to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">def</span> <span class="nf">poly</span><span class="p">(</span><span class="n">runs</span><span class="p">,</span> <span class="n">TOTAL_SIDES</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Teken een polygoon met runs/TOTAL_SIDES</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">runs</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span>  <span class="c1"># klaar</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+        <span class="n">left</span><span class="p">(</span><span class="mi">360</span> <span class="o">/</span> <span class="n">TOTAL_SIDES</span><span class="p">)</span>
+        <span class="n">poly</span><span class="p">(</span><span class="n">runs</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">TOTAL_SIDES</span><span class="p">)</span>
+
+
+<span class="n">poly</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+<span class="n">exitonclick</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Een recursief turtle voorbeeld! De functie <code class="docutils literal notranslate"><span class="pre">poly</span></code> accepteert twee parameters, de <code class="docutils literal notranslate"><span class="pre">run</span></code> parameter bepaalt hoe vaak de functie zichzelf moet aanroepen en <code class="docutils literal notranslate"><span class="pre">TOTAL_SIDES</span></code> is het aantal zijden van de polygoon. Kan je de base case en de recursieve case aanwijzen?</p>
+<p><code class="docutils literal notranslate"><span class="pre">TOTAL_SIDES</span></code> noemen we in dit geval een <em>constante</em>, een onveranderlijke waarde. Deze waarde moet natuurlijk onveranderlijk zijn omdat de functie deze waarde bij elke aanroep nodig heeft om de hoek van de draai te berekenen. Het is een <em>conventie</em> (een gewoonte, of stilzwijgende afspraak) om constante variabelen in <em>hoofdletters</em> te schrijven, niet alleen in Python maar ook in veel andere programmeertalen.</p>
+<p><img alt="turtle polygon" src="../_images/turtle_polygon.png" /></p>
+</section>
+<section id="random-lijnen">
+<h2>Random lijnen<a class="headerlink" href="#random-lijnen" title="Permalink to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
+
+<span class="k">def</span> <span class="nf">rwalk</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Zet N keer 20 pixel stappen, naar NE of SE</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">N</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span>
+
+    <span class="n">direction</span> <span class="o">=</span> <span class="n">choice</span><span class="p">([</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="s2">&quot;right&quot;</span><span class="p">])</span>
+
+    <span class="k">if</span> <span class="n">direction</span> <span class="o">==</span> <span class="s2">&quot;left&quot;</span><span class="p">:</span>
+        <span class="n">left</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
+        <span class="n">forward</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+        <span class="n">rwalk</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">right</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
+        <span class="n">forward</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+        <span class="n">rwalk</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Een random turtle walk! Maak (vanuit het perspectief van turtle) een draai naar noord-oost- (links) of zuid-oostelijke (rechts) richting, afhankelijk van een <em>random</em> keus.</p>
+<p><img alt="turtle random walk" src="../_images/turtle_rwalk.png" /></p>
+<p>De loop van een aangeschoten turtle…</p>
+<section id="herhaling">
+<h3>Herhaling<a class="headerlink" href="#herhaling" title="Permalink to this heading">#</a></h3>
+<p>Herhaling van handelingen maar herhaling in <em>code</em>?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">direction</span> <span class="o">==</span> <span class="s2">&quot;left&quot;</span><span class="p">:</span>
+    <span class="n">left</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
+    <span class="n">forward</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+    <span class="n">rwalk</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">right</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
+    <span class="n">forward</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+    <span class="n">rwalk</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Het is geen probleem als je dit op deze manier schrijft (Python zal in ieder geval niet klagen!) maar je ziet dat we onszelf herhalen. Het enige dat de <code class="docutils literal notranslate"><span class="pre">if</span></code> en <code class="docutils literal notranslate"><span class="pre">else</span></code> van elkaar onderscheidt is de <em>richting</em>, de stap voorwaarts gevolgd door de recursieve aanroep is wat ze met elkaar gemeen hebben. Zou dit ook anders kunnen worden geschreven?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">direction</span> <span class="o">==</span> <span class="s2">&quot;left&quot;</span><span class="p">:</span>
+    <span class="n">left</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">right</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
+
+<span class="n">forward</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">rwalk</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Dit is een herschreven versie. Het <code class="docutils literal notranslate"><span class="pre">if</span></code> / <code class="docutils literal notranslate"><span class="pre">else</span></code> blok is in nu alleen maar “verantwoordelijk” voor de richting en als dit blok is afgehandeld wordt vervolgens een stap voorwaarts gezet en wordt de volgende recursieve aanroep gedaan.</p>
+<p>Nogmaals, is een herhaling zoals je in het eerste geval hebt gezien een probleem? Nee, maar misschien is de tweede variant beter leesbaar of maakt het in ieder geval duidelijker wat een keus voor links of rechts betekent (en maken we daarmee de bedoeling voor onszelf en wellicht ook andere lezers van onze oplossing <em>expliciet</em>).</p>
+</section>
+</section>
+<section id="quiz">
+<h2>Quiz<a class="headerlink" href="#quiz" title="Permalink to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">chai</span><span class="p">(</span><span class="n">dist</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;fn mysterie!</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">dist</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="k">return</span>
+
+    <span class="n">forward</span><span class="p">(</span><span class="n">dist</span><span class="p">)</span>
+    <span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">forward</span><span class="p">(</span><span class="n">dist</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+
+    <span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">forward</span><span class="p">(</span><span class="n">dist</span><span class="p">)</span>
+    <span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+
+    <span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">forward</span><span class="p">(</span><span class="n">dist</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">)</span>
+    <span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">backward</span><span class="p">(</span><span class="n">dist</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Wat is het resultaat van <code class="docutils literal notranslate"><span class="pre">chai(100)</span></code>?</p>
+<p>Pak een stuk papier en probeer de lijn te trekken en het resultaat uit te tekenen! 100 is in dit geval natuurlijk het aantal pixels op scherm, kies op papier bijvoorbeeld voor ~10cm.</p>
+<section id="oplossing">
+<h3>Oplossing<a class="headerlink" href="#oplossing" title="Permalink to this heading">#</a></h3>
+<p><img alt="turtle chai 100" src="../_images/turtle_chai_100.png" /></p>
+</section>
+<section id="vervolg">
+<h3>Vervolg<a class="headerlink" href="#vervolg" title="Permalink to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">chai</span><span class="p">(</span><span class="n">dist</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;fn mysterie onthuld!</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">dist</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="k">return</span>
+
+    <span class="n">forward</span><span class="p">(</span><span class="n">dist</span><span class="p">)</span>
+    <span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">forward</span><span class="p">(</span><span class="n">dist</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+    
+    <span class="n">chai</span><span class="p">(</span><span class="n">dist</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># &lt;== !!!</span>
+    
+    <span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">forward</span><span class="p">(</span><span class="n">dist</span><span class="p">)</span>
+    <span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+
+    <span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">forward</span><span class="p">(</span><span class="n">dist</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">)</span>
+    <span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">backward</span><span class="p">(</span><span class="n">dist</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In het eerste voorbeeld (de quiz) zag je twee witregels. Wat gebeurt er als we een eerste recursieve aanroep doen? Je zal zien dat het patroon dat je net hebt uitgetekend zich gaat herhalen!</p>
+<p><img alt="turtle chai 100 recursive left" src="../_images/turtle_chai_100_recursive_left.png" /></p>
+<p>Laten we zien wat er gebeurt als we de recursieve aanroep alleen op de tweede witregel plaatsen.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">chai</span><span class="p">(</span><span class="n">dist</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;fn mysterie onthuld!</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">dist</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="k">return</span>
+
+    <span class="n">forward</span><span class="p">(</span><span class="n">dist</span><span class="p">)</span>
+    <span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">forward</span><span class="p">(</span><span class="n">dist</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+        
+    <span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">forward</span><span class="p">(</span><span class="n">dist</span><span class="p">)</span>
+    <span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+
+    <span class="n">chai</span><span class="p">(</span><span class="n">dist</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># &lt;== !!!</span>
+    
+    <span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">forward</span><span class="p">(</span><span class="n">dist</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">)</span>
+    <span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">backward</span><span class="p">(</span><span class="n">dist</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="turtle chai 100 recursive right" src="../_images/turtle_chai_100_recursive_right.png" /></p>
+<p>Je ziet precies hetzelfde gebeuren (maar gespiegeld). Laten we ze nu combineren!</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">chai</span><span class="p">(</span><span class="n">dist</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;fn mysterie onthuld!</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">dist</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="k">return</span>
+
+    <span class="n">forward</span><span class="p">(</span><span class="n">dist</span><span class="p">)</span>
+    <span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">forward</span><span class="p">(</span><span class="n">dist</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+        
+    <span class="n">chai</span><span class="p">(</span><span class="n">dist</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># &lt;== !!!</span>
+
+    <span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">forward</span><span class="p">(</span><span class="n">dist</span><span class="p">)</span>
+    <span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+
+    <span class="n">chai</span><span class="p">(</span><span class="n">dist</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># &lt;== !!!</span>
+    
+    <span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">forward</span><span class="p">(</span><span class="n">dist</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">)</span>
+    <span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">backward</span><span class="p">(</span><span class="n">dist</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="turtle chai 100 recursive" src="../_images/turtle_chai_100_recursive.png" /></p>
+<p>En daar zien je het volledig recursief patroon!</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "hanze-hbo-ict/programmeren",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./lectures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="4_errors.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">vorige</p>
+        <p class="prev-next-title">Errors</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../course/practical_4.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">volgende</p>
+        <p class="prev-next-title">Practicum</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Inhoud
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lijnen-trekken">Lijnen trekken</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lijnen-met-python">Lijnen met Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voorbeeld">Voorbeeld</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#random-lijnen">Random lijnen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#herhaling">Herhaling</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quiz">Quiz</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#oplossing">Oplossing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vervolg">Vervolg</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Door Harvey Mudd College / Hanze University of Applied Sciences
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
+    Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
