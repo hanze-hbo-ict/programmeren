@@ -101,13 +101,13 @@ b. Schrijf een functie `print_square(x)` dat een getal accepteert en een # vierk
 
 
 ```ipython
-In : printSquare(3, 3)
+In : print_square(3)
 Out:
 ###
 # #
 ###
 
-In: lines(5)
+In: print_square(5)
 Out:
 #####
 #   #

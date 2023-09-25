@@ -33,9 +33,9 @@ testing()
 
 ```
 
-a. Wat doet de functie blaat?
-b. Wat is de ouput van dit programma?
-c. Gebruik de [Python Tutor](http://www.pythontutor.com/visualize.html)  om je antwoord van a en b te controleren.
+a. Wat doet de functie blaat?  
+b. Wat is de ouput van dit programma?  
+c. Gebruik de [Python Tutor](http://www.pythontutor.com/visualize.html)  om je antwoord van a en b te controleren.  
 
 
 ## Opdracht 2
@@ -62,9 +62,9 @@ testing()
 
 ```
 
-a. Wat doet de functie blaat?
-b. Wat is de ouput van dit programma?
-c. Gebruik de [Python Tutor](http://www.pythontutor.com/visualize.html)  om je antwoord van a en b te controleren.
+a. Wat doet de functie blaat?  
+b. Wat is de ouput van dit programma?  
+c. Gebruik de [Python Tutor](http://www.pythontutor.com/visualize.html)  om je antwoord van a en b te controleren.  
 
 
 ## Opdracht 3
@@ -97,7 +97,7 @@ main()
 testing()
 ```
 
-a. Wat doet de functie blaat1?
-b. Wat doet de functie blaat2?
-c. Wat is de output van dit programma?
-d. Gebruik de [Python Tutor](http://www.pythontutor.com/visualize.html)  om je antwoord van a, b en c te controleren.
+a. Wat doet de functie blaat1?  
+b. Wat doet de functie blaat2?  
+c. Wat is de output van dit programma?  
+d. Gebruik de [Python Tutor](http://www.pythontutor.com/visualize.html)  om je antwoord van a, b en c te controleren.  

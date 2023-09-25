@@ -36,24 +36,24 @@ out: "s is geen juiste optie, programma stopt"
 
 ## Opdracht 1
 
-a. Maak een nieuw bestand `wk3co1.py` met de lege functies `menu()` en `testing()`. Zet bovenaan `import math` zodat je toegang hebt tot de math library, including math.pi
-b. Schrijf een functie `rechthoekOpp(lengte, breedte)` dat twee getallen accepteert en de oppervlakte van een rechthoek teruggeeft
-c. Schrijf een functie `cirkelOpp(radius)` dat een getal accepteerd en de oppervlakte van een cirkel teruggeeft.
-d. Schrijf een functie `cirkelOmtrek(radius)` dat een getal accepteerd en de omtrek van een cirkel teruggeeft.
-e. Schrijf een functie `driehoekOpp(basis, hoogte)` dat twee getallen accepteert en de oppervlakte van een driehoek berekent.
+a. Maak een nieuw bestand `wk3co1.py` met de lege functies `menu()` en `testing()`. Zet bovenaan `import math` zodat je toegang hebt tot de math library, including math.pi  
+b. Schrijf een functie `rechthoekOpp(lengte, breedte)` dat twee getallen accepteert en de oppervlakte van een rechthoek teruggeeft  
+c. Schrijf een functie `cirkelOpp(radius)` dat een getal accepteerd en de oppervlakte van een cirkel teruggeeft.  
+d. Schrijf een functie `cirkelOmtrek(radius)` dat een getal accepteerd en de omtrek van een cirkel teruggeeft.  
+e. Schrijf een functie `driehoekOpp(basis, hoogte)` dat twee getallen accepteert en de oppervlakte van een driehoek berekent.  
 
 
 ## Opdracht 2
 
 
-a. Schrijf een functie `balkInhoud(lengte, breedte, hoogte)` dat drie getallen accepteert en de inhoud van een balk teruggeeft. Maak gebruik van je `rechthoekOpp` functie.
-b. Schrijf een functie `cilinderInhoud(radius, hoogte)` dat twee getallen accepteert en de inhoud van een cilinder teruggeeft. Maak gebruik van je `cirkelOpp` functie.
-c. Schrijf een functie `piramideInhoud(lengte, breede, hoogte)` dat twee getallen accepteert en de inhoud van een piramide terugggeeft. Maak gebruik van je `rechthoekOpp` functie.
+a. Schrijf een functie `balkInhoud(lengte, breedte, hoogte)` dat drie getallen accepteert en de inhoud van een balk teruggeeft. Maak gebruik van je `rechthoekOpp` functie.  
+b. Schrijf een functie `cilinderInhoud(radius, hoogte)` dat twee getallen accepteert en de inhoud van een cilinder teruggeeft. Maak gebruik van je `cirkelOpp` functie.  
+c. Schrijf een functie `piramideInhoud(lengte, breede, hoogte)` dat twee getallen accepteert en de inhoud van een piramide terugggeeft. Maak gebruik van je `rechthoekOpp` functie.  
 
 ## Opdracht 3
 
-a. Schrijf een functie `balkOpp(lengte, breedte, hoogte)` dat drie getallen accepteert en de oppervlakte van een balk teruggeeft. Maak gebruik van je `rechthoekOpp` functie.
-b. Schrijf een functie `cilinderOpp(radius, hoogte)` dat twee getallen accepteert en de oppervlakte van een cilinder teruggeeft. Maak gebruik van je `cirkelOmtrek`, `rechthoekOpp` en `cirkelOpp` functies.
+a. Schrijf een functie `balkOpp(lengte, breedte, hoogte)` dat drie getallen accepteert en de oppervlakte van een balk teruggeeft. Maak gebruik van je `rechthoekOpp` functie.  
+b. Schrijf een functie `cilinderOpp(radius, hoogte)` dat twee getallen accepteert en de oppervlakte van een cilinder teruggeeft. Maak gebruik van je `cirkelOmtrek`, `rechthoekOpp` en `cirkelOpp` functies.  
 
 ## Opdracht 4
 
