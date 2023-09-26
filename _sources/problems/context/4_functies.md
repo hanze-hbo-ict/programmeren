@@ -9,18 +9,18 @@ Maak bij onderstaande opdrachten **geen** gebruik van lussen (for of while) en/o
 
 ## Opdracht 1
 
-a. Schrijf een functie `max(l)` dat een lijst `l` met getallen accepteert en het grootste getal teruggeeft.
+a. Schrijf een functie `max(l)` die een lijst `l` met getallen accepteert en het grootste getal teruggeeft.
 
-b. Schrijf een functie `size(l)` dat een lijst `l` accepteerd en teruggeeft hoeveel objecten er in `l` zitten.
+b. Schrijf een functie `size(l)` die een lijst `l` accepteert en teruggeeft hoeveel objecten er in `l` zitten.
 
-c. Schrijf een functie `telop(l)` dat een lijst `l` met getallen accepteert, alle getallen bij elkaar optelt en het resultaat teruggeeft.
+c. Schrijf een functie `add_up(l)` die een lijst `l` met getallen accepteert, alle getallen bij elkaar optelt en het resultaat teruggeeft.
 
 
 ## Opdracht 2
 
 
-a. Schrijf een functie `aanwezig(l, c)` dat een lijst `l` en variabele `c` accepteert en true teruggeeft of `c` in `l` zit en anders false teruggeeft.
+a. Schrijf een functie `present(l, c)` die een lijst `l` en variabele `c` accepteert en `True` teruggeeft of `c` in `l` zit en anders `False` teruggeeft.
 
-c. Schrijf een functie `tel(l, c)` dat een lijst `l` en variabele `c` accepteert en teruggeeft hoe vaak `c` in `l` zit.
+c. Schrijf een functie `count(l, c)` die een lijst `l` en variabele `c` accepteert en teruggeeft hoe vaak `c` in `l` zit.
 
-b. Schrijf een functie `vind(l, c)` dat een lijst `l` en variabele `c` accepteert en de eerste index teruggeeft waar `c` staat. Zit `c` niet in `l` dan geeft de functie -1 terug.
+b. Schrijf een functie `find(l, c)` die een lijst `l` en variabele `c` accepteert en de *eerste* index teruggeeft waar `c` staat. Zit `c` niet in `l` dan geeft de functie -1 terug.
