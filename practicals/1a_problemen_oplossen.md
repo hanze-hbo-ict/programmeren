@@ -15,7 +15,7 @@ Het probleem oplossen is de eerste stap van de 3 p's:
 De strategie die gebruikt kan worden om een oplossing te vinden verschilt per probleem. De ene strategie past beter dan de ander, wat wel handig is om pen en papier te gebruiken. Hier zijn er een aantal:
 
 -   *Teken het probleem op papier*. Dit werkt vooral als je met ruimtelijke vragen bezig bent.
--   *Maak het probleem kleiner*. Bijvoorbeeld wordt er gevraagd om een methode te verzinnen om getallen te sorteren. Inplaats van het probleem op te lossen met 100 getallen, doe het eerst met twee getallen, daarna met drie, enz.
+-   *Maak het probleem kleiner*. Bijvoorbeeld wordt er gevraagd om een methode te verzinnen om getallen te sorteren. In plaats van het probleem op te lossen met 100 getallen, doe het eerst met twee getallen, daarna met drie, enz.
 -   *Probeer alle opties uit*. Deze leent zich vooral als er niet teveel verschillende input is, zoals bij een logische schakeling.
 
 
@@ -33,7 +33,7 @@ Mocht je de oplossing van Nim gevonden hebben, dan kan je jezelf uitdagen met de
 
 ## Logica puzzles
 
-Logische schakelingen werken met drie poorten: `and`, `or` en `not` en het resultaat is een 0 of een 1. Ook bij Booelaanse logica maak je ook gebruik van 3 operatoren genaamd `and`, `or` en `not` en zijn er maar twee resulaten mogelijk namelijk `True` of `False`. Dit wordt gebruikt binnen het programmeren om aan de computer uit te leggen welke instructies wel of niet uitgevoerd moeten worden. Het is dus handig om er mee te oefenen en dat gaan we doen aan de hand van zogenaamde *Truth and Lies* puzzles. Deze puzzels trainen ook nog eens het probleemoplossend vermogen.
+Logische schakelingen werken met drie poorten: `and`, `or` en `not` en het resultaat is een 0 of een 1. Ook bij Boolaanse logica maak je ook gebruik van 3 operatoren genaamd `and`, `or` en `not` en zijn er maar twee resulaten mogelijk namelijk `True` of `False`. Dit wordt gebruikt binnen het programmeren om aan de computer uit te leggen welke instructies wel of niet uitgevoerd moeten worden. Het is dus handig om er mee te oefenen en dat gaan we doen aan de hand van zogenaamde *Truth and Lies* puzzles. Deze puzzels trainen ook nog eens het probleemoplossend vermogen.
 
 Bekijk nog eens de volgende waarheidstabellen.
 
