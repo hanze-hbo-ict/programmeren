@@ -33,7 +33,7 @@ b. Schrijf de functie `tpl(x)` die een getal als argument accepteert en drie kee
 
 ```ipython
 In : tpl(4)
-Out: 64
+Out: 12
 
 In: tpl("hoi")
 Out: "hoihoihoi"
