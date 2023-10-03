@@ -626,10 +626,17 @@ document.write(`
 <h1>Errors<a class="headerlink" href="#errors" title="Permalink to this heading">#</a></h1>
 <section id="indexerror">
 <h2>IndexError<a class="headerlink" href="#indexerror" title="Permalink to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">blaat</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">blaat</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+
+<span class="n">blaat</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">out</span><span class="p">:</span> <span class="ne">IndexError</span><span class="p">:</span> <span class="n">string</span> <span class="n">index</span> <span class="n">out</span> <span class="n">of</span> <span class="nb">range</span>
 </pre></div>
 </div>
-<p>De functie blaat print de eerste letter van een string en roept zichzelf daarna weer. <code class="docutils literal notranslate"><span class="pre">s[:1]</span></code> geeft aan dat de eerste letter van de string is verwijdert. Als de functie zichzelf vaak genoeg herhaalt zal er uiteindelijk geen letters meer in de string zitten. Als er dan toch gevraagd wordt <code class="docutils literal notranslate"><span class="pre">s[0]</span></code> te printen geeft python een error. <code class="docutils literal notranslate"><span class="pre">IndexError</span></code> geeft aan dat je een lokatie binnen een lijst wil lezen dat niet bestaat. De index is te hoog of te laag.</p>
+<p>De functie blaat print de eerste letter van een string en roept zichzelf daarna weer. <code class="docutils literal notranslate"><span class="pre">s[1:]</span></code> geeft aan dat de eerste letter van de string is verwijdert. Als de functie zichzelf vaak genoeg herhaalt zal er uiteindelijk geen letters meer in de string zitten. Als er dan toch gevraagd wordt <code class="docutils literal notranslate"><span class="pre">s[0]</span></code> te printen geeft python een error. <code class="docutils literal notranslate"><span class="pre">IndexError</span></code> geeft aan dat je een lokatie binnen een lijst wil lezen dat niet bestaat. De index is te hoog of te laag.</p>
 <p>Oplossing is om een base case toe te voegen zodat de functie op tijd stopt. In dit geval willen we stoppen als de string een lengte heeft van 0, met andere woorden, een lege string.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">blaat</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -651,7 +658,7 @@ document.write(`
 <h2>RecursionError<a class="headerlink" href="#recursionerror" title="Permalink to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">blaat</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-    <span class="n">blaat</span><span class="p">(</span><span class="n">s</span><span class="p">[:</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">blaat</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
 
 <span class="n">blaat</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">)</span>
 </pre></div>
@@ -663,7 +670,7 @@ document.write(`
     <span class="k">if</span> <span class="n">s</span>  <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
         <span class="k">return</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-    <span class="n">blaat</span><span class="p">(</span><span class="n">s</span><span class="p">[:</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">blaat</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
 
 <span class="n">blaat</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">)</span>
 </pre></div>
