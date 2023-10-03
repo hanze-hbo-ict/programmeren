@@ -31,7 +31,7 @@ score = 50
  -  **a** 50
  -  **b** 2.7
  -  **c** 5.5
- -  **d** 0.3
+ -  **d** 3.7
 
 
 ## 3. Welke waarde heeft x aan het einde van dit programma?
@@ -209,8 +209,8 @@ main()
  -  **b** 10
  -  **c** 25
  -  **d** 100
-e. None
-f. programma werkt niet
+ -  **e** None
+ -  **f** programma werkt niet
 
 
 ## 13. Wat print dit programma?
@@ -296,10 +296,10 @@ function("Hanze", 4)
 
  -  **a** H, 0, a, 1, n, 2, z, 3, e, 4
  -  **b** H, a, n, z, e, 4, 3, 2, 1, 0
-c, e, z, n, a, H, 4, 3, 2, 1, 0
+ -  **c**, e, z, n, a, H, 4, 3, 2, 1, 0
  -  **d** e, z, n, a, H, 4, 3, 2, 1
-e. H, a, n, z, e, 4, 3, 2, 1
-f. e, 4, z, 3, n, 2, a, 1, H
+ -  **e**. H, a, n, z, e, 4, 3, 2, 1
+ -  **f**. e, 4, z, 3, n, 2, a, 1, H
 
 ## 17. Wat print dit programma?
 
@@ -320,7 +320,7 @@ function("Hanze")
  -  **c** H, H, H, H, H
  -  **d** H, a, n, z
 
-### 18. Welke error geeft dit programma?
+## 18. Welke error geeft dit programma?
 
 
 ```python
@@ -393,8 +393,8 @@ Welke printstatement moet er op regel 4 komen om de volgende output te generen ?
 ```
 
 ```python
- -  **a** print(y*' ' + x*y)
- -  **b** print(y*' ' + x*y*2)
- -  **c** print((z-y)*' ' + x*y*2)
- -  **d** print((z-y)*' ' + x*y)
+ -  a print(y*' ' + x*y)
+ -  b print(y*' ' + x*y*2)
+ -  c print((z-y)*' ' + x*y*2)
+ -  d print((z-y)*' ' + x*y)
 ```
