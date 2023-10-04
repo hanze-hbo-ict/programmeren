@@ -1,0 +1,1199 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="nl" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Week 3 &#8212; Programmeren</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "hanze-hbo-ict/programmeren");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../_static/save_state.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'solutions/week_3';</script>
+    <link rel="canonical" href="https:///hanze-hbo-ict.github.io/programmeren/solutions/week_3.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Zoeken" href="../search.html" />
+    <link rel="next" title="Logisim" href="../support/logisim.html" />
+    <link rel="prev" title="Wisselende stelsels" href="../problems/context/6_lingo.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="nl"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../about/syllabus.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/mascot.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/mascot.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about/syllabus.html">
+                    Programmeren
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Opmerkingen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../about/feedback.html">Anoniem feedbackformulier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/faq.html">Veelgestelde vragen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/references.html">Literatuur</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_1.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/1_introductie.html">Wat is informatica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/1_binaire_getallen.html">Binaire getallen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/1_logische_schakelingen.html">Logische schakelingen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_1.html">Practicum</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/1a_problemen_oplossen.html">Problemen oplossen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/1b_picobot.html">Picobot</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opstap_1.html">Opstap</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/1_logic_riddles.html">Wie spreekt de waarheid?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/1_schakelingen.html">Optellingen schakelen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/1_picobot.html">De lege kamer</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_1.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/1_logic_riddles.html">Logische puzzles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/1_picobot.html">De lege kamer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/1_schakelingen.html">Optellingen schakelen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_1.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/1_logic_riddles.html">Logische puzzles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/1_schakelingen.html">Optellingen schakelen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/1_picobot_1.html">Dolende Picobot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/1_picobot_2.html">Huis met kamers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/1_picobot_3.html">Kamer met meubels</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_2.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/2_hardware.html">Computerarchitectuur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/2_LMC_assembly.html">Assembly</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_2.html">Practicum</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/0_install_python.html">Terminal, teksteditors en Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/2a_var_con.html">Maximum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/2b_strings_en_lists.html">Strings</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opstap_2.html">Opstap</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/2_bugs.html">Busreis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/2_outputs.html">Outputs</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_2.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/2_interactieve_fictie.html">Interactieve fictie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/2_sequenties_en_data.html">Sequenties en data</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_2.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/2_LMC_assembly.html">Little man computer introductie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/2_LMC_assembly.html">Little man computer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/2_rochambeau.html">Rochambeau</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_3.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/3_functies.html">Functies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/3_main_functie.html">Main functie</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_3.html">Practicum</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/3a_fijne_functies.html">Fijne functies</a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../practicals/3b_functie_calls.html">Turtles!</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opstap_3.html">Opstap</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/3_functies.html">Outputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/3_recursie.html">Recursie</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_3.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/3_functies.html">Functies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/3_turtle.html">Turtle</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_3.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/3_functies.html">Rekenmachine</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_4.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/4_errors.html">Errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/4_turtle_recursie.html">Lijnenspel</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_4.html">Practicum</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/4_turtle.html">Turtles!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/4_recursie_unplugged.html">Unplugged recursie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/4_midterm.html">Reading code</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opstap_4.html">Opstap</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/4_turtle.html">Turtle</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_4.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/4_turtle.html">Turtle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/4_midterm.html">Midterm</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_4.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/4_functies.html">Functies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/4_turtle.html">Recursieve turtles</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 5</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_5.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/5_ontwerp_algoritmen.html">Ontwerp van algoritmen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/5_recursie.html">Recursie</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_5.html">Practicum</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/5a_reading_rec.html">Reading code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/5b_feest_met_functies.html">Feest met functies</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opstap_5.html">Opstap</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-23"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/5_recursie.html">Functies lezen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_5.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-24"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/5_recursieve_functies.html">Recursieve functies</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_5.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/5_recursieve_functies.html">Recursieve functies</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 6</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_6.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-26"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/6_binaire_getallen.html">Binaire getallen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/6_rekenen_met_talstelsels.html">Talstelsels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/6_rekenen_met_taal.html">Rekenen met taal</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_6.html">Practicum</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-27"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/6_decimaal_en_verder.html">Van decimaal naar binair en verder!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/6_caesar_op_orde.html">Caesar op orde!</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_6.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-28"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/6_wisselende_stelsels.html">Wisselende stelsels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/6_sorting.html">Sorteren</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_6.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-29"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/6_compressie.html">Compressie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/6_lingo.html">Wisselende stelsels</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Oplossingen</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Week 3</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Support</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../support/logisim.html">Logisim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/plain_text/index.html">Tekstbestanden</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Bronopslagplaats"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/edit/master/solutions/week_3.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/issues/new?title=Issue%20on%20page%20%2Fsolutions/week_3.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open een probleem"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download deze pagina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/solutions/week_3.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download het bronbestand"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Afdrukken naar pdf"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Volledig scherm"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Week 3</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Inhoud </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basis">Basis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functies"><span class="xref myst">Functies</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-1b">Opdracht 1b</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2a">Opdracht 2a</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2b">Opdracht 2b</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3">Opdracht 3</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-4">Opdracht 4</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-5a">Opdracht 5a</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-5b">Opdracht 5b</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#run-en-check-de-functies">Run en check de functies</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turtle"><span class="xref myst">Turtle</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-1a">Opdracht 1a</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Opdracht 1b</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-1c">Opdracht 1c</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Opdracht 2a</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Opdracht 2b</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2c">Opdracht 2c</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3a">Opdracht 3a</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3b">Opdracht 3b</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="week-3">
+<h1>Week 3<a class="headerlink" href="#week-3" title="Permalink to this heading">#</a></h1>
+<section id="basis">
+<h2>Basis<a class="headerlink" href="#basis" title="Permalink to this heading">#</a></h2>
+<section id="functies">
+<h3><a class="reference internal" href="../problems/basis/3_functies.html"><span class="doc std std-doc">Functies</span></a><a class="headerlink" href="#functies" title="Permalink to this heading">#</a></h3>
+<p>Dit is het begin van het Python bestand waar we eventueel te gebruiken modules importeren, bijvoorbeeld de functie <code class="docutils literal notranslate"><span class="pre">choice</span></code> uit de module <code class="docutils literal notranslate"><span class="pre">random</span></code>. Het kan zijn dat je geen modules gebruikt? Dan kun je dit weg laten.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span><span class="p">,</span> <span class="n">randint</span>
+</pre></div>
+</div>
+<section id="opdracht-1b">
+<h4>Opdracht 1b<a class="headerlink" href="#opdracht-1b" title="Permalink to this heading">#</a></h4>
+<p>Schrijf de functie <code class="docutils literal notranslate"><span class="pre">tpl(x)</span></code> die een getal als argument accepteert en drie keer de waarde van dat argument teruggeeft.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tpl</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Geeft driemaal het argument terug</span>
+
+<span class="sd">    :param x: De waarde om te verdrievoudigen</span>
+<span class="sd">    :type x: int, float of string</span>
+<span class="sd">    :rtype: int, float of string</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">x</span>
+</pre></div>
+</div>
+<p>We hebben besloten de <em>docstring</em> van meer informatie te voorzien voor nog meer duidelijkheid.</p>
+<p>Aangezien het een simpele taak is die de functie moet doen, kan de berekening gelijk in de return gezet worden.</p>
+</section>
+<section id="opdracht-2a">
+<h4>Opdracht 2a<a class="headerlink" href="#opdracht-2a" title="Permalink to this heading">#</a></h4>
+<p>Schrijf de functie <code class="docutils literal notranslate"><span class="pre">min_two(a,</span> <span class="pre">b)</span></code> die twee getallen als argument accepteert en de kleinste waarde teruggeeft.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">min_two</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Geeft de laagste van de twee parameters terug</span>
+
+<span class="sd">    :param a, b: de twee waarden waarvan de laagste terug moet worden gegeven</span>
+<span class="sd">    :type a, b: int</span>
+<span class="sd">    :rtype: int</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">a</span>
+    <span class="k">elif</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="n">a</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">b</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Beide getallen zijn even groot!&quot;</span>
+</pre></div>
+</div>
+<p>In de opdracht werd niet gezegd dat we er van uit mogen gaan dat de twee getallen niet hetzelfde kunnen zijn.</p>
+<p>Daarom controleert de functie zowel of a kleiner is en of b kleiner is.
+Als geen van beide kleiner zijn dan zullen de argumenten even groot zijn.</p>
+</section>
+<section id="opdracht-2b">
+<h4>Opdracht 2b<a class="headerlink" href="#opdracht-2b" title="Permalink to this heading">#</a></h4>
+<p>Schrijf de functie <code class="docutils literal notranslate"><span class="pre">min_three(a,</span> <span class="pre">b,</span> <span class="pre">c)</span></code> die drie getallen als argument accepteert en de kleinste waarde teruggeeft.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">min_three</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Geeft de laagste van de drie parameters terug</span>
+
+<span class="sd">    :param a, b, c: de twee waarden waarvan de laagste terug moet worden gegeven</span>
+<span class="sd">    :type a, b, c: int</span>
+<span class="sd">    :rtype: int</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span> <span class="ow">and</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">c</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">a</span>
+    <span class="k">elif</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="n">a</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="n">c</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">b</span>
+    <span class="k">elif</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="n">a</span> <span class="ow">and</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">c</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Er zijn getallen die even groot zijn!&quot;</span>
+</pre></div>
+</div>
+<p>In de opdracht werd niet gezegd dat we er van uit mogen gaan dat de twee getallen niet hetzelfde kunnen zijn.</p>
+<p>Daarom controleert de functie zowel of elke variable kleiner is dan de andere twee met de ‘and’ in de if statements.</p>
+<p>Als geen van de drie argumenten kleiner zijn dan de andere dan zullen er twee hetzelfde zijn of alle zelfs alle drie.</p>
+</section>
+<section id="opdracht-3">
+<h4>Opdracht 3<a class="headerlink" href="#opdracht-3" title="Permalink to this heading">#</a></h4>
+<p>Schrijf de functie absolute(x,y) dat twee getallen accepteert en de afstand berekent tussen de twee getallen.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">absolute</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Geeft de afstand tussen de twee parameters terug</span>
+
+<span class="sd">    :param x, y: de twee waarden waarvan de afstand terug moet worden gegeven</span>
+<span class="sd">    :type a, b, c: int</span>
+<span class="sd">    :rtype: int</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">:</span>
+            <span class="c1"># Bij twee positieve getallen dan krijg je de afstand</span>
+            <span class="c1"># door het kleinste getal van de grote te trekken.</span>
+            <span class="k">return</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span>
+        <span class="k">else</span><span class="p">:</span> <span class="c1"># y is groter</span>
+            <span class="k">return</span> <span class="n">y</span> <span class="o">-</span> <span class="n">x</span>
+    <span class="k">elif</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="c1"># y is groter dan de negatieve x.</span>
+        <span class="c1"># Omdat x negatief is, is de afstand y plus de positieve versie van x.</span>
+        <span class="k">return</span> <span class="n">y</span> <span class="o">+</span> <span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="c1"># Nu is y negatief</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="p">(</span><span class="n">y</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Beide getallen zijn negatief.</span>
+        <span class="c1"># Vindt het kleinste getal.</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">:</span>
+            <span class="c1"># De afstand is altijd positief.</span>
+            <span class="c1"># We corrigeren door het kleinste getal positief te maken</span>
+            <span class="c1"># en het kleinste getal negatief te houden.</span>
+            <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">y</span> <span class="c1"># Plus een negatief getal wordt een aftrek som</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">(</span><span class="n">y</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">x</span>
+</pre></div>
+</div>
+<p>Als beide getallen positief zijn dan hoeft alleen de laagste van de hoogste af getrokken te worden.</p>
+<p>Als een van beide getallen negatief is dan is het andere getal automatisch het grotere getal. Om dan de juiste waarde te krijgen moet de positieve versie van het negatieve getal opgeteld worden bij het al positieve getal.</p>
+<p>Als beide getallen negatief zijn dan kunnen we de positieve versie van het kleinste getal nemen en het andere getal daarvan aftrekken.</p>
+<p>We maken hiervoor gebruik van het feit dat in Python wanneer je een negatief getal ergens bij optelt het een aftrek operatie wordt.</p>
+</section>
+<section id="opdracht-4">
+<h4>Opdracht 4<a class="headerlink" href="#opdracht-4" title="Permalink to this heading">#</a></h4>
+<p>Schrijf de functie <code class="docutils literal notranslate"><span class="pre">trap(x)</span></code> die een getal accepteert en een omgekeerde <code class="docutils literal notranslate"><span class="pre">#</span></code> trap tekent. Maak gebruik van recursie.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">trap</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Print een onderste boven trap naar het scherm</span>
+
+<span class="sd">    :param x: het aantal traptreden</span>
+<span class="sd">    :type x: int</span>
+<span class="sd">    :rtype: geen return waarde</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="s2">&quot;#&quot;</span><span class="p">)</span>
+        <span class="n">trap</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span>
+</pre></div>
+</div>
+<p>Aangezien de bovenste tree de breedste is, kan het programma beginnen bij <code class="docutils literal notranslate"><span class="pre">x</span></code> en vanaf daar aftellen naar 0.</p>
+<p>Is <code class="docutils literal notranslate"><span class="pre">x</span></code> groter dan nul ( <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> ) dan zijn er nog treden om te plaatsen. Plaats de trede, corrigeer x voor de geplaatste trede en roep de functie nog een keer aan.</p>
+<p>Is <code class="docutils literal notranslate"><span class="pre">x</span></code> gelijk aan nul ( <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">0</span></code> ) dan zijn er geen treden meer om te plaatsen en kan de functie stoppen.</p>
+</section>
+<section id="opdracht-5a">
+<h4>Opdracht 5a<a class="headerlink" href="#opdracht-5a" title="Permalink to this heading">#</a></h4>
+<p>Schrijf de functie <code class="docutils literal notranslate"><span class="pre">lines(x,</span> <span class="pre">space)</span></code> die twee <code class="docutils literal notranslate"><span class="pre">#</span></code>-lijnen tekent van <code class="docutils literal notranslate"><span class="pre">x</span></code> regels hoog en <code class="docutils literal notranslate"><span class="pre">space</span></code> geeft aan hoeveel spaties tussen de lijnen liggen.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">lines</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">space</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tekent twee lijnen met # voor &lt;x&gt; aantal regels met &lt;space&gt;</span>
+<span class="sd">    aantal spaties tussen de twee lijnen</span>
+
+<span class="sd">    :param x: geeft aan hoeveel regels</span>
+<span class="sd">    :param space: geeft aantal spaties tussen de twee lijnen</span>
+<span class="sd">    :type x, space: int</span>
+<span class="sd">    :rtype: geen return waarde</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;#&quot;</span> <span class="o">+</span> <span class="n">space</span><span class="o">*</span><span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="s2">&quot;#&quot;</span><span class="p">)</span>
+        <span class="n">lines</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">space</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span>
+</pre></div>
+</div>
+<p>Hier geldt hetzelfde als voor de onderste boven trap.</p>
+<p>Zodra <code class="docutils literal notranslate"><span class="pre">x</span></code> gelijk is aan nul mag het programma stoppen, alle regels zijn naar het scherm geprint.</p>
+<p>Als <code class="docutils literal notranslate"><span class="pre">x</span></code> nog geen nul is dan moet er nog een regel naar het scherm geprint worden.</p>
+<div class="admonition note">
+<p class="admonition-title">Notitie</p>
+<p>We veranderen hier alleen <code class="docutils literal notranslate"><span class="pre">x</span></code> en niet <code class="docutils literal notranslate"><span class="pre">space</span></code>, want de afstand tussen de lijnen is niet afhankelijk van hoeveel regels er al geprint zijn.</p>
+</div>
+</section>
+<section id="opdracht-5b">
+<h4>Opdracht 5b<a class="headerlink" href="#opdracht-5b" title="Permalink to this heading">#</a></h4>
+<p>Schrijf een functie <code class="docutils literal notranslate"><span class="pre">print_square(x)</span></code> die een getal accepteert en een <code class="docutils literal notranslate"><span class="pre">#</span></code> vierkant van grootte <code class="docutils literal notranslate"><span class="pre">x</span></code> print. Maak gebruik van de functie <code class="docutils literal notranslate"><span class="pre">lines</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tekent een vierkant van # met grootte x</span>
+
+<span class="sd">    :param x: geeft aan hoe groot het vierkant moet zijn</span>
+<span class="sd">    :type x: int</span>
+<span class="sd">    :rtype: geen return waarde</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="s2">&quot;#&quot;</span><span class="p">)</span>
+    <span class="n">lines</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span><span class="p">,</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="s2">&quot;#&quot;</span><span class="p">)</span>
+    <span class="k">return</span>
+</pre></div>
+</div>
+<p>Het verschil tussen <code class="docutils literal notranslate"><span class="pre">lines()</span></code> en <code class="docutils literal notranslate"><span class="pre">print_square()</span></code> is dat <code class="docutils literal notranslate"><span class="pre">print_square()</span></code> begint en eindigt met een volle regel met <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">*</span> <span class="pre">&quot;#&quot;</span></code>.</p>
+<p>Deze kunnen direct naar het scherm geprint worden. Dit betekent dat <code class="docutils literal notranslate"><span class="pre">lines()</span></code> alleen de regels tussen de eerste en de twee hoeft te vullen.</p>
+<p>We gebruiken <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">-</span> <span class="pre">2</span></code> voor de <code class="docutils literal notranslate"><span class="pre">x</span></code> van lines omdat er al twee regels geprint worden door <code class="docutils literal notranslate"><span class="pre">print_square()</span></code> zelf.</p>
+<p>We gebruiken <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">-</span> <span class="pre">2</span></code> voor space omdat er voor en na de space een <code class="docutils literal notranslate"><span class="pre">#</span></code> geprint wordt. Als we hier geen rekening mee houden dan worden de <code class="docutils literal notranslate"><span class="pre">lines()</span></code> regels te breed.</p>
+</section>
+<section id="run-en-check-de-functies">
+<h4>Run en check de functies<a class="headerlink" href="#run-en-check-de-functies" title="Permalink to this heading">#</a></h4>
+<p>In de <code class="docutils literal notranslate"><span class="pre">main()</span></code> kunnen de functies nu aangeroepen worden voor gebruik.</p>
+<p>Met de <em>assert statements</em> in <code class="docutils literal notranslate"><span class="pre">testing()</span></code> testen we of alle functies doen wat ze moeten doen.</p>
+<p>Zijn er assert die we vergeten zijn?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Main functie. Roept de andere functies op om hun werk te doen.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">rand_var1</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+    <span class="n">rand_var2</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+    <span class="n">rand_var3</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">rand_var4</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Random variable 1 = &quot;</span><span class="p">,</span> <span class="n">rand_var1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Random variable 2 = &quot;</span><span class="p">,</span> <span class="n">rand_var2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Random variable 3 = &quot;</span><span class="p">,</span> <span class="n">rand_var3</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Random variable 4 = &quot;</span><span class="p">,</span> <span class="n">rand_var4</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;De tpl functie met random variable 1:&quot;</span><span class="p">,</span> <span class="n">tpl</span><span class="p">(</span><span class="n">rand_var1</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;De min_two functie met random variable 1 en 2:&quot;</span><span class="p">,</span> <span class="n">min_two</span><span class="p">(</span><span class="n">rand_var1</span><span class="p">,</span> <span class="n">rand_var2</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;De min_three functie met random variable 1, 3 en 2:&quot;</span><span class="p">,</span> <span class="n">min_three</span><span class="p">(</span><span class="n">rand_var1</span><span class="p">,</span> <span class="n">rand_var3</span><span class="p">,</span> <span class="n">rand_var2</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;De absolute functie met random variable 3 en 1:&quot;</span><span class="p">,</span> <span class="n">absolute</span><span class="p">(</span><span class="n">rand_var3</span><span class="p">,</span> <span class="n">rand_var1</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;De absolute functie met random variable 3 en 4:&quot;</span><span class="p">,</span> <span class="n">absolute</span><span class="p">(</span><span class="n">rand_var3</span><span class="p">,</span> <span class="n">rand_var4</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;De trap functie met random variable 2:&quot;</span><span class="p">)</span>
+    <span class="n">trap</span><span class="p">(</span><span class="n">rand_var2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;De lines functie met random variable 1 en 2:&quot;</span><span class="p">)</span>
+    <span class="n">lines</span><span class="p">(</span><span class="n">rand_var1</span><span class="p">,</span> <span class="n">rand_var2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;De lines functie met random variable 2 en 1:&quot;</span><span class="p">)</span>
+    <span class="n">lines</span><span class="p">(</span><span class="n">rand_var2</span><span class="p">,</span> <span class="n">rand_var1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;De print_square functie met random variable 1:&quot;</span><span class="p">)</span>
+    <span class="n">print_square</span><span class="p">(</span><span class="n">rand_var1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;De print_square functie met random variable 2:&quot;</span><span class="p">)</span>
+    <span class="n">print_square</span><span class="p">(</span><span class="n">rand_var2</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">testing</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Test functie. Hier staan alle assertions om de functies te testen.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="n">tpl</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;tpl() geeft geen waarde terug die drie keer het argument is&quot;</span>
+    <span class="k">assert</span> <span class="n">tpl</span><span class="p">(</span><span class="s2">&quot;hoi&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;hoihoihoi&quot;</span><span class="p">,</span> <span class="s2">&quot;tpl() geeft geen waarde terug die drie keer het argument is&quot;</span>
+
+    <span class="k">assert</span> <span class="n">min_two</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span> <span class="o">==</span> <span class="mi">7</span><span class="p">,</span> <span class="s2">&quot;min_two() geeft niet het kleinste getal terug bij twee positieve getallen&quot;</span>
+    <span class="k">assert</span> <span class="n">min_two</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;min_two() geeft niet het kleinste getal terug bij twee positieve getallen&quot;</span>
+    <span class="k">assert</span> <span class="n">min_two</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="s2">&quot;min_two() geeft niet het kleinste getal terug bij een positief en een negatief getal&quot;</span>
+    <span class="k">assert</span> <span class="n">min_two</span><span class="p">(</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="s2">&quot;min_two() geeft niet het kleinste getal terug bij een positief en een negatief getal&quot;</span>
+    <span class="k">assert</span> <span class="n">min_two</span><span class="p">(</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="s2">&quot;min_two() geeft niet het kleinste getal terug bij twee positieve getallen&quot;</span>
+    <span class="k">assert</span> <span class="n">min_two</span><span class="p">(</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="s2">&quot;min_two() geeft niet het kleinste getal terug bij twee negatieve getallen&quot;</span>
+    <span class="k">assert</span> <span class="n">min_two</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;Beide getallen zijn even groot!&quot;</span><span class="p">,</span> <span class="s2">&quot;Beide getallen zijn even groot maar dit wordt niet gevonden&quot;</span>
+    <span class="k">assert</span> <span class="n">min_two</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="o">-</span><span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;Beide getallen zijn even groot!&quot;</span><span class="p">,</span> <span class="s2">&quot;Beide getallen zijn even groot maar dit wordt niet gevonden&quot;</span>
+
+    <span class="k">assert</span> <span class="n">min_three</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;min_three() geeft niet het kleinste getal terug bij drie positieve getallen&quot;</span>
+    <span class="k">assert</span> <span class="n">min_three</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;min_three() geeft niet het kleinste getal terug bij drie positieve getallen&quot;</span>
+    <span class="k">assert</span> <span class="n">min_three</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="s2">&quot;min_three() geeft niet het kleinste getal terug bij een negatief getal&quot;</span>
+    <span class="k">assert</span> <span class="n">min_three</span><span class="p">(</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="s2">&quot;min_three() geeft niet het kleinste getal terug bij een negatief getal&quot;</span>
+    <span class="k">assert</span> <span class="n">min_three</span><span class="p">(</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="s2">&quot;min_three() geeft niet het kleinste getal terug bij drie positieve getallen&quot;</span>
+    <span class="k">assert</span> <span class="n">min_three</span><span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="s2">&quot;min_three() geeft niet het kleinste getal terug bij drie negatieve getallen&quot;</span>
+    <span class="k">assert</span> <span class="n">min_three</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;Er zijn getallen die even groot zijn!&quot;</span><span class="p">,</span> <span class="s2">&quot;Er zijn getallen die even groot zijn maar die worden niet gevonden&quot;</span>
+    <span class="k">assert</span> <span class="n">min_three</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="o">-</span><span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;Er zijn getallen die even groot zijn!&quot;</span><span class="p">,</span> <span class="s2">&quot;Er zijn getallen die even groot zijn maar die worden niet gevonden&quot;</span>
+
+    <span class="k">assert</span> <span class="n">absolute</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span> <span class="o">==</span> <span class="mi">9</span><span class="p">,</span> <span class="s2">&quot;absolute() met twee postieve getallen berekent de afstand niet goed&quot;</span>
+    <span class="k">assert</span> <span class="n">absolute</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">9</span><span class="p">,</span> <span class="s2">&quot;absolute() met twee positieve getallen berekent de afstand niet goed&quot;</span>
+    <span class="k">assert</span> <span class="n">absolute</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">12</span><span class="p">)</span> <span class="o">==</span> <span class="mi">9</span><span class="p">,</span> <span class="s2">&quot;absolute() met twee negatieve getallen berekent de afstand niet goed&quot;</span>
+    <span class="k">assert</span> <span class="n">absolute</span><span class="p">(</span><span class="o">-</span><span class="mi">12</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">9</span><span class="p">,</span> <span class="s2">&quot;absolute() met twee negatieve getallen berekent de afstand niet goed&quot;</span>
+    <span class="k">assert</span> <span class="n">absolute</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">12</span><span class="p">)</span> <span class="o">==</span> <span class="mi">15</span><span class="p">,</span> <span class="s2">&quot;absolute() met een negatief getal en een positief getal berekent de afstand niet goed&quot;</span>
+    <span class="k">assert</span> <span class="n">absolute</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span> <span class="o">==</span> <span class="mi">15</span><span class="p">,</span> <span class="s2">&quot;absolute() met een negatief getal en een positief getal berekent de afstand niet goed&quot;</span>
+
+<span class="n">main</span><span class="p">()</span>
+<span class="n">testing</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="turtle">
+<h3><a class="reference internal" href="../problems/basis/3_turtle.html"><span class="doc std std-doc">Turtle</span></a><a class="headerlink" href="#turtle" title="Permalink to this heading">#</a></h3>
+<p>Deze opgave gaat over het tekenen met een turtle.</p>
+<section id="opdracht-1a">
+<h4>Opdracht 1a<a class="headerlink" href="#opdracht-1a" title="Permalink to this heading">#</a></h4>
+<p>Maak de functie <code class="docutils literal notranslate"><span class="pre">sq()</span></code> af zodat het een vierkant tekent met zijdes met 25 pixels. Maak gebruik van recursie om de herhaling van code te voorkomen.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Main functie. Roept de andere functies op om hun werk te doen.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">speed</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># set the drawing speed to 10</span>
+    <span class="n">sq</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">done</span><span class="p">()</span> <span class="c1"># tell turtle the drawing is done.</span>
+
+<span class="k">def</span> <span class="nf">testing</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Test functie. Hier staan alle assertions om de functies te testen.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<span class="k">def</span> <span class="nf">sq</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Draws 25-pixel sides of a square.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">forward</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+        <span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+        <span class="n">sq</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">main</span><span class="p">()</span>
+<span class="n">testing</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="id1">
+<h4>Opdracht 1b<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
+<p>Schrijf de functie <code class="docutils literal notranslate"><span class="pre">sqLine(x)</span></code>. De parameter <code class="docutils literal notranslate"><span class="pre">x</span></code> geeft een hoeveel vierkantjes op een rij moeten komen. Maak gebruik van de <code class="docutils literal notranslate"><span class="pre">sq</span></code> functie.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sqLine</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tekent x vierkanten op een rij.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">sq</span><span class="p">()</span>
+        <span class="n">forward</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+        <span class="n">sqLine</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Als de forward niet wordt uitgevoerd dan maakt de turtle elk vierkantje op dezelfde locatie. Omdat de turtle naar rechts kijkt na het maken van het eerste vierkantje wordt het volgende vierkantje rechts van de eerste gemaakt. De derde komt rechts van de tweede enzovoorts.</p>
+</section>
+<section id="opdracht-1c">
+<h4>Opdracht 1c<a class="headerlink" href="#opdracht-1c" title="Permalink to this heading">#</a></h4>
+<p>Schrijf de functie <code class="docutils literal notranslate"><span class="pre">sqSpiral(n)</span></code>. De paramater <code class="docutils literal notranslate"><span class="pre">n</span></code> geeft aan met hoeveel vierkantjes de eerste zijde van de spiraal moet hebben.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sqSpiral</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tekent een spiraal van vierkanten.</span>
+<span class="sd">    n geeft aan hoeveel vierkanten de eerste zijde moet hebben.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">sqLine</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+        <span class="n">sqSpiral</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Het eerste vierkantje van de tweede lijn in de spiraal valt op het laatste vierkantje van de eerste lijn. Anders wordt de tweede lijn te lang. Daarom hoeft alleen de kijkrichting van de turtle aangepast te worden.</p>
+</section>
+<section id="id2">
+<h4>Opdracht 2a<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
+<p>Schrijf de functie <code class="docutils literal notranslate"><span class="pre">sqLength(lengte,</span> <span class="pre">x=4)</span></code>. Deze functie tekent een vierkant van aangegeven grootte. <code class="docutils literal notranslate"><span class="pre">sqLength(50)</span></code> tekent een vierkant met zijdes van 50 pixels lang.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sqLength</span><span class="p">(</span><span class="n">lengte</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">4</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tekent een vierkant met grootte &#39;lengte&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">forward</span><span class="p">(</span><span class="n">lengte</span><span class="p">)</span>
+        <span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+        <span class="n">sqLength</span><span class="p">(</span><span class="n">lengte</span><span class="p">,</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h4>Opdracht 2b<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
+<p>Schrijf de functie <code class="docutils literal notranslate"><span class="pre">sqRec(start,</span> <span class="pre">step)</span></code>. De parameter start geeft de grootte van het eerste vierkant aan en de step geeft aan hoeveel kleiner het volgende vierkant is. Maak gebruik van de <code class="docutils literal notranslate"><span class="pre">sqLength</span></code> functie.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sqRec</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tekent vierkanten step kleiner dan het start vierkant in het start vierkant.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">start</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">sqLength</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+        <span class="n">sqRec</span><span class="p">(</span><span class="n">start</span> <span class="o">-</span> <span class="n">step</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="opdracht-2c">
+<h4>Opdracht 2c<a class="headerlink" href="#opdracht-2c" title="Permalink to this heading">#</a></h4>
+<p>Schrijf een functie <code class="docutils literal notranslate"><span class="pre">sqMiddle(start,</span> <span class="pre">step)</span></code> De parameter start geeft de grootte van het eerste vierkant aan en de step geeft aan hoeveel kleiner het volgende vierkant is. Maak gebruik van de <code class="docutils literal notranslate"><span class="pre">sqLength</span></code> functie. Dit keer worden de vierkantjes in het midden getekend. Met de <code class="docutils literal notranslate"><span class="pre">up()</span></code> functie stopt de turtle met tekenen. Met de functie <code class="docutils literal notranslate"><span class="pre">down()</span></code> start de turtle weer met tekenen.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sqMiddle</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tekent vierkanten step kleiner dan het start vierkant in het midden van het start vierkant.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">start</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">sqLength</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+        <span class="n">up</span><span class="p">()</span>
+        <span class="n">forward</span><span class="p">(</span><span class="n">step</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+        <span class="n">forward</span><span class="p">(</span><span class="n">step</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+        <span class="n">down</span><span class="p">()</span>
+        <span class="n">sqMiddle</span><span class="p">(</span><span class="n">start</span> <span class="o">-</span> <span class="n">step</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Omdat het volgende vierkant precies in het midden van het vorige vierkant moet zitten, moet er rekening gehouden worden dat de afstand tussen de twee bij alle zijden even groot is. Dit bereiken we door <code class="docutils literal notranslate"><span class="pre">step</span> <span class="pre">/</span> <span class="pre">2</span></code> naar rechts en naar beneden als afstand te nemen voor het begin punt van het volgende vierkant. Met <code class="docutils literal notranslate"><span class="pre">left(90)</span></code> zetten we de turtle weer terug naar zijn beginrichting.</p>
+</section>
+<section id="opdracht-3a">
+<h4>Opdracht 3a<a class="headerlink" href="#opdracht-3a" title="Permalink to this heading">#</a></h4>
+<p>Schrijf de functie <code class="docutils literal notranslate"><span class="pre">lijn(x)</span></code> die een lijn tekent. De <code class="docutils literal notranslate"><span class="pre">x</span></code> geeft een hoe lang de lijn moet zijn. Aan het einde van de functie staat de turtle weer waar het was begonnen.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">lijn</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tekent een lijn en zet de turtle weer terug op begin punt.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">forward</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">up</span><span class="p">()</span>
+    <span class="n">right</span><span class="p">(</span><span class="mi">180</span><span class="p">)</span>
+    <span class="n">forward</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">right</span><span class="p">(</span><span class="mi">180</span><span class="p">)</span>
+    <span class="n">down</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>De lijn hoeft maar een keer getekend te worden en net als met de vorige opdracht moet niet vergeten worden de kijkrichting van de turtle weer op de orginele positie te zetten. Dit kan met right(180) om zo een volledige cirkel te maken of met <code class="docutils literal notranslate"><span class="pre">left(180)</span></code> om de half cirkel ongedaan te maken.</p>
+</section>
+<section id="opdracht-3b">
+<h4>Opdracht 3b<a class="headerlink" href="#opdracht-3b" title="Permalink to this heading">#</a></h4>
+<p>Schrijf de functie <code class="docutils literal notranslate"><span class="pre">simpleFlake(n,</span> <span class="pre">angle,</span> <span class="pre">length)</span></code>. De <code class="docutils literal notranslate"><span class="pre">n</span></code> geeft aan hoeveel lijnen er getekend moet worden. <code class="docutils literal notranslate"><span class="pre">angle</span></code> geeft aan hoeveel graden er na elke lijn gedraaid wordt. De parameter <code class="docutils literal notranslate"><span class="pre">length</span></code> geeft aan hoe lang elke lijn moet zijn.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">simpleFlake</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">length</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tekent een simpele sneeuwvlok.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">lijn</span><span class="p">(</span><span class="n">lengte</span><span class="p">)</span>
+        <span class="n">right</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+        <span class="n">simpleFlake</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "hanze-hbo-ict/programmeren",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./solutions"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../problems/context/6_lingo.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">vorige</p>
+        <p class="prev-next-title">Wisselende stelsels</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../support/logisim.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">volgende</p>
+        <p class="prev-next-title">Logisim</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Inhoud
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basis">Basis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functies"><span class="xref myst">Functies</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-1b">Opdracht 1b</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2a">Opdracht 2a</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2b">Opdracht 2b</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3">Opdracht 3</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-4">Opdracht 4</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-5a">Opdracht 5a</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-5b">Opdracht 5b</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#run-en-check-de-functies">Run en check de functies</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turtle"><span class="xref myst">Turtle</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-1a">Opdracht 1a</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Opdracht 1b</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-1c">Opdracht 1c</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Opdracht 2a</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Opdracht 2b</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2c">Opdracht 2c</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3a">Opdracht 3a</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3b">Opdracht 3b</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Door Harvey Mudd College / Hanze University of Applied Sciences
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
+    Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
