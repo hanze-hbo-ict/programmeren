@@ -6,10 +6,10 @@ file: wk4ba2.txt
 # Midterm
 
 ## 1. Wie liegt?
-Jeff zegt: “Alice liegt of Jeff spreekt de waarheid”
-Bob zegt: “Jeff of Alice spreekt de waarheid”
-Alice zegt: “Karen liegt en Alice en Jeff spreken de waarheid”
-Karen zegt: “Bob en Alice spreken de waarheid”
+Jeff zegt: “Alice liegt of Jeff spreekt de waarheid”  
+Bob zegt: “Jeff of Alice spreekt de waarheid”  
+Alice zegt: “Karen liegt en Alice en Jeff spreken de waarheid”  
+Karen zegt: “Bob en Alice spreken de waarheid”  
 
 
  -  **a**  Jeff en Bob
@@ -86,10 +86,10 @@ else:
 
 ```
 
- -  **a** ‘Groep 1’
- -  **b** ‘Groep 2’
- -  **c** ‘Groep 3’
- -  **d** ‘Groep 4’
+ -  **a** ‘groep 1’
+ -  **b** ‘groep 2’
+ -  **c** ‘groep 3’
+ -  **d** ‘groep 4’
 
 
 ## 6. Wat print dit programma?
@@ -295,11 +295,11 @@ function("Hanze", 4)
 ```
 
  -  **a** H, 0, a, 1, n, 2, z, 3, e, 4
- -  **b** H, a, n, z, e, 4, 3, 2, 1, 0
- -  **c**, e, z, n, a, H, 4, 3, 2, 1, 0
- -  **d** e, z, n, a, H, 4, 3, 2, 1
- -  **e**. H, a, n, z, e, 4, 3, 2, 1
- -  **f**. e, 4, z, 3, n, 2, a, 1, H
+ -  **b** H, a, n, z, e, 0, 1, 2, 3, 4, 
+ -  **c** e, z, n, a, H, 4, 3, 2, 1, 0
+ -  **d** e, z, n, a, H, 1, 2, 3, 4
+ -  **e** H, a, n, z, e, 4, 3, 2, 1
+ -  **f** e, 4, z, 3, n, 2, a, 1, H
 
 ## 17. Wat print dit programma?
 
@@ -364,9 +364,9 @@ In welke volgorde moeten deze regels staan om de volgende output te krijgen:
 
 
  -  **a** 1, 2, 5, 4, 6, 3
- -  **b** 2, 4, 5, 6, 3, 1
+ -  **b** 2, 4, 6, 5, 3, 1
  -  **c** 1, 2, 4, 6, 5, 3
- -  **d** 2, 5, 4, 3, 6, 1
+ -  **d** 2, 5, 4, 6, 3, 1
 
 
 ## 20. Gegeven de volgende regels aan code.
