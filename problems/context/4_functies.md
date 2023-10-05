@@ -21,6 +21,6 @@ c. Schrijf een functie `add_up(l)` die een lijst `l` met getallen accepteert, al
 
 a. Schrijf een functie `present(l, c)` die een lijst `l` en variabele `c` accepteert en `True` teruggeeft of `c` in `l` zit en anders `False` teruggeeft.
 
-c. Schrijf een functie `count(l, c)` die een lijst `l` en variabele `c` accepteert en teruggeeft hoe vaak `c` in `l` zit.
+b. Schrijf een functie `count(l, c)` die een lijst `l` en variabele `c` accepteert en teruggeeft hoe vaak `c` in `l` zit.
 
-b. Schrijf een functie `find(l, c)` die een lijst `l` en variabele `c` accepteert en de *eerste* index teruggeeft waar `c` staat. Zit `c` niet in `l` dan geeft de functie -1 terug.
+c. Schrijf een functie `find(l, c)` die een lijst `l` en variabele `c` accepteert en de *eerste* index teruggeeft waar `c` staat. Zit `c` niet in `l` dan geeft de functie -1 terug.
