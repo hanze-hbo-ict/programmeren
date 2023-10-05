@@ -9,7 +9,7 @@ Aan het einde van de opdracht zal je dit uitbreiden naar *ternair*, oftewel gron
 
 ### Opdracht 1: `is_odd(n)`
 
-Als achtergrond voor dit probleem zullen we ons eerst gaan herinneren hoe we kunnen bepalen of de waarden in Python even of oneven zijn. Open eerst VSCode of een andere teksteditor en maak een nieuw bestand `wk6wc1.py` aan. 
+Als achtergrond voor dit probleem zullen we ons eerst gaan herinneren hoe we kunnen bepalen of de waarden in Python even of oneven zijn. Open eerst VSCode of een andere teksteditor en maak een nieuw bestand `wk6wc1.py` aan.
 
 Schrijf dan een Python functie `is_odd(n)` die als argument een integer `n` accepteert, en  `True` teruggeeft als `n` oneven is en `False` als `n` even is. Zorg ervoor dat je deze (boolean) waarden teruggeeft, niet strings! De even- of onevenheid van een getal noemen we zijn *pariteit*.
 
@@ -272,7 +272,7 @@ In [2]: count("11111110", 5)
 
 > Er zijn 10 soorten mensen in de wereld: zij die ternaire getallen kennen, zij die dat niet kennen, en zij die denken dat dit een binaire grap is.
 
-De volgende functies gaan over ternaire getallen, oftewel waarden in grondtal 3. 
+De volgende functies gaan over ternaire getallen, oftewel waarden in grondtal 3.
 
 ### Opdracht  6: `num_to_ternary(n)`
 

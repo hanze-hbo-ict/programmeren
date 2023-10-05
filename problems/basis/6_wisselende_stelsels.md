@@ -1,12 +1,9 @@
+---
+title: Wisselende stelsels
+file: wk6ba1.py
+---
+
 # Wisselende stelsels
-
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Getallen omzetten naar verschillende grondtallen               |
-| Bestandsnaam | `wk6ba1.py`                                                    |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
-
-De volgende problemen hebben allemaal te maken met de weergave van grondtallen en het converteren of het berekenen ervan.
 
 Om te beginnen zal je worden gevraagd om van grondtal 10 naar andere grondtallen te converteren en omgekeerd. Omdat bij grondtallen groter dan grondtal 10 nieuwe "cijfers" nodig zijn, beperken we ons tussen grondtallen van 2 tot en met 10.
 

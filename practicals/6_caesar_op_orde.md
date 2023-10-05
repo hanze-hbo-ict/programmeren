@@ -46,7 +46,7 @@ chr(ord("W") + 13)
 
 Het karakter "e" (87 + 13)
 
-Dit betekent `chr(87 + 13)`, maar `chr(100)` valt buiten de reeks! Hoe kan weer terug naar het begin worden doorgeteld? 
+Dit betekent `chr(87 + 13)`, maar `chr(100)` valt buiten de reeks! Hoe kan weer terug naar het begin worden doorgeteld?
 
 We willen net als bij de schijf door kunnen tellen zodat het eerstvolgende karakter na Z (ordinale waarde 90) A (ordinale waarde 65) is.
 
@@ -72,7 +72,7 @@ assert rot13("<") == "<"
 ```python
 def rot13(c):
     """Roteer c met 13 karakters
-    
+
     "Draai door" indien nodig, negeer NIET alfabetische karakters
     """
     if "a" <= c <= "z":
@@ -92,7 +92,7 @@ def rot13(c):
 - Wat zou moeten gebeuren als `c` geen karakter in het alfabet is?
 
 
-# Opdracht 1: `rot(c, n)`
+## Opdracht 1: `rot(c, n)`
 
 Schrijf een functie `rot(c, n)` die een enkel karakter `c` `n` plaatsen voorwaarts roteert in het alfabet.
 
@@ -111,7 +111,7 @@ Bedenk verder dat je de ingebouwde functies `ord` en `chr` die een string met é
 * `ord('a')` geeft bijvoorbeeld `97` terug
 * ... en `chr(97)` geeft `'a'` terug.
 
-# Opdracht 2: `encipher(s, n)`
+## Opdracht 2: `encipher(s, n)`
 
 Schrijf een functie `encipher(s, n)` die als argumenten een string `s` en een (niet negatieve) integer 'n' met een waarde tussen `0` en `25` verwacht. De functie `encipher` moet een nieuwe string teruggeven waarin de letters in `s` met `n` letters voorwaarts zijn "geroteerd" in het alfabet, en terug naar het begin van het alfabet als dat nodig is.
 
@@ -122,16 +122,14 @@ Bij dit probleem mag je ervan uitgaan dat hoofdletters "geroteerd" worden naar h
 :class: tip
 
 In Python kan je de test `if "a" <= c <= "z":` gebruiken om te controleren of een karakter `c` tussen de `'a'` en `'z'` in het alfabet zit.
-:::
 
-Gebruik de functie `rot()` als hulpfunctie. 
+Gebruik de functie `rot()` als hulpfunctie.
 
 Bedenk verder dat je de ingebouwde functies `ord` en `chr` die een string met één karakter omzetten naar een integer en omgekeerd kan gebruiken bij het roteren:
 
 * `ord('a')` geeft bijvoorbeeld `97` terug
 * ... en `chr(97)` geeft `'a'` terug.
 :::
-
 
 Zorg dat je de functie test! Hier is een begin:
 
@@ -165,11 +163,9 @@ Tot slot, onthoud dat:
 -   Kleine letters altijd kleine letters blijven.
 -   Andere tekens helemaal niet veranderen!
 
-
-
 # De LoL
 
-Lijsten kunnen alle mogelijke datatypes bevatten, dus ook andere lijsten, een zogenaamde LoL. 
+Lijsten kunnen alle mogelijke datatypes bevatten, dus ook andere lijsten, een zogenaamde LoL.
 
 We zouden bijvoorbeeld kunnen bijhouden hoeveel letters elk woord heeft:
 
@@ -206,9 +202,9 @@ Merk verder op dat het laatste voorbeeld laat zien dat onze ontsleutelaar het ni
 
 :::{admonition} Lists of lists
 :class: tip
-Probeer, Plan, Programmeer! 
+Probeer, Plan, Programmeer!
 - Probeer: Hoe los je dit probleem zelf op op papier?
-- Plan: In welke stappen kan je dit probleem opsplitsen? (hulpfuncties) 
+- Plan: In welke stappen kan je dit probleem opsplitsen? (hulpfuncties)
 _ Programmeer!
 :::
 

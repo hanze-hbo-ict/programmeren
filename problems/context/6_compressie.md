@@ -1,17 +1,15 @@
-# Wisselende stelsels
+---
+title: Beeldcompressie
+file: wk5co1.py
+---
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Getallen omzetten naar verschillende grondtallen               |
-| Bestandsnaam | `wk5co1.py`                                                    |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
-
-
-### Beeldcompressie
+# Compressie
 
 In dit probleem onderzoeken we de weergave van beelden met behulp van 0's en 1's.
 
-Voor dit deel schrijf je twee functies, `compress(s)` en `uncompress(c)`, samen met een of meer hulpfuncties. Lussen zijn niet toegestaan. 
+## Beeldcompressie
+
+Voor dit deel schrijf je twee functies, `compress(s)` en `uncompress(c)`, samen met een of meer hulpfuncties. Lussen zijn niet toegestaan.
 
 Om te beginnen bekijken we alleen 8 bij 8 zwart-wit afbeeldingen zoals de afbeelding hieronder:
 
@@ -29,7 +27,7 @@ Een andere manier om deze string voor te stellen in Python is
 "1010101001010101" * 4
 ```
 
-### Achtergrond
+## Achtergrond
 
 Maar wat nu? Stel je voor, je bent ingehuurd door HASA ("Hanze Air and Space Administration"). HASA heeft een satelliet die 8 bij 8 zwart-wit beelden neemt en deze terugstuurt naar de aarde als binaire strings van 64 bits zoals hierboven beschreven. Om kostbare energie te besparen die nodig is voor het verzenden van gegevens, wil HASA de verzonden beelden "comprimeren" in een formaat dat zo weinig mogelijk bits gebruikt. Een manier om dit te doen is door gebruik te maken van het "run-length" coderingsalgoritme.
 
@@ -41,7 +39,7 @@ Met behulp van onze standaard opeenvolging van 64 bits wordt dit beeld weergegev
 
 Run-length codering (die overigens ook wordt gebruikt als onderdeel van het JPEG beeldcompressie-algoritme) stelt voor om dit beeld weer te geven met de code "16 wit, 16 zwart, 16 wit, 16 zwart". Dat is een veel kortere beschrijving dan het opsommen van de reeks van 64 pixels "wit, wit, wit, wit, ...".
 
-#### Run-length encoding
+### Run-length encoding
 
 In het algemeen stelt onze run-length codering een beeld voor met een sequentie (een rij, of "run-length sequence" genoemd) van 8-bits *bytes*:
 
@@ -53,15 +51,15 @@ Merk op dat deze run-length codering een relatief klein aantal bits zal gebruike
 
 Het zal het echter zeer slecht doen (in termen van het aantal bits dat het gebruikt) in het representeren van de dambord afbeelding die we eerst bekeken hebben. In het algemeen doet de run-length codering het goed om afbeeldingen die grote blokken met effen kleuren hebben te "comprimeren". Gelukkig geldt dit voor veel echte afbeeldingen, zoals de afbeeldingen die HASA ontvangt, die meestal wit zijn met een paar zwarte vlekken die hemellichamen voorstellen.
 
-### Opdracht 1: `compress(s)`
+## Opdracht 1: `compress(s)`
 
 Dat was een hoop informatie! Hier is nu jouw taak.
 
 Schrijf een functie `compress(s)`, waarvan het argument een binaire string `s` is met een lengte van minder dan of gelijk aan 64 en dat als resultaat een andere binaire string teruggeeft. De resulterende binaire string zou een run-length codering van het origineel moeten zijn, zoals hierboven beschreven.
 
-Je hebt misschien één of meerdere hulpfunctie nodig en je mag ze elke naam geven die je wilt. Ook kan het zijn dat je één of meerdere functies uit het werkcollege kan gebruiken. 
+Je hebt misschien één of meerdere hulpfunctie nodig en je mag ze elke naam geven die je wilt. Ook kan het zijn dat je één of meerdere functies uit het werkcollege kan gebruiken.
 
-### Opdracht 2: `uncompress(c)`
+## Opdracht 2: `uncompress(c)`
 
 Schrijf vervolgens een functie `uncompress(c)` die het comprimeren van de functie `compress` "omkeert" of "ongedaan maakt".
 
@@ -71,7 +69,7 @@ Dat wil zeggen, `uncompress(compress(s))` zou `s` moeten teruggeven. Hier is een
 assert uncompress(compress(64 * "0")) == 64 * "0"
 ```
 
-Nogmaals, hulpfuncties zijn toegestaan. Lussen zijn niet toegestaan. 
+Nogmaals, hulpfuncties zijn toegestaan. Lussen zijn niet toegestaan.
 
 Hier zijn een paar voorbeelden van `compress` en `decompress` in actie:
 
