@@ -5,20 +5,8 @@ file: wk4ba2.txt
 
 # Midterm
 
-## 1. Wie liegt?
-Jeff zegt: “Alice liegt of Jeff spreekt de waarheid”  
-Bob zegt: “Jeff of Alice spreekt de waarheid”  
-Alice zegt: “Karen liegt en Alice en Jeff spreken de waarheid”  
-Karen zegt: “Bob en Alice spreken de waarheid”  
 
-
- -  **a**  Jeff en Bob
- -  **b**  Bob en Alice
- -  **c**  Alice en Karen
- -  **d**  Karen en Jeff
-
-
-## 2. Welke waarde heeft x aan het einde van dit programma?
+## 1. Welke waarde heeft x aan het einde van dit programma?
 
 ```python
 max_punten = 100
@@ -34,7 +22,7 @@ score = 50
  -  **d** 3.7
 
 
-## 3. Welke waarde heeft x aan het einde van dit programma?
+## 2. Welke waarde heeft x aan het einde van dit programma?
 
 ```python
 x = 4
@@ -52,7 +40,7 @@ else :
  -  **d** 7
 
 
-## 4. Welke waarde heeft x aan het einde van dit programma?
+## 3. Welke waarde heeft x aan het einde van dit programma?
 
 ```python
 x = 8
@@ -70,7 +58,7 @@ elif x == 7 or x == 4 :
  -  **d** 8
 
 
-## 5. Wat print dit programma?
+## 4. Wat print dit programma?
 
 ```python
 x = "Emily"
@@ -92,7 +80,7 @@ else:
  -  **d** ‘groep 4’
 
 
-## 6. Wat print dit programma?
+## 5. Wat print dit programma?
 
 ```python
 woord = "Hanzehogeschool"
@@ -105,7 +93,7 @@ print(woord[-1])
  -  **d** ‘o’
 
 
-## 7. Wat print dit programma?
+## 6. Wat print dit programma?
 
 ```python
 woord = "Hanzehogeschool"
@@ -118,7 +106,7 @@ print(woord[3:6])
  -  **d** ‘zeho’
 
 
-## 8. Wat print dit programma?
+## 7. Wat print dit programma?
 
 ```python
 woord = "Hanzehogeschool"
@@ -132,7 +120,7 @@ print(woord[-1:1:-2])
  -  **d** ‘’
 
 
-## 9. Wat print dit programma?
+## 8. Wat print dit programma?
 
 ```python
 print(function(5, 10))
@@ -148,7 +136,7 @@ def function(x, y):
  -  **d** programma werkt niet
 
 
-## 10. Wat print dit programma?
+## 9. Wat print dit programma?
 
 ```python
 def function(x, y):
@@ -165,7 +153,7 @@ print(function(5, 10))
  -  **d** programma werkt niet
 
 
-## 11. Wat print dit programma?
+## 10. Wat print dit programma?
 
 ```python
 def main():
@@ -186,7 +174,7 @@ main()
  -  **d** programma werkt niet
 
 
-## 12. Wat print dit programma?
+## 11. Wat print dit programma?
 
 ```python
 def main():
@@ -213,7 +201,7 @@ main()
  -  **f** programma werkt niet
 
 
-## 13. Wat print dit programma?
+## 12. Wat print dit programma?
 
 ```python
 def main():
@@ -238,7 +226,7 @@ main()
  -  **d** Programma werkt niet
 
 
-## 14. Hoe vaak print dit programma “hoi”  ?
+## 13. Hoe vaak print dit programma “hoi”  ?
 
 ```python
 def function(y):
@@ -259,7 +247,7 @@ function(4)
  -  **d** Programma werkt niet
 
 
-## 15. Wat print dit programma?
+## 14. Wat print dit programma?
 
 ```python
 def function(x):
@@ -277,7 +265,7 @@ function(5)
  -  **c** 5,4,3,2,1
  -  **d** 4,3,2,1,0
 
-## 16. Wat print dit programma?
+## 15. Wat print dit programma?
 
 ```python
 def function(x, y):
@@ -295,13 +283,13 @@ function("Hanze", 4)
 ```
 
  -  **a** H, 0, a, 1, n, 2, z, 3, e, 4
- -  **b** H, a, n, z, e, 0, 1, 2, 3, 4, 
+ -  **b** H, a, n, z, e, 0, 1, 2, 3, 4,
  -  **c** e, z, n, a, H, 4, 3, 2, 1, 0
  -  **d** e, z, n, a, H, 1, 2, 3, 4
  -  **e** H, a, n, z, e, 4, 3, 2, 1
  -  **f** e, 4, z, 3, n, 2, a, 1, H
 
-## 17. Wat print dit programma?
+## 16. Wat print dit programma?
 
 ```python
 
@@ -320,7 +308,7 @@ function("Hanze")
  -  **c** H, H, H, H, H
  -  **d** H, a, n, z
 
-## 18. Welke error geeft dit programma?
+## 17. Welke error geeft dit programma?
 
 
 ```python
@@ -342,7 +330,7 @@ function("Hanze")
  -  **d** SyntaxError
 
 
-## 19. Gegeven de volgende regels aan code.
+## 18. Gegeven de volgende regels aan code.
 
 ```{code-block} python
 ---
@@ -369,7 +357,7 @@ In welke volgorde moeten deze regels staan om de volgende output te krijgen:
  -  **d** 2, 5, 4, 6, 3, 1
 
 
-## 20. Gegeven de volgende regels aan code.
+## 19. Gegeven de volgende regels aan code.
 
 ```{code-block} python
 ---
