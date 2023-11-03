@@ -1,5 +1,10 @@
 ---
 version: 2023
+lang: nl
+papersize: a4
+geometry: margin=2.5cm
+toc: false
+mainfont: Arial
 ---
 
 # Proeftoets
