@@ -1,0 +1,1041 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="nl" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Week 5 &#8212; Programmeren</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "hanze-hbo-ict/programmeren");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../_static/save_state.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'solutions/week_5';</script>
+    <link rel="canonical" href="https:///hanze-hbo-ict.github.io/programmeren/solutions/week_5.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Zoeken" href="../search.html" />
+    <link rel="next" title="Week 6" href="week_6.html" />
+    <link rel="prev" title="Week 4" href="week_4.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="nl"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../about/syllabus.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/mascot.png" class="logo__image only-light" alt="Programmeren - Home"/>
+    <script>document.write(`<img src="../_static/mascot.png" class="logo__image only-dark" alt="Programmeren - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about/syllabus.html">
+                    Programmeren
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Opmerkingen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../about/feedback.html">Anoniem feedbackformulier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/faq.html">Veelgestelde vragen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/references.html">Literatuur</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_1.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/1_introductie.html">Wat is informatica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/1_binaire_getallen.html">Binaire getallen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/1_logische_schakelingen.html">Logische schakelingen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_1.html">Practicum</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/1a_problemen_oplossen.html">Problemen oplossen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/1b_picobot.html">Picobot</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opstap_1.html">Opstap</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/1_logic_riddles.html">Wie spreekt de waarheid?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/1_schakelingen.html">Optellingen schakelen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/1_picobot.html">De lege kamer</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_1.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/1_logic_riddles.html">Logische puzzles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/1_picobot.html">De lege kamer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/1_schakelingen.html">Optellingen schakelen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_1.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/1_logic_riddles.html">Logische puzzles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/1_schakelingen.html">Optellingen schakelen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/1_picobot_1.html">Dolende Picobot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/1_picobot_2.html">Huis met kamers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/1_picobot_3.html">Kamer met meubels</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_2.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/2_hardware.html">Computerarchitectuur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/2_LMC_assembly.html">Assembly</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_2.html">Practicum</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/0_install_python.html">Terminal, teksteditors en Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/2a_var_con.html">Maximum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/2b_strings_en_lists.html">Strings</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opstap_2.html">Opstap</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/2_bugs.html">Busreis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/2_outputs.html">Outputs</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_2.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/2_interactieve_fictie.html">Interactieve fictie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/2_sequenties_en_data.html">Sequenties en data</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_2.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/2_LMC_assembly.html">Little man computer introductie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/2_LMC_assembly.html">Little man computer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/2_rochambeau.html">Rochambeau</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_3.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/3_functies.html">Functies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/3_main_functie.html">Main functie</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_3.html">Practicum</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/3a_fijne_functies.html">Fijne functies</a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../practicals/3b_functie_calls.html">Turtles!</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opstap_3.html">Opstap</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/3_functies.html">Outputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/3_recursie.html">Recursie</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_3.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/3_functies.html">Functies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/3_turtle.html">Turtle</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_3.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/3_functies.html">Rekenmachine</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_4.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/4_errors.html">Errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/4_turtle_recursie.html">Lijnenspel</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_4.html">Practicum</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/4_turtle.html">Turtles!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/4_recursie_unplugged.html">Unplugged recursie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/4_midterm.html">Reading code</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opstap_4.html">Opstap</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/4_turtle.html">Turtle</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_4.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/4_turtle.html">Turtle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/4_midterm.html">Midterm</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_4.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/4_functies.html">Functies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/4_turtle.html">Recursieve turtles</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 5</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_5.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/5_ontwerp_algoritmen.html">Ontwerp van algoritmen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/5_recursie.html">Recursie</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_5.html">Practicum</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/5a_reading_rec.html">Reading code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/5b_feest_met_functies.html">Feest met functies</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opstap_5.html">Opstap</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-23"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/5_recursie.html">Functies lezen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_5.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-24"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/5_recursieve_functies.html">Recursieve functies</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_5.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/5_recursieve_functies.html">Recursieve functies</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 6</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_6.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-26"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/6_binaire_getallen.html">Binaire getallen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/6_rekenen_met_talstelsels.html">Talstelsels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/6_rekenen_met_taal.html">Rekenen met taal</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_6.html">Practicum</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-27"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/6_decimaal_en_verder.html">Van decimaal naar binair en verder!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/6_caesar_op_orde.html">Caesar op orde!</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_6.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-28"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/6_wisselende_stelsels.html">Wisselende stelsels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/6_sorting.html">Sorteren</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_6.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-29"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/6_compressie.html">Compressie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/6_lingo.html">Wisselende stelsels</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Oefening</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../extra/practice/5a_toets_v23.html">Zelftoets</a><input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-30"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../extra/practice/5a_toets_v23_solution.html">Uitwerking</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../extra/practice/1_recursie.html">Recursieve functies</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Oplossingen</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="week_2.html">Week 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week_3.html">Week 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week_4.html">Week 4</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Week 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week_6.html">Week 6</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Support</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../support/logisim.html">Logisim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/plain_text/index.html">Tekstbestanden</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Bronopslagplaats"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/edit/master/solutions/week_5.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/issues/new?title=Issue%20on%20page%20%2Fsolutions/week_5.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open een probleem"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download deze pagina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/solutions/week_5.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download het bronbestand"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Afdrukken naar pdf"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Volledig scherm"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Week 5</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Inhoud </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basis">Basis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recursieve-functies"><span class="xref myst">Recursieve functies</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-1">Opdracht 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2a">Opdracht 2a</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2b">Opdracht 2b</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2c">Opdracht 2c</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3a">Opdracht 3a</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3b">Opdracht 3b</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3c">Opdracht 3c</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3d">Opdracht 3d</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#context">Context</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><span class="xref myst">Recursieve functies</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-1-bubblesort">Opdracht 1 Bubblesort</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2-mergesort">Opdracht 2 Mergesort</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="week-5">
+<h1>Week 5<a class="headerlink" href="#week-5" title="Permalink to this heading">#</a></h1>
+<section id="basis">
+<h2>Basis<a class="headerlink" href="#basis" title="Permalink to this heading">#</a></h2>
+<section id="recursieve-functies">
+<h3><a class="reference internal" href="../problems/basis/5_recursieve_functies.html"><span class="doc std std-doc">Recursieve functies</span></a><a class="headerlink" href="#recursieve-functies" title="Permalink to this heading">#</a></h3>
+<section id="opdracht-1">
+<h4>Opdracht 1<a class="headerlink" href="#opdracht-1" title="Permalink to this heading">#</a></h4>
+<p>Schrijf een functie <code class="docutils literal notranslate"><span class="pre">no_doubles(l)</span></code> die een lijst <code class="docutils literal notranslate"><span class="pre">l</span></code> accepteert, alle dubbele waarden verwijdert uit <code class="docutils literal notranslate"><span class="pre">l</span></code> en deze nieuwe lijst teruggeeft.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">no_doubles</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Haalt alle dubbele elementen uit lijst `l` en geeft de nieuwe lijst terug.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Base case, de list is leeg.</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">l</span>
+
+    <span class="k">if</span> <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span> <span class="c1"># Het element is dubbel, ga door zonder dit element</span>
+        <span class="k">return</span> <span class="n">no_doubles</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="o">==</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">no_doubles</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span> <span class="n">no_doubles</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+        <span class="c1"># Gebruik voor de list [l[0]] om de l[0] als list mee te geven. Doe je dit niet zo dan krijg je een som of foutmelding terug.</span>
+
+<span class="k">assert</span> <span class="n">no_doubles</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;est&quot;</span><span class="p">,</span> <span class="s2">&quot;De no_doubles() werkt niet goed met tekst.&quot;</span>
+<span class="k">assert</span> <span class="n">no_doubles</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span> <span class="o">==</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="s2">&quot;De no_doubles() werkt niet goed met een lijst van integers.&quot;</span>
+</pre></div>
+</div>
+<p>Omdat een string net wat anders werkt dan een lijst wordt met een <code class="docutils literal notranslate"><span class="pre">if</span></code>-statement gekeken of <code class="docutils literal notranslate"><span class="pre">l</span></code> een string is of een list voordat de functie recursief wordt aangeroepen met het niet dubbele element toe gevoegd aan de uiteindelijk return. Om dezelfde reden geeft het programma bij de base case <code class="docutils literal notranslate"><span class="pre">l</span></code> terug in plaats van een legen lijst of string. Door <code class="docutils literal notranslate"><span class="pre">l</span></code> terug te geven, wordt direct het juiste variable type terug gegeven. Verder maakt deze functie gebruik van principes die al eerder zijn langs gekomen.</p>
+</section>
+<section id="opdracht-2a">
+<h4>Opdracht 2a<a class="headerlink" href="#opdracht-2a" title="Permalink to this heading">#</a></h4>
+<p>Schrijf een functie <code class="docutils literal notranslate"><span class="pre">intersect_sets(a,</span> <span class="pre">b)</span></code> die twee lijsten <code class="docutils literal notranslate"><span class="pre">a</span></code> en <code class="docutils literal notranslate"><span class="pre">b</span></code> binnen krijgt als parameters. De functie geeft een lijst terug met elementen die zowel in lijst <code class="docutils literal notranslate"><span class="pre">a</span></code> als in lijst <code class="docutils literal notranslate"><span class="pre">b</span></code> voorkomt.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">intersect_sets</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Geeft terug welke elementen in zowel lijst a als lijst b voorkomen.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Base case</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[]</span>
+
+    <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="n">b</span><span class="p">:</span> <span class="c1"># Als a[0] voorkomt in b dan moeten we hem bewaren/meenemen.</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span> <span class="n">intersect_sets</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">b</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span> <span class="c1"># Anders slaan we hem over.</span>
+        <span class="k">return</span> <span class="n">intersect_sets</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">b</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">intersect_sets</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span> <span class="o">==</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="s2">&quot;De intersect_sets() geeft een incorrecte lijst terug.&quot;</span>
+<span class="k">assert</span> <span class="n">intersect_sets</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span> <span class="o">==</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="s2">&quot;De intersect_sets() geeft een incorrecte lijst terug.&quot;</span>
+</pre></div>
+</div>
+<p>Hier werken we weer met lists dus kan de base case een lege list terug geven. Met de in statement in de <code class="docutils literal notranslate"><span class="pre">if</span></code>-statement wordt gekeken of een variable in een list zit. Is dit element in de list dan wordt de in een <code class="docutils literal notranslate"><span class="pre">True</span></code> en wordt de <code class="docutils literal notranslate"><span class="pre">if</span></code> geactiveerd. Omdat we alle elementen die in beide lijsten willen, wordt het element als list mee gegeven aan de recursieve return statement. Zit het element niet in de lijst dan roepen we de functie recursief aan zonder het element toe te voegen.</p>
+</section>
+<section id="opdracht-2b">
+<h4>Opdracht 2b<a class="headerlink" href="#opdracht-2b" title="Permalink to this heading">#</a></h4>
+<p>Schrijf een functie <code class="docutils literal notranslate"><span class="pre">except_sets(a,</span> <span class="pre">b)</span></code> dat twee lijsten <code class="docutils literal notranslate"><span class="pre">a</span></code> en <code class="docutils literal notranslate"><span class="pre">b</span></code> binnen krijgt als parameters De functie geeft een lijst terug met alle elementen van <code class="docutils literal notranslate"><span class="pre">a</span></code> die niet in <code class="docutils literal notranslate"><span class="pre">b</span></code> voorkomen.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">except_sets</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Geeft een lijst terug met alle elementen van lijst a die niet in lijst b voorkomen.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Base case</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[]</span>
+
+    <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">b</span><span class="p">:</span> <span class="c1"># Als a[0] niet in b zit dan moeten we hem bewaren/meenemen.</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span> <span class="n">except_sets</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">b</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span> <span class="c1"># Anders slaan we hem over.</span>
+        <span class="k">return</span> <span class="n">except_sets</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">b</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">except_sets</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span> <span class="o">==</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="s2">&quot;De except_sets() geeft een incorrecte lijst terug.&quot;</span>
+<span class="k">assert</span> <span class="n">except_sets</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span> <span class="o">==</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="s2">&quot;De except_sets() geeft een incorrecte lijst terug.&quot;</span>
+</pre></div>
+</div>
+<p>Omdat het programma nu juist alle elementen die niet in beide lijsten voorkomt moet bijhouden, wordt gebruik gemaakt van de not in statement om te kijken of het element niet in de lijst zit. Deze kun je vergelijken met de <code class="docutils literal notranslate"><span class="pre">!=</span></code> die je al eerder hebt gezien in <code class="docutils literal notranslate"><span class="pre">if</span></code>-statements. Verder werkt deze functie net zo als de <code class="docutils literal notranslate"><span class="pre">intersect_sets</span></code> functie.</p>
+</section>
+<section id="opdracht-2c">
+<h4>Opdracht 2c<a class="headerlink" href="#opdracht-2c" title="Permalink to this heading">#</a></h4>
+<p>Schrijf een functie <code class="docutils literal notranslate"><span class="pre">union_sets(a,</span> <span class="pre">b)</span></code> die twee lijsten <code class="docutils literal notranslate"><span class="pre">a</span></code> en <code class="docutils literal notranslate"><span class="pre">b</span></code> binnen krijgt als parameters. De functie geeft de union terug van deze twee lijsten.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">union_sets</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Geeft de union terug van lijsten a en b.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="k">return</span> <span class="n">no_doubles</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+    <span class="c1"># return no_doubles(a+b) zou ook nog kunnen</span>
+
+<span class="k">assert</span> <span class="n">union_sets</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span> <span class="o">==</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="s2">&quot;De union_sets() geeft een incorrecte lijst terug.&quot;</span>
+<span class="k">assert</span> <span class="n">union_sets</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span> <span class="o">==</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="s2">&quot;De union_sets() geeft een incorrecte lijst terug.&quot;</span>
+</pre></div>
+</div>
+<p>De vraag zegt niet dat deze functie recursief moet zijn. De union van de twee lijsten is de twee lijsten samengevoegd en de dubbele waarden verwijderd. Opdracht 1 was het schrijven van een functie die dubbele waarden verwijderd uit een lijst, <code class="docutils literal notranslate"><span class="pre">no_doubles(variable)</span></code>. Hier kunnen we handig gebruik van maken, nadat we de twee lijsten hebben samengevoegd. Roep de no_doubles() aan met de twee lijsten samengevoegd en geef terug wat uit deze functie komt.</p>
+</section>
+<section id="opdracht-3a">
+<h4>Opdracht 3a<a class="headerlink" href="#opdracht-3a" title="Permalink to this heading">#</a></h4>
+<p>Schrijf de functie <code class="docutils literal notranslate"><span class="pre">fact(number,</span> <span class="pre">counter=1)</span></code> dat twee integers number en counter accepteert. De functie verzamelt alle delers van het gegeven number en geeft deze allemaal terug in een lijst. De counter start automatisch op 1 en kan gebruikt worden om de delers van number te vinden.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fact</span><span class="p">(</span><span class="n">number</span><span class="p">,</span> <span class="n">counter</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Geeft alle delers van number in lijst vorm terug.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Base case</span>
+    <span class="k">if</span> <span class="n">counter</span> <span class="o">==</span> <span class="n">number</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span> <span class="c1"># Als we hier niet +1 doen dan testen we niet of het getal deelbaar is door zichzelf!</span>
+        <span class="k">return</span> <span class="p">[]</span>
+
+    <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="n">counter</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># Het getal is deelbaar door counter zonder rest.</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">counter</span><span class="p">]</span> <span class="o">+</span> <span class="n">fact</span><span class="p">(</span><span class="n">number</span><span class="p">,</span> <span class="n">counter</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">fact</span><span class="p">(</span><span class="n">number</span><span class="p">,</span> <span class="n">counter</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">fact</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">24</span><span class="p">],</span> <span class="s2">&quot;De fact() geeft een incorrecte lijst terug.&quot;</span>
+<span class="k">assert</span> <span class="n">fact</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">15</span><span class="p">],</span> <span class="s2">&quot;De fact() geeft een incorrecte lijst terug.&quot;</span>
+</pre></div>
+</div>
+<p>Als het nummer zonder rest gedeeld kan worden door de counter dan is de counter een getal dat aan de delers lijst moet worden toegevoegd. Als het geen deler dan kan de functie zonder dit getal recursief aan geroepen worden. De base case vergelijkt counter met number+1 omdat er ook gekeken moet worden of een getal deelbaar is door zichzelf.</p>
+</section>
+<section id="opdracht-3b">
+<h4>Opdracht 3b<a class="headerlink" href="#opdracht-3b" title="Permalink to this heading">#</a></h4>
+<p>Schrijf de functie <code class="docutils literal notranslate"><span class="pre">ggd(a,</span> <span class="pre">b)</span></code> die twee integers <code class="docutils literal notranslate"><span class="pre">a</span></code> en <code class="docutils literal notranslate"><span class="pre">b</span></code> accepteert en de ggd teruggeeft.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ggd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Geeft de ggd van twee integers a en b terug.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Gebruik fact() om van beide getallen de delers te vinden.</span>
+    <span class="n">fa</span> <span class="o">=</span> <span class="n">fact</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">fb</span> <span class="o">=</span> <span class="n">fact</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+
+    <span class="c1"># Gebruik intersect_sets() om alle gemeenschappelijke delers te vinden.</span>
+    <span class="n">gd</span> <span class="o">=</span> <span class="n">intersect_sets</span><span class="p">(</span><span class="n">fa</span><span class="p">,</span> <span class="n">fb</span><span class="p">)</span>
+
+    <span class="c1"># Geef de hoogste waarde in de gd terug.</span>
+    <span class="k">return</span> <span class="n">gd</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="k">assert</span> <span class="n">ggd</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;De ggd() geeft een verkeerde ggd terug.&quot;</span>
+<span class="k">assert</span> <span class="n">ggd</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">43</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;De ggd() geeft een verkeerde ggd terug.&quot;</span>
+<span class="k">assert</span> <span class="n">ggd</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">90</span><span class="p">)</span> <span class="o">==</span> <span class="mi">30</span><span class="p">,</span> <span class="s2">&quot;De ggd() geeft een verkeerde ggd terug.&quot;</span>
+<span class="k">assert</span> <span class="n">ggd</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">120</span><span class="p">)</span> <span class="o">==</span> <span class="mi">60</span><span class="p">,</span> <span class="s2">&quot;De ggd() geeft een verkeerde ggd terug.&quot;</span>
+</pre></div>
+</div>
+<p>De stappen zijn al in de opdracht meegegeven. Het programma kan <code class="docutils literal notranslate"><span class="pre">gd[-1]</span></code> teruggeven omdat de <code class="docutils literal notranslate"><span class="pre">fact</span></code> functie de getallen in de orde klein naar groot terug geeft. De <code class="docutils literal notranslate"><span class="pre">intersect_sets</span></code> functie behoudt deze volgorde. Het grootste getal staat dus altijd achteraan in de lijst.</p>
+</section>
+<section id="opdracht-3c">
+<h4>Opdracht 3c<a class="headerlink" href="#opdracht-3c" title="Permalink to this heading">#</a></h4>
+<p>Een andere aanpak voor het vinden van de ggd is de het euclides algoritme. Schrijf de functie <code class="docutils literal notranslate"><span class="pre">euclides(a,</span> <span class="pre">b)</span></code> die twee integers <code class="docutils literal notranslate"><span class="pre">a</span></code> en <code class="docutils literal notranslate"><span class="pre">b</span></code> accepteert en via het euclides algoritme de ggd berekent en teruggeeft.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">euclides</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Geeft de ggd van twee integers volgens het euclides algoritme.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Noem het grootste getal m</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">:</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="n">a</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">b</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="n">b</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">a</span>
+
+    <span class="c1"># r = m % n</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">m</span> <span class="o">%</span> <span class="n">n</span>
+
+    <span class="c1"># r == 0? Ja, geef n terug, nee roep de funcie nog een keer aan met n en er</span>
+    <span class="k">if</span> <span class="n">r</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span>
+
+    <span class="k">return</span> <span class="n">euclides</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">euclides</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;De euclides() geeft een verkeerde ggd terug.&quot;</span>
+<span class="k">assert</span> <span class="n">euclides</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">43</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;De euclides() geeft een verkeerde ggd terug.&quot;</span>
+<span class="k">assert</span> <span class="n">euclides</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">90</span><span class="p">)</span> <span class="o">==</span> <span class="mi">30</span><span class="p">,</span> <span class="s2">&quot;De euclides() geeft een verkeerde ggd terug.&quot;</span>
+<span class="k">assert</span> <span class="n">euclides</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">120</span><span class="p">)</span> <span class="o">==</span> <span class="mi">60</span><span class="p">,</span> <span class="s2">&quot;De euclides() geeft een verkeerde ggd terug.&quot;</span>
+<span class="k">assert</span> <span class="n">euclides</span><span class="p">(</span><span class="mi">900</span><span class="p">,</span> <span class="mi">1140</span><span class="p">)</span> <span class="o">==</span> <span class="mi">60</span><span class="p">,</span> <span class="s2">&quot;De euclides() geeft een verkeerde ggd terug.&quot;</span>
+</pre></div>
+</div>
+<p>Ook hier kun je de stappen in de opdracht volgen.</p>
+</section>
+<section id="opdracht-3d">
+<h4>Opdracht 3d<a class="headerlink" href="#opdracht-3d" title="Permalink to this heading">#</a></h4>
+<p>Welke van de twee is beter is vooral van toepassing op grotere getallen. Als je de ggd van 900 en 1140 wilt dan heb je de euclides nodig, omdat de ggd functie te vaak recursief wordt aangeroepen bij deze getallen en een <code class="docutils literal notranslate"><span class="pre">RecursionError</span></code> geeft.</p>
+</section>
+</section>
+</section>
+<section id="context">
+<h2>Context<a class="headerlink" href="#context" title="Permalink to this heading">#</a></h2>
+<section id="id1">
+<h3><a class="reference internal" href="../problems/context/5_recursieve_functies.html"><span class="doc std std-doc">Recursieve functies</span></a><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<section id="opdracht-1-bubblesort">
+<h4>Opdracht 1 Bubblesort<a class="headerlink" href="#opdracht-1-bubblesort" title="Permalink to this heading">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span># Bubblesort
+
+def bubble_sort_once(l):
+    &quot;&quot;&quot; Sorteert lijst `l` volgens bubblesort algoritme, van klein naar groot, een keer.
+    &quot;&quot;&quot;
+    # Base case. Om out of bounds te voor komen
+    if len(l) == 1:
+        return l
+
+    # Er zijn nog maar twee elementen
+    if len(l) == 2:
+        if l[0] &lt;= l[1]: # Het linker element is al kleiner of ze zijn even groot
+            return l
+        return [l[1]] + [l[0]] # De linker is groter, dus de twee getallen wisselen van plek
+
+    if l[0] &lt;= l[1]:
+        return [l[0]] + bubble_sort_once(l[1:]) # We kunnen de huidige volgorde aanhouden
+    else:
+        return [l[1]] + bubble_sort_once([l[0]] + l[2:]) # We moeten de volgorde aanpassen
+
+def check_order(l):
+    &quot;&quot;&quot; Controleert of een list op volgorde is.
+    &quot;&quot;&quot;
+    # Base case
+    if len(l) == 2:
+        if l[0] &lt;= l[1]:
+            return True
+        else:
+            return False
+
+    if l[0] &gt; l[1]: # Het eerste element is groter dan de volgende dus de lijst is niet op volgorde
+        return False
+    else: # Volgorde is goed dus we kunnen een element opschuiven om de rest van de lijst te checken
+        return check_order(l[1:])
+
+def bubblesort(l):
+    &quot;&quot;&quot; Geeft de lijst `l` met bubble sort gesorteerd van klein naar groot terug.
+    &quot;&quot;&quot;
+    if check_order(l) == True:
+        return l
+    else:
+        `l` = bubble_sort_once(l)
+        return bubblesort(l)
+</pre></div>
+</div>
+</section>
+<section id="opdracht-2-mergesort">
+<h4>Opdracht 2 Mergesort<a class="headerlink" href="#opdracht-2-mergesort" title="Permalink to this heading">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">merge_sort</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">half</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span>
+        <span class="k">return</span> <span class="n">merge</span><span class="p">(</span><span class="n">merge_sort</span><span class="p">(</span><span class="n">l</span><span class="p">[:</span><span class="n">half</span><span class="p">]),</span>  <span class="n">merge_sort</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="n">half</span><span class="p">:]))</span>
+    <span class="k">return</span> <span class="n">l</span>
+
+
+<span class="k">def</span> <span class="nf">merge</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">l2</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">l2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">l1</span>
+
+    <span class="k">if</span> <span class="n">l1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">l2</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">l1</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span> <span class="n">merge</span><span class="p">(</span><span class="n">l1</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">l2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">l2</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span> <span class="n">merge</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "hanze-hbo-ict/programmeren",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./solutions"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="week_4.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">vorige</p>
+        <p class="prev-next-title">Week 4</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="week_6.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">volgende</p>
+        <p class="prev-next-title">Week 6</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Inhoud
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basis">Basis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recursieve-functies"><span class="xref myst">Recursieve functies</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-1">Opdracht 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2a">Opdracht 2a</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2b">Opdracht 2b</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2c">Opdracht 2c</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3a">Opdracht 3a</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3b">Opdracht 3b</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3c">Opdracht 3c</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3d">Opdracht 3d</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#context">Context</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><span class="xref myst">Recursieve functies</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-1-bubblesort">Opdracht 1 Bubblesort</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2-mergesort">Opdracht 2 Mergesort</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Door Harvey Mudd College / Hanze University of Applied Sciences
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
+    Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
