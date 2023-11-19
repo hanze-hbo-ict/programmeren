@@ -23,7 +23,7 @@ def main():
     """Main functie"""
 
 def testing():
-    """test functie""" 
+    """test functie"""
     assert lc_mult(4) == [0, 2, 4, 6]
     assert lc_idiv(4) == [0, 0, 1, 1]
     assert lc_fdiv(4) == [0.0, 0.5, 1.0, 1.5]
@@ -101,7 +101,7 @@ Bedenk voordat je de functie uitvoert of `lc_idiv(10)` nog hetzelfde of anders d
 
 Typ nu `run wk3ex3.py` in IPython en probeer `lc_idiv(10)`. Komt dit overeen met wat je verwachtte? Je hoeft hier niets over op te schrijven, maar wees er zeker van dat duidelijk is waarom deze nieuwe uitvoer is zoals het is!
 
-Zie verder voorbeelden van [list comprehensions](/practice/2_list_comprehension) voor meer oefeningen!
+Zie verder voorbeelden van [list comprehensions](/extra/practice/2_list_comprehension) voor meer oefeningen!
 
 ## Integreren
 
