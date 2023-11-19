@@ -1,5 +1,4 @@
-# List Comprehensions
-
+# Klinkt goed!
 
 ## Voorbereiding
 
