@@ -1,4 +1,4 @@
-# For lusjes
+# For lussen
 
 Wat is de output van onderstaande programma's?
 

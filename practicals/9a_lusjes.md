@@ -1,8 +1,10 @@
-# lang leven lusjes
+# Lang leve lusjes
 
 ## Opdracht 1
-Wat is de output van onderstaande programma's?  
-a.  
+
+Wat is de output van onderstaande programma's?
+
+a.
 ```python
 def fun1B():
     for i in range(1, 6):
@@ -12,7 +14,7 @@ def fun1B():
 fun1B()
 ```
 
-b.   
+b.
 ```python
 def fun2B():
     for i in range(1, 6):
@@ -22,7 +24,7 @@ def fun2B():
 fun2B()
 ```
 
-c.  
+c.
 ```python
  def fun3B():
     for i in range(1,6):
@@ -32,7 +34,7 @@ c.
 fun3B()
 ```
 
-d. 
+d.
 ```python
 def fun4B():
     for i in range(1,6):
@@ -154,7 +156,7 @@ def function(L):
     result = []
     for e in L:
         if e < 5:
-            result +=  [e] 
+            result +=  [e]
     return result
 
 print(function([1, 2, 3, 4, 5, 6]))
@@ -192,6 +194,6 @@ print(function("Hanze"))
 
 Maak zelf een functie 'count_vowels(s) die:
 - Een string 's' accepteert
-- de functie telt alle klinkers in de string en geeft dat terug als integer. 
+- de functie telt alle klinkers in de string en geeft dat terug als integer.
 
-Maak zelf een aantal assertions om je functie te testen. 
+Maak zelf een aantal assertions om je functie te testen.
