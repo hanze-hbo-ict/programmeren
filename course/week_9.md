@@ -2,7 +2,7 @@
 
 ![Schotel](/images/saucer.png)
 
-## Levende data
+## Lussen en data
 
 ```{tableofcontents}
 ```

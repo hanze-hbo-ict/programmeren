@@ -48,7 +48,7 @@ assert is_periodical("winkel", L) is False
 ```
 
 ```{important}
-Je zal steeds moeten opletten of je een keus moeten maken tussen twee mogelijke opties want welke dan te gebruiken? Denk aan het "kranten" voorbeeld want de keus voor **K** of **Kr** maakte daar uit en zal ook het geval zijn voor andere woorden. In elk geval zal je altijd moeten controleren op twee mogelijkheden want elementen kunnen uit één of twee karakters kunnen bestaan.
+Je zal steeds moeten opletten of je een keus moeten maken tussen twee mogelijke opties want welke dan te gebruiken? Denk aan het "kranten" voorbeeld want de keus voor **K** of **Kr** maakte daar uit en zal ook het geval zijn voor andere woorden. In elk geval zal je altijd moeten controleren op twee mogelijkheden want elementen kunnen uit één of twee karakters bestaan.
 
 Dit is een voorbeeld van een *subset-sum* probleem waar je de waarden (de *subset*, in dit geval de elementen) moet zien te vinden die het beste het volledige woord kunnen vormen. Het valt (opvallend) eenvoudig op te lossen met behulp van een recursieve strategie, zie de paragraaf 2.10 *Use It or Lose It* in het boek voor een ander voorbeeld.{cite}`alvarado2019cs`
 ```
