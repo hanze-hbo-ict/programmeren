@@ -4,7 +4,7 @@ title: 42ChemShirts
 
 # Periodiek systeem
 
-![Cheers](images/periodiek_systeem/t-shirt.jpg)
+![Cheers](images/periodiek_systeem/t-shirt.png)
 
 Je kunt tegenwoordig T-shirts kopen met teksten die bestaan uit de symbolen van elementen van het periodiek systeem. In deze opgave zal moeten nagaan welke woorden kunnen worden samengesteld met behulp van de elementen.
 
