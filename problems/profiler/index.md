@@ -7,12 +7,6 @@ data: https://cs50.harvard.edu/x/2022/psets/6/dna/
 
 ![DNA](images/dna_forensics.png)
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | DNA en Short Tandem Repeats (STR)                        |
-| Bestandsnaam | `dna.py`                                                       |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
-
 ## Inleiding
 
 DNA, de drager van genetische informatie in levende wezens, wordt al tientallen jaren gebruikt in het strafrecht. Maar hoe werkt het opstellen van DNA-profielen precies? Hoe kunnen forensische onderzoekers aan de hand van een DNA-reeks vaststellen van wie het DNA is?
@@ -81,7 +75,7 @@ Download het bestand met [DNA-databases en begincode](https://cdn.cs50.net/2021/
 
 ## Opdracht
 
-Jouw taak is een programma te schrijven dat een DNA-sequentie en een CSV-bestand met STR-tellingen voor een lijst van personen inleest en vervolgens bepaalt aan wie het DNA (waarschijnlijk) toebehoort. Het programma zal je op de commandline als volgt kunnen gaan uitvoeren met Python zelf (en *niet* met IPython):
+Jouw taak is een programma te schrijven dat een DNA-sequentie en een CSV-bestand met STR-tellingen voor een lijst van personen inleest en vervolgens bepaalt aan wie het DNA (waarschijnlijk) toebehoort. Het programma zal je op de commandline als volgt kunnen gaan uitvoeren met Python:
 
 ```console
 python dna.py databases/large.csv sequences/5.txt
@@ -117,16 +111,40 @@ Het eerste element zal altijd de naam van de bestand zijn dat wordt uitgevoerd (
 
 Het eerste argument dat jouw programma zal moeten accepteren is een CSV-bestand (*comma separated values*) wat dat de STR-tellingen voor een lijst van personen bevat. Een CSV-bestand is een tekstbestand waar waarden door komma's gescheiden worden. Het is een eenvoudig formaat dat je ook in Excel zou kan openen.
 
-Gebruik het volgende om het CSV-bestand regel voor regel in te lezen met behulp van de module `csv`. De *list* `database` zal na het inlezen elke regel als *dictionary* bevatten waar de sleutel de kolomnaam is met de daarbij behorende waarde.
-
+Gebruik het volgende om het CSV-bestand regel voor regel in te lezen met behulp van de module `csv`.
 ```python
 database = []
 
 with open("databases/small.csv") as file:
-    reader = csv.DictReader(file)
+    reader = csv.reader(file)
     for entry in reader:
-        database.append(entry)
+        database += [entry]
 ```
+
+De *list* `database` zal na het inlezen elke regel als *list* bevatten en is dus een lijst van lijsten, oftewel een LoL! Bijvoorbeeld
+
+
+```python
+[
+    ["name", "AGATC", "AATG", "TATC"],
+    ["Alice", "2", "8", "3"],
+    ["Bob", "4", "1", "5"],
+    ["Charlie", "3", "2", "5"],
+]
+```
+
+````{important}
+Sta even stil bij deze structuur. De eerste rij (het eerste element, of `database[0]`) bevat de kolomnamen en de volgende elementen (`database[1:]`) zijn de rijen met de bijbehorende waarden.
+
+Je zal de STR's waar op moet worden getest straks moeten doorlopen en welke deze zijn kan je dus vinden in het eerste element (de eerste rij) in `database`. Gebruik hier variabelen om deze specifieke waarden te verzamelen om later te kunnen gebruiken, bijvoorbeeld
+
+```python
+cols = databases[0]  # de kolomnamen
+stsr = cols[1:]  # de STR's waar op moet worden getest
+```
+
+Let verder op dat de module `csv` alleen maar het bestand leest en elke waarde als een *string* zal zien, dus ook getallen. Bedenk dat je met `int()` een string waarde naar een integer kan omzetten.
+````
 
 De sequenties (het tweede argument) bevatten een enkele *string* en deze lees je als volgt:
 

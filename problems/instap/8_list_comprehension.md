@@ -1,6 +1,6 @@
-# List Comprehensions
+# List comprehension
 
-Wat voor lijst `L` krijg je met onderstaande listcomprehensions
+Wat is de inhoud van lijst `L` met de onderstaande list comprehensions?
 
 ## opgave 1
 ```python

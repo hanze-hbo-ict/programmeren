@@ -1,11 +1,11 @@
-# Levende data
+# Onderwerpen
 
 ![Schotel](/images/saucer.png)
 
-## Onderwerpen
+## Lussen en data
 
--   [2D arrays](/topics/17_2d_arrays)
--   [Meer 2D](/topics/18_meer_2d)
+```{tableofcontents}
+```
 
 ## Boek
 

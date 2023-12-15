@@ -1,18 +1,12 @@
 # TR Investeringen BV
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Slim investeren met Python                                     |
-| Bestandsnaam | `wk9ex3.py`                                                    |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
-
 ```{warning}
-Je mag **geen** gebruik maken van de ingebouwde functies `sum`, `min` of `max` in deze opgave. Schrijf in plaats daarvan bij het bouwen van de verschillende menu-opties hulpfuncties die de gegevens op de juiste manier kunnen verwerken. Als je deze functies *echt* wilt gebruiken, schrijf dan je eigen versies hiervan. (voorbeelden hiervan worden tijdens het college behandeld)
+Je mag **geen** gebruik maken van de ingebouwde functies `sum`, `min` of `max` in deze opgave. Schrijf in plaats daarvan bij het bouwen van de verschillende menu-opties hulpfuncties die de gegevens op de juiste manier kunnen verwerken. Als je deze functies *echt* wilt gebruiken, schrijf dan je eigen versies hiervan.
 ```
 
 ## Begincode
 
-Tijdens het college hebben we een voorbeeld van een lus voor gebruikersinteractie bekeken. Hier is een variatie op die code; dit is een goed begin voor deze opgave. We hebben de hoofdfunctie `main()` genoemd zodat het op dezelfde manier opgebouwd is als hoe je de grotere versie die hieronder beschreven is gaat schrijven:
+In deze opgave ga je een lus gebruiken voor gebruikersinteractie. Je ziet hier startcode die je verder gaat uitwerken:
 
 ```python
 #
@@ -370,4 +364,4 @@ Tot gisteren!
 
 ## Bonusopgave: creatieve menu-opties
 
-Als je wilt kan je voor maximaal 5 bonuspunten extra menu-opties toevoegen (met andere numerieke labels) die de lijst op een andere, eigen ontworpen manier verwerken. Dit hoeft niet serieus te zijn! In ieder geval worden de opties beoordeeld op wat ze doen en hoe makkelijk ze te gebruiken zijn.
+Als je wilt kan je extra menu-opties toevoegen (met andere numerieke labels) die de lijst op een andere, eigen ontworpen manier verwerken. Dit hoeft niet serieus te zijn! In ieder geval worden de opties beoordeeld op wat ze doen en hoe makkelijk ze te gebruiken zijn.

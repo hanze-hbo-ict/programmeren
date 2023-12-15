@@ -1,12 +1,14 @@
-# Assembly
+# Onderwerpen
 
 ![Schotel](/images/saucer.png)
 
-## Onderwerpen
+## List comprehension
 
--   [Hmmm introductie](/topics/13_hmmm_introductie)
--   [Hmmm functies](/topics/14_hmmm_functies)
+```{tableofcontents}
+```
 
 ## Boek
 
-Hoofdstuk 4 uit *CS for All*.{cite}`alvarado2019cs`
+Hoofdstuk 3 uit *CS for All*.{cite}`alvarado2019cs`
+
+Besteed met name aandacht aan 3.6 Putting Google on the Map!

@@ -1,8 +1,8 @@
-# Klinkt goed!
+# Klinkt beter!
 
 ## Geluid
 
-Geluid is, zoals je misschien al eerder hebt gehoord, een trilling en deze trilling kan te tekenen als een golfbeweging. 
+Geluid is, zoals je misschien al eerder hebt gehoord, een trilling en deze trilling kan te tekenen als een golfbeweging.
 
 ![Sound wave](images/8/wave.png)
 
@@ -13,11 +13,11 @@ Hard geluid heeft een hogere amplitude dan een zacht geluid en bij een hoog gelu
 ### Geluidbestanden
 
 
-Afhankelijk van het formaat kunnen audiogegevens op veel verschillende manieren gecodeerd en opgeslagen worden. Het opslaan van een gehele geluidsgolf kost de computer teveel geheugen want hij zou elke punt in zo'n grafiek op moeten slaan. Een van de meest eenvoudige coderingen staat bekend als *pulscodemodulatie* (PCM), waarbij de geluidsgolven om de zoveel tijd worden *gesampled*. 
+Afhankelijk van het formaat kunnen audiogegevens op veel verschillende manieren gecodeerd en opgeslagen worden. Het opslaan van een gehele geluidsgolf kost de computer teveel geheugen want hij zou elke punt in zo'n grafiek op moeten slaan. Een van de meest eenvoudige coderingen staat bekend als *pulscodemodulatie* (PCM), waarbij de geluidsgolven om de zoveel tijd worden *gesampled*.
 
 ![Sampling](images/8/sampling.png)
 
-Uiteindelijk heb je een lijst van waarden in het bereik -128 tot 127 (als er 1 byte per geluidssample wordt gebruikt) of -32768 tot 32767 (als er 2 bytes voor elke sample zijn). Daarnaast heb je een samplerate dat aangeeft hoeveel samples er per seconde aangeeft afgespeeld moet worden om de normale snelheid te bereiken. Met deze informatie kan de computer de originele geluid herconstructueren. 
+Uiteindelijk heb je een lijst van waarden in het bereik -128 tot 127 (als er 1 byte per geluidssample wordt gebruikt) of -32768 tot 32767 (als er 2 bytes voor elke sample zijn). Daarnaast heb je een samplerate dat aangeeft hoeveel samples er per seconde aangeeft afgespeeld moet worden om de normale snelheid te bereiken. Met deze informatie kan de computer de originele geluid herconstructueren.
 
 ![Reconstructie geluidbestand](images/8/reconstruction.jpg)
 
@@ -140,7 +140,7 @@ def flipflop(filename):
     play("out.wav")
 ```
 
-Let op het middelste gedeelte van deze code, waar de nieuwe geluidssamples gemaakt worden op basis van de oude. In dit geval is `newsamps` een "geflipflopde" versie van de oude `samps`. Merk verder op dat deze code precies hetzelfde is als de opdracht `flipside` uit [fijne functies](fijne_functies.md): `flipflop` plaatst de tweede helft van het geluid *voor* de eerste helft!
+Let op het middelste gedeelte van deze code, waar de nieuwe geluidssamples gemaakt worden op basis van de oude. In dit geval is `newsamps` een "geflipflopde" versie van de oude `samps`. Merk verder op dat deze code precies hetzelfde is als de opdracht `flipside` uit de [introductie van functies](/lectures/3_functies): `flipflop` plaatst de tweede helft van het geluid *voor* de eerste helft!
 
 Bij het schrijven van jouw geluidsbewerkende functies kan je `flipflop` als startpunt gebruiken.
 
@@ -386,7 +386,7 @@ In [1]: pure_tone(440, 0.5)  # een A van 0,5 seconde in concertstemming
 
 Je kan de frequenties van andere noten vinden op [Wikipedia](https://nl.wikipedia.org/wiki/Toonhoogtetabel) en op vele andere plekken. Hier is ook een klein overzicht:
 
-![Frequentietabel](images/notes.png)
+![Frequentietabel](images/8/notes.png)
 
 Het is interessant om op te merken dat C0 onder het bereik van het normale menselijke gehoor ligt (we kunnen slechts tot ongeveer 20 Hz horen), maar B8 laat veel ruimte over (de meeste mensen onder de 40 jaar kunnen tot 20.000 Hz of hoger horen). Ook gaan de meeste piano's alleen naar A0 (28 Hz), maar de Bösendorfer Imperial Concert Grand heeft extra toetsen (zwart gekleurd) die helemaal naar C0 gaan. Voor het geval je extra bas nodig hebt!
 

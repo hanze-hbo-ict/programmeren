@@ -1,11 +1,11 @@
-# Lussen
+# Onderwerpen
 
 ![Schotel](/images/saucer.png)
 
-## Onderwerpen
+## Lussen
 
--   [Lussen](/topics/15_lussen)
--   [Iteratief ontwerpen](/topics/16_iteratief_ontwerp)
+```{tableofcontents}
+```
 
 ## Boek
 

@@ -1,6 +1,6 @@
-# Nested lusjes
+# Geneste lussen
 
-Wat is de output van onderstaande programma's?
+Wat is de output van de onderstaande programma's?
 
 ## opgave 1
 ```python

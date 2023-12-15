@@ -1,5 +1,10 @@
 ---
 version: 2023
+lang: nl
+papersize: a4
+geometry: margin=2.5cm
+toc: false
+mainfont: Arial
 ---
 
 # Proeftoets
@@ -59,7 +64,7 @@ Voeg een *docstring* toe aan de functie `remove_double` waarin je beschrijft wat
 
 Voeg *drie* extra assertions toe om de functie te testen.
 
-## Opgave 4
+## Opgave 4 (10pt)
 
 Elk bestand in de computer eindigt met een bestandsextensie. Dit geeft aan wat voor bestand het is. Bijvoorbeeld, ".py" laat de computer weten dat het om een Python bestand gaat. In een email is het vaak niet toegestaan om een bijlage mee te sturen die eindigt op ".exe". Dit zou namelijk malware kunnen zijn die schadelijk is voor de computer.
 

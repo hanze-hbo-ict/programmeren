@@ -1,11 +1,8 @@
-# Objecten
+# Onderwerpen
 
 ![Schotel](/images/saucer.png)
 
-## Onderwerpen
-
-- [Klassen en objecten](/topics/19_objecten)
-- [Dictionaries](/topics/20_dictionaries)
+## Klassen en objecten
 
 ## Boek
 
