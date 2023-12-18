@@ -1,0 +1,21 @@
+digraph {
+    graph [];
+    rankdir=TB;
+
+    p1_label [shape=plaintext, label=<Program p<sub>1</sub> (<font color="blue">fitness=0.03</font>)>, margin=0 width=0 height=0]
+    p2_label [shape=plaintext, label=<Program p<sub>2</sub> (<font color="blue">fitness=0.05</font>)>, margin=0 width=0 height=0]
+    pn_label [shape=plaintext, label=<Program p<sub>n</sub> (<font color="blue">fitness=...</font>)>, margin=0 width=0 height=0]
+
+    c1_label [shape=plaintext, label=<Program c<sub>1</sub> (<font color="blue">fitness=0.19</font>)>, margin=0 width=0 height=0]
+
+    c1 [shape=none, image="picobot_c1.png", label=""]
+
+    p1_label -> c1
+    p2_label -> c1
+    pn_label -> c1
+
+    c1 -> c1_label [style=invis]
+
+    {rank=same; p1_label; p2_label;}
+    {rank=same; p1_label; p2_label; pn_label;}
+}
