@@ -1,0 +1,1327 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="nl" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Vier op een rij: de klasse Board &#8212; Programmeren</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "hanze-hbo-ict/programmeren");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../_static/save_state.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'practicals/12b_vier_op_een_rij';</script>
+    <link rel="canonical" href="https:///hanze-hbo-ict.github.io/programmeren/practicals/12b_vier_op_een_rij.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Zoeken" href="../search.html" />
+    <link rel="next" title="Basis" href="../course/basis_11.html" />
+    <link rel="prev" title="Eeuwigdurende kalender" href="12a_agenda.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="nl"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../about/syllabus.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/mascot.png" class="logo__image only-light" alt="Programmeren - Home"/>
+    <script>document.write(`<img src="../_static/mascot.png" class="logo__image only-dark" alt="Programmeren - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about/syllabus.html">
+                    Programmeren
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Opmerkingen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../about/feedback.html">Anoniem feedbackformulier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/faq.html">Veelgestelde vragen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/references.html">Literatuur</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_1.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/1_introductie.html">Wat is informatica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/1_binaire_getallen.html">Binaire getallen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/1_logische_schakelingen.html">Logische schakelingen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_1.html">Practicum</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="1a_problemen_oplossen.html">Problemen oplossen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1b_picobot.html">Picobot</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opstap_1.html">Opstap</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/1_logic_riddles.html">Wie spreekt de waarheid?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/1_schakelingen.html">Optellingen schakelen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/1_picobot.html">De lege kamer</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_1.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/1_logic_riddles.html">Logische puzzles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/1_picobot.html">De lege kamer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/1_schakelingen.html">Optellingen schakelen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_1.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/1_logic_riddles.html">Logische puzzles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/1_schakelingen.html">Optellingen schakelen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/1_picobot_1.html">Dolende Picobot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/1_picobot_2.html">Huis met kamers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/1_picobot_3.html">Kamer met meubels</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_2.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/2_hardware.html">Computerarchitectuur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/2_LMC_assembly.html">Assembly</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_2.html">Practicum</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/0_install_python.html">Terminal, teksteditors en Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2a_var_con.html">Maximum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2b_strings_en_lists.html">Strings</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opstap_2.html">Opstap</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/2_bugs.html">Busreis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/2_outputs.html">Outputs</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_2.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/2_interactieve_fictie.html">Interactieve fictie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/2_sequenties_en_data.html">Sequenties en data</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_2.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/2_LMC_assembly.html">Little man computer introductie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/2_LMC_assembly.html">Little man computer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/2_rochambeau.html">Rochambeau</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_3.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/3_functies.html">Functies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/3_main_functie.html">Main functie</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_3.html">Practicum</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="3a_fijne_functies.html">Fijne functies</a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="3b_functie_calls.html">Turtles!</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opstap_3.html">Opstap</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/3_functies.html">Outputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/3_recursie.html">Recursie</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_3.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/3_functies.html">Functies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/3_turtle.html">Turtle</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_3.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/3_functies.html">Rekenmachine</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_4.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/4_errors.html">Errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/4_turtle_recursie.html">Lijnenspel</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_4.html">Practicum</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="4_turtle.html">Turtles!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_recursie_unplugged.html">Unplugged recursie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_midterm.html">Reading code</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opstap_4.html">Opstap</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/4_turtle.html">Turtle</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_4.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/4_turtle.html">Turtle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/4_midterm.html">Midterm</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_4.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/4_functies.html">Functies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/4_turtle.html">Recursieve turtles</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 5</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_5.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/5_ontwerp_algoritmen.html">Ontwerp van algoritmen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/5_recursie.html">Recursie</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_5.html">Practicum</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="5a_reading_rec.html">Reading code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5b_feest_met_functies.html">Feest met functies</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opstap_5.html">Opstap</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-23"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/5_recursie.html">Functies lezen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_5.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-24"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/5_recursieve_functies.html">Recursieve functies</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_5.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/5_recursieve_functies.html">Recursieve functies</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 6</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_6.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-26"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/6_binaire_getallen.html">Binaire getallen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/6_rekenen_met_talstelsels.html">Talstelsels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/6_rekenen_met_taal.html">Rekenen met taal</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_6.html">Practicum</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-27"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="6_decimaal_en_verder.html">Van decimaal naar binair en verder!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_caesar_op_orde.html">Caesar op orde!</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_6.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-28"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/6_wisselende_stelsels.html">Wisselende stelsels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/6_sorting.html">Sorteren</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_6.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-29"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/6_compressie.html">Compressie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/6_lingo.html">Wisselende stelsels</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM2 Week 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_7.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-30"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/8_list_comprehension.html">List comprehension</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_7.html">Practicum</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-31"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="8a_list_comprehension.html">Klinkt goed!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8b_klinkt_goed.html">Klinkt beter!</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opstap_7.html">Opstap</a><input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-32"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/8_list_comprehension.html">List comprehension</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_7.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-33"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/8_list_comprehension.html">List comprehension</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_7.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-34"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/8_list_comprehension.html">Numerieke integratie</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM2 Week 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_8.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-35" name="toctree-checkbox-35" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-35"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/9_lussen.html">Lussen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_8.html">Practicum</a><input class="toctree-checkbox" id="toctree-checkbox-36" name="toctree-checkbox-36" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-36"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="9a_lusjes.html">Lang leve lusjes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9b_statistieken.html">Statistieken</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opstap_8.html">Opstap</a><input class="toctree-checkbox" id="toctree-checkbox-37" name="toctree-checkbox-37" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-37"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/9_for_lussen.html">For lussen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/9_while_lussen.html">While lussen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_8.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-38" name="toctree-checkbox-38" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-38"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/9_python_bat.html">Lussen in PythonBat!</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_8.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-39" name="toctree-checkbox-39" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-39"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/9_pi_pijlen.html">Pi met pijltjes</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM2 Week 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_9.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-40" name="toctree-checkbox-40" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-40"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/old%20topics/16_iteratief_ontwerp.html">Iteratief ontwerpen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_9.html">Practicum</a><input class="toctree-checkbox" id="toctree-checkbox-41" name="toctree-checkbox-41" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-41"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/profiler/index.html">De vingerafdruk van DNA</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_9.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-42" name="toctree-checkbox-42" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-42"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/10_iteraties.html">Iteraties</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_9.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-43" name="toctree-checkbox-43" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-43"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/10_periodiek_systeem.html">Periodiek systeem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/tr_investeringen/index.html">TR Investeringen BV</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM2 Week 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_10.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-44" name="toctree-checkbox-44" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-44"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/11_2d_arrays.html">2D Arrays</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_10.html">Practicum</a><input class="toctree-checkbox" id="toctree-checkbox-45" name="toctree-checkbox-45" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-45"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="11a_fraaie_plaatjes.html">Fraaie plaatjes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11b_boter_kaas_eieren.html">Boter, kaas en eieren + N op een rij…</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opstap_10.html">Opstap</a><input class="toctree-checkbox" id="toctree-checkbox-46" name="toctree-checkbox-46" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-46"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/instap/11_nested_lussen.html">Geneste lussen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_10.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-47" name="toctree-checkbox-47" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-47"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/11_ASCII.html">ASCII Art</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_10.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-48" name="toctree-checkbox-48" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-48"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/11_mandelbrot.html">Mandelbrot</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM2 Week 5</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_11.html">Onderwerpen</a><input class="toctree-checkbox" id="toctree-checkbox-49" name="toctree-checkbox-49" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-49"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/12_objecten.html">Klassen en objecten</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../course/practical_11.html">Practicum</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-50" name="toctree-checkbox-50" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-50"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="12a_agenda.html">Eeuwigdurende kalender</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Vier op een rij: de klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/basis_11.html">Basis</a><input class="toctree-checkbox" id="toctree-checkbox-51" name="toctree-checkbox-51" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-51"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/basis/12_vier_op_een_rij_begin.html">Vier op een rij: Begin</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/context_11.html">Context</a><input class="toctree-checkbox" id="toctree-checkbox-52" name="toctree-checkbox-52" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-52"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/12_kunstmatige_intelligentie.html">Kunstmatige intelligentie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/12_picobot_begin.html">De evolutie van Picobot</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../problems/context/12_text_id_begin.html">Tekstidentificatie</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Oefening</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../extra/practice/5a_toets_v23.html">Zelftoets</a><input class="toctree-checkbox" id="toctree-checkbox-53" name="toctree-checkbox-53" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-53"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../extra/practice/5a_toets_v23_solution.html">Uitwerking</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../extra/practice/1_recursie.html">Recursieve functies</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Oplossingen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../solutions/week_2.html">Week 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solutions/week_3.html">Week 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solutions/week_4.html">Week 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solutions/week_5.html">Week 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solutions/week_6.html">Week 6</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Support</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../support/logisim.html">Logisim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/plain_text/index.html">Tekstbestanden</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Bronopslagplaats"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/edit/master/practicals/12b_vier_op_een_rij.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/issues/new?title=Issue%20on%20page%20%2Fpracticals/12b_vier_op_een_rij.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open een probleem"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download deze pagina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/practicals/12b_vier_op_een_rij.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download het bronbestand"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Afdrukken naar pdf"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Volledig scherm"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Vier op een rij: de klasse Board</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Inhoud </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-klasse-board">De klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-constructror-init">De constructror <code class="docutils literal notranslate"><span class="pre">__init__</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-methode-repr">De methode <code class="docutils literal notranslate"><span class="pre">__repr__</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-1-de-methode-add-move">Opdracht 1:  De methode <code class="docutils literal notranslate"><span class="pre">add_move</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2-de-methode-clear">Opdracht 2:  De methode <code class="docutils literal notranslate"><span class="pre">clear</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3-de-methode-set-board">Opdracht 3:  De methode <code class="docutils literal notranslate"><span class="pre">set_board</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-4-de-methode-allows-move">Opdracht 4:  De methode <code class="docutils literal notranslate"><span class="pre">allows_move</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-5-de-methode-is-full">Opdracht 5:  De methode <code class="docutils literal notranslate"><span class="pre">is_full</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-6-de-methode-del-move">Opdracht 6:  De methode <code class="docutils literal notranslate"><span class="pre">del_move</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-7-de-methode-wins-for">Opdracht 7:  De methode <code class="docutils literal notranslate"><span class="pre">wins_for</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-8-de-methode-host-game">Opdracht 8:  De methode <code class="docutils literal notranslate"><span class="pre">host_game</span></code></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="vier-op-een-rij-de-klasse-board">
+<h1>Vier op een rij: de klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code><a class="headerlink" href="#vier-op-een-rij-de-klasse-board" title="Permalink to this heading">#</a></h1>
+<p>Voor deze opgave moet je met een nieuw bestand <code class="docutils literal notranslate"><span class="pre">board.py</span></code> beginnen.</p>
+<p>Vier op een rij is een variant van Boter, kaas en eieren dat gespeeld wordt op een rechthoekig bord van 7 bij 6:</p>
+<p><img alt="Vier op een rij" src="../_images/game_b2.png" /></p>
+<p>Het spel wordt gespeeld door twee spelers, die om de beurt een zet doen, waarbij beide spelers proberen om vier stenen op een verticale, horizontale of diagonale rij te krijgen. Eén voorwaarde bij het spelen is dat, omdat het bord verticaal opgesteld staat, de stenen niet zomaar overal geplaatst kunnen worden. Een steen mag alleen maar bovenaan een bestaande kolom stenen gespeeld worden (of het mag een nieuwe kolom stenen beginnen).</p>
+<section id="de-klasse-board">
+<h2>De klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code><a class="headerlink" href="#de-klasse-board" title="Permalink to this heading">#</a></h2>
+<p>In deze opgave ga je een klasse genaamd <code class="docutils literal notranslate"><span class="pre">Board</span></code> maken die sommige eigenschappen van het spel Vier op een rij implementeert. De klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code> heeft drie instantievariabelen: er is een tweedimensionale lijst (een lijst van lijsten) met karakters die het spelbord voorstelt, en twee variabelen die het aantal rijen en kolommen op het bord bijhouden (6 rijen en 7 kolommen is standaard, maar je klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code> kan elk formaat bord aan).</p>
+<p>Zelfs als we onbeperkt grote borden toestaan blijft de regel echter bestaan dat je vier stenen op een rij nodig hebt om te winnen. Toegegeven, dit maakt het wel lastig om het spel te winnen op een bord van 3 bij 3…</p>
+<p>Je klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code> heeft minstens drie instantievariabelen:</p>
+<ul class="simple">
+<li><p>Een variabele met de naam <code class="docutils literal notranslate"><span class="pre">data</span></code> waarin de tweedimensionale array (lijst van lijsten) met het spelbord wordt opgeslagen</p></li>
+<li><p>Een variabele <code class="docutils literal notranslate"><span class="pre">height</span></code> waarin het aantal rijen op het bord wordt opgeslagen</p></li>
+<li><p>Een variabele <code class="docutils literal notranslate"><span class="pre">width</span></code> waarin het aantal kolommen op het bord wordt opgeslagen</p></li>
+</ul>
+<p>Merk op dat de tweedimensionale lijst een tweedimensionale lijst van <em>karakters</em> is; dit zijn gewoon strings van lengte 1. Je moet een leeg veld laten voorstellen door <code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">'</span></code>, een spatieteken; niet de lege string. Je moet de stenen van speler X laten voorstellen door een <code class="docutils literal notranslate"><span class="pre">'X'</span></code> (de hoofdletter x) en je moet de stenen van speler O laten voorstellen door een <code class="docutils literal notranslate"><span class="pre">'O'</span></code> (de hoofdletter o).</p>
+<div class="danger admonition">
+<p class="admonition-title">Waarschuwing</p>
+<p>Een <strong>heel</strong> moeilijk te vinden bug treedt op als je het <em><strong>nulteken</strong></em> <code class="docutils literal notranslate"><span class="pre">'0'</span></code> gebruikt in plaats van het teken <code class="docutils literal notranslate"><span class="pre">'O'</span></code> (hoofdletter o) om één van de spelers voor te stellen. Het probleem treedt op als door jou, of tijdens het nakijken, de waardes in het bord vergeleken worden met de verkeerde karakters! Zorg ervoor dat je consistent bent in het gebruik van de hoofdletter o.</p>
+</div>
+<p>Je moet een aantal methodes implementeren in de klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code>. Vergeet niet de tips over hoe je ze kan testen te gebruiken nadat je ze geschreven hebt! De eerste twee methodes zijn in het college behandeld en zijn hieronder gegeven zodat je ze kan kopiëren en plakken.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Board</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A data type representing a Connect-4 board</span>
+<span class="sd">       with an arbitrary number of rows and columns.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Construct objects of type Board, with the given width and height.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39; &#39;</span><span class="p">]</span><span class="o">*</span><span class="n">width</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">height</span><span class="p">)]</span>
+
+        <span class="c1"># We hoeven niets terug te geven vanuit een constructor!</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;This method returns a string representation</span>
+<span class="sd">           for an object of type Board.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>                          <span class="c1"># de string om terug te geven</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">):</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39;|&#39;</span>
+            <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">):</span>
+                <span class="n">s</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+
+        <span class="n">s</span> <span class="o">+=</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="s1">&#39;-&#39;</span>   <span class="c1"># onderkant van het bord</span>
+
+        <span class="c1"># hier moeten de nummers nog onder gezet worden</span>
+
+        <span class="k">return</span> <span class="n">s</span>       <span class="c1"># het bord is compleet, geef het terug</span>
+
+</pre></div>
+</div>
+<p>Implementeer vervolgens de volgende methodes in je klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code>. Vergeet niet ze allemaal te testen nadat je ze geschreven hebt; het is veel makkelijker om ze elk onafhankelijk te testen dan om te proberen een grote verzameling methodes tegelijk te debuggen.</p>
+<section id="de-constructror-init">
+<h3>De constructror <code class="docutils literal notranslate"><span class="pre">__init__</span></code><a class="headerlink" href="#de-constructror-init" title="Permalink to this heading">#</a></h3>
+<p>De klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code> heeft een constructor <code class="docutils literal notranslate"><span class="pre">__init__(self,</span> <span class="pre">width,</span> <span class="pre">height)</span></code> die twee argumenten meekrijgt. (Onthoud dat <code class="docutils literal notranslate"><span class="pre">self</span></code> verwijst naar het object dat aangemaakt wordt en dat het niet expliciet wordt meegegeven aan de constructor.) De constructor krijgt een aantal kolommen en rijen mee (7 en 6 zijn de standaard in Vier op een rij, maar ons datatype kan alle bordformaten aan). De constructor stelt de waardes van de instantievariabelen van het object in. Het maakt bovendien de tweedimensionale lijst aan die gebruikt wordt om het bord op te slaan. Je maakt hiervoor een lijst van lijsten <em>op een manier die erg lijkt op die van het practicum over Game of Life</em>.</p>
+<p>Merk op dat <code class="docutils literal notranslate"><span class="pre">self.data</span></code> niet alle karakters bevat die gebruikt worden om het bord af te drukken; alleen de karakters die nodig zijn om het spel te spelen. De extra karakters worden gegenereerd in de methode <code class="docutils literal notranslate"><span class="pre">__repr__</span></code>.</p>
+</section>
+<section id="de-methode-repr">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">__repr__</span></code><a class="headerlink" href="#de-methode-repr" title="Permalink to this heading">#</a></h3>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">__repr__(self)</span></code> geeft een string<code class="docutils literal notranslate"><span class="pre">repr</span></code>esentatie terug van het <code class="docutils literal notranslate"><span class="pre">Board</span></code>-object dat de methode aanroept. Elke “steen” neemt één teken in beslag, en alle kolommen worden gescheiden door verticale lijnen (<code class="docutils literal notranslate"><span class="pre">|</span></code>). De kolommen worden aan de onderkant gelabeld. Hier is een voorbeeld voor een bord met 6 rijen en 7 kolommen, 6 bij 7 dus (zie de onderstaande code voor meer details…)</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+---------------
+ 0 1 2 3 4 5 6
+</pre></div>
+</div>
+<p>Om te zorgen dat alles netjes onder elkaar blijft staan, moet de kolomnummering “modulo 10” gedaan worden,
+zoals te zien in dit grotere voorbeeld met 5 rijen en 15 kolommen (5 bij 15):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">-------------------------------</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span>
+</pre></div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Eén string, meerdere regels?</p>
+<p>De string <code class="docutils literal notranslate"><span class="pre">'\n'</span></code> stelt het <em>newline</em>-karakter voor in Python. Je kan dus meerdere regels in een enkele string zetten door <code class="docutils literal notranslate"><span class="pre">'\n'</span></code> toe te voegen. Bijvoorbeeld met</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span>In [1]: s = &#39;Dit is de bovenste regel.&#39;
+In [2]: s += &#39;\n&#39;
+In [3]: s += &#39;Dit is de tweede regel!\n&#39;
+In [4]: print(s)
+Dit is de bovenste regel.
+Dit is de tweede regel!
+</pre></div>
+</div>
+<p>Merk op dat <code class="docutils literal notranslate"><span class="pre">'\n'</span></code> ook <em>in</em> een string gebruikt kan worden. In dit geval voegt het een extra lege regel toe aan het einde van de string.</p>
+</div>
+</section>
+</section>
+<section id="opdracht-1-de-methode-add-move">
+<h2>Opdracht 1:  De methode <code class="docutils literal notranslate"><span class="pre">add_move</span></code><a class="headerlink" href="#opdracht-1-de-methode-add-move" title="Permalink to this heading">#</a></h2>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">add_move(self,</span> <span class="pre">col,</span> <span class="pre">ox)</span></code> krijgt twee argumenten mee: het eerste, <code class="docutils literal notranslate"><span class="pre">col</span></code>, geeft de kolom aan waaraan de steen moet worden toegevoegd. Het tweede argument, <code class="docutils literal notranslate"><span class="pre">ox</span></code>, is een string van 1 karakter die de steen aangeeft die aan het bord moet worden toegevoegd. Dat wil zeggen, <code class="docutils literal notranslate"><span class="pre">ox</span></code> moet <code class="docutils literal notranslate"><span class="pre">'X'</span></code> of <code class="docutils literal notranslate"><span class="pre">'O'</span></code> zijn (hoofdletter O dus, niet nul).</p>
+<div class="notice admonition">
+<p class="admonition-title">Onthoud dat de stenen van bovenaf in het bord vallen!</p>
+<p>Je code moet dus het geschikte rijnummer vinden die beschikbaar is in kolom <code class="docutils literal notranslate"><span class="pre">col</span></code> en de steen in die rij toevoegen. Je hoeft in <code class="docutils literal notranslate"><span class="pre">add_move</span></code> <strong>niet</strong> te controleren of <code class="docutils literal notranslate"><span class="pre">col</span></code> een geldig kolomnummer is en of er ruimte is in kolom <code class="docutils literal notranslate"><span class="pre">col</span></code>. Die controles zijn wel belangrijk: ze worden in een toekomstige methode, <code class="docutils literal notranslate"><span class="pre">allows_move</span></code>, gedaan.</p>
+</div>
+<p>Hier is een reeks zetten om <code class="docutils literal notranslate"><span class="pre">add_move</span></code> mee te testen; probeer ze uit!</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">b</span> <span class="o">=</span> <span class="n">Board</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">add_move</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">)</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">add_move</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">)</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">add_move</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">)</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">add_move</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">)</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">add_move</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">)</span>  <span class="c1"># Valsspelen door O opnieuw te laten zetten!</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">add_move</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">)</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">8</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">add_move</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">)</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">9</span><span class="p">]:</span> <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>En wat hieruit moet komen is:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+|X| | | | | | |
+|O| | | | | | |
+|X| | |O|O|O|O|
+---------------
+ 0 1 2 3 4 5 6
+</pre></div>
+</div>
+</section>
+<section id="opdracht-2-de-methode-clear">
+<h2>Opdracht 2:  De methode <code class="docutils literal notranslate"><span class="pre">clear</span></code><a class="headerlink" href="#opdracht-2-de-methode-clear" title="Permalink to this heading">#</a></h2>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">clear(self)</span></code> moet het aanroepende bord leeg maken; er valt hier verder weinig over te zeggen, maar de methode is wel nuttig!</p>
+</section>
+<section id="opdracht-3-de-methode-set-board">
+<h2>Opdracht 3:  De methode <code class="docutils literal notranslate"><span class="pre">set_board</span></code><a class="headerlink" href="#opdracht-3-de-methode-set-board" title="Permalink to this heading">#</a></h2>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">set_board(self,</span> <span class="pre">move_string)</span></code> is erg handig om snel een bord te maken om de methode <code class="docutils literal notranslate"><span class="pre">wins_for</span></code> te testen in het volgende deel. Hier is de code die we voor <code class="docutils literal notranslate"><span class="pre">set_board</span></code> gebruikt hebben; voeg dit toe aan
+je klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code>, het maakt het testen veel simpeler!</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">set_board</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">move_string</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Accepts a string of columns and places</span>
+<span class="sd">       alternating checkers in those columns,</span>
+<span class="sd">       starting with &#39;X&#39;.</span>
+
+<span class="sd">       For example, call b.set_board(&#39;012345&#39;)</span>
+<span class="sd">       to see &#39;X&#39;s and &#39;O&#39;s alternate on the</span>
+<span class="sd">       bottom row, or b.set_board(&#39;000000&#39;) to</span>
+<span class="sd">       see them alternate in the left column.</span>
+
+<span class="sd">       move_string must be a string of one-digit integers.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">next_checker</span> <span class="o">=</span> <span class="s1">&#39;X&#39;</span>   <span class="c1"># we starten door een &#39;X&#39; te spelen</span>
+    <span class="k">for</span> <span class="n">col_char</span> <span class="ow">in</span> <span class="n">move_string</span><span class="p">:</span>
+        <span class="n">col</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">col_char</span><span class="p">)</span>
+        <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">col</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_move</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">next_checker</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">next_checker</span> <span class="o">==</span> <span class="s1">&#39;X&#39;</span><span class="p">:</span>
+            <span class="n">next_checker</span> <span class="o">=</span> <span class="s1">&#39;O&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">next_checker</span> <span class="o">=</span> <span class="s1">&#39;X&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="opdracht-4-de-methode-allows-move">
+<h2>Opdracht 4:  De methode <code class="docutils literal notranslate"><span class="pre">allows_move</span></code><a class="headerlink" href="#opdracht-4-de-methode-allows-move" title="Permalink to this heading">#</a></h2>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">allows_move(self,</span> <span class="pre">col)</span></code> methode moet <code class="docutils literal notranslate"><span class="pre">True</span></code> teruggeven als in het aanroepende <code class="docutils literal notranslate"><span class="pre">Board</span></code>-object een zet in kolom <code class="docutils literal notranslate"><span class="pre">col</span></code> <em>wel</em>* geldig is. Ze moet <code class="docutils literal notranslate"><span class="pre">False</span></code> teruggeven als kolom <code class="docutils literal notranslate"><span class="pre">col</span></code> geen geldig kolomnummer is voor het aanroepende object. Ze moet ook <code class="docutils literal notranslate"><span class="pre">False</span></code> teruggeven als kolom <code class="docutils literal notranslate"><span class="pre">col</span></code> vol is. De methode moet dus controleren dat <code class="docutils literal notranslate"><span class="pre">col</span></code> in het bereik van 0 tot de laatste kolom valt <em>en</em> dat er nog ruimte over is in de kolom!</p>
+<p>Hier is een voorbeeldreeks om mee te testen; probeer hem uit!</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">b</span> <span class="o">=</span> <span class="n">Board</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">b</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">-----</span>
+ <span class="mi">0</span> <span class="mi">1</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">add_move</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">add_move</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">b</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span>
+<span class="o">|</span><span class="n">O</span><span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span><span class="n">X</span><span class="o">|</span> <span class="o">|</span>
+<span class="o">-----</span>
+ <span class="mi">0</span> <span class="mi">1</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">allows_move</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="kc">False</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">allows_move</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="kc">False</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">8</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">allows_move</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">8</span><span class="p">]:</span> <span class="kc">True</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">9</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">allows_move</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">9</span><span class="p">]:</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</section>
+<section id="opdracht-5-de-methode-is-full">
+<h2>Opdracht 5:  De methode <code class="docutils literal notranslate"><span class="pre">is_full</span></code><a class="headerlink" href="#opdracht-5-de-methode-is-full" title="Permalink to this heading">#</a></h2>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">is_full(self)</span></code> moet <code class="docutils literal notranslate"><span class="pre">True</span></code> teruggeven als het aanroepende <code class="docutils literal notranslate"><span class="pre">Board</span></code>-object volledig gevuld is met stenen. Ze moet anders <code class="docutils literal notranslate"><span class="pre">False</span></code> teruggeven. Merk op dat je <code class="docutils literal notranslate"><span class="pre">allows_move</span></code> kan gebruiken om deze methode heel kort te schrijven! Als je niet buitengewoon geduldig bent is het handiger om dit op kleinere borden te testen!</p>
+<p>Hier is een voorbeeldreeks om mee te testen; hij gebruikt de methode <code class="docutils literal notranslate"><span class="pre">set_board</span></code> die je hierboven kan vinden.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">b</span> <span class="o">=</span> <span class="n">Board</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">is_full</span><span class="p">()</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="kc">False</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">set_board</span><span class="p">(</span><span class="s1">&#39;0011&#39;</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">b</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span>
+<span class="o">|</span><span class="n">O</span><span class="o">|</span><span class="n">O</span><span class="o">|</span>
+<span class="o">|</span><span class="n">X</span><span class="o">|</span><span class="n">X</span><span class="o">|</span>
+<span class="o">-----</span>
+ <span class="mi">0</span> <span class="mi">1</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">is_full</span><span class="p">()</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</section>
+<section id="opdracht-6-de-methode-del-move">
+<h2>Opdracht 6:  De methode <code class="docutils literal notranslate"><span class="pre">del_move</span></code><a class="headerlink" href="#opdracht-6-de-methode-del-move" title="Permalink to this heading">#</a></h2>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">del_move(self,</span> <span class="pre">col)</span></code> moet het omgekeerde doen van <code class="docutils literal notranslate"><span class="pre">add_move</span></code>. Ze moet de bovenste steen van kolom <code class="docutils literal notranslate"><span class="pre">col</span></code> verwijderen. Als de kolom leeg is moet <code class="docutils literal notranslate"><span class="pre">del_move</span></code> <em>niets</em> doen. Deze functie lijkt nu niet handig, maar het zal <em>erg</em> handig zijn als je je eigen computerspeler voor Vier op een rij wilt implementeren…</p>
+<p>Hier is een voorbeeldreeks om mee te testen:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">b</span> <span class="o">=</span> <span class="n">Board</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">set_board</span><span class="p">(</span><span class="s1">&#39;0011&#39;</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">del_move</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">del_move</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">del_move</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">del_move</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="n">b</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">7</span><span class="p">]:</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span><span class="n">X</span><span class="o">|</span> <span class="o">|</span>
+<span class="o">-----</span>
+ <span class="mi">0</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</section>
+<section id="opdracht-7-de-methode-wins-for">
+<h2>Opdracht 7:  De methode <code class="docutils literal notranslate"><span class="pre">wins_for</span></code><a class="headerlink" href="#opdracht-7-de-methode-wins-for" title="Permalink to this heading">#</a></h2>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">wins_for(self,</span> <span class="pre">ox)</span></code> controleert of iemand het spel gewonnen heeft. Het argument <code class="docutils literal notranslate"><span class="pre">ox</span></code> van deze methode is een steen van 1 karakter: <code class="docutils literal notranslate"><span class="pre">'X'</span></code> of <code class="docutils literal notranslate"><span class="pre">'O'</span></code>. De methode moet <code class="docutils literal notranslate"><span class="pre">True</span></code> teruggeven als er vier stenen van het type <code class="docutils literal notranslate"><span class="pre">ox</span></code> op een rij zijn op het bord. Ze moet anders <code class="docutils literal notranslate"><span class="pre">False</span></code> teruggeven.</p>
+<div class="danger admonition">
+<p class="admonition-title">Let op</p>
+<p>Je moet controleren of de speler horizontaal, verticaal of diagonaal gewonnen heeft (en er zijn twee verschillende richtingen voor een diagonale overwinning).</p>
+<p>Eén mogelijke manier om dit aan te pakken is om je functies uit week 9 te gebruiken in een paar geneste lussen om alle mogelijke manieren om te winnen te controleren. <span class="xref myst">Hier is een pagina met een aanzet voor deze strategie</span></p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Waarschuwing</p>
+<p>De in-een-rij-functies moeten <em><strong>buiten</strong></em> de klasse staan; ze zijn globaal, en geen onderdeel van de klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code>!</p>
+</div>
+<p>Als je opgave 2 van week 9 niet gedaan hebt, kan je ook een aanpak kiezen waarbij je deze functies niet nodig hebt. Hierbij is het nodig om te bedenken welke stenen als een mogelijk <em>“anker”</em> zouden kunnen dienen om een reeks van vier op een rij te beginnen. Alle “ankers” die een horizontale rij kunnen beginnen (van links naar rechts) moeten bijvoorbeeld vallen in kolommen die <em>minstens vier plaatsen van het eind van het bord af liggen</em>. Die begrenzing kan je helpen om te voorkomen dat je code buiten de grenzen van de array loopt. Hier is wat begincode om deze techniek toe te lichten (maar deze controleert nu nog alleen op horizontale overwinningen):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Controleren op horizontale overwinningen</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">-</span> <span class="mi">3</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">==</span> <span class="n">ox</span> <span class="ow">and</span> \
+           <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">ox</span> <span class="ow">and</span> \
+           <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span> <span class="o">+</span> <span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="n">ox</span> <span class="ow">and</span> \
+           <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span> <span class="o">+</span> <span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="n">ox</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<p>Let op de backslashes; deze vertellen Python dat de coderegel doorloopt naar de volgende regel in het bestand.</p>
+<p>Let ook op de “<code class="docutils literal notranslate"><span class="pre">-</span> <span class="pre">3</span></code>” die ervoor zorgt dat de code niet buiten de grenzen loopt. Andere richtingen zullen andere condities nodig hebben om binnen de grenzen te blijven.</p>
+<div class="warning admonition">
+<p class="admonition-title">Waarschuwing</p>
+<p>Het is beter om de stenen <em>niet</em> expliciet te gaan tellen om te zien of je er vier hebt. Het probleem is dan dat je elke steen in de goede volgorde moet bezoeken. Verticaal en horizontaal is dat nog niet zo lastig, maar elke steen in diagonale volgorde bezoeken is lastig en bovendien niet zo praktisch. Het is makkelijker om alle vier stenen tegelijk te controleren, zoals in het voorbeeld hierboven.</p>
+</div>
+<p>Dit is een belangrijke methode die goed getest moet worden! Hier is een voorbeeldreeks om mee te testen:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">b</span> <span class="o">=</span> <span class="n">Board</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">set_board</span><span class="p">(</span><span class="s1">&#39;00102030&#39;</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">wins_for</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="kc">True</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">wins_for</span><span class="p">(</span><span class="s1">&#39;O&#39;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="kc">True</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">b</span> <span class="o">=</span> <span class="n">Board</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">set_board</span><span class="p">(</span><span class="s1">&#39;23344545515&#39;</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="n">b</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">7</span><span class="p">]:</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span><span class="n">X</span><span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span><span class="n">X</span><span class="o">|</span><span class="n">X</span><span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span><span class="n">X</span><span class="o">|</span><span class="n">X</span><span class="o">|</span><span class="n">O</span><span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span><span class="n">O</span><span class="o">|</span><span class="n">X</span><span class="o">|</span><span class="n">O</span><span class="o">|</span><span class="n">O</span><span class="o">|</span><span class="n">O</span><span class="o">|</span> <span class="o">|</span>
+<span class="o">---------------</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">8</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">wins_for</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">)</span>  <span class="c1"># diagonaal</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">8</span><span class="p">]:</span> <span class="kc">True</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">9</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">wins_for</span><span class="p">(</span><span class="s1">&#39;O&#39;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">9</span><span class="p">]:</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</section>
+<section id="opdracht-8-de-methode-host-game">
+<h2>Opdracht 8:  De methode <code class="docutils literal notranslate"><span class="pre">host_game</span></code><a class="headerlink" href="#opdracht-8-de-methode-host-game" title="Permalink to this heading">#</a></h2>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">host_game(self)</span></code> voegt alles samen tot het complete spel Vier op een rij. Ze moet de gebruiker Vier op een rij laten spelen, en hiervoor de bovenstaande methodes gebruiken. In het bijzonder moeten <code class="docutils literal notranslate"><span class="pre">'X'</span></code> (die altijd als eerste is) en <code class="docutils literal notranslate"><span class="pre">'O'</span></code> (die altijd als tweede is) afwisselend aan de beurt zijn. De methode moet de gebruiker (door middel van de functie <code class="docutils literal notranslate"><span class="pre">input</span></code>) vragen een kolomnummer te selecteren voor elke zet. Hieronder kan je een voorbeeld zien van hoe deze interactie moet werken, maar hier zijn een paar belangrijke punten om in de gaten te houden:</p>
+<ul class="simple">
+<li><p>Deze methode moet elke keer het bord afdrukken voordat de zet gevraagd wordt.</p></li>
+<li><p>Het is handig om een grote <code class="docutils literal notranslate"><span class="pre">while</span></code>-lus te gebruiken om het spel te structureren. <code class="docutils literal notranslate"><span class="pre">'X'</span></code> is eerst aan de beurt en daarna <code class="docutils literal notranslate"><span class="pre">'O'</span></code>. We stellen voor dat je beurt van zowel <code class="docutils literal notranslate"><span class="pre">'X'</span></code> als <code class="docutils literal notranslate"><span class="pre">'O'</span></code> in de body van de lus zet. Op die manier speelt één iteratie twee zetten in Vier op een rij.</p></li>
+<li><p>Je kan ook een oneindige lus <code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">True:</span></code> gebruiken en dan ergens in de body van de lus <code class="docutils literal notranslate"><span class="pre">break</span></code> gebruiken als het spel eindigt.</p></li>
+</ul>
+<p>Controleer na elke <code class="docutils literal notranslate"><span class="pre">input</span></code> of de gekozen kolom geldig is. Deze methode moet dus ongeldige zetten, zowel als de kolom niet bestaat of als deze vol is, herkennen, en de gebruiker om een andere kolom vragren. Je hoeft echter niet te controleren of de invoer van de gebruiker een integer is; je mag ervan uitgaan dat dit altijd zo is.</p>
+<p>Je kan als richtlijn voor het voorkomen van <em>ongeldige</em> zetten onderstaande kleine lus gebruiken:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">users_col</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">allows_move</span><span class="p">(</span><span class="n">users_col</span><span class="p">):</span>
+    <span class="n">users_col</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Kies een kolom: &quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Bovenstaande code vraagt de gebruiker simpelweg net zo lang om een geldig kolomnummer tot hij er één ontvangt.</p>
+<p>Let op de elegante constructie <code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">not</span> <span class="pre">self.allows_move(...)</span></code>. Dit is exact hetzelfde als <code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">self.allows_move(...)</span> <span class="pre">==</span> <span class="pre">False</span></code>. Het beschrijft echter heel mooi het idee om door te gaan zolang de zet NIET geldig is”.</p>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">host_game</span></code> moet elke steen in de door de gebruiker gekozen (geldige!) kolom zetten. Gebruik hiervoor <code class="docutils literal notranslate"><span class="pre">add_move</span></code>! Daarna moet ze controleren of die speler gewonnen heeft; als dat zo is, moet er een bericht worden afgedrukt en moet de lus afgebroken worden met <code class="docutils literal notranslate"><span class="pre">break</span></code>. Ook moet je controleren of het bord nu vol is; als dat zo is, moet er een bericht worden afgedrukt en moet de lus afgebroken worden met <code class="docutils literal notranslate"><span class="pre">break</span></code>.</p>
+<p>Als het spel dus afgelopen is voor één van deze redenen, moet het spel stoppen, het bord moet nog een laatste keer worden afgedrukt en het programma moet vertellen wie er gewonnen heeft (of dat het een gelijkspel was.) Merk op dat je <code class="docutils literal notranslate"><span class="pre">break</span></code> kan gebruiken om uit een lus te komen; zelfs als die <code class="docutils literal notranslate"><span class="pre">break</span></code> in een <code class="docutils literal notranslate"><span class="pre">if</span></code>-<code class="docutils literal notranslate"><span class="pre">else</span></code>-statement staat.</p>
+<p>Als het spel niet over is, moet de andere speler gevraagd worden een zet te doen, en zo verder…</p>
+<p>Vergeet niet de methode te testen door het spel een paar keer te spelen (met elke mogelijke uitkomst…)!</p>
+<p>Hier is een voorbeelduitvoer, om een idee te geven van de invoer en uitvoer:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span>In [1]: b = Board(7, 6)
+
+In [2]: b.host_game()
+
+Welkom bij Vier op een rij!
+
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+---------------
+ 0 1 2 3 4 5 6
+
+Keuze van X:  3
+
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | |X| | | |
+---------------
+ 0 1 2 3 4 5 6
+
+Keuze van O:  4
+
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | |X|O| | |
+---------------
+ 0 1 2 3 4 5 6
+
+Keuze van X:  2
+
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | |X|X|O| | |
+---------------
+ 0 1 2 3 4 5 6
+
+Keuze van O:  4
+
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | |O| | |
+| | |X|X|O| | |
+---------------
+ 0 1 2 3 4 5 6
+
+Keuze van X:  1
+
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | |O| | |
+| |X|X|X|O| | |
+---------------
+ 0 1 2 3 4 5 6
+
+Keuze van O:  2
+
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | |O| |O| | |
+| |X|X|X|O| | |
+---------------
+ 0 1 2 3 4 5 6
+
+Keuze van X:  0
+
+
+X wint -- Gefeliciteerd!
+
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | |O| |O| | |
+|X|X|X|X|O| | |
+---------------
+ 0 1 2 3 4 5 6
+
+In [3]:
+</pre></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "hanze-hbo-ict/programmeren",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./practicals"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="12a_agenda.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">vorige</p>
+        <p class="prev-next-title">Eeuwigdurende kalender</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../course/basis_11.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">volgende</p>
+        <p class="prev-next-title">Basis</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Inhoud
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-klasse-board">De klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-constructror-init">De constructror <code class="docutils literal notranslate"><span class="pre">__init__</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-methode-repr">De methode <code class="docutils literal notranslate"><span class="pre">__repr__</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-1-de-methode-add-move">Opdracht 1:  De methode <code class="docutils literal notranslate"><span class="pre">add_move</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2-de-methode-clear">Opdracht 2:  De methode <code class="docutils literal notranslate"><span class="pre">clear</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3-de-methode-set-board">Opdracht 3:  De methode <code class="docutils literal notranslate"><span class="pre">set_board</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-4-de-methode-allows-move">Opdracht 4:  De methode <code class="docutils literal notranslate"><span class="pre">allows_move</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-5-de-methode-is-full">Opdracht 5:  De methode <code class="docutils literal notranslate"><span class="pre">is_full</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-6-de-methode-del-move">Opdracht 6:  De methode <code class="docutils literal notranslate"><span class="pre">del_move</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-7-de-methode-wins-for">Opdracht 7:  De methode <code class="docutils literal notranslate"><span class="pre">wins_for</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-8-de-methode-host-game">Opdracht 8:  De methode <code class="docutils literal notranslate"><span class="pre">host_game</span></code></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Door Harvey Mudd College / Hanze University of Applied Sciences
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
+    Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

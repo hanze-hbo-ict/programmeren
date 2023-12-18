@@ -2,7 +2,7 @@
 
 ![Schotel](/images/saucer.png)
 
-## Klassen en objecten
+## Meer 2D arrays
 
 ## Boek
 
