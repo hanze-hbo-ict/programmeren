@@ -81,7 +81,7 @@ Getallen opgeteld: 15
 ```
 
 ## Opgave 4 (15pt)
-Schrijf de functie number_stairs(size) dat de integer size ontvangt en een ladder uitprint van nummers. Gebruik een lusconstructie. 
+Schrijf de functie `number_stairs(size)` dat de integer size ontvangt en een ladder uitprint van nummers. Gebruik een lusconstructie. 
 
 Voorbeeld: 
 ```python
@@ -107,7 +107,7 @@ output:
 
 
 ## Opgave 5 (25pt)
-De grootste gemene deler (ggd) tussen twee getallen is de grootste deler die beide getallen gemeenschappelijk hebben. Een deler kan gevonden worden met behulp van modulo: $$12\%4 = 0$$ 4 is dus een deler van 12 gezien er geen rest overblijft.  
+De grootste gemene deler (ggd) tussen twee getallen is de grootste deler die beide getallen gemeenschappelijk hebben. Een deler kan gevonden worden met behulp van modulo: $12\%4 = 0$ 4 is dus een deler van 12 gezien er geen rest overblijft.  
 
 ggd van 12 en 18 is 6.  
 ggd van 24 en 36 is 12.  
@@ -115,6 +115,8 @@ ggd van 33 en 48 is 1.
 
 In deze opdracht gaan we een programma schrijven dat de ggd tussen twee getallen kan berekenen.
 
+
+![vermenigvuldigingstabel](images/ggd.png)
 ### Opgave 5a
 Schrijf de functie `intersect(l1, l2)` met docstring. Deze functie krijgt twee lijsten binnen. Beide lijsten bevatten alleen unieke getallen. `intersect(l1, l2)` bepaald welke getallen in beide lijsten aanwezig zijn, plaats deze in een lijst en geeft het eindresultaat terug. Je mag geen gebruik maken van recursie. (10)
 
