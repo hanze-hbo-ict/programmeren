@@ -1,11 +1,11 @@
-# Uitwerkingen proeftoets PGM2 
+# Uitwerkingen proeftoets PGM2
 
 ## Opgave 1
 
 Bij deze opgave gaat het om begrip hebben van lijsten, list comprehensions en lusconstructies op lijsten. Wat deze opgave lastig maakt is dat het gaat om een lijst van lijsten, een nested list.
 
 ```python
-# De list om 
+# De list om
 L = [
     ["0308230", 7.6, True],
     ["8273927", 5.1, False],
@@ -21,7 +21,7 @@ print(HW)
 print()
 ```
 
-Met het stuk 'for x in L' gaan we alle elementen in lijst L af. Deze elementen, x genoemd, zijn ook weer lijsten. 
+Met het stuk 'for x in L' gaan we alle elementen in lijst L af. Deze elementen, x genoemd, zijn ook weer lijsten.
 
 Of de elementen van x worden door gegeven naar de nieuwe lijst hangt af van het derde element van x. Met de if statement bepalen we of het huiswerk gemaakt is en dus het studentnummer en aangepaste cijfer in de nieuwe lijst komen.
 
@@ -53,7 +53,7 @@ Voor de lusconstructie begonnen wordt, moet eerst de nieuwe lijst leeg aangemaak
 
 Met de index lusconstructie gaan we over elk element in lijst L met behulp van de index, i genoemd. Met `range(len(L))` zal de lusconstructie beginnen met i = 0 en door gaan tot en met i = L-1, wat precies overeen komt met de indices van lijst L.
 
-De eerste stap in de lusconstructie is om te kijken of het huiswerkt gemaakt is. Is het huiswerk niet gemaakt dan gebeurt er niets. Is het huiswerk wel gemaakt dan wordt het studentnummer en het aangepaste cijfer toegevoegd aan de nieuwe nested list met de += statement.
+De eerste stap in de lusconstructie is om te kijken of het huiswerk gemaakt is. Is het huiswerk niet gemaakt dan gebeurt er niets. Is het huiswerk wel gemaakt dan wordt het studentnummer en het aangepaste cijfer toegevoegd aan de nieuwe nested list met de += statement.
 
 In plaats van de index lusconstructie kan je de element lusconstructie gebruiken. Die werkt hetzelfde maar in plaats van L[][] werk je met x[], net als in de bovenstaande list comprehension.
 
@@ -105,7 +105,7 @@ Een goede docstring geeft weer wat de functie doet en wat de input en output waa
 
 De functie begint goed door de result variabele buiten de scope van de lusconstructie aan te maken met de beginwaarde nul.
 
-Bij Opgave 1 is al het verschil tussen een index lus en een elementen lus aangegeven. De eerste fout in de gegeven functie is dat deze twee door elkaar gehaald worden. Er wordt een elementen lus begonnen, `for i in L:`, maar de result variabele wordt aan gepast met L[i]. Dit gaat niet, het is of de een of de ander. Hier hebben we er voor gekozen om de elementen versie aan te houden, maar `for i in range(len(L)):` had ook goed geweest.
+Bij Opgave 1 is al het verschil tussen een index lus en een elementen lus. De eerste fout in de gegeven functie is dat deze twee door elkaar gehaald worden. Er wordt een elementen lus begonnen, `for i in L:`, maar de result variabele wordt aan gepast met L[i]. Dit gaat niet, het is of de een of de ander. Hier hebben we er voor gekozen om de elementen versie aan te houden, maar `for i in range(len(L)):` had ook goed geweest.
 
 De volgende fout is in de opbouw van de update statement van result, `result += result + L[i]`. Met deze statement wordt result twee keer gebruikt in de som. De statement `result += result + L[i]` is namelijk `result = result + result + L[i]`. Dit hebben wij gecorrigeerd door `result += i` te gebruiken.
 
@@ -114,7 +114,7 @@ De volgende fout is de locatie van de if statement en return statements. Deze st
 Als laatste zijn de drie gevraagde assert statements toegevoegd.
 
 
-## opgave 3
+## Opgave 3
 
 Deze opgave test je kennis over de while constructie en hoe deze moet worden opgebouwd.
 
@@ -136,7 +136,7 @@ while inp >= 0:
 
     # Check of het een positief getal is
     if inp >= 0:
-        # Werken met een lijst: 
+        # Werken met een lijst:
         L += [inp]
         # Werken met twee variablen:
         count += 1
@@ -156,11 +156,11 @@ print()
 
 Net als met de for lussen, moet ook bij de while lussen rekening gehouden worden met de scope. De variabelen die ook na de while lus nodig zijn worden daarom voor de while lus aangemaakt.
 
-Voor de variabelen aangepast kunnen worden, moet eerst de gebruiker om input gevraagd worden. 
+Voor de variabelen aangepast kunnen worden, moet eerst de gebruiker om input gevraagd worden.
 
 Werken met een lijst: De input wordt aan de lijst toegevoegd als nieuw element. Hoe veel getallen worden opgegeven wordt indirect bij gehouden met de grote van de lijst: elk nieuw toegevoegde element maakt de lijst namelijk een groter. Met `len(L)` kan vervolgens gezien worden hoe veel elementen in de lijst staan. Om de som van de getallen te krijgen is na de while-lus een extra lus nodig om over de lijst met getallen te loopen en zo de som te berekenen.
 
-Werken met twee variablen: De input wordt direct bij de som variabele opgeteld waardoor er na de while lus geen extra acties nodig zijn. Met `count += 1` wordt bijgehouden hoe veel getallen er gegeven zijn.
+Werken met twee variabelen: De input wordt direct bij de som variabele opgeteld waardoor er na de while lus geen extra acties nodig zijn. Met `count += 1` wordt bijgehouden hoe veel getallen er gegeven zijn.
 
 Om de som te krijgen als je alleen met een lijst werkt is er dus een extra lus nodig. om te bepalen welke van de twee voor het programma het beste is, kun je jezelf de volgende vraag stellen: "Heb ik de ingevoerde getallen later nog nodig?" Is het antwoord nee dan kun je de twee variabelen gebruiken. Is het antwoord ja, dan kun je de getallen het beste opslaan in een lijst.
 
@@ -174,7 +174,7 @@ Deze opgave gaat over het ontwerpen en schrijven van een functie en nested lusco
 ```python
 def number_stairs(size):
     """
-    Print een ladder van nummers. 
+    Print een ladder van nummers.
     Input: size, aantal treden.
     Ouput: een ladder van nummers op het scherm.
     """
@@ -188,9 +188,9 @@ number_stairs(5)
 number_stairs(3)
 ```
 
-Het kan helpen om bij nested loops te werken met variabele namen die direct laten zien wat ze (visueel) representateren. Daarom heet de lus variabele van de eerste lus 'rij' en wordt voor de tweede lus 'kolom' gebruikt. 
+Het kan helpen om bij nested loops te werken met variabele namen die direct laten zien wat ze (visueel) representeren. Daarom heet de lus variabele van de eerste lus 'rij' en wordt voor de tweede lus 'kolom' gebruikt.
 
-De aan de functie mee gegeven variabele `size` bepaald hoe veel rijen er moeten komen. Daarom wordt deze meegeven aan range() bij het aanmaken van de eerste lus. Om te corrigeren voor range() begint bij nul, geven we niet alleen de eind waarde maar ook de start waarde mee voor `rij`. 
+De aan de functie mee gegeven variabele `size` bepaald hoe veel rijen er moeten komen. Daarom wordt deze meegeven aan range() bij het aanmaken van de eerste lus. Om te corrigeren voor range() begint bij nul, geven we niet alleen de eind waarde maar ook de start waarde mee voor `rij`.
 
 Hetzelfde doen we voor kolom, maar in plaats van `size` gebruiken we `rij`. De hoeveelheid kolommen hangt namelijk af van welke rij het programma op dat moment behandelt. Omdat de kolom variabelen waarde hetzelfde zijn als de nummers die naar het scherm geprint zijn, kunnen we de kolom variable gebruiken in de print statements. De print statement heeft de optie om het einde van de string een andere waarde te geven in plaats van de standaard nieuwe regel. Hier maken we gebruik van bij het printen van de kolommen.
 
@@ -216,7 +216,7 @@ def intersect(l1, l2):
         return L
     elif l2 == []:
         return L
-    
+
     # Als beide lijsten een of meerdere getallen bevatten dan gaan we de for lus in om L te vullen met gemene delers
     for i in l1:
         if i in l2:
@@ -231,7 +231,7 @@ assert intersect(l1, l3) == [4,6,8]
 assert intersect(l2, l3) == []
 ```
 
-Het is belangrijk om bij het ontwikkelen van een functie te bepalen wat de mogelijke wat de mogelijke situaties zijn die de functie kan tegen komen. In dit geval, als een van de lijsten leeg is dan heeft het geen nut om door een lijst te loopen om opzoek te gaan naar elementen die in beide lijsten voorkomen. Met de if-elif statement testen we dit voor de loop begint. 
+Het is belangrijk om bij het ontwikkelen van een functie te bepalen wat de mogelijke wat de mogelijke situaties zijn die de functie kan tegen komen. In dit geval, als een van de lijsten leeg is dan heeft het geen nut om door een lijst te loopen om opzoek te gaan naar elementen die in beide lijsten voorkomen. Met de if-elif statement testen we dit voor de loop begint.
 
 De functie hoeft maar over een van de twee lijsten te lussen aangezien we met de `if element in lijst2:` snel kunnen zien of een element in de andere lijst te vinden is. Als een element in beide lijsten voorkomt dan wordt dit element toegevoegd aan de nieuwe lijst. Let op dat we een lijst willen maken en het element dus tussen [] gezet moet worden op correct toegevoegd te worden.
 
@@ -239,7 +239,7 @@ De functie hoeft maar over een van de twee lijsten te lussen aangezien we met de
 
 Een voorbeeld omschrijving:
 
-Om de grootste gemene deler te kunnen vinden, moeten we eerst weten door welke getallen beide variabelen gedeelt kunnen worden.
+Om de grootste gemene deler te kunnen vinden, moeten we eerst weten door welke getallen beide variabelen gedeeld kunnen worden.
 
 Stap 1 is dus om de delers van beide getallen te vinden met behulp van een list comprehension met range(1,var+1) om alle getallen tot en met var zelf en met een if statement die gebruikt maakt van de modulo operator voor integer devision. De list comprehension wordt opgeslagen in een nieuwe lijst met een duidelijk naam voor later gebruik. Deze stap resulteert in twee lijsten, een voor elke variabele.
 
@@ -274,19 +274,19 @@ def ggd(g1, g2):
 
 assert ggd(10,15) == 5
 assert ggd(6,24) == 6
-assert ggd(1,6) == 1
+assert ggd(0,6) == 0
 ```
 
 
 ## Opgave 6
 
-Deze opgave gaat over Klasse en Objecten en hoe deze verder te ontwikkelen.
+Deze opgave gaat over Klassen en Objecten en hoe deze verder te ontwikkelen.
 
 ### Opgave 6a
 
 De player_takes functie.
 
-```python 
+```python
 def player_takes(self, remove_sticks):
     """
     Haalt aantal speler stokjes weg.
@@ -297,7 +297,7 @@ def player_takes(self, remove_sticks):
     return
 ```
 
-Elke functie die onderdeel is van een class heeft de self argument. Na de self argument volgen eventuele aanroep argumenten. In dit geval is er een functie argument, het remove_sticks argument welke aangeeft hoe veel stokjes de speler wilt verwijderen. 
+Elke functie die onderdeel is van een class heeft de self argument. Na de self argument volgen eventuele aanroep argumenten. In dit geval is er een functie argument, het remove_sticks argument welke aangeeft hoe veel stokjes de speler wilt verwijderen.
 
 De variabele die bij houdt hoe veel stokjes er zijn, `sticks`, is onderdeel van de class. Om deze aan te kunnen passen, moet er eerst `self.` voor de variable gezet worden. Verder is er geen verschil met het aanpassen een de waarde van een variabele.
 
@@ -317,13 +317,13 @@ def AI_turn(self):
     remove_sticks = self.sticks % 4 # Integer division, wat over blijft moet verwijderd worden om een meervoud van vier over te houden
     if remove_sticks == 0: # Er ligt al een meervoud van vier op tafel, random aantal stokjes moet nu gekozen worden
         remove_sticks = random.randint(1,4)
-    
+
     return remove_sticks
 ```
 
 Net als de functie player_takes, is de AI_turn onderdeel van de class en vereist dus het `self` argument.
 
-De AI bepaalt hoe veel stokjes er weg gehaalt worden aan de hand van hoe veel stokjes er nog zijn en of het mogelijk is om na zijn/haar beurt een veelvoud van 4 stokjes over te houden. Met de modulo operator op `self.sticks` kan bepaald worden hoe veel stokjes er weg gehaald moeten worden. Let op: sticks in onderdeel van de class en kan alleen benaderd en aangepast worden door `self.` te gebruiken.
+De AI bepaalt hoe veel stokjes er weg gehaald worden aan de hand van hoe veel stokjes er nog zijn en of het mogelijk is om na zijn/haar beurt een veelvoud van 4 stokjes over te houden. Met de modulo operator op `self.sticks` kan bepaald worden hoe veel stokjes er weg gehaald moeten worden. Let op: sticks in onderdeel van de class en kan alleen benaderd en aangepast worden door `self.` te gebruiken.
 
 Nu kan het zijn dat er al een meervoud van 4 ligt. In dat geval geeft de modulo statement een nul terug. Dit is geen optie voor een keuze en verreist dan een willekeurige keuze. Dit wordt bereikt door met een if statement te controleren of remove_sticks == 0. Als dit True is dan wordt met de random.randint functie een willekeurige aantal stokjes gekozen.
 
@@ -358,7 +358,7 @@ class Nim:
      def __init__(self, number_of_sticks):
           self.sticks = number_of_sticks
 
-     # hier komt de functie player_takes() 
+     # hier komt de functie player_takes()
      def player_takes(self, remove_sticks):
           """
           Haalt aantal speler stokjes weg.
@@ -377,7 +377,7 @@ class Nim:
           remove_sticks = self.sticks % 4 # Integer division, wat over blijft moet verwijderd worden om een meervoud van vier over te houden
           if remove_sticks == 0: # Er ligt al een meervoud van vier op tafel, random aantal stokjes moet nu gekozen worden
                remove_sticks = random.randint(1,4)
-          
+
           return remove_sticks
 
      def game_over(self):
