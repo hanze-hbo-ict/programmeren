@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="nl" data-content_root="" >
+<html lang="nl" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Recursie &#8212; Programmeren</title>
   
@@ -19,44 +18,42 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css?v=5f6255d3" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css?v=def72667" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
-  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=b028fc25"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -92,19 +89,17 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../_static/save_state.js"></script>
-    <script src="../_static/translations.js"></script>
+    <script src="../_static/translations.js?v=83e0b41b"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'lectures/5_recursie';</script>
+    <script src="../_static/save_state.js?v=f1e4c503"></script>
     <link rel="canonical" href="https:///hanze-hbo-ict.github.io/programmeren/lectures/5_recursie.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Zoeken" href="../search.html" />
@@ -122,7 +117,6 @@ const thebe_selector_output = ".output, .cell_output"
   <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -162,13 +156,10 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <header>
   
-    <div class="bd-header navbar navbar-expand-lg bd-navbar">
-    </div>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
-  </header>
 
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
@@ -207,7 +198,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Zoeken</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -886,7 +888,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="recursie">
-<h1>Recursie<a class="headerlink" href="#recursie" title="Permalink to this heading">#</a></h1>
+<h1>Recursie<a class="headerlink" href="#recursie" title="Link to this heading">#</a></h1>
 <blockquote>
 <div><p>Om recursie te kunnen begrijpen moet je eerst recursie kunnen begrijpen.</p>
 <p>– student, anoniem</p>
@@ -894,7 +896,7 @@ document.write(`
 <p>Of: het antwoord op het probleem is het antwoord op het probleem (is het antwoord op het probleem)</p>
 <p>Zet je schrap want dit onderwerp gaat voor hoofpijn én verassende inzichten zorgen, kies je <a class="reference external" href="https://giphy.com/explore/mind-blown">favoriet</a>…</p>
 <section id="een-oplossing-die-zichzelf-herhaalt">
-<h2>Een oplossing die zichzelf herhaalt<a class="headerlink" href="#een-oplossing-die-zichzelf-herhaalt" title="Permalink to this heading">#</a></h2>
+<h2>Een oplossing die zichzelf herhaalt<a class="headerlink" href="#een-oplossing-die-zichzelf-herhaalt" title="Link to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">numis</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Tel het aantal i&#39;s in s</span>
 <span class="sd">    input s: een string</span>
@@ -912,14 +914,14 @@ document.write(`
 <p>Terzijde, weet je nog dat je het eerste karakter en het restant van een string kan lezen met <code class="docutils literal notranslate"><span class="pre">s[0]</span></code> en <code class="docutils literal notranslate"><span class="pre">s[1:]</span></code>?</p>
 </section>
 <section id="paradigmas">
-<h2>Paradigmas<a class="headerlink" href="#paradigmas" title="Permalink to this heading">#</a></h2>
+<h2>Paradigmas<a class="headerlink" href="#paradigmas" title="Link to this heading">#</a></h2>
 <p>Verschillende manieren om dit probleem dit op te lossen:</p>
 <p><strong>sequentieeel</strong> (iteratief)</p>
 <p><strong>zelfgelijkend</strong> (recursief)</p>
 <p>Het <code class="docutils literal notranslate"><span class="pre">numis(s)</span></code> probleem valt op meer dan één manier op te lossen en we komen daarmee aan bij het bestaan van verschillende <a class="reference external" href="https://nl.wikipedia.org/wiki/Programmeerparadigma">programmeerparadigmas</a>, dat wil zeggen technieken en benaderingen voor het oplossen van een probleem. We gaan eerst recursie verkennen, een <em>iteratieve</em> benadering komt later.</p>
 <p>Als je al eerder (meer of minder) hebt geprogrammeerd zal je iteratieve constructies wellicht kennen als <em>lussen</em> (bijvoobeeld “while” of “for each” lussen), deze benadering gaan we nu dus <em>niet</em> gebruiken!</p>
 <section id="sequentieel-denken">
-<h3>Sequentieel denken<a class="headerlink" href="#sequentieel-denken" title="Permalink to this heading">#</a></h3>
+<h3>Sequentieel denken<a class="headerlink" href="#sequentieel-denken" title="Link to this heading">#</a></h3>
 <p><strong>faculteit</strong></p>
 <p>wiskunde: <span class="math notranslate nohighlight">\(5! = 120\)</span></p>
 <p>informatica: <code class="docutils literal notranslate"><span class="pre">fac(5)</span> <span class="pre">=</span> <span class="pre">5</span> <span class="pre">*</span> <span class="pre">4</span> <span class="pre">*</span> <span class="pre">3</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">1</span></code></p>
@@ -928,7 +930,7 @@ document.write(`
 <p>Maar zou je <code class="docutils literal notranslate"><span class="pre">fac(5)</span></code> als een meer algemene versie van zichzelf kunnen schrijven? Dat kan, laten we daar een begin mee maken en je zal zien dat een zichzelf herhalend (terugkerend?) patroon gaat ontstaan, net als bij het aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;i💙aliens&quot;</span></code>…</p>
 </section>
 <section id="recursief-denken">
-<h3>Recursief denken<a class="headerlink" href="#recursief-denken" title="Permalink to this heading">#</a></h3>
+<h3>Recursief denken<a class="headerlink" href="#recursief-denken" title="Link to this heading">#</a></h3>
 <p><strong>faculteit</strong></p>
 <p>wiskunde: <span class="math notranslate nohighlight">\(5! = 120\)</span></p>
 <p>informatica: <code class="docutils literal notranslate"><span class="pre">fac(5)</span> <span class="pre">=</span> <span class="pre">5</span> <span class="pre">*</span> <span class="pre">4</span> <span class="pre">*</span> <span class="pre">3</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">1</span></code></p>
@@ -936,7 +938,7 @@ document.write(`
 <p><code class="docutils literal notranslate"><span class="pre">fac(N)</span> <span class="pre">=</span> <span class="pre">N</span> <span class="pre">*</span> <span class="pre">fac(N</span> <span class="pre">-</span> <span class="pre">1)</span></code></p>
 </section>
 <section id="dit-is-correct">
-<h3>Dit is correct…<a class="headerlink" href="#dit-is-correct" title="Permalink to this heading">#</a></h3>
+<h3>Dit is correct…<a class="headerlink" href="#dit-is-correct" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fac</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">N</span> <span class="o">*</span> <span class="n">fac</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
@@ -947,7 +949,7 @@ document.write(`
 <p>Loop in gedachten eens na wat er gebeurt als je 1 hebt bereikt in deze functie, het zal vrolijk <code class="docutils literal notranslate"><span class="pre">fac(N-1)</span></code> blijven aanroepen! Dit zal dus doorgaan in een “oneindige recursie” want we hebben nog geen rekening gehouden met de “base case”, het geval waar <strong>geen</strong> recursieve aanroep meer mogelijk is.</p>
 </section>
 <section id="is-het-correct">
-<h3>Is het correct?<a class="headerlink" href="#is-het-correct" title="Permalink to this heading">#</a></h3>
+<h3>Is het correct?<a class="headerlink" href="#is-het-correct" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fac</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">N</span> <span class="o">*</span> <span class="n">fac</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
@@ -957,7 +959,7 @@ document.write(`
 </section>
 </section>
 <section id="id1">
-<h2>Recursief denken<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h2>Recursief denken<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fac</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">N</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># base case </span>
         <span class="k">return</span> <span class="mi">1</span>
@@ -968,7 +970,7 @@ document.write(`
 <p>Je kan testen op de <em>base case</em>, in het geval van een faculteit is dit bereikt als N gelijk is aan 0. Maar als je naar de laatste regel kijkt (<code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">*</span> <span class="pre">fac(N-1)</span></code>),  hoe kan iets (<code class="docutils literal notranslate"><span class="pre">N</span></code>) vermenigvudigd worden met iets dat nog niet is uitgevoerd (<code class="docutils literal notranslate"><span class="pre">fac(N-1)</span></code>)?</p>
 </section>
 <section id="recursief-handelen">
-<h2>Recursief handelen<a class="headerlink" href="#recursief-handelen" title="Permalink to this heading">#</a></h2>
+<h2>Recursief handelen<a class="headerlink" href="#recursief-handelen" title="Link to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fac</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">N</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># base case</span>
         <span class="k">return</span> <span class="mi">1</span>
@@ -979,7 +981,7 @@ document.write(`
 </div>
 <p>Deze uitwerking is meer in de buurt van wat achter schermen gebeurt. In het geval <code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">*</span> <span class="pre">fac(N</span> <span class="pre">-</span> <span class="pre">1)</span></code> wordt door de computer de recursieve aanroep (<code class="docutils literal notranslate"><span class="pre">fac(N</span> <span class="pre">-</span> <span class="pre">1)</span></code>) eerst aangeroepen om vervolgens daar <code class="docutils literal notranslate"><span class="pre">N</span></code> mee te vermenigvuldigen. Je kan dit goed vergelijken met het eerst zetten van een variabele (<code class="docutils literal notranslate"><span class="pre">rest</span></code> in dit geval) die later wordt gebruikt om het antwoord te berekenen (<code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">*</span> <span class="pre">rest</span></code>).</p>
 <section id="stapelen">
-<h3>Stapelen<a class="headerlink" href="#stapelen" title="Permalink to this heading">#</a></h3>
+<h3>Stapelen<a class="headerlink" href="#stapelen" title="Link to this heading">#</a></h3>
 <p>Recursief stapelen!</p>
 <p>Recursieve aanroepen van functies worden gestapeld, zoals je al eerder hebt gezien! Van onder naar boven worden de frames van de stack gehaald en resultaten naar het bovenliggend frame doorgegeven.</p>
 <p><img alt="prob 3 step 18" src="../_images/prob_3_step_18.png" /></p>
@@ -996,13 +998,13 @@ document.write(`
 </section>
 </section>
 <section id="de-uitdaging">
-<h2>De uitdaging<a class="headerlink" href="#de-uitdaging" title="Permalink to this heading">#</a></h2>
+<h2>De uitdaging<a class="headerlink" href="#de-uitdaging" title="Link to this heading">#</a></h2>
 <p><img alt="Varen" src="../_images/varen_blad.jpg" /></p>
 <p>De uitdaging van het oplossen van recursief handelen is om zowel het <em>geheel</em> als de <em>zelfgelijkende delen</em> te zien!</p>
 <p>Je komt trouwens veel voorbeelden van recursie in de natuur tegen, later zie je meer voorbeelden!</p>
 </section>
 <section id="id2">
-<h2>Recursie<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<h2>Recursie<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <p>Recursie als een paradigma voor het oplossen van problemen</p>
 <ul class="simple">
 <li><p>een base case, en</p></li>
@@ -1011,9 +1013,9 @@ document.write(`
 <p>Recursie is een belangrijk patroon, of <em>paradigma</em> voor het oplossen van problemen. Bedenk dat er altijd een <em>base case</em> en een <em>zelfgelijkend ontwerp</em> aanwezig moet zijn. Zelfgelijkend is in dit geval dat we dezelfde oplossing steeds kunnen toepassen op een deel van het probleem.</p>
 </section>
 <section id="recursief-ontwerp">
-<h2>Recursief ontwerp<a class="headerlink" href="#recursief-ontwerp" title="Permalink to this heading">#</a></h2>
+<h2>Recursief ontwerp<a class="headerlink" href="#recursief-ontwerp" title="Link to this heading">#</a></h2>
 <section id="faculteit-fac-x">
-<h3>Faculteit: <code class="docutils literal notranslate"><span class="pre">fac(x)</span></code><a class="headerlink" href="#faculteit-fac-x" title="Permalink to this heading">#</a></h3>
+<h3>Faculteit: <code class="docutils literal notranslate"><span class="pre">fac(x)</span></code><a class="headerlink" href="#faculteit-fac-x" title="Link to this heading">#</a></h3>
 <p><strong><code class="docutils literal notranslate"><span class="pre">fac(5)</span></code></strong>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">fac(5)</span></code> is de waarde van <code class="docutils literal notranslate"><span class="pre">5*4*3*2*1</span></code> en is gelijk aan</p></li>
@@ -1044,7 +1046,7 @@ document.write(`
 <p>Terzijde, Python zal jou tegen een eindeloze recursie beschermen omdat het standaard een maximale diepte (het aantal frames) heeft geconfigureerd voor de recursieve aanroep van een functie (3000 is de limiet). Een stack overflow fout zal je dus niet snel zien en de limiet kan je aanpassen, als het nodig is!</p>
 </section>
 <section id="optelling-plusone-n">
-<h3>Optelling: <code class="docutils literal notranslate"><span class="pre">plusone(n)</span></code><a class="headerlink" href="#optelling-plusone-n" title="Permalink to this heading">#</a></h3>
+<h3>Optelling: <code class="docutils literal notranslate"><span class="pre">plusone(n)</span></code><a class="headerlink" href="#optelling-plusone-n" title="Link to this heading">#</a></h3>
 <p><strong><code class="docutils literal notranslate"><span class="pre">plusone(5)</span></code></strong>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">plusone(5)</span></code> is de waarde van <code class="docutils literal notranslate"><span class="pre">1+1+1+1+1</span></code> en is gelijk aan</p></li>
@@ -1066,7 +1068,7 @@ document.write(`
 </div>
 <p>De <code class="docutils literal notranslate"><span class="pre">...</span></code> zie je hier in de code terug. Wat moet voor de base- en recursieve case worden ingevuld? Denk hier terug aan aan <code class="docutils literal notranslate"><span class="pre">fac(x)</span></code>, hetzelfde patroon zal je hier moeten volgen!</p>
 <section id="oplossing">
-<h4>Oplossing<a class="headerlink" href="#oplossing" title="Permalink to this heading">#</a></h4>
+<h4>Oplossing<a class="headerlink" href="#oplossing" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plusone</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -1087,7 +1089,7 @@ document.write(`
 </section>
 </section>
 <section id="machtverheffing-pow-b-p">
-<h3>Machtverheffing: <code class="docutils literal notranslate"><span class="pre">pow(b,</span> <span class="pre">p)</span></code><a class="headerlink" href="#machtverheffing-pow-b-p" title="Permalink to this heading">#</a></h3>
+<h3>Machtverheffing: <code class="docutils literal notranslate"><span class="pre">pow(b,</span> <span class="pre">p)</span></code><a class="headerlink" href="#machtverheffing-pow-b-p" title="Link to this heading">#</a></h3>
 <p><strong><code class="docutils literal notranslate"><span class="pre">pow(2,</span> <span class="pre">5)</span></code></strong>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">pow(2,</span> <span class="pre">5)</span></code> is de waarde van <code class="docutils literal notranslate"><span class="pre">2*2*2*2*2</span></code> en is gelijk aan</p></li>
@@ -1106,7 +1108,7 @@ document.write(`
 </div>
 <p>Ook hier kan je een base- en recursive case ontdekken. Laten we het uitschrijven:</p>
 <section id="id3">
-<h4>Oplossing<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
+<h4>Oplossing<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">pow</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
@@ -1154,7 +1156,7 @@ document.write(`
 <p>Dit probleem komt zo vaak voor dat het ook in syntax is geïmplementeerd! Probeer in dit geval ook eens als <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">=</span> <span class="pre">5</span></code>. We kunnen dit nu gaan toepassen op de recursieve case in het geval exponent <code class="docutils literal notranslate"><span class="pre">p</span></code> een <em>negatieve</em> waarde heeft.</p>
 </section>
 <section id="id4">
-<h4>Oplossing<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
+<h4>Oplossing<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">pow</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
@@ -1178,7 +1180,7 @@ document.write(`
 </section>
 </section>
 <section id="voordelen-van-recursie">
-<h2>Voordelen van recursie<a class="headerlink" href="#voordelen-van-recursie" title="Permalink to this heading">#</a></h2>
+<h2>Voordelen van recursie<a class="headerlink" href="#voordelen-van-recursie" title="Link to this heading">#</a></h2>
 <p>Het kan <em>zelfstandig</em> in één keer een <em>willekeurige</em> diepte ingaan</p>
 <p>De functie heeft aan zichzelf genoeg en met één aanroep (van ons) lost het zichzelf tot elke willekeurige diepte op!</p>
 <p><img alt="Romanesco broccoli" src="../_images/romanesco.jpg" /></p>
@@ -1189,11 +1191,11 @@ document.write(`
 <p>Misschien, maar gelukkig heeft ons lichaam wél de <em>base case</em> goed gedefinieerd!</p>
 </section>
 <section id="python-is-in">
-<h2>Python is <code class="docutils literal notranslate"><span class="pre">in</span></code><a class="headerlink" href="#python-is-in" title="Permalink to this heading">#</a></h2>
+<h2>Python is <code class="docutils literal notranslate"><span class="pre">in</span></code><a class="headerlink" href="#python-is-in" title="Link to this heading">#</a></h2>
 <p>Bevind een element zich in een sequentie (een list, een string, …)?</p>
 <p>Dit probleem zal je vaak gaan tegenkomen: bijvoorbeeld bij de vraag of “i” een klinker is? Klinkers zijn de karakters a, e, i, o en u. Dit kan je als een sequentie schrijven, bijvoorbeeld als string <code class="docutils literal notranslate"><span class="pre">&quot;aeiou&quot;</span></code> of als list <code class="docutils literal notranslate"><span class="pre">[&quot;a&quot;,</span> <span class="pre">&quot;e&quot;,</span> <span class="pre">&quot;i&quot;,</span> <span class="pre">&quot;o&quot;,</span> <span class="pre">&quot;u&quot;]</span></code>. Python kent  de <code class="docutils literal notranslate"><span class="pre">in</span></code> operator om te testen of een element zich in een sequentie bevindt, bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">&quot;i&quot;</span> <span class="pre">in</span> <span class="pre">&quot;aeiou&quot;</span></code>. Een paar voorbeelden:</p>
 <section id="is-in-string">
-<h3>is <code class="docutils literal notranslate"><span class="pre">in</span></code> string<a class="headerlink" href="#is-in-string" title="Permalink to this heading">#</a></h3>
+<h3>is <code class="docutils literal notranslate"><span class="pre">in</span></code> string<a class="headerlink" href="#is-in-string" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;i&quot;</span> <span class="ow">in</span> <span class="s2">&quot;team&quot;</span>
@@ -1232,7 +1234,7 @@ document.write(`
 </div>
 </section>
 <section id="is-in-list">
-<h3>is <code class="docutils literal notranslate"><span class="pre">in</span></code> list<a class="headerlink" href="#is-in-list" title="Permalink to this heading">#</a></h3>
+<h3>is <code class="docutils literal notranslate"><span class="pre">in</span></code> list<a class="headerlink" href="#is-in-list" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">42</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">41</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">42</span><span class="p">]</span>
@@ -1261,9 +1263,9 @@ document.write(`
 </section>
 </section>
 <section id="meer-voorbeelden">
-<h2>Meer voorbeelden<a class="headerlink" href="#meer-voorbeelden" title="Permalink to this heading">#</a></h2>
+<h2>Meer voorbeelden<a class="headerlink" href="#meer-voorbeelden" title="Link to this heading">#</a></h2>
 <section id="aantal-klinkers-vwl-s">
-<h3>Aantal klinkers: <code class="docutils literal notranslate"><span class="pre">vwl(s)</span></code><a class="headerlink" href="#aantal-klinkers-vwl-s" title="Permalink to this heading">#</a></h3>
+<h3>Aantal klinkers: <code class="docutils literal notranslate"><span class="pre">vwl(s)</span></code><a class="headerlink" href="#aantal-klinkers-vwl-s" title="Link to this heading">#</a></h3>
 <p><strong><code class="docutils literal notranslate"><span class="pre">vwl(&quot;zaaiuien&quot;)</span></code></strong></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">vwl(&quot;zaaiuien&quot;)</span></code> is het aantal klinkers in “zaaiuien” en is gelijk aan</p></li>
@@ -1283,7 +1285,7 @@ document.write(`
 </pre></div>
 </div>
 <section id="id5">
-<h4>Oplossing<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
+<h4>Oplossing<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">vwl</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
@@ -1314,7 +1316,7 @@ document.write(`
 </section>
 </section>
 <section id="alleen-klinkers-keepvwl-s">
-<h3>Alleen klinkers: <code class="docutils literal notranslate"><span class="pre">keepvwl(s)</span></code><a class="headerlink" href="#alleen-klinkers-keepvwl-s" title="Permalink to this heading">#</a></h3>
+<h3>Alleen klinkers: <code class="docutils literal notranslate"><span class="pre">keepvwl(s)</span></code><a class="headerlink" href="#alleen-klinkers-keepvwl-s" title="Link to this heading">#</a></h3>
 <p><strong><code class="docutils literal notranslate"><span class="pre">keepvwl(&quot;pluto&quot;)</span></code></strong></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">keepvwl(&quot;pluto&quot;)</span></code> is “pluto” zonder medeklinkers en is gelijk aan</p></li>
@@ -1334,7 +1336,7 @@ document.write(`
 </pre></div>
 </div>
 <section id="id6">
-<h4>Oplossing<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
+<h4>Oplossing<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">keepvwl</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
@@ -1365,7 +1367,7 @@ document.write(`
 </section>
 </section>
 <section id="het-hoogste-getal-max-l">
-<h3>Het hoogste getal: <code class="docutils literal notranslate"><span class="pre">max(L)</span></code><a class="headerlink" href="#het-hoogste-getal-max-l" title="Permalink to this heading">#</a></h3>
+<h3>Het hoogste getal: <code class="docutils literal notranslate"><span class="pre">max(L)</span></code><a class="headerlink" href="#het-hoogste-getal-max-l" title="Link to this heading">#</a></h3>
 <p><strong><code class="docutils literal notranslate"><span class="pre">max([7,</span> <span class="pre">5,</span> <span class="pre">9,</span> <span class="pre">2])</span></code></strong></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">max([7,</span> <span class="pre">5,</span> <span class="pre">9,</span> <span class="pre">2])</span></code> geeft het hoogste getal terug en is</p></li>
@@ -1388,7 +1390,7 @@ document.write(`
 </pre></div>
 </div>
 <section id="id7">
-<h4>Oplossing<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h4>
+<h4>Oplossing<a class="headerlink" href="#id7" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">max</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
@@ -1430,13 +1432,13 @@ M is 9 en L[0] is 7
 <p>Als we steeds de functie <code class="docutils literal notranslate"><span class="pre">max</span></code> met het restant van <code class="docutils literal notranslate"><span class="pre">L</span></code> aanroepen dan zal het laatste restant 1 element bevatten (de waarde 2) en dit is de base case! <code class="docutils literal notranslate"><span class="pre">L[0]</span></code> is in dit geval 9 en dit is het één na laatste element. De lijst wordt van achteren naar voren doorlopen en je ziet hier de stack in actie!</p>
 </section>
 <section id="spring-eerst-kijk-later">
-<h4>Spring eerst, kijk later<a class="headerlink" href="#spring-eerst-kijk-later" title="Permalink to this heading">#</a></h4>
+<h4>Spring eerst, kijk later<a class="headerlink" href="#spring-eerst-kijk-later" title="Link to this heading">#</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">max(L)</span></code> is een goed voorbeeld van een <em>spring eerst</em> (recursie) en <em>kijk later</em> (test) strategie!</p>
 <p>Denk ook hier weer aan de stack, werk door tot en met de base case, in dit geval door eerst de recursieve aanroep te doen (<code class="docutils literal notranslate"><span class="pre">M</span> <span class="pre">=</span> <span class="pre">max(L[1:])</span></code>) voordat je gaat controleren (<code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">L[0]</span> <span class="pre">&gt;</span> <span class="pre">M</span></code> etc.).</p>
 </section>
 </section>
 <section id="dichtst-bij-0-zeroest-l">
-<h3>Dichtst bij 0: <code class="docutils literal notranslate"><span class="pre">zeroest(L)</span></code><a class="headerlink" href="#dichtst-bij-0-zeroest-l" title="Permalink to this heading">#</a></h3>
+<h3>Dichtst bij 0: <code class="docutils literal notranslate"><span class="pre">zeroest(L)</span></code><a class="headerlink" href="#dichtst-bij-0-zeroest-l" title="Link to this heading">#</a></h3>
 <p><strong><code class="docutils literal notranslate"><span class="pre">zeroest([-7,</span> <span class="pre">5,</span> <span class="pre">9,</span> <span class="pre">2])</span></code></strong></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">zeroest([-7,</span> <span class="pre">5,</span> <span class="pre">9,</span> <span class="pre">2])</span></code> geeft getal het dichtst bij 0 terug en is</p></li>
@@ -1459,7 +1461,7 @@ M is 9 en L[0] is 7
 </pre></div>
 </div>
 <section id="id8">
-<h4>Oplossing<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h4>
+<h4>Oplossing<a class="headerlink" href="#id8" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">zeroest</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
@@ -1661,8 +1663,8 @@ Door Harvey Mudd College / Hanze University of Applied Sciences
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

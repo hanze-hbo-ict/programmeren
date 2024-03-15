@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="nl" data-content_root="" >
+<html lang="nl" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Vier op een rij: de klasse Board &#8212; Programmeren</title>
   
@@ -19,44 +18,42 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css?v=5f6255d3" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css?v=def72667" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
-  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=b028fc25"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -92,17 +89,15 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../_static/save_state.js"></script>
-    <script src="../_static/translations.js"></script>
+    <script src="../_static/translations.js?v=83e0b41b"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'practicals/12b_vier_op_een_rij';</script>
+    <script src="../_static/save_state.js?v=f1e4c503"></script>
     <link rel="canonical" href="https:///hanze-hbo-ict.github.io/programmeren/practicals/12b_vier_op_een_rij.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Zoeken" href="../search.html" />
@@ -120,7 +115,6 @@ const thebe_selector_output = ".output, .cell_output"
   <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -160,13 +154,10 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <header>
   
-    <div class="bd-header navbar navbar-expand-lg bd-navbar">
-    </div>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
-  </header>
 
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
@@ -205,7 +196,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Zoeken</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -794,13 +796,13 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="vier-op-een-rij-de-klasse-board">
-<h1>Vier op een rij: de klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code><a class="headerlink" href="#vier-op-een-rij-de-klasse-board" title="Permalink to this heading">#</a></h1>
+<h1>Vier op een rij: de klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code><a class="headerlink" href="#vier-op-een-rij-de-klasse-board" title="Link to this heading">#</a></h1>
 <p>Voor deze opgave moet je met een nieuw bestand <code class="docutils literal notranslate"><span class="pre">board.py</span></code> beginnen.</p>
 <p>Vier op een rij is een variant van Boter, kaas en eieren dat gespeeld wordt op een rechthoekig bord van 7 bij 6:</p>
 <p><img alt="Vier op een rij" src="../_images/game_b21.png" /></p>
 <p>Het spel wordt gespeeld door twee spelers, die om de beurt een zet doen, waarbij beide spelers proberen om vier stenen op een verticale, horizontale of diagonale rij te krijgen. Eén voorwaarde bij het spelen is dat, omdat het bord verticaal opgesteld staat, de stenen niet zomaar overal geplaatst kunnen worden. Een steen mag alleen maar bovenaan een bestaande kolom stenen gespeeld worden (of het mag een nieuwe kolom stenen beginnen).</p>
 <section id="de-klasse-board">
-<h2>De klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code><a class="headerlink" href="#de-klasse-board" title="Permalink to this heading">#</a></h2>
+<h2>De klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code><a class="headerlink" href="#de-klasse-board" title="Link to this heading">#</a></h2>
 <p>In deze opgave ga je een klasse genaamd <code class="docutils literal notranslate"><span class="pre">Board</span></code> maken die sommige eigenschappen van het spel Vier op een rij implementeert. De klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code> heeft drie instantievariabelen: er is een tweedimensionale lijst (een lijst van lijsten) met karakters die het spelbord voorstelt, en twee variabelen die het aantal rijen en kolommen op het bord bijhouden (6 rijen en 7 kolommen is standaard, maar je klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code> kan elk formaat bord aan).</p>
 <p>Zelfs als we onbeperkt grote borden toestaan blijft de regel echter bestaan dat je vier stenen op een rij nodig hebt om te winnen. Toegegeven, dit maakt het wel lastig om het spel te winnen op een bord van 3 bij 3…</p>
 <p>Je klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code> heeft minstens drie instantievariabelen:</p>
@@ -849,12 +851,12 @@ document.write(`
 </div>
 <p>Implementeer vervolgens de volgende methodes in je klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code>. Vergeet niet ze allemaal te testen nadat je ze geschreven hebt; het is veel makkelijker om ze elk onafhankelijk te testen dan om te proberen een grote verzameling methodes tegelijk te debuggen.</p>
 <section id="de-constructror-init">
-<h3>De constructror <code class="docutils literal notranslate"><span class="pre">__init__</span></code><a class="headerlink" href="#de-constructror-init" title="Permalink to this heading">#</a></h3>
+<h3>De constructror <code class="docutils literal notranslate"><span class="pre">__init__</span></code><a class="headerlink" href="#de-constructror-init" title="Link to this heading">#</a></h3>
 <p>De klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code> heeft een constructor <code class="docutils literal notranslate"><span class="pre">__init__(self,</span> <span class="pre">width,</span> <span class="pre">height)</span></code> die twee argumenten meekrijgt. (Onthoud dat <code class="docutils literal notranslate"><span class="pre">self</span></code> verwijst naar het object dat aangemaakt wordt en dat het niet expliciet wordt meegegeven aan de constructor.) De constructor krijgt een aantal kolommen en rijen mee (7 en 6 zijn de standaard in Vier op een rij, maar ons datatype kan alle bordformaten aan). De constructor stelt de waardes van de instantievariabelen van het object in. Het maakt bovendien de tweedimensionale lijst aan die gebruikt wordt om het bord op te slaan. Je maakt hiervoor een lijst van lijsten <em>op een manier die erg lijkt op die van het practicum over Game of Life</em>.</p>
 <p>Merk op dat <code class="docutils literal notranslate"><span class="pre">self.data</span></code> niet alle karakters bevat die gebruikt worden om het bord af te drukken; alleen de karakters die nodig zijn om het spel te spelen. De extra karakters worden gegenereerd in de methode <code class="docutils literal notranslate"><span class="pre">__repr__</span></code>.</p>
 </section>
 <section id="de-methode-repr">
-<h3>De methode <code class="docutils literal notranslate"><span class="pre">__repr__</span></code><a class="headerlink" href="#de-methode-repr" title="Permalink to this heading">#</a></h3>
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">__repr__</span></code><a class="headerlink" href="#de-methode-repr" title="Link to this heading">#</a></h3>
 <p>De methode <code class="docutils literal notranslate"><span class="pre">__repr__(self)</span></code> geeft een string<code class="docutils literal notranslate"><span class="pre">repr</span></code>esentatie terug van het <code class="docutils literal notranslate"><span class="pre">Board</span></code>-object dat de methode aanroept. Elke “steen” neemt één teken in beslag, en alle kolommen worden gescheiden door verticale lijnen (<code class="docutils literal notranslate"><span class="pre">|</span></code>). De kolommen worden aan de onderkant gelabeld. Hier is een voorbeeld voor een bord met 6 rijen en 7 kolommen, 6 bij 7 dus (zie de onderstaande code voor meer details…)</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>| | | | | | | |
 | | | | | | | |
@@ -880,12 +882,12 @@ zoals te zien in dit grotere voorbeeld met 5 rijen en 15 kolommen (5 bij 15):</p
 <div class="tip admonition">
 <p class="admonition-title">Eén string, meerdere regels?</p>
 <p>De string <code class="docutils literal notranslate"><span class="pre">'\n'</span></code> stelt het <em>newline</em>-karakter voor in Python. Je kan dus meerdere regels in een enkele string zetten door <code class="docutils literal notranslate"><span class="pre">'\n'</span></code> toe te voegen. Bijvoorbeeld met</p>
-<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span>In [1]: s = &#39;Dit is de bovenste regel.&#39;
-In [2]: s += &#39;\n&#39;
-In [3]: s += &#39;Dit is de tweede regel!\n&#39;
-In [4]: print(s)
-Dit is de bovenste regel.
-Dit is de tweede regel!
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Dit is de bovenste regel.&#39;</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39;Dit is de tweede regel!</span><span class="se">\n</span><span class="s1">&#39;</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="n">Dit</span> <span class="ow">is</span> <span class="n">de</span> <span class="n">bovenste</span> <span class="n">regel</span><span class="o">.</span>
+<span class="n">Dit</span> <span class="ow">is</span> <span class="n">de</span> <span class="n">tweede</span> <span class="n">regel</span><span class="err">!</span>
 </pre></div>
 </div>
 <p>Merk op dat <code class="docutils literal notranslate"><span class="pre">'\n'</span></code> ook <em>in</em> een string gebruikt kan worden. In dit geval voegt het een extra lege regel toe aan het einde van de string.</p>
@@ -893,7 +895,7 @@ Dit is de tweede regel!
 </section>
 </section>
 <section id="opdracht-1-de-methode-add-move">
-<h2>Opdracht 1:  De methode <code class="docutils literal notranslate"><span class="pre">add_move</span></code><a class="headerlink" href="#opdracht-1-de-methode-add-move" title="Permalink to this heading">#</a></h2>
+<h2>Opdracht 1:  De methode <code class="docutils literal notranslate"><span class="pre">add_move</span></code><a class="headerlink" href="#opdracht-1-de-methode-add-move" title="Link to this heading">#</a></h2>
 <p>De methode <code class="docutils literal notranslate"><span class="pre">add_move(self,</span> <span class="pre">col,</span> <span class="pre">ox)</span></code> krijgt twee argumenten mee: het eerste, <code class="docutils literal notranslate"><span class="pre">col</span></code>, geeft de kolom aan waaraan de steen moet worden toegevoegd. Het tweede argument, <code class="docutils literal notranslate"><span class="pre">ox</span></code>, is een string van 1 karakter die de steen aangeeft die aan het bord moet worden toegevoegd. Dat wil zeggen, <code class="docutils literal notranslate"><span class="pre">ox</span></code> moet <code class="docutils literal notranslate"><span class="pre">'X'</span></code> of <code class="docutils literal notranslate"><span class="pre">'O'</span></code> zijn (hoofdletter O dus, niet nul).</p>
 <div class="notice admonition">
 <p class="admonition-title">Onthoud dat de stenen van bovenaf in het bord vallen!</p>
@@ -924,11 +926,11 @@ Dit is de tweede regel!
 </div>
 </section>
 <section id="opdracht-2-de-methode-clear">
-<h2>Opdracht 2:  De methode <code class="docutils literal notranslate"><span class="pre">clear</span></code><a class="headerlink" href="#opdracht-2-de-methode-clear" title="Permalink to this heading">#</a></h2>
+<h2>Opdracht 2:  De methode <code class="docutils literal notranslate"><span class="pre">clear</span></code><a class="headerlink" href="#opdracht-2-de-methode-clear" title="Link to this heading">#</a></h2>
 <p>De methode <code class="docutils literal notranslate"><span class="pre">clear(self)</span></code> moet het aanroepende bord leeg maken; er valt hier verder weinig over te zeggen, maar de methode is wel nuttig!</p>
 </section>
 <section id="opdracht-3-de-methode-set-board">
-<h2>Opdracht 3:  De methode <code class="docutils literal notranslate"><span class="pre">set_board</span></code><a class="headerlink" href="#opdracht-3-de-methode-set-board" title="Permalink to this heading">#</a></h2>
+<h2>Opdracht 3:  De methode <code class="docutils literal notranslate"><span class="pre">set_board</span></code><a class="headerlink" href="#opdracht-3-de-methode-set-board" title="Link to this heading">#</a></h2>
 <p>De methode <code class="docutils literal notranslate"><span class="pre">set_board(self,</span> <span class="pre">move_string)</span></code> is erg handig om snel een bord te maken om de methode <code class="docutils literal notranslate"><span class="pre">wins_for</span></code> te testen in het volgende deel. Hier is de code die we voor <code class="docutils literal notranslate"><span class="pre">set_board</span></code> gebruikt hebben; voeg dit toe aan
 je klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code>, het maakt het testen veel simpeler!</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">set_board</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">move_string</span><span class="p">):</span>
@@ -956,7 +958,7 @@ je klasse <code class="docutils literal notranslate"><span class="pre">Board</sp
 </div>
 </section>
 <section id="opdracht-4-de-methode-allows-move">
-<h2>Opdracht 4:  De methode <code class="docutils literal notranslate"><span class="pre">allows_move</span></code><a class="headerlink" href="#opdracht-4-de-methode-allows-move" title="Permalink to this heading">#</a></h2>
+<h2>Opdracht 4:  De methode <code class="docutils literal notranslate"><span class="pre">allows_move</span></code><a class="headerlink" href="#opdracht-4-de-methode-allows-move" title="Link to this heading">#</a></h2>
 <p>De methode <code class="docutils literal notranslate"><span class="pre">allows_move(self,</span> <span class="pre">col)</span></code> methode moet <code class="docutils literal notranslate"><span class="pre">True</span></code> teruggeven als in het aanroepende <code class="docutils literal notranslate"><span class="pre">Board</span></code>-object een zet in kolom <code class="docutils literal notranslate"><span class="pre">col</span></code> <em>wel</em>* geldig is. Ze moet <code class="docutils literal notranslate"><span class="pre">False</span></code> teruggeven als kolom <code class="docutils literal notranslate"><span class="pre">col</span></code> geen geldig kolomnummer is voor het aanroepende object. Ze moet ook <code class="docutils literal notranslate"><span class="pre">False</span></code> teruggeven als kolom <code class="docutils literal notranslate"><span class="pre">col</span></code> vol is. De methode moet dus controleren dat <code class="docutils literal notranslate"><span class="pre">col</span></code> in het bereik van 0 tot de laatste kolom valt <em>en</em> dat er nog ruimte over is in de kolom!</p>
 <p>Hier is een voorbeeldreeks om mee te testen; probeer hem uit!</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">b</span> <span class="o">=</span> <span class="n">Board</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
@@ -994,7 +996,7 @@ je klasse <code class="docutils literal notranslate"><span class="pre">Board</sp
 </div>
 </section>
 <section id="opdracht-5-de-methode-is-full">
-<h2>Opdracht 5:  De methode <code class="docutils literal notranslate"><span class="pre">is_full</span></code><a class="headerlink" href="#opdracht-5-de-methode-is-full" title="Permalink to this heading">#</a></h2>
+<h2>Opdracht 5:  De methode <code class="docutils literal notranslate"><span class="pre">is_full</span></code><a class="headerlink" href="#opdracht-5-de-methode-is-full" title="Link to this heading">#</a></h2>
 <p>De methode <code class="docutils literal notranslate"><span class="pre">is_full(self)</span></code> moet <code class="docutils literal notranslate"><span class="pre">True</span></code> teruggeven als het aanroepende <code class="docutils literal notranslate"><span class="pre">Board</span></code>-object volledig gevuld is met stenen. Ze moet anders <code class="docutils literal notranslate"><span class="pre">False</span></code> teruggeven. Merk op dat je <code class="docutils literal notranslate"><span class="pre">allows_move</span></code> kan gebruiken om deze methode heel kort te schrijven! Als je niet buitengewoon geduldig bent is het handiger om dit op kleinere borden te testen!</p>
 <p>Hier is een voorbeeldreeks om mee te testen; hij gebruikt de methode <code class="docutils literal notranslate"><span class="pre">set_board</span></code> die je hierboven kan vinden.</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">b</span> <span class="o">=</span> <span class="n">Board</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
@@ -1017,7 +1019,7 @@ je klasse <code class="docutils literal notranslate"><span class="pre">Board</sp
 </div>
 </section>
 <section id="opdracht-6-de-methode-del-move">
-<h2>Opdracht 6:  De methode <code class="docutils literal notranslate"><span class="pre">del_move</span></code><a class="headerlink" href="#opdracht-6-de-methode-del-move" title="Permalink to this heading">#</a></h2>
+<h2>Opdracht 6:  De methode <code class="docutils literal notranslate"><span class="pre">del_move</span></code><a class="headerlink" href="#opdracht-6-de-methode-del-move" title="Link to this heading">#</a></h2>
 <p>De methode <code class="docutils literal notranslate"><span class="pre">del_move(self,</span> <span class="pre">col)</span></code> moet het omgekeerde doen van <code class="docutils literal notranslate"><span class="pre">add_move</span></code>. Ze moet de bovenste steen van kolom <code class="docutils literal notranslate"><span class="pre">col</span></code> verwijderen. Als de kolom leeg is moet <code class="docutils literal notranslate"><span class="pre">del_move</span></code> <em>niets</em> doen. Deze functie lijkt nu niet handig, maar het zal <em>erg</em> handig zijn als je je eigen computerspeler voor Vier op een rij wilt implementeren…</p>
 <p>Hier is een voorbeeldreeks om mee te testen:</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">b</span> <span class="o">=</span> <span class="n">Board</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
@@ -1042,7 +1044,7 @@ je klasse <code class="docutils literal notranslate"><span class="pre">Board</sp
 </div>
 </section>
 <section id="opdracht-7-de-methode-wins-for">
-<h2>Opdracht 7:  De methode <code class="docutils literal notranslate"><span class="pre">wins_for</span></code><a class="headerlink" href="#opdracht-7-de-methode-wins-for" title="Permalink to this heading">#</a></h2>
+<h2>Opdracht 7:  De methode <code class="docutils literal notranslate"><span class="pre">wins_for</span></code><a class="headerlink" href="#opdracht-7-de-methode-wins-for" title="Link to this heading">#</a></h2>
 <p>De methode <code class="docutils literal notranslate"><span class="pre">wins_for(self,</span> <span class="pre">ox)</span></code> controleert of iemand het spel gewonnen heeft. Het argument <code class="docutils literal notranslate"><span class="pre">ox</span></code> van deze methode is een steen van 1 karakter: <code class="docutils literal notranslate"><span class="pre">'X'</span></code> of <code class="docutils literal notranslate"><span class="pre">'O'</span></code>. De methode moet <code class="docutils literal notranslate"><span class="pre">True</span></code> teruggeven als er vier stenen van het type <code class="docutils literal notranslate"><span class="pre">ox</span></code> op een rij zijn op het bord. Ze moet anders <code class="docutils literal notranslate"><span class="pre">False</span></code> teruggeven.</p>
 <div class="danger admonition">
 <p class="admonition-title">Let op</p>
@@ -1105,7 +1107,7 @@ je klasse <code class="docutils literal notranslate"><span class="pre">Board</sp
 </div>
 </section>
 <section id="opdracht-8-de-methode-host-game">
-<h2>Opdracht 8:  De methode <code class="docutils literal notranslate"><span class="pre">host_game</span></code><a class="headerlink" href="#opdracht-8-de-methode-host-game" title="Permalink to this heading">#</a></h2>
+<h2>Opdracht 8:  De methode <code class="docutils literal notranslate"><span class="pre">host_game</span></code><a class="headerlink" href="#opdracht-8-de-methode-host-game" title="Link to this heading">#</a></h2>
 <p>De methode <code class="docutils literal notranslate"><span class="pre">host_game(self)</span></code> voegt alles samen tot het complete spel Vier op een rij. Ze moet de gebruiker Vier op een rij laten spelen, en hiervoor de bovenstaande methodes gebruiken. In het bijzonder moeten <code class="docutils literal notranslate"><span class="pre">'X'</span></code> (die altijd als eerste is) en <code class="docutils literal notranslate"><span class="pre">'O'</span></code> (die altijd als tweede is) afwisselend aan de beurt zijn. De methode moet de gebruiker (door middel van de functie <code class="docutils literal notranslate"><span class="pre">input</span></code>) vragen een kolomnummer te selecteren voor elke zet. Hieronder kan je een voorbeeld zien van hoe deze interactie moet werken, maar hier zijn een paar belangrijke punten om in de gaten te houden:</p>
 <ul class="simple">
 <li><p>Deze methode moet elke keer het bord afdrukken voordat de zet gevraagd wordt.</p></li>
@@ -1126,102 +1128,102 @@ je klasse <code class="docutils literal notranslate"><span class="pre">Board</sp
 <p>Als het spel niet over is, moet de andere speler gevraagd worden een zet te doen, en zo verder…</p>
 <p>Vergeet niet de methode te testen door het spel een paar keer te spelen (met elke mogelijke uitkomst…)!</p>
 <p>Hier is een voorbeelduitvoer, om een idee te geven van de invoer en uitvoer:</p>
-<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span>In [1]: b = Board(7, 6)
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">b</span> <span class="o">=</span> <span class="n">Board</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
 
-In [2]: b.host_game()
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">b</span><span class="o">.</span><span class="n">host_game</span><span class="p">()</span>
 
-Welkom bij Vier op een rij!
+<span class="n">Welkom</span> <span class="n">bij</span> <span class="n">Vier</span> <span class="n">op</span> <span class="n">een</span> <span class="n">rij</span><span class="err">!</span>
 
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
----------------
- 0 1 2 3 4 5 6
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">---------------</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span>
 
-Keuze van X:  3
+<span class="n">Keuze</span> <span class="n">van</span> <span class="n">X</span><span class="p">:</span>  <span class="mi">3</span>
 
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | |X| | | |
----------------
- 0 1 2 3 4 5 6
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span><span class="n">X</span><span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">---------------</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span>
 
-Keuze van O:  4
+<span class="n">Keuze</span> <span class="n">van</span> <span class="n">O</span><span class="p">:</span>  <span class="mi">4</span>
 
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | |X|O| | |
----------------
- 0 1 2 3 4 5 6
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span><span class="n">X</span><span class="o">|</span><span class="n">O</span><span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">---------------</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span>
 
-Keuze van X:  2
+<span class="n">Keuze</span> <span class="n">van</span> <span class="n">X</span><span class="p">:</span>  <span class="mi">2</span>
 
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | |X|X|O| | |
----------------
- 0 1 2 3 4 5 6
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span><span class="n">X</span><span class="o">|</span><span class="n">X</span><span class="o">|</span><span class="n">O</span><span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">---------------</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span>
 
-Keuze van O:  4
+<span class="n">Keuze</span> <span class="n">van</span> <span class="n">O</span><span class="p">:</span>  <span class="mi">4</span>
 
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | |O| | |
-| | |X|X|O| | |
----------------
- 0 1 2 3 4 5 6
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span><span class="n">O</span><span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span><span class="n">X</span><span class="o">|</span><span class="n">X</span><span class="o">|</span><span class="n">O</span><span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">---------------</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span>
 
-Keuze van X:  1
+<span class="n">Keuze</span> <span class="n">van</span> <span class="n">X</span><span class="p">:</span>  <span class="mi">1</span>
 
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | |O| | |
-| |X|X|X|O| | |
----------------
- 0 1 2 3 4 5 6
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span><span class="n">O</span><span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span><span class="n">X</span><span class="o">|</span><span class="n">X</span><span class="o">|</span><span class="n">X</span><span class="o">|</span><span class="n">O</span><span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">---------------</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span>
 
-Keuze van O:  2
+<span class="n">Keuze</span> <span class="n">van</span> <span class="n">O</span><span class="p">:</span>  <span class="mi">2</span>
 
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | |O| |O| | |
-| |X|X|X|O| | |
----------------
- 0 1 2 3 4 5 6
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span><span class="n">O</span><span class="o">|</span> <span class="o">|</span><span class="n">O</span><span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span><span class="n">X</span><span class="o">|</span><span class="n">X</span><span class="o">|</span><span class="n">X</span><span class="o">|</span><span class="n">O</span><span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">---------------</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span>
 
-Keuze van X:  0
+<span class="n">Keuze</span> <span class="n">van</span> <span class="n">X</span><span class="p">:</span>  <span class="mi">0</span>
 
 
-X wint -- Gefeliciteerd!
+<span class="n">X</span> <span class="n">wint</span> <span class="o">--</span> <span class="n">Gefeliciteerd</span><span class="err">!</span>
 
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | |O| |O| | |
-|X|X|X|X|O| | |
----------------
- 0 1 2 3 4 5 6
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">|</span> <span class="o">|</span><span class="n">O</span><span class="o">|</span> <span class="o">|</span><span class="n">O</span><span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span><span class="n">X</span><span class="o">|</span><span class="n">X</span><span class="o">|</span><span class="n">X</span><span class="o">|</span><span class="n">X</span><span class="o">|</span><span class="n">O</span><span class="o">|</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">---------------</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span>
 
-In [3]:
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span>
 </pre></div>
 </div>
 </section>
@@ -1352,8 +1354,8 @@ Door Harvey Mudd College / Hanze University of Applied Sciences
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

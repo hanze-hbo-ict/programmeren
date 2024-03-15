@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="nl" data-content_root="" >
+<html lang="nl" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>List comprehension &#8212; Programmeren</title>
   
@@ -19,44 +18,42 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css?v=5f6255d3" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css?v=def72667" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
-  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=b028fc25"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -92,19 +89,17 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../../_static/save_state.js"></script>
-    <script src="../../_static/translations.js"></script>
+    <script src="../../_static/translations.js?v=83e0b41b"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'extra/practice/2_list_comprehension';</script>
+    <script src="../../_static/save_state.js?v=f1e4c503"></script>
     <link rel="canonical" href="https:///hanze-hbo-ict.github.io/programmeren/extra/practice/2_list_comprehension.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Zoeken" href="../../search.html" />
@@ -122,7 +117,6 @@ const thebe_selector_output = ".output, .cell_output"
   <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -162,20 +156,15 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <header>
   
-    <div class="bd-header navbar navbar-expand-lg bd-navbar">
-    </div>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
-  </header>
 
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -209,7 +198,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Zoeken</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -862,12 +862,12 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="list-comprehension">
-<h1>List comprehension<a class="headerlink" href="#list-comprehension" title="Permalink to this heading">#</a></h1>
+<h1>List comprehension<a class="headerlink" href="#list-comprehension" title="Link to this heading">#</a></h1>
 <p>Gebruik list comprehension om de volgende problemen op te lossen.</p>
 <section id="opgaven">
-<h2>Opgaven<a class="headerlink" href="#opgaven" title="Permalink to this heading">#</a></h2>
+<h2>Opgaven<a class="headerlink" href="#opgaven" title="Link to this heading">#</a></h2>
 <section id="mult-of-five">
-<h3><code class="docutils literal notranslate"><span class="pre">mult_of_five</span></code><a class="headerlink" href="#mult-of-five" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">mult_of_five</span></code><a class="headerlink" href="#mult-of-five" title="Link to this heading">#</a></h3>
 <p>De functie <code class="docutils literal notranslate"><span class="pre">mult_of_five</span></code> accepteert een integer <code class="docutils literal notranslate"><span class="pre">n</span></code> en heeft als resultaat een list met de veelvouden 1 tot en met <code class="docutils literal notranslate"><span class="pre">n</span></code> van 5. Gebruik hier de ingebouwde functie <code class="docutils literal notranslate"><span class="pre">range</span></code>.</p>
 <p>De functie <code class="docutils literal notranslate"><span class="pre">range</span></code> begint met 0, je zult voor 1 als volgt moeten corrigeren:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
@@ -893,7 +893,7 @@ document.write(`
 </div>
 </section>
 <section id="divisible-by">
-<h3><code class="docutils literal notranslate"><span class="pre">divisible_by</span></code><a class="headerlink" href="#divisible-by" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">divisible_by</span></code><a class="headerlink" href="#divisible-by" title="Link to this heading">#</a></h3>
 <p>De functie <code class="docutils literal notranslate"><span class="pre">divisible_by</span></code> accepteert een integer <code class="docutils literal notranslate"><span class="pre">n</span></code> en een list <code class="docutils literal notranslate"><span class="pre">L</span></code> en geeft als resultaat een list terug met alle waarden in <code class="docutils literal notranslate"><span class="pre">L</span></code> deelbaar door <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -913,7 +913,7 @@ document.write(`
 </div>
 </section>
 <section id="starts-with">
-<h3><code class="docutils literal notranslate"><span class="pre">starts_with</span></code><a class="headerlink" href="#starts-with" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">starts_with</span></code><a class="headerlink" href="#starts-with" title="Link to this heading">#</a></h3>
 <p>De functie <code class="docutils literal notranslate"><span class="pre">starts_with</span></code> accepteer een string <code class="docutils literal notranslate"><span class="pre">s</span></code> en een list met string <code class="docutils literal notranslate"><span class="pre">L</span></code> en heeft als resultaat een list met alle waarden in <code class="docutils literal notranslate"><span class="pre">L</span></code> die beginnen met <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
 <ul class="simple">
 <li><p>je mag de ingebouwde string methode <code class="docutils literal notranslate"><span class="pre">startswith</span></code> <strong>niet</strong> gebruiken</p></li>
@@ -940,7 +940,7 @@ document.write(`
 </div>
 </section>
 <section id="double-letters">
-<h3><code class="docutils literal notranslate"><span class="pre">double_letters</span></code><a class="headerlink" href="#double-letters" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">double_letters</span></code><a class="headerlink" href="#double-letters" title="Link to this heading">#</a></h3>
 <p>De functie <code class="docutils literal notranslate"><span class="pre">double_letters</span></code> accepteert een list met strings <code class="docutils literal notranslate"><span class="pre">L</span></code> en heeft als resultaat een list met alle waarden verdubbeld.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -959,7 +959,7 @@ document.write(`
 </div>
 </section>
 <section id="num-as">
-<h3><code class="docutils literal notranslate"><span class="pre">num_as</span></code><a class="headerlink" href="#num-as" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">num_as</span></code><a class="headerlink" href="#num-as" title="Link to this heading">#</a></h3>
 <p>De functie <code class="docutils literal notranslate"><span class="pre">num_as</span></code> accepteert een list met met strings <code class="docutils literal notranslate"><span class="pre">L</span></code> en heeft als resultaat een integer het aantal keer dat het karakter “a” zich in <code class="docutils literal notranslate"><span class="pre">L</span></code> bevindt.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -978,7 +978,7 @@ document.write(`
 </div>
 </section>
 <section id="vwl">
-<h3><code class="docutils literal notranslate"><span class="pre">vwl</span></code><a class="headerlink" href="#vwl" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">vwl</span></code><a class="headerlink" href="#vwl" title="Link to this heading">#</a></h3>
 <p>De functie <code class="docutils literal notranslate"><span class="pre">vwl</span></code> accepteert een string <code class="docutils literal notranslate"><span class="pre">s</span></code> en heeft als resultaat het aantal klinkers in <code class="docutils literal notranslate"><span class="pre">s</span></code>. Klinkers zijn “a”, “e”, “i”, “o” en “u”.</p>
 <ul class="simple">
 <li><p>gebruik hier de ingebouwde functie <code class="docutils literal notranslate"><span class="pre">sum</span></code> in combinatie met list comprehension</p></li>
@@ -1001,7 +1001,7 @@ document.write(`
 </div>
 </section>
 <section id="add-tax">
-<h3><code class="docutils literal notranslate"><span class="pre">add_tax</span></code><a class="headerlink" href="#add-tax" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">add_tax</span></code><a class="headerlink" href="#add-tax" title="Link to this heading">#</a></h3>
 <p>De functie <code class="docutils literal notranslate"><span class="pre">add_tax</span></code> accepteert een getal (float of integer) <code class="docutils literal notranslate"><span class="pre">t</span></code> groter dan 0 en een lijst met getallen <code class="docutils literal notranslate"><span class="pre">L</span></code>. <code class="docutils literal notranslate"><span class="pre">t</span></code> staat voor een percentage, <code class="docutils literal notranslate"><span class="pre">L</span></code> bevat prijzen van artikelen en het resultaat is een lijst met prijzen verhoogd met percentage <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1020,7 +1020,7 @@ document.write(`
 </div>
 </section>
 <section id="above-below-freeze">
-<h3><code class="docutils literal notranslate"><span class="pre">above_below_freeze</span></code><a class="headerlink" href="#above-below-freeze" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">above_below_freeze</span></code><a class="headerlink" href="#above-below-freeze" title="Link to this heading">#</a></h3>
 <p>De functie <code class="docutils literal notranslate"><span class="pre">above_below_freeze</span></code> accepteert een lijst met getallen (integer of float) <code class="docutils literal notranslate"><span class="pre">L</span></code> die staan voor temperaturen en heeft als resultaat een list waar voor elke waarde “onder”, “boven” of “gelijk” aan het vriespunt (0 graden) is ingevuld.</p>
 <ul class="simple">
 <li><p>je mag hier een hulpfunctie schrijven, indien nodig</p></li>
@@ -1044,7 +1044,7 @@ document.write(`
 </div>
 </section>
 <section id="zipper">
-<h3><code class="docutils literal notranslate"><span class="pre">zipper</span></code><a class="headerlink" href="#zipper" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">zipper</span></code><a class="headerlink" href="#zipper" title="Link to this heading">#</a></h3>
 <p>De functie <code class="docutils literal notranslate"><span class="pre">zipper</span></code> accepteert twee lists <code class="docutils literal notranslate"><span class="pre">L1</span></code> en <code class="docutils literal notranslate"><span class="pre">L2</span></code> van gelijke lengte. Het resultaat is een <em>list of lists</em> waar elk element de paarsgewijze combinatie (“ritsen”) van waarden in <code class="docutils literal notranslate"><span class="pre">L1</span></code> en <code class="docutils literal notranslate"><span class="pre">L2</span></code> is.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1063,7 +1063,7 @@ document.write(`
 </div>
 </section>
 <section id="only-evens">
-<h3><code class="docutils literal notranslate"><span class="pre">only_evens</span></code><a class="headerlink" href="#only-evens" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">only_evens</span></code><a class="headerlink" href="#only-evens" title="Link to this heading">#</a></h3>
 <p>De functie <code class="docutils literal notranslate"><span class="pre">only_evens</span></code> accepteert een list met integers <code class="docutils literal notranslate"><span class="pre">L</span></code> en geeft als resultaat een list met de even getallen in <code class="docutils literal notranslate"><span class="pre">L</span></code>.</p>
 <ul class="simple">
 <li><p>gebruik de hulpfunctie <code class="docutils literal notranslate"><span class="pre">is_even</span></code> in de list comprehension.</p></li>
@@ -1091,7 +1091,7 @@ document.write(`
 </div>
 </section>
 <section id="mul-table">
-<h3><code class="docutils literal notranslate"><span class="pre">mul_table</span></code><a class="headerlink" href="#mul-table" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">mul_table</span></code><a class="headerlink" href="#mul-table" title="Link to this heading">#</a></h3>
 <p>Een vermenigvuldigingstabel ziet er als volgt uit</p>
 <p><img alt="vermenigvuldigingstabel" src="../../_images/mul_table.png" /></p>
 <p>Met een vermenigvuldigingstabel kan het resultaat van een vermenigvuldiging worden opgezocht, bijvoorbeeld om het resultaat van <span class="math notranslate nohighlight">\(4 \times 4\)</span> op te zoeken kijk je waar de kolommen en rijen elkaar kruisen op positie 4 (dit is 16).</p>
@@ -1129,9 +1129,9 @@ document.write(`
 </section>
 </section>
 <section id="oplossingen">
-<h2>Oplossingen<a class="headerlink" href="#oplossingen" title="Permalink to this heading">#</a></h2>
+<h2>Oplossingen<a class="headerlink" href="#oplossingen" title="Link to this heading">#</a></h2>
 <section id="id1">
-<h3><code class="docutils literal notranslate"><span class="pre">mult_of_five</span></code><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">mult_of_five</span></code><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mult_of_five</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -1154,7 +1154,7 @@ document.write(`
 </div>
 </section>
 <section id="id2">
-<h3><code class="docutils literal notranslate"><span class="pre">divisible_by</span></code><a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">divisible_by</span></code><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">divisible_by</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">L</span><span class="p">):</span>
@@ -1176,7 +1176,7 @@ document.write(`
 </div>
 </section>
 <section id="id3">
-<h3><code class="docutils literal notranslate"><span class="pre">starts_with</span></code><a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">starts_with</span></code><a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">starts_with</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">L</span><span class="p">):</span>
@@ -1201,7 +1201,7 @@ document.write(`
 </div>
 </section>
 <section id="id4">
-<h3><code class="docutils literal notranslate"><span class="pre">double_letters</span></code><a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">double_letters</span></code><a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">double_letters</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
@@ -1222,7 +1222,7 @@ document.write(`
 </div>
 </section>
 <section id="id5">
-<h3><code class="docutils literal notranslate"><span class="pre">num_as</span></code><a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">num_as</span></code><a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">num_as</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
@@ -1243,7 +1243,7 @@ document.write(`
 </div>
 </section>
 <section id="id6">
-<h3><code class="docutils literal notranslate"><span class="pre">vwl</span></code><a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">vwl</span></code><a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">vwl</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
@@ -1265,7 +1265,7 @@ document.write(`
 </div>
 </section>
 <section id="id7">
-<h3><code class="docutils literal notranslate"><span class="pre">add_tax</span></code><a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">add_tax</span></code><a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_tax</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">L</span><span class="p">):</span>
@@ -1286,7 +1286,7 @@ document.write(`
 </div>
 </section>
 <section id="id8">
-<h3><code class="docutils literal notranslate"><span class="pre">above_below_freeze</span></code><a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">above_below_freeze</span></code><a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">above_below</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
@@ -1318,7 +1318,7 @@ document.write(`
 </div>
 </section>
 <section id="id9">
-<h3><code class="docutils literal notranslate"><span class="pre">zipper</span></code><a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">zipper</span></code><a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">zipper</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="n">L2</span><span class="p">):</span>
@@ -1339,7 +1339,7 @@ document.write(`
 </div>
 </section>
 <section id="id10">
-<h3><code class="docutils literal notranslate"><span class="pre">only_evens</span></code><a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">only_evens</span></code><a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_even</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -1366,7 +1366,7 @@ document.write(`
 </div>
 </section>
 <section id="id11">
-<h3><code class="docutils literal notranslate"><span class="pre">mul_table</span></code><a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">mul_table</span></code><a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
 <p>Stel dat we een <span class="math notranslate nohighlight">\(N \times N\)</span> vermenigvuldigingstabel willen opstellen voor <span class="math notranslate nohighlight">\(N=5\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1583,8 +1583,8 @@ Door Harvey Mudd College / Hanze University of Applied Sciences
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

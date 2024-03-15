@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="nl" data-content_root="" >
+<html lang="nl" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>2D Arrays &#8212; Programmeren</title>
   
@@ -19,44 +18,42 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css?v=5f6255d3" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css?v=def72667" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
-  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=b028fc25"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -92,17 +89,15 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../_static/save_state.js"></script>
-    <script src="../_static/translations.js"></script>
+    <script src="../_static/translations.js?v=83e0b41b"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'lectures/11_2d_arrays';</script>
+    <script src="../_static/save_state.js?v=f1e4c503"></script>
     <link rel="canonical" href="https:///hanze-hbo-ict.github.io/programmeren/lectures/11_2d_arrays.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Zoeken" href="../search.html" />
@@ -120,7 +115,6 @@ const thebe_selector_output = ".output, .cell_output"
   <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -160,13 +154,10 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <header>
   
-    <div class="bd-header navbar navbar-expand-lg bd-navbar">
-    </div>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
-  </header>
 
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
@@ -205,7 +196,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Zoeken</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -878,10 +880,10 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="d-arrays">
-<h1>2D Arrays<a class="headerlink" href="#d-arrays" title="Permalink to this heading">#</a></h1>
+<h1>2D Arrays<a class="headerlink" href="#d-arrays" title="Link to this heading">#</a></h1>
 <p>Waar leeft data?</p>
 <section id="eendimensionale-arrays">
-<h2>Eendimensionale arrays<a class="headerlink" href="#eendimensionale-arrays" title="Permalink to this heading">#</a></h2>
+<h2>Eendimensionale arrays<a class="headerlink" href="#eendimensionale-arrays" title="Link to this heading">#</a></h2>
 <p>Zijn lists!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -892,14 +894,14 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">OSError</span><span class="g g-Whitespace">                                   </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/IPython/core/magics/execution.py:716,</span> in <span class="ni">ExecutionMagics.run</span><span class="nt">(self, parameter_s, runner, file_finder)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/IPython/core/magics/execution.py:716,</span> in <span class="ni">ExecutionMagics.run</span><span class="nt">(self, parameter_s, runner, file_finder)</span>
 <span class="g g-Whitespace">    </span><span class="mi">715</span>     <span class="n">fpath</span> <span class="o">=</span> <span class="n">arg_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="ne">--&gt; </span><span class="mi">716</span>     <span class="n">filename</span> <span class="o">=</span> <span class="n">file_finder</span><span class="p">(</span><span class="n">fpath</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">717</span> <span class="k">except</span> <span class="ne">IndexError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/IPython/utils/path.py:90,</span> in <span class="ni">get_py_filename</span><span class="nt">(name)</span>
-<span class="g g-Whitespace">     </span><span class="mi">89</span>         <span class="k">return</span> <span class="n">py_name</span>
-<span class="ne">---&gt; </span><span class="mi">90</span> <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s2">&quot;File `</span><span class="si">%r</span><span class="s2">` not found.&quot;</span> <span class="o">%</span> <span class="n">name</span><span class="p">)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/IPython/utils/path.py:91,</span> in <span class="ni">get_py_filename</span><span class="nt">(name)</span>
+<span class="g g-Whitespace">     </span><span class="mi">90</span>         <span class="k">return</span> <span class="n">py_name</span>
+<span class="ne">---&gt; </span><span class="mi">91</span> <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s2">&quot;File `</span><span class="si">%r</span><span class="s2">` not found.&quot;</span> <span class="o">%</span> <span class="n">name</span><span class="p">)</span>
 
 <span class="ne">OSError</span>: File `&#39;simulate.py&#39;` not found.
 
@@ -909,16 +911,16 @@ document.write(`
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;run&#39;</span><span class="p">,</span> <span class="s1">&#39;simulate.py&#39;</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/IPython/core/interactiveshell.py:2456,</span> in <span class="ni">InteractiveShell.run_line_magic</span><span class="nt">(self, magic_name, line, _stack_depth)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2454</span>     <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;local_ns&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_local_scope</span><span class="p">(</span><span class="n">stack_depth</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2455</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">builtin_trap</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">2456</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2458</span> <span class="c1"># The code below prevents the output from being displayed</span>
-<span class="g g-Whitespace">   </span><span class="mi">2459</span> <span class="c1"># when using magics with decorator @output_can_be_silenced</span>
-<span class="g g-Whitespace">   </span><span class="mi">2460</span> <span class="c1"># when the last Python token in the expression is a &#39;;&#39;.</span>
-<span class="g g-Whitespace">   </span><span class="mi">2461</span> <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">magic</span><span class="o">.</span><span class="n">MAGIC_OUTPUT_CAN_BE_SILENCED</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/IPython/core/interactiveshell.py:2480,</span> in <span class="ni">InteractiveShell.run_line_magic</span><span class="nt">(self, magic_name, line, _stack_depth)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2478</span>     <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;local_ns&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_local_scope</span><span class="p">(</span><span class="n">stack_depth</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2479</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">builtin_trap</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">2480</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2482</span> <span class="c1"># The code below prevents the output from being displayed</span>
+<span class="g g-Whitespace">   </span><span class="mi">2483</span> <span class="c1"># when using magics with decorator @output_can_be_silenced</span>
+<span class="g g-Whitespace">   </span><span class="mi">2484</span> <span class="c1"># when the last Python token in the expression is a &#39;;&#39;.</span>
+<span class="g g-Whitespace">   </span><span class="mi">2485</span> <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">magic</span><span class="o">.</span><span class="n">MAGIC_OUTPUT_CAN_BE_SILENCED</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/IPython/core/magics/execution.py:727,</span> in <span class="ni">ExecutionMagics.run</span><span class="nt">(self, parameter_s, runner, file_finder)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/IPython/core/magics/execution.py:727,</span> in <span class="ni">ExecutionMagics.run</span><span class="nt">(self, parameter_s, runner, file_finder)</span>
 <span class="g g-Whitespace">    </span><span class="mi">725</span>     <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;nt&#39;</span> <span class="ow">and</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;^&#39;.*&#39;$&quot;</span><span class="p">,</span><span class="n">fpath</span><span class="p">):</span>
 <span class="g g-Whitespace">    </span><span class="mi">726</span>         <span class="n">warn</span><span class="p">(</span><span class="s1">&#39;For Windows, use double quotes to wrap a filename: </span><span class="si">%r</span><span class="s1">un &quot;mypath</span><span class="se">\\</span><span class="s1">myfile.py&quot;&#39;</span><span class="p">)</span>
 <span class="ne">--&gt; </span><span class="mi">727</span>     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">e</span>
@@ -962,7 +964,7 @@ document.write(`
 </div>
 </div>
 <section id="handelingen-op-data">
-<h3>Handelingen op data<a class="headerlink" href="#handelingen-op-data" title="Permalink to this heading">#</a></h3>
+<h3>Handelingen op data<a class="headerlink" href="#handelingen-op-data" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="p">[</span><span class="mi">88</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">79</span><span class="p">]</span>
@@ -1005,7 +1007,7 @@ document.write(`
 </section>
 </section>
 <section id="tweedimensionale-arrays">
-<h2>Tweedimensionale arrays<a class="headerlink" href="#tweedimensionale-arrays" title="Permalink to this heading">#</a></h2>
+<h2>Tweedimensionale arrays<a class="headerlink" href="#tweedimensionale-arrays" title="Link to this heading">#</a></h2>
 <p>Zijn overal! (en zijn <code class="docutils literal notranslate"><span class="pre">LoL</span></code>’s)</p>
 <p><img alt="Scores" src="../_images/score_sheet.png" /></p>
 <p>Denk bijvoorbeeld aan spreadsheets …</p>
@@ -1019,7 +1021,7 @@ document.write(`
 </pre></div>
 </div>
 <section id="while-true">
-<h3><code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">True</span></code><a class="headerlink" href="#while-true" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">True</span></code><a class="headerlink" href="#while-true" title="Link to this heading">#</a></h3>
 <p><img alt="Nyan Cat" src="../_images/nyan_cat.gif" /></p>
 <p>Of natuurlijk <a class="reference external" href="http://www.nyan.cat">afbeeldingen</a>!</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
@@ -1032,7 +1034,7 @@ document.write(`
 </div>
 </section>
 <section id="indices">
-<h3>Indices<a class="headerlink" href="#indices" title="Permalink to this heading">#</a></h3>
+<h3>Indices<a class="headerlink" href="#indices" title="Link to this heading">#</a></h3>
 <p><img alt="2D indices" src="../_images/ex_1a.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1076,7 +1078,7 @@ document.write(`
 </section>
 </section>
 <section id="data">
-<h2>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h2>
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>string</p></li>
 <li><p>integer / float</p></li>
@@ -1084,7 +1086,7 @@ document.write(`
 </ul>
 <p>2D arrays zijn <em>lijsten van lijsten</em>, <code class="docutils literal notranslate"><span class="pre">LoL</span></code>’s</p>
 <section id="lists">
-<h3>Lists<a class="headerlink" href="#lists" title="Permalink to this heading">#</a></h3>
+<h3>Lists<a class="headerlink" href="#lists" title="Link to this heading">#</a></h3>
 <p>Lists zijn containers, ze bevatten <em>verwijzingen</em> naar data</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1096,7 +1098,7 @@ document.write(`
 <p><img alt="List references" src="../_images/list_references.png" /></p>
 </section>
 <section id="indentiteit">
-<h3>Indentiteit<a class="headerlink" href="#indentiteit" title="Permalink to this heading">#</a></h3>
+<h3>Indentiteit<a class="headerlink" href="#indentiteit" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
@@ -1167,7 +1169,7 @@ id(obj, /)
 </div>
 </section>
 <section id="waarde-en-identiteit">
-<h3>Waarde en identiteit<a class="headerlink" href="#waarde-en-identiteit" title="Permalink to this heading">#</a></h3>
+<h3>Waarde en identiteit<a class="headerlink" href="#waarde-en-identiteit" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;Astronaut wordt snel oud tijdens een reis naar Mars&quot;</span>
@@ -1226,21 +1228,21 @@ id(obj, /)
 </div>
 </section>
 <section id="verwijzingen">
-<h3>Verwijzingen<a class="headerlink" href="#verwijzingen" title="Permalink to this heading">#</a></h3>
+<h3>Verwijzingen<a class="headerlink" href="#verwijzingen" title="Link to this heading">#</a></h3>
 <p><em>by reference</em></p>
 <p>Lists bevatten verwijzingen naar <em>geheugenadressen</em>, niet de waarden zelf!</p>
 <p><em>by value</em></p>
 <p>Getallen en strings verwijzen naar de <em>waarde</em></p>
 </section>
 <section id="mutabiliteit">
-<h3>Mutabiliteit<a class="headerlink" href="#mutabiliteit" title="Permalink to this heading">#</a></h3>
+<h3>Mutabiliteit<a class="headerlink" href="#mutabiliteit" title="Link to this heading">#</a></h3>
 <p><em>mutable</em> (veranderlijk)</p>
 <p>Lists kunnen worden aangepast</p>
 <p><em>immutable</em> (onveranderlijk)</p>
 <p>Getallen en strings kunnen <em>niet</em> worden aangepast</p>
 </section>
 <section id="mutable">
-<h3>Mutable<a class="headerlink" href="#mutable" title="Permalink to this heading">#</a></h3>
+<h3>Mutable<a class="headerlink" href="#mutable" title="Link to this heading">#</a></h3>
 <p>Lists</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1282,7 +1284,7 @@ id(obj, /)
 </div>
 </section>
 <section id="immutable">
-<h3>Immutable<a class="headerlink" href="#immutable" title="Permalink to this heading">#</a></h3>
+<h3>Immutable<a class="headerlink" href="#immutable" title="Link to this heading">#</a></h3>
 <p>Strings en getallen</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1338,7 +1340,7 @@ id(obj, /)
 </div>
 </section>
 <section id="functies">
-<h3>Functies?<a class="headerlink" href="#functies" title="Permalink to this heading">#</a></h3>
+<h3>Functies?<a class="headerlink" href="#functies" title="Link to this heading">#</a></h3>
 <p><em>by copy</em></p>
 <p>Functies ontvangen parameters als <em>kopie</em></p>
 <div class="cell docutils container">
@@ -1375,10 +1377,10 @@ main NA: y is 140308598063552 en heeft de waarde Pizza salami ananas
 </section>
 </section>
 <section id="shallow-versus-deep-copy">
-<h2>Shallow versus deep copy<a class="headerlink" href="#shallow-versus-deep-copy" title="Permalink to this heading">#</a></h2>
+<h2>Shallow versus deep copy<a class="headerlink" href="#shallow-versus-deep-copy" title="Link to this heading">#</a></h2>
 <p>De ene kopie is de andere niet!</p>
 <section id="shallow-copy">
-<h3>Shallow copy<a class="headerlink" href="#shallow-copy" title="Permalink to this heading">#</a></h3>
+<h3>Shallow copy<a class="headerlink" href="#shallow-copy" title="Link to this heading">#</a></h3>
 <blockquote>
 <div><p>Assignment statements in Python do not copy objects, they create bindings between a target and an object.</p>
 <p><a class="reference external" href="https://docs.python.org/3/library/copy.html">https://docs.python.org/3/library/copy.html</a></p>
@@ -1437,7 +1439,7 @@ main NA: y is 140308598063552 en heeft de waarde Pizza salami ananas
 </div>
 </section>
 <section id="lists-en-shallow-copy">
-<h3>Lists en shallow copy<a class="headerlink" href="#lists-en-shallow-copy" title="Permalink to this heading">#</a></h3>
+<h3>Lists en shallow copy<a class="headerlink" href="#lists-en-shallow-copy" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="s2">&quot;hi&quot;</span><span class="p">]</span>
@@ -1486,7 +1488,7 @@ main NA: y is 140308598063552 en heeft de waarde Pizza salami ananas
 <p>Lists zijn mutable en de shadow copy <code class="docutils literal notranslate"><span class="pre">M</span></code> verwijst nog steeds naar <code class="docutils literal notranslate"><span class="pre">L</span></code> en een aanpassing van <code class="docutils literal notranslate"><span class="pre">M</span></code> zal niet leiden tot een nieuwe list (zoals je wel zag gebeuren bij strings en integers).</p>
 </section>
 <section id="deep-copy">
-<h3>Deep copy<a class="headerlink" href="#deep-copy" title="Permalink to this heading">#</a></h3>
+<h3>Deep copy<a class="headerlink" href="#deep-copy" title="Link to this heading">#</a></h3>
 <p>Deep copy is alleen relevant voor containertypes als lists!</p>
 <blockquote>
 <div><p>A deep copy constructs a new compound object and then, recursively, inserts copies into it of the objects found in the original.</p>
@@ -1548,7 +1550,7 @@ main NA: y is 140308598063552 en heeft de waarde Pizza salami ananas
 </div>
 </section>
 <section id="slicing-is-ook-diep">
-<h3>Slicing is ook diep!<a class="headerlink" href="#slicing-is-ook-diep" title="Permalink to this heading">#</a></h3>
+<h3>Slicing is ook diep!<a class="headerlink" href="#slicing-is-ook-diep" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="s2">&quot;hi&quot;</span><span class="p">]</span>
@@ -1584,7 +1586,7 @@ main NA: y is 140308598063552 en heeft de waarde Pizza salami ananas
 </div>
 </section>
 <section id="list-comprehension">
-<h3>List comprehension<a class="headerlink" href="#list-comprehension" title="Permalink to this heading">#</a></h3>
+<h3>List comprehension<a class="headerlink" href="#list-comprehension" title="Link to this heading">#</a></h3>
 <p>List comprehension creëert een nieuwe lijst</p>
 <p>List comprehension als <em>strategie</em> om mutabiliteit te vermijden!</p>
 <div class="cell docutils container">
@@ -1623,9 +1625,9 @@ main NA: y is 140308598063552 en heeft de waarde Pizza salami ananas
 </section>
 </section>
 <section id="quiz">
-<h2>Quiz<a class="headerlink" href="#quiz" title="Permalink to this heading">#</a></h2>
+<h2>Quiz<a class="headerlink" href="#quiz" title="Link to this heading">#</a></h2>
 <section id="vraag-1">
-<h3>Vraag 1<a class="headerlink" href="#vraag-1" title="Permalink to this heading">#</a></h3>
+<h3>Vraag 1<a class="headerlink" href="#vraag-1" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">conform1</span><span class="p">(</span><span class="n">fav</span><span class="p">):</span>
@@ -1643,7 +1645,7 @@ main NA: y is 140308598063552 en heeft de waarde Pizza salami ananas
 <p>Wat wordt geprint voor <code class="docutils literal notranslate"><span class="pre">fav</span></code> in de functie <code class="docutils literal notranslate"><span class="pre">main1</span></code>?</p>
 </section>
 <section id="antwoord">
-<h3>Antwoord<a class="headerlink" href="#antwoord" title="Permalink to this heading">#</a></h3>
+<h3>Antwoord<a class="headerlink" href="#antwoord" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">main1</span><span class="p">()</span>
@@ -1658,7 +1660,7 @@ main NA: y is 140308598063552 en heeft de waarde Pizza salami ananas
 </div>
 </section>
 <section id="vraag-2">
-<h3>Vraag 2<a class="headerlink" href="#vraag-2" title="Permalink to this heading">#</a></h3>
+<h3>Vraag 2<a class="headerlink" href="#vraag-2" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">conform2</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
@@ -1676,7 +1678,7 @@ main NA: y is 140308598063552 en heeft de waarde Pizza salami ananas
 <p>Wat wordt geprint voor <code class="docutils literal notranslate"><span class="pre">L</span></code> in de functie <code class="docutils literal notranslate"><span class="pre">main2</span></code>?</p>
 </section>
 <section id="id1">
-<h3>Antwoord<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<h3>Antwoord<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">main2</span><span class="p">()</span>
@@ -1691,7 +1693,7 @@ main NA: y is 140308598063552 en heeft de waarde Pizza salami ananas
 </div>
 </section>
 <section id="vraag-3">
-<h3>Vraag 3<a class="headerlink" href="#vraag-3" title="Permalink to this heading">#</a></h3>
+<h3>Vraag 3<a class="headerlink" href="#vraag-3" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">conform3</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
@@ -1709,7 +1711,7 @@ main NA: y is 140308598063552 en heeft de waarde Pizza salami ananas
 <p>Wat wordt geprint voor <code class="docutils literal notranslate"><span class="pre">L</span></code> in de functie <code class="docutils literal notranslate"><span class="pre">main3</span></code>?</p>
 </section>
 <section id="id2">
-<h3>Antwoord<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<h3>Antwoord<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">main3</span><span class="p">()</span>
@@ -1725,19 +1727,19 @@ main NA: y is 140308598063552 en heeft de waarde Pizza salami ananas
 </section>
 </section>
 <section id="staat">
-<h2>Staat<a class="headerlink" href="#staat" title="Permalink to this heading">#</a></h2>
+<h2>Staat<a class="headerlink" href="#staat" title="Link to this heading">#</a></h2>
 <p>Waarom is mutabiliteit belangrijk?</p>
 <p>Mutabiliteit betekent dat <em>staat</em> kan worden gewijzigd!</p>
 <p><img alt="stack 1c" src="../_images/ex_1c.png" /></p>
 <p>Een gewijzigde staat is een probleem dat je eerder hebt gezien. Met <code class="docutils literal notranslate"><span class="pre">pushr</span></code> en <code class="docutils literal notranslate"><span class="pre">popr</span></code> kon een voorgaande staat worden bewaard om later weer terug te zetten.</p>
 <section id="overgang-van-staat">
-<h3>Overgang van staat<a class="headerlink" href="#overgang-van-staat" title="Permalink to this heading">#</a></h3>
+<h3>Overgang van staat<a class="headerlink" href="#overgang-van-staat" title="Link to this heading">#</a></h3>
 <p>Soms is een volgende staat een logisch vervolg op de vorige staat (en is mutabiliteit ok!)</p>
 <p><img alt="Google boter kaas eieren" src="../_images/google_tic_tac_toe.png" /></p>
 <p>Typ “boter kaas en eieren” en speel tegen Google.</p>
 </section>
 <section id="boter-kaas-en-eieren">
-<h3>Boter kaas en eieren<a class="headerlink" href="#boter-kaas-en-eieren" title="Permalink to this heading">#</a></h3>
+<h3>Boter kaas en eieren<a class="headerlink" href="#boter-kaas-en-eieren" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span>
@@ -1766,11 +1768,11 @@ main NA: y is 140308598063552 en heeft de waarde Pizza salami ananas
 </section>
 </section>
 <section id="conway-s-game-of-life">
-<h2>Conway’s Game of Life<a class="headerlink" href="#conway-s-game-of-life" title="Permalink to this heading">#</a></h2>
+<h2>Conway’s Game of Life<a class="headerlink" href="#conway-s-game-of-life" title="Link to this heading">#</a></h2>
 <p><img alt="Game of Life" src="../_images/Game_of_life_glider_gun.png" /></p>
 <p>Een tweedimensionaal raster met vierkante “cellen” die “levend” of “dood” kunnen zijn, en die zich volgens vastgestelde regels ontwikkelen en daarbij allerlei patronen kunnen vormen.</p>
 <section id="regels">
-<h3>Regels<a class="headerlink" href="#regels" title="Permalink to this heading">#</a></h3>
+<h3>Regels<a class="headerlink" href="#regels" title="Link to this heading">#</a></h3>
 <p><img alt="Isolatie" src="../_images/Isolatie.png" /></p>
 <ol class="arabic simple">
 <li><p>Een cel met minder dan twee levende buren sterft (vanwege isolatie)</p></li>
@@ -1789,11 +1791,11 @@ main NA: y is 140308598063552 en heeft de waarde Pizza salami ananas
 </ol>
 </section>
 <section id="patronen">
-<h3>Patronen<a class="headerlink" href="#patronen" title="Permalink to this heading">#</a></h3>
+<h3>Patronen<a class="headerlink" href="#patronen" title="Link to this heading">#</a></h3>
 <p><img alt="Game of Life" src="../_images/Gospers_glider_gun.gif" /></p>
 </section>
 <section id="id3">
-<h3>Staat<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<h3>Staat<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <p>De vorige staat is nodig om de nieuwe staat te bepalen</p>
 <p>Mutabiliteit is hier belangrijk!</p>
 </section>
@@ -1960,8 +1962,8 @@ Door Harvey Mudd College / Hanze University of Applied Sciences
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

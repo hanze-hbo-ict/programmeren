@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="nl" data-content_root="" >
+<html lang="nl" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>List comprehension &#8212; Programmeren</title>
   
@@ -19,44 +18,42 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css?v=5f6255d3" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css?v=def72667" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
-  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=b028fc25"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -92,17 +89,15 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../_static/save_state.js"></script>
-    <script src="../_static/translations.js"></script>
+    <script src="../_static/translations.js?v=83e0b41b"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'lectures/8_list_comprehension';</script>
+    <script src="../_static/save_state.js?v=f1e4c503"></script>
     <link rel="canonical" href="https:///hanze-hbo-ict.github.io/programmeren/lectures/8_list_comprehension.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Zoeken" href="../search.html" />
@@ -120,7 +115,6 @@ const thebe_selector_output = ".output, .cell_output"
   <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -160,13 +154,10 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <header>
   
-    <div class="bd-header navbar navbar-expand-lg bd-navbar">
-    </div>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
-  </header>
 
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
@@ -205,7 +196,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Zoeken</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -902,9 +904,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="list-comprehension">
-<h1>List comprehension<a class="headerlink" href="#list-comprehension" title="Permalink to this heading">#</a></h1>
+<h1>List comprehension<a class="headerlink" href="#list-comprehension" title="Link to this heading">#</a></h1>
 <section id="data-en-functies">
-<h2>Data en functies<a class="headerlink" href="#data-en-functies" title="Permalink to this heading">#</a></h2>
+<h2>Data en functies<a class="headerlink" href="#data-en-functies" title="Link to this heading">#</a></h2>
 <p><em>De compositie van data en functies</em></p>
 <p>Data</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
@@ -920,7 +922,7 @@ document.write(`
 </pre></div>
 </div>
 <section id="sum-l">
-<h3><code class="docutils literal notranslate"><span class="pre">sum(L)</span></code><a class="headerlink" href="#sum-l" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">sum(L)</span></code><a class="headerlink" href="#sum-l" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; input: L, a list of #s</span>
 <span class="sd">        output: L&#39;s sum</span>
@@ -935,7 +937,7 @@ document.write(`
 </section>
 </section>
 <section id="quiz">
-<h2>Quiz<a class="headerlink" href="#quiz" title="Permalink to this heading">#</a></h2>
+<h2>Quiz<a class="headerlink" href="#quiz" title="Link to this heading">#</a></h2>
 <p>Een recursive implementatie van de ingebouwde Python functie <code class="docutils literal notranslate"><span class="pre">range</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
 </pre></div>
@@ -944,7 +946,7 @@ document.write(`
 </pre></div>
 </div>
 <section id="range-low-hi">
-<h3><code class="docutils literal notranslate"><span class="pre">range(low,</span> <span class="pre">hi)</span></code><a class="headerlink" href="#range-low-hi" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">range(low,</span> <span class="pre">hi)</span></code><a class="headerlink" href="#range-low-hi" title="Link to this heading">#</a></h3>
 <p>Wat is de recursive case?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">range</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">hi</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; input: low and hi, integers</span>
@@ -962,7 +964,7 @@ document.write(`
 </div>
 </section>
 <section id="oplossing">
-<h3>Oplossing<a class="headerlink" href="#oplossing" title="Permalink to this heading">#</a></h3>
+<h3>Oplossing<a class="headerlink" href="#oplossing" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">range</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">hi</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; input: low and hi, integers</span>
 <span class="sd">    output: a list from low upto hi</span>
@@ -976,7 +978,7 @@ document.write(`
 </section>
 </section>
 <section id="resultaat">
-<h2>Resultaat<a class="headerlink" href="#resultaat" title="Permalink to this heading">#</a></h2>
+<h2>Resultaat<a class="headerlink" href="#resultaat" title="Link to this heading">#</a></h2>
 <p>Onze recursieve functies <code class="docutils literal notranslate"><span class="pre">sum</span></code> en <code class="docutils literal notranslate"><span class="pre">range</span></code> in actie</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -992,7 +994,7 @@ document.write(`
 </div>
 </section>
 <section id="data-en-functies-combineren">
-<h2>Data en functies combineren<a class="headerlink" href="#data-en-functies-combineren" title="Permalink to this heading">#</a></h2>
+<h2>Data en functies combineren<a class="headerlink" href="#data-en-functies-combineren" title="Link to this heading">#</a></h2>
 <p><em>Verdubbel alle waarden in een list</em></p>
 <p>Data</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
@@ -1010,7 +1012,7 @@ document.write(`
 </pre></div>
 </div>
 <section id="variaties">
-<h3>Variaties<a class="headerlink" href="#variaties" title="Permalink to this heading">#</a></h3>
+<h3>Variaties<a class="headerlink" href="#variaties" title="Link to this heading">#</a></h3>
 <p>Variaties op het toepassen van een functie op de elementen in een list zijn mogelijk</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">L1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">dbl</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">)))</span>
 <span class="n">L2</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="o">*</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">)]</span>
@@ -1020,7 +1022,7 @@ document.write(`
 </section>
 </section>
 <section id="id1">
-<h2>List comprehension<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h2>List comprehension<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p>List</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 </pre></div>
@@ -1035,7 +1037,7 @@ document.write(`
 </div>
 </section>
 <section id="iteratie">
-<h2>Iteratie<a class="headerlink" href="#iteratie" title="Permalink to this heading">#</a></h2>
+<h2>Iteratie<a class="headerlink" href="#iteratie" title="Link to this heading">#</a></h2>
 <p>Stap één voor één over waarden en pas een expressie toe</p>
 <blockquote>
 <div><p>[ <strong>expressie</strong> voor elke <strong>waarde</strong> in <strong>collectie</strong> ]</p>
@@ -1046,7 +1048,7 @@ document.write(`
 <p><code class="docutils literal notranslate"><span class="pre">x</span></code> neemt elke waarde in de list aan waar de expressie <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">x</span></code> op wordt toegepast en op deze manier wordt iteratief wordt een nieuwe list opgebouwd. Hier wordt geen recursie meer toegepast maar wordt <em>sequentieel</em> de data doorlopen en <em>handelingen</em> op toegepast.</p>
 </section>
 <section id="conditioneel">
-<h2>Conditioneel<a class="headerlink" href="#conditioneel" title="Permalink to this heading">#</a></h2>
+<h2>Conditioneel<a class="headerlink" href="#conditioneel" title="Link to this heading">#</a></h2>
 <p>Stap <em>voorwaardelijk</em> één voor één over waarden en pas een expressie toe</p>
 <blockquote>
 <div><p>[ <strong>expressie</strong> voor elke <strong>waarde</strong> in <strong>collectie</strong> als &lt;<strong>test</strong>&gt; ]</p>
@@ -1057,63 +1059,63 @@ document.write(`
 <p>Een list comprehension kan worden uitgebreid met een conditie waar de expressie zal worden toegepast alleen als de test slaagt voor de waarde van <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </section>
 <section id="id2">
-<h2>Quiz<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<h2>Quiz<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <p>Wat is het resultaat van de volgende list comprehensions</p>
 <section id="vraag-1">
-<h3>Vraag 1<a class="headerlink" href="#vraag-1" title="Permalink to this heading">#</a></h3>
+<h3>Vraag 1<a class="headerlink" href="#vraag-1" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">n</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span>
 </pre></div>
 </div>
 <section id="antwoord">
-<h4>Antwoord<a class="headerlink" href="#antwoord" title="Permalink to this heading">#</a></h4>
+<h4>Antwoord<a class="headerlink" href="#antwoord" title="Link to this heading">#</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
 </pre></div>
 </div>
 </section>
 </section>
 <section id="vraag-2">
-<h3>Vraag 2<a class="headerlink" href="#vraag-2" title="Permalink to this heading">#</a></h3>
+<h3>Vraag 2<a class="headerlink" href="#vraag-2" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">42</span> <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
 </pre></div>
 </div>
 <section id="id3">
-<h4>Antwoord<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
+<h4>Antwoord<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">42</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">42</span><span class="p">]</span>
 </pre></div>
 </div>
 </section>
 </section>
 <section id="vraag-3">
-<h3>Vraag 3<a class="headerlink" href="#vraag-3" title="Permalink to this heading">#</a></h3>
+<h3>Vraag 3<a class="headerlink" href="#vraag-3" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">z</span> <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
 </pre></div>
 </div>
 <section id="id4">
-<h4>Antwoord<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
+<h4>Antwoord<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
 </pre></div>
 </div>
 </section>
 </section>
 <section id="vraag-4">
-<h3>Vraag 4<a class="headerlink" href="#vraag-4" title="Permalink to this heading">#</a></h3>
+<h3>Vraag 4<a class="headerlink" href="#vraag-4" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;elk&quot;</span><span class="p">,</span> <span class="s2">&quot;ook&quot;</span><span class="p">,</span> <span class="s2">&quot;vlo&quot;</span><span class="p">]]</span>
 </pre></div>
 </div>
 <section id="id5">
-<h4>Antwoord<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
+<h4>Antwoord<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s2">&quot;l&quot;</span><span class="p">,</span> <span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="s2">&quot;l&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 </section>
 </section>
 <section id="vraag-5">
-<h3>Vraag 5<a class="headerlink" href="#vraag-5" title="Permalink to this heading">#</a></h3>
+<h3>Vraag 5<a class="headerlink" href="#vraag-5" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">a</span> <span class="o">*</span> <span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="k">if</span> <span class="n">a</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
 <section id="id6">
-<h4>Antwoord<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
+<h4>Antwoord<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">42</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -1121,7 +1123,7 @@ document.write(`
 </section>
 </section>
 <section id="syntax">
-<h2>Syntax!<a class="headerlink" href="#syntax" title="Permalink to this heading">#</a></h2>
+<h2>Syntax!<a class="headerlink" href="#syntax" title="Link to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">x</span> <span class="o">*</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]]</span>
 </pre></div>
 </div>
@@ -1131,7 +1133,7 @@ document.write(`
 <p>We kunnen je verzekeren dat met oefening je deze notatie op een gegeven moment zal ook gaan waarderen al is het alleen maar omdat je complexe bewerkingen in een enkele regel kan schrijven.</p>
 </section>
 <section id="miljoen-keer-simuleren">
-<h2>Miljoen keer simuleren<a class="headerlink" href="#miljoen-keer-simuleren" title="Permalink to this heading">#</a></h2>
+<h2>Miljoen keer simuleren<a class="headerlink" href="#miljoen-keer-simuleren" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
@@ -1154,7 +1156,7 @@ document.write(`
 </div>
 <p>Dit is dezelfde functie die je eerder hebt gezien om een getal te raden, maar zonder de print statements waar de computer ons enthousiast liet weten (printen!) dat het het getal had geraden. De functie geeft het aantal keer dat nodig is om een om een getal te raden terug op basis van steeds een <em>random</em> keus van de computer.</p>
 <section id="combineren">
-<h3>Combineren<a class="headerlink" href="#combineren" title="Permalink to this heading">#</a></h3>
+<h3>Combineren<a class="headerlink" href="#combineren" title="Link to this heading">#</a></h3>
 <blockquote>
 <div><p>[ <strong>expressie</strong> voor elke <strong>waarde</strong> in <strong>collectie</strong> ]</p>
 </div></blockquote>
@@ -1177,7 +1179,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[15, 327, 83, 102, 72, 152, 125, 65, 1, 13]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[153, 125, 90, 64, 68, 34, 68, 38, 221, 288]
 </pre></div>
 </div>
 </div>
@@ -1190,7 +1192,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gemiddeld aantal keer raden 100.793
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gemiddeld aantal keer raden 95.878
 </pre></div>
 </div>
 </div>
@@ -1198,7 +1200,7 @@ document.write(`
 <p>De functie <code class="docutils literal notranslate"><span class="pre">sum</span></code> hebben we eerder geschreven in combinatie me de ingebouwde functie <code class="docutils literal notranslate"><span class="pre">len</span></code> kan het gemiddelde aantal keer raden worden berekend van deze simulatie!</p>
 </section>
 <section id="dubbele-ogen">
-<h3>Dubbele ogen<a class="headerlink" href="#dubbele-ogen" title="Permalink to this heading">#</a></h3>
+<h3>Dubbele ogen<a class="headerlink" href="#dubbele-ogen" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
@@ -1227,7 +1229,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>88
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>107
 </pre></div>
 </div>
 </div>
@@ -1246,7 +1248,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[110, 102, 115, 109, 95, 95, 105, 115, 83, 99]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[100, 101, 85, 95, 102, 102, 103, 106, 100, 91]
 </pre></div>
 </div>
 </div>
@@ -1258,7 +1260,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gemiddeld dubbele ogen (/600): 99.899
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gemiddeld dubbele ogen (/600): 100.624
 </pre></div>
 </div>
 </div>
@@ -1266,12 +1268,12 @@ document.write(`
 </section>
 </section>
 <section id="de-winnaar">
-<h2>De winnaar?<a class="headerlink" href="#de-winnaar" title="Permalink to this heading">#</a></h2>
+<h2>De winnaar?<a class="headerlink" href="#de-winnaar" title="Link to this heading">#</a></h2>
 <p><img alt="Python" src="../_images/python_logo.png" /> <img alt="Excel" src="../_images/excel_logo.png" /></p>
 <p>Je hebt gezien dat we met Python efficiënt en met verassend weinig code simulaties kunnen laten uitvoeren. Deze flexibiliteit is onder andere waarom Python zo populair is in data science.</p>
 </section>
 <section id="lcs-gebruiken">
-<h2>LCs gebruiken<a class="headerlink" href="#lcs-gebruiken" title="Permalink to this heading">#</a></h2>
+<h2>LCs gebruiken<a class="headerlink" href="#lcs-gebruiken" title="Link to this heading">#</a></h2>
 <p>Scrabble score</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1348,7 +1350,7 @@ document.write(`
 </div>
 <p>Goede score!</p>
 <section id="oneliners">
-<h3>Oneliners<a class="headerlink" href="#oneliners" title="Permalink to this heading">#</a></h3>
+<h3>Oneliners<a class="headerlink" href="#oneliners" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">len</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
     <span class="n">LC</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">L</span><span class="p">]</span>
     <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">LC</span><span class="p">)</span>
@@ -1362,7 +1364,7 @@ document.write(`
 </section>
 </section>
 <section id="condities">
-<h2>Condities<a class="headerlink" href="#condities" title="Permalink to this heading">#</a></h2>
+<h2>Condities<a class="headerlink" href="#condities" title="Link to this heading">#</a></h2>
 <p>List comprehension met condities</p>
 <blockquote>
 <div><p>[ <strong>expressie</strong> voor elke <strong>waarde</strong> in <strong>collectie</strong> als &lt;<strong>test</strong>&gt;]</p>
@@ -1432,9 +1434,9 @@ document.write(`
 </div>
 </section>
 <section id="id7">
-<h2>Quiz<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h2>
+<h2>Quiz<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
 <section id="even-getallen-tellen">
-<h3>Even getallen tellen<a class="headerlink" href="#even-getallen-tellen" title="Permalink to this heading">#</a></h3>
+<h3>Even getallen tellen<a class="headerlink" href="#even-getallen-tellen" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">nodds</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
     <span class="n">LC</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">L</span> <span class="o">...</span><span class="p">]</span>
     <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">LC</span><span class="p">)</span>
@@ -1449,7 +1451,7 @@ document.write(`
 </pre></div>
 </div>
 <section id="id8">
-<h4>Oplossing<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h4>
+<h4>Oplossing<a class="headerlink" href="#id8" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">nodds</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
@@ -1474,7 +1476,7 @@ document.write(`
 </section>
 </section>
 <section id="zelfde-waarden-in-twee-lijsten">
-<h3>Zelfde waarden in twee lijsten<a class="headerlink" href="#zelfde-waarden-in-twee-lijsten" title="Permalink to this heading">#</a></h3>
+<h3>Zelfde waarden in twee lijsten<a class="headerlink" href="#zelfde-waarden-in-twee-lijsten" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">lingo</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">W</span><span class="p">):</span>
     <span class="n">LC</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="o">...</span> <span class="k">if</span> <span class="o">...</span><span class="p">]</span>
     <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">LC</span><span class="p">)</span>
@@ -1490,7 +1492,7 @@ document.write(`
 </div>
 <p>Tip: de <code class="docutils literal notranslate"><span class="pre">in</span></code> expressie kan hier handig zijn (<code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">in</span> <span class="pre">W</span></code>)</p>
 <section id="id9">
-<h4>Oplossing<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h4>
+<h4>Oplossing<a class="headerlink" href="#id9" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">lingo</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">W</span><span class="p">):</span>
@@ -1515,7 +1517,7 @@ document.write(`
 </section>
 </section>
 <section id="positieve-delers">
-<h3>Positieve delers<a class="headerlink" href="#positieve-delers" title="Permalink to this heading">#</a></h3>
+<h3>Positieve delers<a class="headerlink" href="#positieve-delers" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ndivs</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
     <span class="n">LC</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="o">...</span> <span class="k">if</span> <span class="o">...</span><span class="p">]</span>
     <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">LC</span><span class="p">)</span>
@@ -1532,7 +1534,7 @@ document.write(`
 <p>(de positieve delers van 12 zijn <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">6,</span> <span class="pre">12]</span></code>)</p>
 <p>Tip: gebruik <code class="docutils literal notranslate"><span class="pre">range</span></code> om een reeks getallen van 1 <em>tot en met</em> <code class="docutils literal notranslate"><span class="pre">N</span></code> te genereren</p>
 <section id="id10">
-<h4>Oplossing<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h4>
+<h4>Oplossing<a class="headerlink" href="#id10" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ndivs</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
@@ -1557,7 +1559,7 @@ document.write(`
 </section>
 </section>
 <section id="priemgetallen">
-<h3>Priemgetallen<a class="headerlink" href="#priemgetallen" title="Permalink to this heading">#</a></h3>
+<h3>Priemgetallen<a class="headerlink" href="#priemgetallen" title="Link to this heading">#</a></h3>
 <p>Een uitdaging!</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">primes_up_to</span><span class="p">(</span><span class="n">P</span><span class="p">):</span>
     <span class="n">LC</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="o">...</span> <span class="k">if</span> <span class="o">...</span><span class="p">]</span>
@@ -1575,7 +1577,7 @@ document.write(`
 <p>Ter herinnering, een priemgetal is een heel getal dat precies door twee getallen kan worden gedeeld en waarmee je met de deling een heel getal overhoudt. Een priemgetal is altijd deelbaar door 1 en deelbaar door zichzelf.</p>
 <p>Bijvoorbeeld het getal 5 heeft precies 2 delers, namelijk 1 en 5. Het getal 4 is geen priemgetal, 4 heeft namelijk 3 delers (1, 2 en 4). Tip: je kan in de conditie de functie <code class="docutils literal notranslate"><span class="pre">ndivs</span></code> gebruiken als in <code class="docutils literal notranslate"><span class="pre">ndivs(x)</span> <span class="pre">==</span> <span class="pre">2</span></code>.</p>
 <section id="id11">
-<h4>Oplossing<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h4>
+<h4>Oplossing<a class="headerlink" href="#id11" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">primes_up_to</span><span class="p">(</span><span class="n">P</span><span class="p">):</span>
@@ -1602,7 +1604,7 @@ document.write(`
 </section>
 </section>
 <section id="in-de-herhaling">
-<h2>In de herhaling<a class="headerlink" href="#in-de-herhaling" title="Permalink to this heading">#</a></h2>
+<h2>In de herhaling<a class="headerlink" href="#in-de-herhaling" title="Link to this heading">#</a></h2>
 <div><iframe width="560" height="315" src="https://www.youtube.com/embed/AhSvKGTh28Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><p>Deze video herhaalt alles wat we tot nu met list comprehension hebben gedaan. Je zal ook een ander gebruik zien van <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">x</span> <span class="pre">in</span> <span class="pre">...</span></code> die een <em>for each</em> lus wordt genoemd. Met een sequentiële benadering van herhaling hebben we alvast een begin gemaakt dit concept te verkennen en we komen hier later uitgebreid op terug als we <em>imperatief</em> programmeren gaan verkennen, een ander programmeerparadigma.</p>
 </section>
 </section>
@@ -1791,8 +1793,8 @@ Door Harvey Mudd College / Hanze University of Applied Sciences
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

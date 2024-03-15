@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="nl" data-content_root="" >
+<html lang="nl" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Tekst genereren met Markovprocessen &#8212; Programmeren</title>
   
@@ -19,44 +18,42 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css?v=5f6255d3" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css?v=def72667" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
-  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=b028fc25"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -92,17 +89,15 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../_static/save_state.js"></script>
-    <script src="../_static/translations.js"></script>
+    <script src="../_static/translations.js?v=83e0b41b"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'practicals/13a_text_genereren';</script>
+    <script src="../_static/save_state.js?v=f1e4c503"></script>
     <link rel="canonical" href="https:///hanze-hbo-ict.github.io/programmeren/practicals/13a_text_genereren.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Zoeken" href="../search.html" />
@@ -120,7 +115,6 @@ const thebe_selector_output = ".output, .cell_output"
   <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -160,13 +154,10 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <header>
   
-    <div class="bd-header navbar navbar-expand-lg bd-navbar">
-    </div>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
-  </header>
 
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
@@ -205,7 +196,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Zoeken</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -795,9 +797,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="tekst-genereren-met-markovprocessen">
-<h1>Tekst genereren met Markovprocessen<a class="headerlink" href="#tekst-genereren-met-markovprocessen" title="Permalink to this heading">#</a></h1>
+<h1>Tekst genereren met Markovprocessen<a class="headerlink" href="#tekst-genereren-met-markovprocessen" title="Link to this heading">#</a></h1>
 <section id="opdracht-1">
-<h2>Opdracht 1:<a class="headerlink" href="#opdracht-1" title="Permalink to this heading">#</a></h2>
+<h2>Opdracht 1:<a class="headerlink" href="#opdracht-1" title="Link to this heading">#</a></h2>
 <p>Gebruik deze code als beginpunt voor je bestand, en noem het <code class="docutils literal notranslate"><span class="pre">wk12pr1.py</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 <span class="c1"># functie #1</span>
@@ -826,7 +828,7 @@ document.write(`
 </div>
 </section>
 <section id="python-s-dictionaries-gebruiken">
-<h2>Python’s dictionaries gebruiken…<a class="headerlink" href="#python-s-dictionaries-gebruiken" title="Permalink to this heading">#</a></h2>
+<h2>Python’s dictionaries gebruiken…<a class="headerlink" href="#python-s-dictionaries-gebruiken" title="Link to this heading">#</a></h2>
 <p>Je doel bij deze opgave is om een programma te schrijven dat uit zichzelf “betekenisvolle” tekst kan genereren! Je gaat dit doel bereiken door het schrijven van een algoritme dat met behulp van zogeheten Markovprocessen tekst genereert.</p>
 <p>Python heeft een ingebouwd datatype (klasse) die <em>dictionary</em> heet. Probeer de voorbeelden hieronder op de Pythonshell om een idee te krijgen van hoe dictionary’s werken. In het kort zijn het containers zoals lijsten, maar dan beter! (Of in ieder geval anders…)</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>   <span class="c1"># maakt een lege dictionary, d</span>
@@ -868,12 +870,12 @@ document.write(`
 </div>
 <p>Deze opgave gebruikt een Python-dictionary om tekst te modelleren; en daarna te genereren.</p>
 <section id="voorbeeldcode">
-<h3>Voorbeeldcode<a class="headerlink" href="#voorbeeldcode" title="Permalink to this heading">#</a></h3>
+<h3>Voorbeeldcode<a class="headerlink" href="#voorbeeldcode" title="Link to this heading">#</a></h3>
 <p>Je kan een paar voorbeelden vinden van hoe je in Python dictionary’s kan gebruiken om tekst te analyseren met een <em>vocabulaireteller</em> (in tegenstelling tot een woordenteller) in <a class="reference download internal" download="" href="../_downloads/ac48a3b0373bdb2ec2b6fb84f941811f/file_and_dictionary_examples.py"><span class="xref download myst">deze voorbeeldcode; dit kan je gebruiken als naslagwerk voor wat je nodig hebt…</span></a></p>
 </section>
 </section>
 <section id="id1">
-<h2>Tekst genereren met Markovprocessen<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h2>Tekst genereren met Markovprocessen<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p>Hier is het basisidee: het Nederlands is een taal met veel structuur. Woorden hebben de neiging (sterker, de verplichting) om alleen in bepaalde volgordes voor te komen. De regels van de grammatica bepalen welke combinaties van verschillende stukken spraak toegestaan zijn. De zin “De kat klimt de trap op” heeft bijvoorbeeld een geldige woordvolgorde. “Trap de op kat klimt” heeft dat niet. Daarnaast beperkt de semantiek (de betekenis van een woord of zin) de mogelijke combinaties nog verder. “De trap klimt de kat op” is een perfect geldige zin, maar het is wel onzinnig en je zal deze woordvolgorde in de praktijk zeer waarschijnlijk niet tegenkomen.</p>
 <p>Zelfs zonder de formele regels van het Nederlands te kennen, of de betekenis van Nederlandse woorden, kunnen we een idee krijgen van welke woordcombinaties geldig zijn door simpelweg naar correcte Nederlandse teksten te kijken en de combinaties van woorden te bekijken die in de praktijk voorkomen. We kunnen daarna op basis van onze observaties <em>nieuwe</em> zinnen maken door willekeurig woorden te selecteren aan de hand van hoe vaak ze in die volgorde voorkomen. Bekijk bijvoorbeeld de volgende tekst:</p>
 <p>“Ik houd van rozen en anjers. Ik dacht, ik koop rozen voor mijn verjaardag.”</p>
@@ -881,13 +883,13 @@ document.write(`
 <p>Formeel gezegd heet het proces dat we gebruiken om deze zinnen te genereren een <em>Markovproces van de eerste orde</em>. Een Markovproces van de eerste orde is een proces waarin de toestand op tijdstip <em>t</em>+1 (dat wil zeggen, het volgende woord) alleen afhankelijk is van de toestand op tijdstip <em>t</em> (dat wil zeggen, het vorige woord). In een Markovproces van de tweede orde is het volgende woord afhankelijk van de <em>twee</em> vorige woorden, en zo verder. Ons voorbeeld hierboven was een proces van de eerste orde omdat de keuze voor het volgende woord alleen afhing van het huidge woord. Merk op dat de waarde van het volgende woord onafhankelijk is van de positie van het woord, en alleen maar afhangt van zijn directe geschiedenis. Dat wil zeggen dat het niet uitmaakt of we het 2e woord kiezen of het 92e. Het maakt alleen uit wat het 1e of 91e woord is, respectievelijke.</p>
 </section>
 <section id="teksten-analyseren-en-genereren">
-<h2>Teksten analyseren en genereren<a class="headerlink" href="#teksten-analyseren-en-genereren" title="Permalink to this heading">#</a></h2>
+<h2>Teksten analyseren en genereren<a class="headerlink" href="#teksten-analyseren-en-genereren" title="Link to this heading">#</a></h2>
 <p>In het eerste deel van deze opgave implementeer je een Markovproces van de eerste orde om teksten mee te genereren. Om deze functie te schrijven heb je twee andere functies nodig: (1) één om een bestand te verwerken en een dictionary van geldige woordcombinaties te maken en (2) een andere om de nieuwe tekst daadwerkelijk te genereren.</p>
 <p>Als je hier geen speciale code voor schrijft zal je programma woorden als verschillend beschouwen zelfs als ze alleen maar verschillen in hoofdletters of leestekens. Dit is voor deze opgave geen probleem: <code class="docutils literal notranslate"><span class="pre">spam</span></code>, <code class="docutils literal notranslate"><span class="pre">Spam</span></code> en <code class="docutils literal notranslate"><span class="pre">spam.</span></code> (met punt erachter) mag je allemaal als verschillende woorden beschouwen.</p>
 <p>Hier zijn de details over de twee functies die je moet schrijven:</p>
 </section>
 <section id="opracht-2-de-functie-create-dictionary">
-<h2>Opracht 2:  De functie <code class="docutils literal notranslate"><span class="pre">create_dictionary</span></code><a class="headerlink" href="#opracht-2-de-functie-create-dictionary" title="Permalink to this heading">#</a></h2>
+<h2>Opracht 2:  De functie <code class="docutils literal notranslate"><span class="pre">create_dictionary</span></code><a class="headerlink" href="#opracht-2-de-functie-create-dictionary" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">create_dictionary(filename)</span></code> krijgt een string als argument mee, wat de naam van een tekstbestand is dat wat voorbeeldtekst bevat. Het moet een dictionary teruggeven waarvan de sleutels woorden zijn die in de tekst voorkomen en waarvan de waardes lijsten met woorden zijn die op het sleutelwoord kunnen volgen. Merk op dat je een manier moet bedenken waarop je bijhoudt hoe vaak een woord op het sleutelwoord volgt. Dat wil zeggen dat als het woord “fiets” twee keer zo vaak wordt gevolgd door het woord “kopen” als door het woord “repareren”, je dictionary deze informatie ook moet bevatten. Je kan bijvoorbeeld het woord meerdere keren opnemen in de lijst.</p>
 <p>De dictionary die wordt teruggegeven door <code class="docutils literal notranslate"><span class="pre">create_dictionary</span></code> geeft je de mogelijkheid om woord <code class="docutils literal notranslate"><span class="pre">t</span></code>+1 te kiezen als je woord <code class="docutils literal notranslate"><span class="pre">t</span></code> al hebt. Maar hoe kies je het <em>eerste</em> woord, als je geen bestaand woord hebt die je als sleutel voor
 de dictionary kan gebruiken?</p>
@@ -902,7 +904,7 @@ de dictionary kan gebruiken?</p>
 <p>Je herinnert je misschien het alternatief met <code class="docutils literal notranslate"><span class="pre">in</span></code> (van het controleren van klinkers in een vorige opgave…): <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">w[-1]</span> <span class="pre">in</span> <span class="pre">'.!':</span></code></p>
 </div>
 <section id="strategie">
-<h3>Strategie<a class="headerlink" href="#strategie" title="Permalink to this heading">#</a></h3>
+<h3>Strategie<a class="headerlink" href="#strategie" title="Link to this heading">#</a></h3>
 <p>Merk op dat in het college <em>bijna</em> de hele functie besproken is. Hier zie je de voorbeeldcode, met de uitleg daaronder:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="n">pw</span> <span class="o">=</span> <span class="s1">&#39;$&#39;</span>
@@ -962,7 +964,7 @@ de dictionary kan gebruiken?</p>
 <p>Het enige wat in dit voorbeeld nog niet staat is hoe je woorden die eindigen op een leesteken kan verwerken. Dat moet je zelf bedenken (maar er staan tips in het commentaar hierboven)…</p>
 </section>
 <section id="je-code-controleren">
-<h3>Je code controleren…<a class="headerlink" href="#je-code-controleren" title="Permalink to this heading">#</a></h3>
+<h3>Je code controleren…<a class="headerlink" href="#je-code-controleren" title="Link to this heading">#</a></h3>
 <p>Om je code te controleren, kan je de volgende tekst in een plat tekstbestand zetten (bijvoorbeeld in een nieuw “.txt”-bestandsvenster in VSCode):</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>A B A. A B C. B A C. C C C.
 </pre></div>
@@ -1009,7 +1011,7 @@ degene die je het college hebt gezien (merk op dat de volgorde van de sleutels k
 </section>
 </section>
 <section id="opdacht-3-de-functie-generate-text">
-<h2>Opdacht 3:  De functie <code class="docutils literal notranslate"><span class="pre">generate_text</span></code><a class="headerlink" href="#opdacht-3-de-functie-generate-text" title="Permalink to this heading">#</a></h2>
+<h2>Opdacht 3:  De functie <code class="docutils literal notranslate"><span class="pre">generate_text</span></code><a class="headerlink" href="#opdacht-3-de-functie-generate-text" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">generate_text(d,</span> <span class="pre">n)</span></code> krijgt een dictionary met woordovergangen (gemaakt door je functie <code class="docutils literal notranslate"><span class="pre">create_dictionary</span></code> van hierboven) mee, en een positieve integer <code class="docutils literal notranslate"><span class="pre">n</span></code>. Hiermee moet <code class="docutils literal notranslate"><span class="pre">generate_text</span></code> een string van <code class="docutils literal notranslate"><span class="pre">n</span></code> woorden afdrukken.</p>
 <p>Het eerste woord moet willekeurig gekozen zijn uit de woorden die kunnen volgen op het startsymbool <code class="docutils literal notranslate"><span class="pre">&quot;$&quot;</span></code>. Bedenk dat <code class="docutils literal notranslate"><span class="pre">random.choice</span></code> een willekeurig element <em><strong>uit een lijst</strong></em> kan kiezen! Het tweede woord moet willekeurig gekozen worden uit de lijst woorden die kunnen volgen op het eerste woord, en zo verder. Als een gekozen woord eindigt op een punt <code class="docutils literal notranslate"><span class="pre">.</span></code>, een vraagteken <code class="docutils literal notranslate"><span class="pre">?</span></code> of een uitroepteken <code class="docutils literal notranslate"><span class="pre">!</span></code>, moet de functie <code class="docutils literal notranslate"><span class="pre">generate_text</span></code> deze gebeurtenis herkennen en een nieuwe zin beginnen door opnieuw een willekeurig woord te kiezen dat kan volgen op een <code class="docutils literal notranslate"><span class="pre">&quot;$&quot;</span></code>.</p>
 <p>Laat <code class="docutils literal notranslate"><span class="pre">'$'</span></code> niet terugkomen in de uitvoertekst; het is alleen een interne markering voor je functie.</p>
@@ -1025,7 +1027,7 @@ degene die je het college hebt gezien (merk op dat de volgorde van de sleutels k
 </div>
 </section>
 <section id="een-gegenereerd-essay-van-500-woorden">
-<h2>Een gegenereerd essay van 500 woorden!<a class="headerlink" href="#een-gegenereerd-essay-van-500-woorden" title="Permalink to this heading">#</a></h2>
+<h2>Een gegenereerd essay van 500 woorden!<a class="headerlink" href="#een-gegenereerd-essay-van-500-woorden" title="Link to this heading">#</a></h2>
 <p>Voor het laatste deel van deze opdracht moet je een interessant tekstbestand vinden, hiermee een Markovmodel van de eerste orde maken, en zelf wat tekst genereren! Een kunstmatig essay dus.</p>
 <p>Voeg onderin je bestand een triple-quoted string (commentaar) toe met:</p>
 <ul class="simple">
@@ -1175,8 +1177,8 @@ Door Harvey Mudd College / Hanze University of Applied Sciences
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>
