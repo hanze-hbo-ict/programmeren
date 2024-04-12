@@ -1,4 +1,4 @@
-# Week 6
+# PGM1 Week 6
 
 ## Basis
 

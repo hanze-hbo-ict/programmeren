@@ -1,4 +1,4 @@
-# Oplossingen PGM2 week 3
+# PGM2 week 3
 
 ## Basis
 
@@ -33,12 +33,12 @@ def count_42(L):
     M = [1 for x in L if x == 42]
 
     total = sum(M)
-    return total # Of return sum(M) 
+    return total # Of return sum(M)
 
 # assert count_42([0, 42, 1, 42, 3]) == 2
 ```
 
-De variablen die in de lussen nodig zijn of geupdate worden, moeten aangemaakt worden voor de lus gestart wordt. 
+De variablen die in de lussen nodig zijn of geupdate worden, moeten aangemaakt worden voor de lus gestart wordt.
 Als je dit verkeerd doet, kun je een infinite loop maken of wordt de variable niet goed aangepast/bijgehouden.
 
 
@@ -68,7 +68,7 @@ def NumbertoScreen(n=1):
     else:
         print(n)
         return NumbertoScreen(n+1)
-    
+
 NumbertoScreen()
 ```
 

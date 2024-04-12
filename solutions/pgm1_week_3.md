@@ -1,4 +1,4 @@
-# Week 3
+# PGM1 Week 3
 
 ## Basis
 

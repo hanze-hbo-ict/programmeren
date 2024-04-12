@@ -1,13 +1,13 @@
-# Oplossingen PGM2 week 4
+# PGM2 week 4
 
 ## Basis
 
 ### [ASCII Art](/problems/basis/11_ASCII)
 
-Belangrijke beperking bij deze opdrachten: 
+Belangrijke beperking bij deze opdrachten:
 In deze opgave mag je de string-vermenigvuldig- en string-opteloperatoren niet gebruiken. Omdat ons doel is om lusconstructies te gebruiken, moet je lussen gebruiken om te herhalen, ook als het met deze operatoren korter zou kunnen. Hier is één uitzondering op, echter; je mag string-vermenigvuldiging gebruiken met het spatieteken
 
-#### Opdracht 1 
+#### Opdracht 1
 
 Schrijf een functie met de naam print_rect die drie argumenten meekrijgt, width, height en symbol, en een vierkant van width bij height met symbolen afdrukt op het scherm.
 
@@ -15,7 +15,7 @@ Schrijf een functie met de naam print_rect die drie argumenten meekrijgt, width,
 def print_rect(width, height, symbol):
     """ Drukt een vierkant van symbol af op het scherm van width bij height.
     """
-    
+
     for row in range(height):
         for column in range(width):
             print(symbol, end=" ")
@@ -31,7 +31,7 @@ Schrijf een functie print_triangle die drie argumenten meekrijgt: width, symbol 
 
 ```python
 def print_triangle(width, symbol, right_side_up):
-    """ Drukt een driehoek van symbol af op het scherm met breedte van 
+    """ Drukt een driehoek van symbol af op het scherm met breedte van
     width en right_side_up bepaalt of de punt naar boven (True) of naar
     beneden (False) moet.
     """
@@ -56,7 +56,7 @@ Gebruik nu je functie print_triangle om een functie genaamd print_bumps(num, sym
 
 ```python
 def print_bumps(num, symbol1, symbol2):
-    """ Deze functie drukt het gegeven aantal “heuvels” van twee symbolen 
+    """ Deze functie drukt het gegeven aantal “heuvels” van twee symbolen
     af, waarbij elke heuvel groter is dan de volgende.
     """
     for bumps in range(1, num + 1):
@@ -276,7 +276,7 @@ def we_want_this_pixel(col, row):
         return True
     else:
         return False
-    
+
 def test():
     """This function demonstrates how
        to create and save a PNG image.
@@ -326,7 +326,7 @@ def mset():
     XMAX = 1.0    # de grootste waarde voor de reële coördinaat
     YMIN = -1.0  # de kleinste waarde voor de imaginaire coördinaat
     YMAX = 1.0   # de grootste waarde voor de imaginaire coördinaat
-    
+
     width = 300
     height = 200
     image = PNGImage(width, height)

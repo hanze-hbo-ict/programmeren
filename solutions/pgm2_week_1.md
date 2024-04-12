@@ -1,4 +1,4 @@
-# Oplossingen PGM2 week 1
+# PGM2 week 1
 
 ## Basis
 
@@ -131,14 +131,14 @@ def is_freeze(x):
         return "onder"
 
 def above_below_freeze(L):
-    """Return whether each item in L is below, above or 
+    """Return whether each item in L is below, above or
     equals freezing temperature as a string representation
     """
     return [is_freeze(x) for x in L ]
 
 # Zonder hulp functie
 # def above_below_freeze(L):
-#     """Return whether each item in L is below, above or 
+#     """Return whether each item in L is below, above or
 #     equals freezing temperature as a string representation
 #     """
 #     return ["gelijk" if x == 0 else "boven" if x > 0 else "onder" for x in L ]
@@ -193,7 +193,7 @@ assert only_evens([2, 2, 2]) == [2, 2, 2]
 assert only_evens([0, 1, 2, 3]) == [0, 2]
 ```
 
-In de hulp functie maken we net als eerder gebruik van een if statement en de %-operator en de regels met betrekking tot integer devision. 
+In de hulp functie maken we net als eerder gebruik van een if statement en de %-operator en de regels met betrekking tot integer devision.
 
 
 ## Context
@@ -225,9 +225,9 @@ def testing():
     assert f_of_fracs(sq, 4, 10, 6) == [16.0, 25.0, 36.0, 49.0, 64.0, 81.0]
     assert f_of_fracs(sin, 0, pi, 2) == [0.0, 1.0]
     assert f_of_fracs(sqrt, 1, 17, 2) == [1.0, 3.0]
-    
+
     assert integrate(dbl, 0, 10, 4) == 75
-    assert integrate(sq, 0, 10, 4) == 2.5 * sum([0, 2.5*2.5, 5*5, 7.5*7.5]) 
+    assert integrate(sq, 0, 10, 4) == 2.5 * sum([0, 2.5*2.5, 5*5, 7.5*7.5])
 
 # twee extra functies (die niet in de module math hierboven zitten)
 
@@ -268,25 +268,25 @@ def lc_fdiv(n):
 
 # Stap 1, deel 1
 def unitfracs(n):
-    """Geeft een lijst van linkergrenzen (en dit zijn breuken, of fracties) 
+    """Geeft een lijst van linkergrenzen (en dit zijn breuken, of fracties)
     op gelijke afstand van elkaar en met elk een waarde tussen 0 en 1 terug
     """
     #pass  # vervang deze regel (pass is een Python-statement dat niets doet)
     return[ x / n for x in range(n)]
 
 def scaledfracs(low, hi, n):
-    """Geeft een lijst met n linkergrenzen terug die evenredig verdeeld 
+    """Geeft een lijst met n linkergrenzen terug die evenredig verdeeld
     zijn over een interval dat van low tot hi loopt
     """
     diff = hi - low
     return [low + x * diff for x in unitfracs(n)]
 
 def sqfracs(low, hi, n):
-    """Geeft een lijst met n linkergrenzen terug die evenredig verdeeld 
+    """Geeft een lijst met n linkergrenzen terug die evenredig verdeeld
     zijn over een interval dat van low tot hi loopt en gekwadrateerd zijn
     """
     return [sq(x) for x in scaledfracs(low, hi, n)]
-    
+
 def f_of_fracs(f, low, hi, n):
     """ Geeft de fracties van low, hi en n en past de functie f toe op de fracties
     """

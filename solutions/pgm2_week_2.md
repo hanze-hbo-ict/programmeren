@@ -1,4 +1,4 @@
-# Oplossingen PGM2 week 2
+# PGM2 week 2
 
 ## Basis
 
@@ -22,9 +22,9 @@ import random
 import math
 
 def throw_dart():
-    """ Deze functie maakt gebruik van de random library om een 
-    willekeurige x- en een willekeurige y-coördinaat te genereren 
-    tussen -1 en 1. Als de pijl de cirkel raakt geeft de functie 
+    """ Deze functie maakt gebruik van de random library om een
+    willekeurige x- en een willekeurige y-coördinaat te genereren
+    tussen -1 en 1. Als de pijl de cirkel raakt geeft de functie
     True terug anders False.
     """
 
@@ -34,11 +34,11 @@ def throw_dart():
     distance = math.sqrt((x * x) + (y * y))
     if distance <= 1.0: # Raakt de cirkel
         return True
-    
+
     return False
 
 def for_pi(n):
-    """ Deze functie gooit n pijltjes om de constante pi te benaderen. 
+    """ Deze functie gooit n pijltjes om de constante pi te benaderen.
     De geschatte waarde pi wordt door de functie terug gegeven.
     """
 
@@ -48,7 +48,7 @@ def for_pi(n):
         hit = throw_dart()
         if hit:
             timesHit += 1.0
-        
+
         print(str(timesHit) + " raak van de " + str(dart) + " worpen dus pi is " + str((4.0*timesHit)/dart))
 
     return ((4.0*timesHit)/n)
@@ -66,13 +66,13 @@ def find_number_of_decimals(x):
         return 0
     else:
         return 1 + find_number_of_decimals(x[0:-1])
-    
+
 assert find_number_of_decimals(str(3.12345)) == 5
 assert find_number_of_decimals(str(456.98756429)) == 8
 assert find_number_of_decimals(str(0.1)) == 1
 
 def while_pi(accuracy):
-    """ Geeft het aantal pijltjes terug dat nodig was om nauwkeurigheid 
+    """ Geeft het aantal pijltjes terug dat nodig was om nauwkeurigheid
     x te halen.
     """
     # Omdat de schatting van pi veel meer decimalen geeft dan de mee gegeven nauwkeurigheid
@@ -80,7 +80,7 @@ def while_pi(accuracy):
     # round functie. Hiervoor houden we het aantal decimalen aan van de mee gegeven variable en
     # gebruiken we een hulp functie.
     # Maak van de float een een str om gebruik te kunnen maken van string slicing om het aantal decimalen te krijgen
-    decimal = find_number_of_decimals(str(accuracy)) 
+    decimal = find_number_of_decimals(str(accuracy))
     #print("Number of decimals: " + str(decimal))
     timesHit = 0.0
     dart = 0
