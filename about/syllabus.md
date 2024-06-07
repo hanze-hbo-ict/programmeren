@@ -35,8 +35,3 @@ Elke week is er een hoorcollege dat een nieuw onderwerp introduceert en twee wer
 
     Dit zijn opdrachten om de geleerde vaardigheden in te zetten in echte problemen. Zo krijg je beter inzicht in hoe de geleerde vaardigheden in de praktijk worden gebruikt. De problemen zijn ook groter en zal je stap voor stap oplossen.
 
-## Boek
-
-![CS for All](../images/cs_for_all.jpg)
-
-Deze cursus maakt ter ondersteuning gebruik van het boek *CS for All*{cite}`alvarado2019cs`. Alle onderwerpen die worden behandeld komen daar aan ook bod, inclusief interessante nieuwe problemen, zoals bijvoorbeeld hoe een *music recommender* systeem of een spellchecker zou kunnen werken. Dit boek verdient een plek in jouw boekenkast en we weten zeker dat je het later nog vaak als naslagwerk zal gaan gebruiken.
