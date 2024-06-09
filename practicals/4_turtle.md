@@ -12,7 +12,7 @@ from random import *
 
 def main():
     """
-    Main functie. Roept de andere functies op om hun werk te doen.
+    Main functie. Roept de andere functies aan om het werk te doen.
     """
     tri()
     done() # tell turtle the drawing is done.
