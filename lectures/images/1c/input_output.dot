@@ -1,0 +1,14 @@
+// dot -Tpng -Gdpi=100 -Nfontname=Helvetica -Efontname=Helvetica -o input_output.png input_output.dot
+
+digraph {
+    rankdir="LR";
+
+    node [shape=oval, style=filled]
+    input [label="input", fillcolor="#196F3D", fontcolor=white]
+    output [label="output", fillcolor=firebrick, fontcolor=white]
+
+    node [shape=box]
+    algo [label="?", fillcolor=lavender]
+
+    input -> algo -> output
+}
