@@ -1,6 +1,0 @@
-# Opstap
-
-## Opgaven
-
-```{tableofcontents}
-```

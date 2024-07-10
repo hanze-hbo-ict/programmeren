@@ -1,11 +1,12 @@
-# Week 3
+# Opgaven
 
 ![Schotel](/images/saucer.png)
 
-|                |                                                                                                           | Punten |           |
-|----------------|-----------------------------------------------------------------------------------------------------------|--------|-----------|
-| **Practicum**  | [Python Turtles!](/problems/python_turtles/index)<br>Tekenen met turtle                                      | 30     |           |
-| **Leesopgave** | [Computer wins Jeopardy!](/readings/computer_wins_jeopardy)<br>Slimme computers?                       | 5      |           |
-| **Huiswerk**   | [Slaapwandelende student](/problems/slaapwandelende_student/index)<br>Toevallige bewegingen                  | 35     | 10 bonus  |
-|                | [Numerieke integratie](/problems/numerieke_integratie/index)<br>Beter dan wiskundigen oppervlakten berekenen | 30     |           |
-|                | [Turtles all the way down](/problems/turtles_tot_het_einde/index)<br>Recursieve kunst met turtle             | 10     | Optioneel |
+
+
+```{tableofcontents}
+```
+
+De basis opgave is een zelftest om te checken of je de stof van deze week hebt begrepen
+De opstap opgaven zijn er om je te helpen als je moeite hebt
+De extra opgaven zijn er om je uit te dagen. 
