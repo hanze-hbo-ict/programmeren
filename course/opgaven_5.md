@@ -1,10 +1,12 @@
-# Week 5
+# Opgaven
 
 ![Schotel](/images/saucer.png)
 
-|                |                                                                                                                 | Punten |           |
-|----------------|-----------------------------------------------------------------------------------------------------------------|--------|-----------|
-| **Practicum**  | [Van decimaal naar binair en verder!](/problems/decimaal_en_verder/index)<br>Van decimaal naar binair: talstelsels | 30     |           |
-| **Leesopgave** | [A Bug and a Crash](/readings/bug_and_crash)<br>Onverwachte fouten met tellen                                   | 5      |           |
-| **Huiswerk**   | [Wisselende stelsels](/problems/wisselende_stelsels/index)<br>Getallen omzetten naar verschillende grondtallen        | 65     |           |
-|                | [Fraaie plaatjes](/problems/fraaie_plaatjes/index)<br>Afbeeldingen bewerken                                           | 10     | Optioneel |
+
+
+```{tableofcontents}
+```
+
+De basis opgave is een zelftest om te checken of je de stof van deze week hebt begrepen
+De opstap opgaven zijn er om je te helpen als je moeite hebt
+De extra opgaven zijn er om je uit te dagen. 
