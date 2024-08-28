@@ -1,6 +1,0 @@
-# Basis
-
-## Opgaven
-
-```{tableofcontents}
-```
