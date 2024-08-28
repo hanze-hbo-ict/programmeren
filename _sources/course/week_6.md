@@ -2,11 +2,7 @@
 
 ![Schotel](/images/saucer.png)
 
-## Schakelingen
+## Data representatie
 
 ```{tableofcontents}
 ```
-
-## Boek
-
-Hoofdstuk 4 uit *CS for All*.{cite}`alvarado2019cs`

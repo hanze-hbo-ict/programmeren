@@ -1,4 +1,4 @@
-# Practicum
+# Werkcollege
 
 ## Opgaven
 

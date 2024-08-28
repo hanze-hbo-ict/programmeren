@@ -1,6 +1,0 @@
-# Context
-
-## Opgaven
-
-```{tableofcontents}
-```

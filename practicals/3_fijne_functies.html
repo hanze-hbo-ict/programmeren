@@ -1,0 +1,998 @@
+
+<!DOCTYPE html>
+
+
+<html lang="nl" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Fijne functies &#8212; Programmeren</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css?v=def72667" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css?v=5f6255d3" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=b028fc25"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "hanze-hbo-ict/programmeren");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../_static/translations.js?v=5ce3cdba"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'practicals/3_fijne_functies';</script>
+    <script src="../_static/save_state.js?v=f1e4c503"></script>
+    <link rel="canonical" href="https:///hanze-hbo-ict.github.io/programmeren/practicals/3_fijne_functies.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Zoeken" href="../search.html" />
+    <link rel="next" title="Opgaven" href="../course/opgaven_3.html" />
+    <link rel="prev" title="Werkcollege" href="../course/practical_3.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="nl"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../about/syllabus.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/mascot.png" class="logo__image only-light" alt="Programmeren - Home"/>
+    <script>document.write(`<img src="../_static/mascot.png" class="logo__image only-dark" alt="Programmeren - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Zoeken</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about/syllabus.html">
+                    Programmeren
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Opmerkingen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../about/feedback.html">Anoniem feedbackformulier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/faq.html">Veelgestelde vragen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/references.html">Literatuur</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Intro</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lectures/0a_command-line.html">De terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lectures/0b_install_python.html">Instaleren Python</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_1.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/1a_intro_programmeren.html">Wat is informatica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/1b_picobot.html">picobot</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_1.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="1_picobot.html">Picobot</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_2.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/2a_var_con.html">Maximum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/2b_strings_en_lists.html">Strings</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_2.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="2_rochambeau.html">Rochambeau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_sequenties_en_data.html">Sequenties en data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_2.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/2_opstap.html">Opstap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/2_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/2_extra.html">Extra</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/solutions_2.html">Uitwerkingen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/2_rochembeau.html">Rochembeau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/2_sequenties_en_data.html">Sequenties en data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/2_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/2_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 3</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_3.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/3a_functies.html">Functies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/3b_functie_calls.html">Functie calls</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../course/practical_3.html">Werkcollege</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Fijne functies</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_3.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/3_opstap.html">Opstap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/3_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/3_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_4.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/4a_lussen.html">Lussen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/4b_midterm.html">Oefen Midterm</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_4.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="4_python_bat.html">Lussen in PythonBat!</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_4.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/4_opstap.html">Opstap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/4_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/4_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 5</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_5.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/5a_nested_lus.html">Nested lussen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_5.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="5a_ascii_art.html">ASCII Art</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5b_boter_kaas_eieren.html">Boter, kaas en eieren + N op een rij…</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_5.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/5_opstap.html">Opstap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/5_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/5_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 6</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_6.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/6a_data.html">Data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_6.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="6a_binair.html">Van decimaal naar binair en verder!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6b_images.html">Fraaie plaatjes</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_6.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/6_opstap.html">Opstap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/6_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/6_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 7</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_7.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/7a_lists_advanced.html">More on Lists</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_7.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="7a_text_genereren.html">Tekst genereren met Markovprocessen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_7.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/7_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/7_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Oefening</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../extra/practice/1_recursie.html">Recursieve functies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extra/practice/2_list_comprehension.html">List comprehension</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Support</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../support/logisim.html">Logisim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/plain_text/index.html">Tekstbestanden</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Bronopslagplaats"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/edit/master/practicals/3_fijne_functies.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/issues/new?title=Issue%20on%20page%20%2Fpracticals/3_fijne_functies.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open een probleem"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download deze pagina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/practicals/3_fijne_functies.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download het bronbestand"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Afdrukken naar pdf"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Volledig scherm"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Fijne functies</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Inhoud </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ingebouwde-functies">Ingebouwde functies</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#range"><code class="docutils literal notranslate"><span class="pre">range</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sum"><code class="docutils literal notranslate"><span class="pre">sum</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#een-nieuw-bestand">Een nieuw bestand</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#signature-en-docstring">Signature en docstring</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voorbeeldopgave">Voorbeeldopgave</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uitwerking">Uitwerking</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgaven">Opgaven</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sq-x"><code class="docutils literal notranslate"><span class="pre">sq(x)</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interp-low-hi-fraction"><code class="docutils literal notranslate"><span class="pre">interp(low,</span> <span class="pre">hi,</span> <span class="pre">fraction)</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#checkends-s"><code class="docutils literal notranslate"><span class="pre">checkends(s)</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flipside-s"><code class="docutils literal notranslate"><span class="pre">flipside(s)</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-from-seconds-s"><code class="docutils literal notranslate"><span class="pre">convert_from_seconds(s)</span></code></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="fijne-functies">
+<h1>Fijne functies<a class="headerlink" href="#fijne-functies" title="Link to this heading">#</a></h1>
+<p>In deze opgave ga je oefenen met het schrijven van functies (de fundamentele bouwstenen van software) en het toepassen van onder andere string- en lijstbewerkingen.</p>
+<section id="ingebouwde-functies">
+<h2>Ingebouwde functies<a class="headerlink" href="#ingebouwde-functies" title="Link to this heading">#</a></h2>
+<p>Je gaat eerst een aantal van de vele <em>ingebouwde</em> Python functies proberen.</p>
+<section id="range">
+<h3><code class="docutils literal notranslate"><span class="pre">range</span></code><a class="headerlink" href="#range" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">range</span></code> geeft een <em>iterator</em> met integers terug. Het maakt niet uit als je niet precies weet wat een iterator is, het belangrijkst is dat je ziet dat <code class="docutils literal notranslate"><span class="pre">list</span></code> de iterator omzet naar een <em>lijst</em> met integers:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="mi">99</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="info admonition">
+<p class="admonition-title">Tot het eind!</p>
+<p>Let op dat <code class="docutils literal notranslate"><span class="pre">range</span></code>, zoals bij vrijwel alles in Python, <em>tot</em> het eindpunt telt (en niet tot <em>en met</em>)!</p>
+</div>
+</section>
+<section id="sum">
+<h3><code class="docutils literal notranslate"><span class="pre">sum</span></code><a class="headerlink" href="#sum" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">sum</span></code> telt een lijst van getallen op, en <code class="docutils literal notranslate"><span class="pre">range</span></code> maakt een lijst met integers (of eigenlijk een iterator met integers, maar daar kan <code class="docutils literal notranslate"><span class="pre">sum</span></code> ook mee overweg):</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="mi">52</span>
+</pre></div>
+</div>
+<p>Een omslachtige manier om <code class="docutils literal notranslate"><span class="pre">40</span> <span class="pre">+</span> <span class="pre">2</span></code> uit te rekenen:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="nb">sum</span><span class="p">([</span><span class="mi">40</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="mi">42</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="een-nieuw-bestand">
+<h2>Een nieuw bestand<a class="headerlink" href="#een-nieuw-bestand" title="Link to this heading">#</a></h2>
+<p>Functies zijn de fundamentele bouwstenen van programmeren. Wat Python onderscheidt van andere programmeertalen is het gemak waarmee je eigen functies kan maken!</p>
+<p>Kopieer het volgende commentaar en de definitie van een functie met de naam <code class="docutils literal notranslate"><span class="pre">dbl</span></code> naar jouw bestand:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dbl</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns twice the argument</span>
+
+<span class="sd">    Spam is great, and dbl(&quot;spam&quot;) is better!</span>
+
+<span class="sd">    :param x: The value to double</span>
+<span class="sd">    :type x: int, float or string</span>
+<span class="sd">    :rtype: int, float or string</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span>
+</pre></div>
+</div>
+</section>
+<section id="signature-en-docstring">
+<h2>Signature en docstring<a class="headerlink" href="#signature-en-docstring" title="Link to this heading">#</a></h2>
+<p>De eerste regel van een functie wordt de <em>signature</em> genoemd. De signature van een functie bevat het keyword <code class="docutils literal notranslate"><span class="pre">def</span></code> (een afkorting van “define”), de naam van de functie, en een lijst met argumenten voor de functie tussen haakjes. Let op de <em>dubbele punt</em> waar de signature mee wordt afgesloten.</p>
+<p>Direct onder de signature staat een string tussen drie dubbele aanhalingstekens <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span></code>, dit heet een <em>docstring</em> (een afkorting van “documentation string”). We verwachten dat je in al je functies een docstring schrijft, zelfs in eenvoudige functies zoals <code class="docutils literal notranslate"><span class="pre">dbl</span></code> zodat dit een gewoonte voor jou wordt.</p>
+<p>Een docstring moet de argumenten van de functie en het resultaat (de returnwaarde) beschrijven. Zoals je hierboven ziet kan je ook andere belangrijke informatie toevoegen.</p>
+<div class="warning admonition">
+<p class="admonition-title">Inspringen (indentatie)</p>
+<p>De eerste driedubbele aanhalingstekens <em>moeten</em> ingesprongen worden direct onder de signatuur. De afsluitende driedubbele aanhalingstekens van de docstring springen op hetzelfde niveau en an alle volgende code binnen de functie (de functie “body”).</p>
+</div>
+</section>
+<section id="voorbeeldopgave">
+<h2>Voorbeeldopgave<a class="headerlink" href="#voorbeeldopgave" title="Link to this heading">#</a></h2>
+<p>Laten we beginnen met functies schrijven! Vergeet niet voor elk van deze functies een docstring toe te voegen die beschrijft wat je functie <em>doet</em> en wat de <em>argumenten</em> zijn. Zie het voorbeeld <code class="docutils literal notranslate"><span class="pre">tpl</span></code> hieronder voor hoe je dit kan doen, deze lijkt heel erg op <code class="docutils literal notranslate"><span class="pre">dbl</span></code> die je al eerder hebt gezien:</p>
+<p>Schrijf de functie <code class="docutils literal notranslate"><span class="pre">tpl(x)</span></code> die een getal als argument accepteert en drie keer de waarde van dat argument teruggeeft.</p>
+<section id="uitwerking">
+<h3>Uitwerking<a class="headerlink" href="#uitwerking" title="Link to this heading">#</a></h3>
+<p>Kopieer de volgende oplossing (nadat je een paar regels nieuwe regels hebt toegevoegd om de leesbaarheid te verbeteren) naar jouw bestand:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tpl</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns thrice the argument</span>
+
+<span class="sd">    :param x: The value to triple</span>
+<span class="sd">    :type x: int, float or string</span>
+<span class="sd">    :rtype: int, float or string</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">x</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="opgaven">
+<h2>Opgaven<a class="headerlink" href="#opgaven" title="Link to this heading">#</a></h2>
+<p>Als in de opgaven wordt gesproken over een <em>getal</em>, neem dan aan dat dit een integer of een float mag zijn, in alle andere gevallen zal duidelijk worden worden gezegd welk type moet worden gebruikt.</p>
+<section id="sq-x">
+<h3><code class="docutils literal notranslate"><span class="pre">sq(x)</span></code><a class="headerlink" href="#sq-x" title="Link to this heading">#</a></h3>
+<p>Schrijf de functie <code class="docutils literal notranslate"><span class="pre">sq(x)</span></code> die een getal <code class="docutils literal notranslate"><span class="pre">x</span></code> als argument accepteert en het <em>kwadraat</em> van het argument als resultaat teruggeeft. (Het kwadraat van <code class="docutils literal notranslate"><span class="pre">x</span></code> is <code class="docutils literal notranslate"><span class="pre">x</span></code> keer zichzelf…)</p>
+</section>
+<section id="interp-low-hi-fraction">
+<h3><code class="docutils literal notranslate"><span class="pre">interp(low,</span> <span class="pre">hi,</span> <span class="pre">fraction)</span></code><a class="headerlink" href="#interp-low-hi-fraction" title="Link to this heading">#</a></h3>
+<p>Schrijf de functie <code class="docutils literal notranslate"><span class="pre">interp(low,</span> <span class="pre">hi,</span> <span class="pre">fraction)</span></code> die de getallen <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">hi</span></code> en <code class="docutils literal notranslate"><span class="pre">fraction</span></code> als argumenten accepteert en een floating point getal teruggeeft.</p>
+<p><code class="docutils literal notranslate"><span class="pre">fraction</span></code> staat voor een <em>fractie</em>, een deel van een geheel dat van een laagste waarde <code class="docutils literal notranslate"><span class="pre">low</span></code> naar een hoogste waarde <code class="docutils literal notranslate"><span class="pre">hi</span></code> loopt. Bijvoorbeeld, in het geval van een taart zou dit van waarde 0 (geen taart) naar 2 (twee, hmmm!) kunnen lopen, waar fractie 0.75 gelijk staat aan 1.5 (anderhalve taart, ook fijn).</p>
+<p>Wat hier uit volgt is dat als <code class="docutils literal notranslate"><span class="pre">fraction</span></code> 0 is <code class="docutils literal notranslate"><span class="pre">low</span></code> moet worden teruggegeven. Als <code class="docutils literal notranslate"><span class="pre">fraction</span></code> 1 is zal <code class="docutils literal notranslate"><span class="pre">hi</span></code> moeten worden teruggegeven. Waarden voor <code class="docutils literal notranslate"><span class="pre">fraction</span></code> tussen <code class="docutils literal notranslate"><span class="pre">0</span></code> en <code class="docutils literal notranslate"><span class="pre">1</span></code> geven resultaten tussen <code class="docutils literal notranslate"><span class="pre">low</span></code> en <code class="docutils literal notranslate"><span class="pre">hi</span></code>.</p>
+<p>Sterker nog, <code class="docutils literal notranslate"><span class="pre">fraction</span></code> kan een waarde onder 0 krijgen en het resultaat zal dan kleiner zijn dan <code class="docutils literal notranslate"><span class="pre">low</span></code>. Ook kan <code class="docutils literal notranslate"><span class="pre">fraction</span></code> een waarde boven <code class="docutils literal notranslate"><span class="pre">1</span></code> krijgen, en het resultaat zal dan groter zijn dan <code class="docutils literal notranslate"><span class="pre">hi</span></code> (puristen zouden dit waarschijnlijk <code class="docutils literal notranslate"><span class="pre">extrap</span></code>olatie in plaats van <code class="docutils literal notranslate"><span class="pre">interp</span></code>olatie, noemen).</p>
+<p>Nu het probleem bekend is zal je misschien geneigd zijn de functie op te delen in een aantal condities en <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code> en dergelijke proberen te gebruiken. Je kan deze functie echter schrijven <em>zonder</em> conditionele statements (<code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, <code class="docutils literal notranslate"><span class="pre">else</span></code>)! Probeer de functie te schrijven <em>zonder</em> <code class="docutils literal notranslate"><span class="pre">if</span></code> te gebruiken!</p>
+<p>Hier zijn een paar voorbeelden om te verduidelijken hoe <code class="docutils literal notranslate"><span class="pre">interp</span></code> zal moeten werken:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">interp</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">9.0</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">)</span>  <span class="c1"># Een kwart (.25) op weg van 1.0 naar 9.0</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="mf">3.0</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">interp</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">)</span>  <span class="c1"># Een kwart op weg van 1.0 naar 3.0</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="mf">1.5</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">interp</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mf">0.22</span><span class="p">)</span>     <span class="c1"># 22% op weg van 2 naar 12</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="mf">4.2</span>
+</pre></div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p>Als je niet zeker weet hoe je moet beginnen, kan je naar het eerste voorbeeld hierboven kijken. Hierbij geldt dat</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>low is 1.0
+hi is 9.0
+fraction is 0.25
+</pre></div>
+</div>
+<p>Kijk of je kan bepalen hoe je deze drie waarden moet combineren om tot de correcte returnwaarde 3.0 te komen. Je zou kunnen beginnen met <code class="docutils literal notranslate"><span class="pre">(hi</span> <span class="pre">-</span> <span class="pre">low)</span></code> …</p>
+</div>
+<p>Hier zijn nog twee andere voorbeelden die je kan proberen:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">interp</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>       <span class="c1"># 0% op weg van 24 naar 42</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="mf">24.0</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">interp</span><span class="p">(</span><span class="mi">102</span><span class="p">,</span> <span class="mi">117</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.0</span><span class="p">)</span>  <span class="c1"># -400% op weg van 102 naar 117 (vreemd!)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="mf">42.0</span>
+</pre></div>
+</div>
+<p>In de volgende functies ga je strings gebruiken, reeksen van karakters. Schrijf ze allemaal in jouw bestand. Test elke functie die je hebt geschreven <em>voordat</em> je doorgaat naar de volgende. Zorg er ook voor dat je voor elke functie een docstring toevoegt die (heel kort) vertelt wat deze doet.</p>
+</section>
+<section id="checkends-s">
+<h3><code class="docutils literal notranslate"><span class="pre">checkends(s)</span></code><a class="headerlink" href="#checkends-s" title="Link to this heading">#</a></h3>
+<p>Schrijf een functie <code class="docutils literal notranslate"><span class="pre">checkends(s)</span></code> die als parameter een string <code class="docutils literal notranslate"><span class="pre">s</span></code> accepteert en <code class="docutils literal notranslate"><span class="pre">True</span></code> teruggeeft als het eerste karakter van <code class="docutils literal notranslate"><span class="pre">s</span></code> gelijk is aan het laatste karakter van <code class="docutils literal notranslate"><span class="pre">s</span></code>. Anders zal het <code class="docutils literal notranslate"><span class="pre">False</span></code> teruggeven. De functie <code class="docutils literal notranslate"><span class="pre">checkends</span></code> hoeft niet te werken met een lege string <code class="docutils literal notranslate"><span class="pre">s</span></code> (een string met waarde <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>).</p>
+<div class="warning admonition">
+<p class="admonition-title">boolean waarden</p>
+<p>De functie moet <em>geen</em> strings teruggeven! In plaats daarvan moet het een <em>boolean</em> teruggeven, dus <code class="docutils literal notranslate"><span class="pre">True</span></code> of <code class="docutils literal notranslate"><span class="pre">False</span></code>, zonder aanhalingstekens.</p>
+<p>In de editor zul je zien dat booleans een andere kleur krijgen (in het standaardkleurenschema van VSCode worden ze blauw) om aan te geven dat Python ze herkent als waarden van het type <code class="docutils literal notranslate"><span class="pre">bool</span></code>. Als je er per ongeluk strings van hebt gemaakt (<code class="docutils literal notranslate"><span class="pre">&quot;True&quot;</span></code> in plaats van <code class="docutils literal notranslate"><span class="pre">True</span></code>) dan worden ze oranje in VSCode.</p>
+<p>Voor alle duidelijkheid, booleans en strings zijn twee heel     verschillende dingen! Voor <code class="docutils literal notranslate"><span class="pre">True</span></code> en <code class="docutils literal notranslate"><span class="pre">False</span></code> heb je vrijwel altijd de booleans, dus zonder aanhalingstekens, nodig.</p>
+</div>
+<p>We geven straks een aantal tips, maar bekijk eerst de volgende voorbeelden. Deze voorbeelden leggen uit hoe <code class="docutils literal notranslate"><span class="pre">checkends</span></code> werkt en vergeet niet ze te proberen als je een eerste versie van de functie geschreven hebt. Merk op dat het laatste, vierde voorbeeld hieronder de
+string met <em>een enkele spatie</em> is, dat is niet hetzelfde als de lege string, die bevat geen karakters:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">checkends</span><span class="p">(</span><span class="s1">&#39;niet gelijk&#39;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kc">False</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">checkends</span><span class="p">(</span><span class="s1">&#39;kijk! wel gelijk&#39;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="kc">True</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">checkends</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="kc">True</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">checkends</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<p>Zorg dat het laatste voorbeeld (de string met een enkele spatie) ook werkt in jouw functie. Zoals eerder gezegd, een lege string hoeft <em>niet</em> te werken.</p>
+<div class="tip admonition">
+<p class="admonition-title">Vergelijken</p>
+<p>Je kan in deze functie gebruikmaken van een <code class="docutils literal notranslate"><span class="pre">if</span></code>-<code class="docutils literal notranslate"><span class="pre">else</span></code>-constructie, hier is een begin:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="o">...</span><span class="p">:</span>
+    <span class="k">return</span> <span class="kc">True</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">return</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<p>Misschien kan je een oplossing vinden die helemaal geen <code class="docutils literal notranslate"><span class="pre">if</span></code> en <code class="docutils literal notranslate"><span class="pre">else</span></code> gebruikt, dit is ook goed!</p>
+<p>De vergelijking <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">42</span></code> is een expressie waar <code class="docutils literal notranslate"><span class="pre">True</span></code> of <code class="docutils literal notranslate"><span class="pre">False</span></code> uitkomt.</p>
+</div>
+</section>
+<section id="flipside-s">
+<h3><code class="docutils literal notranslate"><span class="pre">flipside(s)</span></code><a class="headerlink" href="#flipside-s" title="Link to this heading">#</a></h3>
+<p>Schrijf een functie <code class="docutils literal notranslate"><span class="pre">flipside(s)</span></code> die als arument een string <code class="docutils literal notranslate"><span class="pre">s</span></code> accepteert en een string teruggeeft waarvan de eerste helft de
+tweede helft van <code class="docutils literal notranslate"><span class="pre">s</span></code> is en de tweede helft de eerste helft van <code class="docutils literal notranslate"><span class="pre">s</span></code>. De functie zal argument <code class="docutils literal notranslate"><span class="pre">s</span></code> dus <em>gespiegeld</em> teruggeven.</p>
+<p>Als <code class="docutils literal notranslate"><span class="pre">len(s)</span></code> (de lengte van <code class="docutils literal notranslate"><span class="pre">s</span></code>) oneven is, dan geldt dat <em>eerste helft</em> van <code class="docutils literal notranslate"><span class="pre">s</span></code> één karakter korter is dan de tweede helft. De tweede helft van de string die teruggegeven wordt zal in dit geval één karakter korter zijn dan de eerste helft. Na de onderstaande voorbeelden kan je ook een tip vinden.</p>
+<div class="info admonition">
+<p class="admonition-title">Lengte bepalen</p>
+<p>Het kan hier handig zijn de ingebouwde functie <code class="docutils literal notranslate"><span class="pre">len(s)</span></code> te gebruiken, die de lengte van het argument, een string <code class="docutils literal notranslate"><span class="pre">s</span></code>, teruggeeft. De functie <code class="docutils literal notranslate"><span class="pre">len</span></code> kan je ook gebruiken voor andere typen, bijvoorbeeld lijsten (lists).</p>
+</div>
+<p>Voorbeelden:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">flipside</span><span class="p">(</span><span class="s1">&#39;huiswerk&#39;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">werkhuis</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">flipside</span><span class="p">(</span><span class="s1">&#39;zijkant&#39;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">kantzij</span>
+</pre></div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Integerdeling</p>
+<p>Deze functie is eenvoudiger als je op de eerste regel een variabele maakt die gelijk is aan <code class="docutils literal notranslate"><span class="pre">len(s)</span> <span class="pre">//</span> <span class="pre">2</span></code>, bijvoorbeeld,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">flipside</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Put your docstring here</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+
+    <span class="k">return</span> <span class="o">...</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">//</span></code> staat voor een <em>integer deling</em>, zie hoe dit anders is dan een gewone <code class="docutils literal notranslate"><span class="pre">/</span></code> deling:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="mf">1.5</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="mi">3</span> <span class="o">//</span> <span class="mi">2</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>De oplossing en het return statement moet je natuurlijk verder aanvullen. Je zal de variabele <code class="docutils literal notranslate"><span class="pre">x</span></code> <em>twee keer</em> gaan gebruiken, daarom is het handig is om deze waarde een naam te geven, in plaats van het twee keer <code class="docutils literal notranslate"><span class="pre">len(s)</span> <span class="pre">//</span> <span class="pre">2</span></code> te typen.</p>
+<p>Terzijde, de naam <code class="docutils literal notranslate"><span class="pre">x</span></code> is hier slecht gekozen, <code class="docutils literal notranslate"><span class="pre">l</span></code> (voor “lengte”) zou beter zijn geweest. We hebben echter <code class="docutils literal notranslate"><span class="pre">l</span></code> niet gebruikt omdat het te veel lijkt op het nummer <code class="docutils literal notranslate"><span class="pre">1</span></code>. Welke naam zou beter kunnen zijn dan <code class="docutils literal notranslate"><span class="pre">x</span></code>? Bedenk dat Python namen met meerdere letters ondersteunt, en dat de naam <code class="docutils literal notranslate"><span class="pre">len</span></code> al in gebruik is!</p>
+</div>
+</section>
+<section id="convert-from-seconds-s">
+<h3><code class="docutils literal notranslate"><span class="pre">convert_from_seconds(s)</span></code><a class="headerlink" href="#convert-from-seconds-s" title="Link to this heading">#</a></h3>
+<p>Schrijf een functie <code class="docutils literal notranslate"><span class="pre">convert_from_seconds(s)</span></code> die als argumment een (niet negatieve) integer <code class="docutils literal notranslate"><span class="pre">s</span></code> accepteert en een lijst met <em>vier</em> (niet negatieve) integers teruggeeft die het aantal seconden in een meer gebruikelijke vorm beschrijft, zodat:</p>
+<ul class="simple">
+<li><p>het eerste element het <em>aantal dagen</em> bevat</p></li>
+<li><p>het tweede element het <em>aantal uren</em> bevat</p></li>
+<li><p>het derde element het <em>aantal minuten</em> bevat</p></li>
+<li><p>het laatste element het <em>aantal seconden</em> bevat</p></li>
+</ul>
+<p>Je zal op het volgende moeten letten:</p>
+<ul class="simple">
+<li><p>0 ≤ seconden &lt; 60</p></li>
+<li><p>0 ≤ minuten &lt; 60</p></li>
+<li><p>0 ≤ uren &lt; 24</p></li>
+</ul>
+<p>Er is geen limiet op het aantal dagen. Een paar voorbeelden:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">convert_from_seconds</span><span class="p">(</span><span class="mi">610</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">convert_from_seconds</span><span class="p">(</span><span class="mi">100000</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">40</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Hoe te beginnen? Je kan de volgende code (die <em>vier</em> variabelen telt) als begin gebruiken:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">convert_from_seconds</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Put your docstring here</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">days</span> <span class="o">=</span> <span class="n">s</span> <span class="o">//</span> <span class="p">(</span><span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>  <span class="c1"># Het aantal dagen</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">%</span> <span class="p">(</span><span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>  <span class="c1"># Het restant</span>
+    <span class="n">hours</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="n">minutes</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="n">seconds</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">days</span><span class="p">,</span> <span class="n">hours</span><span class="p">,</span> <span class="n">minutes</span><span class="p">,</span> <span class="n">seconds</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>De gedachte hier is dat wanneer je de vier variabelen (<code class="docutils literal notranslate"><span class="pre">days</span></code>, <code class="docutils literal notranslate"><span class="pre">hours</span></code>, <code class="docutils literal notranslate"><span class="pre">minutes</span></code> en <code class="docutils literal notranslate"><span class="pre">seconds</span></code>) klaarzet ze in één keer als lijst kunnnen worden teruggeven, wat in de laatste regel gebeurt:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="p">[</span><span class="n">days</span><span class="p">,</span> <span class="n">hours</span><span class="p">,</span> <span class="n">minutes</span><span class="p">,</span> <span class="n">seconds</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>De regel die het aantal dagen berekent is:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">days</span> <span class="o">=</span> <span class="n">s</span> <span class="o">//</span> <span class="p">(</span><span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Het is nu aan jou om te bedenken wat de regels voor <code class="docutils literal notranslate"><span class="pre">hours</span></code>, <code class="docutils literal notranslate"><span class="pre">minutes</span></code> en <code class="docutils literal notranslate"><span class="pre">seconds</span></code> moeten zijn!</p>
+<p>Je ziet in de bovenstaande code dat <code class="docutils literal notranslate"><span class="pre">s</span></code> op een gegeven moment een andere waarde aanneemt (het resultaat van een modulo <code class="docutils literal notranslate"><span class="pre">%</span></code> berekening). Het is mogelijk dit probleem op te lossen zonder de variabele <code class="docutils literal notranslate"><span class="pre">s</span></code> te veranderen, maar het al gaande wijzigen van <code class="docutils literal notranslate"><span class="pre">s</span></code> is een elegante en handige oplossingsstrategie om stap voor stap tot de waarde van de vier variabelen te komen. Probeer deze strategie in de bovenstaande code verder toe te passen.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "hanze-hbo-ict/programmeren",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./practicals"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../course/practical_3.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">vorige</p>
+        <p class="prev-next-title">Werkcollege</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../course/opgaven_3.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">volgende</p>
+        <p class="prev-next-title">Opgaven</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Inhoud
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ingebouwde-functies">Ingebouwde functies</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#range"><code class="docutils literal notranslate"><span class="pre">range</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sum"><code class="docutils literal notranslate"><span class="pre">sum</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#een-nieuw-bestand">Een nieuw bestand</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#signature-en-docstring">Signature en docstring</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voorbeeldopgave">Voorbeeldopgave</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uitwerking">Uitwerking</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgaven">Opgaven</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sq-x"><code class="docutils literal notranslate"><span class="pre">sq(x)</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interp-low-hi-fraction"><code class="docutils literal notranslate"><span class="pre">interp(low,</span> <span class="pre">hi,</span> <span class="pre">fraction)</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#checkends-s"><code class="docutils literal notranslate"><span class="pre">checkends(s)</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flipside-s"><code class="docutils literal notranslate"><span class="pre">flipside(s)</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-from-seconds-s"><code class="docutils literal notranslate"><span class="pre">convert_from_seconds(s)</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Door Harvey Mudd College / Hanze University of Applied Sciences
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
+    Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
