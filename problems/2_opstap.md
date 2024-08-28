@@ -4,7 +4,7 @@
  Leerdoel: Lezen van conditionele statements in python
 
 ### Opdracht
-In deze opdracht is het vooral de bedoeling om te bepalen wat de output is van de code. Test je antwoorden met behulp van de python tutor. 
+In deze opdracht is het vooral de bedoeling om te bepalen wat de output is van de code. Test je antwoorden met behulp van de [python tutor](https://pythontutor.com/visualize.html#mode=edit). 
 
 Wat is de output?
 
