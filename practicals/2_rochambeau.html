@@ -229,13 +229,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Intro</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../lectures/0a_command-line.html">De terminal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lectures/0b_install_python.html">Instaleren Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lectures/0b_install_python.html">Python installeren</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 1</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_1.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../lectures/1a_intro_programmeren.html">Wat is informatica</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lectures/1b_picobot.html">picobot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/1b_picobot.html">Picobot</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_1.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -415,6 +415,55 @@ commentsRunWhenDOMLoaded(addUtterances);
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/hanze-hbo-ict/programmeren/blob/master/practicals/2_rochambeau.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -440,7 +489,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       
       
       
-      <li><a href="https://github.com/hanze-hbo-ict/programmeren/edit/master/practicals/2_rochambeau.md" target="_blank"
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/edit/master/practicals/2_rochambeau.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -487,7 +536,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       
       
       
-      <li><a href="../_sources/practicals/2_rochambeau.md" target="_blank"
+      <li><a href="../_sources/practicals/2_rochambeau.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download het bronbestand"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -497,7 +546,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -584,7 +633,10 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steen-papier-en-schaar">Steen, papier en schaar</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-regels">De regels</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#een-begin">Een begin</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#en-verder">En verder!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#en-verder">En verder!</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave">Opgave</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uitbreidingen">Uitbreidingen</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rps-5-rpssl">RPS-5 (RPSSL)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rps-25">RPS-25</a></li>
@@ -624,7 +676,6 @@ document.write(`
 <h2>Een begin<a class="headerlink" href="#een-begin" title="Link to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>  <span class="c1"># import the module named random</span>
 
-
 <span class="k">def</span> <span class="nf">rps</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Play a game of rock-paper-scissors in Dutch</span>
 
@@ -646,7 +697,7 @@ document.write(`
 </section>
 <section id="en-verder">
 <h2>En verder!<a class="headerlink" href="#en-verder" title="Link to this heading">#</a></h2>
-<p>Werk de bovenstaande code nu verder uit tot een volledig programma dat:</p>
+<p>Werk de code nu verder uit tot een volledig programma dat:</p>
 <ul class="simple">
 <li><p>Een gebruiker uitnodigt het spel <em>steen, papier en schaar</em> te spelen</p></li>
 <li><p>De gebruiker uit minstens drie opties laat kiezen</p>
@@ -668,10 +719,38 @@ document.write(`
 <li><p>Afdrukt welke keuze het <em>zelf</em> heeft gemaakt uit de mogelijke opties (eerlijk of niet)</p></li>
 <li><p>Afdrukt wie het spel heeft gewonnen (of een gelijkspel, of een andere uitkomst)</p></li>
 </ul>
+<section id="opgave">
+<h3>Opgave<a class="headerlink" href="#opgave" title="Link to this heading">#</a></h3>
+<p>We hebben de begincode hier alvast gekopiëerd indien je dit notebook wilt gebruiken om de opgave uit te werken (bijvoorbeeld in <a class="reference external" href="https://colab.research.google.com/">Google Colab</a>). Maak je een fout of wil je opnieuw beginnen dan kan je altijd de bovenstaande code kopiëren en hier weer plakken.</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>  <span class="c1"># import the module named random</span>
+
+<span class="k">def</span> <span class="nf">rps</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Play a game of rock-paper-scissors in Dutch</span>
+
+<span class="sd">    arguments: no arguments (prompted text doesn&#39;t count as an argument)</span>
+<span class="sd">    result: no result       (printing doesn&#39;t count as a result)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Kies een wapen (steen, papier of schaar): &quot;</span><span class="p">)</span>
+    <span class="n">comp</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s2">&quot;steen&quot;</span><span class="p">,</span> <span class="s2">&quot;papier&quot;</span><span class="p">,</span> <span class="s2">&quot;schaar&quot;</span><span class="p">])</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;De gebruiker (jij) koos&quot;</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;De computer (ik) koos&quot;</span><span class="p">,</span> <span class="n">comp</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">user</span> <span class="o">==</span> <span class="s2">&quot;steen&quot;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Haha! Eigenlijk koos ik papier! IK HEB GEWONNEN!&quot;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hopelijk heb je de volgende keer meer geluk...&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="tip admonition">
 <p class="admonition-title">Extra commentaar</p>
-<p>Het toevoegen van extra commentaar (<code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">...</span></code>) aan de code is optioneel, maar is aan te raden voor wanneer jouw uitwerking gaat worden beoordeeld!</p>
+<p>Het toevoegen van extra commentaar (<code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">...</span></code>) aan de code is optioneel, maar is aan te raden om aantekeningen in de code te maken voor jezelf (of voor anderen die jouw code gaan lezen!).</p>
 </div>
+</section>
 </section>
 <section id="uitbreidingen">
 <h2>Uitbreidingen<a class="headerlink" href="#uitbreidingen" title="Link to this heading">#</a></h2>
@@ -796,7 +875,10 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steen-papier-en-schaar">Steen, papier en schaar</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-regels">De regels</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#een-begin">Een begin</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#en-verder">En verder!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#en-verder">En verder!</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave">Opgave</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uitbreidingen">Uitbreidingen</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rps-5-rpssl">RPS-5 (RPSSL)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rps-25">RPS-25</a></li>

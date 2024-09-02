@@ -229,13 +229,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Intro</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="0a_command-line.html">De terminal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="0b_install_python.html">Instaleren Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0b_install_python.html">Python installeren</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 1</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_1.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="1a_intro_programmeren.html">Wat is informatica</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1b_picobot.html">picobot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1b_picobot.html">Picobot</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_1.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -415,6 +415,55 @@ commentsRunWhenDOMLoaded(addUtterances);
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/hanze-hbo-ict/programmeren/blob/master/lectures/2a_var_con.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -440,7 +489,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       
       
       
-      <li><a href="https://github.com/hanze-hbo-ict/programmeren/edit/master/lectures/2a_var_con.md" target="_blank"
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/edit/master/lectures/2a_var_con.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -487,7 +536,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       
       
       
-      <li><a href="../_sources/lectures/2a_var_con.md" target="_blank"
+      <li><a href="../_sources/lectures/2a_var_con.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download het bronbestand"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -497,7 +546,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -584,20 +633,20 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#input-en-output">Input en output</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variabelen">Variabelen</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datatypes">Datatypes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-operatoren">Python operatoren</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operatoren">Operatoren</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#if-then-else">If then else</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#het-if-statement">Het if statement</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax">syntax</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#het-if-statement">Het if-statement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax">Syntax</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#het-if-else-statement">Het if-else statement</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-if-then-else-boom">De if-then-else boom</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maximum-probleem">Maximum probleem</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdrachten">Opdrachten</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-1">Opdracht 1.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-1">Opdracht 1</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2">Opdracht 2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3">opdracht 3</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-4-wat-is-de-output">Opdracht 4:   Wat is de output?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3">Opdracht 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-4">Opdracht 4</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-5">Opdracht 5</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-6">Opdracht 6</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-7">Opdracht 7</a></li>
@@ -616,86 +665,97 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="maximum">
 <h1>Maximum<a class="headerlink" href="#maximum" title="Link to this heading">#</a></h1>
-<p>Het probleem: Gegeven twee getallen, welke van de twee getallen is de grootste?</p>
+<p>Het probleem: Gegeven twee getallen, welke van de twee getallen is het grootste?</p>
 <p>De 3 p’s:</p>
 <ul class="simple">
 <li><p><strong>Probeer</strong>: Probeer het probleem op te lossen op papier.</p></li>
 <li><p><strong>Plan</strong>: Noteer de stappen die zijn gebruikt om het probleem op te lossen.</p></li>
-<li><p><strong>Programmeer</strong>: Vertaal de stappen naar een programmeer taal.</p></li>
+<li><p><strong>Programmeer</strong>: Vertaal de stappen naar een programmeertaal.</p></li>
 </ul>
-<p><strong>Stap 1: probeer</strong>:
-In dit voorbeeld is de probeer fase niet erg indrukwekkend. Gegeven twee getallen kunnen wij als mens al heel snel zien welke van de twee groter is.</p>
+<p><strong>Stap 1: Probeer</strong>:</p>
+<p>In dit voorbeeld is de probeerfase niet erg indrukwekkend. Gegeven twee getallen kunnen wij als mens al heel snel zien welke van de twee groter is.</p>
 <p><strong>Stap 2: Plan</strong>:</p>
 <ol class="arabic simple">
 <li><p>Neem twee getallen a en b</p></li>
-<li><p>als a &gt; b dan is a de grooste anders is b het grootste getal.</p></li>
+<li><p>Als a &gt; b dan is a het grootste, anders is b het grootste getal.</p></li>
 </ol>
-<p><strong>Stap 3: Programmeer</strong>:
-Nu het plan omzetten in code. Deze cursus gebruikt hiervoor python. De leerdoelen van deze werkcollege zijn:</p>
+<p><strong>Stap 3: Programmeer</strong>:</p>
+<p>Nu gaan we het plan omzetten in code. Deze cursus gebruikt hiervoor Python. De leerdoelen van dit werkcollege zijn:</p>
 <ul class="simple">
 <li><p>Input en output</p></li>
 <li><p>Variabelen</p></li>
 <li><p>If-then-else</p></li>
 </ul>
-<p>Dit is de kennis dat nodig is om het gemaakte plan om te zetten tot programmeer code.</p>
+<p>Dit is de kennis die nodig is om het gemaakte plan om te zetten tot programmacode.</p>
 <section id="input-en-output">
 <h2>Input en output<a class="headerlink" href="#input-en-output" title="Link to this heading">#</a></h2>
-<p>De computer moet worden verteld welke twee getallen we met elkaar willen vergelijken. Dit kan gedaan worden met behulp van een Input functie. Een functie en is een opdracht dat een computer kan uitvoeren.</p>
+<p>De computer moet worden verteld welke twee getallen we met elkaar willen vergelijken. Dit kan gedaan worden met behulp van een input-functie. Een functie is een opdracht die een computer kan uitvoeren.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">input</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>De functie heeft als naam ‘input’. Door het gebruik van haakjes weet de computer dat het hier gaat om een functie en dat er dus een opdracht uitgevoerd moet worden. In dit geval weet de computer dat er gevraagd moet worden voor input. Om te vertellen aan de gebruiker van het programma wat voor input er verwacht wordt kunnen we een string toevoegen aan de functie. Een string wordt aangegven met dubbele quotes, zo weet de computer dat het om een zin/woord gaat.</p>
+<p>De functie heeft als naam ‘input’. Door het gebruik van haakjes weet de computer dat het hier gaat om een functie en dat er dus een opdracht uitgevoerd moet worden. In dit geval weet de computer dat er gevraagd moet worden om input. Om de gebruiker van het programma te vertellen wat voor input er verwacht wordt, kunnen we een string toevoegen aan de functie. Een string wordt aangegeven met dubbele aanhalingstekens, zo weet de computer dat het om een zin/woord gaat.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Geef getal a&quot;</span><span class="p">)</span>
 <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Geef getal b&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>De functie krijgt nu als parameter een string mee. De computer geeft deze zin als output voordat hij vraagt om input. Zo kan een gebruiker lezen welke input er gevraagd wordt. Om de computer enkel ouput te laten zien wordt de print functie gebruikt. <a class="reference external" href="https://allendowney.github.io/ThinkPython/chap02.html#the-print-function">book</a></p>
+<p>De functie krijgt nu als parameter een string mee. De computer geeft deze zin als output voordat hij vraagt om input. Zo kan een gebruiker lezen welke input er gevraagd wordt. Om de computer enkel output te laten zien wordt de print-functie gebruikt.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>De computer print nu hello world als dit programma wordt gedraaid. “Hello world” worden vaak gebruikt als eerste kennis making met code. Voor python is deze ene zin genoeg. Er is een hele wikipage met ‘hello world’ programma’s in allerlei verschillende programmeer talen. https://en.wikipedia.org/wiki/%22Hello,_World!%22_program</p>
+<p>De computer print nu “Hello world” als dit programma wordt gedraaid. “Hello world” wordt vaak gebruikt als eerste kennismaking met code. Voor Python is deze ene zin genoeg. Er is zelfs een <a class="reference external" href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program">Wikipedia-pagina</a> met ‘hello world’-programma’s in allerlei verschillende programmeertalen!</p>
+<div class="admonition seealso">
+<p class="admonition-title">Zie ook</p>
+<p>Zie ook de uitleg in het boek over het <a class="reference external" href="https://allendowney.github.io/ThinkPython/chap02.html#the-print-function">printen</a> van waarden.</p>
+</div>
 </section>
 <section id="variabelen">
 <h2>Variabelen<a class="headerlink" href="#variabelen" title="Link to this heading">#</a></h2>
-<p>De computer wordt nu verteld om om input te vragen, maar is nog niet verteld wat er met deze input moet gebeuren. Data kan bewaard worden in een variabele. Zie een variabele als een doos met daarop een naam, een adres en een type. In de doos wordt de data bewaard.</p>
+<p>De computer wordt nu verteld om om input te vragen, maar er is nog niet verteld wat er met deze input moet gebeuren. Data kan bewaard worden in een variabele. Zie een variabele als een doos met daarop een naam, een adres en een type. In de doos wordt de data bewaard.</p>
 <ul class="simple">
-<li><p>De naam bepalen we zelf als programmeur. Advies is om herkanbare namen te gebruiken voor variabelen. Dit maakt code leesbaarder. Werken met namen is voor ons als mensen makkelijker dan werken met geheugen adressen.</p></li>
+<li><p>De naam bepalen we zelf als programmeur. Advies is om herkenbare namen te gebruiken voor variabelen. Dit maakt code leesbaarder. Werken met namen is voor ons als mensen makkelijker dan werken met geheugen adressen.</p></li>
 <li><p>Het adres wordt door de computer bepaald. Zo weet de computer waar in het geheugen de data staat.</p></li>
-<li><p>Het type verteld de computer wat voor soort data het is.</p></li>
+<li><p>Het type vertelt de computer wat voor soort data het is.</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">getal_A</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Geef getal a&quot;</span><span class="p">)</span>
 <span class="n">getal_B</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Geef getal b&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>De computer zal nu de data opslaan in de variabelen getal_A en getal_B</p>
-<p>Variabelen mogen geen spaties bevatten en moeten beginnen met een kleine letter. Er zijn twee verschillende manieren in omgang om variabelen op te schrijven. snake_case gebruikt de underscore als vervanging van de spatie. camelCase gebruikt hoofdletters voor elke nieuw woord. Welke van de twee gebruikt wordt maakt niet uit, maar wees consequent ter bevoordering van de leesbaarheid van je code. Binnen Python is het wel gebruikelijk om de snake_case te gebruiken.</p>
+<p>De computer zal nu de data opslaan in de variabelen getal_A en getal_B.</p>
+<p>Variabelen mogen geen spaties bevatten en moeten beginnen met een kleine letter. Er zijn twee verschillende manieren om variabelen op te schrijven. snake_case gebruikt de underscore als vervanging van de spatie. camelCase gebruikt hoofdletters voor elk nieuw woord. Welke van de twee gebruikt wordt maakt niet uit, maar wees consequent ter bevordering van de leesbaarheid van je code. Binnen Python is het wel gebruikelijk om de snake_case te gebruiken.</p>
 </section>
 <section id="datatypes">
 <h2>Datatypes<a class="headerlink" href="#datatypes" title="Link to this heading">#</a></h2>
-<p><a class="reference external" href="https://allendowney.github.io/ThinkPython/chap01.html#values-and-types">Book</a>
-Er zijn verschillende soorten datatypes:</p>
+<div class="admonition seealso">
+<p class="admonition-title">Zie ook</p>
+<p>Zie ook de uitleg in het boek over <a class="reference external" href="https://allendowney.github.io/ThinkPython/chap01.html#values-and-types">waarden en bijbehorende typen</a>.</p>
+</div>
+<p>Er zijn verschillende soorten datatypes:</p>
 <ul class="simple">
-<li><p><strong>int</strong> Een geheel getal van 32 of 64 bits groot.</p></li>
-<li><p><strong>float</strong> Een komma getal</p></li>
-<li><p><strong>Bool</strong> Is afgeleid van boolean en heeft enkel de waarde True of False</p></li>
-<li><p><strong>String</strong> Een reeks van characters, zoals woorden en zinnen. Deze wordt aangegeven met de dubbele haakjes</p></li>
-<li><p><strong>List</strong> Een lijst van objecten.</p></li>
-<li><p><strong>Array</strong> Een lijst van 1 type object.</p></li>
+<li><p><strong>int</strong>: Een geheel getal van 32 of 64 bits groot.</p></li>
+<li><p><strong>float</strong>: Een kommagetal.</p></li>
+<li><p><strong>bool</strong>: Is afgeleid van boolean en heeft enkel de waarde True of False.</p></li>
+<li><p><strong>string</strong>: Een reeks van karakters, zoals woorden en zinnen. Deze wordt aangegeven met de dubbele aanhalingstekens.</p></li>
+<li><p><strong>list</strong>: Een lijst van objecten.</p></li>
+<li><p><strong>array</strong>: Een lijst van één type object.</p></li>
 </ul>
-<p>Er zijn ook andere datatypes, maar voor nu is dit alles wat we gaan gebruiken. Zodra een variabelen wordt gemaakt probeert Python in te schatten welke datatype er wordt bedoelt. Dit gaat niet altijd goed. In andere talen, zoals java, moet de programmeer aangeven welke datatype de variabele heeft.</p>
+<p>Er zijn ook andere datatypes, maar voor nu is dit alles wat we gaan gebruiken. Zodra een variabele wordt gemaakt, probeert Python in te schatten welk datatype er wordt bedoeld. Dit gaat niet altijd goed. In andere talen, zoals Java, moet de programmeur aangeven welk datatype de variabele heeft.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">getal_A</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Geef getal a&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Om ervoor te zorgen dat de input echt een getal is en geen woord kan de functie int() gebruikt worden.</p>
+<p>Om ervoor te zorgen dat de input echt een getal is en geen woord, kan de functie int() gebruikt worden.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">getal_A</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Geef getal a&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>De input dat gegeven wordt, wordt nu omgezet naar een int.</p>
+<p>De input die gegeven wordt, wordt nu omgezet naar een int.</p>
 </section>
-<section id="python-operatoren">
-<h2>Python operatoren<a class="headerlink" href="#python-operatoren" title="Link to this heading">#</a></h2>
-<p><a class="reference external" href="https://allendowney.github.io/ThinkPython/chap01.html#arithmetic-operators">Book</a>
-Python kent verschillende operatoren om mee te rekenen en om variabelen te vergelijken.</p>
+<section id="operatoren">
+<h2>Operatoren<a class="headerlink" href="#operatoren" title="Link to this heading">#</a></h2>
+<div class="admonition seealso">
+<p class="admonition-title">Zie ook</p>
+<p>Zie ook de uitleg in het boek over
+<a class="reference external" href="https://allendowney.github.io/ThinkPython/chap01.html#arithmetic-operators">operatoren</a>.</p>
+</div>
+<p>Python kent verschillende operatoren om mee te rekenen en om variabelen te vergelijken.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Betekenis</p></th>
@@ -727,53 +787,57 @@ Python kent verschillende operatoren om mee te rekenen en om variabelen te verge
 </section>
 <section id="if-then-else">
 <h2>If then else<a class="headerlink" href="#if-then-else" title="Link to this heading">#</a></h2>
-<p><a class="reference external" href="https://allendowney.github.io/ThinkPython/chap05.html#if-statements">book</a>
-Stap 1 van het plan was:  Neem twee getallen a en b. Via de input functie kan er gevraagd worden voor twee getallen en deze worden opgeslagen in variabelen.</p>
+<div class="admonition seealso">
+<p class="admonition-title">Zie ook</p>
+<p>Zie ook de uitleg in het boek over
+<a class="reference external" href="https://allendowney.github.io/ThinkPython/chap05.html#if-statements"><code class="docutils literal notranslate"><span class="pre">if</span></code>-statements</a></p>
+</div>
+<p>Stap 1 van het plan was: Neem twee getallen a en b. Via de input functie kan er gevraagd worden om twee getallen en deze worden opgeslagen in variabelen.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">getal_A</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Geef een geheel getal a: &quot;</span><span class="p">))</span>
 <span class="n">getal_B</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Geef een geheel getal b: &quot;</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>Nu stap 2 nog: de twee getallen met elkaar vergeleken worden om te bepalen welke van de twee getallen de grooste is.</p>
+<p>Nu stap 2 nog: de twee getallen moeten met elkaar vergeleken worden om te bepalen welke van de twee getallen het grootste is.</p>
 <section id="het-if-statement">
-<h3>Het if statement<a class="headerlink" href="#het-if-statement" title="Link to this heading">#</a></h3>
-<p>Met behulp van een if-statement kan een computer verteld worden of een stuk code wel of niet uitgevoerd hoeft te worden. Als de if statement true is wordt de code binnen de if statement uitgevoerd. ALs de if statement false is slaat de computer de code over</p>
-<p>if <em>conditie</em> :
-    Do this
-     Do this
-     Do this</p>
+<h3>Het if-statement<a class="headerlink" href="#het-if-statement" title="Link to this heading">#</a></h3>
+<p>Met behulp van een if-statement kan een computer verteld worden of een stuk code wel of niet uitgevoerd moet worden. Als het if-statement true is, wordt de code binnen de if-statement uitgevoerd. Als het if-statement false is, slaat de computer de code over.</p>
+<p>if <em>conditie</em> :<br>
+    Do this<br>
+    Do this<br>
+    Do this<br></p>
 </section>
 <section id="syntax">
-<h3>syntax<a class="headerlink" href="#syntax" title="Link to this heading">#</a></h3>
-<p>Let op de dubbele punt na de conditie, deze is verplicht. Ook heel belangrijk binnen python is het gebruik van tabs. De code dat uitgevoerd moet worden als de if statement true is hebben een tab, een zogenaamde indentation. Dit is gevoelig. Als de code ook maar een spatie uit lood ligt werkt de code niet of geeft het een andere uitkomst dan gewenst.</p>
-<p>Binnen python hoeven er geen haakjes om de conditie. Ook hier geldt dat je consequent moet zijn. Dus overal haakjes in de if-statement of nergens.</p>
-<p>Dit alles valt onder syntax. Als er een fout wordt gemaakt in de syntax geeft de compiler een <code class="docutils literal notranslate"><span class="pre">syntax</span> <span class="pre">error</span></code>. Vaak geeft het ook een regelnummer waar hij het probleem is tegengekomen. Vaak mist er dan dubbele puntjes. Een andere error wat je tegen kan komen is <code class="docutils literal notranslate"><span class="pre">indentation</span> <span class="pre">error</span></code>. Dan is er een probleem met het gebruik indentations, met andere worden, de tabs.</p>
+<h3>Syntax<a class="headerlink" href="#syntax" title="Link to this heading">#</a></h3>
+<p>Let op de dubbele punt na de conditie, deze is verplicht. Ook heel belangrijk binnen Python is het gebruik van tabs. De code die uitgevoerd moet worden als de if-statement true is, moet ingesprongen zijn (een tab of spaties, ook wel indentation genoemd). Dit is zeer gevoelig. Als de code ook maar één spatie uit lood ligt, werkt de code niet of geeft het een andere uitkomst dan gewenst.</p>
+<p>Binnen Python hoeven er geen haakjes om de conditie. Ook hier geldt dat je consequent moet zijn. Dus overal haakjes in de if-statement of nergens.</p>
+<p>Dit alles valt onder syntax. Als er een fout wordt gemaakt in de syntax, geeft de compiler een <code class="docutils literal notranslate"><span class="pre">syntax</span> <span class="pre">error</span></code>. Vaak geeft het ook een regelnummer waar het probleem is tegengekomen. Vaak ontbreken er dan dubbele punten. Een andere error die je tegen kunt komen is <code class="docutils literal notranslate"><span class="pre">indentation</span> <span class="pre">error</span></code>. Dan is er een probleem met het gebruik van indentations, met andere woorden, de tabs of spaties.</p>
 </section>
 <section id="het-if-else-statement">
 <h3>Het if-else statement<a class="headerlink" href="#het-if-else-statement" title="Link to this heading">#</a></h3>
-<p>Soms is het nodig om een computer te laten kiezen tussen twee opties. Als a waar is voer opdracht a uit en anders voer opdracht b uit.</p>
-<p>if <em>conditie</em> :
-    Do this
-     Do this
-     Do this
-else :
-     Do that
+<p>Soms is het nodig om een computer te laten kiezen tussen twee opties. Als a waar is, voer opdracht a uit, en anders voer opdracht b uit.</p>
+<p>if <em>conditie</em> :<br>
+     Do this<br>
+     Do this<br>
+     Do this<br>
+else:<br>
+     Do that<br>
      Do that</p>
 <p>Ook hier is het weer belangrijk om aan de tabs te denken en aan de dubbele punten!</p>
 </section>
 <section id="de-if-then-else-boom">
 <h3>De if-then-else boom<a class="headerlink" href="#de-if-then-else-boom" title="Link to this heading">#</a></h3>
-<p>Het is ook mogelijk om de computer te laten kiezen tussen verschillende opties, Dit kan gedaan worden door een else if te gebruiken, in python aangegen met elif. Als a waar is voer opdracht a uit anders als b waar is voer opdracht b uit anders voer opdracht c uit.</p>
-<p>if <em>conditie</em> :
-    Do this
-     Do this
-     Do this
-elif <em>conditie</em> :
-     Do this
-     Do this
-else:
-     Do this
+<p>Het is ook mogelijk om de computer te laten kiezen tussen verschillende opties. Dit kan gedaan worden door een else if te gebruiken, in Python aangegeven met <code class="docutils literal notranslate"><span class="pre">elif</span></code>. Als a waar is, voer opdracht a uit, anders als b waar is, voer opdracht b uit, anders voer opdracht c uit.</p>
+<p>if <em>conditie</em> :<br>
+     Do this<br>
+     Do this<br>
+     Do this<br>
+elif <em>conditie</em> :<br>
+     Do this<br>
+     Do this<br>
+else:<br>
+     Do this<br>
      Do this</p>
-<p>Er kan een onbeperkte hoeveelheid else if condities toegevoegd worden en er hoeft niet altijd geëindigd te worden met else. De else statement wordt enkel uitgevoerd als alle bovenstaande statements false zijn. Zodra een true statement wordt gevonden zullen de andere statement binnen de boom niet meer gecontroleerd worden.</p>
+<p>Er kan een onbeperkte hoeveelheid else if-condities toegevoegd worden en er hoeft niet altijd geëindigd te worden met else. De else-statement wordt enkel uitgevoerd als alle bovenstaande statements false zijn. Zodra een true statement wordt gevonden, zullen de andere statements binnen de boom niet meer gecontroleerd worden.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">cijfer</span> <span class="o">&gt;</span> <span class="mf">7.5</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Goed&quot;</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">cijfer</span> <span class="o">&gt;</span> <span class="mf">5.5</span><span class="p">:</span>
@@ -782,9 +846,9 @@ else:
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Onvoldoende&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Als het behaalde cijfer een 8 is print dit programma ‘goed’. Het ligt namelijk hoger dan een 7.5, dus de eerste statement is true en is de statement dat wordt uitgevoerd. De andere statements worden niet meer gecontroleerd. Dus ondanks dat een 8 ook hoger is dan een 5,5 wordt het woord ‘voldoende’ niet geprint.</p>
-<p>Als het behaalde cijfer een 6 is print het programma ‘voldoende’. De eerste statement is false, gezien 6 lager is dan een 7,5. De tweede statement is true en dus wordt het woord ‘voldoende’ geprint.</p>
-<p>Als het behaalde cijfer een 4 is print het programma onvoldoende gezien de eerste twee statements false zijn wordt automatisch de else statement uitgevoerd.</p>
+<p>Als het behaalde cijfer een 8 is, print dit programma ‘Goed’. Het ligt namelijk hoger dan een 7.5, dus het eerste statement is true en wordt uitgevoerd. De andere statements worden niet meer gecontroleerd. Dus ondanks dat een 8 ook hoger is dan een 5,5 wordt het woord ‘Voldoende’ niet geprint.</p>
+<p>Als het behaalde cijfer een 6 is, print het programma ‘Voldoende’. De eerste statement is false, gezien 6 lager is dan een 7,5. De tweede statement is true en dus wordt het woord ‘Voldoende’ geprint.</p>
+<p>Als het behaalde cijfer een 4 is, print het programma ‘Onvoldoende’ gezien de eerste twee statements false zijn, wordt automatisch het else-statement uitgevoerd.</p>
 </section>
 </section>
 <section id="maximum-probleem">
@@ -792,14 +856,14 @@ else:
 <p>Met behulp van een if-else statement kan het programma afgerond worden. Het plan was:</p>
 <ol class="arabic simple">
 <li><p>Neem twee getallen a en b</p></li>
-<li><p>als a &gt; b dan is a de grooste anders is b het grootste getal.</p></li>
+<li><p>Als a &gt; b dan is a het grootste, anders is b het grootste getal.</p></li>
 </ol>
 <p>Met behulp van inputs en variabelen was stap 1 opgelost.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">getal_A</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Geef een geheel getal a: &quot;</span><span class="p">))</span>
 <span class="n">getal_B</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Geef een geheel getal b: &quot;</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>Met behulp van if-else statements kunnen we stap twee oplossen door de twee getallen met elkaar te vergelijken en het grooste getal te printen.</p>
+<p>Met behulp van if-else statements kunnen we stap twee oplossen door de twee getallen met elkaar te vergelijken en het grootste getal te printen.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">getal_A</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Geef een geheel getal a: &quot;</span><span class="p">))</span>
 <span class="n">getal_B</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Geef een geheel getal b: &quot;</span><span class="p">))</span>
 
@@ -813,143 +877,219 @@ else:
 <section id="opdrachten">
 <h2>Opdrachten<a class="headerlink" href="#opdrachten" title="Link to this heading">#</a></h2>
 <section id="opdracht-1">
-<h3>Opdracht 1.<a class="headerlink" href="#opdracht-1" title="Link to this heading">#</a></h3>
-<p>Gegeven een stukje code, welke ouput verwacht je?</p>
+<h3>Opdracht 1<a class="headerlink" href="#opdracht-1" title="Link to this heading">#</a></h3>
+<p>Gegeven een stukje code, welke output verwacht je?</p>
 <p>a.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
 </div>
 <p>b.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;5&quot;</span>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;5&quot;</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+</div>
 <p>c.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+</div>
 <p>d.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;5&quot;</span>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;5&quot;</span>
 <span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;2&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>e. % staat voor modulo rekenen</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+</div>
+</div>
+<p>e. <code class="docutils literal notranslate"><span class="pre">%</span></code> staat voor modulo rekenen</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+</div>
 <p>f.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
 <span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>g. Er zijn twee manieren gegeven voor een deling, namelijk / en //. Zoek uit wat het verschil is om te bepalen wat de ouput is van onderstaand programma.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+</div>
+</div>
+<p>g. Er zijn twee manieren gegeven voor een deling, namelijk <code class="docutils literal notranslate"><span class="pre">/</span></code> en <code class="docutils literal notranslate"><span class="pre">//</span></code>. Zoek uit wat het verschil is om te bepalen wat de output is van onderstaand programma.</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">//</span> <span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+</div>
 </section>
 <section id="opdracht-2">
 <h3>Opdracht 2<a class="headerlink" href="#opdracht-2" title="Link to this heading">#</a></h3>
-<p>Waar kan dit programma gebruikt voor worden?</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">getal</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;geef een geheel getal&quot;</span><span class="p">))</span>
+<p>Waarvoor kan dit programma gebruikt worden?</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">getal</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Geef een geheel getal: &quot;</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">getal</span> <span class="o">*</span> <span class="n">getal</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+</div>
 </section>
 <section id="opdracht-3">
-<h3>opdracht 3<a class="headerlink" href="#opdracht-3" title="Link to this heading">#</a></h3>
+<h3>Opdracht 3<a class="headerlink" href="#opdracht-3" title="Link to this heading">#</a></h3>
 <p>Wat is het nadeel van onderstaande code?</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">getal_A</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Geef een geheel getal a: &quot;</span><span class="p">))</span>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">getal_A</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Geef een geheel getal a: &quot;</span><span class="p">))</span>
 <span class="n">getal_B</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Geef een geheel getal b: &quot;</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">getal_A</span> <span class="o">&gt;</span> <span class="n">getal_B</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+</div>
 </section>
-<section id="opdracht-4-wat-is-de-output">
-<h3>Opdracht 4:   Wat is de output?<a class="headerlink" href="#opdracht-4-wat-is-de-output" title="Link to this heading">#</a></h3>
+<section id="opdracht-4">
+<h3>Opdracht 4<a class="headerlink" href="#opdracht-4" title="Link to this heading">#</a></h3>
+<p>Wat is de output?</p>
 <p>a.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+
 <span class="k">if</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+</div>
 <p>b.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+
 <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+</div>
 <p>c.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+
 <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+</div>
 <p>d.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+
 <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
    <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="opdracht-5">
 <h3>Opdracht 5<a class="headerlink" href="#opdracht-5" title="Link to this heading">#</a></h3>
 <p>Wat is de output?</p>
 <p>a.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+
 <span class="k">if</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+</div>
 <p>b.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+
 <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+</div>
 <p>c.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+
 <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">b</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="opdracht-6">
 <h3>Opdracht 6<a class="headerlink" href="#opdracht-6" title="Link to this heading">#</a></h3>
 <p>Wat is de output?</p>
 <p>a.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">getal</span> <span class="o">=</span> <span class="mf">6.8</span>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">getal</span> <span class="o">=</span> <span class="mf">6.8</span>
+
 <span class="k">if</span> <span class="n">getal</span> <span class="o">&gt;</span> <span class="mf">7.5</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">getal</span> <span class="o">&gt;</span> <span class="mf">5.5</span><span class="p">:</span>
@@ -958,8 +1098,13 @@ else:
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hoi&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+</div>
 <p>b.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">getal</span> <span class="o">=</span> <span class="mf">8.2</span>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">getal</span> <span class="o">=</span> <span class="mf">8.2</span>
+
 <span class="k">if</span> <span class="n">getal</span> <span class="o">&lt;</span> <span class="mf">5.5</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;bonjour&quot;</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">getal</span> <span class="o">&lt;</span> <span class="mf">7.6</span><span class="p">:</span>
@@ -968,19 +1113,28 @@ else:
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+</div>
 <p>c.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">getal</span> <span class="o">=</span> <span class="mf">7.5</span>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">getal</span> <span class="o">=</span> <span class="mf">7.5</span>
+
 <span class="k">if</span> <span class="n">getal</span> <span class="o">&gt;=</span> <span class="mf">5.5</span> <span class="ow">and</span> <span class="n">getal</span> <span class="o">&lt;</span> <span class="mf">7.5</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hoi&quot;</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">getal</span> <span class="o">&gt;</span> <span class="mf">7.5</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;bonjour&quot;</span><span class="p">)</span>
-
 </pre></div>
 </div>
+</div>
+</div>
 <p>d.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">getal</span> <span class="o">=</span> <span class="mf">6.8</span>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">getal</span> <span class="o">=</span> <span class="mf">6.8</span>
+
 <span class="k">if</span> <span class="n">getal</span> <span class="o">&lt;</span> <span class="mf">5.5</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hoi&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
@@ -988,61 +1142,92 @@ else:
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;bonjour&quot;</span><span class="p">)</span>
-
 </pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="opdracht-7">
 <h3>Opdracht 7<a class="headerlink" href="#opdracht-7" title="Link to this heading">#</a></h3>
 <p>Wat is de output?</p>
 <p>a.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">42</span>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">42</span>
+
 <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span>
 <span class="k">elif</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">/</span> <span class="mi">2</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+</div>
 <p>b.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+
 <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span>
 <span class="k">elif</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">/</span> <span class="mi">2</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+</div>
 <p>c.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">6</span>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">6</span>
+
 <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span>
 <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">/</span> <span class="mi">2</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
 </div>
 <p>d.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">42</span>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">42</span>
+
 <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span>
 <span class="k">elif</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">5</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">/</span> <span class="mi">2</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+</div>
 <p>e.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+
 <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span>
 <span class="k">elif</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">5</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">/</span> <span class="mi">2</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
 </div>
 </section>
 </section>
@@ -1115,20 +1300,20 @@ else:
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#input-en-output">Input en output</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variabelen">Variabelen</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datatypes">Datatypes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-operatoren">Python operatoren</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operatoren">Operatoren</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#if-then-else">If then else</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#het-if-statement">Het if statement</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax">syntax</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#het-if-statement">Het if-statement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax">Syntax</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#het-if-else-statement">Het if-else statement</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-if-then-else-boom">De if-then-else boom</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maximum-probleem">Maximum probleem</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdrachten">Opdrachten</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-1">Opdracht 1.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-1">Opdracht 1</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2">Opdracht 2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3">opdracht 3</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-4-wat-is-de-output">Opdracht 4:   Wat is de output?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3">Opdracht 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-4">Opdracht 4</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-5">Opdracht 5</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-6">Opdracht 6</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-7">Opdracht 7</a></li>

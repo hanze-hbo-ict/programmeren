@@ -103,7 +103,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="canonical" href="https:///hanze-hbo-ict.github.io/programmeren/lectures/1a_intro_programmeren.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Zoeken" href="../search.html" />
-    <link rel="next" title="picobot" href="1b_picobot.html" />
+    <link rel="next" title="Picobot" href="1b_picobot.html" />
     <link rel="prev" title="Onderwerpen" href="../course/week_1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="nl"/>
@@ -231,13 +231,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Intro</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="0a_command-line.html">De terminal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="0b_install_python.html">Instaleren Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0b_install_python.html">Python installeren</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 1</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../course/week_1.html">Onderwerpen</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Wat is informatica</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1b_picobot.html">picobot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1b_picobot.html">Picobot</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_1.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -417,55 +417,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 
 
 
-<div class="dropdown dropdown-launch-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
-    <i class="fas fa-rocket"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://colab.research.google.com/github/hanze-hbo-ict/programmeren/blob/master/lectures/1a_intro_programmeren.ipynb" target="_blank"
-   class="btn btn-sm dropdown-item"
-   title="Launch on Colab"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  
-    <img alt="Colab logo" src="../_static/images/logo_colab.png">
-  </span>
-<span class="btn__text-container">Colab</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="initThebeSBT()"
-  class="btn btn-sm btn-launch-thebe dropdown-item"
-  title="Launch Thebe"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-play"></i>
-  </span>
-<span class="btn__text-container">Live Code</span>
-</button>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-
-
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -491,7 +442,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       
       
       
-      <li><a href="https://github.com/hanze-hbo-ict/programmeren/edit/master/lectures/1a_intro_programmeren.ipynb" target="_blank"
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/edit/master/lectures/1a_intro_programmeren.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -538,7 +489,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       
       
       
-      <li><a href="../_sources/lectures/1a_intro_programmeren.ipynb" target="_blank"
+      <li><a href="../_sources/lectures/1a_intro_programmeren.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download het bronbestand"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -548,7 +499,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -659,25 +610,25 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="wat-is-informatica">
 <h1>Wat is informatica<a class="headerlink" href="#wat-is-informatica" title="Link to this heading">#</a></h1>
-<p>Voordat we beginnen moeten we iets zeggen over informatica. Wat denk je dat informatica is?</p>
+<p>Voordat we beginnen, moeten we iets zeggen over informatica. Wat denk je dat informatica is?</p>
 <p>Veel mensen denken dat het <em>programmeren</em> of gewoon <em>leren coderen</em> is of dat het iets met computers is.</p>
-<p>Informatica is het verwerken van informatie. Gegeven een input, hoe verwerken we dat tot een gewenste uitput? Met andere woorden, het gaat om problemen oplossen. Programmeren is een belangrijk hulpmiddel om de computer de informatie te laten verwerken en tot de oplossing te komen. De truuk is om als programmeur de computer uit te gaan leggen hoe hij de data moet verwerken.</p>
+<p>Informatica is het verwerken van informatie. Gegeven een input, hoe verwerken we dat tot een gewenste output? Met andere woorden, het gaat om problemen oplossen. Programmeren is een belangrijk hulpmiddel om de computer de informatie te laten verwerken en tot de oplossing te komen. De truc is om als programmeur de computer uit te leggen hoe hij de data moet verwerken.</p>
 <section id="hoe-kan-een-probleem-worden-opgelost">
 <h2>Hoe kan een probleem worden opgelost?<a class="headerlink" href="#hoe-kan-een-probleem-worden-opgelost" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Kan je het probleem oplossen?</p></li>
-<li><p>Kan je een proces ontwerpen om dit soort problemen op te lossen?</p></li>
+<li><p>Kun je het probleem oplossen?</p></li>
+<li><p>Kun je een proces ontwerpen om dit soort problemen op te lossen?</p></li>
 </ul>
-<p>Het niet is verstandig dat als er een probleem opgelost moet worden om meteen te gaan programmeren. Probeer eerst het probleem op papier op te lossen met een klein voorbeeld. Welke stappen/instructies zijn er gebruikt om het probleem op te lossen? Dit wordt computational thinking genoemd. De vaardigheid om een set van instructies te ontwikkelen dat een gegeven probleem kan oplossen. Deze set van instucties om van A naar B te komen wordt een algoritme genoemd.</p>
+<p>Het is niet verstandig om, als er een probleem opgelost moet worden, meteen te gaan programmeren. Probeer eerst het probleem op papier op te lossen met een klein voorbeeld. Welke stappen/instructies zijn er gebruikt om het probleem op te lossen? Dit wordt computational thinking genoemd: de vaardigheid om een set van instructies te ontwikkelen dat een gegeven probleem kan oplossen. Deze set van instructies om van A naar B te komen wordt een algoritme genoemd.</p>
 </section>
 <section id="strategieen">
 <h2>Strategieën<a class="headerlink" href="#strategieen" title="Link to this heading">#</a></h2>
-<p>De strategie die gebruikt kan worden om een oplossing te vinden verschilt per probleem. De ene strategie past beter dan de ander, wat wel handig is om pen en papier te gebruiken. Hier zijn er een aantal:</p>
-<ul class="simple">
+<p>De strategie die gebruikt kan worden om een oplossing te vinden verschilt per probleem. De ene strategie past beter dan de ander, maar wat wel handig is, is om pen en papier te gebruiken. Hier zijn er een aantal:</p>
+<ol class="arabic simple">
 <li><p><em>Teken het probleem op papier</em>. Dit werkt vooral als je met ruimtelijke vragen bezig bent.</p></li>
-<li><p><em>Maak het probleem kleiner</em>. Bijvoorbeeld wordt er gevraagd om een methode te verzinnen om getallen te sorteren. Inplaats van het probleem op te lossen met 100 getallen, doe het eerst met twee getallen, daarna met drie, enz.</p></li>
-<li><p><em>Probeer alle opties uit</em>. Deze leent zich vooral als er niet teveel verschillende input zijn.</p></li>
-</ul>
+<li><p><em>Maak het probleem kleiner</em>. Bijvoorbeeld: wordt er gevraagd om een methode te verzinnen om getallen te sorteren? In plaats van het probleem op te lossen met 100 getallen, doe het eerst met twee getallen, daarna met drie, enz.</p></li>
+<li><p><em>Probeer alle opties uit</em>. Deze leent zich vooral als er niet teveel verschillende inputs zijn.</p></li>
+</ol>
 <section id="longest-common-subsequence-lcs">
 <h3>Longest Common Subsequence (LCS)<a class="headerlink" href="#longest-common-subsequence-lcs" title="Link to this heading">#</a></h3>
 <p>Het string-matching probleem in DND:</p>
@@ -685,15 +636,15 @@ document.write(`
 <li><p>‘CGCTGAGCTAGGCC…’</p></li>
 <li><p>‘ATCCTAGGTAACTG…’ (en <span class="math notranslate nohighlight">\(10^9\)</span> meer!)</p></li>
 </ul>
-<p>Wat is de langst <em>gemeenschappelijke opeenvolging</em> van karakters? In biologie is dit een werkelijk probleem waar het gaat om het vergelijken van DNA-sequenties.</p>
-<p>Inplaats van het probleem op te lossen op een  grote dataset is het vaak makkelijker om eerst een dataset te proberen op te lossen, Bijvoorbeeld twee woorden.</p>
+<p>Wat is de langst <em>gemeenschappelijke opeenvolging</em> van karakters? In biologie is dit een werkelijk probleem waar het gaat om het vergelijken van DNA-sequenties. Een subsequence is een reeks karakters die in dezelfde volgorde voorkomen in beide strings, maar niet noodzakelijk aaneengesloten.</p>
+<p>In plaats van het probleem op te lossen op een grote dataset is het vaak makkelijker om eerst een kleinere dataset te proberen op te lossen. Bijvoorbeeld twee woorden:</p>
 <ul class="simple">
 <li><p>‘HUMAN’</p></li>
 <li><p>‘CHIMPANZEE’</p></li>
 </ul>
-<p>Je zult redelijk snel zien dat ‘AN’ de langst gemeenschappelijke opeenvolging van karakters is. Dit is de eerste stap van het oplossen van een probleem; De probeer fase.</p>
-<p>Welke stappen heb je gebruikt om tot een oplossing te komen? Zijn deze stappen ook toe te passen op een opeenvolging van 3 miljard karakters? Dit is de plan fase waarin het algoritme wordt ontworpen.</p>
-<p>Zodra er een algoritme is ontworpen kan het geprogrammeerd worden. Dat is dan de programmeer fase.</p>
+<p>Je zult redelijk snel zien dat ‘HAN’ de langst gemeenschappelijke opeenvolging van karakters is. Dit is de eerste stap van het oplossen van een probleem: de probeerfase.</p>
+<p>Welke stappen heb je gebruikt om tot een oplossing te komen? Zijn deze stappen ook toe te passen op een opeenvolging van 3 miljard karakters? Dit is de planfase waarin het algoritme wordt ontworpen.</p>
+<p>Zodra er een algoritme is ontworpen kan het geprogrammeerd worden. Dat is dan de programmeerfase.</p>
 </section>
 </section>
 <section id="beslissingsboom">
@@ -702,63 +653,64 @@ document.write(`
 <p><img alt="Beslisboom" src="../_images/beslisboom.gif" /></p>
 <p>Dit is het algoritme van Euclides wat gebruikt kan worden om de grootste gemene deler tussen twee getallen te bepalen. Euclides had ontdekt dat via een paar instructies altijd te berekenen is:</p>
 <ol class="arabic simple">
-<li><p>Noem het grootste van de beide getallen <span class="math notranslate nohighlight">\(m\)</span>, het andere <span class="math notranslate nohighlight">\(n\)</span>.</p></li>
-<li><p>Deel <span class="math notranslate nohighlight">\(m\)</span> door <span class="math notranslate nohighlight">\(n\)</span>, bereken hoeveel je overhoudt en noem dat <span class="math notranslate nohighlight">\(r\)</span>.</p></li>
-<li><p>Wanneer er 0 over blijft zijn we klaar, en is <span class="math notranslate nohighlight">\(n\)</span> de ggd.</p></li>
-<li><p>Zo niet, herhaal dan het algoritme met <span class="math notranslate nohighlight">\(n\)</span> en <span class="math notranslate nohighlight">\(r\)</span>.</p></li>
+<li><p>Noem het grootste van de beide getallen <em>m</em>, het andere <em>n</em>.</p></li>
+<li><p>Deel <em>m</em> door <em>n</em>, bereken hoeveel je overhoudt en noem dat <em>r</em>.</p></li>
+<li><p>Wanneer er 0 over blijft zijn we klaar, en is <em>n</em> de ggd.</p></li>
+<li><p>Zo niet, herhaal dan het algoritme met <em>n</em> en <em>r</em>.</p></li>
 </ol>
 <p>Met het algoritme van Euclides kan dus de ggd van 900 en 1140 berekend worden.
-Stel dat <span class="math notranslate nohighlight">\(m\)</span> 1140 is en <span class="math notranslate nohighlight">\(n\)</span> 900,</p>
+Stel dat <em>m</em> 1140 is en <em>n</em> 900,</p>
 <p><span class="math notranslate nohighlight">\( 1140 = 1 * 900 + 240 \)</span></p>
-<p>De rest is 240, wat niet gelijk is aan 0 en dus moet er verder gerekend worden. Deze keer is <span class="math notranslate nohighlight">\(m\)</span> gelijk aan 900 en <span class="math notranslate nohighlight">\(n\)</span> gelijk aan 240.</p>
+<p>De rest is 240, wat niet gelijk is aan 0 en dus moet er verder gerekend worden. Deze keer is <em>m</em> gelijk aan 900 en <em>n</em> gelijk aan 240.</p>
 <p><span class="math notranslate nohighlight">\( 900 = 3 * 240 + 180 \)</span></p>
-<p>De rest is 180, wat niet gelijk is aan 0 en dus moet er verder gerekend worden. Deze keer is <span class="math notranslate nohighlight">\(m\)</span> gelijk aan 240 en <span class="math notranslate nohighlight">\(n\)</span> gelijk aan 180.</p>
+<p>De rest is 180, wat niet gelijk is aan 0 en dus moet er verder gerekend worden. Deze keer is <em>m</em> gelijk aan 240 en <em>n</em> gelijk aan 180.</p>
 <p><span class="math notranslate nohighlight">\( 240 = 1 * 180 + 60 \)</span></p>
-<p>De rest is 60, wat niet gelijk is aan 0 en dus moet er verder gerekend worden. Deze keer is <span class="math notranslate nohighlight">\(m\)</span> gelijk aan 180 en <span class="math notranslate nohighlight">\(n\)</span> gelijk aan 60.</p>
+<p>De rest is 60, wat niet gelijk is aan 0 en dus moet er verder gerekend worden. Deze keer is <em>m</em> gelijk aan 180 en <em>n</em> gelijk aan 60.</p>
 <p><span class="math notranslate nohighlight">\( 180 = 3 * 60 + 0 \)</span></p>
 <p>Nu is de rest 0, en daarmee zijn we aan het einde gekomen. We hebben bepaald dat 60 de grootste gemene deler van 900 en 1140 is.</p>
 </section>
 <section id="state-machine">
 <h2>State Machine<a class="headerlink" href="#state-machine" title="Link to this heading">#</a></h2>
 <p>Een andere methode voor het ontwerpen van programma’s is het gebruik van een state machine. Deze manier leent zich er vooral voor om een probleem in kleinere problemen op te breken. Een state machine bestaat uit verschillende states (een staat, of situatie) en heeft altijd een <em>begin</em> en <em>eind</em> state. Tussen de states zijn overgangen die aangeven wanneer er van state verandert wordt.</p>
-<p>Neem bijvoorbeeld de spookjes van Pacman. Zodra het spel begint zoeken ze naar Pacman en als ze hem zien gaan ze achter hem aan. Als Pacman een Powerpallet pakt moeten de spookjes juist vluchten. Dit idee kan afgebeeld worden in een state machine.</p>
+<p>Neem bijvoorbeeld de spoken van Pac-Man. Zodra het spel begint zoeken ze naar Pac-Man en als ze hem zien gaan ze achter hem aan. Als Pac-Man een Power Pellet pakt moeten de spoken juist vluchten. Dit idee kan afgebeeld worden in een state machine.</p>
 <p><img alt="State Machine" src="../_images/pacmanStates.png" /></p>
-<p>Na het ontwerpen van een de state machine kan er nagedacht worden over hoe de afzonderlijke problemen opgelost kunnen worden en dit kan weer gedaan worden met een belissisingsboom.</p>
+<p>Na het ontwerpen van een de state machine kan er nagedacht worden over hoe de afzonderlijke problemen opgelost kunnen worden en dit kan weer gedaan worden met een beslissingsboom.</p>
 </section>
 <section id="p-s">
 <h2>3 p’s<a class="headerlink" href="#p-s" title="Link to this heading">#</a></h2>
 <p>De drie p’s van het programmeren:</p>
-<ul class="simple">
+<ol class="arabic simple">
 <li><p><strong>Probeer</strong>: Probeer het probleem op te lossen in gedachten of op papier.</p></li>
 <li><p><strong>Plan</strong>: Noteer de stappen die zijn gebruikt om het probleem op te lossen.</p></li>
 <li><p><strong>Programmeer</strong>: Vertaal de stappen naar een programmeertaal.</p></li>
-</ul>
+</ol>
 </section>
 <section id="opdrachten">
 <h2>Opdrachten<a class="headerlink" href="#opdrachten" title="Link to this heading">#</a></h2>
+<p>Deze opdrachten zijn ontworpen om je te helpen denken als een informaticus. Door strategieën te ontwikkelen voor deze spellen, oefen je met het soort probleemoplossend denken dat essentieel is in de informatica.</p>
 <section id="opdracht-1-nim">
 <h3>Opdracht 1 : Nim<a class="headerlink" href="#opdracht-1-nim" title="Link to this heading">#</a></h3>
-<p><img alt="Nim 16 lucifers" src="lectures/images/1/nimGame.png" /></p>
+<p><img alt="Nim 16 lucifers" src="../_images/NimGame.png" /></p>
 <p>Nim is een spel voor twee spelers. Er liggen 16 lucifers op tafel. Om de beurt pakt een speler 1, 2 of 3 lucifers. Degene die de laatste lucifer van tafel pakt heeft gewonnen. Als de speler die als tweede begint de juiste strategie gebruikt kan hij/zij altijd winnen.</p>
 <ul class="simple">
-<li><p><strong>Stap 1: Proberen.</strong> Ga op  uitzoeken welke strategie speler 2 moet gebruiken om altijd te winnen.</p></li>
+<li><p><strong>Stap 1: Proberen.</strong> Ga uitzoeken welke strategie speler 2 moet gebruiken om altijd te winnen.</p></li>
 <li><p><strong>Stap 2: Plan.</strong> Maak een beslissingsboom voor speler 2.</p></li>
 </ul>
 </section>
 <section id="opdracht-2-nim-variant">
 <h3>Opdracht 2 : Nim variant<a class="headerlink" href="#opdracht-2-nim-variant" title="Link to this heading">#</a></h3>
-<p>Leg 3 groepjes lucifers op tafel. Hoeveel lucifers er in elke groep ligt, dat maakt niet uit. Om de beurt pakt een speler 1, 2 of 3 lucifers <strong>uit dezelfe groep</strong>. Degene die de laatste lucifer van tafel pakt heeft gewonnen. Ook nu kan met de juiste strategie speler 2 altijd winnen</p>
+<p>Leg 3 groepjes lucifers op tafel. Hoeveel lucifers er in elke groep ligt, dat maakt niet uit. Om de beurt pakt een speler 1, 2 of 3 lucifers <strong>uit dezelfde groep</strong>. Degene die de laatste lucifer van tafel pakt heeft gewonnen. Ook nu kan met de juiste strategie speler 2 altijd winnen.</p>
 <ul class="simple">
-<li><p><strong>Stap 1: Proberen.</strong> Ga op  uitzoeken welke strategie speler 2 moet gebruiken om altijd te winnen.</p></li>
+<li><p><strong>Stap 1: Proberen.</strong> Ga uitzoeken welke strategie speler 2 moet gebruiken om altijd te winnen.</p></li>
 <li><p><strong>Stap 2: Plan.</strong> Maak een beslissingsboom voor speler 2.</p></li>
 </ul>
 </section>
 <section id="opdracht-3-sos">
 <h3>Opdracht 3: SOS<a class="headerlink" href="#opdracht-3-sos" title="Link to this heading">#</a></h3>
-<p>SOS is ook een spel voor twee spelers. Het speelveld is een rij van 100 vakjes. Om de beurt plaats een speler de letter ‘S’ of de letter “O” in een vakje. De spelers kiezen zelf welk vakje en welke letter. Het spel is voorbij zodra er ‘SOS’ gespeld is op het bord. Wie de laatste letter heeft neergezet wint, ongeacht wie de andere twee letters van het woord ‘SOS’ heeft geplaatst.
+<p>SOS is ook een spel voor twee spelers. Het speelveld is een rij van 100 vakjes. Om de beurt plaatst een speler de letter ‘S’ of de letter “O” in een vakje. De spelers kiezen zelf welk vakje en welke letter. Het spel is voorbij zodra er ‘SOS’ gespeld is op het bord. Wie de laatste letter heeft neergezet wint, ongeacht wie de andere twee letters van het woord ‘SOS’ heeft geplaatst.
 Ook hier geldt dat speler 2 met de juiste strategie altijd wint.</p>
 <ul class="simple">
-<li><p><strong>Stap 1: Proberen.</strong> Ga op  uitzoeken welke strategie speler 2 moet gebruiken om altijd te winnen.</p></li>
+<li><p><strong>Stap 1: Proberen.</strong> Ga uitzoeken welke strategie speler 2 moet gebruiken om altijd te winnen.</p></li>
 <li><p><strong>Stap 2: Plan.</strong> Maak een beslissingsboom voor speler 2.</p></li>
 </ul>
 </section>
@@ -809,7 +761,7 @@ Ook hier geldt dat speler 2 met de juiste strategie altijd wint.</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">volgende</p>
-        <p class="prev-next-title">picobot</p>
+        <p class="prev-next-title">Picobot</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

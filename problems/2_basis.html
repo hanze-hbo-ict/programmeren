@@ -231,13 +231,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Intro</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../lectures/0a_command-line.html">De terminal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lectures/0b_install_python.html">Instaleren Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lectures/0b_install_python.html">Python installeren</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 1</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_1.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../lectures/1a_intro_programmeren.html">Wat is informatica</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lectures/1b_picobot.html">picobot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/1b_picobot.html">Picobot</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_1.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -417,6 +417,55 @@ commentsRunWhenDOMLoaded(addUtterances);
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/hanze-hbo-ict/programmeren/blob/master/problems/2_basis.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -442,7 +491,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       
       
       
-      <li><a href="https://github.com/hanze-hbo-ict/programmeren/edit/master/problems/2_basis.md" target="_blank"
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/edit/master/problems/2_basis.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -489,7 +538,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       
       
       
-      <li><a href="../_sources/problems/2_basis.md" target="_blank"
+      <li><a href="../_sources/problems/2_basis.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download het bronbestand"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -499,7 +548,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -583,7 +632,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formules-en-vars">Formules en Vars</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formules-en-variabelen">Formules en variabelen</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-1">Opdracht 1</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2">Opdracht 2</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3">Opdracht 3</a></li>
@@ -607,53 +656,102 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="basis">
 <h1>Basis<a class="headerlink" href="#basis" title="Link to this heading">#</a></h1>
-<section id="formules-en-vars">
-<h2>Formules en Vars<a class="headerlink" href="#formules-en-vars" title="Link to this heading">#</a></h2>
-<p>Leerdoel: Berekening maken met variabelen</p>
+<section id="formules-en-variabelen">
+<h2>Formules en variabelen<a class="headerlink" href="#formules-en-variabelen" title="Link to this heading">#</a></h2>
+<p>Rekenen met variabelen.</p>
 <section id="opdracht-1">
 <h3>Opdracht 1<a class="headerlink" href="#opdracht-1" title="Link to this heading">#</a></h3>
-<p><strong>1a.</strong>
-Een klusjesman, Handige Harry, rekent een start/voorrijtarief van 60 Euro en per uur een tarief van 40 Euro. Schrijf een programma dat de volgende stappen doet:</p>
+<p><strong>1a</strong></p>
+<p>Een klusjesman, Handige Harry, rekent startkosten/voorrijkosten van €60 en een uurtarief van €40. Schrijf een programma dat de volgende stappen doet:</p>
 <ol class="arabic simple">
-<li><p>Vraagt de gebruiker om input, dit omzet tot een integer en het resultaat opslaat in aan variable genaamd <code class="docutils literal notranslate"><span class="pre">uren</span></code>.</p></li>
-<li><p>Een bereking uitvoert om uit te rekenen hoeveel geld Harry krijgt en het resultaat opslaat in een variabele genaamd <code class="docutils literal notranslate"><span class="pre">rekening</span></code></p></li>
-<li><p>Print het resultaat uit.</p></li>
+<li><p>Vraagt de gebruiker om input, dit omzet tot een integer en het resultaat opslaat in een variabele genaamd <code class="docutils literal notranslate"><span class="pre">uren</span></code>.</p></li>
+<li><p>Een berekening uitvoert om uit te rekenen hoeveel geld Harry krijgt en het resultaat opslaat in een variabele genaamd <code class="docutils literal notranslate"><span class="pre">rekening</span></code>.</p></li>
+<li><p>Print het resultaat.</p></li>
 </ol>
-<p><strong>1b.</strong>
-Harry heeft een aanbieding lopen, namelijk dat als de klant meer dan 400 euro kwijt is, dan krijgt de klant 10% korting. Pas het programma bij a zo aan dat het ook de korting wordt meerekent, als de klant daar recht op heeft.</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># jouw oplossing</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>1b</strong></p>
+<p>Harry heeft een aanbieding lopen: als de klant meer dan €400 moet betalen, dan krijgt de klant 10% korting. Pas het programma bij a zo aan dat ook de korting wordt meeberekend, als de klant daar recht op heeft.</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># jouw oplossing</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="opdracht-2">
 <h3>Opdracht 2<a class="headerlink" href="#opdracht-2" title="Link to this heading">#</a></h3>
 <p>Tentamencijfers worden vaak berekend aan de hand van een formule:</p>
-<p>punten/max_punten * 9 + 1 = cijfer</p>
-<p>Schrijf een programma dat de gebruiker 2 keer om input vraagt; namelijk hoeveel punten er is gehaald voor de toets en hoeveel punten er maximaal te halen is. Vervolgens berekend het programma het cijfer en print dat uit.</p>
+<p>punten / max_punten * 9 + 1 = cijfer</p>
+<p>Schrijf een programma dat de gebruiker 2 keer om input vraagt; namelijk hoeveel punten er zijn gehaald voor de toets en hoeveel punten er maximaal te behalen zijn. Vervolgens berekent het programma het cijfer en print dat uit.</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># jouw oplossing</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="opdracht-3">
 <h3>Opdracht 3<a class="headerlink" href="#opdracht-3" title="Link to this heading">#</a></h3>
-<p><strong>3a</strong>
-Schrijf een programma dat de gebruiker 2 keer om input vraagt;namelijk wat de temperatuur is en of dat in fahrenheit is of in Celsius. Als het in fahrenheit is rekent het programma uit wat dat in Celsius is en andersom. De formule om van Celsius naar Fahrenheit te komen is <span class="math notranslate nohighlight">\( (Celsius×95)+32 = Fahrenheit \)</span></p>
-<p><strong>3b</strong>
-Naast Fahrenheit en Celsius is er ook Kelvin. De formule van Kelvin is <span class="math notranslate nohighlight">\( Celsius + 237.15 = Kelvin \)</span> . Pas het programma bij a zo aan dat als de gebruiker aangeeft dat de temperatuur in Kelvin is dat het programma de temperatuur in Celsius en in Fahrenheit uitprint. Als het Celsius is ,dan print het programma Kelvin en Fahrenheit uit. Als het fahrenheit is, dan print het programma Celsius en Kelvin uit.</p>
-<p>Temp?: 20<br />
-Schaal?: Celsius<br />
-Fahrenheit = 68<br />
-Kelvin = 239.15</p>
-<p>Temp?: 20<br />
-Schaal?: Fahrenheit<br />
-Celsius = -6.67<br />
-Kelvin = 266.48</p>
+<p><strong>3a</strong></p>
+<p>Schrijf een programma dat de gebruiker 2 keer om input vraagt; namelijk wat de temperatuur is en of dat in Fahrenheit is of in Celsius. Als het in Fahrenheit is, rekent het programma uit wat dat in Celsius is en andersom. De formule om van Celsius naar Fahrenheit te komen is:</p>
+<div class="math notranslate nohighlight">
+\[(Celsius \times \frac{9}{5}) + 32 = Fahrenheit\]</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># jouw oplossing</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>3b</strong></p>
+<p>Naast Fahrenheit en Celsius is er ook graden Kelvin. De formule voor de omzetting van graden Celsius naar Kelvin is als volgt:</p>
+<div class="math notranslate nohighlight">
+\[Celsius + 273.15 = Kelvin \]</div>
+<p>Pas het programma bij <strong>a</strong> zodanig aan dat:</p>
+<ul class="simple">
+<li><p>Als de gebruiker aangeeft dat de temperatuur in Kelvin is, het programma de temperatuur in Celsius en in Fahrenheit uitprint.</p></li>
+<li><p>Als het Celsius is, dan print het programma Kelvin en Fahrenheit uit.</p></li>
+<li><p>Als het Fahrenheit is, dan print het programma Celsius en Kelvin uit.</p></li>
+</ul>
+<p>Voorbeeld output:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Temperatuur?: 20
+Schaal?: Celsius
+Fahrenheit = 68
+Kelvin = 293.15
+
+Temperatuur?: 20
+Schaal?: Fahrenheit
+Celsius = -6.67
+Kelvin = 266.48
+</pre></div>
+</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># jouw oplossing</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 <section id="interactieve-fictie">
 <h2>Interactieve fictie<a class="headerlink" href="#interactieve-fictie" title="Link to this heading">#</a></h2>
-<p>Leerdoel: Programma schrijven met conditionele statements</p>
+<p>Een programma schrijven met conditionele statements.</p>
 <p>In deze opgave ga je interactieve fictie in Python schrijven, en met <em>interactieve</em> fictie bedoelen we een <em>kies-je-eigen-avontuur</em> programma!</p>
 <section id="een-begin">
 <h3>Een begin<a class="headerlink" href="#een-begin" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Titel voor je avontuur: De queeste naar taart.</span>
 
-<span class="sd">Opmerkingen over hoe je het avontuuur kan &quot;winnen&quot; of &quot;verliezen&quot;:</span>
+<span class="sd">Opmerkingen over hoe je het avontuur kan &quot;winnen&quot; of &quot;verliezen&quot;:</span>
 <span class="sd">* kies de tafel om te winnen</span>
 <span class="sd">* kies de deur om te verliezen</span>
 <span class="sd">&quot;&quot;&quot;</span>
@@ -732,8 +830,8 @@ Kelvin = 266.48</p>
 </div>
 <div class="info admonition">
 <p class="admonition-title">Nieuwe regel</p>
-<p>Het zal je opvallen dat <code class="docutils literal notranslate"><span class="pre">print()</span></code> (ongeacht het argument, bijvoorbeeld jouw tekst) altijd een nieuwe regel start. Dit gebeurt omdat standaard de karaktercombinatie <code class="docutils literal notranslate"><span class="pre">'\n'</span></code> aan de uitvoer wordt toevoegd. <code class="docutils literal notranslate"><span class="pre">'\n'</span></code> staat voor “newline” (nieuwe regel) en kent zelfs een hele <a class="reference external" href="https://en.wikipedia.org/wiki/Newline">geschiedenis</a> (inclusief de oudewetse typemachine, en het wordt zeker niet alleen in Python gebruikt!).</p>
-<p>Kan je in het voorbeeldverhaal het gebruik van <code class="docutils literal notranslate"><span class="pre">'\n'</span></code> ontdekken, en zou je dit misschien straks in jouw verhaal op een slimme manier kunnen gebruiken?</p>
+<p>Het zal je opvallen dat <code class="docutils literal notranslate"><span class="pre">print()</span></code> (ongeacht het argument, bijvoorbeeld jouw tekst) altijd een nieuwe regel start. Dit gebeurt omdat standaard de karaktercombinatie <code class="docutils literal notranslate"><span class="pre">'\n'</span></code> aan de uitvoer wordt toevoegd. <code class="docutils literal notranslate"><span class="pre">'\n'</span></code> staat voor “newline” (nieuwe regel) en kent zelfs een hele <a class="reference external" href="https://en.wikipedia.org/wiki/Newline">geschiedenis</a> (inclusief de ouderwetse typemachine, en het wordt zeker niet alleen in Python gebruikt!).</p>
+<p>Kun je in het voorbeeldverhaal het gebruik van <code class="docutils literal notranslate"><span class="pre">'\n'</span></code> ontdekken, en zou je dit misschien straks in jouw verhaal op een slimme manier kunnen gebruiken?</p>
 </div>
 </section>
 <section id="opdracht">
@@ -763,6 +861,13 @@ Kelvin = 266.48</p>
 <p>Wees verder ook bewust van de tijd die je aan deze opdracht besteedt, het is gemakkelijk om de tijd te verliezen. Het schrijven van het taartavontuur duurde ons al veel langer dan we oorspronkelijk hadden gedacht en het telt slechts <em>twee</em> controlestructuren!</p>
 </div>
 <p>Veel plezier met avonturieren!</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># jouw oplossing</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 </section>
@@ -831,7 +936,7 @@ Kelvin = 266.48</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formules-en-vars">Formules en Vars</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formules-en-variabelen">Formules en variabelen</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-1">Opdracht 1</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2">Opdracht 2</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3">Opdracht 3</a></li>

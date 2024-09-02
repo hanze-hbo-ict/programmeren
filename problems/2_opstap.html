@@ -229,13 +229,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Intro</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../lectures/0a_command-line.html">De terminal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lectures/0b_install_python.html">Instaleren Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lectures/0b_install_python.html">Python installeren</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 1</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_1.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../lectures/1a_intro_programmeren.html">Wat is informatica</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lectures/1b_picobot.html">picobot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/1b_picobot.html">Picobot</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_1.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -415,6 +415,55 @@ commentsRunWhenDOMLoaded(addUtterances);
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/hanze-hbo-ict/programmeren/blob/master/problems/2_opstap.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -440,7 +489,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       
       
       
-      <li><a href="https://github.com/hanze-hbo-ict/programmeren/edit/master/problems/2_opstap.md" target="_blank"
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/edit/master/problems/2_opstap.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -487,7 +536,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       
       
       
-      <li><a href="../_sources/problems/2_opstap.md" target="_blank"
+      <li><a href="../_sources/problems/2_opstap.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download het bronbestand"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -497,7 +546,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -581,20 +630,42 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax-van-conditionele-statements">Syntax van conditionele statements</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht">Opdracht</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditionele-statements">Conditionele statements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-1-a">Opgave 1-A</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-1-b">Opgave 1-B</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-1-c">Opgave 1-C</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-1-d">Opgave 1-D</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-1-e">Opgave 1-E</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-1-f">Opgave 1-F</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-1-g">Opgave 1-G</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-1-h">Opgave 1-H</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-1-i">Opgave 1-I</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-1-j">Opgave 1-J</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax-van-strings">Syntax van strings</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-1">Opdracht 1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2">Opdracht 2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3">Opdracht 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-en-lists">Strings en lists</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-2-a">Opgave 2-A</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-2-b">Opgave 2-B</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-2-c">Opgave 2-C</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-2-d">Opgave 2-D</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-2-e">Opgave 2-E</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-2-f">Opgave 2-F</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-2-g">Opgave 2-G</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-2-h">Opgave 2-H</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-2-i">Opgave 2-I</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-4">Opdracht 4</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-5">Opdracht 5</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging">Debugging</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave">Opgave</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#debuggen">Debuggen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave">Opgave</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#uitwerking-3-a">Uitwerking 3-A</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#uitwerking-3-b">Uitwerking 3-B</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#uitwerking-3-c">Uitwerking 3-C</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#uitwerking-3-d">Uitwerking 3-D</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#uitwerking-3-e">Uitwerking 3-E</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#uitwerking-3-f">Uitwerking 3-F</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#uitwerking-3-g">Uitwerking 3-G</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -610,41 +681,65 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="opstap">
 <h1>Opstap<a class="headerlink" href="#opstap" title="Link to this heading">#</a></h1>
-<section id="syntax-van-conditionele-statements">
-<h2>Syntax van conditionele statements<a class="headerlink" href="#syntax-van-conditionele-statements" title="Link to this heading">#</a></h2>
-<p>Leerdoel: Lezen van conditionele statements in python</p>
-<section id="opdracht">
-<h3>Opdracht<a class="headerlink" href="#opdracht" title="Link to this heading">#</a></h3>
-<p>In deze opdracht is het vooral de bedoeling om te bepalen wat de output is van de code. Test je antwoorden met behulp van de <a class="reference external" href="https://pythontutor.com/visualize.html#mode=edit">python tutor</a>.</p>
+<p>In de volgende opgaven ga je oefenen met <em>conditionele statements</em>, <em>strings</em> en <em>lijsten</em> in Python. Ook ga je oefenen met het vinden van fouten (<em>bugs</em>) in code.</p>
+<section id="conditionele-statements">
+<h2>Conditionele statements<a class="headerlink" href="#conditionele-statements" title="Link to this heading">#</a></h2>
+<p>Het lezen en begrijpen van conditionele statements in Python.</p>
+<p>In de volgende opgaven is het vooral de bedoeling te kunnen bepalen wat de output is van de code. Test je antwoorden met behulp van <a class="reference external" href="https://pythontutor.com/visualize.html#mode=edit">Python Tutor</a> of open de opgave in <a class="reference external" href="https://colab.research.google.com/">Google Colab</a>.</p>
+<section id="opgave-1-a">
+<h3>Opgave 1-A<a class="headerlink" href="#opgave-1-a" title="Link to this heading">#</a></h3>
 <p>Wat is de output?</p>
-<p>a.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">8</span>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">8</span>
+
 <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;if statement is True&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;staat buiten de if statement&quot;</span><span class="p">)</span>
-
 </pre></div>
 </div>
-<p>b.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">8</span>
+</div>
+</div>
+</section>
+<section id="opgave-1-b">
+<h3>Opgave 1-B<a class="headerlink" href="#opgave-1-b" title="Link to this heading">#</a></h3>
+<p>Wat is de output?</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">8</span>
+
 <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">5</span> <span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;if statement is True&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;staat buiten de if statement&quot;</span><span class="p">)</span>
-
 </pre></div>
 </div>
-<p>c.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">8</span>
+</div>
+</div>
+</section>
+<section id="opgave-1-c">
+<h3>Opgave 1-C<a class="headerlink" href="#opgave-1-c" title="Link to this heading">#</a></h3>
+<p>Wat is de output?</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">8</span>
+
 <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">5</span> <span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;if statement is True&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;if statement is false&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;staat buiten de if-else statement&quot;</span><span class="p">)</span>
-
 </pre></div>
 </div>
-<p>d.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+</div>
+</div>
+</section>
+<section id="opgave-1-d">
+<h3>Opgave 1-D<a class="headerlink" href="#opgave-1-d" title="Link to this heading">#</a></h3>
+<p>Wat is de output?</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+
 <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">5</span> <span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;if statement is True&quot;</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
@@ -653,8 +748,15 @@ document.write(`
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;zowel de if en elif statements zijn false&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>e.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="mf">23.0</span>
+</div>
+</div>
+</section>
+<section id="opgave-1-e">
+<h3>Opgave 1-E<a class="headerlink" href="#opgave-1-e" title="Link to this heading">#</a></h3>
+<p>Wat is de output?</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="mf">23.0</span>
 
 <span class="k">if</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">35.0</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Heet!&quot;</span><span class="p">)</span>
@@ -666,8 +768,15 @@ document.write(`
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Brrr!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>f.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="mf">15.0</span>
+</div>
+</div>
+</section>
+<section id="opgave-1-f">
+<h3>Opgave 1-F<a class="headerlink" href="#opgave-1-f" title="Link to this heading">#</a></h3>
+<p>Wat is de output?</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="mf">15.0</span>
 
 <span class="k">if</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">35.0</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Heet!&quot;</span><span class="p">)</span>
@@ -681,8 +790,16 @@ document.write(`
             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Brrr!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>g.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+</div>
+</div>
+</section>
+<section id="opgave-1-g">
+<h3>Opgave 1-G<a class="headerlink" href="#opgave-1-g" title="Link to this heading">#</a></h3>
+<p>Wat is de output?</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+
 <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">5</span> <span class="p">:</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">3</span>
 <span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
@@ -690,19 +807,35 @@ document.write(`
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>h.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">4</span>
+</div>
+</div>
+</section>
+<section id="opgave-1-h">
+<h3>Opgave 1-H<a class="headerlink" href="#opgave-1-h" title="Link to this heading">#</a></h3>
+<p>Wat is de output?</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">4</span>
+
 <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">5</span> <span class="p">:</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">3</span>
 <span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">3</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>i.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">naam</span> <span class="o">=</span> <span class="s2">&quot;Suzan&quot;</span>
+</div>
+</div>
+</section>
+<section id="opgave-1-i">
+<h3>Opgave 1-I<a class="headerlink" href="#opgave-1-i" title="Link to this heading">#</a></h3>
+<p>Wat is de output?</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">naam</span> <span class="o">=</span> <span class="s2">&quot;Suzan&quot;</span>
 <span class="k">if</span> <span class="n">naam</span> <span class="o">&lt;=</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;groep 1&quot;</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">naam</span> <span class="o">&lt;=</span> <span class="s1">&#39;J&#39;</span><span class="p">:</span>
@@ -715,8 +848,15 @@ document.write(`
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;groep 5&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>j.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">naam</span> <span class="o">=</span> <span class="s2">&quot;Emily&quot;</span>
+</div>
+</div>
+</section>
+<section id="opgave-1-j">
+<h3>Opgave 1-J<a class="headerlink" href="#opgave-1-j" title="Link to this heading">#</a></h3>
+<p>Wat is de output?</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">naam</span> <span class="o">=</span> <span class="s2">&quot;Emily&quot;</span>
 <span class="k">if</span> <span class="n">naam</span>  <span class="o">&lt;=</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;groep 1&quot;</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">naam</span>  <span class="o">&lt;=</span> <span class="s1">&#39;J&#39;</span><span class="p">:</span>
@@ -729,55 +869,95 @@ document.write(`
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;groep 5&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+</div>
 </section>
 </section>
-<section id="syntax-van-strings">
-<h2>Syntax van strings<a class="headerlink" href="#syntax-van-strings" title="Link to this heading">#</a></h2>
-<p>Leerdoel: Syntax omrent het gebruik van strings en lijsten in Python</p>
-<section id="opdracht-1">
-<h3>Opdracht 1<a class="headerlink" href="#opdracht-1" title="Link to this heading">#</a></h3>
-<p>Wat is de output ?</p>
-<p>a.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;123&quot;</span>
+<section id="strings-en-lists">
+<h2>Strings en lists<a class="headerlink" href="#strings-en-lists" title="Link to this heading">#</a></h2>
+<p>Het lezen en begrijpen van werken met strings en lists in Python.</p>
+<section id="opgave-2-a">
+<h3>Opgave 2-A<a class="headerlink" href="#opgave-2-a" title="Link to this heading">#</a></h3>
+<p>Wat is de output?</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;123&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">a</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>b.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;hanze&quot;</span>
+</div>
+</div>
+</section>
+<section id="opgave-2-b">
+<h3>Opgave 2-B<a class="headerlink" href="#opgave-2-b" title="Link to this heading">#</a></h3>
+<p>Wat is de output?</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;hanze&quot;</span>
 <span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;Hogeschool&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>c.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">123</span>
+</div>
+</div>
+</section>
+<section id="opgave-2-c">
+<h3>Opgave 2-C<a class="headerlink" href="#opgave-2-c" title="Link to this heading">#</a></h3>
+<p>Wat is de output?</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">123</span>
 <span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;456&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>d.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
-<span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
+</div>
+</div>
+</section>
+<section id="opgave-2-d">
+<h3>Opgave 2-D<a class="headerlink" href="#opgave-2-d" title="Link to this heading">#</a></h3>
+<p>Wat is de output?</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+
 <span class="n">answer0</span> <span class="o">=</span> <span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
 <span class="n">answer1</span> <span class="o">=</span> <span class="n">c</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="n">answer0</span> <span class="o">*</span> <span class="n">answer1</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>e.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;computer&quot;</span>
+</div>
+</div>
+</section>
+<section id="opgave-2-e">
+<h3>Opgave 2-E<a class="headerlink" href="#opgave-2-e" title="Link to this heading">#</a></h3>
+<p>Wat is de output?</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;computer&quot;</span>
 <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;science&quot;</span>
 
 <span class="n">answer0</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">answer1</span> <span class="o">=</span> <span class="n">c</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">c</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">+</span> <span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">::</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">c</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="o">+</span> <span class="n">c</span><span class="p">[</span><span class="mi">6</span><span class="p">:])</span>
 </pre></div>
 </div>
+</div>
+</div>
 </section>
-<section id="opdracht-2">
-<h3>Opdracht 2<a class="headerlink" href="#opdracht-2" title="Link to this heading">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pi</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<section id="opgave-2-f">
+<h3>Opgave 2-F<a class="headerlink" href="#opgave-2-f" title="Link to this heading">#</a></h3>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pi</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
 
 <span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;pi&#39;</span><span class="p">,</span> <span class="s2">&quot;isn&#39;t&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">]]</span>
 </pre></div>
+</div>
+</div>
 </div>
 <ol class="arabic simple">
 <li><p>Wat is <code class="docutils literal notranslate"><span class="pre">len(pi)</span></code>?</p></li>
@@ -788,13 +968,17 @@ document.write(`
 <li><p>Welk puntje <code class="docutils literal notranslate"><span class="pre">pi</span></code> is <code class="docutils literal notranslate"><span class="pre">[3,4,5]</span></code>?</p></li>
 </ol>
 </section>
-<section id="opdracht-3">
-<h3>Opdracht 3<a class="headerlink" href="#opdracht-3" title="Link to this heading">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;pi&#39;</span><span class="p">,</span> <span class="s2">&quot;isn&#39;t&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">]]</span>
+<section id="opgave-2-g">
+<h3>Opgave 2-G<a class="headerlink" href="#opgave-2-g" title="Link to this heading">#</a></h3>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;pi&quot;</span><span class="p">,</span> <span class="s2">&quot;isn&#39;t&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
 
-<span class="n">M</span> <span class="o">=</span> <span class="s1">&#39;You need parentheses for chemistry !&#39;</span>
+<span class="n">M</span> <span class="o">=</span> <span class="s2">&quot;You need parentheses for chemistry !&quot;</span>
 <span class="c1">#    0   4   8   12  16  20  24  28  32</span>
 </pre></div>
+</div>
+</div>
 </div>
 <ol class="arabic simple">
 <li><p>Wat is <code class="docutils literal notranslate"><span class="pre">L[0]</span></code>?</p></li>
@@ -806,35 +990,40 @@ document.write(`
 <li><p>Welk puntje M is <code class="docutils literal notranslate"><span class="pre">'shoe'</span></code>?</p></li>
 </ol>
 </section>
-</section>
-<section id="opdracht-4">
-<h2>Opdracht 4<a class="headerlink" href="#opdracht-4" title="Link to this heading">#</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pi</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<section id="opgave-2-h">
+<h3>Opgave 2-H<a class="headerlink" href="#opgave-2-h" title="Link to this heading">#</a></h3>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pi</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
 </pre></div>
+</div>
+</div>
 </div>
 <ol class="arabic simple">
 <li><p>Wat is <code class="docutils literal notranslate"><span class="pre">pi[0]</span> <span class="pre">*</span> <span class="pre">(pi[1]</span> <span class="pre">+</span> <span class="pre">pi[2])</span></code>?</p></li>
 <li><p>Wat is <code class="docutils literal notranslate"><span class="pre">pi[0]</span> <span class="pre">*</span> <span class="pre">(pi[1:2]</span> <span class="pre">+</span> <span class="pre">pi[2:3])</span></code>?</p></li>
-<li><p>Hoe krijg je <code class="docutils literal notranslate"><span class="pre">[3,4,5,3,4,5,3,4,5]</span></code>?</p></li>
+<li><p>Hoe krijg je <code class="docutils literal notranslate"><span class="pre">[3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5]</span></code>?</p></li>
 </ol>
 </section>
-<section id="opdracht-5">
-<h2>Opdracht 5<a class="headerlink" href="#opdracht-5" title="Link to this heading">#</a></h2>
-<p>True or false?</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">.</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span> <span class="o">&gt;</span> <span class="p">[</span><span class="mi">42</span><span class="p">]</span>
-<span class="n">b</span><span class="o">.</span> <span class="s2">&quot;hoi&quot;</span> <span class="o">&gt;</span> <span class="s2">&quot;doei&quot;</span>
-<span class="n">c</span><span class="o">.</span> <span class="s2">&quot;eten&quot;</span> <span class="o">&gt;</span> <span class="s2">&quot;werken&quot;</span>
-<span class="n">d</span><span class="o">.</span> <span class="s2">&quot;Haard&quot;</span> <span class="o">&lt;</span> <span class="s2">&quot;Huis&quot;</span>
-<span class="n">e</span><span class="o">.</span> <span class="s2">&quot;F&quot;</span> <span class="o">&lt;</span> <span class="s2">&quot;Fiets&quot;</span>
-<span class="n">f</span><span class="o">.</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;m&amp;m&#39;s&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;koffie&quot;</span><span class="p">]</span>
-</pre></div>
-</div>
+<section id="opgave-2-i">
+<h3>Opgave 2-I<a class="headerlink" href="#opgave-2-i" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>?</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[4,</span> <span class="pre">2]</span> <span class="pre">&gt;</span> <span class="pre">[42]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;hoi&quot;</span> <span class="pre">&gt;</span> <span class="pre">&quot;doei&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;eten&quot;</span> <span class="pre">&gt;</span> <span class="pre">&quot;werken&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;Haard&quot;</span> <span class="pre">&lt;</span> <span class="pre">&quot;Huis&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;F&quot;</span> <span class="pre">&lt;</span> <span class="pre">&quot;Fiets&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[4,</span> <span class="pre">&quot;m&amp;m's&quot;]</span> <span class="pre">&lt;</span> <span class="pre">[1,</span> <span class="pre">&quot;koffie&quot;]</span></code></p></li>
+</ol>
 </section>
-<section id="debugging">
-<h2>Debugging<a class="headerlink" href="#debugging" title="Link to this heading">#</a></h2>
-<p>Leerdoel: Vinden van bugs in conditionele statements</p>
-<p><strong>Opdracht uit de herkansing van 2022-2023</strong></p>
-<p>Tijdens een busreis worden studenten verdeelt over verschillende bussen aan de hand van hun achternaam.</p>
+</section>
+<section id="debuggen">
+<h2>Debuggen<a class="headerlink" href="#debuggen" title="Link to this heading">#</a></h2>
+<p>Het kunnen vinden van bugs in conditionele statements.</p>
+<section id="opgave">
+<h3>Opgave<a class="headerlink" href="#opgave" title="Link to this heading">#</a></h3>
+<p>Tijdens een busreis worden studenten verdeeld over verschillende bussen aan de hand van hun achternaam.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Bus</p></th>
@@ -860,14 +1049,22 @@ document.write(`
 </tbody>
 </table>
 </div>
-<p>Student met de achternaam Niël komt in bus 3
-Student met de achternaam Hoebe komt in bus 2</p>
-<p>Gegeven is een variabele naam die staat voor de achternaam ( zonder voorvoegsels en met hoofdletter) van een student, deze toekenning hoef je niet te schrijven. Schrijf een conditionele statement (geen functie) om de juiste bus nummer af te drukken. Je hoeft de bus nummer dus niet een variabele op te slaan.</p>
-<section id="opgave">
-<h3>Opgave<a class="headerlink" href="#opgave" title="Link to this heading">#</a></h3>
-<p>Deze opdracht is op veel manieren op te lossen. Hieronder staan een aantal oplossingen, maar er zit telkens een fout in. Welke fout is er gemaakt waardoor de code niet klopt? Test je antwoord met behulp van de python tutor.</p>
-<p>a.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">naam</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span>
+<p>Bijvoorbeeld, een student met de achternaam “Niël” komt in bus 3 en een student met de achternaam “Hoebe” komt in bus 2</p>
+<p>Gegeven is een variabele <code class="docutils literal notranslate"><span class="pre">naam</span></code> die staat voor de achternaam (zonder voorvoegsels en met hoofdletter) van een student. De opdracht is om een conditionele statement te schrijven om de juiste bus nummer af te drukken.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">naam</span> <span class="o">=</span> <span class="s2">&quot;Hoebe&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Deze opdracht is op meerdere manieren op te lossen en hieronder staan een aantal uitwerkingen, maar er zit telkens een fout in!</p>
+<p><strong>Probeer bij elke uitwerking te bepalen welke fout wordt gemaakt waardoor de code niet correct is.</strong></p>
+<section id="uitwerking-3-a">
+<h4>Uitwerking 3-A<a class="headerlink" href="#uitwerking-3-a" title="Link to this heading">#</a></h4>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">naam</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">naam</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="s1">&#39;J&#39;</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -877,11 +1074,16 @@ Student met de achternaam Hoebe komt in bus 2</p>
     <span class="nb">print</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="k">else</span>
     <span class="nb">print</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-
 </pre></div>
 </div>
-<p>b.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">naam</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span>
+</div>
+</div>
+</section>
+<section id="uitwerking-3-b">
+<h4>Uitwerking 3-B<a class="headerlink" href="#uitwerking-3-b" title="Link to this heading">#</a></h4>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">naam</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">naam</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="s1">&#39;J&#39;</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -891,11 +1093,16 @@ Student met de achternaam Hoebe komt in bus 2</p>
     <span class="nb">print</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-
 </pre></div>
 </div>
-<p>c.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">naam</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span>
+</div>
+</div>
+</section>
+<section id="uitwerking-3-c">
+<h4>Uitwerking 3-C<a class="headerlink" href="#uitwerking-3-c" title="Link to this heading">#</a></h4>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">naam</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">naam</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="s1">&#39;J&#39;</span><span class="p">:</span>
@@ -906,11 +1113,16 @@ Student met de achternaam Hoebe komt in bus 2</p>
             <span class="nb">print</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-
 </pre></div>
 </div>
-<p>d.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">naam</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span>
+</div>
+</div>
+</section>
+<section id="uitwerking-3-d">
+<h4>Uitwerking 3-D<a class="headerlink" href="#uitwerking-3-d" title="Link to this heading">#</a></h4>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">naam</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">naam</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="s1">&#39;J&#39;</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -920,11 +1132,16 @@ Student met de achternaam Hoebe komt in bus 2</p>
         <span class="nb">print</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-
 </pre></div>
 </div>
-<p>e.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">naam</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="s1">&#39;Z&#39;</span><span class="p">:</span>
+</div>
+</div>
+</section>
+<section id="uitwerking-3-e">
+<h4>Uitwerking 3-E<a class="headerlink" href="#uitwerking-3-e" title="Link to this heading">#</a></h4>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">naam</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="s1">&#39;Z&#39;</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">naam</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="s1">&#39;U&#39;</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
@@ -934,11 +1151,16 @@ Student met de achternaam Hoebe komt in bus 2</p>
     <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
 </pre></div>
 </div>
-<p>f.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">naam</span> <span class="o">&lt;=</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span>
+</div>
+</div>
+</section>
+<section id="uitwerking-3-f">
+<h4>Uitwerking 3-F<a class="headerlink" href="#uitwerking-3-f" title="Link to this heading">#</a></h4>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">naam</span> <span class="o">&lt;=</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">naam</span> <span class="o">&lt;=</span> <span class="s1">&#39;J&#39;</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -948,11 +1170,16 @@ Student met de achternaam Hoebe komt in bus 2</p>
     <span class="nb">print</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-
 </pre></div>
 </div>
-<p>g.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">naam</span> <span class="o">&lt;</span> <span class="s1">&#39;F&#39;</span>
+</div>
+</div>
+</section>
+<section id="uitwerking-3-g">
+<h4>Uitwerking 3-G<a class="headerlink" href="#uitwerking-3-g" title="Link to this heading">#</a></h4>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">naam</span> <span class="o">&lt;</span> <span class="s1">&#39;F&#39;</span>
     <span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">naam</span> <span class="o">&lt;</span> <span class="s1">&#39;K&#39;</span>
     <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -964,22 +1191,9 @@ Student met de achternaam Hoebe komt in bus 2</p>
     <span class="nb">print</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>h.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">naam</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="s1">&#39;A&#39;</span> <span class="ow">or</span> <span class="n">naam</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">naam</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="s1">&#39;F&#39;</span> <span class="ow">or</span> <span class="n">naam</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="s1">&#39;J&#39;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">naam</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="s1">&#39;K&#39;</span> <span class="ow">or</span> <span class="n">naam</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="s1">&#39;O&#39;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">naam</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="s1">&#39;Q&#39;</span> <span class="ow">or</span> <span class="n">naam</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="s1">&#39;U&#39;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-
-</pre></div>
 </div>
-<p>i.
-Geef een juiste oplossing voor dit probleem.</p>
+</div>
+</section>
 </section>
 </section>
 </section>
@@ -1048,20 +1262,42 @@ Geef een juiste oplossing voor dit probleem.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax-van-conditionele-statements">Syntax van conditionele statements</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht">Opdracht</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditionele-statements">Conditionele statements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-1-a">Opgave 1-A</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-1-b">Opgave 1-B</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-1-c">Opgave 1-C</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-1-d">Opgave 1-D</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-1-e">Opgave 1-E</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-1-f">Opgave 1-F</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-1-g">Opgave 1-G</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-1-h">Opgave 1-H</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-1-i">Opgave 1-I</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-1-j">Opgave 1-J</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax-van-strings">Syntax van strings</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-1">Opdracht 1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2">Opdracht 2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3">Opdracht 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-en-lists">Strings en lists</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-2-a">Opgave 2-A</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-2-b">Opgave 2-B</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-2-c">Opgave 2-C</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-2-d">Opgave 2-D</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-2-e">Opgave 2-E</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-2-f">Opgave 2-F</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-2-g">Opgave 2-G</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-2-h">Opgave 2-H</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-2-i">Opgave 2-I</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-4">Opdracht 4</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-5">Opdracht 5</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging">Debugging</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave">Opgave</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#debuggen">Debuggen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave">Opgave</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#uitwerking-3-a">Uitwerking 3-A</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#uitwerking-3-b">Uitwerking 3-B</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#uitwerking-3-c">Uitwerking 3-C</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#uitwerking-3-d">Uitwerking 3-D</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#uitwerking-3-e">Uitwerking 3-E</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#uitwerking-3-f">Uitwerking 3-F</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#uitwerking-3-g">Uitwerking 3-G</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

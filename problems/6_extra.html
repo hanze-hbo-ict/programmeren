@@ -231,13 +231,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Intro</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../lectures/0a_command-line.html">De terminal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lectures/0b_install_python.html">Instaleren Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lectures/0b_install_python.html">Python installeren</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 1</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_1.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../lectures/1a_intro_programmeren.html">Wat is informatica</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lectures/1b_picobot.html">picobot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/1b_picobot.html">Picobot</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_1.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -738,7 +738,7 @@ document.write(`
 <p>Tot nu toe hebben we onderzocht hoe getallen in binaire vorm worden weergegeven, maar in dit probleem onderzoeken we de weergave van beelden met behulp van 0’s en 1’s.</p>
 <p>Voor dit deel schrijf je twee functies, <code class="docutils literal notranslate"><span class="pre">compress(s)</span></code> en <code class="docutils literal notranslate"><span class="pre">uncompress(c)</span></code>, samen met een of meer hulpfuncties.</p>
 <p>Om te beginnen bekijken we alleen 8 bij 8 zwart-wit afbeeldingen zoals de afbeelding hieronder:</p>
-<p><img alt="Dambord" src="problems/images/6/pattern_1.png" /></p>
+<p><img alt="Dambord" src="../_images/pattern_1.png" /></p>
 <p>Elke cel in de afbeelding wordt een “pixel” genoemd. Een witte pixel wordt voorgesteld door het cijfer 0 en een zwarte pixel door het cijfer 1. Het eerste cijfer staat voor de pixel in de linkerbovenhoek van de afbeelding. Het volgende cijfer staat voor de pixel in de bovenste rij en de tweede kolom. Het achtste bit (cijfer) staat voor de pixel aan de rechterzijde van de bovenste rij. Het volgende bit staat voor de meest linkse pixel in de tweede rij, enzovoort. Daarom wordt de bovenstaande afbeelding weergegeven door de volgende binaire string met lengte 64:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;1010101001010101101010100101010110101010010101011010101001010101&quot;</span>
 </pre></div>
@@ -751,7 +751,7 @@ document.write(`
 <h3>Achtergrond<a class="headerlink" href="#achtergrond" title="Link to this heading">#</a></h3>
 <p>Maar wat nu? Stel je voor, je bent ingehuurd door HASA (“Hanze Air and Space Administration”). HASA heeft een satelliet die 8 bij 8 zwart-wit beelden neemt en deze terugstuurt naar de aarde als binaire strings van 64 bits zoals hierboven beschreven. Om kostbare energie te besparen die nodig is voor het verzenden van gegevens, wil HASA de verzonden beelden “comprimeren” in een formaat dat zo weinig mogelijk bits gebruikt. Een manier om dit te doen is door gebruik te maken van het “run-length” coderingsalgoritme.</p>
 <p>Stel je voor dat we een beeld hebben dat er als volgt uitziet:</p>
-<p><img alt="Strepen" src="problems/images/6/pattern_5.png" /></p>
+<p><img alt="Strepen" src="../_images/pattern_5.png" /></p>
 <p>Met behulp van onze standaard opeenvolging van 64 bits wordt dit beeld weergegeven door een binaire reeks die begint met 16 opeenvolgende 0’en (voor twee rijen witte pixels) gevolgd door 16 opeenvolgende 1’en (voor twee rijen zwarte pixels) gevolgd door 16 opeenvolgende 0’en gevolgd door 16 opeenvolgende 1’en.</p>
 <p>Run-length codering (die overigens ook wordt gebruikt als onderdeel van het JPEG beeldcompressie-algoritme) stelt voor om dit beeld weer te geven met de code “16 wit, 16 zwart, 16 wit, 16 zwart”. Dat is een veel kortere beschrijving dan het opsommen van de reeks van 64 pixels “wit, wit, wit, wit, …”.</p>
 <section id="run-length-encoding">
