@@ -1,4 +1,4 @@
-# Instaleren Python
+# Python installeren
 
 Het **doel** van deze opgave is om:
 
@@ -136,7 +136,7 @@ Sla dit bestand op als `hello.py` in je programmeer folder.
     * Type `ls`( mac) of `dir` (windows) om de bestanden in de huidige directory te zien
     * Zorg dat je je bestand `hello.py` ziet!
         * Als je hem niet zien, gebruik dan `cd ..` of `cd Desktop` of andere combinaties om naar de juiste directory te gaan.
-    * Typ op de prompt `python hello.py` (je kan hier tab completion voor gebruiken). Als je de melding krijgt dat python niet gevonden is kan het zijn dat de Path variabele niet goed is ingesteld. 
+    * Typ op de prompt `python hello.py` (je kan hier tab completion voor gebruiken). Als je de melding krijgt dat python niet gevonden is kan het zijn dat de Path variabele niet goed is ingesteld (Windows).
     * Dit voert het bestand `hello.py` uit.
     * Als alles goed gaat wordt het programma uitgevoerd en zie je de uitvoer.
     * Je kan nu je bestand bewerken, opnieuw opslaan en *pijltje omhoog* drukken om het opnieuw uit te voeren.

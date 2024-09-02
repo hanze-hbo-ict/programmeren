@@ -125,6 +125,7 @@ Als je Picobot afsluit zijn al jouw regels verdwenen! Kopiëeer daarom de regels
 :::
 
 ## Opgave 2
+
 Heb je Picobot de lege kamer kunnen laten verkennen? Dan is het nu tijd voor andere omgevingen, waaronder een doolhof!
 
 ![Picobot doolhof](images/1/picobotMaze.png)
@@ -138,12 +139,14 @@ Klik op de pijlen naast MAP om de omgeving van Picobot te veranderen, de eerstvo
 
 Net als bij de opgave met de lege ruimte is de uitdaging een meest efficënte oplossing te vinden. Let op, ook hier geldt dat het *geen* probleem is als jouw oplossing meer regels nodig heeft! De uitdaging is om deze opgave in slechts *8 regels* voor Picobot op te lossen.
 
-## opgave 3
+## Opgave 3
+
 ![Picobot diamant](images/1/picobotDiamond.png)
 
 Ontwerp een verzameling regels om Picobot een ruimte in de vorm van een ruit te laten verkennen (er zijn geen beperkingen aan het aantal regels).
 
-## opgave 4
+## Opgave 4
+
 ![Picobot grot](images/1/picobotExCr.png)
 
 Ontwerp een verzameling regels om Picobot een ruimte in de vorm van een grot te laten verkennen (er zijn geen beperkingen aan het aantal regels).
