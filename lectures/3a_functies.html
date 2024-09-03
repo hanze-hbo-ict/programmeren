@@ -103,7 +103,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="canonical" href="https:///hanze-hbo-ict.github.io/programmeren/lectures/3a_functies.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Zoeken" href="../search.html" />
-    <link rel="next" title="Functie calls" href="3b_functie_calls.html" />
+    <link rel="next" title="Functies aanroepen" href="3b_functies_aanroepen.html" />
     <link rel="prev" title="Onderwerpen" href="../course/week_3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="nl"/>
@@ -275,7 +275,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../course/week_3.html">Onderwerpen</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Functies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3b_functie_calls.html">Functie calls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3b_functies_aanroepen.html">Functies aanroepen</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_3.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -657,7 +657,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optie-1">Optie 1:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optie-2">Optie 2:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optie-3">Optie 3:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#handige-libraries">Handige libraries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#handige-modules">Handige modules</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-1">Opdracht 1</a></li>
@@ -806,28 +806,33 @@ f(x) = 2x + 3
 </div>
 </div>
 <p>Dit is een eenvoudige functie die een waarde verdubbelt en het resultaat teruggeeft met <code class="docutils literal notranslate"><span class="pre">return</span></code>. Nu een variant met <code class="docutils literal notranslate"><span class="pre">print(x)</span></code> in plaats van <code class="docutils literal notranslate"><span class="pre">return</span></code>:</p>
-<div class="cell docutils container">
+<div class="cell tag_raises-exception docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dbl_pr</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;verdubbelt x?</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a_dbl_pr</span> <span class="o">=</span> <span class="n">dbl_pr</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="o">+</span> <span class="mi">20</span>
-</pre></div>
-</div>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>---------------------------------------------------------------------------
-TypeError                                 Traceback (most recent call last)
-&lt;ipython-input-5-f85fb4a1e955&gt; in &lt;module&gt;
-      4     print(2 * x)
-      5 
-----&gt; 6 a_dbl_pr = dbl_pr(20) + 20
 
-TypeError: unsupported operand type(s) for +: &#39;NoneType&#39; and &#39;int&#39;
+<span class="n">a_dbl_pr</span> <span class="o">=</span> <span class="n">dbl_pr</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="o">+</span> <span class="mi">20</span>
 </pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>40
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;verdubbelt x?</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">a_dbl_pr</span> <span class="o">=</span> <span class="n">dbl_pr</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="o">+</span> <span class="mi">20</span>
+
+<span class="ne">TypeError</span>: unsupported operand type(s) for +: &#39;NoneType&#39; and &#39;int&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <p>Dit geeft een fout op regel 6, waar we bij het resultaat van de functie 20 willen optellen. Waarom deze fout terwijl we wél een resultaat op scherm zien (40)? De verklaring is dat een functie zonder <code class="docutils literal notranslate"><span class="pre">return</span></code> niets teruggeeft en dat “niets” (verassend genoeg!) wél een waarde heeft, een waarde <code class="docutils literal notranslate"><span class="pre">None</span></code> (met type <code class="docutils literal notranslate"><span class="pre">NoneType</span></code>). <code class="docutils literal notranslate"><span class="pre">None</span></code> (“geen”) representeert het niets en Python zegt ons hier dat we 20 <em>niet</em> bij niets kunnen optellen!</p>
 <p>Het <em>niets</em> is voor Python blijkbaar wel “iets” (<code class="docutils literal notranslate"><span class="pre">None</span></code>)!</p>
@@ -895,9 +900,9 @@ TypeError: unsupported operand type(s) for +: &#39;NoneType&#39; and &#39;int&#3
 <section id="belangrijke-functies">
 <h2>Belangrijke functies<a class="headerlink" href="#belangrijke-functies" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>range</p></li>
-<li><p>sum</p></li>
-<li><p>choice</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sum</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">choice</span></code></p></li>
 </ul>
 <section id="range">
 <h3>Range<a class="headerlink" href="#range" title="Link to this heading">#</a></h3>
@@ -924,7 +929,7 @@ TypeError: unsupported operand type(s) for +: &#39;NoneType&#39; and &#39;int&#3
 </section>
 <section id="choice">
 <h3>Choice<a class="headerlink" href="#choice" title="Link to this heading">#</a></h3>
-<p>Choice is een functie dat een random keuze kan maken uit een gegeven lijst. Het is alleen niet standaard beschikbaar zoals de functies <code class="docutils literal notranslate"><span class="pre">sum</span></code> en <code class="docutils literal notranslate"><span class="pre">range</span></code>. Om de functie te kunnen gebruiken moeten we het eerst importeren.</p>
+<p>Choice is een functie die een random keuze kan maken uit een gegeven lijst. Het is alleen niet standaard beschikbaar zoals de functies <code class="docutils literal notranslate"><span class="pre">sum</span></code> en <code class="docutils literal notranslate"><span class="pre">range</span></code>. Om de functie te kunnen gebruiken moeten we het eerst importeren.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
 <span class="n">l</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
 <span class="n">rand</span> <span class="o">=</span> <span class="n">choice</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
@@ -934,7 +939,7 @@ TypeError: unsupported operand type(s) for +: &#39;NoneType&#39; and &#39;int&#3
 </section>
 <section id="imports">
 <h2>Imports<a class="headerlink" href="#imports" title="Link to this heading">#</a></h2>
-<p>Random is wat we noemen een library. Met het importeren van een library krijg te toegang tot alle functies die in deze library staan.</p>
+<p>Random is wat een module wordt genoemd, soms wordt hier ook het woord <em>library</em> of <em>functiebibliotheek</em> voor gebruikt. Met het importeren van een module krijg te toegang tot alle functies die in deze module staan.</p>
 <section id="optie-1">
 <h3>Optie 1:<a class="headerlink" href="#optie-1" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
@@ -944,7 +949,7 @@ TypeError: unsupported operand type(s) for +: &#39;NoneType&#39; and &#39;int&#3
 <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>In deze optie wordt de hele library toegevoegd. Om de functies te gebruiken die in deze library staan, noteren we eerst uit welke library ze komen en dan volgt de functie naam. Zo onstaan er geen problemen als er meerdere libraries worden geimporteerd en er functie namen overeenkomen.</p>
+<p>In deze optie wordt de hele module toegevoegd. Om de functies te gebruiken die in deze module staan, noteren we eerst uit welke module ze komen en dan volgt de functie naam. Zo ontstaan er geen problemen als er meerdere modules worden geïmporteerd en er functie namen overeenkomen.</p>
 </section>
 <section id="optie-2">
 <h3>Optie 2:<a class="headerlink" href="#optie-2" title="Link to this heading">#</a></h3>
@@ -957,7 +962,7 @@ TypeError: unsupported operand type(s) for +: &#39;NoneType&#39; and &#39;int&#3
 <span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">random</span> <span class="pre">import</span> <span class="pre">choice</span></code> importeert een hele specifieke functie uit de library en niet de hele library. Scheelt in de grootte van het programma. Is vooral handig om te gebruiken als je maar een enkele functie uit de libary wilt gebruiken.</p>
+<p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">random</span> <span class="pre">import</span> <span class="pre">choice</span></code> importeert een hele specifieke functie uit de module en niet de gehele module. Scheelt in de grootte van het programma. Is vooral handig om te gebruiken als je maar een enkele functie uit de module wilt gebruiken.</p>
 </section>
 <section id="optie-3">
 <h3>Optie 3:<a class="headerlink" href="#optie-3" title="Link to this heading">#</a></h3>
@@ -968,38 +973,39 @@ TypeError: unsupported operand type(s) for +: &#39;NoneType&#39; and &#39;int&#3
 <span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">random</span> <span class="pre">import</span> <span class="pre">*</span></code> importeert alle functies uit de library. Het is belangrijk om te weten welke functies dit zijn om te voorkomen dat er twee dezelfde functies in het programma staan. Bijvorbeeld van een andere library of in je eigen code.</p>
+<p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">random</span> <span class="pre">import</span> <span class="pre">*</span></code> importeert alle functies uit de module. Het is belangrijk om te weten welke functies dit zijn om te voorkomen dat er twee dezelfde functies in het programma staan. Bijvoorbeeld van een andere module of in je eigen code.</p>
 </section>
-<section id="handige-libraries">
-<h3>Handige libraries<a class="headerlink" href="#handige-libraries" title="Link to this heading">#</a></h3>
-<p>math</p>
+<section id="handige-modules">
+<h3>Handige modules<a class="headerlink" href="#handige-modules" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">math</span></code></p>
 <ul class="simple">
-<li><p>cos()</p></li>
-<li><p>sin()</p></li>
-<li><p>tan()</p></li>
-<li><p>sqrt()</p></li>
-<li><p>pi</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cos()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sin()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tan()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sqrt()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pi</span></code></p></li>
 </ul>
-<p>random</p>
+<p><code class="docutils literal notranslate"><span class="pre">random</span></code></p>
 <ul class="simple">
-<li><p>choice()</p></li>
-<li><p>randint()</p></li>
-<li><p>uniform()</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">choice()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">randint()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uniform()</span></code></p></li>
 </ul>
-<p>time</p>
+<p><code class="docutils literal notranslate"><span class="pre">time</span></code></p>
 <ul class="simple">
-<li><p>time()</p></li>
-<li><p>ctime()</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">time()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ctime()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sleep()</span></code></p></li>
 </ul>
 </section>
 </section>
 <section id="opdracht-1">
 <h2>Opdracht 1<a class="headerlink" href="#opdracht-1" title="Link to this heading">#</a></h2>
-<p>Schrijf een functie <code class="docutils literal notranslate"><span class="pre">maximum()</span></code> dat twee integers krijgt als paramaters en vervolgens de grooste integer teruggeeft. Zorg ervoor dat je de functie test met behulp van assertions en voeg een docstring toe.</p>
+<p>Schrijf een functie <code class="docutils literal notranslate"><span class="pre">maximum()</span></code> die twee integers krijgt als parameters en vervolgens de grootste integer teruggeeft. Zorg ervoor dat je de functie test met behulp van assertions en voeg een docstring toe.</p>
 </section>
 <section id="opdracht-2">
 <h2>Opdracht 2<a class="headerlink" href="#opdracht-2" title="Link to this heading">#</a></h2>
-<p>Schrijf een functie <code class="docutils literal notranslate"><span class="pre">minutes()</span></code> dat een integer binnen krijgt dat seconden moet voorstellen en vervolgens teruggeeft hoeveel minuten dat zijn. Zorg ervoor dat je de functie test met behulp van assertions en voeg een docstring toe.</p>
+<p>Schrijf een functie <code class="docutils literal notranslate"><span class="pre">minutes()</span></code> die een integer als parameter accepteert dat een aantal seconden voorstelt en vervolgens teruggeeft hoeveel minuten dat zijn. Zorg ervoor dat je de functie test met behulp van assertions en voeg een docstring toe.</p>
 </section>
 <section id="opdracht-3">
 <h2>Opdracht 3<a class="headerlink" href="#opdracht-3" title="Link to this heading">#</a></h2>
@@ -1047,11 +1053,11 @@ TypeError: unsupported operand type(s) for +: &#39;NoneType&#39; and &#39;int&#3
       </div>
     </a>
     <a class="right-next"
-       href="3b_functie_calls.html"
+       href="3b_functies_aanroepen.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">volgende</p>
-        <p class="prev-next-title">Functie calls</p>
+        <p class="prev-next-title">Functies aanroepen</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1096,7 +1102,7 @@ TypeError: unsupported operand type(s) for +: &#39;NoneType&#39; and &#39;int&#3
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optie-1">Optie 1:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optie-2">Optie 2:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optie-3">Optie 3:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#handige-libraries">Handige libraries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#handige-modules">Handige modules</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-1">Opdracht 1</a></li>
