@@ -659,12 +659,12 @@ document.write(`
 </section>
 <section id="pi-met-pijltjes-berekenen-achtergrond">
 <h2>Pi met pijltjes berekenen: achtergrond<a class="headerlink" href="#pi-met-pijltjes-berekenen-achtergrond" title="Link to this heading">#</a></h2>
-<p>Stel je een cirkel voor die ingeschreven is in een vierkant die het gebied met <code class="docutils literal notranslate"><span class="pre">-1</span> <span class="pre">≤</span> <span class="pre">x</span> <span class="pre">≤</span> <span class="pre">1</span></code> en <code class="docutils literal notranslate"><span class="pre">-1</span> <span class="pre">≤</span> <span class="pre">y</span> <span class="pre">≤</span> <span class="pre">-1</span></code> beslaat. De oppervlakte van de ingeschreven cirkel, waarvan de straal <code class="docutils literal notranslate"><span class="pre">1.0</span></code> is, moet dan π zijn: de oppervlakte van een cirkel is immers gelijk aan π<em>r</em><sup>2</sup>, en de straal <em>r</em> is hier <code class="docutils literal notranslate"><span class="pre">1.0</span></code>.</p>
+<p>Stel je een cirkel voor die ingeschreven is in een vierkant dat het gebied met <code class="docutils literal notranslate"><span class="pre">-1</span> <span class="pre">≤</span> <span class="pre">x</span> <span class="pre">≤</span> <span class="pre">1</span></code> en <code class="docutils literal notranslate"><span class="pre">-1</span> <span class="pre">≤</span> <span class="pre">y</span> <span class="pre">≤</span> <span class="pre">1</span></code> beslaat. De oppervlakte van de ingeschreven cirkel, waarvan de straal <code class="docutils literal notranslate"><span class="pre">1.0</span></code> is, moet dan π zijn: de oppervlakte van een cirkel is immers gelijk aan π<em>r</em><sup>2</sup>, en de straal <em>r</em> is hier <code class="docutils literal notranslate"><span class="pre">1.0</span></code>.</p>
 <div class="notice admonition">
 <p class="admonition-title">Ingeschreven cirkel</p>
 <p>Een <em>ingeschreven</em> cirkel raakt de randen van het omliggende vierkant precies; als het vierkant dus zijden van lengte 2 heeft, is de diameter van de cirkel ook 2.</p>
 </div>
-<p>Als je pijltjes gooit op willekeurige punten in het vierkant zullen maar een deel daarvan de ingeschreven cirkel raken. De verhouding</p>
+<p>Als je pijltjes gooit op willekeurige punten in het vierkant zal maar een deel daarvan de ingeschreven cirkel raken. De verhouding</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">oppervlakte</span> <span class="n">van</span> <span class="n">de</span> <span class="n">cirkel</span> <span class="o">/</span> <span class="n">oppervlakte</span> <span class="n">van</span> <span class="n">het</span> <span class="n">vierkant</span>
 </pre></div>
 </div>
@@ -673,6 +673,7 @@ document.write(`
 </pre></div>
 </div>
 <p>Als je meer en meer pijltjes gooit benadert de tweede verhouding hierboven steeds dichter de eerste verhouding. Aangezien drie van de vier waardes hierboven bekend zijn kunnen we ze gebruiken om de oppervlakte van de cirkel te benaderen. Dit kan weer gebruikt worden om π te benaderen.</p>
+<p><img alt="Turtle pijltjes" src="../_images/pi_turtle.gif" /></p>
 <section id="pijltjes-gooien-ontwerpen">
 <h3>Pijltjes gooien ontwerpen…<a class="headerlink" href="#pijltjes-gooien-ontwerpen" title="Link to this heading">#</a></h3>
 <p>Om een pijltje te gooien, moet je willekeurige x- en y-coördinaten genereren tussen <code class="docutils literal notranslate"><span class="pre">-1.0</span></code> en <code class="docutils literal notranslate"><span class="pre">1.0</span></code>. Zorg dat je de regel</p>
@@ -683,7 +684,7 @@ document.write(`
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Deze regel geeft een floating-pointwaarde in het bereik van <code class="docutils literal notranslate"><span class="pre">-1.0</span></code> tot en met <code class="docutils literal notranslate"><span class="pre">1.0</span></code>. Je kan bijvoorbeeld schrijven:</p>
+<p>Deze regel geeft een floating-pointwaarde in het bereik van <code class="docutils literal notranslate"><span class="pre">-1.0</span></code> tot en met <code class="docutils literal notranslate"><span class="pre">1.0</span></code>. Je kunt bijvoorbeeld schrijven:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -712,7 +713,7 @@ document.write(`
 <p>Na elk pijltje dat gegooid is moet de functie het volgende afdrukken:</p>
 <ul class="simple">
 <li><p>Het aantal pijltjes dat tot nu toe gegooid is.</p></li>
-<li><p>Het aantal pijtljes dat tot nu toe de cirkel <em><strong>geraakt</strong></em> heeft.</p></li>
+<li><p>Het aantal pijltjes dat tot nu toe de cirkel <em><strong>geraakt</strong></em> heeft.</p></li>
 <li><p>De hieruit volgende schatting voor π.</p></li>
 </ul>
 <p><strong>Returnwaarde</strong>; <em>vergeet deze niet!</em></p>
@@ -737,6 +738,13 @@ document.write(`
 <span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="mf">3.2</span>
 </pre></div>
 </div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># jouw oplossing</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="de-functie-while-pi-error">
 <h2>De functie <code class="docutils literal notranslate"><span class="pre">while_pi(error)</span></code><a class="headerlink" href="#de-functie-while-pi-error" title="Link to this heading">#</a></h2>
@@ -750,7 +758,7 @@ document.write(`
 <p>Net als de functie <code class="docutils literal notranslate"><span class="pre">for_pi</span></code> moet je functie <code class="docutils literal notranslate"><span class="pre">while_pi</span></code> na elke worp het volgende afdrukken:</p>
 <ul class="simple">
 <li><p>Het aantal pijltjes dat tot nu toe gegooid is.</p></li>
-<li><p>Het aantal pijtljes dat tot nu toe de cirkel <em><strong>geraakt</strong></em> heeft.</p></li>
+<li><p>Het aantal pijltjes dat tot nu toe de cirkel <em><strong>geraakt</strong></em> heeft.</p></li>
 <li><p>De hieruit volgende schatting voor π.</p></li>
 </ul>
 <p><strong>Returnwaarde</strong>; <em>vergeet deze niet!</em></p>
@@ -770,6 +778,13 @@ nauwkeurigheid te bereiken.</p>
 
 <span class="n">Out</span><span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="mi">9</span>
 </pre></div>
+</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># jouw oplossing</span>
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 </section>

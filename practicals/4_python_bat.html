@@ -415,55 +415,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 
 
 
-<div class="dropdown dropdown-launch-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
-    <i class="fas fa-rocket"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://colab.research.google.com/github/hanze-hbo-ict/programmeren/blob/master/practicals/4_python_bat.ipynb" target="_blank"
-   class="btn btn-sm dropdown-item"
-   title="Launch on Colab"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  
-    <img alt="Colab logo" src="../_static/images/logo_colab.png">
-  </span>
-<span class="btn__text-container">Colab</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="initThebeSBT()"
-  class="btn btn-sm btn-launch-thebe dropdown-item"
-  title="Launch Thebe"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-play"></i>
-  </span>
-<span class="btn__text-container">Live Code</span>
-</button>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-
-
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -489,7 +440,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       
       
       
-      <li><a href="https://github.com/hanze-hbo-ict/programmeren/edit/master/practicals/4_python_bat.ipynb" target="_blank"
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/edit/master/practicals/4_python_bat.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -536,7 +487,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       
       
       
-      <li><a href="../_sources/practicals/4_python_bat.ipynb" target="_blank"
+      <li><a href="../_sources/practicals/4_python_bat.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download het bronbestand"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -546,7 +497,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -607,7 +558,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -623,6 +576,16 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Inhoud </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht">Opdracht</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tips">Tips</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusie">Conclusie</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -634,13 +597,13 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="lussen-in-pythonbat">
 <h1>Lussen in PythonBat!<a class="headerlink" href="#lussen-in-pythonbat" title="Link to this heading">#</a></h1>
-<p>In dit werkcollege ga je oefenen met de lussen van Python: <code class="docutils literal notranslate"><span class="pre">for</span></code> en <code class="docutils literal notranslate"><span class="pre">while</span></code>.</p>
-<p>Er staan 12 lusproblemen op de twee PythonBat-pagina’s:</p>
+<p>In dit werkcollege ga je oefenen met Python-lussen: <code class="docutils literal notranslate"><span class="pre">for</span></code> en <code class="docutils literal notranslate"><span class="pre">while</span></code>.</p>
+<p>Er staan 12 lusproblemen op de twee CodingBat-pagina’s:</p>
 <ul class="simple">
 <li><p>Zes “medium list problems” om lussen te gebruiken op <a class="reference external" href="http://codingbat.com/python/List-2">CodingBat</a></p></li>
 <li><p>Zes “medium python string problems” om lussen te gebruiken op <a class="reference external" href="http://codingbat.com/python/String-2">CodingBat</a></p></li>
 </ul>
-<p>Als je bijvoorbeeld de pagina met <a class="reference external" href="http://codingbat.com/python/String-2">“medium python string problems”</a> opent, zie je dat het eerste probleem <code class="docutils literal notranslate"><span class="pre">double_char</span></code> heet. De pagina zegt</p>
+<p>Als je bijvoorbeeld de pagina met <a class="reference external" href="http://codingbat.com/python/String-2">“medium python string problems”</a> opent, zie je dat het eerste probleem <code class="docutils literal notranslate"><span class="pre">double_char</span></code> heet. De pagina zegt:</p>
 <blockquote>
 <div><p>Given a string, return a string where for every char in the original, there are two chars.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>double_char(&#39;The&#39;) → &#39;TThhee&#39;
@@ -649,7 +612,7 @@ double_char(&#39;Hi-There&#39;) → &#39;HHii--TThheerree&#39;
 </pre></div>
 </div>
 </div></blockquote>
-<p>Het leuke aan de PythonBat-pagina’s is dat ze je code meteen controleren.</p>
+<p>Het voordeel van de CodingBat is dat het jouw code onmiddellijk controleert.</p>
 <p>Hier is een compleet en correct antwoord voor <code class="docutils literal notranslate"><span class="pre">double_char</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">double_char</span><span class="p">(</span><span class="nb">str</span><span class="p">):</span>
     <span class="n">result</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
@@ -659,16 +622,37 @@ double_char(&#39;Hi-There&#39;) → &#39;HHii--TThheerree&#39;
 </pre></div>
 </div>
 <p>Zorg dat je de <em><strong>strategie</strong></em> voor deze oplossing voor <code class="docutils literal notranslate"><span class="pre">double_char</span></code> begrijpt:</p>
-<ul class="simple">
+<ol class="arabic simple">
 <li><p>We beginnen met een verzamelvariabele met een geschikte startwaarde</p>
-<ul>
-<li><p>Hier is dat de variabele <code class="docutils literal notranslate"><span class="pre">result</span></code>, die begint op de waarde <code class="docutils literal notranslate"><span class="pre">''</span></code> (de lege string)</p></li>
+<ul class="simple">
+<li><p>Hier is dat de variabele <code class="docutils literal notranslate"><span class="pre">result</span></code>, die begint met de waarde <code class="docutils literal notranslate"><span class="pre">''</span></code> (de lege string)</p></li>
 </ul>
 </li>
 <li><p>We schrijven een lus die het gewenste resultaat verzamelt</p></li>
 <li><p>Daarna geven we het resultaat terug</p></li>
+</ol>
+<section id="opdracht">
+<h2>Opdracht<a class="headerlink" href="#opdracht" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Maak alle 12 oefeningen op de CodingBat-website.</p></li>
+<li><p>Kopieer de gemaakte code naar een Python-bestand om het te bewaren.</p></li>
+<li><p>Probeer voor elke oefening de strategie te begrijpen en toe te passen.</p></li>
+</ol>
+</section>
+<section id="tips">
+<h2>Tips<a class="headerlink" href="#tips" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Lees de probleemomschrijving zorgvuldig.</p></li>
+<li><p>Begin met het plannen van je aanpak voordat je begint met coderen.</p></li>
+<li><p>Test je code met de gegeven voorbeelden en probeer ook <em>edge cases</em> (bijzondere gevallen).</p></li>
+<li><p>Als je vastloopt, probeer het probleem op te delen in kleinere stappen.</p></li>
+<li><p>Vergelijk je oplossing met die van anderen nadat je klaar bent, om te leren van verschillende aanpakken.</p></li>
 </ul>
-<p>Maak alle 12 oefeningen. De gemaakte code kan je kopieren naar een python bestand om het te bewaren.</p>
+</section>
+<section id="conclusie">
+<h2>Conclusie<a class="headerlink" href="#conclusie" title="Link to this heading">#</a></h2>
+<p>Door deze oefeningen te maken, zul je je vaardigheden in het werken met Python-lussen verbeteren. Veel succes!</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -725,6 +709,23 @@ double_char(&#39;Hi-There&#39;) → &#39;HHii--TThheerree&#39;
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Inhoud
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht">Opdracht</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tips">Tips</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusie">Conclusie</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
