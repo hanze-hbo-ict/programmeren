@@ -36,8 +36,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css?v=def72667" />
     <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css?v=5f6255d3" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css?v=def72667" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -308,7 +308,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 5</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_5.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../lectures/5a_nested_lus.html">Nested lussen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/5a_geneste_lus.html">Lussen in lussen</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_5.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -630,17 +630,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geneste-lussen">geneste lussen</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-1">opgave 1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-2">opgave 2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-3">opgave 3</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-4">opgave 4</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-5">opgave 5</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-6">opgave 6</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-7">opgave 7</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-8">opgave 8</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-1">Opgave 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-2">Opgave 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-3">Opgave 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-4">Opgave 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-5">Opgave 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-6">Opgave 6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-7">Opgave 7</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-8">Opgave 8</a></li>
 </ul>
             </nav>
         </div>
@@ -654,20 +651,26 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="opstap">
 <h1>Opstap<a class="headerlink" href="#opstap" title="Link to this heading">#</a></h1>
-<section id="geneste-lussen">
-<h2>geneste lussen<a class="headerlink" href="#geneste-lussen" title="Link to this heading">#</a></h2>
-<p>Wat is de output van de onderstaande programma’s?</p>
+<p>Leerdoel: het lezen van geneste lussen</p>
+<p>Wat is de output van onderstaande programma’s? Gebruik <a class="reference external" href="http://www.pythontutor.com/visualize.html">Python Tutor</a> of dit notebook om je antwoorden te controleren.</p>
 <section id="opgave-1">
-<h3>opgave 1<a class="headerlink" href="#opgave-1" title="Link to this heading">#</a></h3>
+<h2>Opgave 1<a class="headerlink" href="#opgave-1" title="Link to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;harry&quot;</span>
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
 </pre></div>
 </div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># controleer jouw antwoord</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="opgave-2">
-<h3>opgave 2<a class="headerlink" href="#opgave-2" title="Link to this heading">#</a></h3>
+<h2>Opgave 2<a class="headerlink" href="#opgave-2" title="Link to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">lijst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">lijst</span><span class="p">:</span>
@@ -675,27 +678,48 @@ document.write(`
 
 </pre></div>
 </div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># controleer jouw antwoord</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="opgave-3">
-<h3>opgave 3<a class="headerlink" href="#opgave-3" title="Link to this heading">#</a></h3>
+<h2>Opgave 3<a class="headerlink" href="#opgave-3" title="Link to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">lol</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],[</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">]]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">lol</span><span class="p">:</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">i</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
 </pre></div>
 </div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># controleer jouw antwoord</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="opgave-4">
-<h3>opgave 4<a class="headerlink" href="#opgave-4" title="Link to this heading">#</a></h3>
+<h2>Opgave 4<a class="headerlink" href="#opgave-4" title="Link to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">lol</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">][</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">]]</span>
 <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lol</span><span class="p">)):</span>
     <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lol</span><span class="p">[</span><span class="n">y</span><span class="p">]))</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">lol</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">])</span>
 </pre></div>
 </div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># controleer jouw antwoord</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="opgave-5">
-<h3>opgave 5<a class="headerlink" href="#opgave-5" title="Link to this heading">#</a></h3>
+<h2>Opgave 5<a class="headerlink" href="#opgave-5" title="Link to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">lol</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
 <span class="n">k</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
@@ -705,17 +729,31 @@ document.write(`
 <span class="nb">print</span><span class="p">(</span><span class="n">lol</span><span class="p">)</span>
 </pre></div>
 </div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># controleer jouw antwoord</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="opgave-6">
-<h3>opgave 6<a class="headerlink" href="#opgave-6" title="Link to this heading">#</a></h3>
+<h2>Opgave 6<a class="headerlink" href="#opgave-6" title="Link to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">i</span> <span class="o">*</span> <span class="n">j</span><span class="p">)</span>
 </pre></div>
 </div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># controleer jouw antwoord</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="opgave-7">
-<h3>opgave 7<a class="headerlink" href="#opgave-7" title="Link to this heading">#</a></h3>
+<h2>Opgave 7<a class="headerlink" href="#opgave-7" title="Link to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
@@ -723,9 +761,16 @@ document.write(`
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># controleer jouw antwoord</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="opgave-8">
-<h3>opgave 8<a class="headerlink" href="#opgave-8" title="Link to this heading">#</a></h3>
+<h2>Opgave 8<a class="headerlink" href="#opgave-8" title="Link to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
@@ -737,7 +782,13 @@ document.write(`
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># controleer jouw antwoord</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
@@ -805,17 +856,14 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geneste-lussen">geneste lussen</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-1">opgave 1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-2">opgave 2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-3">opgave 3</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-4">opgave 4</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-5">opgave 5</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-6">opgave 6</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-7">opgave 7</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-8">opgave 8</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-1">Opgave 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-2">Opgave 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-3">Opgave 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-4">Opgave 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-5">Opgave 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-6">Opgave 6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-7">Opgave 7</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-8">Opgave 8</a></li>
 </ul>
   </nav></div>
 

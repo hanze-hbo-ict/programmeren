@@ -36,8 +36,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css?v=def72667" />
     <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css?v=5f6255d3" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css?v=def72667" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -308,7 +308,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 5</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_5.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../lectures/5a_nested_lus.html">Nested lussen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/5a_geneste_lus.html">Lussen in lussen</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../course/practical_5.html">Werkcollege</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
@@ -630,12 +630,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-functie-print-rect">De functie <code class="docutils literal notranslate"><span class="pre">print_rect</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-functie-print-triangle">De functie <code class="docutils literal notranslate"><span class="pre">print_triangle</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-functie-print-bumps">De functie <code class="docutils literal notranslate"><span class="pre">print_bumps</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-functie-print-diamond">De functie <code class="docutils literal notranslate"><span class="pre">print_diamond</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-functie-print-striped-diamond">De functie <code class="docutils literal notranslate"><span class="pre">print_striped_diamond</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-functie-print-crazy-striped-diamond">De functie <code class="docutils literal notranslate"><span class="pre">print_crazy_striped_diamond</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-1">Opgave 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2">Opdracht 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3">Opdracht 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-4">Opdracht 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-5">Opdracht 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-6">Opdracht 6</a></li>
 </ul>
             </nav>
         </div>
@@ -650,20 +650,22 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="ascii-art">
 <h1>ASCII Art<a class="headerlink" href="#ascii-art" title="Link to this heading">#</a></h1>
 <p>In deze opgave bekijk je een klassieke kunstvorm: ASCII art!</p>
-<div class="warning admonition">
-<p class="admonition-title">Belangrijke beperking!</p>
-<p>In deze opgave mag je de string-vermenigvuldig- en string-opteloperatoren <strong>niet</strong> gebruiken. Omdat ons doel is om lusconstructies te gebruiken, moet je lussen gebruiken om te herhalen, ook als het met deze operatoren korter zou kunnen. Hier is één uitzondering op, echter; je <strong>mag</strong> string-vermenigvuldiging gebruiken met het spatieteken <code class="docutils literal notranslate"><span class="pre">&quot;</span> <span class="pre">&quot;</span></code>. Dat wl zeggen, je mag een aantal opeenvolgende spaties maken met constructies als</p>
+<div class="admonition warning">
+<p class="admonition-title">Waarschuwing</p>
+<p>Bij de volgende opgaven geldt een belangrijke beperking!</p>
+<p>In deze opgave mag je de string-vermenigvuldigs- en string-opteloperatoren <strong>niet</strong> gebruiken. Omdat ons doel is om lusconstructies te gebruiken, moet je lussen gebruiken om te herhalen, ook als het met deze operatoren korter zou kunnen. Hier is één uitzondering op, echter; je <strong>mag</strong> string-vermenigvuldiging gebruiken met het spatieteken <code class="docutils literal notranslate"><span class="pre">&quot;</span> <span class="pre">&quot;</span></code>. Dat wil zeggen, je mag een aantal opeenvolgende spaties maken met constructies als</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot; &quot;</span><span class="o">*</span><span class="mi">5</span>
 </pre></div>
 </div>
 </div>
-<div class="tip admonition">
-<p class="admonition-title">Eerst ontwerpen!</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Eerst ontwerpen!</p>
 <p>De bedoeling van deze opgave is om je redeneervermogen over lussen en geneste lussen verder te vergroten. Voor veel van de opgaves (met name de gestreepte ruit) moet je zorgvuldig nadenken over de waarde van je luscontrolevariabele tijdens het uitvoeren van je lus of lussen. “Debuggen door willekeurige wijzingingen”; dat wil zeggen, je luscondities of variabelen willekeurig wijzigen; zal tot veel frustratie leiden. De oplossing is om goed na te denken over je lussen!</p>
 </div>
-<section id="de-functie-print-rect">
-<h2>De functie <code class="docutils literal notranslate"><span class="pre">print_rect</span></code><a class="headerlink" href="#de-functie-print-rect" title="Link to this heading">#</a></h2>
-<p>Schrijf een functie met de naam <code class="docutils literal notranslate"><span class="pre">print_rect</span></code> die drie argumenten meekrijgt, <code class="docutils literal notranslate"><span class="pre">width</span></code>, <code class="docutils literal notranslate"><span class="pre">height</span></code> en <code class="docutils literal notranslate"><span class="pre">symbol</span></code>, en een vierkant van <code class="docutils literal notranslate"><span class="pre">width</span></code> bij <code class="docutils literal notranslate"><span class="pre">height</span></code> met <code class="docutils literal notranslate"><span class="pre">symbol</span></code>en afdrukt op het scherm.</p>
+<section id="opgave-1">
+<h2>Opgave 1<a class="headerlink" href="#opgave-1" title="Link to this heading">#</a></h2>
+<p>Schrijf een functie <code class="docutils literal notranslate"><span class="pre">print_rect</span></code> die drie argumenten <code class="docutils literal notranslate"><span class="pre">width</span></code>, <code class="docutils literal notranslate"><span class="pre">height</span></code> en <code class="docutils literal notranslate"><span class="pre">symbol</span></code> accepteert, en een rechthoek van <code class="docutils literal notranslate"><span class="pre">width</span></code> bij <code class="docutils literal notranslate"><span class="pre">height</span></code> met <code class="docutils literal notranslate"><span class="pre">symbol</span></code>en afdrukt op het scherm.</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">print_rect</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;%&quot;</span><span class="p">)</span>
 <span class="n">Out</span><span class="p">:</span>
 <span class="o">%</span> <span class="o">%</span> <span class="o">%</span> <span class="o">%</span>
@@ -674,19 +676,27 @@ document.write(`
 <span class="o">%</span> <span class="o">%</span> <span class="o">%</span> <span class="o">%</span>
 </pre></div>
 </div>
-<p>:class: tip
-Als je de slides over geneste lussen bekijkt, zul je zien dat deze opgave behandeld is! De enige verschillen zijn dat</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Als je de voorbeelden van geneste lussen bekijkt, zul je zien dat deze opgave daar behandeld wordt! De enige verschillen zijn dat</p>
 <ul class="simple">
 <li><p>De breedte een variabele is, in plaats van een constante</p></li>
 <li><p>De hoogte een variabele is, in plaats van een constante</p></li>
 <li><p>Het af te drukken teken een variabele is, in plaats van een constante</p></li>
 </ul>
-<div class="docutils">
+</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># jouw oplossing</span>
+</pre></div>
+</div>
+</div>
 </div>
 </section>
-<section id="de-functie-print-triangle">
-<h2>De functie <code class="docutils literal notranslate"><span class="pre">print_triangle</span></code><a class="headerlink" href="#de-functie-print-triangle" title="Link to this heading">#</a></h2>
-<p>Schrijf een functie <code class="docutils literal notranslate"><span class="pre">print_triangle</span></code> die drie argumenten meekrijgt: <code class="docutils literal notranslate"><span class="pre">width</span></code>, <code class="docutils literal notranslate"><span class="pre">symbol</span></code> en <code class="docutils literal notranslate"><span class="pre">right_side_up</span></code>, en een driehoek van symbolen op het scherm afdrukt. <code class="docutils literal notranslate"><span class="pre">width</span></code> is een getal die de breedte van de basis van de driehoek bepaalt en <code class="docutils literal notranslate"><span class="pre">right_side_up</span></code> is een boolean die bepaalt of de driehoek met de punt naar boven (<code class="docutils literal notranslate"><span class="pre">True</span></code>) of naar onder (<code class="docutils literal notranslate"><span class="pre">False</span></code>) moet worden afgedrukt.</p>
+<section id="opdracht-2">
+<h2>Opdracht 2<a class="headerlink" href="#opdracht-2" title="Link to this heading">#</a></h2>
+<p>Schrijf een functie <code class="docutils literal notranslate"><span class="pre">print_triangle</span></code> die drie argumenten <code class="docutils literal notranslate"><span class="pre">width</span></code>, <code class="docutils literal notranslate"><span class="pre">symbol</span></code> en <code class="docutils literal notranslate"><span class="pre">right_side_up</span></code> accepteert, en een driehoek van symbolen op het scherm afdrukt.</p>
+<p><code class="docutils literal notranslate"><span class="pre">width</span></code> is een getal die de breedte van de basis van de driehoek bepaalt en <code class="docutils literal notranslate"><span class="pre">right_side_up</span></code> is een boolean die bepaalt of de driehoek met de punt naar boven (<code class="docutils literal notranslate"><span class="pre">True</span></code>) of naar onder (<code class="docutils literal notranslate"><span class="pre">False</span></code>) moet worden afgedrukt.</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">print_triangle</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;@&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
 <span class="n">Out</span><span class="p">:</span>
 <span class="o">@</span>
@@ -700,10 +710,17 @@ Als je de slides over geneste lussen bekijkt, zul je zien dat deze opgave behand
 <span class="o">@</span>
 </pre></div>
 </div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># jouw oplossing</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-<section id="de-functie-print-bumps">
-<h2>De functie <code class="docutils literal notranslate"><span class="pre">print_bumps</span></code><a class="headerlink" href="#de-functie-print-bumps" title="Link to this heading">#</a></h2>
-<p>Gebruik nu je functie <code class="docutils literal notranslate"><span class="pre">print_triangle</span></code> om een functie genaamd <code class="docutils literal notranslate"><span class="pre">print_bumps(num,</span> <span class="pre">symbol1,</span> <span class="pre">symbol2)</span></code> te schrijven die het gegeven aantal “heuvels” van twee symbolen afdrukt, waarbij elke heuvel groter is dan de volgende, zoals in het volgende voorbeeld:</p>
+<section id="opdracht-3">
+<h2>Opdracht 3<a class="headerlink" href="#opdracht-3" title="Link to this heading">#</a></h2>
+<p>Gebruik nu jouw functie <code class="docutils literal notranslate"><span class="pre">print_triangle</span></code> om een functie <code class="docutils literal notranslate"><span class="pre">print_bumps(num,</span> <span class="pre">symbol1,</span> <span class="pre">symbol2)</span></code> te schrijven die het gegeven aantal “heuvels” van twee symbolen afdrukt, waarbij elke heuvel groter is dan de volgende, zoals in het volgende voorbeeld:</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">print_bumps</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;%&quot;</span><span class="p">,</span> <span class="s2">&quot;#&quot;</span><span class="p">)</span>
 <span class="n">Out</span><span class="p">:</span>
 <span class="o">%</span>
@@ -728,11 +745,18 @@ Als je de slides over geneste lussen bekijkt, zul je zien dat deze opgave behand
 <span class="c1">#</span>
 </pre></div>
 </div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># jouw oplossing</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-<section id="de-functie-print-diamond">
-<h2>De functie <code class="docutils literal notranslate"><span class="pre">print_diamond</span></code><a class="headerlink" href="#de-functie-print-diamond" title="Link to this heading">#</a></h2>
-<p>Voor deze “ruit”-functies <strong>mag</strong> je string-vermenigvuldiging gebruiken, maar alleen voor strings van spaties, zoals <code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">'</span> <span class="pre">*</span> <span class="pre">n</span></code> en dergelijke. Elk zichtbaar karakter moet <strong>afzonderlijk</strong> afgedrukt worden, net zoals in de functies eerder in de opgave. Het is echter <strong>niet verplicht</strong> om de operator <code class="docutils literal notranslate"><span class="pre">*</span></code> niet gebruiken voor strings van spaties.</p>
-<p>Schrijf een functie <code class="docutils literal notranslate"><span class="pre">print_diamond(width,</span> <span class="pre">symbol)</span></code> die een ruit met <code class="docutils literal notranslate"><span class="pre">symbol</span></code>en afdrukt waarvan de maximale breedte bepaald wordt door <code class="docutils literal notranslate"><span class="pre">width</span></code>.</p>
+<section id="opdracht-4">
+<h2>Opdracht 4<a class="headerlink" href="#opdracht-4" title="Link to this heading">#</a></h2>
+<p>Voor deze en de volgende “ruit”-functies <strong>mag</strong> je string-vermenigvuldiging gebruiken, maar alleen voor strings van spaties, zoals <code class="docutils literal notranslate"><span class="pre">&quot;</span> <span class="pre">&quot;</span> <span class="pre">*</span> <span class="pre">n</span></code> en dergelijke. Elk zichtbaar karakter moet <strong>afzonderlijk</strong> afgedrukt worden, net zoals in de functies van de eerdere opgaven. Het is echter <strong>niet verplicht</strong> om de operator * te gebruiken voor strings van spaties.</p>
+<p>Schrijf een functie <code class="docutils literal notranslate"><span class="pre">print_diamond(width,</span> <span class="pre">symbol)</span></code> die een ruit met <code class="docutils literal notranslate"><span class="pre">symbol</span></code>-en afdrukt waarvan de maximale breedte bepaald wordt door <code class="docutils literal notranslate"><span class="pre">width</span></code>.</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">print_diamond</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;&amp;&quot;</span><span class="p">)</span>
 <span class="n">Out</span><span class="p">:</span>
    <span class="o">&amp;</span>
@@ -742,10 +766,17 @@ Als je de slides over geneste lussen bekijkt, zul je zien dat deze opgave behand
    <span class="o">&amp;</span>
 </pre></div>
 </div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># jouw oplossing</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-<section id="de-functie-print-striped-diamond">
-<h2>De functie <code class="docutils literal notranslate"><span class="pre">print_striped_diamond</span></code><a class="headerlink" href="#de-functie-print-striped-diamond" title="Link to this heading">#</a></h2>
-<p>Schrijf nu een functie genaamd <code class="docutils literal notranslate"><span class="pre">print_striped_diamond(width,</span> <span class="pre">sym1,</span> <span class="pre">sym2)</span></code> die een “gestreepte ruit” van <code class="docutils literal notranslate"><span class="pre">sym1</span></code> en <code class="docutils literal notranslate"><span class="pre">sym2</span></code> afdrukt.</p>
+<section id="opdracht-5">
+<h2>Opdracht 5<a class="headerlink" href="#opdracht-5" title="Link to this heading">#</a></h2>
+<p>Schrijf nu een functie <code class="docutils literal notranslate"><span class="pre">print_striped_diamond(width,</span> <span class="pre">sym1,</span> <span class="pre">sym2)</span></code> die een “gestreepte ruit” van <code class="docutils literal notranslate"><span class="pre">sym1</span></code> en <code class="docutils literal notranslate"><span class="pre">sym2</span></code> afdrukt.</p>
 <p>Bijvoorbeeld:</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">print_striped_diamond</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="s2">&quot;%&quot;</span><span class="p">)</span>
 <span class="n">Out</span><span class="p">:</span>
@@ -764,11 +795,22 @@ Als je de slides over geneste lussen bekijkt, zul je zien dat deze opgave behand
       <span class="o">.</span>
 </pre></div>
 </div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># jouw oplossing</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-<section id="de-functie-print-crazy-striped-diamond">
-<h2>De functie <code class="docutils literal notranslate"><span class="pre">print_crazy_striped_diamond</span></code><a class="headerlink" href="#de-functie-print-crazy-striped-diamond" title="Link to this heading">#</a></h2>
-<p>Uitdaging!<br />
-Schrijf ten slotte (en dit is 5 punten waard <em>bovenop</em> de 8 voor de vorige figuren) een functie genaamd <code class="docutils literal notranslate"><span class="pre">print_crazy_striped_diamond(width,</span> <span class="pre">sym1,</span> <span class="pre">sym2,</span> <span class="pre">sym1_width,</span> <span class="pre">sym2_width)</span></code> die een “gestreepte ruit” van <code class="docutils literal notranslate"><span class="pre">sym1</span></code> en <code class="docutils literal notranslate"><span class="pre">sym2</span></code> afdrukt waarbij de strepen verschillende breedtes kunnen hebben. <code class="docutils literal notranslate"><span class="pre">sym1_width</span></code> bepaalt de breedte van de streep gemaakt van symbool 1 en <code class="docutils literal notranslate"><span class="pre">sym2_width</span></code> bepaalt de breedte van de streep gemaakt van symbool 2.</p>
+<section id="opdracht-6">
+<h2>Opdracht 6<a class="headerlink" href="#opdracht-6" title="Link to this heading">#</a></h2>
+<p>Een uitdaging!</p>
+<p>Schrijf tot slot een functie <code class="docutils literal notranslate"><span class="pre">print_crazy_striped_diamond(width,</span> <span class="pre">sym1,</span> <span class="pre">sym2,</span> <span class="pre">sym1_width,</span> <span class="pre">sym2_width)</span></code> die een “gestreepte ruit” van <code class="docutils literal notranslate"><span class="pre">sym1</span></code> en <code class="docutils literal notranslate"><span class="pre">sym2</span></code> afdrukt waarbij de strepen verschillende breedtes kunnen hebben.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sym1_width</span></code> bepaalt de breedte van de streep gemaakt van symbool 1</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sym2_width</span></code> bepaalt de breedte van de streep gemaakt van symbool 2.</p></li>
+</ul>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">print_crazy_striped_diamond</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="s2">&quot;%&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">Out</span><span class="p">:</span>
       <span class="o">.</span>
@@ -785,6 +827,13 @@ Schrijf ten slotte (en dit is 5 punten waard <em>bovenop</em> de 8 voor de vorig
      <span class="o">%</span> <span class="o">.</span>
       <span class="o">.</span>
 </pre></div>
+</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># jouw oplossing</span>
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 </section>
@@ -853,12 +902,12 @@ Schrijf ten slotte (en dit is 5 punten waard <em>bovenop</em> de 8 voor de vorig
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-functie-print-rect">De functie <code class="docutils literal notranslate"><span class="pre">print_rect</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-functie-print-triangle">De functie <code class="docutils literal notranslate"><span class="pre">print_triangle</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-functie-print-bumps">De functie <code class="docutils literal notranslate"><span class="pre">print_bumps</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-functie-print-diamond">De functie <code class="docutils literal notranslate"><span class="pre">print_diamond</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-functie-print-striped-diamond">De functie <code class="docutils literal notranslate"><span class="pre">print_striped_diamond</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-functie-print-crazy-striped-diamond">De functie <code class="docutils literal notranslate"><span class="pre">print_crazy_striped_diamond</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-1">Opgave 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2">Opdracht 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3">Opdracht 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-4">Opdracht 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-5">Opdracht 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-6">Opdracht 6</a></li>
 </ul>
   </nav></div>
 

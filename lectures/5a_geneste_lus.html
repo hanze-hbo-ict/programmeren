@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Nested lussen &#8212; Programmeren</title>
+    <title>Lussen in lussen &#8212; Programmeren</title>
   
   
   
@@ -36,8 +36,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css?v=def72667" />
     <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css?v=5f6255d3" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css?v=def72667" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -96,9 +96,9 @@ commentsRunWhenDOMLoaded(addUtterances);
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'lectures/5a_nested_lus';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lectures/5a_geneste_lus';</script>
     <script src="../_static/save_state.js?v=f1e4c503"></script>
-    <link rel="canonical" href="https:///hanze-hbo-ict.github.io/programmeren/lectures/5a_nested_lus.html" />
+    <link rel="canonical" href="https:///hanze-hbo-ict.github.io/programmeren/lectures/5a_geneste_lus.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Zoeken" href="../search.html" />
     <link rel="next" title="Werkcollege" href="../course/practical_5.html" />
@@ -308,7 +308,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 5</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../course/week_5.html">Onderwerpen</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Nested lussen</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Lussen in lussen</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_5.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -423,7 +423,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       
       
       
-      <li><a href="https://colab.research.google.com/github/hanze-hbo-ict/programmeren/blob/master/lectures/5a_nested_lus.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/hanze-hbo-ict/programmeren/blob/master/lectures/5a_geneste_lus.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -489,7 +489,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       
       
       
-      <li><a href="https://github.com/hanze-hbo-ict/programmeren/edit/master/lectures/5a_nested_lus.ipynb" target="_blank"
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/edit/master/lectures/5a_geneste_lus.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -506,7 +506,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       
       
       
-      <li><a href="https://github.com/hanze-hbo-ict/programmeren/issues/new?title=Issue%20on%20page%20%2Flectures/5a_nested_lus.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/issues/new?title=Issue%20on%20page%20%2Flectures/5a_geneste_lus.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open een probleem"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -536,7 +536,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       
       
       
-      <li><a href="../_sources/lectures/5a_nested_lus.ipynb" target="_blank"
+      <li><a href="../_sources/lectures/5a_geneste_lus.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download het bronbestand"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -620,7 +620,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Nested lussen</h1>
+    <h1>Lussen in lussen</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -668,8 +668,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="nested-lussen">
-<h1>Nested lussen<a class="headerlink" href="#nested-lussen" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="lussen-in-lussen">
+<h1>Lussen in lussen<a class="headerlink" href="#lussen-in-lussen" title="Link to this heading">#</a></h1>
+<p>Geneste lussen!</p>
 <section id="eendimensionale-lists">
 <h2>Eendimensionale lists<a class="headerlink" href="#eendimensionale-lists" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
@@ -1007,7 +1008,7 @@ return profit, its b-day, and s-day
 </section>
 <section id="paarsgewijs">
 <h3>Paarsgewijs<a class="headerlink" href="#paarsgewijs" title="Link to this heading">#</a></h3>
-<p>Begin <code class="docutils literal notranslate"><span class="pre">j</span></code> altijd één positie na <code class="docutils literal notranslate"><span class="pre">i</span></code></p>
+<p>Begin <code class="docutils literal notranslate"><span class="pre">j</span></code> altijd één positie na <code class="docutils literal notranslate"><span class="pre">i</span></code>, bijvoorbeeld:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
