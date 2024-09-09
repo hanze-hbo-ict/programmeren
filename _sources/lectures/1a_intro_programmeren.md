@@ -15,15 +15,15 @@ Het is niet verstandig om, als er een probleem opgelost moet worden, meteen te g
 
 ## Strategieën
 
-De strategie die gebruikt kan worden om een oplossing te vinden verschilt per probleem. De ene strategie past beter dan de ander, maar wat wel handig is, is om pen en papier te gebruiken. Hier zijn er een aantal:
+De strategie die gebruikt kan worden om een oplossing te vinden verschilt per probleem. De ene strategie past beter dan de andere, maar wat wel handig is, is om pen en papier te gebruiken. Hier zijn er een aantal:
 
 1. *Teken het probleem op papier*. Dit werkt vooral als je met ruimtelijke vragen bezig bent.
 2. *Maak het probleem kleiner*. Bijvoorbeeld: wordt er gevraagd om een methode te verzinnen om getallen te sorteren? In plaats van het probleem op te lossen met 100 getallen, doe het eerst met twee getallen, daarna met drie, enz.
-3. *Probeer alle opties uit*. Deze leent zich vooral als er niet teveel verschillende inputs zijn.
+3. *Probeer alle opties uit*. Deze leent zich vooral als er niet te veel verschillende beginsituaties zijn.
 
 ### Longest Common Subsequence (LCS)
 
-Het string-matching probleem in DND:
+Het string-matching probleem in DNA:
 
 - 'CGCTGAGCTAGGCC...'
 - 'ATCCTAGGTAACTG...' (en $10^9$ meer!)
@@ -46,7 +46,7 @@ Beslissingsbomen (*behavior trees*) kunnen gebruikt worden om instructies te vis
 
 ![Beslisboom](images/1/beslisboom.gif)
 
-Dit is het algoritme van Euclides wat gebruikt kan worden om de grootste gemene deler tussen twee getallen te bepalen. Euclides had ontdekt dat via een paar instructies altijd te berekenen is:
+Dit is het algoritme van Euclides wat gebruikt kan worden om de grootste gemene deler (ggd) tussen twee getallen te bepalen. Euclides had ontdekt dat via een paar instructies altijd te berekenen is:
 
 1. Noem het grootste van de beide getallen *m*, het andere *n*.
 2. Deel *m* door *n*, bereken hoeveel je overhoudt en noem dat *r*.
@@ -74,13 +74,13 @@ Nu is de rest 0, en daarmee zijn we aan het einde gekomen. We hebben bepaald dat
 
 ## State Machine
 
-Een andere methode voor het ontwerpen van programma's is het gebruik van een state machine. Deze manier leent zich er vooral voor om een probleem in kleinere problemen op te breken. Een state machine bestaat uit verschillende states (een staat, of situatie) en heeft altijd een *begin* en *eind* state. Tussen de states zijn overgangen die aangeven wanneer er van state verandert wordt.
+Een andere methode voor het ontwerpen van programma's is het gebruik van een state machine. Deze manier leent zich er vooral voor om een probleem in kleinere problemen op te breken. Een state machine bestaat uit verschillende states (een staat, of situatie) en heeft altijd een *begin* en *eind* state. Tussen de states zijn overgangen die aangeven wanneer er van state veranderd wordt.
 
 Neem bijvoorbeeld de spoken van Pac-Man. Zodra het spel begint zoeken ze naar Pac-Man en als ze hem zien gaan ze achter hem aan. Als Pac-Man een Power Pellet pakt moeten de spoken juist vluchten. Dit idee kan afgebeeld worden in een state machine.
 
 ![State Machine](images/1/pacmanStates.png)
 
-Na het ontwerpen van een de state machine kan er nagedacht worden over hoe de afzonderlijke problemen opgelost kunnen worden en dit kan weer gedaan worden met een beslissingsboom.
+Na het ontwerpen van de state machine kan er nagedacht worden over hoe de afzonderlijke problemen opgelost kunnen worden en dit kan weer gedaan worden met een beslissingsboom.
 
 ## 3 p's
 
@@ -93,26 +93,26 @@ De drie p's van het programmeren:
 
 Deze opdrachten zijn ontworpen om je te helpen denken als een informaticus. Door strategieën te ontwikkelen voor deze spellen, oefen je met het soort probleemoplossend denken dat essentieel is in de informatica.
 
-### Opdracht 1 : Nim
+### Opdracht 1: Nim
 
 ![Nim 16 lucifers](images/1/NimGame.png)
 
-Nim is een spel voor twee spelers. Er liggen 16 lucifers op tafel. Om de beurt pakt een speler 1, 2 of 3 lucifers. Degene die de laatste lucifer van tafel pakt heeft gewonnen. Als de speler die als tweede begint de juiste strategie gebruikt kan hij/zij altijd winnen.
+Nim is een spel voor twee spelers. Er liggen 16 lucifers op tafel. Om de beurt pakt een speler 1, 2 of 3 lucifers. Degene die de laatste lucifer van tafel pakt heeft gewonnen. Als de speler die als tweede begint de juiste strategie gebruikt, kan hij/zij altijd winnen.
 
-- **Stap 1: Proberen.** Ga uitzoeken welke strategie speler 2 moet gebruiken om altijd te winnen.
-- **Stap 2: Plan.** Maak een beslissingsboom voor speler 2.
+- **Stap 1: Proberen.** Ga uitzoeken welke strategie speler 2 moet gebruiken om altijd te winnen. Speel het spel een paar keer tegen jezelf of een medestudent om patronen te ontdekken.
+- **Stap 2: Plan.** Maak een beslissingsboom voor speler 2. Begin bij de startsituatie en werk alle mogelijke zetten uit tot je de winnende strategie ziet.
 
-### Opdracht 2 : Nim variant
+### Opdracht 2: Nim variant
 
-Leg 3 groepjes lucifers op tafel. Hoeveel lucifers er in elke groep ligt, dat maakt niet uit. Om de beurt pakt een speler 1, 2 of 3 lucifers **uit dezelfde groep**. Degene die de laatste lucifer van tafel pakt heeft gewonnen. Ook nu kan met de juiste strategie speler 2 altijd winnen.
+Leg 3 groepjes lucifers op tafel. Het aantal lucifers in elke groep maakt niet uit. Om de beurt pakt een speler 1, 2 of 3 lucifers **uit dezelfde groep**. Degene die de laatste lucifer van tafel pakt heeft gewonnen. Ook nu kan met de juiste strategie speler 2 altijd winnen.
 
-- **Stap 1: Proberen.** Ga uitzoeken welke strategie speler 2 moet gebruiken om altijd te winnen.
-- **Stap 2: Plan.** Maak een beslissingsboom voor speler 2.
+- **Stap 1: Proberen.** Ga uitzoeken welke strategie speler 2 moet gebruiken om altijd te winnen. Begin met een eenvoudige opstelling, bijvoorbeeld (3,4,5) lucifers in de groepen.
+- **Stap 2: Plan.** Maak een beslissingsboom voor speler 2. Beschrijf de winnende strategie in algemene termen, zodat deze voor elke beginopstelling werkt.
 
 ### Opdracht 3: SOS
 
-SOS is ook een spel voor twee spelers. Het speelveld is een rij van 100 vakjes. Om de beurt plaatst een speler de letter 'S' of de letter "O" in een vakje. De spelers kiezen zelf welk vakje en welke letter. Het spel is voorbij zodra er 'SOS' gespeld is op het bord. Wie de laatste letter heeft neergezet wint, ongeacht wie de andere twee letters van het woord 'SOS' heeft geplaatst.
+SOS is ook een spel voor twee spelers. Het speelveld is een rij van 100 vakjes. Om de beurt plaatst een speler de letter 'S' of de letter 'O' in een vakje. De spelers kiezen zelf welk vakje en welke letter. Het spel is voorbij zodra er 'SOS' gespeld is op het bord. Wie de laatste letter heeft neergezet wint, ongeacht wie de andere twee letters van het woord 'SOS' heeft geplaatst.
 Ook hier geldt dat speler 2 met de juiste strategie altijd wint.
 
-- **Stap 1: Proberen.** Ga uitzoeken welke strategie speler 2 moet gebruiken om altijd te winnen.
-- **Stap 2: Plan.** Maak een beslissingsboom voor speler 2.
+- **Stap 1: Proberen.** Ga uitzoeken welke strategie speler 2 moet gebruiken om altijd te winnen. Begin met een kleiner speelveld, bijvoorbeeld 10 vakjes, om het probleem behapbaar te maken.
+- **Stap 2: Plan.** Maak een beslissingsboom voor speler 2. Beschrijf de strategie in termen van hoe speler 2 moet reageren op de zetten van speler 1 om altijd te winnen.
