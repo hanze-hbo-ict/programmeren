@@ -28,13 +28,21 @@ Het string-matching probleem in DNA:
 - 'CGCTGAGCTAGGCC...'
 - 'ATCCTAGGTAACTG...' (en $10^9$ meer!)
 
-Wat is de langst *gemeenschappelijke opeenvolging* van karakters? In biologie is dit een werkelijk probleem waar het gaat om het vergelijken van DNA-sequenties. Een subsequence is een reeks karakters die in dezelfde volgorde voorkomen in beide strings, maar niet noodzakelijk aaneengesloten.
+Wat is de langst *gemeenschappelijke opeenvolging* van karakters? In biologie is dit een werkelijk probleem waar het gaat om het vergelijken van DNA-sequenties. Een subsequence is een reeks karakters die in dezelfde volgorde voorkomen in beide strings, *maar niet noodzakelijk aaneengesloten*.
 
 In plaats van het probleem op te lossen op een grote dataset is het vaak makkelijker om eerst een kleinere dataset te proberen op te lossen. Bijvoorbeeld twee woorden:
+
 - 'HUMAN'
 - 'CHIMPANZEE'
 
-Je zult redelijk snel zien dat 'HAN' de langst gemeenschappelijke opeenvolging van karakters is. Dit is de eerste stap van het oplossen van een probleem: de probeerfase.
+Je zult misschien redelijk snel zien dat 'HMAN' de langst gemeenschappelijke opeenvolging van karakters is, het volgende verduidelijkt dit als we de twee woorden boven elkaar plaatsen en de plekken die niet overeenkomen markeren met een `-`:
+
+```text
+-HU-M-AN---
+CH-IMPANZEE
+```
+
+Dit is de eerste stap van het oplossen van een probleem: de probeerfase.
 
 Welke stappen heb je gebruikt om tot een oplossing te komen? Zijn deze stappen ook toe te passen op een opeenvolging van 3 miljard karakters? Dit is de planfase waarin het algoritme wordt ontworpen.
 
