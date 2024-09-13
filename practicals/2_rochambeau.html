@@ -680,24 +680,20 @@ document.write(`
 </section>
 <section id="een-begin">
 <h2>Een begin<a class="headerlink" href="#een-begin" title="Link to this heading">#</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>  <span class="c1"># import the module named random</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span> <span class="c1"># import the function choice from the module named random</span>
 
-<span class="k">def</span> <span class="nf">rps</span><span class="p">():</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Play a game of rock-paper-scissors in Dutch</span>
+<span class="c1"># Play a game of rock-paper-scissors in Dutch</span>
 
-<span class="sd">    arguments: no arguments (prompted text doesn&#39;t count as an argument)</span>
-<span class="sd">    result: no result       (printing doesn&#39;t count as a result)</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">user</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Kies een wapen (steen, papier of schaar): &quot;</span><span class="p">)</span>
-    <span class="n">comp</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s2">&quot;steen&quot;</span><span class="p">,</span> <span class="s2">&quot;papier&quot;</span><span class="p">,</span> <span class="s2">&quot;schaar&quot;</span><span class="p">])</span>
+<span class="n">user</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Kies een wapen (steen, papier of schaar): &quot;</span><span class="p">)</span>
+<span class="n">comp</span> <span class="o">=</span> <span class="n">choice</span><span class="p">([</span><span class="s2">&quot;steen&quot;</span><span class="p">,</span> <span class="s2">&quot;papier&quot;</span><span class="p">,</span> <span class="s2">&quot;schaar&quot;</span><span class="p">])</span>
 
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;De gebruiker (jij) koos&quot;</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;De computer (ik) koos&quot;</span><span class="p">,</span> <span class="n">comp</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;De gebruiker (jij) koos&quot;</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;De computer (ik) koos&quot;</span><span class="p">,</span> <span class="n">comp</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="n">user</span> <span class="o">==</span> <span class="s2">&quot;steen&quot;</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Haha! Eigenlijk koos ik papier! IK HEB GEWONNEN!&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">user</span> <span class="o">==</span> <span class="s2">&quot;steen&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Haha! Eigenlijk koos ik papier! IK HEB GEWONNEN!&quot;</span><span class="p">)</span>
 
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hopelijk heb je de volgende keer meer geluk...&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hopelijk heb je de volgende keer meer geluk...&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -730,24 +726,20 @@ document.write(`
 <p>We hebben de begincode hier alvast gekopiëerd indien je dit notebook wilt gebruiken om de opgave uit te werken (bijvoorbeeld in <a class="reference external" href="https://colab.research.google.com/">Google Colab</a>). Maak je een fout of wil je opnieuw beginnen dan kan je altijd de bovenstaande code kopiëren en hier weer plakken.</p>
 <div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>  <span class="c1"># import the module named random</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span> <span class="c1"># import the function choice from the module named random</span>
 
-<span class="k">def</span> <span class="nf">rps</span><span class="p">():</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Play a game of rock-paper-scissors in Dutch</span>
+<span class="c1"># Play a game of rock-paper-scissors in Dutch</span>
 
-<span class="sd">    arguments: no arguments (prompted text doesn&#39;t count as an argument)</span>
-<span class="sd">    result: no result       (printing doesn&#39;t count as a result)</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">user</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Kies een wapen (steen, papier of schaar): &quot;</span><span class="p">)</span>
-    <span class="n">comp</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s2">&quot;steen&quot;</span><span class="p">,</span> <span class="s2">&quot;papier&quot;</span><span class="p">,</span> <span class="s2">&quot;schaar&quot;</span><span class="p">])</span>
+<span class="n">user</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Kies een wapen (steen, papier of schaar): &quot;</span><span class="p">)</span>
+<span class="n">comp</span> <span class="o">=</span> <span class="n">choice</span><span class="p">([</span><span class="s2">&quot;steen&quot;</span><span class="p">,</span> <span class="s2">&quot;papier&quot;</span><span class="p">,</span> <span class="s2">&quot;schaar&quot;</span><span class="p">])</span>
 
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;De gebruiker (jij) koos&quot;</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;De computer (ik) koos&quot;</span><span class="p">,</span> <span class="n">comp</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;De gebruiker (jij) koos&quot;</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;De computer (ik) koos&quot;</span><span class="p">,</span> <span class="n">comp</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="n">user</span> <span class="o">==</span> <span class="s2">&quot;steen&quot;</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Haha! Eigenlijk koos ik papier! IK HEB GEWONNEN!&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">user</span> <span class="o">==</span> <span class="s2">&quot;steen&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Haha! Eigenlijk koos ik papier! IK HEB GEWONNEN!&quot;</span><span class="p">)</span>
 
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hopelijk heb je de volgende keer meer geluk...&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hopelijk heb je de volgende keer meer geluk...&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
