@@ -661,27 +661,22 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voorbereiding">Voorbereiding</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-python-bestand">import python bestand.</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#onze-png-module">Onze PNG module</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-1-uitproberen">Opdracht 1: Uitproberen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voorbereiding">Voorbereiding</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#onze-png-module">Onze PNG module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-1-uitproberen">Opdracht 1: Uitproberen</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#datastructuur">Datastructuur</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#luminantie">Luminantie</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spelen-met-pixels">Spelen met pixels</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spelen-met-pixels">Spelen met pixels</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2-greyscale">Opdracht 2: <code class="docutils literal notranslate"><span class="pre">greyscale()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3-binarize-thresh">Opdracht 3: <code class="docutils literal notranslate"><span class="pre">binarize(thresh)</span></code></a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2-greyscale">Opdracht 2: <code class="docutils literal notranslate"><span class="pre">greyscale()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3-binarize-thresh">Opdracht 3: <code class="docutils literal notranslate"><span class="pre">binarize(thresh)</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geometrische-transformaties">Geometrische transformaties</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-4-flip-vert">Opdracht 4: <code class="docutils literal notranslate"><span class="pre">flip_vert()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-5-flip-horiz">Opdracht 5: <code class="docutils literal notranslate"><span class="pre">flip_horiz()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-6-mirror-vert">Opdracht 6: <code class="docutils literal notranslate"><span class="pre">mirror_vert()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-7-mirror-horiz">Opdracht 7: <code class="docutils literal notranslate"><span class="pre">mirror_horiz</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-8-scale">Opdracht 8: <code class="docutils literal notranslate"><span class="pre">scale</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-7-mirror-horiz">Opdracht 7: <code class="docutils literal notranslate"><span class="pre">mirror_horiz()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-8-scale">Opdracht 8: <code class="docutils literal notranslate"><span class="pre">scale()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-9-meer-transformaties">Opdracht 9 Meer transformaties</a></li>
 </ul>
 </li>
@@ -700,7 +695,7 @@ document.write(`
 <h1>Fraaie plaatjes<a class="headerlink" href="#fraaie-plaatjes" title="Link to this heading">#</a></h1>
 <section id="voorbereiding">
 <h2>Voorbereiding<a class="headerlink" href="#voorbereiding" title="Link to this heading">#</a></h2>
-<p>Download <a class="reference external" href="https://github.com/hanze-hbo-ict/programmeren/raw/master/problems/assets/fraaie_plaatjes.zip">Python plaatjes</a>.</p>
+<p>Download eerst <a class="reference download internal" download="" href="../_downloads/66cb5c4e73ee09d4a0275c19244ddbaa/fraaie_plaatjes.zip"><span class="xref download myst">Python plaatjes</span></a>.</p>
 <p>Dit bestand moet ergens uitgepakt worden. Het bevat een aantal bestanden die allemaal in <strong>dezelfde</strong> map moeten staan:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">fraaie_plaatjes.py</span></code> (het bestand dat je gaat uitvoeren!)</p></li>
@@ -710,21 +705,23 @@ document.write(`
 <li><p><code class="docutils literal notranslate"><span class="pre">zp7.png</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">png.py</span></code></p></li>
 </ul>
-<p>Het bestand dat we gaan bewerken is de afbeelding <code class="docutils literal notranslate"><span class="pre">spam.png</span></code>.  Verder zijn er nog twee andere voorbeelden:</p>
-<p>Het meegeleverde bestand <code class="docutils literal notranslate"><span class="pre">in.png</span></code>: <img alt="in.png" src="../_images/in.png" /></p>
-<p>Het aangepaste (geïnverteerde) bestand <code class="docutils literal notranslate"><span class="pre">out.png</span></code>: <img alt="out.png" src="../_images/out.png" /></p>
-<p>Hier is ook de originele en een geïnverteerd afbeelding van een bekend gebouw op de Zernikecampus in Groningen, de Van Olsttoren:</p>
+<p>Het bestand dat je gaat bewerken is de afbeelding <code class="docutils literal notranslate"><span class="pre">spam.png</span></code>.  Verder zijn er nog twee andere voorbeelden:</p>
+<ul class="simple">
+<li><p>het meegeleverde bestand <code class="docutils literal notranslate"><span class="pre">in.png</span></code>: <img alt="in.png" src="../_images/in.png" /></p></li>
+<li><p>het aangepaste (geïnverteerde) bestand <code class="docutils literal notranslate"><span class="pre">out.png</span></code>: <img alt="out.png" src="../_images/out.png" /></p></li>
+</ul>
+<p>Hier is ook de originele en een geïnverteerde afbeelding (een negatief) van een bekend gebouw op de Zernikecampus in Groningen, de Van Olsttoren:</p>
 <p><img alt="Van Olsttoren" src="../_images/zp7.png" /></p>
 <p><img alt="Van Olsttoren, geïnverteerd" src="../_images/invert.png" /></p>
-<section id="import-python-bestand">
-<h3>import python bestand.<a class="headerlink" href="#import-python-bestand" title="Link to this heading">#</a></h3>
-<p>Naast het importeren van bestaande libraries kunnen we ook onze eigen python bestanden toevoegen. We kunnen dan onze eigen functies gebruiken in het python bestand. Zo kan je functies hergebruiken of een groot programma opsplitsen in verschillende delen.</p>
-<p>Bovenaan fraaie_plaatjes.py staat de code</p>
+<div class="admonition note">
+<p class="admonition-title">Notitie</p>
+<p>Naast het importeren van bestaande (ingebouwde) Python-modules kan je ook uit eigen Python bestanden importeren. Je kan dan eigen functies gebruiken uit een ander Python-bestand en dit is een handige techniek voor het hergebruiken van code of een groter programma op te splitsen in verschillende delen.</p>
+<p>Bovenaan <code class="docutils literal notranslate"><span class="pre">fraaie_plaatjes.py</span></code> staat de volgende code</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">png</span> <span class="kn">import</span> <span class="o">*</span>
 </pre></div>
 </div>
-<p>Deze aanroep importeert het bestand png.py dat ook in de map staat dat is gedownload. Dit python bestand behandeld het openen, lezen en opslaan van images. Door het importeren van dit bestand kunnen we alle functies van png.py gebruiken.</p>
-</section>
+<p>Deze aanroep gebruikt het bestand <code class="docutils literal notranslate"><span class="pre">png.py</span></code> dat ook in de map staat die je zojuist hebt gedownload. Dit Python-bestand bevat functionaliteit voor het openen, lezen en schrijven van afbeeldingen. Hier gebruiken we <code class="docutils literal notranslate"><span class="pre">*</span></code> om <em>alle</em> functies in het bestand <code class="docutils literal notranslate"><span class="pre">png.py</span></code> te importeren en te kunnen gebruiken.</p>
+</div>
 </section>
 <section id="onze-png-module">
 <h2>Onze PNG module<a class="headerlink" href="#onze-png-module" title="Link to this heading">#</a></h2>
@@ -736,34 +733,44 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</section>
 <section id="opdracht-1-uitproberen">
-<h3>Opdracht 1: Uitproberen<a class="headerlink" href="#opdracht-1-uitproberen" title="Link to this heading">#</a></h3>
+<h2>Opdracht 1: Uitproberen<a class="headerlink" href="#opdracht-1-uitproberen" title="Link to this heading">#</a></h2>
 <p>Probeer <code class="docutils literal notranslate"><span class="pre">fraaie_plaatjes.py</span></code> op de gebruikelijke manier uit.</p>
-<p>Door dit te doen wordt de functie <code class="docutils literal notranslate"><span class="pre">invert()</span></code> uitgevoerd</p>
+<p>Door dit te doen wordt de functie <code class="docutils literal notranslate"><span class="pre">invert()</span></code> uitgevoerd.</p>
+<p>Door dit te doen wordt de functie <code class="docutils literal notranslate"><span class="pre">invert()</span></code> uitgevoerd (kijk naar het einde van <code class="docutils literal notranslate"><span class="pre">fraaie_plaatjes.py</span></code>, je ziet de aanroep van <code class="docutils literal notranslate"><span class="pre">invert</span></code> bijna aan het einde van het bestand…).</p>
 <p>Voor de volledigheid is hier de code van deze functie:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">invert</span><span class="p">():</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot; run this function to read in the in.png image,</span>
-<span class="sd">        change it, and write out the result to out.png</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Run this function to read in the in.png image,</span>
+<span class="sd">    change it, and write out the result to out.png</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">im_pix</span> <span class="o">=</span> <span class="n">get_rgb</span><span class="p">(</span><span class="s1">&#39;in.png&#39;</span><span class="p">)</span>  <span class="c1"># lees het bestand in.png in</span>
+    <span class="n">im_pix</span> <span class="o">=</span> <span class="n">get_rgb</span><span class="p">(</span><span class="s2">&quot;in.png&quot;</span><span class="p">)</span>  <span class="c1"># lees het bestand in.png in</span>
+
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;De eerste twee pixels van de eerste rij zijn&quot;</span><span class="p">,</span> <span class="n">im_pix</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
-    <span class="c1">#</span>
+
     <span class="c1"># Onthoud dat im_pix een lijst (de afbeelding) van</span>
     <span class="c1"># lijsten (elke rij) van lijsten (elke pixel is [R,G,B]) is</span>
-    <span class="c1">#</span>
+
     <span class="n">new_pix</span> <span class="o">=</span> <span class="p">[]</span>
+
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">im_pix</span><span class="p">:</span>
-        <span class="n">new_row</span><span class="o">=</span><span class="p">[]</span>
+        <span class="n">new_row</span> <span class="o">=</span> <span class="p">[]</span>
+
         <span class="k">for</span> <span class="n">pixel</span> <span class="ow">in</span> <span class="n">row</span><span class="p">:</span>
             <span class="n">new_pixel</span> <span class="o">=</span> <span class="n">change</span><span class="p">(</span><span class="n">pixel</span><span class="p">)</span>
-            <span class="n">new_row</span><span class="o">+=</span> <span class="p">[</span><span class="n">new_pixel</span><span class="p">]</span>
+            <span class="n">new_row</span> <span class="o">+=</span> <span class="p">[</span><span class="n">new_pixel</span><span class="p">]</span>
+
         <span class="n">new_pix</span> <span class="o">+=</span> <span class="p">[</span><span class="n">new_row</span><span class="p">]</span>
+
     <span class="c1"># sla nu het bestand &#39;out.png&#39; op</span>
-    <span class="n">save_rgb</span><span class="p">(</span><span class="n">new_pix</span><span class="p">,</span> <span class="s1">&#39;out.png&#39;</span><span class="p">)</span>
+    <span class="n">save_rgb</span><span class="p">(</span><span class="n">new_pix</span><span class="p">,</span> <span class="s2">&quot;out.png&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># uitproberen!</span>
+<span class="n">invert</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>b. Lees deze functie door om een idee te krijgen van hoe je afbeeldingen kan inlezen, wijzigen en uitvoeren. Denk alvast na over de datastructuur van  <code class="docutils literal notranslate"><span class="pre">im_pix</span></code>, en de andere met dezelfde structuur, <code class="docutils literal notranslate"><span class="pre">new_pix</span></code>. De volgende paragraaf zal hier bij helpen…</p>
-</section>
+<p>Lees deze functie door om een idee te krijgen van hoe je afbeeldingen kan inlezen, wijzigen en uitvoeren. Denk alvast na over de datastructuur van  <code class="docutils literal notranslate"><span class="pre">im_pix</span></code>, en de andere met dezelfde structuur, <code class="docutils literal notranslate"><span class="pre">new_pix</span></code>. Het volgende zal je hier bij helpen…</p>
 <section id="datastructuur">
 <h3>Datastructuur<a class="headerlink" href="#datastructuur" title="Link to this heading">#</a></h3>
 <p>De relevante datastructuur in bovenstaande code is <code class="docutils literal notranslate"><span class="pre">im_pix</span></code>, die alle pixelgegevens van de afbeelding bevat.</p>
@@ -781,9 +788,9 @@ document.write(`
 </pre></div>
 </div>
 <p>In dit voorbeeld zijn de pixels linksboven en middenboven puur blauw, en de pixel rechtsboven is zwart. De pixel linksonder is wit, de pixel middenonder is rood en de pixel rechtsonder is blauw.</p>
-<p>Met pixels van het formaat als in een computerspel uit de jaren zeventig ziet de afbeelding er als volgt uit:</p>
+<p>Deze pixels zien er in kleur als volgt uit:</p>
 <p><img alt="Voorbeeld" src="../_images/pix.png" /></p>
-<p>De nested lus in de functie <code class="docutils literal notranslate"><span class="pre">convert</span></code> heeft twee niveaus:</p>
+<p>De geneste lus in de functie <code class="docutils literal notranslate"><span class="pre">convert</span></code> heeft twee niveaus:</p>
 <ul class="simple">
 <li><p>Het buitenste niveau loopt door elke rij van de afbeelding (elke rij wordt <code class="docutils literal notranslate"><span class="pre">row</span></code> genoemd, de variabele voor dat gedeelte)</p>
 <ul>
@@ -801,17 +808,21 @@ document.write(`
 </section>
 <section id="luminantie">
 <h3>Luminantie<a class="headerlink" href="#luminantie" title="Link to this heading">#</a></h3>
-<p>Eerst zullen we ons richten op operaties op pixelniveau. Voor het maken van grijswaarden- en binaire beelden zal je je moeten richten op de <a class="reference external" href="http://en.wikipedia.org/wiki/Luminance_(relative)">relatieve luminantie</a>. In essentie is dit hoe helder of donker de kleuren in een pixel zijn (in vergelijking met wit).</p>
-<p>Zoals Wikipedia het berekent, is de luminantie 21% rood, 72% groen en 7% blauw. Intuïtief is dit logisch, want als je denkt aan standaard rood, groen en blauw, dan is groen het lichtste en heeft dus het grootste positieve effect op de luminantie, terwijl blauw donkerder is en een lagere waarde heeft voor de luminantie. Dit is nuttig! Je gaat de luminantie berekenen voor pixelbewerkingen.</p>
-</section>
+<p>Eerst zullen we ons richten op operaties op pixelniveau. Voor het maken van <em>grijswaarden</em>- en <em>binaire</em> beelden zal je je moeten richten op de <a class="reference external" href="http://en.wikipedia.org/wiki/Luminance_(relative)">relatieve luminantie</a>. In essentie is dit hoe helder of donker de kleuren in een pixel zijn (in vergelijking met wit).</p>
+<p>Zoals <a class="reference external" href="http://en.wikipedia.org/wiki/Luminance_(relative)">Wikipedia</a> het berekent, is de luminantie 21% rood, 72% groen en 7% blauw. Intuïtief is dit logisch, want als je denkt aan standaard rood, groen en blauw, dan is groen het lichtste en heeft dus het grootste positieve effect op de luminantie, terwijl blauw donkerder is en een lagere waarde heeft voor de luminantie. Dit is nuttig! Je gaat de luminantie berekenen voor pixelbewerkingen.</p>
 </section>
 <section id="spelen-met-pixels">
-<h2>Spelen met pixels<a class="headerlink" href="#spelen-met-pixels" title="Link to this heading">#</a></h2>
-<p>We hebben je een functie <code class="docutils literal notranslate"><span class="pre">invert</span></code> gegeven en die een beeld wijzigt om het negatief te creëren. Dat wil zeggen, alle kleurwaarden zijn 255 min hun oorspronkelijke waarde. Let vooral op het gebruik van de list comprehension in <code class="docutils literal notranslate"><span class="pre">invert</span></code>, die elke pixel in de afbeelding langsloopt (itereert) en <code class="docutils literal notranslate"><span class="pre">change(p)</span></code> aanroept.</p>
-<p>Het is het gemakkelijkst om ook <code class="docutils literal notranslate"><span class="pre">greyscale</span></code> en <code class="docutils literal notranslate"><span class="pre">binarize</span></code> in hetzelfde formaat te schrijven: een hoofdfunctie die gebruikersinvoer accepteert en een list comprehension bevat die een hulpfunctie voor elke pixel aanroept.</p>
+<h3>Spelen met pixels<a class="headerlink" href="#spelen-met-pixels" title="Link to this heading">#</a></h3>
+<p>We hebben je een functie <code class="docutils literal notranslate"><span class="pre">invert</span></code> gegeven en die een beeld wijzigt om het negatief te creëren. Dat wil zeggen, alle kleurwaarden zijn 255 min hun oorspronkelijke waarde. Let vooral op het gebruik van de lus in <code class="docutils literal notranslate"><span class="pre">invert</span></code> (<code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">pixel</span> <span class="pre">in</span> <span class="pre">row</span></code>), die elke pixel in de afbeelding langsloopt (itereert) en <code class="docutils literal notranslate"><span class="pre">change(p)</span></code> aanroept.</p>
+<div class="admonition attention">
+<p class="admonition-title">Let op</p>
+<p>Je gaat straks twee nieuwe functies schrijven, <code class="docutils literal notranslate"><span class="pre">greyscale</span></code> en <code class="docutils literal notranslate"><span class="pre">binarize</span></code>. Het is het gemakkelijkst om bij deze functies dezelfde structuur te gebruiken als in <code class="docutils literal notranslate"><span class="pre">convert</span></code>: een geneste lus waar je steeds een hulpfunctie voor elke pixel aanroept (de functie <code class="docutils literal notranslate"><span class="pre">change</span></code> die door de functie <code class="docutils literal notranslate"><span class="pre">convert</span></code> wordt gebruikt).</p>
+</div>
+</section>
+</section>
 <section id="opdracht-2-greyscale">
-<h3>Opdracht 2: <code class="docutils literal notranslate"><span class="pre">greyscale()</span></code><a class="headerlink" href="#opdracht-2-greyscale" title="Link to this heading">#</a></h3>
-<p>Schrijf nu een functie <code class="docutils literal notranslate"><span class="pre">greyscale</span></code> en die een afbeelding wijzigt naar grijswaarden. Hiervoor zul je iets moeten doen dat lijkt op <code class="docutils literal notranslate"><span class="pre">invert</span></code>, behalve dat de nieuwe functie <code class="docutils literal notranslate"><span class="pre">change</span></code> de luminantie van de pixel zal berekenen zoals hierboven beschreven. Aangezien luminantie een maat is van hoe wit of zwart een pixel is, is het eenvoudig om een lijst met RGB-waarden in grijswaarden terug te geven, geef gewoon dezelfde waarde in elk kleurkanaal teruggeven!</p>
+<h2>Opdracht 2: <code class="docutils literal notranslate"><span class="pre">greyscale()</span></code><a class="headerlink" href="#opdracht-2-greyscale" title="Link to this heading">#</a></h2>
+<p>Schrijf nu een functie <code class="docutils literal notranslate"><span class="pre">greyscale</span></code> die een afbeelding wijzigt naar grijswaarden. Hiervoor zul je iets moeten doen dat lijkt op <code class="docutils literal notranslate"><span class="pre">invert</span></code>, behalve dat de nieuwe functie <code class="docutils literal notranslate"><span class="pre">change</span></code> de luminantie van de pixel zal berekenen zoals hierboven beschreven. Aangezien luminantie een maat is van hoe wit of zwart een pixel is, is het eenvoudig om een lijst met RGB-waarden in grijswaarden terug te geven, geef gewoon dezelfde waarde in elk kleurkanaal teruggeven!</p>
 <p><img alt="Spam" src="../_images/spam.png" /></p>
 <p><img alt="Grijswaarden" src="../_images/greyscale.png" /></p>
 <p><em>Een afbeelding voor en na de conversie naar grijswaarden (luminantie).</em></p>
@@ -820,11 +831,10 @@ document.write(`
 <p>Krijg je de fout <code class="docutils literal notranslate"><span class="pre">filename</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">defined</span></code>? Zorg ervoor dat er  aanhalingstekens om de bestandsnaam staan wanneer je deze aanroept in de IPython shell. Zorg er ook voor dat de afbeelding in dezelfde map staat als je Python-script, en dat de afbeelding de juiste permissies heeft.</p>
 </section>
 <section id="opdracht-3-binarize-thresh">
-<h3>Opdracht 3: <code class="docutils literal notranslate"><span class="pre">binarize(thresh)</span></code><a class="headerlink" href="#opdracht-3-binarize-thresh" title="Link to this heading">#</a></h3>
+<h2>Opdracht 3: <code class="docutils literal notranslate"><span class="pre">binarize(thresh)</span></code><a class="headerlink" href="#opdracht-3-binarize-thresh" title="Link to this heading">#</a></h2>
 <p>Schrijf een functie <code class="docutils literal notranslate"><span class="pre">binarize(thresh)</span></code>, die een afbeelding binair (zwart-wit) maakt met een drempelwaarde <code class="docutils literal notranslate"><span class="pre">thresh</span></code> gegeven door de gebruiker. Deze drempelwaarde is een helderheidswaarde tussen 0 en 255, als een pixel groter is dan de drempelwaarde, dan moet het wit worden, en als het minder is dan de drempelwaarde, dan moet het zwart worden. Dus, een drempelwaarde van 0 betekent dat je afbeelding zuiver wit wordt en een drempelwaarde van 255 betekent dat je afbeelding zwart wordt.</p>
 <p><img alt="Binaire afbeelding" src="../_images/binarize.png" /></p>
 <p><em>Binaire spam met een grenswaarde van 100.</em></p>
-</section>
 </section>
 <section id="geometrische-transformaties">
 <h2>Geometrische transformaties<a class="headerlink" href="#geometrische-transformaties" title="Link to this heading">#</a></h2>
@@ -846,19 +856,19 @@ document.write(`
 <p>Schrijf de functie <code class="docutils literal notranslate"><span class="pre">mirror_vert</span></code>, die de afbeelding over de horizontale as (d.w.z. dat het bovenste deel ondersteboven wordt gespiegeld aan de onderkant van het beeld). Het eenvoudigst is om de onderste helft van <code class="docutils literal notranslate"><span class="pre">im_pix</span></code> te vervangen door de omgekeerde rijen van de bovenste helft. Om dit te doen, gebruik je de ingebouwde functie <code class="docutils literal notranslate"><span class="pre">get_wh()</span></code> in <code class="docutils literal notranslate"><span class="pre">png.py</span></code> om de hoogte van <code class="docutils literal notranslate"><span class="pre">im_pix</span></code> te bepalen.</p>
 <p><img alt="Verticaal gespiegeld" src="../_images/mirror_vert.png" /></p>
 <p><em><code class="docutils literal notranslate"><span class="pre">in.png</span></code> verticaal gespiegeld</em></p>
-<div class="warning admonition">
+<div class="admonition warning">
 <p class="admonition-title">Waarschuwing</p>
 <p>Je kan geen kopie maken van een lijst met <code class="docutils literal notranslate"><span class="pre">list1</span> <span class="pre">=</span> <span class="pre">list2</span></code>, omdat Python in plaats van een nieuw object te maken, gewoon een nieuwe verwijzing naar de oude lijst zal maken. Het slicen van lijsten maakt echter wel nieuwe kopieën van lijsten, dus bedenk hoe je twee slices, elk half zo groot als de originele lijst, kan combineren om de afbeelding te spiegelen.</p>
 </div>
 </section>
 <section id="opdracht-7-mirror-horiz">
-<h3>Opdracht 7: <code class="docutils literal notranslate"><span class="pre">mirror_horiz</span></code><a class="headerlink" href="#opdracht-7-mirror-horiz" title="Link to this heading">#</a></h3>
+<h3>Opdracht 7: <code class="docutils literal notranslate"><span class="pre">mirror_horiz()</span></code><a class="headerlink" href="#opdracht-7-mirror-horiz" title="Link to this heading">#</a></h3>
 <p>Schrijf de functie <code class="docutils literal notranslate"><span class="pre">mirror_horiz</span></code> die gelijk is aan de functie <code class="docutils literal notranslate"><span class="pre">mirror_vert</span></code>, maar dan over de verticale as. In plaats van de onderste rijen te vervangen door de omgekeerde bovenste rijen (zoals in <code class="docutils literal notranslate"><span class="pre">mirror_vert</span></code>), vervang je de laatste helft van de pixels in elke rij door de omgekeerde eerste helft van de pixels.</p>
 <p><img alt="Horizontaal gespiegeld" src="../_images/mirror_horiz.png" /></p>
 <p><em>De belangrijkere vraag is, welke kant maak je eerst open?</em></p>
 </section>
 <section id="opdracht-8-scale">
-<h3>Opdracht 8: <code class="docutils literal notranslate"><span class="pre">scale</span></code><a class="headerlink" href="#opdracht-8-scale" title="Link to this heading">#</a></h3>
+<h3>Opdracht 8: <code class="docutils literal notranslate"><span class="pre">scale()</span></code><a class="headerlink" href="#opdracht-8-scale" title="Link to this heading">#</a></h3>
 <p>Schrijf de functie <code class="docutils literal notranslate"><span class="pre">scale</span></code>, die de afbeelding verkleint naar de helft van de oorspronkelijke afmetingen (dit zal een kwart van het oorspronkelijke oppervlakte zijn). De eenvoudigste manier om dit te doen is om elke tweede pixel in elke rij te verwijderen (het afbeelding horizontaal te schalen) <em>en</em> elke tweede rij te verwijderen (de afbeelding verticaal te schalen).</p>
 </section>
 <section id="opdracht-9-meer-transformaties">
@@ -933,27 +943,22 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voorbereiding">Voorbereiding</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-python-bestand">import python bestand.</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#onze-png-module">Onze PNG module</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-1-uitproberen">Opdracht 1: Uitproberen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voorbereiding">Voorbereiding</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#onze-png-module">Onze PNG module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-1-uitproberen">Opdracht 1: Uitproberen</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#datastructuur">Datastructuur</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#luminantie">Luminantie</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spelen-met-pixels">Spelen met pixels</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spelen-met-pixels">Spelen met pixels</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2-greyscale">Opdracht 2: <code class="docutils literal notranslate"><span class="pre">greyscale()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3-binarize-thresh">Opdracht 3: <code class="docutils literal notranslate"><span class="pre">binarize(thresh)</span></code></a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2-greyscale">Opdracht 2: <code class="docutils literal notranslate"><span class="pre">greyscale()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3-binarize-thresh">Opdracht 3: <code class="docutils literal notranslate"><span class="pre">binarize(thresh)</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geometrische-transformaties">Geometrische transformaties</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-4-flip-vert">Opdracht 4: <code class="docutils literal notranslate"><span class="pre">flip_vert()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-5-flip-horiz">Opdracht 5: <code class="docutils literal notranslate"><span class="pre">flip_horiz()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-6-mirror-vert">Opdracht 6: <code class="docutils literal notranslate"><span class="pre">mirror_vert()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-7-mirror-horiz">Opdracht 7: <code class="docutils literal notranslate"><span class="pre">mirror_horiz</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-8-scale">Opdracht 8: <code class="docutils literal notranslate"><span class="pre">scale</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-7-mirror-horiz">Opdracht 7: <code class="docutils literal notranslate"><span class="pre">mirror_horiz()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-8-scale">Opdracht 8: <code class="docutils literal notranslate"><span class="pre">scale()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-9-meer-transformaties">Opdracht 9 Meer transformaties</a></li>
 </ul>
 </li>
