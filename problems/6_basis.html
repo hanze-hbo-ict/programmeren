@@ -683,8 +683,8 @@ document.write(`
 <h1>Basis<a class="headerlink" href="#basis" title="Link to this heading">#</a></h1>
 <section id="wisselende-stelsels">
 <h2>Wisselende stelsels<a class="headerlink" href="#wisselende-stelsels" title="Link to this heading">#</a></h2>
-<p>De volgende problemen hebben allemaal te maken met de weergave van grondtallen en het converteren of het berekenen ervan.</p>
-<p>Om te beginnen zal je worden gevraagd om van grondtal 10 naar andere grondtallen te converteren en omgekeerd. Omdat bij grondtallen groter dan grondtal 10 nieuwe “cijfers” nodig zijn, beperken we ons tussen grondtallen van 2 tot en met 10.</p>
+<p>De volgende problemen hebben te maken met de weergave van grondtallen en het omzetten of het berekenen ervan.</p>
+<p>Om te beginnen zal je worden gevraagd om van grondtal 10 naar andere grondtallen om te zetten en omgekeerd. Omdat bij grondtallen groter dan grondtal 10 nieuwe “cijfers” nodig zijn, beperken we ons tot grondtallen 2 tot en met 10.</p>
 <section id="functie-1-num-to-base-b-n-b">
 <h3>Functie 1: <code class="docutils literal notranslate"><span class="pre">num_to_base_b(n,</span> <span class="pre">b)</span></code><a class="headerlink" href="#functie-1-num-to-base-b-n-b" title="Link to this heading">#</a></h3>
 <p>Schrijf een Python functie <code class="docutils literal notranslate"><span class="pre">num_to_base_b(n,</span> <span class="pre">b)</span></code>, die een (niet negatieve) integer <code class="docutils literal notranslate"><span class="pre">n</span></code> en een grondtal <code class="docutils literal notranslate"><span class="pre">b</span></code> (van 2 tot en met 10) accepteert en een string teruggeeft die het getal <code class="docutils literal notranslate"><span class="pre">n</span></code> in grondtal <code class="docutils literal notranslate"><span class="pre">b</span></code> voorstelt.</p>
@@ -728,30 +728,18 @@ document.write(`
 <span class="n">Out</span><span class="p">[</span><span class="mi">11</span><span class="p">]:</span> <span class="s1">&#39;&#39;</span>                   <span class="c1"># merk op dat als n 0 is we een lege string willen!!</span>
 </pre></div>
 </div>
-<div class="notice admonition">
-<p class="admonition-title">Opmerkingen</p>
-<p>Vergeet niet dat jouw functie een string en <em>niet</em> een getal moet teruggeven! Verder,</p>
-<!-- TODO verwijzing naar num_to_bin in college -->
-<ul class="simple">
-<li><p>De functie <code class="docutils literal notranslate"><span class="pre">num_to_binary</span></code> die je eerder hebt geschreven is een goed begin…</p></li>
-<li><p>Vraag jezelf af, wat moet er veranderen om waarden in grondtal <code class="docutils literal notranslate"><span class="pre">b</span></code> terug te geven in plaats van grondtal 2?</p></li>
-</ul>
-</div>
 <p>Hier zie je een aantal tests die je kan gebruiken:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">num_to_base_b</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span>
 <span class="k">assert</span> <span class="n">num_to_base_b</span><span class="p">(</span><span class="mi">42</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;132&#39;</span>
 </pre></div>
 </div>
 <p>Je kan er natuurlijk meer bedenken!</p>
-<p>::{admonition} Tips
-:class: tip</p>
-<p>Jouw code moet een lege string teruggeven wanneer de waarde van <code class="docutils literal notranslate"><span class="pre">n</span></code> 0 is (dit voorkomt voorloopnullen!)</p>
-<p>Gebruik de volgende twee Python functies voor het heen en weer schakelen tussen strings en getallen. Deze zijn het meest nuttig als je daar enkele tekens of getallen gebruikt:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">str(x)</span></code> geeft het getal (de integer) <code class="docutils literal notranslate"><span class="pre">x</span></code> terug als string</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">int(x)</span></code> geeft de integerwaarde van de string <code class="docutils literal notranslate"><span class="pre">s</span></code> terug, Python zal een <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> geven als <code class="docutils literal notranslate"><span class="pre">s</span></code> geen integer voorstelt</p></li>
-</ul>
-<div class="docutils">
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># jouw oplossing</span>
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="functie-2-base-b-to-num-s-b">
@@ -789,16 +777,8 @@ document.write(`
 <span class="n">Out</span><span class="p">[</span><span class="mi">10</span><span class="p">]:</span> <span class="mi">0</span>                         <span class="c1"># de lege string moet 0 opleveren</span>
 </pre></div>
 </div>
-<div class="notice admonition">
-<p class="admonition-title">Opmerkingen</p>
-<p>Vergeet niet dat jouw functie een getal teruggeeft, en een string als argument <code class="docutils literal notranslate"><span class="pre">s</span></code> accepteert! Verder,</p>
-<ul class="simple">
-<li><p>Het <code class="docutils literal notranslate"><span class="pre">bin_to_num</span></code> voorbeeld die je eerder hebt gezien is een goed begin…</p></li>
-<li><p>Vraag jezelf weer af, wat moet er veranderen om waarden in grondtal 2 terug te geven in plaats van grondtal <code class="docutils literal notranslate"><span class="pre">b</span></code>?</p></li>
-</ul>
-</div>
-<div class="tip admonition">
-<p class="admonition-title">Tips</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <p>Jouw functie <code class="docutils literal notranslate"><span class="pre">base_b_to_num</span></code> moet <code class="docutils literal notranslate"><span class="pre">0</span></code> teruggeven als <code class="docutils literal notranslate"><span class="pre">s</span></code> een lege string is. Verder,</p>
 <ul class="simple">
 <li><p>Zoals gewoonlijk zal het meest rechtse karakter van de string de “een“‘en kolom zijn,” het minst significante getal in grondtal <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p></li>
@@ -809,6 +789,13 @@ document.write(`
 <li><p><code class="docutils literal notranslate"><span class="pre">str(x)</span></code> geeft het getal (de integer) <code class="docutils literal notranslate"><span class="pre">x</span></code> terug als string</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">int(x)</span></code> geeft de integerwaarde van de string <code class="docutils literal notranslate"><span class="pre">s</span></code> terug, Python zal een <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> geven als <code class="docutils literal notranslate"><span class="pre">s</span></code> geen integer voorstelt</p></li>
 </ul>
+</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># jouw oplossing</span>
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="functie-3-base-to-base-b1-b2-s-in-b1">
@@ -844,12 +831,19 @@ document.write(`
 <span class="n">Out</span><span class="p">[</span><span class="mi">9</span><span class="p">]:</span> <span class="s1">&#39;4321&#39;</span>
 </pre></div>
 </div>
-<div class="tip admonition">
-<p class="admonition-title">Tips</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <ul class="simple">
 <li><p>Gebruik eerst <code class="docutils literal notranslate"><span class="pre">base_b_to_num</span></code> om een gewoon, decimaal getal voor <code class="docutils literal notranslate"><span class="pre">s_in_b1</span></code> te krijgen. Geef het een naam.</p></li>
 <li><p>Gebruik dan de functie <code class="docutils literal notranslate"><span class="pre">num_to_base_b</span></code> om die waarde om te zetten naar het juiste grondtal!</p></li>
 </ul>
+</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># jouw oplossing</span>
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="functie-4-add-s-t">
@@ -873,6 +867,13 @@ document.write(`
 <span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">add</span><span class="p">(</span><span class="s2">&quot;10101&quot;</span><span class="p">,</span> <span class="s2">&quot;10101&quot;</span><span class="p">)</span>
 <span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="s1">&#39;101010&#39;</span>
 </pre></div>
+</div>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># jouw oplossing</span>
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 </section>

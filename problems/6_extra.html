@@ -691,7 +691,7 @@ document.write(`
 <h1>Extra<a class="headerlink" href="#extra" title="Link to this heading">#</a></h1>
 <section id="binair-optellen">
 <h2>Binair optellen<a class="headerlink" href="#binair-optellen" title="Link to this heading">#</a></h2>
-<p>Op de basisschool heb je vast geleerd hoe je grootte getallen bij elkaar kan optellen door ze onder elkaar te zetten.</p>
+<p>Je zal ooit hebben geleerd dat je getallen bij elkaar kan optellen door ze onder elkaar te plaatsen.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{array}{r}
@@ -702,8 +702,8 @@ document.write(`
 1271
 \end{array}
 \end{split}\]</div>
-<p>Zodra je boven de 10 komt, zet je de eenheden onder de streep en onhoud je de tientallen door deze boven de som te zetten. 9+2 = 11, dus 1 onder de streep en 1 onthouden</p>
-<p>We kunnen hetzelfde doe als we binaire getallen bij elkaar optellen.</p>
+<p>Zodra je bij een optelling boven de 10 komt, zet je de eenheden onder de streep en onhoud je de tientallen door deze boven de som te zetten. 9+2 = 11, dus 1 onder de streep en 1 onthouden (meenemen).</p>
+<p>Je kan hetzelfde doen bij het optellen van binaire getallen.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{array}{r}
@@ -718,11 +718,11 @@ document.write(`
 1 + 0 = 1<br />
 1 + 1 = 10<br />
 1 + 1 + 1 = 11</p>
-<p>Als we 1 + 1 bij elkaar optellen, krijgen we 10 (binair) We schrijven de eenheden onder de lijn, dus 0 en onthouden de tweetallen, in dit geval 1.</p>
+<p>Als we 1 + 1 bij elkaar optellen, krijgen we 10 (binair) We schrijven de eenheden onder de lijn, dus 0 en onthouden de tweetallen die we meenemen, in dit geval 1.</p>
 <section id="functie-5-add-b-s-t">
 <h3>Functie 5: <code class="docutils literal notranslate"><span class="pre">add_b(s,</span> <span class="pre">t)</span></code><a class="headerlink" href="#functie-5-add-b-s-t" title="Link to this heading">#</a></h3>
 <p>In de basis opgaven zag je een manier om twee binaire getallen op te tellen: zet ze eerst om naar grondtal 10, tel deze getallen op en zet vervolgens de uitkomst weer om naar een binaire string.</p>
-<p>Bij deze opgave zal je echter een andere, meer directe, methode implementeren voor het optellen van twee binaire getallen, met behulp van de “basisschool” methode:</p>
+<p>Bij deze opgave zal je echter een andere, meer directe methode implementeren voor het optellen van twee binaire getallen, met behulp van de bekende methode:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>  101110
   100111
 --------
@@ -736,10 +736,10 @@ document.write(`
  1010101
 </pre></div>
 </div>
-<p>Je ziet hier de “carry” bits op de eerste regel.</p>
-<p>Schrijf voor dit probleem een Python functie <code class="docutils literal notranslate"><span class="pre">add_b(s,</span> <span class="pre">t)</span></code> die twee strings als argument accepteert. Deze strings stellen binaire getallen voor.</p>
+<p>Je ziet hier de “carry” bit (het bit dat je meeneemt) op de eerste regel.</p>
+<p>Schrijf voor dit probleem een functie <code class="docutils literal notranslate"><span class="pre">add_b(s,</span> <span class="pre">t)</span></code> die twee strings als argument accepteert. Deze strings stellen binaire getallen voor.</p>
 <p>De functie <code class="docutils literal notranslate"><span class="pre">add_b</span></code> moet een nieuwe string teruggeven die de som van de twee argumenten voorstelt.</p>
-<p>De som moet berekend worden met het “basisschool” binaire optelalgoritme, zoals hierboven is besproken, en niet met basisconversies (door grondtallen om te zetten). Dat wil zeggen dat de optelling puur <em>syntactisch</em> zal moeten zijn: je gebruikt de opteloperator <code class="docutils literal notranslate"><span class="pre">+</span></code> voor getallen van Python <em>niet</em>.</p>
+<p>De som moet berekend worden met het binaire optelalgoritme, zoals hierboven is besproken, en niet met basisconversies (door grondtallen om te zetten). Dat wil zeggen dat de optelling puur <em>syntactisch</em> zal moeten zijn: je gebruikt de opteloperator <code class="docutils literal notranslate"><span class="pre">+</span></code> voor getallen van Python <em>niet</em>.</p>
 <p>Hier zijn een paar voorbeelden:</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">add_b</span><span class="p">(</span><span class="s2">&quot;11100&quot;</span><span class="p">,</span> <span class="s2">&quot;11110&quot;</span><span class="p">)</span>
 <span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="s1">&#39;111010&#39;</span>
