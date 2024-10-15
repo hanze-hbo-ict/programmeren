@@ -1,11 +1,12 @@
-# Week 9
+# Opgaven
 
 ![Schotel](/images/saucer.png)
 
-|                |                                                                                                                     | Punten |         |
-|----------------|---------------------------------------------------------------------------------------------------------------------|--------|---------|
-| **Practicum**  | [Game of Life](/problems/game_of_life/index)<br>De evolutie van leven                                                  | 30     |         |
-| **Leesopgave** | [From horseless to driverless](/readings/horseless_driverless.md)<br>Een mogelijke toekomst met zelfrijdende auto’s | 5      |         |
-| **Huiswerk**   | [Boter kaas en eieren](/problems/boter_kaas_eieren/index)<br>Boter, kaas en eieren en N Op een rij                     | 35     |         |
-|                | [TR Investeringen BV](/problems/tr_investeringen/index)<br>Slim investeren met Python                                  | 30     | 5 bonus |
 
+
+```{tableofcontents}
+```
+
+De basis opgave is een zelftest om te checken of je de stof van deze week hebt begrepen  
+De opstap opgaven zijn er om je te helpen als je moeite hebt  
+De extra opgaven zijn er om je uit te dagen.   
