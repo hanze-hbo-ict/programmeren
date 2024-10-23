@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -39,10 +41,11 @@
     <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css?v=def72667" />
     <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css?v=5f6255d3" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../../_static/documentation_options.js?v=b028fc25"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
@@ -107,6 +110,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="prev" title="Extra" href="../../solutions/7_extra.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="nl"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -122,19 +126,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -142,7 +135,6 @@ commentsRunWhenDOMLoaded(addUtterances);
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -150,8 +142,8 @@ commentsRunWhenDOMLoaded(addUtterances);
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -167,7 +159,8 @@ commentsRunWhenDOMLoaded(addUtterances);
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -197,21 +190,17 @@ commentsRunWhenDOMLoaded(addUtterances);
     
     
     <img src="../../_static/lightbulb.png" class="logo__image only-light" alt="Programmeren - Home"/>
-    <script>document.write(`<img src="../../_static/lightbulb.png" class="logo__image only-dark" alt="Programmeren - Home"/>`);</script>
+    <img src="../../_static/lightbulb.png" class="logo__image only-dark pst-js-only" alt="Programmeren - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Zoeken</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Zoeken</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -393,8 +382,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Oefening</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">PGM1 Oefententamen</a></li>
-
-
 <li class="toctree-l1"><a class="reference internal" href="1_recursie.html">Recursieve functies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="2_list_comprehension.html">List comprehension</a></li>
 </ul>
@@ -622,24 +609,16 @@ commentsRunWhenDOMLoaded(addUtterances);
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -663,18 +642,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">PGM1 Oefententamen</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-1-10pt">Opgave 1 (10pt)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-2-10pt">Opgave 2 (10pt)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-3-10pt">Opgave 3 (10pt)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-4-10pt">Opgave 4 (10pt)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-5-10pt">Opgave 5 (10pt)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-6-15pt">Opgave 6 (15pt)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-7-25pt">Opgave  7 (25pt)</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-6-15pt">Opgave 6 (15pt)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-7-25pt">Opgave  7 (25pt)</a></li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -806,10 +781,9 @@ document.write(`
 </pre></div>
 </div>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="opgave-6-15pt">
-<h1>Opgave 6 (15pt)<a class="headerlink" href="#opgave-6-15pt" title="Link to this heading">#</a></h1>
-<p>Schrijf de functie <code class="docutils literal notranslate"><span class="pre">end_check(phrase)</span></code> die een string <code class="docutils literal notranslate"><span class="pre">phrase</span></code> accepteert en de langste substring teruggeeft die aan het begin <em>en</em> aan het einde van de gegeven <code class="docutils literal notranslate"><span class="pre">phrase</span></code> staat, zonder te overlappen. De enige ingebouwde Python functie die je mag gebruiken is <code class="docutils literal notranslate"><span class="pre">len()</span></code>. Vergeet geen docstring toe te voegen en test de functie met drie assertions.</p>
+<section id="opgave-6-15pt">
+<h2>Opgave 6 (15pt)<a class="headerlink" href="#opgave-6-15pt" title="Link to this heading">#</a></h2>
+<p>Schrijf de functie <code class="docutils literal notranslate"><span class="pre">end_check(phrase)</span></code> die een string <code class="docutils literal notranslate"><span class="pre">phrase</span></code> accepteert en de langste substring teruggeeft die aan het begin <em>en</em> aan het einde van de gegeven <code class="docutils literal notranslate"><span class="pre">phrase</span></code> staat, zonder te overlappen. De enige ingebouwde Python functies die je mag gebruiken zijn <code class="docutils literal notranslate"><span class="pre">len()</span></code> en <code class="docutils literal notranslate"><span class="pre">range()</span></code>. Vergeet geen docstring toe te voegen en test de functie met drie assertions.</p>
 <p>Voorbeelden:</p>
 <p>“test”
 output:
@@ -824,18 +798,20 @@ output:
 output:
 “x”</p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="opgave-7-25pt">
-<h1>Opgave  7 (25pt)<a class="headerlink" href="#opgave-7-25pt" title="Link to this heading">#</a></h1>
+<section id="opgave-7-25pt">
+<h2>Opgave  7 (25pt)<a class="headerlink" href="#opgave-7-25pt" title="Link to this heading">#</a></h2>
 <p>Frequentieanalyse is, in cryptoanalyse, het onderzoek naar de frequentie van letters of groepen van letters van een versleutelde tekst. Het wordt gebruikt als hulpmiddel voor het breken van klassieke cryptografie, zoals het Caesarcijfer.</p>
 <p>De methode is gebaseerd op het feit dat binnen elke geschreven taal er een frequentie waar te nemen is van bepaalde letters of lettercombinaties. De letter ‘e’ heeft in de Nederlandse taal de hoogste frequentie.</p>
-<p>NMBCPZNCJ MVVP BC GPCHSCMRDC TVM KCRRCPQ NG EPNCOCM TVM KCRRCPQ TVM CCM TCPQKCSRCKBC RCJQR.</p>
-<p>In deze tekst heeft de letter ‘C’ de hoogste frequentie en zouden we kunnen aannemen dat dat de letter ‘e’ is in de originele tekst.</p>
-<p>a.	Schrijf de functie <code class="docutils literal notranslate"><span class="pre">count_char(zin,</span> <span class="pre">let)</span></code>, inclusief een docstring. Deze functie kriigt twee strings binnen waarbij <code class="docutils literal notranslate"><span class="pre">zin</span></code> een hele zin is en <code class="docutils literal notranslate"><span class="pre">le</span></code>t een enkele letter. De functie geeft terug hoe vaak let voorkomt in zin. Maak maak hier gebruik van lus(sen), vergeet niet een docstring toe te voegen en test de functie met drie assertions. (10)</p>
+<blockquote>
+<div><p>nmbcpzncj mvvp bc gpchscmrdc tvm kcrrcpq ng epncocm tvm kcrrcpq tvm ccm tcpqkcsrckbc rcjqr</p>
+</div></blockquote>
+<p>In de bovenstaande tekst heeft de letter ‘c’ de hoogste frequentie en zouden we kunnen aannemen dit de letter ‘e’ is in de originele tekst.</p>
+<p>a.	Schrijf de functie <code class="docutils literal notranslate"><span class="pre">count_char(zin,</span> <span class="pre">let)</span></code> die twee strings accepteert waar <code class="docutils literal notranslate"><span class="pre">zin</span></code> een hele zin is en <code class="docutils literal notranslate"><span class="pre">let</span></code> een enkele letter. De functie geeft terug hoe vaak <code class="docutils literal notranslate"><span class="pre">let</span></code> voorkomt in <code class="docutils literal notranslate"><span class="pre">zin</span></code>.</p>
+<p>Je hoeft alleen rekening te houden met <em>kleine</em> letters. Maak hier gebruik van lus(sen), vergeet niet een docstring toe te voegen en test de functie met drie assertions. (10)</p>
 <p>b.	Schijf de functie <code class="docutils literal notranslate"><span class="pre">max_freq_letter(z)</span></code> die een string <code class="docutils literal notranslate"><span class="pre">z</span></code> accepteert. Deze functie moet het karakter in <code class="docutils literal notranslate"><span class="pre">z</span></code> teruggeven met de hoogste frequentie.</p>
-<p>Maak gebruik van lus(sen), de functie <code class="docutils literal notranslate"><span class="pre">count_char(zin,</span> <span class="pre">let)</span></code> en een lijst met alle letters van het alfabet. Vergeet geen docstring toe te voegen en test de functie met drie assertions. (15)</p>
-<p>Mocht het niet gelukt zijn bij 5a om de functie count_char(zin, let) te schrijven mag je onderstaande functie gebruiken als vervanging.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
-<span class="k">def</span> <span class="nf">count_char</span> <span class="p">(</span><span class="n">zin</span><span class="p">,</span> <span class="n">let</span><span class="p">):</span>
+<p>Je hoeft alleen rekening te houden met <em>kleine</em> letters. Maak gebruik van lus(sen), de functie <code class="docutils literal notranslate"><span class="pre">count_char(zin,</span> <span class="pre">let)</span></code> en een lijst met alle letters van het alfabet. Vergeet geen docstring toe te voegen en test de functie met drie assertions. (15)</p>
+<p>Mocht het je niet zijn gelukt om bij 7a de functie <code class="docutils literal notranslate"><span class="pre">count_char(zin,</span> <span class="pre">let)</span></code> te schrijven dan mag je de onderstaande functie gebruiken ter vervanging.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">count_char</span> <span class="p">(</span><span class="n">zin</span><span class="p">,</span> <span class="n">let</span><span class="p">):</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">zin</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">0</span>
     <span class="k">elif</span> <span class="n">zin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">let</span><span class="p">:</span>
@@ -844,6 +820,7 @@ output:
         <span class="k">return</span> <span class="n">count_char</span> <span class="p">(</span><span class="n">zin</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">let</span><span class="p">)</span>   
 </pre></div>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -901,7 +878,8 @@ output:
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -910,18 +888,14 @@ output:
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">PGM1 Oefententamen</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-1-10pt">Opgave 1 (10pt)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-2-10pt">Opgave 2 (10pt)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-3-10pt">Opgave 3 (10pt)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-4-10pt">Opgave 4 (10pt)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-5-10pt">Opgave 5 (10pt)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-6-15pt">Opgave 6 (15pt)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-7-25pt">Opgave  7 (25pt)</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-6-15pt">Opgave 6 (15pt)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-7-25pt">Opgave  7 (25pt)</a></li>
-</ul>
-
   </nav></div>
 
 </div></div>
@@ -969,8 +943,8 @@ Door Harvey Mudd College / Hanze University of Applied Sciences
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>
