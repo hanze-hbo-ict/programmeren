@@ -1,0 +1,1072 @@
+
+<!DOCTYPE html>
+
+
+<html lang="nl" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Intro Recursief &#8212; Programmeren</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css?v=def72667" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css?v=5f6255d3" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../_static/documentation_options.js?v=b028fc25"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "hanze-hbo-ict/programmeren");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../_static/translations.js?v=5ce3cdba"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lectures/9a_intro_recursie';</script>
+    <script src="../_static/save_state.js?v=f1e4c503"></script>
+    <link rel="canonical" href="https:///hanze-hbo-ict.github.io/programmeren/lectures/9a_intro_recursie.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Zoeken" href="../search.html" />
+    <link rel="next" title="Recursief ontwerpen" href="9b_recursief.html" />
+    <link rel="prev" title="Onderwerpen" href="../course/week_9.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="nl"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../about/syllabus.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/lightbulb.png" class="logo__image only-light" alt="Programmeren - Home"/>
+    <img src="../_static/lightbulb.png" class="logo__image only-dark pst-js-only" alt="Programmeren - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Zoeken</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about/syllabus.html">
+                    Programmeren
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Opmerkingen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../about/feedback.html">Anoniem feedbackformulier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/faq.html">Veelgestelde vragen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/references.html">Literatuur</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Intro</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0a_command-line.html">De terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0b_install_python.html">Python installeren</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_1.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="1a_intro_programmeren.html">Wat is informatica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1b_picobot.html">Picobot</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_1.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/1_picobot.html">Picobot</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_2.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="2a_var_con.html">Maximum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2b_strings_en_lists.html">Strings</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_2.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/2_rochambeau.html">Rochambeau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/2_sequenties_en_data.html">Sequenties en data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_2.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/2_opstap.html">Opstap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/2_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/2_extra.html">Extra</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/solutions_2.html">Uitwerkingen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/2_rochambeau.html">Rochambeau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/2_sequenties_en_data.html">Sequenties en data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/2_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/2_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_3.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="3a_functies.html">Functies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3b_functies_aanroepen.html">Functies aanroepen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_3.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/3_fijne_functies.html">Fijne functies</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_3.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/3_opstap.html">Opstap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/3_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/3_extra.html">Extra</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/solutions_3.html">Uitwerkingen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/3_fijne_functies.html">Fijne functies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/3_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/3_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_4.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="4a_lussen.html">Lussen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4b_midterm.html">Oefen Midterm</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_4.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/4_python_bat.html">Lussen in PythonBat!</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_4.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/4_opstap.html">Opstap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/4_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/4_extra.html">Extra</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/solutions_4.html">Uitwerkingen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/4_python_bat.html">Python CodeBat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/4_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/4_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 5</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_5.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="5a_geneste_lus.html">Lussen in lussen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_5.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/5a_ascii_art.html">ASCII Art</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/5b_boter_kaas_eieren.html">Boter, kaas en eieren + N op een rij…</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_5.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/5_opstap.html">Opstap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/5_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/5_extra.html">Extra</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/solutions_5.html">Uitwerkingen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/5a_ascii_art.html">ASCII art</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/5b_boter_kaas_eieren.html">Boter kaas en eieren.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/5_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/5_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 6</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_6.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="6a_data.html">Data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_6.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/6a_binair.html">Van decimaal naar binair en verder!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/6b_images.html">Fraaie plaatjes</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_6.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/6_opstap.html">Opstap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/6_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/6_extra.html">Extra</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/solutions_6.html">Uitwerkingen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/6a_binair.html">Binair</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/6_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/6_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 7</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_7.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="7a_lists_advanced.html">More on Lists</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_7.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/7a_text_genereren.html">Tekst genereren met Markovprocessen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_7.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/7_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/7_extra.html">Extra</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/solutions_7.html">Uitwerkingen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/7a_text_genereren.html">Tekst genereren met Markovprocessen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/7_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/7_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM2 Week 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_8.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="8a_list_comprehension.html">List comprehensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8b_double_list_comprehension.html">LoL’s comprehension</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_8.html">Practicum</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/8_klinkt_goed.html">Klinkt goed</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_8.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/8_instap.html">Instap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/8_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/8_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM2 Week 2</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../course/week_9.html">Onderwerpen</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Intro Recursief</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9b_recursief.html">Recursief ontwerpen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_9.html">Practicum</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/9_recursieve_functies.html">Recursieve functies</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_9.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/9_instap.html">instap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/9_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/9_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM2 Week 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_10.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="10a_knapzak_probleem.html">Ontwerp van algoritmen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_10.html">Practicum</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/10a_wissel_geld.html">Wisselgeld</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/10b_periodieke_tshirt.html">Periodieke tshirt</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_10.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/10_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/10_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM2 Week 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_11.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="11a_objecten.html">Klassen en objecten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11b_data_object.html">Een <code class="docutils literal notranslate"><span class="pre">Date</span></code> klasse</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_11.html">Practicum</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/11_vier_op_rij_board.html">Vier op een rij: de klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_11.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/11_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/11_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM2 Week 5</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_12.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="12_ai.html">Kunstmatige intelligentie</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_12.html">Practicum</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/12_vier_op_rij_AI.html">Vier op een rij: Intro AI</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM2 Week 6</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../practicals/13_vier_op_rij_speler.html">Vier op een rij: AI speler</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Projects</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../projects/picobot.html">De evolutie van Picobot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/textid.html">Tekstidentificatie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/vpython.html">VPool</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Oefening</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/pgm1_tentamen.html">PGM1 oefententamen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../extra/practice/pgm1_examen.html">PGM1 Oefententamen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/PGM1_examen.html">Oplossingen PGM1 Oefententamen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../extra/practice/1_recursie.html">Recursieve functies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extra/practice/2_list_comprehension.html">List comprehension</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Support</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../support/logisim.html">Logisim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/plain_text/index.html">Tekstbestanden</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/hanze-hbo-ict/programmeren/blob/master/lectures/9a_intro_recursie.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Bronopslagplaats"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/edit/master/lectures/9a_intro_recursie.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/issues/new?title=Issue%20on%20page%20%2Flectures/9a_intro_recursie.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open een probleem"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download deze pagina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/lectures/9a_intro_recursie.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download het bronbestand"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Afdrukken naar pdf"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Volledig scherm"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Intro Recursief</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Inhoud </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plan">Plan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#een-oplossing-die-zichzelf-herhaalt">Een oplossing die zichzelf herhaalt</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paradigmas">Paradigmas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sequentieel-denken">Sequentieel denken</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recursief-denken">Recursief denken</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dit-is-correct">Dit is correct…</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Recursief denken</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recursief-handelen">Recursief handelen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voordelen-van-recursie">Voordelen van recursie</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recursie-unplugged">Recursie unplugged</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#oplossing">Oplossing</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-1">Opgave 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2">Opdracht 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3">Opdracht 3</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="intro-recursief">
+<h1>Intro Recursief<a class="headerlink" href="#intro-recursief" title="Link to this heading">#</a></h1>
+<p>Stel het volgende probleem voor. Je wilt alle namen van alle word documenten printen die in de map documenten staan. Dat is inclusief alle submappen. Deze submappen kunnen ook weer submappen bevatten. Dit kunnen best veel word documenten zijn. Voordat we dit meteen aan programmeren, eerst een plan opstellen. Onthoud, probeer, plan, programeer</p>
+<section id="plan">
+<h2>Plan<a class="headerlink" href="#plan" title="Link to this heading">#</a></h2>
+<p>Als je een plan opstelt kan je dit doen in zogenaamde psuedocode. Dit is niet bestaande programmeer code, maar het geeft wel aan wat je wilt bereiken.</p>
+<p>Plan 1</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">functon</span> <span class="n">print_names</span><span class="p">(</span><span class="n">folder</span><span class="p">):</span>
+    <span class="nb">print</span> <span class="n">alle</span> <span class="n">word</span> <span class="n">documenten</span> 
+    <span class="k">for</span> <span class="n">submap</span> <span class="ow">in</span> <span class="n">folder</span>
+        <span class="nb">print</span> <span class="n">alle</span> <span class="n">word</span> <span class="n">documenten</span>
+        <span class="k">for</span> <span class="n">subsubmap</span> <span class="ow">in</span> <span class="n">submap</span>
+            <span class="nb">print</span> <span class="n">alle</span> <span class="n">word</span> <span class="n">documenten</span>
+                <span class="k">for</span> <span class="n">subsubsubmap</span> <span class="ow">in</span> <span class="n">subsubmap</span>
+                    <span class="n">Print</span> <span class="n">alle</span> <span class="n">word</span> <span class="n">documenten</span>
+</pre></div>
+</div>
+<p>Hoeveel for loops zijn er nodig? Het lastige is dat we niet weten hoeveel submappen er zijn en hoe diep deze mappen gaan. Vergeet niet, het filesysteem is een boomstructuur. Elk map kan submappen bevatten en ook deze submappen kunnen weer hun eigen submappen bevatten en ook deze submappen kunnen weer hun eigen submappen bevatten enz…</p>
+<p><img alt="Boomstructuur" src="../_images/tree_folders.png" /></p>
+<p>Ik wil graag dat de functie print_names() alle namen binnen een map print. Als deze perfect werkt, zou ik deze kunnen gebruiken om ook alle submappen te laten printen. We hebben al eens eerder gezien dat een functie zichzelf mag aanroepen.</p>
+<p>Plan 2</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">function</span> <span class="n">print_names</span><span class="p">(</span><span class="n">folder</span><span class="p">):</span>
+    <span class="nb">print</span> <span class="n">alle</span> <span class="n">word</span> <span class="n">documenten</span>
+    <span class="k">for</span> <span class="n">subfolder</span> <span class="ow">in</span> <span class="n">folder</span><span class="p">:</span>
+        <span class="n">print_names</span><span class="p">(</span><span class="n">subfolder</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="een-oplossing-die-zichzelf-herhaalt">
+<h2>Een oplossing die zichzelf herhaalt<a class="headerlink" href="#een-oplossing-die-zichzelf-herhaalt" title="Link to this heading">#</a></h2>
+<p>Stel je een functie voor die het aantal i’s in een string telt en dit als waarde teruggeeft. Dit is een lastig probleem, laten we proberen het eerst uit te schrijven zonder direct in Python te denken. Het resultaat van de functie zou het volgende moeten zijn:</p>
+<p>Totaal aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;i💙aliens&quot;</span></code>?</p>
+<p>Laat dit de string zijn die we willen gaan onderzoeken en je weet dat een string een opeenvolging van karakters is. We zullen karakter voor karakter moeten controleren (testen) of het gelijk is aan het karakter “i” (en ja, emoji zijn ook karakters :heart:). Karakter voor karakter betekent dat een eerste stap om dit probleem op te lossen de volgende zal zijn:</p>
+<p>Aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;i&quot;</span></code> + Aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;💙aliens&quot;</span></code></p>
+<p>We nemen het eerst karakter, tellen het aantal i’s (dit kan voor een enkel karakter 0 of 1 zijn) en tellen daar het aantal i’s in het <em>restant</em> van de string bij op. We herhalen deze handeling voor het eerste karakter van het restant, en tellen daar natuurlijk het resultaat van het eerste karakter bij op:</p>
+<p>Aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;i&quot;</span></code> + Aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;💙&quot;</span></code> + Aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;aliens&quot;</span></code></p>
+<p>Et cetera. Je zal hier een patroon zien, het probleem en oplossing herhaalt zich steeds: na het eerste karakter moeten we hetzelfde “recept” steeds weer herhalen voor het restant van de string.</p>
+<p>Terzijde, weet je nog dat je het eerste karakter en het restant van een string kan lezen met <code class="docutils literal notranslate"><span class="pre">s[0]</span></code> en <code class="docutils literal notranslate"><span class="pre">s[1:]</span></code>?</p>
+</section>
+<section id="paradigmas">
+<h2>Paradigmas<a class="headerlink" href="#paradigmas" title="Link to this heading">#</a></h2>
+<p>Verschillende manieren om problemen op te lossen:</p>
+<p><strong>sequentieeel</strong> (iteratief)</p>
+<p><strong>zelfgelijkend</strong> (recursief)</p>
+<p>Problemen zijn op meer dan één manier op te lossen en we komen daarmee aan bij het bestaan van verschillende <a class="reference external" href="https://nl.wikipedia.org/wiki/Programmeerparadigma">programmeerparadigmas</a>, dat wil zeggen technieken en benaderingen voor het oplossen van een probleem. Tot nu toe hebben we voornamelijk interatieve constructies gebruikt met behulp van lussen. We gaan nu recursie gebruiken om problemen op te lossen.</p>
+<section id="sequentieel-denken">
+<h3>Sequentieel denken<a class="headerlink" href="#sequentieel-denken" title="Link to this heading">#</a></h3>
+<p><strong>faculteit</strong></p>
+<p>wiskunde: <span class="math notranslate nohighlight">\(5! = 120\)</span></p>
+<p>informatica: <code class="docutils literal notranslate"><span class="pre">fac(5)</span> <span class="pre">=</span> <span class="pre">5</span> <span class="pre">*</span> <span class="pre">4</span> <span class="pre">*</span> <span class="pre">3</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">1</span></code></p>
+<p>Laten we het geheugen even opfrissen wat de faculteit van een getal ook alweer is. Stel je 42 aliens voor en je zou willen weten op hoeveel manieren je deze aliens op een rij kan zetten. Je weet misschien het antwoord, dit is 42 x 41 x 41 … 3 x 2 x 1, of ook wel bekend als de <em>42 faculteit</em> en (wiskundig) geschreven als <span class="math notranslate nohighlight">\(42!\)</span>. Sequentieel denken en daarmee dit probleem oplossen (uitschrijven) als <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">*</span> <span class="pre">4</span> <span class="pre">*</span> <span class="pre">3</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">1</span></code> is heel natuurlijk voor mensen, zo hebben we het als oplossing geleerd!</p>
+<p><code class="docutils literal notranslate"><span class="pre">fac(N)</span> <span class="pre">=</span> <span class="pre">N</span> <span class="pre">*</span> <span class="pre">(N-1)</span> <span class="pre">*</span> <span class="pre">...</span> <span class="pre">*</span> <span class="pre">3</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">1</span></code></p>
+<p>Maar zou je <code class="docutils literal notranslate"><span class="pre">fac(5)</span></code> als een meer algemene versie van zichzelf kunnen schrijven? Dat kan, laten we daar een begin mee maken en je zal zien dat een zichzelf herhalend (terugkerend?) patroon gaat ontstaan, net als bij het aantal i’s in <code class="docutils literal notranslate"><span class="pre">&quot;i💙aliens&quot;</span></code>…</p>
+</section>
+<section id="recursief-denken">
+<h3>Recursief denken<a class="headerlink" href="#recursief-denken" title="Link to this heading">#</a></h3>
+<p><strong>faculteit</strong></p>
+<p>wiskunde: <span class="math notranslate nohighlight">\(5! = 120\)</span></p>
+<p>informatica: <code class="docutils literal notranslate"><span class="pre">fac(5)</span> <span class="pre">=</span> <span class="pre">5</span> <span class="pre">*</span> <span class="pre">4</span> <span class="pre">*</span> <span class="pre">3</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">1</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">fac(5)</span> <span class="pre">=</span> <span class="pre">5</span> <span class="pre">*</span> <span class="pre">fac(4)</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">fac(N)</span> <span class="pre">=</span> <span class="pre">N</span> <span class="pre">*</span> <span class="pre">fac(N</span> <span class="pre">-</span> <span class="pre">1)</span></code></p>
+</section>
+<section id="dit-is-correct">
+<h3>Dit is correct…<a class="headerlink" href="#dit-is-correct" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fac</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">N</span> <span class="o">*</span> <span class="n">fac</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>maar is niet aan te raden…</p>
+<p>Je kan de funcie <code class="docutils literal notranslate"><span class="pre">fac(N)</span></code> met de meest algemene vorm (oplossing) nu invulllen. De functie roept zichelf aan met steeds <code class="docutils literal notranslate"><span class="pre">N-1</span></code>, dit is het patroon dat we hebben kunnen ontdekken. Maar dit is niet volledig correct zoals je misschien zelf al kan zien?</p>
+<p><img alt="Oneindige Recursie" src="../_images/infinite_recursion.jpg" /></p>
+<p>Loop in gedachten eens na wat er gebeurt als je 1 hebt bereikt in deze functie, het zal vrolijk <code class="docutils literal notranslate"><span class="pre">fac(N-1)</span></code> blijven aanroepen! Dit zal dus doorgaan in een “oneindige recursie” want we hebben nog geen rekening gehouden met de “base case”, het geval waar <strong>geen</strong> recursieve aanroep meer mogelijk is.</p>
+<p>Een <em>base case</em> ontbreekt, de <em>noodstop</em>!</p>
+<p>Er is een duidelijk moment dat we de recursie moeten beëindigen, het moment dat geen recursieve aanroep meer mogelijk is. Dit is het moment dat de base case is bereikt (de “noodzakelijk” stop). <code class="docutils literal notranslate"><span class="pre">N-1</span></code> gaat uiteindelijk naar negatieve getallen, zou de waarde 0 in dit geval de noodzakelijke stop (de base case) kunnen zijn?</p>
+</section>
+</section>
+<section id="id1">
+<h2>Recursief denken<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fac</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">N</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># base case </span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>       <span class="c1"># recursive case</span>
+        <span class="k">return</span> <span class="n">N</span> <span class="o">*</span> <span class="n">fac</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Je kan testen op de <em>base case</em>, in het geval van een faculteit is dit bereikt als N gelijk is aan 0. Maar als je naar de laatste regel kijkt (<code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">*</span> <span class="pre">fac(N-1)</span></code>),  hoe kan iets (<code class="docutils literal notranslate"><span class="pre">N</span></code>) vermenigvudigd worden met iets dat nog niet is uitgevoerd (<code class="docutils literal notranslate"><span class="pre">fac(N-1)</span></code>)?</p>
+</section>
+<section id="recursief-handelen">
+<h2>Recursief handelen<a class="headerlink" href="#recursief-handelen" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fac</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">N</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># base case</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>       <span class="c1"># recursive case</span>
+        <span class="n">rest</span> <span class="o">=</span> <span class="n">fac</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">N</span> <span class="o">*</span> <span class="n">rest</span>
+</pre></div>
+</div>
+<p>Deze uitwerking is meer in de buurt van wat achter schermen gebeurt. In het geval <code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">*</span> <span class="pre">fac(N</span> <span class="pre">-</span> <span class="pre">1)</span></code> wordt door de computer de recursieve aanroep (<code class="docutils literal notranslate"><span class="pre">fac(N</span> <span class="pre">-</span> <span class="pre">1)</span></code>) eerst aangeroepen om vervolgens daar <code class="docutils literal notranslate"><span class="pre">N</span></code> mee te vermenigvuldigen. Je kan dit goed vergelijken met het eerst zetten van een variabele (<code class="docutils literal notranslate"><span class="pre">rest</span></code> in dit geval) die later wordt gebruikt om het antwoord te berekenen (<code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">*</span> <span class="pre">rest</span></code>).</p>
+</section>
+<section id="voordelen-van-recursie">
+<h2>Voordelen van recursie<a class="headerlink" href="#voordelen-van-recursie" title="Link to this heading">#</a></h2>
+<p>Het kan <em>zelfstandig</em> in één keer een <em>willekeurige</em> diepte ingaan</p>
+<p>De functie heeft aan zichzelf genoeg en met één aanroep (van ons) lost het zichzelf tot elke willekeurige diepte op! Dit is perfect voor het probleem waar we mee begonnen, namelijk het printen van alle word documenten.</p>
+<p>In principe zijn alle problemen iteratief of recursief op te lossen. Het ligt aan het type probleem welke optie de betere/makkelijkere is. We gaan later kijken naar problemen die zich heel goed lenen voor een recursieve oplossing. Eerst oefenen met recursief denken.</p>
+</section>
+<section id="recursie-unplugged">
+<h2>Recursie unplugged<a class="headerlink" href="#recursie-unplugged" title="Link to this heading">#</a></h2>
+<p>Een groep gevangenen zitten op een rij. De meest rechter dief krijgt een beker in handen gevuld met getallen. Zijn taak is om erachter te komen of het getal <code class="docutils literal notranslate"><span class="pre">42</span></code> in de beker zit. Heeft hij gelijk, dan is de hele groep vrij, heeft hij ongelijk, dan blijft de hele groep een jaar langer gevangen. Er zijn wel een paar regels waar de hele groep zich aan moet houden. Doen ze dat niet, falen ze de test automatisch.</p>
+<ol class="arabic simple">
+<li><p>Elke dief mag maar èèn getal uit de beker halen. Niemand anders mag dit getal zien. Daarna geeft hij de beker aan degene die rechts van hem zit.</p></li>
+<li><p>Elke dief mag 1 keer True of False fluisteren naar zijn/haar linker buur. De rest van de groep mag dit niet horen.</p></li>
+</ol>
+<p>Met welke strategie kunnen ze dit probleem oplossen?</p>
+<section id="oplossing">
+<h3>Oplossing<a class="headerlink" href="#oplossing" title="Link to this heading">#</a></h3>
+<p>Elke dief pakt 1 papiertje en geeft dan de beker door aan de linker buurman als 42 niet op het papiertje staat. Als een dief een lege beker krijgt, dan fluistert hij false naar zijn buurman. Die geeft het weer door aan zijn buurman en dat gaat door totdat de eerste dief de informatie heeft.</p>
+<p>Als een dief 42 pakt uit de beker stopt hij met het doorgeven van de beker en fluistert hij True naar zijn rechter buurman. Die geeft het weer door aan zijn rechter buurman en dat gaat door totdat de eerste dief de informatie heeft.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_forty_two</span><span class="p">(</span><span class="n">beker</span><span class="p">):</span>
+    
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">beker</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># check of de beker leeg is. </span>
+        <span class="k">return</span> <span class="kc">False</span>    <span class="c1"># vertel je rechter buurman dat de beker leeg is</span>
+    
+    <span class="n">papiertje</span> <span class="o">=</span> <span class="n">beker</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>    <span class="c1"># pak een papiertje</span>
+    <span class="k">if</span> <span class="n">papiertje</span> <span class="o">==</span> <span class="mi">42</span><span class="p">:</span>     <span class="c1"># getal 42 is gevonden</span>
+        <span class="k">return</span> <span class="kc">True</span>         <span class="c1"># vertel je rechter buurman dat 42 is gevonden</span>
+    <span class="n">buurman</span> <span class="o">=</span> <span class="n">find_forty_two</span><span class="p">(</span><span class="n">beker</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span> <span class="c1">#geef de beker aan je linker buurman en wacht op antwoord.</span>
+    <span class="k">return</span> <span class="n">buurman</span>  <span class="c1">#  geef vervolgens zijn antwoord door aan je rechter buurman</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Je kan het ook zien dat elke dief te lui is om de hele beker te checken voor het getal 42. Inplaats daarvan pakt hij 1 briefje, controleert die en geeft vervolgens aan zijn buurman de rest van beker om te controleren. Hoe de buurman het probleem oplost, dat maakt niet uit. Vervolgens is de buurman ook lui, checkt 1 papiertje en schuift de rest van het werk op een ander.</p>
+<p>De functie doet dus 1 stap/berekening en schuift vervolgens de rest van het werk naar de volgende en wacht op resultaat.</p>
+</section>
+</section>
+<section id="opgave-1">
+<h2>Opgave 1<a class="headerlink" href="#opgave-1" title="Link to this heading">#</a></h2>
+<p>Een groep gevangenen zitten nogmaals op een rij. De meest rechter dief krijgt een beker in handen gevuld met getallen. Zijn taak is om het hoogste getal te achterhalen. Heeft hij gelijk, dan is de hele groep vrij, heeft hij ongelijk, dan blijft de hele groep een jaar langer gevangen. Er zijn wel een paar regels waar de hele groep zich aan moet houden. Doen ze dat niet, falen ze de test automatisch.</p>
+<ol class="arabic simple">
+<li><p>Elke dief mag maar èèn getal uit de beker halen. Daarna geeft hij de beker aan degene die rechts van hem zit.</p></li>
+<li><p>Elke dief mag èèn getal aan zijn/haar linker buur laten zien.</p></li>
+</ol>
+<p>Met welke strategie kunnen ze dit probleem oplossen?</p>
+</section>
+<section id="opdracht-2">
+<h2>Opdracht 2<a class="headerlink" href="#opdracht-2" title="Link to this heading">#</a></h2>
+<p>Een groep gevangenen zitten weer op een rij. Dit keer zijn ze geblinddoekt, ze kunnen elkaar dus niet zien en weten niet hoe groot de groep is. De meest rechter dief krijgt een beker in handen gevuld met papiertjes. Zijn taak is om erachter te komen hoeveel papiertjes er in de beker zit. Heeft hij gelijk, dan is de hele groep vrij, heeft hij ongelijk, dan blijft de hele groep een jaar langer gevangen. Er zijn wel een paar regels waar de hele groep zich aan moet houden. Doen ze dat niet, falen ze de test automatisch.</p>
+<ol class="arabic simple">
+<li><p>Elke dief mag  èèn papiertje uit de beker halen, Daarna geeft hij de beker aan degene die rechts van hem zit.</p></li>
+<li><p>Elke dief mag èèn getal fluisteren naar zijn/haar linker buur. De rest van de groep mag dit niet horen.</p></li>
+</ol>
+<p>Met welke strategie kunnen ze dit probleem oplossen?</p>
+</section>
+<section id="opdracht-3">
+<h2>Opdracht 3<a class="headerlink" href="#opdracht-3" title="Link to this heading">#</a></h2>
+<p>Een groep gevangenen zitten nogmaals op een rij. De meest rechter dief krijgt een beker in handen gevuld met getallen. Zijn taak is alle getallen bij ekaar op te tellen. Heeft hij gelijk, dan is de hele groep vrij, heeft hij ongelijk, dan blijft de hele groep een jaar langer gevangen. Er zijn wel een paar regels waar de hele groep zich aan moet houden. Doen ze dat niet, falen ze de test automatisch.</p>
+<ol class="arabic simple">
+<li><p>Elke dief mag maar èèn getal uit de beker halen. Daarna geeft hij de beker aan degene die rechts van hem zit.</p></li>
+<li><p>Elke dief mag èèn getal fluisteren naar zijn/haar linker buur. De rest van de groep mag dit niet horen.</p></li>
+</ol>
+<p>Met welke strategie kunnen ze dit probleem oplossen?</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "hanze-hbo-ict/programmeren",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./lectures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../course/week_9.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">vorige</p>
+        <p class="prev-next-title">Onderwerpen</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="9b_recursief.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">volgende</p>
+        <p class="prev-next-title">Recursief ontwerpen</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Inhoud
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plan">Plan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#een-oplossing-die-zichzelf-herhaalt">Een oplossing die zichzelf herhaalt</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paradigmas">Paradigmas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sequentieel-denken">Sequentieel denken</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recursief-denken">Recursief denken</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dit-is-correct">Dit is correct…</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Recursief denken</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recursief-handelen">Recursief handelen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voordelen-van-recursie">Voordelen van recursie</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recursie-unplugged">Recursie unplugged</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#oplossing">Oplossing</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-1">Opgave 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2">Opdracht 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3">Opdracht 3</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Door Harvey Mudd College / Hanze University of Applied Sciences
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
+    Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
