@@ -2,9 +2,8 @@
 
 ![Schotel](/images/saucer.png)
 
-## Dictionaries
+## Kunstmatige Inteligentie
 
 ```{tableofcontents}
 ```
 
-Hoofdstuk 7 uit *CS for All*.{cite}`alvarado2019cs`

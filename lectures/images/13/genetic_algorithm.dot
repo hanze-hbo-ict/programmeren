@@ -1,0 +1,25 @@
+digraph {
+    graph [];
+    rankdir=LR;
+    splines=ortho;
+
+    node [shape=rectangle, fontsize=10]
+
+    initialize [label="Initialize\nPopulation"]
+    evaluate [label="Evaluate"]
+    selection [label="Selection"]
+    crossover [label="Crossover"]
+    mutation [label="Mutation"]
+    criterion [shape=diamond, label="Termination\nCriterion"]
+    solution [label="Solution"]
+
+    initialize -> evaluate
+    evaluate -> selection
+    selection -> crossover
+    crossover -> mutation
+    mutation -> criterion
+    criterion -> solution
+    evaluate -> criterion [dir=back]
+
+    {rank=same; initialize; evaluate; selection; crossover; mutation; criterion; solution;}
+}
