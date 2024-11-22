@@ -746,6 +746,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#divisible-by"><code class="docutils literal notranslate"><span class="pre">divisible_by</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starts-with"><code class="docutils literal notranslate"><span class="pre">starts_with</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#end-x"><code class="docutils literal notranslate"><span class="pre">end_x</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ngram"><code class="docutils literal notranslate"><span class="pre">ngram</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oplossingen">Oplossingen</a><ul class="nav section-nav flex-column">
@@ -759,6 +760,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8"><code class="docutils literal notranslate"><span class="pre">divisible_by</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9"><code class="docutils literal notranslate"><span class="pre">starts_with</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10"><code class="docutils literal notranslate"><span class="pre">end_x</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11"><code class="docutils literal notranslate"><span class="pre">ngram</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -887,7 +889,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">no_x</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return s with all x&#39;s removed </span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return s with all x&#39;s removed</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="o">...</span>
 </pre></div>
@@ -983,6 +985,29 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 </section>
+<section id="ngram">
+<h3><code class="docutils literal notranslate"><span class="pre">ngram</span></code><a class="headerlink" href="#ngram" title="Link to this heading">#</a></h3>
+<p>De kans dat een letter wordt gebruikt is een maat voor een taal. Om karakters te tellen in tekst moeten woorden worden opgebroken in opeenvolgende karakters, zogenaamde n-grams (zie ook <a class="reference external" href="https://en.wikipedia.org/wiki/N-gram">Wikipedia</a> en bijvoorbeeld <a class="reference external" href="https://books.google.com/ngrams/">Google Books Ngram Viewer</a>). In het geval van een enkel karakter spreek je van een unigram, langere opeenvolgingen geven meer informatie, bijvoorbeeld een bi- of trigram (twee of drie opeenvolgende karakters).</p>
+<p>De functie <code class="docutils literal notranslate"><span class="pre">ngram</span></code> accepteert een string <code class="docutils literal notranslate"><span class="pre">w</span></code> en een integer <code class="docutils literal notranslate"><span class="pre">n</span></code> en geeft een lijst terug met <code class="docutils literal notranslate"><span class="pre">n</span></code> opeenvolgende delen van een woord <code class="docutils literal notranslate"><span class="pre">w</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ngram</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Break up a word w into n consecutive parts</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Gebruik de volgende assertions om jouw oplossing te testen:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">ngram</span><span class="p">(</span><span class="s2">&quot;alien&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;l&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;n&quot;</span><span class="p">]</span>  <span class="c1"># 1-gram (unigram)</span>
+<span class="k">assert</span> <span class="n">ngram</span><span class="p">(</span><span class="s2">&quot;alien&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;al&quot;</span><span class="p">,</span> <span class="s2">&quot;li&quot;</span><span class="p">,</span> <span class="s2">&quot;ie&quot;</span><span class="p">,</span> <span class="s2">&quot;en&quot;</span><span class="p">]</span>  <span class="c1"># 2-gram (bigram)</span>
+<span class="k">assert</span> <span class="n">ngram</span><span class="p">(</span><span class="s2">&quot;alien&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;ali&quot;</span><span class="p">,</span> <span class="s2">&quot;lie&quot;</span><span class="p">,</span> <span class="s2">&quot;ien&quot;</span><span class="p">]</span>  <span class="c1"># 3-gram (trigram)</span>
+<span class="k">assert</span> <span class="n">ngram</span><span class="p">(</span><span class="s2">&quot;alien&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;alie&quot;</span><span class="p">,</span> <span class="s2">&quot;lien&quot;</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">ngram</span><span class="p">(</span><span class="s2">&quot;alien&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;alien&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
 </section>
 <section id="oplossingen">
 <h2>Oplossingen<a class="headerlink" href="#oplossingen" title="Link to this heading">#</a></h2>
@@ -1004,7 +1029,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">one_to_sum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
-<span class="k">assert</span> <span class="n">one_to_sum</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> 
+<span class="k">assert</span> <span class="n">one_to_sum</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
 <span class="k">assert</span> <span class="n">one_to_sum</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span>   <span class="c1"># 1 + 2 + 3</span>
 <span class="k">assert</span> <span class="n">one_to_sum</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">15</span>  <span class="c1"># 1 + 2 + 3 + 4 + 5</span>
 </pre></div>
@@ -1120,7 +1145,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">no_x</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return s with all x&#39;s removed </span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return s with all x&#39;s removed</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="s2">&quot;&quot;</span>
@@ -1250,6 +1275,33 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </section>
+<section id="id11">
+<h3><code class="docutils literal notranslate"><span class="pre">ngram</span></code><a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ngram</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Break up a word w into n consecutive parts</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">w</span><span class="p">[:</span><span class="n">n</span><span class="p">]]</span> <span class="o">+</span> <span class="n">ngram</span><span class="p">(</span><span class="n">w</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">ngram</span><span class="p">(</span><span class="s2">&quot;alien&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;l&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;n&quot;</span><span class="p">]</span>  <span class="c1"># 1-gram (unigram)</span>
+<span class="k">assert</span> <span class="n">ngram</span><span class="p">(</span><span class="s2">&quot;alien&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;al&quot;</span><span class="p">,</span> <span class="s2">&quot;li&quot;</span><span class="p">,</span> <span class="s2">&quot;ie&quot;</span><span class="p">,</span> <span class="s2">&quot;en&quot;</span><span class="p">]</span>  <span class="c1"># 2-gram (bigram)</span>
+<span class="k">assert</span> <span class="n">ngram</span><span class="p">(</span><span class="s2">&quot;alien&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;ali&quot;</span><span class="p">,</span> <span class="s2">&quot;lie&quot;</span><span class="p">,</span> <span class="s2">&quot;ien&quot;</span><span class="p">]</span>  <span class="c1"># 3-gram (trigram)</span>
+<span class="k">assert</span> <span class="n">ngram</span><span class="p">(</span><span class="s2">&quot;alien&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;alie&quot;</span><span class="p">,</span> <span class="s2">&quot;lien&quot;</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">ngram</span><span class="p">(</span><span class="s2">&quot;alien&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;alien&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -1329,6 +1381,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#divisible-by"><code class="docutils literal notranslate"><span class="pre">divisible_by</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starts-with"><code class="docutils literal notranslate"><span class="pre">starts_with</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#end-x"><code class="docutils literal notranslate"><span class="pre">end_x</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ngram"><code class="docutils literal notranslate"><span class="pre">ngram</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oplossingen">Oplossingen</a><ul class="nav section-nav flex-column">
@@ -1342,6 +1395,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8"><code class="docutils literal notranslate"><span class="pre">divisible_by</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9"><code class="docutils literal notranslate"><span class="pre">starts_with</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10"><code class="docutils literal notranslate"><span class="pre">end_x</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11"><code class="docutils literal notranslate"><span class="pre">ngram</span></code></a></li>
 </ul>
 </li>
 </ul>
