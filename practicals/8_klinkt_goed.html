@@ -781,7 +781,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <section id="geluid-programmeren">
 <h2>Geluid programmeren<a class="headerlink" href="#geluid-programmeren" title="Link to this heading">#</a></h2>
 <p>We laten twee voorbeelden zien hoe je geluidsdata kan lezen en bewerken. Probeer deze voorbeelden!</p>
-<p>Omdat je geluid gaat maken in dit practicum heb je wat extra code nodig om mee te beginnen; download <a class="reference download internal" download="" href="../_downloads/667236f2aa71af3f2ba33bfb23da82c0/wk4ex1.zip"><span class="xref download myst">wk4ex1.zip</span></a> en pak het uit.</p>
+<p>Omdat je geluid gaat maken in dit practicum heb je wat extra code nodig om mee te beginnen; download <a class="reference download internal" download="" href="../_downloads/667236f2aa71af3f2ba33bfb23da82c0/wk4ex1.zip"><span class="xref download myst">wk4ex1.zip</span></a> en pak het uit. Zet de map wk4ex1 met de python en geluid bestanden op de c schijf van de computer.(c://wk4ex1/) en open de folder via visual studio.</p>
 <p><strong>Voorbeeld 1</strong>: <code class="docutils literal notranslate"><span class="pre">change_speed</span></code></p>
 <p>De functie <code class="docutils literal notranslate"><span class="pre">change_speed</span></code> zou aanwezig moeten zijn in <code class="docutils literal notranslate"><span class="pre">wk4ex1.py</span></code>, zo niet dan kan je het hier kopiëren en in jouw bestand plakken:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># De voorbeeldfunctie change_speed</span>
@@ -912,7 +912,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="c1"># ... veel uitvoer ...</span>
 </pre></div>
 </div>
-<p>Merk op dat deze functie <code class="docutils literal notranslate"><span class="pre">reverse</span></code> <em>geen</em> gebruik hoeft te maken van de functies die je hiervoor geschreven hebt, maar de volgende functies wel!</p>
 </section>
 <section id="opdracht-3-volume">
 <h3>Opdracht 3: <code class="docutils literal notranslate"><span class="pre">volume</span></code><a class="headerlink" href="#opdracht-3-volume" title="Link to this heading">#</a></h3>
@@ -921,15 +920,13 @@ commentsRunWhenDOMLoaded(addUtterances);
     <span class="o">...</span>
 </pre></div>
 </div>
-<p>zodat <code class="docutils literal notranslate"><span class="pre">volume</span></code> een <code class="docutils literal notranslate"><span class="pre">filename</span></code> accepteert zoals gebruikelijk en een floating-point waarde <code class="docutils literal notranslate"><span class="pre">scale_factor</span></code>. Vervolgens moet <code class="docutils literal notranslate"><span class="pre">volume</span></code> op de gebruikelijke manier het geluid verwerken, waarbij het uitvoerbestand en het afgespeelde geluid de amplitude (volume) wordt geschaald met de schaalfactor <code class="docutils literal notranslate"><span class="pre">scale_factor</span></code>. Met andere woorden, elke sample moet worden vermenigvuldigd met <code class="docutils literal notranslate"><span class="pre">scale_factor</span></code>.</p>
+<p>zodat <code class="docutils literal notranslate"><span class="pre">volume</span></code> een <code class="docutils literal notranslate"><span class="pre">filename</span></code> accepteert zoals gebruikelijk en een floating-point waarde <code class="docutils literal notranslate"><span class="pre">scale_factor</span></code>. Vervolgens moet <code class="docutils literal notranslate"><span class="pre">volume</span></code> op de gebruikelijke manier het geluid verwerken, waarbij het uitvoerbestand en het afgespeelde geluid de amplitude (volume) wordt geschaald met de schaalfactor <code class="docutils literal notranslate"><span class="pre">scale_factor</span></code>. Met andere woorden, elke sample moet worden vermenigvuldigd met <code class="docutils literal notranslate"><span class="pre">scale_factor</span></code>. Gebruik hiervoor een listcomprehension.</p>
 <div class="tip admonition">
-<p class="admonition-title">Gebruik de hulpfunctie <code class="docutils literal notranslate"><span class="pre">scale</span></code></p>
-<p>Gebruik de hulpfunctie <code class="docutils literal notranslate"><span class="pre">scale</span></code> die je eerder hebt geschreven. Wat je nodig hebt is</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">newsamps</span> <span class="o">=</span> <span class="n">scale</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
-</pre></div>
+<p class="admonition-title">Vermenigvuldig met</p>
+<p>Check de functie three_ize(L) dat in het document staat voor inspiratie hoe je de list comprehension kan schrijven.</p>
 </div>
 <p>Dit is een typisch voorbeeld, steeds zullen maar kleine aanpassingen nodig zijn voor elke volgende audio functie die je gaat schrijven.</p>
-</div>
+<div class="docutils">
 <p>Zie de volgende voorbeelden:</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">volume</span><span class="p">(</span><span class="s2">&quot;swfaith.wav&quot;</span><span class="p">,</span> <span class="mf">.1</span><span class="p">)</span>    <span class="c1"># Een rustiger Darth...</span>
 <span class="c1"># ... veel uitvoer ...</span>
@@ -937,6 +934,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">volume</span><span class="p">(</span><span class="s2">&quot;swfaith.wav&quot;</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">)</span>  <span class="c1"># Een hele drukke Darth!</span>
 <span class="c1"># ... veel uitvoer ...</span>
 </pre></div>
+</div>
 </div>
 <p>Je zult merken dat jouw gehoor zich opmerkelijk goed aanpast aan de veranderingen in het absolute volume van deze functie, waardoor het waargenomen effect aanzienlijk minder is dan je zou verwachten.</p>
 <p>Je zult ook merken dat als je het volume te veel verhoogt, het geluid vervormd raakt, net als wanneer een versterker op 11 wordt gezet.</p>
@@ -950,8 +948,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>zodat <code class="docutils literal notranslate"><span class="pre">static</span></code> een <code class="docutils literal notranslate"><span class="pre">filename</span></code> (zoals gebruikelijk) en een floating-point waarde <code class="docutils literal notranslate"><span class="pre">probability_of_static</span></code> accepteert, waarvan je mag aannemen dat deze tussen 0 en 1 ligt.</p>
-<p><code class="docutils literal notranslate"><span class="pre">static</span></code> moet het geluid op de gebruikelijke manier verwerken, waarbij de uitvoersamples met een kans gelijk aan <code class="docutils literal notranslate"><span class="pre">probability_of_static</span></code> moeten worden vervangen door een willekeurig getal tussen -32768 en 32767.</p>
-<p>Je gebruikt hier de hulpfunctie <code class="docutils literal notranslate"><span class="pre">replace_some</span></code> die je al eerder hebt geschreven. Je hoeft <code class="docutils literal notranslate"><span class="pre">randomize</span></code> niet te gebruiken want deze wordt al door <code class="docutils literal notranslate"><span class="pre">replace_some</span></code> gebruikt!</p>
+<p><code class="docutils literal notranslate"><span class="pre">static</span></code> moet het geluid op de gebruikelijke manier verwerken, waarbij de uitvoersamples met een kans gelijk aan <code class="docutils literal notranslate"><span class="pre">probability_of_static</span></code> moeten worden vervangen door een willekeurig getal tussen -32768 en 32767. Gebruik voor deze opdracht een list comprehension en de functie <code class="docutils literal notranslate"><span class="pre">randomize(x,</span> <span class="pre">chance_of_replacing)</span></code> dat een getal <code class="docutils literal notranslate"><span class="pre">x</span></code> verwacht en of <code class="docutils literal notranslate"><span class="pre">x</span></code> teruggeeft of een willekeurig getal tussen -32768 en 32767. De kans dat er een willekeurig getal wordt teruggegeven is afhankelijk van <code class="docutils literal notranslate"><span class="pre">chance_of_replacing</span></code>.</p>
 <p>Zie de volgende voorbeelden:</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">static</span><span class="p">(</span><span class="s2">&quot;swfaith.wav&quot;</span><span class="p">,</span> <span class="mf">.05</span><span class="p">)</span>  <span class="c1"># Vader, die een tunnel in rijdt</span>
 <span class="c1"># ... veel uitvoer ...</span>
@@ -968,9 +965,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <span class="o">...</span>
 </pre></div>
 </div>
-<p>zodat <code class="docutils literal notranslate"><span class="pre">overlay</span></code> twee bestandsnamen accepteert, en een nieuw geluid creëert dat de twee overlapt (combineert). Het resultaat moet net zo lang zijn als de kortere van de twee. (negeer eventuele extra samples, net als in <code class="docutils literal notranslate"><span class="pre">add_scale_2</span></code>.)</p>
-<p>Gebruik de <code class="docutils literal notranslate"><span class="pre">add_scale_2</span></code> hulpfunctie om je hierbij te helpen! Op die manier kan je het relatieve volume van de twee bestanden aanpassen. Het is ook mogelijk, maar zeker niet verplicht, om meer argumenten toe te voegen aan de functie <code class="docutils literal notranslate"><span class="pre">overlay</span></code>, zodat je hiermee de relatieve volumes kan aanpassen (of samples kan bijsnijden, maar dat is lastiger).</p>
-<p><em>Onthoud</em> dat <code class="docutils literal notranslate"><span class="pre">add_scale_2(samps1,</span> <span class="pre">samps2,</span> <span class="pre">0.5,</span> <span class="pre">0.5)</span></code> lijsten (<code class="docutils literal notranslate"><span class="pre">samps</span></code>) als argumenten accepteert en geen bestandsnamen, dat zijn gewoon strings! De <code class="docutils literal notranslate"><span class="pre">samps</span></code> zijn lijsten van de ruwe geluidsdata.</p>
+<p>zodat <code class="docutils literal notranslate"><span class="pre">overlay</span></code> twee bestandsnamen accepteert, en een nieuw geluid creëert dat de twee overlapt (samples bij elkaar optelt). Het resultaat moet net zo lang zijn als de kortere van de twee. (negeer eventuele extra samples.) Gebruik hiervoor een list comprehension</p>
 <p>Zie het volgende voorbeeld:</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">:</span> <span class="n">overlay</span><span class="p">(</span><span class="s2">&quot;swfaith.wav&quot;</span><span class="p">,</span> <span class="s2">&quot;swnotry.wav&quot;</span><span class="p">)</span>  <span class="c1"># Vader vs. Yoda</span>
 <span class="c1"># ... veel uitvoer ...</span>
@@ -986,11 +981,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>zodat <code class="docutils literal notranslate"><span class="pre">echo</span></code> een bestandsnaam accepteert zoals gebruikelijk en een floating-point waarde <code class="docutils literal notranslate"><span class="pre">time_delay</span></code>, die een aantal seconden voostelt.</p>
-<p>Dan moet <code class="docutils literal notranslate"><span class="pre">echo</span></code> het geluid op de gebruikelijke manier verwerken, waarbij het originele geluid wordt overlapt door een kopie van zichzelf die in de tijd wordt verschoven met <code class="docutils literal notranslate"><span class="pre">time_delay</span></code> seconden.</p>
-<p>Om de geluiden te laten overlappen zal je <code class="docutils literal notranslate"><span class="pre">add_scale_2</span></code> weer willen gebruiken, zoals eerder.</p>
+<p>Dan moet <code class="docutils literal notranslate"><span class="pre">echo</span></code> het geluid op de gebruikelijke manier verwerken, waarbij het originele geluid wordt overlapt (samples bij elkaar optellen) door een kopie van zichzelf die in de tijd wordt verschoven met <code class="docutils literal notranslate"><span class="pre">time_delay</span></code> seconden. Gebruik hiervoor een list comprehension zoals bij de overlay functie.</p>
 <p>Om de geluiden te verschuiven kan je de sampling rate gebruiken om het aantal samples voor een bepaald aantal seconden te bepalen:</p>
 <ul class="simple">
-<li><p>Als bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">time_delay</span></code> een waarde <code class="docutils literal notranslate"><span class="pre">0.1</span></code> heeft en de sampling rate <code class="docutils literal notranslate"><span class="pre">22050</span></code>, dan moet je <code class="docutils literal notranslate"><span class="pre">2205</span></code> samples wachten</p></li>
+<li><p>Als bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">time_delay</span></code> een waarde <code class="docutils literal notranslate"><span class="pre">0.1</span></code> heeft en de sampling rate <code class="docutils literal notranslate"><span class="pre">22050</span></code>, dan moet je <code class="docutils literal notranslate"><span class="pre">2205</span></code> samples wachten (0.1* 22050)</p></li>
 <li><p>Of, als <code class="docutils literal notranslate"><span class="pre">time_delay</span></code> een waarde <code class="docutils literal notranslate"><span class="pre">0.25</span></code> heeft en de sampling rate <code class="docutils literal notranslate"><span class="pre">44100</span></code>, dan is het aantal samples dat je moet wachten <code class="docutils literal notranslate"><span class="pre">11025</span></code></p></li>
 </ul>
 <div class="tip admonition">
@@ -1099,13 +1093,6 @@ kunnen doen om hiervoor te compenseren zonder het akkoord <em>te stil</em> te ma
 <li><p>Aangezien de amplitude van elk origineel <code class="docutils literal notranslate"><span class="pre">1.0</span></code> is, moet je een breuk (fractie) als schaalfactor gebruiken om ervoor te zorgen dat de totale amplitude van de opgetelde golven op 1.0 of minder blijft.</p></li>
 <li><p>Als de amplitude van golf groter is dan <code class="docutils literal notranslate"><span class="pre">1.0</span></code>, zal hij “afgekapt” worden door de luidsprekers. Dit klinkt alsof er luide ruis in het geluid zit (of het klinkt gewoon heel slecht).</p></li>
 </ul>
-<p>Uitdaging: Gebruik de bovenstaande frequentietabel om het akkoord te veranderen van een A-mineur naar een A-majoor akkoord. Of maak jouw eigen akkoord…</p>
-<p>Maar hoe zit het met het creëren van een <em>C mineur septiem</em> (of overmatig) akkoord?</p>
-<p>Inderdaad, je zou grotere akkoorden kunnen maken met willekeurig veel tonen… of andere ongewone/onbelangrijke/inspirerende/verstorende algoritmisch gegenereerde geluidseffecten. We moedigen je zeker aan om dingen uit te proberen! Het is niet vreselijk moeilijk om iets te schrijven dat echte muziek speelt!</p>
-<div class="tip admonition">
-<p class="admonition-title">Verder uitbreiden</p>
-<p>Het kan helpen om functies als <code class="docutils literal notranslate"><span class="pre">a_flat(duration)</span></code> of <code class="docutils literal notranslate"><span class="pre">cm7(duration)</span></code> te hebben, en dan iets te schrijven dat daarop voortbouwt.</p>
-</div>
 </section>
 </section>
 </section>
