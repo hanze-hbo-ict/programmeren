@@ -1,11 +1,5 @@
 # Caesar op orde!
 
-| Naam         | Beschrijving                                                   |
-|--------------|----------------------------------------------------------------|
-| Onderwerp    | Taal ontcijferen                                               |
-| Bestandsnaam | `wk4ex2.py`                                                    |
-| Inleveren    | Lever jouw bestand met de juiste bestandsnaam in op GradeScope |
-
 In deze opgave ga je een aantal functies schrijven met behulp van *functioneel programmeren*, dat wil zeggen, conditionele statements, recursie en/of list comprehensions.
 
 Zorg bij elke opdracht dat je de naam precies zo schrijft zoals dit wordt opgegeven, inclusief hoofd-en kleine letters. Voeg verder aan elke functie een *docstring* toe waar je kort uitlegt wat de argumenten van de functie zijn en wat de functie doet.
@@ -50,7 +44,7 @@ Bedenk verder dat je de ingebouwde functies `ord` en `chr` die een string met é
 
 <!-- TODO verwijzing DNA-naar-RNA opnemen -->
 
-Als je de tip volgt en een hulpfunctie`rot(c, n)` schrijft dan wordt het probleem gelijk aan het DNA-naar-RNA probleem (`transcribe`)! Dat wil zeggen:
+Als je de tip volgt en een hulpfunctie`rot(c, n)` schrijft dan kan je:
 
 -   je kan het met behulp van `rot(c, n)` een string letter voor letter recursief doorlopen, met een lege string `s` als base case.
 
@@ -136,7 +130,7 @@ Je mag zelf bepalen hoe je "Nederlandstaligheid" een score geeft, hier een paar 
 <!-- TODO verwijzing naar college -->
 :::
 
-Een mogelijke aanpak is het gebruik van letterfrequenties, hieronder is een functie gegeven met de freuqenties per letter en deze kan je gebruiken in de opgave. Je zou ook Scrabble scores kunnen proberen (want deze zijn ook gebaseerd op letterfrequenties). Je mag zelf extra heuristieken ("vuistregels") bedenken en verder mag je ook kleine hulpfuncties toevoegen om te helpen met het schrijven van `decipher`.
+Een mogelijke aanpak is het gebruik van letterfrequenties, hieronder is een functie gegeven met de frequenties per letter en deze kan je gebruiken in de opgave. Je zou ook Scrabble scores kunnen proberen (want deze zijn ook gebaseerd op letterfrequenties). Je mag zelf extra heuristieken ("vuistregels") bedenken en verder mag je ook kleine hulpfuncties toevoegen om te helpen met het schrijven van `decipher`.
 
 Hoe je het ook aanpakt, onthoud dat je de strategie die je gebruikt bij het schrijven van de functie `decipher` moet documenteren in een kort stukje commentaar boven de functie `decipher`.
 
