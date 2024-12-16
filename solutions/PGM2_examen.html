@@ -760,7 +760,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                   
   <section class="tex2jax_ignore mathjax_ignore" id="oplossingen">
 <h1>Oplossingen<a class="headerlink" href="#oplossingen" title="Link to this heading">#</a></h1>
-<p>Dit zijn de antwoorden op de opgaven in het Proeftentamen PGM1 en we nemen je stap voor stap mee in de uitwerkingen.</p>
+<p>Dit zijn de antwoorden op de opgaven in het Proeftentamen PGM2 en we nemen je stap voor stap mee in de uitwerkingen.</p>
 <div class="admonition important">
 <p class="admonition-title">Belangrijk</p>
 <p>Let op, de opgaven kunnen op verschillende manieren worden opgelost, het kan zijn dat jij sommige dingen anders hebt geschreven of andere stappen hebt gevolgd en dat is prima!</p>
@@ -792,28 +792,28 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p>Stap voor stap lopen we na wat hier gebeurt:</p>
 <ol class="arabic">
-<li><p>Nogmals, de functie <code class="docutils literal notranslate"><span class="pre">check_extension(s,</span> <span class="pre">e)</span></code> controleert of bestandsnaam <code class="docutils literal notranslate"><span class="pre">s</span></code> eindigt met extensie <code class="docutils literal notranslate"><span class="pre">e</span></code></p></li>
+<li><p>Nogmaals, de functie <code class="docutils literal notranslate"><span class="pre">check_extension(s,</span> <span class="pre">e)</span></code> controleert of bestandsnaam <code class="docutils literal notranslate"><span class="pre">s</span></code> eindigt met extensie <code class="docutils literal notranslate"><span class="pre">e</span></code></p></li>
 <li><p>Er zijn vier situaties die we controleren:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>  <span class="c1"># Situatie 1</span>
     <span class="k">return</span> <span class="kc">False</span>
 </pre></div>
 </div>
-<p>Als de bestandsnaam leeg is, kan het niet eindigen met de extensie, dus: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+<p>Als de bestandsnaam leeg is, kan het niet eindigen met de extensie, dus: <code class="docutils literal notranslate"><span class="pre">False</span></code> (een <em>eerste</em> base case)</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">e</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>  <span class="c1"># Situatie 2</span>
     <span class="k">return</span> <span class="kc">True</span>
 </pre></div>
 </div>
-<p>Als de extensie leeg is (we hebben alle letters gecheckt), dan eindigt het bestand met de extensie, dus: <code class="docutils literal notranslate"><span class="pre">True</span></code></p>
+<p>Als de extensie leeg is (we hebben alle letters gecheckt), dan eindigt het bestand met de extensie, dus: <code class="docutils literal notranslate"><span class="pre">True</span></code> (een <em>tweede</em> base case)</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="n">e</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>  <span class="c1"># Situatie 3</span>
     <span class="k">return</span> <span class="kc">False</span>
 </pre></div>
 </div>
-<p>Als de laatste letters niet gelijk zijn, kan het bestand niet eindigen met de extensie, dus: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+<p>Als de laatste letters niet gelijk zijn, kan het bestand niet eindigen met de extensie, dus: <code class="docutils literal notranslate"><span class="pre">False</span></code> (een <em>derde</em> base case)</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">else</span><span class="p">:</span>  <span class="c1"># Situatie 4</span>
     <span class="k">return</span> <span class="n">check_extension</span><span class="p">(</span><span class="n">s</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">e</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
 </div>
-<p>Als de laatste letters wél gelijk zijn, controleren we de rest van de strings door de functie opnieuw aan te roepen zonder de laatste letters</p>
+<p>Als de laatste letters wél gelijk zijn, controleren we de rest van de strings door de functie opnieuw aan te roepen zonder de laatste letters (de <em>recursieve</em> case)</p>
 </li>
 <li><p>Voorbeeld met “program.exe” en “.exe”:</p>
 <ul class="simple">
@@ -822,7 +822,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>Dan “program.e” met “.e”</p></li>
 <li><p>Dan “program.” met “.”</p></li>
 <li><p>Dan “program” met “” (lege extensie)</p></li>
-<li><p>Dit geeft True terug, dus het bestand eindigt met .exe</p></li>
+<li><p>Dit geeft <code class="docutils literal notranslate"><span class="pre">True</span></code> terug, dus het bestand eindigt met .exe</p></li>
 </ul>
 </li>
 </ol>
@@ -865,14 +865,14 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p>De drie verschillende manieren om hetzelfde probleem op te lossen: het vinden van alle even getallen in een lijst.</p>
 <ol class="arabic simple">
-<li><p>De loop-manier:</p></li>
+<li><p>De lus-manier:</p></li>
 </ol>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">only_even_loop</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>              <span class="c1"># We beginnen met een lege lijst</span>
-    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">L</span><span class="p">:</span>             <span class="c1"># We pakken steeds één getal uit de lijst</span>
-        <span class="k">if</span> <span class="n">e</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>      <span class="c1"># Als het getal even is</span>
-            <span class="n">result</span> <span class="o">+=</span> <span class="p">[</span><span class="n">e</span><span class="p">]</span>    <span class="c1"># stoppen we het in onze nieuwe lijst</span>
-    <span class="k">return</span> <span class="n">result</span>           <span class="c1"># Als we klaar zijn geven we de nieuwe lijst terug</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>            <span class="c1"># We beginnen met een lege lijst</span>
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">L</span><span class="p">:</span>            <span class="c1"># We nemen steeds één getal uit de lijst</span>
+        <span class="k">if</span> <span class="n">e</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>     <span class="c1"># Als het getal even is</span>
+            <span class="n">result</span> <span class="o">+=</span> <span class="p">[</span><span class="n">e</span><span class="p">]</span>  <span class="c1"># stoppen we het in onze nieuwe lijst</span>
+    <span class="k">return</span> <span class="n">result</span>          <span class="c1"># Als we klaar zijn geven we de nieuwe lijst terug</span>
 </pre></div>
 </div>
 <p>Dit is zoals het sorteren van knikkers: je pakt er één, kijkt of die even is, en als dat zo is stop je hem in een nieuwe zak. Dit doe je tot alle knikkers op zijn.</p>
@@ -883,15 +883,15 @@ commentsRunWhenDOMLoaded(addUtterances);
     <span class="k">return</span> <span class="p">[</span><span class="n">e</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">L</span> <span class="k">if</span> <span class="n">e</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>Dit is alsof je tegen Python zegt: “Maak een nieuwe lijst voor mij. Kijk naar alle getallen in L, en als een getal even is, stop het dan in de nieuwe lijst”. Het is eigenlijk precies hetzelfde als de loop-manier, maar dan in één regel geschreven.</p>
+<p>Dit is alsof je tegen Python zegt: “Maak een nieuwe lijst voor mij. Kijk naar alle getallen in L, en als een getal even is, stop het dan in de nieuwe lijst”. Het is eigenlijk precies hetzelfde als de lus-manier, maar dan in één regel geschreven.</p>
 <ol class="arabic simple" start="3">
 <li><p>De recursieve manier:</p></li>
 </ol>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">only_even_rec</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">L</span> <span class="o">==</span> <span class="p">[]:</span>            <span class="c1"># Als de lijst leeg is</span>
-        <span class="k">return</span> <span class="n">L</span>           <span class="c1"># zijn we klaar</span>
+    <span class="k">if</span> <span class="n">L</span> <span class="o">==</span> <span class="p">[]:</span>        <span class="c1"># Als de lijst leeg is</span>
+        <span class="k">return</span> <span class="n">L</span>       <span class="c1"># zijn we klaar</span>
     
-    <span class="k">if</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>     <span class="c1"># Is het eerste getal even?</span>
+    <span class="k">if</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># Is het eerste getal even?</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span> <span class="n">only_even_rec</span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>  <span class="c1"># Ja: bewaar het en kijk naar de rest</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">only_even_rec</span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>           <span class="c1"># Nee: kijk alleen naar de rest</span>
@@ -900,7 +900,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Dit is als een stapel kaarten: je kijkt naar de bovenste kaart, beslist of die in je nieuwe stapel moet, en geeft de rest van de stapel door aan een vriend die precies hetzelfde doet. Jullie blijven dit doen tot de stapel op is.</p>
 <p>Het verschil zit vooral in hoe je het probleem aanpakt:</p>
 <ul class="simple">
-<li><p>Bij de loop ga je stap voor stap door de getallen heen, zoals wanneer je zelf knikkers sorteert</p></li>
+<li><p>Bij de lus ga je stap voor stap door de getallen heen, zoals wanneer je zelf knikkers sorteert</p></li>
 <li><p>Bij list comprehension vertel je Python in één keer wat je wilt, zoals een bestelling opgeven</p></li>
 <li><p>Bij recursie deel je het werk op in kleine stapjes en lost elke stap een klein deel op, zoals bij het doorgeven van de kaarten</p></li>
 </ul>
@@ -934,7 +934,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">e</span> <span class="pre">in</span> <span class="pre">L</span></code>:</p>
 <ul class="simple">
-<li><p>We pakken één voor één elke student uit de lijst <code class="docutils literal notranslate"><span class="pre">L</span></code></p></li>
+<li><p>We nemen één voor één elke student uit de lijst <code class="docutils literal notranslate"><span class="pre">L</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">e</span></code> wordt dan bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">[&quot;0308230&quot;,</span> <span class="pre">7.6,</span> <span class="pre">True]</span></code></p></li>
 </ul>
 </li>
@@ -950,7 +950,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>Voor elke student die zijn huiswerk heeft gemaakt, maken we een nieuwe lijst met:</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">e[0]</span></code>: Het studentnummer (eerste element)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">e[1]+0.5</span></code>: Het cijfer (tweede element) plus 0.5 punt bonus</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">e[1]</span> <span class="pre">+</span> <span class="pre">0.5</span></code>: Het cijfer (tweede element) plus 0.5 punt bonus</p></li>
 </ul>
 </li>
 </ul>
@@ -979,7 +979,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             <span class="c1"># als er 3 of minder stokjes zijn, pak ze allemaal</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">sticks</span>
 
-        <span class="c1"># bereken hoeveel stokjes we moeten pakken om een meervoud van 4 over te houden</span>
+        <span class="c1"># bereken hoeveel stokjes we moeten nemen om een meervoud van 4 over te houden</span>
         <span class="n">remainder</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sticks</span> <span class="o">%</span> <span class="mi">4</span>
         <span class="k">if</span> <span class="n">remainder</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="c1"># als het al een meervoud van 4 is, kies random</span>
@@ -1054,7 +1054,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>Dit kan in één regel: <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">self.sticks</span> <span class="pre">&lt;=</span> <span class="pre">0</span></code></p></li>
 </ul>
 <ol class="arabic simple" start="4">
-<li><p>De hoofdloop afmaken:</p></li>
+<li><p>De hoofdlus afmaken:</p></li>
 </ol>
 <ul class="simple">
 <li><p>Onder het commentaar moet de beurt van de computer worden toegevoegd</p></li>
@@ -1065,7 +1065,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>Toon wat de computer heeft gepakt</p></li>
 </ol>
 </li>
-<li><p>Daarna moet je checken of de computer heeft gewonnen</p></li>
+<li><p>Daarna moet je controleren of de computer heeft gewonnen</p></li>
 </ul>
 <p>Deze opdeling in subvragen helpt de student om het probleem in kleinere, behapbare stukken op te delen. Elke subvraag bouwt voort op de vorige en samen vormen ze een werkend spel.</p>
 </section>
@@ -1107,7 +1107,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <span class="k">return</span> <span class="kc">True</span>
 </pre></div>
 </div>
-<p>Dit is wat we noemen een “basisgeval” voor recursie. Als het woord maar 1 letter lang is, dan staan de letters automatisch in alfabetische volgorde (er is immers maar één letter). Daarom geven we <code class="docutils literal notranslate"><span class="pre">True</span></code> terug.</p>
+<p>Dit is wat we noemen een “base case” (of basisgeval) voor recursie. Als het woord maar 1 letter lang is, dan staan de letters automatisch in alfabetische volgorde (er is immers maar één letter). Daarom geven we <code class="docutils literal notranslate"><span class="pre">True</span></code> terug.</p>
 <ol class="arabic simple" start="3">
 <li><p>De volgende controle is:</p></li>
 </ol>
@@ -1115,7 +1115,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <span class="k">return</span> <span class="kc">False</span>
 </pre></div>
 </div>
-<p>Hier vergelijken we de eerste letter (<code class="docutils literal notranslate"><span class="pre">s[0]</span></code>) met de tweede letter (<code class="docutils literal notranslate"><span class="pre">s[1]</span></code>). In Python kunnen we letters direct vergelijken - als de eerste letter later in het alfabet komt dan de tweede letter, dan is de volgorde niet correct en geven we <code class="docutils literal notranslate"><span class="pre">False</span></code> terug.</p>
+<p>Hier vergelijken we de eerste letter (<code class="docutils literal notranslate"><span class="pre">s[0]</span></code>) met de tweede letter (<code class="docutils literal notranslate"><span class="pre">s[1]</span></code>). In Python kunnen we letters direct vergelijken - als de eerste letter later in het alfabet komt dan de tweede letter, dan is de volgorde niet correct en geven we <code class="docutils literal notranslate"><span class="pre">False</span></code> terug. Dit is ook een base case, want in dit geval zijn we klaar en hebben niets meer door te geven.</p>
 <ol class="arabic simple" start="4">
 <li><p>Als de letters wel in de juiste volgorde staan, gaan we verder met:</p></li>
 </ol>
@@ -1143,7 +1143,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>Derde aanroep met “l”:</p>
 <ul class="simple">
 <li><p>Is lengte 1? Ja!</p></li>
-<li><p>Return True</p></li>
+<li><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code></p></li>
 </ul>
 </li>
 </ol>
@@ -1154,21 +1154,21 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul class="simple">
 <li><p>Is lengte 1? Nee</p></li>
 <li><p>Is ‘t’ &gt; ‘e’? Ja! (‘t’ komt later in alfabet)</p></li>
-<li><p>Return False direct</p></li>
+<li><p>Return <code class="docutils literal notranslate"><span class="pre">False</span></code> direct</p></li>
 </ul>
 </li>
 </ol>
 <p>Dit verklaart ook waarom de assertions correct zijn:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">alfabet_word</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">True</span>      <span class="c1"># één letter is altijd True</span>
-<span class="k">assert</span> <span class="n">alfabet_word</span><span class="p">(</span><span class="s2">&quot;bel&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">True</span>    <span class="c1"># b-&gt;e-&gt;l gaat omhoog in alfabet</span>
-<span class="k">assert</span> <span class="n">alfabet_word</span><span class="p">(</span><span class="s2">&quot;adem&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">True</span>   <span class="c1"># a-&gt;d-&gt;e-&gt;m gaat omhoog in alfabet</span>
-<span class="k">assert</span> <span class="n">alfabet_word</span><span class="p">(</span><span class="s2">&quot;python&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">False</span> <span class="c1"># p-&gt;y gaat omhoog, maar y-&gt;t gaat omlaag</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">alfabet_word</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">True</span>        <span class="c1"># één letter is altijd True</span>
+<span class="k">assert</span> <span class="n">alfabet_word</span><span class="p">(</span><span class="s2">&quot;bel&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">True</span>      <span class="c1"># b-&gt;e-&gt;l gaat omhoog in alfabet</span>
+<span class="k">assert</span> <span class="n">alfabet_word</span><span class="p">(</span><span class="s2">&quot;adem&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">True</span>     <span class="c1"># a-&gt;d-&gt;e-&gt;m gaat omhoog in alfabet</span>
+<span class="k">assert</span> <span class="n">alfabet_word</span><span class="p">(</span><span class="s2">&quot;python&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">False</span>  <span class="c1"># p-&gt;y gaat omhoog, maar y-&gt;t gaat omlaag</span>
 </pre></div>
 </div>
 </section>
 <section id="opgave-6-moeilijke-woorden">
 <h2>Opgave 6 <em>Moeilijke woorden</em><a class="headerlink" href="#opgave-6-moeilijke-woorden" title="Link to this heading">#</a></h2>
-<p>Deze opgave vraagt jou om in een paar stappen gegevens te reduceren (tekst naar zinnen en zinnen naar woorden) om daar vervolgens op basis van een eenvoudige formule een resultaat te berekenen. We kiezen hier voor een enkele methode (geen hulpfunctie) en list comprehension omdat we hier werken met lijsten. Andere oplossingen zijn ook mogelijk.</p>
+<p>Deze opgave vraagt jou om in een paar stappen gegevens te reduceren (tekst naar zinnen en zinnen naar woorden) en vervolgens op basis daarvan met een eenvoudige formule een resultaat te berekenen. We kiezen hier voor een enkele methode (geen hulpfunctie) en list comprehension omdat we hier veel moeten werken met lijsten (lijsten met zinnen en lijsten met woorden). Let ook op dat we ook <em>geneste</em> lussen binnen een list comprehensions gebruiken (bijvoorbeeld bij <code class="docutils literal notranslate"><span class="pre">all_words</span></code>). Andere oplossingen zijn natuurlijk ook mogelijk en daar kijken we later naar.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">complexity_score</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
@@ -1258,7 +1258,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p>De oplossing stap voor stap uitgelegd:</p>
 <ol class="arabic simple">
-<li><p>Eerst kijken we naar de functiedefinitie:</p></li>
+<li><p>Eerst kijken we naar de functiedefinitie (ook wel de <em>signatuur</em> genoemd):</p></li>
 </ol>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">complexity_score</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
 </pre></div>
@@ -1277,7 +1277,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">all_words</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">sentences</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span>
 </pre></div>
 </div>
-<p>Dit is een nested list comprehension die twee dingen doet:</p>
+<p>Dit is een geneste list comprehension die twee dingen doet:</p>
 <ul class="simple">
 <li><p>Voor elke zin (<code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">sentence</span> <span class="pre">in</span> <span class="pre">sentences</span></code>)</p></li>
 <li><p>Split die zin in woorden (<code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">word</span> <span class="pre">in</span> <span class="pre">sentence.split()</span></code>)
