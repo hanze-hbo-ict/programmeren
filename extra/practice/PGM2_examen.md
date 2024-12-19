@@ -275,35 +275,32 @@ assert (
         ),
         1,
     )
-    == 15.4
+    == 16.7
 )
 # Uitleg:
 # Woorden (11): Dit(1) is(2) een(3) gecompliceerde(4) zin(5) met(6) veel(7)
 #               verschillende(8) woorden(9) erin(10) verstopt(11)
 # Zinnen (1): 1 zin van 11 woorden (< 15, dus niet complex)
 # Complex: gecompliceerde(13 letters), verschillende(13 letters)
-# Score: 2 complexe woorden / 12 totale elementen ≈ 15.4%
-
+# Score: 2 complexe woorden / 12 totale elementen ≈ 16.7%
 
 assert (
     round(complexity_score("De intelligentie van computerprogramma's neemt toe."), 1)
-    == 25.0
+    == 28.6
 )
 # Uitleg:
 # Woorden (6): De(1) intelligentie(2) van(3) computerprogramma's(4)
 #              neemt(5) toe(6)
 # Zinnen (1): 1 zin van 6 woorden (< 15, dus niet complex)
 # Complex: intelligentie(12 letters), computerprogramma's(16 letters)
-# Score: 2 complexe woorden / 7 totale elementen ≈ 25.0%
+# Score: 2 complexe woorden / 7 totale elementen ≈ 28.6%
 
 assert (
     round(
-        complexity_score("""Programmeren is leuk.
-Dit is een zeer lange zin die meer dan vijftien woorden bevat en daarom als complex wordt beschouwd bij deze analyse.
-Nog een zin."""),
+        complexity_score("Programmeren is leuk. Dit is een zeer lange zin die meer dan vijftien woorden bevat en daarom als complex wordt beschouwd bij deze analyse. Nog een zin."),
         1,
     )
-    == 6.5
+    == 6.7
 )
 # Uitleg:
 # Zin 1 (3): Programmeren(1) is(2) leuk(3)
@@ -312,17 +309,17 @@ Nog een zin."""),
 #             complex(16) wordt(17) beschouwd(18) bij(19) deze(20) analyse(21)
 # Zin 3 (3): Nog(1) een(2) zin(3)
 # Complex: programmeren(11 letters), en zin 2 (21 woorden > 15)
-# Score: 2 complexe elementen / 30 totale elementen ≈ 6.5%
+# Score: 2 complexe elementen / 30 totale elementen ≈ 6.7%
 ```
 
 Tot slot het volgende, de string-methode `split()` geeft een lijst van strings
 terug. Gebruik deze methode om een tekst op te delen op basis van een
 scheidingsteken:
 
-- `text.split(".")` voor het opdelen van een tekst in zinnen
+- `text.split(".")[:-1]` voor het opdelen van een tekst in zinnen. Het `[:-1]`
+  verwijdert de lege string die ontstaat na de laatste punt.
 - `sentence.split()` voor het opdelen van een zin in woorden (hier is geen
-  scheidingsteken nodig, standaard zal worden opgedeeld op basis van een spatie)
+  scheidingsteken nodig, standaard zal worden opgedeeld op basis van spaties)
 
-Let op: bij het splitsen van zinnen en vervolgens woorden zullen enkele woorden
-toch nog een spatie bevatten, en ontstaan er soms lege zinnen. Het is _niet_
-nodig om hier rekening mee te houden!
+Bij het splitsen van zinnen en vervolgens woorden zullen enkele woorden toch nog
+een spatie bevatten, het is _niet_ nodig om hier rekening mee te houden!
