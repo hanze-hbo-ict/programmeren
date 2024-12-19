@@ -323,5 +323,6 @@ scheidingsteken:
 - `sentence.split()` voor het opdelen van een zin in woorden (hier is geen
   scheidingsteken nodig, standaard zal worden opgedeeld op basis van een spatie)
 
-Bij het splitsen van zinnen en vervolgens woorden zullen enkele woorden toch nog
-een spatie bevatten, het is _niet_ nodig om hier rekening mee te houden.
+Let op: bij het splitsen van zinnen en vervolgens woorden zullen enkele woorden
+toch nog een spatie bevatten, en ontstaan er soms lege zinnen. Het is _niet_
+nodig om hier rekening mee te houden!
