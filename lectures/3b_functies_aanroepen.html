@@ -30,7 +30,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -777,12 +777,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 <section id="vraag">
 <h3>Vraag<a class="headerlink" href="#vraag" title="Link to this heading">#</a></h3>
 <p>Functies kunnen andere functies aanroepen!</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">demo</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">demo</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">/</span> <span class="mi">3</span>
     <span class="n">z</span> <span class="o">=</span> <span class="n">g</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">z</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">x</span>
 
-<span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="n">result</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
     <span class="k">return</span> <span class="n">result</span>
 </pre></div>
@@ -822,7 +822,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="n">flipside</span><span class="p">(</span><span class="s2">&quot;huiswerk&quot;</span><span class="p">)</span>
 <span class="n">flipside</span><span class="p">(</span><span class="s2">&quot;studiemaatje&quot;</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">flipside</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">flipside</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; flipside(s): spiegel s!</span>
 <span class="sd">    input s: een string</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -834,7 +834,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p><code class="docutils literal notranslate"><span class="pre">NameError</span> <span class="pre">name</span> <span class="pre">'flipside'</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">defined</span></code></p>
 <p>Deze fout krijg je ook als je probeert een variabele te gebruiken die nog niet bestaat.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
-<span class="k">def</span> <span class="nf">flipside</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">flipside</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; flipside(s): spiegel s!</span>
 <span class="sd">    input s: een string</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -848,12 +848,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p>De functie aanroep moet dus onder de functie zelf staan. Dit geeft wel het nadeel dat als je een heel lang programma hebt met meerdere functies dat de start van het programma helemaal onderaan komt te staan. Dit is niet prettig, daarom gebruiken veel python programmeurs een zogenaamde main functie die helemaal bovenaan komt te staan. In de main functie wordt het programma aangestuurd.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">flipside</span><span class="p">(</span><span class="s2">&quot;automaat&quot;</span><span class="p">))</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">flipside</span><span class="p">(</span><span class="s2">&quot;huiswerk&quot;</span><span class="p">))</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">flipside</span><span class="p">(</span><span class="s2">&quot;studiemaatje&quot;</span><span class="p">))</span>
 
-<span class="k">def</span> <span class="nf">flipside</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">flipside</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; flipside(s): spiegel s!</span>
 <span class="sd">    input s: een string</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -873,12 +873,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p>als “neem aan dat het resultaat van de aanroep <code class="docutils literal notranslate"><span class="pre">flipside('huiswerk')</span></code> gelijk is aan de string <code class="docutils literal notranslate"><span class="pre">'werkhuis'</span></code>”. Als de aanname fout is (en het verwachte antwoord dus niet klopt) dan geeft Python dit aan. Als er geen fouten zijn, meldt Python niets.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
     <span class="k">assert</span> <span class="n">flipside</span><span class="p">(</span><span class="s1">&#39;huiswerk&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;werkhuis&#39;</span>
     <span class="k">assert</span> <span class="n">flipside</span><span class="p">(</span><span class="s1">&#39;automaat&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;maatauto&#39;</span>
     <span class="k">assert</span> <span class="n">flipside</span><span class="p">(</span><span class="s1">&#39;studiemaatje&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;maatjestudie&#39;</span>
 
-<span class="k">def</span> <span class="nf">flipside</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">flipside</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; flipside(s): spiegel s!</span>
 <span class="sd">    input s: een string</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -892,19 +892,19 @@ commentsRunWhenDOMLoaded(addUtterances);
 </section>
 <section id="opdracht-1">
 <h2>Opdracht 1<a class="headerlink" href="#opdracht-1" title="Link to this heading">#</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Main functie. Roept de andere functies op om hun werk te doen. </span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">blaat</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">+</span> <span class="n">blaat</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">testing</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">testing</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Test functie. Hier staan alle assertions om de functies te testen.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<span class="k">def</span> <span class="nf">blaat</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">blaat</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="n">l</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
     <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
 
@@ -920,23 +920,23 @@ c. Gebruik de <a class="reference external" href="http://www.pythontutor.com/vis
 <section id="opdracht-2">
 <h2>Opdracht 2<a class="headerlink" href="#opdracht-2" title="Link to this heading">#</a></h2>
 <p>a. Kopieer onderstaande code over naar een bestand genaamd ‘wk3wc2.py’</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">turtle</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Main functie. Roept de andere functies op om hun werk te doen. </span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">tri</span><span class="p">()</span>
     <span class="n">done</span><span class="p">()</span> <span class="c1"># tell turtle the drawing is done.</span>
 
-<span class="k">def</span> <span class="nf">testing</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">testing</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Test functie. Hier staan alle assertions om de functies te testen.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<span class="k">def</span> <span class="nf">tri</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">tri</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Draws 100-pixel sides of an equilateral triangle.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">width</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>    <span class="c1"># width of the line to draw</span>
@@ -960,7 +960,7 @@ c. Gebruik de <a class="reference external" href="http://www.pythontutor.com/vis
 <p>b. Draai het programma. Als alles goed gaat wordt er in een nieuw scherm een driehoek getekend.<br />
 c. Pas de functie <code class="docutils literal notranslate"><span class="pre">tri()</span></code> aan zodat het een parameter accepteert dat de lengte van zijdes van de driehoek aangeeft. Vergeet niet de docstring aan te passen.</p>
 <p>d. Gegeven de functie <code class="docutils literal notranslate"><span class="pre">triRec()</span></code></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">triRec</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">triRec</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Draws 100-pixel sides of an equilateral triangle.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">width</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>    <span class="c1"># width of the line to draw</span>
@@ -980,7 +980,7 @@ c. Pas de functie <code class="docutils literal notranslate"><span class="pre">t
 <section id="opdracht-3">
 <h2>Opdracht 3<a class="headerlink" href="#opdracht-3" title="Link to this heading">#</a></h2>
 <p>a. Voorspel wat onderstaande programma zal doen als het uitgevoerd wordt.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">test</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
     <span class="n">test</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 
@@ -989,7 +989,7 @@ c. Pas de functie <code class="docutils literal notranslate"><span class="pre">t
 </div>
 <p>b. Open de <a class="reference external" href="http://www.pythontutor.com/visualize.html">Python Tutor</a> en kopieer het programma. Test vervolgens of je voorspelling bij <code class="docutils literal notranslate"><span class="pre">a.</span></code> juist was door stap voor stap door het programma te lopen.</p>
 <p>c. Voorspel wat onderstaande programma zal doen als het uitgevoerd wordt.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">test</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -1010,7 +1010,7 @@ c. Pas de functie <code class="docutils literal notranslate"><span class="pre">t
 <p><img alt="infinite" src="../_images/infinite_recursion.jpg" /></p>
 <p><em>Ergens</em> moet de recursie stoppen en hebben we iets van een noodstop (of <em>noodzakelijke</em> stop) nodig, het moment dat een recursieve stap niet meer mogelijk is! Dit wordt ook wel de base case genoemd.</p>
 <p>In opdracht 3 was de basecase <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">n</span> <span class="pre">==</span> <span class="pre">0</span></code> Met andere woorden, als de counter 0 bereikt willen we dat de recursie stopt. De return statement zorgt ervoor dat de functie stopt en dat het dus zichzelf niet meer kan aanroepen.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">test</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>

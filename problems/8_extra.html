@@ -30,7 +30,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -800,12 +800,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Begin met een nieuw bestand <code class="docutils literal notranslate"><span class="pre">wk3ex3.py</span></code> en plak daar de onderstaande code in:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 <span class="c1"># hiermee krijgen we functies als sin en cos...</span>
-<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Main functie&quot;&quot;&quot;</span>
 
-<span class="k">def</span> <span class="nf">testing</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">testing</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;test functie&quot;&quot;&quot;</span>
     <span class="k">assert</span> <span class="n">lc_mult</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
     <span class="k">assert</span> <span class="n">lc_idiv</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
@@ -815,12 +815,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="c1"># twee extra functies (die niet in de module math hierboven zitten)</span>
 
 
-<span class="k">def</span> <span class="nf">dbl</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">dbl</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Doubler!  argument: x, a number&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span>
 
 
-<span class="k">def</span> <span class="nf">sq</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">sq</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Squarer!  argument: x, a number&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
 
@@ -828,7 +828,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="c1"># voorbeelden om aan list comprehensions te wennen...</span>
 
 
-<span class="k">def</span> <span class="nf">lc_mult</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">lc_mult</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;This example accepts an integer n</span>
 <span class="sd">       and returns a list of integers</span>
 <span class="sd">       from 0 to n-1, **each multiplied by 2**</span>
@@ -836,7 +836,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <span class="k">return</span> <span class="p">[</span><span class="mi">2</span> <span class="o">*</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
 
 
-<span class="k">def</span> <span class="nf">lc_idiv</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">lc_idiv</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;This example accepts an integer n</span>
 <span class="sd">       and returns a list of integers</span>
 <span class="sd">       from 0 to n-1, **each divided by 2**</span>
@@ -845,7 +845,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <span class="k">return</span> <span class="p">[</span><span class="n">x</span> <span class="o">//</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
 
 
-<span class="k">def</span> <span class="nf">lc_fdiv</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">lc_fdiv</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;This example accepts an integer n</span>
 <span class="sd">       and returns a list of integers</span>
 <span class="sd">       from 0 to n-1, **each divided by 2**</span>
@@ -858,7 +858,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 
 
 <span class="c1"># Stap 1, deel 1</span>
-<span class="k">def</span> <span class="nf">unitfracs</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">unitfracs</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Vergeet niet deze docstring te verbeteren!</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span>  <span class="c1"># vervang deze regel (pass is een Python-statement dat niets doet)</span>
@@ -887,7 +887,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Meer in het algemeen is een integraal eenvoudigweg de <em>som</em> van de resultaten van een numerieke functie, dat wil zeggen de y-waarden over een gekozen bereik.</p>
 <p>Dit is belangrijk omdat het aan de hand van één getal een soort van samenvatting geeft van wat de functie “doet” over een interval (een bepaald bereik). Het wordt ook gebruikt om te bepalen hoe verschillende krachten (zwaartekracht, trekkracht, …) zich gedragen op een bepaald punt, oppervlak of object over een periode van tijd. Het is ook essentieel bij het definiëren van de “gemiddelde waarde” van een functie over een interval of een gebied. Integralen kunnen worden gebruikt om een vliegtuigvleugel te ontwerpen, het weer te voorspellen of te berekenen hoeveel een bankrekening over tien jaar waard zal zijn, zelfs als de rentetarieven veranderen.</p>
 <p>Bijvoorbeeld, denk aan de functie <code class="docutils literal notranslate"><span class="pre">dbl</span></code> hierboven (maar nu met een betere docstring):</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dbl</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">dbl</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Argument: a number x (int or float)</span>
 <span class="sd">       Return value: twice the argument</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -973,7 +973,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p>Op deze manier hoef je het werk van <code class="docutils literal notranslate"><span class="pre">unitfracs</span></code> niet opnieuw te doen! Je zal ook misschien hebben zien dat <code class="docutils literal notranslate"><span class="pre">scaledfracs</span></code> erg lijkt op de functie <code class="docutils literal notranslate"><span class="pre">interp</span></code> die je eerder hebt geschreven, en dat klopt!</p>
 <p>De functie <code class="docutils literal notranslate"><span class="pre">interp</span></code> hoef je niet te gebruiken, maar je kan er wel ideeën uit opdoen! Hier is de functie, ter herinnering:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">interp</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">hi</span><span class="p">,</span> <span class="n">fraction</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">interp</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">hi</span><span class="p">,</span> <span class="n">fraction</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns a value frac of the way from low to hi&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">low</span> <span class="o">+</span> <span class="p">(</span><span class="n">hi</span> <span class="o">-</span> <span class="n">low</span><span class="p">)</span> <span class="o">*</span> <span class="n">fraction</span>
 </pre></div>
@@ -1047,7 +1047,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p>Maak je geen zorgen over kleine fouten in de meest rechtse cijfers achter de komma. Deze komen door afrondfouten, dit kan je niet voorkomen omdat de nauwkeurigheid van floating-point getallen beperkt is.</p>
 <p>Om te beginnen is hier de <em>signature</em> (de regel met <code class="docutils literal notranslate"><span class="pre">def</span></code>) en de docstring voor <code class="docutils literal notranslate"><span class="pre">integrate</span></code>. Voel je vrij dit te gebruiken:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">integrate</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">hi</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">integrate</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">hi</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Integrate returns an estimate of the definite integral</span>
 <span class="sd">       of the function f (the first argument)</span>
 <span class="sd">       with lower limit low (the second argument)</span>
@@ -1116,7 +1116,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <section id="vraag-2">
 <h3>Vraag 2<a class="headerlink" href="#vraag-2" title="Link to this heading">#</a></h3>
 <p>De volgende functie <code class="docutils literal notranslate"><span class="pre">c</span></code> volgt de bovenste helft van een cirkel met straal 2.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">c</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;c is a semicircular function of radius two&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="p">(</span><span class="mi">4</span> <span class="o">-</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">0.5</span>
 </pre></div>

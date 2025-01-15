@@ -30,7 +30,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -769,7 +769,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <section id="functie-1">
 <h2>Functie 1<a class="headerlink" href="#functie-1" title="Link to this heading">#</a></h2>
 <p>Schrijf een Python functie is_odd(n) die als argument een integer n accepteert, en True teruggeeft als n oneven is en False als n even is. Zorg ervoor dat je deze (boolean) waarden teruggeeft, niet strings! De even- of onevenheid van een getal noemen we zijn pariteit.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_odd</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">is_odd</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span>
 </pre></div>
 </div>
@@ -777,7 +777,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <section id="functie-2">
 <h2>Functie 2<a class="headerlink" href="#functie-2" title="Link to this heading">#</a></h2>
 <p>In dit onderdeel ga je getallen bit voor bit,van rechts naar links van decimaal naar binair omzetten, wat misschien “even” raar zal klinken…!</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">num_to_binary</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">num_to_binary</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
     <span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">is_odd</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -793,7 +793,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <section id="functie-3">
 <h2>Functie 3<a class="headerlink" href="#functie-3" title="Link to this heading">#</a></h2>
 <p>Nu ga je het meer uitdagende probleem aanpakken om van grondtal 2 naar grondtal 10 te gaan, opnieuw van rechts naar links. We stellen een waarde met grondtal 2 voor als een reeks van 0’en en 1’en (bits).</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">binary_to_num</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">binary_to_num</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)):</span>
         <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">+</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">**</span> <span class="n">i</span><span class="p">)</span>
@@ -805,7 +805,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <section id="functie-4">
 <h2>Functie 4<a class="headerlink" href="#functie-4" title="Link to this heading">#</a></h2>
 <p>In het kort, schrijft increment(S), die een binaire string s met 0’en en 1’en accepteert en het volgende getal in grondtal 2 teruggeeft.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">increment</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="n">n</span> <span class="o">=</span> <span class="n">binary_to_num</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
     <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
     <span class="n">result</span> <span class="o">=</span>  <span class="n">num_to_binary</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
@@ -819,7 +819,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <section id="functie-5">
 <h2>Functie 5<a class="headerlink" href="#functie-5" title="Link to this heading">#</a></h2>
 <p>Gebruik de functie increment om de functie count(s, n) te schrijven, die een binaire string van 8 tekens accepteert als argument en vervolgens n keer doortelt vanaf s, terwijl hij wordt afgedrukt.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">count</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">count</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span>  <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
         <span class="n">s</span> <span class="o">=</span> <span class="n">increment</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
@@ -830,7 +830,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <section id="functie-6">
 <h2>Functie 6<a class="headerlink" href="#functie-6" title="Link to this heading">#</a></h2>
 <p>Scrijf de functie ternary_to_num(s), die een integer representatie teruggeeft van de waarde van het argument s (net als binary_to_num).</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ternary_to_num</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">ternary_to_num</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)):</span>
         <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">+</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">**</span> <span class="n">i</span><span class="p">)</span>

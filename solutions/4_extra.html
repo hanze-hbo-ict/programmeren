@@ -30,7 +30,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -764,10 +764,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 <section id="pi-met-pijltjes">
 <h2>Pi met Pijltjes<a class="headerlink" href="#pi-met-pijltjes" title="Link to this heading">#</a></h2>
 <p>Het is misschien verbazingwekkend dat het mogelijk is om de wiskundige constante π te berekenen zonder dat je andere operaties nodig hebt dan tellen, optellen en vermenigvuldigen. In deze opgave ga je twee functies schrijven om pi (3.14159…) te benaderen door het gooien van pijltjes.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
-<span class="kn">import</span> <span class="nn">math</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
 
-<span class="k">def</span> <span class="nf">throw_dart</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">throw_dart</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Deze functie maakt gebruik van de random library om een</span>
 <span class="sd">    willekeurige x- en een willekeurige y-coördinaat te genereren</span>
 <span class="sd">    tussen -1 en 1. Als de pijl de cirkel raakt geeft de functie</span>
@@ -782,7 +782,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         <span class="k">return</span> <span class="kc">True</span>
 
     <span class="k">return</span> <span class="kc">False</span>
-<span class="k">def</span> <span class="nf">for_pi</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">for_pi</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Deze functie gooit n pijltjes om de constante pi te benaderen.</span>
 <span class="sd">    De geschatte waarde pi wordt door de functie terug gegeven.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -802,7 +802,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="c1"># Mocht je tijd hebben en een pc die dit wel aan kan:</span>
 <span class="c1"># print(&quot;Laatste schatting for pi is &quot; + str(for_pi(5000000)))</span>
 
-<span class="k">def</span> <span class="nf">find_number_of_decimals</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">find_number_of_decimals</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Geeft het aantal cijfers achter de komma voor float x (gegeven als string!) als integer terug.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -816,7 +816,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="k">assert</span> <span class="n">find_number_of_decimals</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="mf">456.98756429</span><span class="p">))</span> <span class="o">==</span> <span class="mi">8</span>
 <span class="k">assert</span> <span class="n">find_number_of_decimals</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="mf">0.1</span><span class="p">))</span> <span class="o">==</span> <span class="mi">1</span>
 
-<span class="k">def</span> <span class="nf">while_pi</span><span class="p">(</span><span class="n">accuracy</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">while_pi</span><span class="p">(</span><span class="n">accuracy</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Geeft het aantal pijltjes terug dat nodig was om nauwkeurigheid</span>
 <span class="sd">    x te halen.</span>
 <span class="sd">    &quot;&quot;&quot;</span>

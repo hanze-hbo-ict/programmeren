@@ -30,7 +30,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -774,17 +774,17 @@ commentsRunWhenDOMLoaded(addUtterances);
 <section id="de-klasse-player">
 <h2>De klasse <code class="docutils literal notranslate"><span class="pre">Player</span></code><a class="headerlink" href="#de-klasse-player" title="Link to this heading">#</a></h2>
 <p>In dit project moet je een klasse <code class="docutils literal notranslate"><span class="pre">Player</span></code> schrijven die bordposities van Vier op een rij evalueert en bepaalt waar de volgende zet gedaan moet worden. Je kan voor deze klasse onderstaande begincode gebruiken, maar dit hoeft niet.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Player</span><span class="p">:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Player</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;An AI player for Connect Four.&quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ox</span><span class="p">,</span> <span class="n">tbt</span><span class="p">,</span> <span class="n">ply</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ox</span><span class="p">,</span> <span class="n">tbt</span><span class="p">,</span> <span class="n">ply</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Construct a player for a given checker, tie-breaking type,</span>
 <span class="sd">           and ply.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ox</span> <span class="o">=</span> <span class="n">ox</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">tbt</span> <span class="o">=</span> <span class="n">tbt</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ply</span> <span class="o">=</span> <span class="n">ply</span>
 
-    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Create a string represenation of the player.&quot;&quot;&quot;</span>
         <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Player: ox = &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">ox</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span>
         <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot;tbt = &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">tbt</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span>

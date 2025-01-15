@@ -30,7 +30,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -814,8 +814,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <section id="de-klasse-program">
 <h2>De klasse <code class="docutils literal notranslate"><span class="pre">Program</span></code><a class="headerlink" href="#de-klasse-program" title="Link to this heading">#</a></h2>
 <p>Je klasse <code class="docutils literal notranslate"><span class="pre">Program</span></code> begint als volgt:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Program</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">rules</span> <span class="o">=</span> <span class="p">{}</span>
 </pre></div>
 </div>
@@ -942,11 +942,11 @@ originele…)</p>
 <h3>Handige hulpmethodes<a class="headerlink" href="#handige-hulpmethodes" title="Link to this heading">#</a></h3>
 <p>Het kan bij het schrijven van het genetische algoritme handig zijn om lijsten met <code class="docutils literal notranslate"><span class="pre">(fitnesswaarde,</span> <span class="pre">programma)</span></code>-paren te sorteren. Je hebt bijvoorbeeld een lijst van lengte 200 met de vorm: <code class="docutils literal notranslate"><span class="pre">[(fitness0,</span> <span class="pre">programma0),</span> <span class="pre">(fitness1,</span> <span class="pre">programma1),</span> <span class="pre">...,</span> <span class="pre">(fitness199,</span> <span class="pre">programma199)]</span></code> die je willen sorteren op basis van de <em>floating-pointwaarde van de fitness</em>. De ingebouwde functie <code class="docutils literal notranslate"><span class="pre">sorted</span></code> werkt hier heel goed, <em>behalve als twee fitnesswaardes exact gelijk zijn</em>, wat zeker zal gebeuren! De functie <code class="docutils literal notranslate"><span class="pre">sorted</span></code> zal dan proberen de volgorde te bepalen door de programma’s te sorteren, bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">programma0</span></code> en <code class="docutils literal notranslate"><span class="pre">programma1</span></code>. Het probleem is dat het sorteren van programma’s niet gedefinieerd is.</p>
 <p>Om het sorteren van programma’s te definiëren kan je deze definities van <code class="docutils literal notranslate"><span class="pre">__gt__</span></code> en <code class="docutils literal notranslate"><span class="pre">__lt__</span></code>, de groter-dan- en kleiner-dan-operatoren, in je klasse <code class="docutils literal notranslate"><span class="pre">Program</span></code> plakken. Ze vergelijken niet echt twee programma’s; ze geven willekeurig <code class="docutils literal notranslate"><span class="pre">True</span></code> of <code class="docutils literal notranslate"><span class="pre">False</span></code> terug; maar dat is alles wat je nodig hebt om <code class="docutils literal notranslate"><span class="pre">sorted</span></code> te laten werken op lijsten zoals hierboven beschreven.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="fm">__gt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="fm">__gt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
 <span class="w">  </span><span class="sd">&quot;&quot;&quot;Greater-than operator -- works randomly, but works!&quot;&quot;&quot;</span>
   <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span>
 
-<span class="k">def</span> <span class="fm">__lt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="fm">__lt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
 <span class="w">  </span><span class="sd">&quot;&quot;&quot;Less-than operator -- works randomly, but works!&quot;&quot;&quot;</span>
   <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span>
 </pre></div>
@@ -968,8 +968,8 @@ originele…)</p>
 </ul>
 <p>Als je nog andere instantievariabelen wilt gebruiken kan dat natuurlijk.</p>
 <p>Dit is hoe de klasse begint:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">World</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">initial_row</span><span class="p">,</span> <span class="n">initial_col</span><span class="p">,</span> <span class="n">program</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">World</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">initial_row</span><span class="p">,</span> <span class="n">initial_col</span><span class="p">,</span> <span class="n">program</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">prow</span> <span class="o">=</span> <span class="n">initial_row</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">pcol</span> <span class="o">=</span> <span class="n">initial_col</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">=</span> <span class="mi">0</span>
@@ -1067,7 +1067,7 @@ wat je maar wilt. Als je je ASCII-weergave extra mooi wilt maken kan je <code cl
 <div class="tip admonition">
 <p class="admonition-title">Programma’s bewaren</p>
 <p>Je kan het handig vinden om het beste programma van elke generatie op te slaan in een bestand (dat is minder onoverzichtelijk en makkelijker te bewaren). Hier is een stukje code om dit makkelijker te maken:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">save_to_file</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">save_to_file</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Saves the data from Program p</span>
 <span class="sd">        to a file named filename.&quot;&quot;&quot;</span>
     <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
@@ -1188,7 +1188,7 @@ wat je maar wilt. Als je je ASCII-weergave extra mooi wilt maken kan je <code cl
 <p>Dit is een methode <code class="docutils literal notranslate"><span class="pre">working</span></code> voor de klasse <code class="docutils literal notranslate"><span class="pre">Program</span></code> die lijkt op <code class="docutils literal notranslate"><span class="pre">randomize</span></code>. Het verschil is dat
 <code class="docutils literal notranslate"><span class="pre">working</span></code> de regels instelt op een bekend, werkend programma dat de hele lege ruimte bedekt. Deze methode is
 handig om te zorgen dat <code class="docutils literal notranslate"><span class="pre">step</span></code>, <code class="docutils literal notranslate"><span class="pre">run</span></code> en <code class="docutils literal notranslate"><span class="pre">evaluate_fitness</span></code> allemaal werken…</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">working</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">working</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This method will set the current program (self) to a working</span>
 <span class="sd">    room-clearing program. This is super-useful to make sure that</span>

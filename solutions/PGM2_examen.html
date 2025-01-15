@@ -30,7 +30,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -776,7 +776,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Deze opgave gaat over het recursief controleren van karakters op een specifieke positie.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">check_extension</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">check_extension</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>  <span class="c1"># of len(s) == 0</span>
         <span class="k">return</span> <span class="kc">False</span>
 
@@ -838,7 +838,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Deze opgave vraagt jou om met behulp van drie verschillende technieken een lijst samen te stellen.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">only_even_loop</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">only_even_loop</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
     <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
 
     <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">L</span><span class="p">:</span>
@@ -848,11 +848,11 @@ commentsRunWhenDOMLoaded(addUtterances);
     <span class="k">return</span> <span class="n">result</span>
 
 
-<span class="k">def</span> <span class="nf">only_even_lc</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">only_even_lc</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">[</span><span class="n">e</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">L</span> <span class="k">if</span> <span class="n">e</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
 
 
-<span class="k">def</span> <span class="nf">only_even_rec</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">only_even_rec</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">L</span> <span class="o">==</span> <span class="p">[]:</span>
         <span class="k">return</span> <span class="n">L</span>
 
@@ -873,7 +873,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ol class="arabic simple">
 <li><p>De lus-manier:</p></li>
 </ol>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">only_even_loop</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">only_even_loop</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
     <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>            <span class="c1"># We beginnen met een lege lijst</span>
     <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">L</span><span class="p">:</span>            <span class="c1"># We nemen steeds één getal uit de lijst</span>
         <span class="k">if</span> <span class="n">e</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>     <span class="c1"># Als het getal even is</span>
@@ -885,7 +885,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ol class="arabic simple" start="2">
 <li><p>De list comprehension-manier:</p></li>
 </ol>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">only_even_lc</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">only_even_lc</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">[</span><span class="n">e</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">L</span> <span class="k">if</span> <span class="n">e</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -893,7 +893,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ol class="arabic simple" start="3">
 <li><p>De recursieve manier:</p></li>
 </ol>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">only_even_rec</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">only_even_rec</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">L</span> <span class="o">==</span> <span class="p">[]:</span>        <span class="c1"># Als de lijst leeg is</span>
         <span class="k">return</span> <span class="n">L</span>       <span class="c1"># zijn we klaar</span>
     
@@ -969,18 +969,18 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Deze opgave vraagt jou om methoden in een klasse verder uit te werken. Het gebruik van de klasse pas je toe in een lus.</p>
 <div class="cell tag_skip-execution docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">choice</span>
 
 
-<span class="k">class</span> <span class="nc">Nim</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number_of_sticks</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Nim</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number_of_sticks</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sticks</span> <span class="o">=</span> <span class="n">number_of_sticks</span>
 
-    <span class="k">def</span> <span class="nf">player_takes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">player_turn</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">player_takes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">player_turn</span><span class="p">):</span>
         <span class="c1"># verminder het aantal stokjes met de hoeveelheid die de speler pakt</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sticks</span> <span class="o">-=</span> <span class="n">player_turn</span>
 
-    <span class="k">def</span> <span class="nf">AI_turn</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">AI_turn</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sticks</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="p">:</span>
             <span class="c1"># als er 3 of minder stokjes zijn, pak ze allemaal</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">sticks</span>
@@ -994,7 +994,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             <span class="c1"># pak precies genoeg om een meervoud van 4 over te houden</span>
             <span class="k">return</span> <span class="n">remainder</span>
 
-    <span class="k">def</span> <span class="nf">game_over</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">game_over</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># het spel is voorbij als er geen stokjes meer zijn</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">sticks</span> <span class="o">&lt;=</span> <span class="mi">0</span>  <span class="c1"># geeft True of False terug</span>
 
@@ -1080,7 +1080,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Deze opgave vraagt jou om recursief te bepalen of een eerstvolgend karakter later in het alfabet voorkomt.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">alfabet_word</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">alfabet_word</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">True</span>
 
@@ -1102,7 +1102,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ol class="arabic simple">
 <li><p>Eerst kijken we naar de functie definitie:</p></li>
 </ol>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">alfabet_word</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">alfabet_word</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
 </pre></div>
 </div>
 <p>Deze functie accepteert één parameter <code class="docutils literal notranslate"><span class="pre">s</span></code>, wat een string (woord) is dat we gaan controleren.</p>
@@ -1177,7 +1177,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Deze opgave vraagt jou om in een paar stappen gegevens te reduceren (tekst naar zinnen en zinnen naar woorden) en vervolgens op basis daarvan met een eenvoudige formule een resultaat te berekenen. We kiezen hier voor een enkele methode (geen hulpfunctie) en list comprehension omdat we hier veel moeten werken met lijsten (lijsten met zinnen en lijsten met woorden). Let ook op dat we ook <em>geneste</em> lussen binnen een list comprehensions gebruiken (bijvoorbeeld bij <code class="docutils literal notranslate"><span class="pre">all_words</span></code>). Andere oplossingen zijn natuurlijk ook mogelijk en daar kijken we later naar.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">complexity_score</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">complexity_score</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="c1"># Split text in to sentences</span>
     <span class="n">sentences</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 
@@ -1265,7 +1265,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ol class="arabic simple">
 <li><p>Eerst kijken we naar de functiedefinitie (ook wel de <em>signatuur</em> genoemd):</p></li>
 </ol>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">complexity_score</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">complexity_score</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
 </pre></div>
 </div>
 <p>Dit maakt een functie die één parameter accepteert: de tekst die we willen analyseren.</p>
@@ -1340,7 +1340,7 @@ Het resultaat is één grote lijst met alle woorden uit alle zinnen.</p></li>
 <li><p>Vermenigvuldig met 100 om een percentage te krijgen</p></li>
 </ul>
 <p>Meerdere oplossingen zijn mogelijk, bijvoorbeeld met gewone lussen:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">complexity_score</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">complexity_score</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="c1"># Split text into sentences</span>
     <span class="n">sentences</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>

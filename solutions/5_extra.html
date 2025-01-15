@@ -30,7 +30,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -765,12 +765,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2>Mandelbrot<a class="headerlink" href="#mandelbrot" title="Link to this heading">#</a></h2>
 <p>Tijdens deze opdracht ga je een programma schrijven om de punten in en rond de mandelbrotverzameling weer te geven en te verkennen.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># laat deze importregel staan...</span>
-<span class="kn">from</span> <span class="nn">png</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">png</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="c1">#</span>
 <span class="c1"># een testfunctie...</span>
 <span class="c1">#</span>
-<span class="k">def</span> <span class="nf">test_fun</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_fun</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; algorithmic image-creation one pixel at a time...</span>
 <span class="sd">        this is a test function: it should output</span>
 <span class="sd">        an image named test.png in the same directory</span>
@@ -791,7 +791,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="c1"># zet je functies hieronder neer:</span>
 <span class="c1">#</span>
 
-<span class="k">def</span> <span class="nf">mult</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">mult</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Mult uses only a loop and addition</span>
 <span class="sd">       to multiply c by the positive integer n</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -804,7 +804,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="k">assert</span> <span class="n">mult</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="mi">42</span>
 <span class="k">assert</span> <span class="n">mult</span><span class="p">(</span><span class="mf">1.5</span><span class="p">,</span> <span class="mi">28</span><span class="p">)</span> <span class="o">==</span> <span class="mf">42.0</span>
 
-<span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Update starts with z = 0 and runs z = z**2 + c</span>
 <span class="sd">       for a total of n times. It returns the final z.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -817,7 +817,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="k">assert</span> <span class="n">update</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span>
 <span class="k">assert</span> <span class="n">update</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
 
-<span class="k">def</span> <span class="nf">in_mset</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">in_mset</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;in_mset accepts</span>
 
 <span class="sd">    c for the update step of z = z**2+c</span>
@@ -849,7 +849,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="k">assert</span> <span class="n">in_mset</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
 
 
-<span class="k">def</span> <span class="nf">we_want_this_pixel</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">we_want_this_pixel</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;This function returns True if we want to show</span>
 <span class="sd">       the pixel at col, row and False otherwise.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -859,7 +859,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">False</span>
 
-<span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;This function demonstrates how</span>
 <span class="sd">       to create and save a PNG image.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -881,7 +881,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="c1"># test()</span>
 
 
-<span class="k">def</span> <span class="nf">scale</span><span class="p">(</span><span class="n">pix</span><span class="p">,</span> <span class="n">pix_max</span><span class="p">,</span> <span class="n">float_min</span><span class="p">,</span> <span class="n">float_max</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">scale</span><span class="p">(</span><span class="n">pix</span><span class="p">,</span> <span class="n">pix_max</span><span class="p">,</span> <span class="n">float_min</span><span class="p">,</span> <span class="n">float_max</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;scale accepts</span>
 
 <span class="sd">    pix, the CURRENT pixel column (or row)</span>
@@ -900,7 +900,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="k">assert</span> <span class="n">scale</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mf">1.75</span>
 <span class="c1"># print(scale(299, 300, -2.0, 1.0)) # == 0.99</span>
 
-<span class="k">def</span> <span class="nf">mset</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">mset</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Creates a 300x200 image of the Mandelbrot set</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">NUM_ITER</span> <span class="o">=</span> <span class="mi">50</span>  <span class="c1"># aantal updates</span>

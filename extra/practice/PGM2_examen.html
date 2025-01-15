@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -836,18 +836,18 @@ computer) is tweede.</p>
 een meervoud van 4 op tafel ligt. Als er bijvoorbeeld 13 lucifers op tafel
 liggen, dan zou de AI er 1 pakken zodat er 12 op tafel blijven liggen. Met deze
 strategie wint de AI altijd.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">choice</span>
 
-<span class="k">class</span> <span class="nc">Nim</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number_of_sticks</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Nim</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number_of_sticks</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sticks</span> <span class="o">=</span> <span class="n">number_of_sticks</span>
 
     <span class="c1"># schrijf hier de functie player_takes()</span>
 
-    <span class="k">def</span> <span class="nf">AI_turn</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">AI_turn</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
       <span class="o">...</span>
 
-    <span class="k">def</span> <span class="nf">game_over</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">game_over</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
       <span class="o">...</span>
 
 
@@ -874,17 +874,17 @@ strategie wint de AI altijd.</p>
 </div>
 <ol class="arabic simple">
 <li><p>Schrijf de functie <code class="docutils literal notranslate"><span class="pre">player_takes</span></code> binnen de klasse <code class="docutils literal notranslate"><span class="pre">Nim</span></code>. Deze functie
-accepteert een parameter <code class="docutils literal notranslate"><span class="pre">player_turm</span></code> (een integer) die aangeeft hoeveel
+accepteert een parameter <code class="docutils literal notranslate"><span class="pre">player_turn</span></code> (een integer) die aangeeft hoeveel
 lucifers een speler van tafel pakt en de variabele <code class="docutils literal notranslate"><span class="pre">self.sticks</span></code> vervolgens
 aanpast. (5)</p></li>
 <li><p>Maak de functie <code class="docutils literal notranslate"><span class="pre">AI_turn</span></code> af. Deze geeft het aantal lucifers dat de AI wil
 pakken terug. De AI wil altijd een meervoud van vier op tafel laten liggen;
-als dat niet mogelijk is, kiestx het een willekeurige hoeveelheid lucifers.
-Gebruik <code class="docutils literal notranslate"><span class="pre">random.choice([1,</span> <span class="pre">2,</span> <span class="pre">3])</span></code> om een random aantal lucifers tussen 1 en
+als dat niet mogelijk is, kiest het een willekeurige hoeveelheid lucifers.
+Gebruik <code class="docutils literal notranslate"><span class="pre">choice([1,</span> <span class="pre">2,</span> <span class="pre">3])</span></code> om een random aantal lucifers tussen 1 en
 3 te kiezen. (5)</p></li>
 <li><p>Maak de functie <code class="docutils literal notranslate"><span class="pre">game_over</span></code> af. Deze functie controleert of het spel voorbij
 is door te checken of er nog lucifers op tafel liggen. Als er geen lucifers
-liggen, geeft het true terug en anders false. (5)</p></li>
+liggen, geeft het <code class="docutils literal notranslate"><span class="pre">True</span></code> terug en anders <code class="docutils literal notranslate"><span class="pre">False</span></code>. (5)</p></li>
 <li><p>De <code class="docutils literal notranslate"><span class="pre">while</span></code>-lus is niet helemaal compleet. De beurt van de computer ontbreekt.
 Maak de <code class="docutils literal notranslate"><span class="pre">while</span></code>-lus af door de beurt van de computer toe te voegen onder het
 commentaar <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">de</span> <span class="pre">beurt</span> <span class="pre">van</span> <span class="pre">de</span> <span class="pre">computer</span></code>. (5)</p></li>

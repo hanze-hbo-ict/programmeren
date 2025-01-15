@@ -30,7 +30,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -885,7 +885,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <section id="de-methode-copy">
 <h3>De methode <code class="docutils literal notranslate"><span class="pre">copy</span></code><a class="headerlink" href="#de-methode-copy" title="Link to this heading">#</a></h3>
 <p>Eerst gaan we een nieuwe methode, <code class="docutils literal notranslate"><span class="pre">copy(self)</span></code> toevoegen aan de klasse <code class="docutils literal notranslate"><span class="pre">Date</span></code>. Je kan hiervoor onderstaande code kopiëren en plakken.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns a new object with the same day, month, year</span>
 <span class="sd">       as the calling object (self).</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -935,7 +935,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <section id="de-methode-equals">
 <h3>De methode <code class="docutils literal notranslate"><span class="pre">equals</span></code><a class="headerlink" href="#de-methode-equals" title="Link to this heading">#</a></h3>
 <p>Voeg ook de methode <code class="docutils literal notranslate"><span class="pre">equals(self,</span> <span class="pre">d2)</span></code> toe aan de klasse <code class="docutils literal notranslate"><span class="pre">Date</span></code>, met behulp van deze code:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">equals</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">d2</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">equals</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">d2</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Decides if self and d2 represent the same calendar date,</span>
 <span class="sd">       whether or not they are the in the same place in memory.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -976,7 +976,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h3>De operator <code class="docutils literal notranslate"><span class="pre">==</span></code> herdefiniëren<a class="headerlink" href="#de-operator-herdefinieren" title="Link to this heading">#</a></h3>
 <p>In Python kan je ook standaardoperators definiëren voor je eigen klassen en objecten!</p>
 <p>Omdat bijvoorbeeld het gedrag van de functie <code class="docutils literal notranslate"><span class="pre">equals</span></code> hierboven hetzelfde is als hoe we <em><strong>zouden willen</strong></em> dat de dubbel-gelijk-aan-operator, <code class="docutils literal notranslate"><span class="pre">==</span></code>, werkt, kunnen we dit gedrag definiëren door een methode <code class="docutils literal notranslate"><span class="pre">__eq__</span></code> toe te voegen. Merk op dat de naam <em><strong>twee</strong></em> underscores heeft aan weerszijden van <code class="docutils literal notranslate"><span class="pre">eq</span></code>. Dit geeft aan dat deze methode voor Python een speciale betekenis heeft, net zoals <code class="docutils literal notranslate"><span class="pre">__init__</span></code> en <code class="docutils literal notranslate"><span class="pre">__repr__</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">d2</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">d2</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Overrides the == operator so that it declares two of the same dates</span>
 <span class="sd">        in history as ==.  This way, we don&#39;t need to use the awkward</span>
 <span class="sd">        d.equals(d2) syntax...</span>

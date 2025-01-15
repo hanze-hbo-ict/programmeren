@@ -30,7 +30,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -770,7 +770,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h3>De functie <code class="docutils literal notranslate"><span class="pre">mult</span></code><a class="headerlink" href="#de-functie-mult" title="Link to this heading">#</a></h3>
 <p>Schrijf een functie genaamd <code class="docutils literal notranslate"><span class="pre">mult(c,</span> <span class="pre">n)</span></code> die het product <code class="docutils literal notranslate"><span class="pre">c</span></code> keer <code class="docutils literal notranslate"><span class="pre">n</span></code> teruggeeft, maar zonder gebruik te maken van vermenigvuldigen. In plaats daarvan moet de functie een waarde (genaamd <code class="docutils literal notranslate"><span class="pre">result</span></code>) eerst op 0 zetten en daarna herhaaldelijk de waarde van <code class="docutils literal notranslate"><span class="pre">c</span></code> <em>optellen</em> bij <code class="docutils literal notranslate"><span class="pre">result</span></code>. Ze moet een <code class="docutils literal notranslate"><span class="pre">for</span></code>-lus gebruiken om te zorgen dat <code class="docutils literal notranslate"><span class="pre">c</span></code> het goede aantal keer wordt opgeteld. Nadat de lus klaar is, moet de functie het resultaat teruggeven.</p>
 <p>De waarde van <code class="docutils literal notranslate"><span class="pre">n</span></code> is een positieve integer. Om je te helpen is hier een deel van de functie dat de waarde van <code class="docutils literal notranslate"><span class="pre">result</span></code> op 0 zet en de lus bevat:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mult</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">mult</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Mult uses only a loop and addition</span>
 <span class="sd">       to multiply c by the positive integer n</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -794,7 +794,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h3>De functie <code class="docutils literal notranslate"><span class="pre">update</span></code><a class="headerlink" href="#de-functie-update" title="Link to this heading">#</a></h3>
 <p>De volgende functie bevat de basisstap van de mandelbrotverzameling, namelijk <code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">=</span> <span class="pre">z</span> <span class="pre">**</span> <span class="pre">2</span> <span class="pre">+</span> <span class="pre">c</span></code> voor een gegeven constante <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p>
 <p>Schrijf hiervoor een functie genaamd <code class="docutils literal notranslate"><span class="pre">update(c,</span> <span class="pre">n)</span></code> waar je een nieuwe waarde <code class="docutils literal notranslate"><span class="pre">z</span></code> op 0 laat beginnen en dan herhaaldelijk de waarde van <code class="docutils literal notranslate"><span class="pre">z</span></code> bijwerkt met behulp van de toekenning <code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">=</span> <span class="pre">z</span> <span class="pre">**</span> <span class="pre">2</span> <span class="pre">+</span> <span class="pre">c</span></code>; laat dit <code class="docutils literal notranslate"><span class="pre">n</span></code> keer herhaald worden. Aan het eind moet de functie de laatste waarde van <code class="docutils literal notranslate"><span class="pre">z</span></code> teruggeven. De waarde van <code class="docutils literal notranslate"><span class="pre">n</span></code> is een positieve integer. Hieronder zie je de signature en de docstring:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Update starts with z = 0 and runs z = z**2 + c</span>
 <span class="sd">       for a total of n times. It returns the final z.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -903,7 +903,7 @@ bij het bouwen van de mandelbrotverzameling.</p>
 <h3><code class="docutils literal notranslate"><span class="pre">in_mset</span></code> schrijven<a class="headerlink" href="#in-mset-schrijven" title="Link to this heading">#</a></h3>
 <p>Je kan het beste je functie <code class="docutils literal notranslate"><span class="pre">update</span></code> <strong>kopiëren</strong> en de naam veranderen in <code class="docutils literal notranslate"><span class="pre">in_mset</span></code>. Roep de functie <code class="docutils literal notranslate"><span class="pre">update</span></code> <strong>niet</strong> direct aan in <code class="docutils literal notranslate"><span class="pre">in_mset</span></code>, en laat de oude functie <code class="docutils literal notranslate"><span class="pre">update</span></code> in je bestand staan!</p>
 <p>Om je op weg te helpen is hier de signature en een docstring voor <code class="docutils literal notranslate"><span class="pre">in_mset</span></code>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">in_mset</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">in_mset</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;in_mset accepts</span>
 
 <span class="sd">    c for the update step of z = z**2+c</span>
@@ -969,10 +969,10 @@ bij het bouwen van de mandelbrotverzameling.</p>
 <section id="een-begin-maken">
 <h3>Een begin maken<a class="headerlink" href="#een-begin-maken" title="Link to this heading">#</a></h3>
 <p>Probeer om te beginnen deze code:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">png</span> <span class="kn">import</span> <span class="o">*</span>   <span class="c1"># Je hebt deze regel misschien al bovenaan je bestand...</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">png</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>   <span class="c1"># Je hebt deze regel misschien al bovenaan je bestand...</span>
 
 
-<span class="k">def</span> <span class="nf">we_want_this_pixel</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">we_want_this_pixel</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;This function returns True if we want to show</span>
 <span class="sd">       the pixel at col, row and False otherwise.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -982,7 +982,7 @@ bij het bouwen van de mandelbrotverzameling.</p>
         <span class="k">return</span> <span class="kc">False</span>
 
 
-<span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;This function demonstrates how</span>
 <span class="sd">       to create and save a PNG image.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -1056,7 +1056,7 @@ bij het bouwen van de mandelbrotverzameling.</p>
 <h3>De oplossing<a class="headerlink" href="#de-oplossing" title="Link to this heading">#</a></h3>
 <p>Eén functie, genaamd <code class="docutils literal notranslate"><span class="pre">scale</span></code>, zal gebruikt worden om coördinaten in het algemeen om te zetten.</p>
 <p>Je moet dus deze functie <code class="docutils literal notranslate"><span class="pre">scale</span></code> schrijven:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">scale</span><span class="p">(</span><span class="n">pix</span><span class="p">,</span> <span class="n">pix_max</span><span class="p">,</span> <span class="n">float_min</span><span class="p">,</span> <span class="n">float_max</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">scale</span><span class="p">(</span><span class="n">pix</span><span class="p">,</span> <span class="n">pix_max</span><span class="p">,</span> <span class="n">float_min</span><span class="p">,</span> <span class="n">float_max</span><span class="p">)</span>
     <span class="o">...</span>
 </pre></div>
 </div>
@@ -1086,7 +1086,7 @@ Je hebt een vrijwel dezelfde functie (<code class="docutils literal notranslate"
 <h3>Een begin van de functie <code class="docutils literal notranslate"><span class="pre">scale</span></code><a class="headerlink" href="#een-begin-van-de-functie-scale" title="Link to this heading">#</a></h3>
 <p>Om deze omzetting tussen pixelcoördinaten en complexe coördinaten te berekenen schrijf je een functie
 die als volgt begint:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">scale</span><span class="p">(</span><span class="n">pix</span><span class="p">,</span> <span class="n">pix_max</span><span class="p">,</span> <span class="n">float_min</span><span class="p">,</span> <span class="n">float_max</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">scale</span><span class="p">(</span><span class="n">pix</span><span class="p">,</span> <span class="n">pix_max</span><span class="p">,</span> <span class="n">float_min</span><span class="p">,</span> <span class="n">float_max</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;scale accepts</span>
 
 <span class="sd">    pix, the CURRENT pixel column (or row)</span>
@@ -1145,7 +1145,7 @@ dit er concreet uitziet:</p>
 </div>
 <p>Dit vormt een rechthoek van 3.0 bij 2.0.</p>
 <p>Begin door de code uit de functie <code class="docutils literal notranslate"><span class="pre">test</span></code> te kopiëren en te hernoemen naar <code class="docutils literal notranslate"><span class="pre">mset</span></code>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mset</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">mset</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Creates a 300x200 image of the Mandelbrot set</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">width</span> <span class="o">=</span> <span class="mi">300</span>
@@ -1281,7 +1281,7 @@ mandelbrotverzameling is, bijvoorbeeld zoals deze afbeelding:</p>
 <p>Het resultaat hiervan is dat je de pixels uit een andere afbeelding kan gebruiken om de weergave van de punten die wel (of geen) onderdeel zijn van de mandelbrotverzameling te bepalen, zoals,</p>
 <p><img alt="Vermandelbrotte alien" src="../_images/mbtify.png" /></p>
 <p>Hier is een voorbeeld dat laat zien hoe je een afbeelding kan laden (de afbeelding <code class="docutils literal notranslate"><span class="pre">alien.png</span></code> uit de map <code class="docutils literal notranslate"><span class="pre">pngs</span></code>):</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">example</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">example</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Shows how to access the pixels of an image.</span>
 
 <span class="sd">    input_pixels is a list of rows, each of which is a list of columns,</span>

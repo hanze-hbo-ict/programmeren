@@ -30,7 +30,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -771,10 +771,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>Alle andere cellen blijven in dezelfde toestand</p></li>
 </ol>
 <p>Alhoewel deze regels simpel lijken leiden ze tot complexe en interessante patronen. Meer informatie en een aantal interessante patronen kan je vinden op <a class="reference external" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway’s Game of Life</a>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
 
 
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
     <span class="n">a</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> 
         <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> 
         <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> 
@@ -789,7 +789,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <span class="n">print_board</span><span class="p">(</span><span class="n">a3</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">create_one_row</span><span class="p">(</span><span class="n">width</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">create_one_row</span><span class="p">(</span><span class="n">width</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; returns one row of zeros of width &quot;width&quot;...  </span>
 <span class="sd">         You might use this in your create_board(width, height) function &quot;&quot;&quot;</span>
     <span class="n">row</span> <span class="o">=</span> <span class="p">[]</span>
@@ -797,21 +797,21 @@ commentsRunWhenDOMLoaded(addUtterances);
         <span class="n">row</span> <span class="o">+=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">row</span>
 
-<span class="k">def</span> <span class="nf">create_board</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">create_board</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns a 2D array with &quot;height&quot; rows and &quot;width&quot; columns.&quot;&quot;&quot;</span>
     <span class="n">a</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">height</span><span class="p">):</span>
         <span class="n">a</span> <span class="o">+=</span> <span class="p">[</span><span class="n">create_one_row</span><span class="p">(</span><span class="n">width</span><span class="p">)]</span>        <span class="c1"># gebruik de bovenstaande functie zodat ... één rij is!!</span>
     <span class="k">return</span> <span class="n">a</span>
 
-<span class="k">def</span> <span class="nf">print_board</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">print_board</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;This function prints the 2D list-of-lists a.&quot;&quot;&quot;</span>
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>               <span class="c1"># row is de hele rij</span>
         <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">row</span><span class="p">:</span>         <span class="c1"># col is het individuele element</span>
             <span class="nb">print</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>  <span class="c1"># druk dat element af</span>
         <span class="nb">print</span><span class="p">()</span>
 
-<span class="k">def</span> <span class="nf">diagonalize</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">diagonalize</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Creates an empty board and then modifies it</span>
 <span class="sd">       so that it has a diagonal strip of &quot;on&quot; cells.</span>
 <span class="sd">       But do that only in the *interior* of the 2D array.</span>
@@ -827,21 +827,21 @@ commentsRunWhenDOMLoaded(addUtterances);
 
     <span class="k">return</span> <span class="n">a</span>
 
-<span class="k">def</span> <span class="nf">inner_cells</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">inner_cells</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">):</span>
     <span class="n">board</span> <span class="o">=</span> <span class="n">create_board</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">h</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">h</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">w</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
             <span class="n">board</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="n">board</span>
 
-<span class="k">def</span> <span class="nf">random_cells</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">random_cells</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">):</span>
     <span class="n">board</span> <span class="o">=</span> <span class="n">create_board</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">h</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">h</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">w</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
             <span class="n">board</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
     <span class="k">return</span> <span class="n">board</span>
 
-<span class="k">def</span> <span class="nf">copy</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">copy</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns a DEEP copy of the 2D array a.&quot;&quot;&quot;</span>
     <span class="n">height</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
     <span class="n">width</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -854,7 +854,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 
     <span class="k">return</span> <span class="n">new_a</span>
 
-<span class="k">def</span> <span class="nf">inner_reverse</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">inner_reverse</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
 
     <span class="n">height</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
     <span class="n">width</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -866,7 +866,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 
     <span class="k">return</span> <span class="n">new_a</span>
 
-<span class="k">def</span> <span class="nf">count_neighbours</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">count_neighbours</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
     <span class="n">buren</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="n">row</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">col</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
         <span class="n">buren</span> <span class="o">+=</span> <span class="mi">1</span>
@@ -888,7 +888,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <span class="k">return</span> <span class="n">buren</span>
 
 
-<span class="k">def</span> <span class="nf">next_life_generation</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">next_life_generation</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
 
     <span class="n">height</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
     <span class="n">width</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>

@@ -30,7 +30,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -763,9 +763,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h1>Basis<a class="headerlink" href="#basis" title="Link to this heading">#</a></h1>
 <section id="tr-investeringen-bv">
 <h2>TR investeringen BV<a class="headerlink" href="#tr-investeringen-bv" title="Link to this heading">#</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
 
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
     <span class="n">print_menu</span><span class="p">()</span>
     <span class="n">keuze</span> <span class="o">=</span> <span class="n">get_Input</span><span class="p">()</span>
     <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
@@ -799,7 +799,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         <span class="n">keuze</span> <span class="o">=</span> <span class="n">get_Input</span><span class="p">()</span>
 
 
-<span class="k">def</span> <span class="nf">print_menu</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">print_menu</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(0) Voer een nieuwe lijst in&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(1) Druk de huidige lijst af&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(2) Bepaal de gemiddelde prijs&quot;</span><span class="p">)</span>
@@ -809,39 +809,39 @@ commentsRunWhenDOMLoaded(addUtterances);
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(6) Je TR-investeringsplan&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(9) Stoppen&quot;</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">get_Input</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_Input</span><span class="p">():</span>
     <span class="n">keuze</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
     <span class="k">while</span> <span class="n">keuze</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">keuze</span> <span class="o">&gt;</span> <span class="mi">6</span> <span class="ow">and</span> <span class="n">keuze</span> <span class="o">!=</span> <span class="mi">9</span><span class="p">:</span>
         <span class="n">keuze</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Maak je keuze: &quot;</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">keuze</span>
 
-<span class="k">def</span> <span class="nf">input_list</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">input_list</span><span class="p">():</span>
     <span class="n">lijst</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;voer een nieuwe lijst in: &quot;</span><span class="p">)</span>
     <span class="n">lijst</span> <span class="o">=</span> <span class="n">lijst</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;[&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
     <span class="n">lijst</span> <span class="o">=</span> <span class="n">lijst</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;]&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
     <span class="n">lijst</span> <span class="o">=</span> <span class="n">lijst</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">lijst</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">print_list</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">print_list</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dag  prijs&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;---  -----&quot;</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)):</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="s2">&quot;  &quot;</span><span class="p">,</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 
-<span class="k">def</span> <span class="nf">mean</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
     <span class="n">som</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">L</span><span class="p">:</span>
         <span class="n">som</span> <span class="o">+=</span> <span class="n">v</span>
     <span class="k">return</span> <span class="n">som</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">s_afwijking</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">s_afwijking</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
     <span class="n">avg</span> <span class="o">=</span> <span class="n">mean</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
     <span class="n">som</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">L</span><span class="p">:</span>
         <span class="n">som</span> <span class="o">+=</span> <span class="p">(</span><span class="n">v</span> <span class="o">-</span> <span class="n">avg</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
     <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">som</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">))</span>
 
-<span class="k">def</span> <span class="nf">find_min</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">find_min</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
     <span class="n">mini</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">dag</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)):</span>
@@ -850,7 +850,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             <span class="n">dag</span> <span class="o">=</span> <span class="n">i</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">dag</span><span class="p">,</span> <span class="n">mini</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">find_max</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">find_max</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
     <span class="n">maxi</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">dag</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)):</span>

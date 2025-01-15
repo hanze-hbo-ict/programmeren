@@ -30,7 +30,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -793,12 +793,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Een <strong>heel</strong> moeilijk te vinden bug treedt op als je het <em><strong>nulteken</strong></em> <code class="docutils literal notranslate"><span class="pre">'0'</span></code> gebruikt in plaats van het teken <code class="docutils literal notranslate"><span class="pre">'O'</span></code> (hoofdletter o) om één van de spelers voor te stellen. Het probleem treedt op als door jou, of tijdens het nakijken, de waardes in het bord vergeleken worden met de verkeerde karakters! Zorg ervoor dat je consistent bent in het gebruik van de hoofdletter o.</p>
 </div>
 <p>Je moet een aantal methodes implementeren in de klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code>. Vergeet niet de tips over hoe je ze kan testen te gebruiken nadat je ze geschreven hebt! De eerste twee methodes zijn in het college behandeld en zijn hieronder gegeven zodat je ze kan kopiëren en plakken.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Board</span><span class="p">:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Board</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;A data type representing a Connect-4 board</span>
 <span class="sd">       with an arbitrary number of rows and columns.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Construct objects of type Board, with the given width and height.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
@@ -806,7 +806,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 
         <span class="c1"># We hoeven niets terug te geven vanuit een constructor!</span>
 
-    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;This method returns a string representation</span>
 <span class="sd">           for an object of type Board.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -908,7 +908,7 @@ zoals te zien in dit grotere voorbeeld met 5 rijen en 15 kolommen (5 bij 15):</p
 <h3>De methode <code class="docutils literal notranslate"><span class="pre">set_board</span></code><a class="headerlink" href="#de-methode-set-board" title="Link to this heading">#</a></h3>
 <p>De methode <code class="docutils literal notranslate"><span class="pre">set_board(self,</span> <span class="pre">move_string)</span></code> is erg handig om snel een bord te maken om de methode <code class="docutils literal notranslate"><span class="pre">wins_for</span></code> te testen in het volgende deel. Hier is de code die we voor <code class="docutils literal notranslate"><span class="pre">set_board</span></code> gebruikt hebben; voeg dit toe aan
 je klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code>, het maakt het testen veel simpeler!</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">set_board</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">move_string</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">set_board</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">move_string</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Accepts a string of columns and places</span>
 <span class="sd">       alternating checkers in those columns,</span>
 <span class="sd">       starting with &#39;X&#39;.</span>

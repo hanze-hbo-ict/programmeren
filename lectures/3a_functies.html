@@ -30,7 +30,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -826,7 +826,7 @@ f(x) = 2x + 3
 \]</div>
 <p>Definieert een <strong>structuur</strong>: wat het <em>is</em> (en wat logischerwijs volgt)</p>
 <p>Dit is de syntax die wiskudigen hebben bedacht om een <em>structuur</em> te beschrijven en wat daar logischerwijs uit zou moeten volgen.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">3</span>
 </pre></div>
 </div>
@@ -840,7 +840,7 @@ f(x) = 2x + 3
 <h2>Binnen een functie<a class="headerlink" href="#binnen-een-functie" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">flipside</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">flipside</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; flipside(s): spiegel s!</span>
 <span class="sd">    input s: een string</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -860,7 +860,7 @@ f(x) = 2x + 3
 <p>Laten we gaan kijken naar de binnenkant van functies. We hebben hier een functie <code class="docutils literal notranslate"><span class="pre">flipside</span></code> gedefinieerd die een <em>string</em> spiegelt. Je ziet dat functie <code class="docutils literal notranslate"><span class="pre">len(x)</span></code>, <em>floor division</em> <code class="docutils literal notranslate"><span class="pre">//</span></code> en string <em>slicing</em> wordt gebruikt. Maar je ziet ook andere dingen, bijvoorbeeld binnen de functie een nieuwe variabele <code class="docutils literal notranslate"><span class="pre">x</span></code> en tekst tussen driedubbele aanhalingstekens <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span></code>.</p>
 <section id="docstrings">
 <h3>Docstrings<a class="headerlink" href="#docstrings" title="Link to this heading">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">flipside</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">flipside</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; flipside(s): spiegel s!</span>
 <span class="sd">    input s: een string</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -870,13 +870,13 @@ f(x) = 2x + 3
 </section>
 <section id="gebruik-variabelen">
 <h3>Gebruik variabelen<a class="headerlink" href="#gebruik-variabelen" title="Link to this heading">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">flipside</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">flipside</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="n">x</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
     <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="n">x</span><span class="p">:]</span> <span class="o">+</span> <span class="n">s</span><span class="p">[:</span><span class="n">x</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>De lengte van de string is nodig om vervolgens met een floor division het aantal karakters tot het middelpunt van de string te bepalen. Dit aantal wordt aan de nieuwe variabele <code class="docutils literal notranslate"><span class="pre">x</span></code> toegekend en deze <code class="docutils literal notranslate"><span class="pre">x</span></code> wordt vervolgens 2 keer gebruikt voor het slicen van de string (de start- en stop waarden). We breken met het zetten van deze variabele <code class="docutils literal notranslate"><span class="pre">x</span></code> ook het probleem in stukjes op, en het scheelt ons typewerk!</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">flipside</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">flipside</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">:]</span> <span class="o">+</span> <span class="n">s</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -884,7 +884,7 @@ f(x) = 2x + 3
 </section>
 <section id="variabelen-opnieuw-definieren">
 <h3>Variabelen opnieuw definieren<a class="headerlink" href="#variabelen-opnieuw-definieren" title="Link to this heading">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">convert_from_seconds</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">convert_from_seconds</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Een getal naar dagen, uren, minuten en seconden</span>
 <span class="sd">    </span>
 <span class="sd">    Zet een getal om naar naar een lijst van</span>
@@ -912,7 +912,7 @@ f(x) = 2x + 3
 <p>Je hebt eerder kennisgemaakt met <code class="docutils literal notranslate"><span class="pre">print(x)</span></code> en deze functie geeft iets terug, althans zo lijkt het! <code class="docutils literal notranslate"><span class="pre">return</span></code> geeft een resultaat van een functie terug, wat is nu het verschil met <code class="docutils literal notranslate"><span class="pre">print(x)</span></code>?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dbl</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">dbl</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;verdubbelt x?</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span>
@@ -925,7 +925,7 @@ f(x) = 2x + 3
 <p>Dit is een eenvoudige functie die een waarde verdubbelt en het resultaat teruggeeft met <code class="docutils literal notranslate"><span class="pre">return</span></code>. Nu een variant met <code class="docutils literal notranslate"><span class="pre">print(x)</span></code> in plaats van <code class="docutils literal notranslate"><span class="pre">return</span></code>:</p>
 <div class="cell tag_raises-exception docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dbl_pr</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">dbl_pr</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;verdubbelt x?</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span>
@@ -968,7 +968,7 @@ f(x) = 2x + 3
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1: functie definitie</span>
 
-<span class="k">def</span> <span class="nf">flipside</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">flipside</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; flipside(s): spiegel s!</span>
 <span class="sd">    input s: een string</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -1047,7 +1047,7 @@ f(x) = 2x + 3
 <section id="choice">
 <h3>Choice<a class="headerlink" href="#choice" title="Link to this heading">#</a></h3>
 <p>Choice is een functie die een random keuze kan maken uit een gegeven lijst. Het is alleen niet standaard beschikbaar zoals de functies <code class="docutils literal notranslate"><span class="pre">sum</span></code> en <code class="docutils literal notranslate"><span class="pre">range</span></code>. Om de functie te kunnen gebruiken moeten we het eerst importeren.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">choice</span>
 <span class="n">l</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
 <span class="n">rand</span> <span class="o">=</span> <span class="n">choice</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
 </pre></div>
@@ -1059,7 +1059,7 @@ f(x) = 2x + 3
 <p>Random is wat een module wordt genoemd, soms wordt hier ook het woord <em>library</em> of <em>functiebibliotheek</em> voor gebruikt. Met het importeren van een module krijg te toegang tot alle functies die in deze module staan.</p>
 <section id="optie-1">
 <h3>Optie 1:<a class="headerlink" href="#optie-1" title="Link to this heading">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
 
 <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)))</span>
 <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
@@ -1070,9 +1070,9 @@ f(x) = 2x + 3
 </section>
 <section id="optie-2">
 <h3>Optie 2:<a class="headerlink" href="#optie-2" title="Link to this heading">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
-<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
-<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">uniform</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">choice</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">randint</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">uniform</span>
 
 <span class="n">choice</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)))</span>
 <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
@@ -1083,7 +1083,7 @@ f(x) = 2x + 3
 </section>
 <section id="optie-3">
 <h3>Optie 3:<a class="headerlink" href="#optie-3" title="Link to this heading">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">choice</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)))</span>
 <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
