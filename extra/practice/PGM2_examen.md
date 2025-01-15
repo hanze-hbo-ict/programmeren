@@ -185,19 +185,19 @@ while True:
 ```
 
 1. Schrijf de functie `player_takes` binnen de klasse `Nim`. Deze functie
-   accepteert een parameter `player_turm` (een integer) die aangeeft hoeveel
+   accepteert een parameter `player_turn` (een integer) die aangeeft hoeveel
    lucifers een speler van tafel pakt en de variabele `self.sticks` vervolgens
    aanpast. (5)
 
 2. Maak de functie `AI_turn` af. Deze geeft het aantal lucifers dat de AI wil
    pakken terug. De AI wil altijd een meervoud van vier op tafel laten liggen;
-   als dat niet mogelijk is, kiestx het een willekeurige hoeveelheid lucifers.
-   Gebruik `random.choice([1, 2, 3])` om een random aantal lucifers tussen 1 en
+   als dat niet mogelijk is, kiest het een willekeurige hoeveelheid lucifers.
+   Gebruik `choice([1, 2, 3])` om een random aantal lucifers tussen 1 en
    3 te kiezen. (5)
 
 3. Maak de functie `game_over` af. Deze functie controleert of het spel voorbij
    is door te checken of er nog lucifers op tafel liggen. Als er geen lucifers
-   liggen, geeft het true terug en anders false. (5)
+   liggen, geeft het `True` terug en anders `False`. (5)
 
 4. De `while`-lus is niet helemaal compleet. De beurt van de computer ontbreekt.
    Maak de `while`-lus af door de beurt van de computer toe te voegen onder het
