@@ -14,7 +14,7 @@ Bepaal de outputs van onderstaande programma's zonder het gebruik van een interp
 ```python
 def main():
     """
-    Main functie. Roept de andere functies op om hun werk te doen.
+    Main functie. Roept de andere functies aan om hun werk te doen.
     """
     x = blaat(4) + blaat(6)
     print(x)
@@ -34,7 +34,7 @@ testing()
 ```
 
 a. Wat doet de functie blaat?  
-b. Wat is de ouput van dit programma?  
+b. Wat is de output van dit programma?  
 c. Gebruik de [Python Tutor](http://www.pythontutor.com/visualize.html)  om je antwoord van a en b te controleren.  
 
 
@@ -42,7 +42,7 @@ c. Gebruik de [Python Tutor](http://www.pythontutor.com/visualize.html)  om je a
 ```python
 def main():
     """
-    Main functie. Roept de andere functies op om hun werk te doen.
+    Main functie. Roept de andere functies aan om hun werk te doen.
     """
     x = blaat("lol")
     y = blaat("xo")
@@ -63,7 +63,7 @@ testing()
 ```
 
 a. Wat doet de functie blaat?  
-b. Wat is de ouput van dit programma?  
+b. Wat is de output van dit programma?  
 c. Gebruik de [Python Tutor](http://www.pythontutor.com/visualize.html)  om je antwoord van a en b te controleren.  
 
 
@@ -73,7 +73,7 @@ c. Gebruik de [Python Tutor](http://www.pythontutor.com/visualize.html)  om je a
 ```python
 def main():
     """
-    Main functie. Roept de andere functies op om hun werk te doen.
+    Main functie. Roept de andere functies aan om hun werk te doen.
     """
     l = blaat1(5)
     x = blaat2(l)

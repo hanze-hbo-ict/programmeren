@@ -14,7 +14,7 @@ Bepaal de outputs van onderstaande programma's zonder het gebruik van een interp
 ```python
 def main():
     """
-    Main functie. Roept de andere functies op om hun werk te doen.
+    Main functie. Roept de andere functies aan om hun werk te doen.
     """
     x = blaat(10)
 
@@ -35,7 +35,7 @@ testing()
 ```
 
 a. Wat doet de functie blaat?  
-b. Wat is de ouput van dit programma?  
+b. Wat is de output van dit programma?  
 c. Gebruik de [Python Tutor](http://www.pythontutor.com/visualize.html)  om je antwoord van a en b te controleren.  
 
 
@@ -44,7 +44,7 @@ c. Gebruik de [Python Tutor](http://www.pythontutor.com/visualize.html)  om je a
 ```python
 def main():
     """
-    Main functie. Roept de andere functies op om hun werk te doen.
+    Main functie. Roept de andere functies aan om hun werk te doen.
     """
     x = blaat(10, 2)
 
@@ -65,8 +65,8 @@ testing()
 ```
 
 a. Wat doet de functie blaat?  
-b. Wat is de ouput van dit programma?  
-c. Wat is de ouput als `blaat(10, 2)` wordt vervangen met `blaat(5,0)`  
+b. Wat is de output van dit programma?  
+c. Wat is de output als `blaat(10, 2)` wordt vervangen met `blaat(5,0)`  
 d. Gebruik de [Python Tutor](http://www.pythontutor.com/visualize.html)  om je antwoord van a, b en c te controleren.  
 
 
@@ -75,7 +75,7 @@ d. Gebruik de [Python Tutor](http://www.pythontutor.com/visualize.html)  om je a
 ```python
 def main():
     """
-    Main functie. Roept de andere functies op om hun werk te doen.
+    Main functie. Roept de andere functies aan om hun werk te doen.
     """
     x = blaat(10, 6)
 
@@ -96,5 +96,5 @@ testing()
 
 
 a. Wat doet de functie blaat?  
-b. Wat is de ouput van dit programma?  
+b. Wat is de output van dit programma?  
 c. Gebruik de [Python Tutor](http://www.pythontutor.com/visualize.html)  om je antwoord van a en b te controleren.  
