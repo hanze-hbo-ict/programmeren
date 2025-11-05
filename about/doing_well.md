@@ -75,4 +75,3 @@ You need to be prepared to let go of them if you are to really master these foun
 You need a relevant math co-requisite for this course (one of MATH 100, 102, 104, 110, 120, 180, 184).  
 We will assume that you are comfortable with the following (and can do them quickly and easily): scientific notation, unit conversions, order of magnitude estimates, significant figures, trig, algebra, sketching and interpreting graphs, basic differentiation (and a touch of integration too).  
 Early in the course, you will get a chance to diagnose any gaps in your own math knowledge.  
-
