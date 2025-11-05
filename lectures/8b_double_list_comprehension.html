@@ -1,0 +1,1144 @@
+
+<!DOCTYPE html>
+
+
+<html lang="nl" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>LoL’s comprehension &#8212; Programmeren</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css?v=5f6255d3" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css?v=def72667" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=b028fc25"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "hanze-hbo-ict/programmeren");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../_static/translations.js?v=5ce3cdba"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lectures/8b_double_list_comprehension';</script>
+    <script src="../_static/save_state.js?v=f1e4c503"></script>
+    <link rel="canonical" href="https:///hanze-hbo-ict.github.io/programmeren/lectures/8b_double_list_comprehension.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Zoeken" href="../search.html" />
+    <link rel="next" title="Practicum" href="../course/practical_8.html" />
+    <link rel="prev" title="List comprehensions" href="8a_list_comprehension.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="nl"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../about/syllabus.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/lightbulb.png" class="logo__image only-light" alt="Programmeren - Home"/>
+    <script>document.write(`<img src="../_static/lightbulb.png" class="logo__image only-dark" alt="Programmeren - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Zoeken</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about/syllabus.html">
+                    Programmeren
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Opmerkingen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../about/feedback.html">Anoniem feedbackformulier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/faq.html">Veelgestelde vragen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/references.html">Literatuur</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Intro</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0a_command-line.html">De terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0b_install_python.html">Python installeren</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_1.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="1a_intro_programmeren.html">Wat is informatica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1b_picobot.html">Picobot</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_1.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/1_picobot.html">Picobot</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_2.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="2a_var_con.html">Maximum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2b_strings_en_lists.html">Strings</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_2.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/2_rochambeau.html">Rochambeau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/2_sequenties_en_data.html">Sequenties en data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_2.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/2_opstap.html">Opstap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/2_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/2_extra.html">Extra</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/solutions_2.html">Uitwerkingen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/2_rochambeau.html">Rochambeau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/2_sequenties_en_data.html">Sequenties en data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/2_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/2_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_3.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="3a_functies.html">Functies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3b_functies_aanroepen.html">Functies aanroepen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_3.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/3_fijne_functies.html">Fijne functies</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_3.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/3_opstap.html">Opstap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/3_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/3_extra.html">Extra</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/solutions_3.html">Uitwerkingen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/3_fijne_functies.html">Fijne functies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/3_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/3_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_4.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="4a_lussen.html">Lussen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4b_midterm.html">Oefen Midterm</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_4.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/4_python_bat.html">Lussen in PythonBat!</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_4.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/4_opstap.html">Opstap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/4_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/4_extra.html">Extra</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/solutions_4.html">Uitwerkingen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/4_python_bat.html">Python CodeBat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/4_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/4_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 5</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_5.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="5a_geneste_lus.html">Lussen in lussen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_5.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/5a_ascii_art.html">ASCII Art</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/5b_boter_kaas_eieren.html">Boter, kaas en eieren + N op een rij…</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_5.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/5_opstap.html">Opstap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/5_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/5_extra.html">Extra</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/solutions_5.html">Uitwerkingen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/5a_ascii_art.html">ASCII art</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/5b_boter_kaas_eieren.html">Boter kaas en eieren.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/5_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/5_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 6</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_6.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="6a_data.html">Data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_6.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/6a_binair.html">Van decimaal naar binair en verder!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/6b_images.html">Fraaie plaatjes</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_6.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/6_opstap.html">Opstap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/6_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/6_extra.html">Extra</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/solutions_6.html">Uitwerkingen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/6a_binair.html">Binair</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/6_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/6_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 7</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_7.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="7a_lists_advanced.html">More on Lists</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_7.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/7a_text_genereren.html">Tekst genereren met Markovprocessen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_7.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/7_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/7_extra.html">Extra</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/solutions_7.html">Uitwerkingen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/7a_text_genereren.html">Tekst genereren met Markovprocessen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/7_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/7_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM2 Week 1</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../course/week_8.html">Onderwerpen</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="8a_list_comprehension.html">List comprehensions</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">LoL’s comprehension</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_8.html">Practicum</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/8_klinkt_goed.html">Klinkt goed</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_8.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/8_instap.html">Instap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/8_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/8_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM2 Week 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_9.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="9a_intro_recursie.html">Intro Recursief</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9b_recursief.html">Recursief ontwerpen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_9.html">Practicum</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/9_recursieve_functies.html">Recursieve functies</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_9.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/9_instap.html">instap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/9_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/9_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM2 Week 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_10.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="10a_knapzak_probleem.html">Ontwerp van algoritmen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_10.html">Practicum</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/10a_wissel_geld.html">Wisselgeld</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/10b_periodieke_tshirt.html">Periodieke tshirt</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_10.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/10_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/10_extra.html">Extra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/opdrachten/caesar_op_orde/index.html">Extra II</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM2 Week 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_11.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="11a_objecten.html">Klassen en objecten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11b_data_object.html">Een <code class="docutils literal notranslate"><span class="pre">Date</span></code> klasse</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_11.html">Practicum</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/11_vier_op_rij_board.html">Vier op een rij: de klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_11.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/11_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/11_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM2 Week 5</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_12.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="12_ai.html">Kunstmatige intelligentie</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_12.html">Practicum</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/12_vier_op_rij_AI.html">Vier op een rij: Intro AI</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM2 Week 6</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../practicals/13_vier_op_rij_speler.html">Vier op een rij: AI speler</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Projects</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../projects/picobot.html">De evolutie van Picobot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/textid.html">Tekstidentificatie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/vpython.html">VPool</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Oefening</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/pgm1_tentamen.html">PGM1 oefententamen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../extra/practice/pgm1_examen.html">Toets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/PGM1_examen.html">Oplossingen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/pgm2_tentamen.html">PGM2 oefententamen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../extra/practice/PGM2_examen.html">Toets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/PGM2_examen.html">Oplossingen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../extra/practice/1_recursie.html">Recursieve functies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extra/practice/2_list_comprehension.html">List comprehension</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Support</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../support/logisim.html">Logisim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/plain_text/index.html">Tekstbestanden</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/wins_for.html">Tips voor de in-een-rij-strategie voor <code class="docutils literal notranslate"><span class="pre">wins_for</span></code></a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/hanze-hbo-ict/programmeren/blob/master/lectures/8b_double_list_comprehension.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Bronopslagplaats"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/edit/master/lectures/8b_double_list_comprehension.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/issues/new?title=Issue%20on%20page%20%2Flectures/8b_double_list_comprehension.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open een probleem"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download deze pagina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/lectures/8b_double_list_comprehension.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download het bronbestand"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Afdrukken naar pdf"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Volledig scherm"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>LoL’s comprehension</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Inhoud </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zelfde-waarden-in-twee-lijsten">Zelfde waarden in twee lijsten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paar-gewijs-optellen">Paar gewijs optellen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tweedimensionale-arrays">Tweedimensionale arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdrachten">Opdrachten</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-1">Opdracht 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2">Opdracht 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3">Opdracht 3</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="lol-s-comprehension">
+<h1>LoL’s comprehension<a class="headerlink" href="#lol-s-comprehension" title="Link to this heading">#</a></h1>
+<p>List comprehension kunnen ook gebruikt worden met meer dan 1 lijst.</p>
+<section id="zelfde-waarden-in-twee-lijsten">
+<h2>Zelfde waarden in twee lijsten<a class="headerlink" href="#zelfde-waarden-in-twee-lijsten" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>input: <code class="docutils literal notranslate"><span class="pre">Y</span></code> en <code class="docutils literal notranslate"><span class="pre">W</span></code>, twee lijsten met “loterij” getallen (integers)</p></li>
+<li><p>output: de getallen in <code class="docutils literal notranslate"><span class="pre">Y</span></code> dat ook in <code class="docutils literal notranslate"><span class="pre">W</span></code> voorkomt</p></li>
+</ul>
+<p>Voorbeeld:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">lingo</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">47</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">47</span><span class="p">])</span> <span class="o">==</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">same_numbers</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">W</span><span class="p">):</span>
+    <span class="n">LC</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">Y</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">W</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">LC</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Met een kleine aanpassing kunnen we ook tellen hoeveel getallen in <code class="docutils literal notranslate"><span class="pre">Y</span></code> ook voorkomt in <code class="docutils literal notranslate"><span class="pre">W</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">lingo</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">W</span><span class="p">):</span>
+    <span class="n">LC</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">Y</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">W</span><span class="p">]</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">LC</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="paar-gewijs-optellen">
+<h2>Paar gewijs optellen<a class="headerlink" href="#paar-gewijs-optellen" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>input: <code class="docutils literal notranslate"><span class="pre">Y</span></code> en <code class="docutils literal notranslate"><span class="pre">W</span></code>, twee lijsten met evenveel getallen (integers)</p></li>
+<li><p>output: De elementen zijn paarsgewijs bij elkaar opgeteld. Met andere woorden. [Y[0] + W[0], Y[1]+W[1], …]</p></li>
+</ul>
+<p>Voorbeeld:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pairwise</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span> <span class="o">==</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">pairwise</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">W</span><span class="p">):</span>
+    <span class="n">LC</span> <span class="o">=</span> <span class="p">[</span><span class="n">Y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">W</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">Y</span><span class="p">))]</span>
+    <span class="k">return</span> <span class="n">LC</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">pairwise</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[6, 8, 10, 12]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="tweedimensionale-arrays">
+<h2>Tweedimensionale arrays<a class="headerlink" href="#tweedimensionale-arrays" title="Link to this heading">#</a></h2>
+<p>Zijn overal! (en zijn <code class="docutils literal notranslate"><span class="pre">LoL</span></code>’s)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">mul_table</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns a multiplication table for n</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">[[</span><span class="n">x</span> <span class="o">*</span> <span class="n">y</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Voor alle <code class="docutils literal notranslate"><span class="pre">y</span></code> in de range van <code class="docutils literal notranslate"><span class="pre">1</span></code> tot <code class="docutils literal notranslate"><span class="pre">n+1</span></code> wordt</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">x</span> <span class="o">*</span> <span class="n">y</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span> 
+</pre></div>
+</div>
+<p>uitgevoerd. Het wordt dus <code class="docutils literal notranslate"><span class="pre">n</span></code> keer uitgevoerd en dit creeert <code class="docutils literal notranslate"><span class="pre">n</span></code> lijsten binnen de list <code class="docutils literal notranslate"><span class="pre">rn</span></code>. Dit creëert dus een LoL.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mul_table</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1, 2, 3, 4, 5],
+ [2, 4, 6, 8, 10],
+ [3, 6, 9, 12, 15],
+ [4, 8, 12, 16, 20],
+ [5, 10, 15, 20, 25]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">mul_table</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns a multiplication table for n</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">table</span> <span class="o">=</span> <span class="p">[]</span>                     <span class="c1"># start with an empty table</span>
+    
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>      <span class="c1"># for every row in this table ...</span>
+        <span class="n">row</span> <span class="o">=</span> <span class="p">[]</span>                   <span class="c1"># start with an empty row</span>
+        
+        <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>  <span class="c1"># for every column in this row ...</span>
+            <span class="n">row</span> <span class="o">+=</span> <span class="p">[</span><span class="n">x</span> <span class="o">*</span> <span class="n">y</span><span class="p">]</span>         <span class="c1"># add the column value to the row</span>
+            
+        <span class="n">table</span> <span class="o">+=</span> <span class="p">[</span><span class="n">row</span><span class="p">]</span>             <span class="c1"># add the row to the table</span>
+        
+    <span class="k">return</span> <span class="n">table</span>                   <span class="c1"># return table</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Gegeven een LoL</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Wat als we willen tellen hoeveel getallen er in de LoL zijn.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">sum_2D</span><span class="p">(</span><span class="n">lol</span><span class="p">):</span>
+    <span class="n">LC</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">row</span><span class="p">)</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">lol</span><span class="p">]</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">LC</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_2D</span><span class="p">(</span><span class="n">L</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>16
+</pre></div>
+</div>
+</div>
+</div>
+<p>De expressie mag dus een lijst bevatten. <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">row</span> <span class="pre">in</span> <span class="pre">lol</span></code> gaat elke rij langs en <code class="docutils literal notranslate"><span class="pre">len(row)</span></code> telt hoeveel elementen er in de rij staan. <code class="docutils literal notranslate"><span class="pre">sum(LC)</span></code> telt vervolgens alle lengtes van alle rijen bij elkaar op.</p>
+<p>Nu willen we alle getallen in de LoL verdubbelen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">double</span><span class="p">(</span><span class="n">lol</span><span class="p">):</span>
+    <span class="n">LC</span> <span class="o">=</span> <span class="p">[[</span><span class="n">x</span> <span class="o">*</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">row</span><span class="p">]</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">lol</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">LC</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">double</span><span class="p">(</span><span class="n">L</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[6, 4, 12, 16], [18, 4, 10, 14], [0, 6, 4, 6], [2, 4, 6, 8]]
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">row</span> <span class="pre">in</span> <span class="pre">lol</span></code> gaat elke rij af in de LoL.<br />
+<code class="docutils literal notranslate"><span class="pre">[x</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">for</span> <span class="pre">x</span> <span class="pre">in</span> <span class="pre">row]</span></code> gaat elk element af binnen de gegeven rij en verdubbelt deze. Zo worden dus alle elementen per rij verdubbelt.</p>
+<p>Op deze manier kunnen we ook afbeeldingen bewerken.
+Ter herinnering, een afbeelding bestaat uit rijen met pixels</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">afbeelding</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[[</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">],</span> <span class="p">[</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">],</span> <span class="p">[</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">],</span> <span class="o">...</span><span class="p">]</span>
+    <span class="p">[[</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">],</span> <span class="p">[</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">],</span> <span class="p">[</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">],</span> <span class="o">...</span><span class="p">]</span>
+    <span class="p">[[</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">],</span> <span class="p">[</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">],</span> <span class="p">[</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">],</span> <span class="o">...</span><span class="p">]</span>
+    <span class="o">...</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>We zouden dus elke pixel kunnen bewerken met behulp van een List comprehension.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">LC</span> <span class="o">=</span> <span class="p">[[</span><span class="n">change</span><span class="p">(</span><span class="n">pix</span><span class="p">)</span> <span class="k">for</span> <span class="n">pix</span> <span class="ow">in</span> <span class="n">row</span><span class="p">]</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">afbeelding</span><span class="p">]</span> 
+</pre></div>
+</div>
+</section>
+<section id="opdrachten">
+<h2>Opdrachten<a class="headerlink" href="#opdrachten" title="Link to this heading">#</a></h2>
+<section id="opdracht-1">
+<h3>Opdracht 1<a class="headerlink" href="#opdracht-1" title="Link to this heading">#</a></h3>
+<p>In het werkcollege van week 6, Fraaie plaatjes, gebruikte we for loops om alle pixels binnen een afbeelding aan te passen</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">invert</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; run this function to read in the in.png image,</span>
+<span class="sd">        change it, and write out the result to out.png</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">im_pix</span> <span class="o">=</span> <span class="n">get_rgb</span><span class="p">(</span><span class="s1">&#39;in.png&#39;</span><span class="p">)</span>  <span class="c1"># lees het bestand in.png in</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;De eerste twee pixels van de eerste rij zijn&quot;</span><span class="p">,</span> <span class="n">im_pix</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+    <span class="c1">#</span>
+    <span class="c1"># Onthoud dat im_pix een lijst (de afbeelding) van</span>
+    <span class="c1"># lijsten (elke rij) van lijsten (elke pixel is [R,G,B]) is</span>
+    <span class="c1">#</span>
+    <span class="n">new_pix</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">im_pix</span><span class="p">:</span>
+        <span class="n">new_row</span><span class="o">=</span><span class="p">[]</span>
+        <span class="k">for</span> <span class="n">pixel</span> <span class="ow">in</span> <span class="n">row</span><span class="p">:</span>
+            <span class="n">new_pixel</span> <span class="o">=</span> <span class="n">change</span><span class="p">(</span><span class="n">pixel</span><span class="p">)</span>
+            <span class="n">new_row</span><span class="o">+=</span> <span class="p">[</span><span class="n">new_pixel</span><span class="p">]</span>
+        <span class="n">new_pix</span> <span class="o">+=</span> <span class="p">[</span><span class="n">new_row</span><span class="p">]</span>
+    <span class="c1"># sla nu het bestand &#39;out.png&#39; op</span>
+    <span class="n">save_rgb</span><span class="p">(</span><span class="n">new_pix</span><span class="p">,</span> <span class="s1">&#39;out.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Vervang de nested loops met een list comprehension zodanig dat alle pixels worden aangepast met behulp van de functie <code class="docutils literal notranslate"><span class="pre">change(pixel)</span></code></p>
+</section>
+<section id="opdracht-2">
+<h3>Opdracht 2<a class="headerlink" href="#opdracht-2" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>input: row en colums, waarbij row aangeeft hoeveel rijen er zijn en colums hoe lang de rijen moeten zijn.</p></li>
+<li><p>output: een LoL met <code class="docutils literal notranslate"><span class="pre">row</span></code> aantal list van <code class="docutils literal notranslate"><span class="pre">colums</span></code> lang gevuld met 0-en.</p></li>
+</ul>
+<p>Input: empty_board(5, 3):<br />
+output:<br />
+[[0,0,0]<br />
+[0,0,0]<br />
+[0,0,0]<br />
+[0,0,0]<br />
+[0,0,0]]</p>
+</section>
+<section id="opdracht-3">
+<h3>Opdracht 3<a class="headerlink" href="#opdracht-3" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>input: Een LoL</p></li>
+<li><p>output: Een LoL waarbij alle oneven getallen zijn verwijderd.</p></li>
+</ul>
+<p>In: [[2,3,4][4,5,6][6,7,8]]<br />
+Out: [[2,4][4,6][6,8]]</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "hanze-hbo-ict/programmeren",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./lectures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="8a_list_comprehension.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">vorige</p>
+        <p class="prev-next-title">List comprehensions</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../course/practical_8.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">volgende</p>
+        <p class="prev-next-title">Practicum</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Inhoud
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zelfde-waarden-in-twee-lijsten">Zelfde waarden in twee lijsten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paar-gewijs-optellen">Paar gewijs optellen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tweedimensionale-arrays">Tweedimensionale arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opdrachten">Opdrachten</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-1">Opdracht 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-2">Opdracht 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opdracht-3">Opdracht 3</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Door Harvey Mudd College / Hanze University of Applied Sciences
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
+    Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

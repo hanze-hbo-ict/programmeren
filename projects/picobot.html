@@ -1,0 +1,1407 @@
+
+<!DOCTYPE html>
+
+
+<html lang="nl" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>De evolutie van Picobot &#8212; Programmeren</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css?v=5f6255d3" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css?v=def72667" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=b028fc25"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "hanze-hbo-ict/programmeren");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../_static/translations.js?v=5ce3cdba"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'projects/picobot';</script>
+    <script src="../_static/save_state.js?v=f1e4c503"></script>
+    <link rel="canonical" href="https:///hanze-hbo-ict.github.io/programmeren/projects/picobot.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Zoeken" href="../search.html" />
+    <link rel="next" title="Tekstidentificatie" href="textid.html" />
+    <link rel="prev" title="Vier op een rij: AI speler" href="../practicals/13_vier_op_rij_speler.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="nl"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../about/syllabus.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/lightbulb.png" class="logo__image only-light" alt="Programmeren - Home"/>
+    <script>document.write(`<img src="../_static/lightbulb.png" class="logo__image only-dark" alt="Programmeren - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Zoeken</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about/syllabus.html">
+                    Programmeren
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Opmerkingen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../about/feedback.html">Anoniem feedbackformulier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/faq.html">Veelgestelde vragen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/references.html">Literatuur</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Intro</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lectures/0a_command-line.html">De terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lectures/0b_install_python.html">Python installeren</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_1.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/1a_intro_programmeren.html">Wat is informatica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/1b_picobot.html">Picobot</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_1.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/1_picobot.html">Picobot</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_2.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/2a_var_con.html">Maximum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/2b_strings_en_lists.html">Strings</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_2.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/2_rochambeau.html">Rochambeau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/2_sequenties_en_data.html">Sequenties en data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_2.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/2_opstap.html">Opstap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/2_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/2_extra.html">Extra</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/solutions_2.html">Uitwerkingen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/2_rochambeau.html">Rochambeau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/2_sequenties_en_data.html">Sequenties en data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/2_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/2_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_3.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/3a_functies.html">Functies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/3b_functies_aanroepen.html">Functies aanroepen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_3.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/3_fijne_functies.html">Fijne functies</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_3.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/3_opstap.html">Opstap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/3_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/3_extra.html">Extra</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/solutions_3.html">Uitwerkingen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/3_fijne_functies.html">Fijne functies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/3_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/3_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_4.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/4a_lussen.html">Lussen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/4b_midterm.html">Oefen Midterm</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_4.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/4_python_bat.html">Lussen in PythonBat!</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_4.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/4_opstap.html">Opstap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/4_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/4_extra.html">Extra</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/solutions_4.html">Uitwerkingen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/4_python_bat.html">Python CodeBat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/4_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/4_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 5</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_5.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/5a_geneste_lus.html">Lussen in lussen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_5.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/5a_ascii_art.html">ASCII Art</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/5b_boter_kaas_eieren.html">Boter, kaas en eieren + N op een rij…</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_5.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/5_opstap.html">Opstap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/5_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/5_extra.html">Extra</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/solutions_5.html">Uitwerkingen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/5a_ascii_art.html">ASCII art</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/5b_boter_kaas_eieren.html">Boter kaas en eieren.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/5_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/5_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 6</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_6.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/6a_data.html">Data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_6.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/6a_binair.html">Van decimaal naar binair en verder!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/6b_images.html">Fraaie plaatjes</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_6.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/6_opstap.html">Opstap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/6_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/6_extra.html">Extra</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/solutions_6.html">Uitwerkingen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/6a_binair.html">Binair</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/6_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/6_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM1 Week 7</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_7.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/7a_lists_advanced.html">More on Lists</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_7.html">Werkcollege</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/7a_text_genereren.html">Tekst genereren met Markovprocessen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_7.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/7_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/7_extra.html">Extra</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/solutions_7.html">Uitwerkingen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/7a_text_genereren.html">Tekst genereren met Markovprocessen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/7_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/7_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM2 Week 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_8.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/8a_list_comprehension.html">List comprehensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/8b_double_list_comprehension.html">LoL’s comprehension</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_8.html">Practicum</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/8_klinkt_goed.html">Klinkt goed</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_8.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/8_instap.html">Instap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/8_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/8_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM2 Week 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_9.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/9a_intro_recursie.html">Intro Recursief</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/9b_recursief.html">Recursief ontwerpen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_9.html">Practicum</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/9_recursieve_functies.html">Recursieve functies</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_9.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/9_instap.html">instap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/9_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/9_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM2 Week 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_10.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/10a_knapzak_probleem.html">Ontwerp van algoritmen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_10.html">Practicum</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/10a_wissel_geld.html">Wisselgeld</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/10b_periodieke_tshirt.html">Periodieke tshirt</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_10.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/10_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/10_extra.html">Extra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/opdrachten/caesar_op_orde/index.html">Extra II</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM2 Week 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_11.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/11a_objecten.html">Klassen en objecten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/11b_data_object.html">Een <code class="docutils literal notranslate"><span class="pre">Date</span></code> klasse</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_11.html">Practicum</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/11_vier_op_rij_board.html">Vier op een rij: de klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/opgaven_11.html">Opgaven</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/11_basis.html">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/11_extra.html">Extra</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM2 Week 5</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/week_12.html">Onderwerpen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lectures/12_ai.html">Kunstmatige intelligentie</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/practical_12.html">Practicum</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practicals/12_vier_op_rij_AI.html">Vier op een rij: Intro AI</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PGM2 Week 6</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../practicals/13_vier_op_rij_speler.html">Vier op een rij: AI speler</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Projects</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">De evolutie van Picobot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textid.html">Tekstidentificatie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vpython.html">VPool</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Oefening</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/pgm1_tentamen.html">PGM1 oefententamen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../extra/practice/pgm1_examen.html">Toets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/PGM1_examen.html">Oplossingen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../course/pgm2_tentamen.html">PGM2 oefententamen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../extra/practice/PGM2_examen.html">Toets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/PGM2_examen.html">Oplossingen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../extra/practice/1_recursie.html">Recursieve functies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extra/practice/2_list_comprehension.html">List comprehension</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Support</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../support/logisim.html">Logisim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/plain_text/index.html">Tekstbestanden</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/wins_for.html">Tips voor de in-een-rij-strategie voor <code class="docutils literal notranslate"><span class="pre">wins_for</span></code></a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Bronopslagplaats"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/edit/master/projects/picobot.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hanze-hbo-ict/programmeren/issues/new?title=Issue%20on%20page%20%2Fprojects/picobot.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open een probleem"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download deze pagina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/projects/picobot.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download het bronbestand"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Afdrukken naar pdf"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Volledig scherm"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>De evolutie van Picobot</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Inhoud </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#genetische-algoritmes">Genetische algoritmes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#picobot">Picobot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#het-project">Het project</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-klasses-program-en-world">De klasses <code class="docutils literal notranslate"><span class="pre">Program</span></code> en <code class="docutils literal notranslate"><span class="pre">World</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-klasse-program">De klasse <code class="docutils literal notranslate"><span class="pre">Program</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lege-ruimte-om-mee-te-beginnen">Lege ruimte (om mee te beginnen)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#begin-met-maar-5-toestanden">Begin met maar 5 toestanden</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geen-wildcards">Geen wildcards!</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mogelijke-omgevingen">Mogelijke <em>omgevingen</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-constructor-init">De constructor <code class="docutils literal notranslate"><span class="pre">__init__</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-methode-repr">De methode <code class="docutils literal notranslate"><span class="pre">__repr__</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-methode-randomize">De methode <code class="docutils literal notranslate"><span class="pre">randomize</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-methode-get-move">De methode <code class="docutils literal notranslate"><span class="pre">get_move</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-methode-mutate">De methode <code class="docutils literal notranslate"><span class="pre">mutate</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-methode-crossover">De methode <code class="docutils literal notranslate"><span class="pre">crossover</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#handige-hulpmethodes">Handige hulpmethodes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-klasse-world">De klasse <code class="docutils literal notranslate"><span class="pre">World</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">De methode <code class="docutils literal notranslate"><span class="pre">__repr__</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-methode-get-current-surroundings">De methode <code class="docutils literal notranslate"><span class="pre">get_current_surroundings</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-methode-step">De methode <code class="docutils literal notranslate"><span class="pre">step</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-methode-run">De methode <code class="docutils literal notranslate"><span class="pre">run</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-methode-fraction-visited-cells">De methode <code class="docutils literal notranslate"><span class="pre">fraction_visited_cells</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wat-nu">Wat nu?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#een-willekeurige-populatie">Een willekeurige populatie</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#een-fitness-evaluatiefunctie-evaluate-fitness">Een fitness-evaluatiefunctie <code class="docutils literal notranslate"><span class="pre">evaluate_fitness</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-hoofdfunctie-genetic-algorithm">De hoofdfunctie <code class="docutils literal notranslate"><span class="pre">genetic_algorithm</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hoe-snel-en-hoe-goed-moet-mijn-programma-zijn">Hoe snel en hoe “goed” moet mijn programma zijn?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inleveren">Inleveren</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#begin">Begin</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#milestone">Milestone</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#oplevering">Oplevering</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optionele-bonusuitbreidingen">Optionele bonusuitbreidingen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hulp-bij-het-debuggen">Hulp bij het debuggen…</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="de-evolutie-van-picobot">
+<h1>De evolutie van Picobot<a class="headerlink" href="#de-evolutie-van-picobot" title="Link to this heading">#</a></h1>
+<p>In de eerste week van Programmeren I hebben we Picobot, een virtuele robot, geprogrammeerd. In dit project ga je een Python-programma schrijven die zelf Picobot-programma’s <strong>schrijft</strong>!</p>
+<p>Sterker nog, je Python-software zal automatisch steeds betere Picobot-programma’s laten “evolueren” aan de hand van een opp de natuur geïnspireerde technologie die we een “genetisch algoritme” noemen. Je gebruikt technieken die we bij de colleges over object-georiënteerd programmeren in Python hebben behandeld. Hierdoor zal het eindresultaat relatief kort en elegant zijn!</p>
+<section id="genetische-algoritmes">
+<h2>Genetische algoritmes<a class="headerlink" href="#genetische-algoritmes" title="Link to this heading">#</a></h2>
+<p>Het belangrijkste idee achter een genetisch algoritme is om te beginnen met een <em><strong>populatie</strong></em> van <em>willekeurige</em> Picobot-programma’s.</p>
+<ul class="simple">
+<li><p>Je code bepaalt dan de <em>“fitness”</em> (“geschiktheid”) van elk van de Picobot-programma’s door het een aantal stappen uit te laten voeren en dan te bepalen welk percentage van de ruimte het opvult; dit leidt tot een kommagetal tussen 0.0 en 1.0.</p></li>
+<li><p>Je programma selecteert aan de hand hiervan een aantal programma’s met de <em><strong>hoogste fitness</strong></em>.</p></li>
+<li><p>Uit die verzameling selecteert je programma willekeurige paren programma’s om te “paren”. Dit paarproces maakt een nieuw Picobot-programma, een “kind”, met eigenschappen van de beide Picobot-programma’s die zijn “ouders” zijn.</p></li>
+<li><p>Bovendien moet je software een klein aantal willekeurige mutaties introduceren bij sommige programma’s. Zulke willekeurige mutaties helpen om de diversiteit in de populatie te bewaken, wat belangrijk is voor de fitness van de populatie als geheel.</p></li>
+<li><p>Op deze manier heb je een volgende generatie van programma’s gemaakt. De volgende generatie is even groot als de vorige generatie, maar heeft hopelijk een hogere fitness.</p></li>
+<li><p>Je zal dit proces een aantal keer herhalen; als laatste kies je het programma met de hoogste fitness uit de laatste generatie en <em>dat</em> is je volledig geëvolueerde Picobot-programma!</p></li>
+</ul>
+</section>
+<section id="picobot">
+<h2>Picobot<a class="headerlink" href="#picobot" title="Link to this heading">#</a></h2>
+<p>Kijk nog even terug naar de opgaven in week 1 van Programmeren I om je geheugen op te frissen wat betreft de logica van Picobot, en de syntax van de regels.</p>
+<p>Je kan ook meteen naar de <a class="reference external" href="https://www.cs.hmc.edu/picobot/">Picobot-simulator</a> gaan.</p>
+</section>
+<section id="het-project">
+<h2>Het project<a class="headerlink" href="#het-project" title="Link to this heading">#</a></h2>
+<p>De code die je schrijft komt in een bestand met de naam <code class="docutils literal notranslate"><span class="pre">begin.py</span></code>, <code class="docutils literal notranslate"><span class="pre">milestone.py</span></code> of <code class="docutils literal notranslate"><span class="pre">oplevering.py</span></code>, afhankelijk van de fase van je project. Vergeet niet bovenaan het bestand de volgende zaken te vermelden:</p>
+<ul class="simple">
+<li><p>Een korte beschrijving van het project</p></li>
+<li><p>De datum</p></li>
+</ul>
+<p>Zorg ook dat je de modules die je nodig hebt importeerd, bijvoorbeeld,</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">random</span></code></p></li>
+<li><p>… en misschien nog andere modules.</p></li>
+</ul>
+<p>Gebruik ten slotte een aantal globale variabelen om <em>“magische constanten”</em> in je code te vermijden.</p>
+<p>“Magische cinstanten” zijn simpelweg constanten in een programma die “magisch” lijken omdat hun betekenis niet uitgelegd wordt. Het is een slecht idee om ze te gebruiken omdat als je (of iemand anders) later je code opnieuw wilt lezen, het erg lastig is om te begrijpen wat deze getallen doen!</p>
+<p>De lege ruimte van Picobot is bijvoorbeeld 25 bij 25 groot (inclusief muren). In plaats van overal in je code het getal <code class="docutils literal notranslate"><span class="pre">25</span></code> neer te zetten, kan je beter een paar global constanten bovenaan je bestand zetten:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">NUM_STATES</span> <span class="o">=</span> <span class="mi">5</span>
+</pre></div>
+</div>
+<p>Die laatste is een limiet op het aantal toestanden in je Picobot-programma’s; meer hierover later. Je mag ook andere globale constanten gebruiken; het is gebruikelijk om deze namen te geven die uit alleen maar hoofdletters bestaan (bovendien veranderen ze niet tijdens het uitvoeren van het programma).</p>
+<p>Een ander <strong>groot</strong> voordeel van deze globale constanten is dat je ze kan wijzigen, en omdat je ze door de hele code gebruikt, zal die enkele aanpassing overal doorwerken (als je elke individuele <code class="docutils literal notranslate"><span class="pre">25</span></code> moet aanpassen zou dat foutgevoelig zijn; je kan er één missen; en bovendien veel tijd kosten!)</p>
+<section id="de-klasses-program-en-world">
+<h3>De klasses <code class="docutils literal notranslate"><span class="pre">Program</span></code> en <code class="docutils literal notranslate"><span class="pre">World</span></code><a class="headerlink" href="#de-klasses-program-en-world" title="Link to this heading">#</a></h3>
+<p>Je programma heeft twee basiscomponenten nodig:</p>
+<ul class="simple">
+<li><p>De eerste is een Picobot-programma (of verzameling regels) en</p></li>
+<li><p>De tweede is een Picobot-wereld.</p></li>
+</ul>
+<p>Je moet voor elk van deze twee een klasse schrijven:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">Program</span></code> bevat een Picobot-programma.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">World</span></code> bevat een Picobot-wereld.</p></li>
+</ul>
+<p>Je hoeft geen aparte klasse voor Picobot zelf te hebben; die zal simpelweg een onderdeel worden van <code class="docutils literal notranslate"><span class="pre">World</span></code> van hierboven.</p>
+<p>Je mag ook andere klassen die je zelf ontworpen hebt toevoegen, zeker als je andere functionaliteiten toevoegt, maar deze twee zijn het fundament.</p>
+</section>
+</section>
+<section id="de-klasse-program">
+<h2>De klasse <code class="docutils literal notranslate"><span class="pre">Program</span></code><a class="headerlink" href="#de-klasse-program" title="Link to this heading">#</a></h2>
+<p>Je klasse <code class="docutils literal notranslate"><span class="pre">Program</span></code> begint als volgt:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rules</span> <span class="o">=</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<p>Wat is die <code class="docutils literal notranslate"><span class="pre">self.rules</span></code>? Het is een dictionary waar de details van het programma in worden opgeslagen! Een Picobot-regel ziet er immers uit als:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">toestand</span> <span class="n">omgeving</span> <span class="o">-&gt;</span> <span class="n">verplaatsing</span> <span class="n">nieuweToestand</span>
+</pre></div>
+</div>
+<p>Een regel kan er bijvoorbeeld zo uitzien:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span> <span class="n">xExx</span> <span class="o">-&gt;</span> <span class="n">N</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>Deze regel betekent: “Als ik in toestand 0 ben en de omgeving is <code class="docutils literal notranslate"><span class="pre">xExx</span></code> dan moet ik naar het noorden bewegen en naar toestand 1 gaan”.</p>
+<p>Dit kan (en doe dit vooral!) in de dictionary opgeslagen worden door de tuple <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">&quot;xExx&quot;)</span></code> als sleutel te gebruiken waarbij de bijbehorende waarde de tuple <code class="docutils literal notranslate"><span class="pre">(&quot;N&quot;,</span> <span class="pre">1)</span></code>.</p>
+<p>Een <code class="docutils literal notranslate"><span class="pre">Program</span></code>-object slaat deze regel op in de dictionary <code class="docutils literal notranslate"><span class="pre">self.rules</span></code> zodat de sleutel <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">&quot;xExx&quot;)</span></code> de bijbehorende waarde <code class="docutils literal notranslate"><span class="pre">(&quot;N&quot;,</span> <span class="pre">1)</span></code> krijgt. Of in code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">rules</span><span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;xExx&quot;</span><span class="p">)]</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;N&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Dit is natuurlijk maar een voorbeeld van een Picobot-regel; deze specifieke regel zit misschien niet eens in het programma.</p>
+<section id="lege-ruimte-om-mee-te-beginnen">
+<h3>Lege ruimte (om mee te beginnen)<a class="headerlink" href="#lege-ruimte-om-mee-te-beginnen" title="Link to this heading">#</a></h3>
+<p>Begin voor dit project met de lege Picobot-ruimte. (Programma’s evalueren om het doolhof op te lossen is moeilijker; die en andere Picobot-werelden zijn een optioneel bonusgedeelte van het project.)</p>
+</section>
+<section id="begin-met-maar-5-toestanden">
+<h3>Begin met maar 5 toestanden<a class="headerlink" href="#begin-met-maar-5-toestanden" title="Link to this heading">#</a></h3>
+<p>Het is slim om het aantal toestanden die je Picobot-programma’s (objecten van de klasse <code class="docutils literal notranslate"><span class="pre">Program</span></code>) gebruiken te beperken.</p>
+<p>De ervaring leert dat 5 toestanden een goede waarde is om mee te beginnen. Voor moeilijkere omgevingen kunnen meer toestanden handig zijn. Maar voor eenvoudigere omgevingen vergroten meer toestanden alleen maar de zoekruimte (de verzameling mogelijke Picobot-programma’s) en kost het alleen maar meer tijd om programma’s te evolueren zonder dat ze betere resultaten geven.</p>
+</section>
+<section id="geen-wildcards">
+<h3>Geen wildcards!<a class="headerlink" href="#geen-wildcards" title="Link to this heading">#</a></h3>
+<p>Gebruik in ieder geval om te beginnen het wildcardkarakter <code class="docutils literal notranslate"><span class="pre">*</span></code> niet in je Picobot-regels.</p>
+<p>De wildcard maakt zowel je Picobot-simulator als het evolueren van programma’s een stuk moeilijker, omdat hij veel regels vertegenwoordigd met een enkele regel. In plaats daar van moeten al je Picobot-programma’s volledig gespecificeerde omgevingen bevatten.</p>
+<p>Gelukkig is dit haalbaar, omdat er maar 9 mogelijke omgevingen zijn in de lege ruimte.</p>
+</section>
+<section id="mogelijke-omgevingen">
+<h3>Mogelijke <em>omgevingen</em><a class="headerlink" href="#mogelijke-omgevingen" title="Link to this heading">#</a></h3>
+<p>Picobot hoeft in de lege ruimte alleen deze 9 omgevingen te overwegen (waarom?):</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>xxxx
+Nxxx
+NExx
+NxWx
+xxxS
+xExS
+xxWS
+xExx
+xxWx
+</pre></div>
+</div>
+<p>Daarnaast beperken we Picobot-programma’s tot het gebruik van exact 5 toestanden: 0, 1, 2, 3 en 4. (In ieder geval om mee te beginnen.)</p>
+<p>Dat is wat de globale constante <code class="docutils literal notranslate"><span class="pre">NUM_STATES</span></code> aan het begin van het programma betekent.</p>
+<p>Een volledig gespecificeerd Picobot-programma heeft dus precies 5 * 9 = 45 regels, één voor elke combinatie van toestand en omgeving. Voor elke combinatie hebben we een sleutel <code class="docutils literal notranslate"><span class="pre">(toestand,</span> <span class="pre">omgeving)</span></code> en een bijbehorende waarde <code class="docutils literal notranslate"><span class="pre">(verplaatsing,</span> <span class="pre">nieuweToestand)</span></code>.</p>
+</section>
+<section id="de-constructor-init">
+<h3>De constructor <code class="docutils literal notranslate"><span class="pre">__init__</span></code><a class="headerlink" href="#de-constructor-init" title="Link to this heading">#</a></h3>
+<p>De klasse <code class="docutils literal notranslate"><span class="pre">Program</span></code> heeft natuurlijk een constructor <code class="docutils literal notranslate"><span class="pre">__init__(self)</span></code> nodig; deze kent gewoon de lege dictionary toe aan <code class="docutils literal notranslate"><span class="pre">self.rules</span></code>, zoals je hierboven kan zien.</p>
+</section>
+<section id="de-methode-repr">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">__repr__</span></code><a class="headerlink" href="#de-methode-repr" title="Link to this heading">#</a></h3>
+<p>Daarnaast heeft de klasse een methode <code class="docutils literal notranslate"><span class="pre">__repr__(self)</span></code> nodig die de stringrepresentatie van het programma <strong>teruggeeft</strong>; Python verwacht dat deze methode een string teruggeeft! Als je een nieuwe regel wilt beginnen in een string, kan je <code class="docutils literal notranslate"><span class="pre">\n</span></code> gebruiken.</p>
+<div class="notice admonition">
+<p class="admonition-title">Belangrijk!</p>
+<p>Vergeet niet dat <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> een string moet <strong>teruggeven</strong> in plaats van de string af te drukken!</p>
+</div>
+<p>Zorg er in het bijzonder voor dat je methode <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> een string maakt die alle regels in <code class="docutils literal notranslate"><span class="pre">self.rules</span></code> <strong>gesorteerd</strong> bevat, gesorteerd op de sleutels van de dictionary. Dit is handig omdat het betekent dat de programma’s makkelijker met elkaar te vergelijken zijn; ze staan immers dan altijd in dezelfde volgorde.</p>
+<p>Maar <em>hoe</em> kan je de regels gesorteerd afdrukken? Bedenk dat <code class="docutils literal notranslate"><span class="pre">self.rules</span></code> een dictionary is. Als je dus</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rules</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>gebruikt wordt <code class="docutils literal notranslate"><span class="pre">keys</span></code> een lijst van alle <em>sleutels</em> in de dictionary. <code class="docutils literal notranslate"><span class="pre">keys</span></code> is dus een lijst van de vorm
+<code class="docutils literal notranslate"><span class="pre">[(toestand,</span> <span class="pre">omgeving),</span> <span class="pre">(toestand,</span> <span class="pre">omgeving),</span> <span class="pre">...]</span></code>. Je kan dan de ingebouwde functie <code class="docutils literal notranslate"><span class="pre">sorted</span></code> als volgt gebruiken:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sorted_keys</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">keys</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Dit maakt een <strong>gesorteerde</strong> lijst met sleutels, met de naam <code class="docutils literal notranslate"><span class="pre">sorted_keys</span></code>. Top!</p>
+<div class="danger admonition">
+<p class="admonition-title">Net zo belangrijk!</p>
+<p>Je methode <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> moet het hele Picobot-programma zo teruggeven <em><strong>dat je deze direct kan kopiëren en plakken</strong></em> in de <a class="reference external" href="https://www.cs.hmc.edu/picobot/">Picobot-simulator</a>. Elke regel moet dus als volgt geformatteerd worden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="n">Nxxx</span> <span class="o">-&gt;</span> <span class="n">W</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<p>Hier vind je <a class="reference internal" href="#/support/picobot_example"><span class="xref myst">voorbeeld-uitvoer</span></a> die je als sjabloon kan gebruiken.</p>
+</div>
+</section>
+<section id="de-methode-randomize">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">randomize</span></code><a class="headerlink" href="#de-methode-randomize" title="Link to this heading">#</a></h3>
+<p>De klasse moet een methode <code class="docutils literal notranslate"><span class="pre">randomize(self)</span></code> bevatten, die een willekeurige volledige set regels genereert voor de dictionary <code class="docutils literal notranslate"><span class="pre">self.rules</span></code> van het programma. Onthoud dat de dictionary leeg begint. Deze methode maakt willekeurige regels, één voor elke combinatie van de <code class="docutils literal notranslate"><span class="pre">NUM_STATES</span></code> mogelijke toestanden; in het begin zijn dit er 5; en de 9 mogelijke omgevingen. Merk op dat er voor 5 toestanden en 9 omgevingen 45 willekeurig gegenereerde regels zijn.</p>
+<div class="tip admonition">
+<p class="admonition-title">Sleutels van <code class="docutils literal notranslate"><span class="pre">rules</span></code></p>
+<p>De sleutels (begintoestand, omgeving) van de dictionary zijn <em><strong>niet</strong></em> willekeurig! Je kan gewoon door alle mogelijke toestanden en alle mogelijke omgevingen lussen. Voor elke combinatie moet je <em>wel</em> een willekeurige nieuwe toestand en een willekeurige verplaatsing genereren. Een uitdaging is dat de verplaatsing <em>geldig moet zijn, dus <strong>niet</strong> tegen een muur aan</em>!</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Geldige verplaatsingen</p>
+<p>Om ervoor te zorgen dat je alleen een geldige verplaatsing kiest voor een gegeven omgeving <code class="docutils literal notranslate"><span class="pre">pattern</span></code> kan je een while-lus die op deze lijkt gebruiken:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">movedir</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">POSSIBLE_MOVES</span><span class="p">)</span>
+<span class="k">while</span> <span class="n">movedir</span> <span class="ow">in</span> <span class="n">pattern</span><span class="p">:</span>
+    <span class="n">movedir</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">POSSIBLE_MOVES</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Hierbij is het wel van belang dat je mogelijke verplaatsingen en je omgevingen allemaal hoofdletters gebruiken voor de mogelijke waarden, maar dat zou geen probleem moeten zijn. Deze <code class="docutils literal notranslate"><span class="pre">while</span></code>-lus blijft willekeurig een waarde kiezen voor <code class="docutils literal notranslate"><span class="pre">movedir</span></code> totdat de waarde <em>wel</em> geldig is!</p>
+</div>
+</section>
+<section id="de-methode-get-move">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">get_move</span></code><a class="headerlink" href="#de-methode-get-move" title="Link to this heading">#</a></h3>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">get_move(self,</span> <span class="pre">state,</span> <span class="pre">surroundings)</span></code> krijgt een integertoestand en een omgeving (bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">&quot;xExx&quot;</span></code>) mee en moet een tuple teruggeven die de volgende verplaatsing en de nieuwe toestand bevat. Deze methode kan gewoon de dictionary <code class="docutils literal notranslate"><span class="pre">self.rules</span></code> gebruiken om dit te bereiken.</p>
+</section>
+<section id="de-methode-mutate">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">mutate</span></code><a class="headerlink" href="#de-methode-mutate" title="Link to this heading">#</a></h3>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">mutate(self)</span></code> moet willekeurig één regel kiezen uit <code class="docutils literal notranslate"><span class="pre">self.rules</span></code> en moet de waarde (de verplaatsing en de toestand) aanpassen voor die regel. Als het programma bijvoorbeeld een regel bevat die de <code class="docutils literal notranslate"><span class="pre">(toestand,</span> <span class="pre">omgeving)</span> <span class="pre">(0,</span> <span class="pre">&quot;xExx&quot;)</span></code> heeft gekoppeld aan de <code class="docutils literal notranslate"><span class="pre">(verplaatsing,</span> <span class="pre">nieuwe_toestand)</span> <span class="pre">(&quot;N&quot;,</span> <span class="pre">1)</span></code>, zou deze vervangen kunnen worden met een nieuwe willekeurig gekozen <code class="docutils literal notranslate"><span class="pre">(verplaatsing,</span> <span class="pre">nieuwe_toestand)</span></code> zoals <code class="docutils literal notranslate"><span class="pre">(&quot;S&quot;,</span> <span class="pre">2)</span></code>. Merk op dat het niet geldig zou zijn om naar “E” te verplaatsen in dit geval, omdat het patroon laat zien dat er een muur naar het oosten is; je code moet willekeurig één van de geldige richtingen kiezen om naar te verplaatsen. (Een extra detail is dat de verandere regel niet hetzelfde moet zijn als de
+originele…)</p>
+</section>
+<section id="de-methode-crossover">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">crossover</span></code><a class="headerlink" href="#de-methode-crossover" title="Link to this heading">#</a></h3>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">crossover(self,</span> <span class="pre">other)</span></code> is een methode die een object <code class="docutils literal notranslate"><span class="pre">other</span></code> van het type <code class="docutils literal notranslate"><span class="pre">Program</span></code> meekrijgt. Het moet een nieuw “kind”, ook van het type <code class="docutils literal notranslate"><span class="pre">Program</span></code> teruggeven die <em>sommige</em> regels van <code class="docutils literal notranslate"><span class="pre">self</span></code> en de rest van <code class="docutils literal notranslate"><span class="pre">other</span></code> bevat. Merk op dat de programma’s <code class="docutils literal notranslate"><span class="pre">self</span></code> en <code class="docutils literal notranslate"><span class="pre">other</span></code> precies evenveel regels bevatten! Als we bijvoorbeed 5 toestanden hebben, zijn er omdat er maar 9 mogelijke omgevingen zijn precies 45 regels in het programma.</p>
+<div class="tip admonition">
+<p class="admonition-title">Effectieve crossovers</p>
+<p>De <strong>effectiefste</strong> manier om de crossover uit te voeren is om een willekeurige “crossover-toestand” te kiezen, van 1 tot en met 3. Stel dat toestand 2 gekozen is. Het kind krijgt dan alle regels van één ouder uit toestanden 0, 1 en 2 en krijgt alle regels van de <em>andere</em> ouder uit de overgebleven toestanden, 3 en 4.</p>
+<p>Het blijkt dat als je elke regel van een willekeurige ouder kiest, de “genetische code” te veel gehusseld wordt waardoor de kinderen de goede eigenschappen van de ouders niet bewaren.</p>
+</div>
+<div class="danger admonition">
+<p class="admonition-title">Veel voorkomende fout</p>
+<p>Een veel voorkomende fout is om het programma van één van de ouders te <em>wijzigen</em>, in plaats van een nieuw kind van het type <code class="docutils literal notranslate"><span class="pre">Program</span></code> terug te geven. Dit is niet alleen biologisch een slecht idee, maar zal hier ook niet werken! Waarom niet? Stel je voor dat paren het genoom van een ouder zou aanpassen. Als een ouder een hoge fitness heeft, heeft hij waarschijnlijk meerdere kinderen, die hopelijk veel van de goede eigenschappen van de ouder erven. Als het genoom van de ouder echter <em>verandert</em> de eerste keer dat hij paart, is het erg waarschijnlijk dat zijn fitness kleiner wordt! Zijn verdere kinderen hebben daardoor vermoedelijk een lagere fitness dan de eerste.</p>
+</div>
+</section>
+<section id="handige-hulpmethodes">
+<h3>Handige hulpmethodes<a class="headerlink" href="#handige-hulpmethodes" title="Link to this heading">#</a></h3>
+<p>Het kan bij het schrijven van het genetische algoritme handig zijn om lijsten met <code class="docutils literal notranslate"><span class="pre">(fitnesswaarde,</span> <span class="pre">programma)</span></code>-paren te sorteren. Je hebt bijvoorbeeld een lijst van lengte 200 met de vorm: <code class="docutils literal notranslate"><span class="pre">[(fitness0,</span> <span class="pre">programma0),</span> <span class="pre">(fitness1,</span> <span class="pre">programma1),</span> <span class="pre">...,</span> <span class="pre">(fitness199,</span> <span class="pre">programma199)]</span></code> die je willen sorteren op basis van de <em>floating-pointwaarde van de fitness</em>. De ingebouwde functie <code class="docutils literal notranslate"><span class="pre">sorted</span></code> werkt hier heel goed, <em>behalve als twee fitnesswaardes exact gelijk zijn</em>, wat zeker zal gebeuren! De functie <code class="docutils literal notranslate"><span class="pre">sorted</span></code> zal dan proberen de volgorde te bepalen door de programma’s te sorteren, bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">programma0</span></code> en <code class="docutils literal notranslate"><span class="pre">programma1</span></code>. Het probleem is dat het sorteren van programma’s niet gedefinieerd is.</p>
+<p>Om het sorteren van programma’s te definiëren kan je deze definities van <code class="docutils literal notranslate"><span class="pre">__gt__</span></code> en <code class="docutils literal notranslate"><span class="pre">__lt__</span></code>, de groter-dan- en kleiner-dan-operatoren, in je klasse <code class="docutils literal notranslate"><span class="pre">Program</span></code> plakken. Ze vergelijken niet echt twee programma’s; ze geven willekeurig <code class="docutils literal notranslate"><span class="pre">True</span></code> of <code class="docutils literal notranslate"><span class="pre">False</span></code> terug; maar dat is alles wat je nodig hebt om <code class="docutils literal notranslate"><span class="pre">sorted</span></code> te laten werken op lijsten zoals hierboven beschreven.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="fm">__gt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;Greater-than operator -- works randomly, but works!&quot;&quot;&quot;</span>
+  <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span>
+
+<span class="k">def</span><span class="w"> </span><span class="fm">__lt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;Less-than operator -- works randomly, but works!&quot;&quot;&quot;</span>
+  <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>(Als je het fijn vindt mag je ook “echte” vergelijkingsoperatoren definiëren voor <code class="docutils literal notranslate"><span class="pre">Program</span></code>, maar dat is niet nodig.)</p>
+</section>
+</section>
+<section id="de-klasse-world">
+<h2>De klasse <code class="docutils literal notranslate"><span class="pre">World</span></code><a class="headerlink" href="#de-klasse-world" title="Link to this heading">#</a></h2>
+<p>Het andere fundamentele onderdeel van je programma is een klasse <code class="docutils literal notranslate"><span class="pre">World</span></code> die een complete Picobot-wereld kan representeren (en ook de positie van Picobot en zijn acties in de wereld). Voor dit project hoeft je klasse <code class="docutils literal notranslate"><span class="pre">World</span></code> alleen een lege ruimte van 25 bij 25 te bevatten en te simuleren.</p>
+<p>Picobot, de “robot” die in één cel in de ruimte staat, hoeft geen eigen klasse te hebben: hij kan gewoon gesimuleerd worden vanuit de klasse <code class="docutils literal notranslate"><span class="pre">World</span></code>!</p>
+<p>De klasse <code class="docutils literal notranslate"><span class="pre">World</span></code> heeft een aantal gegevens nodig om de toestand van de wereld bij te houden en Picobot daarin te simuleren:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">self.prow</span></code>, de huidige rij waarin Picobot zich bevindt (dit zal veranderen).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">self.pcol</span></code>, de huidige kolom waarin Picobot zich bevindt (dit zal veranderen).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">self.state</span></code>, de huidige toestand van Picobot (dit zal veranderen).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">self.room</span></code>, een lijst-van-lijsten die de tweedimensionale ruimte bevat waarin Picobot zich bevindt (dit lijkt heel erg op <code class="docutils literal notranslate"><span class="pre">self.data</span></code> in <code class="docutils literal notranslate"><span class="pre">Board</span></code> uit Vier op een rij).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">self.prog</span></code>, een object van het type <code class="docutils literal notranslate"><span class="pre">Program</span></code> die de simulatie van Picobot bestuurt.</p></li>
+</ul>
+<p>Als je nog andere instantievariabelen wilt gebruiken kan dat natuurlijk.</p>
+<p>Dit is hoe de klasse begint:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">World</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">initial_row</span><span class="p">,</span> <span class="n">initial_col</span><span class="p">,</span> <span class="n">program</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">prow</span> <span class="o">=</span> <span class="n">initial_row</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pcol</span> <span class="o">=</span> <span class="n">initial_col</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">prog</span> <span class="o">=</span> <span class="n">program</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">room</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39; &#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">WIDTH</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">HEIGHT</span><span class="p">)]</span>
+</pre></div>
+</div>
+<div class="notice admonition">
+<p class="admonition-title"><code class="docutils literal notranslate"><span class="pre">self.room</span></code></p>
+<p>Die lege list is niet de uiteindelijke waarde voor <code class="docutils literal notranslate"><span class="pre">self.room</span></code>! Deze verandert nog!</p>
+</div>
+<p>Je kan terugkijken naar de implementatie van de klasse <code class="docutils literal notranslate"><span class="pre">Board</span></code> uit Vier op een rij als een voorbeeld van hoe je een ruimte in Picobot wilt opslaan; het beginpunt hierboven lijkt daar op! Merk op dat, net als <code class="docutils literal notranslate"><span class="pre">self.data</span></code> bij Vier op een rij, het een redelijke aanpak voor het maken van <code class="docutils literal notranslate"><span class="pre">self.room</span></code> is om een lijst van rijen te maken, die ieder een rij van kolommen is, die ieder een string van één karakter is.</p>
+<p>Je moet bovendien zorgen dat de <em><strong>buitenrand</strong></em> van <code class="docutils literal notranslate"><span class="pre">self.room</span></code> muren bevat, misschien met het karakter <code class="docutils literal notranslate"><span class="pre">'W'</span></code>, of
+wat je maar wilt. Als je je ASCII-weergave extra mooi wilt maken kan je <code class="docutils literal notranslate"><span class="pre">'-'</span></code> voor horizontale muren, <code class="docutils literal notranslate"><span class="pre">'|'</span></code> voor verticale muren en <code class="docutils literal notranslate"><span class="pre">+</span></code> voor kruisingen gebruiken!</p>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p>Als je een eenvoudigere aanpak kiest, waarin alle muren een <code class="docutils literal notranslate"><span class="pre">'+'</span></code> zijn, dan wordt alles veel makkelijker door <strong>de plustekens in de ruimte zelf te zetten</strong> met code als deze in je constructor <code class="docutils literal notranslate"><span class="pre">__init__</span></code>, <em>nadat</em> je de ruimte met lege spaties gemaakt hebt:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">WIDTH</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">room</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;+&#39;</span>
+</pre></div>
+</div>
+<p>Merk op dat dit alleen de bovenmuur maakt. Je moet ook de andere drie muren maken, en de <code class="docutils literal notranslate"><span class="pre">'P'</span></code> voor Picobot!</p>
+<p>Deze aanpak om de hele inhoud van de ruimte bij te houdn in <code class="docutils literal notranslate"><span class="pre">self.room</span></code> maakt het schrijven van de methode <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> veel makkelijker!</p>
+</div>
+<p>In essentie slaat een object van type <code class="docutils literal notranslate"><span class="pre">World</span></code> een kaart van de ruimte <code class="docutils literal notranslate"><span class="pre">self.room</span></code>, het programma <code class="docutils literal notranslate"><span class="pre">self.prog</span></code> waarmee de ruimte verkend zal worden, en de huidige toestand, rij en kolom van Picobot <code class="docutils literal notranslate"><span class="pre">self.state</span></code>, <code class="docutils literal notranslate"><span class="pre">self.prow</span></code> en <code class="docutils literal notranslate"><span class="pre">self.pcol</span></code> op. Andere informatie opslaan is ook goed.</p>
+<p>Daarnaast heeft de klasse <code class="docutils literal notranslate"><span class="pre">World</span></code> natuurlijk een aantal methodes nodig; je mag deze in beginsel zelf kiezen, maar een aantal methodes heb je sowieso nodig.</p>
+<section id="id1">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">__repr__</span></code><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">__repr__(self)</span></code> geeft een string terug die de ruimte toont met een spatie voor lege cellen die nog niet bezocht zijn, de muren met welk teken je ook gekozen hebt, de positie van Picobot in de ruimte met een hoofdletter “P” en het karakter <code class="docutils literal notranslate"><span class="pre">o</span></code> (de kleine letter o) voor lege maar eerder bezochte posities in de ruimte. Deze methode is cruciaal voor het debuggen van je Picobot-simulator.</p>
+</section>
+<section id="de-methode-get-current-surroundings">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">get_current_surroundings</span></code><a class="headerlink" href="#de-methode-get-current-surroundings" title="Link to this heading">#</a></h3>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">get_current_surroundings(self)</span></code> geeft een omgevingsstring zoals <code class="docutils literal notranslate"><span class="pre">&quot;xExx&quot;</span></code> terug voor de huidige positie van Picobot die in de variabelen <code class="docutils literal notranslate"><span class="pre">self.prow</span></code> en <code class="docutils literal notranslate"><span class="pre">self.pcol</span></code> staat.</p>
+</section>
+<section id="de-methode-step">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">step</span></code><a class="headerlink" href="#de-methode-step" title="Link to this heading">#</a></h3>
+<p>De methode <code class="docutils literal notranslate"><span class="pre">step(self)</span></code> verplaatst Picobot één stap. Hierbij werk je <code class="docutils literal notranslate"><span class="pre">self.room</span></code>, de toestand, de rij en de kolom van Picobot bij, allemaal aan de hand van het programma <code class="docutils literal notranslate"><span class="pre">self.prog</span></code>. Deze methode geeft niets terug! In plaats daarvan gebruikt ze de waardes <code class="docutils literal notranslate"><span class="pre">self.prow</span></code> en <code class="docutils literal notranslate"><span class="pre">self.pcol</span></code> van Picobot om de huidige omgeving te bepalen (aan de hand van <code class="docutils literal notranslate"><span class="pre">get_current_surroundings</span></code>). Ze gebruikt dan die omgeving en <code class="docutils literal notranslate"><span class="pre">self.state</span></code> om het programma, <code class="docutils literal notranslate"><span class="pre">self.prog</span></code> te vragen de verplaatsing en nieuwe toestand te bepalen. Dit kan gedaan worden via de methode <code class="docutils literal notranslate"><span class="pre">get_move</span></code> van het programma, zoals hierboven beschreven is in de klasse <code class="docutils literal notranslate"><span class="pre">Program</span></code></p>
+<p>Ten slotte moet de methode <code class="docutils literal notranslate"><span class="pre">step</span></code> de positie en toestand van Picobot bijwerken, en ook de ruimte bijwerken (door bijvoorbeeld een cel als leeg maar bezocht te markeren en een andere te markeren als de huidige positie van de <code class="docutils literal notranslate"><span class="pre">P</span></code> van Picobot).</p>
+</section>
+<section id="de-methode-run">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">run</span></code><a class="headerlink" href="#de-methode-run" title="Link to this heading">#</a></h3>
+<p>Maak ook een methode <code class="docutils literal notranslate"><span class="pre">run(self,</span> <span class="pre">steps)</span></code> die het aantal stappen (<code class="docutils literal notranslate"><span class="pre">steps</span></code>) meekrijgt die uitgevoerd moeten worden. De methode <code class="docutils literal notranslate"><span class="pre">run</span></code> moet simpelweg dat aantal stappen uitvoeren met behulp van de method <code class="docutils literal notranslate"><span class="pre">run</span></code>. Dit is een Picobot-simulator!</p>
+</section>
+<section id="de-methode-fraction-visited-cells">
+<h3>De methode <code class="docutils literal notranslate"><span class="pre">fraction_visited_cells</span></code><a class="headerlink" href="#de-methode-fraction-visited-cells" title="Link to this heading">#</a></h3>
+<p>Je hebt een methode <code class="docutils literal notranslate"><span class="pre">fraction_visited_cells(self)</span></code> nodig die een floating-pointgetal teruggeeft met het percentage (als kommagetal van <code class="docutils literal notranslate"><span class="pre">0.0</span></code> tot <code class="docutils literal notranslate"><span class="pre">1.0</span></code>) van de cellen in <code class="docutils literal notranslate"><span class="pre">self.room</span></code> die gemarkeerd zijn als <em>bezocht</em> (inclusief de huidige positie van Picobot). Dit is niet het aantal stappen, omdat cellen vaker bezocht kunnen worden. In plaats daarvan is dit het aantal unieke posities in de ruimte van Picobot waar hij tijdens het uitvoeren geweest is. Dit is de <strong>fitness-score</strong> voor een Picobot-programma!</p>
+</section>
+</section>
+<section id="wat-nu">
+<h2>Wat nu?<a class="headerlink" href="#wat-nu" title="Link to this heading">#</a></h2>
+<p>Je hebt nu al het grootste deel van het programma geschreven! De rest kan je schrijven in een aantal korte functies (buiten de klassen <code class="docutils literal notranslate"><span class="pre">Program</span></code> en <code class="docutils literal notranslate"><span class="pre">World</span></code>).</p>
+<section id="een-willekeurige-populatie">
+<h3>Een willekeurige populatie<a class="headerlink" href="#een-willekeurige-populatie" title="Link to this heading">#</a></h3>
+<p>Je hebt bijvoorbeeld een erg korte functie nodig die de grootte van een populatie meekrijgt en een populate (een Python-lijst) met dat aantal willekeurige Picobot-programma’s teruggeeft.</p>
+</section>
+<section id="een-fitness-evaluatiefunctie-evaluate-fitness">
+<h3>Een fitness-evaluatiefunctie <code class="docutils literal notranslate"><span class="pre">evaluate_fitness</span></code><a class="headerlink" href="#een-fitness-evaluatiefunctie-evaluate-fitness" title="Link to this heading">#</a></h3>
+<p>Een erg korte fitness-evaluatiefunctie die de fitness van een gegeven Picobot-programma bepaalt. Deze functie krijgt de naam <code class="docutils literal notranslate"><span class="pre">evaluate_fitness(program,</span> <span class="pre">trials,</span> <span class="pre">steps)</span></code>. De argumenten zijn een Picobot-programma <code class="docutils literal notranslate"><span class="pre">program</span></code>, een positieve integer <code class="docutils literal notranslate"><span class="pre">trials</span></code> die het aantal willekeurige beginposities die getest moeten worden, en een positieve integer <code class="docutils literal notranslate"><span class="pre">steps</span></code> die het aantal stappen dat de simulatie mag nemen aangeeft. De functie geeft de fitness (een floating-pointgetal tussen 0.0 en 1.0) terug die overeenkomt met het percentage van de cellen die dit Picobot-programma bezoekt, gemiddeld over het aantal <code class="docutils literal notranslate"><span class="pre">trials</span></code>. Je kan hiervoor <code class="docutils literal notranslate"><span class="pre">fraction_visited_cells</span></code> gebruiken.</p>
+<p>Stel je als voorbeeld voor dat <code class="docutils literal notranslate"><span class="pre">p</span></code> een Picobot-programma is en we <code class="docutils literal notranslate"><span class="pre">evaluate_fitness(p,</span> <span class="pre">42,</span> <span class="pre">1000)</span></code> uitvoeren. Deze functie kiest dan een willekeurige startpositie voor Picobot, voert het gegeven programma 1000 stappen lang uit, en berekent het percentage bezochte cellen. Daarna wist het de ruimte, kiest een nieuwe startpositie en doet het nog een keer; 42 keer in totaal.</p>
+<p>Na alle 42 tests neemt de code het gemiddelde van het percentage van bezochte cellen van alle pogingen.</p>
+<div class="notice admonition">
+<p class="admonition-title">Opmerking</p>
+<p>De ruimte bevat 529 cellen (23 bij 23 lege cellen), dus zelfs een programma met relatief hoge fitness heeft een stuk meer dan 529 stappen nodig heeft om een groot deel van de ruimte te vullen, omdat het onwaarschijnlijk is dat het programma erg efficiënt zal zijn. Dat is waarom je misschien 1000 <code class="docutils literal notranslate"><span class="pre">steps</span></code> gebruikt, of zelfs een nog hoger aantal, in plaats van 529.</p>
+</div>
+</section>
+<section id="de-hoofdfunctie-genetic-algorithm">
+<h3>De hoofdfunctie <code class="docutils literal notranslate"><span class="pre">genetic_algorithm</span></code><a class="headerlink" href="#de-hoofdfunctie-genetic-algorithm" title="Link to this heading">#</a></h3>
+<p>De <strong>hoofdfunctie</strong> moet naar het onderwerp, genetische algoritmes, vernoemd worden: <code class="docutils literal notranslate"><span class="pre">genetic_algorithm(pop_size,</span> <span class="pre">num_gens)</span></code>.</p>
+<p>Deze functie <code class="docutils literal notranslate"><span class="pre">genetic_algorithm(pop_size,</span> <span class="pre">num_gens)</span></code> moet <code class="docutils literal notranslate"><span class="pre">pop_size</span></code> willekeurige Picobot-programma’s genereren als de beginpopulatie (200 is hier een goede waarde voor). Daarna moet de fitness van al deze programma’s geëvalueerd worden, en moet je de programma’s met de hoogste fitness kiezen. Deze programma’s overleven en dienen bovendien als “ouders” voor de volgende generatie.</p>
+<div class="tip admonition">
+<p class="admonition-title">List-of-lists</p>
+<p>Je kan een lijst met paren met (fitness, programma) sorteren. Stel dat dit de lijst <code class="docutils literal notranslate"><span class="pre">programs</span> <span class="pre">=</span>&#160; <span class="pre">[(.4,</span> <span class="pre">prog1),</span> <span class="pre">(.2,</span> <span class="pre">prog2),</span> <span class="pre">(.3,</span> <span class="pre">prog3)]</span></code> is, dan kan je</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sorted_programs</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">programs</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>aanroepen en zal je zien dat <code class="docutils literal notranslate"><span class="pre">sorted_programs</span></code> gelijk wordt aan <code class="docutils literal notranslate"><span class="pre">[(.2,</span> <span class="pre">prog2),</span> <span class="pre">(.3,</span> <span class="pre">prog3),</span> <span class="pre">(.4,</span> <span class="pre">prog1)]</span></code></p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Het aantal overlevende programma’s</p>
+<p>10% van de populatie (bijvoorbeeld 20 van de 200) is een goede keuze voor het aantal overlevende programma’s, maar je mag hier natuurlijk mee experimenteren.</p>
+</div>
+<p>De overlevende programma’s moeten <strong>bewaard</strong> blijven als onderdeel van de volgende generatie; die moet vervolgens aangevuld worden met “kinderen”, nieuwe programma’s.</p>
+<div class="tip admonition">
+<p class="admonition-title">Kinderen maken</p>
+<p>Om deze kinderen te maken kan je bijvoorbeeld deze aanpak gebruiken:</p>
+<ul class="simple">
+<li><p>Twee willekeurige ouders kiezen uit de programma’s met hoge fitness.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">crossover</span></code> gebruiken om een programma te maken die een “kind” is deze twee ouders.</p></li>
+<li><p>Af en toe <code class="docutils literal notranslate"><span class="pre">mutate</span></code> gebruiken (de kans hierop moet je zelf inregelen…). Als er te veel mutatie is wordt fitness niet bewaard. Als er te weinig is zal het gebrek aan nieuwe genen de evolutie beperken.</p></li>
+</ul>
+<p>De details van het maken van kinderen bepalen hoe effectief je genetisch algoritme is; hier zul je moeten experimenteren!</p>
+</div>
+<p>Je hebt nu een nieuwe populatie, hopelijk met hogere fitness, dus kan je nu het hele proces herhalen. Het is het beste om elke generatie even groot te laten zijn (<code class="docutils literal notranslate"><span class="pre">pop_size</span></code>), bijvoorbeeld 200.</p>
+<p>Aan het eind moet je programma het beste programma uit de laatste generatie teruggeven (en als je wilt afdrukken). Je kan dan dat programma kopiëren en plakken in de Picobot-simulator om hem uit te voeren!</p>
+<div class="tip admonition">
+<p class="admonition-title">Programma’s bewaren</p>
+<p>Je kan het handig vinden om het beste programma van elke generatie op te slaan in een bestand (dat is minder onoverzichtelijk en makkelijker te bewaren). Hier is een stukje code om dit makkelijker te maken:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">save_to_file</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Saves the data from Program p</span>
+<span class="sd">        to a file named filename.&quot;&quot;&quot;</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>        <span class="c1"># print het Picobot-programma met __repr__</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="c1"># hier is hoe je dit gebruikt... vermoedelijk in de hoofdlus van genetic_algorithm...</span>
+<span class="n">save_to_file</span><span class="p">(</span><span class="s1">&#39;gen1.txt&#39;</span><span class="p">,</span> <span class="n">best_p_in_gen_1</span><span class="p">)</span>
+<span class="n">save_to_file</span><span class="p">(</span><span class="s1">&#39;gen2.txt&#39;</span><span class="p">,</span> <span class="n">best_p_in_gen_2</span><span class="p">)</span>  <span class="c1"># enzovoorts...</span>
+</pre></div>
+</div>
+</div>
+<p>Ongeacht of je je programma’s in bestanden opslaat of op het scherm afdrukt moet je in elke iteratie van de generatielus van <code class="docutils literal notranslate"><span class="pre">genetic_algorithm</span></code> zowel de <em><strong>gemiddelde</strong></em> als de <em><strong>maximale</strong></em> fitness van programma’s in die generatie van de simulatie afdrukken. Hier is een voorbeeld (waarin de beste programma’s niet getoond worden omdat ze naar aparte bestanden worden geschreven):</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">42</span><span class="p">]:</span> <span class="n">genetic_algorithm</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">Fitness</span> <span class="n">wordt</span> <span class="n">gemeten</span> <span class="n">met</span> <span class="mi">20</span> <span class="n">willekeurige</span> <span class="n">tests</span> <span class="n">en</span> <span class="n">met</span> <span class="mi">800</span> <span class="n">stappen</span> <span class="n">per</span> <span class="n">test</span><span class="p">:</span>
+
+<span class="n">Generatie</span>  <span class="mi">0</span>
+  <span class="n">Gemiddelde</span> <span class="n">fitness</span><span class="p">:</span>  <span class="mf">0.0575675</span>
+  <span class="n">Hoogste</span> <span class="n">fitness</span><span class="p">:</span>  <span class="mf">0.217125</span>
+
+<span class="n">Generatie</span>  <span class="mi">1</span>
+  <span class="n">Gemiddelde</span> <span class="n">fitness</span><span class="p">:</span>  <span class="mf">0.08800625</span>
+  <span class="n">Hoogste</span> <span class="n">fitness</span><span class="p">:</span>  <span class="mf">0.453125</span>
+
+<span class="n">Generatie</span>  <span class="mi">2</span>
+  <span class="n">Gemiddelde</span> <span class="n">fitness</span><span class="p">:</span>  <span class="mf">0.1041525</span>
+  <span class="n">Hoogste</span> <span class="n">fitness</span><span class="p">:</span>  <span class="mf">0.343625</span>
+
+<span class="n">Generatie</span>  <span class="mi">3</span>
+  <span class="n">Gemiddelde</span> <span class="n">fitness</span><span class="p">:</span>  <span class="mf">0.113141875</span>
+  <span class="n">Hoogste</span> <span class="n">fitness</span><span class="p">:</span>  <span class="mf">0.41525</span>
+
+<span class="o">...</span>
+
+<span class="n">Generatie</span> <span class="mi">14</span><span class="p">:</span>
+  <span class="n">Gemiddelde</span> <span class="n">fitness</span><span class="p">:</span>  <span class="mf">0.869975625</span>
+  <span class="n">Hoogste</span> <span class="n">fitness</span><span class="p">:</span>  <span class="mf">0.880875</span>
+
+<span class="n">Beste</span> <span class="n">Picobot</span><span class="o">-</span><span class="n">programma</span> <span class="p">(</span><span class="n">ook</span> <span class="ow">in</span> <span class="n">gen14</span><span class="o">.</span><span class="n">txt</span><span class="p">):</span>
+<span class="mi">3</span> <span class="n">xExx</span> <span class="o">-&gt;</span> <span class="n">W</span> <span class="mi">3</span>
+<span class="mi">1</span> <span class="n">xxWx</span> <span class="o">-&gt;</span> <span class="n">E</span> <span class="mi">2</span>
+<span class="mi">1</span> <span class="n">NExx</span> <span class="o">-&gt;</span> <span class="n">W</span> <span class="mi">4</span>
+<span class="mi">1</span> <span class="n">xxxS</span> <span class="o">-&gt;</span> <span class="n">N</span> <span class="mi">0</span>
+<span class="mi">0</span> <span class="n">xxWS</span> <span class="o">-&gt;</span> <span class="n">N</span> <span class="mi">1</span>
+<span class="mi">3</span> <span class="n">xxxx</span> <span class="o">-&gt;</span> <span class="n">S</span> <span class="mi">2</span>
+ <span class="o">...</span> <span class="n">rest</span> <span class="n">van</span> <span class="n">het</span> <span class="n">programma</span> <span class="n">overgeslagen</span> <span class="o">...</span>
+</pre></div>
+</div>
+<div class="notice admonition">
+<p class="admonition-title">Hulpfuncties</p>
+<p>Als je een aantal hulpfuncties wilt schrijven hiervoor mag dat natuurlijk!</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Keuzes voor de parameters</p>
+<p>Als je wilt kan je wat lezen over hoe je de programma’s met de hoogste fitness kan kiezen om die zich te laten voortplanten en de <a class="reference internal" href="#/support/picobot_parameters"><span class="xref myst">keuzes voor de parameters</span></a> die daar bij horen (maar het staat je natuurlijk vrij om er mee te experimenteren en andere te kiezen).</p>
+</div>
+</section>
+<section id="hoe-snel-en-hoe-goed-moet-mijn-programma-zijn">
+<h3>Hoe snel en hoe “goed” moet mijn programma zijn?<a class="headerlink" href="#hoe-snel-en-hoe-goed-moet-mijn-programma-zijn" title="Link to this heading">#</a></h3>
+<p>Met de parameterwaardes die hierboven genoemd zijn moet het uitvoeren van <code class="docutils literal notranslate"><span class="pre">genetic_algorithm(200,</span> <span class="pre">20)</span></code> ongeveer 60 secondes per generatie duren. Je beginpopulatie heeft vermoedelijk een gemiddelde fitness van ongeveer 1% tot 2%. De gemiddelde fitness moet elke generatie langzaam toenemen; er kunnen hier misschien een paar uitzonderingen op zijn. De maximale fitness neemt normaal gesproken toe, maar ook hier kan die af en toe afnemen.</p>
+<p>Na 20 generaties zou je een maximale fitness van 80% tot 90% moeten zien, soms zelfs nog hoger.</p>
+</section>
+</section>
+<section id="inleveren">
+<h2>Inleveren<a class="headerlink" href="#inleveren" title="Link to this heading">#</a></h2>
+<p>Je moet dit project in drie stappen inleveren: het begin in week 11, de milestone in week 12 en ten slotte de oplevering.</p>
+<section id="begin">
+<span id="picobot-start"></span><h3>Begin<a class="headerlink" href="#begin" title="Link to this heading">#</a></h3>
+<p>Het begin, <code class="docutils literal notranslate"><span class="pre">begin.py</span></code>, moet aan de volgende eisen voldoen:</p>
+<ul class="simple">
+<li><p>Het bevat een klasse <code class="docutils literal notranslate"><span class="pre">Program</span></code> met een werkende constructor en <code class="docutils literal notranslate"><span class="pre">__repr__</span></code></p></li>
+<li><p>Deze klasse bevat een werkende methode <code class="docutils literal notranslate"><span class="pre">randomize</span></code></p></li>
+</ul>
+<p>Lever dit bestand, samen met je uitleg hierover in <code class="docutils literal notranslate"><span class="pre">begin.txt</span></code>, in Gradescope in als onderdeel van het huiswerk van week 11.</p>
+</section>
+<section id="milestone">
+<span id="picobot-milestone"></span><h3>Milestone<a class="headerlink" href="#milestone" title="Link to this heading">#</a></h3>
+<p>De milestone, <code class="docutils literal notranslate"><span class="pre">milestone.py</span></code>, moet aan de volgende eisen voldoen:</p>
+<ul class="simple">
+<li><p>Het bevat een klasse <code class="docutils literal notranslate"><span class="pre">Program</span></code> met een werkende constructor en <code class="docutils literal notranslate"><span class="pre">__repr__</span></code></p></li>
+<li><p>Deze klasse bevat een werkende methode <code class="docutils literal notranslate"><span class="pre">randomize</span></code></p></li>
+<li><p>Het bevat een klasse <code class="docutils literal notranslate"><span class="pre">World</span></code> met een werkende constructor en <code class="docutils literal notranslate"><span class="pre">__repr__</span></code></p></li>
+<li><p>Deze klasse bevat twee werkende methodes <code class="docutils literal notranslate"><span class="pre">step</span></code> en <code class="docutils literal notranslate"><span class="pre">run</span></code></p></li>
+</ul>
+<p>Dit betekent dat je een Picobot-simulator gebouwd hebt; in ieder geval in ASCII. Het genetisch algoritme hoeft nog niet af te zijn voor de milestone, maar als het wel zo is, des te beter!</p>
+<p>Lever dit bestand, samen met je uitleg hierover in <code class="docutils literal notranslate"><span class="pre">milestone.txt</span></code>, in Gradescope in als onderdeel van het huiswerk van week 12.</p>
+</section>
+<section id="oplevering">
+<h3>Oplevering<a class="headerlink" href="#oplevering" title="Link to this heading">#</a></h3>
+<p>Voor de oplevering, het laatste inlevermoment voor dit project, moet je het genetisch algoritme dat Picobot-programma’s evolueert afmaken. We zullen je programma testen met de hierboven beschreven functie <code class="docutils literal notranslate"><span class="pre">genetic_algorithm</span></code>.</p>
+<p>Test je programma zorgvuldig. Het kan zijn dat je tot de conclusie komt dat je crossover-mechanisme (voor het paren van programma’s) niet erg effectief is. Dan moet je experimenteren met andere manieren om crossover te regelen.</p>
+<p>De oplevering, <code class="docutils literal notranslate"><span class="pre">oplevering.py</span></code>, moet een complete uitwerking van het project bevatten. Lever dit bestand, samen met je uitleg hierover in <code class="docutils literal notranslate"><span class="pre">oplevering.txt</span></code>, in Gradescope in. In de uitleg moet je in ieder geval het volgende beschrijven:</p>
+<ul class="simple">
+<li><p>Hoe je je code hebt getest en parameters hebt gekozen voor je genetisch algoritme, bijvoorbeeld,</p>
+<ul>
+<li><p>Welk percentage van elke populatie je hebt gekozen om mee te “paren”</p></li>
+<li><p>Hoe je paren en mutaties hebt geregeld</p></li>
+</ul>
+</li>
+<li><p>Hoe goed je best geëvolueerde Picobot-programma werkt en <em>hoe</em> het werkt.</p></li>
+<li><p>Voeg ook het Picobot-programma met de hoogste fitness toe, en de fitnesswaarde, zodat we het kunnen uitvoeren!</p></li>
+</ul>
+</section>
+</section>
+<section id="optionele-bonusuitbreidingen">
+<h2>Optionele bonusuitbreidingen<a class="headerlink" href="#optionele-bonusuitbreidingen" title="Link to this heading">#</a></h2>
+<p>Als je de genetische-algoritmeaspecten van het probleem verder wilt verkennen, kan je deze extra vragen nog onderzoeken:</p>
+<ul class="simple">
+<li><p>Hoe goed kan je een programma evolueren om het <em>doolhof</em> op te lossen (met een andere ruimte in <code class="docutils literal notranslate"><span class="pre">World</span></code>…)? Het doolhof is erg moeilijk om op te lossen op deze manier; je kan de ruitvormige ruimte gebruiken als tussenweg.</p></li>
+<li><p>Het is mogelijk om een programma met behoorlijke fitness te evolueren <em>helemaal zonder crossover</em>! Het idee is dat je het programma met de hoogste fitness bewaart en mutatie gebruikt om de volgende generatie te maken. Dit werkt, maar duurt normaal gesproken langer.</p></li>
+</ul>
+<p>Ontwerp en implementeer de noodzakelijke software-ondersteuning om te testen <em>hoeveel groter de populatie moet zijn</em> of <em>hoeveel meer generaties je nodig hebt</em> (of allebei) om een programma te evolueren met alleen mutatie dat een even hoge fitness heeft als een programma dat met mutatie en crossover geëvolueerd is.</p>
+</section>
+<section id="hulp-bij-het-debuggen">
+<h2>Hulp bij het debuggen…<a class="headerlink" href="#hulp-bij-het-debuggen" title="Link to this heading">#</a></h2>
+<p>Het kan erg lastig zijn om een Python-programma te debuggen die Picobot-programma’s evolueert…</p>
+<p>Hier is een stukje code dat hierbij kan helpen…</p>
+<p>Dit is een methode <code class="docutils literal notranslate"><span class="pre">working</span></code> voor de klasse <code class="docutils literal notranslate"><span class="pre">Program</span></code> die lijkt op <code class="docutils literal notranslate"><span class="pre">randomize</span></code>. Het verschil is dat
+<code class="docutils literal notranslate"><span class="pre">working</span></code> de regels instelt op een bekend, werkend programma dat de hele lege ruimte bedekt. Deze methode is
+handig om te zorgen dat <code class="docutils literal notranslate"><span class="pre">step</span></code>, <code class="docutils literal notranslate"><span class="pre">run</span></code> en <code class="docutils literal notranslate"><span class="pre">evaluate_fitness</span></code> allemaal werken…</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">working</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This method will set the current program (self) to a working</span>
+<span class="sd">    room-clearing program. This is super-useful to make sure that</span>
+<span class="sd">    methods such as step, run, and evaluate_fitness are working!</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">possible_surroundings</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;NExx&#39;</span><span class="p">,</span> <span class="s1">&#39;NxWx&#39;</span><span class="p">,</span> <span class="s1">&#39;Nxxx&#39;</span><span class="p">,</span> <span class="s1">&#39;xExS&#39;</span><span class="p">,</span>
+                             <span class="s1">&#39;xExx&#39;</span><span class="p">,</span> <span class="s1">&#39;xxWS&#39;</span><span class="p">,</span> <span class="s1">&#39;xxWx&#39;</span><span class="p">,</span> <span class="s1">&#39;xxxS&#39;</span><span class="p">,</span> <span class="s1">&#39;xxxx&#39;</span><span class="p">]</span>
+    <span class="n">possible_moves</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;W&#39;</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">]</span>
+    <span class="n">possible_states</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">st</span> <span class="ow">in</span> <span class="n">possible_states</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">surr</span> <span class="ow">in</span> <span class="n">possible_surroundings</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">st</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="p">(</span><span class="s1">&#39;N&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">surr</span><span class="p">):</span>
+                <span class="n">val</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">st</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="p">(</span><span class="s1">&#39;W&#39;</span> <span class="ow">in</span> <span class="n">surr</span><span class="p">):</span>
+                <span class="n">val</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">st</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">val</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;W&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">st</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="p">(</span><span class="s1">&#39;S&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">surr</span><span class="p">):</span>
+                <span class="n">val</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">st</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="p">(</span><span class="s1">&#39;W&#39;</span> <span class="ow">in</span> <span class="n">surr</span><span class="p">):</span>
+                <span class="n">val</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">st</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">val</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;W&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">st</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="p">(</span><span class="s1">&#39;E&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">surr</span><span class="p">):</span>
+                <span class="n">val</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">st</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="p">(</span><span class="s1">&#39;N&#39;</span> <span class="ow">in</span> <span class="n">surr</span><span class="p">):</span>
+                <span class="n">val</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">st</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="n">val</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">stepdir</span> <span class="o">=</span> <span class="n">surr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="k">while</span> <span class="n">stepdir</span> <span class="ow">in</span> <span class="n">surr</span><span class="p">:</span>
+                    <span class="n">stepdir</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">possible_moves</span><span class="p">)</span>
+                <span class="n">val</span> <span class="o">=</span> <span class="p">(</span><span class="n">stepdir</span><span class="p">,</span> <span class="n">st</span><span class="p">)</span>  <span class="c1"># blijft in dezelfde toestand</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">rules</span><span class="p">[(</span><span class="n">st</span><span class="p">,</span> <span class="n">surr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">val</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "hanze-hbo-ict/programmeren",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./projects"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../practicals/13_vier_op_rij_speler.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">vorige</p>
+        <p class="prev-next-title">Vier op een rij: AI speler</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="textid.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">volgende</p>
+        <p class="prev-next-title">Tekstidentificatie</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Inhoud
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#genetische-algoritmes">Genetische algoritmes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#picobot">Picobot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#het-project">Het project</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-klasses-program-en-world">De klasses <code class="docutils literal notranslate"><span class="pre">Program</span></code> en <code class="docutils literal notranslate"><span class="pre">World</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-klasse-program">De klasse <code class="docutils literal notranslate"><span class="pre">Program</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lege-ruimte-om-mee-te-beginnen">Lege ruimte (om mee te beginnen)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#begin-met-maar-5-toestanden">Begin met maar 5 toestanden</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geen-wildcards">Geen wildcards!</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mogelijke-omgevingen">Mogelijke <em>omgevingen</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-constructor-init">De constructor <code class="docutils literal notranslate"><span class="pre">__init__</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-methode-repr">De methode <code class="docutils literal notranslate"><span class="pre">__repr__</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-methode-randomize">De methode <code class="docutils literal notranslate"><span class="pre">randomize</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-methode-get-move">De methode <code class="docutils literal notranslate"><span class="pre">get_move</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-methode-mutate">De methode <code class="docutils literal notranslate"><span class="pre">mutate</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-methode-crossover">De methode <code class="docutils literal notranslate"><span class="pre">crossover</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#handige-hulpmethodes">Handige hulpmethodes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-klasse-world">De klasse <code class="docutils literal notranslate"><span class="pre">World</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">De methode <code class="docutils literal notranslate"><span class="pre">__repr__</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-methode-get-current-surroundings">De methode <code class="docutils literal notranslate"><span class="pre">get_current_surroundings</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-methode-step">De methode <code class="docutils literal notranslate"><span class="pre">step</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-methode-run">De methode <code class="docutils literal notranslate"><span class="pre">run</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-methode-fraction-visited-cells">De methode <code class="docutils literal notranslate"><span class="pre">fraction_visited_cells</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wat-nu">Wat nu?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#een-willekeurige-populatie">Een willekeurige populatie</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#een-fitness-evaluatiefunctie-evaluate-fitness">Een fitness-evaluatiefunctie <code class="docutils literal notranslate"><span class="pre">evaluate_fitness</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-hoofdfunctie-genetic-algorithm">De hoofdfunctie <code class="docutils literal notranslate"><span class="pre">genetic_algorithm</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hoe-snel-en-hoe-goed-moet-mijn-programma-zijn">Hoe snel en hoe “goed” moet mijn programma zijn?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inleveren">Inleveren</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#begin">Begin</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#milestone">Milestone</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#oplevering">Oplevering</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optionele-bonusuitbreidingen">Optionele bonusuitbreidingen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hulp-bij-het-debuggen">Hulp bij het debuggen…</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Door Harvey Mudd College / Hanze University of Applied Sciences
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"> </a>
+    Alle inhoud op deze site (tenzij anders vermeld) valt onder de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> licentie.
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
