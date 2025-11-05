@@ -1,6 +1,0 @@
-# Practicum
-
-## Opgaven
-
-```{tableofcontents}
-```
