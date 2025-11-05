@@ -19,8 +19,8 @@ Schrijf de functie bubblesort(l) dat een lijst 'l' accepteert, deze via het bubb
 
 **tips**
 
-* Schrijf een hulpfunctie dat de lijst 1 keer doorloopt, met andere woorden, vergelijk elk element met het volgende. Als ze in de verkeerde volgorde staan worden ze gewisseld en wordt er een stukje opgeschoven.
-* schrijf een hulpfunctie dat controleert of de lijst op volgorde staat, zo ja, stop de functie bubblesort, zo niet, start de bubblesort opnieuw om de lijst opnieuw te doorlopen.
+* Schrijf een hulpfunctie die de lijst 1 keer doorloopt, met andere woorden, vergelijk elk element met het volgende. Als ze in de verkeerde volgorde staan worden ze gewisseld en wordt er een stukje opgeschoven.
+* schrijf een hulpfunctie die controleert of de lijst op volgorde staat, zo ja, stop de functie bubblesort, zo niet, start de bubblesort opnieuw om de lijst opnieuw te doorlopen.
 
 ## Opdracht 2
 
