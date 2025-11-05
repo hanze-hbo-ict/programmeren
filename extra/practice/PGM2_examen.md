@@ -224,7 +224,7 @@ alfabet de letter "e" op "b" en de letter "l" op "e". Voor de woorden "test",
 Bedenk dat Python weet van de volgorde van letters, bijvoorbeeld:
 
 ```python
-assert "a" > "b" is True
+assert "a" < "b" is True
 ```
 
 ## Opgave 6 _Moeilijke woorden_ (20pt)
