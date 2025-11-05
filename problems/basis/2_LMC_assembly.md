@@ -150,4 +150,4 @@ De twee start waardes.
 De hoogte van de counter.
 De stap grootte van de counter. (standaard is dat 1)
 
-Het programma geeft als ouput de gewenste hoeveel getallen van de fibonaccie reeks, aangegeven via de counter.
+Het programma geeft als output de gewenste hoeveel getallen van de fibonaccie reeks, aangegeven via de counter.

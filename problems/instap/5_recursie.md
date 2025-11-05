@@ -12,7 +12,7 @@ Maak onderstaande opdrachten zonder het gebruik van een interpreter.
 ```python
 def main():
     """
-    Main functie. Roept de andere functies op om hun werk te doen.
+    Main functie. Roept de andere functies aan om hun werk te doen.
     """
     x = blaat("Test")
 
@@ -31,7 +31,7 @@ main()
 testing()
 ```
 
-a. Wat is de ouput van dit programma?
+a. Wat is de output van dit programma?
 
 b. Gebruik de [Python Tutor](http://www.pythontutor.com/visualize.html) om je antwoord van a te controleren.
 
@@ -41,7 +41,7 @@ b. Gebruik de [Python Tutor](http://www.pythontutor.com/visualize.html) om je an
 ```python
 def main():
     """
-    Main functie. Roept de andere functies op om hun werk te doen.
+    Main functie. Roept de andere functies aan om hun werk te doen.
     """
     x = blaat("Test", "e")
     print(x)
@@ -62,7 +62,7 @@ main()
 testing()
 ```
 
-a. Wat is de ouput van dit programma?
+a. Wat is de output van dit programma?
 
 b. Gebruik de [Python Tutor](http://www.pythontutor.com/visualize.html)  om je antwoord van a te controleren.
 
@@ -71,7 +71,7 @@ b. Gebruik de [Python Tutor](http://www.pythontutor.com/visualize.html)  om je a
 ```python
 def main():
     """
-    Main functie. Roept de andere functies op om hun werk te doen.
+    Main functie. Roept de andere functies aan om hun werk te doen.
     """
     print(blaat(10, 9))
     print(blaat(7, 6))
@@ -94,7 +94,7 @@ main()
 testing()
 ```
 
-a. Wat is de ouput van dit programma?
+a. Wat is de output van dit programma?
 
 b. Gebruik de [Python Tutor](http://www.pythontutor.com/visualize.html)  om je antwoord van a te controleren.
 
