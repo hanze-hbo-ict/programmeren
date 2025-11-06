@@ -20,14 +20,17 @@ def main():
     """
     Main functie. Roept de andere functies op om hun werk te doen.
     """
+
     speed(10)
     drawStar(3, 150)
     done() # tell turtle the drawing is done.
+
 
 def testing():
     """
     Test functie. Hier staan alle assertions om de functies te testen.
     """
+
 
 def drawStar(n, distance):
     forward(distance)

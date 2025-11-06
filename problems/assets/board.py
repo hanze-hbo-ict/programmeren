@@ -128,7 +128,8 @@ class Board:
     def play_game(self, px, po, show_scores=False):
         """
         Plays a game of Connect Four between players px and po.
-        If show_scores is True, the player's board evaluations are printed each turn.
+        If show_scores is True, the player's board evaluations are
+        printed each turn.
         """
         ox = "O"
         while True:
@@ -170,8 +171,15 @@ class Board:
 
 
 def in_a_row_n_east(ch, r_start, c_start, a, n):
-    """Checks whether ch has n in a row starting at r_start, c_start going east"""
-    if r_start < 0 or r_start >= len(a) or c_start < 0 or c_start >= len(a[0]) - n + 1:
+    """Checks whether ch has n in a row starting at r_start, c_start
+    going east"""
+
+    if (
+        r_start < 0
+        or r_start >= len(a)
+        or c_start < 0
+        or c_start >= len(a[0]) - n + 1
+    ):
         return False
     for i in range(0, n):
         if a[r_start][c_start + i] != ch:
@@ -180,8 +188,15 @@ def in_a_row_n_east(ch, r_start, c_start, a, n):
 
 
 def in_a_row_n_south(ch, r_start, c_start, a, n):
-    """Checks whether ch has n in a row starting at r_start, c_start going south"""
-    if r_start < 0 or r_start >= len(a) - n + 1 or c_start < 0 or c_start >= len(a[0]):
+    """Checks whether ch has n in a row starting at r_start, c_start
+    going south"""
+
+    if (
+        r_start < 0
+        or r_start >= len(a) - n + 1
+        or c_start < 0
+        or c_start >= len(a[0])
+    ):
         return False
     for i in range(0, n):
         if a[r_start + i][c_start] != ch:
@@ -190,7 +205,9 @@ def in_a_row_n_south(ch, r_start, c_start, a, n):
 
 
 def in_a_row_n_southeast(ch, r_start, c_start, a, n):
-    """Checks whether ch has n in a row starting at r_start, c_start going southeast"""
+    """Checks whether ch has n in a row starting at r_start, c_start
+    going southeast"""
+
     if (
         r_start < 0
         or r_start >= len(a) - n + 1
@@ -205,7 +222,9 @@ def in_a_row_n_southeast(ch, r_start, c_start, a, n):
 
 
 def in_a_row_n_northeast(ch, r_start, c_start, a, n):
-    """Checks whether ch has n in a row starting at r_start, c_start going northeast"""
+    """Checks whether ch has n in a row starting at r_start, c_start
+    going northeast"""
+
     if (
         r_start < n - 1
         or r_start >= len(a)
