@@ -20,7 +20,6 @@ def main():
     """
     Main functie. Roept de andere functies op om hun werk te doen.
     """
-
     speed(10)
     drawStar(3, 150)
     done() # tell turtle the drawing is done.

@@ -15,7 +15,6 @@ def count_words(filename):
 
     Example: wc('a.txt')
     """
-
     # Eerst moeten we het bestand "openen" (net als het openen van een boek
     # om dat te lezen). We vragen Python om de encoding "utf-8" te gebruiken,
     # omdat dat meer tekens dan ASCII accepteert.
@@ -48,7 +47,6 @@ def count_vocab(filename):
     Example: vc('a.txt') might print 3 and return
     {'I': 2, 'love': 3, 'spam': 42}
     """
-
     fhand = open(filename, encoding="utf-8")
     text = fhand.read()
     fhand.close()

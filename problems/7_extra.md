@@ -60,10 +60,10 @@ Zorg dat je de functie `create_one_row` **niet opnieuw** implementeert!
 ```python
 def create_board(width, height):
     """Returns a 2D array with "height" rows and "width" columns."""
-    a = []
+    array = []
     for row in range(height):
-        a += [...]        # gebruik de bovenstaande functie zodat ... één rij is!!
-    return a
+        array += [...]        # gebruik de bovenstaande functie zodat ... één rij is!!
+    return array
 ```
 
 Dat is alles wat je nodig hebt! Het idee is dus om het voorbeeld van `create_one_row` te gebruiken; maar in plaats van dat je elke keer een `0` toevoegt, voegt de functie elke keer een hele rije met `0`'en toe, namelijk het resultaat van `create_one_row`!
@@ -71,8 +71,8 @@ Dat is alles wat je nodig hebt! Het idee is dus om het voorbeeld van `create_one
 Probeer je functie `create_board` uit!
 
 ```ipython
-In [1]: a = create_board(5, 3)
-In [2]: a
+In [1]: array = create_board(5, 3)
+In [2]: array
 Out[2]: [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]
 ```
 
@@ -85,9 +85,9 @@ Je hebt ongetwijfeld gemerkt dat als Python een tweedimensionale lijst afdrukt, 
 **Let op: er mist één regel!** Misschien zie je het al...
 
 ```python
-def print_board(a):
+def print_board(array):
     """This function prints the 2D list-of-lists a."""
-    for row in a:               # row is de hele rij
+    for row in array:               # row is de hele rij
         for col in row:         # col is het individuele element
             print(col, end='')  # druk dat element af
 ```
@@ -95,8 +95,8 @@ def print_board(a):
 Probeer `print_board` vervolgens uit. Op dit moment, klopt het *niet helemaal*:
 
 ```
-In [1]: a = create_board(5, 3)
-In [2]: print_board(a)
+In [1]: array = create_board(5, 3)
+In [2]: print_board(array)
 000000000000000
 ```
 
@@ -110,8 +110,8 @@ De betreffende regel is `print()`; een leeg print-statement. *Waar moet deze reg
 Vergeet niet je verbeterde `print_board` te testen:
 
 ```ipython
-In [1]: a = create_board(5, 3)
-In [2]: print_board(a)
+In [1]: array = create_board(5, 3)
+In [2]: print_board(array)
 00000
 00000
 00000
@@ -129,26 +129,26 @@ def diagonalize(width, height):
        so that it has a diagonal strip of "on" cells.
        But do that only in the *interior* of the 2D array.
     """
-    a = create_board(width, height)
+    array = create_board(width, height)
 
     for row in range(1, height - 1):
         for col in range(1, width - 1):
             if row == col:
-                a[row][col] = 1
+                array[row][col] = 1
             else:
-                a[row][col] = 0
+                array[row][col] = 0
 
-    return a
+    return array
 ```
 
-Deze functie, `diagonalize`, krijgt de gewenste breedte en hoogte mee. Ze maakt dan een array `a` en stelt de elementen in `a` zo in dat alle elementen `0` zijn *behalve de **binnenkant** van de diagonaal* waar geldt dat `row == col`.
+Deze functie, `diagonalize`, krijgt de gewenste breedte en hoogte mee. Ze maakt dan een array `array` en stelt de elementen in `array` zo in dat alle elementen `0` zijn *behalve de **binnenkant** van de diagonaal* waar geldt dat `row == col`.
 
 Probeer de resultaten weer te geven met deze commandos:
 
 ```ipython
-In [1]: a = diagonalize(7, 6)
+In [1]: array = diagonalize(7, 6)
 
-In [2]: a
+In [2]: array
 Out[2]:
 [[0, 0, 0, 0, 0, 0, 0],
  [0, 1, 0, 0, 0, 0, 0],
@@ -157,7 +157,7 @@ Out[2]:
  [0, 0, 0, 0, 1, 0, 0],
  [0, 0, 0, 0, 0, 0, 0]]
 
-In [3]: print_board(a)
+In [3]: print_board(array)
 0000000
 0100000
 0010000
@@ -180,7 +180,7 @@ Je kan in dit voorbeeld ook zien dat `height` en `width` niet hetzelfde hoeven t
 
 ### De functie `inner_cells`
 
-Schrijf aan de hand van het voorbeeld van `diagonalize` een variatie met de naam `inner_cells(w, h)` die een tweedimensionale array teruggeeft met *alleen maar* levende cellen, met een waarde `1`, ***behalve*** een rand van één cel breedt die leeg blijft (met een waarde `0`) langs de buitenrand van de tweedimensionale array.
+Schrijf aan de hand van het voorbeeld van `diagonalize` een variatie met de naam `inner_cells(width, height)` die een tweedimensionale array teruggeeft met *alleen maar* levende cellen, met een waarde `1`, ***behalve*** een rand van één cel breedt die leeg blijft (met een waarde `0`) langs de buitenrand van de tweedimensionale array.
 
 Je kan bijvoorbeeld dit proberen:
 
@@ -199,14 +199,14 @@ Dit is maar een kleine aanpassing op `diagonalize`!
 
 ### De functie `random_cells`
 
-Maak nu een functie genaamd `random_cells(w, h)`, die een array met willekeurig toegekende `1`'en en `0`'en teruggeeft, *behalve* de buitenrand, die moet nog steeds helemaal leeg zijn (allemaal `0`'en), net zoals bij `inner_cells`.
+Maak nu een functie genaamd `random_cells(width, height)`, die een array met willekeurig toegekende `1`'en en `0`'en teruggeeft, *behalve* de buitenrand, die moet nog steeds helemaal leeg zijn (allemaal `0`'en), net zoals bij `inner_cells`.
 
 Hier is een voorbeelduitvoer:
 
 ```ipython
-In [1]: a = random_cells(10, 10)
+In [1]: arrat = random_cells(10, 10)
 
-In [2]: print_board(a)  # pijltje omhoog!
+In [2]: print_board(array)  # pijltje omhoog!
 0000000000
 0100000110
 0001111100
@@ -225,37 +225,37 @@ Je herinnert je misschien dat `random.choice([0, 1])` een `0` of een `1` terugge
 
 Elk van de functies tot nu toe die een array bijwerken maken een nieuwe verzameling cellen zonder rekening te houden met een oude "generatie" waar ze van af zouden kunnen hangen. Game of Life van Conway, daarentegen, volgt een verzameling cellen door de ene generatie te *veranderen* in de volgende.
 
-Om te zien waarom `copy(a)` een essentiële hulpfunctie is voor dit proces, kan je de volgende commando's proberen:
+Om te zien waarom `copy(array)` een essentiële hulpfunctie is voor dit proces, kan je de volgende commando's proberen:
 
 ```ipython
-In [1]: a = inner_cells(5, 5)  # maak een bord van 5 bij 5 met inner_cells
+In [1]: array = inner_cells(5, 5)  # maak een bord van 5 bij 5 met inner_cells
 
-In [2]: print_board(a)         # pijltje omhoog
+In [2]: print_board(array)         # pijltje omhoog
 00000
 01110
 01110
 01110
 00000
 
-In [3]: new_a = a              # maakt een oneigenlijke ("shallow" of "ondiepe") kopie
+In [3]: new_array = array              # maakt een oneigenlijke ("shallow" of "ondiepe") kopie
 
-In [4]: print_board(new_a)     # pijlte omhoog en aanpassen... ZIET er hetzelfde uit...!
+In [4]: print_board(new_array)     # pijlte omhoog en aanpassen... ZIET er hetzelfde uit...!
 00000
 01110
 01110
 01110
 00000
 
-In [5]: a[2][2] = 5            # zet het midden van de oude a op 5
+In [5]: array[2][2] = 5            # zet het midden van de oude a op 5
 
-In [6]: print_board(a)         # er is een 5 in het midden...
+In [6]: print_board(array)         # er is een 5 in het midden...
 00000
 01110
 01510
 01110
 00000
 
-In [7]: print_board(new_a)     # merk op dat new_a ook veranderd is; aargh!
+In [7]: print_board(new_array)     # merk op dat new_array ook veranderd is; aargh!
 00000
 01110
 01510
@@ -263,26 +263,26 @@ In [7]: print_board(new_a)     # merk op dat new_a ook veranderd is; aargh!
 00000
 ```
 
-Hier hebben we een ondiepe "kopie" (of *shallow copy*) van `a` gemaakt, en die shallow copy `new_a` genoemd.
+Hier hebben we een ondiepe "kopie" (of *shallow copy*) van `array` gemaakt, en die shallow copy `new_array` genoemd.
 
-`new_a` is echter alleen maar een kopie van de *verwijzing* naar de originele elementen van `a`!
+`new_array` is echter alleen maar een kopie van de *verwijzing* naar de originele elementen van `array`!
 
-Het gevolg hiervan is dat als de elementen van `a` veranderen, de elementen van `new_a` ook veranderen, ondanks dat we die nooit rechtstreeks hebben aangepast!
+Het gevolg hiervan is dat als de elementen van `array` veranderen, de elementen van `new_array` ook veranderen, ondanks dat we die nooit rechtstreeks hebben aangepast!
 
 Het voorbeeld hierboven laat ***shallow*** copying zien: het kopiëren van een *verwijzing* naar de elementen, niet het maken van een volledige *kopie* van alle elementen.
 
 Een volledige kopie van alle elementen maken heet **diep** kopiëren of *deep copying*.
 
-## `copy(a)`, een "deep" copier, schrijven...
+## `copy(array)`, een "deep" copier, schrijven...
 
 Begin met deze code:
 
 ```python
-def copy(a):
+def copy(array):
     """Returns a DEEP copy of the 2D array a."""
-    height = len(a)
-    width = len(a[0])
-    new_a = create_board(width, height)
+    height = len(array)
+    width = len(array[0])
+    new_array = create_board(width, height)
 
     for row in range(1, height - 1):
         for col in range(1, width - 1):
@@ -290,46 +290,46 @@ def copy(a):
             # naar het corresponderende element van new_a te kopiëren?
             ...
 
-    return new_a
+    return new_array
 ```
 
-en maak de implementatie af om een functie genaamd `copy(a)` te maken, die een **deep** copy van de tweedimensionale array `a` maakt.
+en maak de implementatie af om een functie genaamd `copy(array)` te maken, die een **deep** copy van de tweedimensionale array `array` maakt.
 
 Je hoeft je zoals gebruikelijk geen zorgen te maken over de buitenrand: die blijft altijd `0`. De lussen lopen alleen over de cellen die niet op de rand liggen.
 
-`copy` krijgt dus een tweedimensionale array `a` als invoer. En `copy` geeft een helemaal nieuwe tweedimensionale array terug waarvan de elementen hetzelfde patroon vormen als in de originele array.
+`copy` krijgt dus een tweedimensionale array `array` als invoer. En `copy` geeft een helemaal nieuwe tweedimensionale array terug waarvan de elementen hetzelfde patroon vormen als in de originele array.
 
 Je kan controleren dat je functie `copy` goed werkt met dit voorbeeld:
 
 ```ipython
-In [1]: a = inner_cells(5, 5)  # maak een bord van 5 bij 5 met inner_cells bord
+In [1]: array = inner_cells(5, 5)  # maak een bord van 5 bij 5 met inner_cells bord
 
-In [2]: print_board(a)         # pijltje omhoog
+In [2]: print_board(array)         # pijltje omhoog
 00000
 01110
 01110
 01110
 00000
 
-In [3]: new_a = copy(a)
+In [3]: new_array = copy(array)
 
-In [4]: print_board(new_a)
+In [4]: print_board(new_array)
 00000
 01110
 01110
 01110
 00000
 
-In [5]: a[2][2] = 5
+In [5]: array[2][2] = 5
 
-In [6]: print_board(a)     # deze is veranderd!
+In [6]: print_board(array)     # deze is veranderd!
 00000
 01110
 01510
 01110
 00000
 
-In [7]: print_board(new_a)  # NIET veranderd!
+In [7]: print_board(new_array)  # NIET veranderd!
 00000
 01110
 01110
@@ -337,7 +337,7 @@ In [7]: print_board(new_a)  # NIET veranderd!
 00000
 ```
 
-Deze keer wordt `new_a` ***niet*** veranderd ondanks dat `a` wel veranderd is: het is een echte, "diepe" kopie.
+Deze keer wordt `new_array` ***niet*** veranderd ondanks dat `array` wel veranderd is: het is een echte, "diepe" kopie.
 
 :::{admonition} de ingebouwde `deepcopy` van Python
 :class: notice
@@ -347,7 +347,7 @@ Je functie `copy` geeft een deep copy terug van haar invoer. Dit is handig genoe
 ```python
 from copy import deepcopy
 
-new_a = deepcopy(a)
+new_array = deepcopy(array)
 ```
 
 Nu heb je gezien hoe dit geïmplementeerd wordt: elementsgewijs! Voel je vrij om te kiezen welke
@@ -360,26 +360,26 @@ Kopiëren is een simpele manier om een nieuwe "generatie" array-elementen te mak
 
 Nu ga je een functie schrijven die een generatie cellen *verandert* in een nieuwe generatie.
 
-Om dit te doen, schrijf je een functie `inner_reverse(a)` die een oude tweedimensionale array `a` (een oude "generatie") meekrijgt en dan een nieuwe generatie `new_a` met dezelfde afmetingen maakt, met behulp van `create_board` of `copy`.
+Om dit te doen, schrijf je een functie `inner_reverse(array)` die een oude tweedimensionale array `array` (een oude "generatie") meekrijgt en dan een nieuwe generatie `new_array` met dezelfde afmetingen maakt, met behulp van `create_board` of `copy`.
 
-Bij `inner_reverse` moet de nieuwe generatie echter overal het "tegenovergesteld" van de cellen van `a` zijn, behalve aan de buitenrand.
+Bij `inner_reverse` moet de nieuwe generatie echter overal het "tegenovergesteld" van de cellen van `array` zijn, behalve aan de buitenrand.
 
 Net zoals bij `inner_cells` moet je ervoor zorgen dat de cellen in de buitenrand van de nieuwe generatie altijd allemaal `0` zijn.
 
-Voor cellen aan de binnenkant; dus niet op de rand; waar `a[row][col]` een `1` is, moet de waarde in de nieuwe array een `0` zijn en omgekeerd.
+Voor cellen aan de binnenkant; dus niet op de rand; waar `array[row][col]` een `1` is, moet de waarde in de nieuwe array een `0` zijn en omgekeerd.
 
 :::{admonition} Maak gebruik van `copy`
 :class: tip
 
-Je kan de functie `copy(a)` kopiëren en plakken, en dan een toepasselijke `if/else` toevoegen.
+Je kan de functie `copy(array)` kopiëren en plakken, en dan een toepasselijke `if/else` toevoegen.
 :::
 
 Probeer je functie `inner_reverse` door een voorbeeld te laten zien. Dit voorbeeld gebruikt `random_cells`:
 
 ```ipython
-In [1]: a = random_cells(8, 8)
+In [1]: array = random_cells(8, 8)
 
-In [2]: print_board(a)
+In [2]: print_board(array)
 00000000
 01011010
 00110010
@@ -389,9 +389,9 @@ In [2]: print_board(a)
 01111010
 00000000
 
-In [3]: a2 = inner_reverse(a)
+In [3]: array2 = inner_reverse(array)
 
-In [4]: print_board(a2)
+In [4]: print_board(array2)
 00000000
 00100100
 01001100
@@ -405,55 +405,55 @@ In [4]: print_board(a2)
 :::{admonition} Terzijde
 :class: notice
 
-Je zou kunnen beargumenteren dat het mogelijk is om gewoon het oude argument `a` aan te passen, in plaats van het aanmaken en teruggeven van een nieuwe array; dit is wel waar voor het omdraaien van een patroon met array-elementen, maar het is *niet* waar als we de regels voor Game of Life van Conway gaan implementeren. In dat geval zou het aanpassen van cellen zonder te kopiëren het aantal buren van andere cellen veranderen!
+Je zou kunnen beargumenteren dat het mogelijk is om gewoon het oude argument `array` aan te passen, in plaats van het aanmaken en teruggeven van een nieuwe array; dit is wel waar voor het omdraaien van een patroon met array-elementen, maar het is *niet* waar als we de regels voor Game of Life van Conway gaan implementeren. In dat geval zou het aanpassen van cellen zonder te kopiëren het aantal buren van andere cellen veranderen!
 :::
 
 ## Stap 4: Game of Life van John Conway
 
 In deze stap maak je twee functies:
 
-* `count_neighbours(row, col, a)` en
-* `next_life_generation(a)`
+* `count_neighbours(row, col, array)` en
+* `next_life_generation(array)`
 
 ### De functie `count_neighbours`
 
-Het is handig om een hulpfunctie `count_neighbours(row, col, a)` te schrijven, die *het aantal levende buren* van een cel in het bord `a` op een gegeven `row` en `col` teruggeeft.
+Het is handig om een hulpfunctie `count_neighbours(row, col, array)` te schrijven, die *het aantal levende buren* van een cel in het bord `array` op een gegeven `row` en `col` teruggeeft.
 
 Er zijn twee mogelijke oplossingsrichtingen voor `count_neighbours`:
 
-1. Schrijf *kleine* for-lussen die de negen cells gecentreerd **op `a[row][col]`** bekijken. Je zal dan het centrum toevoegen. Dit is geen probleem, mits je het weer van het resultaat *aftrekt* voordat je dat teruggeeft!
+1. Schrijf *kleine* for-lussen die de negen cells gecentreerd **op `array[row][col]`** bekijken. Je zal dan het centrum toevoegen. Dit is geen probleem, mits je het weer van het resultaat *aftrekt* voordat je dat teruggeeft!
 2. **OF** schrijf acht `if`-statements om alle acht mogelijke buren te bekijken... Merk hierbij op dat je ze ALLE acht wilt uitvoeren; gebruik dus `if` voor ze allemaal; gebruik geen `elif`: die is te "exclusief" 🙂
 
-Definieer of plak deze 5-bij-5-array `a` en controleer daarna de aantallen
+Definieer of plak deze 5-bij-5-array `array` en controleer daarna de aantallen
 buren van een paar cellen, om te testen of `count_neighbours` werkt:
 
 ```ipython
 In [1]: run wk9ex1
 
-In [2]: a = [[0, 0, 0, 0, 0],
+In [2]: array = [[0, 0, 0, 0, 0],
       [0, 0, 1, 0, 0],
       [0, 0, 1, 0, 0],
       [0, 0, 1, 0, 0],
       [0, 0, 0, 0, 0]]
 
-In [3]: print_board(a)
+In [3]: print_board(array)
 00000
 00100
 00100
 00100
 00000
 
-In [4]: count_neighbours(2, 1, a)
+In [4]: count_neighbours(2, 1, array)
 Out[4]: 3                # Klopt! Er zijn hier 3 levende buren
 
-In [5]: count_neighbours(2, 2, a)
+In [5]: count_neighbours(2, 2, array)
 Out[5]: 2                # Vergeet niet de cel zelf niet te tellen!
 
-In [6]: count_neighbours(0, 1, a)
+In [6]: count_neighbours(0, 1, array)
 Out[6]: 1
 ```
 
-### De functie `next_life_generation(a)`
+### De functie `next_life_generation(array)`
 
 Je schrijft ten slotte `next_life_generation`, die de regels van Game of Life implementeert.
 
@@ -466,7 +466,7 @@ Deze functie zal het meeste lijken op `inner_reverse`, dus die kan je als sjablo
 Hier is een beginsignature voor `next_life_generation`:
 
 ```python
-def next_life_generation(a):
+def next_life_generation(array):
     """Makes a copy of a and then advances one
        generation of Conway's Game of Life within
        the *inner cells* of that copy.
@@ -474,16 +474,16 @@ def next_life_generation(a):
     """
 ```
 
-Deze functie `next_life_generation` moet een tweedimensionale array `a` meekrijgen, die de "oude" generatie cellen voorstelt, en moet een *nieuwe generatie* cellen teruggeven, die ieder `0` of `1` zijn, gebaseerd op de regels voor *Game of Life* van John Conway:
+Deze functie `next_life_generation` moet een tweedimensionale array `array` meekrijgen, die de "oude" generatie cellen voorstelt, en moet een *nieuwe generatie* cellen teruggeven, die ieder `0` of `1` zijn, gebaseerd op de regels voor *Game of Life* van John Conway:
 
-1. Vergeet niet de nieuwe generatie `new_a` te maken met dezelfde afmetingen als de oude generatie `a`.
+1. Vergeet niet de nieuwe generatie `new_array` te maken met dezelfde afmetingen als de oude generatie `array`.
 2. Alle randcelen blijven nul (`0`), zoals gebruikelijk (maar zie de extra uitdagingen, hieronder).
 3. Een cel met minder dan twee levende buren sterft (vanwege eenzaamheid).
 4. Een cel met meer dan 3 levende buren sterft (vanwege overbevolking).
 5. Een cel die dood is en precies 3 levende buren heeft wordt weer levend.
 6. Alle andere cellen behouden hun huidige staat (en krijgen dus de waarde van de bijbehorende oude cel).
 
-Om dit iets concreter te maken noemen we de nieuwe generatie cellen die je teruggeeft `new_a` om deze te onderscheiden van `a`.
+Om dit iets concreter te maken noemen we de nieuwe generatie cellen die je teruggeeft `new_array` om deze te onderscheiden van `array`.
 
 :::{admonition} De buitenrand moet `0` blijven
 :class: notice
@@ -496,8 +496,8 @@ Zoals benoemd bij `inner_reverse` moet je alle cellen in de buitenrand altijd le
 
 Er zijn een paar zaken die je in je achterhoofd moet houden:
 
-* Tel alleen buren in de oude generatie `a`. Verander alleen de nieuwe generatie, `new_a`.
-* Onthoud dat je *elke* waarde in `new_a` (de nieuwe elementen) moet instellen, ook als deze hetzelfde is als in `a`.
+* Tel alleen buren in de oude generatie `array`. Verander alleen de nieuwe generatie, `new_array`.
+* Onthoud dat je *elke* waarde in `new_array` (de nieuwe elementen) moet instellen, ook als deze hetzelfde is als in `array`.
 * Een cel is **GEEN** buur van zichzelf.
 * Een vierkant van 2 bij 2 cellen is stabiel en zal niet veranderen (als dit geïsoleerd is); je kan dit op een klein raster proberen om het te testen.
 * Een lijn van 3 bij 1 cellen zal afwisselend horizontaal en verticaal zijn (als deze geisoleerd is); dit is ook een goed patroon om te testen.
@@ -506,27 +506,27 @@ Er zijn een paar zaken die je in je achterhoofd moet houden:
 Hier is een aantal tests die je kan proberen gebaseerd op de laatste suggestie in de bovenstaande lijst:
 
 ```ipython
-In [1]: a = [[0, 0, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 0, 0]]  # vertical bar
+In [1]: array = [[0, 0, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 0, 0]]  # vertical bar
 
-In [2]: print_board(a)
+In [2]: print_board(array)
 00000
 00100
 00100
 00100
 00000
 
-In [3]: a2 = next_life_generation(a)
+In [3]: array2 = next_life_generation(array)
 
-In [4]: print_board(a2)
+In [4]: print_board(array2)
 00000
 00000
 01110
 00000
 00000
 
-In [5]: a3 = next_life_generation(a2)
+In [5]: array3 = next_life_generation(array2)
 
-In [6]: print_board(a3)
+In [6]: print_board(array3)
 00000
 00100
 00100

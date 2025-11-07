@@ -10,7 +10,6 @@ def create_dictionary(text):
     that specific word in the provided text. This list of words can
     contain duplicates.
     """
-
     words_follow = {}
     previous_word = "$"
 
@@ -31,7 +30,6 @@ def generate_text(words_follow, number_of_words):
     """Generates a text of length 'number_of_words' based on the markov
     dictionary 'words_follow'.
     """
-
     previous_word = "$"
     text = ""
 
