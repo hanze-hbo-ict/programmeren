@@ -112,10 +112,10 @@ Nim is een spel voor twee spelers. Er liggen 16 lucifers op tafel. Om de beurt p
 
 ### Opdracht 2: Nim variant
 
-Leg 3 groepjes lucifers op tafel. Het aantal lucifers in elke groep maakt niet uit. Om de beurt pakt een speler 1, 2 of 3 lucifers **uit dezelfde groep**. Degene die de laatste lucifer van tafel pakt heeft gewonnen. Ook nu kan met de juiste strategie speler 2 altijd winnen.
+Leg 3 groepjes lucifers op tafel. Het aantal lucifers in elke groep maakt niet uit. Om de beurt pakt een speler 1, 2 of 3 lucifers, **uit één groep**. Degene die de laatste lucifer van tafel pakt heeft gewonnen. Ook nu kan met de juiste strategie een speler altijd de winst garanderen.
 
-- **Stap 1: Proberen.** Ga uitzoeken welke strategie speler 2 moet gebruiken om altijd te winnen. Begin met een eenvoudige opstelling, bijvoorbeeld (3,4,5) lucifers in de groepen.
-- **Stap 2: Plan.** Maak een beslissingsboom voor speler 2. Beschrijf de winnende strategie in algemene termen, zodat deze voor elke beginopstelling werkt.
+- **Stap 1: Proberen.** Ga uitzoeken welke strategie een speler moet gebruiken om altijd te winnen. Begin met een eenvoudige opstelling, bijvoorbeeld (3,4,5) lucifers in de groepen.
+- **Stap 2: Plan.** Maak een beslissingsboom voor speler 2. Beschrijf de winnende strategie in algemene termen, zodat deze voor elke beginopstelling werkt. Tip: Afhankelijk van de lucifers op tafel wil de winnende speler soms wel beginnen, en soms niet. Beschrijf voor jouw strategie zowel een manier om te besluiten of je wél of níet wil beginnen, en hoe je het bord leeg speelt.
 
 ### Opdracht 3: SOS
 
