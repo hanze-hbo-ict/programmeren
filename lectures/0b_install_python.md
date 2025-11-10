@@ -76,6 +76,33 @@ Download en installeer VSCode van [https://code.visualstudio.com/](https://code.
 
    ![Autosave](images/0/autosave.png)
 
+
+## VSCode configureren
+
+Het mooiste van een editor als VSCode is dat het extensies ondersteunt. Extensies zijn toevoegingen, soms geschreven door de VSCode ontwikkelaars, soms gebruikers zoals jij en ik. Deze toevoegingen zorgen ervoor dat jij nog makkelijker kan leren programmeren!
+
+### Extensies toevoegen
+
+Als je VSCode geopend hebt, kan je in de linker balk het extensies menu openen. Bovenin heeft deze een zoek balk. De volgende extensies kunnen we van harte aanraden:
+
+- **'Python' van Microsoft.** Deze bevat een paar losse tools, en maakt het vooral mogelijk voor andere python tools om te functioneren. Deze module komt met 'Pylance' en 'Python Debugger' (allebei ook van Microsoft).
+- **Een linter.** Je kan kiezen voor 'Pylance' die meegeleverd wordt met de 'Python' extensie, of een andere gebruiken. In het docenten team worden 'Flake8' (Microsoft) en 'Black' (Mikoz) gebruikt.
+
+### Extensies verwijderen
+
+Wanneer je VSCode installeert, worden automatisch een aantal extensies mee geïnstalleerd. Terwijl deze extensies heel handig kunnen zijn op de werkvloer, zitten ze het leerproces dwars. Daarom raden we je aan ze voor nu te deïnstalleren of uit te zetten:
+
+- **'GitHub Copilot' van GitHub.** We snappen heel goed dat je met die mooie AI tools bezig wil, maar raden dit echt af: Je kan niet goed beoordelen of AI met een goede suggestie komt als je nog niet weet hoe het moet. Daarom: Voor nu zelf doen en oefenen, en dan later in de opleiding daardoor nóg beter gebruik kunnen maken van AI ;-)
+
+### instellingen instellen
+
+Let op: VSCode staat toe om instellingen te hebben per user, en per workspace. Doe deze vooral **per user**, zodat ze het hele vak door behouden blijven!
+
+Deze instellingen zijn heel handig:
+- **Autosave.** Zie hierboven.
+- **chat: disable AI features**. Om deze instelling te vinden, zoek je op 'chat.disable'. Ook deze AI tools komen veel beter tot hun recht als je het eerst leert doen zonder!
+
+
 We gaan nu je vensters herschikken zodat je efficiënter kan gebruiken; als je aan het programmeren bent kan het *erg veel* helpen als je zorgt dat de goede vensters tegelijk zichtbaar zijn!
 
 ## Vensters herschikken! (dit is handig!)
