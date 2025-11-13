@@ -657,7 +657,6 @@ def example():
     input_pixels is a list of rows, each of which is a list of columns,
         each of which is a list [r,g,b]
     """
-
     input_pixels = get_rgb("./pngs/alien.png")
     input_pixels = input_pixels[::-1]  # de rijen zijn omgekeerd
 

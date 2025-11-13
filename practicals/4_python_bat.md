@@ -22,10 +22,10 @@ Het voordeel van de CodingBat is dat het jouw code onmiddellijk controleert.
 Hier is een compleet en correct antwoord voor `double_char`:
 
 ```python
-def double_char(str):
+def double_char(string):
     result = ''
-    for c in str:
-        result += c*2
+    for char in string:
+        result += char * 2
     return result
 ```
 
