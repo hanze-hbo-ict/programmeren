@@ -33,7 +33,7 @@ Nadat je de AI gebouwd hebt moet je deze op minstens één van deze manieren uit
 
 ## De klasse `Board`
 
-Je kan de klasse `Board` uit je uitwerking van [opgave 2 van week 10](../week10/wk10ex2.md). Als je deze niet hebt gemaakt kan je ook [onze uitwerking](https://github.com/hanze-hbo-ict/programmeren/raw/master/problems/assets/board.py) gebruiken.
+Je kan de klasse `Board` uit je uitwerking van [opgave 2 van week 10](../week10/wk10ex2.md). Als je deze niet hebt gemaakt kan je ook [onze uitwerking](assets/board.py) gebruiken.
 
 :::{admonition} Bordgrootte
 :class: notice
@@ -315,7 +315,7 @@ kunnen laten spelen, maar ook tegen een mens. Dat wil zeggen dat als `px` of `po
 :::{admonition} Zelf schrijven?
 :class: notice
 
-Je mag natuurlijk `play_game` zelf schrijven, als je dat een leuke uitdaging vindt. Anders kan je deze methode vinden in de [begincode voor de klasse `Board`](../assets/board.py).
+Je mag natuurlijk `play_game` zelf schrijven, als je dat een leuke uitdaging vindt. Anders kan je deze methode vinden in de [begincode voor de klasse `Board`](assets/board.py).
 :::
 
 Probeer de voorbeelden hieronder; deze zijn niet afhankelijk van een willekeurige waarde, dus je kan ze goed gebruiken om `play_game` en je AI voor Vier op een rij te testen!

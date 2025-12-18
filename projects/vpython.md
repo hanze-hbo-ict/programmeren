@@ -4,7 +4,7 @@
 
 ## Overzicht
 
-Bij dit project schrijf je een volledig interactief 3D-spel met VPython. 
+Bij dit project schrijf je een volledig interactief 3D-spel met VPython.
 
 Je spel moet een 3D-interactie zijn die gebruik maakt van "GlowScript" VPython (op het web), met:
 
@@ -22,7 +22,7 @@ Als eerste een introductie in VPython of Glowscript VPython heet, dat:
 * Web-gebaseerd is (alles wordt uitgevoerd op een publieke website), en
 * Grafisch is (je gaat 3D-modellen bouwen en hun gedrag programmeren)
 
-Het doel van deze intro is de module VPython te verkennen om een 3D-interactie te begrijpen, en uit te breiden. 
+Het doel van deze intro is de module VPython te verkennen om een 3D-interactie te begrijpen, en uit te breiden.
 
 ### Documentatie
 
@@ -615,7 +615,7 @@ Je mag natuurlijk extra functionaliteiten toevoegen als je dat wilt!
 Hier zijn een paar tips die handig kunnen zijn:
 
 * Vergeet niet dat de [naslagpagina](http://vpython.org/contents/docs/index.html) van VPython de volledige documentatie bevat.
-* [Dit bestand `vpython_events.py` is een voorbeeld van een manier om beweging, toetsaanslagen en muisevents te verwerken.](../assets/vpython_events.py)
+* [Dit bestand `vpython_events.py` is een voorbeeld van een manier om beweging, toetsaanslagen en muisevents te verwerken.](assets/vpython_events.py)
 
   :::{admonition} Opmerking
   :class: warning

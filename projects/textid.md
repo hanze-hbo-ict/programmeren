@@ -239,7 +239,7 @@ stammen als uitvoer geeft. Je mag hierbij:
 
 * Je eigen schrijven (het moet ten minste tien stemmingregels bevatten. *Je hoeft niet alle mogelijke regels te implementeren*; dat zou ook niet kunnen, daar zijn te veel uitzonderingen voor!)
 * Online een stemming-bibliotheek zoeken en die in je project gebruiken
-* Of [deze stemmer](../assets/snowball.py) gebaseerd op de Nederlandse stemmer in *Snowball*, een bibliotheek van stemmers. Deze is ook niet perfect, maar een redelijke kandidaat om te gebruiken.
+* Of [deze stemmer](assets/snowball.py) gebaseerd op de Nederlandse stemmer in *Snowball*, een bibliotheek van stemmers. Deze is ook niet perfect, maar een redelijke kandidaat om te gebruiken.
 * Als je deze wilt gebruiken, voeg dan deze code toe bovenaan je bestand. Je kan dan `create_stem(w)` aanroepen, waar `w` het woord is waarvan je de stam wilt hebben!
 
 ### Je eigen teksteigenschap
