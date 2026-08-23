@@ -1,5 +1,0 @@
-# Uitwerkingen
-
-
-```{tableofcontents}
-```

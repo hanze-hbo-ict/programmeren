@@ -1,0 +1,59 @@
+[project]
+name = "programmeren"
+version = "0.1.0"
+description = "Hanzehogeschool Programmeren 1 & 2 cursusmateriaal"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "matplotlib>=3.10.0",
+    "myst-nb>=1.4.0",
+    "myst-parser>=5.0.0",
+    "numpy>=2.3.0",
+    "sphinx>=9.1.0",
+    "sphinx-design>=0.7.0",
+    "sphinx-exercise>=1.2.1",
+    "sphinx-external-toc>=1.1.0",
+    "sphinx-immaterial>=0.13.9",
+    "sphinxcontrib-bibtex>=2.6.5",
+    "sphinxcontrib-mermaid>=1.0.0",
+]
+
+[tool.uv]
+upgrade = true
+python-preference = "only-system"
+
+[dependency-groups]
+dev = [
+    "sphinx-autobuild>=2025.8.25",
+    "pre-commit>=4.5.1",
+    "pymarkdownlnt>=0.9.35",
+    "ruff>=0.9.0",
+    "nbstripout>=0.8.1",
+]
+
+[tool.pymarkdown]
+extensions.front-matter.enabled = true
+# Nodig voor de `<!--pyml disable-num-lines ...-->`-pragma's die we gebruiken
+# rond MyST-labels (`(label)=`) vlak boven een heading: die twee regels mogen
+# geen witregel ertussen hebben (anders koppelt het label niet), maar MD022
+# ziet dat als "geen witregel boven de heading".
+extensions.linter-pragmas.enabled = true
+# MD011 geeft valse positieven op inline code-spans die toevallig op
+# "reversed link syntax" lijken, bijvoorbeeld `text.split(".")[:-1]`.
+plugins.md011.enabled = false
+plugins.md001.enabled = false
+plugins.md013.enabled = false
+plugins.md024.siblings_only = true
+# MyST-pagina's zetten vaak zowel een front-matter `title` (voor TOC/metadata)
+# als een eigen `#`-heading in de body; dat is geen dubbele titel. Er is geen
+# manier om deze koppeling helemaal uit te zetten (lege string is ongeldig),
+# dus wijs 'm naar een front-matter key die we nooit gebruiken.
+plugins.md025.front_matter_title = "unused-md025-key"
+plugins.md033.allowed_elements = "!--,![CDATA[,!DOCTYPE,br,sub,sup,code,iframe,a"
+plugins.md036.enabled = false
+plugins.md040.enabled = true
+plugins.md041.enabled = false
+# MD046 uitgeschakeld: pymarkdownlnt herkent MyST colon-fence directives
+# ({admonition}, {tab-set}, {exercise}, ...) niet, waardoor ingesprongen
+# directive-content als indented code block wordt gezien.
+plugins.md046.enabled = false

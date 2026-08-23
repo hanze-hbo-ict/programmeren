@@ -1,0 +1,33 @@
+repos:
+  - repo: local
+    hooks:
+      - id: no-commit-to-master
+        name: Blokkeer commits op master
+        language: system
+        entry: .claude/no-commit-to-master.sh
+        pass_filenames: false
+        always_run: true
+
+      - id: check-code-blocks
+        name: Python syntaxcontrole en opmaak in markdown en notebooks
+        language: system
+        entry: python3 .claude/check-code-blocks.py
+        types_or: [markdown, jupyter]
+        files: ^source/.*\.(md|ipynb)$
+        pass_filenames: true
+
+      - id: pymarkdown
+        name: Markdown linting (pymarkdown)
+        language: system
+        entry: uv run pymarkdown --config pyproject.toml scan
+        types: [markdown]
+        files: ^source/.*\.md$
+        pass_filenames: true
+
+      - id: nbstripout
+        name: Strip notebook outputs
+        language: system
+        entry: uv run nbstripout
+        types: [jupyter]
+        files: ^source/.*\.ipynb$
+        pass_filenames: true
