@@ -25,7 +25,7 @@ from random import *
 
 def main():
     """
-    Main functie. Roept de andere functies op om hun werk te doen.
+    Main functie. Roept de andere functies aan om hun werk te doen.
     """
     snowflake(300, 2)
     done() # tell turtle the drawing is done.

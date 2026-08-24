@@ -169,7 +169,7 @@ Out[3]: 'wauw! wauw! '
 
 De eerste regel van een functie wordt de *signature* genoemd. De signature van een functie bevat het keyword `def` (een afkorting van "define"), de naam van de functie, en een lijst met argumenten voor de functie tussen haakjes. Let op de *dubbele punt* waar de signature mee wordt afgesloten.
 
-Direct onder de signature staat een string tussen drie dubbele aanhalingstekens `"""`, dit heet een *docstring* (een afkorting van "documentation string"). We verwachten dat je in al je functies een docstring schrijft, zelfs in eenvoudige functies zoals `dbl` zodat dit een gewoonte voor jou wordt.
+Direct onder de signature staat een string tussen drie dubbele aanhalingstekens `"""`, dit heet een *docstring* (een afkorting van "documentation string"). We verwachten dat je *in al je functies* een docstring schrijft, zelfs in eenvoudige functies zoals `dbl` zodat dit een gewoonte voor jou wordt.
 
 Een docstring moet de argumenten van de functie en het resultaat (de returnwaarde) beschrijven. Zoals je hierboven ziet kan je ook andere belangrijke informatie toevoegen. Docstring zijn de manier waarop *jouw* functies onderdeel worden van het ingebouwde hulpsysteem van Python.
 
@@ -184,7 +184,7 @@ Je zal zien dat Python de docstring als hulp teruggeeft! Het hulpsysteem van de 
 :::{admonition} Inspringen (indentatie)
 :class: warning
 
-De eerste driedubbele aanhalingstekens *moeten* ingesprongen worden direct onder de signatuur. De afsluitende driedubbele aanhalingstekens van de docstring springen op hetzelfde niveau en an alle volgende code binnen de functie (de functie "body").
+De eerste driedubbele aanhalingstekens *moeten* ingesprongen worden direct onder de signatuur. De afsluitende driedubbele aanhalingstekens van de docstring springen op hetzelfde niveau in als alle volgende code binnen de functie (de functie "body").
 :::
 
 ## Voorbeeldopgave

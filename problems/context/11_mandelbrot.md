@@ -18,7 +18,7 @@ Om wat inzicht in lussen te krijgen, schrijf je eerst twee korte functies in `wk
 
 Schrijf een functie genaamd `mult(c, n)` die het product `c` keer `n` teruggeeft, maar zonder gebruik te maken van vermenigvuldigen. In plaats daarvan moet de functie een waarde (genaamd `result`) eerst op 0 zetten en daarna herhaaldelijk de waarde van `c` *optellen* bij `result`. Ze moet een `for`-lus gebruiken om te zorgen dat `c` het goede aantal keer wordt opgeteld. Nadat de lus klaar is, moet de functie het resultaat teruggeven.
 
-De waarde van `n` is een positieve integer. Om je te helpen is hier een deel van de functie dat de waarde van `result` op 0 zet en de lus bevat:
+De waarde van `n` is een positieve integer. Om je te helpen is hier een deel van de functie die de waarde van `result` op 0 zet en de lus bevat:
 
 ```python
 def mult(c, n):

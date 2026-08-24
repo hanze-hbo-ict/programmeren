@@ -146,7 +146,7 @@ Na 20 generaties zou je een maximale fitness van 80% tot 90% moeten zien, soms z
 
 * Het importeert `program.py` en `world.py`. 
 * De file bevat twee werkende functies `genetic_algorithm`,  `evaluate_fitness` en `save_to_file`
-* De main functie dat alles aanstuurt. 
+* De main functie die alles aanstuurt. 
 
 Test je programma zorgvuldig. Het kan zijn dat je tot de conclusie komt dat je crossover-mechanisme (voor het paren van programma's) niet erg effectief is. Dan moet je experimenteren met andere manieren om crossover te regelen.
 
