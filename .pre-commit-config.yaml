@@ -16,6 +16,14 @@ repos:
         files: ^source/.*\.(md|ipynb)$
         pass_filenames: true
 
+      - id: check-notebook-tags
+        name: Celtags in notebooks (opgaven leeg, uitwerkingen draaien)
+        language: system
+        entry: python3 .claude/check-notebook-tags.py
+        types: [jupyter]
+        files: ^source/.*\.ipynb$
+        pass_filenames: true
+
       - id: pymarkdown
         name: Markdown linting (pymarkdown)
         language: system

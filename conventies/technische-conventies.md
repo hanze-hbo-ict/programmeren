@@ -55,6 +55,7 @@ Vier hooks draaien via pre-commit. Ze werken alleen op `source/`.
 |---|---|---|
 | `no-commit-to-master` | altijd | Blokkeert directe commits op `master`; werk in een branch |
 | `check-code-blocks` | `.md`, `.ipynb` | Python in ` ```python `-fences: syntax en ruff-opmaak |
+| `check-notebook-tags` | `.ipynb` | Celtags: opgaven leeg, uitwerkingen draaien |
 | `pymarkdown` | `.md` | Markdown-linting volgens de configuratie in `pyproject.toml` |
 | `nbstripout` | `.ipynb` | Verwijdert celuitvoer, zodat die niet in git belandt |
 
@@ -335,10 +336,20 @@ De middelste groep is de reden dat deze tag geen implementatiedetail is: hij
 bepaalt straks welke cellen voor de student uitvoerbaar worden. Een cel die de
 tag ten onrechte mist, staat er dan dood bij.
 
-> **Bekende afwijking.** In `problems/8_basis.ipynb` staan 10 skeletcellen
-> (`return [...]`) zonder de tag, terwijl 76 vergelijkbare cellen elders hem wel
-> dragen. Ze veroorzaken nu geen zichtbare uitvoer, dus het valt niet op, maar
-> ze zouden bij de Pyodide-stap buiten de boot vallen.
+Omdat deze fout onzichtbaar is in de gerenderde pagina, bewaakt een hook hem:
+`check-notebook-tags` controleert dat een codecel in `problems/` of
+`practicals/` de tag draagt en dat een codecel in `solutions/` hem juist niet
+draagt. Twee uitzonderingen kent hij:
+
+- Een cel met `raises-exception` mag draaien; de fout hoort bij de les.
+- Een uitwerking die `input()` vraagt of niet uit zichzelf eindigt, kan niet
+  onbewaakt draaien en mag overgeslagen worden.
+
+> **Bekende afwijking.** 15 cellen voldoen nog niet, verdeeld over
+> `problems/8_basis.ipynb` (10 skeletcellen met `return [...]`),
+> `problems/2_opstap.ipynb` (4) en `practicals/2_sequenties_en_data.ipynb` (1).
+> Omdat de hook alleen kijkt naar bestanden die je aanraakt, blokkeert dit niets
+> tot het betreffende document aan de beurt is.
 
 ## Markdown-linting
 
