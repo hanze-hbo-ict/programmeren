@@ -108,6 +108,79 @@ Weekpagina's tonen hun onderliggende pagina's met:
 ```
 ````
 
+## Markdown of notebook
+
+Het materiaal gebruikt beide formaten. Dat is geen toeval maar een keuze met een
+geschiedenis, en die geschiedenis bepaalt de regel.
+
+**Markdown is de standaard.** Kies een notebook alleen wanneer minstens één van
+deze drie gronden geldt:
+
+1. **Het document wordt als sheets gepresenteerd.** De colleges zijn opgezet om
+   in de les als sheets te draaien, met cellen van het type `notes` als
+   spreeknotities. Die notities renderen op de site als gewone tekst, waardoor
+   hetzelfde bestand in de les een presentatie is en daarna een doorlopend
+   verhaal dat de student zelfstandig kan lezen.
+2. **De code moet uitvoeren.** Codecellen draaien bij de build, wat het
+   materiaal automatisch controleert, en ze zijn de basis voor code die de
+   student in de browser kan uitvoeren.
+3. **De student werkt in het document.** Een opgave met invulcellen is een
+   werkboek; dat werkt alleen als notebook.
+
+Geldt geen van drieën, dan is het een markdown-bestand.
+
+### Waarom dit zo gegroeid is
+
+In de oorspronkelijke opzet waren de colleges notebooks omdat ze als sheets
+werden gebruikt, en waren de opgaven markdown omdat de student ze in VSCode
+uitwerkte. Toen bleek dat de tooling voor beginners een drempel is, en toen de
+opgaven werden opgesplitst in opstap, basis en extra, is geprobeerd de code in
+de browser uitvoerbaar te maken. Dat liep via MyBinder, werd door veel studenten
+gebruikt, maar was niet betrouwbaar. Het uitgangspunt blijft overeind; de
+uitvoering wordt bij de herziening vervangen door Pyodide.
+
+> **Op dit moment ontbreekt die mogelijkheid.** De oude Jupyter Book-opzet had
+> `launch_buttons` met thebe en een Colab-koppeling. Sphinx-immaterial heeft die
+> niet, en bij de migratie zijn ze niet vervangen. Een notebook levert de student
+> op de site nu dus niets extra's op boven markdown. Drie bestanden verwijzen de
+> student nog wel naar Colab. Dit staat open tot de Pyodide-oplossing er is.
+
+### Wat het formaat betekent voor de controle
+
+De twee formaten worden verschillend gecontroleerd, en geen van beide volledig:
+
+| Waar de code staat | Syntax en opmaak | Wordt uitgevoerd |
+|---|---|---|
+| ` ```python ` in een markdown-bestand | ja, door de hook | nee |
+| ` ```python ` in een markdown-cel van een notebook | ja, door de hook | nee |
+| Codecel in een notebook | nee | ja, bij de build |
+
+Dat verschil is niet vrijblijvend. Een uitwerking als codecel wordt bij elke
+build daadwerkelijk uitgevoerd; dezelfde uitwerking als markdown-blok wordt
+alleen op syntax en opmaak bekeken. Van de 22 uitwerkingen staan er nu 15 als
+markdown-blok en zijn dus nooit gedraaid.
+
+De ongedekte flank in die tabel, de opmaak van codecellen, is op dit moment geen
+probleem: alle 525 uitvoerbare cellen voldoen al aan `ruff format`. De hook
+uitbreiden zou dat vastleggen in plaats van erop te vertrouwen.
+
+### Huidige verdeling
+
+| Grond voor notebook | Aantal | Waar |
+|---|---|---|
+| Sheets, met of zonder code | 6 | uitsluitend `lectures/` |
+| Uitvoerbare code, geen sheets | 23 | verspreid |
+| Alleen invulcellen (werkboek) | 12 | `problems/` 10, `practicals/` 2 |
+| **Geen van drieën** | **39** | `solutions/` 15, `problems/` 12, `practicals/` 7, `lectures/` 4, `extra/` 1 |
+
+Die laatste 39 zijn markdown-documenten in een notebook-jasje. Twee colleges
+springen eruit omdat ze in `lectures/` geen enkele grond hebben:
+`10a_knapzak_probleem.ipynb` en `4b_midterm.ipynb`.
+
+Dit wordt niet in één actie omgezet. Per document wordt bij de herziening
+bepaald welke grond geldt, en daarmee welk formaat. Voor uitwerkingen speelt de
+verificatietabel hierboven daarin mee.
+
 ### Afbeeldingen en bijlagen
 
 - **Bij de inhoud horende afbeeldingen** staan naast het bestand, in

@@ -66,6 +66,9 @@ met per geval het aantal:
 - Een aankondiging in week 2 dat we in het Engels programmeren, wat vooruitloopt
   op de afgesproken overgang, zie de codeconventies.
 - `Opgave` en `Opdracht` door elkaar als kop, zie de begrippenlijst.
+- 39 notebooks zonder grond om notebook te zijn, en het ontbreken van de
+  browser-uitvoering die notebooks voor de student zinvol maakt, zie de
+  technische conventies.
 
 Deze worden niet in een aparte opruimactie weggewerkt maar per bestand
 rechtgezet tijdens de inhoudelijke herziening. Ze staan hier zodat ze niet
