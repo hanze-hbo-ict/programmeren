@@ -2,33 +2,44 @@ import random
 
 
 def create_dictionary(text):
-    d = {}
-    pw = "$"
+    """Creates a dictionary based on the argument 'text', storing what
+    words follow what.
 
-    LoW = text.split()
+    In the output dictionary 'words_follow', the keys are words, and
+    each of the values is a list of strings of words that have followed
+    that specific word in the provided text. This list of words can
+    contain duplicates.
+    """
+    words_follow = {}
+    previous_word = "$"
 
-    for nw in LoW:
-        if pw not in d:
-            d[pw] = [nw]
+    list_of_words = text.split()
+
+    for next_word in list_of_words:
+        if previous_word not in words_follow:
+            words_follow[previous_word] = [next_word]
         else:
-            d[pw] += [nw]
+            words_follow[previous_word] += [next_word]
 
-        pw = "$" if nw[-1] in ".?!" else nw
+        previous_word = "$" if next_word[-1] in ".?!" else next_word
 
-    return d
+    return words_follow
 
 
-def generate_text(d, n):
-    pw = "$"
+def generate_text(words_follow, number_of_words):
+    """Generates a text of length 'number_of_words' based on the markov
+    dictionary 'words_follow'.
+    """
+    previous_word = "$"
     text = ""
 
-    for i in range(n):
-        nw = random.choice(d[pw])
-        text += nw + " "
+    for _ in range(number_of_words):
+        new_word = random.choice(words_follow[previous_word])
+        text += new_word + " "
 
-        if nw[-1] in ".?!" or nw not in d:
-            pw = "$"
+        if new_word[-1] in ".?!" or new_word not in words_follow:
+            previous_word = "$"
         else:
-            pw = nw
+            previous_word = new_word
 
     return text

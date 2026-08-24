@@ -30,20 +30,20 @@ a.	Schrijf een functie `intersect_sets(a, b)` dat twee lijsten `a` en `b` binnen
 
 
 ```python
-intersect([1,2,3], [3, 4, 5]) == [3]
+intersect([1, 2, 3], [3, 4, 5]) == [3]
 ```
 
-b.	Schrijf een functie `except_sets(a,b)` dat twee lijsten `a` en `b` binnen krijgt als paramaters De functie geeft een lijst terug met alle elementen van `a` die niet in `b` voorkomen.
+b.	Schrijf een functie `except_sets(a, b)` dat twee lijsten `a` en `b` binnen krijgt als paramaters De functie geeft een lijst terug met alle elementen van `a` die niet in `b` voorkomen.
 
 ```python
-except_sets([1,2,3], [3, 4, 5]) == [1,2]
+except_sets([1, 2, 3], [3, 4, 5]) == [1, 2]
 ```
 
 c.	Schrijf een functie `union_sets(a, b)` dat twee lijsten `a` en `b` binnen krijgt als paramaters. De functie geeft de union terug van deze twee lijsten.
 
 Voorbeeld
 ```python
-union_sets([1,2,3], [3, 4, 5]) == [1,2,3,4,5]
+union_sets([1, 2, 3], [3, 4, 5]) == [1, 2, 3, 4, 5]
 ```
 
 ## Opdracht 3

@@ -7,20 +7,20 @@
 # in dezelfde directory als dit .py-bestand maken!
 
 
-def wc(filename):
+def count_words(filename):
     """Word-counting function.
 
     Opens a file named 'filename', reads it,
     and returns the number of words in the file.
 
-    Example: wc('a.txt')
+    Example: count_words('a.txt')
     """
     #
     # Eerst moeten we het bestand "openen" (net als het openen van een boek
     # om dat te lezen). We vragen Python om de encoding "utf-8" te gebruiken,
     # omdat dat meer tekens dan ASCII accepteert.
     #
-    f = open(filename, encoding="utf-8")
+    fhand = open(filename, encoding="utf-8")
 
     #
     # Lees nu de hele inhoud van het bestand in een string met de naam "text",
@@ -28,8 +28,8 @@ def wc(filename):
     # bestanden; grotere bestanden moet je regel voor regel lezen door
     # 'f.readline()' in een lus aan te roepen.
     #
-    text = f.read()
-    f.close()
+    text = fhand.read()
+    fhand.close()
 
     #
     # De tekst van het bestand is één lange string. Gebruik "split" om
@@ -43,7 +43,7 @@ def wc(filename):
     return len(words)
 
 
-def vc(filename):
+def count_vocab(filename):
     """Vocabulary-counting function.
 
     Opens a file named 'filename', reads it, and breaks it into words.
@@ -52,22 +52,23 @@ def vc(filename):
     and then returns a dictionary in which each word is a key and
     the word's frequency is the value.
 
-    Example: vc('a.txt') might print 3 and return
+    Example: count_vocab('a.txt') might print 3 and return
     {'I': 2, 'love': 3, 'spam': 42}
     """
-    f = open(filename, encoding="utf-8")
-    text = f.read()
-    f.close()
+    fhand = open(filename, encoding="utf-8")
+    text = fhand.read()
+    fhand.close()
 
     words = text.split()
     print("Er zijn", len(words), "woorden.")
 
-    d = {}
-    for w in words:
-        if w not in d:
-            d[w] = 1
+    word_count = {}
+    for word in words:
+        if word not in word_count:
+            word_count[word] = 1
         else:
-            d[w] += 1
+            word_count[word] += 1
 
-    print("Er zijn", len(d), "*verschillende* woorden.\n")
-    return d  # op deze manier kunnen we de gegevens in d later gebruiken!
+    print("Er zijn", len(word_count), "*verschillende* woorden.\n")
+    # op deze manier kunnen we de gegevens in word_count later gebruiken!
+    return word_count

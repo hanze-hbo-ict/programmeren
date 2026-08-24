@@ -6,12 +6,12 @@ file: wk4ba2.txt
 # Midterm
 
 
-## 1. Welke waarde heeft x aan het einde van dit programma?
+## 1. Welke waarde heeft grade aan het einde van dit programma?
 
 ```python
-max_punten = 100
+max_points = 100
 score = 30
-x = score/max_punten * 9 + 1
+grade = score/max_points * 9 + 1
 score = 50
 
 ```
@@ -236,7 +236,7 @@ def function(y):
     if y == 0:
         return
 
-    function(y-1)
+    function(y - 1)
 
 function(4)
 ```
@@ -254,7 +254,7 @@ def function(x):
 
     if x == 0:
         return x
-    print(function(x-1))
+    print(function(x - 1))
     return x
 
 function(5)
@@ -275,7 +275,7 @@ def function(x, y):
     if y == 0:
         return
 
-    function(x, y-1)
+    function(x, y - 1)
     print(y)
 
 
@@ -336,8 +336,8 @@ function("Hanze")
 ---
 linenos: True
 ---
-function([1,2,3,4,5], 4)
-def function(x,y):
+function([1, 2, 3, 4, 5], 4)
+def function(x, y):
     function(x[:-1], y-1)
     if y == 0:
     print(x[0:y])
@@ -363,11 +363,11 @@ In welke volgorde moeten deze regels staan om de volgende output te krijgen:
 ---
 linenos: True
 ---
-def function(x,y,z):
+def function(x, y, z):
     if y == z:
         return
 
-    function(x, y+1, z)
+    function(x, y + 1, z)
 
 function("x", 2, 5)
 ```
@@ -381,8 +381,8 @@ Welke printstatement moet er op regel 4 komen om de volgende output te generen ?
 ```
 
 ```python
- -  a print(y*' ' + x*y)
- -  b print(y*' ' + x*y*2)
- -  c print((z-y)*' ' + x*y*2)
- -  d print((z-y)*' ' + x*y)
+ -  a print(y * ' ' + x * y)
+ -  b print(y * ' ' + x * y * 2)
+ -  c print((z - y) * ' ' + x * y * 2)
+ -  d print((z - y)*' ' + x * y)
 ```

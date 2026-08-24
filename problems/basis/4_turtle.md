@@ -24,10 +24,12 @@ def main():
     drawStar(3, 150)
     done() # tell turtle the drawing is done.
 
+
 def testing():
     """
     Test functie. Hier staan alle assertions om de functies te testen.
     """
+
 
 def drawStar(n, distance):
     forward(distance)
