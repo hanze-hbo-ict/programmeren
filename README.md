@@ -28,11 +28,13 @@ uv run make livehtml   # bouwt en herbouwt automatisch bij wijzigingen
 
 ## Conventies
 
-De afspraken voor auteurs staan in [`conventies/`](conventies/): de
-[schrijfwijzer](conventies/schrijfwijzer.md) voor register en terminologie, en de
-[technische conventies](conventies/technische-conventies.md) voor opmaak, opbouw
-en de controles. Deze documenten horen niet bij het studentenmateriaal en worden
-niet meegebouwd in de site.
+De afspraken voor auteurs staan in [`conventies/`](conventies/), gebonden door
+[`conventies.md`](conventies/conventies.md): een
+[schrijfwijzer](conventies/schrijfwijzer.md), een
+[begrippenlijst](conventies/begrippen.md),
+[codeconventies](conventies/codeconventies.md) en
+[technische conventies](conventies/technische-conventies.md). Deze documenten
+horen niet bij het studentenmateriaal en worden niet meegebouwd in de site.
 
 ## Bijdragen
 
