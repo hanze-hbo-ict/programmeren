@@ -69,6 +69,9 @@ met per geval het aantal:
 - 39 notebooks zonder grond om notebook te zijn, en het ontbreken van de
   browser-uitvoering die notebooks voor de student zinvol maakt, zie de
   technische conventies.
+- 15 van de 22 uitwerkingen staan als markdown-blok en worden dus nooit
+  uitgevoerd, en 10 skeletcellen missen `skip-execution`, zie de technische
+  conventies.
 
 Deze worden niet in een aparte opruimactie weggewerkt maar per bestand
 rechtgezet tijdens de inhoudelijke herziening. Ze staan hier zodat ze niet

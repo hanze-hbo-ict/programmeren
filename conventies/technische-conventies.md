@@ -153,12 +153,24 @@ De twee formaten worden verschillend gecontroleerd, en geen van beide volledig:
 |---|---|---|
 | ` ```python ` in een markdown-bestand | ja, door de hook | nee |
 | ` ```python ` in een markdown-cel van een notebook | ja, door de hook | nee |
-| Codecel in een notebook | nee | ja, bij de build |
+| Codecel **zonder** `skip-execution` | nee | ja, bij de build |
+| Codecel **met** `skip-execution` | nee | nee |
+
+De laatste rij is de enige plek waar code door niets wordt gecontroleerd. Dat is
+geen ontwerpfout maar de prijs van interactiviteit: een cel die de lezer zelf
+moet uitvoeren, moet leeg aankomen.
 
 Dat verschil is niet vrijblijvend. Een uitwerking als codecel wordt bij elke
 build daadwerkelijk uitgevoerd; dezelfde uitwerking als markdown-blok wordt
 alleen op syntax en opmaak bekeken. Van de 22 uitwerkingen staan er nu 15 als
 markdown-blok en zijn dus nooit gedraaid.
+
+**Vandaar de regel: uitwerkingen draaien, opgaven niet.** Een cel kan niet
+tegelijk leeg aankomen en geverifieerd zijn. Voor een opgave weegt leeg het
+zwaarst, en komt de verificatie van de bijbehorende uitwerking. Het materiaal
+doet dit al grotendeels: van de codecellen in `solutions/` draaien er 40 en
+staat er 1 op `skip`, terwijl `practicals/` juist 66 overgeslagen cellen heeft
+tegen 1 die draait.
 
 De ongedekte flank in die tabel, de opmaak van codecellen, is op dit moment geen
 probleem: alle 525 uitvoerbare cellen voldoen al aan `ruff format`. De hook
@@ -299,9 +311,34 @@ Markdown-link geeft een build-waarschuwing.
 
   | Tag | Effect |
   |---|---|
-  | `skip-execution` | Cel draait niet. Voor stubs die de student invult |
+  | `skip-execution` | Cel draait niet en bereikt de lezer leeg |
   | `raises-exception` | Cel mag falen; de fout hoort bij de les |
   | `remove-cell` | Cel verschijnt niet op de site |
+
+### `skip-execution` is niet alleen een build-instelling
+
+Deze tag draagt het interactieve ontwerp. Draait een cel bij de build, dan staat
+de uitvoer in de HTML en valt er voor de lezer niets meer te doen. Draagt hij de
+tag, dan komt hij leeg aan en kan de student hem op de pagina zelf uitvoeren.
+Dat werkte eerder via MyBinder en wordt straks Pyodide.
+
+De tag heeft daarmee drie verschillende aanleidingen, en het loont ze uit elkaar
+te houden:
+
+| Aanleiding | Aantal | Toelichting |
+|---|---|---|
+| Stub die de student invult | 100 | Het werkboekmodel |
+| Compleet voorbeeld dat de student zelf uitvoert | 89 | Hier gaat het interactieve ontwerp om |
+| Zou de build blokkeren of laten falen | 4 | `input()`, turtle, bestanden openen |
+
+De middelste groep is de reden dat deze tag geen implementatiedetail is: hij
+bepaalt straks welke cellen voor de student uitvoerbaar worden. Een cel die de
+tag ten onrechte mist, staat er dan dood bij.
+
+> **Bekende afwijking.** In `problems/8_basis.ipynb` staan 10 skeletcellen
+> (`return [...]`) zonder de tag, terwijl 76 vergelijkbare cellen elders hem wel
+> dragen. Ze veroorzaken nu geen zichtbare uitvoer, dus het valt niet op, maar
+> ze zouden bij de Pyodide-stap buiten de boot vallen.
 
 ## Markdown-linting
 
