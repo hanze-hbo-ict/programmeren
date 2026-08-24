@@ -26,7 +26,22 @@ uv run make livehtml   # bouwt en herbouwt automatisch bij wijzigingen
 - `.github/workflows/deploy_sphinx.yml` — bouwt en publiceert de site naar GitHub Pages.
 - `.pre-commit-config.yaml` — lint-hooks (markdown, code in codeblokken, notebook-output stripping) die voor elke commit draaien.
 
+## Conventies
+
+De afspraken voor auteurs staan in [`conventies/`](conventies/): de
+[schrijfwijzer](conventies/schrijfwijzer.md) voor register en terminologie, en de
+[technische conventies](conventies/technische-conventies.md) voor opmaak, opbouw
+en de controles. Deze documenten horen niet bij het studentenmateriaal en worden
+niet meegebouwd in de site.
+
 ## Bijdragen
+
+Activeer na het clonen eerst de hooks:
+
+```bash
+uv sync
+uv run pre-commit install
+```
 
 Commits direct op `master` zijn geblokkeerd door een pre-commit hook; werk in een feature branch en maak een pull request.
 
