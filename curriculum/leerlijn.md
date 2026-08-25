@@ -15,19 +15,42 @@ Dit document is voor auteurs en docenten, niet voor studenten.
 
 ## Programmeren I
 
+De onderwerpen liggen vast. De laatste kolom is de norm voor
+vooruitverwijzingen: een begrip hoort niet eerder in het materiaal voor te komen
+dan de week waarin het hier staat.
+
 | Week | Onderwerp | Leeruitkomsten | Voor het eerst geïntroduceerd |
 |---|---|---|---|
 | 1 | Introductie, Picobot | - | toestandsmachine, regels, string, methode |
 | 2 | Variabelen en condities | P1, P2, P3 | toekenning, variabele, operatoren, `if`, lijst, docstring, assertion |
-| 3 | Functies | P5, A2 | functiedefinitie, parameter, zelfaanroep, 2D-lijst |
-| 4 | Lussen | A1 | `for`, begrensde herhaling |
-| 5 | Geneste lussen | A1, A3 | geneste lus, ASCII-art, bordrepresentatie |
-| 6 | Data | P4 | binair, talstelsel, beeldbewerking |
-| 7 | Meer data | P4, A3 | dictionary, bestanden lezen, Markov |
+| 3 | Functies | P5, P6, P7, A2 | functiedefinitie, parameter, zelfaanroep |
+| 4 | Lussen | A1 | `for`, `while`, begrensde herhaling |
+| 5 | Geneste lussen | A1, A3 | geneste lus, 2D-lijst, ASCII-art, bordrepresentatie |
+| 6 | Bestanden en data | bestanden † | bestand lezen en schrijven, beeldbewerking |
+| 7 | Lijsten en dictionaries | P4, A3 | dictionary, Markov |
 
-Recursie wordt in PGM1 niet onderwezen. Week 3 laat bij de functies alleen zien
-dát een functie zichzelf kan aanroepen; het gedrag zelf komt in PGM2 aan bod. Dat
-is zo bedoeld, maar leeruitkomst A4 staat er wel op. Zie het gat hieronder.
+† De leeruitkomst over tekstbestanden staat nu in de PGM2-matrijs en wisselt van
+plaats met recursie. Zie [leeruitkomsten.md](leeruitkomsten.md).
+
+Vier dingen die aan deze indeling zijn veranderd, en waarom:
+
+**Week 3 heeft een opgave met context gekregen**, de controle van een
+burgerservicenummer met de elfproef. De week droeg P5 en A2 op het dunste
+materiaal van de cursus, en er lag nergens iets om op terug te vallen. Zie
+[uitgangspunten.md](uitgangspunten.md) voor waarom niet.
+
+**Recursie wordt in PGM1 niet onderwezen.** Week 3 laat bij de functies alleen
+zien dát een functie zichzelf kan aanroepen. De leesopdrachten daarover zijn naar
+de PGM2-recursieweek verplaatst.
+
+**Binair en talstelsels vervallen**, en week 6 wordt de week van bestanden. De
+beeldbewerking blijft, maar dan als wat het al is: een bestand inlezen, bewerken
+en wegschrijven.
+
+**Dictionaries krijgen meer gewicht in week 7.** CS5 introduceert ze als een
+verbijzondering van een lijst, index-gebaseerd tegenover key-gebaseerd, en
+scheert er verder overheen. Dat is te weinig voor wat PGM2 er in week 1 op
+bouwt.
 
 ### Verdeling van het opgavemateriaal
 
@@ -97,16 +120,17 @@ en de twee gaten hieronder horen daarin te worden meegenomen.
 
 Gemeten op het voorkomen van de betreffende constructies in `source/`.
 
-| Leeruitkomst | Weging | Bevinding |
-|---|---|---|
-| **PGM2 P4** excepties | 10% | Twee bestanden. In `problems/5_basis` staat `try`/`except` in *gegeven* code van het menuprogramma, niet als uitleg. Nergens onderwezen. |
-| **PGM2 P3** tekstbestanden | 10% | Drie plekken, waarvan twee in de Markov-opgave van PGM1 week 7. |
-| **PGM1 A4** recursie | 10%, creëren | Wordt in PGM1 niet onderwezen; week 3 toont alleen de zelfaanroep. Het oefententamen toetst het ook niet. Voorstel: verplaatsen naar de PGM2-matrijs. |
-| **PGM2 P1** lussen | 5% | Wordt in PGM1 onderwezen (week 4 en 5) en in PGM2 getoetst. Kan bedoeld zijn als herhaling, maar staat niet in de planning voor 2026. |
-| **PGM2 A5** finite state machines | geen | Komt nergens voor. Voorstel is schrappen; zie [leeruitkomsten.md](leeruitkomsten.md). |
+| Leeruitkomst | Weging | Bevinding | Besluit |
+|---|---|---|---|
+| **PGM2 P3** tekstbestanden | 10% | Drie plekken, waarvan twee in de Markov-opgave van PGM1 week 7. | Naar PGM1 week 6 |
+| **PGM1 A4** recursie | 10%, creëren | Wordt in PGM1 niet onderwezen; week 3 toont alleen de zelfaanroep. Het oefententamen toetst het ook niet. | Naar de PGM2-matrijs |
+| **PGM2 P4** excepties | 10% | Twee bestanden. In `problems/5_basis` staat `try`/`except` in *gegeven* code van het menuprogramma, niet als uitleg. Nergens onderwezen. | Blijft in PGM2, moet daar onderwezen worden |
+| **PGM2 P1** lussen | 5% | Wordt in PGM1 onderwezen (week 4 en 5) en in PGM2 getoetst. Kan bedoeld zijn als herhaling, maar staat niet in de planning voor 2026. | open |
+| **PGM2 A5** finite state machines | geen | Komt nergens voor. | Schrappen; zie [leeruitkomsten.md](leeruitkomsten.md) |
 
-De eerste twee zijn kandidaat om in PGM1 te landen. Voor bestanden ligt de haak
-er al: de Markov-opgave in week 7 leest een tekstbestand.
+Van de twee gaten die samen 20% van het PGM2-tentamen zijn, is er daarmee één
+belegd en één belegd maar nog niet gemaakt: PGM2 moet excepties daadwerkelijk
+gaan behandelen.
 
 ## Vooruitverwijzingen om na te lopen
 
@@ -118,7 +142,6 @@ als zodanig is gemarkeerd.
 |---|---|---|---|
 | `while` | PGM1 week 4 | PGM1 week 2, `practicals/2_rochambeau` | Bewust; de tekst zegt erbij dat lussen later komen |
 | list comprehension | PGM2 week 1 | PGM1 week 6, `practicals/6b_images` | Onderwerp van een hele PGM2-week |
-| binair, talstelsel | PGM1 week 6 | PGM1 week 4, `problems/4_basis` | Opgave loopt twee weken voor op het college |
 | 2D-lijst | PGM1 week 5 | PGM1 week 3, `problems/3_opstap` | Traversal vereist geneste lussen uit week 5 |
 | functiedefinitie | PGM1 week 3 | PGM1 week 2, `problems/2_basis` | Mogelijk als gegeven voorbeeld |
 
