@@ -2,7 +2,7 @@
 
 ![Schotel](/images/saucer.png)
 
-## Data representatie
+## Data en bestanden
 
 ```{tableofcontents}
 ```
