@@ -19,14 +19,47 @@ Dit document is voor auteurs en docenten, niet voor studenten.
 |---|---|---|---|
 | 1 | Introductie, Picobot | - | toestandsmachine, regels, string, methode |
 | 2 | Variabelen en condities | P1, P2, P3 | toekenning, variabele, operatoren, `if`, lijst, docstring, assertion |
-| 3 | Functies | P5, A2 | functiedefinitie, parameter, **recursie**, 2D-lijst |
+| 3 | Functies | P5, A2 | functiedefinitie, parameter, zelfaanroep, 2D-lijst |
 | 4 | Lussen | A1 | `for`, begrensde herhaling |
 | 5 | Geneste lussen | A1, A3 | geneste lus, ASCII-art, bordrepresentatie |
 | 6 | Data | P4 | binair, talstelsel, beeldbewerking |
 | 7 | Meer data | P4, A3 | dictionary, bestanden lezen, Markov |
 
-Recursie (A4) wordt in week 3 geïntroduceerd en daarna niet meer uitgewerkt; de
-uitwerking zit in PGM2. Zie het gat hieronder.
+Recursie wordt in PGM1 niet onderwezen. Week 3 laat bij de functies alleen zien
+dát een functie zichzelf kan aanroepen; het gedrag zelf komt in PGM2 aan bod. Dat
+is zo bedoeld, maar leeruitkomst A4 staat er wel op. Zie het gat hieronder.
+
+### Verdeling van het opgavemateriaal
+
+Omvang in woorden per niveau, gemeten over `problems/` voor de weken 2 tot en met
+7. Een ruwe maat, maar de verhoudingen zijn te groot om aan de meetmethode te
+liggen.
+
+| Week | opstap | basis | extra | Totaal |
+|---|---|---|---|---|
+| 2 | 1.145 | 1.089 | 463 | 2.697 |
+| 3 | 242 | 389 | 176 | **807** |
+| 4 | 616 | 1.034 | 1.048 | 2.698 |
+| 5 | 238 | 1.865 | **5.265** | 7.368 |
+| 6 | 372 | 1.067 | 1.162 | 2.601 |
+| 7 | geen | 453 | **3.713** | 4.166 |
+| **Totaal** | **2.613** | **5.897** | **11.827** | 20.337 |
+
+Drie dingen vallen op.
+
+**Het zwaartepunt ligt in de optionele laag.** Extra is 58% van het materiaal,
+tweemaal zo groot als basis. Daar zitten Mandelbrot, Game of Life, Pi met
+pijltjes en beeldcompressie: precies de opgaven waarin een probleem stap voor
+stap wordt opgebouwd. Zie [uitgangspunten.md](uitgangspunten.md) voor de
+achtergrond.
+
+**Week 3 is de dunste week van de cursus.** Met 807 woorden is ze negen keer
+kleiner dan week 5, terwijl ze functies draagt: P5 en A2, samen 20% van het
+tentamen.
+
+**De structuur is onvolledig.** Week 7 heeft geen opstap. In week 5 loopt de
+nummering van opstap van 1 naar 5, 6, 7, 8: er is uit geknipt zonder te
+hernummeren.
 
 ## Programmeren II
 
@@ -68,7 +101,7 @@ Gemeten op het voorkomen van de betreffende constructies in `source/`.
 |---|---|---|
 | **PGM2 P4** excepties | 10% | Twee bestanden. In `problems/5_basis` staat `try`/`except` in *gegeven* code van het menuprogramma, niet als uitleg. Nergens onderwezen. |
 | **PGM2 P3** tekstbestanden | 10% | Drie plekken, waarvan twee in de Markov-opgave van PGM1 week 7. |
-| **PGM1 A4** recursie | 10%, creëren | Eén college in week 3, daarna pas PGM2. Het toetsniveau is het hoogste van de matrijs; het aanbod is het smalst. |
+| **PGM1 A4** recursie | 10%, creëren | Wordt in PGM1 niet onderwezen; week 3 toont alleen de zelfaanroep. Het oefententamen toetst het ook niet. Voorstel: verplaatsen naar de PGM2-matrijs. |
 | **PGM2 P1** lussen | 5% | Wordt in PGM1 onderwezen (week 4 en 5) en in PGM2 getoetst. Kan bedoeld zijn als herhaling, maar staat niet in de planning voor 2026. |
 | **PGM2 A5** finite state machines | geen | Komt nergens voor. Voorstel is schrappen; zie [leeruitkomsten.md](leeruitkomsten.md). |
 

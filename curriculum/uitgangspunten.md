@@ -35,6 +35,37 @@ Daarnaast geldt **Think Python** van Allen Downey als begeleidend boek.
 | 10-12 | Object-georiënteerd programmeren |
 | 13-14 | Theoretische onderwerpen |
 
+## De context waarin het vak draait
+
+Twee gegevens die het materiaal zelf nergens vermeldt, maar die bij vrijwel elke
+keuze meewegen.
+
+### Een gemengde doelgroep
+
+Het vak wordt gevolgd door studenten van drie profielen tegelijk: **software
+engineering**, **netwerk- en security engineering** en **business en IT
+management**. Ze krijgen hierna niet hetzelfde vervolg. Wat voor de ene groep een
+opstap is naar een later vak, is voor de andere groep het enige moment waarop ze
+het onderwerp zien.
+
+Dat maakt relevantie geen retorische kwestie maar een harde eis: een onderwerp
+dat alleen te verdedigen is vanuit één profiel, is voor een derde van de zaal
+niet te verdedigen. Wie hier een onderwerp voorstelt, moet het voor alle drie
+kunnen dragen.
+
+### Drie bijeenkomsten per week
+
+| Bijeenkomst | Vorm | Wat er gebeurt |
+|---|---|---|
+| 1 | College | Het onderwerp wordt geïntroduceerd |
+| 2 | Werkcollege | Een opgave wordt gezamenlijk uitgewerkt |
+| 3 | Practicum | Zelfstandig werken onder begeleiding aan de opgaven |
+
+Deze indeling verklaart de mappen: `lectures/` hoort bij de eerste bijeenkomst,
+`practicals/` bij het werkcollege, `problems/` bij het practicum. Ze is ook
+relevant voor de vraag waar context hoort te zitten, want het werkcollege is de
+plek waar een probleem gezamenlijk stap voor stap wordt opgebouwd.
+
 ## Principes die we aanhouden
 
 **Probleemoplossen, niet programmeerles.** Klawe vat de kern zo samen: *"Instead
@@ -82,6 +113,7 @@ organisatorisch besluit niet.
 |---|---|---|
 | Recursie is naar PGM2 verplaatst; imperatief komt eerst | organisatorisch | gesloten |
 | De theoretische afsluiting is geschrapt | ervaring | gesloten |
+| Schakelingen zijn geschrapt, binair is afgeslankt | organisatorisch | gesloten |
 | Objecten pas in PGM2 | didactisch | staand, onderbouwd |
 | Picobot opent PGM1 | didactisch | staand, onderbouwd |
 | Opgaven in opstap, basis en extra | didactisch | **open** |
@@ -115,10 +147,15 @@ Twee dingen die er wél uit volgen:
    probleem. Daarmee staat het op eigen benen in plaats van als vreemde variant
    op iets dat de student net geleerd heeft, en dat is precies de framing die het
    esoterisch doet lijken.
-2. **De volgorde van introductie is intact gebleven, de diepte niet.** Recursie
-   wordt nog steeds vóór de lussen geïntroduceerd, in PGM1 week 3. Wat verdween
-   is de uitwerking: CS5 gaf er drie weken aan, hier is het één college. Zie de
-   leerlijn voor het gat dat dat oplevert ten opzichte van leeruitkomst A4.
+2. **Recursie wordt in PGM1 niet onderwezen.** Wat er in PGM1 week 3 over te
+   vinden is, is bewust smal: bij de functies wordt getoond dát een functie
+   zichzelf kan aanroepen, en niets meer. Het gedrag zelf wordt pas in PGM2
+   bestudeerd. Dat is geen omissie maar het besluit in uitvoering.
+
+   Daaruit volgt wel dat leeruitkomst **A4** in de verkeerde toetsmatrijs staat:
+   PGM1 belooft ontwerpen van recursieve oplossingen op creëren-niveau voor 10%
+   van het tentamen, terwijl het vak het onderwerp niet aanbiedt. Zie
+   [leeruitkomsten.md](leeruitkomsten.md).
 
 ### De theoretische afsluiting
 
@@ -134,6 +171,53 @@ Bij hbo-studenten sloeg dat niet aan: te abstract. Het is geprobeerd en
 losgelaten. Gevolg: Picobot blijft, de sluiting komt niet terug, en leeruitkomst
 A5 over eindige toestandsmachines hoort daarmee uit de toetsmatrijs. Zie
 [leeruitkomsten.md](leeruitkomsten.md).
+
+### Schakelingen en binair
+
+Binair en talstelsels stonden er niet op zichzelf. Ze hoorden bij **schakelingen**:
+een inkijk in hoe een computer werkt, waarbij binaire representatie vanzelf ter
+sprake komt. Toen de schakelingen verdwenen, bleef de rekenkunde over zonder de
+vraag die haar betekenis gaf.
+
+Daar kwam de doelgroep bij. Voor software- en netwerkstudenten komt het onderwerp
+terug in een apart vak computerarchitectuur; business- en IT-managementstudenten
+krijgen dat vak niet, en voor hen is de relevantie moeilijk hard te maken. Het
+management beoordeelt het daarom als minder passend voor deze groep.
+
+Het onderwerp is dus niet slecht, maar het is zijn drager kwijt. Wie het wil
+behouden, moet ofwel de context terugbrengen ofwel het voor alle drie de
+profielen kunnen verdedigen.
+
+### De verdeling in opstap, basis en extra
+
+De indeling komt van de docent die het oorspronkelijke materiaal heeft bewerkt.
+Het idee erachter is bruikbaar en blijft:
+
+| Niveau | Bedoeling |
+|---|---|
+| **opstap** | Vingeroefeningen: de syntaxis onder de knie krijgen |
+| **basis** | Wat wij verwachten dat je kunt, oftewel toetsniveau |
+| **extra** | De uitdaging |
+
+De uitvoering is het probleem, niet het idee. Vrijwel alle oorspronkelijke
+CS5-opgaven zijn onder *extra* geplaatst, en een ander deel is naar het
+werkcollege verhuisd. Daarmee zit het merendeel van het materiaal, en vrijwel
+alle context, in de laag die optioneel voelt. Zie [leerlijn.md](leerlijn.md) voor
+de meting.
+
+Twee gevolgen die in de herziening moeten worden opgelost:
+
+1. **De uitdaging is optioneel geworden.** PGM1 wordt als rustig ervaren en PGM2
+   komt hard aan. PGM1 hoort een vriendelijke introductie te blijven, maar de
+   oplopende lijn erin moet scherper.
+2. **Het onderwerp in context is verdwenen uit opstap en basis.** Een concreet
+   ICT-probleem dat stap voor stap wordt opgelost is een dragend idee van CS5:
+   zo wordt de relevantie van het vak zichtbaar. Opstap en basis zijn nu
+   overwegend droge opgaven zonder context. Dat is voor opstap verdedigbaar,
+   want vingeroefeningen zijn nu eenmaal kaal, maar voor basis niet.
+
+Dit is een spanningsveld en geen eenvoudige keuze: syntaxis moet geoefend worden
+en dat gaat het snelst kaal, terwijl relevantie juist context vereist.
 
 ## Een besluit toevoegen
 

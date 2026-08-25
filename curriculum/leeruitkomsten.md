@@ -83,6 +83,12 @@ toetsing is een belofte die niemand nakijkt.
 | **PGM2 P6** (operator overloading) | Wél onderwezen, en in de planning voor 2026 krijgt het een hele week. | Weging geven, of de week heroverwegen. |
 | **PGM2 P7** (externe bibliotheken) | Verspreid aanwezig, niet als onderwerp behandeld. | Besluiten of dit een leeruitkomst moet blijven. |
 
+Daarnaast staat één uitkomst in de verkeerde matrijs:
+
+| Uitkomst | Bevinding | Voorstel |
+|---|---|---|
+| **PGM1 A4** (recursie) | Staat op creëren-niveau voor 10% van het PGM1-tentamen, maar recursie wordt in PGM1 niet onderwezen: dat gebeurt sinds het verplaatsingsbesluit in PGM2. Het oefententamen van PGM1 toetst het dan ook niet; de enige recursieve functie die er voorkomt krijgt de student kant-en-klaar. | **Verplaatsen naar de PGM2-matrijs.** Dit is geen inhoudelijke wijziging maar het naleven van een besluit dat al genomen is. |
+
 ## Gaten tussen toetsing en onderwijs
 
 Twee leeruitkomsten die samen 20% van het PGM2-tentamen zijn, worden in het
