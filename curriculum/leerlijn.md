@@ -47,6 +47,11 @@ de PGM2-recursieweek verplaatst.
 beeldbewerking blijft, maar dan als wat het al is: een bestand inlezen, bewerken
 en wegschrijven.
 
+**Week 7 is de grens waar mutatie binnenkomt.** De weken daarvoor rekenen en
+geven terug, en veranderen niets aan wat ze meekrijgen. Dat was tot nu toe
+feitelijk zo maar nergens gezegd; zie
+[uitgangspunten.md](uitgangspunten.md).
+
 **Dictionaries krijgen meer gewicht in week 7.** CS5 introduceert ze als een
 verbijzondering van een lijst, index-gebaseerd tegenover key-gebaseerd, en
 scheert er verder overheen. Dat is te weinig voor wat PGM2 er in week 1 op
@@ -143,6 +148,7 @@ als zodanig is gemarkeerd.
 | `while` | PGM1 week 4 | PGM1 week 2, `practicals/2_rochambeau` | Bewust; de tekst zegt erbij dat lussen later komen |
 | list comprehension | PGM2 week 1 | PGM1 week 6, `practicals/6b_images` | Onderwerp van een hele PGM2-week |
 | 2D-lijst | PGM1 week 5 | PGM1 week 3, `problems/3_opstap` | Traversal vereist geneste lussen uit week 5 |
+| mutatie van een lijst | PGM1 week 7 | PGM1 week 4, `lectures/4b_midterm` opgave 19 | Vraagt de student de uitvoer te voorspellen van een lus die `my_list[ix]` overschrijft. Het goede antwoord hangt af van begrijpen dat de lijst zelf verandert. |
 | functiedefinitie | PGM1 week 3 | PGM1 week 2, `problems/2_basis` | Mogelijk als gegeven voorbeeld |
 
 Deze lijst is met tekstpatronen gemaakt en dus indicatief. Ze is het uitgangspunt

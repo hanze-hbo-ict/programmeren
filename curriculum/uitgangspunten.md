@@ -165,6 +165,59 @@ alleen een opstapje naar zelf schrijven.
 
 **Worked examples.** De opbouw leunt op voorgedane uitwerkingen.
 
+## Mutabiliteit: een grens die we bewaken
+
+CS5 kreeg deze grens gratis. De eerste weken zijn functioneel programmeren, en
+daarin bestaan side effects niet: een functie rekent iets uit en geeft het terug.
+Begint daarna het imperatieve deel, dan is verandering een *nieuw vermogen* dat
+je kunt benoemen, voordoen en nuttig inzetten. De student heeft een wereld zonder
+gekend, dus hij ziet wat erbij komt.
+
+Door de herordening zijn die functionele weken weg. De **vorm** bleek echter nog
+intact. Gemeten over PGM1 week 1 tot en met 6 wordt een lijst nergens ter plekke
+gewijzigd, op één plek na, en muterende methodes komen helemaal niet voor. De
+eerste echte mutatie staat in `lectures/7a_lists_advanced`, en daar staat ze
+meteen naast `deepcopy`.
+
+Wat verdwenen is, is dus niet de grens maar het **label**. Niemand wijst hem aan.
+De student merkt niet dat hij zes weken in een wereld zonder verandering heeft
+gewerkt, en krijgt in week 7 mutatie en aliasing in één adem, als techniek in
+plaats van als begrip. `deepcopy` lost dan een probleem op waarvan hij niet wist
+dat het bestond.
+
+**Besluit: de grens blijft, en wordt benoemd.**
+
+| Waar | Wat geldt |
+|---|---|
+| PGM1 week 2 tot en met 6 | Een functie rekent iets uit en geeft het terug. Wat je meegeeft verandert niet. |
+| PGM1 week 7 | De grens. Eerst *dat* je een lijst kunt wijzigen en wat dat oplevert, daarna pas dat twee namen naar dezelfde lijst kunnen wijzen, en daarna pas het kopiëren. |
+| PGM2 | Een object is data plus de handelingen daarop, en dus een bundel toestand die verandert. Het woord ervoor bestaat dan al. |
+
+Drie dingen volgen hieruit.
+
+**Week 3 zegt het één keer hardop.** Bij de functies: hier rekent een functie iets
+uit en geeft het terug, en verandert niets aan wat je meegeeft. De BSN-opgave
+demonstreert dat al zonder er iets voor te hoeven doen; alle zes functies geven
+een waarde terug en geen van alle verandert iets.
+
+**Week 7 keert de volgorde om.** Nu komen mutatie en aliasing tegelijk. Het
+vermogen hoort eerst, de valkuil daarna. Game of Life in `problems/7_extra`
+draait volledig om bijwerken en is daarmee de natuurlijke aanleiding.
+
+**Het versterkt de regel over objectmethoden.** `L.append(x)` is én een methode én
+een mutatie, dus twee overtredingen in één aanroep. `L = L + [x]` is geen van
+beide. Zie [codeconventies.md](../conventies/codeconventies.md).
+
+### Open: mag het bord in week 5 veranderen?
+
+Boter-kaas-en-eieren in week 5 bouwt een bord en wijzigt het nooit. Dat past bij
+de grens, maar het betekent wel dat de student een raster leert *lezen* en niet
+*bijwerken*, terwijl week 7 vervolgens Game of Life vraagt, wat volledig om
+bijwerken draait.
+
+De vraag is of die mutatievrije weken een verworvenheid zijn die we beschermen,
+of een gevolg van het uitdunnen van het materiaal. Dit is nog niet besloten.
+
 ## Besluitenregister
 
 Per besluit staat de **aard** erbij, want die bepaalt of en hoe het heropend kan
@@ -178,6 +231,8 @@ organisatorisch besluit niet.
 | Schakelingen zijn geschrapt, binair is afgeslankt | organisatorisch | gesloten |
 | De wekelijkse leesopgaven zijn vervallen | praktisch | gesloten |
 | Bestanden naar PGM1, excepties blijven in PGM2 | didactisch | staand, onderbouwd |
+| Mutatie pas vanaf PGM1 week 7, en als grens benoemd | didactisch | staand, onderbouwd |
+| Mag het bord in week 5 gewijzigd worden | didactisch | **open** |
 | Objecten pas in PGM2 | didactisch | staand, onderbouwd |
 | Picobot opent PGM1 | didactisch | staand, onderbouwd |
 | Opgaven in opstap, basis en extra | didactisch | **open** |
