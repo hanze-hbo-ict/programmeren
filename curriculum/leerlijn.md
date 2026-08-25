@@ -7,9 +7,9 @@ Die laatste kolom is het dragende deel van dit document. Zolang vastligt waar ee
 begrip voor het eerst hoort, is een vooruitverwijzing te detecteren: materiaal
 dat iets gebruikt wat volgens dit document later pas komt.
 
-De weergegeven staat is **het materiaal zoals het nu is**, gemeten aan de
-inhoudsopgave en aan het eerste voorkomen van begrippen in de tekst. Waar de
-afgesproken richting daarvan afwijkt, staat dat erbij.
+Voor PGM2 is de planning voor studiejaar 2026 leidend. Voor PGM1 liggen de
+onderwerpen nog niet vast; wat hieronder staat is het huidige materiaal, gemeten
+aan de inhoudsopgave en aan het eerste voorkomen van begrippen in de tekst.
 
 Dit document is voor auteurs en docenten, niet voor studenten.
 
@@ -30,21 +30,35 @@ uitwerking zit in PGM2. Zie het gat hieronder.
 
 ## Programmeren II
 
-Voor PGM2 lopen twee beelden uiteen: wat het materiaal nu doet, en wat voor
-studiejaar 2026 is afgesproken.
+**De planning voor 2026 is leidend.** Wat het materiaal nu doet is de
+uitgangssituatie, niet de norm; het verschil tussen beide kolommen is het werk.
 
-| Week | Materiaal nu | Afgesproken voor 2026 |
-|---|---|---|
-| 1 | List comprehension | datastructuren |
-| 2 | Recursie | comprehensions (list, dict, set, range, enumerate) |
-| 3 | Algoritmen (knapzak, wisselgeld) | recursie |
-| 4 | Objecten en dictionaries | use it or lose it, lambda |
-| 5 | Kunstmatige intelligentie | OO, klassen, encapsulatie |
-| 6 | Vier op een rij, AI-speler | polymorfisme, overerving, duck typing |
-| 7 | - | operator overloading, oefentoets |
+| Week | Leidend voor 2026 | Verantwoordelijk | Materiaal nu |
+|---|---|---|---|
+| 1 | Datastructuren | BRRA | List comprehension |
+| 2 | Comprehensions (list, dict, set, range, enumerate) | HOEM | Recursie |
+| 3 | Recursie | HOEM | Algoritmen (knapzak, wisselgeld) |
+| 4 | Use it or lose it, lambda | HOEM | Objecten en dictionaries |
+| 5 | OO, klassen, encapsulatie | BRRA | Kunstmatige intelligentie |
+| 6 | Polymorfisme, overerving, duck typing | BRRA | Vier op een rij, AI-speler |
+| 7 | Operator overloading, oefentoets | BRRA | - |
 
-Begrippen die in PGM2 voor het eerst opduiken: klasse en object (week 4 in het
-huidige materiaal), operator overloading (idem), lambda (nergens).
+Een deel van deze onderwerpen komt in het huidige materiaal niet of nauwelijks
+voor. Dat is bekend en verwacht: de planning beschrijft waar PGM2 heen gaat, niet
+waar het staat.
+
+## Volgorde van het werk
+
+**Eerst wordt PGM1 herzien, met de PGM2-lijn als randvoorwaarde.**
+
+Dat betekent dat PGM1 niet op zichzelf ontworpen wordt: wat PGM2 in week 1
+veronderstelt, moet PGM1 hebben geleverd. Bij elke keuze in PGM1 is de vraag dus
+niet alleen of ze op zichzelf klopt, maar ook of ze de bovenstaande lijn
+ondersteunt.
+
+De onderwerpen voor PGM1 liggen nog niet vast; de tabel hierboven voor PGM1
+beschrijft het huidige materiaal. Ze vaststellen is het eerste inhoudelijke werk,
+en de twee gaten hieronder horen daarin te worden meegenomen.
 
 ## Gaten tussen toetsing en materiaal
 
