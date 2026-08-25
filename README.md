@@ -26,6 +26,13 @@ uv run make livehtml   # bouwt en herbouwt automatisch bij wijzigingen
 - `.github/workflows/deploy_sphinx.yml` — bouwt en publiceert de site naar GitHub Pages.
 - `.pre-commit-config.yaml` — lint-hooks (markdown, code in codeblokken, notebook-output stripping) die voor elke commit draaien.
 
+## Curriculum
+
+Het ontwerp van de leerlijn staat in [`curriculum/`](curriculum/): de
+[leeruitkomsten en toetsmatrijs](curriculum/leeruitkomsten.md) als bindende laag,
+de [leerlijn](curriculum/leerlijn.md) per week, en de
+[uitgangspunten](curriculum/uitgangspunten.md) met het besluitenregister.
+
 ## Conventies
 
 De afspraken voor auteurs staan in [`conventies/`](conventies/), gebonden door
