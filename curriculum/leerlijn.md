@@ -21,7 +21,7 @@ dan de week waarin het hier staat.
 
 | Week | Onderwerp | Leeruitkomsten | Voor het eerst geïntroduceerd |
 |---|---|---|---|
-| 1 | Introductie, Picobot | - | toestandsmachine, regels, string, methode |
+| 1 | Introductie, Picobot | - | toestandsmachine, regels, string |
 | 2 | Variabelen en condities | P1, P2, P3 | toekenning, variabele, operatoren, `if`, lijst, docstring, assertion |
 | 3 | Functies | P5, P6, P7, A2 | functiedefinitie, parameter, zelfaanroep |
 | 4 | Lussen | A1 | `for`, `while`, begrensde herhaling |

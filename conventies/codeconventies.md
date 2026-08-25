@@ -136,6 +136,33 @@ inhoudelijke herziening. De regel hierboven beslist dan welke naam wint: in een
 functie van drie regels de korte, in een functie van dertig de uitgeschreven.
 Binnen één bestand is de keuze wel overal dezelfde.
 
+## Geen objectmethoden in PGM1
+
+Een methode is een handeling die bij een object hoort, en objecten zijn het
+onderwerp van PGM2: data en de handelingen daarop, als één geheel. Een student
+die in PGM1 `L.append(x)` schrijft, gebruikt dat begrip zonder het te hebben.
+
+Daarom gebruikt PGM1 **functies en operatoren, geen methoden**. In de praktijk
+gaat het vooral om deze twee gevallen:
+
+| Niet in PGM1 | Wel |
+|---|---|
+| `L.append(x)` | `L = L + [x]` |
+| `s.isdigit()` | `from string import digits`, en dan `c in digits` |
+
+Het materiaal staat er goed voor. Muterende lijstmethodes komen in PGM1
+**nergens** voor; de enige vindplaats in de hele repo is een PGM2-opgave die
+`L.sort()` juist *verbiedt*. Stringmethodes komen zes keer voor: vier keer
+`.format()` in `problems/5_basis` en twee keer `.split()` in week 7.
+
+Dat maakt dit een conventie die te handhaven is in plaats van een wens.
+
+:::{note}
+Het woord *methode* komt in week 1 wel voor, in `lectures/1a_intro_programmeren`,
+maar in de gewone Nederlandse betekenis: "een methode verzinnen om getallen te
+sorteren". Dat is geen vooruitverwijzing en hoeft niet weg.
+:::
+
 ## Docstrings
 
 Elke functie die de student schrijft of leest, heeft een docstring. Dat is een
