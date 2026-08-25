@@ -66,6 +66,48 @@ Deze indeling verklaart de mappen: `lectures/` hoort bij de eerste bijeenkomst,
 relevant voor de vraag waar context hoort te zitten, want het werkcollege is de
 plek waar een probleem gezamenlijk stap voor stap wordt opgebouwd.
 
+## Het referentiemateriaal: tag `v1.0.0`
+
+Tag **`v1.0.0`** (juni 2023) bevat de vertaalde CS5-opgaven zoals ze
+oorspronkelijk waren. Dat is de referentie bij de herziening: niet om naar terug
+te keren, maar om op terug te vallen wanneer onduidelijk is wat een opgave
+oorspronkelijk deed.
+
+Die terugval is nodig omdat bij de latere bewerking de opbouw van veel opgaven is
+gebroken. Op de oorspronkelijke opgaven viel genoeg aan te merken, ze vragen
+veel leeswerk en zijn niet altijd strak geordend, maar ze hebben wel een
+doorlopende lijn. Waar het huidige materiaal een fragment is, staat in `v1.0.0`
+het geheel waar dat fragment uit komt.
+
+Drie momenten zijn te onderscheiden:
+
+| Tag | Wanneer | Opzet |
+|---|---|---|
+| `v1.0.0` | juni 2023 | 12 weken, CS5 zoals vertaald. Per week een reeks opgaven plus één leesopgave. Geen niveaus. |
+| `v1.1.0` | april 2024 | De niveaus `opstap`, `basis` en `context` ingevoerd. De opgavenbibliotheek staat er nog; de leesopgaven staan nog in de repo maar niet meer in de inhoudsopgave. |
+| nu | — | `context` heet `extra`. De bibliotheek en de leesopgaven zijn verdwenen. |
+
+### De opgavenbibliotheek
+
+In `v1.0.0` staat elke opgave als een eigen eenheid in `problems/<naam>/index.md`,
+met eigen afbeeldingen, los van een week. De inhoudsopgave wijst er per week
+naar. Ruim veertig opgaven, waarvan een aantal in het huidige materiaal niet meer
+voorkomt.
+
+Die opzet is op zichzelf het overwegen waard: een opgave die niet aan een
+weeknummer vastzit, kan verplaatst worden zonder verbouwd te worden.
+
+### De leesopgaven
+
+`v1.0.0` heeft **twaalf leesopgaven, één per week**, in `readings/`. Artikelen
+over waar het vakgebied op ingrijpt: algoritmen die discrimineren, een computer
+die Jeopardy wint, zelfrijdende auto's, taal en denken.
+
+Ze zijn volledig verdwenen. Dat is het meest directe verlies aan relevantie in
+het hele materiaal, want dit was de plek waar het vak buiten zichzelf wees
+zonder dat er een regel code aan te pas kwam. De vraag of ze terugkomen hoort in
+de herziening thuis.
+
 ## Principes die we aanhouden
 
 **Probleemoplossen, niet programmeerles.** Klawe vat de kern zo samen: *"Instead
@@ -204,6 +246,12 @@ CS5-opgaven zijn onder *extra* geplaatst, en een ander deel is naar het
 werkcollege verhuisd. Daarmee zit het merendeel van het materiaal, en vrijwel
 alle context, in de laag die optioneel voelt. Zie [leerlijn.md](leerlijn.md) voor
 de meting.
+
+> **De derde laag heette eerst `context`.** Bij de invoering van de niveaus, in
+> tag `v1.1.0`, waren het `opstap`, `basis` en `context`. De laag die het
+> onderwerp in context bracht is daarna hernoemd naar *extra*. Die hernoeming
+> beschrijft de verschuiving beter dan welke analyse ook: van *de toepassing*
+> naar *het facultatieve*.
 
 Twee gevolgen die in de herziening moeten worden opgelost:
 
