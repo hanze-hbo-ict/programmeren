@@ -87,6 +87,23 @@ Drie momenten zijn te onderscheiden:
 | `v1.1.0` | april 2024 | De niveaus `opstap`, `basis` en `context` ingevoerd. De opgavenbibliotheek staat er nog; de leesopgaven staan nog in de repo maar niet meer in de inhoudsopgave. |
 | nu | — | `context` heet `extra`. De bibliotheek en de leesopgaven zijn verdwenen. |
 
+### Het materiaal doorzoekbaar maken
+
+De tag zelf is lastig doorzoekbaar; `git show` per bestand werkt niet als je nog
+niet weet wat je zoekt. Pak het daarom lokaal uit:
+
+```bash
+mkdir -p referentie/cs5
+git archive v1.0.0 topics course problems readings _toc.yml | tar -x -C referentie/cs5
+```
+
+`referentie/` staat in `.gitignore`: het materiaal zit al in de
+geschiedenis en hoeft niet nog een keer in de boom. Ripgrep slaat genegeerde
+mappen over, dus zoek er expliciet in met `rg --no-ignore ... referentie/`.
+
+Begin bij `_toc.yml`. Daar staat welke opgaven bij welke week hoorden, en dat is
+de snelste ingang naar wat er omheen stond.
+
 ### De opgavenbibliotheek
 
 In `v1.0.0` staat elke opgave als een eigen eenheid in `problems/<naam>/index.md`,
