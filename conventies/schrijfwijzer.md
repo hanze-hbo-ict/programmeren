@@ -133,6 +133,36 @@ Een beginner moet altijd weten of hij uitleg leest of iets moet doen.
 - **Leerdoelen** formuleer je als wat de student kan, niet als wat is
   opgeleverd.
 
+### De vorm van een opgave
+
+Beknopt betekent niet dat er minder op de pagina staat, maar dat de student
+minder hoeft te lezen om te weten wat hij moet doen. Structuur doet dat werk,
+niet weglaten.
+
+De vaste vorm, uitgewerkt in [`problems/3_basis`](../source/problems/3_basis.ipynb):
+
+1. **Het probleem en zijn context.** Waar dit over gaat en waarom iemand het zou
+   willen. Een alinea, geen bladzijde.
+2. **De regel of het gegeven**, één keer en volledig, met een uitgewerkt
+   voorbeeld. Een tabel is hier vrijwel altijd beter dan proza.
+3. **Een overzicht van de stappen.** Wat de student gaat maken, in één tabel of
+   lijst, zodat de vorm van het geheel zichtbaar is voordat hij begint.
+4. **Genummerde stappen.** `## Stap 1`, `## Stap 2`, enzovoort, elk met een
+   koptekst die de functie of handeling noemt. Per stap: één zin specificatie,
+   voorbeelden als tabel, eventueel een hint, dan een lege cel en een testcel.
+5. **Een afsluiting** die het resultaat plaatst, en waar mogelijk vooruitwijst
+   naar wat de student hierna nodig heeft.
+
+Twee dingen daarbij:
+
+**Nummer de stappen ook echt.** Een reeks kopjes zonder nummers laat de student
+niet zien waar hij is. Gebruik *stap* voor de delen van één samenhangende opgave
+en *opdracht* voor losse oefeningen die niet op elkaar voortbouwen.
+
+**Klap een hint niet weg.** Een hint achter een dropdown lijkt de pagina rustiger
+te maken, maar hij verstopt precies de hulp waarvoor hij bedoeld is. Wie hem niet
+nodig heeft, leest eroverheen.
+
 ## Expressiemiddelen
 
 Materiaal hoeft niet uit lopende tekst te bestaan. De leidende regel: een middel
