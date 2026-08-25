@@ -177,6 +177,7 @@ organisatorisch besluit niet.
 | De theoretische afsluiting is geschrapt | ervaring | gesloten |
 | Schakelingen zijn geschrapt, binair is afgeslankt | organisatorisch | gesloten |
 | De wekelijkse leesopgaven zijn vervallen | praktisch | gesloten |
+| Bestanden naar PGM1, excepties blijven in PGM2 | didactisch | staand, onderbouwd |
 | Objecten pas in PGM2 | didactisch | staand, onderbouwd |
 | Picobot opent PGM1 | didactisch | staand, onderbouwd |
 | Opgaven in opstap, basis en extra | didactisch | **open** |
@@ -202,6 +203,19 @@ verdedigen ervan meer kostte dan het opleverde.
 
 **Dit besluit staat en wordt niet op didactische gronden heropend.** Wie het toch
 ter discussie stelt, heeft nieuw draagvlak nodig, geen nieuw artikel.
+
+Wel moet de prijs ervan bekend zijn, want die is bij de uitvoering onzichtbaar
+gebleven. In CS5 zijn functies en recursie hetzelfde onderwerp: het functionele
+paradigma komt in de weken 1 tot en met 3, en vrijwel elke opgave over functies
+gebruikt recursie. `feest_met_functies`, `python_turtles` en `caesar_op_orde`
+doen dat allemaal. Met recursie zijn dus ook de functie-opgaven meeverhuisd naar
+PGM2.
+
+Daardoor heeft **PGM1 week 3 geen inhoudelijke opgave meer**, ook niet in het
+referentiemateriaal: alles wat er lag is elders terechtgekomen. Het is de dunste
+week van de cursus terwijl ze P5 en A2 draagt, samen 20% van het tentamen. Dat is
+geen slordigheid maar een gevolg van dit besluit, en het betekent dat hier nieuw
+materiaal geschreven moet worden in plaats van teruggehaald.
 
 Twee dingen die er wél uit volgen:
 
@@ -287,6 +301,33 @@ Twee gevolgen die in de herziening moeten worden opgelost:
 
 Dit is een spanningsveld en geen eenvoudige keuze: syntaxis moet geoefend worden
 en dat gaat het snelst kaal, terwijl relevantie juist context vereist.
+
+### Bestanden en excepties
+
+De twee gaten in de toetsing worden verschillend opgelost, en dat is opzet.
+
+**Bestanden gaan naar PGM1.** Het lezen en schrijven van een bestand vraagt geen
+enkel begrip dat de student daar nog niet heeft, en er ligt al materiaal: de
+beeldbewerking leest en schrijft bestanden, en de Markov-opgave in week 7 leest
+een tekstbestand.
+
+**Excepties blijven in PGM2**, om twee redenen die elkaar versterken. Ze horen bij
+robuustheid, en die vraag komt pas op als een programma groot genoeg is om ergens
+te breken. En zwaarderwegend: een exceptie *is* een object, en de klassenhiërarchie
+is precies wat het mogelijk maakt om specifiek af te vangen in plaats van alles.
+Excepties onderwijzen vóór objecten en overerving betekent de constructie
+aanleren zonder de reden waarom ze werkt.
+
+Daaruit volgt dat de twee leeruitkomsten van plaats wisselen met recursie:
+
+| Vak | Eruit | Erin |
+|---|---|---|
+| PGM1 | A4 recursie, 10% | P3 bestanden, 10% |
+| PGM2 | P3 bestanden, 10% | A4 recursie, 10% |
+
+Beide matrijzen blijven op 100% sluiten, en beide vakken toetsen voortaan wat ze
+onderwijzen. PGM2 moet excepties dan wel daadwerkelijk gaan behandelen; nu staat
+`try`/`except` daar uitsluitend in gegeven code.
 
 ## Een besluit toevoegen
 
