@@ -116,14 +116,17 @@ weeknummer vastzit, kan verplaatst worden zonder verbouwd te worden.
 
 ### De leesopgaven
 
-`v1.0.0` heeft **twaalf leesopgaven, één per week**, in `readings/`. Artikelen
-over waar het vakgebied op ingrijpt: algoritmen die discrimineren, een computer
-die Jeopardy wint, zelfrijdende auto's, taal en denken.
+`v1.0.0` heeft **twaalf leesopgaven, één per week**, in `readings/`: artikelen
+over waar het vakgebied op ingrijpt, zoals algoritmen die discrimineren, een
+computer die Jeopardy wint, zelfrijdende auto's, taal en denken.
 
-Ze zijn volledig verdwenen. Dat is het meest directe verlies aan relevantie in
-het hele materiaal, want dit was de plek waar het vak buiten zichzelf wees
-zonder dat er een regel code aan te pas kwam. De vraag of ze terugkomen hoort in
-de herziening thuis.
+Ze zijn bewust losgelaten. Interessant materiaal, maar het bleek niet in de
+beschikbare tijd in te passen. Zie het besluitenregister.
+
+Wat er wel uit volgt: CS5 liet de relevantie van het vak langs twee wegen zien,
+via de opgaven én via de leesopgaven. Nu die tweede weg is vervallen, rust dat
+volledig op de opgaven. Dat maakt het hierboven beschreven probleem met de laag
+`extra` zwaarder dan het op zichzelf al is.
 
 ## Principes die we aanhouden
 
@@ -173,6 +176,7 @@ organisatorisch besluit niet.
 | Recursie is naar PGM2 verplaatst; imperatief komt eerst | organisatorisch | gesloten |
 | De theoretische afsluiting is geschrapt | ervaring | gesloten |
 | Schakelingen zijn geschrapt, binair is afgeslankt | organisatorisch | gesloten |
+| De wekelijkse leesopgaven zijn vervallen | praktisch | gesloten |
 | Objecten pas in PGM2 | didactisch | staand, onderbouwd |
 | Picobot opent PGM1 | didactisch | staand, onderbouwd |
 | Opgaven in opstap, basis en extra | didactisch | **open** |
