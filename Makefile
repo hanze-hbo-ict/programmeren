@@ -28,7 +28,9 @@ livehtml:
 
 # Een pull request bekijken zoals hij eruitziet, niet zoals de diff hem toont.
 # De notebookcache staat buiten git en overleeft een branchwissel, dus dit duurt
-# een paar seconden zolang er geen notebooks zijn veranderd.
+# een paar seconden zolang er geen notebooks zijn veranderd. De pagina's worden
+# over HTTP geserveerd en niet als bestand geopend, want Mermaid laadt als
+# ES-module vanaf een CDN en dat weigert een browser op een file://-pagina.
 review:
 	@test -n "$(PR)" || (echo "Gebruik: make review PR=<nummer>"; exit 1)
 	gh pr checkout $(PR)
