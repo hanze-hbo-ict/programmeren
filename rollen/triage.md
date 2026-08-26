@@ -46,6 +46,11 @@ een ontwerp op dat door de poort komt omdat niemand het kan controleren.
 
 De route, en één zin waarom. Bij afwijzen: hoe het opgesplitst zou moeten worden.
 
+Op GitHub: zet het label `route: doen`, `route: licht` of `route: volledig` op de
+issue, zet de status door naar de eerste stap van die route (*Meten* bij
+volledig, *Schrijven* bij licht), en schrijf je zin als reactie. Bij afwijzen
+sluit je de issue met het advies erin.
+
 ## Harde regel
 
 **Je doet het werk niet, ook niet als het klein is.** Route *doen* betekent dat

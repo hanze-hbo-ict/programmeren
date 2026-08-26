@@ -110,9 +110,61 @@ flowchart TD
 De eindredacteur staat buiten de lus. Die draait periodiek over het geheel, niet
 per werkitem, omdat samenhang over weken heen niet zichtbaar is vanuit één week.
 
+## Hoe dit op GitHub loopt
+
+De overdrachten zijn geen losse bestanden maar GitHub-artefacten. Daarmee staat
+de hele geschiedenis van een wijziging op één plek, en is te zien wie wat wanneer
+heeft besloten.
+
+| Overdracht | Waar het staat |
+|---|---|
+| Werkitem | Een **issue**, aangemaakt met het sjabloon |
+| Route | Label `route: doen`, `route: licht` of `route: volledig` |
+| Bevindingen | Reactie op de issue |
+| Weekontwerp | Reactie op de issue, met de open vragen apart |
+| Besluit | Reactie van de vakdeskundige, plus de verwijzing naar wat er in `curriculum/` is vastgelegd |
+| Oplevering | Een **pull request**, met het sjabloon ingevuld |
+| Redactieverslag | Reactie op de pull request |
+| Beoordeling | Een **review** op de pull request, per beoordelaar één |
+| Akkoord | De vakdeskundige merget |
+
+De stap waarin een werkitem zit, staat in het veld **Status** op het
+[projectbord](https://github.com/orgs/hanze-hbo-ict/projects/4): Triage, Meten,
+Ontwerpen, Besluit, Schrijven, Redactie, Beoordeling, Klaar.
+
+Wie een stap afrondt, plaatst zijn artefact en zet de status door. Blijft een
+werkitem op *Besluit* staan, dan wacht het op een mens, en dat hoort zichtbaar te
+zijn.
+
+### Branches en pull requests
+
+Commits op `master` zijn geblokkeerd door een pre-commit hook. Elk werkitem
+krijgt dus een eigen branch, genoemd naar waar het over gaat: `week-6`,
+`bestanden-in-pgm1`, `midterm-mutatie`.
+
+De pull request sluit de issue (`Sluit #12`), zodat het werkitem dichtgaat op het
+moment dat het werk erin zit en niet eerder.
+
+Eén pull request per werkitem. Een tweede onderwerp erbij nemen omdat je er toch
+zit, maakt de beoordeling onmogelijk: dat is een nieuw werkitem.
+
+### Wat er ondanks GitHub geldt
+
+**Een reactie is een artefact, geen gesprek.** De bevindingen zijn één reactie
+met alles erin, niet zeven losse opmerkingen door de draad heen. Wie later
+terugleest moet de overdracht in één keer kunnen lezen.
+
+**Wat niet in het artefact staat, is niet overgedragen.** Ook niet als het
+ergens anders in de draad staat, en zeker niet als het buiten GitHub is
+besproken.
+
+**Een besluit hoort in `curriculum/`, niet alleen in de issue.** Een issue wordt
+gesloten en verdwijnt uit het zicht; het besluitenregister is waar de volgende
+persoon kijkt.
+
 ## De overdrachten
 
-Wat er tussen de stappen gaat. Een veld dat je niet kunt invullen laat je leeg
+Wat er in elk artefact hoort. Een veld dat je niet kunt invullen laat je leeg
 met `<geen>`; er iets plausibels neerzetten is erger, want dat is verzonnen
 precisie waar de volgende rol op vertrouwt.
 

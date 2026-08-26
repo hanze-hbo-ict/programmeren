@@ -1,0 +1,62 @@
+name: Werkitem
+description: Een wijziging aan het cursusmateriaal
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Een werkitem beschrijft wat er af moet zijn, niet hoe. Het ontwerp komt
+        later, van de curriculumontwerper.
+
+        Zie [`rollen/rollen.md`](../blob/master/rollen/rollen.md) voor hoe dit
+        verder loopt.
+
+  - type: textarea
+    id: aanleiding
+    attributes:
+      label: Aanleiding
+      description: Wat is er aan de hand, of wat willen we bereiken?
+      placeholder: |
+        Week 5 heeft geen contextrijke opgave op basisniveau; de student oefent
+        geneste lussen zonder dat er een probleem wordt opgelost.
+    validations:
+      required: true
+
+  - type: textarea
+    id: klaar
+    attributes:
+      label: Wanneer is dit af?
+      description: >
+        Waaraan zie je dat het klaar is? Concreet genoeg dat een ander het kan
+        vaststellen zonder jou.
+      placeholder: |
+        - Basis opent met een probleem in context
+        - De opgave dekt A1 en A3
+        - Uitwerking draait mee in de build
+    validations:
+      required: true
+
+  - type: input
+    id: raakt
+    attributes:
+      label: Waar raakt het aan
+      description: Weken, bestanden of documenten. Laat leeg als je het niet weet.
+      placeholder: PGM1 week 5, problems/5_basis, curriculum/leerlijn.md
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Wat de repo niet weet
+      description: >
+        Geschiedenis, afspraken of overwegingen die nergens vastliggen. Dit is
+        het waardevolste veld: wat hier niet staat, wordt straks geraden.
+      placeholder: |
+        Deze opgave is in 2024 ingekort omdat er te weinig practicumtijd was.
+
+  - type: checkboxes
+    id: gecontroleerd
+    attributes:
+      label: Vooraf nagekeken
+      options:
+        - label: Ik heb in `curriculum/uitgangspunten.md` gekeken of hier al een besluit over is genomen
+        - label: Dit gaat over één week of één afgebakende wijziging
