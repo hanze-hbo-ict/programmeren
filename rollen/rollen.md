@@ -1,0 +1,178 @@
+# Rollen
+
+Dit document beschrijft hoe een herziening van het cursusmateriaal verloopt: in
+welke stappen, wie wat doet, en wat er tussen die stappen wordt overgedragen.
+
+Het is een bewerking van het [role loop](https://github.com/misja/agent-role-loop)-model
+voor een redactieproces in plaats van een softwareproject. De vier principes
+daaruit gelden onverkort; de rollen en de overdrachten zijn andere.
+
+Dit document is voor auteurs en docenten, niet voor studenten. Het staat buiten
+`source/` en maakt geen deel uit van het boek.
+
+## Waarom dit er is
+
+Deze repo is niet stukgegaan aan één slechte wijziging. Ze is stukgegaan aan
+veel wijzigingen die ieder op zich verdedigbaar waren en samen de samenhang
+hebben opgegeten. Opgaven verhuisd zonder hun context, een niveau hernoemd
+waardoor de bedoeling verschoof, een opgave gehalveerd zonder de rest bij te
+werken.
+
+Daar helpt geen betere reviewer tegen. Daar helpt tegen dat iemand vóór elke
+wijziging meet wat er staat, en dat elk besluit ergens landt waar de volgende
+het terugvindt.
+
+## De vier principes
+
+Overgenomen uit het bronmodel, met wat ze hier betekenen.
+
+**Contextisolatie.** Elke rol krijgt een eigen, verse context. Wie meet, moet
+niet weten wat de uitkomst zou moeten zijn. Wie beoordeelt, moet niet de
+worsteling van de auteur hebben gezien.
+
+**Expliciete overdrachten.** Tussen twee rollen gaat precies één artefact. Wat
+niet in dat artefact staat, is niet overgedragen. "Zoals besproken" bestaat niet.
+
+**Proportionaliteit.** Een typefout doorloopt niet zeven stappen. Een hele week
+herzien wel.
+
+**De mens in de lus.** Bij dit materiaal is dat geen formaliteit maar een
+noodzaak, en op een manier die het bronmodel niet kent. Zie hieronder.
+
+## Twee afwijkingen van het bronmodel
+
+### Meten is een eigen stap, en komt eerst
+
+In het bronmodel verkent de planner terwijl hij plant. Dat werkt hier niet.
+
+Bij het herzien van de weken 3 en 6 werd zes keer een aanname omvergeworpen door
+een meting, en dat waren geen kleinigheden: recursie bleek niet verkeerd
+geplaatst maar bewust smal gehouden; muterende lijstmethodes bleken in PGM1
+helemaal niet voor te komen; de leesopgaven bleken geen vergeten maar een
+besluit; de dunste week van de cursus bleek dun door een besluit en niet door
+slordigheid.
+
+Wie meet met een hypothese in het hoofd, meet naar die hypothese toe. Daarom is
+de **verkenner** een aparte rol die alleen feiten oplevert en geen voorstellen
+doet.
+
+### De vakdeskundige is een bron, geen poort
+
+In het bronmodel keurt de mens een plan goed. Hier houdt de vakdeskundige
+informatie vast die nergens anders bestaat: waarom recursie is verplaatst, dat
+de leesopgaven zijn losgelaten, dat een vraag met opzet onoplosbaar is, welke
+besluiten politiek zijn en dus niet met argumenten te heropenen.
+
+Die kennis is niet af te leiden uit de repo. Ze moet gevraagd worden, en
+daarom staat de vakdeskundige niet alleen achteraan als poort maar ook
+vooraan als bron. Elke ontwerpstap eindigt met de vragen die alleen hij kan
+beantwoorden.
+
+Daaruit volgt een harde regel: **een besluit dat niet in `curriculum/` landt, is
+niet genomen.** Dat is precies wat er eerder is misgegaan.
+
+## De stappen
+
+```mermaid
+flowchart TD
+    W["Werkitem"] --> T{Triage}
+    T -->|licht| A
+    T -->|volledig| V["Verkenner"]
+    T -->|afwijzen| R0["Terug, met advies"]
+    V -->|Bevindingen| O["Curriculumontwerper"]
+    O -->|Weekontwerp + open vragen| M{"Vakdeskundige (mens)"}
+    M -->|herzie| O
+    M -->|stop| E1["Einde"]
+    M -->|Besluit| A["Auteur"]
+    A -->|Oplevering| RD["Redacteur"]
+    RD -->|Redactieverslag| B
+    subgraph B["Beoordelaars (parallel, geïsoleerd)"]
+        direction LR
+        B1["onderwijskundige"]
+        B2["eerstejaars"]
+    end
+    B -->|Beoordeling| M2{"Vakdeskundige (mens)"}
+    M2 -->|blokkeer| A
+    M2 -->|akkoord| E2["Merge"]
+```
+
+| Stap | Rol | Krijgt | Levert |
+|---|---|---|---|
+| Triage | [triage](triage.md) | werkitem | route |
+| Meten | [verkenner](verkenner.md) | werkitem | bevindingen |
+| Ontwerpen | [curriculumontwerper](curriculumontwerper.md) | bevindingen, `curriculum/` | weekontwerp, open vragen |
+| Beslissen | [vakdeskundige](vakdeskundige.md) — **mens** | weekontwerp | besluit, vastgelegd |
+| Schrijven | [auteur](auteur.md) | besluit, `conventies/` | oplevering |
+| Repareren | [redacteur](redacteur.md) | oplevering | redactieverslag |
+| Beoordelen | [onderwijskundige](onderwijskundige.md), [eerstejaars](eerstejaars.md) | oplevering | beoordeling |
+| Vegen | [eindredacteur](eindredacteur.md) | de hele cursus | bevindingen |
+
+De eindredacteur staat buiten de lus. Die draait periodiek over het geheel, niet
+per werkitem, omdat samenhang over weken heen niet zichtbaar is vanuit één week.
+
+## De overdrachten
+
+Wat er tussen de stappen gaat. Een veld dat je niet kunt invullen laat je leeg
+met `<geen>`; er iets plausibels neerzetten is erger, want dat is verzonnen
+precisie waar de volgende rol op vertrouwt.
+
+**Bevindingen** — feiten, geen oordeel.
+
+- Wat er staat: bestanden, omvang, structuur, per niveau
+- Wat het materiaal doet tegenover wat `conventies/` voorschrijft
+- Wat de leerlijn en de toetsmatrijs voor deze week vragen
+- Wat `v1.0.0` op deze plek had, en wat daarvan over is
+- Vooruitverwijzingen: begrippen die eerder gebruikt worden dan geïntroduceerd
+- Elke bewering met de meting erbij
+
+**Weekontwerp** — wat de week wordt.
+
+- Per niveau wat er komt te staan, en waarom dat de leeruitkomst dekt
+- Wat blijft, wat verdwijnt, wat wordt teruggehaald uit `v1.0.0`
+- De spanningen, benoemd, met een aanbeveling per stuk
+- **Open vragen voor de vakdeskundige**, expliciet gescheiden van de rest
+- Wat dit doet met de weken ervoor en erna
+
+**Besluit** — van de mens.
+
+- Antwoord op elke open vraag, of expliciet uitstel
+- Wat er in `curriculum/` is vastgelegd, met verwijzing
+- Akkoord, herziening met genoemde wijzigingen, of stop
+
+**Oplevering** — van de auteur.
+
+- De gewijzigde bestanden
+- Bewijs dat het werkt: welke assertions draaien, dat de build schoon is, dat de
+  hooks slagen
+- Waar van het ontwerp is afgeweken, en waarom
+
+**Redactieverslag** — wat er is gerepareerd, en wat opzettelijk is blijven staan.
+
+**Beoordeling** — bevindingen, geen correcties, elk met de plek in het materiaal.
+
+## Verificatie
+
+Een oplevering zonder bewijs is geen oplevering. Wat hier telt als bewijs:
+
+| Soort materiaal | Bewijs |
+|---|---|
+| Opgave met testcellen | De uitwerking draait tijdens de build en alle assertions slagen |
+| Opgave met verwachte uitvoer | Die uitvoer is nagerekend tegen de echte databestanden |
+| Elk bestand | `uv run pre-commit run --files ...` slaagt |
+| Elke wijziging | `uv run make html` bouwt zonder waarschuwingen |
+
+Verwachte uitvoer die niet is nagerekend, is een fout die wacht. In week 6 stond
+er `139.3` waar Python `139.29999999999998` zegt.
+
+## Proportionaliteit
+
+| Omvang | Route |
+|---|---|
+| Een typefout, een dode link, een naam rechtzetten | Doen. Hooks en build zijn genoeg. |
+| Eén opgave herzien, een sectie toevoegen | Licht: auteur, redacteur, mens. |
+| Een week herzien | De volledige lus. |
+| Een vak herindelen | Te groot. Eerst opsplitsen in weken. |
+
+Bij twijfel tussen licht en volledig telt hoe moeilijk het terug te draaien is.
+Materiaal weggooien of een leeruitkomst verplaatsen verdient de volledige lus,
+ook als de wijziging klein oogt.

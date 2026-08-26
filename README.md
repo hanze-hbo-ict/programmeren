@@ -33,6 +33,12 @@ Het ontwerp van de leerlijn staat in [`curriculum/`](curriculum/): de
 de [leerlijn](curriculum/leerlijn.md) per week, en de
 [uitgangspunten](curriculum/uitgangspunten.md) met het besluitenregister.
 
+## Werkwijze
+
+Hoe een herziening verloopt staat in [`rollen/`](rollen/), gebonden door
+[`rollen.md`](rollen/rollen.md): welke stappen er zijn, wie wat doet, en wat er
+tussen die stappen wordt overgedragen.
+
 ## Conventies
 
 De afspraken voor auteurs staan in [`conventies/`](conventies/), gebonden door
