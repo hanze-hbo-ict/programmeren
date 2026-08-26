@@ -26,7 +26,7 @@ dan de week waarin het hier staat.
 | 3 | Functies | P5, P6, P7, A2 | functiedefinitie, parameter, zelfaanroep |
 | 4 | Lussen | A1 | `for`, `while`, begrensde herhaling |
 | 5 | Geneste lussen | A1, A3 | geneste lus, 2D-lijst, ASCII-art, bordrepresentatie |
-| 6 | Bestanden en data | bestanden † | bestand lezen en schrijven, beeldbewerking |
+| 6 | Bestanden en data | bestanden † | bits, bytes, ASCII, newline, `with open`, beeldbewerking |
 | 7 | Lijsten en dictionaries | P4, A3 | dictionary, Markov |
 
 † De leeruitkomst over tekstbestanden staat nu in de PGM2-matrijs en wisselt van

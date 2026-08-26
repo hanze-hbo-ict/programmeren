@@ -232,6 +232,7 @@ organisatorisch besluit niet.
 | De wekelijkse leesopgaven zijn vervallen | praktisch | gesloten |
 | Bestanden naar PGM1, excepties blijven in PGM2 | didactisch | staand, onderbouwd |
 | Mutatie pas vanaf PGM1 week 7, en als grens benoemd | didactisch | staand, onderbouwd |
+| Canonieke Python aanbieden, mechanisme later uitleggen | didactisch | staand, onderbouwd |
 | Mag het bord in week 5 gewijzigd worden | didactisch | **open** |
 | Objecten pas in PGM2 | didactisch | staand, onderbouwd |
 | Picobot opent PGM1 | didactisch | staand, onderbouwd |
@@ -383,6 +384,39 @@ Daaruit volgt dat de twee leeruitkomsten van plaats wisselen met recursie:
 Beide matrijzen blijven op 100% sluiten, en beide vakken toetsen voortaan wat ze
 onderwijzen. PGM2 moet excepties dan wel daadwerkelijk gaan behandelen; nu staat
 `try`/`except` daar uitsluitend in gegeven code.
+
+### Canonieke vormen, mechanisme later
+
+De cursus legt nadruk op logische handelingen: open een bestand, lees het, sluit
+het. In de praktijk combineert Python die handelingen tot één constructie:
+
+```python
+with open(filename) as file:
+    for line in file:
+        ...
+```
+
+De keuze is dan of je de losse handelingen voorop stelt of meteen de vorm
+aanleert die iedereen gebruikt. **Wij bieden de canonieke vorm aan**, om drie
+redenen.
+
+**Er valt niets af te leren.** Wie `open` en `close` los leert, moet later zowel
+een nieuwe vorm leren als de oude afwennen. Wie `with` leert, krijgt er alleen
+uitleg bij.
+
+**Als frase is het wel degelijk een logische handeling**: *open dit bestand
+zolang dit blok duurt*. Dat is eerder duidelijker dan twee statements die de
+student zelf moet onthouden te paren.
+
+**Het mechanisme kan wachten, net als bij `open` zelf.** Niemand legt in week 6
+uit wat een filedescriptor is. `with` bestaat om het sluiten te garanderen ook
+als er iets misgaat, en dat is exceptieterritorium: in PGM2 landt het naast de
+excepties en heeft het daar zijn reden.
+
+Prettige bijkomstigheid: deze vorm roept geen enkele methode aan, en past dus
+binnen de regel dat objectmethoden in PGM1 wegblijven. De variant zonder `with`
+zou dat ook doen, maar laat het bestand open en leert precies de gewoonte aan
+waarvoor `with` bestaat.
 
 ## Een besluit toevoegen
 
