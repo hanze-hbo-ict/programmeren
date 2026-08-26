@@ -147,8 +147,17 @@ Commits op `master` zijn geblokkeerd door een pre-commit hook. Elk werkitem
 krijgt dus een eigen branch, genoemd naar waar het over gaat: `week-6`,
 `bestanden-in-pgm1`, `midterm-mutatie`.
 
-De pull request sluit de issue (`Sluit #12`), zodat het werkitem dichtgaat op het
-moment dat het werk erin zit en niet eerder.
+De pull request sluit de issue, zodat het werkitem dichtgaat op het moment dat
+het werk erin zit en niet eerder. Schrijf daarvoor bovenaan de beschrijving:
+
+```text
+Closes #12
+```
+
+Dat sleutelwoord moet **Engels** zijn. GitHub herkent `close`, `closes`,
+`closed`, `fix`, `fixes`, `fixed`, `resolve`, `resolves` en `resolved`, en verder
+niets. Een Nederlandse variant als *Sluit #12* leest prima en doet niets: de
+issue blijft dan gewoon openstaan nadat de pull request is gemerged.
 
 Eén pull request per werkitem. Een tweede onderwerp erbij nemen omdat je er toch
 zit, maakt de beoordeling onmogelijk: dat is een nieuw werkitem.

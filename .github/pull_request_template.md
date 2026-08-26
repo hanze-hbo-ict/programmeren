@@ -3,7 +3,12 @@ Dit is de oplevering uit rollen/rollen.md. Een oplevering zonder bewijs is geen
 oplevering, dus vul het bewijsblok echt in.
 -->
 
-Sluit #
+<!--
+Het sleutelwoord moet Engels zijn, anders sluit GitHub de issue niet bij het
+mergen. Toegestaan: close(s|d), fix(es|ed), resolve(s|d).
+-->
+
+Closes #
 
 ## Wat er is veranderd
 
