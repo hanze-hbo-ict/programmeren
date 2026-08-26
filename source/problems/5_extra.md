@@ -653,7 +653,7 @@ Het resultaat hiervan is dat je de pixels uit een andere afbeelding kan gebruike
 
 ![Vermandelbrotte alien](images/5/mbtify.png)
 
-Hier is een voorbeeld dat laat zien hoe je een afbeelding kan laden (de afbeelding `alien.png` uit de map `pngs`):
+Hier is een voorbeeld dat laat zien hoe je een afbeelding kan laden (de afbeelding `alien.png` uit de directory `pngs`):
 
 ```python
 def example():

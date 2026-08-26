@@ -209,4 +209,4 @@ twee plekken half hetzelfde beweert.
   daarmee de enige harde, toetsbare uitwerking van de regel hierboven.
 - Spaarzaam met vetgedrukte tekst en opsommingen; alleen waar ze de structuur
   echt verhelderen.
-- Verwijs naar bestanden en mappen als inline code.
+- Verwijs naar bestanden en directories als inline code.

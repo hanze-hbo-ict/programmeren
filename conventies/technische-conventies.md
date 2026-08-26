@@ -86,7 +86,7 @@ boven:
 
 ## Indeling van `source/`
 
-| Map | Inhoud |
+| Directory | Inhoud |
 |---|---|
 | `about/` | Syllabus, FAQ, feedback, literatuurverwijzingen |
 | `course/` | Weekpagina's, practicum-, opgaven- en oplossingenoverzichten |
@@ -200,7 +200,7 @@ verificatietabel hierboven daarin mee.
   `images/<weeknummer>/`, en worden relatief aangehaald: `images/6/binarize.png`.
 - **Site-brede afbeeldingen** staan in `source/images/` en worden root-relatief
   aangehaald: `/images/saucer.png`.
-- **Bijlagen** (`.py`, `.zip`, `.jar`) staan in een `assets/`-map naast de
+- **Bijlagen** (`.py`, `.zip`, `.jar`) staan in een `assets/`-directory naast de
   inhoud.
 
 Geef elke afbeelding een alt-tekst die beschrijft wat er te zien is.

@@ -61,7 +61,7 @@ kunnen dragen.
 | 2 | Werkcollege | Een opgave wordt gezamenlijk uitgewerkt |
 | 3 | Practicum | Zelfstandig werken onder begeleiding aan de opgaven |
 
-Deze indeling verklaart de mappen: `lectures/` hoort bij de eerste bijeenkomst,
+Deze indeling verklaart de directories: `lectures/` hoort bij de eerste bijeenkomst,
 `practicals/` bij het werkcollege, `problems/` bij het practicum. Ze is ook
 relevant voor de vraag waar context hoort te zitten, want het werkcollege is de
 plek waar een probleem gezamenlijk stap voor stap wordt opgebouwd.
@@ -99,7 +99,7 @@ git archive v1.0.0 topics course problems readings _toc.yml | tar -x -C referent
 
 `referentie/` staat in `.gitignore`: het materiaal zit al in de
 geschiedenis en hoeft niet nog een keer in de boom. Ripgrep slaat genegeerde
-mappen over, dus zoek er expliciet in met `rg --no-ignore ... referentie/`.
+directories over, dus zoek er expliciet in met `rg --no-ignore ... referentie/`.
 
 Begin bij `_toc.yml`. Daar staat welke opgaven bij welke week hoorden, en dat is
 de snelste ingang naar wat er omheen stond.

@@ -2,7 +2,7 @@
 
 Het **doel** van deze les is om:
 
-* Kennis maken met het folder systeem.
+* Kennis maken met de directorystructuur.
 * Werken met een command-line interface
 
 ## Foldersysteem
@@ -12,30 +12,32 @@ Een programma heeft instructies nodig om te weten wat het moet doen. Deze instru
 :::{admonition} Belangrijk!
 :class: notice
 
-In de verkenner van windows zijn niet alle bestanden en mappen zichtbaar. Daarnaast zijn de extensies niet standaard weergegeven. Het is verstandig om via het tabblad View de optie *file name extensie* en *hidden items* te selecteren.
+In de verkenner van windows zijn niet alle bestanden en directories zichtbaar. Daarnaast zijn de extensies niet standaard weergegeven. Het is verstandig om via het tabblad View de optie *file name extensie* en *hidden items* te selecteren.
 
 ![View settings](images/0/view_settings.png)
 :::
 
-Vele programma's bestaan uit verschillende bestanden en om deze allemaal bij elkaar te houden staan ze in een map, ook bekend als een folder of een directory. Als gebruiker kan je ook mappen aanmaken om bestanden makkelijk terug te vinden. Binnen windows gebruik je de verkenner a.k.a. de explorer en binnen apple gebruik je Finder.
+Vele programma's bestaan uit verschillende bestanden en om deze allemaal bij elkaar te houden staan ze in een **directory**. Als gebruiker kan je ook directories aanmaken om bestanden makkelijk terug te vinden. Binnen windows gebruik je de verkenner a.k.a. de explorer en binnen apple gebruik je Finder.
 
-Mappen staan in een zogenaamde boomstructuur.
+Wat de Verkenner een *map* noemt, heet in de terminal een *directory*. Het is hetzelfde ding, en wij houden directory aan, omdat de commando's het zo noemen: `pwd` staat voor *print working directory* en `cd` voor *change directory*.
+
+Directories staan in een zogenaamde boomstructuur.
 
 ![Boomstructuur](images/0/tree_folders.png)
 
-Vaak staan de mappen onder elkaar afgebeeld.
+Vaak staan de directories onder elkaar afgebeeld.
 
-![Folder overzicht](images/0/folders.png)
+![Overzicht van directories](images/0/folders.png)
 
-De apple finder gebruikt een andere methode om mappen structuur af te beelden.
+De Finder van Apple beeldt de structuur op een andere manier af.
 
-![Finder folders](images/0/finder_folders.png)
+![Directories in de Finder](images/0/finder_folders.png)
 
 ### One-drive
 
-One-drive is de cloud systeem van microsoft. Het is automatisch geinstaleerd in windows. Voor mac kan het geinstalleerd worden met Rosetta 2 emulator. Via de hanze heb je toegang tot een grote one-drive om al je schoolwerk in kwijt te kunnen. Het werkt als een normale folder in de verkenner en alles wat erin staat wordt opgeslagen in de cloud. Het grote voordeel is dat je werk altijd een backup heeft. Je kan ook op verschillende apperaten inloggen dezelfde one-drive account instellen, bijvoorbeeld op een tablet, laptop en desktop. Op deze manier heb je toegang tot je bestanden op alle drie the apperaten.
+One-drive is de cloud systeem van microsoft. Het is automatisch geinstaleerd in windows. Voor mac kan het geinstalleerd worden met Rosetta 2 emulator. Via de hanze heb je toegang tot een grote one-drive om al je schoolwerk in kwijt te kunnen. Het werkt als een normale directory in de verkenner en alles wat erin staat wordt opgeslagen in de cloud. Het grote voordeel is dat je werk altijd een backup heeft. Je kan ook op verschillende apperaten inloggen dezelfde one-drive account instellen, bijvoorbeeld op een tablet, laptop en desktop. Op deze manier heb je toegang tot je bestanden op alle drie the apperaten.
 
-In de settings van one_drive kan je een account toevoegen, including je hanze schoolaccount. Zodra je deze hebt aangemaakt wordt er een nieuwe map aangemaakt voor de one-drive. Daar kan al het werk in geplaats worden.
+In de settings van one_drive kan je een account toevoegen, including je hanze schoolaccount. Zodra je deze hebt aangemaakt wordt er een nieuwe directory aangemaakt voor de one-drive. Daar kan al het werk in geplaats worden.
 
 :::{admonition} Belangrijk!
 :class: notice
@@ -69,15 +71,15 @@ Als dit de eerste keer is dat je de terminal gebruikt, goed bezig!
 
 ## Paden
 
-Zodra je de terminal opent start het vaak in de eigen user map. Dit is aangegeven via een pad.
+Zodra je de terminal opent start het vaak in je eigen home directory. Dit is aangegeven via een pad.
 
 ```console
 C:\Users\Emily>
 ```
 
-De slashes `/` scheiden submappen van de map waar ze in zitten. Op Windows zie je meestal backslashes `\` of dubbele backslashes; dit verschil is niet belangrijk.
+De slashes `/` scheiden subdirectories van de directory waar ze in zitten. Op Windows zie je meestal backslashes `\` of dubbele backslashes; dit verschil is niet belangrijk.
 
-Vertaling: Op de C-schijf in de map Users is de map Emily
+Vertaling: op de C-schijf staat in de directory Users de directory Emily
 
 Alle bestanden hebben hun eigen pad, een locatie binnen het systeem. Een computer kan enkel een bestand vinden als het pad bekend is.
 
@@ -105,9 +107,9 @@ Alles wat je kan doen met de vensters van je besturingssyteem kan je ook met de 
 
 Bij dit vak heb je drie terminalcommando's nodig. We behandelen ze alledrie kort. Hier is een kort overzicht:
 
-* `pwd`; kort voor *print working directory*. Het drukt je huidige locatie (map) af.
+* `pwd`; kort voor *print working directory*. Het drukt je huidige locatie af.
 * `ls`; Het drukt een lijst af van alle bestanden in de huidige locatie.
-* `cd`; kort voor *change directory*. Het laat je van map naar map door je computer navigeren.
+* `cd`; kort voor *change directory*. Het laat je van directory naar directory door je computer navigeren.
 
 ## `pwd`
 
@@ -135,7 +137,7 @@ misja@selenix:~$
 
 ``````
 
-**Het commando `pwd`** staat voor *print working directory*. Het drukt je huidige locatie (map) af. Probeer het:
+**Het commando `pwd`** staat voor *print working directory*. Het drukt je huidige locatie af. Probeer het:
 
 `````{tab-set}
 
@@ -174,11 +176,11 @@ Je ziet de locatie waarin je terminal en command line op dit moment actief is. W
 
 Merk ook op dat een volgende prompt verschenen is, die op een volgend commando wacht...
 
-De uitvoer is de *naam van de map* waar je je momenteel bevindt in de terminal. "Map" en "directory" betekenen hetzelfde.
+De uitvoer is de *naam van de directory* waar je je momenteel bevindt in de terminal.
 
-De slashes `/` scheiden submappen van de map waar ze in zitten. Op Windows zie je meestal backslashes `\` of dubbele backslashes; dit verschil is niet belangrijk.
+De slashes `/` scheiden subdirectories van de directory waar ze in zitten. Op Windows zie je meestal backslashes `\` of dubbele backslashes; dit verschil is niet belangrijk.
 
-In alle voorbeelden is de gebruiker in een submap met de naam `misja` op de harde schijf. Dit zal jou "home directory" zijn, de plek waar al jouw bestanden staan.
+In alle voorbeelden is de gebruiker in een subdirectory met de naam `misja` op de harde schijf. Dit zal jou "home directory" zijn, de plek waar al jouw bestanden staan.
 
 We gaan nu kijken wat we hier kunnen vinden met het commando `ls`...
 
@@ -186,7 +188,7 @@ We gaan nu kijken wat we hier kunnen vinden met het commando `ls`...
 
 **Het commando `ls`** staat voor *list*.
 
-Als je `ls` uitvoert toont dit een lijst van alle bestanden en mappen in je huidige directory. Gebruik je het programma command prompt, dan gebruik je het commando `dir` (afkorting for directory). Een voorbeelduitvoer van `ls` is:
+Als je `ls` uitvoert toont dit een lijst van alle bestanden en directories in je huidige directory. Gebruik je het programma command prompt, dan gebruik je het commando `dir` (afkorting for directory). Een voorbeelduitvoer van `ls` is:
 
 `````{tab-set}
 
@@ -235,25 +237,25 @@ misja@selenix:~$
 
 `````
 
-De uitvoer is een lijst van alle bestanden en (sub)mappen in de huidige directory (Ter herinnering, "directory" en "map" zijn hetzelfde; de begrippen worden beide gebruikt.)
+De uitvoer is een lijst van alle bestanden en subdirectories in de huidige directory.
 
-Probeer het commando om een lijst van de namen van bestanden en submappen in je huidige directory te zien in de terminal, bijvoorbeeld
+Probeer het commando om een lijst van de namen van bestanden en subdirectories in je huidige directory te zien in de terminal, bijvoorbeeld
 
 ````{tip}
-Met `ls` kan je ook de inhoud van een submap bekijken door het de naam van deze map mee te geven als extra *argument*, bijvoorbeeld
+Met `ls` kan je ook de inhoud van een subdirectory bekijken door het de naam daarvan mee te geven als extra *argument*, bijvoorbeeld
 
 ```console
 ls Desktop
 ```
 ````
 
-Nu ga je door de directory's heen "bewegen" met `cd`...
+Nu ga je met `cd` door de directories heen bewegen...
 
 ## `cd`: het *change-directory*-commando
 
 **Het commando `cd`** is het belangrijkste. Het staat voor *change directory*.
 
-Het commando `cd` laat je van je huidige map naar andere mappen (directory's) op je computer navigeren. Om het te gebruiken moet je natuurlijk wel weten waar je heen wilt gaan!
+Het commando `cd` laat je van je huidige directory naar andere directories op je computer navigeren. Om het te gebruiken moet je natuurlijk wel weten waar je heen wilt gaan!
 
 Je kan bijvoorbeeld het bureaublad (Desktop) proberen ... typ dus `cd Desktop` in:
 
@@ -292,13 +294,13 @@ ls
 
 Je gaat je nu "omhoog" verplaatsen in de directorystructuur...
 
-## `cd ..`: een map "omhoog" gaan
+## `cd ..`: een directory "omhoog" gaan
 
 Ok, je bent naar het bureaublad (Desktop) ge-`cd`'d, *maar hoe ga je terug?!*
 
 De speciale directorynaam met twee punten achter elkaar `..` betekent "één directory *omhoog*".
 
-Als je dus `cd ..` intypt en op return drukt ben je terug in de map die je bureaublad *bevat*:
+Als je dus `cd ..` intypt en op return drukt ben je terug in de directory die je bureaublad *bevat*:
 
 ```console
 cd ..

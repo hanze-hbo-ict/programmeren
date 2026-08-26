@@ -43,6 +43,36 @@ forceer geen Nederlandse vertaling. Voor dit materiaal werkt dat zo uit:
 | Een programma starten | **uitvoeren** | draaien (5×) | |
 | Een functie gebruiken | **aanroepen** | oproepen (1×) | |
 | Melding bij een fout | **foutmelding** | error, exception, uitzondering | Voor het Python-mechanisme: `exception` |
+| Plek waar bestanden in staan | **directory** | map (41×), folder (22×) | Zie hieronder |
+
+## Directory, map, folder
+
+Drie woorden voor hetzelfde ding, en ze stonden niet netjes gescheiden per
+hoofdstuk maar door elkaar, tot in één zin toe: *"staan ze in een map, ook bekend
+als een folder of een directory"*.
+
+**Directory wint**, en het doorslaggevende argument is niet vaktaal in het
+algemeen maar dat de commando's het zelf spellen. `pwd` is *print working
+directory*, `cd` is *change directory*. Wie "map" leert, moet die vertaling zelf
+maken bij elke foutmelding en elke `--help`.
+
+**Folder vervalt.** Dat is de enige van de drie zonder achterban: de Nederlandse
+Verkenner zegt het niet, de commando's zeggen het niet, en in het Nederlands is
+het bovendien dubbelzinnig, want een folder is ook een reclamefoldertje.
+
+**Map krijgt één overbrugging.** Dat is wél wat de student in zijn eigen
+Verkenner ziet staan, dus dat verschil hoort één keer benoemd te worden:
+
+> Wat Verkenner een map noemt, heet in de terminal een directory.
+
+Daarna consequent *directory*, ook in de koppen.
+
+Hier komt **geen hook op**, anders dan bij de andere mechanische regels. Er
+blijven vijf legitieme uitzonderingen staan: de knop `MAP` in de
+Picobot-omgeving, de glowscript-URL's in `projects/vpython.md`, de overbruggende
+zin hierboven, en de bestandsnamen `folders.png` en `finder_folders.png`. Een
+hook met vijf uitzonderingen leert auteurs vooral hem te omzeilen. Dit is werk
+voor de veegronde van de eindredacteur, die terminologie toch al meet.
 
 ## Opgave, opdracht, practicum
 

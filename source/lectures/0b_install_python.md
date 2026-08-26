@@ -67,7 +67,7 @@ Download en installeer VSCode van [https://code.visualstudio.com/](https://code.
 
     ![Leeg bestand](images/0/edit1.png)
 * Sla dit bestand op als `intro.txt`
-  * Dat kan op je bureaublad of in een speciale map voor Programmeren I; dat mag je zelf bepalen. Dit ziet er dan ongeveer zo uit:
+  * Dat kan op je bureaublad of in een speciale directory voor Programmeren I; dat mag je zelf bepalen. Dit ziet er dan ongeveer zo uit:
 
     ![Intro.txt](images/0/edit0.png)
 * ***Automatisch opslaan!***; het is een goed idee om VSCode in te stellen zodat deze al je bestanden automatisch opslaat
@@ -145,9 +145,9 @@ Plak (of typ) onderstaande code in het nieuwe bestand
 print("Hello World")
 ```
 
-Sla dit bestand op als `hello.py` in je programmeer folder.
+Sla dit bestand op als `hello.py` in je programmeerdirectory.
 
-* Hierna kan je je Python-programma's overal opslaan; het is handig om ze te organiseren in mappen.
+* Hierna kan je je Python-programma's overal opslaan; het is handig om ze te organiseren in directories.
 * Vergeet **niet** om de extensie `.py` toe te voegen
 * Als je het bestand opslaat met de extensie `.py` (zoals we dat noemen), zie je dat de Python-code *gekleurd* wordt.
   * Dit wordt ook wel *syntax highlighting* genoemd

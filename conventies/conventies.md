@@ -24,7 +24,7 @@ De conventies gelden voor `source/`, het materiaal dat de student ziet.
 Ze gelden **niet** voor de documenten in `conventies/` zelf, en niet voor de
 verzameling niet-gemigreerd materiaal buiten `source/` (`ontwikkeling/`,
 `readings/`, `teacher_guides/`, `topics/`, `problems/context/` en verwante
-mappen). Dat materiaal staat bewust stil in afwachting van een beslissing over
+directories). Dat materiaal staat bewust stil in afwachting van een beslissing over
 wat ermee gebeurt.
 
 ## Hoe dit geborgd is
