@@ -61,7 +61,7 @@ uv run make html
 Notebooks worden uitgevoerd tijdens de build, dus een uitwerking met een fout
 laat de build vallen. Dat is de bedoeling.
 
-Let op de werkmap: een notebook draait in zijn eigen map. Een uitwerking in
+Let op de werkdirectory: een notebook draait in zijn eigen directory. Een uitwerking in
 `solutions/` die data uit `problems/assets/` leest, doet dat via `../problems/`.
 
 ## Harde regels

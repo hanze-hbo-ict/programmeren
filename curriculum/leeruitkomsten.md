@@ -4,7 +4,7 @@ De bindende laag: wat de student moet kunnen en hoe zwaar het meetelt in het
 tentamen. Alle overige keuzes moeten hiermee te rijmen zijn.
 
 Dit document is de kopie onder versiebeheer van de toetsmatrijzen die eerder
-alleen in `ontwikkeling/` stonden, een map die niet in git zit. Daardoor was het
+alleen in `ontwikkeling/` stonden, een directory die niet in git zit. Daardoor was het
 bindende document niet gedeeld en niet gevolgd in de tijd.
 
 > **Formele status.** Een toetsmatrijs wordt vastgesteld en is geen document dat
