@@ -100,13 +100,13 @@ De drie p's van het programmeren:
 
 ## Opdrachten
 
-Deze opdrachten zijn ontworpen om je te helpen denken als een informaticus. Door strategieën te ontwikkelen voor deze spellen, oefen je met het soort probleemoplossend denken dat essentieel is in de informatica.
+Deze opdrachten zijn ontworpen om je te helpen denken als een informaticus. Bij de eerste twee ontwikkel je een strategie voor een spel, bij de derde redeneer je naar een antwoord toe. Allebei zijn het vormen van het probleemoplossend denken dat essentieel is in de informatica, en voor allebei heb je nog geen regel Python nodig.
 
 ### Opdracht 1: Nim
 
 ![Nim 16 lucifers](images/1/NimGame.png)
 
-Nim is een spel voor twee spelers. Er liggen 16 lucifers op tafel. Om de beurt pakt een speler 1, 2 of 3 lucifers. Degene die de laatste lucifer van tafel pakt heeft gewonnen. Als de speler die als tweede begint de juiste strategie gebruikt, kan hij/zij altijd winnen.
+Nim is een spel voor twee spelers. Er liggen 16 lucifers op tafel. Om de beurt pakt een speler 1, 2 of 3 lucifers. Degene die de laatste lucifer van tafel pakt heeft gewonnen. Als de speler die als tweede aan de beurt is de juiste strategie gebruikt, kan hij of zij altijd winnen.
 
 - **Stap 1: Proberen.** Ga uitzoeken welke strategie speler 2 moet gebruiken om altijd te winnen. Speel het spel een paar keer tegen jezelf of een medestudent om patronen te ontdekken.
 - **Stap 2: Plan.** Maak een beslissingsboom voor speler 2. Begin bij de startsituatie en werk alle mogelijke zetten uit tot je de winnende strategie ziet.
@@ -115,13 +115,49 @@ Nim is een spel voor twee spelers. Er liggen 16 lucifers op tafel. Om de beurt p
 
 Leg 3 groepjes lucifers op tafel. Het aantal lucifers in elke groep maakt niet uit. Om de beurt pakt een speler 1, 2 of 3 lucifers, **uit één groep**. Degene die de laatste lucifer van tafel pakt heeft gewonnen. Ook nu kan met de juiste strategie een speler altijd de winst garanderen.
 
-- **Stap 1: Proberen.** Ga uitzoeken welke strategie een speler moet gebruiken om altijd te winnen. Begin met een eenvoudige opstelling, bijvoorbeeld (3,4,5) lucifers in de groepen.
-- **Stap 2: Plan.** Maak een beslissingsboom voor speler 2. Beschrijf de winnende strategie in algemene termen, zodat deze voor elke beginopstelling werkt. Tip: Afhankelijk van de lucifers op tafel wil de winnende speler soms wel beginnen, en soms niet. Beschrijf voor jouw strategie zowel een manier om te besluiten of je wél of níet wil beginnen, en hoe je het bord leeg speelt.
+Anders dan bij de vorige opgave ligt hier niet vast wíe er kan winnen. Dat hangt af van de beginopstelling, en dus is de eerste vraag niet hoe je wint maar of je wilt beginnen.
 
-### Opdracht 3: SOS
+- **Stap 1: Proberen.** Speel een paar opstellingen na, bijvoorbeeld (3,4,5) en (1,2,3), en let erop of je in die stand liever als eerste of als tweede aan de beurt bent. Ze zijn niet allebei hetzelfde.
+- **Stap 2: Plan.** Beschrijf twee dingen: hoe je aan een opstelling ziet of je wilt beginnen, en hoe je daarna wint. Je strategie moet voor elke beginopstelling werken, niet alleen voor de twee die je hebt gespeeld.
 
-SOS is ook een spel voor twee spelers. Het speelveld is een rij van 100 vakjes. Om de beurt plaatst een speler de letter 'S' of de letter 'O' in een vakje. De spelers kiezen zelf welk vakje en welke letter. Het spel is voorbij zodra er 'SOS' gespeld is op het bord. Wie de laatste letter heeft neergezet wint, ongeacht wie de andere twee letters van het woord 'SOS' heeft geplaatst.
-Ook hier geldt dat speler 2 met de juiste strategie altijd wint.
+### Opdracht 3: Wie liegt er?
 
-- **Stap 1: Proberen.** Ga uitzoeken welke strategie speler 2 moet gebruiken om altijd te winnen. Begin met een kleiner speelveld, bijvoorbeeld 10 vakjes, om het probleem behapbaar te maken.
-- **Stap 2: Plan.** Maak een beslissingsboom voor speler 2. Beschrijf de strategie in termen van hoe speler 2 moet reageren op de zetten van speler 1 om altijd te winnen.
+De vorige twee opgaven gingen over een strategie bedenken. Deze gaat over
+redeneren naar één antwoord toe, en dat is minstens zo vaak wat je bij het
+programmeren doet.
+
+Ze lopen op in moeilijkheid. Schrijf bij elke puzzel je redenering op, niet
+alleen je antwoord: die redenering is waar het om gaat.
+
+**a.** Nate en Jeff komen uit een land waar sommige mensen altijd de waarheid spreken en de rest altijd liegt.
+
+> Nate zegt: "Nate liegt en Jeff spreekt de waarheid."
+
+Liegt Nate? En Jeff?
+
+**b.** Suzy en Spike komen uit datzelfde land.
+
+> Suzy zegt: "Spike spreekt de waarheid."
+>
+> Spike zegt: "Suzy liegt en ik spreek de waarheid."
+
+Wie liegt er, en wie niet?
+
+**c.** Fred, Wilma en Pebbles ook.
+
+> Fred zegt: "Pebbles spreekt de waarheid."
+>
+> Pebbles zegt: "Ik lieg, of Wilma spreekt de waarheid."
+
+Wie liegt er, en wie niet?
+
+**d.** Het eiland Quork wordt bewoond door ridders en schurken. Ridders spreken altijd de waarheid, schurken liegen altijd. Op een dag zitten er elf bewoners in het café. Een toerist vraagt aan ieder van hen: "Hoeveel ridders zijn hier aanwezig?"
+
+Hij krijgt deze elf antwoorden:
+
+```text
+3  2  5  7  2  3  4  4  3  2  5
+```
+
+Kan de toerist hieruit vaststellen hoeveel ridders er in het café zitten? Zo ja,
+hoeveel, en hoe weet je dat zeker?
