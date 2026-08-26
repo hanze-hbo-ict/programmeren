@@ -21,9 +21,38 @@ Vele programma's bestaan uit verschillende bestanden en om deze allemaal bij elk
 
 Wat de Verkenner een *map* noemt, heet in de terminal een *directory*. Het is hetzelfde ding, en wij houden directory aan, omdat de commando's het zo noemen: `pwd` staat voor *print working directory* en `cd` voor *change directory*.
 
-Directories staan in een zogenaamde boomstructuur.
+Directories staan in een zogenaamde boomstructuur. Elke directory kan
+directories bevatten, en die weer, zo diep als je wilt.
 
-![Boomstructuur](images/0/tree_folders.png)
+```{mermaid}
+flowchart TD
+    C["C:"] --> PF["Program Files"]
+    C --> U["Users"]
+    C --> W["Windows"]
+    U --> A["Administrator"]
+    U --> E["emily"]
+    E --> D["Desktop"]
+    E --> Doc["Documents"]
+    E --> Dow["Downloads"]
+```
+
+In de terminal zie je diezelfde structuur zonder plaatjes, zo:
+
+```text
+C:
+├── Program Files
+├── Users
+│   ├── Administrator
+│   └── emily
+│       ├── Desktop
+│       ├── Documents
+│       └── Downloads
+└── Windows
+```
+
+Dat is geen tekening maar uitvoer: het commando `tree` drukt het zo af. Je komt
+deze schrijfwijze overal tegen, dus het loont om hem te leren lezen. Wat
+inspringt zit erin.
 
 Vaak staan de directories onder elkaar afgebeeld.
 
