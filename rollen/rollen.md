@@ -162,6 +162,33 @@ issue blijft dan gewoon openstaan nadat de pull request is gemerged.
 Eén pull request per werkitem. Een tweede onderwerp erbij nemen omdat je er toch
 zit, maakt de beoordeling onmogelijk: dat is een nieuw werkitem.
 
+### Een pull request bekijken
+
+Een diff laat zien wat er is veranderd, niet hoe het eruitziet. Bij een diagram,
+een tabel of een admonition is dat precies het verkeerde: je moet de pagina zien.
+
+```bash
+make review PR=87   # haalt de branch op, bouwt, en opent de gewijzigde pagina's
+make terug          # terug naar master
+```
+
+Dat is goedkoper dan het lijkt. De notebookcache staat buiten git en overleeft
+een branchwissel, dus een build waarin geen notebooks zijn veranderd duurt een
+paar seconden. Alleen als er notebooks bij zitten die opnieuw uitgevoerd moeten
+worden, loopt het op.
+
+`make review` opent precies de pagina's die de pull request raakt, niet de hele
+site. Levert een gewijzigd bronbestand geen pagina op, dan zegt het dat: meestal
+betekent dat het bestand niet in de inhoudsopgave staat.
+
+:::{note}
+Een preview-URL per pull request zou nog prettiger zijn, maar deze site
+publiceert via GitHub Pages met workflow-deployment, en daarbij vervangt elke
+deployment de hele site. Previews naast productie zouden terug moeten naar een
+`gh-pages`-branch of naar een externe dienst. Dat weegt niet op tegen een build
+van een paar seconden.
+:::
+
 ### Wat er ondanks GitHub geldt
 
 **Een reactie is een artefact, geen gesprek.** De bevindingen zijn één reactie
