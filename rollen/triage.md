@@ -14,6 +14,7 @@ dat niemand kan overzien.
 | **Licht** | Eén opgave herzien, een sectie toevoegen, een reparatie met een duidelijke grens | Auteur, redacteur, mens. Geen verkenner, geen ontwerp. |
 | **Volledig** | Een week herzien, een onderwerp verplaatsen, materiaal weggooien | De hele lus. |
 | **Afwijzen** | Een vak herindelen, meerdere weken tegelijk | Terug met het advies eerst op te splitsen. |
+| **Doorlopend** | Een kwaliteitszorg die overal speelt en nooit af is | Blijft open als verzamelplek; het werk gebeurt per sectie mee. |
 
 ## Waar je op let
 
@@ -31,6 +32,28 @@ uitzondering: een reparatie van hetzelfde soort fout op meerdere plekken mag als
 
 **Weet je waar het over gaat?** Kun je niet uitleggen wat er af moet zijn, dan
 is het werkitem niet af. Terug naar de indiener.
+
+## De doorlopende route
+
+Sommige dingen zijn geen werkitem maar een staande zorg: beeldkwaliteit,
+consistente terminologie, dode verwijzingen. Ze spelen overal, ze zijn nooit af,
+en ze opsplitsen in vijftig kleine issues levert vijftig issues op die niemand
+leest.
+
+Herken je er een, geef hem dan het label `doorlopend` en laat hem open staan. Hij
+wordt dan twee dingen: de plek waar bevindingen samenkomen, en de afvinklijst per
+sectie. Het werk zelf gebeurt mee met de sectie die toch al herzien wordt, want
+dan zit iemand er al in.
+
+Twee dingen horen erbij:
+
+**Een meting.** Zonder cijfers is een staande zorg een klaagzang. Bij de
+beeldkwaliteit is dat het gewicht per map en de lijst van uitschieters; bij
+terminologie het aantal treffers per woord.
+
+**Wat alleen een mens kan.** Schermafbeeldingen maken, een besluit nemen, iets
+navragen bij een collega. Zet dat er apart bij, zodat duidelijk is welk deel
+blijft liggen en waarom, en dat de rest daar niet op hoeft te wachten.
 
 ## Bij twijfel
 

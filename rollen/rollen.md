@@ -110,6 +110,11 @@ flowchart TD
 De eindredacteur staat buiten de lus. Die draait periodiek over het geheel, niet
 per werkitem, omdat samenhang over weken heen niet zichtbaar is vanuit één week.
 
+Zijn bevindingen worden meestal geen losse werkitems maar **doorlopende** issues:
+staande zorgen die overal spelen en nooit af zijn. Die blijven open als
+verzamelplek, en het werk eraan gaat mee met de sectie die toch al herzien wordt.
+Zie [triage](triage.md).
+
 ## Hoe dit op GitHub loopt
 
 De overdrachten zijn geen losse bestanden maar GitHub-artefacten. Daarmee staat
@@ -224,6 +229,7 @@ er `139.3` waar Python `139.29999999999998` zegt.
 | Eén opgave herzien, een sectie toevoegen | Licht: auteur, redacteur, mens. |
 | Een week herzien | De volledige lus. |
 | Een vak herindelen | Te groot. Eerst opsplitsen in weken. |
+| Beeldkwaliteit, terminologie, dode verwijzingen | Doorlopend. Blijft open, gaat mee met de sectie die toch herzien wordt. |
 
 Bij twijfel tussen licht en volledig telt hoe moeilijk het terug te draaien is.
 Materiaal weggooien of een leeruitkomst verplaatsen verdient de volledige lus,
