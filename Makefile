@@ -33,7 +33,9 @@ review:
 	@test -n "$(PR)" || (echo "Gebruik: make review PR=<nummer>"; exit 1)
 	gh pr checkout $(PR)
 	@$(MAKE) --no-print-directory html
-	@uv run python tools/open_changed.py
+	@# Uit master lezen: na de checkout staat het script niet meer in de werkboom
+	@# als de branch ouder is dan het script zelf.
+	@git show master:tools/open_changed.py | uv run python -
 
 terug:
 	git checkout master
