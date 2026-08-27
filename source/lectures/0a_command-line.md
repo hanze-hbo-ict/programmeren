@@ -24,7 +24,7 @@ Wat de Verkenner een *map* noemt, heet in de terminal een *directory*. Het is he
 Directories staan in een zogenaamde boomstructuur. Elke directory kan
 directories bevatten, en die weer, zo diep als je wilt.
 
-```{mermaid}
+```{md-mermaid}
 flowchart TD
     C["C:"] --> PF["Program Files"]
     C --> U["Users"]

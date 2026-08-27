@@ -15,7 +15,6 @@ extensions = [
     "sphinx.ext.mathjax",
     "sphinx_external_toc",
     "sphinxcontrib.bibtex",
-    "sphinxcontrib.mermaid",
     "sphinx_immaterial",
 ]
 
