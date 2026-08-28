@@ -18,7 +18,7 @@ flowchart TD
     T -->|"C1 DOORLOPEND"| D["Blijft open als verzamelplek"]
     T -->|"C1 LICHT"| A["Auteur"]
     T -->|"C1 VOLLEDIG"| V["Verkenner"]
-    V -->|Bevindingen| O["Curriculumontwerper"]
+    V -->|"C1b Bevindingen"| O["Curriculumontwerper"]
     O -->|"C2 Weekontwerp"| C{Verhelderaar}
     C -->|"C3 FAAL"| O
     C -->|"C3 AKKOORD"| G{"Poort (mens)"}
@@ -43,8 +43,8 @@ flowchart TD
 | Stap | Rol | Krijgt | Levert | Door |
 |---|---|---|---|---|
 | Triage | [triage](roles/triage.md) | C0 | C1 | agent |
-| Meten | [verkenner](roles/verkenner.md) | C0, C1 | bevindingen | agent |
-| Ontwerpen | [curriculumontwerper](roles/curriculumontwerper.md) | C0, bevindingen | C2 | agent |
+| Meten | [verkenner](roles/verkenner.md) | C0, C1 | C1b | agent |
+| Ontwerpen | [curriculumontwerper](roles/curriculumontwerper.md) | C0, C1b | C2 | agent |
 | Verhelderen | [verhelderaar](roles/verhelderaar.md) | C0, C2 | C3 | agent |
 | Poort | [vakdeskundige](roles/vakdeskundige.md) | C2, C3 | C4 | **mens** |
 | Schrijven | [auteur](roles/auteur.md) | C2, C4 | C5 | agent |

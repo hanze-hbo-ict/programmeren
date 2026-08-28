@@ -25,12 +25,11 @@ De contracten staan in `.claude/agent-role-loop/core/contracts/`, de lus in
    `LICHT`: sla door naar stap 6 met een minimaal ontwerp (het werkitem plus het
    triagebesluit) en zeg dat je op het lichte pad zit. Bij `VOLLEDIG`: ga door.
 
-3. **Meten.** Start `rol-verkenner` met C0 + C1. Je houdt nu de bevindingen vast.
+3. **Meten.** Start `rol-verkenner` met C0 + C1. Je houdt nu C1b vast.
 
-4. **Ontwerpen en verhelderen.** Start `rol-curriculumontwerper` met C0 + de
-   bevindingen. Start daarna `rol-verhelderaar` met de resulterende C2 + C0. Bij
+4. **Ontwerpen en verhelderen.** Start `rol-curriculumontwerper` met C0 + C1b. Start daarna `rol-verhelderaar` met de resulterende C2 + C0. Bij
    `FAAL`: stuur het ontwerp terug naar een **verse** `rol-curriculumontwerper` met
-   C0, de bevindingen en C3, en verhelder opnieuw. Faalt het een derde keer, stop
+   C0, C1b en C3, en verhelder opnieuw. Faalt het een derde keer, stop
    dan en leg de patstelling voor aan de gebruiker.
 
 5. **De poort - stop hier.** Toon de gebruiker: het definitieve C2 Weekontwerp, het

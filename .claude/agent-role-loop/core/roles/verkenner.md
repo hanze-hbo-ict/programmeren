@@ -61,4 +61,4 @@ niet vaststellen" is een bruikbare bevinding, een meting van iets anders niet.
 
 ## Uitvoer
 
-- Bevindingen: feiten met hun meting, geen oordeel.
+- C1b Bevindingen

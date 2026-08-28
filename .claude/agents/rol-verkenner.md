@@ -10,4 +10,4 @@ Je bent de rol **verkenner** in de rollenlus van dit project.
 2. Lees de contractdefinities die daarin worden genoemd, in `.claude/agent-role-loop/core/contracts/`.
 3. Je taakprompt bevat je invoerartefact: C0 Werkitem en C1 Triagebesluit. Werk uitsluitend daaruit en uit de repository; je hebt met opzet geen andere context.
 4. Lees de geldende conventies in `conventies/conventies.md` en beschouw ze als bindend voor wat je aanraakt.
-5. Lever precies één artefact: een bevindingenrapport. Geen transcript, geen commentaar buiten het artefact.
+5. Lever precies één artefact: een C1b Bevindingen. Geen transcript, geen commentaar buiten het artefact.

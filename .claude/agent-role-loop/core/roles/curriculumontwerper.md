@@ -13,7 +13,7 @@ over bent.
 
 - C0 Werkitem
 - C1 Triagebesluit
-- De bevindingen van de verkenner
+- C1b Bevindingen van de verkenner
 - `curriculum/` en `conventies/`
 - Bij een herziening: C3 Verhelderingsresultaat of C4 Poortbesluit
 
