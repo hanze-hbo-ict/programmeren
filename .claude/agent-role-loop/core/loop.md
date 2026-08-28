@@ -1,0 +1,111 @@
+# De rollenlus
+
+De pijplijn: de stappen, de contracten die ertussen gaan, en de plekken waar het
+pad zich splitst. De grondslag staat in [principles.md](principles.md), de
+contracten in [contracts/](contracts/), de rolprompts in [roles/](roles/). De
+uitleg voor mensen staat in [`rollen/`](../../../rollen/rollen.md).
+
+Dit is een bewerking van het [role loop](https://github.com/misja/agent-role-loop)-model
+voor een redactieproces in plaats van een softwareproject. De vier principes
+gelden onverkort; de rollen en de contracten zijn bewerkt.
+
+## Pijplijn
+
+```mermaid
+flowchart TD
+    W["Werkitem (C0)"] --> T{Triage}
+    T -->|"C1 AFWIJZEN"| Req["Terug, met advies"]
+    T -->|"C1 DOORLOPEND"| D["Blijft open als verzamelplek"]
+    T -->|"C1 LICHT"| A["Auteur"]
+    T -->|"C1 VOLLEDIG"| V["Verkenner"]
+    V -->|Bevindingen| O["Curriculumontwerper"]
+    O -->|"C2 Weekontwerp"| C{Verhelderaar}
+    C -->|"C3 FAAL"| O
+    C -->|"C3 AKKOORD"| G{"Poort (mens)"}
+    G -->|"C4 HERZIEN"| O
+    G -->|"C4 STOP"| E1["Einde"]
+    G -->|"C4 AKKOORD"| A
+    A -->|"C5 Oplevering"| B
+    subgraph B["Beoordelaars (parallel, geïsoleerd)"]
+        direction LR
+        B1["onderwijskundige"]
+        B2["eerstejaars"]
+        B3["redacteur"]
+        B4["pragmaticus"]
+    end
+    B -->|"C6 Beoordeling (x4)"| H{Hoofdredacteur}
+    H -->|"C7 BLOKKEER"| A
+    H -->|"C7 AKKOORD"| E2["Naar de vakdeskundige om te mergen"]
+```
+
+## Stappen
+
+| Stap | Rol | Krijgt | Levert | Door |
+|---|---|---|---|---|
+| Triage | [triage](roles/triage.md) | C0 | C1 | agent |
+| Meten | [verkenner](roles/verkenner.md) | C0, C1 | bevindingen | agent |
+| Ontwerpen | [curriculumontwerper](roles/curriculumontwerper.md) | C0, bevindingen | C2 | agent |
+| Verhelderen | [verhelderaar](roles/verhelderaar.md) | C0, C2 | C3 | agent |
+| Poort | [vakdeskundige](roles/vakdeskundige.md) | C2, C3 | C4 | **mens** |
+| Schrijven | [auteur](roles/auteur.md) | C2, C4 | C5 | agent |
+| Beoordelen | [vier beoordelaars](roles/) | C5 (kern) | C6 (x4) | agents, parallel |
+| Eindoordeel | [hoofdredacteur](roles/hoofdredacteur.md) | C5 (volledig), C6 (alle) | C7 | agent |
+
+De vier beoordelaars kijken naar dezelfde kern vanuit een eigen houding:
+[onderwijskundig](roles/beoordelaar-onderwijskundige.md),
+[als eerstejaars](roles/beoordelaar-eerstejaars.md),
+[redactioneel](roles/beoordelaar-redacteur.md) en
+[pragmatisch](roles/beoordelaar-pragmaticus.md).
+
+De [eindredacteur](roles/eindredacteur.md) staat buiten de lus en draait
+periodiek over het geheel. Zijn bevindingen worden meestal werkitems met de route
+`DOORLOPEND`.
+
+## Waar het pad zich splitst
+
+1. **Triage (C1).** `VOLLEDIG` begint bij de verkenner. `LICHT` gaat rechtstreeks
+   naar de auteur met een minimaal ontwerp. `DOORLOPEND` blijft open als
+   verzamelplek. `AFWIJZEN` gaat terug met advies.
+2. **Verhelderaar (C3).** `AKKOORD` gaat naar de poort. `FAAL` gaat terug naar de
+   ontwerper met genummerde wijzigingen. Faalt het drie keer, dan gaat de patstelling
+   naar de mens.
+3. **Poort (C4).** `AKKOORD` laat de auteur beginnen. `HERZIEN` stuurt genoemde
+   wijzigingen terug. `STOP` beëindigt het werk. Alleen een mens vult C4 in.
+4. **Eindoordeel (C7).** `AKKOORD` en `AKKOORD MET PUNTJES` sluiten de lus.
+   `BLOKKEER` gaat terug naar de auteur met een moet-lijst.
+
+## Gelijktijdigheid
+
+De beoordelaars draaien parallel en geïsoleerd: elk krijgt dezelfde kern van C5,
+en geen van hen ziet het oordeel van een ander. Onafhankelijke gezichtspunten zijn
+de waarde; context delen laat ze samenvallen tot één.
+
+Schrijven gebeurt achter elkaar. Twee auteurs in hetzelfde materiaal leveren
+conflicten op, geen snelheid.
+
+## Wat de machine eerst doet
+
+De mechanische controles zijn groen **voordat** de oplevering naar de
+beoordelaars gaat:
+
+```sh
+uv run pre-commit run --files <gewijzigde bestanden>
+uv run make html
+```
+
+Ze zijn een toegangsvoorwaarde tot de beoordeling, geen onderdeel ervan.
+Beoordelingsaandacht besteden aan wat een hook al vaststelt, is verspilling.
+
+## Proportionaliteit
+
+| Omvang | Route |
+|---|---|
+| Een typefout, een dode link, een naam rechtzetten | `LICHT`, of gewoon doen |
+| Eén opgave herzien, een sectie toevoegen | `LICHT` |
+| Een week herzien | `VOLLEDIG` |
+| Beeldkwaliteit, terminologie, dode verwijzingen | `DOORLOPEND` |
+| Een vak herindelen | `AFWIJZEN`; eerst opsplitsen in weken |
+
+Bij twijfel telt hoe moeilijk het terug te draaien is. Materiaal weggooien of een
+leeruitkomst verplaatsen verdient de volledige lus, ook als de wijziging klein
+oogt.

@@ -35,9 +35,11 @@ de [leerlijn](curriculum/leerlijn.md) per week, en de
 
 ## Werkwijze
 
-Hoe een herziening verloopt staat in [`rollen/`](rollen/), gebonden door
-[`rollen.md`](rollen/rollen.md): welke stappen er zijn, wie wat doet, en wat er
-tussen die stappen wordt overgedragen.
+Hoe een herziening verloopt staat in [`rollen/rollen.md`](rollen/rollen.md): de
+rollenlus, de contracten ertussen, en waarom de vakdeskundige er middenin zit.
+
+De lus draai je met `/orc work-items/<werkitem>.md`. De rolprompts en contracten
+staan in `.claude/agent-role-loop/core/`, de subagents in `.claude/agents/`.
 
 ## Conventies
 
