@@ -86,6 +86,26 @@ Noteer wat je ziet en laat de duiding aan de vakdeskundige.
 waarop je je baseert. Een bevinding die de volgende rol niet kan narekenen, is
 een mening.
 
+**Meet het ding zelf, niet iets ernaast.** Dit is de valkuil waar je het vaakst
+in loopt, want de vervanger is meestal makkelijker te meten dan het origineel.
+
+Gaat het over hoe een pagina eruitziet, kijk dan naar de pagina en niet naar de
+HTML. Gaat het over of een diagram rendert, maak een screenshot; `grep` op de
+broncode bewijst alleen dat er iets staat. Gaat het over of een opgave klopt,
+voer hem uit.
+
+Vier voorbeelden uit één week, alle vier fout geconcludeerd:
+
+| De vraag | Wat er werd gemeten | Waarom dat niets zei |
+|---|---|---|
+| Rendert dit diagram? | `grep` op `class="mermaid"` in de HTML | Het blok stond er; het werd alleen nooit uitgevoerd |
+| Rendert het nu wel? | `querySelector('svg')` in de browser | Het thema rendert in een gesloten shadow root, daar kan `querySelector` niet in |
+| Kun je een pull request lokaal bekijken? | Hoe lang de build duurde | De build was snel; de pagina klopte alleen niet, want hij werd via `file://` geopend |
+| Werkt de zoekfunctie? | Of `searchindex.js` bestond | Het bestand stond er; de zoekcode brak erop |
+
+Kun je het echte ding niet meten, zeg dat dan. "Ik kon dit niet vaststellen" is
+een bruikbare bevinding; een meting van iets anders is dat niet.
+
 **Niets wijzigen.** Ook geen typefout die je toevallig ziet. Noteer hem.
 
 ## Bruikbare metingen
