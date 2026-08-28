@@ -323,18 +323,46 @@ de uitvoer in de HTML en valt er voor de lezer niets meer te doen. Draagt hij de
 tag, dan komt hij leeg aan en kan de student hem op de pagina zelf uitvoeren.
 Dat werkte eerder via MyBinder en wordt straks Pyodide.
 
-De tag heeft daarmee drie verschillende aanleidingen, en het loont ze uit elkaar
-te houden:
+#### Wanneer zet je hem
+
+De tag zegt één ding: **deze cel is er om door de student uitgevoerd te worden.**
+Dat is de vraag die je jezelf stelt, niet of de build ermee overweg kan.
+
+Er zijn twee gevallen, en ze zien er verschillend uit maar vragen hetzelfde:
+
+**Uitleg.** Een compleet, werkend voorbeeld. De student voert het uit en kijkt
+wat eruit komt. Het gaat om de handeling: uitvoer lezen die er al staat is iets
+anders dan hem zien verschijnen, zeker wanneer de student eerst mag voorspellen
+wat er gaat gebeuren.
+
+**Opdracht.** Een lege of halve cel die de student invult en draait.
+
+In beide gevallen moet de cel leeg aankomen, en dus mag hij bij de build niet
+draaien.
+
+Zet hem **niet** op een cel waarvan de lezer de uitvoer alleen hoeft te lezen;
+die hoort te draaien, dan staat er tenminste iets dat klopt. En niet in
+`solutions/`, want daar is de uitvoering juist het bewijs dat de uitwerking
+werkt.
+
+#### Hoe het er nu voor staat
+
+Gemeten over `source/`, per aanleiding:
 
 | Aanleiding | Aantal | Toelichting |
 |---|---|---|
-| Stub die de student invult | 100 | Het werkboekmodel |
-| Compleet voorbeeld dat de student zelf uitvoert | 89 | Hier gaat het interactieve ontwerp om |
+| Opdracht: stub die de student invult | 100 | Het werkboekmodel |
+| Uitleg: compleet voorbeeld dat de student uitvoert | 89 | |
 | Zou de build blokkeren of laten falen | 4 | `input()`, turtle, bestanden openen |
 
-De middelste groep is de reden dat deze tag geen implementatiedetail is: hij
-bepaalt straks welke cellen voor de student uitvoerbaar worden. Een cel die de
-tag ten onrechte mist, staat er dan dood bij.
+Die laatste groep is een noodgreep en geen bedoeling. De eerste twee zijn de
+regel hierboven.
+
+En daarom is dit geen implementatiedetail: deze tag bepaalt straks welke cellen
+voor de student uitvoerbaar worden, zie
+[#96](https://github.com/hanze-hbo-ict/programmeren/issues/96). Een cel die de
+tag ten onrechte mist, staat er dan dood bij; een cel die hem ten onrechte
+draagt, is een leeg vakje zonder opdracht.
 
 Omdat deze fout onzichtbaar is in de gerenderde pagina, bewaakt een hook hem:
 `check-notebook-tags` controleert dat een codecel in `problems/` of
