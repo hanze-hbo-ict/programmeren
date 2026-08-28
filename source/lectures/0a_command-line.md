@@ -5,7 +5,7 @@ Het **doel** van deze les is om:
 * Kennis maken met de directorystructuur.
 * Werken met een command-line interface
 
-## Foldersysteem
+## Directorystructuur
 
 Een programma heeft instructies nodig om te weten wat het moet doen. Deze instructies staan in bestanden, ook bekend als files. Elk bestand heeft een extensie om aan te geven wat voor type bestand het is. `bestand.py` is een python bestand, `bestand.docx` is een word bestand. Het zijn altijd de laaste drie, soms vier letters na de **laatste** punt. `bestand.docx.py` is nog steeds een python bestand.
 

@@ -45,12 +45,12 @@ bibtex_bibfiles = ["references.bib"]
 # -- HTML output options -----------------------------------------------------
 html_theme = "furo"
 html_title = "Programmeren"
-html_logo = "_static/lightbulb.svg"
-
 html_theme_options = {
     "source_repository": "https://github.com/hanze-hbo-ict/programmeren",
     "source_branch": "master",
     "source_directory": "source/",
+    "light_logo": "lightbulb.svg",
+    "dark_logo": "lightbulb-dark.svg",
     "light_css_variables": {
         "color-brand-primary": "#3f51b5",
         "color-brand-content": "#3f51b5",
