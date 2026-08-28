@@ -14,8 +14,8 @@ extensions = [
     "sphinx_design",
     "sphinx.ext.mathjax",
     "sphinx_external_toc",
+    "sphinxcontrib.mermaid",
     "sphinxcontrib.bibtex",
-    "sphinx_immaterial",
 ]
 
 external_toc_path = "_toc.yml"
@@ -43,37 +43,22 @@ nb_execution_timeout = 60
 bibtex_bibfiles = ["references.bib"]
 
 # -- HTML output options -----------------------------------------------------
-html_theme = "sphinx_immaterial"
+html_theme = "furo"
 html_title = "Programmeren"
 html_logo = "_static/lightbulb.svg"
 
 html_theme_options = {
-    "repo_url": "https://github.com/hanze-hbo-ict/programmeren",
-    "repo_name": "programmeren",
-    "edit_uri": "blob/master/source",
-
-    "palette": [
-        {
-            "media": "(prefers-color-scheme: light)",
-            "scheme": "default",
-            "primary": "indigo-blue",
-            "accent": "light-blue",
-            "toggle": {
-                "icon": "material/brightness-7",
-                "name": "Schakel naar dark mode",
-            },
-        },
-        {
-            "media": "(prefers-color-scheme: dark)",
-            "scheme": "slate",
-            "primary": "indigo-blue",
-            "accent": "light-blue",
-            "toggle": {
-                "icon": "material/brightness-4",
-                "name": "Schakel naar light mode",
-            },
-        },
-    ],
+    "source_repository": "https://github.com/hanze-hbo-ict/programmeren",
+    "source_branch": "master",
+    "source_directory": "source/",
+    "light_css_variables": {
+        "color-brand-primary": "#3f51b5",
+        "color-brand-content": "#3f51b5",
+    },
+    "dark_css_variables": {
+        "color-brand-primary": "#7986cb",
+        "color-brand-content": "#7986cb",
+    },
 }
 
 html_static_path = ["_static"]

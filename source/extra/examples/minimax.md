@@ -14,7 +14,7 @@ Stel je voor dat je schaakt. Bij elke beurt:
 
 Laten we dit visualiseren met een eenvoudig voorbeeld:
 
-```{md-mermaid}
+```{mermaid}
 graph TD
     A[A: MAX] --> B[B: MIN]
     A --> C[C: MIN]
@@ -54,7 +54,7 @@ Nu komt het slimme deel: alpha-beta pruning. Dit is een techniek om veel sneller
 
 Laten we dit visualiseren:
 
-```{md-mermaid}
+```{mermaid}
 graph TD
     A[A: MAX<br/>α=-∞ β=∞] --> B[B: MIN<br/>α=3 β=∞]
     A --> C[C: MIN<br/>α=3 β=∞]
@@ -96,7 +96,7 @@ Het voordeel van alpha-beta pruning is dat je veel minder posities hoeft te eval
 
 ## Boter-kaas-en-eieren
 
-```{md-mermaid}
+```{mermaid}
 graph TD
     A["Start<br/>□ □ □<br/>□ X □<br/>□ □ □<br/>[MAX]"] --> B["□ □ O<br/>□ X □<br/>□ □ □<br/>[MIN]"]
     A --> C["□ □ □<br/>□ X □<br/>□ □ O<br/>[MIN]"]
@@ -150,7 +150,7 @@ Laten we dit voorbeeld stap voor stap doornemen:
 
 Laten we nu zien hoe alpha-beta pruning hier kan helpen:
 
-```{md-mermaid}
+```{mermaid}
 graph TD
     A["Start<br/>□ □ □<br/>□ X □<br/>□ □ □<br/>α=-∞ β=∞"] --> B["□ □ O<br/>□ X □<br/>□ □ □<br/>α=-∞ β=1"]
     A --> C["□ □ □<br/>□ X □<br/>□ □ O<br/>❌ Gesnoeid"]
@@ -194,7 +194,7 @@ Wil je dat ik nog dieper inga op bepaalde aspecten van het algoritme of heb je i
 
 ## Genetisch algoritme
 
-```{md-mermaid}
+```{mermaid}
 flowchart TD
     A[Initiële Populatie] -->|Genereer willekeurig| B[Evaluatie]
     B --> C{Fitness Check}
