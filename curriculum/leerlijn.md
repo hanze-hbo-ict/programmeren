@@ -27,7 +27,7 @@ dan de week waarin het hier staat.
 | 4 | Lussen | A1 | `for`, `while`, begrensde herhaling |
 | 5 | Geneste lussen | A1, A3 | geneste lus, 2D-lijst, ASCII-art, bordrepresentatie |
 | 6 | Bestanden en data | bestanden † | bits, bytes, ASCII, newline, `with open`, beeldbewerking |
-| 7 | Lijsten en dictionaries | P4, A3 | dictionary, Markov |
+| 7 | Lijsten en dictionaries | P4, A3 | dictionary, mutatie, objectmethode, Markov |
 
 † De leeruitkomst over tekstbestanden staat nu in de PGM2-matrijs en wisselt van
 plaats met recursie. Zie [leeruitkomsten.md](leeruitkomsten.md).
@@ -47,9 +47,10 @@ de PGM2-recursieweek verplaatst.
 beeldbewerking blijft, maar dan als wat het al is: een bestand inlezen, bewerken
 en wegschrijven.
 
-**Week 7 is de grens waar mutatie binnenkomt.** De weken daarvoor rekenen en
-geven terug, en veranderen niets aan wat ze meekrijgen. Dat was tot nu toe
-feitelijk zo maar nergens gezegd; zie
+**Week 7 is de grens waar mutatie én objectmethoden binnenkomen.** De weken
+daarvoor rekenen en geven terug, en veranderen niets aan wat ze meekrijgen. Dat
+was tot nu toe feitelijk zo maar nergens gezegd. Dat het één grens is en niet
+twee volgt uit de zaak zelf: `L.append(x)` is een methode én een mutatie. Zie
 [uitgangspunten.md](uitgangspunten.md).
 
 **Dictionaries krijgen meer gewicht in week 7.** CS5 introduceert ze als een

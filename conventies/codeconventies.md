@@ -136,24 +136,35 @@ inhoudelijke herziening. De regel hierboven beslist dan welke naam wint: in een
 functie van drie regels de korte, in een functie van dertig de uitgeschreven.
 Binnen één bestand is de keuze wel overal dezelfde.
 
-## Geen objectmethoden in PGM1
+## Objectmethoden pas vanaf week 7
 
-Een methode is een handeling die bij een object hoort, en objecten zijn het
-onderwerp van PGM2: data en de handelingen daarop, als één geheel. Een student
-die in PGM1 `L.append(x)` schrijft, gebruikt dat begrip zonder het te hebben.
+Een methode is een handeling die bij een object hoort. Een student die
+`L.append(x)` schrijft voordat hij weet wat een object is, gebruikt dat begrip
+zonder het te hebben.
 
-Daarom gebruikt PGM1 **functies en operatoren, geen methoden**. In de praktijk
-gaat het vooral om deze twee gevallen:
+**Tot en met week 6 gebruikt het materiaal functies en operatoren, geen
+methoden:**
 
-| Niet in PGM1 | Wel |
+| Niet vóór week 7 | Wel |
 |---|---|
 | `L.append(x)` | `L = L + [x]` |
 | `s.isdigit()` | `from string import digits`, en dan `c in digits` |
 
-Het materiaal staat er goed voor. Muterende lijstmethodes komen in PGM1
+**Vanaf week 7 mogen methoden.** Die grens valt samen met de mutatiegrens, en
+dat is geen toeval: een methode is een handeling die bij een object hoort, en
+muteren is precies wat zo'n handeling doet. Tot week 7 leeft de student in een
+wereld zonder neveneffecten en zonder objecten; daarna komen ze allebei, en PGM2
+legt uit waarom ze samenhangen. Zie
+[`curriculum/uitgangspunten.md`](../curriculum/uitgangspunten.md).
+
+Zonder die grens is week 7 niet te maken. Leeruitkomst **P4** vraagt letterlijk
+om "lijsten en strings en de bijbehorende methodes", en tekstanalyse zonder
+`.split()` of dictionaries zonder `.items()` wordt gekunsteld.
+
+Het materiaal staat er goed voor. Muterende lijstmethodes komen vóór week 7
 **nergens** voor; de enige vindplaats in de hele repo is een PGM2-opgave die
-`L.sort()` juist *verbiedt*. Stringmethodes komen zes keer voor: vier keer
-`.format()` in `problems/5_basis` en twee keer `.split()` in week 7.
+`L.sort()` juist *verbiedt*. Stringmethodes komen zes keer voor, waarvan vier
+keer `.format()` in `problems/5_basis` en twee keer `.split()` in week 7 zelf.
 
 Dat maakt dit een conventie die te handhaven is in plaats van een wens.
 

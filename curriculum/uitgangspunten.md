@@ -190,7 +190,7 @@ dat het bestond.
 | Waar | Wat geldt |
 |---|---|
 | PGM1 week 2 tot en met 6 | Een functie rekent iets uit en geeft het terug. Wat je meegeeft verandert niet. |
-| PGM1 week 7 | De grens. Eerst *dat* je een lijst kunt wijzigen en wat dat oplevert, daarna pas dat twee namen naar dezelfde lijst kunnen wijzen, en daarna pas het kopiëren. |
+| PGM1 week 7 | De grens, voor mutatie én voor objectmethoden. Eerst *dat* je een lijst kunt wijzigen en wat dat oplevert, daarna pas dat twee namen naar dezelfde lijst kunnen wijzen, en daarna pas het kopiëren. |
 | PGM2 | Een object is data plus de handelingen daarop, en dus een bundel toestand die verandert. Het woord ervoor bestaat dan al. |
 
 Drie dingen volgen hieruit.
@@ -204,9 +204,14 @@ een waarde terug en geen van alle verandert iets.
 vermogen hoort eerst, de valkuil daarna. Game of Life in `problems/7_extra`
 draait volledig om bijwerken en is daarmee de natuurlijke aanleiding.
 
-**Het versterkt de regel over objectmethoden.** `L.append(x)` is én een methode én
-een mutatie, dus twee overtredingen in één aanroep. `L = L + [x]` is geen van
-beide. Zie [codeconventies.md](../conventies/codeconventies.md).
+**Objectmethoden vallen op dezelfde grens.** `L.append(x)` is én een methode én
+een mutatie; dat is geen toeval maar hetzelfde ding van twee kanten bekeken. Tot
+en met week 6 leeft de student in een wereld zonder neveneffecten en zonder
+objecten, en vanaf week 7 komen ze allebei tegelijk. Eén grens dus, geen twee.
+
+Zonder die samenval is week 7 niet te maken: leeruitkomst P4 vraagt letterlijk om
+"lijsten en strings en de bijbehorende methodes". Zie
+[codeconventies.md](../conventies/codeconventies.md).
 
 ### Open: mag het bord in week 5 veranderen?
 
@@ -234,6 +239,7 @@ organisatorisch besluit niet.
 | Mutatie pas vanaf PGM1 week 7, en als grens benoemd | didactisch | staand, onderbouwd |
 | Canonieke Python aanbieden, mechanisme later uitleggen | didactisch | staand, onderbouwd |
 | Mag het bord in week 5 gewijzigd worden | didactisch | **open** |
+| Objectmethoden pas vanaf week 7, samen met mutatie | didactisch | staand, onderbouwd |
 | Objecten pas in PGM2 | didactisch | staand, onderbouwd |
 | Picobot opent PGM1 | didactisch | staand, onderbouwd |
 | Opgaven in opstap, basis en extra | didactisch | **open** |
