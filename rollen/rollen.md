@@ -96,12 +96,17 @@ Daaruit volgt een harde regel: **een besluit dat niet in `curriculum/` of
 
 ## Hoe je het draait
 
-Schrijf een werkitem volgens het sjabloon in `work-items/_sjabloon.md`, en start
-de lus:
+Maak een werkitem aan als GitHub-issue, met het sjabloon **Werkitem**, en start
+de lus op het nummer:
 
 ```text
-/orc work-items/week-5-herzien.md
+/orc 105
 ```
+
+Werkitems zijn issues en geen bestanden. De issue is het artefact, elke overdracht
+wordt een reactie erop, en de stap waarin het werk zit staat in het veld Status op
+het [projectbord](https://github.com/orgs/hanze-hbo-ict/projects/4). Zo staat de
+hele geschiedenis van een wijziging op één plek.
 
 De orkestrator draait triage, verkenner, ontwerper en verhelderaar, en **stopt bij
 de poort**. Daar lees je het ontwerp en de open vragen, en geef je je besluit.
@@ -137,7 +142,7 @@ weg. Zo houdt de oordeelslaag aandacht over voor het moeilijke.
 |---|---|
 | Rolprompts en contracten | `.claude/agent-role-loop/core/` |
 | Subagents en het `/orc`-commando | `.claude/agents/`, `.claude/commands/` |
-| Werkitems | `work-items/` |
+| Werkitems | GitHub-issues, sjabloon in `.github/ISSUE_TEMPLATE/` |
 | Wat vastligt over het vak | `curriculum/` |
 | Hoe je schrijft | `conventies/` |
 | Deze uitleg | hier |

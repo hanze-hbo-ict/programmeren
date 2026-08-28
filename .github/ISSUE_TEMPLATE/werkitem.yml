@@ -1,62 +1,90 @@
 name: Werkitem
-description: Een wijziging aan het cursusmateriaal
+description: Een wijziging aan het cursusmateriaal (C0)
 labels: []
 body:
   - type: markdown
     attributes:
       value: |
-        Een werkitem beschrijft wat er af moet zijn, niet hoe. Het ontwerp komt
+        Dit is een **C0 Werkitem**, de invoer van de rollenlus. Zie
+        `.claude/agent-role-loop/core/contracts/C0-werkitem.md`.
+
+        Het beschrijft de gewenste uitkomst, niet de uitvoering. Het ontwerp komt
         later, van de curriculumontwerper.
 
-        Zie [`rollen/rollen.md`](../blob/master/rollen/rollen.md) voor hoe dit
-        verder loopt.
+  - type: checkboxes
+    id: vooraf
+    attributes:
+      label: Vóór het ontwerp
+      description: >
+        Raadpleeg het projectbord op open `doorlopend`-issues die dit werk raken,
+        en op eerder geparkeerde gevolgen die hier neerslaan. Neem wat van
+        toepassing is mee in de acceptatiecriteria of de afbakening, zodat de
+        ontwerpfase niet aan geheugen hangt.
+      options:
+        - label: Ik heb het bord geraadpleegd op doorlopende zaken die dit raken
+        - label: Ik heb in `curriculum/uitgangspunten.md` gekeken of hier al een besluit over is genomen
 
   - type: textarea
     id: aanleiding
     attributes:
       label: Aanleiding
-      description: Wat is er aan de hand, of wat willen we bereiken?
+      description: Waarom dit werk bestaat; het waargenomen probleem of de aanleiding. Een korte alinea.
       placeholder: |
-        Week 5 heeft geen contextrijke opgave op basisniveau; de student oefent
-        geneste lussen zonder dat er een probleem wordt opgelost.
+        Week 5 introduceert geneste lussen met een bord dat nooit verandert. De
+        student leert een raster lezen en niet bijwerken, terwijl week 7 om
+        bijwerken vraagt.
     validations:
       required: true
 
   - type: textarea
-    id: klaar
+    id: uitkomst
     attributes:
-      label: Wanneer is dit af?
-      description: >
-        Waaraan zie je dat het klaar is? Concreet genoeg dat een ander het kan
-        vaststellen zonder jou.
+      label: Gewenste uitkomst
+      description: Wat waar is als het werk slaagt, geformuleerd als waarneembaar resultaat.
       placeholder: |
-        - Basis opent met een probleem in context
-        - De opgave dekt A1 en A3
-        - Uitwerking draait mee in de build
+        Een student die week 5 heeft gedaan kan een tweedimensionale structuur
+        aanmaken en doorlopen, en weet wat er wel en niet aan verandert.
     validations:
       required: true
 
-  - type: input
-    id: raakt
+  - type: textarea
+    id: criteria
     attributes:
-      label: Waar raakt het aan
-      description: Weken, bestanden of documenten. Laat leeg als je het niet weet.
-      placeholder: PGM1 week 5, problems/5_basis, curriculum/leerlijn.md
+      label: Acceptatiecriteria
+      description: >
+        Genummerd en toetsbaar. Laat leeg als je ze niet kunt formuleren; de
+        curriculumontwerper leidt ze dan af en de vakdeskundige bevestigt ze bij
+        de poort. Het laatste criterium staat vast en hoort in elk werkitem.
+      value: |
+        1. 
+        2. 
+        3. Voldoet aan de conventies in `conventies/conventies.md`, en de build is schoon.
+    validations:
+      required: true
+
+  - type: textarea
+    id: randvoorwaarden
+    attributes:
+      label: Randvoorwaarden
+      description: Harde grenzen; een deadline, een besluit dat vastligt, een leeruitkomst die gedekt moet blijven.
+      placeholder: "<geen>"
 
   - type: textarea
     id: context
     attributes:
       label: Wat de repo niet weet
       description: >
-        Geschiedenis, afspraken of overwegingen die nergens vastliggen. Dit is
+        Geschiedenis, afspraken of ervaringen die nergens zijn vastgelegd. Dit is
         het waardevolste veld: wat hier niet staat, wordt straks geraden.
       placeholder: |
-        Deze opgave is in 2024 ingekort omdat er te weinig practicumtijd was.
+        Het bord in week 5 is bewust nooit gewijzigd, omdat mutatie pas in week 7
+        komt. Dat staat in het besluitenregister als open vraag.
 
-  - type: checkboxes
-    id: gecontroleerd
+  - type: dropdown
+    id: omvang
     attributes:
-      label: Vooraf nagekeken
-      options:
-        - label: Ik heb in `curriculum/uitgangspunten.md` gekeken of hier al een besluit over is genomen
-        - label: Dit gaat over één week of één afgebakende wijziging
+      label: Omvangschatting
+      description: De triage mag hem overrulen.
+      options: ["XS", "S", "M", "L", "XL"]
+    validations:
+      required: true

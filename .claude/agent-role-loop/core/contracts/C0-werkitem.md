@@ -2,9 +2,14 @@
 
 ## Doel
 
-De invoer van de lus: een beschrijving van werk dat gedaan moet worden, in platte
-Markdown. De inhoud is onafhankelijk van het ticketsysteem, zodat ze op zichzelf
-leesbaar blijft of ze nu een bestand is, de tekst van een issue, of iets anders.
+De invoer van de lus: een beschrijving van werk dat gedaan moet worden. Het
+contract is onafhankelijk van het ticketsysteem, zodat de inhoud op zichzelf
+leesbaar blijft.
+
+**In dit project is een werkitem een GitHub-issue**, aangemaakt met het sjabloon
+in `.github/ISSUE_TEMPLATE/werkitem.yml`. De issue is het artefact, de
+overdrachten zijn reacties erop, en de stap staat in het veld Status op het
+[projectbord](https://github.com/orgs/hanze-hbo-ict/projects/4).
 Een werkitem geeft de triage genoeg om proportionaliteit te beoordelen en de
 curriculumontwerper genoeg om een ontwerp op te gronden. Het beschrijft de
 gewenste uitkomst, niet de uitvoering.

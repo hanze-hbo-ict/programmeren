@@ -38,7 +38,7 @@ de [leerlijn](curriculum/leerlijn.md) per week, en de
 Hoe een herziening verloopt staat in [`rollen/rollen.md`](rollen/rollen.md): de
 rollenlus, de contracten ertussen, en waarom de vakdeskundige er middenin zit.
 
-De lus draai je met `/orc work-items/<werkitem>.md`. De rolprompts en contracten
+De lus draai je met `/orc <issuenummer>`; werkitems zijn GitHub-issues. De rolprompts en contracten
 staan in `.claude/agent-role-loop/core/`, de subagents in `.claude/agents/`.
 
 ## Conventies
