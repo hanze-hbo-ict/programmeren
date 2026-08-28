@@ -4,7 +4,7 @@ Cursusmateriaal voor Programmeren 1 & 2 (Hanze Hogeschool, HBO-ICT), gebaseerd o
 
 De up-to-date build van het boek [kan hier gevonden worden](https://hanze-hbo-ict.github.io/programmeren/about/syllabus.html).
 
-De site wordt gebouwd met [Sphinx](https://www.sphinx-doc.org/) + [MyST](https://myst-parser.readthedocs.io/) en het [sphinx-immaterial](https://sphinx-immaterial.readthedocs.io/)-thema, en automatisch gepubliceerd naar GitHub Pages bij elke push naar `master`.
+De site wordt gebouwd met [Sphinx](https://www.sphinx-doc.org/) + [MyST](https://myst-parser.readthedocs.io/) en het [furo](https://pradyunsg.me/furo/)-thema, en automatisch gepubliceerd naar GitHub Pages bij elke push naar `master`.
 
 ## Aanpassingen
 

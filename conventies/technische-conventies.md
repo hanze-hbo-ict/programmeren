@@ -14,7 +14,7 @@ Dit document is voor auteurs, niet voor studenten. Het staat bewust buiten
 ## Bouwomgeving
 
 Het boek is een Sphinx-site met MyST voor Markdown en myst-nb voor notebooks,
-op het thema sphinx-immaterial. Python-afhankelijkheden worden beheerd met uv en
+op het thema furo. Python-afhankelijkheden worden beheerd met uv en
 `uv.lock` staat in de repository.
 
 ```sh
@@ -23,6 +23,8 @@ uv run pre-commit install   # hooks activeren; eenmalig na het clonen
 make html               # bouwt naar build/html
 make livehtml           # bouwt en ververst automatisch bij wijzigingen
 make clean              # verwijdert build/ en de notebook-cache
+make review PR=87       # haalt een pull request op, bouwt, opent de gewijzigde pagina's
+make terug              # terug naar master na een review
 ```
 
 Het Makefile roept zelf `uv run sphinx-build` aan, dus `make` volstaat.
@@ -31,17 +33,64 @@ De build hoort **zonder waarschuwingen** te draaien. Dat is nu het geval en het
 is de norm: een waarschuwing wijst vrijwel altijd op een kapotte verwijzing, een
 onbekende directive of een afbeelding die niet gevonden wordt.
 
-> **Twee aanbevelingen, nog niet doorgevoerd.**
->
-> 1. De build faalt nu niet op waarschuwingen. Met `-W --keep-going` in het
->    Makefile-doel wordt "schoon" afdwingbaar in plaats van een afspraak.
->    Overwegen zodra de inhoudelijke revisie begint, want dan neemt het aantal
->    wijzigingen per week toe.
-> 2. `pyproject.toml` zet `[tool.uv] upgrade = true`. Daardoor zoekt uv bij elke
->    aanroep naar nieuwere versies en verandert `uv.lock` spontaan, ook als je
->    niets aan de afhankelijkheden doet. Een lockfile hoort juist te garanderen
->    dat iedereen dezelfde versies bouwt; overweeg de instelling te verwijderen
->    en bewust te upgraden met `uv lock --upgrade`.
+> **Nog te overwegen.** De build faalt niet op waarschuwingen. Met
+> `-W --keep-going` in het Makefile-doel wordt "schoon" afdwingbaar in plaats van
+> een afspraak. Dat is het overwegen waard nu de inhoudelijke revisie loopt en
+> het aantal wijzigingen per week toeneemt.
+
+## Het thema
+
+De site draait op **furo**. Daarvoor stond er sphinx-immaterial, en het is de
+moeite waard op te schrijven waarom dat is gewisseld, want anders wordt die
+keuze over twee jaar opnieuw gevoerd zonder de metingen erbij.
+
+### Waarom furo
+
+Sphinx-immaterial gaf in één week drie problemen, en ze kwamen alle drie uit
+dezelfde hoek:
+
+| | sphinx-immaterial | furo |
+|---|---|---|
+| Zoeken op Sphinx 9.1 | **0 resultaten** | 13 resultaten |
+| JavaScript-fouten per pagina | 2 | geen |
+| Mermaid | botste met `sphinxcontrib-mermaid` | werkt |
+
+De zoekfunctie was geen theorie: op de gepubliceerde site gaf een zoekopdracht
+op *picobot* niets terug, op een site waar Picobot een heel hoofdstuk is.
+
+Beide problemen staan bovenstrooms open en zijn door de maintainers bevestigd:
+[#485](https://github.com/jbms/sphinx-immaterial/issues/485) voor het zoeken en
+[#435](https://github.com/jbms/sphinx-immaterial/issues/435) voor mermaid, waar
+de maintainer schrijft dat ondersteuning voor `sphinxcontrib-mermaid` niet
+gepland is.
+
+### De les die breder geldt
+
+Sphinx-immaterial declareert `sphinx>=6`, **zonder bovengrens**. Daardoor
+installeert uv het naast Sphinx 9, een versie die het thema niet aankan. Furo
+declareert `sphinx>=7,<10`: die dichte bovengrens betekent dat iemand 9 heeft
+getest.
+
+**Een open bovengrens op een afhankelijkheid die diep in de build zit, is een
+risicosignaal.** Kijk ernaar voordat je iets toevoegt.
+
+### Wat eraan vastzit
+
+Weinig, en dat is met opzet zo gehouden:
+
+| | |
+|---|---|
+| `html_theme_options` | ~20 regels in `conf.py` |
+| Eigen CSS | `source/_static/custom.css`, een handvol regels |
+| Logo | `light_logo` en `dark_logo`; twee versies van dezelfde tekening, de donkere met een opgelichte vulling |
+
+Al het andere is standaard MyST en `sphinx-design`, en dat werkt in elk thema.
+Toen we wisselden was de hele koppeling 28 regels opties, 7 mermaid-directives
+en 4 regels CSS.
+
+Gebruik daarom **geen themaspecifieke directives** in het materiaal. Mermaid gaat
+via `sphinxcontrib.mermaid`, tabs en kaarten via `sphinx-design`, admonitions via
+MyST. Dan blijft een volgende wissel een dag werk.
 
 ## Controles voor elke commit
 
@@ -212,12 +261,20 @@ Geef elke afbeelding een alt-tekst die beschrijft wat er te zien is.
 
 ### Admonitions
 
-Gebruik uitsluitend de types die het thema kent. Andere waarden renderen wel,
-maar krijgen de standaardopmaak in plaats van een eigen kleur en pictogram, en
-vallen daardoor uit de toon.
+Gebruik uitsluitend de standaardtypes. Andere waarden renderen wel, maar krijgen
+de standaardopmaak in plaats van een eigen kleur en pictogram, en vallen daardoor
+uit de toon.
 
-`abstract`, `bug`, `danger`, `example`, `failure`, `info`, `note`, `question`,
-`quote`, `success`, `tip`, `warning`
+`attention`, `caution`, `danger`, `error`, `hint`, `important`, `note`, `seealso`,
+`tip`, `warning`
+
+Dit zijn de types van Sphinx zelf, dus ze werken ongeacht het thema. Gebruik geen
+themaspecifieke types, want die vervallen zodra het thema wisselt.
+
+> **Bekende afwijking.** `notice` komt 16 keer voor en bestaat niet: het is geen
+> type van Sphinx en was het ook niet in het vorige thema. Het rendert als een
+> kader zonder betekenis. Meestal is `note` of `important` bedoeld. Te repareren
+> wanneer het betreffende document aan de beurt is.
 
 Twee schrijfwijzen, beide goed:
 
