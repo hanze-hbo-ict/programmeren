@@ -3,10 +3,15 @@
 ## Doel
 
 Het oordeel van de verhelderaar over een weekontwerp (C2): is het ondubbelzinnig,
-gegrond en toetsbaar genoeg om aan een auteur te geven? Een `FAAL` is hier
-goedkoop en later duur, dus het oordeel neigt naar streng. Het resultaat stuurt
-het ontwerp door naar de poort, of terug naar de ontwerper met genummerde,
-uitvoerbare wijzigingen.
+gegrond en toetsbaar genoeg om aan een auteur te geven? Het resultaat stuurt het
+ontwerp door naar de poort, of terug naar de ontwerper met genummerde, uitvoerbare
+wijzigingen.
+
+Het oordeel is streng op wat blokkeert en mild op de rest. Een `FAAL` kost een
+hele ontwerpronde, dus hij is gereserveerd voor wat de auteur werkelijk ophoudt;
+al het overige reist mee als *Mee te geven aan de auteur*. Zie de ernstdrempel in
+`roles/verhelderaar.md`. Een ontwerp waarin niets meer te verbeteren valt bestaat
+niet, dus "ik vond nog iets" is op zichzelf geen grond om te falen.
 
 ## Schema
 
@@ -18,7 +23,11 @@ Verplichte velden:
 Voorwaardelijke en optionele velden (laat leeg met `<geen>`):
 
 - **Gevraagde wijzigingen** - genummerd; verplicht bij `FAAL`. Elke wijziging
-  noemt de sectie van het ontwerp waarop ze slaat.
+  noemt de sectie van het ontwerp waarop ze slaat en is gemarkeerd als
+  **blokkerend**. Alleen blokkerende bevindingen horen hier.
+- **Mee te geven aan de auteur** - de verbeterpunten: genummerd, met sectie, maar
+  ze kosten geen ronde. Bij `AKKOORD` staan ze hier alleen; bij `FAAL` gaan ze
+  mee terug naar de ontwerper als bijvangst van de reparatie.
 - **Vragen aan de ontwerper** - onduidelijkheden die een antwoord nodig hebben,
   geen herontwerp.
 - **Risico's om te benoemen** - risico's die het ontwerp hoort te noemen, ook bij

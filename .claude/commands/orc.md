@@ -46,8 +46,20 @@ veld **Status** op het [projectbord](https://github.com/orgs/hanze-hbo-ict/proje
    `rol-curriculumontwerper` met C0 + C1b; plaats C2 als reactie. Zet de status op
    **Verhelderen** en start `rol-verhelderaar` met C2 + C0; plaats C3 als reactie.
 
-   Bij `FAAL`: terug naar een **verse** `rol-curriculumontwerper` met C0, C1b en
-   C3. Faalt het een derde keer, stop dan en leg de patstelling voor.
+   Bij `FAAL` gaat het ontwerp terug naar een **verse** `rol-curriculumontwerper`,
+   maar de opdracht verschilt per ronde:
+
+   - **Eerste FAAL: herontwerp.** Geef C0, C1b en C3. De ontwerper is niet
+     gebonden aan het afgekeurde ontwerp.
+   - **Tweede FAAL: reparatie.** Geef C0, C1b, het afgekeurde C2 en C3, en zeg
+     erbij dat hij de genoemde punten repareert en de rest ongemoeid laat. Een
+     herschrijving van een ontwerp van duizenden woorden om een handvol punten is
+     verspilling.
+   - **Derde FAAL: stop** en leg de patstelling voor. Ga niet naar een vierde
+     ontwerper.
+
+   Een C3 met `AKKOORD` kan bevindingen dragen onder *Mee te geven aan de auteur*.
+   Die kosten geen ronde: neem ze mee in de invoer van stap 6.
 
 5. **De poort - stop hier.** Zet de status op **Besluit**. Toon de gebruiker het
    definitieve C2, het C3 en de open vragen uit het ontwerp. Vraag om een C4
