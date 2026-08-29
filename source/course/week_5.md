@@ -2,7 +2,7 @@
 
 ![Schotel](/images/saucer.png)
 
-## Herhaling
+## Geneste lussen en 2D-lijsten
 
 ```{tableofcontents}
 ```

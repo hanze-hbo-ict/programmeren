@@ -16,8 +16,9 @@ Dit document is voor auteurs, niet voor studenten. Het staat bewust buiten
 ### Namen zijn Engels, vanaf week 1
 
 Functienamen en de parameters die bij een opdracht horen, zijn Engels. Dat is
-geen wens maar een vaststelling: alle 313 functienamen in het materiaal zijn het
-al, in beide studiejaren, zonder uitzondering.
+geen wens maar een vaststelling: alle functienamen in het materiaal zijn het al,
+in beide studiejaren. Tot de herziening van week 5 was er één uitzondering,
+`s_afwijking` in `solutions/5_basis`; die heet nu `std_dev`.
 
 Daar zijn goede redenen voor. De naam van een functie *is* de opdracht:
 `flipside`, `count_vowels` en `num_to_base_b` staan in de opgavetekst en worden
@@ -163,8 +164,14 @@ om "lijsten en strings en de bijbehorende methodes", en tekstanalyse zonder
 
 Het materiaal staat er goed voor. Muterende lijstmethodes komen vóór week 7
 **nergens** voor; de enige vindplaats in de hele repo is een PGM2-opgave die
-`L.sort()` juist *verbiedt*. Stringmethodes komen zes keer voor, waarvan vier
-keer `.format()` in `problems/5_basis` en twee keer `.split()` in week 7 zelf.
+`L.sort()` juist *verbiedt*.
+
+Stringmethodes stonden er in week 5 acht, niet vier zoals hier eerder stond: vier
+keer `.format()` in `problems/5_basis` en vier keer in `solutions/5_basis`, te
+weten drie keer `.replace()` en één keer `.split()`. Alle acht zijn bij de
+herziening van week 5 verdwenen. Wat vóór week 7 nog overblijft is twee keer
+`.lower()` in `solutions/4_python_bat.ipynb`; in week 7 zelf staat twee keer
+`.split()`.
 
 Dat maakt dit een conventie die te handhaven is in plaats van een wens.
 
