@@ -62,33 +62,38 @@ bouwt.
 
 Omvang in woorden per niveau, gemeten over `problems/` voor de weken 2 tot en met
 7. Een ruwe maat, maar de verhoudingen zijn te groot om aan de meetmethode te
-liggen.
+liggen. Hermeten bij de herziening van week 5; de weken 3, 6 en 7 waren sinds de
+vorige meting ook veranderd.
 
 | Week | opstap | basis | extra | Totaal |
 |---|---|---|---|---|
 | 2 | 1.145 | 1.089 | 463 | 2.697 |
-| 3 | 242 | 389 | 176 | **807** |
+| 3 | 242 | 1.143 | 176 | **1.561** |
 | 4 | 616 | 1.034 | 1.048 | 2.698 |
-| 5 | 238 | 1.865 | **5.265** | 7.368 |
-| 6 | 372 | 1.067 | 1.162 | 2.601 |
-| 7 | geen | 453 | **3.713** | 4.166 |
-| **Totaal** | **2.613** | **5.897** | **11.827** | 20.337 |
+| 5 | 674 | 2.940 | **5.354** | 8.968 |
+| 6 | 353 | 1.343 | 772 | 2.468 |
+| 7 | 532 | 1.110 | **3.713** | 5.355 |
+| **Totaal** | **3.562** | **8.659** | **11.526** | 23.747 |
 
 Drie dingen vallen op.
 
-**Het zwaartepunt ligt in de optionele laag.** Extra is 58% van het materiaal,
-tweemaal zo groot als basis. Daar zitten Mandelbrot, Game of Life, Pi met
+**Het zwaartepunt ligt in de optionele laag.** Extra is 49% van het materiaal en
+een derde groter dan basis. Daar zitten Mandelbrot, Game of Life, Pi met
 pijltjes en beeldcompressie: precies de opgaven waarin een probleem stap voor
 stap wordt opgebouwd. Zie [uitgangspunten.md](uitgangspunten.md) voor de
-achtergrond.
+achtergrond. De scheefheid is kleiner dan bij de vorige meting, doordat basis in
+de weken 3 en 5 is gegroeid.
 
-**Week 3 is de dunste week van de cursus.** Met 807 woorden is ze negen keer
-kleiner dan week 5, terwijl ze functies draagt: P5 en A2, samen 20% van het
+**Week 3 is de dunste week van de cursus.** Met 1.561 woorden is ze bijna zes
+keer kleiner dan week 5, terwijl ze functies draagt: P5 en A2, samen 20% van het
 tentamen.
 
-**De structuur is onvolledig.** Week 7 heeft geen opstap. In week 5 loopt de
-nummering van opstap van 1 naar 5, 6, 7, 8: er is uit geknipt zonder te
-hernummeren.
+**De structuur is compleet.** Twee beweringen die hier eerder stonden zijn
+nagemeten en bleken onjuist. Week 7 heeft wél een opstap, met dertien
+opdrachten, sinds commit `8190d95c`. En de nummering van de opstap van week 5
+loopt door zonder gat; dat is ze in de hele geschiedenis van
+`source/problems/5_opstap.ipynb` geweest. Sinds de herziening van week 5 telt die
+opstap twaalf opgaven: acht om te lezen en vier om te schrijven.
 
 ## Programmeren II
 
@@ -130,7 +135,7 @@ Gemeten op het voorkomen van de betreffende constructies in `source/`.
 |---|---|---|---|
 | **PGM2 P3** tekstbestanden | 10% | Drie plekken, waarvan twee in de Markov-opgave van PGM1 week 7. | Naar PGM1 week 6 |
 | **PGM1 A4** recursie | 10%, creëren | Wordt in PGM1 niet onderwezen; week 3 toont alleen de zelfaanroep. Het oefententamen toetst het ook niet. | Naar de PGM2-matrijs |
-| **PGM2 P4** excepties | 10% | Twee bestanden. In `problems/5_basis` staat `try`/`except` in *gegeven* code van het menuprogramma, niet als uitleg. Nergens onderwezen. | Blijft in PGM2, moet daar onderwezen worden |
+| **PGM2 P4** excepties | 10% | Bij de herziening van week 5 is `try`/`except` uit de gegeven code van `problems/5_basis` gehaald; de menukeuze wordt daar nu als string vergeleken. Excepties worden nergens in PGM1 onderwezen. | Blijft in PGM2, moet daar onderwezen worden |
 | **PGM2 P1** lussen | 5% | Wordt in PGM1 onderwezen (week 4 en 5) en in PGM2 getoetst. Kan bedoeld zijn als herhaling, maar staat niet in de planning voor 2026. | open |
 | **PGM2 A5** finite state machines | geen | Komt nergens voor. | Schrappen; zie [leeruitkomsten.md](leeruitkomsten.md) |
 
@@ -148,15 +153,34 @@ als zodanig is gemarkeerd.
 |---|---|---|---|
 | `while` | PGM1 week 4 | PGM1 week 2, `practicals/2_rochambeau` | Bewust; de tekst zegt erbij dat lussen later komen |
 | list comprehension | PGM2 week 1 | PGM1 week 6, `practicals/6b_images` | Onderwerp van een hele PGM2-week |
-| 2D-lijst | PGM1 week 5 | PGM1 week 3, `problems/3_opstap` | Traversal vereist geneste lussen uit week 5 |
-Eerder stond hier ook `lectures/4b_midterm` opgave 19, die de student vroeg de
-uitvoer te voorspellen van een lus die `my_list[ix]` overschrijft. Die is
-herschreven met het patroon `result = result + [...]`, hetzelfde patroon dat
-opgave 18 ernaast al gebruikte. Het goede antwoord is niet veranderd.
 | functiedefinitie | PGM1 week 3 | PGM1 week 2, `problems/2_basis` | Mogelijk als gegeven voorbeeld |
+
+Twee regels stonden hier eerder en zijn nagemeten en geschrapt.
+
+**2D-lijst in `problems/3_opstap`.** Nagemeten bij de herziening van week 5, met
+een patroon op dubbele indexering en een patroon op een 2D-literal: beide geven
+nul treffers op dat bestand. De enige treffer op het woord was het stringliteraal
+`x = function("lol")`. Er staat daar geen 2D-lijst.
+
+**`lectures/4b_midterm` opgave 19**, die de student vroeg de uitvoer te
+voorspellen van een lus die `my_list[ix]` overschrijft. Die is herschreven met
+het patroon `result = result + [...]`, hetzelfde patroon dat opgave 18 ernaast al
+gebruikte. Het goede antwoord is niet veranderd.
 
 Deze lijst is met tekstpatronen gemaakt en dus indicatief. Ze is het uitgangspunt
 voor de controle die dit wil mechaniseren, niet het eindoordeel.
+
+## Wat een week aan een latere week aflevert
+
+Wat in de ene week wordt geleerd en in een latere week nodig is, staat hier. Zo
+blijft een raakvlak vindbaar zonder dat het in een werkitem verstopt zit.
+
+| Van week | Naar week | Wat | Status |
+|---|---|---|---|
+| PGM1 week 5 | PGM2 week 6 | De vier zoekfuncties uit `practicals/5b_boter_kaas_eieren.ipynb` hebben andere parameternamen dan de gelijknamige functies in `source/problems/assets/board.py` regels 173-224. | Besloten, laten zoals het is: `board.py` definieert ze zelf en importeert het werk van de student nooit. Zie het besluitenregister in [uitgangspunten.md](uitgangspunten.md). |
+| PGM1 week 5 | PGM1 week 7 | Week 5 levert `create_board` en `print_board` als vermogen; `source/problems/7_extra.md` regels 36-114 leert ze nu vanaf nul aan. | Voorstel: laat week 7 ernaar verwijzen in plaats van ze opnieuw aan te leren. |
+| PGM1 week 5 | PGM1 week 7 | `[[0] * 3] * 3` en de waarschuwing daarbij horen in week 7, naast aliasing en `deepcopy`. De constructie bijt pas zodra je erin toewijst, en dat gebeurt in week 5 niet. | Besloten in het weekontwerp van week 5, uit te voeren bij de herziening van week 7. |
+| PGM1 week 5 | PGM1 week 7 | Week 5 sluit af op één probleem: één vakje van een raster veranderen terwijl de rest blijft staan. Beide afsluitingen verwijzen naar `source/problems/7_extra.md`, de optionele extra-laag. | Voorstel: laat `source/lectures/7a_lists_advanced.ipynb` datzelfde probleem opnemen, zodat ook de student die extra overslaat het vervolg krijgt. |
 
 ## Onderhoud
 

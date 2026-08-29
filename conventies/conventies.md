@@ -59,19 +59,22 @@ Het materiaal is over jaren door verschillende auteurs bewerkt en voldoet nog
 niet overal. Die afwijkingen zijn vastgelegd in de documenten waar ze thuishoren,
 met per geval het aantal:
 
-- 18 kaders met het ongeldige type `notice`, zie de technische conventies.
+- 10 kaders met het ongeldige type `notice`, zie de technische conventies. Het
+  waren er 16; week 5 heeft er 6 rechtgezet.
 - Twee naamgevingssystemen naast elkaar, zie de codeconventies.
 - 48 keer de kleine letter `l` als variabelenaam, en een functie `blaat`, zie de
   codeconventies.
 - Een aankondiging in week 2 dat we in het Engels programmeren, wat vooruitloopt
   op de afgesproken overgang, zie de codeconventies.
 - `Opgave` en `Opdracht` door elkaar als kop, zie de begrippenlijst.
-- 39 notebooks zonder grond om notebook te zijn, en het ontbreken van de
+- 34 notebooks zonder grond om notebook te zijn, en het ontbreken van de
   browser-uitvoering die notebooks voor de student zinvol maakt, zie de
-  technische conventies.
-- 15 van de 22 uitwerkingen staan als markdown-blok en worden dus nooit
+  technische conventies. Het waren er 39; de vijf van week 5 hebben nu
+  uitvoerbare cellen.
+- 11 van de 22 uitwerkingen staan als markdown-blok en worden dus nooit
   uitgevoerd, en 10 skeletcellen missen `skip-execution`, zie de technische
-  conventies.
+  conventies. Het waren er 15; de vier uitwerkingen van week 5 draaien nu bij de
+  build.
 
 Deze worden niet in een aparte opruimactie weggewerkt maar per bestand
 rechtgezet tijdens de inhoudelijke herziening. Ze staan hier zodat ze niet

@@ -2,7 +2,7 @@
 
 ## Mandelbrot
 
-![Mandelbrot](images/5/640px-Mandel_zoom_00_mandelbrot_set.jpg)
+![De mandelbrotverzameling in zwart op een wit vlak, met de kenmerkende gekartelde rand](images/5/640px-Mandel_zoom_00_mandelbrot_set.jpg)
 
 Tijdens dit practicum ga je een programma schrijven om de punten in en rond de mandelbrotverzameling weer te geven en te verkennen. Hierbij ga je:
 
@@ -12,9 +12,9 @@ Tijdens dit practicum ga je een programma schrijven om de punten in en rond de m
 
 ## Inleiding op `for`-lussen
 
-Omdat je afbeeldingen gaat maken in dit practicum heb je wat extra code nodig om mee te beginnen; download {download}`wk8ex1.zip <assets/wk8ex1.zip>` en pak het uit.
+Omdat je afbeeldingen gaat maken in dit practicum heb je wat extra code nodig om mee te beginnen; download {download}`mandelbrot.zip <assets/mandelbrot.zip>` en pak het uit.
 
-Om wat inzicht in lussen te krijgen, schrijf je eerst twee korte functies in `wk8ex1.py`:
+Om wat inzicht in lussen te krijgen, schrijf je eerst twee korte functies in `mandelbrot.py`:
 
 ### De functie `mult`
 
@@ -89,7 +89,7 @@ De *mandelbrotverzameling* is een verzameling punten op het complexe vlak die ee
 * *z*<sub>*n*+1</sub> = *z<sub>n</sub>*<sup>2</sup> + *c*
 
 :::{admonition} Complexe getallen
-:class: notice
+:class: note
 
 Je weet misschien dat het met normale getallen niet mogelijk is om de wortel van een negatief getal te nemen. Dit is voor wiskundigen een onwenselijke situatie, dus hebben ze een stelsel getallen bedacht waarbij dit wel kan. We noemen deze getallen "complexe getallen". Waar je de normale getallen op een getallenlijn kan zetten, kan je de complexe getallen op een getallen*vlak* zetten, met een *x*- en een *y*-as. Elk complex getal kan je dus aangeven als een combinatie van een *x*- en een *y*-coördinaat. De *x*-waarde noemen we **reëel** en de *y*-waarde **imaginair**, en je schrijft dit als *c* = *x* + *iy*; *i* is de eenheid van imaginaire getallen, en is het antwoord op de vraag wat de wortel van -1 is.
 
@@ -132,7 +132,7 @@ Ook de waarde `1 + j` is geen complex getal: Python gaat ervan uit dat je een va
 Je hoef zelf verder niet te weten wat bijvoorbeeld de rekenregels voor vermenigvuldigen, optellen en machtsverheffen zijn met complexe getallen, Python zorgt er wel voor dat ze goed gebruikt worden!
 
 :::{admonition} *i* of *j*?
-:class: notice
+:class: note
 
 Wiskundigen gebruiken *i*; elektrotechnici gebruiken *j* omdat in de elektrotechniek *i* gebruikt wordt voor elektrische stroom. Python gebruikt deze laatste conventie, wat een bron van *oneidinge* verwarring kan zijn!
 :::
@@ -157,7 +157,7 @@ Python gebruikt zonder problemen de machtsverheffingsoperator (`**`) en andere o
 Je kan echter **wel** de magnitude, of lengte (tussen de oorsprong van het complexe vlak en het punt *c*), vergelijken: `abs(c) > 2`. We kunnen blijkbaar de ingebouwde functie `abs` gebruiken om de magnitude van een complex getal te bepalen.
 
 :::{admonition} Absolute waarde
-:class: notice
+:class: note
 
 Eerder hebben we `abs` gebruikt om te zorgen dat een getal altijd positief is: `abs(-5)` wordt 5, maar `abs(5)` is ook 5. Dit is consistent met deze nieuwe definitie: immers, de lengte op de getallen lijn tussen 0 en 5 is 5, maar de lengte tussen 0 en -5 is dat ook!
 :::
@@ -308,19 +308,19 @@ Sla deze code op en voer het uit door `test()`, met haakjes, in te typen in de P
 Als je een `ModuleNotFoundError` krijgt, betekent dit dat de Python-module `pillow` niet geïnstalleerd is. Als je Anaconda Python gebruikt zou deze al geïnstalleerd moeten zijn, maar mogelijk heb je nog een Python-installatie op je systeem. Je kan dat `conda activate base` proberen om Anaconda te activeren. Als je geen Anaconda Python hebt, moet je `pillow` zelf installeren met het commando `pip install pillow`.
 :::
 
-Als alles goed gaat zal `test()` de geneste lussen uitvoeren en een bericht afdrukken dat het bestand `test.png` aangemaakt is. Dat bestand zou moeten verschijnen in dezelfde directory als het bestand `wk8ex1.py`.
+Als alles goed gaat zal `test()` de geneste lussen uitvoeren en een bericht afdrukken dat het bestand `test.png` aangemaakt is. Dat bestand zou moeten verschijnen in dezelfde directory als het bestand `mandelbrot.py`.
 
 Zowel Windows- en Mac-computers hebben goede ingebouwde ondersteuning om PNG-bestanden te bekijken; `png` is een afkorting voor *portable network graphics*. Voor de meeste mensen zal het dubbelklikken op het icoon van `test.png` deze afbeelding weergeven. Je kan er ook nog voor kiezen het in een browser te openen.
 
 In ieder geval zou voor de bovenstaande functie de afbeelding helemaal wit moeten zijn, met uitzondering van een regelmatig puntenveld, waarvan de rij- en kolomnummers beide een veelvoud van 10 waren:
 
-![Afbeelding](images/5/mtest1.png)
+![Een wit vlak met een regelmatig raster van losse zwarte punten, om de tien rijen en om de tien kolommen een punt](images/5/mtest1.png)
 
 Je kan afbeeldingen ook in- en uitzoomen met de menu-opties of snelkoppelingen.
 
 ### Een gedachtenexperiment over afbeeldingen
 
-Schrijf, voordat je bovenstaande code aanpast, **een kort commentaar** onder de functie `test` in je bestand `wk8ex1.py` dat beschrijft hoe de afbeelding zal veranderen als je de regel
+Schrijf, voordat je bovenstaande code aanpast, **een kort commentaar** onder de functie `test` in je bestand `mandelbrot.py` dat beschrijft hoe de afbeelding zal veranderen als je de regel
 
 ```python
 if col % 10 == 0 and row % 10 == 0:
@@ -342,7 +342,7 @@ Er zijn drie regels in de functie `test` waar we nader naar kijken:
 
 * `image = PNGImage(width, height)` Deze regel code maakt een variabele van het type `PNGImage` met de gegeven hoogte en breedte. De variabele `image` bevat *de hele afbeelding*! Dit lijkt op de manier waarop een enkele variabele, vaak met de naam `L`, een onbeperkt grote lijst kan bevatten. Als informatie samengenomen wordt in een lijst of andere structuur noemen we dit een *software-object* of gewoon *object*.
 
-  We zullen over een paar weken onze eigen objecten gaan ontwerpen; in dit practicum gebruiken we ze zonder te hoeven bedenken hoe we ze uit het niets kunnen maken.
+  Eigen objecten ontwerpen doe je pas in Programmeren 2; in dit practicum gebruik je ze zonder te hoeven bedenken hoe je ze uit het niets maakt.
 
 * `image.plot_point(col, row)` Een belangrijke eigenschap van *objecten* is dat ze hun eigen functies meenemen en kunnen aanroepen! Dit doen ze middels de puntoperator `.`. Hier roept het object `image` zijn eigen functie `plot_point` aan om een pixel op de gegeven kolom en rij te tekenen. Functies die op deze manier worden aangeroepen worden ook wel `methodes` genoemd.
 
@@ -401,8 +401,8 @@ Het is in feite slechts wat rekenwerk. Je moet jezelf bedenken
 * Hoe je de waarde `float_max - float_min` kan gebruiken
 :::
 
-:::{tip} Dit hebben we al gedaan bij Programmeren I!
-Je hebt een vrijwel dezelfde functie (`interp`) geschreven in het vorige blok, tijdens het practicum van week 3.
+:::{tip} Dit heb je al eens gedaan!
+Je hebt een vrijwel dezelfde functie (`interp`) geschreven in het practicum van week 3.
 :::
 
 ### Een begin van de functie `scale`
@@ -436,7 +436,7 @@ Nogmaals, het idee is dat `scale` de floating-pointwaarde tussen `float_min` en 
 overeenkomt met de positie van de pixel `pix`, die ergens tussen `0` en `pix_max` valt. Dit diagram illustreert hoe
 dit er concreet uitziet:
 
-![Diagram](images/5/pixScale.png)
+![Een pixelas van 0 tot pix_max naast een getallenas van float_min tot float_max, met een pijl van een pixel naar het bijbehorende getal](images/5/pixScale.png)
 
 Als je je functie `scale` geschreven hebt, kan je deze testgevallen gebruiken om te kijken of hij werkt:
 
@@ -458,7 +458,7 @@ Out[5]: 0.99
 ```
 
 :::{admonition} Opmerking
-:class: notice
+:class: note
 
 We hebben `scale` beschreven in termen van het berekenen van floating-pointwaardes voor de x-coördinaat (de reële as), maar de functie `scale` werkt ook voor de y-dimensie. Je hebt geen aparte functie nodig voor de verticale as!
 :::
@@ -522,7 +522,7 @@ In [1]:  mset()
 proberen en controleren of de afbeelding die je krijgt een zwart-witte versie van de
 mandelbrotverzameling is, bijvoorbeeld zoals deze afbeelding:
 
-![Mandelbrotverzameling](images/5/mset1.png)
+![De mandelbrotverzameling in wit op een zwarte achtergrond, berekend met mset](images/5/mset1.png)
 
 ## `mset` uitbreiden
 
@@ -551,7 +551,7 @@ toe aan de lussen die lopen over de waardes voor `col` en `row`. Dit maakt alle 
 
 Probeer het zelf, misschien door eerst je mandelbrotverzameling te veranderen naar oranje `(255, 175, 0)` op een zwarte achtegrond `(0, 0, 0)`.
 
-![Gekleurde mandelbrotverzameling](images/5/mset2.png)
+![Dezelfde verzameling, nu oranje op een zwarte achtergrond](images/5/mset2.png)
 
 Pas daarna de kleuren naar je eigen smaak aan!
 
@@ -616,9 +616,9 @@ YMAX = -0.1
 ```
 
 :::{admonition} Zeepaardjes?!?
-:class: notice
+:class: note
 
-Kijk ook eens of je andere waardes kan vinden die een interessant deel van de verzameling tonen; en benoem ze in commentaar in je bestand `wk8ex1.py`. Als richtlijn kun je de suggesties proberen op [deze pagina over de "Vallei der Zeepaarden"](http://mrob.com/pub/muency/seahorsevalley.html)
+Kijk ook eens of je andere waardes kan vinden die een interessant deel van de verzameling tonen; en benoem ze in commentaar in je bestand `mandelbrot.py`. Als richtlijn kun je de suggesties proberen op [deze pagina over de "Vallei der Zeepaarden"](http://mrob.com/pub/muency/seahorsevalley.html)
 :::
 
 Merk op dat de *aspectratio* van de afbeelding 3:2 (horizontaal:vertikaal) is; als je deze aspectratio aanhoudt, dan wordt de verzameling op een natuurlijke manier geschaald.
@@ -627,7 +627,7 @@ Het werkt wel met andere verhoudingen, maar om natuurlijke schaling te behouden 
 
 ### Inleveren
 
-Je hebt nu dit practicum, `wk8ex1.py`, voltooid; vergeet niet dit in te leveren in Gradescope!
+Je hebt nu dit practicum, `mandelbrot.py`, voltooid; vergeet niet dit in te leveren in Gradescope!
 
 ## Nog niet genoeg Mandelbrot?
 
@@ -651,7 +651,7 @@ De PNG-module kan ook afbeeldingen lezen. (Ze is echter niet heel snel in het om
 
 Het resultaat hiervan is dat je de pixels uit een andere afbeelding kan gebruiken om de weergave van de punten die wel (of geen) onderdeel zijn van de mandelbrotverzameling te bepalen, zoals,
 
-![Vermandelbrotte alien](images/5/mbtify.png)
+![Een tekening van een groen ruimtewezen waarvan alleen de pixels binnen de mandelbrotverzameling zijn getekend](images/5/mbtify.png)
 
 Hier is een voorbeeld dat laat zien hoe je een afbeelding kan laden (de afbeelding `alien.png` uit de directory `pngs`):
 
@@ -679,7 +679,7 @@ def example():
 
 De code hierboven produceert de volgende afbeelding:
 
-![Alien](images/5/exampleImageProc.png)
+![Dezelfde tekening, waarvan om de tien pixels een blokje van vijf bij vijf is overgenomen](images/5/exampleImageProc.png)
 
 Probeer deze afbeelding, of een andere `png` die je wilt gebruiken, te *vermandelbrotten*...
 

@@ -212,14 +212,15 @@ moet uitvoeren, moet leeg aankomen.
 
 Dat verschil is niet vrijblijvend. Een uitwerking als codecel wordt bij elke
 build daadwerkelijk uitgevoerd; dezelfde uitwerking als markdown-blok wordt
-alleen op syntax en opmaak bekeken. Van de 22 uitwerkingen staan er nu 15 als
-markdown-blok en zijn dus nooit gedraaid.
+alleen op syntax en opmaak bekeken. Van de 22 uitwerkingen staan er nu 11 als
+markdown-blok en zijn dus nooit gedraaid; het waren er 15, tot de vier van week 5
+werden omgezet.
 
 **Vandaar de regel: uitwerkingen draaien, opgaven niet.** Een cel kan niet
 tegelijk leeg aankomen en geverifieerd zijn. Voor een opgave weegt leeg het
 zwaarst, en komt de verificatie van de bijbehorende uitwerking. Het materiaal
-doet dit al grotendeels: van de codecellen in `solutions/` draaien er 40 en
-staat er 1 op `skip`, terwijl `practicals/` juist 66 overgeslagen cellen heeft
+doet dit al grotendeels: van de codecellen in `solutions/` draaien er 109 en
+staan er 2 op `skip`, terwijl `practicals/` juist 60 overgeslagen cellen heeft
 tegen 1 die draait.
 
 De ongedekte flank in die tabel, de opmaak van codecellen, is op dit moment geen
@@ -233,10 +234,11 @@ uitbreiden zou dat vastleggen in plaats van erop te vertrouwen.
 | Sheets, met of zonder code | 6 | uitsluitend `lectures/` |
 | Uitvoerbare code, geen sheets | 23 | verspreid |
 | Alleen invulcellen (werkboek) | 12 | `problems/` 10, `practicals/` 2 |
-| **Geen van drieën** | **39** | `solutions/` 15, `problems/` 12, `practicals/` 7, `lectures/` 4, `extra/` 1 |
+| **Geen van drieën** | **34** | `solutions/` 11, `problems/` 11, `practicals/` 7, `lectures/` 4, `extra/` 1 |
 
-Die laatste 39 zijn markdown-documenten in een notebook-jasje. Twee colleges
-springen eruit omdat ze in `lectures/` geen enkele grond hebben:
+Die laatste 34 zijn markdown-documenten in een notebook-jasje; het waren er 39,
+tot de vijf van week 5 uitvoerbare cellen kregen. Twee colleges springen eruit
+omdat ze in `lectures/` geen enkele grond hebben:
 `10a_knapzak_probleem.ipynb` en `4b_midterm.ipynb`.
 
 Dit wordt niet in één actie omgezet. Per document wordt bij de herziening
@@ -271,10 +273,11 @@ uit de toon.
 Dit zijn de types van Sphinx zelf, dus ze werken ongeacht het thema. Gebruik geen
 themaspecifieke types, want die vervallen zodra het thema wisselt.
 
-> **Bekende afwijking.** `notice` komt 16 keer voor en bestaat niet: het is geen
-> type van Sphinx en was het ook niet in het vorige thema. Het rendert als een
-> kader zonder betekenis. Meestal is `note` of `important` bedoeld. Te repareren
-> wanneer het betreffende document aan de beurt is.
+> **Bekende afwijking.** `notice` bestaat niet: het is geen type van Sphinx en was
+> het ook niet in het vorige thema. Het rendert als een kader zonder betekenis.
+> Meestal is `note` of `important` bedoeld. Te repareren wanneer het betreffende
+> document aan de beurt is. Het aantal staat in
+> [conventies.md](conventies.md) onder *Bekende afwijkingen*, en nergens anders.
 
 Twee schrijfwijzen, beide goed:
 
@@ -295,9 +298,10 @@ De tekst van het kader, met de standaardkop "Tip".
 Gebruik de eerste vorm wanneer de kop iets toevoegt, de tweede wanneer de
 standaardkop volstaat.
 
-> **`notice` is geen geldig type.** Het komt nog 18 keer voor in het materiaal
-> en levert stille verkeerde opmaak op. Vervang het door `note` zodra je een
-> bestand aanraakt. Hetzelfde geldt voor `seealso`, `important`, `caution` en
+> **`notice` is geen geldig type.** Het komt nog voor in het materiaal en levert
+> stille verkeerde opmaak op; het aantal staat in
+> [conventies.md](conventies.md). Vervang het door `note` zodra je een bestand
+> aanraakt. Hetzelfde geldt voor `seealso`, `important`, `caution` en
 > `attention`: die renderen, maar vallen buiten het palet van het thema.
 
 ### Codeblokken

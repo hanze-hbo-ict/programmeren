@@ -213,15 +213,48 @@ Zonder die samenval is week 7 niet te maken: leeruitkomst P4 vraagt letterlijk o
 "lijsten en strings en de bijbehorende methodes". Zie
 [codeconventies.md](../conventies/codeconventies.md).
 
-### Open: mag het bord in week 5 veranderen?
+### Het bord verandert niet in week 5
 
 Boter-kaas-en-eieren in week 5 bouwt een bord en wijzigt het nooit. Dat past bij
 de grens, maar het betekent wel dat de student een raster leert *lezen* en niet
 *bijwerken*, terwijl week 7 vervolgens Game of Life vraagt, wat volledig om
-bijwerken draait.
+bijwerken draait. De vraag was of die mutatievrije weken een verworvenheid zijn
+die we beschermen, of een gevolg van het uitdunnen van het materiaal.
 
-De vraag is of die mutatievrije weken een verworvenheid zijn die we beschermen,
-of een gevolg van het uitdunnen van het materiaal. Dit is nog niet besloten.
+**Besluit: het bord verandert niet in week 5, en die grens wordt daar benoemd.**
+
+Drie gronden. De mutatiegrens in week 7 is een gesloten, onderbouwd besluit, en
+het hele punt ervan is dat de student een wereld zonder verandering heeft gekend
+voordat verandering een nieuw vermogen wordt. Week 5 heeft zonder mutatie ruim
+genoeg te doen. En `problems/7_extra.md` leert `create_board` en `print_board`
+zelf opnieuw aan; wat week 7 werkelijk nodig heeft is dat de student een raster
+kan bouwen en doorlopen.
+
+De prijs is benoemd: de student leert een raster lezen en niet bijwerken, en
+week 7 draagt dan drie nieuwe dingen tegelijk. De verzachting is dat week 5
+afsluit op precies dat ene probleem - één vakje van een raster veranderen
+terwijl de rest blijft staan - en het bij naam doorverwijst naar week 7. Die
+afsluiting staat in `source/lectures/5a_geneste_lus.ipynb` en, woordelijk
+dezelfde zin, in `source/problems/5_basis.ipynb`.
+
+Wat er zou moeten veranderen om dit te heropenen: dat de mutatiegrens zelf
+verschuift. Zolang die op week 7 ligt, volgt dit besluit eruit. Blijkt in de
+zaal dat week 7 met drie nieuwe onderwerpen tegelijk te zwaar wordt, dan is dat
+een reden om de grens te heroverwegen, niet om week 5 er alvast overheen te
+laten stappen.
+
+### De parameternamen van `board.py` blijven zoals ze zijn
+
+`source/problems/assets/board.py` roept op regels 91-94 vier zoekfuncties aan en
+definieert ze op regels 173-224 zelf opnieuw, met de signature
+`(ch, r_start, c_start, a, n)`. Practicum 5b laat de student dezelfde functies
+schrijven met de signature `(char, row_start, col_start, array, n)`.
+
+**Besluit: de parameternamen in week 5 blijven zoals de opgave ze heeft, en
+`board.py` wordt niet aangeraakt.** Omdat `board.py` de functies zelf definieert,
+importeert het nooit het werk van de student en breekt de afwijking mechanisch
+niets. `board.py` wordt op precies één plek aangeboden:
+`practicals/13_vier_op_rij_speler.md` regel 343, PGM2 week 6.
 
 ## Besluitenregister
 
@@ -238,7 +271,8 @@ organisatorisch besluit niet.
 | Bestanden naar PGM1, excepties blijven in PGM2 | didactisch | staand, onderbouwd |
 | Mutatie pas vanaf PGM1 week 7, en als grens benoemd | didactisch | staand, onderbouwd |
 | Canonieke Python aanbieden, mechanisme later uitleggen | didactisch | staand, onderbouwd |
-| Mag het bord in week 5 gewijzigd worden | didactisch | **open** |
+| Het bord verandert niet in week 5; de grens wordt daar benoemd | didactisch | gesloten |
+| De parameternamen van `board.py` blijven zoals ze zijn | praktisch | gesloten |
 | Objectmethoden pas vanaf week 7, samen met mutatie | didactisch | staand, onderbouwd |
 | Objecten pas in PGM2 | didactisch | staand, onderbouwd |
 | Picobot opent PGM1 | didactisch | staand, onderbouwd |
