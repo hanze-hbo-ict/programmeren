@@ -256,7 +256,7 @@ Out[3]: [0, 0, 0, 1, 1, 1, 1]
 ```
 
 :::{admonition} Binaire eenvoud
-:class: notice
+:class: hint
 
 Dit probleem is veel *makkelijker* dan gewoon sorteren! Maak gebruik van het feit dat de lijst `L` alleen maar `0` of `1` kan bevatten.
 :::

@@ -273,11 +273,9 @@ uit de toon.
 Dit zijn de types van Sphinx zelf, dus ze werken ongeacht het thema. Gebruik geen
 themaspecifieke types, want die vervallen zodra het thema wisselt.
 
-> **Bekende afwijking.** `notice` bestaat niet: het is geen type van Sphinx en was
-> het ook niet in het vorige thema. Het rendert als een kader zonder betekenis.
-> Meestal is `note` of `important` bedoeld. Te repareren wanneer het betreffende
-> document aan de beurt is. Het aantal staat in
-> [conventies.md](conventies.md) onder *Bekende afwijkingen*, en nergens anders.
+`notice` en `info` bestaan niet en zijn nergens meer in gebruik. Kom je ze
+tegen in materiaal van buiten, kijk dan naar de kop van het kader: die zegt
+meestal welk type bedoeld is.
 
 Twee schrijfwijzen, beide goed:
 
@@ -298,11 +296,12 @@ De tekst van het kader, met de standaardkop "Tip".
 Gebruik de eerste vorm wanneer de kop iets toevoegt, de tweede wanneer de
 standaardkop volstaat.
 
-> **`notice` is geen geldig type.** Het komt nog voor in het materiaal en levert
-> stille verkeerde opmaak op; het aantal staat in
-> [conventies.md](conventies.md). Vervang het door `note` zodra je een bestand
-> aanraakt. Hetzelfde geldt voor `seealso`, `important`, `caution` en
-> `attention`: die renderen, maar vallen buiten het palet van het thema.
+> **Alle tien de types hebben in furo hun eigen opmaak.** De eerdere waarschuwing
+> dat `seealso`, `important`, `caution` en `attention` buiten het palet zouden
+> vallen, stamde uit de tijd van sphinx-immaterial en klopt niet meer. Gemeten in
+> `build/html/_static/styles/furo.css`: alle acht gecontroleerde types krijgen er
+> evenveel regels. Kies dus het type dat de inhoud dekt, niet het type dat er
+> zeker uitziet.
 
 ### Codeblokken
 
@@ -478,7 +477,7 @@ geschreven.
 |---|---|
 | Build-waarschuwing "document isn't included in any toctree" | Pagina ontbreekt in `source/_toc.yml` |
 | Lexer-waarschuwing op een `ipython`-blok | Uitvoer bevat tekens die de lexer niet aankan; gebruik `text` |
-| Kaderopmaak klopt niet | Ongeldig admonition-type, meestal `notice` |
+| Kaderopmaak klopt niet | Ongeldig admonition-type; alleen de tien standaardtypes hebben eigen opmaak |
 | Anker naar een andere pagina werkt niet | Extensie vergeten, of de HTML-`id` gekopieerd in plaats van de MyST-slug |
 | Build-waarschuwing bij een link naar een `.py` of `.zip` | Gewone link gebruikt in plaats van de `download`-rol |
 | Notebook faalt bij de build | Een `%run`-bestand of afbeelding staat niet mee onder `source/` |

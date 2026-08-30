@@ -10,7 +10,7 @@ Het **doel** van deze les is om:
 Een programma heeft instructies nodig om te weten wat het moet doen. Deze instructies staan in bestanden, ook bekend als files. Elk bestand heeft een extensie om aan te geven wat voor type bestand het is. `bestand.py` is een python bestand, `bestand.docx` is een word bestand. Het zijn altijd de laaste drie, soms vier letters na de **laatste** punt. `bestand.docx.py` is nog steeds een python bestand.
 
 :::{admonition} Belangrijk!
-:class: notice
+:class: important
 
 In de verkenner van windows zijn niet alle bestanden en directories zichtbaar. Daarnaast zijn de extensies niet standaard weergegeven. Het is verstandig om via het tabblad View de optie *file name extensie* en *hidden items* te selecteren.
 
@@ -69,7 +69,7 @@ One-drive is de cloud systeem van microsoft. Het is automatisch geinstaleerd in 
 In de settings van one_drive kan je een account toevoegen, including je hanze schoolaccount. Zodra je deze hebt aangemaakt wordt er een nieuwe directory aangemaakt voor de one-drive. Daar kan al het werk in geplaats worden.
 
 :::{admonition} Belangrijk!
-:class: notice
+:class: important
 
 One-drive staat standaard op *Files On-demand*. Dit houdt in dat het enkel een document download zodra je het opent. Voor programmeren werkt dat niet. Bestanden moeten lokaal beschikbaar zijn. Het is dus verstandig om *files on-demand* uit te zetten.  
 

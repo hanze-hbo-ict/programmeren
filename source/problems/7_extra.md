@@ -169,7 +169,7 @@ In [3]: print_board(array)
 Bekijk even goed in welke richting de diagonaal loopt; dat geeft aan op welke manier de *rijen* van het bord weergegeven worden: van boven naar beneden, in dit geval.
 
 :::{admonition} De randen blijven 0!
-:class: notice
+:class: important
 
 Merk op dat de code `range(1, height - 1)` en `range(1, width - 1)` gebruikt om te voorkomen dat de randen aangepast worden.
 
@@ -340,7 +340,7 @@ In [7]: print_board(new_array)  # NIET veranderd!
 Deze keer wordt `new_array` ***niet*** veranderd ondanks dat `array` wel veranderd is: het is een echte, "diepe" kopie.
 
 :::{admonition} de ingebouwde `deepcopy` van Python
-:class: notice
+:class: seealso
 
 Je functie `copy` geeft een deep copy terug van haar invoer. Dit is handig genoeg om ingebouwd te zijn in Python. Om deze ingebouwde functie te gebruiken, kan je dit uitvoeren:
 
@@ -403,7 +403,7 @@ In [4]: print_board(array2)
 ```
 
 :::{admonition} Terzijde
-:class: notice
+:class: note
 
 Je zou kunnen beargumenteren dat het mogelijk is om gewoon het oude argument `array` aan te passen, in plaats van het aanmaken en teruggeven van een nieuwe array; dit is wel waar voor het omdraaien van een patroon met array-elementen, maar het is *niet* waar als we de regels voor Game of Life van Conway gaan implementeren. In dat geval zou het aanpassen van cellen zonder te kopiëren het aantal buren van andere cellen veranderen!
 :::
@@ -486,7 +486,7 @@ Deze functie `next_life_generation` moet een tweedimensionale array `array` meek
 Om dit iets concreter te maken noemen we de nieuwe generatie cellen die je teruggeeft `new_array` om deze te onderscheiden van `array`.
 
 :::{admonition} De buitenrand moet `0` blijven
-:class: notice
+:class: important
 
 Zoals benoemd bij `inner_reverse` moet je alle cellen in de buitenrand altijd leeg houden!** Dit is simpelweg een kwestie van het beperken van je lussen tot een geschikt bereik. Dit maakt echter de bijwerkingsregels hierboven een stuk makkelijker, omdat het betekent dat je altijd alleen de cellen aan de binnenkant bewerkt, die allemaal ***een volledige verzameling van acht buren hebben zonder dat je de grenzen overschrijdt.***
 :::
