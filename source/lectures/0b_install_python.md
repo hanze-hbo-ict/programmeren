@@ -90,18 +90,52 @@ Als je VSCode geopend hebt, kan je in de linker balk het extensies menu openen. 
 
 Wanneer je VSCode installeert, worden automatisch een aantal extensies mee geïnstalleerd. Terwijl deze extensies heel handig kunnen zijn op de werkvloer, zitten ze het leerproces dwars. Daarom raden we je aan ze voor nu te deïnstalleren of uit te zetten:
 
-* **'GitHub Copilot' van GitHub.** We snappen heel goed dat je met die mooie AI tools bezig wil, maar raden dit echt af: Je kan niet goed beoordelen of AI met een goede suggestie komt als je nog niet weet hoe het moet. Daarom: Voor nu zelf doen en oefenen, en dan later in de opleiding daardoor nóg beter gebruik kunnen maken van AI ;-)
+* **'GitHub Copilot' van GitHub.** Zet deze uit. Niet omdat AI verboden is in deze opleiding, maar omdat automatische suggesties precies dat wegnemen waar je nu voor komt.
+
+  Programmeren leer je door vast te lopen. Je typt iets, het werkt niet, je zoekt uit waarom, en dát is het moment waarop je iets leert. Een suggestie die verschijnt voordat je hebt nagedacht, slaat dat moment over. Je krijgt code die werkt en je hebt niets geleerd, en dat merk je pas bij het tentamen.
+
+  Er is een tweede reden, en die is praktischer: je kan een suggestie nu nog niet beoordelen. Copilot heeft er geen moeite mee om met grote stelligheid iets voor te stellen dat subtiel fout is. Wie de taal kent ziet dat; wie hem leert niet. Later in de opleiding, als je wél kan zien of een suggestie deugt, wordt hetzelfde gereedschap juist nuttig.
 
 ### Instellingen instellen
 
-Let op: VSCode staat toe om instellingen te hebben per user, en per workspace. Doe deze vooral **per user**, zodat ze het hele vak door behouden blijven!
+VSCode kent twee soorten instellingen: **per user** (voor alles wat je opent) en **per workspace** (alleen voor die ene projectmap). Zet deze **per user**, dan gelden ze het hele vak door en hoef je er niet meer aan te denken.
+
+Dat je het per user uitzet, betekent niet dat je vastzit. Werk je aan een eigen project waar je AI wél wil gebruiken, dan zet je het daar per workspace weer aan; de instelling van dat project wint dan van je algemene instelling. De keuze blijft dus van jou. Voor het materiaal van dit vak raden we aan het uit te laten.
 
 Deze instellingen zijn heel handig:
 
 * **Autosave.** Zie hierboven.
-* **chat: disable AI features**. Om deze instelling te vinden, zoek je op 'chat.disable'. Ook deze AI tools komen veel beter tot hun recht als je het eerst leert doen zonder!
+* **chat: disable AI features**. Om deze instelling te vinden, zoek je op 'chat.disable'. Hiermee verdwijnen ook de chat- en suggestievensters die los van Copilot meekomen.
 
 We gaan nu je vensters herschikken zodat je efficiënter kan gebruiken; als je aan het programmeren bent kan het *erg veel* helpen als je zorgt dat de goede vensters tegelijk zichtbaar zijn!
+
+## AI gebruiken in dit vak
+
+Je hebt hierboven de automatische suggesties uitgezet. Dat betekent niet dat je geen AI mag gebruiken, wel dat je hem anders inzet dan je misschien gewend bent.
+
+**Niet als antwoordmachine.** Vraag hem niet je opgave op te lossen. Je krijgt dan code die je niet begrijpt, waar je in de volgende week op vastloopt, en die je bij het tentamen niet hebt.
+
+**Wel als tutor.** Een taalmodel is geduldig, legt hetzelfde vier keer op vier manieren uit, en klaagt niet als je iets vraagt dat je eigenlijk al zou moeten weten. Dat is precies wat je nodig hebt.
+
+Het verschil zit in hoe je het vraagt. Vergelijk:
+
+```text
+Schrijf een functie die het grootste van drie getallen teruggeeft.
+```
+
+```text
+Ik moet een functie schrijven die het grootste van drie getallen teruggeeft.
+Geef me alsjeblieft geen code en geen antwoord. Stel me vragen die me stap
+voor stap naar de oplossing leiden, en laat me het zelf bedenken. Ik ken op
+dit moment alleen variabelen, if/elif/else en print.
+```
+
+De tweede vraag levert je een gesprek op waarin je zelf op het antwoord komt. Dat kost meer tijd dan de eerste, en dat is de bedoeling: die tijd *is* het leren.
+
+Twee dingen die daarbij helpen:
+
+* **Zeg wat je al kent.** Anders krijg je een oplossing met gereedschap dat je nog niet hebt gehad, en dan snap je het antwoord niet en je eigen code ook niet meer.
+* **Vraag om uitleg van je eigen code, niet om nieuwe code.** "Waarom geeft dit een foutmelding?" en "wat doet deze regel precies?" zijn goede vragen. Daar leer je van, en je houdt de code van jezelf.
 
 ## Vensters herschikken! (dit is handig!)
 
