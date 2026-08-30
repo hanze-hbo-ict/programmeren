@@ -223,7 +223,7 @@ Out[2]:
 
 De elementen in elke lijst hoeven niet in dezelfde volgorde te staan, maar ze moeten wel in dezelfde hoeveelheden aanwezig zijn als hierboven voor elk van de vier sleutels, 'A', 'C', 'B' en '$'.
 
-Hier is de inhoud van het ***taarten***-bestand, met de naam `a.txt`, uit het college.
+Hier is de inhoud van het ***taarten***-bestand, met de naam `a.txt`, uit het college ({download}`downloaden </practicals/assets/a.txt>`).
 
 ```text
 Ik wil taarten en 42 en spam.
