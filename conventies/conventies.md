@@ -59,8 +59,6 @@ Het materiaal is over jaren door verschillende auteurs bewerkt en voldoet nog
 niet overal. Die afwijkingen zijn vastgelegd in de documenten waar ze thuishoren,
 met per geval het aantal:
 
-- 10 kaders met het ongeldige type `notice`, zie de technische conventies. Het
-  waren er 16; week 5 heeft er 6 rechtgezet.
 - Twee naamgevingssystemen naast elkaar, zie de codeconventies.
 - 48 keer de kleine letter `l` als variabelenaam, en een functie `blaat`, zie de
   codeconventies.

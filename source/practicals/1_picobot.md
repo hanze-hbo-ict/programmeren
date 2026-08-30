@@ -106,7 +106,7 @@ Je zou kunnen bepalen hoe *efficiënt* jouw oplossing is door te kijken naar het
 De uitdaging is om deze opgave in slechts *6 regels* voor Picobot op te lossen.
 
 :::{admonition} De perfecte oplossing
-:class: notice
+:class: note
 
 Let op, de 6 regels zouden kunnen gelden als een meest efficënte, of misschien zelfs perfecte oplossing voor dit probleem. Dit is een streven, maar het is *geen* probleem als jouw oplossing meer regels nodig heeft!
 :::

@@ -3,7 +3,7 @@
 Laat het ons weten als je opmerkingen, ideeën, vragen of andere feedback hebt over de cursus of docent. Dit formulier is volledig anoniem en er wordt geen identificeerbare informatie verzameld of opgeslagen. We hopen dat je dit als een veilige plek beschouwt om eerlijke en oprechte feedback te geven!
 
 :::{admonition} Let op
-:class: info
+:class: important
 
 Dit formulier is om algemene opmerkingen over de cursus te plaatsen en *niet* om vragen over opgaven te stellen.
 :::
