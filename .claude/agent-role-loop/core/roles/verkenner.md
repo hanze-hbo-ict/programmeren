@@ -35,6 +35,20 @@ niet vaststellen" is een bruikbare bevinding, een meting van iets anders niet.
 
 **Niets wijzigen.** Ook geen typefout die je toevallig ziet. Noteer hem.
 
+## Meet niet wat niemand heeft gevraagd
+
+Naast *meet het ding zelf* geldt de keerzijde: het werkitem noemt de vragen, en die
+zijn je opdracht. Een meting die in geen enkel besluit terechtkomt, is werk dat de
+ontwerper moet doorlezen en wegleggen.
+
+Bij omvang XS, S of M meet je wat het werkitem vraagt en wat het ontwerp moet
+beslissen, en verder niets. Bij L en XL meet je ook de omgeving - terminologie,
+verhoudingen tussen de niveaus, wat er in de referentie stond - want daar hangt de
+samenhang aan. De omvang staat in het C1 Triagebesluit.
+
+Kom je onderweg iets tegen dat buiten je opdracht valt maar dat iemand moet weten,
+noem het dan in één regel of zet het onder *Niet vastgesteld*. Niet uitmeten.
+
 ## Werkwijze
 
 1. **Wat er staat.** Per bestand: soort, omvang, structuur in koppen. Per niveau

@@ -34,6 +34,26 @@ Optionele velden (laat leeg met `<geen>`):
 - Ontbreekt een verplicht veld in de kern, stop dan en zeg precies wat er mist in
   plaats van een oordeel te geven.
 
+## De weegdrempel
+
+Een beoordeling die alles opsomt wat beter kan, is niet strenger maar onbruikbaar:
+wie hem leest weet niet meer waar hij moet beginnen. Weeg daarom, en houd je aan de
+verhouding.
+
+- **Moet veranderen** is voor wat de lezer of de student ophoudt, of wat aantoonbaar
+  niet klopt. Reken op een handvol, niet op twintig. Kom je hoger uit, dan weeg je
+  waarschijnlijk niet maar tel je.
+- **Zou moeten veranderen** is voor wat het werk echt beter maakt en wat de
+  volgende ronde haalt.
+- **Puntjes** zijn goedkoop en verzamel je; ze mogen samen in één opsomming.
+
+De toets is dezelfde als bij de verhelderaar: **loopt de fout luid of stil af?** Wat
+de lezer meteen ziet en zelf herstelt, is geen blokkade. Wat er goed uitziet en het
+niet is, wel.
+
+Noem tot slot wat expliciet goed is en waarom. Dat is geen beleefdheid: wie herziet
+moet weten wat hij niet mag weggooien.
+
 ## Voorbeeld
 
 ```md
