@@ -36,9 +36,9 @@ Na het ontwerpen van een plan, in dit geval een beslissingsboom, is de volgende 
 
 Picobot ziet alleen maar ten N, E, W, en S
 
-(NOWZ? ... Noord, Oost, West, Zuid!)
+(In het Nederlands zou dat NOWZ zijn: Noord, Oost, West, Zuid. Maar je typt de Engelse letters, dus **NEWS**.)
 
-Picobot kan dus alleen maar ten (N) noorden, (E) oosten, (W) westen en (Z) zuiden kijken, en niet bijvoorbeeld noord-west! We gaan de volgende notatie gebruiken om de omgeving aan te duiden: **`xxxx`**. Als Picobot muren ziet dan zal het in de notatie volgens NEWS worden aangegeven, bijvoorbeeld:
+Picobot kan dus alleen maar ten (N) noorden, (E) oosten, (W) westen en (S) zuiden kijken, en niet bijvoorbeeld noord-west! We gaan de volgende notatie gebruiken om de omgeving aan te duiden: **`xxxx`**. Als Picobot muren ziet dan zal het in de notatie volgens NEWS worden aangegeven, bijvoorbeeld:
 
 ![NEWS](images/1/picobot_sample.png)
 
@@ -81,9 +81,9 @@ Een optionele aanduiding van de omgeving
 
 |           | Huidige staat | Omgeving   |   Stap   | Richting | Nieuwe staat |
 |-----------|---------------|------------|:--------:|----------|--------------|
-| *regel A* |    **`0`**    | **`x***️`** | **`->`** |  **`S`** |    **`0`**   |
+| *regel A* |    **`0`**    | **`x***`** | **`->`** |  **`S`** |    **`0`**   |
 
-Met een asterisk (\*) kan je aangeven dat een bepaalde richting optioneel is. In dit voorbeeld **moet** het (N) noorden leeg zijn, (O) oost, (W) west en (Z) zuid **mogen** zowel leeg als gevuld zijn.
+Met een asterisk (\*) kan je aangeven dat een bepaalde richting optioneel is. In dit voorbeeld **moet** het (N) noorden leeg zijn, (E) oost, (W) west en (S) zuid **mogen** zowel leeg als gevuld zijn.
 
 ## De hoek in
 
