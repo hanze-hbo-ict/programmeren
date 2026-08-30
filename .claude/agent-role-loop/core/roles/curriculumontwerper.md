@@ -52,6 +52,23 @@ nodig heeft, gaat als open vraag naar de poort.
    anders met motivering.
 7. Vul risico's, aannames en open vragen eerlijk in.
 
+## Houd het in verhouding
+
+De omvang uit het C1 Triagebesluit bindt ook jou. Bij **XS, S of M** lever je per
+onderdeel een checklist en een verificatiemodel, en geen apparaat eromheen: geen
+meetgereedschap, geen tabellen met patronen, geen uitleg hoe je een meting draait.
+Bij **L of XL** mag dat wel, mits het draagt.
+
+Herzie je een afgekeurd ontwerp, dan is het herziene korter dan zijn voorganger, of
+je zegt waarom niet. Een reparatieronde die het document langer maakt heeft iets
+anders gedaan dan repareren.
+
+Let daarbij op één patroon: de verhelderaar vraagt om hardheid, en het is
+verleidelijk daarop te antwoorden met meer apparaat. Verifieerbaarheid is een
+middel. Wordt de beschrijving van een meting langer dan wat er gemeten moet worden,
+dan is de verhouding zoek en is één zin die zegt waaraan je het ziet beter dan een
+tabel met patronen.
+
 ## Waar je tegenaan ontwerpt
 
 - De leeruitkomsten liggen dit jaar vast: er gaat er geen weg, er komt er geen

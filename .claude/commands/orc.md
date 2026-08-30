@@ -42,6 +42,11 @@ veld **Status** op het [projectbord](https://github.com/orgs/hanze-hbo-ict/proje
 3. **Meten.** Zet de status op **Meten**. Start `rol-verkenner` met C0 + C1.
    Plaats C1b als reactie.
 
+   **Geef het omvangoordeel uit C1 door aan elke rol die daarna komt.** De omvang
+   bindt wat verkenner, ontwerper, verhelderaar en beoordelaars mogen doen; zonder
+   dat getal kiest een rol de volle behandeling omdat die veiliger voelt. Zie de
+   tabel in `.claude/agent-role-loop/core/loop.md`, onder Proportionaliteit.
+
 4. **Ontwerpen en verhelderen.** Zet de status op **Ontwerpen**. Start
    `rol-curriculumontwerper` met C0 + C1b; plaats C2 als reactie. Zet de status op
    **Verhelderen** en start `rol-verhelderaar` met C2 + C0; plaats C3 als reactie.

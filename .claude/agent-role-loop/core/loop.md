@@ -126,3 +126,31 @@ altijd.
 Bij twijfel telt hoe moeilijk het terug te draaien is. Materiaal weggooien of een
 leeruitkomst verplaatsen verdient de volledige lus, ook als de wijziging klein
 oogt.
+
+### De omvang bindt ook de rollen die erna komen
+
+Triage bepaalt een omvang en tot nu toe deed niemand daar iets mee: een klein
+werkitem kreeg dezelfde behandeling als een grote herziening. Dat is de duurste
+fout die de lus kan maken, want zij treft juist de stappen die het meeste kosten.
+
+| | **XS, S, M** | **L, XL** |
+|---|---|---|
+| Verkenner | meet wat het werkitem vraagt en wat het ontwerp moet beslissen, en verder niets | meet ook de omgeving: terminologie, verhoudingen, wat er ooit stond |
+| Ontwerper | een checklist per onderdeel, geen apparaat eromheen | de volledige vorm, inclusief meetgereedschap waar dat draagt |
+| Verhelderaar | faalt alleen op wat de auteur ophoudt | de volledige controlevolgorde |
+| Beoordelaars | het aantal uit de weegdrempel, en niet meer | idem, maar over meer materiaal |
+
+De omvang staat in het C1 Triagebesluit. Wie hem niet kent, vraagt ernaar in plaats
+van de volle behandeling te kiezen omdat die veiliger voelt.
+
+### Artefacten convergeren
+
+Een herzien artefact is **korter** dan zijn voorganger, of het zegt waarom niet.
+Een reparatieronde die het ontwerp langer maakt, heeft iets anders gedaan dan
+repareren.
+
+Let daarbij op één patroon dat de lus uit zichzelf voortbrengt: de verhelderaar
+vraagt om hardheid, de ontwerper antwoordt met apparaat, en de ronde daarna vraagt
+de verhelderaar of dat apparaat wel klopt. Zo optimaliseert de lus tegen zijn eigen
+criticus. Verifieerbaarheid is een middel; als de beschrijving van de meting langer
+wordt dan wat er gemeten moet worden, is de verhouding zoek.
