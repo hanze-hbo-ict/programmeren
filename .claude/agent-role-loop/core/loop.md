@@ -96,6 +96,23 @@ uv run make html
 Ze zijn een toegangsvoorwaarde tot de beoordeling, geen onderdeel ervan.
 Beoordelingsaandacht besteden aan wat een hook al vaststelt, is verspilling.
 
+## Gereedschap: gebruik wat er is
+
+Elke rol die een commando draait, gebruikt de standaardgereedschappen die op het
+systeem staan: `grep`, `sed`, `awk`, `find`, `python`, `git`, `jq`. Wat er verder
+aanwezig is, stel je vast in plaats van aan te nemen.
+
+**Ga er niet van uit dat `ripgrep`, `fd`, `bat` of ander vervangend gereedschap
+bestaat, en installeer nooit iets.** Wat er op de machine staat is een besluit van
+de gebruiker, niet van een rol. Draai een patroon dat je opschrijft eerst zelf, en
+draait het niet, kies dan een vorm die het wel doet - `grep -P` heeft dezelfde
+PCRE-semantiek als de meeste voorbeelden die je tegenkomt.
+
+Dit is een bijzonder geval van de verkennersregel *meet het ding zelf, niet iets
+ernaast*: een patroon dat stukloopt op een vlag die dit systeem niet kent, meet
+niets, en een patroon waarvan nul treffers het geslaagd-criterium is, slaagt dan
+altijd.
+
 ## Proportionaliteit
 
 | Omvang | Route |

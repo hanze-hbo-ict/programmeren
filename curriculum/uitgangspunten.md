@@ -273,6 +273,7 @@ organisatorisch besluit niet.
 | Canonieke Python aanbieden, mechanisme later uitleggen | didactisch | staand, onderbouwd |
 | Het bord verandert niet in week 5; de grens wordt daar benoemd | didactisch | gesloten |
 | De parameternamen van `board.py` blijven zoals ze zijn | praktisch | gesloten |
+| Gewichten mogen binnen een vak schuiven; de uitkomsten zelf liggen dit jaar vast | organisatorisch | staand, onderbouwd |
 | Objectmethoden pas vanaf week 7, samen met mutatie | didactisch | staand, onderbouwd |
 | Objecten pas in PGM2 | didactisch | staand, onderbouwd |
 | Picobot opent PGM1 | didactisch | staand, onderbouwd |
@@ -457,6 +458,32 @@ Prettige bijkomstigheid: deze vorm roept geen enkele methode aan, en past dus
 binnen de regel dat objectmethoden in PGM1 wegblijven. De variant zonder `with`
 zou dat ook doen, maar laat het bestand open en leert precies de gewoonte aan
 waarvoor `with` bestaat.
+
+### Wat er aan de leeruitkomsten wel en niet mag veranderen
+
+De leeruitkomsten in [leeruitkomsten.md](leeruitkomsten.md) zijn tot nu toe als
+volledig gegeven behandeld. Dat is te strikt. De grens loopt hier:
+
+**Wat vastligt dit jaar.** De uitkomsten zelf: welke er zijn, hoe ze geformuleerd
+zijn, aan welke HBO-i-competentie ze hangen. Er gaat er dit jaar geen weg, er komt
+er geen bij, en de formulering blijft. Dat is extern vastgelegd en niet iets wat
+een herziening van het materiaal kan wijzigen.
+
+**Wat wel mag.** Met de **gewichten** mag geschoven worden, binnen PGM1 of binnen
+PGM2. Weegt een uitkomst zwaarder dan het materiaal rechtvaardigt, of lichter, dan
+is dat te herverdelen zolang het totaal per vak klopt en de verschuiving binnen
+hetzelfde vak blijft. Schuiven tussen PGM1 en PGM2 kan niet.
+
+Er ligt werk dat hierop wacht. A4 in PGM1 belooft 10% van het tentamen over
+recursie, terwijl recursie sinds het besluit "recursie na de lussen" in PGM2 wordt
+onderwezen. De uitkomst blijft dit jaar staan; wat er kan gebeuren is dat die 10%
+binnen PGM1 wordt herverdeeld. A5 in PGM2 weegt al niets en blijft eveneens staan.
+
+Wat dit betekent voor een ontwerper: kan een week een uitkomst niet dragen, dan is
+"deze uitkomst weegt hier te zwaar" een geldige uitkomst van je ontwerp, en
+"schrap de uitkomst" niet. Het blijft een besluit voor de vakdeskundige, dus het
+gaat als open vraag naar de poort en het landt hier en in de matrijs. Wat níét mag
+is de matrijs stilzwijgend anders lezen dan hij staat.
 
 ## Een besluit toevoegen
 

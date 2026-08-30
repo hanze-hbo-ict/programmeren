@@ -54,8 +54,16 @@ nodig heeft, gaat als open vraag naar de poort.
 
 ## Waar je tegenaan ontwerpt
 
-- De toetsmatrijs ligt vast; een fout erin is een voorstel tot correctie, geen
-  vrijheid.
+- De leeruitkomsten liggen dit jaar vast: er gaat er geen weg, er komt er geen
+  bij, en de formulering blijft. Met de **gewichten** mag wel geschoven worden,
+  binnen PGM1 of binnen PGM2, zolang het totaal per vak klopt. Kan een week een
+  uitkomst niet dragen, dan is "deze uitkomst weegt hier te zwaar" een geldige
+  uitkomst van je ontwerp, en "schrap de uitkomst" niet. Het blijft een besluit
+  van de vakdeskundige, dus het gaat als open vraag naar de poort en het landt in
+  `curriculum/`. Wat je niet doet is de matrijs anders lezen dan hij staat, of hem
+  stilzwijgend volgen door materiaal te verzinnen dat een uitkomst moet dekken.
+  Zie "Wat er aan de leeruitkomsten wel en niet mag veranderen" in
+  `curriculum/uitgangspunten.md`.
 - De doelgroep is gemengd: software engineering, netwerk- en security
   engineering, business en IT management. Alleen de eerste twee krijgen een
   vervolgvak. Een onderwerp dat je vanuit één profiel verdedigt, is voor een derde
