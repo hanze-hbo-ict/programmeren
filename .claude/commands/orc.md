@@ -32,6 +32,14 @@ veld **Status** op het [projectbord](https://github.com/orgs/hanze-hbo-ict/proje
 
 2. **Triage.** Start `rol-triage` met de inhoud van de issue als C0. Plaats C1 als
    reactie en zet het label `route: ...`.
+
+   **Plak de inhoud, verwijs niet.** De rolsubagents hebben geen shell: `rol-triage`,
+   `rol-curriculumontwerper`, `rol-verhelderaar`, `rol-hoofdredacteur` en de vier
+   beoordelaars kennen alleen `Read`, `Glob` en `Grep`. Een opdracht als "lees de
+   issue met `gh issue view`" kan een rol dus niet uitvoeren, en hij wijkt dan uit
+   naar wat er verder in zijn prompt staat - met een oordeel dat op de verkeerde
+   tekst rust. Zet elk artefact dat een rol nodig heeft in de prompt zelf, of in een
+   bestand dat hij mag lezen. Dat geldt voor elke stap hierna evengoed.
    - `AFWIJZEN`: meld besluit en advies, sluit de issue; klaar.
    - `DOORLOPEND`: zet het label `doorlopend`, meld dat het werk meegaat met de
      eerstvolgende sectieherziening; klaar.
