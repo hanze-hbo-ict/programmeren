@@ -278,6 +278,7 @@ organisatorisch besluit niet.
 | Objecten pas in PGM2 | didactisch | staand, onderbouwd |
 | Picobot opent PGM1 | didactisch | staand, onderbouwd |
 | Opgaven in opstap, basis en extra | didactisch | **open** |
+| De student werkt lokaal in VS Code; de browser is verrijking | didactisch | staand, onderbouwd |
 | Code uitvoerbaar in de browser | praktisch | open, uitvoering wijzigt |
 
 ### Recursie na de lussen
@@ -484,6 +485,25 @@ Wat dit betekent voor een ontwerper: kan een week een uitkomst niet dragen, dan 
 "schrap de uitkomst" niet. Het blijft een besluit voor de vakdeskundige, dus het
 gaat als open vraag naar de poort en het landt hier en in de matrijs. Wat níét mag
 is de matrijs stilzwijgend anders lezen dan hij staat.
+
+### Waar de student werkt
+
+De student werkt op zijn eigen machine, in VS Code. Dat is niet alleen praktisch:
+het is een competentie. Een ICT'er werkt met een echte ontwikkelomgeving, en hoe
+eerder hij daar thuis raakt, hoe minder die omgeving hem later in de weg zit. Week
+0 is er dan ook grotendeels aan gewijd.
+
+Uitvoering in de browser is een **verrijking**, geen vervanging. Zij was er in de
+Jupyter Book-versie via het raketicoon en veel studenten gebruikten haar
+daadwerkelijk; sinds de Sphinx-migratie ontbreekt zij. Zie het werkitem over
+Pyodide.
+
+Dit besluit is genomen omdat het materiaal het tegendeel liet zien. Twee practica
+in week 2 stonden na elkaar in de inhoudsopgave met onverenigbare werkwijzen: het
+eerste opende met een checklist "Python geïnstalleerd, VS Code geïnstalleerd", het
+tweede stuurde de student naar een raketicoon dat niet meer bestaat. Wie materiaal
+schrijft dat een omgeving veronderstelt, gaat uit van de lokale; komt de
+browseruitvoering terug, dan is dat winst en geen ander uitgangspunt.
 
 ## Een besluit toevoegen
 
