@@ -22,6 +22,21 @@ Een agent die dit niet weet, vult het in, en dan komt het als redenering terug i
 het materiaal. Daarom eindigt elk ontwerp met vragen aan jou, en is "dat weet ik
 niet meer" ook een bruikbaar antwoord.
 
+## Je draagt twee petten
+
+Bij de poort ben je **vakdeskundige**: is dit ontwerp goed voor dit vak, en wat
+besluit ik over de open vragen. Dat is waar de rest van dit document over gaat.
+
+Daarnaast ben je **initiator van het experiment**: deugt deze werkwijze, en moet er
+iets aan veranderen. Dat is een andere vraag met ander bewijs - niet het materiaal
+maar `onderzoek/`, en niet dit werkitem maar de reeks.
+
+Houd ze uit elkaar. Een lus die op dit werkitem hindert, is niet vanzelf een lus
+die niet deugt; en een werkwijze die je wilt bijstellen, stel je niet bij midden in
+een ronde. Merk je bij de poort iets over de werkwijze zelf, noteer het dan in
+`onderzoek/bevindingen.md` en besluit erover wanneer je die pet op hebt - met de
+onderzoeker ernaast als er genoeg is om een patroon in te zien.
+
 ## Invoer
 
 - C2 Weekontwerp
