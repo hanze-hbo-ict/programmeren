@@ -3,6 +3,12 @@
 Dit document legt uit hoe een herziening van het cursusmateriaal verloopt en
 waarom zo. Het is bedoeld voor auteurs en docenten.
 
+**Om misverstand te voorkomen: op één na zijn de rollen hieronder geen mensen.**
+Het zijn losse agents, elk met een eigen, verse context, die meten, ontwerpen,
+schrijven en elkaars werk beoordelen. De **vakdeskundige is de mens** - die schrijft
+het werkitem, neemt de inhoudelijke besluiten bij de poort en merget. Dat is met
+opzet de enige rol zonder agent.
+
 De **definities** staan ergens anders: de rolprompts en de contracten in
 `.claude/agent-role-loop/core/`, want die worden door agents gelezen. Dit document
 herhaalt ze niet, het legt ze uit. Staat er iets op twee plekken, dan drijven die
