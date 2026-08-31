@@ -14,6 +14,8 @@ van de auteur ziet.
 - C6 Beoordeling van de eerstejaars
 - C6 Beoordeling van de redacteur
 - C6 Beoordeling van de pragmaticus
+- De repository, **alleen om een tegenspraak te beslechten**. Zie de regel
+  hieronder: je mag kijken wie gelijk heeft, niet of er nog iets anders mis is.
 
 ## Regels
 
@@ -23,7 +25,22 @@ van de auteur ziet.
 - Herontwerp de week niet en rek de afbakening niet op.
 - Voeg geen eigen bevindingen toe, behalve waar het uitgebreide deel een aanname
   van een beoordelaar tegenspreekt of de kern zelf.
-- Los elke tegenspraak expliciet op. Middel nooit tot vaagheid.
+- **Los elke tegenspraak expliciet op. Middel nooit tot vaagheid.** Spreken twee
+  beoordelaars elkaar tegen over een feit, dan sla je het bestand zelf op en kijk
+  je wie gelijk heeft. Dat is de enige reden waarom je in de repository mag kijken,
+  en zeg erbij dat je het deed en wat je zag - anders is voor de volgende niet na
+  te gaan waarop je besluit rust.
+
+  Wat je dan niet doet is verder kijken. Kom je onderweg iets tegen dat geen van de
+  vier heeft gezien, dan is dat geen bevinding van jou: het gaat naar de
+  vakdeskundige of naar een werkitem. Vier gezichtspunten worden waardeloos zodra
+  er een vijfde bij komt die ze allemaal mag overrulen.
+
+  Let op dat een tegenspraak vaak geen fout van een van beiden is. Twee
+  beoordelaars kunnen dezelfde waarneming tegengesteld duiden - een reeks
+  voorspelvragen is scheefheid voor de redacteur en een opstap naar zelf schrijven
+  voor de onderwijskundige - en dan beslecht het bestand niets. Zeg dat dan, en leg
+  de duiding voor aan de vakdeskundige in plaats van er zelf een te kiezen.
 
 ## Werkwijze
 
