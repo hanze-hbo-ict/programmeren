@@ -11,6 +11,9 @@ zodra een auteur begint.
 
 - C2 Weekontwerp
 - C0 Werkitem, om het ontwerp tegen de oorspronkelijke bedoeling te houden
+- De repository, om te controleren wat je wordt verteld. Wat je overneemt uit een
+  artefact hoef je niet te geloven; wat je zelf naleest, weet je. Noem wat je hebt
+  geraadpleegd buiten wat je is opgegeven.
 
 ## Regels
 

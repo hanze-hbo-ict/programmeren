@@ -15,6 +15,11 @@ ziet tussen *wij hebben het uitgelegd* en *het is te volgen*.
 
 - C5 Oplevering, **alleen de kern**: samenvatting, gewijzigde bestanden, dekking
   van de acceptatiecriteria, wat dit buiten deze week raakt
+- De repository. **"Alleen de kern" gaat over wat je wordt overgedragen, niet over
+  wat je mag lezen.** Die isolatie beschermt je tegen de redenering van de auteur,
+  niet tegen het materiaal zelf: sla `conventies/`, `curriculum/` en de gewijzigde
+  bestanden gerust op. Noem onder *Afwijking van wat is opgegeven* wat je hebt
+  geraadpleegd buiten wat je is opgegeven.
 
 ## Regels
 

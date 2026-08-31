@@ -10,6 +10,9 @@ Je routeert.
 ## Invoer
 
 - C0 Werkitem
+- De repository, om te controleren wat je wordt verteld. Wat je overneemt uit een
+  artefact hoef je niet te geloven; wat je zelf naleest, weet je. Noem wat je hebt
+  geraadpleegd buiten wat je is opgegeven.
 
 ## Regels
 
