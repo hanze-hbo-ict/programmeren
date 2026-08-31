@@ -34,6 +34,37 @@ Optionele velden (laat leeg met `<geen>`):
 - Ontbreekt een verplicht veld in de kern, stop dan en zeg precies wat er mist in
   plaats van een oordeel te geven.
 
+## Twee modi: beoordeling en leesronde
+
+Het gewone geval is een **beoordeling**: vier beoordelaars, geïsoleerd, over de
+kern van één C5. Daarvoor is dit contract geschreven.
+
+Er is een tweede geval, en dat is te waardevol om te blijven improviseren. Bij een
+**leesronde** lees je bestaand materiaal dat de lus nog nooit heeft gezien. Er is
+dan geen C5, geen ontwerp en geen auteur om iets aan terug te geven; jouw oordeel
+wordt de grondslag voor een werkitem. Dat is aantoonbaar de goedkoopste manier om
+te weten wat er aan de hand is met een week die nooit is herzien - goedkoper dan de
+volle lus erop loslaten en pas achteraf ontdekken wat er speelde.
+
+Wat er in een leesronde anders geldt:
+
+- **Het veld *Dekking van de acceptatiecriteria* vervalt**, want die zijn er niet.
+  Zet in plaats daarvan neer waaraan je hebt getoetst: het vaste criterium uit
+  `conventies/conventies.md` geldt altijd, en `curriculum/leerlijn.md` zegt wat de
+  week hoort te doen. Noem per norm of zij gehaald is en waarop je dat baseert.
+- **De stopvoorwaarde over een ontbrekend verplicht veld geldt niet.** Het ontbreken
+  van de kern is hier bekend en met opzet, geen verzuim van een uitvoerder. Stop
+  dus niet; meld het en beoordeel.
+- **Het veld *Afwijking van wat is opgegeven*** gebruik je voor wat je tegenkomt
+  buiten de bestanden die je zijn opgegeven, en voor wat verder reikt dan de weken
+  die je leest. Dat scheelt het werkitem een herontdekking.
+- **Wie de leesronde start, zegt erbij dat het er een is**, welke bestanden erbij
+  horen, en dat het oordeel de grondslag voor een werkitem wordt. Zonder dat
+  vervalt een rol terug op de gewone modus en stopt hij.
+
+De weegdrempel hieronder geldt in beide modi, en in een leesronde des te meer:
+bestaand materiaal levert altijd meer bevindingen op dan één oplevering.
+
 ## De weegdrempel
 
 Een beoordeling die alles opsomt wat beter kan, is niet strenger maar onbruikbaar:

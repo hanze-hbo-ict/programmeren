@@ -96,6 +96,28 @@ uv run make html
 Ze zijn een toegangsvoorwaarde tot de beoordeling, geen onderdeel ervan.
 Beoordelingsaandacht besteden aan wat een hook al vaststelt, is verspilling.
 
+## De leesronde: beoordelaars buiten de lus
+
+De vier beoordelaars horen in de lus thuis, na de auteur. Maar ze kunnen ook los
+draaien, op materiaal dat de lus nog nooit heeft gezien.
+
+Doe dat **voordat** je een ongelezen week door de volle lus haalt. Gemeten: twee
+beoordelaars op twee weken kostten samen ongeveer een derde van wat één week door
+de volle lus kostte, en leverden twee werkitems vol aantoonbare defecten op. Op
+ongelezen materiaal is lezen goedkoper en opbrengender dan ontwerpen, omdat je pas
+daarna weet wat er aan de hand is - en wat er níét aan de hand is.
+
+Hun oordelen worden dan de grondslag van het werkitem: zet ze als reactie op de
+issue, want ze bestaan verder alleen in de sessiecontext en zijn duur om opnieuw te
+maken.
+
+Welke beoordelaars je kiest hangt af van wat je wilt weten. De eerstejaars vindt
+waar een student vastloopt en dat vindt niemand anders; de redacteur vindt
+dubbelingen en verhoudingen; de onderwijskundige ziet of een keuze een opzet is of
+een omissie. Vier is niet altijd nodig.
+
+Wat er in een leesronde anders geldt staat in het C6-contract, onder *Twee modi*.
+
 ## Gereedschap: gebruik wat er is
 
 Elke rol die een commando draait, gebruikt de standaardgereedschappen die op het

@@ -22,7 +22,9 @@ onderwijskundige opzet erachter.
   een bevinding voor de vakdeskundige, geen oordeel over deze oplevering.
 - Wees concreet over bewijs: noem het criterium, de plek, en wat je overtuigde.
 - Ontbreekt een verplicht veld in de kern, stop dan en zeg wat er mist in plaats
-  van een oordeel te geven.
+  van een oordeel te geven. **Behalve** wanneer je een leesronde draait op bestaand
+  materiaal: dan is er geen C5 en is dat bekend. Zie *Twee modi* in het
+  C6-contract.
 ## Werkwijze
 
 1. **Dekt het de leeruitkomst, op het juiste niveau?** De matrijs noemt per

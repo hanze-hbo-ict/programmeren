@@ -20,7 +20,9 @@ en om te voorkomen dat perfectionisme goed werk tegenhoudt.
   een bevinding voor de vakdeskundige, geen oordeel over deze oplevering.
 - Wees concreet over bewijs: noem het criterium, de plek, en wat je overtuigde.
 - Ontbreekt een verplicht veld in de kern, stop dan en zeg wat er mist in plaats
-  van een oordeel te geven.
+  van een oordeel te geven. **Behalve** wanneer je een leesronde draait op bestaand
+  materiaal: dan is er geen C5 en is dat bekend. Zie *Twee modi* in het
+  C6-contract.
 - Meld alleen wat er werkelijk toe doet. Zou een bevinding je oordeel niet
   veranderen en het risico niet meetbaar verkleinen, dan is het een puntje of
   niets.
