@@ -16,8 +16,7 @@ flowchart TD
     W["Werkitem (C0)"] --> T{Triage}
     T -->|"C1 AFWIJZEN"| Req["Terug, met advies"]
     T -->|"C1 DOORLOPEND"| D["Blijft open als verzamelplek"]
-    T -->|"C1 LICHT"| A["Auteur"]
-    T -->|"C1 VOLLEDIG"| V["Verkenner"]
+    T -->|"C1 LUS: de rollen die C1 noemt"| V["Verkenner"]
     V -->|"C1b Bevindingen"| O["Curriculumontwerper"]
     O -->|"C2 Weekontwerp"| C{Verhelderaar}
     C -->|"C3 FAAL"| O
@@ -63,9 +62,10 @@ periodiek over het geheel. Zijn bevindingen worden meestal werkitems met de rout
 
 ## Waar het pad zich splitst
 
-1. **Triage (C1).** `VOLLEDIG` begint bij de verkenner. `LICHT` gaat rechtstreeks
-   naar de auteur met een minimaal ontwerp. `DOORLOPEND` blijft open als
-   verzamelplek. `AFWIJZEN` gaat terug met advies.
+1. **Triage (C1).** `LUS` gaat langs de rollen die C1 bij naam noemt, in de
+   volgorde hierboven; wat er niet staat wordt overgeslagen. Er is dus niet één
+   licht pad en één volledig pad, maar een pad per werkitem. `DOORLOPEND` blijft
+   open als verzamelplek. `AFWIJZEN` gaat terug met advies.
 2. **Verhelderaar (C3).** `AKKOORD` gaat naar de poort. `FAAL` gaat terug naar de
    ontwerper met genummerde wijzigingen. Faalt het drie keer, dan gaat de patstelling
    naar de mens.
@@ -137,17 +137,34 @@ altijd.
 
 ## Proportionaliteit
 
-| Omvang | Route |
+| Omvang | Wat dat betekent |
 |---|---|
-| Een typefout, een dode link, een naam rechtzetten | `LICHT`, of gewoon doen |
-| Eén opgave herzien, een sectie toevoegen | `LICHT` |
-| Een week herzien | `VOLLEDIG` |
+| Een typefout, een dode link, een naam rechtzetten | Gewoon doen - en daarna laten lezen |
+| Eén opgave herzien, een sectie toevoegen | `LUS`, met een handvol rollen |
+| Een week herzien | `LUS`, meestal met alle |
 | Beeldkwaliteit, terminologie, dode verwijzingen | `DOORLOPEND` |
 | Een vak herindelen | `AFWIJZEN`; eerst opsplitsen in weken |
 
 Bij twijfel telt hoe moeilijk het terug te draaien is. Materiaal weggooien of een
 leeruitkomst verplaatsen verdient de volledige lus, ook als de wijziging klein
 oogt.
+
+### Twee vragen, niet één
+
+Triage beantwoordt twee vragen die los van elkaar staan.
+
+**Welke verantwoordelijkheden doet dit werk aan?** Dat is de rollenlijst in C1.
+Niet elk werkitem raakt de hele lus: iets kan meten nodig hebben en geen ontwerp,
+of geen ontwerp en wel een lezer. De vragen die dat bepalen staan in
+`roles/triage.md`.
+
+**Hoe diep gaat elke rol die meedoet?** Dat is de omvang, en de tabel hieronder.
+
+Ze lopen niet gelijk op, en dat is de reden dat ze uit elkaar zijn gehaald. Een
+werkitem van omvang S kan twee rollen hard nodig hebben; een werkitem van omvang L
+kan er negen nodig hebben en op elk daarvan ondiep blijven. Wie de twee in één
+getal propt, slaat werk over dat achteraf alsnog moet gebeuren - en dan als
+reparatie op iets dat al gemerged is.
 
 ### De omvang bindt ook de rollen die erna komen
 

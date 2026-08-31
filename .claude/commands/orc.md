@@ -33,6 +33,13 @@ veld **Status** op het [projectbord](https://github.com/orgs/hanze-hbo-ict/proje
 2. **Triage.** Start `rol-triage` met de inhoud van de issue als C0. Plaats C1 als
    reactie en zet het label `route: ...`.
 
+   **C1 noemt de rollen die meedoen.** Draai precies die, in de volgorde van de
+   pijplijn hieronder, en sla de rest over. Een stap die niet in de lijst staat
+   bestaat voor dit werkitem niet: je hoeft hem niet te verantwoorden en je vult
+   hem niet zelf in. Staat er geen rollenlijst - een oud C1, of een triage die hem
+   vergat - vraag er dan om in plaats van de volle lus te draaien omdat die
+   veiliger voelt.
+
    **Plak de inhoud, verwijs niet.** De rolsubagents hebben geen shell: `rol-triage`,
    `rol-curriculumontwerper`, `rol-verhelderaar`, `rol-hoofdredacteur` en de vier
    beoordelaars kennen alleen `Read`, `Glob` en `Grep`. Een opdracht als "lees de
@@ -43,9 +50,8 @@ veld **Status** op het [projectbord](https://github.com/orgs/hanze-hbo-ict/proje
    - `AFWIJZEN`: meld besluit en advies, sluit de issue; klaar.
    - `DOORLOPEND`: zet het label `doorlopend`, meld dat het werk meegaat met de
      eerstvolgende sectieherziening; klaar.
-   - `LICHT`: sla door naar stap 6 met een minimaal ontwerp (C0 + C1); zeg dat je
-     op het lichte pad zit.
-   - `VOLLEDIG`: ga door.
+   - `LUS`: ga door, langs de rollen die C1 noemt. Meld welke dat zijn, zodat de
+     gebruiker ziet wat er wel en niet gaat draaien.
 
 3. **Meten.** Zet de status op **Meten**. Start `rol-verkenner` met C0 + C1.
    Plaats C1b als reactie.
@@ -124,3 +130,9 @@ veld **Status** op het [projectbord](https://github.com/orgs/hanze-hbo-ict/proje
   in plaats van de rol zelf te improviseren.
 - De poorten van de machine draaien vóór de beoordeling, niet erin. De auteur
   levert pas op nadat `pre-commit` en `make html` groen zijn.
+- **Wie het zelf doet, laat het lezen.** Doe je werk met de hand omdat het te klein
+  leek voor een werkitem, draai dan achteraf alsnog minstens één beoordelaar over
+  het resultaat - meestal de redacteur, en de eerstejaars zodra een student de
+  tekst leest. Overslaan bespaart de stap niet, het verplaatst hem naar de
+  reparatie erna. Een half doorgevoerde vervanging, een kop die de conventie niet
+  volgt en een diff vol opmaakruis zijn alle drie zo ontstaan.
