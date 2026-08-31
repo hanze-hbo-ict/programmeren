@@ -137,7 +137,7 @@ boven:
 
 | Directory | Inhoud |
 |---|---|
-| `about/` | Syllabus, FAQ, feedback, literatuurverwijzingen |
+| `about/` | Syllabus, FAQ, literatuurverwijzingen |
 | `course/` | Weekpagina's, practicum-, opgaven- en oplossingenoverzichten |
 | `lectures/` | Collegemateriaal |
 | `practicals/` | Practicumopdrachten |
