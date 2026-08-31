@@ -71,7 +71,9 @@ na elke wijziging: dan vind je iedere keer hetzelfde en wordt je rapport genegee
      percentages in de matrijs met het oefententamen in
      `source/extra/practice/`: tel de punten per opgave en weeg ze naar wat zij
      van de student vraagt. Loopt dat uiteen, dan beschrijft de matrijs een andere
-     toets dan er wordt afgenomen.
+     toets dan er wordt afgenomen. Let op dat een tentamen 90 te verdienen punten
+     heeft en niet 100: tien punten zijn de basis, want een student haalt minimaal
+     een 1. Zie de sectie hierover in `curriculum/leeruitkomsten.md`.
 
    Gewichten mogen binnen een vak schuiven; de uitkomsten zelf liggen dit jaar
    vast. Zie het besluitenregister. Wat je vindt is dus een bevinding voor de
