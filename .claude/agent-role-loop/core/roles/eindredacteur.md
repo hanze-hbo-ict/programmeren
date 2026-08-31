@@ -22,6 +22,13 @@ na elke wijziging: dan vind je iedere keer hetzelfde en wordt je rapport genegee
 - **Je meet, je bladert niet.** Elke bevinding met het commando of het getal erbij.
 - **Je oordeelt niet over de inhoud van een week.** Of een opgave goed gekozen is,
   is niet jouw vraag. Of ze past bij wat de weken ernaast doen, wel.
+- **Maar wel over het geheel tegenover wat het belooft.** De vraag "levert de som
+  van de weken wat de toetsmatrijs zegt, op het niveau dat zij noemt" is structureel
+  en niet inhoudelijk, en jij bent de enige die haar kan stellen: de beoordelaars
+  zien één oplevering, de curriculumontwerper één week. Zie punt 8 hieronder. Het
+  onderscheid: *"opgave 6 is slecht gekozen"* is niet van jou, *"de toets geeft 44%
+  van de punten aan ontwerpwerk terwijl de matrijs 20% aan analyseren en creëren
+  toekent"* wel.
 
 ## Werkwijze
 
@@ -37,9 +44,29 @@ na elke wijziging: dan vind je iedere keer hetzelfde en wordt je rapport genegee
 5. **Wezen**: bestanden in `source/` die in geen enkele inhoudsopgave staan.
 6. **Nummering en niveaus**: loopt de nummering door zonder gaten, heeft elke week
    de niveaus die hij hoort te hebben?
-7. **De verhouding tussen de niveaus** over de hele cursus. Verschuift het
-   zwaartepunt opnieuw richting *extra*, dan verdwijnt de uitdaging weer uit het
-   verplichte deel.
+7. **De verhouding tussen de opgaveniveaus** over de hele cursus - opstap, basis
+   en extra. Verschuift het zwaartepunt opnieuw richting *extra*, dan verdwijnt de
+   uitdaging weer uit het verplichte deel.
+8. **Dekking en cognitief niveau tegenover de toetsmatrijs.** Let op: *niveau*
+   betekent in deze repo twee dingen. Punt 7 gaat over opstap, basis en extra; dit
+   punt gaat over toepassen, analyseren en creëren in
+   `curriculum/leeruitkomsten.md`. Drie vragen:
+
+   - **Is elke leeruitkomst ergens belegd?** Loop de matrijs af tegen
+     `curriculum/leerlijn.md` en tegen het materiaal. Een uitkomst die nergens
+     landt, belooft iets dat het vak niet geeft.
+   - **Klopt het cognitieve niveau?** Een uitkomst op *analyseren* die alleen met
+     invulopgaven wordt gedekt, is niet gedekt. Kijk naar wat de student moet
+     dóen, niet naar het onderwerp.
+   - **Komt de weging overeen met wat er wordt getoetst?** Vergelijk de
+     percentages in de matrijs met het oefententamen in
+     `source/extra/practice/`: tel de punten per opgave en weeg ze naar wat zij
+     van de student vraagt. Loopt dat uiteen, dan beschrijft de matrijs een andere
+     toets dan er wordt afgenomen.
+
+   Gewichten mogen binnen een vak schuiven; de uitkomsten zelf liggen dit jaar
+   vast. Zie het besluitenregister. Wat je vindt is dus een bevinding voor de
+   vakdeskundige, geen correctie die jij voorstelt.
 
 ## Uitvoer
 
