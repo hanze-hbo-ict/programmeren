@@ -40,6 +40,27 @@ bindende document niet gedeeld en niet gevolgd in de tijd.
 
 Totaal: 70% toepassen, 10% analyseren, 10% creëren.
 
+## Hoe de percentages zich tot de toets verhouden
+
+De matrijzen hierboven sluiten op 100%, en beide oefententamens tellen 90 punten.
+Dat is geen fout. Het cijfer wordt zo berekend:
+
+$$
+\text{cijfer} = 9 \times \frac{\text{behaalde punten}}{\text{totaal aantal punten}} + 1
+$$
+
+waarbij het totaal 90 is. De **+1** is de basis: een student die niets goed heeft
+haalt een 1 en geen 0. Wie alle 90 punten haalt komt op een 10 uit.
+
+Die basis wordt niet over de leeruitkomsten verdeeld. De percentages van de matrijs
+gaan dus over de negentig punten die te verdienen zijn, en een uitkomst van 10% komt
+overeen met 9 punten op de toets.
+
+Dit staat hier omdat het uit de repository niet af te leiden is. Een veegronde die
+de punten in het oefententamen telt, komt op 90 uit en concludeert dan dat er iets
+niet klopt; dat is precies wat er op 31 augustus 2026 gebeurde. Vastgesteld door de
+vakdeskundige.
+
 ## Programmeren II
 
 ### Competenties (HBO-i-model)
