@@ -33,13 +33,36 @@ Het ontwerp van de leerlijn staat in [`curriculum/`](curriculum/): de
 de [leerlijn](curriculum/leerlijn.md) per week, en de
 [uitgangspunten](curriculum/uitgangspunten.md) met het besluitenregister.
 
-## Werkwijze
+## Werkwijze: de rollenlus
 
-Hoe een herziening verloopt staat in [`rollen/rollen.md`](rollen/rollen.md): de
-rollenlus, de contracten ertussen, en waarom de vakdeskundige er middenin zit.
+Herzieningen lopen via een vaste werkwijze, en die is **een experiment**. Het idee
+erachter is contextisolatie: in plaats van één assistent die meet, ontwerpt,
+schrijft en beoordeelt, doet elke rol één ding met een eigen, verse context. Wie
+meet weet niet wat de uitkomst zou moeten zijn. Wie beoordeelt heeft de worsteling
+van de schrijver niet gezien. Tussen twee rollen gaat precies één artefact, in de
+vorm die een contract voorschrijft; wat daar niet in staat, is niet overgedragen.
 
-De lus draai je met `/orc <issuenummer>`; werkitems zijn GitHub-issues. De rolprompts en contracten
-staan in `.claude/agent-role-loop/core/`, de subagents in `.claude/agents/`.
+Dat is trager en duurder dan het in één gesprek doen, en dat is de bedoeling. Deze
+repo is niet stukgegaan aan één slechte wijziging maar aan veel wijzigingen die
+ieder op zich verdedigbaar waren en samen de samenhang hebben opgegeten. Daar helpt
+geen betere reviewer tegen; daar helpt tegen dat iemand vóór elke wijziging meet wat
+er staat, dat elk besluit ergens landt waar de volgende het terugvindt, en dat wie
+beoordeelt niet dezelfde is als wie het bedacht.
+
+Of het werkt, weten we niet zeker. Het is bijgesteld terwijl we het gebruikten en
+dat zal het blijven; wat we onderweg leren staat in de roldefinities zelf.
+
+Hoe het in de praktijk gaat staat in [`rollen/rollen.md`](rollen/rollen.md): de
+stappen, de contracten ertussen, en waarom de vakdeskundige er middenin zit. De lus
+draai je met `/orc <issuenummer>`; werkitems zijn GitHub-issues, en de stap waarin
+het werk zit staat op het
+[projectbord](https://github.com/orgs/hanze-hbo-ict/projects/4). De rolprompts en
+contracten staan in `.claude/agent-role-loop/core/`, de subagents in
+`.claude/agents/`.
+
+**Niet alles hoeft door de lus.** Een typefout, een dode link of een naam
+rechtzetten doe je gewoon, in een branch met een pull request. De lus is voor een
+sectie of een week.
 
 ## Conventies
 
@@ -61,6 +84,36 @@ uv run pre-commit install
 ```
 
 Commits direct op `master` zijn geblokkeerd door een pre-commit hook; werk in een feature branch en maak een pull request.
+
+### Wil je met de rollenlus werken?
+
+Dan is er meer nodig dan `uv sync`. Drie dingen:
+
+**1. Toegang tot de issues en het bord.** Werkitems zijn GitHub-issues en de lus
+zet de stap in het veld Status op het projectbord. Zorg dat `gh` is
+geauthenticeerd (`gh auth status`) en dat je schrijfrechten hebt op
+[bord 4](https://github.com/orgs/hanze-hbo-ict/projects/4).
+
+**2. Het referentiemateriaal.** Meerdere rollen vergelijken met de oorspronkelijke
+vertaalde CS5-opgaven uit tag `v1.0.0`. Die staan niet in de werkboom en zijn
+gitignored, dus pak ze zelf uit:
+
+```bash
+mkdir -p referentie/cs5
+git archive v1.0.0 topics course problems readings _toc.yml | tar -x -C referentie/cs5
+```
+
+Omdat `referentie/` gitignored is, moet je er met `rg --no-ignore` in zoeken. Zie
+[`curriculum/uitgangspunten.md`](curriculum/uitgangspunten.md).
+
+**3. Weten wat er al vastligt.** Lees [`rollen/rollen.md`](rollen/rollen.md) voor
+de werkwijze, en het besluitenregister in
+[`curriculum/uitgangspunten.md`](curriculum/uitgangspunten.md) voor wat er over het
+vak besloten is. Een besluit dat daar niet staat, is niet genomen.
+
+Werk je met Claude Code, dan wordt [`CLAUDE.md`](CLAUDE.md) automatisch geladen en
+weet de assistent hiervan; de subagents en het `/orc`-commando komen met de repo
+mee.
 
 ## Bronnen
 
