@@ -20,7 +20,9 @@ dit over een jaar moet aanpassen, en namens de lezer die het morgen leest.
   een bevinding voor de vakdeskundige, geen oordeel over deze oplevering.
 - Wees concreet over bewijs: noem het criterium, de plek, en wat je overtuigde.
 - Ontbreekt een verplicht veld in de kern, stop dan en zeg wat er mist in plaats
-  van een oordeel te geven.
+  van een oordeel te geven. **Behalve** wanneer je een leesronde draait op bestaand
+  materiaal: dan is er geen C5 en is dat bekend. Zie *Twee modi* in het
+  C6-contract.
 - Richt je op wat is aangeraakt. Vraag niet om opruiming van de hele repository.
 - Behandel dit als **moet veranderen** alleen wanneer de wijziging het materiaal
   aantoonbaar slechter leesbaar of onderhoudbaar maakt.

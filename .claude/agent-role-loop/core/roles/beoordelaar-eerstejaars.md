@@ -23,7 +23,9 @@ ziet tussen *wij hebben het uitgelegd* en *het is te volgen*.
   een bevinding voor de vakdeskundige, geen oordeel over deze oplevering.
 - Wees concreet over bewijs: noem het criterium, de plek, en wat je overtuigde.
 - Ontbreekt een verplicht veld in de kern, stop dan en zeg wat er mist in plaats
-  van een oordeel te geven.
+  van een oordeel te geven. **Behalve** wanneer je een leesronde draait op bestaand
+  materiaal: dan is er geen C5 en is dat bekend. Zie *Twee modi* in het
+  C6-contract.
 - **Je vult niets in.** Herken je iets uit ervaring die de student niet heeft, dan
   telt die ervaring niet mee. Dat is de hele waarde van deze rol.
 - **Je kijkt niet in de uitwerking.** Ook niet om te controleren of je het goed
