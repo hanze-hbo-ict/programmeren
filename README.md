@@ -35,12 +35,23 @@ de [leerlijn](curriculum/leerlijn.md) per week, en de
 
 ## Werkwijze: de rollenlus
 
-Herzieningen lopen via een vaste werkwijze, en die is **een experiment**. Het idee
-erachter is contextisolatie: in plaats van één assistent die meet, ontwerpt,
-schrijft en beoordeelt, doet elke rol één ding met een eigen, verse context. Wie
-meet weet niet wat de uitkomst zou moeten zijn. Wie beoordeelt heeft de worsteling
-van de schrijver niet gezien. Tussen twee rollen gaat precies één artefact, in de
-vorm die een contract voorschrijft; wat daar niet in staat, is niet overgedragen.
+**Dit cursusmateriaal wordt herzien met behulp van taalmodellen, en dat is een
+experiment.** Niet alleen als hulpje bij het schrijven: de agents meten wat er
+staat, ontwerpen de herziening, schrijven het materiaal en beoordelen het werk van
+elkaar. Een mens schrijft het werkitem, neemt de inhoudelijke besluiten bij de
+poort halverwege, en merget. De rest wordt uitbesteed.
+
+Dat verdient een waarschuwing vooraf, want de rolnamen hieronder - redacteur,
+eerstejaars, vakdeskundige - lezen als collega's. Op één na zijn het geen mensen
+maar losse agents, elk met een eigen, verse context. **De vakdeskundige is de mens**,
+en die is met opzet de enige rol zonder agent.
+
+Het idee erachter is **contextisolatie**: in plaats van één assistent die meet,
+ontwerpt, schrijft en beoordeelt, doet elke rol één ding en ziet niets van de rest.
+Wie meet weet niet wat de uitkomst zou moeten zijn. Wie beoordeelt heeft de
+worsteling van de schrijver niet gezien, en ook niet het oordeel van de drie andere
+beoordelaars. Tussen twee rollen gaat precies één artefact, in de vorm die een
+contract voorschrijft; wat daar niet in staat, is niet overgedragen.
 
 Dat is trager en duurder dan het in één gesprek doen, en dat is de bedoeling. Deze
 repo is niet stukgegaan aan één slechte wijziging maar aan veel wijzigingen die
@@ -50,7 +61,16 @@ er staat, dat elk besluit ergens landt waar de volgende het terugvindt, en dat w
 beoordeelt niet dezelfde is als wie het bedacht.
 
 Of het werkt, weten we niet zeker. Het is bijgesteld terwijl we het gebruikten en
-dat zal het blijven; wat we onderweg leren staat in de roldefinities zelf.
+dat zal het blijven. Wat het kost en wat er misgaat wordt bijgehouden in
+[`onderzoek/`](onderzoek/) - de eerste twee dagen kostten 1,7 miljoen tokens aan
+agents en leverden negen bevindingen op, waarvan er één over de werkwijze zelf
+gaat en toegeeft dat de eerste maatregel niet werkte.
+
+Dat betekent ook iets voor wie dit materiaal gebruikt of eraan bijdraagt: **een deel
+van wat hier staat is door een taalmodel geschreven**, onder toezicht van een docent
+die de inhoudelijke besluiten neemt en elke wijziging aftekent. Kom je een fout
+tegen, dan is dat waardevolle informatie over deze werkwijze en niet alleen over
+deze pagina; zie [Bijdragen](#bijdragen).
 
 Hoe het in de praktijk gaat staat in [`rollen/rollen.md`](rollen/rollen.md): de
 stappen, de contracten ertussen, en waarom de vakdeskundige er middenin zit. De lus

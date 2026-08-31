@@ -10,9 +10,14 @@ staat, is over een half jaar niet terug te vinden.
 
 ## De vraag
 
-Kun je het onderhoud van cursusmateriaal beter doen door het werk te verdelen over
-rollen met een eigen, geïsoleerde context, dan door één assistent alles te laten
-doen?
+Kun je cursusmateriaal onderhouden met taalmodellen die het werk niet alleen
+uitvoeren maar ook verdelen - en levert het verdelen over rollen met een eigen,
+geïsoleerde context beter werk op dan één agent die alles doet?
+
+Concreet: agents meten wat er staat, ontwerpen de herziening, schrijven het
+materiaal en beoordelen elkaars werk. Een mens schrijft het werkitem, beslist bij de
+poort halverwege, en merget. De vraag is of die verdeling de fouten vangt die één
+agent maakt, en tegen welke prijs.
 
 De aanleiding is een concrete: deze repository is niet stukgegaan aan één slechte
 wijziging, maar aan veel wijzigingen die ieder op zich verdedigbaar waren en samen
