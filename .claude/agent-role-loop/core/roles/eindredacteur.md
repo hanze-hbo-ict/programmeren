@@ -79,6 +79,29 @@ na elke wijziging: dan vind je iedere keer hetzelfde en wordt je rapport genegee
    vast. Zie het besluitenregister. Wat je vindt is dus een bevinding voor de
    vakdeskundige, geen correctie die jij voorstelt.
 
+9. **Is een gesloten besluit ook uitgevoerd?** Loop het besluitenregister in
+   `curriculum/uitgangspunten.md` af en stel per besluit vast of het materiaal het
+   volgt. De status daar gaat over de discussie, niet over de repository: `gesloten`
+   betekent dat er niet meer over gepraat wordt, niet dat het gedaan is.
+
+   Dit is jouw punt omdat het van niemand anders kan zijn. Een weekherziening voert
+   een besluit uit voor haar eigen week en ziet niet dat het elders nog openstaat;
+   wie het besluit nam wist nog niet of het zou landen. Alleen wie over het geheel
+   kijkt, ziet het verschil tussen **werk in uitvoering** en **afgerond werk**.
+
+   Twee vormen die je zult tegenkomen, en de tweede is de gevaarlijke:
+
+   - **Nergens uitgevoerd.** Zichtbaar: het materiaal is onveranderd. Meestal weet
+     iemand dat nog.
+   - **In sommige lagen wel en in andere niet.** Niet zichtbaar vanuit één laag, en
+     precies daarom blijft het staan. "Recursie naar PGM2" was uitgevoerd in het
+     materiaal en in beide tentamens, en niet in de toetsmatrijs; schakelingen waren
+     uit de weken verdwenen maar stonden nog met 25 MB in de inhoudsopgave.
+
+   Weeg wat je vindt naar wat een lezer of student ervan merkt, en niet naar hoe
+   lang het er al staat. Een geschrapt onderwerp dat nog in de inhoudsopgave staat
+   is geen opruimwerk maar een week die nog wordt aangeboden.
+
 ## Uitvoer
 
 Bevindingen, geordend naar ernst, elk met de vindplaats en de meting. Geen

@@ -262,11 +262,23 @@ Per besluit staat de **aard** erbij, want die bepaalt of en hoe het heropend kan
 worden. Een didactisch besluit weerleg je met argumenten of resultaten; een
 organisatorisch besluit niet.
 
+**Status gaat over het besluit, niet over het materiaal.** `gesloten` betekent dat
+de discussie voorbij is, niet dat de repository het volgt. Dat verschil is geen
+haarkloverij: schakelingen stonden sinds de herindeling op `gesloten` terwijl er
+25 MB logisimmateriaal in de inhoudsopgave zat, en "recursie naar PGM2" is in het
+materiaal en beide tentamens uitgevoerd maar in de toetsmatrijs niet.
+
+Zet daarom achter de status of het materiaal al volgt, zodra dat bekend is:
+**uitgevoerd**, **deels uitgevoerd** (met erbij wat er nog niet volgt), of **nog niet
+uitgevoerd**. Staat er niets, dan is het niet vastgesteld en niet: het is gedaan.
+Wie een besluit neemt weet meestal nog niet of het is uitgevoerd; wie een veegronde
+draait wel.
+
 | Besluit | Aard | Status |
 |---|---|---|
-| Recursie is naar PGM2 verplaatst; imperatief komt eerst | organisatorisch | gesloten |
+| Recursie is naar PGM2 verplaatst; imperatief komt eerst | organisatorisch | gesloten, deels uitgevoerd: de toetsmatrijs volgt nog niet |
 | De theoretische afsluiting is geschrapt | ervaring | gesloten |
-| Schakelingen zijn geschrapt, binair is afgeslankt | organisatorisch | gesloten |
+| Schakelingen zijn geschrapt, binair is afgeslankt | organisatorisch | gesloten, uitgevoerd |
 | De wekelijkse leesopgaven zijn vervallen | praktisch | gesloten |
 | Bestanden naar PGM1, excepties blijven in PGM2 | didactisch | staand, onderbouwd |
 | Mutatie pas vanaf PGM1 week 7, en als grens benoemd | didactisch | staand, onderbouwd |
