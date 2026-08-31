@@ -64,6 +64,17 @@ contracten staan in `.claude/agent-role-loop/core/`, de subagents in
 rechtzetten doe je gewoon, in een branch met een pull request. De lus is voor een
 sectie of een week.
 
+## Onderzoek
+
+Deze werkwijze is een experiment, en wat we erover leren staat apart in
+[`onderzoek/`](onderzoek/): de [metingen](onderzoek/metingen.md) per rol per ronde,
+en de [bevindingen](onderzoek/bevindingen.md) over de werkwijze zelf, elk met het
+bewijs en met wat het veranderde.
+
+Dat staat los van het werk aan het materiaal, want het is een andere lezer. Wie het
+cursusmateriaal onderhoudt heeft niets aan een tokentelling; wie de werkwijze wil
+begrijpen of overnemen heeft niets aan de vraag of week 5 een raster doorloopt.
+
 ## Conventies
 
 De afspraken voor auteurs staan in [`conventies/`](conventies/), gebonden door

@@ -118,6 +118,45 @@ een omissie. Vier is niet altijd nodig.
 
 Wat er in een leesronde anders geldt staat in het C6-contract, onder *Twee modi*.
 
+## Twee rollen buiten de lus
+
+De **eindredacteur** draait periodiek over het materiaal, want samenhang over de
+weken heen is vanuit één week niet zichtbaar.
+
+De **onderzoeker** doet hetzelfde voor de werkwijze. Hij leest `onderzoek/` en
+vraagt wat terugkeert, of een bevinding werkelijk is geland, en of het daarna nog
+een keer gebeurde. Die laatste vraag is de scherpste: gebeurt hetzelfde ná de
+maatregel die het moest voorkomen, dan raakt de maatregel niet de oorzaak.
+
+Ook hij draait zelden. Na één ronde is er geen patroon, en een rapport dat elke
+keer hetzelfde vindt wordt genegeerd.
+
+### Wie de lus van buitenaf ziet
+
+Er komt géén dertiende agent bij die de twaalf bekijkt. Zo iemand zou nodig hebben
+wat de rollen elkaar juist niet mogen geven, en hij zou de kosten van elke stap
+verdubbelen.
+
+Dat is ook niet nodig, want **dat uitzicht bestaat al**, verdeeld over drie posities
+die er rechtmatig over beschikken:
+
+- De **orkestrator** ziet de mechaniek: wat er draaide, wat het kostte, wat er
+  sneuvelde. Contextisolatie geldt voor de rollen; hij routeert er juist tussen.
+  Vandaar dat de meting zijn verplichting is - hij is de enige die de tokentelling
+  te zien krijgt, en die is weg zodra de sessie eindigt.
+- De **vakdeskundige** ziet het oordeel: hij leest het ontwerp, de kritiek erop en
+  later de uitkomst, en weet als enige of het de moeite waard was.
+- De **onderzoeker** ziet het patroon over de tijd, en niets anders.
+
+Die verdeling is geen compromis maar de reden dat het werkt. De bruikbaarste
+bevindingen komen voort uit het **voelen** van een fout en niet uit het lezen ervan:
+de diff van 370 regels viel op omdat een getal niet klopte met wat er net was
+gedaan. Wie achteraf een transcript leest, vindt zwakkere dingen.
+
+Wat er ontbrak was dus geen uitzicht maar een **toewijzing**. De metingen van de
+eerste twee dagen zijn opgeschreven omdat er expliciet om werd gevraagd, niet omdat
+iemand het zijn taak vond. Daarom staat het nu in `/orc` en in `CLAUDE.md`.
+
 ## Gereedschap: gebruik wat er is
 
 Elke rol die een commando draait, gebruikt de standaardgereedschappen die op het

@@ -115,6 +115,28 @@ veld **Status** op het [projectbord](https://github.com/orgs/hanze-hbo-ict/proje
 
 - Eén artefact in, één artefact uit, per subagent. Levert een subagent gebabbel om
   zijn artefact heen, houd dan alleen het artefact.
+- **Elk artefact draagt zijn eigen meting.** Jij bent de enige die de tokentelling
+  en de duur van een subagent te zien krijgt, en die zijn weg zodra de sessie
+  eindigt. Sluit daarom elke reactie waarin je een artefact plaatst af met een
+  regel in deze vorm:
+
+  ```text
+  ---
+  *rol-verkenner · 157.971 tokens · 16 min · omvang L · C1b*
+  ```
+
+  Bij een afgebroken run zet je erbij wat er bewaard is gebleven, want het verschil
+  tussen verlies en vertraging is zelf een gegeven.
+
+  Dit is met opzet geen losse stap na afloop: een losse stap wordt vergeten omdat
+  het werk dan al af voelt. Het artefact zonder meetregel is een **onvolledig
+  artefact**, en dat verbiedt de regel hierboven al.
+
+- **Neem de metingen over in `onderzoek/metingen.md`** zodra het werkitem sluit, of
+  eerder wanneer de sessie dreigt te eindigen. De reacties op de issue zijn de
+  bron; het bestand is de plek waar ze te vergelijken zijn. Staat er niets in het
+  bestand terwijl er wel is gedraaid, dan is de bron nog de issue - niet: er is
+  niets gemeten.
 - Elk artefact wordt een reactie op de issue of de pull request, met zijn
   contract-ID erboven. Een overdracht die alleen in dit gesprek bestaat, is niet
   overgedragen.
