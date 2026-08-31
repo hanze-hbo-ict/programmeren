@@ -363,6 +363,15 @@ Het onderwerp is dus niet slecht, maar het is zijn drager kwijt. Wie het wil
 behouden, moet ofwel de context terugbrengen ofwel het voor alle drie de
 profielen kunnen verdedigen.
 
+Het materiaal is op 31 augustus 2026 ook daadwerkelijk verwijderd. Het besluit
+stond al sinds de herindeling op *gesloten*, maar `support/logisim.md` stond nog in
+de inhoudsopgave, met een Java-applicatie van 22 MB, de schakelbestanden en tien
+schermafbeeldingen; geen enkele week verwees ernaar. Daarnaast zijn acht
+afbeeldingen bij `lectures/images/6/` weggehaald die bij binair en talstelsels
+hoorden en nergens meer werden aangehaald. Wie het onderwerp ooit terugbrengt, haalt
+het uit tag `v1.0.0`; dat is de weg die dit document voor al het geschrapte
+materiaal voorschrijft.
+
 ### De verdeling in opstap, basis en extra
 
 De indeling komt van de docent die het oorspronkelijke materiaal heeft bewerkt.
