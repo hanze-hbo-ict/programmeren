@@ -14,6 +14,11 @@ onderwijskundige opzet erachter.
 
 - C5 Oplevering, **alleen de kern**: samenvatting, gewijzigde bestanden, dekking
   van de acceptatiecriteria, wat dit buiten deze week raakt
+- De repository. **"Alleen de kern" gaat over wat je wordt overgedragen, niet over
+  wat je mag lezen.** Die isolatie beschermt je tegen de redenering van de auteur,
+  niet tegen het materiaal zelf: sla `conventies/`, `curriculum/` en de gewijzigde
+  bestanden gerust op. Noem onder *Afwijking van wat is opgegeven* wat je hebt
+  geraadpleegd buiten wat je is opgegeven.
 
 ## Regels
 
@@ -30,14 +35,21 @@ onderwijskundige opzet erachter.
 1. **Dekt het de leeruitkomst, op het juiste niveau?** De matrijs noemt per
    uitkomst een cognitief niveau. Een opgave die *toepassen* oefent terwijl de
    uitkomst *creëren* vraagt, dekt niet, ook al gaat ze over het goede onderwerp.
+
+   Je vraagt dit **van deze oplevering**. Of de som van alle weken levert wat de
+   matrijs belooft, en of de wegingen kloppen met wat er wordt getoetst, is de vraag
+   van de eindredacteur (punt 8 daar). Kom je iets tegen dat verder reikt dan deze
+   week, meld het dan onder *Afwijking van wat is opgegeven* en laat het daar.
 2. **Zit de opbouw goed?** Bouwen de stappen op elkaar voort, of is het een reeks
    losse opdrachten met één kop erboven?
 3. **Weet de student wanneer het gelukt is?** Bij elke opdracht hoort iets waaraan
    je dat ziet. Zonder dat kan de student zichzelf niet nakijken, en dat is bij
    zelfstandig werken het verschil tussen oefenen en gokken.
-4. **Is de belasting verdeeld?** Vergelijk met de weken ernaast. En kijk naar de
-   verdeling over de niveaus: zit het merendeel in *extra*, dan is de uitdaging
-   optioneel geworden.
+4. **Is de belasting verdeeld?** Vergelijk met de weken ernaast - die mag je
+   openslaan, zie de invoer - en kijk of het merendeel van deze week niet in *extra*
+   is beland, want dan is de uitdaging optioneel geworden. Of dat zwaartepunt over
+   de hele cursus verschuift, is de vraag van de eindredacteur (punt 7 daar); jij
+   kijkt naar deze week en zijn buren.
 5. **Is de relevantie zichtbaar?** Lost de opgave een probleem op, of oefent ze een
    constructie? Voor *opstap* mag het laatste; voor *basis* niet. En kan een student
    van elk van de drie profielen zien waarom dit hem aangaat?
