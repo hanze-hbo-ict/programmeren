@@ -8,7 +8,7 @@ De site wordt gebouwd met [Sphinx](https://www.sphinx-doc.org/) + [MyST](https:/
 
 ## Aanpassingen
 
-Hoewel we ons best doen het boek up-to-date te houden, kan het soms toch gebeuren dat er een foutje in sluipt. Spot je zo'n foutje? Help ons dan vooral! Je kan problemen, suggesties, etc. melden via het [anonieme feedback formulier](https://hanze-hbo-ict.github.io/programmeren/about/feedback.html), maar natuurlijk is het ook een optie deze repo te forken, de fout te herstellen, en een PR te openen (zie [Bijdragen](#bijdragen) hieronder).
+Hoewel we ons best doen het boek up-to-date te houden, kan het soms toch gebeuren dat er een foutje in sluipt. Spot je zo'n foutje? Help ons dan vooral: open een issue, of fork deze repo, herstel de fout en open een pull request (zie [Bijdragen](#bijdragen) hieronder).
 
 ## Lokaal bouwen
 
