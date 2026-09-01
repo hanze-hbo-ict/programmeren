@@ -191,6 +191,17 @@ materiaal moet die dus zelf voordoen.
 - De taal volgt de afspraak hierboven: eerst Nederlands, na het
   overgangsmoment Engels.
 
+**Uitzondering: code in een leesvraag draagt geen docstring.** Bij een vraag van
+het type *"wat drukt dit programma af?"* is een docstring die beschrijft wat de
+functie doet het antwoord, en dan toetst de vraag niets meer. Dit geldt voor de
+oefenmidterms en voor de leesopdrachten in de opstap en de colleges - overal waar
+de student de code moet lezen in plaats van gebruiken. Vastgesteld bij de poort
+van #146; zie *Leesvragen mogen fout aflopen* in
+[`../curriculum/uitgangspunten.md`](../curriculum/uitgangspunten.md).
+
+De plicht geldt onverkort voor alles wat de student als voorbeeld of uitwerking
+krijgt om ván te leren.
+
 ## Assertions
 
 Opgaven worden getest met `assert`. Dat is de standaardvorm in dit materiaal:
