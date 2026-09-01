@@ -190,7 +190,7 @@ dat het bestond.
 | Waar | Wat geldt |
 |---|---|
 | PGM1 week 2 tot en met 6 | Een functie rekent iets uit en geeft het terug. Wat je meegeeft verandert niet. |
-| PGM1 week 7 | De grens, voor mutatie én voor objectmethoden. Eerst *dat* je een lijst kunt wijzigen en wat dat oplevert, daarna pas dat twee namen naar dezelfde lijst kunnen wijzen, en daarna pas het kopiëren. |
+| PGM1 week 7 | De grens, voor mutatie. Eerst *dat* je een lijst kunt wijzigen en wat dat oplevert, daarna pas dat twee namen naar dezelfde lijst kunnen wijzen, en daarna pas het kopiëren. Objectmethoden vallen niet op deze grens; die verschuiven naar PGM2 week 1. |
 | PGM2 | Een object is data plus de handelingen daarop, en dus een bundel toestand die verandert. Het woord ervoor bestaat dan al. |
 
 Drie dingen volgen hieruit.
@@ -204,13 +204,17 @@ een waarde terug en geen van alle verandert iets.
 vermogen hoort eerst, de valkuil daarna. Game of Life in `problems/7_extra`
 draait volledig om bijwerken en is daarmee de natuurlijke aanleiding.
 
-**Objectmethoden vallen op dezelfde grens.** `L.append(x)` is én een methode én
-een mutatie; dat is geen toeval maar hetzelfde ding van twee kanten bekeken. Tot
-en met week 6 leeft de student in een wereld zonder neveneffecten en zonder
-objecten, en vanaf week 7 komen ze allebei tegelijk. Eén grens dus, geen twee.
+**Objectmethoden vallen niet op dezelfde grens.** `L.append(x)` is én een
+methode én een mutatie, maar week 7 laat mutatie zien via `L[i] = x`: dat
+vraagt geen methodeaanroep. Methodeaanroep wordt voor het eerst geïntroduceerd
+in PGM2 week 1, samen met dictionaries en sets. Tot en met PGM1 week 7 leeft de
+student dus in een wereld zonder objecten.
 
-Zonder die samenval is week 7 niet te maken: leeruitkomst P4 vraagt letterlijk om
-"lijsten en strings en de bijbehorende methodes". Zie
+Leeruitkomst P4 vroeg lange tijd letterlijk om "lijsten en strings en de
+bijbehorende methodes" in PGM1, maar wordt daar al jaren niet meer op getoetst.
+Dat staat als voorgestelde correctie in
+[leeruitkomsten.md](leeruitkomsten.md#voorgestelde-correcties); dit besluit
+loopt op die correctie vooruit. Zie
 [codeconventies.md](../conventies/codeconventies.md).
 
 ### Het bord verandert niet in week 5
@@ -286,7 +290,8 @@ draait wel.
 | Het bord verandert niet in week 5; de grens wordt daar benoemd | didactisch | gesloten |
 | De parameternamen van `board.py` blijven zoals ze zijn | praktisch | gesloten |
 | Gewichten mogen binnen een vak schuiven; de uitkomsten zelf liggen dit jaar vast | organisatorisch | staand, onderbouwd |
-| Objectmethoden pas vanaf week 7, samen met mutatie | didactisch | staand, onderbouwd |
+| Objectmethoden pas vanaf PGM2 week 1, los van de mutatiegrens in PGM1 week 7 | didactisch | staand, onderbouwd |
+| Dictionaries en de Markov-opgave verhuizen van PGM1 week 7 naar PGM2 week 1 | didactisch | staand, nog niet uitgevoerd |
 | Objecten pas in PGM2 | didactisch | staand, onderbouwd |
 | Picobot opent PGM1 | didactisch | staand, onderbouwd |
 | Opgaven in opstap, basis en extra | didactisch | **open** |
