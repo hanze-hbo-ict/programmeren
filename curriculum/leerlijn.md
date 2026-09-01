@@ -61,10 +61,24 @@ plaats van in PGM1 week 7. Methodeaanroep wordt voor het eerst geïntroduceerd
 in diezelfde week, samen met sets; de Markov-opgave gaat mee. Week 7 draagt
 vanaf nu de mutatiegrens, functiecompositie en algoritmeontwerp.
 
-**Tuples landen in week 7, niet in PGM2.** Een tuple is onveranderlijk, en dat
-is precies het contrast dat de mutatieles nodig heeft: naast `L[i] = x` (mag)
-staat dat een tuple dat niet toelaat. De introductie hoort daarom bij dezelfde
-les als mutatie, niet bij PGM2 week 1.
+**Tuples landen in week 7, niet in PGM2.** Daar zijn twee redenen voor, en ze
+wijzen dezelfde kant op.
+
+Een tuple is onveranderlijk, en dat is precies het contrast dat de mutatieles
+nodig heeft: naast `L[i] = x` (mag) staat dat een tuple dat niet toelaat. De
+introductie hoort daarom bij dezelfde les als mutatie.
+
+En PGM2 week 1 heeft het er nodig. Dictionaries doorlopen gaat via `.items()`,
+en dat levert paren op die je uitpakt met `for word, count in ...`. Zowel het
+tuple als het uitpakken ervan is daar dus veronderstelde kennis. Vastgesteld met
+de docent van PGM2 op 1 september 2026.
+
+**Het materiaal van week 7 levert dit nog niet.** Gemeten op 1 september 2026:
+het woord *tuple* komt in `source/` voor in vier bestanden, en geen daarvan is
+een week 7-bestand; de enige plek vóór PGM2 week 1 is `problems/5_extra.md`, de
+optionele laag van week 5, ongemarkeerd. Dat is werk voor #102 en geen gebrek in
+PGM2 week 1: die week mag vooruitlopen op wat hier is afgesproken. Zie de rij in
+*Wat een week aan een latere week aflevert*.
 
 ### Verdeling van het opgavemateriaal
 
@@ -186,6 +200,7 @@ blijft een raakvlak vindbaar zonder dat het in een werkitem verstopt zit.
 
 | Van week | Naar week | Wat | Status |
 |---|---|---|---|
+| PGM1 week 7 | PGM2 week 1 | Week 7 levert **tuples en tuple unpacking**. PGM2 week 1 doorloopt dictionaries met `.items()` en pakt de paren uit met `for word, count in ...`; `lectures/8a_datastructuren.ipynb` verwijst er expliciet naar terug. Het materiaal van week 7 bevat op dit moment geen enkele tuple. | Besloten met beide docenten op 1 september 2026. Uit te voeren bij de herziening van week 7 (#102). PGM2 week 1 loopt hier met opzet op vooruit; dat is geen defect in die week. |
 | PGM1 week 5 | PGM2 week 6 | De vier zoekfuncties uit `practicals/5b_boter_kaas_eieren.ipynb` hebben andere parameternamen dan de gelijknamige functies in `source/problems/assets/board.py` regels 173-224. | Besloten, laten zoals het is: `board.py` definieert ze zelf en importeert het werk van de student nooit. Zie het besluitenregister in [uitgangspunten.md](uitgangspunten.md). |
 | PGM1 week 5 | PGM1 week 7 | Week 5 levert `create_board` en `print_board` als vermogen; `source/problems/7_extra.md` regels 36-114 leert ze nu vanaf nul aan. | Voorstel: laat week 7 ernaar verwijzen in plaats van ze opnieuw aan te leren. |
 | PGM1 week 5 | PGM1 week 7 | `[[0] * 3] * 3` en de waarschuwing daarbij horen in week 7, naast aliasing en `deepcopy`. De constructie bijt pas zodra je erin toewijst, en dat gebeurt in week 5 niet. | Besloten in het weekontwerp van week 5, uit te voeren bij de herziening van week 7. |
