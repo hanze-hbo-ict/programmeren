@@ -426,6 +426,49 @@ Twee gevolgen die in de herziening moeten worden opgelost:
 Dit is een spanningsveld en geen eenvoudige keuze: syntaxis moet geoefend worden
 en dat gaat het snelst kaal, terwijl relevantie juist context vereist.
 
+### Eén opgave over drie niveaus
+
+De manier om beide gevolgen tegelijk op te lossen: **breek een grote opgave op en
+verdeel haar over de drie niveaus**, zodat de student al oefenend naar een complete
+oplossing toewerkt.
+
+De opstap oefent dan de losse handelingen die de opgave nodig heeft, de basis lost
+er een werkzame kern mee op, en de extra is de uitbreiding voor wie verder wil.
+Alle drie in dezelfde context, met hetzelfde probleem. Wie alleen de basis doet,
+heeft iets af; wie doorgaat, bouwt verder op wat hij al heeft in plaats van aan iets
+nieuws te beginnen.
+
+Dat lost allebei de gevolgen hierboven op. De uitdaging is niet meer optioneel maar
+de bovenste tree van een trap die de student al beklimt, en de context zit in alle
+drie de lagen in plaats van alleen in de laatste - precies waar de derde laag
+oorspronkelijk `context` voor heette.
+
+**De meting wijst aan waar dit het meest oplevert.** Gemeten op 1 september 2026,
+in woorden per laag:
+
+| week | opstap | basis | extra | extra-aandeel |
+|---|---|---|---|---|
+| 2 | 1.078 | 1.100 | 463 | 18% |
+| 3 | 229 | 1.108 | 162 | 11% |
+| 4 | 574 | 1.020 | 1.025 | 39% |
+| **5** | 649 | 2.897 | **5.354** | **60%** |
+| 6 | 337 | 1.319 | 760 | 31% |
+| **7** | 504 | 1.087 | **3.713** | **70%** |
+
+De basislaag is opmerkelijk stabiel, rond de 1.100 woorden per week. De scheefheid
+zit niet in te dunne opstap en basis maar in **twee uitschieters**: Mandelbrot
+(5.354 woorden) en Game of Life (3.713). Die twee opgaven zijn samen groter dan alle
+basisopgaven van PGM1 bij elkaar, en het zijn allebei opgaven die in CS5 het
+*practicum* van hun week waren - het dragende werk, niet het optionele.
+
+Daar is dit dus geen herverdeling maar een herstel: materiaal dat ooit droeg, weer
+laten dragen.
+
+**Wat het niet is.** Niet elke extra-opgave hoeft opgebroken. Een korte uitdaging
+naast een volle basis is prima; week 2 en 3 laten zien dat het kan. En opbreken is
+geen reden om een opgave langer te maken - de bedoeling is dat dezelfde inhoud over
+drie niveaus wordt verdeeld, niet dat er drie keer zoveel komt te staan.
+
 ### Bestanden en excepties
 
 De twee gaten in de toetsing worden verschillend opgelost, en dat is opzet.
