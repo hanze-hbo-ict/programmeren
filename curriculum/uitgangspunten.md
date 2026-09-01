@@ -291,6 +291,7 @@ draait wel.
 | De parameternamen van `board.py` blijven zoals ze zijn | praktisch | gesloten |
 | De vastgestelde matrijs wijzigt niet als bijvangst; bevindingen gaan naar *Voorgestelde correcties* | organisatorisch | staand, onderbouwd |
 | Het oefententamen is representatief en verandert voorlopig niet | organisatorisch | staand |
+| Leesvragen mogen fout aflopen; de fout is het antwoord | didactisch | staand, onderbouwd |
 | Eerst de weken van PGM1 afronden; het materiaal moet zo snel mogelijk live | organisatorisch | staand |
 | Objectmethoden pas vanaf PGM2 week 1, los van de mutatiegrens in PGM1 week 7 | didactisch | staand, onderbouwd |
 | Dictionaries en de Markov-opgave verhuizen van PGM1 week 7 naar PGM2 week 1 | didactisch | staand, nog niet uitgevoerd |
@@ -615,6 +616,46 @@ uitkomst zouden moeten dragen en het niet doen.
 Wie de weging later herziet: de vraag is niet alleen hoe de percentages moeten,
 maar of de toets toetst wat hij zegt te toetsen. Zolang het oefententamen niet
 verandert, is dat een vraag over de matrijs en niet over de toets.
+
+### Leesvragen mogen fout aflopen
+
+Op dit punt in het vak gaat het om **code lezen en begrijpen**, niet om code
+schrijven. Dat is waarom de opstap van week 4 uit leesopdrachten bestaat en waarom
+de oefenmidterm uit "wat print dit programma?" bestaat. Wie die vorm tegenkomt en
+denkt dat er schrijfopgaven ontbreken, leest een keuze als een gat.
+
+Daaruit volgt hoe een leesvraag mag aflopen. Een programma dat crasht of eeuwig
+doorloopt is een **geldige vraag met een geldig antwoord**, niet een defect. Het
+antwoord is dan de optie "Het programma werkt niet". Begrijpen wat code doet
+omvat begrijpen wanneer ze stukloopt: een student die alleen geslaagde uitvoer
+leert voorspellen, herkent zijn eigen `ZeroDivisionError` niet.
+
+Concreet in `source/lectures/4b_midterm.ipynb`: **opgave 18** loopt op een
+`ZeroDivisionError` (`48 % x` bij `x = 0`) en **opgave 20** eindigt nooit. Beide
+hebben "Het programma werkt niet" als antwoord. Ze zijn goed zoals ze zijn.
+
+**Voor wie dit materiaal nakijkt, mens of taalmodel:** repareer deze vragen niet.
+De verleiding is groot, want ze zien er stuk uit, en ze zijn ook precies zo
+gevonden - twee beoordelaars merkten los van elkaar op dat "geen van de opties kan
+kloppen". Dat klopte alleen niet: de optie die wél klopt is de laatste, en die
+staat er bij elke vraag. Wat een leesvraag wél kapot maakt is een uitkomst die
+nergens in de opties staat.
+
+Dat is het onderscheid dat telt, en het scheidt binnen dezelfde midterm twee
+gevallen die op elkaar lijken:
+
+| | Uitkomst | Antwoord aanwezig? |
+|---|---|---|
+| Opgave 18 | `ZeroDivisionError` | ja - "Het programma werkt niet" |
+| Opgave 20 | eindigt nooit | ja - "Het programma werkt niet" |
+| Opgave 17 | print `7.0` | **nee** - de opties zeggen `7` |
+| Opgave 2 | print `1.0` | **nee** - de opties zeggen `1` |
+
+De laatste twee zijn een ander geval: het programma werkt, er komt een waarde uit,
+en die waarde staat niet in de lijst. Of `7.0` en `7` hier als hetzelfde antwoord
+mogen gelden is een vraag aan de vakdeskundige en geen redactie - het gaat om
+`/` die een float geeft, in de week na de week waarin types zijn geïntroduceerd.
+**Nog niet beantwoord.**
 
 ## Een besluit toevoegen
 

@@ -68,8 +68,15 @@ sleutel, `unique` die nooit is geïntroduceerd, `while_pi` die de opgave niet
 oplost, en `print(lijst)` waar `lst` staat. De redacteur vond opgave 18 er
 bovenop, de eerstejaars niet. Het leverde werkitem #146 op.
 
-Van de blokkerende bevindingen zijn er zeven nagerekend door de code te draaien of
-het patroon te ijken. Zes hielden stand; één is weerlegd (bevinding 12).
+Twaalf bevindingen zijn nagerekend door de code te draaien, de hook te draaien of
+het patroon te ijken. Negen hielden stand, **drie zijn weerlegd**: de bewering dat
+een pre-commit hook zou breken (bevinding 12), en twee midtermvragen die beide
+rollen voor kapot aanzagen terwijl ze met opzet fout aflopen (bevinding 7, tweede
+voorval).
+
+Die verhouding is zelf het resultaat. Een leesronde van 195k leverde negen
+aantoonbare defecten en drie beweringen die het niet haalden - en de drie waren
+alleen te scheiden van de negen door ze na te rekenen, niet door ze te lezen.
 
 ## Werkitem #115 — de uitwerkingen
 

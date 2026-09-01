@@ -203,6 +203,40 @@ de eindredacteur weet het. Maar het wijst op iets breders: het werkitemsjabloon
 heeft een veld *Wat de repo niet weet*, en dat is er juist voor. De eindredacteur
 draait zonder werkitem en heeft dat veld dus niet. **Nog niet opgelost.**
 
+### Tweede voorval, 1 september 2026
+
+Bij de leesronde op week 4 merkten **beide** beoordelaars los van elkaar op dat
+twee midtermvragen geen juist antwoord hebben: opgave 18 loopt op een
+`ZeroDivisionError`, opgave 20 eindigt nooit. De redacteur voerde er nog een
+bewijsstuk bij aan - de dode variabele `number = 48` - om te laten zien dat "het
+programma werkt niet" niet de bedoeling was.
+
+Beide metingen klopten. Ik heb ze zelf nagerekend en ze hielden stand. De conclusie
+klopte niet: de vragen toetsen code lezen en begrijpen, en tot de uitkomsten die je
+leert voorspellen horen de fouten. "Het programma werkt niet" *is* het antwoord, en
+die optie staat bij elke vraag.
+
+Twee dingen maken dit voorval erger dan het eerste. De kennis lag niet bij één rol
+die pech had: twee rollen met verschillende opdrachten kwamen langs dezelfde plek
+en beoordeelden hem allebei verkeerd, wat betekent dat contextisolatie hier niet
+helpt - ze isoleert ze van elkaar, niet van een gedeelde blinde vlek. En het
+nareken*en* hielp evenmin: de meting bevestigen bevestigde de verkeerde conclusie,
+want er viel niets te weerleggen aan de waarneming.
+
+Wat het wél had gevangen is dat het besluit ergens stond. Dat is precies wat
+bevinding 7 al concludeerde, en de herhaling laat zien dat het veld *Wat de repo
+niet weet* het probleem niet dekt: dit werkitem bestond nog niet toen de rollen
+draaiden. Bij een leesronde is er geen C0 om zo'n veld in te vullen.
+
+**Wat het veranderde.** Het besluit staat nu in `curriculum/uitgangspunten.md`
+onder *Leesvragen mogen fout aflopen*, met een tabel die de twee vragen die goed
+zijn scheidt van de twee die het niet zijn, en met een regel gericht aan wie het
+materiaal later nakijkt: repareer deze niet. Dat is de goedkoopste borging, want
+ze staat op de plek waar een rol toch al langskomt.
+
+Wat er niet is veranderd: een leesronde begint nog steeds zonder een plek waar
+staat wat er over dit materiaal al besloten is. **Deels opgelost.**
+
 ---
 
 ## 8. Het register hield de stand van de discussie bij, niet die van het materiaal
