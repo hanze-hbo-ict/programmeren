@@ -316,6 +316,62 @@ geen borging. De toets is dezelfde: gebeurt het daarna nog een keer.
 
 ---
 
+## 11. De orkestrator citeert zichzelf in plaats van de bron
+
+*1 september 2026. Vijf waarnemingen.*
+
+Vijf keer in één sessie moest de orkestrator een eigen uitspraak corrigeren, en
+alle vijf hadden dezelfde vorm: **een bewering overgenomen uit wat hij zelf eerder
+had gezegd, in plaats van uit de bron.**
+
+| Wat er werd beweerd | Wat het was | Waar de bron stond |
+|---|---|---|
+| Week 5 is 71% extra | 60% | Zelf te meten; 71% kwam uit een meting van vóór de herziening |
+| De tabel *Voorgestelde correcties* is nieuw | Bestond al sinds het curriculummodel | `git log -S` |
+| De uitkomsten liggen extern vast, formulering blijft | Er is een procedure, geen slot | `leeruitkomsten.md`, twee secties |
+| De toets besteedt 40 van de 90 punten aan ontwerpwerk | 15; opgave 7 schrijft de opdeling voor | De opgavetekst zelf |
+| Triage adviseerde #115 langs de weken te splitsen | Adviseerde het grotendeels op te heffen | Het C1, drie regels verderop |
+
+Geen van de vijf is gevonden door een controle. Vier ervan zijn gevonden doordat de
+vakdeskundige ernaar vroeg; de vijfde doordat een getal niet klopte met wat er net
+was gedaan.
+
+**Waarom dit een eigen bevinding is en niet een geval van bevinding 2.** Die ging
+over metingen die stil mislukken - een patroon dat nul teruggeeft, een AST die
+anders normaliseert. Hier mislukt er niets. De meting was er, zij was juist, en zij
+werd correct opgeschreven. Wat er misging is dat een latere samenvatting de bron
+niet meer raadpleegde.
+
+De repo heeft precies hiervoor een regel, in `CLAUDE.md` en in de verkennersrol:
+*beweer niets over dit materiaal zonder het te meten, en meet het ding zelf, niet
+iets ernaast.* Die wordt op het materiaal toegepast en niet op de eigen eerdere
+uitspraken. Een gespreksgeschiedenis voelt als kennis en niet als een bron die
+geraadpleegd moet worden - en dat is precies wat zij is, met dezelfde
+houdbaarheidsdatum als een telling in `conventies.md`.
+
+**Waar het zich concentreert.** Alle vijf komen voor in een samenvatting: een
+werkitem schrijven op grond van een eerdere meting, een issue bijwerken na een
+besluit, een adviesronde navertellen. Het maken van het artefact zelf ging goed;
+het hergebruik ervan niet.
+
+**Wat het veranderde.** Nog niets, en dat is met opzet. Gezien bevinding 9 is een
+regel op zichzelf geen borging, en dit is bij uitstek een geval waar een regel niet
+helpt: de orkestrator wist de regel al. Wat wel zou kunnen werken is een handeling
+- teruglezen vóór samenvatten - maar die is niet af te dwingen en zou bij elke
+samenvatting een leesronde toevoegen.
+
+Wat de bevinding wel oplevert is een **plek om te tellen**. Als dit patroon in een
+volgende reeks werkitems opnieuw vijf keer voorkomt, is dat een sterker argument
+voor een maatregel dan wat hier nu staat. Als het één keer voorkomt, was deze
+sessie een uitschieter - een lange sessie met veel besluiten die elkaar snel
+opvolgden.
+
+**Voor het onderzoek is dit het interessantste geval in dit document**, want het
+raakt de aanname onder de hele lus. Contextisolatie beschermt rollen tegen elkaars
+redenering. Niets beschermt de orkestrator tegen zijn eigen.
+
+---
+
 ## Open: welk model per rol
 
 *1 september 2026. Nog niet onderzocht.*
