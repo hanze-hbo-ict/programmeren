@@ -168,8 +168,8 @@ introduceert `.append()` nu nog expliciet als methode (vier keer, plus één kee
 in `problems/7_opstap.ipynb`), en `problems/5_extra.md` (PGM1 week 5, laag
 extra) introduceert methode, object én tuple zelfs nog eerder, via
 `image.plot_point(...)` en `image.save_file()`. Dat is bekend en hoort te
-worden rechtgezet bij de herziening van PGM1 week 7 (issue #102) en PGM2 week 1
-(issue #134) — het is nu nog geen conventie die te handhaven is.
+worden rechtgezet bij de herziening van PGM1 week 7 (issue #102) — het is nu
+nog geen conventie die te handhaven is.
 
 :::{note}
 Het woord *methode* komt in week 1 wel voor, in `lectures/1a_intro_programmeren`,
