@@ -630,32 +630,41 @@ antwoord is dan de optie "Het programma werkt niet". Begrijpen wat code doet
 omvat begrijpen wanneer ze stukloopt: een student die alleen geslaagde uitvoer
 leert voorspellen, herkent zijn eigen `ZeroDivisionError` niet.
 
-Concreet in `source/lectures/4b_midterm.ipynb`: **opgave 18** loopt op een
-`ZeroDivisionError` (`48 % x` bij `x = 0`) en **opgave 20** eindigt nooit. Beide
-hebben "Het programma werkt niet" als antwoord. Ze zijn goed zoals ze zijn.
+**Dit geldt voor de hele soort, niet voor een lijstje vragen.** Een crash, een
+lus die niet eindigt, een `IndentationError`, een `NameError` - het maakt niet
+uit welke fout het is. Loopt het programma fout af en staat "Het programma werkt
+niet" bij de opties, dan is de vraag goed zoals hij is.
 
-**Voor wie dit materiaal nakijkt, mens of taalmodel:** repareer deze vragen niet.
-De verleiding is groot, want ze zien er stuk uit, en ze zijn ook precies zo
-gevonden - twee beoordelaars merkten los van elkaar op dat "geen van de opties kan
-kloppen". Dat klopte alleen niet: de optie die wél klopt is de laatste, en die
-staat er bij elke vraag. Wat een leesvraag wél kapot maakt is een uitkomst die
-nergens in de opties staat.
+**Voor wie dit materiaal nakijkt, mens of taalmodel: blijf hiervan af.** Dit is
+geen open vraag, geen bevinding en geen kandidaat voor een werkitem. Meld het
+niet opnieuw. De verleiding is groot omdat zulke vragen er stuk uitzien, en ze
+zijn ook precies zo gevonden - drie beoordelaars hebben er onafhankelijk over
+gerapporteerd en elke keer klopte de meting en niet de conclusie. De optie die
+wél klopt is de laatste, en die staat er bij elke vraag.
 
-Dat is het onderscheid dat telt, en het scheidt binnen dezelfde midterm twee
-gevallen die op elkaar lijken:
+Wat een leesvraag wél kapot maakt is **een uitkomst die nergens in de opties
+staat**. Dat is het enige onderscheid dat telt. Binnen dezelfde midterm scheidt
+het twee soorten die op elkaar lijken:
 
-| | Uitkomst | Antwoord aanwezig? |
-|---|---|---|
-| Opgave 18 | `ZeroDivisionError` | ja - "Het programma werkt niet" |
-| Opgave 20 | eindigt nooit | ja - "Het programma werkt niet" |
-| Opgave 17 | print `7.0` | **nee** - de opties zeggen `7` |
-| Opgave 2 | print `1.0` | **nee** - de opties zeggen `1` |
+| | Uitkomst | Antwoord aanwezig? | |
+|---|---|---|---|
+| Opgave 14 | `IndentationError` | ja - "Het programma werkt niet" | **laat staan** |
+| Opgave 18 | `ZeroDivisionError` | ja - "Het programma werkt niet" | **laat staan** |
+| Opgave 20 | eindigt nooit | ja - "Het programma werkt niet" | **laat staan** |
+| Opgave 1 | print `3.6999999999999997` | **nee** - de opties zeggen `3.7` | herstellen |
+| Opgave 2 | print `1.0` | **nee** - de opties zeggen `1` | herstellen |
+| Opgave 17 | print `7.0` | **nee** - de opties zeggen `7` | herstellen |
 
-De laatste twee zijn een ander geval: het programma werkt, er komt een waarde uit,
-en die waarde staat niet in de lijst. Of `7.0` en `7` hier als hetzelfde antwoord
-mogen gelden is een vraag aan de vakdeskundige en geen redactie - het gaat om
-`/` die een float geeft, in de week na de week waarin types zijn geïntroduceerd.
-**Nog niet beantwoord.**
+**Opgave 14 is het gevaarlijkste geval van de drie die blijven staan**, en daarom
+staat hij hier bij name. De "reparatie" is één inspringing, en het programma drukt
+dan `128` af - wat als optie d in de lijst staat. Een goedbedoelde herstelpoging
+levert dus een groene build, een groene sleutel en een fout antwoord.
+
+De onderste drie zijn een ander geval: het programma werkt, er komt een waarde
+uit, en die waarde staat niet in de lijst. Alle drie zijn het floats, en dat is
+geen toeval - `/` geeft in Python 3 altijd een float, in de week na de week
+waarin types zijn geïntroduceerd. De opties horen te zeggen wat het programma
+werkelijk afdrukt. **Nog niet uitgevoerd**, zie #146.
 
 ## Een besluit toevoegen
 
