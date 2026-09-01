@@ -290,6 +290,8 @@ draait wel.
 | Het bord verandert niet in week 5; de grens wordt daar benoemd | didactisch | gesloten |
 | De parameternamen van `board.py` blijven zoals ze zijn | praktisch | gesloten |
 | De vastgestelde matrijs wijzigt niet als bijvangst; bevindingen gaan naar *Voorgestelde correcties* | organisatorisch | staand, onderbouwd |
+| Het oefententamen is representatief en verandert voorlopig niet | organisatorisch | staand |
+| Eerst de weken van PGM1 afronden; het materiaal moet zo snel mogelijk live | organisatorisch | staand |
 | Objectmethoden pas vanaf PGM2 week 1, los van de mutatiegrens in PGM1 week 7 | didactisch | staand, onderbouwd |
 | Dictionaries en de Markov-opgave verhuizen van PGM1 week 7 naar PGM2 week 1 | didactisch | staand, nog niet uitgevoerd |
 | Objecten pas in PGM2 | didactisch | staand, onderbouwd |
@@ -577,6 +579,42 @@ eerste opende met een checklist "Python geïnstalleerd, VS Code geïnstalleerd",
 tweede stuurde de student naar een raketicoon dat niet meer bestaat. Wie materiaal
 schrijft dat een omgeving veronderstelt, gaat uit van de lokale; komt de
 browseruitvoering terug, dan is dat winst en geen ander uitgangspunt.
+
+### Wat er nu voorgaat: de weken afmaken
+
+De prioriteit ligt bij het **afronden van PGM1 per week**: onderwerp, opgaven,
+uitwerkingen en docentenhandleiding compleet, zodat het materiaal live kan. Wat
+daar niet aan bijdraagt, wacht.
+
+Dat betekent twee dingen voor wat er openstaat.
+
+**Het oefententamen verandert voorlopig niet.** Het is representatief voor het
+tentamen dat wordt afgenomen; de onderwerpen en de aard van de vragen wijken
+nauwelijks af. Vastgesteld door de vakdeskundige, want het echte tentamen staat
+niet in de repository.
+
+**De weging in de toetsmatrijs wacht.** Met de verplaatsing van de
+recursie-uitkomst naar PGM2 telt PGM1 90% en is er geen uitkomst op
+creëren-niveau meer. Dat is een reële vraag, maar niet er een die het afronden
+van een week in de weg staat, en zij is beter te beantwoorden als de weken af
+zijn. Zie *Voorgestelde correcties* in [leeruitkomsten.md](leeruitkomsten.md).
+
+Bij die weging hoort één meting die de afweging bepaalt en die eerder verkeerd is
+weergegeven. Van de negentig punten in het PGM1-oefententamen vraagt alleen
+**opgave 6** (15 punten) om zelf een aanpak bedenken. Opgave 7 is met 25 punten de
+grootste, maar schrijft de opdeling voor: *"Maak gebruik van lus(sen), de functie
+`count_char(zin, let)` en een lijst met alle letters van het alfabet."* De student
+voert daar een gegeven ontwerp uit.
+
+Dat raakt twee uitkomsten. **A3** (ontwerpen, analyseren, 10%) wordt met 15 punten
+iets zwaarder getoetst dan de matrijs zegt - niet genoeg voor een verdubbeling.
+En **A2** (problemen opdelen, 10%) zou juist door opgave 7 gedragen moeten worden,
+maar die opgave doet het opdelen voor de student. Vijfentwintig punten die een
+uitkomst zouden moeten dragen en het niet doen.
+
+Wie de weging later herziet: de vraag is niet alleen hoe de percentages moeten,
+maar of de toets toetst wat hij zegt te toetsen. Zolang het oefententamen niet
+verandert, is dat een vraag over de matrijs en niet over de toets.
 
 ## Een besluit toevoegen
 
