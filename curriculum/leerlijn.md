@@ -27,7 +27,7 @@ dan de week waarin het hier staat.
 | 4 | Lussen | A1 | `for`, `while`, begrensde herhaling |
 | 5 | Geneste lussen | A1, A3 | geneste lus, 2D-lijst, ASCII-art, bordrepresentatie |
 | 6 | Bestanden en data | bestanden † | bits, bytes, ASCII, newline, `with open`, beeldbewerking |
-| 7 | Mutabiliteit en algoritmeontwerp | P4, A3 | mutatie, functiecompositie, deelprobleem, algoritme |
+| 7 | Mutabiliteit en algoritmeontwerp | P4, A3 | mutatie, functiecompositie, deelprobleem, algoritme, tuple |
 
 † De leeruitkomst over tekstbestanden staat nu in de PGM2-matrijs en wisselt van
 plaats met recursie. Zie [leeruitkomsten.md](leeruitkomsten.md).
@@ -60,6 +60,11 @@ te weinig voor wat PGM2 er in week 1 op bouwt, dus landen dictionaries daar in
 plaats van in PGM1 week 7. Methodeaanroep wordt voor het eerst geïntroduceerd
 in diezelfde week, samen met sets; de Markov-opgave gaat mee. Week 7 draagt
 vanaf nu de mutatiegrens, functiecompositie en algoritmeontwerp.
+
+**Tuples landen in week 7, niet in PGM2.** Een tuple is onveranderlijk, en dat
+is precies het contrast dat de mutatieles nodig heeft: naast `L[i] = x` (mag)
+staat dat een tuple dat niet toelaat. De introductie hoort daarom bij dezelfde
+les als mutatie, niet bij PGM2 week 1.
 
 ### Verdeling van het opgavemateriaal
 
@@ -105,7 +110,7 @@ uitgangssituatie, niet de norm; het verschil tussen beide kolommen is het werk.
 
 | Week | Leidend voor 2026 | Verantwoordelijk | Materiaal nu |
 |---|---|---|---|
-| 1 | Datastructuren (lists ter herhaling, dictionaries, sets, evt. tuples, methodeaanroep, Markov) | BRRA | List comprehension |
+| 1 | Datastructuren (lists ter herhaling, dictionaries, sets, methodeaanroep, Markov) | BRRA | List comprehension |
 | 2 | Comprehensions (list, dict, set, range, enumerate) | HOEM | Recursie |
 | 3 | Recursie | HOEM | Algoritmen (knapzak, wisselgeld) |
 | 4 | Use it or lose it, lambda | HOEM | Objecten en dictionaries |
@@ -157,6 +162,7 @@ als zodanig is gemarkeerd.
 | `while` | PGM1 week 4 | PGM1 week 2, `practicals/2_rochambeau` | Bewust; de tekst zegt erbij dat lussen later komen |
 | list comprehension | PGM2 week 1 | PGM1 week 6, `practicals/6b_images` | Onderwerp van een hele PGM2-week |
 | functiedefinitie | PGM1 week 3 | PGM1 week 2, `problems/2_basis` | Mogelijk als gegeven voorbeeld |
+| tuple | PGM1 week 7 | PGM1 week 5, laag extra, `problems/5_extra.md` | Ongemarkeerd; introduceert ook *methode* en *object*. Buiten bereik van de herzieningen in #102/#134 |
 
 Twee regels stonden hier eerder en zijn nagemeten en geschrapt.
 
