@@ -71,11 +71,11 @@ tabel met patronen.
 
 ## Waar je tegenaan ontwerpt
 
-- De leeruitkomsten liggen dit jaar vast: er gaat er geen weg, er komt er geen
-  bij, en de formulering blijft. Met de **gewichten** mag wel geschoven worden,
-  binnen PGM1 of binnen PGM2, zolang het totaal per vak klopt. Kan een week een
-  uitkomst niet dragen, dan is "deze uitkomst weegt hier te zwaar" een geldige
-  uitkomst van je ontwerp, en "schrap de uitkomst" niet. Het blijft een besluit
+- De vastgestelde toetsmatrijs wijzig je niet als bijvangst van je ontwerp. Merk je
+  dat een uitkomst niet klopt - een weging, een plaatsing, een formulering - dan is
+  dat een bevinding voor *Voorgestelde correcties* in `leeruitkomsten.md`, niet een
+  wijziging die jij doorvoert. Met de **gewichten** binnen een vak is meer ruimte,
+  zolang het totaal per vak klopt. Het blijft een besluit
   van de vakdeskundige, dus het gaat als open vraag naar de poort en het landt in
   `curriculum/`. Wat je niet doet is de matrijs anders lezen dan hij staat, of hem
   stilzwijgend volgen door materiaal te verzinnen dat een uitkomst moet dekken.
