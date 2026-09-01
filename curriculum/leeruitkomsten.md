@@ -36,9 +36,13 @@ bindende document niet gedeeld en niet gevolgd in de tijd.
 | **A1** | Student implementeert eenvoudige algoritmes door middel van functioneel programmeren. | SRe1 | Toepassen | 15% |
 | **A2** | Student verdeelt eenvoudige computationele problemen in kleinere deelproblemen. | SRe1 | Toepassen | 10% |
 | **A3** | Student ontwerpt algoritmes om eenvoudige computationele problemen op te lossen. | OP-I | Analyseren | 10% |
-| **A4** | Student ontwerpt en past eenvoudige recursieve oplossingen toe. | SOn1 | Creëren | 10% |
 
-Totaal: 70% toepassen, 10% analyseren, 10% creëren.
+Totaal: 80% toepassen, 10% analyseren. **Samen 90%**; de 10% die met de
+verplaatsing van A4 vrijkwam is nog niet herverdeeld, en PGM1 heeft daarmee geen
+uitkomst op creëren-niveau. Zie *Voorgestelde correcties*.
+
+> De eerder vermelde verdeling "70% toepassen" klopte niet met de som van de rijen,
+> ook vóór deze wijziging niet.
 
 ## Hoe de percentages zich tot de toets verhouden
 
@@ -88,8 +92,16 @@ vakdeskundige.
 | **A3** | Student implementeert complexere applicaties, gebruikmakend van functioneel, imperatief en object-georiënteerd programmeren. | SRe1 | Creëren | 10% |
 | **A4** | Student ontwerpt algoritmes om complexere computationele problemen op te lossen. | SOn1, OP-III | Creëren | 10% |
 | **A5** | Student ontwerpt finite state machines voor eenvoudige talen. | SOn1 | - | **geen** |
+| **A6** | Student ontwerpt en past eenvoudige recursieve oplossingen toe. | SOn1 | Creëren | 10% |
 
-Totaal: 80% toepassen, 20% creëren.
+Totaal: 70% toepassen, 30% creëren. Samen 100%.
+
+> A6 is per 1 september 2026 overgekomen uit de PGM1-matrijs; recursie wordt sinds
+> het besluit "recursie na de lussen" in PGM2 week 3 onderwezen en in het
+> PGM2-tentamen getoetst, met 30 van de 90 punten. De uitkomst heeft het nummer
+> A6 gekregen omdat A4 en A5 al bezet zijn; hernummeren zou verwijzingen elders
+> breken. De eerder vermelde verdeling "80% toepassen, 20% creëren" telde op tot
+> 90% en klopte niet met de som van de rijen.
 
 ## Voorgestelde correcties
 
@@ -103,13 +115,14 @@ toetsing is een belofte die niemand nakijkt.
 | **PGM1 P7** (docstrings) | Wél onderwezen en overal in het materiaal toegepast, maar niet getoetst. | Weging geven of expliciet als vormeis opnemen. |
 | **PGM2 P6** (operator overloading) | Wél onderwezen, en in de planning voor 2026 krijgt het een hele week. | Weging geven, of de week heroverwegen. |
 | **PGM2 P7** (externe bibliotheken) | Verspreid aanwezig, niet als onderwerp behandeld. | Besluiten of dit een leeruitkomst moet blijven. |
+| **PGM1: 10% onverdeeld, en geen creëren-niveau** | Met het vertrek van A4 telt de PGM1-matrijs 90% en heeft het vak geen enkele uitkomst op creëren-niveau meer. Dat laatste is niet vanzelf een gebrek - PGM1 is een introductievak - maar het is wel een keuze die niemand expliciet heeft gemaakt. De veegronde stelde bovendien vast dat het oefententamen 40 van de 90 punten aan ontwerpwerk besteedt, tegen 10% analyseren in de matrijs. | Herverdelen binnen PGM1. De meting wijst richting A3 (ontwerpen, analyseren), dat nu 10% weegt terwijl de toets er aanzienlijk meer aan besteedt. |
 | **PGM1 P4** (lijsten/strings en de bijbehorende methodes) | Het methodes-deel wordt al jaren niet meer in PGM1 onderwezen of getoetst. Vanaf de herziening van PGM1 week 7 en PGM2 week 1 introduceert PGM1 geen objectmethoden meer; dat verschuift volledig naar PGM2 week 1. Zie [leerlijn.md](leerlijn.md) en [uitgangspunten.md](uitgangspunten.md). | Herformuleren tot wat lijsten/strings betreft zonder de methodes, of het methodes-deel schrappen. |
 
 Daarnaast staat één uitkomst in de verkeerde matrijs:
 
 | Uitkomst | Bevinding | Voorstel |
 |---|---|---|
-| **PGM1 A4** (recursie) | Staat op creëren-niveau voor 10% van het PGM1-tentamen, maar recursie wordt in PGM1 niet onderwezen: dat gebeurt sinds het verplaatsingsbesluit in PGM2. Het oefententamen van PGM1 toetst het dan ook niet; de enige recursieve functie die er voorkomt krijgt de student kant-en-klaar. | **Verplaatsen naar de PGM2-matrijs.** Dit is geen inhoudelijke wijziging maar het naleven van een besluit dat al genomen is. |
+| ~~**PGM1 A4** (recursie)~~ | **Uitgevoerd op 1 september 2026.** De uitkomst staat nu als **PGM2 A6**. Zij stond op creëren-niveau voor 10% van het PGM1-tentamen terwijl recursie in PGM1 niet wordt onderwezen; het PGM2-tentamen besteedt er 30 van de 90 punten aan. PGM2 telde vóór de verplaatsing 90% en komt er nu mee op 100% uit. | Gedaan. Wat resteert: de 10% die in PGM1 vrijkomt, zie de rij hieronder. |
 
 ## Gaten tussen toetsing en onderwijs
 
