@@ -238,11 +238,12 @@ De vierde werd wél gelezen, maar alleen omdat de reparatie toevallig binnen de
 looptijd van een beoordelingsronde viel die toch al liep - niet omdat er een
 regel is die dat afdwingt voor werk buiten de lus. Zie bevinding 4.
 
-### 1 september 2026, na afronding van #134 — issue #155
+### 1 september 2026, na afronding van #134 — issues #155 en #156
 
 | Werk | Waarom buiten de lus | Achteraf gelezen? |
 |---|---|---|
 | `problems/6_basis.ipynb`: vooruitverwijzing naar dictionaries herformuleerd (PR #158) | XS-omvang, één zin in één bestand, per de proportionaliteitsregel geen werkitem voor de volle lus | **ja** — `rol-beoordelaar-redacteur` los ingezet, AKKOORD |
+| `solutions/8_extra.ipynb` toegevoegd voor de sets-opgave (PR #159) | XS-omvang, één ontbrekende uitwerking naar bestaand patroon (`solutions/8_basis.ipynb`) | **ja** — `rol-beoordelaar-redacteur` los ingezet, AKKOORD; de rol had zelf geen shell, dus de poorten zijn door de orkestrator gedraaid vóór de PR openging |
 
 Deze keer bewust wél gelezen, op verzoek gedaan in plaats van bij toeval - de
 regel uit bevinding 4 toegepast in plaats van herhaald.
