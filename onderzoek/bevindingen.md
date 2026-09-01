@@ -372,6 +372,47 @@ redenering. Niets beschermt de orkestrator tegen zijn eigen.
 
 ---
 
+## 12. Een rol zonder shell beweert toch wat het gereedschap zou doen
+
+*1 september 2026.*
+
+De redacteur las week 4 in een leesronde. Hij had `Read`, `Glob` en `Grep`, geen
+`Bash`, en hij wist dat: bij *Build schoon* schreef hij **niet gemeten**, met de
+reden erbij. Twee alinea's verderop stelde hij dat `lectures/4a_lussen.ipynb` de
+hook `check-code-blocks` breekt omdat cel 74 een `return` op moduleniveau heeft
+zonder `<!-- codecontrole:skip -->`, en in zijn slotparagraaf dat het bestand
+daarom "niet te committen" is — als één van de dingen die vóór publicatie moesten.
+
+Gedraaid: de hook slaagt, op alle tien de bestanden van week 4, en
+`check-notebook-tags` ook. `return` op moduleniveau is voor `ast.parse` geldige
+syntaxis; de fout valt pas bij `compile`. De waarneming klopte — die `return`
+staat er, zonder skip — maar het gevolg was afgeleid uit hoe de hook zou werken.
+
+Dit is bevinding 7 met een verschil dat telt. Daar lag de ontbrekende kennis buiten
+de repository en kon de rol er niet bij. Hier lag ze binnen handbereik: het is één
+commando, de rol had het alleen niet. En de rol maakte zichtbaar dat hij het
+onderscheid kende, want hij paste het één regel eerder correct toe.
+
+De verleiding zit in de vorm van het oordeel. "Niet gemeten" invullen bij een
+kolom kost niets; een aparte alinea openen met "dit heb ik niet kunnen nagaan"
+verzwakt de bevinding waar je hem juist opschrijft.
+
+**Wat het veranderde.** De bevinding is niet in werkitem #146 als eis beland maar
+als weerlegging, onder *Wat de repo niet weet*, zodat de auteur er geen regel voor
+schrijft die niets oplost. Structureel is er nog niets veranderd. Twee richtingen,
+geen van beide genomen:
+
+- De beoordelaars `Bash` geven. Dat maakt ze duurder en het haalt de scheiding weg
+  die de leesronde goedkoop houdt.
+- In het C6-contract eisen dat een bewering over gedrag van gereedschap het label
+  *gelezen* of *gemeten* draagt, net als de kolom nu al doet — dan geldt de regel
+  overal in het oordeel en niet alleen in de tabel.
+
+De tweede is de goedkoopste, en hij sluit aan op wat de rol uit zichzelf al deed.
+**Nog niet opgelost.**
+
+---
+
 ## Open: welk model per rol
 
 *1 september 2026. Nog niet onderzocht.*

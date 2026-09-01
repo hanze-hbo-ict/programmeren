@@ -45,6 +45,32 @@ Twee beoordelaars op bestaand materiaal, zonder C5 en zonder ontwerp.
 **Totaal 248k**, en het leverde twee werkitems op vol aantoonbare defecten (#106,
 #107). Ter vergelijking: 1.13M voor één week door de volle lus. Zie bevinding 3.
 
+## Leesronde — PGM1 week 4
+
+Twee beoordelaars op bestaand materiaal, zonder C5 en zonder ontwerp. Dezelfde
+opzet als bij week 1 en 2, met twee dingen erbij: de leesronde staat nu als modus
+in het C6-contract, en de eerstejaars kreeg een lijst mee van wat hij op dit punt
+kent en niet kent.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| beoordelaar-redacteur | 126.153 | 11 min | BLOKKEER, 5 blokkerend |
+| beoordelaar-eerstejaars | 68.747 | 6 min | BLOKKEER, 6 blokkerend |
+
+**Totaal 195k**, tegen 248k voor week 1 en 2. De eerstejaars werd 40% goedkoper,
+en de aannemelijkste verklaring is de kennislijst: hij hoefde niet meer zelf af te
+leiden wat een student in week 4 heeft gehad. Dat is één waarneming en geen
+gemeten oorzaak.
+
+De twee rollen zagen elkaars oordeel niet en kwamen onafhankelijk op dezelfde vijf
+blokkerende punten uit: `while` als "oneindige herhaling", de midterm zonder
+sleutel, `unique` die nooit is geïntroduceerd, `while_pi` die de opgave niet
+oplost, en `print(lijst)` waar `lst` staat. De redacteur vond opgave 18 er
+bovenop, de eerstejaars niet. Het leverde werkitem #146 op.
+
+Van de blokkerende bevindingen zijn er zeven nagerekend door de code te draaien of
+het patroon te ijken. Zes hielden stand; één is weerlegd (bevinding 12).
+
 ## Werkitem #115 — de uitwerkingen
 
 | Rol | Tokens | Duur | Uitkomst |
@@ -116,8 +142,9 @@ gelezen:
 | De matrijsprocedure rechtgezet (#139) | Correctie op mijn eigen formulering | **nee** |
 | A4 naar de PGM2-matrijs (#140) | Een voorstel uit de correctielijst uitvoeren | **nee** |
 | Consistentiecontrole op issues en bord | Onderhoud, geen materiaal | **nee** |
+| Werkitem #146 geschreven uit twee C6-oordelen | Bankwerk op andermans bevindingen, geen materiaal | n.v.t. — de bron *is* twee beoordelaars |
 
-**Dertien ingrepen in totaal, nul beoordelaars.** Bij de eerste zeven leverden er
+**Veertien ingrepen in totaal, nul beoordelaars.** Bij de eerste zeven leverden er
 drie een reparatie op die een redacteur zou hebben gevangen (bevinding 4); bij deze
 zes leverde de laatste er vier op, want de consistentiecontrole vond vier issues met
 een achterhaalde bewering (bevinding 10).
