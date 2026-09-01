@@ -24,7 +24,7 @@ dan de week waarin het hier staat.
 | 1 | Introductie, Picobot | - | toestandsmachine, regels, string |
 | 2 | Variabelen en condities | P1, P2, P3 | toekenning, variabele, operatoren, `if`, lijst, docstring, assertion |
 | 3 | Functies | P5, P6, P7, A2 | functiedefinitie, parameter, zelfaanroep |
-| 4 | Lussen | A1 | `for`, `while`, begrensde herhaling |
+| 4 | Lussen | A1 | `for`, `while`, begrensde en onbegrensde herhaling, `break`, `continue`, het lusrecept |
 | 5 | Geneste lussen | A1, A3 | geneste lus, 2D-lijst, ASCII-art, bordrepresentatie |
 | 6 | Bestanden en data | bestanden † | bits, bytes, ASCII, newline, `with open`, beeldbewerking |
 | 7 | Mutabiliteit en algoritmeontwerp | P4, A3 | mutatie, functiecompositie, deelprobleem, algoritme, tuple |
@@ -38,6 +38,15 @@ Vier dingen die aan deze indeling zijn veranderd, en waarom:
 burgerservicenummer met de elfproef. De week droeg P5 en A2 op het dunste
 materiaal van de cursus, en er lag nergens iets om op terug te vallen. Zie
 [uitgangspunten.md](uitgangspunten.md) voor waarom niet.
+
+**De termen zijn *begrensde* en *onbegrensde* herhaling.** Het materiaal noemde
+`while` tot 1 september 2026 "oneindige herhaling", overgeërfd uit CS5. Dat is
+onjuist en het is precies de misvatting die het materiaal verderop bestrijdt. De
+vaste termen komen uit `leeruitkomsten.md` r83, waar PGM2 P1 luidt: *"Student
+past begrensde en onbegrensde lusconstructies toe."* Zij staan dus in de bindende
+laag, en zij dragen het onderscheid dat het lusrecept nodig heeft: bij een `for`
+staat de grens vast, bij een `while` levert de schrijver hem. Vastgesteld bij de
+poort van #146.
 
 **Recursie wordt in PGM1 niet onderwezen.** Week 3 laat bij de functies alleen
 zien dát een functie zichzelf kan aanroepen. De leesopdrachten daarover zijn naar
@@ -201,6 +210,8 @@ blijft een raakvlak vindbaar zonder dat het in een werkitem verstopt zit.
 | Van week | Naar week | Wat | Status |
 |---|---|---|---|
 | PGM1 week 7 | PGM2 week 1 | Week 7 levert **tuples en tuple unpacking**. PGM2 week 1 doorloopt dictionaries met `.items()` en pakt de paren uit met `for word, count in ...`; `lectures/8a_datastructuren.ipynb` verwijst er expliciet naar terug. Het materiaal van week 7 bevat op dit moment geen enkele tuple. | Besloten met beide docenten op 1 september 2026. Uit te voeren bij de herziening van week 7 (#102). PGM2 week 1 loopt hier met opzet op vooruit; dat is geen defect in die week. |
+| PGM1 week 4 | PGM2 week 1 | Week 4 levert de termen **begrensde** en **onbegrensde** herhaling, die `leeruitkomsten.md` r83 als PGM2 P1 toetst (5%, toepassen). Het materiaal gebruikte ze tot 1 september 2026 nergens. | Besloten bij de poort van #146, uit te voeren in datzelfde werkitem. |
+| PGM1 week 4 | PGM1 week 5 | Week 4 levert het **lusrecept**: vijf vragen waarvan de vijfde het stopmoment is. Week 5 bouwt erop voort met geneste lussen, en `unique` sluit week 4 af op precies het probleem dat week 5 opent - een lus in een lus. | Besloten bij de poort van #146. |
 | PGM1 week 5 | PGM2 week 6 | De vier zoekfuncties uit `practicals/5b_boter_kaas_eieren.ipynb` hebben andere parameternamen dan de gelijknamige functies in `source/problems/assets/board.py` regels 173-224. | Besloten, laten zoals het is: `board.py` definieert ze zelf en importeert het werk van de student nooit. Zie het besluitenregister in [uitgangspunten.md](uitgangspunten.md). |
 | PGM1 week 5 | PGM1 week 7 | Week 5 levert `create_board` en `print_board` als vermogen; `source/problems/7_extra.md` regels 36-114 leert ze nu vanaf nul aan. | Voorstel: laat week 7 ernaar verwijzen in plaats van ze opnieuw aan te leren. |
 | PGM1 week 5 | PGM1 week 7 | `[[0] * 3] * 3` en de waarschuwing daarbij horen in week 7, naast aliasing en `deepcopy`. De constructie bijt pas zodra je erin toewijst, en dat gebeurt in week 5 niet. | Besloten in het weekontwerp van week 5, uit te voeren bij de herziening van week 7. |

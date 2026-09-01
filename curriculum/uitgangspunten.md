@@ -292,6 +292,8 @@ draait wel.
 | De vastgestelde matrijs wijzigt niet als bijvangst; bevindingen gaan naar *Voorgestelde correcties* | organisatorisch | staand, onderbouwd |
 | Het oefententamen is representatief en verandert voorlopig niet | organisatorisch | staand |
 | Leesvragen mogen fout aflopen; de fout is het antwoord | didactisch | staand, onderbouwd |
+| Week 4 krijgt een lusrecept van vijf vragen, in `4a_lussen` | didactisch | gesloten, nog niet uitgevoerd (#146) |
+| Recursie gaat uit PGM1 week 4, op alle vier de plekken | organisatorisch | gesloten, nog niet uitgevoerd (#146, samen met #126) |
 | Eerst de weken van PGM1 afronden; het materiaal moet zo snel mogelijk live | organisatorisch | staand |
 | Objectmethoden pas vanaf PGM2 week 1, los van de mutatiegrens in PGM1 week 7 | didactisch | staand, onderbouwd |
 | Dictionaries en de Markov-opgave verhuizen van PGM1 week 7 naar PGM2 week 1 | didactisch | staand, nog niet uitgevoerd |
@@ -663,8 +665,52 @@ levert dus een groene build, een groene sleutel en een fout antwoord.
 De onderste drie zijn een ander geval: het programma werkt, er komt een waarde
 uit, en die waarde staat niet in de lijst. Alle drie zijn het floats, en dat is
 geen toeval - `/` geeft in Python 3 altijd een float, in de week na de week
-waarin types zijn geïntroduceerd. De opties horen te zeggen wat het programma
-werkelijk afdrukt. **Nog niet uitgevoerd**, zie #146.
+waarin types zijn geïntroduceerd.
+
+**Besloten bij de poort van #146: de opties zeggen wat het programma werkelijk
+afdrukt**, dus `3.6999999999999997`, `1.0` en `7.0`. De sleutel legt bij opgave 1
+uit waarom er geen `3.7` uit komt. Daarmee worden drie kapotte vragen drie vragen
+over floating point, en de vraagstelling blijft ongemoeid. **Nog niet
+uitgevoerd**, zie #146.
+
+### Het lusrecept van week 4
+
+Week 4 krijgt één recept voor het ontwerpen van een lus, en het beantwoordt vijf
+vragen:
+
+1. Wat verzamel je, en wat is de startwaarde?
+2. Wat loop je langs? Daaruit volgt `for` of `while`, en bij een `for` element of
+   index.
+3. Wat gebeurt er per stap met wat je verzamelt?
+4. Wanneer is het klaar?
+5. Wat geef je terug, en waar staat die regel?
+
+**Vier van de vijf stonden er al**, verspreid: 1 en 3 als de driestapsstrategie in
+`practicals/4_python_bat.md` r32-37, 2 in `lectures/4a_lussen.ipynb` cellen 38-47,
+en 5 in het commentaar bij `fac` in `problems/4_basis.ipynb`. Het patroon zelf komt
+in week 4 vierenzestig keer voor en kreeg één keer een naam. Het recept verzint dus
+weinig; het geeft wat er al is een naam en een plek.
+
+**Vraag 4 is nieuw, en zij is de reden dat dit een recept is en geen samenvatting.**
+Zolang `while` "oneindige herhaling" heet, is stoppen een eigenschap van de
+constructie. Het is het tegenovergestelde: bij een `while` levert de schrijver het
+stopmoment. Dat idee komt uit *How to Design Programs*, waar het aantonen dát een
+functie eindigt een aparte ontwerpstap is.
+
+**Het landt in `4a_lussen`**, na "Denken in lussen", en niet in een tweede college.
+Een tweede college verplaatst de oefenmidterm naar de practicumsleuf, en die is
+bezet door CodingBat - het enige zelfcontrolerende schrijfwerk van de week.
+
+**Het gearchiveerde `lectures/4b_lussen_ontwerpen.ipynb` is niet overgenomen.**
+Dat notebook (commit `587e3800`, verwijderde branch `pgm1-25-26`, juli 2025) deed
+hetzelfde met zes stappen. De regel *terughalen gaat vóór verzinnen* veronderstelt
+beproefd materiaal, en die aanname geldt daar niet: de cel die het recept moet
+voordoen is fout (`index_of` belooft `-1` in docstring én commentaar en geeft
+`False`), het plan wijkt af van de code eronder, er staat geen enkele assertion in,
+en de codeconventies worden op vier punten overtreden. Wel is de **vorm**
+overgenomen, dezelfde die `extra/examples/design_recipe.md` heeft: genummerde
+stappen, uitgewerkte voorbeelden met de stapnamen als regelcommentaar, en
+opdrachten die eerst om een plan vragen en dan om de code.
 
 ## Een besluit toevoegen
 
