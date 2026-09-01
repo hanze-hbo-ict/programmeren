@@ -238,6 +238,15 @@ De vierde werd wél gelezen, maar alleen omdat de reparatie toevallig binnen de
 looptijd van een beoordelingsronde viel die toch al liep - niet omdat er een
 regel is die dat afdwingt voor werk buiten de lus. Zie bevinding 4.
 
+### 1 september 2026, na afronding van #134 — issue #155
+
+| Werk | Waarom buiten de lus | Achteraf gelezen? |
+|---|---|---|
+| `problems/6_basis.ipynb`: vooruitverwijzing naar dictionaries herformuleerd (PR #158) | XS-omvang, één zin in één bestand, per de proportionaliteitsregel geen werkitem voor de volle lus | **ja** — `rol-beoordelaar-redacteur` los ingezet, AKKOORD |
+
+Deze keer bewust wél gelezen, op verzoek gedaan in plaats van bij toeval - de
+regel uit bevinding 4 toegepast in plaats van herhaald.
+
 ## Hoe je een meting noteert
 
 Rol, ronde, tokens, duur, uitkomst in één regel. Bij een afgebroken run: wat er
