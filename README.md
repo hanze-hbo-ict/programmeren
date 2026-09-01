@@ -1,14 +1,21 @@
 # Programmeren
 
-Cursusmateriaal voor Programmeren 1 & 2 (Hanze Hogeschool, HBO-ICT), gebaseerd op het CS5-materiaal van Harvey Mudd College.
+Cursusmateriaal voor Programmeren 1 & 2 (Hanze Hogeschool, HBO-ICT), gebaseerd
+op het CS5-materiaal van Harvey Mudd College.
 
 De up-to-date build van het boek [kan hier gevonden worden](https://hanze-hbo-ict.github.io/programmeren/about/syllabus.html).
 
-De site wordt gebouwd met [Sphinx](https://www.sphinx-doc.org/) + [MyST](https://myst-parser.readthedocs.io/) en het [furo](https://pradyunsg.me/furo/)-thema, en automatisch gepubliceerd naar GitHub Pages bij elke push naar `master`.
+De site wordt gebouwd met [Sphinx](https://www.sphinx-doc.org/) +
+[MyST](https://myst-parser.readthedocs.io/) en het
+[furo](https://pradyunsg.me/furo/)-thema, en automatisch gepubliceerd naar
+GitHub Pages bij elke push naar `master`.
 
 ## Aanpassingen
 
-Hoewel we ons best doen het boek up-to-date te houden, kan het soms toch gebeuren dat er een foutje in sluipt. Spot je zo'n foutje? Help ons dan vooral: open een issue, of fork deze repo, herstel de fout en open een pull request (zie [Bijdragen](#bijdragen) hieronder).
+Hoewel we ons best doen het boek up-to-date te houden, kan het soms toch
+gebeuren dat er een foutje in sluipt. Spot je zo'n foutje? Help ons dan vooral:
+open een issue, of fork deze repo, herstel de fout en open een pull request (zie
+[Bijdragen](#bijdragen) hieronder).
 
 ## Lokaal bouwen
 
@@ -22,7 +29,8 @@ uv run make livehtml   # bouwt en herbouwt automatisch bij wijzigingen
 
 ## Structuur
 
-- `source/` — alle content (lectures, practicals, opgaven, oplossingen, projecten) en de Sphinx-configuratie (`conf.py`, `_toc.yml`).
+- `source/` — alle content (lectures, practicals, opgaven, oplossingen,
+  projecten) en de Sphinx-configuratie (`conf.py`, `_toc.yml`).
 - `.github/workflows/deploy_sphinx.yml` — bouwt en publiceert de site naar GitHub Pages.
 - `.pre-commit-config.yaml` — lint-hooks (markdown, code in codeblokken, notebook-output stripping) die voor elke commit draaien.
 
@@ -36,64 +44,25 @@ de [leerlijn](curriculum/leerlijn.md) per week, en de
 ## Werkwijze: de rollenlus
 
 **Dit cursusmateriaal wordt herzien met behulp van taalmodellen, en dat is een
-experiment.** Niet alleen als hulpje bij het schrijven: de agents meten wat er
-staat, ontwerpen de herziening, schrijven het materiaal en beoordelen het werk van
-elkaar. Een mens schrijft het werkitem, neemt de inhoudelijke besluiten bij de
-poort halverwege, en merget. De rest wordt uitbesteed.
+experiment.** Niet alleen als hulp bij het schrijven: de agents meten wat er staat,
+ontwerpen de herziening, schrijven het materiaal en beoordelen elkaars werk. De
+docent schrijft het werkitem, neemt de inhoudelijke besluiten halverwege, en tekent
+elke wijziging af.
 
-Dat verdient een waarschuwing vooraf, want de rolnamen hieronder - redacteur,
-eerstejaars, vakdeskundige - lezen als collega's. Op één na zijn het geen mensen
-maar losse agents, elk met een eigen, verse context. **De vakdeskundige is de mens**,
-en die is met opzet de enige rol zonder agent.
+Elke rol is een aparte agent met een eigen, verse context en ziet niets van de
+rest. Wie meet, weet niet wat de uitkomst zou moeten zijn; wie beoordeelt, heeft de
+worsteling van de schrijver niet gezien. Dat is trager dan alles in één gesprek
+doen, en dat is de bedoeling: deze repo is niet stukgegaan aan één slechte
+wijziging maar aan veel wijzigingen die ieder op zich verdedigbaar waren en samen
+de samenhang hebben opgegeten.
 
-Het idee erachter is **contextisolatie**: in plaats van één assistent die meet,
-ontwerpt, schrijft en beoordeelt, doet elke rol één ding en ziet niets van de rest.
-Wie meet weet niet wat de uitkomst zou moeten zijn. Wie beoordeelt heeft de
-worsteling van de schrijver niet gezien, en ook niet het oordeel van de drie andere
-beoordelaars. Tussen twee rollen gaat precies één artefact, in de vorm die een
-contract voorschrijft; wat daar niet in staat, is niet overgedragen.
+Waar dit materiaal is herzien, is een deel van de tekst dus door een taalmodel
+geschreven. Kom je een fout tegen, dan zegt die iets over deze werkwijze en niet
+alleen over die pagina; we horen het graag, zie [Bijdragen](#bijdragen).
 
-Dat is trager en duurder dan het in één gesprek doen, en dat is de bedoeling. Deze
-repo is niet stukgegaan aan één slechte wijziging maar aan veel wijzigingen die
-ieder op zich verdedigbaar waren en samen de samenhang hebben opgegeten. Daar helpt
-geen betere reviewer tegen; daar helpt tegen dat iemand vóór elke wijziging meet wat
-er staat, dat elk besluit ergens landt waar de volgende het terugvindt, en dat wie
-beoordeelt niet dezelfde is als wie het bedacht.
-
-Of het werkt, weten we niet zeker. Het is bijgesteld terwijl we het gebruikten en
-dat zal het blijven. Wat het kost en wat er misgaat wordt bijgehouden in
-[`onderzoek/`](onderzoek/) - de eerste twee dagen kostten 1,7 miljoen tokens aan
-agents en leverden negen bevindingen op, waarvan er één over de werkwijze zelf
-gaat en toegeeft dat de eerste maatregel niet werkte.
-
-Dat betekent ook iets voor wie dit materiaal gebruikt of eraan bijdraagt: **een deel
-van wat hier staat is door een taalmodel geschreven**, onder toezicht van een docent
-die de inhoudelijke besluiten neemt en elke wijziging aftekent. Kom je een fout
-tegen, dan is dat waardevolle informatie over deze werkwijze en niet alleen over
-deze pagina; zie [Bijdragen](#bijdragen).
-
-Hoe het in de praktijk gaat staat in [`rollen/rollen.md`](rollen/rollen.md): de
-stappen, de contracten ertussen, en waarom de vakdeskundige er middenin zit. De lus
-draai je met `/orc <issuenummer>`; werkitems zijn GitHub-issues, en de stap waarin
-het werk zit staat op het
-[projectbord](https://github.com/orgs/hanze-hbo-ict/projects/4). De rolprompts en
-contracten staan in `.claude/agent-role-loop/core/`, de subagents in
-`.claude/agents/`.
-
-**Niet alles hoeft door de lus.** Een typefout, een dode link of een naam
-rechtzetten doe je gewoon, in een branch met een pull request. De lus is voor een
-sectie of een week.
-
-## Onderzoek
-
-Deze werkwijze is een experiment, en wat we erover leren staat apart in
-[`onderzoek/`](onderzoek/): de [metingen](onderzoek/metingen.md) per rol per ronde,
-en de [bevindingen](onderzoek/bevindingen.md) over de werkwijze zelf, elk met het
-bewijs en met wat het veranderde.
-
-Dat staat los van het werk aan het materiaal, want het is een andere lezer. Wie het
-cursusmateriaal onderhoudt heeft niets aan een tokentelling; wie de werkwijze wil
-begrijpen of overnemen heeft niets aan de vraag of week 5 een raster doorloopt.
+De stappen, de rollen en de contracten ertussen staan in
+[`rollen/rollen.md`](rollen/rollen.md). Wat de werkwijze kost en wat eraan misgaat
+staat in [`onderzoek/`](onderzoek/).
 
 ## Conventies
 
@@ -114,7 +83,8 @@ uv sync
 uv run pre-commit install
 ```
 
-Commits direct op `master` zijn geblokkeerd door een pre-commit hook; werk in een feature branch en maak een pull request.
+Commits direct op `master` zijn geblokkeerd door een pre-commit hook; werk in
+een feature branch en maak een pull request.
 
 ### Wil je met de rollenlus werken?
 
