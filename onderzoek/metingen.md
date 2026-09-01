@@ -106,8 +106,25 @@ gelezen:
 | Achttien docstrings vertaald, `with open` in week 7 (#128) | Leek mechanisch | **nee**, wel door de orkestrator zelf nagelezen |
 | `a.txt` teruggehaald (#113) | Eén ontbrekend bestand | **nee** |
 
-**Zeven ingrepen, nul beoordelaars.** Drie ervan leverden een reparatie op die een
-redacteur zou hebben gevangen; die staan als bevinding 4. Dat is geen verwijt
+### 1 september 2026, na het samenkomen met het werk van de tweede docent
+
+| Werk | Waarom buiten de lus | Achteraf gelezen? |
+|---|---|---|
+| Vier issues bijgewerkt na PR #133/#135 | Vaststellen wat er achterhaald was | **nee** |
+| README ingekort van 1039 naar 677 woorden | Redactie op een document buiten `source/` | **nee** |
+| Het opbreken over drie niveaus vastgelegd (#138) | Een besluit van de vakdeskundige noteren | **nee** |
+| De matrijsprocedure rechtgezet (#139) | Correctie op mijn eigen formulering | **nee** |
+| A4 naar de PGM2-matrijs (#140) | Een voorstel uit de correctielijst uitvoeren | **nee** |
+| Consistentiecontrole op issues en bord | Onderhoud, geen materiaal | **nee** |
+
+**Dertien ingrepen in totaal, nul beoordelaars.** Bij de eerste zeven leverden er
+drie een reparatie op die een redacteur zou hebben gevangen (bevinding 4); bij deze
+zes leverde de laatste er vier op, want de consistentiecontrole vond vier issues met
+een achterhaalde bewering (bevinding 10).
+
+Dat de controle die fouten vond is geen weerlegging van de regel maar de
+bevestiging ervan: het gebeurde omdat er gekeken werd, en het was toeval dat er
+gekeken werd. Dat is geen verwijt
 achteraf maar de reden dat de regel er nu is - en deze tabel is de plek waar te
 zien is of hij wordt nageleefd.
 
