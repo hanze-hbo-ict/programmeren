@@ -447,6 +447,55 @@ De tweede is de goedkoopste, en hij sluit aan op wat de rol uit zichzelf al deed
 
 ---
 
+## 13. Eén artefact per overdracht maakt het werkitem onleesbaar
+
+*1 september 2026.*
+
+Werkitem #146 stond bij de poort op **135.829 tekens** — ruwweg twintigduizend
+woorden, verdeeld over een body en acht reacties. De vakdeskundige:
+
+> "issue #146 is waanzinnig groot geworden, zo veel tekst dat ik de bomen door het
+> bos niet meer zie."
+
+Geen van die artefacten is te lang voor zichzelf. C1b is 34.000 tekens omdat de
+verkenner negen bestanden heeft doorgemeten en dat ook laat zien; C2 is 36.000
+tekens omdat het negen onderdelen met verificatiemodellen draagt. De regel *één
+artefact in, één artefact uit* werkt precies zoals bedoeld. Het probleem is de
+**optelsom**, en die heeft niemand als taak.
+
+Dat is een ander soort gebrek dan de vorige twaalf. Hier gaat niets mis in een
+rol; het gaat mis tussen de rollen, op de enige plek waar een mens moet beslissen.
+De lus is gebouwd om context te isoleren zodat rollen elkaar niet besmetten — maar
+de vakdeskundige heeft juist géén isolatie: hij krijgt bij de poort alles tegelijk.
+
+Er speelt nog iets. Dezelfde bevinding kwam drie keer terug — de leesvragen die
+fout aflopen, telkens met een nieuwe opgave erbij (18 en 20, daarna 14) — en elke
+keer schreef ik hem opnieuw op en legde ik hem opnieuw voor. Dat is niet alleen
+verspilling: het is ruis bovenop een issue die al te vol was, en het maakt het
+besluit dat er wél ligt moeilijker vindbaar. De vakdeskundige moest dat twee keer
+zeggen.
+
+**Wat het veranderde.** Twee dingen, allebei uitgevoerd.
+
+De **body van het werkitem is nu de kaart en niet het archief**: waar het over
+gaat in vijf regels, wat er níét verandert, de zes besluiten die bij de poort
+liggen met hun aanbeveling, en een tabel met links naar de artefacten en wat ze
+kostten. De oorspronkelijke tekst staat eronder in een `<details>`. De artefacten
+blijven staan waar ze staan — de traceerbaarheid is niet het probleem, de
+vindbaarheid was het.
+
+En het besluit *Leesvragen mogen fout aflopen* in `curriculum/uitgangspunten.md`
+is **van gevallen naar soort** herschreven. Het somde opgave 18 en 20 op; nu zegt
+het dat het voor de hele soort geldt, met "blijf hiervan af, meld het niet
+opnieuw" erbij en met opgave 14 er expliciet bij omdat die het gevaarlijkst is.
+Een besluit dat gevallen opsomt, nodigt uit tot het melden van het volgende geval.
+
+Wat er niet is opgelost: er is nog steeds geen rol die de optelsom bewaakt, en
+niets dwingt de volgende orkestrator om de body als kaart te onderhouden.
+**Deels opgelost.**
+
+---
+
 ## Open: welk model per rol
 
 *1 september 2026. Nog niet onderzocht.*
