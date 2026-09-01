@@ -137,43 +137,39 @@ inhoudelijke herziening. De regel hierboven beslist dan welke naam wint: in een
 functie van drie regels de korte, in een functie van dertig de uitgeschreven.
 Binnen één bestand is de keuze wel overal dezelfde.
 
-## Objectmethoden pas vanaf week 7
+## Objectmethoden pas vanaf PGM2 week 1
 
 Een methode is een handeling die bij een object hoort. Een student die
 `L.append(x)` schrijft voordat hij weet wat een object is, gebruikt dat begrip
 zonder het te hebben.
 
-**Tot en met week 6 gebruikt het materiaal functies en operatoren, geen
+**In heel PGM1 gebruikt het materiaal functies en operatoren, geen
 methoden:**
 
-| Niet vóór week 7 | Wel |
+| Niet vóór PGM2 week 1 | Wel |
 |---|---|
-| `L.append(x)` | `L = L + [x]` |
+| `L.append(x)` | `L[i] = x`, of `L = L + [x]` |
 | `s.isdigit()` | `from string import digits`, en dan `c in digits` |
 
-**Vanaf week 7 mogen methoden.** Die grens valt samen met de mutatiegrens, en
-dat is geen toeval: een methode is een handeling die bij een object hoort, en
-muteren is precies wat zo'n handeling doet. Tot week 7 leeft de student in een
-wereld zonder neveneffecten en zonder objecten; daarna komen ze allebei, en PGM2
-legt uit waarom ze samenhangen. Zie
-[`curriculum/uitgangspunten.md`](../curriculum/uitgangspunten.md).
+**Vanaf PGM2 week 1 mogen methoden.** Die grens valt niet meer samen met de
+mutatiegrens: PGM1 week 7 laat mutatie zien via `L[i] = x`, wat geen
+methodeaanroep vraagt. Methodeaanroep zelf wordt voor het eerst
+geïntroduceerd in PGM2 week 1, samen met dictionaries en sets. Zie
+[`curriculum/uitgangspunten.md`](../curriculum/uitgangspunten.md) en
+[`curriculum/leerlijn.md`](../curriculum/leerlijn.md).
 
-Zonder die grens is week 7 niet te maken. Leeruitkomst **P4** vraagt letterlijk
-om "lijsten en strings en de bijbehorende methodes", en tekstanalyse zonder
-`.split()` of dictionaries zonder `.items()` wordt gekunsteld.
+Leeruitkomst **P4** vroeg lange tijd letterlijk om "lijsten en strings en de
+bijbehorende methodes" in PGM1, maar wordt daar al jaren niet meer op
+getoetst. Dat staat als voorgestelde correctie in
+[`curriculum/leeruitkomsten.md`](../curriculum/leeruitkomsten.md#voorgestelde-correcties).
 
-Het materiaal staat er goed voor. Muterende lijstmethodes komen vóór week 7
-**nergens** voor; de enige vindplaats in de hele repo is een PGM2-opgave die
-`L.sort()` juist *verbiedt*.
-
-Stringmethodes stonden er in week 5 acht, niet vier zoals hier eerder stond: vier
-keer `.format()` in `problems/5_basis` en vier keer in `solutions/5_basis`, te
-weten drie keer `.replace()` en één keer `.split()`. Alle acht zijn bij de
-herziening van week 5 verdwenen. Wat vóór week 7 nog overblijft is twee keer
-`.lower()` in `solutions/4_python_bat.ipynb`; in week 7 zelf staat twee keer
-`.split()`.
-
-Dat maakt dit een conventie die te handhaven is in plaats van een wens.
+**Het materiaal volgt deze regel nog niet.** `lectures/7a_lists_advanced.ipynb`
+introduceert `.append()` nu nog expliciet als methode (vier keer, plus één keer
+in `problems/7_opstap.ipynb`), en `problems/5_extra.md` (PGM1 week 5, laag
+extra) introduceert methode, object én tuple zelfs nog eerder, via
+`image.plot_point(...)` en `image.save_file()`. Dat is bekend en hoort te
+worden rechtgezet bij de herziening van PGM1 week 7 (issue #102) en PGM2 week 1
+(issue #134) — het is nu nog geen conventie die te handhaven is.
 
 :::{note}
 Het woord *methode* komt in week 1 wel voor, in `lectures/1a_intro_programmeren`,
