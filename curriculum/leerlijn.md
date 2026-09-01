@@ -142,7 +142,7 @@ Gemeten op het voorkomen van de betreffende constructies in `source/`.
 | Leeruitkomst | Weging | Bevinding | Besluit |
 |---|---|---|---|
 | **PGM2 P3** tekstbestanden | 10% | Drie plekken, waarvan twee in de Markov-opgave van PGM1 week 7. | Naar PGM1 week 6 |
-| **PGM1 A4** recursie | 10%, creëren | Wordt in PGM1 niet onderwezen; week 3 toont alleen de zelfaanroep. Het oefententamen toetst het ook niet. | Naar de PGM2-matrijs |
+| ~~**PGM1 A4** recursie~~ | | **Uitgevoerd op 1 september 2026**: staat nu als PGM2 A6. Wat resteert is de 10% die in PGM1 vrijkomt. | Zie `leeruitkomsten.md`, *Voorgestelde correcties* |
 | **PGM2 P4** excepties | 10% | Bij de herziening van week 5 is `try`/`except` uit de gegeven code van `problems/5_basis` gehaald; de menukeuze wordt daar nu als string vergeleken. Excepties worden nergens in PGM1 onderwezen. | Blijft in PGM2, moet daar onderwezen worden |
 | **PGM2 P1** lussen | 5% | Wordt in PGM1 onderwezen (week 4 en 5) en in PGM2 getoetst. Kan bedoeld zijn als herhaling, maar staat niet in de planning voor 2026. | open |
 | **PGM2 A5** finite state machines | geen | Komt nergens voor. | Schrappen; zie [leeruitkomsten.md](leeruitkomsten.md) |

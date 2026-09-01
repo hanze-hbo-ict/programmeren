@@ -280,7 +280,7 @@ draait wel.
 
 | Besluit | Aard | Status |
 |---|---|---|
-| Recursie is naar PGM2 verplaatst; imperatief komt eerst | organisatorisch | gesloten, deels uitgevoerd: de toetsmatrijs volgt nog niet |
+| Recursie is naar PGM2 verplaatst; imperatief komt eerst | organisatorisch | gesloten, uitgevoerd; de matrijs volgt sinds 1 september 2026 |
 | De theoretische afsluiting is geschrapt | ervaring | gesloten |
 | Schakelingen zijn geschrapt, binair is afgeslankt | organisatorisch | gesloten, uitgevoerd |
 | De wekelijkse leesopgaven zijn vervallen | praktisch | gesloten |
@@ -344,9 +344,10 @@ Twee dingen die er wél uit volgen:
    zichzelf kan aanroepen, en niets meer. Het gedrag zelf wordt pas in PGM2
    bestudeerd. Dat is geen omissie maar het besluit in uitvoering.
 
-   Daaruit volgt wel dat leeruitkomst **A4** in de verkeerde toetsmatrijs staat:
-   PGM1 belooft ontwerpen van recursieve oplossingen op creëren-niveau voor 10%
-   van het tentamen, terwijl het vak het onderwerp niet aanbiedt. Zie
+   Leeruitkomst **A4** stond daardoor in de verkeerde toetsmatrijs: PGM1 beloofde
+   ontwerpen van recursieve oplossingen op creëren-niveau voor 10% van het
+   tentamen, terwijl het vak het onderwerp niet aanbiedt. Op 1 september 2026 is
+   zij verplaatst naar de PGM2-matrijs, waar zij **A6** heet. Zie
    [leeruitkomsten.md](leeruitkomsten.md).
 
 ### De theoretische afsluiting
@@ -490,7 +491,7 @@ Daaruit volgt dat de twee leeruitkomsten van plaats wisselen met recursie:
 | Vak | Eruit | Erin |
 |---|---|---|
 | PGM1 | A4 recursie, 10% | P3 bestanden, 10% |
-| PGM2 | P3 bestanden, 10% | A4 recursie, 10% |
+| PGM2 | P3 bestanden, 10% | recursie, 10% (heet daar **A6**) |
 
 Beide matrijzen blijven op 100% sluiten, en beide vakken toetsen voortaan wat ze
 onderwijzen. PGM2 moet excepties dan wel daadwerkelijk gaan behandelen; nu staat
