@@ -27,7 +27,7 @@ dan de week waarin het hier staat.
 | 4 | Lussen | A1 | `for`, `while`, begrensde herhaling |
 | 5 | Geneste lussen | A1, A3 | geneste lus, 2D-lijst, ASCII-art, bordrepresentatie |
 | 6 | Bestanden en data | bestanden † | bits, bytes, ASCII, newline, `with open`, beeldbewerking |
-| 7 | Lijsten en dictionaries | P4, A3 | dictionary, mutatie, objectmethode, Markov |
+| 7 | Mutabiliteit en algoritmeontwerp | P4, A3 | mutatie, functiecompositie, deelprobleem, algoritme |
 
 † De leeruitkomst over tekstbestanden staat nu in de PGM2-matrijs en wisselt van
 plaats met recursie. Zie [leeruitkomsten.md](leeruitkomsten.md).
@@ -47,16 +47,19 @@ de PGM2-recursieweek verplaatst.
 beeldbewerking blijft, maar dan als wat het al is: een bestand inlezen, bewerken
 en wegschrijven.
 
-**Week 7 is de grens waar mutatie én objectmethoden binnenkomen.** De weken
-daarvoor rekenen en geven terug, en veranderen niets aan wat ze meekrijgen. Dat
-was tot nu toe feitelijk zo maar nergens gezegd. Dat het één grens is en niet
-twee volgt uit de zaak zelf: `L.append(x)` is een methode én een mutatie. Zie
+**Week 7 is de grens waar mutatie binnenkomt.** De weken daarvoor rekenen en
+geven terug, en veranderen niets aan wat ze meekrijgen. Dat was tot nu toe
+feitelijk zo maar nergens gezegd. Objectmethoden vallen niet op deze grens:
+week 7 laat mutatie zien via `L[i] = x`, wat geen methodeaanroep vraagt. Zie
 [uitgangspunten.md](uitgangspunten.md).
 
-**Dictionaries krijgen meer gewicht in week 7.** CS5 introduceert ze als een
-verbijzondering van een lijst, index-gebaseerd tegenover key-gebaseerd, en
-scheert er verder overheen. Dat is te weinig voor wat PGM2 er in week 1 op
-bouwt.
+**Dictionaries en de Markov-opgave verhuizen naar PGM2 week 1.** CS5
+introduceert dictionaries in PGM1 als een verbijzondering van een lijst,
+index-gebaseerd tegenover key-gebaseerd, en scheert er verder overheen. Dat is
+te weinig voor wat PGM2 er in week 1 op bouwt, dus landen dictionaries daar in
+plaats van in PGM1 week 7. Methodeaanroep wordt voor het eerst geïntroduceerd
+in diezelfde week, samen met sets; de Markov-opgave gaat mee. Week 7 draagt
+vanaf nu de mutatiegrens, functiecompositie en algoritmeontwerp.
 
 ### Verdeling van het opgavemateriaal
 
@@ -102,7 +105,7 @@ uitgangssituatie, niet de norm; het verschil tussen beide kolommen is het werk.
 
 | Week | Leidend voor 2026 | Verantwoordelijk | Materiaal nu |
 |---|---|---|---|
-| 1 | Datastructuren | BRRA | List comprehension |
+| 1 | Datastructuren (lists ter herhaling, dictionaries, sets, evt. tuples, methodeaanroep, Markov) | BRRA | List comprehension |
 | 2 | Comprehensions (list, dict, set, range, enumerate) | HOEM | Recursie |
 | 3 | Recursie | HOEM | Algoritmen (knapzak, wisselgeld) |
 | 4 | Use it or lose it, lambda | HOEM | Objecten en dictionaries |

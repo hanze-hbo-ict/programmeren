@@ -103,6 +103,7 @@ toetsing is een belofte die niemand nakijkt.
 | **PGM1 P7** (docstrings) | Wél onderwezen en overal in het materiaal toegepast, maar niet getoetst. | Weging geven of expliciet als vormeis opnemen. |
 | **PGM2 P6** (operator overloading) | Wél onderwezen, en in de planning voor 2026 krijgt het een hele week. | Weging geven, of de week heroverwegen. |
 | **PGM2 P7** (externe bibliotheken) | Verspreid aanwezig, niet als onderwerp behandeld. | Besluiten of dit een leeruitkomst moet blijven. |
+| **PGM1 P4** (lijsten/strings en de bijbehorende methodes) | Het methodes-deel wordt al jaren niet meer in PGM1 onderwezen of getoetst. Vanaf de herziening van PGM1 week 7 en PGM2 week 1 introduceert PGM1 geen objectmethoden meer; dat verschuift volledig naar PGM2 week 1. Zie [leerlijn.md](leerlijn.md) en [uitgangspunten.md](uitgangspunten.md). | Herformuleren tot wat lijsten/strings betreft zonder de methodes, of het methodes-deel schrappen. |
 
 Daarnaast staat één uitkomst in de verkeerde matrijs:
 
