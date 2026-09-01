@@ -496,6 +496,56 @@ niets dwingt de volgende orkestrator om de body als kaart te onderhouden.
 
 ---
 
+## 14. Beoordelaars herhalen een besluit dat de poort al nam, omdat ze het besluit niet krijgen
+
+*1 september 2026. Werkitem #134.*
+
+Alle vier de beoordelaars gaven bij de eerste ronde onafhankelijk **BLOKKEER**,
+en drie van de vier noemden dezelfde tekst als blokkerend: een zin in
+`lectures/8a_datastructuren.ipynb` die verwijst naar een tuple "die je in PGM1
+week 7 al bent tegengekomen." Die tuple stond op dat moment inderdaad nog
+nergens in het PGM1-week-7-materiaal — maar dat was geen gat, het was een
+bewust genomen besluit. Bij de poort van hetzelfde werkitem had de
+vakdeskundige al vastgelegd dat tuples naar PGM1 week 7 verhuizen en dat de
+volgorde waarin de twee werkitems (#134 en #102) worden uitgevoerd er niet toe
+doet, juist met het argument dat de daadwerkelijke onderwijsvolgorde (PGM1 vóór
+PGM2) los staat van welke pull request eerder landt.
+
+De beoordelaars konden dat niet weten. Het contract schrijft voor dat elke
+beoordelaar **alleen de kern van C5** krijgt, met opzet: "Geef geen enkele
+beoordelaar het uitgebreide deel of het oordeel van een ander." Het C4-besluit
+zelf — de reden waarom de tekst mag staan zoals hij staat — hoort bij geen van
+beide. Het gevolg: vier onafhankelijke, correcte metingen ("dit klopt niet met
+wat er nu in `source/` staat") die vier keer tot dezelfde onterechte conclusie
+leidden ("dus is dit een fout"), omdat er niemand was die het antwoord op de
+vraag "is dit besluit al genomen?" kon geven behalve de vakdeskundige zelf, pas
+bij het lezen van het C7.
+
+Dat kostte een volledige tweede beoordelingsronde: vier beoordelaars plus de
+hoofdredacteur opnieuw, **ongeveer 669.000 tokens** om te bevestigen wat bij de
+eerste ronde al waar was. Zie [metingen.md](metingen.md#werkitem-134--pgm2-week-1-van-list-comprehension-naar-datastructuren).
+
+Dit is een ander soort gebrek dan bevinding 1, dat over een ontbrekende
+ernstdrempel ging. Hier maten de rollen precies goed volgens hun eigen
+contract; het gat zit tussen de rollen, in wat een latere rol niet krijgt van
+een eerdere.
+
+**Wat het veranderde.** Nog niets. De isolatie tussen ontwerp en beoordeling is
+met opzet zo gebouwd (bevinding 11 laat zien wat er misgaat als een latere rol
+wél toegang heeft tot eerdere redenering: hij citeert zichzelf in plaats van de
+bron), en het is niet vanzelfsprekend dat het C4-besluit daar een uitzondering
+op moet zijn. Een mogelijke maatregel — de C5-kern laten verwijzen naar de
+specifieke C4-beslissingen die een bewering onderbouwen, zodat een beoordelaar
+kan navragen zonder de hele geschiedenis te krijgen — is niet ingevoerd en niet
+beproefd.
+
+Wat de bevinding wel oplevert is dezelfde **plek om te tellen** als bevinding
+11: komt dit patroon terug bij een volgend werkitem met een vergelijkbare
+poortbeslissing, dan is dat een sterker argument dan deze ene, goed gemeten
+maar op zichzelf staande waarneming.
+
+---
+
 ## Open: welk model per rol
 
 *1 september 2026. Nog niet onderzocht.*
