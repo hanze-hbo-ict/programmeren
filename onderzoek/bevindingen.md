@@ -203,6 +203,40 @@ de eindredacteur weet het. Maar het wijst op iets breders: het werkitemsjabloon
 heeft een veld *Wat de repo niet weet*, en dat is er juist voor. De eindredacteur
 draait zonder werkitem en heeft dat veld dus niet. **Nog niet opgelost.**
 
+### Tweede voorval, 1 september 2026
+
+Bij de leesronde op week 4 merkten **beide** beoordelaars los van elkaar op dat
+twee midtermvragen geen juist antwoord hebben: opgave 18 loopt op een
+`ZeroDivisionError`, opgave 20 eindigt nooit. De redacteur voerde er nog een
+bewijsstuk bij aan - de dode variabele `number = 48` - om te laten zien dat "het
+programma werkt niet" niet de bedoeling was.
+
+Beide metingen klopten. Ik heb ze zelf nagerekend en ze hielden stand. De conclusie
+klopte niet: de vragen toetsen code lezen en begrijpen, en tot de uitkomsten die je
+leert voorspellen horen de fouten. "Het programma werkt niet" *is* het antwoord, en
+die optie staat bij elke vraag.
+
+Twee dingen maken dit voorval erger dan het eerste. De kennis lag niet bij één rol
+die pech had: twee rollen met verschillende opdrachten kwamen langs dezelfde plek
+en beoordeelden hem allebei verkeerd, wat betekent dat contextisolatie hier niet
+helpt - ze isoleert ze van elkaar, niet van een gedeelde blinde vlek. En het
+nareken*en* hielp evenmin: de meting bevestigen bevestigde de verkeerde conclusie,
+want er viel niets te weerleggen aan de waarneming.
+
+Wat het wél had gevangen is dat het besluit ergens stond. Dat is precies wat
+bevinding 7 al concludeerde, en de herhaling laat zien dat het veld *Wat de repo
+niet weet* het probleem niet dekt: dit werkitem bestond nog niet toen de rollen
+draaiden. Bij een leesronde is er geen C0 om zo'n veld in te vullen.
+
+**Wat het veranderde.** Het besluit staat nu in `curriculum/uitgangspunten.md`
+onder *Leesvragen mogen fout aflopen*, met een tabel die de twee vragen die goed
+zijn scheidt van de twee die het niet zijn, en met een regel gericht aan wie het
+materiaal later nakijkt: repareer deze niet. Dat is de goedkoopste borging, want
+ze staat op de plek waar een rol toch al langskomt.
+
+Wat er niet is veranderd: een leesronde begint nog steeds zonder een plek waar
+staat wat er over dit materiaal al besloten is. **Deels opgelost.**
+
 ---
 
 ## 8. Het register hield de stand van de discussie bij, niet die van het materiaal
@@ -369,6 +403,47 @@ opvolgden.
 **Voor het onderzoek is dit het interessantste geval in dit document**, want het
 raakt de aanname onder de hele lus. Contextisolatie beschermt rollen tegen elkaars
 redenering. Niets beschermt de orkestrator tegen zijn eigen.
+
+---
+
+## 12. Een rol zonder shell beweert toch wat het gereedschap zou doen
+
+*1 september 2026.*
+
+De redacteur las week 4 in een leesronde. Hij had `Read`, `Glob` en `Grep`, geen
+`Bash`, en hij wist dat: bij *Build schoon* schreef hij **niet gemeten**, met de
+reden erbij. Twee alinea's verderop stelde hij dat `lectures/4a_lussen.ipynb` de
+hook `check-code-blocks` breekt omdat cel 74 een `return` op moduleniveau heeft
+zonder `<!-- codecontrole:skip -->`, en in zijn slotparagraaf dat het bestand
+daarom "niet te committen" is — als één van de dingen die vóór publicatie moesten.
+
+Gedraaid: de hook slaagt, op alle tien de bestanden van week 4, en
+`check-notebook-tags` ook. `return` op moduleniveau is voor `ast.parse` geldige
+syntaxis; de fout valt pas bij `compile`. De waarneming klopte — die `return`
+staat er, zonder skip — maar het gevolg was afgeleid uit hoe de hook zou werken.
+
+Dit is bevinding 7 met een verschil dat telt. Daar lag de ontbrekende kennis buiten
+de repository en kon de rol er niet bij. Hier lag ze binnen handbereik: het is één
+commando, de rol had het alleen niet. En de rol maakte zichtbaar dat hij het
+onderscheid kende, want hij paste het één regel eerder correct toe.
+
+De verleiding zit in de vorm van het oordeel. "Niet gemeten" invullen bij een
+kolom kost niets; een aparte alinea openen met "dit heb ik niet kunnen nagaan"
+verzwakt de bevinding waar je hem juist opschrijft.
+
+**Wat het veranderde.** De bevinding is niet in werkitem #146 als eis beland maar
+als weerlegging, onder *Wat de repo niet weet*, zodat de auteur er geen regel voor
+schrijft die niets oplost. Structureel is er nog niets veranderd. Twee richtingen,
+geen van beide genomen:
+
+- De beoordelaars `Bash` geven. Dat maakt ze duurder en het haalt de scheiding weg
+  die de leesronde goedkoop houdt.
+- In het C6-contract eisen dat een bewering over gedrag van gereedschap het label
+  *gelezen* of *gemeten* draagt, net als de kolom nu al doet — dan geldt de regel
+  overal in het oordeel en niet alleen in de tabel.
+
+De tweede is de goedkoopste, en hij sluit aan op wat de rol uit zichzelf al deed.
+**Nog niet opgelost.**
 
 ---
 
