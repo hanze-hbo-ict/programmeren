@@ -289,7 +289,7 @@ draait wel.
 | Canonieke Python aanbieden, mechanisme later uitleggen | didactisch | staand, onderbouwd |
 | Het bord verandert niet in week 5; de grens wordt daar benoemd | didactisch | gesloten |
 | De parameternamen van `board.py` blijven zoals ze zijn | praktisch | gesloten |
-| Gewichten mogen binnen een vak schuiven; de uitkomsten zelf liggen dit jaar vast | organisatorisch | staand, onderbouwd |
+| De vastgestelde matrijs wijzigt niet als bijvangst; bevindingen gaan naar *Voorgestelde correcties* | organisatorisch | staand, onderbouwd |
 | Objectmethoden pas vanaf PGM2 week 1, los van de mutatiegrens in PGM1 week 7 | didactisch | staand, onderbouwd |
 | Dictionaries en de Markov-opgave verhuizen van PGM1 week 7 naar PGM2 week 1 | didactisch | staand, nog niet uitgevoerd |
 | Objecten pas in PGM2 | didactisch | staand, onderbouwd |
@@ -529,31 +529,34 @@ binnen de regel dat objectmethoden in PGM1 wegblijven. De variant zonder `with`
 zou dat ook doen, maar laat het bestand open en leert precies de gewoonte aan
 waarvoor `with` bestaat.
 
-### Wat er aan de leeruitkomsten wel en niet mag veranderen
+### Wat er aan de leeruitkomsten mag veranderen
 
 De leeruitkomsten in [leeruitkomsten.md](leeruitkomsten.md) zijn tot nu toe als
-volledig gegeven behandeld. Dat is te strikt. De grens loopt hier:
+volledig gegeven behandeld. Dat is te strikt. Het gaat niet om een slot maar om een
+**procedure**, en die staat in dat document zelf: er is een **vastgestelde matrijs**,
+en daaronder een lijst met **voorgestelde correcties**.
 
-**Wat vastligt dit jaar.** De uitkomsten zelf: welke er zijn, hoe ze geformuleerd
-zijn, aan welke HBO-i-competentie ze hangen. Er gaat er dit jaar geen weg, er komt
-er geen bij, en de formulering blijft. Dat is extern vastgelegd en niet iets wat
-een herziening van het materiaal kan wijzigen.
+**Wat er niet gebeurt.** De vastgestelde matrijs wordt niet gewijzigd als bijvangst
+van materiaalwerk. Wie bij het herzien van een week merkt dat een uitkomst niet
+klopt, past de matrijs niet aan; dat zou de bindende laag laten meebewegen met wat
+er toevallig is geschreven, en dan bindt zij niets meer.
 
-**Wat wel mag.** Met de **gewichten** mag geschoven worden, binnen PGM1 of binnen
-PGM2. Weegt een uitkomst zwaarder dan het materiaal rechtvaardigt, of lichter, dan
-is dat te herverdelen zolang het totaal per vak klopt en de verschuiving binnen
-hetzelfde vak blijft. Schuiven tussen PGM1 en PGM2 kan niet.
+**Wat er wel gebeurt.** Zo'n bevinding gaat naar *Voorgestelde correcties*, met de
+bevinding en een voorstel. Dat geldt voor alles: een weging die niet klopt met wat
+er getoetst wordt, een uitkomst die in de verkeerde matrijs staat, en ook een
+formulering die niet meer beschrijft wat het vak doet - zie de rij over PGM1 P4, die
+bij de knip tussen mutatie en methodeaanroep is toegevoegd. Er staat op dit moment
+niets in de weg dat een voorstel later wordt overgenomen; wat vastligt is dat het
+een besluit vraagt en geen zijdelingse wijziging is.
 
-Er ligt werk dat hierop wacht. A4 in PGM1 belooft 10% van het tentamen over
-recursie, terwijl recursie sinds het besluit "recursie na de lussen" in PGM2 wordt
-onderwezen. De uitkomst blijft dit jaar staan; wat er kan gebeuren is dat die 10%
-binnen PGM1 wordt herverdeeld. A5 in PGM2 weegt al niets en blijft eveneens staan.
+**Met de gewichten binnen een vak** is meer ruimte, want die raken geen externe
+afspraak: weegt een uitkomst zwaarder dan het materiaal rechtvaardigt, dan is dat te
+herverdelen zolang het totaal per vak klopt. Schuiven tussen PGM1 en PGM2 kan niet.
 
 Wat dit betekent voor een ontwerper: kan een week een uitkomst niet dragen, dan is
-"deze uitkomst weegt hier te zwaar" een geldige uitkomst van je ontwerp, en
-"schrap de uitkomst" niet. Het blijft een besluit voor de vakdeskundige, dus het
-gaat als open vraag naar de poort en het landt hier en in de matrijs. Wat níét mag
-is de matrijs stilzwijgend anders lezen dan hij staat.
+dat een bevinding en geen vrijheid. Ze gaat als open vraag naar de poort, en wat
+daar wordt besloten landt in de matrijs of in de correctielijst. Wat níét mag is de
+matrijs stilzwijgend anders lezen dan hij staat.
 
 ### Waar de student werkt
 
