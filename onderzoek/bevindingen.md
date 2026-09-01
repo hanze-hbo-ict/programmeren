@@ -264,6 +264,58 @@ de toets is dezelfde: gebeurt het daarna nog een keer.
 
 ---
 
+## 10. Een correctie in een reactie corrigeert het document niet
+
+*1 september 2026.*
+
+Bij een consistentiecontrole op de open werkitems bleken er vier een bewering te
+dragen die al was weerlegd. In alle vier de gevallen **stond de correctie er wel,
+maar als reactie eronder** terwijl de fout in de tekst zelf bleef staan:
+
+- **#104** droeg de randvoorwaarde *"er gaat er geen weg, er komt er geen bij, en
+  de formulering blijft; dat is extern vastgelegd"*, een dag nadat die formulering
+  in `curriculum/uitgangspunten.md` was rechtgezet en er een correctie op de issue
+  stond.
+- **#136** noemde 71% waar de hermeting 60% gaf - een cijfer dat een uur eerder al
+  was gecorrigeerd en dat ik daarna alsnog in een nieuw werkitem overnam.
+- **#124** droeg datzelfde cijfer op meerdere plekken, en voerde bevinding A2 nog
+  als open terwijl zij was uitgevoerd.
+- **#126** verwees naar "bevinding A4", wat verwarrend werd zodra leeruitkomst A4
+  van matrijs veranderde.
+
+Wie zo'n issue van boven naar beneden leest, gelooft de tekst. De correctie
+eronder wordt gevonden door wie hem toch al kent.
+
+**Dit is de derde keer dat dezelfde vorm terugkomt.** Bevinding 8 ging over het
+besluitenregister dat de stand van de discussie bijhield en niet die van het
+materiaal. De veegronde vond 25 MB voor een geschrapt onderwerp omdat *gesloten*
+niet *uitgevoerd* betekende. En nu: een issue die *gecorrigeerd* is zonder dat de
+tekst het is.
+
+Steeds hetzelfde: **de vastlegging en de werkelijkheid lopen uiteen, en er is niets
+dat het verschil zichtbaar maakt.**
+
+**Wat het veranderde.** De vier issues zijn in hun body gecorrigeerd, niet alleen
+in een reactie, en #104 en #124 dragen bovenaan een regel die de lezer naar de
+reacties stuurt. Dat is een reparatie en geen maatregel.
+
+**Wat het niet oploste.** Er is geen regel die zegt waar een correctie hoort te
+landen. Voor artefacten in de lus is dat geen probleem - die zijn onveranderlijk en
+een nieuwe ronde levert een nieuw artefact op. Het probleem zit bij documenten die
+blijven staan en meebewegen: een werkitem, het besluitenregister, een
+conventietelling.
+
+Een mogelijke regel, nog niet ingevoerd: *corrigeer waar de fout staat, en laat in
+een reactie zien dat je het hebt gedaan* - de omgekeerde volgorde van wat er nu
+gebeurt. Of, sterker: een issue waarvan de body is achterhaald krijgt bovenaan een
+regel die dat zegt, zoals het besluitenregister sinds bevinding 8 achter de status
+zet of het materiaal al volgt.
+
+Of dat werkt is niet vastgesteld, en gezien bevinding 9 is een regel op zichzelf
+geen borging. De toets is dezelfde: gebeurt het daarna nog een keer.
+
+---
+
 ## Open: welk model per rol
 
 *1 september 2026. Nog niet onderzocht.*
