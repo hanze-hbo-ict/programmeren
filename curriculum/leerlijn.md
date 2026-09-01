@@ -110,7 +110,7 @@ uitgangssituatie, niet de norm; het verschil tussen beide kolommen is het werk.
 
 | Week | Leidend voor 2026 | Verantwoordelijk | Materiaal nu |
 |---|---|---|---|
-| 1 | Datastructuren (lists ter herhaling, dictionaries, sets, methodeaanroep, Markov) | BRRA | List comprehension |
+| 1 | Datastructuren (lists ter herhaling, dictionaries, sets, methodeaanroep, Markov) | BRRA | Datastructuren |
 | 2 | Comprehensions (list, dict, set, range, enumerate) | HOEM | Recursie |
 | 3 | Recursie | HOEM | Algoritmen (knapzak, wisselgeld) |
 | 4 | Use it or lose it, lambda | HOEM | Objecten en dictionaries |
