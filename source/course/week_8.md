@@ -2,7 +2,7 @@
 
 ![Schotel](/images/saucer.png)
 
-## List comprehensions
+## Datastructuren
 
 ```{tableofcontents}
 ```

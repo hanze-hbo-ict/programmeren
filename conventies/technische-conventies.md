@@ -433,11 +433,12 @@ draagt. Twee uitzonderingen kent hij:
 - Een uitwerking die `input()` vraagt of niet uit zichzelf eindigt, kan niet
   onbewaakt draaien en mag overgeslagen worden.
 
-> **Bekende afwijking.** 15 cellen voldoen nog niet, verdeeld over
-> `problems/8_basis.ipynb` (10 skeletcellen met `return [...]`),
+> **Bekende afwijking.** 5 cellen voldoen nog niet, verdeeld over
 > `problems/2_opstap.ipynb` (4) en `practicals/2_sequenties_en_data.ipynb` (1).
-> Omdat de hook alleen kijkt naar bestanden die je aanraakt, blokkeert dit niets
-> tot het betreffende document aan de beurt is.
+> Het waren er 15, tot de tien skeletcellen van `problems/8_basis.ipynb` bij de
+> herziening van PGM2 week 1 de tag kregen. Omdat de hook alleen kijkt naar
+> bestanden die je aanraakt, blokkeert dit niets tot het betreffende document
+> aan de beurt is.
 
 ## Markdown-linting
 
