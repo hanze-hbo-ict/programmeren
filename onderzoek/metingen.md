@@ -112,6 +112,67 @@ orkestratie. Verdeeld over de rollen:
 | beoordelaars | 248k (15%) |
 | triage, twee keer | 32k (2%) |
 
+## Werkitem #134 — PGM2 week 1, van list comprehension naar datastructuren
+
+Volledige lus, omvang L. Vier ontwerprondes (één FAAL, één HERZIEN bij de poort,
+één tweede FAAL), twee volledige beoordelingsrondes met alle vier de
+beoordelaars.
+
+| Rol | Ronde | Tokens | Duur | Uitkomst |
+|---|---|---|---|---|
+| triage | | 42.380 | 2 min | LUS, L |
+| verkenner | | 141.279 | 9 min | C1b |
+| curriculumontwerper | 1 | 102.628 | 10 min | C2 |
+| verhelderaar | 1 | 119.541 | 6 min | FAAL |
+| curriculumontwerper | 2 (herontwerp) | 186.913 | 11 min | C2 |
+| verhelderaar | 2 | 129.875 | 7 min | AKKOORD |
+| *vakdeskundige* | | *mens* | | C4 HERZIEN |
+| curriculumontwerper | 3 (reparatie na HERZIEN) | 91.632 | 8 min | C2 |
+| verhelderaar | 3 | 98.315 | 9 min | FAAL |
+| curriculumontwerper | 4 (reparatie, tweede FAAL) | 22.648 | 2 min | C2 |
+| verhelderaar | 4 | 36.836 | 2 min | AKKOORD |
+| *vakdeskundige* | | *mens* | | C4 AKKOORD |
+| auteur | 1 | 293.772 | 21 min | C5, PR #148 |
+| beoordelaar-onderwijskundige | 1 | 152.154 | 10 min | BLOKKEER |
+| beoordelaar-pragmaticus | 1 | 131.372 | 10 min | BLOKKEER |
+| beoordelaar-redacteur | 1 | 146.273 | 10 min | BLOKKEER |
+| beoordelaar-eerstejaars | 1 | 151.270 | 11 min | BLOKKEER |
+| hoofdredacteur | 1 | 33.793 | 4 min | C7 BLOKKEER |
+| *vakdeskundige* | | *mens* | | correctie op C7, één moet-punt vervalt |
+| auteur | 2 (reparatie) | 96.537 | 4 min | C5-vervolg, zelfde PR |
+| beoordelaar-onderwijskundige | 2 | 171.484 | 1 min | AKKOORD MET PUNTJES |
+| beoordelaar-pragmaticus | 2 | 149.122 | 1 min | AKKOORD MET PUNTJES |
+| beoordelaar-redacteur | 2 | 170.495 | 2 min | AKKOORD MET PUNTJES |
+| beoordelaar-eerstejaars | 2 | 177.786 | 3 min | AKKOORD MET PUNTJES |
+| hoofdredacteur | 2 | 17.605 | 2 min | C7 AKKOORD MET PUNTJES |
+| *vakdeskundige* | | *mens* | | merge |
+
+**Totaal: ongeveer 2,66 miljoen tokens** voor één week — meer dan het dubbele
+van werkitem #103, met dezelfde vorm van kostenopbouw: niet de omvang van het
+werk, maar het aantal rondes.
+
+Twee dingen vielen daarbij op, buiten wat al met bevinding 1 is vastgesteld:
+
+**De poort ving iets dat de lus zelf niet kon vinden.** Tussen ontwerpronde 2
+(AKKOORD van de verhelderaar) en ronde 3 zit geen FAAL maar een HERZIEN: de
+vakdeskundige besliste bij de poort dat tuples naar PGM1 week 7 verhuizen, wat
+het ontwerp moest verwerken. Dat is geen fout van de verhelderaar — het was een
+besluit dat alleen bij de poort genomen kon worden (curriculumkeuze, niet
+verifieerbaar tegen de repository) — maar het laat zien dat "AKKOORD" van de
+verhelderaar niet betekent dat er bij de poort niets meer gebeurt.
+
+**Alle vier beoordelaars vonden onafhankelijk dezelfde valse bevinding, omdat
+niemand van hen het C4-besluit had.** De eerste beoordelingsronde leverde vier
+keer BLOKKEER op, voor een deel op een bewering (de tuple-verwijzing naar PGM1
+week 7 in `lectures/8a_datastructuren.ipynb`) die al bij de poort was
+goedgekeurd als bewust vooruitlopen op issue #102. De beoordelaars kregen —
+volgens het contract, met opzet — alleen de kern van C5, niet het C4-besluit
+waarop die kern leunt. Drie van de vier bestempelden het als blokkerend, wat
+een volledige tweede beoordelingsronde met alle vier de beoordelaars kostte
+(≈669k tokens) om te herstellen. De twee overige moet-punten uit die eerste
+ronde waren wel reëel en bleven staan na correctie. Dit is nieuw genoeg om apart
+te noteren; zie [bevinding 14](bevindingen.md#14-beoordelaars-herhalen-een-besluit-dat-de-poort-al-nam-omdat-ze-het-besluit-niet-krijgen).
+
 ## Werk buiten de lus om
 
 Hier hoort wat met de hand is gedaan omdat het te klein leek voor een werkitem.
@@ -161,6 +222,21 @@ bevestiging ervan: het gebeurde omdat er gekeken werd, en het was toeval dat er
 gekeken werd. Dat is geen verwijt
 achteraf maar de reden dat de regel er nu is - en deze tabel is de plek waar te
 zien is of hij wordt nageleefd.
+
+### 1 september 2026, rond werkitem #134
+
+| Werk | Waarom buiten de lus | Achteraf gelezen? |
+|---|---|---|
+| PR #133: de mutatiegrens tussen PGM1 week 7 en PGM2 week 1 vastgelegd in `curriculum/` | Voorbereidend besluit van de vakdeskundige, vóór het werkitem bestond | **nee** |
+| PR #135: `conventies/codeconventies.md` gelijkgetrokken met PR #133 | Gevonden tijdens de verkenning van #134, kleine correctie op een net genomen besluit | **nee** |
+| PR #137: tuples van PGM2 week 1 naar PGM1 week 7 verplaatst in `curriculum/` | Besluit van de vakdeskundige, genomen bij de poort van #134 | **nee** |
+| `curriculum/leerlijn.md` "Materiaal nu" voor PGM2 week 1 bijgewerkt (commit `6e953211`) | Gevonden door de redacteur-beoordelaar, per abuis niet in het eerste C7 opgenomen; zelf gerepareerd in plaats van terug de lus in gestuurd | **ja** — de tweede beoordelingsronde bevestigde de reparatie expliciet |
+
+**Vier ingrepen, één gelezen.** De drie curriculum-PR's zijn besluiten van de
+vakdeskundige die ík heb opgeschreven; niemand heeft ze nadien nog beoordeeld.
+De vierde werd wél gelezen, maar alleen omdat de reparatie toevallig binnen de
+looptijd van een beoordelingsronde viel die toch al liep - niet omdat er een
+regel is die dat afdwingt voor werk buiten de lus. Zie bevinding 4.
 
 ## Hoe je een meting noteert
 
