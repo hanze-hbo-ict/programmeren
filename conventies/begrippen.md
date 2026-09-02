@@ -65,7 +65,7 @@ hier niet staat - *state diagram*, *staatovergang* - weeg haar dan zo, en voeg h
 toe.
 
 `curriculum/leerlijn.md` en `curriculum/uitgangspunten.md` schreven
-*toestandsmachine* op drie plekken; dat is bij dit besluit meteen rechtgezet. In
+*toestandsmachine* op drie plekken; dat is bij dit besluit meteen rechtgezet.
 In `source/` moet de term nog één worden. **Bij de poort van #168 is besloten** dat
 week 1 en de twee Picobot-supportbestanden meegaan naar *staat*, en dat de
 Picobot-syntaxis dat ook doet: `HuidigeToestand ... NieuweToestand` wordt
@@ -74,6 +74,9 @@ de werkelijke simulatorinvoer is `0 xxxS -> N 0` en die verandert niet.
 
 `source/projects/picobot.md` blijft voorlopig *toestand* schrijven. Dat bestand
 hoort bij PGM2 en krijgt een eigen werkitem; tot dan is het een bekende afwijking.
+Hetzelfde geldt voor `lectures/5a_geneste_lus.ipynb` en `problems/7_extra.md`, die
+het begrip in een andere betekenis gebruiken; die liften mee met de herziening van
+hun eigen week.
 
 De officiële formulering van leeruitkomst **A5** is Engels: *"Student ontwerpt
 finite state machines voor eenvoudige talen"* (`curriculum/leeruitkomsten.md`).

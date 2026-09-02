@@ -292,7 +292,7 @@ draait wel.
 | De vastgestelde matrijs wijzigt niet als bijvangst; bevindingen gaan naar *Voorgestelde correcties* | organisatorisch | staand, onderbouwd |
 | Het oefententamen is representatief en verandert voorlopig niet | organisatorisch | staand |
 | Leesvragen mogen fout aflopen; de fout is het antwoord | didactisch | staand, onderbouwd |
-| Studenten leveren geen werk in; opdrachten zijn oefening | organisatorisch | gesloten |
+| Studenten leveren geen werk in; opdrachten zijn oefening | organisatorisch | gesloten, **nog niet uitgevoerd**: `source/` draagt nog inleverinstructies |
 | Tot en met week 4 ligt de nadruk op lezen en begrijpen; schrijven begint wel | didactisch | staand, onderbouwd |
 | Een weekpagina vat samen wat volgt en waarop het voortbouwt | praktisch | gesloten, nog niet uitgevoerd (#167) |
 | Elk opgaveniveau hoort een uitwerking te hebben | didactisch | gesloten, nog niet uitgevoerd; 17 van de 31 ontbreken |
@@ -661,7 +661,7 @@ In de oefenmidterm van week 4 zijn dat **opdracht 14** (`IndentationError`), **1
 (`ZeroDivisionError`) en **20** (eindigt nooit). Alle drie hebben "Het programma
 werkt niet" als antwoord en alle drie blijven staan.
 
-**Opgave 14 is het gevaarlijkste geval van de drie die blijven staan**, en daarom
+**Opdracht 14 is het gevaarlijkste geval van de drie die blijven staan**, en daarom
 staat hij hier bij name. De "reparatie" is één inspringing, en het programma drukt
 dan `128` af - wat als optie d in de lijst staat. Een goedbedoelde herstelpoging
 levert dus een groene build, een groene sleutel en een fout antwoord.
@@ -783,15 +783,22 @@ en niet de huidige toestand die zichzelf verdedigt.
 
 **Er is geen inlevermoment en geen inleverplatform.** In `v1.0.0` was dat er wel -
 het CS5-materiaal droeg per opgave een tabel met een bestandsnaam en een
-inleverkanaal, en een weging in punten - maar dat geldt niet meer. Opdrachten zijn
+inleverkanaal, en in de lopende tekst een weging in punten - maar dat geldt niet meer. Opdrachten zijn
 oefening.
 
 Twee dingen volgen daaruit voor wie materiaal herziet.
 
-**Haal geen inlevertabellen terug uit het referentiemateriaal.** Ze staan er nog in
-`referentie/cs5/`, ze zien eruit als iets dat bij de migratie is weggevallen, en ze
-zijn bij week 1 ook als zodanig aangemerkt. Dat was een terechte waarneming en een
-verkeerde conclusie: ze zijn niet weggevallen maar vervallen.
+**Haal geen inlevertabellen terug uit het referentiemateriaal.** Ze staan nog in
+`referentie/cs5/`, ze zien eruit als iets dat bij de migratie is weggevallen, en bij
+de herziening van week 1 zijn ze ook zo aangemerkt. Dat was een terechte waarneming
+en een verkeerde conclusie: ze zijn niet weggevallen maar vervallen.
+
+**En ze staan nog in `source/` zelf**, dus het besluit is nog niet uitgevoerd. Bij
+de vaststelling droegen `problems/opdrachten/rij_van_conway/index.md` en
+`problems/opdrachten/tekst_genereren/index.md` nog de volledige tabel met
+bestandsnaam en inleverkanaal, `problems/5_extra.md` een inleversectie, en
+`projects/picobot.md` en `projects/textid.md` elk een inleversectie met
+weeknummers. Die liften mee met de herziening van de week waar ze bij horen.
 
 **Een opdracht die geen becijfering draagt, kan nog steeds verdieping zijn.** Waar
 het materiaal onderscheid maakt tussen wat iedereen doet en wat extra is, gebeurt
