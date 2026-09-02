@@ -35,6 +35,7 @@ forceer geen Nederlandse vertaling. Voor dit materiaal werkt dat zo uit:
 | Kommagetal | **floating-point getal** | float (9×), kommagetal (4×) | Het type heet `float` |
 | Herhaling | **lus** | loop (23×), herhaling (10×) | Ook in samenstellingen: *begrensde lus*, niet *begrensde herhaling* |
 | Bouwsteen van een lijst | **element** | item (2×) | |
+| De situatie waarin iets zich bevindt | **staat** | state, toestand | Maar het model heet **state machine**; zie hieronder |
 | Variabele die in een lus een resultaat opbouwt | **verzamelvariabele** | telvariabele (2×) | Zie de toelichting hieronder |
 | Sjabloon voor objecten | **klasse** | class (145×) | Het sleutelwoord is `class` |
 | Functie in een klasse | **methode** | - | |
@@ -45,6 +46,35 @@ forceer geen Nederlandse vertaling. Voor dit materiaal werkt dat zo uit:
 | Een functie gebruiken | **aanroepen** | oproepen (1×) | |
 | Melding bij een fout | **foutmelding** | error, exception, uitzondering | Voor het Python-mechanisme: `exception` |
 | Plek waar bestanden in staan | **directory** | map (41×), folder (22×) | Zie hieronder |
+
+## Staat, en state machine
+
+Voor het begrip zelf schrijven we **staat**. Week 1 noemt hetzelfde ding nu
+*staat*, *state* en *toestand* in drie opeenvolgende documenten; dat wordt één term.
+
+**Maar het model heet een state machine, niet een toestandsmachine.**
+*Toestandsmachine* is een redelijke vertaling, maar de voorkeur van de
+vakdeskundige gaat uit naar de Engelse term omdat die in het vakgebied gangbaarder
+is. Dat is precies het geval waarvoor regel 2 hierboven bestaat: we vertalen niet
+wat in het vak Engels heet. Vastgesteld op 2 september 2026.
+
+Waarom *lus* wél de samenstelling stuurt en *staat* niet: elke term wordt op zijn
+eigen gangbaarheid gewogen, volgens regel 1 en 2 hierboven. *Begrensde lus* is
+gangbaar Nederlands, *toestandsmachine* niet. Kom je een samenstelling tegen die
+hier niet staat - *state diagram*, *staatovergang* - weeg haar dan zo, en voeg haar
+toe.
+
+`curriculum/leerlijn.md` en `curriculum/uitgangspunten.md` schreven
+*toestandsmachine* op drie plekken; dat is bij dit besluit meteen rechtgezet. In
+`source/` moet de term nog één worden - week 1 gebruikt er drie door elkaar (#168),
+en `practicals/1_picobot.md` draagt bovendien de Picobot-syntaxis
+`HuidigeToestand ... NieuweToestand`; wat daarmee gebeurt is een keuze voor dat
+werkitem.
+
+De officiële formulering van leeruitkomst **A5** is Engels: *"Student ontwerpt
+finite state machines voor eenvoudige talen"* (`curriculum/leeruitkomsten.md`).
+Schrijf dus *finite state machine* waar het de leeruitkomst betreft, niet "eindige
+state machine".
 
 ## Verzamelvariabele
 

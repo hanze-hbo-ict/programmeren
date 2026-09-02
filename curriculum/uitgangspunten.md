@@ -191,7 +191,7 @@ dat het bestond.
 |---|---|
 | PGM1 week 2 tot en met 6 | Een functie rekent iets uit en geeft het terug. Wat je meegeeft verandert niet. |
 | PGM1 week 7 | De grens, voor mutatie. Eerst *dat* je een lijst kunt wijzigen en wat dat oplevert, daarna pas dat twee namen naar dezelfde lijst kunnen wijzen, en daarna pas het kopiëren. Objectmethoden vallen niet op deze grens; die verschuiven naar PGM2 week 1. |
-| PGM2 | Een object is data plus de handelingen daarop, en dus een bundel toestand die verandert. Het woord ervoor bestaat dan al. |
+| PGM2 | Een object is data plus de handelingen daarop, en dus een bundel staat die verandert. Het woord ervoor bestaat dan al. |
 
 Drie dingen volgen hieruit.
 
@@ -292,6 +292,9 @@ draait wel.
 | De vastgestelde matrijs wijzigt niet als bijvangst; bevindingen gaan naar *Voorgestelde correcties* | organisatorisch | staand, onderbouwd |
 | Het oefententamen is representatief en verandert voorlopig niet | organisatorisch | staand |
 | Leesvragen mogen fout aflopen; de fout is het antwoord | didactisch | staand, onderbouwd |
+| Tot en met week 4 ligt de nadruk op lezen en begrijpen; schrijven begint wel | didactisch | staand, onderbouwd |
+| Een weekpagina vat samen wat volgt en waarop het voortbouwt | praktisch | gesloten, nog niet uitgevoerd (#167) |
+| Elk opgaveniveau hoort een uitwerking te hebben | didactisch | gesloten, nog niet uitgevoerd; 17 van de 31 ontbreken |
 | Week 4 krijgt een lusrecept van vijf vragen, in `4a_lussen` | didactisch | gesloten, **uitgevoerd** met #153; week 5 pikt het nog niet op (#163) |
 | Recursie gaat uit PGM1 week 4, op alle vier de plekken | organisatorisch | gesloten, **deels uitgevoerd**: 1 van 4 met #153 (midtermopdracht 13). `unique` (2×) en `find_number_of_decimals` staan er nog; zie ronde twee en #126 |
 | Eerst de weken van PGM1 afronden; het materiaal moet zo snel mogelijk live | organisatorisch | staand |
@@ -358,7 +361,7 @@ Twee dingen die er wél uit volgen:
 ### De theoretische afsluiting
 
 CS5 sluit af met computeerbaarheid en de grenzen van berekening, en keert daarbij
-terug naar de eindige toestandsmachine die de student in week 0 als Picobot
+terug naar de finite state machine die de student in week 0 als Picobot
 tegenkwam: *"After students have twelve weeks of hands-on experience in creating
 computation and building confidence, they are often surprised to learn (in a good
 way) that there are some things that a computer provably cannot accomplish."*
@@ -367,7 +370,7 @@ Picobot opent die boog, de theorie sluit hem.
 
 Bij hbo-studenten sloeg dat niet aan: te abstract. Het is geprobeerd en
 losgelaten. Gevolg: Picobot blijft, de sluiting komt niet terug, en leeruitkomst
-A5 over eindige toestandsmachines hoort daarmee uit de toetsmatrijs. Zie
+A5 over finite state machines hoort daarmee uit de toetsmatrijs. Zie
 [leeruitkomsten.md](leeruitkomsten.md).
 
 ### Schakelingen en binair
@@ -621,10 +624,15 @@ verandert, is dat een vraag over de matrijs en niet over de toets.
 
 ### Leesvragen mogen fout aflopen
 
-Op dit punt in het vak gaat het om **code lezen en begrijpen**, niet om code
-schrijven. Dat is waarom de opstap van week 4 uit leesopdrachten bestaat en waarom
-de oefenmidterm uit "wat print dit programma?" bestaat. Wie die vorm tegenkomt en
-denkt dat er schrijfopgaven ontbreken, leest een keuze als een gat.
+Op dit punt in het vak ligt de **nadruk** op code lezen en begrijpen. Dat is waarom
+de opstap van week 4 uit leesopdrachten bestaat en waarom de oefenmidterm uit "wat
+print dit programma?" bestaat. Wie die vorm tegenkomt en denkt dat er schrijfopgaven
+ontbreken, leest een keuze als een gat.
+
+**Nadruk is geen uitsluiting**, en dat is later scherper gesteld: er moet in die
+weken wel degelijk geschreven worden. Zie *Lezen en schrijven: waar de nadruk ligt*
+verderop. Wat hier staat gaat over de vorm van de leesvragen die er zijn, niet over
+de vraag of er genoeg schrijfwerk naast staat.
 
 Daaruit volgt hoe een leesvraag mag aflopen. Een programma dat crasht of eeuwig
 doorloopt is een **geldige vraag met een geldig antwoord**, niet een defect. Het
@@ -714,6 +722,87 @@ en de codeconventies worden op vier punten overtreden. Wel is de **vorm**
 overgenomen, dezelfde die `extra/examples/design_recipe.md` heeft: genummerde
 stappen, uitgewerkte voorbeelden met de stapnamen als regelcommentaar, en
 opdrachten die eerst om een plan vragen en dan om de code.
+
+### Lezen en schrijven: waar de nadruk ligt
+
+**Tot en met week 4 ligt de nadruk op code lezen en begrijpen.** Dat is een opbouw
+naar de midterm, die in week 5 wordt afgenomen: tot dat punt oefent de student
+vooral het voorspellen van wat code doet, inclusief de fouten die code kan
+opleveren.
+
+**Nadruk is geen uitsluiting.** Er moet in die weken wel degelijk geschreven worden,
+en er moet een begin mee worden gemaakt - waar het nodig is, hoort het er te zijn.
+Wat hier niet staat is een streefverhouding, en dat is met opzet: het gaat om waar
+het zwaartepunt ligt en niet om een getal dat een ontwerp moet halen.
+
+De aanleiding was een telling op week 2: **94 keer "wat is de uitvoer" tegen 17 keer
+"schrijf zelf code"**, waarvan 25 van die 94 letterlijke kopieën uit het college.
+Die telling komt uit de leesronde op #107 en is een **classificatie, geen
+zoekopdracht**: zij is niet met een patroon na te rekenen en draagt geen bestandslijst.
+Behandel haar als orde van grootte.
+Dat cijfer is op zichzelf geen bezwaar - de nadruk hóórt daar te liggen - maar de
+dubbelingen zijn het wel, en of er genoeg geschreven wordt is een inhoudelijke vraag
+per week en geen rekensom. Zie #169.
+
+Dit verklaart ook waarom de opstap van week 4 uit twintig leesopdrachten bestaat en
+waarom de oefenmidterm uit leesvragen bestaat; zie *Leesvragen mogen fout aflopen*.
+
+### Wat een weekpagina draagt
+
+De weekpagina's van `source/course/` zijn nu een kop, een plaatje en een
+inhoudsopgave. Ze horen kort samen te vatten **wat er die week volgt en wat de
+student leert**, met een **terugverwijzing naar de vorige week** zodat de lijn
+zichtbaar wordt.
+
+**Over de status.** De vakdeskundige bracht dit aanvankelijk als een gedachte
+("een gedachte is om ... mss. ook een terugverwijzing") en heeft het op 2 september
+2026 desgevraagd bevestigd als besluit, inclusief de terugverwijzing en inclusief
+dat het voor alle weken geldt. Het staat hier dus als `gesloten` en niet als
+voorstel, maar de bron was een overweging en dat hoort zichtbaar te zijn.
+
+De terugverwijzing is de reden dat dit een besluit is en geen redactie: zij maakt
+van twaalf losse weken een leerlijn, en zij is precies wat een student mist die
+niet weet waarom hij doet wat hij doet. Vergelijk *Wat een week aan een latere
+week aflevert* in [leerlijn.md](leerlijn.md), dat hetzelfde doet voor auteurs.
+
+**Dit geldt voor alle twaalf de weken**, niet alleen voor de week die op dat moment
+wordt herzien. Uitvoeren mag per week meeliften met de herziening; het besluit
+wacht daar niet op. Let op: `source/_toc.yml` heeft dertien weeksecties, want PGM2
+week 6 heeft geen weekpagina.
+
+**Te heropenen wanneer** blijkt dat studenten de samenvatting overslaan, of wanneer
+de terugverwijzing bij herordening van de weken structureel achterloopt op het
+materiaal - dan is zij een onderhoudslast in plaats van een leerlijn.
+
+### Elk opgaveniveau hoort een uitwerking te hebben
+
+**Een niveau zonder uitwerking is een omissie, geen keuze.** Ziet een lezer dat
+opgaven geen uitwerking hebben, dan is dat een gebrek van de auteurs en het hoort
+gerepareerd te worden. Er is dus geen "de opstap heeft er met opzet geen".
+
+De omvang, gemeten op 2 september 2026 tegen `source/_toc.yml`: **17 van de 31
+opgavebestanden hebben geen uitwerking.** Dat zijn:
+
+- **alle acht opstapbestanden**, `problems/2_opstap` tot en met `problems/8_opstap`
+  plus `problems/9_instap` (die heet *instap*, niet *opstap*);
+- de basis en extra van `problems/9_*`, `10_*` en `11_*` - dat zijn **PGM2 week 2,
+  3 en 4**, want de bestandsnummering loopt door over beide vakken heen en is niet
+  het weeknummer;
+- drie losse opdrachten: `caesar_op_orde`, `rij_van_conway`, `tekst_genereren`.
+
+Dat is te veel voor één werkitem en het hoeft ook niet in één keer: het liftt mee
+met de herziening van de week waar het bij hoort. Maar het is vanaf nu een gebrek
+dat benoemd hoort te worden en niet een vorm die verdedigd kan worden.
+
+**De vorm staat vast sinds #146:** een uitwerking is een draaiende codecel en geen
+markdown-blok, zodat de build haar controleert. Het model is
+`source/solutions/4_midterm.ipynb`. Programma's die met opzet stuklopen dragen
+`raises-exception`, zodat de student de echte foutmelding ziet.
+
+**Te heropenen wanneer** blijkt dat een gepubliceerde uitwerking bij een bepaald
+niveau het leereffect schaadt - de opstap is de kandidaat, want daar controleert de
+student nu door de cel te draaien. Dat is dan een besluit per niveau met een reden,
+en niet de huidige toestand die zichzelf verdedigt.
 
 ## Een besluit toevoegen
 
