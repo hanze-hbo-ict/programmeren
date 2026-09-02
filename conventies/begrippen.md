@@ -33,7 +33,7 @@ forceer geen Nederlandse vertaling. Voor dit materiaal werkt dat zo uit:
 | Sleutel-waardepaar-container | **dictionary** | - | Consistent in gebruik |
 | Geheel getal | **integer** | geheel getal (3×) | Het type heet `int` |
 | Kommagetal | **floating-point getal** | float (9×), kommagetal (4×) | Het type heet `float` |
-| Herhaling | **lus** | loop (23×), herhaling (10×) | Maar wél *begrensde* en *onbegrensde herhaling* als vaste term; zie hieronder |
+| Herhaling | **lus** | loop (23×), herhaling (10×) | Ook in samenstellingen: *begrensde lus*, niet *begrensde herhaling* |
 | Bouwsteen van een lijst | **element** | item (2×) | |
 | Variabele die in een lus een resultaat opbouwt | **verzamelvariabele** | telvariabele (2×) | Zie de toelichting hieronder |
 | Sjabloon voor objecten | **klasse** | class (145×) | Het sleutelwoord is `class` |
@@ -62,19 +62,24 @@ De term staat in `source/lectures/4a_lussen.ipynb` (het lusrecept) en in
 `source/problems/4_basis.ipynb` en `source/solutions/4_basis.ipynb` schrijven
 *telvariabele*; dat gaat mee met #162.
 
-## Begrensde en onbegrensde herhaling
+## Begrensde en onbegrensde lus
 
-Voor het onderwerp van een lus schrijven we **lus** en niet *herhaling*, zoals de
-tabel hierboven zegt. Maar *begrensde herhaling* en *onbegrensde herhaling* zijn
-wél vaste termen: zij staan in `curriculum/leeruitkomsten.md` als PGM2 P1
-("Student past begrensde en onbegrensde lusconstructies toe") en zij dragen het
-onderscheid dat het lusrecept nodig heeft - bij een `for` ligt het aantal
-herhalingen vast voordat de lus begint, bij een `while` levert de schrijver het
-stopmoment.
+Een lus is een **vorm van** herhaling, niet een synoniem ervoor. Daarom schrijven
+we **begrensde lus** en **onbegrensde lus**, en niet *begrensde herhaling*. Bij een
+`for` ligt het aantal herhalingen vast voordat de lus begint; bij een `while`
+levert de schrijver het stopmoment. Vastgesteld door de vakdeskundige op 2
+september 2026.
+
+Dat sluit aan op de regel in de tabel hierboven - wij schrijven *lus* en niet
+*herhaling* - en op `curriculum/leeruitkomsten.md`, waar PGM2 P1 luidt: *"Student
+past begrensde en onbegrensde **lusconstructies** toe."* De bindende laag zegt dus
+al lus; alleen `curriculum/leerlijn.md` en het college van week 4 schreven een tijd
+lang *herhaling*, en dat is rechtgezet.
 
 Wat er in geen geval mag staan is *oneindige herhaling* voor `while`. Die
-formulering is uit CS5 overgeërfd, is onjuist, en is bij de herziening van week 4
-verwijderd.
+formulering is uit CS5 overgeërfd, is onjuist - een `while` is niet oneindig, het
+aantal herhalingen ligt alleen niet vooraf vast - en zij is bij de herziening van
+week 4 verwijderd.
 
 ## Directory, map, folder
 
