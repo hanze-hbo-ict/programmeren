@@ -78,6 +78,77 @@ Die verhouding is zelf het resultaat. Een leesronde van 195k leverde negen
 aantoonbare defecten en drie beweringen die het niet haalden - en de drie waren
 alleen te scheiden van de negen door ze na te rekenen, niet door ze te lezen.
 
+## Werkitem #146 — PGM1 week 4, onderdeel 1 tot en met 3
+
+De eerste keer dat een week de volle lus doorliep **na** een leesronde. Omvang **L**
+(de triage overrulede de M van de indiener).
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| triage | 29.310 | 101 s | LUS, omvang L, tien rollen |
+| verkenner | 200.139 | 26 min | C1b, negen bestanden doorgemeten |
+| curriculumontwerper | 117.693 | 10 min | C2, negen onderdelen, tien criteria |
+| verhelderaar | 130.762 | 11 min | **AKKOORD**, 13 verbeterpunten, 0 blokkerend |
+| auteur | 195.211 | 24 min | C5, onderdeel 1-3, hooks en build groen |
+| beoordelaar-eerstejaars | 116.595 | 10 min | **BLOKKEER**, 2 blokkerend |
+| beoordelaar-redacteur | 123.215 | 10 min | AKKOORD MET PUNTJES |
+| beoordelaar-onderwijskundige | 106.369 | 9 min | AKKOORD MET PUNTJES |
+| beoordelaar-pragmaticus | 106.740 | 8 min | AKKOORD MET PUNTJES |
+
+**1.126.034 tokens voor drie van de negen onderdelen.** Met de leesronde erbij
+(194.900) staat week 4 op **1.32M** en is hij niet af. Week 5 kostte 1.13M voor de
+volle lus in één keer.
+
+Dat is de meting die de aanname onder bevinding 3 begrenst. Een leesronde is
+goedkoper dán ontwerpen, maar hij **vervangt de lus niet** - hij gaat eraan
+vooraf. De winst zit niet in minder tokens maar in een werkitem vol aantoonbare
+defecten in plaats van vermoedens, en in een ontwerp dat de verhelderaar in één
+ronde haalde. Dat laatste is nieuw: bij #103 kostte het drie ontwerprondes.
+
+### Vier beoordelaars, één die het zag
+
+De vier parallelle beoordelaars kostten samen **453.919 tokens**. Er was precies
+één blokkerend defect in de oplevering: `4a_lussen` cel 60 definieerde `while`
+omgekeerd - *"jij zorgt dat die ooit waar wordt"*, terwijl een `while`-conditie
+juist onwaar moet worden.
+
+**Alleen de eerstejaars zag het.** De onderwijskundige en de pragmaticus hebben
+diezelfde zin gelezen en hem in hun AC1-oordeel goedkeurend geciteerd; de
+redacteur ging er zonder opmerking langs. Drie rollen kenden de constructie te
+goed om de tekst te kunnen lezen zoals hij er staat.
+
+Dat is één waarneming en geen wet, maar hij pleit tegen het snoeien in het aantal
+beoordelaars als er op kosten moet worden bespaard: de goedkoopste van de vier
+(106k) was niet degene die het vond, en de duurste evenmin.
+
+### Wat het vastgelegde besluit deed
+
+**Geen van de vier meldde opdracht 14, 18 of 20 als defect.** In de drie
+beoordelingen daarvóór gebeurde dat elke keer wél, met een kloppende meting en een
+verkeerde conclusie (bevinding 7). Het verschil is dat het besluit tussendoor van
+gevallen naar soort is herschreven, met "blijf hiervan af, meld het niet opnieuw"
+erbij, en dat het in de opdracht van elke rol zat.
+
+Dat is de eerste keer in dit onderzoek dat een tegenmaatregel meetbaar heeft
+gewerkt. Zie bevinding 7 en 13.
+
+### De meetregel van AC1 struikelde drie keer
+
+Criterium 1 vroeg dat `while` nergens meer "oneindige herhaling" heet. De meetregel
+erbij ging drie keer mis, en telkens anders:
+
+1. De oorspronkelijke regel (`grep -rn "oneindige herhaling"`) dekte maar één van
+   de twee plekken die het criterium zélf noemt. Gevonden door de triage.
+2. Het ontwerp zei "elf treffers elders"; het zijn er vijftien. Gevonden door de
+   verhelderaar.
+3. Na oplevering is het criterium naar de letter gehaald - nul treffers op
+   `oneindig` in week 4 - terwijl `# watch out for infinite loops!` één regel
+   verderop blijft staan. Het patroon zocht op het Nederlandse woord en kon dat per
+   constructie niet zien. Gevonden door de redacteur.
+
+Alle drie zijn ze gevonden, en dat is het punt: het criterium is drie rollen lang
+gecontroleerd door rollen die er niet aan hadden meegeschreven.
+
 ## Werkitem #115 — de uitwerkingen
 
 | Rol | Tokens | Duur | Uitkomst |
@@ -211,8 +282,11 @@ gelezen:
 | A4 naar de PGM2-matrijs (#140) | Een voorstel uit de correctielijst uitvoeren | **nee** |
 | Consistentiecontrole op issues en bord | Onderhoud, geen materiaal | **nee** |
 | Werkitem #146 geschreven uit twee C6-oordelen | Bankwerk op andermans bevindingen, geen materiaal | n.v.t. — de bron *is* twee beoordelaars |
+| Het leesvragenbesluit soortgebonden gemaakt (#150) | Een besluit van de vakdeskundige noteren | **nee** |
+| Het poortbesluit vastgelegd in `curriculum/` en `conventies/` (#152) | Vastlegplicht na C4 | **nee** |
+| De body van #146 herschreven tot kaart | Leesbaarheid, geen materiaal | **nee** |
 
-**Veertien ingrepen in totaal, nul beoordelaars.** Bij de eerste zeven leverden er
+**Zeventien ingrepen in totaal, nul beoordelaars.** Bij de eerste zeven leverden er
 drie een reparatie op die een redacteur zou hebben gevangen (bevinding 4); bij deze
 zes leverde de laatste er vier op, want de consistentiecontrole vond vier issues met
 een achterhaalde bewering (bevinding 10).
