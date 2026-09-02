@@ -94,6 +94,28 @@ veld **Status** op het [projectbord](https://github.com/orgs/hanze-hbo-ict/proje
    het geeft. Bij `HERZIEN`: terug naar stap 4. Bij `STOP`: leg vast waarom en
    eindig.
 
+5b. **Het vastleggen wordt gelezen.** Schrijf je zelf naar `curriculum/` of
+   `conventies/`, draai dan `rol-beoordelaar-redacteur` over die diff **voordat je
+   de pull request ter merge aanbiedt**. Geef hem de diff, het C4 waaruit het
+   besluit komt, en de vraag of wat er staat het besluit weergeeft en niet iets
+   ruimers of engers.
+
+   Dit is geen losse stap na afloop maar onderdeel van het vastleggen, om dezelfde
+   reden als bij de meetregel: een losse stap wordt overgeslagen omdat het werk dan
+   al af voelt. **De pull request zonder dat oordeel is een onvolledig artefact.**
+
+   De grond is gemeten en niet bedacht. De regel *wie het zelf doet, laat het
+   lezen* bestaat al in `CLAUDE.md`, en is zeventien van de zeventien keer niet
+   nageleefd (`onderzoek/metingen.md`, *Werk buiten de lus om*). Bij #146 gingen zo
+   drie fouten van de orkestrator de repo in: een verkeerd genummerde vraag in de
+   leerlijn, een pad naar een C5 dat nooit is weggeschreven, en *begrensde
+   herhaling* waar de bindende laag *lus* zegt. Alle drie zijn gevangen, maar twee
+   pas na de merge. Zie bevinding 14.
+
+   Wat je vastlegt is bovendien het enige artefact in de lus dat **geen** verse
+   rol heeft gemaakt: de verhelderaar toetst het ontwerp, vier beoordelaars toetsen
+   de oplevering, en niets toetst wat de orkestrator schrijft.
+
 6. **Schrijven.** Zet de status op **Schrijven**. Start `rol-auteur` met C2 + C4.
    Levert de auteur een stopvoorwaarde in plaats van een oplevering, leg die dan
    voor en wacht.

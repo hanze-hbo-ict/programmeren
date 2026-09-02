@@ -546,6 +546,64 @@ maar op zichzelf staande waarneming.
 
 ---
 
+## 14. Niets toetst wat de orkestrator schrijft
+
+*2 september 2026.*
+
+De lus laat elk artefact door een verse rol beoordelen. Het ontwerp gaat langs de
+verhelderaar, de oplevering langs vier beoordelaars, en die vier langs de
+hoofdredacteur. Eén artefact ontsnapt daaraan: **wat de orkestrator zelf naar
+`curriculum/` en `conventies/` schrijft bij de vastlegplicht.**
+
+Bij werkitem #146 gingen daar drie fouten doorheen.
+
+| Fout | Gevonden door | Wanneer |
+|---|---|---|
+| `leerlijn.md`: "vijf vragen waarvan **de vijfde** het stopmoment is" - het is de vierde | drie van de vier beoordelaars van PR #153 | ná de merge |
+| Een pad naar een C5 dat nooit is weggeschreven, meegegeven aan de hoofdredacteur | de hoofdredacteur zelf, die het meldde en doorging | tijdens |
+| *begrensde herhaling* geschreven waar `leeruitkomsten.md` r83 *lusconstructies* zegt, en doorgevoerd tot in het college | de vakdeskundige | ná de merge |
+
+De derde is de leerzaamste. De bindende laag zei al *lus*; ik schreef *herhaling*
+en voerde dat consequent door, tot het materiaal zichzelf tegensprak - `4_opstap`
+zei "begrensde `for`-lus", het college zei "begrensde herhaling". **Vier
+beoordelaars verklaarden dat criterium gehaald**, want zij toetsten
+`begrensd`/`onbegrensd` tegen r83 en vergeleken het zelfstandig naamwoord niet. Een
+gemeten criterium, correct uitgevoerd, en het ding zelf niet nagekeken.
+
+**Wat dit níét is.** Het is geen detectieprobleem: alle drie zijn gevangen, drie
+van de drie. Het is een tijdigheidsprobleem - twee waren al gemerged, en een besluit
+in `curriculum/` is precies het soort tekst waar volgende rollen op gaan staan.
+
+**Waarom de bestaande regel niet volstaat.** *Wie het zelf doet, laat het lezen*
+staat al in `CLAUDE.md` en in `/orc`, en is **zeventien van de zeventien keer niet
+nageleefd** (`metingen.md`, *Werk buiten de lus om*). Dat is bevinding 9 nog eens:
+een regel is geen borging.
+
+En een bevinding hier opschrijven verandert dat niet. Gemeten: van alle
+roldefinities verwijzen alleen `vakdeskundige.md` en `onderzoeker.md` naar
+`onderzoek/`. **Voor een auteur of beoordelaar bestaat dit document niet.** Wie hier
+iets neerzet en denkt dat het daarmee is geborgd, heeft het opgeschreven en niet
+geregeld.
+
+**Wat wél werkte, in dezelfde sessie.** Het besluit *Leesvragen mogen fout aflopen*
+werd van gevallen naar soort herschreven, landde in `curriculum/uitgangspunten.md`,
+en werd in de opdracht van elke rol geplakt. Resultaat: drie van de drie
+beoordelaars daarvóór meldden het als defect, nul van de vier daarna. Het verschil
+zat niet in het opschrijven - dat stond er al - maar in dat het de rol bereikte op
+het moment dat zij handelde.
+
+**Wat het veranderde.** `/orc` heeft een stap **5b** gekregen: schrijft de
+orkestrator zelf naar `curriculum/` of `conventies/`, dan gaat die diff langs
+`rol-beoordelaar-redacteur` vóórdat de pull request ter merge wordt aangeboden. Als
+stap en niet als regel, en met dezelfde motivering die `/orc` al bij de meetregel
+gebruikt: *een losse stap wordt overgeslagen omdat het werk dan al af voelt.* De
+pull request zonder dat oordeel is een onvolledig artefact.
+
+Of dat werkt is de volgende meting. De meetregel zelf is deze sessie wél elke keer
+nageleefd, en dat is de enige aanwijzing dat de vorm klopt. **Nog niet bewezen.**
+
+---
+
 ## Open: welk model per rol
 
 *1 september 2026. Nog niet onderzocht.*
