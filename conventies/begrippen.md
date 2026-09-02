@@ -52,15 +52,29 @@ forceer geen Nederlandse vertaling. Voor dit materiaal werkt dat zo uit:
 Voor het begrip zelf schrijven we **staat**. Week 1 noemt hetzelfde ding nu
 *staat*, *state* en *toestand* in drie opeenvolgende documenten; dat wordt één term.
 
-**Maar het model heet een `state machine`, niet een toestandsmachine.**
-*Toestandsmachine* is een redelijke vertaling en zij komt in het vakgebied nauwelijks
-voor; de Engelse term is er de gangbare. Dat is precies het geval waarvoor de regel
-hierboven bestaat: we vertalen niet wat in het vak Engels heet. Vastgesteld door de
-vakdeskundige op 2 september 2026.
+**Maar het model heet een state machine, niet een toestandsmachine.**
+*Toestandsmachine* is een redelijke vertaling, maar de voorkeur van de
+vakdeskundige gaat uit naar de Engelse term omdat die in het vakgebied gangbaarder
+is. Dat is precies het geval waarvoor regel 2 hierboven bestaat: we vertalen niet
+wat in het vak Engels heet. Vastgesteld op 2 september 2026.
+
+Waarom *lus* wél de samenstelling stuurt en *staat* niet: elke term wordt op zijn
+eigen gangbaarheid gewogen, volgens regel 1 en 2 hierboven. *Begrensde lus* is
+gangbaar Nederlands, *toestandsmachine* niet. Kom je een samenstelling tegen die
+hier niet staat - *state diagram*, *staatovergang* - weeg haar dan zo, en voeg haar
+toe.
 
 `curriculum/leerlijn.md` en `curriculum/uitgangspunten.md` schreven
 *toestandsmachine* op drie plekken; dat is bij dit besluit meteen rechtgezet. In
-`source/` moet de term nog één worden - week 1 gebruikt er drie door elkaar (#168).
+`source/` moet de term nog één worden - week 1 gebruikt er drie door elkaar (#168),
+en `practicals/1_picobot.md` draagt bovendien de Picobot-syntaxis
+`HuidigeToestand ... NieuweToestand`; wat daarmee gebeurt is een keuze voor dat
+werkitem.
+
+De officiële formulering van leeruitkomst **A5** is Engels: *"Student ontwerpt
+finite state machines voor eenvoudige talen"* (`curriculum/leeruitkomsten.md`).
+Schrijf dus *finite state machine* waar het de leeruitkomst betreft, niet "eindige
+state machine".
 
 ## Verzamelvariabele
 
