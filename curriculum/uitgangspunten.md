@@ -292,8 +292,8 @@ draait wel.
 | De vastgestelde matrijs wijzigt niet als bijvangst; bevindingen gaan naar *Voorgestelde correcties* | organisatorisch | staand, onderbouwd |
 | Het oefententamen is representatief en verandert voorlopig niet | organisatorisch | staand |
 | Leesvragen mogen fout aflopen; de fout is het antwoord | didactisch | staand, onderbouwd |
-| Week 4 krijgt een lusrecept van vijf vragen, in `4a_lussen` | didactisch | gesloten, nog niet uitgevoerd (#146) |
-| Recursie gaat uit PGM1 week 4, op alle vier de plekken | organisatorisch | gesloten, nog niet uitgevoerd (#146, samen met #126) |
+| Week 4 krijgt een lusrecept van vijf vragen, in `4a_lussen` | didactisch | gesloten, **uitgevoerd** met #153; week 5 pikt het nog niet op (#163) |
+| Recursie gaat uit PGM1 week 4, op alle vier de plekken | organisatorisch | gesloten, **deels uitgevoerd**: 1 van 4 met #153 (midtermopdracht 13). `unique` (2×) en `find_number_of_decimals` staan er nog; zie ronde twee en #126 |
 | Eerst de weken van PGM1 afronden; het materiaal moet zo snel mogelijk live | organisatorisch | staand |
 | Objectmethoden pas vanaf PGM2 week 1, los van de mutatiegrens in PGM1 week 7 | didactisch | staand, onderbouwd |
 | Dictionaries en de Markov-opgave verhuizen van PGM1 week 7 naar PGM2 week 1 | didactisch | staand, nog niet uitgevoerd |
@@ -670,8 +670,11 @@ waarin types zijn geïntroduceerd.
 **Besloten bij de poort van #146: de opties zeggen wat het programma werkelijk
 afdrukt**, dus `3.6999999999999997`, `1.0` en `7.0`. De sleutel legt bij opgave 1
 uit waarom er geen `3.7` uit komt. Daarmee worden drie kapotte vragen drie vragen
-over floating point, en de vraagstelling blijft ongemoeid. **Nog niet
-uitgevoerd**, zie #146.
+over floating point, en de vraagstelling blijft ongemoeid. **Uitgevoerd** met #153.
+
+De tabel hierboven spreekt van *opgave*; de koppen in het materiaal heten sinds
+#153 **opdracht**, conform `conventies/begrippen.md`. De nummers zijn ongewijzigd,
+dus opdracht 14, 18 en 20 zijn dezelfde vragen als voorheen.
 
 ### Het lusrecept van week 4
 
