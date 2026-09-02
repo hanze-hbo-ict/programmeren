@@ -35,6 +35,7 @@ forceer geen Nederlandse vertaling. Voor dit materiaal werkt dat zo uit:
 | Kommagetal | **floating-point getal** | float (9×), kommagetal (4×) | Het type heet `float` |
 | Herhaling | **lus** | loop (23×), herhaling (10×) | Ook in samenstellingen: *begrensde lus*, niet *begrensde herhaling* |
 | Bouwsteen van een lijst | **element** | item (2×) | |
+| De situatie waarin iets zich bevindt | **staat** | state, toestand | Maar het model heet **state machine**; zie hieronder |
 | Variabele die in een lus een resultaat opbouwt | **verzamelvariabele** | telvariabele (2×) | Zie de toelichting hieronder |
 | Sjabloon voor objecten | **klasse** | class (145×) | Het sleutelwoord is `class` |
 | Functie in een klasse | **methode** | - | |
@@ -45,6 +46,21 @@ forceer geen Nederlandse vertaling. Voor dit materiaal werkt dat zo uit:
 | Een functie gebruiken | **aanroepen** | oproepen (1×) | |
 | Melding bij een fout | **foutmelding** | error, exception, uitzondering | Voor het Python-mechanisme: `exception` |
 | Plek waar bestanden in staan | **directory** | map (41×), folder (22×) | Zie hieronder |
+
+## Staat, en state machine
+
+Voor het begrip zelf schrijven we **staat**. Week 1 noemt hetzelfde ding nu
+*staat*, *state* en *toestand* in drie opeenvolgende documenten; dat wordt één term.
+
+**Maar het model heet een `state machine`, niet een toestandsmachine.**
+*Toestandsmachine* is een redelijke vertaling en zij komt in het vakgebied nauwelijks
+voor; de Engelse term is er de gangbare. Dat is precies het geval waarvoor de regel
+hierboven bestaat: we vertalen niet wat in het vak Engels heet. Vastgesteld door de
+vakdeskundige op 2 september 2026.
+
+`curriculum/leerlijn.md` en `curriculum/uitgangspunten.md` schreven
+*toestandsmachine* op drie plekken; dat is bij dit besluit meteen rechtgezet. In
+`source/` moet de term nog één worden - week 1 gebruikt er drie door elkaar (#168).
 
 ## Verzamelvariabele
 
