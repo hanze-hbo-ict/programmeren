@@ -29,12 +29,13 @@ def double_char(string):
     return result
 ```
 
-Zorg dat je de ***strategie*** voor deze oplossing voor `double_char` begrijpt:
+Deze oplossing volgt het [lusrecept](/lectures/4a_lussen.ipynb#het-lusrecept) uit het college. Ga na hoe:
 
-1. We beginnen met een verzamelvariabele met een geschikte startwaarde
-   * Hier is dat de variabele `result`, die begint met de waarde `''` (de lege string)
-2. We schrijven een lus die het gewenste resultaat verzamelt
-3. Daarna geven we het resultaat terug
+1. de verzamelvariabele `result` begint op `''`, de lege string
+2. we langs de karakters van `string` lopen, dus een `for` op element
+3. er per stap `char * 2` bij komt
+4. we klaar zijn als `string` op is
+5. `return result` na de lus staat
 
 ## Opdracht
 
