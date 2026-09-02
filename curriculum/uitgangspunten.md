@@ -292,6 +292,7 @@ draait wel.
 | De vastgestelde matrijs wijzigt niet als bijvangst; bevindingen gaan naar *Voorgestelde correcties* | organisatorisch | staand, onderbouwd |
 | Het oefententamen is representatief en verandert voorlopig niet | organisatorisch | staand |
 | Leesvragen mogen fout aflopen; de fout is het antwoord | didactisch | staand, onderbouwd |
+| Studenten leveren geen werk in; opdrachten zijn oefening | organisatorisch | gesloten |
 | Tot en met week 4 ligt de nadruk op lezen en begrijpen; schrijven begint wel | didactisch | staand, onderbouwd |
 | Een weekpagina vat samen wat volgt en waarop het voortbouwt | praktisch | gesloten, nog niet uitgevoerd (#167) |
 | Elk opgaveniveau hoort een uitwerking te hebben | didactisch | gesloten, nog niet uitgevoerd; 17 van de 31 ontbreken |
@@ -777,6 +778,29 @@ foutmelding in plaats van een beschrijving ervan.
 niveau het leereffect schaadt - de opstap is de kandidaat, want daar controleert de
 student nu door de cel te draaien. Dat is dan een besluit per niveau met een reden,
 en niet de huidige toestand die zichzelf verdedigt.
+
+### Studenten leveren niets in
+
+**Er is geen inlevermoment en geen inleverplatform.** In `v1.0.0` was dat er wel -
+het CS5-materiaal droeg per opgave een tabel met een bestandsnaam en een
+inleverkanaal, en een weging in punten - maar dat geldt niet meer. Opdrachten zijn
+oefening.
+
+Twee dingen volgen daaruit voor wie materiaal herziet.
+
+**Haal geen inlevertabellen terug uit het referentiemateriaal.** Ze staan er nog in
+`referentie/cs5/`, ze zien eruit als iets dat bij de migratie is weggevallen, en ze
+zijn bij week 1 ook als zodanig aangemerkt. Dat was een terechte waarneming en een
+verkeerde conclusie: ze zijn niet weggevallen maar vervallen.
+
+**Een opdracht die geen becijfering draagt, kan nog steeds verdieping zijn.** Waar
+het materiaal onderscheid maakt tussen wat iedereen doet en wat extra is, gebeurt
+dat op didactische grond en niet op puntentelling - het zegt iets over de opbouw,
+niet over het cijfer. Zonder zo'n markering staan opdrachten van ongelijk gewicht
+er ogenschijnlijk gelijkwaardig bij, en is de aflopende steun die het materiaal
+biedt niet uitgelegd.
+
+Vastgesteld bij de poort van #168.
 
 ## Een besluit toevoegen
 

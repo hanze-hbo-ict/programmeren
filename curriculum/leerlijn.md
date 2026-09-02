@@ -21,13 +21,13 @@ dan de week waarin het hier staat.
 
 | Week | Onderwerp | Leeruitkomsten | Voor het eerst geïntroduceerd |
 |---|---|---|---|
-| 1 | Introductie, Picobot | - | state machine, staat, regels, string |
+| 1 | Introductie, Picobot | - | state machine, staat, regels, string, algoritme |
 | 2 | Variabelen en condities | P1, P2, P3 | toekenning, variabele, operatoren, `if`, lijst, docstring, assertion |
 | 3 | Functies | P5, P6, P7, A2 | functiedefinitie, parameter, zelfaanroep |
 | 4 | Lussen | A1 | `for`, `while`, begrensde en onbegrensde lus, `break`, `continue`, het lusrecept |
 | 5 | Geneste lussen | A1, A3 | geneste lus, 2D-lijst, ASCII-art, bordrepresentatie |
 | 6 | Bestanden en data | bestanden † | bits, bytes, ASCII, newline, `with open`, beeldbewerking |
-| 7 | Mutabiliteit en algoritmeontwerp | P4, A3 | mutatie, functiecompositie, deelprobleem, algoritme, tuple |
+| 7 | Mutabiliteit en algoritmeontwerp | P4, A3 | mutatie, functiecompositie, deelprobleem, algoritmeontwerp, tuple |
 
 † De leeruitkomst over tekstbestanden staat nu in de PGM2-matrijs en wisselt van
 plaats met recursie. Zie [leeruitkomsten.md](leeruitkomsten.md).
@@ -52,6 +52,12 @@ synoniem ervoor, en `conventies/begrippen.md` schrijft *lus* voor. Dit document
 schreef tot 2 september 2026 "begrensde herhaling"; dat week af van zowel de
 begrippenlijst als van `leeruitkomsten.md`, dat "lusconstructies" zegt.
 Vastgesteld bij de poort van #146 en rechtgezet daarna.
+
+**Het begrip *algoritme* valt in week 1, het *ontwerpen* ervan in week 7.**
+`lectures/1a_intro_programmeren.md` geeft de naam aan wat de planstap van de 3 p's
+oplevert, en zonder die naam heeft die draad geen woord voor zijn eigen product.
+Week 7 gaat over algoritme**ontwerp** en het opdelen in deelproblemen, en dat is
+iets anders dan het begrip. Vastgesteld bij de poort van #168.
 
 **Recursie wordt in PGM1 niet onderwezen.** Week 3 laat bij de functies alleen
 zien dát een functie zichzelf kan aanroepen. De leesopdrachten daarover zijn naar
