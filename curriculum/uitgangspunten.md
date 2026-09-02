@@ -656,33 +656,22 @@ Wat een leesvraag wél kapot maakt is **een uitkomst die nergens in de opties
 staat**. Dat is het enige onderscheid dat telt. Binnen dezelfde midterm scheidt
 het twee soorten die op elkaar lijken:
 
-| | Uitkomst | Antwoord aanwezig? | |
-|---|---|---|---|
-| Opgave 14 | `IndentationError` | ja - "Het programma werkt niet" | **laat staan** |
-| Opgave 18 | `ZeroDivisionError` | ja - "Het programma werkt niet" | **laat staan** |
-| Opgave 20 | eindigt nooit | ja - "Het programma werkt niet" | **laat staan** |
-| Opgave 1 | print `3.6999999999999997` | **nee** - de opties zeggen `3.7` | herstellen |
-| Opgave 2 | print `1.0` | **nee** - de opties zeggen `1` | herstellen |
-| Opgave 17 | print `7.0` | **nee** - de opties zeggen `7` | herstellen |
+In de oefenmidterm van week 4 zijn dat **opdracht 14** (`IndentationError`), **18**
+(`ZeroDivisionError`) en **20** (eindigt nooit). Alle drie hebben "Het programma
+werkt niet" als antwoord en alle drie blijven staan.
 
 **Opgave 14 is het gevaarlijkste geval van de drie die blijven staan**, en daarom
 staat hij hier bij name. De "reparatie" is één inspringing, en het programma drukt
 dan `128` af - wat als optie d in de lijst staat. Een goedbedoelde herstelpoging
 levert dus een groene build, een groene sleutel en een fout antwoord.
 
-De onderste drie zijn een ander geval: het programma werkt, er komt een waarde
-uit, en die waarde staat niet in de lijst. Alle drie zijn het floats, en dat is
-geen toeval - `/` geeft in Python 3 altijd een float, in de week na de week
-waarin types zijn geïntroduceerd.
-
-**Besloten bij de poort van #146: de opties zeggen wat het programma werkelijk
-afdrukt**, dus `3.6999999999999997`, `1.0` en `7.0`. De sleutel legt bij opgave 1
-uit waarom er geen `3.7` uit komt. Daarmee worden drie kapotte vragen drie vragen
-over floating point, en de vraagstelling blijft ongemoeid. **Uitgevoerd** met #153.
-
-De tabel hierboven spreekt van *opgave*; de koppen in het materiaal heten sinds
-#153 **opdracht**, conform `conventies/begrippen.md`. De nummers zijn ongewijzigd,
-dus opdracht 14, 18 en 20 zijn dezelfde vragen als voorheen.
+**Er is een tweede geval dat hierop lijkt en er niet onder valt:** het programma
+werkt, er komt een waarde uit, en die waarde staat niet in de lijst. In week 4 was
+dat drie keer een float, en dat is geen toeval - `/` geeft in Python 3 altijd een
+float, in de week na de week waarin types zijn geïntroduceerd. Dat is wél een
+defect, en het is hersteld: **de opties zeggen wat het programma werkelijk
+afdrukt**, en de sleutel legt uit waar de float vandaan komt. Zo worden drie kapotte
+vragen drie vragen over floating point, zonder de vraagstelling te raken.
 
 ### Het lusrecept van week 4
 
@@ -696,11 +685,10 @@ vragen:
 4. Wanneer is het klaar?
 5. Wat geef je terug, en waar staat die regel?
 
-**Vier van de vijf stonden er al**, verspreid: 1 en 3 als de driestapsstrategie in
-`practicals/4_python_bat.md` r32-37, 2 in `lectures/4a_lussen.ipynb` cellen 38-47,
-en 5 in het commentaar bij `fac` in `problems/4_basis.ipynb`. Het patroon zelf komt
-in week 4 vierenzestig keer voor en kreeg één keer een naam. Het recept verzint dus
-weinig; het geeft wat er al is een naam en een plek.
+**Vier van de vijf stonden er al**, verspreid over het practicum, het college en
+het commentaar bij een voorbeeldfunctie. Het patroon zelf kwam in de week
+tientallen keren voor en kreeg één keer een naam. Het recept verzint dus weinig;
+het geeft wat er al is een naam en een plek.
 
 **Vraag 4 is nieuw, en zij is de reden dat dit een recept is en geen samenvatting.**
 Zolang `while` "oneindige herhaling" heet, is stoppen een eigenschap van de
@@ -735,17 +723,14 @@ en er moet een begin mee worden gemaakt - waar het nodig is, hoort het er te zij
 Wat hier niet staat is een streefverhouding, en dat is met opzet: het gaat om waar
 het zwaartepunt ligt en niet om een getal dat een ontwerp moet halen.
 
-De aanleiding was een telling op week 2: **94 keer "wat is de uitvoer" tegen 17 keer
-"schrijf zelf code"**, waarvan 25 van die 94 letterlijke kopieën uit het college.
-Die telling komt uit de leesronde op #107 en is een **classificatie, geen
-zoekopdracht**: zij is niet met een patroon na te rekenen en draagt geen bestandslijst.
-Behandel haar als orde van grootte.
-Dat cijfer is op zichzelf geen bezwaar - de nadruk hóórt daar te liggen - maar de
-dubbelingen zijn het wel, en of er genoeg geschreven wordt is een inhoudelijke vraag
-per week en geen rekensom. Zie #169.
+De aanleiding was een week waarin het voorspellen het schrijven ruim vijf keer
+overtrof, met een kwart van die leesvragen letterlijk uit het college overgenomen.
+Die verhouding is op zichzelf geen bezwaar - de nadruk hóórt daar te liggen - maar
+de dubbelingen zijn het wel, en of er genoeg geschreven wordt is een inhoudelijke
+vraag per week en geen rekensom.
 
-Dit verklaart ook waarom de opstap van week 4 uit twintig leesopdrachten bestaat en
-waarom de oefenmidterm uit leesvragen bestaat; zie *Leesvragen mogen fout aflopen*.
+Dit verklaart ook waarom een opstap uit leesopdrachten mag bestaan en waarom de
+oefenmidterm uit leesvragen bestaat; zie *Leesvragen mogen fout aflopen*.
 
 ### Wat een weekpagina draagt
 
@@ -780,24 +765,13 @@ materiaal - dan is zij een onderhoudslast in plaats van een leerlijn.
 opgaven geen uitwerking hebben, dan is dat een gebrek van de auteurs en het hoort
 gerepareerd te worden. Er is dus geen "de opstap heeft er met opzet geen".
 
-De omvang, gemeten op 2 september 2026 tegen `source/_toc.yml`: **17 van de 31
-opgavebestanden hebben geen uitwerking.** Dat zijn:
+Bij de vaststelling ontbrak ruim de helft van de uitwerkingen. Dat is te veel voor
+één ingreep en het hoeft ook niet in één keer: het liftt mee met de herziening van
+de week waar het bij hoort. De inventarisatie hoort in de werkitems, niet hier.
 
-- **alle acht opstapbestanden**, `problems/2_opstap` tot en met `problems/8_opstap`
-  plus `problems/9_instap` (die heet *instap*, niet *opstap*);
-- de basis en extra van `problems/9_*`, `10_*` en `11_*` - dat zijn **PGM2 week 2,
-  3 en 4**, want de bestandsnummering loopt door over beide vakken heen en is niet
-  het weeknummer;
-- drie losse opdrachten: `caesar_op_orde`, `rij_van_conway`, `tekst_genereren`.
-
-Dat is te veel voor één werkitem en het hoeft ook niet in één keer: het liftt mee
-met de herziening van de week waar het bij hoort. Maar het is vanaf nu een gebrek
-dat benoemd hoort te worden en niet een vorm die verdedigd kan worden.
-
-**De vorm staat vast sinds #146:** een uitwerking is een draaiende codecel en geen
-markdown-blok, zodat de build haar controleert. Het model is
-`source/solutions/4_midterm.ipynb`. Programma's die met opzet stuklopen dragen
-`raises-exception`, zodat de student de echte foutmelding ziet.
+**De vorm:** een uitwerking is een draaiende codecel en geen markdown-blok, zodat
+de build haar controleert. Programma's die met opzet stuklopen tonen hun
+foutmelding in plaats van een beschrijving ervan.
 
 **Te heropenen wanneer** blijkt dat een gepubliceerde uitwerking bij een bepaald
 niveau het leereffect schaadt - de opstap is de kandidaat, want daar controleert de
