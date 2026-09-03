@@ -54,11 +54,11 @@ In dit geval geven we aan dat ten (N) noorden en (W) westen zich een muur bevind
 
 De huidige staat waarin Picobot zich bevindt.
 
-Picobot's geheugen is een *enkel* getal en start altijd met `0`. Dit representeert de huidige staat. *Staat* en *omgeving* is alles wat Picobot kent van de wereld!
+Het geheugen van Picobot is een *enkel* getal en start altijd met `0`. Dit representeert de huidige staat. *Staat* en *omgeving* is alles wat Picobot kent van de wereld!
 
 ![Picobot met daarnaast het bericht "Mijn staat is 0"](images/1/picobot_state.png)
 
-Dat getal loopt van `0` tot en met `99`; meer geheugen heeft Picobot niet. Een staat zegt in welke situatie een berekening zich bevindt; bij Picobot lees je elke staat als één gedrag. Hieronder is staat `0` "rij naar het noorden" en staat `1` "rij naar het westen".
+Dat getal loopt van `0` tot en met `99`; meer geheugen heeft Picobot niet. Een staat zegt in welke situatie een berekening zich bevindt; bij Picobot lees je elke staat als één gedrag. In het uitgewerkte voorbeeld verderop, [De hoek in](#de-hoek-in), is staat `0` "rij naar het noorden" en staat `1` "rij naar het westen". Welk gedrag bij welk nummer hoort kies je zelf; het staat nergens vast.
 
 ### De regels
 
