@@ -23,6 +23,8 @@ De strategie die gebruikt kan worden om een oplossing te vinden verschilt per pr
 
 ### Longest Common Subsequence (LCS)
 
+Een *string* is een stuk tekst zoals de computer het bewaart: een rij losse karakters achter elkaar. Hier zijn dat DNA-letters, later zijn het woorden en zinnen.
+
 Het string-matching probleem in DNA:
 
 - 'CGCTGAGCTAGGCC...'
@@ -82,7 +84,7 @@ Nu is de rest 0, en daarmee zijn we aan het einde gekomen. We hebben bepaald dat
 
 ## State Machine
 
-Een andere methode voor het ontwerpen van programma's is het gebruik van een state machine. Deze manier leent zich er vooral voor om een probleem in kleinere problemen op te breken. Een state machine bestaat uit verschillende states (een staat, of situatie) en heeft altijd een *begin* en *eind* state. Tussen de states zijn overgangen die aangeven wanneer er van state veranderd wordt.
+Een andere methode voor het ontwerpen van programma's is het gebruik van een state machine. Deze manier leent zich er vooral voor om een probleem in kleinere problemen op te breken. Een state machine bestaat uit verschillende staten (een situatie waarin het programma zich bevindt) en heeft altijd een *beginstaat* en een *eindstaat*. Tussen de staten zijn overgangen die aangeven wanneer er van staat veranderd wordt.
 
 Neem bijvoorbeeld de spoken van Pac-Man. Zodra het spel begint zoeken ze naar Pac-Man en als ze hem zien gaan ze achter hem aan. Als Pac-Man een Power Pellet pakt moeten de spoken juist vluchten. Dit idee kan afgebeeld worden in een state machine.
 
@@ -111,23 +113,31 @@ Nim is een spel voor twee spelers. Er liggen 16 lucifers op tafel. Om de beurt p
 - **Stap 1: Proberen.** Ga uitzoeken welke strategie speler 2 moet gebruiken om altijd te winnen. Speel het spel een paar keer tegen jezelf of een medestudent om patronen te ontdekken.
 - **Stap 2: Plan.** Maak een beslissingsboom voor speler 2. Begin bij de startsituatie en werk alle mogelijke zetten uit tot je de winnende strategie ziet.
 
+Je bent klaar als je met je boom in de hand drie potjes speelt als speler 2 en er geen zet van je tegenstander is waarop je boom geen antwoord geeft.
+
 ### Opdracht 2: Nim variant
 
 Leg 3 groepjes lucifers op tafel. Het aantal lucifers in elke groep maakt niet uit. Om de beurt pakt een speler 1, 2 of 3 lucifers, **uit één groep**. Degene die de laatste lucifer van tafel pakt heeft gewonnen. Ook nu kan met de juiste strategie een speler altijd de winst garanderen.
 
-Anders dan bij de vorige opgave ligt hier niet vast wíe er kan winnen. Dat hangt af van de beginopstelling, en dus is de eerste vraag niet hoe je wint maar of je wilt beginnen.
+Anders dan bij de vorige opdracht ligt hier niet vast wíe er kan winnen. Dat hangt af van de beginopstelling, en dus is de eerste vraag niet hoe je wint maar of je wilt beginnen.
 
 - **Stap 1: Proberen.** Speel een paar opstellingen na, bijvoorbeeld (3,4,5) en (1,2,3), en let erop of je in die stand liever als eerste of als tweede aan de beurt bent. Ze zijn niet allebei hetzelfde.
 - **Stap 2: Plan.** Beschrijf twee dingen: hoe je aan een opstelling ziet of je wilt beginnen, en hoe je daarna wint. Je strategie moet voor elke beginopstelling werken, niet alleen voor de twee die je hebt gespeeld.
 
+Je bent klaar als je je strategie op drie zelfbedachte opstellingen loslaat, waaronder één die je nog niet hebt gespeeld, en zij bij alle drie een zet aanwijst.
+
 ### Opdracht 3: Wie liegt er?
 
-De vorige twee opgaven gingen over een strategie bedenken. Deze gaat over
+De vorige twee opdrachten gingen over een strategie bedenken. Deze gaat over
 redeneren naar één antwoord toe, en dat is minstens zo vaak wat je bij het
 programmeren doet.
 
 Ze lopen op in moeilijkheid. Schrijf bij elke puzzel je redenering op, niet
 alleen je antwoord: die redenering is waar het om gaat.
+
+Je bent klaar als je bij elke puzzel je redenering aan een medestudent kan
+voorlezen zonder ergens "en dan zie je het" te hoeven zeggen: elke stap volgt
+uit een uitspraak in de puzzel.
 
 **a.** Nate en Jeff komen uit een land waar sommige mensen altijd de waarheid spreken en de rest altijd liegt.
 
@@ -161,3 +171,7 @@ Hij krijgt deze elf antwoorden:
 
 Kan de toerist hieruit vaststellen hoeveel ridders er in het café zitten? Zo ja,
 hoeveel, en hoe weet je dat zeker?
+
+## En nu Picobot
+
+Deze drie opdrachten deed je met pen en papier. In het volgende college doe je hetzelfde voor een robotje dat je daarna echt kan laten lopen: [Picobot](/lectures/1b_picobot).

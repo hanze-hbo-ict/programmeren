@@ -1,7 +1,7 @@
-# Een voorbeeld van een Picobot-programma met 5 toestanden
+# Een voorbeeld van een Picobot-programma met 5 staten
 
-Dit is één voorbeeld van een Picobot-programma met 5 toestanden en 9 regels
-per toestand die met `__repr__` is afgedrukt.
+Dit is één voorbeeld van een Picobot-programma met 5 staten en 9 regels
+per staat die met `__repr__` is afgedrukt.
 
 Je kan als voorbeeld gebruiken om te zorgen dat je methode `__repr__` uitvoer geeft die
 rechtstreeks gekopieerd en geplakt kan worden in de [Picobot-simulator](https://www.cs.hmc.edu/picobot/).

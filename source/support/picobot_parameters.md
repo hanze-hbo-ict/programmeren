@@ -18,11 +18,11 @@ Als je willekeurig ouders kiest kan het gebeuren dat een bepaald kind twee keer 
 
 ## Mutaties
 
-Muteer bijvoorbeeld een derde van de populate die je op deze manier maakt (op maar één regel, en alleen met een geldige nieuwe verplaatsing en misschien een nieuwe toestand). De *meeste* mutaties zijn fataal voor de programma's die ze krijgen, maar dit is niet altijd zo. Zonder mutaties is er geen manier om iets beters te krijgen dan wat er aanwezig was in de oorspronkelijke genenpoel.
+Muteer bijvoorbeeld een derde van de populate die je op deze manier maakt (op maar één regel, en alleen met een geldige nieuwe verplaatsing en misschien een nieuwe staat). De *meeste* mutaties zijn fataal voor de programma's die ze krijgen, maar dit is niet altijd zo. Zonder mutaties is er geen manier om iets beters te krijgen dan wat er aanwezig was in de oorspronkelijke genenpoel.
 
-## Toestanden
+## Staten
 
-Als je vast zit op 12% of 17%, kan het zijn dat je een fout hebt waardoor de toestand nooit wijzigt. Probeer eens alle toestanden die tijdens een test langskomen af te drukken...
+Als je vast zit op 12% of 17%, kan het zijn dat je een fout hebt waardoor de staat nooit wijzigt. Probeer eens alle staten die tijdens een test langskomen af te drukken...
 
 ## Het doolhof
 
