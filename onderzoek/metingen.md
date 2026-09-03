@@ -221,6 +221,54 @@ Wat wél verschilde is de **opbrengst**: het herontwerp loste de twee blokkades 
 en introduceerde drie nieuwe, de reparatie loste er drie op en introduceerde er
 geen.
 
+### De oplevering en de beoordeling
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| auteur | onbekend | 21 min | C5; **afgebroken op een verbindingsfout** ná het openen van de PR |
+| beoordelaar-eerstejaars | 116.713 | 9 min | **BLOKKEER**, 1 blokkerend |
+| beoordelaar-onderwijskundige | 96.273 | 8 min | AKKOORD MET PUNTJES |
+| beoordelaar-redacteur | 82.563 | 8 min | AKKOORD MET PUNTJES |
+| beoordelaar-pragmaticus | 78.855 | 6 min | AKKOORD MET PUNTJES |
+
+**De tokentelling van de auteur is verloren.** Hij viel om op een verbindingsfout
+nadat hij had gecommit en de pull request had geopend, dus het werk is compleet en
+alleen zijn eindverslag ging weg. Dat is het verschil tussen verlies en vertraging,
+en hier is het verlies beperkt tot een getal.
+
+### Vier beoordelaars, en opnieuw één die het zag
+
+**Alleen de eerstejaars vond het blokkerende defect**, net als bij week 4. Het is
+er één en het is klein: `1b` r61 zegt *"Hieronder is staat `0` rij naar het
+noorden"*, terwijl de tabel er direct onder staat 0 een stap naar het **zuiden**
+laat zetten (`Nxxx -> S`). De zin die er wél mee klopt staat 65 regels verder.
+
+Dat is de enige plek waar het lastigste begrip van de week wordt uitgelegd - het
+ontwerp bracht alle uitleg daarheen - en het is precies de route waar het practicum
+de student naartoe stuurt. De andere drie beoordelaars lazen dezelfde regels en
+zagen het niet.
+
+Tweede waarneming op rij dat de rol die de constructie *niet* kent, ziet wat de
+rollen die haar kennen overlezen. Zie ook de meting bij #146.
+
+### De overdracht ging opnieuw stuk, en de rol ving het
+
+De orkestrator gaf de kern van C5 door door hem met de hand in vier prompts over te
+typen, en knipte daarbij het verplichte veld *Wat dit raakt buiten deze week* eraf.
+De eerstejaars **stopte daarop en gaf geen oordeel**, zoals zijn contract
+voorschrijft, en onderbouwde waarom het geen formaliteit was: hij had tijdens het
+lezen gezien dat twee van de zes gewijzigde bestanden geen week 1-materiaal zijn en
+dat `projects/picobot.md` nog *toestand* schrijft. Hij kon niet aannemen dat het
+veld leeg was.
+
+Het veld dekte dat precies. Het gat zat in de overdracht, niet in de oplevering.
+
+Na aanlevering van het ontbrekende veld maakte hij zijn C6 af **zonder opnieuw te
+lezen**, in dezelfde draad. Hij merkte daarbij zelf op dat dit de tweede keer is dat
+een stopvoorwaarde afgaat op een onvolledig doorgegeven kern, en dat de goedkoopste
+ingreep niet een uitzondering in het contract is maar het **letterlijk doorgeven**
+van de kern in plaats van hem over te typen. Zie bevinding 15.
+
 ### Drie verhelderaarrondes, drie keer raak
 
 Geen van de drie oordelen was ruis. Ronde 1 ving dat het ontwerp niet zei hoeveel
