@@ -149,6 +149,94 @@ erbij ging drie keer mis, en telkens anders:
 Alle drie zijn ze gevonden, en dat is het punt: het criterium is drie rollen lang
 gecontroleerd door rollen die er niet aan hadden meegeschreven.
 
+## Werkitem #107 — week 1 en 2, afgewezen bij de triage
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| triage | 45.336 | 163 s | **AFWIJZEN**, omvang XL, splitsingsadvies langs drie naden |
+
+Week 1 en week 2 delen geen enkel bestand in `_toc.yml`, en de criteria vielen
+langs diezelfde naad uiteen. Voor **45k** is vastgesteld dat dit werk in drie
+stukken uiteenvalt, waar het als één XL-werkitem ruim een miljoen zou hebben
+gekost. Dat is de tweede keer dat triage het duurste besluit voor de laagste prijs
+neemt; zie bevinding 6.
+
+Eén kanttekening die de orkestrator ving: C1 beriep zich op de regel
+*"een vak herindelen → AFWIJZEN"* uit de proportionaliteitstabel, en twee weken
+herzien is dat niet. De conclusie stond wel, maar op de regel erboven.
+
+## Werkitem #167 — vier besluiten, en de eerste keer dat stap 5b draaide
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| beoordelaar-redacteur (stap 5b) | 62.499 | 7 min | **BLOKKEER**, 4 moet-punten |
+
+Stap 5b bestaat sinds bevinding 14: niets toetste wat de orkestrator naar
+`curriculum/` en `conventies/` schrijft. **Bij de eerste run verdiende hij zichzelf
+terug.** Twee van de vier moet-punten waren feitelijke fouten van de orkestrator:
+
+- "PGM2 week 9, 10 en 11" bestaat niet — `problems/9_*`, `10_*` en `11_*` zijn PGM2
+  week 2, 3 en 4. Dat stond in het uitvoerbare deel van een besluit; wie het had
+  nageleefd, had naar niets gezocht.
+- Een nieuw besluit sprak een staand besluit tegen: *Leesvragen mogen fout aflopen*
+  opende met "niet om code schrijven", terwijl het nieuwe besluit juist zegt dat er
+  wél geschreven moet worden. Twee plekken in hetzelfde document, honderd regels uit
+  elkaar.
+
+## Werkitem #168 — PGM1 week 1, drie ontwerprondes
+
+| Rol | Ronde | Tokens | Duur | Uitkomst |
+|---|---|---|---|---|
+| triage | | 53.589 | 4 min | LUS, omvang L (overrulet M) |
+| verkenner | | 146.300 | 16 min | C1b |
+| curriculumontwerper | 1 | 67.664 | 6 min | C2 |
+| verhelderaar | 1 | 89.902 | 9 min | **FAAL**, 2 blokkerend |
+| curriculumontwerper | 2 (herontwerp) | 86.133 | 10 min | C2 |
+| verhelderaar | 2 | 90.188 | 10 min | **FAAL**, 3 blokkerend |
+| curriculumontwerper | 3 (reparatie) | 72.242 | 8 min | C2 |
+| verhelderaar | 3 | 77.193 | 7 min | **AKKOORD**, 9 verbeterpunten |
+
+**683.211 tokens tot aan de poort**, voor een week van vijf markdownbestanden en
+3.872 woorden. De auteur en de beoordelaars waren toen nog niet gedraaid.
+
+### Een herontwerp is niet duurder dan een reparatie
+
+Dit weerlegt een aanname die de orkestrator hardop maakte. `/orc` onderscheidt de
+eerste `FAAL` (herontwerp, ontwerper krijgt het afgekeurde C2 niet) van de tweede
+(reparatie, hij krijgt het wel), en de gedachte daarachter is dat reparatie
+goedkoper is. Gemeten:
+
+| Ronde | Wat | Tokens |
+|---|---|---|
+| 1 | eerste ontwerp | 67.664 |
+| 2 | **herontwerp**, zonder het afgekeurde C2 | 86.133 |
+| 3 | **reparatie**, mét het afgekeurde C2 | 72.242 |
+
+Het verschil is 14k op 86k, ongeveer een zesde. De orkestrator schatte de
+reparatie vooraf op 30 tot 40k en zat er ruim naast. De verklaring is dat een
+reparatieronde het volledige document opnieuw oplevert; alleen het *denkwerk* is
+smaller, en dat is niet waar de tokens zitten.
+
+Wat wél verschilde is de **opbrengst**: het herontwerp loste de twee blokkades op
+en introduceerde drie nieuwe, de reparatie loste er drie op en introduceerde er
+geen.
+
+### Drie verhelderaarrondes, drie keer raak
+
+Geen van de drie oordelen was ruis. Ronde 1 ving dat het ontwerp niet zei hoeveel
+van een oplossing het college mocht weggeven, terwijl het uit CS5 een sectie wilde
+terughalen die drie van de acht regels van de zwaarste opdracht bevat. Ronde 2 ving
+dat drie acceptatiecriteria aan geen enkel onderdeel hingen, en dat de
+woordbudgetten van één criterium niet konden optellen — 3.956 tegen een plafond van
+3.872 — terwijl de grond eronder onwaar was ("1.700 blijft onder 1.543"). Ronde 3
+gaf `AKKOORD` en ving daarbij nog dat een ijkgetal dat de orkestrator zelf had
+doorgegeven, 68, in werkelijkheid het practicum (29) plus een bestand was dat
+uitdrukkelijk buiten de opdracht viel (39).
+
+Die laatste rol deed daarbij iets wat het noteren waard is: hij meldde dat zijn
+**eigen** eerste patroon nul gaf en stukgelopen bleek. Dat is de huisregel uit
+`CLAUDE.md`, door een rol op zichzelf toegepast en uit zichzelf gerapporteerd.
+
 ## Werkitem #115 — de uitwerkingen
 
 | Rol | Tokens | Duur | Uitkomst |
@@ -283,6 +371,14 @@ gelezen:
 | Consistentiecontrole op issues en bord | Onderhoud, geen materiaal | **nee** |
 | Werkitem #146 geschreven uit twee C6-oordelen | Bankwerk op andermans bevindingen, geen materiaal | n.v.t. — de bron *is* twee beoordelaars |
 | Het leesvragenbesluit soortgebonden gemaakt (#150) | Een besluit van de vakdeskundige noteren | **nee** |
+| Het poortbesluit van #146 vastgelegd (#152) | Vastlegplicht na C4 | **nee** |
+| De body van #146 herschreven tot kaart | Leesbaarheid, geen materiaal | **nee** |
+| De moet-lijst van C7 met de hand uitgevoerd | De auteur viel om op de maandlimiet | **nee** |
+| #107 gesplitst in #167, #168 en #169 | Uitvoering van een triagebesluit | **nee** |
+| Het poortbesluit van #167 vastgelegd | Vastlegplicht na C4 | **ja — stap 5b, BLOKKEER** |
+| `uitgangspunten.md` opgeschoond van refactor-boekhouding | Verzoek van de vakdeskundige | **ja — stap 5b** |
+| Het poortbesluit van #168 vastgelegd | Vastlegplicht na C4 | **ja — stap 5b** |
+| Het leesvragenbesluit soortgebonden gemaakt (#150) | Een besluit van de vakdeskundige noteren | **nee** |
 | Het poortbesluit vastgelegd in `curriculum/` en `conventies/` (#152) | Vastlegplicht na C4 | **nee** |
 | De body van #146 herschreven tot kaart | Leesbaarheid, geen materiaal | **nee** |
 
@@ -291,7 +387,13 @@ drie een reparatie op die een redacteur zou hebben gevangen (bevinding 4); bij d
 zes leverde de laatste er vier op, want de consistentiecontrole vond vier issues met
 een achterhaalde bewering (bevinding 10).
 
-Dat de controle die fouten vond is geen weerlegging van de regel maar de
+**De laatste drie zijn wél gelezen**, en dat is het eerste gevolg van stap 5b uit
+`/orc`: sinds die stap bestaat, gaat elke vastlegging in `curriculum/` of
+`conventies/` langs een redacteur voordat de pull request wordt aangeboden. De
+eerste keer leverde dat meteen `BLOKKEER` op met twee feitelijke fouten. Van
+zeventien-op-nul naar drie-op-drie in één dag; of het houdt, is de volgende meting.
+
+Dat de eerdere controle fouten vond is geen weerlegging van de regel maar de
 bevestiging ervan: het gebeurde omdat er gekeken werd, en het was toeval dat er
 gekeken werd. Dat is geen verwijt
 achteraf maar de reden dat de regel er nu is - en deze tabel is de plek waar te
