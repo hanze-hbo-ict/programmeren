@@ -7,7 +7,7 @@ Het **doel** van deze les is om:
 
 ## Directorystructuur
 
-Een programma heeft instructies nodig om te weten wat het moet doen. Deze instructies staan in bestanden, ook bekend als files. Elk bestand heeft een extensie om aan te geven wat voor type bestand het is. `bestand.py` is een python bestand, `bestand.docx` is een word bestand. Het zijn altijd de laaste drie, soms vier letters na de **laatste** punt. `bestand.docx.py` is nog steeds een python bestand.
+Een programma heeft instructies nodig om te weten wat het moet doen. Deze instructies staan in bestanden, ook bekend als files. Elk bestand heeft een extensie om aan te geven wat voor type bestand het is. `bestand.py` is een python bestand, `bestand.docx` is een word bestand. Het zijn altijd de laatste drie, soms vier letters na de **laatste** punt. `bestand.docx.py` is nog steeds een python bestand.
 
 :::{admonition} Belangrijk!
 :class: important
@@ -54,31 +54,27 @@ Dat is geen tekening maar uitvoer: het commando `tree` drukt het zo af. Je komt
 deze schrijfwijze overal tegen, dus het loont om hem te leren lezen. Wat
 inspringt zit erin.
 
-Vaak staan de directories onder elkaar afgebeeld.
-
-![Overzicht van directories](images/0/folders.png)
-
-De Finder van Apple beeldt de structuur op een andere manier af.
+De Finder van macOS beeldt de structuur op een andere manier af.
 
 ![Directories in de Finder](images/0/finder_folders.png)
 
-### One-drive
+### OneDrive
 
-One-drive is de cloud systeem van microsoft. Het is automatisch geinstaleerd in windows. Voor mac kan het geinstalleerd worden met Rosetta 2 emulator. Via de hanze heb je toegang tot een grote one-drive om al je schoolwerk in kwijt te kunnen. Het werkt als een normale directory in de verkenner en alles wat erin staat wordt opgeslagen in de cloud. Het grote voordeel is dat je werk altijd een backup heeft. Je kan ook op verschillende apperaten inloggen dezelfde one-drive account instellen, bijvoorbeeld op een tablet, laptop en desktop. Op deze manier heb je toegang tot je bestanden op alle drie the apperaten.
+OneDrive is de cloud systeem van microsoft. Het is automatisch geïnstalleerd in windows. Voor mac kan het geïnstalleerd worden met Rosetta 2 emulator. Via de Hanze heb je toegang tot een grote OneDrive om al je schoolwerk in kwijt te kunnen. Het werkt als een normale directory in de verkenner en alles wat erin staat wordt opgeslagen in de cloud. Het grote voordeel is dat je werk altijd een backup heeft. Je kan ook op verschillende apparaten inloggen dezelfde OneDrive account instellen, bijvoorbeeld op een tablet, laptop en desktop. Op deze manier heb je toegang tot je bestanden op alle drie the apparaten.
 
-In de settings van one_drive kan je een account toevoegen, including je hanze schoolaccount. Zodra je deze hebt aangemaakt wordt er een nieuwe directory aangemaakt voor de one-drive. Daar kan al het werk in geplaats worden.
+In de settings van one_drive kan je een account toevoegen, including je hanze schoolaccount. Zodra je deze hebt aangemaakt wordt er een nieuwe directory aangemaakt voor de OneDrive. Daar kan al het werk in geplaatst worden.
 
 :::{admonition} Belangrijk!
 :class: important
 
-One-drive staat standaard op *Files On-demand*. Dit houdt in dat het enkel een document download zodra je het opent. Voor programmeren werkt dat niet. Bestanden moeten lokaal beschikbaar zijn. Het is dus verstandig om *files on-demand* uit te zetten.  
+OneDrive staat standaard op *Files On-demand*. Dit houdt in dat het enkel een document download zodra je het opent. Voor programmeren werkt dat niet. Bestanden moeten lokaal beschikbaar zijn. Het is dus verstandig om *files on-demand* uit te zetten.
 
 ![files on demand off](images/0/files_on_demand.png)
 :::
 
 ## Command Prompt
 
-De meeste interacties die we met computers hebben zijn via vensters die door het besturingssysteem aangeboden worden. Het besturingssysteem (of *OS*, kort voor *operating system*), is meestal Windows of Mac OS, maar er zijn vele andere, waarvan Linux de meest voorkomende is. Het besturingsysteem dat je gebruikt voorziet in een *venstersysteem* waardoor je een muis kan gebruiken, op een gebruikersvriendelijke manier kan interacteren met de computer, en zelfs films kan bekijken. De klik-en-sleepinterface van moderne venstersystemen is zeker heel erg handig!
+De meeste interacties die we met computers hebben zijn via vensters die door het besturingssysteem aangeboden worden. Het besturingssysteem (of *OS*, kort voor *operating system*), is meestal Windows of macOS, maar er zijn vele andere, waarvan Linux de meest voorkomende is. Het besturingssysteem dat je gebruikt voorziet in een *venstersysteem* waardoor je een muis kan gebruiken, op een gebruikersvriendelijke manier kan interacteren met de computer, en zelfs films kan bekijken. De klik-en-sleepinterface van moderne venstersystemen is zeker heel erg handig!
 
 ***Echter***, de grafische interface is ook een gordijn, dat de gebruiker afschermt van wat er echt gebeurt met de bestanden op het systeem. Het is een krachtige en nuttige vaardigheid om een duidelijk idee te hebben van hoe bestanden gebruikt worden *achter* het gordijn van het venstersysteem. De terminal is een programma dat "achter" het gordijn kijkt. Hij gebruikt tekstcommando's op de zogeheten "command line" (of commandoregel) om bestanden en acties op je computer aan te spreken.
 
@@ -86,55 +82,43 @@ Je op je gemak voelen op de command line is vaak handig om programma's te *maken
 
 ***Start je terminal op!***
 
-Windows: Start command prompt via het startmenu. Klik op het start menu of op het vergrootglas en type in cmd. Je kan ook werken met powershell door powershell in te typen en op te starten.
+`````{tab-set}
 
-Apple: Om de terminal te openen in Apple druk je op command+spatie en type je in term. Dit geef dan de optie om de terminal te openen.
+````{tab-item} Windows
+Vind en start *Terminal*. Als je deze applicatie niet hebt, installeer het via [Windows Store](https://apps.microsoft.com/detail/9n0dx20hk701?gl=NL&hl=nl-NL&gl=NL).
+````
 
-De terminal heeft vele namen:
+````{tab-item} macOS
+Druk op command (⌘)+ spatie en type Terminal.
+````
 
-* De terminal
-* De shell
-* De command line
+````{tab-item} Linux
+De terminal die gebruikt wordt kan per distributie verschillen, bijvoorbeeld `xterm`, `gnome-terminal` of `ptyxis`. Je zal moeten uitzoeken welke is geïnstalleerd, raadpleeg andere de documentatie van jouw distributie.
+````
+
+`````
 
 Als dit de eerste keer is dat je de terminal gebruikt, goed bezig!
 
 ## Paden
 
-Zodra je de terminal opent start het vaak in je eigen home directory. Dit is aangegeven via een pad.
+Zodra je de terminal opent start het vaak in je home directory. Dit is aangegeven via een pad.
 
 ```console
 C:\Users\Emily>
 ```
 
-De slashes `/` scheiden subdirectories van de directory waar ze in zitten. Op Windows zie je meestal backslashes `\` of dubbele backslashes; dit verschil is niet belangrijk.
+De *slashes* (`/`) scheiden subdirectories van de directory waar ze in zitten. Op Windows zie je meestal backslashes `\` of dubbele backslashes; dit verschil is niet belangrijk. Linus en macOS gebruiken *forward* slashes (`/`).
 
 Vertaling: op de C-schijf staat in de directory Users de directory Emily
 
-Alle bestanden hebben hun eigen pad, een locatie binnen het systeem. Een computer kan enkel een bestand vinden als het pad bekend is.
-
-### Path Variable
-
-Er zijn commando's die je als programmeur vaak wil gebruiken, bijvoorbeeld het uitvoeren van Python of een java programma. Om de computer een python programma uit te laten voeren heeft python.exe nodig samen met een python bestand. Pyhton.exe heeft een locatie, bijvoorbeeld `C:\Users\Emily\AppData\Local\Programs\Python\Python311\python.exe`. Als je pyton gaat programmeren wil je niet elke keer de hele locatie uit typen. Het is makkelijker als de pc altijd python.exe kon vinden.
-
-In windows kan je dat doen via PATH. Druk op start en type in path. Dit geeft je de optie om de system environment variables aan te passen.
-
-![system var opstarten](images/0/system_vars.png)
-
-Dit opent een nieuw programma in en in het tabblad Advanced kan je de optie Environment variables aan klikken.
-
-![system properties](images/0/system_prop.png)
-
-Je hebt nu toegang tot alle environment variables, waaronder ook Path.
-
-![Path instellen](images/0/path.png)
-
-In path staan verschillende locatie aangegeven. De bestanden die in deze locaties staan zijn altijd te vinden. Als `C:\Users\Emily\AppData\Local\Programs\Python\Python311\` in het path staat is `python.exe` beschikbaar om te gebruiken.
+Alle bestanden hebben een eigen pad, een locatie binnen het systeem. Een computer kan enkel een bestand vinden als het pad bekend is.
 
 ## De terminal en de command-line
 
-Alles wat je kan doen met de vensters van je besturingssyteem kan je ook met de terminal en de command-line doen. (Sterker, je kan nog veel *meer* met de command line doen...)
+Alles wat je kan doen met de vensters van je besturingssysteem kan je ook met de terminal en de command-line doen. (Sterker, je kan nog veel *meer* met de command line doen...)
 
-Bij dit vak heb je drie terminalcommando's nodig. We behandelen ze alledrie kort. Hier is een kort overzicht:
+Bij dit vak heb je een paar terminalcommando's nodig, hier is een kort overzicht:
 
 * `pwd`; kort voor *print working directory*. Het drukt je huidige locatie af.
 * `ls`; Het drukt een lijst af van alle bestanden in de huidige locatie.
@@ -201,7 +185,7 @@ misja@selenix:~$
 
 `````
 
-Je ziet de locatie waarin je terminal en command line op dit moment actief is. Waarschijnlijk zal je een iets ander resulaat zien, behalve als je naam toevallig `misja` is 😉
+Je ziet de locatie waarin je terminal en command line op dit moment actief is. Waarschijnlijk zal je een iets ander resultaat zien, behalve als je naam toevallig `misja` is 😉
 
 Merk ook op dat een volgende prompt verschenen is, die op een volgend commando wacht...
 

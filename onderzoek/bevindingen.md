@@ -604,6 +604,56 @@ nageleefd, en dat is de enige aanwijzing dat de vorm klopt. **Nog niet bewezen.*
 
 ---
 
+## 15. De orkestrator typt artefacten over in plaats van ze door te geven
+
+*3 september 2026.*
+
+Bij de beoordelingsronde van #168 kreeg elke beoordelaar de kern van C5 doordat de
+orkestrator hem **met de hand in vier prompts overtypte**. Daarbij viel het
+verplichte veld *Wat dit raakt buiten deze week* weg — in alle vier.
+
+De eerstejaars stopte daarop en gaf geen oordeel, precies zoals het C6-contract
+voorschrijft. Zijn onderbouwing waarom dat geen formaliteit was, is het aardigste
+deel: hij had tijdens het lezen gezien dat twee van de zes gewijzigde bestanden
+geen week 1-materiaal zijn, en dat `projects/picobot.md` nog *toestand* schrijft.
+Hij kón niet aannemen dat het veld leeg was, want hij zag bewijs dat het dat niet
+was.
+
+**Het veld dekte dat allemaal.** De auteur had `projects/picobot.md` erin staan
+met 39 voorkomens, als bekende afwijking met een eigen werkitem. Het gat zat in de
+overdracht en niet in de oplevering.
+
+**Dit is het derde geval van dezelfde soort**, alle drie van de orkestrator en alle
+drie in dezelfde sessie:
+
+| Wat | Gevolg |
+|---|---|
+| Een pad naar een C5 dat nooit is weggeschreven (#146) | De hoofdredacteur werkte zonder de oplevering |
+| IJkgetallen die practicum plus een buiten-scope bestand bleken (#168) | Een auteur zou 39 voorkomens zoeken in een bestand dat hij niet mag aanraken |
+| De kern overgetypt en een verplicht veld afgeknipt (#168) | Vier beoordelaars kregen een onvolledig artefact; één stopte |
+
+Het patroon is telkens hetzelfde: **de orkestrator geeft iets door zonder te
+controleren dat het compleet is.** Bevinding 14 ging over wat hij naar
+`curriculum/` schrijft; dit gaat over wat hij tússen rollen doorgeeft, en dat is een
+groter oppervlak.
+
+**Wat het veranderde.** Nog niets structureels, en dat is de eerlijke stand. De
+eerstejaars doet zelf het voorstel dat me het beste lijkt, en het is goedkoper dan
+een regel: **geef de kern letterlijk door in plaats van hem over te typen.** Een
+artefact hoort naar een bestand te gaan dat de rol leest, niet door een prompt heen
+gekopieerd te worden — dat kan `/orc` al ("in de prompt zelf, of in een bestand dat
+hij mag lezen"), en het overtypen was de duurdere van de twee opties die de regel
+toestaat.
+
+Dat het één keer goed afliep is geen geruststelling maar het tegendeel: het liep
+goed af omdat de rol zijn stopvoorwaarde naleefde. Drie andere beoordelaars kregen
+hetzelfde onvolledige artefact en **stopten niet**. Zij hadden het veld ook nodig —
+twee van hen kwamen in hun oordeel uit bij precies wat erin stond.
+
+**Nog niet opgelost.**
+
+---
+
 ## Open: welk model per rol
 
 *1 september 2026. Nog niet onderzocht.*
