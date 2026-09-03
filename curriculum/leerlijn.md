@@ -23,7 +23,7 @@ dan de week waarin het hier staat.
 |---|---|---|---|
 | 1 | Introductie, Picobot | - | state machine, staat, regels, string, algoritme |
 | 2 | Variabelen en condities | P1, P2, P3 | toekenning, variabele, operatoren, `if`, lijst, assertion |
-| 3 | Functies | P5, P6, P7, A2 | functiedefinitie, parameter, zelfaanroep |
+| 3 | Functies | P5, P6, P7, A2 | functiedefinitie, parameter, zelfaanroep, docstring |
 | 4 | Lussen | A1 | `for`, `while`, begrensde en onbegrensde lus, `break`, `continue`, het lusrecept |
 | 5 | Geneste lussen | A1, A3 | geneste lus, 2D-lijst, ASCII-art, bordrepresentatie |
 | 6 | Bestanden en data | bestanden † | bits, bytes, ASCII, newline, `with open`, beeldbewerking |
@@ -59,12 +59,16 @@ oplevert, en zonder die naam heeft die draad geen woord voor zijn eigen product.
 Week 7 gaat over algoritme**ontwerp** en het opdelen in deelproblemen, en dat is
 iets anders dan het begrip. Vastgesteld bij de poort van #168.
 
-**Een docstring komt in week 2 voor zonder uitleg.** De student ziet er een in het
-skelet dat hij bij de basisopgave krijgt, en dat is genoeg; wat een docstring *is*
-wordt pas expliciet gemaakt bij de functies van week 3. Daarom staat *docstring*
-niet in de kolom hiernaast: die kolom gaat over waar een begrip wordt
-geïntroduceerd, en dit is onderdompeling. Zie *Onderdompeling gaat vooraf aan
-uitleg* in [uitgangspunten.md](uitgangspunten.md).
+**Een docstring komt in week 2 voor zonder dat de vorm wordt uitgelegd.** De
+student ziet er twee in de gegeven code bij de basisopgave, en het wóórd valt daar
+ook al: `practicals/2_rochambeau.ipynb` schrijft over "comments en docstrings". Wat
+een docstring *is* wordt pas expliciet gemaakt bij de functies van week 3, en
+daarom staat *docstring* in de kolom van week 3 en niet van week 2. Zie
+*Onderdompeling gaat vooraf aan uitleg* in [uitgangspunten.md](uitgangspunten.md).
+
+Die zin in `2_rochambeau` staat overigens al als bekende afwijking in
+`conventies/codeconventies.md`, op een andere grond: hij vertelt te vroeg dat code
+Engels is. Beide lopen mee met de herziening van week 2.
 
 **Recursie wordt in PGM1 niet onderwezen.** Week 3 laat bij de functies alleen
 zien dát een functie zichzelf kan aanroepen. De leesopdrachten daarover zijn naar
@@ -202,7 +206,7 @@ als zodanig is gemarkeerd.
 |---|---|---|---|
 | `while` | PGM1 week 4 | PGM1 week 2, `practicals/2_rochambeau` | Bewust; de tekst zegt erbij dat lussen later komen |
 | list comprehension | PGM2 week 1 | PGM1 week 6, `practicals/6b_images` | Onderwerp van een hele PGM2-week |
-| functiedefinitie | PGM1 week 3 | PGM1 week 2, `problems/2_basis` | Mogelijk als gegeven voorbeeld |
+| functiedefinitie | PGM1 week 3 | PGM1 week 2, `problems/2_basis` | Als gegeven code, niet om te schrijven. De docstring in datzelfde blok is onderdompeling; of dat ook voor de `def` geldt is nog niet besloten |
 | tuple | PGM1 week 7 | PGM1 week 5, laag extra, `problems/5_extra.md` | Ongemarkeerd; introduceert ook *methode* en *object*. Buiten bereik van de herzieningen in #102/#134 |
 
 Twee regels stonden hier eerder en zijn nagemeten en geschrapt.
