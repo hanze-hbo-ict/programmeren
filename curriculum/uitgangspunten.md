@@ -292,6 +292,7 @@ draait wel.
 | De vastgestelde matrijs wijzigt niet als bijvangst; bevindingen gaan naar *Voorgestelde correcties* | organisatorisch | staand, onderbouwd |
 | Het oefententamen is representatief en verandert voorlopig niet | organisatorisch | staand |
 | Leesvragen mogen fout aflopen; de fout is het antwoord | didactisch | staand, onderbouwd |
+| Onderdompeling mag vooraf gaan aan uitleg | didactisch | staand; de grens is nog een afleiding |
 | Studenten leveren geen werk in; opdrachten zijn oefening | organisatorisch | gesloten, **nog niet uitgevoerd**: `source/` draagt nog inleverinstructies |
 | Tot en met week 4 ligt de nadruk op lezen en begrijpen; schrijven begint wel | didactisch | staand, onderbouwd |
 | Een weekpagina vat samen wat volgt en waarop het voortbouwt | praktisch | gesloten, nog niet uitgevoerd (#167) |
@@ -808,6 +809,34 @@ er ogenschijnlijk gelijkwaardig bij, en is de aflopende steun die het materiaal
 biedt niet uitgelegd.
 
 Vastgesteld bij de poort van #168.
+
+### Onderdompeling gaat vooraf aan uitleg
+
+**Een begrip mag in het materiaal voorkomen voordat het wordt uitgelegd.** De
+student ziet het dan een paar keer in het wild, en pas later wordt expliciet
+gemaakt wat het is. Dat is geen slordigheid maar een keuze: wie een vorm al een
+paar keer heeft zien staan, heeft bij de uitleg iets om haar aan op te hangen.
+
+Het geval waarop dit is vastgesteld: de **docstring**. Die staat in week 2 in de
+gegeven code bij de basisopgave, zonder dat de vorm wordt uitgelegd, en wordt pas
+bij de functies van week 3 benoemd. Vastgesteld door de vakdeskundige op
+3 september 2026.
+
+**Afleiding, niet vastgesteld** - waar de grens ligt is niet uitgesproken; wat
+hierna staat is de lezing van de orkestrator, en zij hoort bij de eerstvolgende
+poort te worden bevestigd of bijgesteld.
+
+*Leg uit waar de student over struikelt, dompel onder waar hij alleen leest.* Een
+docstring die hij ziet staan kost hem niets. Een `assert` die hij uitvoert stopt
+zijn programma met een `AssertionError`, en dan heeft hij een verklaring nodig op
+het moment dat het gebeurt - vandaar dat assertions in week 2 wél worden
+geïntroduceerd en docstrings niet, terwijl ze allebei in dezelfde week voorkomen.
+Kan de student er overheen lezen, dan mag het onderdompeling zijn; loopt hij erop
+vast, dan hoort er uitleg bij.
+
+Dit gaat over iets anders dan de "langzame onderdompeling" in
+`conventies/codeconventies.md`: die gaat over de overgang van Nederlands naar
+Engels in code, deze over een vorm tonen vóór de uitleg.
 
 ## Een besluit toevoegen
 
