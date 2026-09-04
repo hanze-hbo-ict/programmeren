@@ -486,8 +486,10 @@ vier zaken op in `2_rochambeau` die bij lezen niet opvallen: een zwevende string
 moduleniveau die zich voordoet als docstring, 74 seconden `time.sleep` verdeeld over
 zeventien aanroepen, een hervraag die het tweede antwoord niet meer toetst, en
 `# Uitbreiding Dummie proof` dat verwijst naar een uitbreiding die het practicum niet
-kent - het practicum noemt RPS-5, RPS-25, RPS-101 en Blijven spelen. Alleen de eerste
-drie zijn hier gerepareerd; de rest is inhoud en hoort bij #169.
+kent - het practicum noemt RPS-5, RPS-25, RPS-101 en Blijven spelen. **Geen van deze
+vier is gerepareerd**: ze raken de inhoud en horen bij #169. Wat wel is gerepareerd
+zijn drie redactionele fouten die bij hetzelfde draaien opvielen (PR #176): een
+spelfout, een paar scheve aanhalingstekens en `nested if`.
 
 **Drie van mijn eigen metingen liepen eerst stuk, en alle drie op dezelfde manier:
 een patroon dat nul gaf.** Losse codeblokken parsen meldde een `SyntaxError` die een
@@ -513,7 +515,9 @@ gecontroleerde cellen op. Bij `2_basis` komt daar een harde reden bij: het enige
 zonder `input()` is de voortzetting van het eerste en leunt op `time` en `delay`
 daaruit, dus overslaan van het eerste breekt het vijfde. Dat legt een blinde vlek van
 `check-notebook-tags` bloot: de hook oordeelt per cel en kan niet zien dat een cel bij
-een interactief programma hoort. Twaalf van de achttien blokken draaien nu wel mee.
+een interactief programma hoort. **Elf van de achttien** blokken draaien nu mee: de
+tien van `2_sequenties_en_data` en de ene van `2_extra`. De zeven die blijven liggen
+zitten in `2_basis` (vijf) en `2_rochambeau` (twee).
 
 ## Hoe je een meting noteert
 
