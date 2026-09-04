@@ -380,6 +380,63 @@ een volledige tweede beoordelingsronde met alle vier de beoordelaars kostte
 ronde waren wel reëel en bleven staan na correctie. Dit is nieuw genoeg om apart
 te noteren; zie [bevinding 14](bevindingen.md#14-beoordelaars-herhalen-een-besluit-dat-de-poort-al-nam-omdat-ze-het-besluit-niet-krijgen).
 
+## Triageronde, 4 september 2026 — negen werkitems achter elkaar
+
+Aanleiding: de routes waren stilgevallen. Van de 31 issues sinds de invoering van de
+route-labels op 26 augustus hadden er 17 geen route, en in september waren er nog drie
+toegekend. Acht daarvan waren echte werkitems; met het nieuwe #178 erbij zijn er negen
+achter elkaar getrieerd, de acht van deze ronde parallel.
+
+| Werkitem | Tokens | Duur | Besluit | Omvang |
+|---|---|---|---|---|
+| #178 opgaveniveaus | 40.544 | 2 min 45 s | LUS | L, bevestigt |
+| #104 toetsmatrijs | 39.164 | 1 min 40 s | LUS | **S**, overruled M |
+| #126 recursie week 3 | 25.963 | 1 min 2 s | LUS | **M**, overruled S |
+| #136 Mandelbrot | 30.548 | 1 min 53 s | LUS | L, bevestigt |
+| #144 examennotebooks | 24.678 | 1 min 23 s | LUS | M, bevestigt |
+| #160 PGM2 week 5 | 41.152 | 2 min 4 s | LUS | L, bevestigt |
+| #162 week 4, ronde twee | 23.180 | 1 min 29 s | LUS | L, bevestigt |
+| #163 lusrecept week 5 | 26.602 | 1 min 56 s | LUS | **M**, overruled S |
+| #169 week 2 | 53.333 | 2 min 54 s | LUS | M, bevestigt |
+| **Totaal** | **305.164** | | 9× LUS | 3 bijgesteld |
+
+**Negen van de negen gaan de lus in.** Geen afwijzing, geen splitsing. Dat is het
+tegenovergestelde van wat de vorige twee triages opleverden - #115 kreeg AFWIJZEN met
+een splitsingsadvies - en het betekent dat het overslaan van de triage de afgelopen week
+geen afweging was maar een gewoonte die wegviel. Er zat niets tussen dat de lus niet
+verdiende.
+
+**Een triage kost gemiddeld 34k en nooit meer dan 53k.** Over alle elf gemeten triages
+loopt de spreiding van 19.671 (#115) tot 53.333 (#169). Een volledige lus kostte 1,2
+miljoen (#103) en 2,66 miljoen (#134). **Triage is daarmee ongeveer anderhalf procent van
+wat hij routeert**, en hij nam hier drie keer een omvangoordeel over dat van de indiener.
+Dat bevestigt bevinding 6 op een grotere steekproef dan waarop zij was geschreven.
+
+**Wat de triages vonden dat de werkitems zelf niet wisten.** Dit is de opbrengst die niet
+in het besluit zit maar in het lezen:
+
+- **#104** — vier van de zeven criteria waren ingehaald, en de A3-bevinding uit de
+  veegronde bleek per 1 september al uitgevoerd. Daarnaast draagt `leeruitkomsten.md`
+  r118 nog de achterhaalde meting "40 van de 90 punten ontwerpwerk", die
+  `uitgangspunten.md` r610-621 corrigeert naar 15. Twee getallen voor hetzelfde feit, in
+  de laag die bindt.
+- **#126** — de regelverwijzingen in het werkitem zijn verschoven: `leerlijn.md` r73-75
+  in plaats van r42-44, `uitgangspunten.md` r352-355 in plaats van r325-328. De documenten
+  zijn onder het issue vandaan geschoven.
+- **#163** — acceptatiecriterium 2 hoort er niet in: *verzamelvariabele* is al besloten in
+  `begrippen.md` r39, met de uitvoering toegewezen aan #162. Er kwam een vierde vindplaats
+  bij die in geen lijst stond: `problems/11_basis.ipynb` r526.
+- **#169** — het handwerk van 4 september sloot criterium 1 en 6, maar niet 2. En
+  `solutions/2_rochambeau.ipynb` wordt **niet** vanzelf een draaiende cel: met `input()`
+  en `while True:` valt het onder de uitzondering van `technische-conventies.md` r433-434.
+- **#160** — de parkeerregel van #124 gold voor óngevraagde veegbevindingen op andermans
+  weken, niet voor een besteld werkitem op een vastgelegde lijn. De orkestrator gaf die
+  parkeerreden mee als aanname, en de rol weerlegde haar.
+
+Dat laatste is het patroon van deze ronde: **vijf van de negen triages corrigeerden een
+bewering in het werkitem of in de opdracht die zij meekregen.** Geen daarvan was met het
+blote oog zichtbaar.
+
 ## Werk buiten de lus om
 
 Hier hoort wat met de hand is gedaan omdat het te klein leek voor een werkitem.
