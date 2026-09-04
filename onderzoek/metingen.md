@@ -472,6 +472,91 @@ regel is die dat afdwingt voor werk buiten de lus. Zie bevinding 4.
 Deze keer bewust wél gelezen, op verzoek gedaan in plaats van bij toeval - de
 regel uit bevinding 4 toegepast in plaats van herhaald.
 
+### 4 september 2026, week 2 op orde
+
+| Werk | Waarom buiten de lus | Achteraf gelezen? |
+|---|---|---|
+| PR #176: spelling en aanhalingstekens in `solutions/2_rochambeau` en `2_basis` | XS-omvang, dertien regels redactie, per de proportionaliteitsregel geen werkitem | *nog niet* |
+| PR #177: `2_sequenties_en_data` en `2_extra` omgezet van markdown-blok naar codecellen (#115) | Uitvoering van een doorlopend werkitem; mechanisch, geen ontwerp | **ja** — meegelezen in beide rondes hieronder |
+| PR #177: `solutions/2_opstap.ipynb` geschreven, 1.789 woorden en 20 codecellen | Uitvoering van een gesloten besluit (`uitgangspunten.md` r764); nieuw materiaal, geen herziening | **ja** — twee rondes, en de tweede staat op BLOKKEER |
+
+**Twee leesrondes over `2_opstap`, en beide keren convergentie.** De redacteur en de
+eerstejaars zijn los van elkaar ingezet, zonder elkaars oordeel en zonder hun eigen
+vorige oordeel.
+
+| Ronde | Redacteur | Eerstejaars | Waarop zij samenkwamen |
+|---|---|---|---|
+| 1 | BLOKKEER | BLOKKEER | De tellingen in de inleiding en de slotalinea van *Debuggen* - drie luide fouten stonden er als twee, vijf punten als vier - en de omgekeerde bewering bij 3-G |
+| 2, hertoets | AKKOORD MET PUNTJES | BLOKKEER | De debugsectie staat als markdown-blok terwijl `uitgangspunten.md` r774-776 een draaiende codecel voorschrijft |
+
+**De hertoets vond wat de eerste ronde niet vond, en dat is het argument om er een te
+draaien.** Ronde 1 ging over wat er stond, ronde 2 over de vorm waarin het stond.
+Beide beoordelaars kwamen daar onafhankelijk op uit, met hetzelfde bewijs: de grond
+"die code parseert niet" dekt drie van de zeven gevallen, want 3-B, 3-C, 3-E en 3-F
+zijn geldige Python die uit zichzelf eindigt. `technische-conventies.md` r403-406 zegt
+bovendien met zoveel woorden dat `skip-execution` niet in `solutions/` hoort, "want
+daar is de uitvoering juist het bewijs dat de uitwerking werkt".
+
+Dat de tweede ronde blokkeert op iets wat de eerste liet lopen, is geen strengheid die
+oploopt. Het is een gevolg van het herstel zelf: ronde 1 repareerde tellingen met de
+hand, en juist dat handwerk maakt zichtbaar dat niets in de repository die elf
+getalsclaims narekent. Beide beoordelaars hebben ze opnieuw met de hand nagelopen en
+ze kloppen alle vijf - maar dat handwerk is nog steeds de enige controle die er is.
+
+**De blokkade is niet verwerkt maar doorgezet naar #169**, met beide zou-moeten-lijsten
+erbij. Reden: de vormeis van r774-776 geldt voor alle 22 uitwerkingen en niet alleen
+voor deze, en voor 3-A, 3-D en 3-G moet eerst gemeten worden of `raises-exception` een
+`SyntaxError` bij het bouwen opvangt. Blijkt van niet, dan is dat volgens de
+eerstejaars zelf een grond om het besluit voor te leggen, niet om er stil van af te
+wijken. Wat hier zichtbaar hoort te blijven: **deze PR gaat dicht met een staande
+blokkade**, en dat is een besluit van de vakdeskundige geweest, niet van de uitvoerder.
+
+Twee dingen die de beoordelaars buiten deze oplevering vonden en die bij #169 horen:
+`lectures/2b_strings_en_lists.ipynb` bevat 2-F t/m 2-I letterlijk, met `puntje` waar de
+uitwerking `slice` schrijft en met precies de nummering 1, 2, 3, 6, 7, 4, 5 die in de
+opgave nu is rechtgezet - de reparatie heeft die twee kopieën uit elkaar gedreven. En
+de telling in `conventies/conventies.md` r73-75 ("11 van de 22 uitwerkingen staan als
+markdown-blok") is niet hermeten terwijl er een uitwerking bij is gekomen.
+
+**Wat het draaien opleverde dat lezen niet had opgeleverd.** De vier week
+2-uitwerkingen zijn met de hand gedraaid omdat de build ze niet ziet. Dat leverde
+vier zaken op in `2_rochambeau` die bij lezen niet opvallen: een zwevende string op
+moduleniveau die zich voordoet als docstring, 74 seconden `time.sleep` verdeeld over
+zeventien aanroepen, een hervraag die het tweede antwoord niet meer toetst, en
+`# Uitbreiding Dummie proof` dat verwijst naar een uitbreiding die het practicum niet
+kent - het practicum noemt RPS-5, RPS-25, RPS-101 en Blijven spelen. **Geen van deze
+vier is gerepareerd**: ze raken de inhoud en horen bij #169. Wat wel is gerepareerd
+zijn drie redactionele fouten die bij hetzelfde draaien opvielen (PR #176): een
+spelfout, een paar scheve aanhalingstekens en `nested if`.
+
+**Drie van mijn eigen metingen liepen eerst stuk, en alle drie op dezelfde manier:
+een patroon dat nul gaf.** Losse codeblokken parsen meldde een `SyntaxError` die een
+bewust fragment was; het blok zegt in zijn eigen commentaar dat het achter het vorige
+hoort. Een zoektocht naar een puntje dat `'shoe'` oplevert gaf nul omdat ik alleen
+positieve stapgroottes probeerde - met negatieve zijn er zestien. En een greep op
+succescriteria in week 1 gaf nul terwijl ze er staan, in andere woorden. Alleen de
+tweede is opgemerkt door te ijken; de andere twee doordat het antwoord ongeloofwaardig
+was. Dat is de regel uit `CLAUDE.md` die zich drie keer op één dag bewees.
+
+**Wat het schrijven van de uitwerking opleverde.** Alle antwoorden zijn gedraaid en
+niet bedacht, en dat legde iets bloot dat de opgave zelf niet zegt: twee van de zeven
+kapotte debugvoorbeelden (3-C en 3-F) geven bij de meegeleverde naam `"Hoebe"` het
+júiste busnummer. Hun fout is bij die invoer onzichtbaar. De uitwerking noemt daarom
+per geval een naam die de fout wél toont, en onderscheidt fouten die luid aflopen van
+fouten die stil aflopen - hetzelfde onderscheid dat de ernstdrempel van de
+beoordelaars gebruikt.
+
+**Wat er niet is omgezet, en waarom dat geen omissie is.** `2_basis` en
+`2_rochambeau` blijven markdown. Beide bestaan vrijwel geheel uit blokken met
+`input()`; omgezet zouden die `skip-execution` dragen en levert de build nul
+gecontroleerde cellen op. Bij `2_basis` komt daar een harde reden bij: het enige blok
+zonder `input()` is de voortzetting van het eerste en leunt op `time` en `delay`
+daaruit, dus overslaan van het eerste breekt het vijfde. Dat legt een blinde vlek van
+`check-notebook-tags` bloot: de hook oordeelt per cel en kan niet zien dat een cel bij
+een interactief programma hoort. **Elf van de achttien** blokken draaien nu mee: de
+tien van `2_sequenties_en_data` en de ene van `2_extra`. De zeven die blijven liggen
+zitten in `2_basis` (vijf) en `2_rochambeau` (twee).
+
 ## Hoe je een meting noteert
 
 Rol, ronde, tokens, duur, uitkomst in één regel. Bij een afgebroken run: wat er
