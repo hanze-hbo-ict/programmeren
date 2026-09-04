@@ -380,6 +380,44 @@ een volledige tweede beoordelingsronde met alle vier de beoordelaars kostte
 ronde waren wel reëel en bleven staan na correctie. Dit is nieuw genoeg om apart
 te noteren; zie [bevinding 14](bevindingen.md#14-beoordelaars-herhalen-een-besluit-dat-de-poort-al-nam-omdat-ze-het-besluit-niet-krijgen).
 
+## Werkitem #169 — PGM1 week 2, na handwerk buiten de lus
+
+Volledige lus, omvang M. Hier staat wat er tot nu toe is gedraaid.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| triage | 53.333 | 2 min 54 s | LUS, M |
+| verkenner | 163.154 | 20 min 10 s | C1b |
+
+**De verkenner van deze M kostte meer dan die van een L.** Bij #134 was hij 141.279 in
+9 minuten. Twee getallen zijn geen vergelijking, en het verschil is met de omvangklasse
+niet verklaard: deze verkenner moest een echte Sphinx-build draaien om één vraag te
+beantwoorden, en die van #134 niet. Wat het wél zegt is dat de omvangschatting de kosten
+van deze rol niet voorspelt; het aantal metingen doet dat.
+
+**De meting die de dure was, was ook de beslissende.** De vraag of `raises-exception` een
+`SyntaxError` bij het bouwen opvangt is beantwoord met een minimaal Sphinx-project en een
+cel die niet parseert - **ja**, met nul waarschuwingen, waar dezelfde cel zonder tag er
+twee geeft. Die ijking is wat het nulresultaat vertrouwd maakt. Er bleek bovendien al een
+precedent in de repo te staan, `solutions/4_midterm.ipynb` cel 28, dat niemand had
+opgemerkt.
+
+Daarmee verviel een besluit dat de orkestrator al bij de vakdeskundige had willen
+neerleggen. **De meting was goedkoper dan het besluit**, en dat is de regel uit
+`CLAUDE.md` op zijn duurste rol toegepast.
+
+**Drie tellingen in `conventies/` bleken achterhaald**, alle drie door deze rol gevonden
+en door de orkestrator nagemeten: `technische-conventies.md` r412-416 telt 193
+`skip-execution`-cellen waar er 309 zijn, r436-441 meldt 5 afwijkende cellen waar er 0
+zijn, en `conventies.md` r73-75 heeft twee verschillende maten onder één zin geschoven -
+de 15 telde uitwerkingen zonder draaiende codecel, de 11 telt uitwerkingen met een
+markdownblok.
+
+**Een stille verkeerde meting is net vermeden.** De werkboom stond op een branch die van
+een verouderde `master` was gemaakt en `solutions/2_opstap.ipynb` miste - het bestand dat
+de kern van de opdracht was. De rol merkte het, mat op een schone uitdraai van `4c792e29`
+met `git archive`, en meldde het in zijn artefact. Dat was geen mechanisme maar oplettendheid.
+
 ## Triageronde, 4 september 2026 — negen werkitems achter elkaar
 
 Aanleiding: de routes waren stilgevallen. Van de 31 issues sinds de invoering van de
