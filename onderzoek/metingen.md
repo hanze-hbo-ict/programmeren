@@ -472,6 +472,49 @@ regel is die dat afdwingt voor werk buiten de lus. Zie bevinding 4.
 Deze keer bewust wél gelezen, op verzoek gedaan in plaats van bij toeval - de
 regel uit bevinding 4 toegepast in plaats van herhaald.
 
+### 4 september 2026, week 2 op orde
+
+| Werk | Waarom buiten de lus | Achteraf gelezen? |
+|---|---|---|
+| PR #176: spelling en aanhalingstekens in `solutions/2_rochambeau` en `2_basis` | XS-omvang, dertien regels redactie, per de proportionaliteitsregel geen werkitem | *nog niet* |
+| PR #177: `2_sequenties_en_data` en `2_extra` omgezet van markdown-blok naar codecellen (#115) | Uitvoering van een doorlopend werkitem; mechanisch, geen ontwerp | *nog niet* |
+| PR #177: `solutions/2_opstap.ipynb` geschreven, 1.789 woorden en 20 codecellen | Uitvoering van een gesloten besluit (`uitgangspunten.md` r764); nieuw materiaal, geen herziening | *nog niet* |
+
+**Wat het draaien opleverde dat lezen niet had opgeleverd.** De vier week
+2-uitwerkingen zijn met de hand gedraaid omdat de build ze niet ziet. Dat leverde
+vier zaken op in `2_rochambeau` die bij lezen niet opvallen: een zwevende string op
+moduleniveau die zich voordoet als docstring, 74 seconden `time.sleep` verdeeld over
+zeventien aanroepen, een hervraag die het tweede antwoord niet meer toetst, en
+`# Uitbreiding Dummie proof` dat verwijst naar een uitbreiding die het practicum niet
+kent - het practicum noemt RPS-5, RPS-25, RPS-101 en Blijven spelen. Alleen de eerste
+drie zijn hier gerepareerd; de rest is inhoud en hoort bij #169.
+
+**Drie van mijn eigen metingen liepen eerst stuk, en alle drie op dezelfde manier:
+een patroon dat nul gaf.** Losse codeblokken parsen meldde een `SyntaxError` die een
+bewust fragment was; het blok zegt in zijn eigen commentaar dat het achter het vorige
+hoort. Een zoektocht naar een puntje dat `'shoe'` oplevert gaf nul omdat ik alleen
+positieve stapgroottes probeerde - met negatieve zijn er zestien. En een greep op
+succescriteria in week 1 gaf nul terwijl ze er staan, in andere woorden. Alleen de
+tweede is opgemerkt door te ijken; de andere twee doordat het antwoord ongeloofwaardig
+was. Dat is de regel uit `CLAUDE.md` die zich drie keer op één dag bewees.
+
+**Wat het schrijven van de uitwerking opleverde.** Alle antwoorden zijn gedraaid en
+niet bedacht, en dat legde iets bloot dat de opgave zelf niet zegt: twee van de zeven
+kapotte debugvoorbeelden (3-C en 3-F) geven bij de meegeleverde naam `"Hoebe"` het
+júiste busnummer. Hun fout is bij die invoer onzichtbaar. De uitwerking noemt daarom
+per geval een naam die de fout wél toont, en onderscheidt fouten die luid aflopen van
+fouten die stil aflopen - hetzelfde onderscheid dat de ernstdrempel van de
+beoordelaars gebruikt.
+
+**Wat er niet is omgezet, en waarom dat geen omissie is.** `2_basis` en
+`2_rochambeau` blijven markdown. Beide bestaan vrijwel geheel uit blokken met
+`input()`; omgezet zouden die `skip-execution` dragen en levert de build nul
+gecontroleerde cellen op. Bij `2_basis` komt daar een harde reden bij: het enige blok
+zonder `input()` is de voortzetting van het eerste en leunt op `time` en `delay`
+daaruit, dus overslaan van het eerste breekt het vijfde. Dat legt een blinde vlek van
+`check-notebook-tags` bloot: de hook oordeelt per cel en kan niet zien dat een cel bij
+een interactief programma hoort. Twaalf van de achttien blokken draaien nu wel mee.
+
 ## Hoe je een meting noteert
 
 Rol, ronde, tokens, duur, uitkomst in één regel. Bij een afgebroken run: wat er
