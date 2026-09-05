@@ -25,7 +25,19 @@ Ze gelden **niet** voor de documenten in `conventies/` zelf, en niet voor de
 verzameling niet-gemigreerd materiaal buiten `source/` (`ontwikkeling/`,
 `readings/`, `teacher_guides/`, `topics/`, `problems/context/` en verwante
 directories). Dat materiaal staat bewust stil in afwachting van een beslissing over
-wat ermee gebeurt.
+wat ermee gebeurt. Voor `teacher_guides/` geldt dat nog steeds voor de `.docx` die
+er staan; wat daaruit is herschreven, verhuist naar `handleidingen/` en valt onder
+het regime hieronder.
+
+Voor `handleidingen/` geldt een eigen regime. Die documenten richten zich tot de
+docent en niet tot de student, en zijn geen onderdeel van het boek: de
+Sphinx-build raakt ze niet. Van de vier conventiedocumenten binden de
+begrippenlijst, de codeconventies voor de codefragmenten die een handleiding
+toont, en de markdownopmaak en de lintregels uit de technische conventies. De
+schrijfwijzer bindt ze niet, en de MyST-directives, de celtags en de indeling van
+`source/` uit de technische conventies evenmin: die gaan over het boek en zijn
+build. Mechanisch geborgd is alleen de Markdown-linting - `handleidingen/` staat
+in het `pymarkdown`-patroon.
 
 ## Hoe dit geborgd is
 

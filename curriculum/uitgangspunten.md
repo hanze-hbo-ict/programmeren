@@ -66,6 +66,25 @@ Deze indeling verklaart de directories: `lectures/` hoort bij de eerste bijeenko
 relevant voor de vraag waar context hoort te zitten, want het werkcollege is de
 plek waar een probleem gezamenlijk stap voor stap wordt opgebouwd.
 
+#### Twee erkende afwijkingen
+
+De indeling is het uitgangspunt en niet een rooster dat elke week haalt. Bij het
+schrijven van de docentenhandleidingen (#182) zijn twee afwijkingen vastgesteld en
+erkend; ze staan hier zodat een volgende weekherziening ze niet opnieuw als
+conflict afleidt.
+
+**Week 1 volgt een flexibele indeling.** Er is geen `problems/` en geen
+`solutions/` voor week 1, en de Picobot-opdrachten beginnen in bijeenkomst 2 als
+plan (`source/lectures/1b_picobot.md`) en worden in bijeenkomst 3 geprogrammeerd
+(`source/practicals/1_picobot.md`). De twee bijeenkomsten lopen dus in elkaar
+over; wat in bijeenkomst 2 blijft liggen, gaat naar bijeenkomst 3. De tijdsblokken
+in de handleiding van week 1 zijn daarom richtsnoer en geen strak rooster.
+
+**Week 2 laat een practicum naar de derde bijeenkomst vallen.** Week 2 draagt twee
+onderwerpen, en het werkcollege wordt gevuld door `2b` plus
+`practicals/2_rochambeau`; `practicals/2_sequenties_en_data` schuift daardoor naar
+de derde bijeenkomst, naast de drie opgavebundels.
+
 ## Het referentiemateriaal: tag `v1.0.0`
 
 Tag **`v1.0.0`** (juni 2023) bevat de vertaalde CS5-opgaven zoals ze
@@ -300,6 +319,8 @@ draait wel.
 | Week 4 krijgt een lusrecept van vijf vragen, in `4a_lussen` | didactisch | gesloten, **uitgevoerd** met #153; week 5 pikt het nog niet op (#163) |
 | Recursie gaat uit PGM1 week 4, op alle vier de plekken | organisatorisch | gesloten, **deels uitgevoerd**: 1 van 4 met #153 (midtermopdracht 13). `unique` (2×) en `find_number_of_decimals` staan er nog; zie ronde twee en #126 |
 | Eerst de weken van PGM1 afronden; het materiaal moet zo snel mogelijk live | organisatorisch | staand |
+| Een docentenhandleiding gaat per week en dekt het materiaal en de opgaven, met een didactische invalshoek | didactisch | gesloten, deels uitgevoerd: week 1 staat er, week 2 nog niet |
+| Handleidingen zijn repo-materiaal en geen onderdeel van het boek | organisatorisch | gesloten, uitgevoerd |
 | Objectmethoden pas vanaf PGM2 week 1, los van de mutatiegrens in PGM1 week 7 | didactisch | staand, onderbouwd |
 | Dictionaries en de Markov-opgave verhuizen van PGM1 week 7 naar PGM2 week 1 | didactisch | staand, nog niet uitgevoerd |
 | Objecten pas in PGM2 | didactisch | staand, onderbouwd |
@@ -623,6 +644,31 @@ uitkomst zouden moeten dragen en het niet doen.
 Wie de weging later herziet: de vraag is niet alleen hoe de percentages moeten,
 maar of de toets toetst wat hij zegt te toetsen. Zolang het oefententamen niet
 verandert, is dat een vraag over de matrijs en niet over de toets.
+
+### Wat een docentenhandleiding is, en waar hij staat
+
+Twee besluiten, genomen door de vakdeskundige bij de poort van #182 op
+5 september 2026.
+
+**Een docentenhandleiding gaat per week en dekt het materiaal en de opgaven, met
+een didactische invalshoek.** Dus niet een handleiding per college, ook niet in de
+weken met twee colleges. Hij beschrijft hoe je een onderdeel brengt, hoeveel tijd
+eraan gaat, waar studenten op vastlopen en wat je doet als een opdracht niet
+uitkomt. Hij is geen uitwerkingenboek: de uitwerkingen staan in `solutions/`, en
+waar die voor een collegeopdracht niet bestaan, geeft de handleiding een kort
+antwoord van hooguit een regel. Dit besluit heropent wie kan laten zien dat een
+docent met een weekdocument het overzicht per bijeenkomst kwijtraakt.
+
+**Handleidingen zijn repo-materiaal en geen onderdeel van het boek.** Ze staan in
+`handleidingen/`, naast `conventies/` en `rollen/`, en niet in `source/` of
+`source/_toc.yml`. De student ziet ze niet en de Sphinx-build raakt ze niet. Welke
+conventies er wel en niet voor gelden staat in `conventies/conventies.md`
+onder *Reikwijdte*; mechanisch geborgd is alleen de Markdown-linting. Dit besluit
+heropent wie de handleidingen aan studenten wil tonen - dan zijn het boekpagina's
+en gelden de conventies onverkort.
+
+De `.docx` in `teacher_guides/` zijn de voorlopers hiervan. Ze blijven staan tot ze
+per week zijn herschreven; wat herschreven is, verhuist naar `handleidingen/`.
 
 ### Leesvragen mogen fout aflopen
 
