@@ -191,6 +191,20 @@ materiaal moet die dus zelf voordoen.
 - De taal volgt de afspraak hierboven: eerst Nederlands, na het
   overgangsmoment Engels.
 
+**De maatstaf voor de student is de lezer, niet een stijl.** Er bestaan meerdere
+docstringconventies naast elkaar, waaronder PEP 257, en wij schrijven er geen voor.
+Wat de student schrijft is goed als iemand anders er genoeg aan heeft om de functie
+te gebruiken zonder de code te lezen. Beoordeel daarop, en niet op de vorm.
+
+Voor het materiaal zelf ligt dat anders: daar geldt de vorm hierboven wél, omdat het
+materiaal voordoet wat het aanleert. Een cursus die vijf docstringstijlen laat zien,
+leert de student dat het niet uitmaakt hoe je het opschrijft, terwijl de boodschap
+juist is dat het uitmaakt wat je opschrijft.
+
+Docstrings komen bovendien pas in week 3 aan de orde als begrip; in week 2 ziet de
+student ze al staan in gegeven code. Zie *Onderdompeling gaat vooraf aan uitleg* in
+[`../curriculum/uitgangspunten.md`](../curriculum/uitgangspunten.md).
+
 **Uitzondering: code in een leesvraag draagt geen docstring.** Bij een vraag van
 het type *"wat drukt dit programma af?"* is een docstring die beschrijft wat de
 functie doet het antwoord, en dan toetst de vraag niets meer. Dit geldt voor de
@@ -219,6 +233,24 @@ Opgaven worden getest met `assert`. Dat is de standaardvorm in dit materiaal:
 
 Alle Python in ` ```python `-fences volgt `ruff format`, en de pre-commit hook
 dwingt dat af. Dat is geen afweging per blok.
+
+**Strings staan tussen dubbele aanhalingstekens.** Dat is de keuze van `ruff` en
+`black`, en daarmee inmiddels de gangbare vorm in Python. Het materiaal volgde haar
+al voordat zij was opgeschreven: in de codecellen staan 1.514 dubbele tegen 102
+enkele aanhalingstekens.
+
+Die 102 zitten in elf bestanden, met `problems/2_opstap.ipynb` (29),
+`solutions/4_python_bat.ipynb` (16) en `practicals/2_sequenties_en_data.ipynb` (15)
+bovenaan. Ze worden rechtgezet wanneer die bestanden aan de beurt zijn, niet in een
+aparte veegronde.
+
+**In codecellen is dit niet mechanisch geborgd, en dat is een keuze.** De hook
+controleert alleen ` ```python `-fences in proza; hij zegt dat zelf, en wijst erbij
+naar ruffs eigen ondersteuning voor notebooks. Die aansluiten zou de conventie
+afdwingen, maar `ruff format` is een volledige formatter en geen quotehersteller: hij
+herschikt ook regelafbrekingen en witruimte, en in lesmateriaal kan opmaak bedoeld
+zijn. Zolang die afweging niet is gemaakt, is deze regel bindend voor wie schrijft en
+niet voor een hook.
 
 Code die met opzet niet aan de conventie voldoet, bijvoorbeeld een vraag waarin
 de student een fout moet vinden, markeer je met `<!-- codecontrole:skip -->`.
