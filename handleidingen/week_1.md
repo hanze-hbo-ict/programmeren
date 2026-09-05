@@ -42,9 +42,11 @@ Behandel de tijdsblokken hieronder daarom als richtsnoer en niet als rooster.
 
 ### Over de tijden
 
-De blokken van bijeenkomst 1 en 2 komen uit de handleidingen van 2023
-(`teacher_guides/1a_problemen_oplossen.docx` en `teacher_guides/1b_picobot.docx`)
-en tellen daar op tot **95 minuten** per bijeenkomst, met een ongetimede pauze.
+De blokken van bijeenkomst 1 en 2 komen uit de twee Word-handleidingen van 2023
+die tot werkitem #182 in `teacher_guides/` stonden. Ze zijn daar verwijderd zodra
+deze handleiding hun inhoud had overgenomen; wie ze wil nalezen vindt ze in de
+git-geschiedenis. Ze tellen op tot **95 minuten** per bijeenkomst, met een
+ongetimede pauze.
 **Hoe lang een bijeenkomst werkelijk duurt staat nergens in de repository**; duurt
 die van jou korter of langer, schaal de blokken dan mee. De blokken van
 bijeenkomst 3 zijn richttijden zonder bron - daarvoor bestaat geen oude
@@ -423,9 +425,8 @@ De volledige verantwoording per aanwijzing staat in werkitem #182.
 
 ### Wat er nog loopt
 
-- De vier `.docx` in `teacher_guides/` voor week 1 en 2 staan er nog. Ze worden
-  verwijderd zodra ook de handleiding van week 2 er is; tot die tijd zijn ze de
-  bron en niet de handleiding.
-- Een handleiding voor **week 2** bestaat nog niet.
+- De vier `.docx` van week 1 en 2 zijn uit `teacher_guides/` verwijderd; deze
+  handleiding en `handleidingen/week_2.md` zijn er de opvolgers van. De negen
+  `.docx` van week 3 tot en met 6 staan er nog en wachten op werkitem #95.
 - Deze handleiding beschrijft het materiaal zoals het op 5 september 2026 in de
   repository staat.

@@ -44,8 +44,10 @@ onder begeleiding, en dus een practicum.
 
 ### Over de tijden
 
-De blokken van bijeenkomst 1 en 2 komen uit de handleidingen van 2023
-(`teacher_guides/2a_var_con.docx` en `teacher_guides/2b_strings_en_lists.docx`).
+De blokken van bijeenkomst 1 en 2 komen uit de twee Word-handleidingen van 2023
+die tot werkitem #182 in `teacher_guides/` stonden. Ze zijn daar verwijderd zodra
+deze handleiding hun inhoud had overgenomen; wie ze wil nalezen vindt ze in de
+git-geschiedenis.
 De blokken van bijeenkomst 3 zijn richttijden zonder bron - daarvoor bestaat geen
 oude handleiding. Voor het Rochambeau-deel van bijeenkomst 2 geldt hetzelfde; dat
 staat bij het blokschema erbij.
@@ -609,8 +611,8 @@ De volledige verantwoording per aanwijzing staat in werkitem #182.
   `conventies/begrippen.md` *lijst* voorschrijft, dus ook die kop kan nog
   wijzigen. Controleer bij twijfel de kop in het bestand voordat je ernaar
   verwijst.
-- De vier `.docx` in `teacher_guides/` voor week 1 en 2 staan er nog. Ze worden
-  verwijderd zodra er een besluit ligt over wat er nog uit moet; tot die tijd
-  zijn ze de bron en niet de handleiding.
+- De vier `.docx` van week 1 en 2 zijn uit `teacher_guides/` verwijderd; deze
+  handleiding en `handleidingen/week_1.md` zijn er de opvolgers van. De negen
+  `.docx` van week 3 tot en met 6 staan er nog en wachten op werkitem #95.
 - Deze handleiding beschrijft het materiaal zoals het op 5 september 2026 in de
   repository staat.
