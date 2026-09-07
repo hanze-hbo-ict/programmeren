@@ -31,6 +31,8 @@ uv run make livehtml   # bouwt en herbouwt automatisch bij wijzigingen
 
 - `source/` — alle content (lectures, practicals, opgaven, oplossingen,
   projecten) en de Sphinx-configuratie (`conf.py`, `_toc.yml`).
+- `handleidingen/` — de docentenhandleidingen, één per week. Geen onderdeel van
+  het boek: ze richten zich tot de docent en de Sphinx-build raakt ze niet.
 - `.github/workflows/deploy_sphinx.yml` — bouwt en publiceert de site naar GitHub Pages.
 - `.pre-commit-config.yaml` — lint-hooks (markdown, code in codeblokken, notebook-output stripping) die voor elke commit draaien.
 
