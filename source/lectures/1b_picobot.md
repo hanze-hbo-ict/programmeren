@@ -113,9 +113,7 @@ Eén regel met sterretjes vervangt dus een reeks regels zonder. Stel dat **`0 x*
 
 ## De hoek in
 
-Doel is om Picobot instructies te geven om zich naar de hoek te begeven. Eerst was er een plan opgesteld:
-
-![Beslissingsboom voor de weg naar de hoek](images/1/boom_hoek.png)
+Doel is om Picobot instructies te geven om zich naar de hoek te begeven. Eerst was er een plan opgesteld: de beslissingsboom onder [Naar de hoek](#naar-de-hoek).
 
 Picobot begint altijd in staat 0
 
