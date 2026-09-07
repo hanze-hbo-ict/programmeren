@@ -12,6 +12,7 @@ const _I18N_DEFAULTS = {
   run: "Run",
   loadingPython: "Loading Python\u2026",
   running: "Running\u2026",
+  inputPrompt: "Input:",
   editorLoadError: "Could not load editor: ",
   pythonLoadError: "Could not load Python: ",
   pyodideLoadError: "Could not load Pyodide from ",
@@ -206,8 +207,28 @@ class InteractiveCodeCell extends HTMLElement {
     let stdout = "";
 
     try {
-      pyodide.setStdout({ batched: (s) => { stdout += s + "\n"; } });
-      pyodide.setStderr({ batched: (s) => { stdout += s + "\n"; } });
+      // `write` in plaats van `batched`: dat laatste levert pas iets op bij een
+      // nieuwe regel, en de vraag van `input("Geef een getal: ")` heeft er geen.
+      // Zonder dit staat de vraag nog in de buffer op het moment dat we hem als
+      // label nodig hebben.
+      const uit = new TextDecoder();
+      const fout = new TextDecoder();
+      pyodide.setStdout({ write: (buf) => { stdout += uit.decode(buf, { stream: true }); return buf.length; } });
+      pyodide.setStderr({ write: (buf) => { stdout += fout.decode(buf, { stream: true }); return buf.length; } });
+
+      // Zonder stdin valt elke input() om met een I/O-fout. De browser heeft een
+      // synchrone prompt, en dat is precies wat Pyodide hier verwacht. Wat er na de
+      // laatste nieuwe regel in de uitvoer staat is de vraag die het programma net
+      // heeft gesteld; dat is het label. Het antwoord gaat ook de uitvoer in, anders
+      // leest het transcript als een gesprek waarin de helft ontbreekt.
+      pyodide.setStdin({
+        stdin: () => {
+          const vraag = stdout.slice(stdout.lastIndexOf("\n") + 1).trim();
+          const antwoord = window.prompt(vraag || t("inputPrompt")) ?? "";
+          stdout += antwoord + "\n";
+          return antwoord + "\n";
+        },
+      });
 
       const result = await pyodide.runPythonAsync(code);
       const combined =
@@ -223,6 +244,7 @@ class InteractiveCodeCell extends HTMLElement {
     } finally {
       pyodide.setStdout({ batched: console.log });
       pyodide.setStderr({ batched: console.error });
+      pyodide.setStdin();
       this.#setStatus("");
     }
   }

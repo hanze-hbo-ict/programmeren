@@ -26,6 +26,7 @@ def _inject_i18n(app: Sphinx) -> None:
         "run": _("Run"),
         "loadingPython": _("Loading Python\u2026"),
         "running": _("Running\u2026"),
+        "inputPrompt": _("Input:"),
         "editorLoadError": _("Could not load editor: "),
         "pythonLoadError": _("Could not load Python: "),
         "pyodideLoadError": _("Could not load Pyodide from "),
