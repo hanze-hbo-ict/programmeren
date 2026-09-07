@@ -54,7 +54,20 @@ Zodra er een algoritme is ontworpen kan het geprogrammeerd worden. Dat is dan de
 
 Beslissingsbomen (*behavior trees*) kunnen gebruikt worden om instructies te visualiseren. Het is een vorm die je misschien wel herkent.
 
-![Beslisboom](images/1/beslisboom.gif)
+```{mermaid}
+flowchart TD
+    invoer[/"Lees in: m, n"/]
+    deel["Deel m door n<br>en noem de rest r"]
+    test{"r = 0 ?"}
+    wissel["m wordt n<br>n wordt r"]
+    uitvoer[/"Lees uit: n"/]
+
+    invoer --> deel
+    deel --> test
+    test -- ja --> uitvoer
+    test -- nee --> wissel
+    wissel --> deel
+```
 
 Dit is het algoritme van Euclides wat gebruikt kan worden om de grootste gemene deler (ggd) tussen twee getallen te bepalen. Euclides had ontdekt dat via een paar instructies altijd te berekenen is:
 

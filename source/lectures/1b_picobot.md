@@ -30,7 +30,25 @@ Welke set instructies heeft Picobot nodig om de linkerbovenhoek te bereiken?
 
 Hoe ziet de [beslissingsboom](/lectures/1a_intro_programmeren.md#beslissingsboom) eruit die bij deze set instructies hoort?
 
-![Beslissingsboom voor de weg naar de hoek](images/1/boom_hoek.png)
+```{mermaid}
+graph TD
+    %% Nodes definitie
+    Start([start])
+    MuurNoord{Muur in<br>het noorden?}
+    StapNoord[Zet een stap naar het noorden]
+    MuurWest{Muur in<br>het westen?}
+    StapWest[Zet een stap naar het westen]
+    Hoek[Hoek bereikt.]
+
+    %% Stroomlijnen en verbindingen
+    Start --> MuurNoord
+    MuurNoord -- Nee --> StapNoord
+    StapNoord --> MuurNoord
+    MuurNoord -- Ja --> MuurWest
+    MuurWest -- Nee --> StapWest
+    StapWest --> MuurWest
+    MuurWest -- Ja --> Hoek
+```
 
 Na het ontwerpen van een plan, in dit geval een beslissingsboom, is de volgende stap om deze daadwerkelijk te programmeren. Picobotjes spreken hun eigen taal. Het doel is dus om de instructies te vertalen zodat Picobot ze uit kan voeren.
 
