@@ -179,6 +179,26 @@ deze drie gronden geldt:
 
 Geldt geen van drieën, dan is het een markdown-bestand.
 
+**Weeg het opnieuw bij een weekherziening.** Staan er Python-blokken in een
+markdown-opgave, dan is grond 2 mogelijk gaan gelden zonder dat iemand het heeft
+opgemerkt: die blokken draaien niet bij de build en de student kan ze niet
+uitvoeren. Beslis dat per week, bij de herziening van die week, en niet vooraf
+voor de hele cursus.
+
+Gemeten op `2dcd0224` gaat het om vijf bestanden:
+
+| Bestand | ` ```python `-blokken | Week |
+|---|---|---|
+| `problems/5_extra.md` | 18 | 5 |
+| `practicals/13_vier_op_rij_speler.md` | 9 | 13 |
+| `problems/7_extra.md` | 8 | 7 |
+| `practicals/8a_text_genereren.md` | 5 | 8 |
+| `practicals/4_python_bat.md` | 1 | 4 |
+
+`practicals/1_picobot.md` en `practicals/12_vier_op_rij_AI.md` bevatten geen
+Python en zijn dus terecht markdown. Week 1 en 2 dragen verder geen
+markdown-opgaven.
+
 ### Waarom dit zo gegroeid is
 
 In de oorspronkelijke opzet waren de colleges notebooks omdat ze als sheets
