@@ -36,7 +36,7 @@ _META_KEY = "interactive-code"
 
 
 def _activate_bar_html() -> str:
-    info = _("This page contains executable code cells.")
+    info = _("This page contains executable code.")
     button = _("Activate")
     return (
         '<div class="sic-bar">'
