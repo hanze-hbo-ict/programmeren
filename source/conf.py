@@ -1,6 +1,12 @@
 import os
+import sys
+from pathlib import Path
 
 # Configuration file for Sphinx documentation
+
+# De Sphinx-extensies van deze repo staan in `extensions/`. Het zijn geen
+# geinstalleerde pakketten maar code van dit project; zie extensions/README.md.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "extensions"))
 
 # -- Project information -----------------------------------------------------
 project = "Programmeren"
@@ -16,6 +22,8 @@ extensions = [
     "sphinx_external_toc",
     "sphinxcontrib.mermaid",
     "sphinxcontrib.bibtex",
+    "sphinx_interactive_code",
+    "sphinx_interactive_code.myst_nb",
 ]
 
 external_toc_path = "_toc.yml"

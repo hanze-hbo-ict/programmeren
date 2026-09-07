@@ -1,0 +1,64 @@
+/* interactive-code.css — minimal structural overrides for interactive-code-cell.
+   Typography, colors, and borders are intentionally left to the Sphinx theme. */
+
+/* Activation bar for myst_nb pages */
+.sic-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+    padding: 0.5em 0.9em;
+    margin: 0 0 1.2em;
+    background: #f0f7ff;
+    border: 1px solid #c8deff;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.sic-btn-activate {
+    cursor: pointer;
+    padding: 0.2em 0.8em;
+    border: 1px solid #2d8a4e;
+    border-radius: 4px;
+    background: #4caf50;
+    color: #fff;
+    font-size: 0.9em;
+    font-family: inherit;
+}
+
+interactive-code-cell {
+    display: block;
+    margin: 1em 0;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* Toolbar: flex layout + subtle background to distinguish from editor */
+.sic-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0.4em 0.6em;
+    background: #f3f4f6;
+    border-top: 1px solid #e5e7eb;
+}
+
+.sic-btn-run {
+    cursor: pointer;
+}
+
+.sic-status { color: #9ca3af; }
+.sic-status.is-error { color: #dc2626; }
+
+/* Output: needs white-space and monospace — functional, not cosmetic */
+.sic-output {
+    margin: 0;
+    padding: 0.5em 0.75em;
+    border-top: 1px solid #e5e7eb;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-family: monospace;
+}
+
+.sic-output.is-error { color: #dc2626; }
+

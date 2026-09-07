@@ -23,8 +23,11 @@ clean:
 	rm -rf $(BUILDDIR)/*
 	rm -rf $(SOURCEDIR)/.jupyter_cache
 
+# Ook `extensions/` volgen: de stijlen en de JavaScript van de interactieve cellen
+# staan daar, en autobuild kijkt uit zichzelf alleen naar SOURCEDIR. Zonder dit
+# levert een wijziging aan interactive-code.css of .js geen herbouw op.
 livehtml:
-	uv run sphinx-autobuild $(SOURCEDIR) $(BUILDDIR)/html --open-browser
+	uv run sphinx-autobuild $(SOURCEDIR) $(BUILDDIR)/html --watch extensions --open-browser
 
 # Een pull request bekijken zoals hij eruitziet, niet zoals de diff hem toont.
 # De notebookcache staat buiten git en overleeft een branchwissel, dus dit duurt

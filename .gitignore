@@ -142,3 +142,9 @@ referentie/
 # Bestanden die studenten in de opgaven aanmaken
 source/problems/telling.txt
 source/problems/lang.txt
+
+# Uitzondering: de gecompileerde vertaalcatalogus van de Pyodide-extensie.
+# Normaal is een .mo een bouwartefact, maar er is in deze repo geen i18n-
+# gereedschap dat hem genereert, en zonder dit bestand vallen de knoppen stil
+# terug op Engels. Zie extensions/README.md en #96.
+!extensions/sphinx_interactive_code/locales/**/*.mo
