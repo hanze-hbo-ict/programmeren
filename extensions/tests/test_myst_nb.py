@@ -83,20 +83,6 @@ class TestNotebookCellTransform:
         # Markdown cell renders as a heading, not as a web component
         assert "<h2" in html or "Just text" in html
 
-    def test_proxy_url_config_applied(self, nb_build):
-        html = nb_build(
-            make_notebook({"source": "pass"}),
-            conf_extra='interactive_code_proxy_url = "http://proxy.example.com"',
-        )
-        assert 'data-proxy-url="http://proxy.example.com"' in html
-
-    def test_coach_open_config_applied(self, nb_build):
-        html = nb_build(
-            make_notebook({"source": "pass"}),
-            conf_extra="interactive_code_coach_open = True",
-        )
-        assert 'data-coach-open="true"' in html
-
     def test_assignment_from_cell_metadata(self, nb_build):
         nb = make_notebook({
             "source": "pass",

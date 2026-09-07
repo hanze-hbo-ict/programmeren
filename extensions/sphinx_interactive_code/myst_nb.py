@@ -95,9 +95,7 @@ class NotebookCellTransform(SphinxPostTransform):
 
             interactive_html = build_element(
                 code,
-                proxy_url=config.interactive_code_proxy_url,
                 pyodide_url=config.interactive_code_pyodide_url,
-                coach_open=bool(config.interactive_code_coach_open),
                 assignment=meta.get("assignment", ""),
                 solution=meta.get("solution", ""),
                 dormant=True,

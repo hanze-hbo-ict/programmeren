@@ -28,7 +28,14 @@ dev = [
     "pymarkdownlnt>=0.9.35",
     "ruff>=0.9.0",
     "nbstripout>=0.8.1",
+    "pytest>=9.0.0",
 ]
+
+[tool.pytest.ini_options]
+# De Sphinx-extensie in `extensions/` is geen apart pakket maar code van deze
+# repo; `pythonpath` maakt haar importeerbaar zonder installatie.
+pythonpath = ["extensions"]
+testpaths = ["extensions/tests"]
 
 [tool.pymarkdown]
 extensions.front-matter.enabled = true

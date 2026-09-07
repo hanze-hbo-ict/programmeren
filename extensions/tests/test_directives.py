@@ -17,17 +17,13 @@ from sphinx_interactive_code.directives import build_element
 
 def make_element(
     code: str = "pass",
-    proxy_url: str = "/llm-proxy",
     pyodide_url: str = "https://cdn.example.com/pyodide.js",
-    coach_open: bool = False,
     assignment: str = "",
     solution: str = "",
 ) -> str:
     return build_element(
         code,
-        proxy_url=proxy_url,
         pyodide_url=pyodide_url,
-        coach_open=coach_open,
         assignment=assignment,
         solution=solution,
     )
@@ -43,16 +39,6 @@ class TestBuildElement:
         html = make_element("x = a < b")
         assert "a &lt; b" in html
         assert "a < b" not in html
-
-    def test_proxy_url_attribute(self):
-        html = make_element(proxy_url="/my-proxy")
-        assert 'data-proxy-url="/my-proxy"' in html
-
-    def test_coach_open_true(self):
-        assert 'data-coach-open="true"' in make_element(coach_open=True)
-
-    def test_coach_open_false(self):
-        assert "data-coach-open" not in make_element(coach_open=False)
 
     def test_assignment_present(self):
         html = make_element(assignment="Write fibonacci.")
@@ -126,50 +112,6 @@ class TestDirectiveIntegration:
 """
         )
         assert "Write a fibonacci function." in html
-
-    def test_coach_closed_by_default(self, sphinx_build):
-        html = sphinx_build(
-            """\
-.. interactive-code::
-
-   pass
-"""
-        )
-        assert "data-coach-open" not in html
-
-    def test_coach_open_flag(self, sphinx_build):
-        html = sphinx_build(
-            """\
-.. interactive-code::
-   :coach-open:
-
-   pass
-"""
-        )
-        assert 'data-coach-open="true"' in html
-
-    def test_site_wide_coach_open_config(self, sphinx_build):
-        html = sphinx_build(
-            """\
-.. interactive-code::
-
-   pass
-""",
-            conf_extra="interactive_code_coach_open = True",
-        )
-        assert 'data-coach-open="true"' in html
-
-    def test_coach_closed_overrides_site_default(self, sphinx_build):
-        html = sphinx_build(
-            """\
-.. interactive-code::
-   :coach-closed:
-
-   pass
-""",
-            conf_extra="interactive_code_coach_open = True",
-        )
-        assert "data-coach-open" not in html
 
     def test_solution_file_read_and_encoded(self, sphinx_build, tmp_path):
         solution = "def fibonacci(n): return n\n"

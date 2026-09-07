@@ -14,9 +14,7 @@ from sphinx.util.docutils import SphinxDirective
 def build_element(
     code: str,
     *,
-    proxy_url: str,
     pyodide_url: str,
-    coach_open: bool,
     assignment: str,
     solution: str,
     dormant: bool = False,
@@ -24,13 +22,10 @@ def build_element(
     """Return the raw HTML for an ``<interactive-code-cell>`` element."""
     solution_b64 = base64.b64encode(solution.encode()).decode() if solution else ""
     attrs = {
-        "data-proxy-url": proxy_url,
         "data-pyodide-url": pyodide_url,
         "data-assignment": assignment,
         "data-solution": solution_b64,
     }
-    if coach_open:
-        attrs["data-coach-open"] = "true"
     if dormant:
         attrs["data-dormant"] = "true"
     attr_str = " ".join(
@@ -40,14 +35,13 @@ def build_element(
 
 
 class InteractiveCodeDirective(SphinxDirective):
-    """Renders an interactive code cell powered by Pyodide and an LLM coach.
+    """Renders an interactive code cell powered by Pyodide.
 
     Usage::
 
         .. interactive-code::
            :assignment: Schrijf een recursieve fibonacci functie.
            :solution: _solutions/fibonacci.py
-           :coach-open:
 
            def fibonacci(n):
                pass
@@ -59,26 +53,14 @@ class InteractiveCodeDirective(SphinxDirective):
         "assignment": directives.unchanged,
         # Path to a solution file, relative to the document source directory.
         "solution": directives.path,
-        # Override the site-wide interactive_code_coach_open setting.
-        "coach-open": directives.flag,
-        "coach-closed": directives.flag,
     }
 
     def run(self) -> list[nodes.Node]:
         config = self.env.config
 
-        if "coach-open" in self.options:
-            coach_open = True
-        elif "coach-closed" in self.options:
-            coach_open = False
-        else:
-            coach_open = bool(config.interactive_code_coach_open)
-
         html = build_element(
             "\n".join(self.content),
-            proxy_url=config.interactive_code_proxy_url,
             pyodide_url=config.interactive_code_pyodide_url,
-            coach_open=coach_open,
             assignment=self.options.get("assignment", ""),
             solution=self._read_solution(),
         )

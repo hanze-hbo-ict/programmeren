@@ -1,5 +1,5 @@
 // Vanilla ES module — no build step required.
-// Depends on: Pyodide (CDN), CodeMirror 6 (esm.sh CDN), marked + DOMPurify (esm.sh CDN)
+// Depends on: Pyodide (CDN), CodeMirror 6 (esm.sh CDN)
 
 const DEFAULT_PYODIDE_URL =
   "https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js";
@@ -10,35 +10,16 @@ const DEFAULT_PYODIDE_URL =
 
 const _I18N_DEFAULTS = {
   run: "Run",
-  help: "Help",
-  askPlaceholder: "Ask a question\u2026",
   loadingPython: "Loading Python\u2026",
   running: "Running\u2026",
   editorLoadError: "Could not load editor: ",
   pythonLoadError: "Could not load Python: ",
   pyodideLoadError: "Could not load Pyodide from ",
-  httpError: "Error: HTTP ",
-  connectionError: "Connection error: ",
-  error: "Error: ",
 };
 
 function t(key) {
   return window.SIC_I18N?.[key] ?? _I18N_DEFAULTS[key];
 }
-
-import { marked } from "https://esm.sh/marked@15";
-import DOMPurify from "https://esm.sh/dompurify@3";
-
-// Restrict markdown to inline formatting + lists only — no headings, hr, images, tables.
-marked.use({
-  renderer: {
-    heading({ text }) { return `<p><strong>${text}</strong></p>\n`; },
-    hr() { return ""; },
-    blockquote({ body }) { return body; },
-    image() { return ""; },
-    table() { return ""; },
-  },
-});
 
 // ---------------------------------------------------------------------------
 // Pyodide singleton — loaded once per page, shared across all cells
@@ -64,7 +45,6 @@ function getPyodide(url) {
 // ---------------------------------------------------------------------------
 
 const ICON_PLAY = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="14" height="14" fill="currentColor" style="vertical-align:-2px"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm4.879-2.773 4.264 2.559a.25.25 0 0 1 0 .428l-4.264 2.559A.25.25 0 0 1 6 10.559V5.442a.25.25 0 0 1 .379-.215Z"/></svg>`;
-const ICON_QUESTION = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="14" height="14" fill="currentColor" style="vertical-align:-2px"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.92 6.085h.001a.749.749 0 1 1-1.342-.67c.169-.339.436-.701.849-.977C6.845 4.16 7.369 4 8 4a2.756 2.756 0 0 1 1.637.525c.503.377.863.965.863 1.725 0 .448-.115.83-.329 1.15-.205.307-.47.513-.692.662-.109.073-.22.138-.313.195l-.006.004a6.24 6.24 0 0 0-.26.17.748.748 0 0 0-.095.085V9a.75.75 0 0 1-1.5 0v-.5c0-.325.182-.6.428-.75.14-.085.293-.173.438-.257.11-.065.212-.124.301-.186.173-.115.23-.191.253-.228a.47.47 0 0 0 .054-.241c0-.186-.077-.343-.247-.469A1.255 1.255 0 0 0 8 5.5c-.384 0-.618.115-.74.198-.136.09-.225.2-.34.387ZM8.5 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"/></svg>`;
 
 // ---------------------------------------------------------------------------
 // Shadow DOM — only the CodeMirror editor host + slot for light DOM projection
@@ -83,16 +63,9 @@ function buildLightHtml() {
   return buildLightHtml._html ??= `
 <div class="sic-toolbar">
   <button class="sic-btn-run" type="button">${ICON_PLAY} ${t("run")}</button>
-  <button class="sic-btn-help" type="button">${ICON_QUESTION} ${t("help")}</button>
   <span class="sic-status"></span>
 </div>
 <pre class="sic-output" hidden></pre>
-<div class="sic-help" hidden>
-  <div class="sic-messages" role="log" aria-live="polite"></div>
-  <form class="sic-input-form">
-    <input class="sic-help-input" type="text" placeholder="${t("askPlaceholder")}" autocomplete="off">
-  </form>
-</div>
 `;
 }
 
@@ -109,12 +82,7 @@ window.sicActivate = function (btn) {
 
 class InteractiveCodeCell extends HTMLElement {
   #editor = null;
-  #messages = [];
-  #lastRunContext = "";
-  #abortController = null;
   #activateHandler = null;
-  #activeReader = null;
-  #msgsEl = null;
   #statusEl = null;
 
   connectedCallback() {
@@ -134,7 +102,6 @@ class InteractiveCodeCell extends HTMLElement {
       document.removeEventListener("sic:activate", this.#activateHandler);
       this.#activateHandler = null;
     }
-    if (this.#abortController) this.#abortController.abort();
     this.#editor?.destroy();
   }
 
@@ -150,11 +117,6 @@ class InteractiveCodeCell extends HTMLElement {
     shadow.appendChild(document.createElement("slot"));
 
     this.innerHTML = buildLightHtml();
-
-    if (this.dataset.coachOpen === "true") {
-      this.querySelector(".sic-help").hidden = false;
-      this.querySelector(".sic-btn-help").classList.add("is-active");
-    }
 
     this.#bindEvents();
     this.#init(code, editorHost, shadow);
@@ -222,25 +184,10 @@ class InteractiveCodeCell extends HTMLElement {
   }
 
   #bindEvents() {
-    this.#msgsEl = this.querySelector(".sic-messages");
     this.#statusEl = this.querySelector(".sic-status");
 
     this.querySelector(".sic-btn-run")
       .addEventListener("click", () => this.#run());
-
-    this.querySelector(".sic-btn-help")
-      .addEventListener("click", () => {
-        const helpEl = this.querySelector(".sic-help");
-        const btnEl = this.querySelector(".sic-btn-help");
-        helpEl.hidden = !helpEl.hidden;
-        btnEl.classList.toggle("is-active", !helpEl.hidden);
-      });
-
-    this.querySelector(".sic-input-form")
-      .addEventListener("submit", (e) => {
-        e.preventDefault();
-        this.#sendMessage();
-      });
   }
 
   // ---- Code execution -------------------------------------------------------
@@ -266,11 +213,10 @@ class InteractiveCodeCell extends HTMLElement {
       const combined =
         stdout + (result !== undefined && result !== null ? String(result) : "");
 
-      this.#lastRunContext = combined.trim();
-      outputEl.textContent = this.#lastRunContext;
-      outputEl.hidden = !this.#lastRunContext;
+      const output = combined.trim();
+      outputEl.textContent = output;
+      outputEl.hidden = !output;
     } catch (err) {
-      this.#lastRunContext = err.message;
       outputEl.textContent = err.message;
       outputEl.classList.add("is-error");
       outputEl.hidden = false;
@@ -281,114 +227,7 @@ class InteractiveCodeCell extends HTMLElement {
     }
   }
 
-  // ---- LLM chat -------------------------------------------------------------
-
-  async #sendMessage() {
-    const input = this.querySelector(".sic-help-input");
-    const text = input.value.trim();
-    if (!text || !this.#editor) return;
-
-    input.value = "";
-    this.#messages.push({ role: "user", content: text });
-    this.#addMessage("user", text);
-
-    const assistantEl = this.#addMessage("assistant", "\u2026");
-
-    if (this.#abortController) {
-      this.#abortController.abort();
-      this.#activeReader?.cancel();
-    }
-    this.#abortController = new AbortController();
-
-    const solution = this.dataset.solution ? atob(this.dataset.solution) : "";
-    let assistantText = "";
-
-    try {
-      const response = await fetch(
-        `${this.dataset.proxyUrl || "/llm-proxy"}/chat`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          signal: this.#abortController.signal,
-          body: JSON.stringify({
-            messages: this.#messages,
-            code: this.#editor.state.doc.toString(),
-            output: this.#lastRunContext,
-            assignment: this.dataset.assignment || "",
-            solution,
-          }),
-        }
-      );
-
-      if (!response.ok) {
-        assistantEl.textContent = `${t("httpError")}${response.status}`;
-        return;
-      }
-
-      assistantEl.textContent = "";
-      const reader = response.body.getReader();
-      this.#activeReader = reader;
-      const decoder = new TextDecoder();
-      let renderPending = false;
-
-      outer: while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-
-        for (const line of decoder.decode(value, { stream: true }).split("\n")) {
-          if (!line.startsWith("data:")) continue;
-          const raw = line.slice(5).trim();
-          if (raw === "[DONE]") break outer;
-
-          const payload = JSON.parse(raw);
-          if (payload.error) {
-            assistantEl.textContent = `${t("error")}${payload.error}`;
-            return;
-          }
-          assistantText += payload.text;
-          if (!renderPending) {
-            renderPending = true;
-            requestAnimationFrame(() => {
-              assistantEl.innerHTML = this.#md(assistantText);
-              this.#scrollMessages();
-              renderPending = false;
-            });
-          }
-        }
-      }
-
-      assistantEl.innerHTML = this.#md(assistantText);
-      this.#scrollMessages();
-    } catch (err) {
-      if (err.name !== "AbortError") {
-        assistantEl.textContent = `${t("connectionError")}${err.message}`;
-        return;
-      }
-    } finally {
-      this.#activeReader = null;
-    }
-
-    if (assistantText) this.#messages.push({ role: "assistant", content: assistantText });
-  }
-
   // ---- Helpers --------------------------------------------------------------
-
-  #md(text) {
-    return DOMPurify.sanitize(marked.parse(text));
-  }
-
-  #addMessage(role, text) {
-    const el = document.createElement("div");
-    el.className = `sic-message sic-message--${role}`;
-    el.textContent = text;
-    this.#msgsEl.appendChild(el);
-    this.#scrollMessages();
-    return el;
-  }
-
-  #scrollMessages() {
-    this.#msgsEl.scrollTop = this.#msgsEl.scrollHeight;
-  }
 
   #setStatus(text, isError = false) {
     this.#statusEl.textContent = text;
