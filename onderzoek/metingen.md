@@ -380,6 +380,68 @@ een volledige tweede beoordelingsronde met alle vier de beoordelaars kostte
 ronde waren wel reëel en bleven staan na correctie. Dit is nieuw genoeg om apart
 te noteren; zie [bevinding 14](bevindingen.md#14-beoordelaars-herhalen-een-besluit-dat-de-poort-al-nam-omdat-ze-het-besluit-niet-krijgen).
 
+## Werkitem #182 — de docentenhandleidingen van week 1 en 2
+
+Volledige lus, omvang M. **De eerste M die van begin tot eind is gemeten.** Tot dan waren
+er alleen twee L's: 1,2 miljoen (#103) en 2,66 miljoen (#134).
+
+| Rol | Ronde | Tokens | Duur | Uitkomst |
+|---|---|---|---|---|
+| triage | | 32.967 | 2 min | LUS, M |
+| verkenner | | 105.825 | 11 min | C1b |
+| curriculumontwerper | 1 | 58.415 | 8 min | C2 |
+| verhelderaar | 1 | 64.593 | 6 min | **FAAL** |
+| *vakdeskundige* | | *mens* | | twee gateantwoorden vooruitlopend op de poort |
+| curriculumontwerper | 2 (herontwerp) | 60.606 | 6 min | C2 |
+| verhelderaar | 2 | 80.576 | 8 min | AKKOORD |
+| *vakdeskundige* | | *mens* | | C4 AKKOORD, vier besluiten, drie vragen uitgesteld |
+| auteur | 1 (onderdeel 1 en 2) | 140.083 | 13 min | C5, PR #183 |
+| auteur | 2 (onderdeel 3) | 245.131 | 23 min | C5, PR #184 |
+| auteur | 3 (onderdeel 4) | 147.782 | 9 min | C5, PR #185 |
+| **Totaal tot de beoordeling** | | **935.978** | | |
+
+**Een M kost ongeveer een derde van een L.** Dat is de eerste keer dat die verhouding te
+zien is, en zij past bij de vorm van de kostenopbouw uit bevinding 1: niet de omvang maar
+het aantal rondes. Deze lus had één herontwerpronde tegen vier bij #134.
+
+**De auteur is drie keer gedraaid omdat de oplevering bewust is geknipt.** Het ontwerp
+droeg een afbreekregel voor het geval de termijn zou knellen; die is niet ingeroepen, maar
+de knip is wel gebruikt om het werk over drie leveringen te verdelen. Dat kostte niets
+extra's aan rondes en leverde drie keer een schone tussenstand op.
+
+**De duurste rol was de tweede auteursronde** met 245k, de handleiding van week 2. Die
+week is vier keer zo groot als week 1 (16 bestanden tegen 5, 15.114 woorden tegen 4.591),
+en het verschil in kosten volgt dat vrijwel evenredig.
+
+### Wat het draaien opleverde dat lezen niet had opgeleverd
+
+De auteur heeft de twaalf korte antwoorden bij de collegeopdrachten uitgevoerd in plaats
+van overgenomen. **Drie klopten niet meer:** `2a` Opdracht 7c en 7d geven `6.0` en `21.0`
+waar de bron van 2023 `6` en `21` zei, want `x = x / 2` levert een float; en `2b` Opdracht
+1b geeft `hanzehanzeHogeschool` waar de bron kleine letters zei. Die drie zouden anders aan
+het bord verkeerd zijn voorgedaan.
+
+### Twee keer werd een nul niet vertrouwd
+
+De regel uit `CLAUDE.md` bewees zich twee keer, en beide keren zonder dat erom gevraagd
+was. De verhelderaar merkte dat het voorgestelde ijkbestand voor het patroon
+`\b(and|or|not)\b` de verkeerde kant op wees, en gaf het juiste getal: 13 regels in
+`lectures/2a_var_con.ipynb`. En de auteur van onderdeel 4 kreeg nul op de zin *"Laat ze
+kiezen: de lege kamer of het doolhof"*, zag dat de zin over twee regels afbreekt na `of`,
+kortte het patroon in, en vond de regel wel.
+
+### Wat de rollen corrigeerden aan de orkestrator
+
+Drie keer, en dat is het argument voor de lus dat niet in de kosten zit:
+
+- Het werkitem noteerde de `.docx` als **augustus 2024**; de verkenner las `docProps/core.xml`
+  en maakte er **2023** van. Die fout stond ook in #95 en is daaruit overgenomen.
+- Het werkitem zei dat de tekenobjecten **niet overzetbaar** waren; de verkenner liet zien
+  dat `pandoc` alle 27 labels netjes teruggeeft en dat alleen de koppeling tussen pijl en
+  vak verloren gaat.
+- De orkestrator gaf de triage van #160 mee dat PGM2 geparkeerd was; die rol liet zien dat
+  de parkeerreden gold voor ongevraagde veegbevindingen en niet voor een besteld werkitem.
+
 ## Werkitem #169 — PGM1 week 2, na handwerk buiten de lus
 
 Volledige lus, omvang M. Hier staat wat er tot nu toe is gedraaid.
