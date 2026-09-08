@@ -319,7 +319,7 @@ draait wel.
 | Week 4 krijgt een lusrecept van vijf vragen, in `4a_lussen` | didactisch | gesloten, **uitgevoerd** met #153; week 5 pikt het nog niet op (#163) |
 | Recursie gaat uit PGM1 week 4, op alle vier de plekken | organisatorisch | gesloten, **deels uitgevoerd**: 1 van 4 met #153 (midtermopdracht 13). `unique` (2×) en `find_number_of_decimals` staan er nog; zie ronde twee en #126 |
 | Eerst de weken van PGM1 afronden; het materiaal moet zo snel mogelijk live | organisatorisch | staand |
-| Een docentenhandleiding gaat per week en dekt het materiaal en de opgaven, met een didactische invalshoek | didactisch | gesloten, **deels uitgevoerd**: week 1 en 2 staan er met #182; de weken 3 tot en met 12 ontbreken, zie #95 |
+| Een docentenhandleiding gaat per week en helpt de docent die week te geven; hij is geen leeswijzer | didactisch | gesloten, **deels uitgevoerd**: week 1 en 2 staan er met #182; de weken 3 tot en met 12 ontbreken, zie #95 |
 | Handleidingen zijn repo-materiaal en geen onderdeel van het boek | organisatorisch | gesloten, uitgevoerd |
 | Objectmethoden pas vanaf PGM2 week 1, los van de mutatiegrens in PGM1 week 7 | didactisch | staand, onderbouwd |
 | Dictionaries en de Markov-opgave verhuizen van PGM1 week 7 naar PGM2 week 1 | didactisch | staand, nog niet uitgevoerd |
@@ -650,11 +650,17 @@ verandert, is dat een vraag over de matrijs en niet over de toets.
 Twee besluiten, genomen door de vakdeskundige bij de poort van #182 op
 5 september 2026.
 
-**Een docentenhandleiding gaat per week en dekt het materiaal en de opgaven, met
-een didactische invalshoek.** Dus niet een handleiding per college, ook niet in de
-weken met twee colleges. Hij beschrijft hoe je een onderdeel brengt, hoeveel tijd
-eraan gaat, waar studenten op vastlopen en wat je doet als een opdracht niet
-uitkomt. Hij is geen uitwerkingenboek: de uitwerkingen staan in `solutions/`, en
+**Een docentenhandleiding gaat per week en helpt de docent die week te geven.**
+Dus niet een handleiding per college, ook niet in de weken met twee colleges. Hij
+beschrijft hoe je een onderdeel brengt, hoeveel tijd eraan gaat, waar studenten op
+vastlopen en wat je doet als een opdracht niet uitkomt.
+
+**Hij is geen leeswijzer.** Het materiaal spreekt voor zichzelf; de handleiding
+zegt wat je ermee doet. Verwijzingen naar het materiaal dienen om de tijdsindeling
+eraan te verankeren, niet om de inhoud na te vertellen. Merk je dat een handleiding
+moet uitleggen hoe het materiaal in elkaar zit, dan is dat een aanwijzing dat het
+materiaal zelf niet klopt - en dan hoort dat daar gerepareerd te worden en niet
+hier beschreven. Hij is geen uitwerkingenboek: de uitwerkingen staan in `solutions/`, en
 waar die voor een collegeopdracht niet bestaan, geeft de handleiding een kort
 antwoord van hooguit een regel. Dit besluit heropent wie kan laten zien dat een
 docent met een weekdocument het overzicht per bijeenkomst kwijtraakt.
