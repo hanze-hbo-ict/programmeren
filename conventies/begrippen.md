@@ -147,22 +147,58 @@ zin hierboven, en de bestandsnamen `folders.png` en `finder_folders.png`. Een
 hook met vijf uitzonderingen leert auteurs vooral hem te omzeilen. Dit is werk
 voor de veegronde van de eindredacteur, die terminologie toch al meet.
 
-## Opgave, opdracht, practicum
+## Opgave, opdracht, stap
 
-Deze drie liepen door elkaar. In koppen komt `Opdracht` 137 keer voor en
-`Opgave` 108 keer, verspreid over dezelfde soorten documenten. Voorstel voor een
-werkverdeling die aansluit op de structuur die er al is:
+Deze woorden liepen door elkaar: hetzelfde soort taak heette in het ene bestand
+`Opgave` en in het andere `Opdracht`, en de bestanden onder `problems/` heetten
+allebei. Vastgesteld door de vakdeskundige op 8 september 2026 met
+werkitem #178: elk woord heeft één taak.
 
 | Term | Betekenis |
 |---|---|
 | **college** | Het materiaal onder `lectures/` |
 | **practicum** | Het materiaal onder `practicals/` |
-| **opgave** | Een huiswerkitem onder `problems/`, zoals de inhoudsopgave het al noemt |
-| **opdracht** | Een genummerde taak *binnen* een document, ongeacht welk soort |
+| **opgave** | Het artefact: een bestand onder `problems/`, en de rubriek in `course/` die ernaar verwijst |
+| **opdracht** | Een genummerde taak *binnen* een document, die op zichzelf staat |
+| **stap** | Een genummerde taak *binnen* een document, die voortbouwt op de vorige |
 
-Zo krijgt elk woord één taak: opgave is het artefact, opdracht is de stap erin.
-Dit raakt veel koppen en wordt dus niet in één keer doorgevoerd, maar per
-document bij de herziening.
+Opgave is dus het artefact; opdracht en stap zijn de taken erin, en het verschil
+tussen die twee is of de taak op de vorige voortbouwt. Dat sluit aan op
+[schrijfwijzer.md](schrijfwijzer.md), *De vorm van een opgave*, dat om genummerde
+stappen vraagt.
+
+`problems/3_basis` gebruikt beide woorden in één bestand: `## Stap 1` tot en met
+`## Stap 6` bouwen samen één programma op, `### Opdracht 1` tot en met
+`### Opdracht 3` staan los van elkaar. Dat de schrijfwijzer juist dat bestand als
+model aanwijst en dat het onder deze regel klopt zonder te worden aangepast, is
+het bewijs dat de regel dit materiaal beschrijft in plaats van eraan wordt
+opgelegd.
+
+**De nummering is een kaal cijfer, doorlopend binnen het document.** Dus geen
+`1-A`, geen `2b`, en geen herstart halverwege het bestand. **Een uitwerkingskop
+spiegelt de opgavekop die hij oplost: hetzelfde nummer, geen letter.** Deelvragen
+staan in de lopende tekst, precies zoals in de opgave. Daarmee is de regel
+toetsbaar: elke werkeenheidkop in `solutions/` heeft een kop in `problems/` met
+hetzelfde nummer.
+
+**Een tentamenvraag is geen van drieën.** De vier oefententamens houden daarom
+hun `Opgave N`-koppen; zie de reikwijdteregel in
+[conventies.md](conventies.md).
+
+`Opdracht N` → `Stap N` is met werkitem #178 **niet** doorgevoerd. Dat
+vraagt per bestand een oordeel over voortbouwen versus losstaan, en dat oordeel is inhoud; het
+gebeurt bij de herziening van de week.
+
+## De drie opgaveniveaus
+
+De niveaus heten **opstap**, **basis** en **extra**, en een vierde naam is er
+niet. Dat geldt voor de bestandsnamen onder `problems/` en `solutions/`, voor de
+titel in het notebook, voor de inhoudsopgave en voor de lopende tekst.
+
+Wat elk niveau *bedoelt* staat in
+[`curriculum/uitgangspunten.md`](../curriculum/uitgangspunten.md); welke week
+welk niveau *hoort te hebben* in
+[`curriculum/leerlijn.md`](../curriculum/leerlijn.md).
 
 ## Woorden die geen synoniem zijn
 

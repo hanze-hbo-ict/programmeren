@@ -34,7 +34,7 @@ Nee, de opdrachten zijn niet verplicht. We raden je wél aan ze te maken want na
 
 ## Hoe kan ik opdrachten laten controleren?
 
-Gebruik hier de werkcolleges voor waar jij jouw oplossingen kan bespreken. De antwoorden op de opgaven kan je ook in het [werkboek](https://hanze-hbo-ict.github.io/programmeren/) vinden.
+Gebruik hier de werkcolleges voor waar jij jouw oplossingen kan bespreken. Voor de weken 2 tot en met 8 staan de uitwerkingen ook in het [werkboek](https://hanze-hbo-ict.github.io/programmeren/); vanaf week 9 zijn ze er nog niet.
 
 ## Mag ik samenwerken?
 

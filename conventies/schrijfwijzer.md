@@ -157,7 +157,9 @@ Twee dingen daarbij:
 
 **Nummer de stappen ook echt.** Een reeks kopjes zonder nummers laat de student
 niet zien waar hij is. Gebruik *stap* voor de delen van één samenhangende opgave
-en *opdracht* voor losse oefeningen die niet op elkaar voortbouwen.
+en *opdracht* voor losse oefeningen die niet op elkaar voortbouwen. Welk woord
+waar hoort, en hoe je nummert, staat in [begrippen.md](begrippen.md), *Opgave,
+opdracht, stap*; dat document bindt hier.
 
 **Klap een hint niet weg.** Een hint achter een dropdown lijkt de pagina rustiger
 te maken, maar hij verstopt precies de hulp waarvoor hij bedoeld is. Wie hem niet

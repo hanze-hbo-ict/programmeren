@@ -1,6 +1,6 @@
 # Werkcollege
 
-## Opgaven
+## Opdrachten
 
 ```{tableofcontents}
 ```

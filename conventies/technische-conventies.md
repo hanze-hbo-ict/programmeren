@@ -94,7 +94,7 @@ MyST. Dan blijft een volgende wissel een dag werk.
 
 ## Controles voor elke commit
 
-Vier hooks draaien via pre-commit. Ze werken alleen op `source/`.
+Vijf hooks draaien via pre-commit. Ze werken alleen op `source/`.
 
 > **Activeer ze eerst.** `.pre-commit-config.yaml` staat in de repository, maar
 > een git-hook wordt niet meegekloond. Zonder `uv run pre-commit install` draait
@@ -105,6 +105,7 @@ Vier hooks draaien via pre-commit. Ze werken alleen op `source/`.
 | `no-commit-to-master` | altijd | Blokkeert directe commits op `master`; werk in een branch |
 | `check-code-blocks` | `.md`, `.ipynb` | Python in ` ```python `-fences: syntax en ruff-opmaak |
 | `check-notebook-tags` | `.ipynb` | Celtags: opgaven leeg, uitwerkingen draaien |
+| `check-kopwoord` | `.md`, `.ipynb` | Koppen: een genummerde taak heet `Opdracht`, en geen `instap` in een bestandsnaam |
 | `pymarkdown` | `.md` | Markdown-linting volgens de configuratie in `pyproject.toml` |
 | `nbstripout` | `.ipynb` | Verwijdert celuitvoer, zodat die niet in git belandt |
 
@@ -133,6 +134,30 @@ boven:
 <!-- codecontrole:skip -->
 ```
 
+### Wat `check-kopwoord` wel en niet ziet
+
+De hook leest **koppen**, en alleen koppen: een regel die met `#` begint, buiten
+een codefence. In notebooks leest hij de markdown-cellen, samengevoegd uit de
+regels waarin de JSON ze opslaat - een kop die daar per teken is opgeslagen ziet
+hij dus net zo goed als een kop op één regel. Dat is nodig, want zo staan er
+enkele in `problems/5_opstap.ipynb`.
+
+Hij valt op twee dingen: een kop van de vorm `## Opgave 3`, en een bestandsnaam
+met `instap` erin. Hij laat door wat volgens
+[begrippen.md](begrippen.md) mag blijven: de rubriekkop `# Opgaven`, de
+ongenummerde `### Opgave` boven `problems/`-materiaal, en een `Opgave`-regel
+binnen een codefence - die is materiaal en geen kop.
+
+De vier oefententamens zijn uitgezonderd met een padfilter in
+`.pre-commit-config.yaml`. Waarom, staat in
+[conventies.md](conventies.md) onder *Reikwijdte*, en niet alleen in die
+configuratie: een hook met stilzwijgende uitzonderingen leert auteurs vooral hem
+te omzeilen.
+
+Wat de hook **niet** ziet is prozatekst en de nummering zelf. Of de nummers
+doorlopen, en of een uitwerkingskop zijn opgavekop spiegelt, blijft werk voor de
+beoordeling.
+
 ## Indeling van `source/`
 
 | Directory | Inhoud |
@@ -141,7 +166,7 @@ boven:
 | `course/` | Weekpagina's, practicum-, opgaven- en oplossingenoverzichten |
 | `lectures/` | Collegemateriaal |
 | `practicals/` | Practicumopdrachten |
-| `problems/` | Huiswerkopgaven (opstap, instap, basis, extra) |
+| `problems/` | Huiswerkopgaven; de niveaunamen staan in [begrippen.md](begrippen.md) |
 | `solutions/` | Uitwerkingen |
 | `projects/` | Projectbeschrijvingen |
 | `extra/`, `support/` | Verdiepend en ondersteunend materiaal |

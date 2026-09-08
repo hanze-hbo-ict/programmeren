@@ -24,6 +24,17 @@ repos:
         files: ^source/.*\.ipynb$
         pass_filenames: true
 
+      - id: check-kopwoord
+        name: Kopwoord en niveaunaam (Opdracht, en opstap/basis/extra)
+        language: system
+        entry: python3 .claude/check-kopwoord.py
+        types_or: [markdown, jupyter]
+        files: ^source/.*\.(md|ipynb)$
+        # De vier oefententamens houden hun `Opgave N`-koppen; de grond staat in
+        # conventies/conventies.md, onder Reikwijdte.
+        exclude: ^source/(extra/practice/(pgm1_examen\.ipynb|PGM2_examen\.md)|solutions/PGM[12]_examen\.ipynb)$
+        pass_filenames: true
+
       - id: pymarkdown
         name: Markdown linting (pymarkdown)
         language: system
