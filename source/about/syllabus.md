@@ -23,14 +23,14 @@ Verder is het ook belangrijk om te ontdekken hoe de computer werkt. Wat kan het 
 
 Elke week zijn er twee korte hoorcolleges die nieuwe onderwerpen introduceren. Bij elk hoorcollege hoort een set aan opdrachten om te oefenen met de stof die in het hoorcollege is behandeld. Er is elke week ook een werkcollege waarin de stof van de week samenkomt in een (grotere) programmeer opdracht. Elke week is er ook een set aan opdrachten waar thuis mee geoefend kan worden. Deze zijn verdeeld in drie categorieën:
 
-- **Instap**
+- **Opstap**
 
-    Bij deze opdrachten gaat het voornamelijk om begrip van code. In plaats van zelf te gaan programmeren, krijg je code waar je verschillende vragen over zal moeten beantwoorden. De instap opdrachten worden aangegeven met een *-*
+    De kleinste stap bij een nieuw onderwerp. In het begin krijg je vooral korte programma's om te *lezen*: je voorspelt wat ze doen en controleert dat daarna. Naarmate je verder komt schrijf je die kleine stukjes zelf - één opdracht, één ding, zodat je de syntaxis in de vingers krijgt. Komt er iets echt nieuws, dan begint het weer met lezen. Kost *basis* je moeite, begin dan hier.
 
 - **Basis**
 
-    Dit zijn de opdrachten waarvan we verwachten dat je ze kan maken. De focus ligt vooral op korte problemen om de vaardigheden te testen. Heb je er veel moeite mee, dan is het verstandig om eerst de instap opdrachten te maken. Zijn de basisvragen (te) makkelijk voor jou dan is het verstandig om te kijken naar de uitdagende vragen.
+    Dit zijn de opdrachten waarvan we verwachten dat je ze kan maken. De focus ligt vooral op korte problemen om de vaardigheden te testen. Heb je er veel moeite mee, dan is het verstandig om eerst de opstap te maken. Zijn de basisvragen (te) makkelijk voor jou, kijk dan naar de extra opdrachten.
 
-- **Extra/uitdaging**
+- **Extra**
 
-    Dit zijn opdrachten die wat meer een uitdaging zijn. Vaak zijn het opdrachten om de geleerde vaardigheden in te zetten in echte ICT problemen. Zo krijg je beter inzicht in hoe de geleerde vaardigheden in de praktijk worden gebruikt. De problemen zijn ook groter en zal je stap voor stap moeten oplossen. Deze opdrachten worden aangegeven met een *+* teken.
+    Dit zijn opdrachten die wat meer een uitdaging zijn. Vaak zijn het opdrachten om de geleerde vaardigheden in te zetten in echte ICT problemen. Zo krijg je beter inzicht in hoe de geleerde vaardigheden in de praktijk worden gebruikt. De problemen zijn ook groter en zal je stap voor stap moeten oplossen.

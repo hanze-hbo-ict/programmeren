@@ -94,7 +94,8 @@ MyST. Dan blijft een volgende wissel een dag werk.
 
 ## Controles voor elke commit
 
-Vier hooks draaien via pre-commit. Ze werken alleen op `source/`.
+Zes hooks draaien via pre-commit. Op `no-commit-to-master` na werken ze alleen
+op `source/`.
 
 > **Activeer ze eerst.** `.pre-commit-config.yaml` staat in de repository, maar
 > een git-hook wordt niet meegekloond. Zonder `uv run pre-commit install` draait
@@ -105,6 +106,7 @@ Vier hooks draaien via pre-commit. Ze werken alleen op `source/`.
 | `no-commit-to-master` | altijd | Blokkeert directe commits op `master`; werk in een branch |
 | `check-code-blocks` | `.md`, `.ipynb` | Python in ` ```python `-fences: syntax en ruff-opmaak |
 | `check-notebook-tags` | `.ipynb` | Celtags: opgaven leeg, uitwerkingen draaien |
+| `check-kopwoord` | `.md`, `.ipynb` | Koppen: een genummerde taak heet `Opdracht`, en geen `instap` in een bestandsnaam |
 | `pymarkdown` | `.md` | Markdown-linting volgens de configuratie in `pyproject.toml` |
 | `nbstripout` | `.ipynb` | Verwijdert celuitvoer, zodat die niet in git belandt |
 
@@ -133,6 +135,51 @@ boven:
 <!-- codecontrole:skip -->
 ```
 
+### Wat `check-kopwoord` wel en niet ziet
+
+De hook leest **koppen**, en alleen koppen: een regel die met `#` begint, buiten
+een codefence. In notebooks leest hij de markdown-cellen, samengevoegd uit de
+regels waarin de JSON ze opslaat - een kop die daar over meer dan één
+array-element is verdeeld ziet hij dus net zo goed als een kop in één element.
+
+**Vandaag levert die samenvoeging niets extra's op**, en dat is gemeten: van de
+1.083 koppen in de 81 notebooks onder `source/` staat er geen enkele over meer
+dan één array-element. Tot 8 september 2026 waren er twee, allebei in
+`problems/5_opstap.ipynb`, en die zijn verdwenen doordat werkitem #178 dat
+notebook opnieuw wegschreef. Het notebookformaat staat de splitsing toe, elke
+editor die een cel herschrijft kan haar terugbrengen, en een hook die een kop
+mist faalt stil - dus de samenvoeging blijft staan.
+
+Hij valt op twee dingen: een kop van de vorm `## Opgave 3`, en een bestandsnaam
+met `instap` erin. Welke vormen van `Opgave` mogen blijven staat in
+[begrippen.md](begrippen.md), *Opgave, opdracht, stap*; dat document bindt en dit
+document beschrijft alleen wat de hook ervan afdekt. Daarnaast laat hij een
+`Opgave`-regel binnen een codefence door: die is materiaal en geen kop.
+
+De vier oefententamens zijn uitgezonderd met een padfilter in
+`.pre-commit-config.yaml`. Waarom, staat in
+[conventies.md](conventies.md) onder *Reikwijdte*, en niet alleen in die
+configuratie: een hook met stilzwijgende uitzonderingen leert auteurs vooral hem
+te omzeilen.
+
+**Wat de hook niet ziet**, en dat is de belangrijkste alinea hier:
+
+- **Codecellen.** Hij leest alleen markdown-cellen. Een label als
+  `# Opgave 1: maak de lijst` boven de cel die de student invult loopt er stil
+  doorheen, en `begrippen.md` bindt dat label wel - het onderscheid zit in de
+  taak en niet in de opmaak. Dit is geen theoretisch geval: bij werkitem #178
+  bleven op die manier twintig regels in `practicals/2_sequenties_en_data.ipynb`
+  en zijn uitwerking staan terwijl de telling nul meldde. Ze zijn met de hand
+  rechtgezet. De hook is er niet op uitgebreid, want een `# Opgave` in een
+  tekststring of in uitleg over de oude naam is iets anders dan een label; dat
+  onderscheid vraagt een oordeel.
+- **Prozatekst.** Een zin die naar `opgave 3` verwijst, blijft staan.
+- **De nummering zelf.** Of de nummers doorlopen, en of een uitwerkingskop zijn
+  opgavekop spiegelt, blijft werk voor de beoordeling.
+
+Wie het kopwoord meet, meet dus niet alleen met deze hook. `grep -rn 'Opgave [0-9]'
+source/` vangt de codecellen en het proza er wél bij.
+
 ## Indeling van `source/`
 
 | Directory | Inhoud |
@@ -141,7 +188,7 @@ boven:
 | `course/` | Weekpagina's, practicum-, opgaven- en oplossingenoverzichten |
 | `lectures/` | Collegemateriaal |
 | `practicals/` | Practicumopdrachten |
-| `problems/` | Huiswerkopgaven (opstap, instap, basis, extra) |
+| `problems/` | Huiswerkopgaven; de niveaunamen staan in [begrippen.md](begrippen.md) |
 | `solutions/` | Uitwerkingen |
 | `projects/` | Projectbeschrijvingen |
 | `extra/`, `support/` | Verdiepend en ondersteunend materiaal |

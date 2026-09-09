@@ -267,7 +267,7 @@ werkcollege in eigenlijke zin: je bouwt samen met de klas één programma op.
 | 5 | 20 | Slicen, stappen en achteruit lopen | `2b`: `### Slicing`, `### Stappen`, `### Achteruit lopen`, `### Opdracht 2`, `### Opdracht 3`, `### Opdracht 4` |
 | 6 | 10 | Vergelijken: wat is groter, en waarom | `2b`: `` ## `max` of `min` ``, `` ### `str`ings to the `max` ``, `### Opdracht 5` |
 | 7 | 5 | Het spel, de regels, en de begincode lezen | `2_rochambeau`: `# Rochambeau`, `## De regels`, `## Een begin` |
-| 8 | 15 | Samen opbouwen: drie wapens, drie uitkomsten | `2_rochambeau`: `## En verder!`, `### Opgave` |
+| 8 | 15 | Samen opbouwen: drie wapens, drie uitkomsten | `2_rochambeau`: `## En verder!`, `### Opdracht` |
 | 9 | 5 | Afronden, en waar ze verder werken | `2_rochambeau`: `## Uitbreidingen`, `## Blijven spelen` |
 
 Negen blokken, 90 minuten. **Blok 7 tot en met 9 hebben geen bron**: voor
@@ -406,7 +406,7 @@ hiervoor.
 |---|---|---|---|
 | 1 | 10 | Aftrap: waar je werkt, en wat de drie bundels van elkaar onderscheidt | `2_sequenties_en_data`: `## Waar je werkt` · `source/course/opgaven_2.md` |
 | 2 | 20 | De cellen doorlopen, en daarna zelf foutmeldingen uitlokken | `2_sequenties_en_data`: `## Bewerkingen met Python`, `## Fouten` |
-| 3 | 20 | De opgaven met lijsten, en `assert` als nakijkregel | `2_sequenties_en_data`: `## Opgaven`, `### Lijsten maken en bewerken`, `` ### Jezelf nakijken met `assert` `` |
+| 3 | 20 | De opgaven met lijsten, en `assert` als nakijkregel | `2_sequenties_en_data`: `## Opdrachten`, `### Lijsten maken en bewerken`, `` ### Jezelf nakijken met `assert` `` |
 | | | **Pauze** | |
 | 4 | 15 | Dezelfde opgaven, nu met strings | `2_sequenties_en_data`: `### Strings slicen en indexeren` |
 | 5 | 20 | Zelfstandig aan de bundels, ieder op zijn eigen niveau | `source/problems/2_opstap.ipynb`, `2_basis.ipynb`, `2_extra.ipynb` |
@@ -511,32 +511,34 @@ dat zelf proberen vóór kijken het hele punt is.
   in `source/lectures/2a_var_con.ipynb` en in
   `source/lectures/2b_strings_en_lists.ipynb`. Noem in de klas altijd het bestand
   of het college erbij; een verwijzing zonder wijst naar twee plekken. Hetzelfde
-  geldt voor `### Opgave`, die zowel in `source/practicals/2_rochambeau.ipynb`
-  als in `source/problems/2_opstap.ipynb` staat.
+  geldt sinds werkitem #178 voor de ongenummerde `### Opdracht`, die zowel in
+  `source/practicals/2_rochambeau.ipynb` als in `source/problems/2_basis.ipynb`
+  staat.
 - **`### Positie` en `### Slicing` staan allebei twee keer in
   `source/lectures/2b_strings_en_lists.ipynb`**, één keer voor lijsten en één
   keer voor strings.
 - **De tweede reeks van de opstap is het tweede college nog een keer.** De vijf
   opdrachten van `source/lectures/2b_strings_en_lists.ipynb` staan bijna
   letterlijk terug in `source/problems/2_opstap.ipynb`: `### Opdracht 1` als
-  `### Opgave 2-A`, `2-B` en `2-C`, en `### Opdracht 2` tot en met
-  `### Opdracht 5` als `2-F` tot en met `2-I`. Drie ervan zijn woordelijk gelijk;
-  de rest verschilt alleen in variabelenaam. Alleen `2-D` en `2-E` zijn nieuw.
+  `### Opdracht 11`, `12` en `13`, en `### Opdracht 2` tot en met
+  `### Opdracht 5` als `16` tot en met `19`. Drie ervan zijn woordelijk gelijk;
+  de rest verschilt alleen in variabelenaam. Alleen `14` en `15` zijn nieuw.
   Handig om te weten voordat je iemand naar de opstap stuurt.
-- **De nummering verschilt per bundel, en binnen een bundel.** Drie gevallen
-  waar je tegenaan loopt zodra je naar een opgave verwijst:
-  - `source/problems/2_opstap.ipynb` heeft `### Opgave 1-A` tot en met `1-J` en
-    `### Opgave 2-A` tot en met `2-I`, maar **geen** `Opgave 3-x`. De derde reeks
-    bestaat alleen als `#### Uitwerking 3-A` tot en met `3-G`, onder één
-    ongenummerde `### Opgave`. Zeg dus "de debugopgave" en niet "opgave 3".
+- **Twee bundels hebben een kop zonder nummer.** Het `1-A`/`2-A`-schema van de
+  opstap is met werkitem #178 vervangen door doorlopende nummers,
+  `### Opdracht 1` tot en met `### Opdracht 19`, maar ongenummerd blijft
+  ongenummerd:
+  - `source/problems/2_opstap.ipynb` sluit af met de debugopgave onder één
+    ongenummerde `### Opgave`, met daaronder `#### Uitwerking A` tot en met
+    `#### Uitwerking G`. Zeg dus "de debugopgave" en niet "opdracht 20".
   - `source/problems/2_basis.ipynb` heeft `### Opdracht 1`, `2` en `3` onder
     `## Formules en variabelen`, en daarnaast een **ongenummerde** `### Opdracht`
     onder `## Interactieve fictie`. "Opdracht 4" bestaat niet.
-  - `source/practicals/2_rochambeau.ipynb` heeft één ongenummerde `### Opgave`
+  - `source/practicals/2_rochambeau.ipynb` heeft één ongenummerde `### Opdracht`
     plus vier uitbreidingen zonder nummer.
 - **In de uitwerkingen staat de debugopgave een kopniveau hoger.**
-  `source/problems/2_opstap.ipynb` schrijft `#### Uitwerking 3-A`,
-  `source/solutions/2_opstap.ipynb` schrijft `### Uitwerking 3-A`. Dezelfde
+  `source/problems/2_opstap.ipynb` schrijft `#### Uitwerking A`,
+  `source/solutions/2_opstap.ipynb` schrijft `### Uitwerking A`. Dezelfde
   namen, ander niveau.
 - **`source/course/practical_2.md` heeft als titel `# Werkcollege`**, maar draagt
   beide practica - ook het practicum van bijeenkomst 3. Dat is een restant; de
@@ -606,11 +608,11 @@ De volledige verantwoording per aanwijzing staat in werkitem #182.
   eerste is dat de drie p's uit de opening van
   `source/lectures/2a_var_con.ipynb` verdwijnen; de aanwijzing in sectie 2 is zo
   geschreven dat ze klopt of ze er nu nog staan of niet. Het tweede is de
-  terminologie. De vraag of alles `Opgave` of `Opdracht` gaat heten ligt bij de
-  vakdeskundige en raakt veel koppen van deze week; en `## Lists` is Engels waar
-  `conventies/begrippen.md` *lijst* voorschrijft, dus ook die kop kan nog
-  wijzigen. Controleer bij twijfel de kop in het bestand voordat je ernaar
-  verwijst.
+  terminologie. Die vraag is met werkitem #178 beslist en uitgevoerd: een
+  genummerde taak heet `Opdracht`, en de aanwijzingen hierboven noemen de
+  koppen zoals ze er nu staan. Wat nog kan wijzigen is `## Lists`, Engels waar
+  `conventies/begrippen.md` *lijst* voorschrijft. Controleer bij twijfel de kop
+  in het bestand voordat je ernaar verwijst.
 - De vier `.docx` van week 1 en 2 zijn uit `teacher_guides/` verwijderd; deze
   handleiding en `handleidingen/week_1.md` zijn er de opvolgers van. De negen
   `.docx` van week 3 tot en met 6 staan er nog en wachten op werkitem #95.

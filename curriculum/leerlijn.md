@@ -167,6 +167,43 @@ Een deel van deze onderwerpen komt in het huidige materiaal niet of nauwelijks
 voor. Dat is bekend en verwacht: de planning beschrijft waar PGM2 heen gaat, niet
 waar het staat.
 
+## Welk niveau een week hoort te hebben
+
+De niveaus zelf staan in [uitgangspunten.md](uitgangspunten.md); hun namen in
+`conventies/begrippen.md`. Hier staat *wanneer* een niveau verplicht is.
+
+| Niveau | Wanneer verplicht |
+|---|---|
+| **basis** | Elke week die een leeruitkomst draagt. Basis is toetsniveau: draagt een week een leeruitkomst en heeft ze geen basis, dan wordt er getoetst op iets waar niet mee geoefend is |
+| **opstap** | Elke week die nieuwe syntaxis introduceert. Een vingeroefening zonder nieuwe syntaxis is oefenen op niets |
+| **extra** | Nooit verplicht |
+
+**PGM1 is hiermee ingevuld.** Week 1 draagt geen leeruitkomst en introduceert
+geen Python - Picobot heeft een eigen regeltaal - en hoort dus geen opstap en
+geen basis te hebben. Dat week 1 geen opgaven heeft is daarmee geen gat maar de
+juiste uitkomst, en dat hoort te staan waar de volgende het terugvindt; zonder
+deze zin leest iedere volgende lezer het als een gat. De weken 2 tot en met 7
+dragen elk een leeruitkomst en introduceren elk nieuwe syntaxis: daar zijn opstap
+en basis allebei verplicht en is extra facultatief. Gemeten in
+`source/problems/` op 8 september 2026 hebben die zes weken alle drie de niveaus,
+dus er ontbreekt niets.
+
+**PGM2 blijft uitgesteld, en dat is een keuze en geen vergeten.** Vastleggen wat
+een week hoort te hebben terwijl nog niet vaststaat wát die week behandelt, is
+een besluit op drijfzand: in de tabel hierboven lopen *Leidend voor 2026* en
+*Materiaal nu* op vijf van de zeven weken uiteen. Het uitstel eindigt wanneer die
+invulling is gemaakt; wat er nu per PGM2-week ligt, staat in
+[uitgangspunten.md](uitgangspunten.md) bij *De verdeling in opstap, basis en
+extra*.
+
+**Wat er wél uit volgt: zes ontbrekende opstapuitwerkingen.** Dat volgt niet uit
+de regel hierboven maar uit het besluit *Elk opgaveniveau hoort een uitwerking te
+hebben*, dat elk **bestaand** niveau bindt en dus onafhankelijk is van het
+PGM2-uitstel. `source/solutions/` heeft alleen `2_opstap`; voor de weken 3 tot en
+met 8 ontbreekt de opstapuitwerking. Vanaf week 9 ontbreken de uitwerkingen
+helemaal, en dat is een groter gat dat onder hetzelfde besluit valt. Dit is
+werkitem #194 en geen werk voor de herziening van dit document.
+
 ## Volgorde van het werk
 
 **Eerst wordt PGM1 herzien, met de PGM2-lijn als randvoorwaarde.**
