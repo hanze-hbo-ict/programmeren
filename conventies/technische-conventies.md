@@ -94,7 +94,8 @@ MyST. Dan blijft een volgende wissel een dag werk.
 
 ## Controles voor elke commit
 
-Vijf hooks draaien via pre-commit. Ze werken alleen op `source/`.
+Zes hooks draaien via pre-commit. Op `no-commit-to-master` na werken ze alleen
+op `source/`.
 
 > **Activeer ze eerst.** `.pre-commit-config.yaml` staat in de repository, maar
 > een git-hook wordt niet meegekloond. Zonder `uv run pre-commit install` draait
