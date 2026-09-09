@@ -158,7 +158,7 @@ werkitem #178: elk woord heeft één taak.
 |---|---|
 | **college** | Het materiaal onder `lectures/` |
 | **practicum** | Het materiaal onder `practicals/` |
-| **opgave** | Het artefact: een bestand onder `problems/`, en de rubriek in `course/` die ernaar verwijst |
+| **opgave** | Het artefact: een bestand onder `problems/`, en de rubriekkop die naar zulk materiaal verwijst |
 | **opdracht** | Een genummerde taak *binnen* een document, die op zichzelf staat |
 | **stap** | Een genummerde taak *binnen* een document, die voortbouwt op de vorige |
 
@@ -174,12 +174,41 @@ model aanwijst en dat het onder deze regel klopt zonder te worden aangepast, is
 het bewijs dat de regel dit materiaal beschrijft in plaats van eraan wordt
 opgelegd.
 
+**Twee vormen van `Opgave` blijven staan, en dit zijn ze.** Wie er een derde
+tegenkomt, heeft een opdracht gevonden die nog de oude naam draagt.
+
+- **`## Opgaven` als rubriekkop, ook buiten `course/`.** Hij staat boven een
+  verzameling opgaven en niet boven een taak. Vindplaatsen: `course/opgaven_2`
+  tot en met `opgaven_11`, `problems/9_basis.ipynb`, en de twee oefenbestanden
+  `extra/practice/1_recursie.ipynb` en `2_list_comprehension.ipynb`.
+- **Een ongenummerde `### Opgave`, *binnen* een bestand onder `problems/`.** Dat
+  is één opgave die uit meer dan één taak bestaat en zelf geen nummer draagt;
+  hij staat er binnen en niet boven. Vindplaats: de debugopgave in
+  `problems/2_opstap.ipynb`.
+
+Wat níet blijft is een **genummerde** `Opgave N`, of dat nu een kop is of een
+commentaarregel boven de cel die de student invult. Dat is een opdracht, en het
+onderscheid zit in de taak en niet in de opmaak.
+
 **De nummering is een kaal cijfer, doorlopend binnen het document.** Dus geen
 `1-A`, geen `2b`, en geen herstart halverwege het bestand. **Een uitwerkingskop
 spiegelt de opgavekop die hij oplost: hetzelfde nummer, geen letter.** Deelvragen
 staan in de lopende tekst, precies zoals in de opgave. Daarmee is de regel
-toetsbaar: elke werkeenheidkop in `solutions/` heeft een kop in `problems/` met
-hetzelfde nummer.
+toetsbaar: elke werkeenheidkop in `solutions/` heeft een kop met hetzelfde nummer
+in het bestand dat hij uitwerkt. Dat is lang niet altijd een bestand onder
+`problems/`: `solutions/4_midterm` werkt `lectures/4b_midterm` uit, en
+`2_sequenties_en_data`, `5a_ascii_art` en `5b_boter_kaas_eieren` werken een
+practicum uit.
+
+**Eén uitzondering, en zij hoort hier te staan en niet in een oplevering.**
+`problems/2_opstap.ipynb` en `solutions/2_opstap.ipynb` dragen `Uitwerking A` tot
+en met `Uitwerking G`: zeven **foutieve** voorstellen bij één ongenummerde
+opgave, de debugopgave. Er is geen nummer om te spiegelen. Nummeren zou bovendien
+misleiden - `Uitwerking 1` naast `Opdracht 1` in hetzelfde document leest als "de
+uitwerking van opdracht 1" - en zeven identieke koppen leveren juist de
+`idN`-ankers op die Sphinx bij een titelbotsing genereert: een anker dat niets
+zegt en bij de volgende wijziging verspringt. Zonder deze zin leest de regel als
+een verbod dat het eigen modelbestand overtreedt.
 
 **Een tentamenvraag is geen van drieën.** De vier oefententamens houden daarom
 hun `Opgave N`-koppen; zie de reikwijdteregel in

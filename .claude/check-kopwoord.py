@@ -19,8 +19,21 @@ die met `#` begint, buiten een codefence. Een `Opgave`-regel *binnen* een
 ` ```-blok ` is materiaal en geen kop, en gaat er dus doorheen. In notebooks
 leest hij de markdown-cellen, samengevoegd uit de regels waarin de JSON ze
 opslaat - een kop die daar per teken is opgeslagen ziet hij net zo goed als een
-kop op één regel. Wat hij níet ziet is prozatekst en de nummering zelf; dat blijft
-werk voor de beoordeling.
+kop op één regel.
+
+Wat hij **niet** ziet, en dat is het deel om te onthouden:
+
+- **Codecellen.** Een label als `# Opgave 1: maak de lijst` boven de cel die de
+  student invult loopt er stil doorheen, terwijl regel 1 hierboven het wél
+  bindt: het onderscheid zit in de taak en niet in de opmaak. Bij werkitem #178
+  bleven op die manier twintig regels staan terwijl de telling nul meldde. De
+  hook is er bewust niet op uitgebreid - een `# Opgave` in een tekststring of in
+  uitleg over de oude naam is iets anders dan een label, en dat onderscheid
+  vraagt een oordeel.
+- **Prozatekst**, en **de nummering zelf**. Dat blijft werk voor de beoordeling.
+
+Wie het kopwoord meet, meet dus niet alleen met deze hook:
+`grep -rn 'Opgave [0-9]' source/` vangt de codecellen en het proza er wél bij.
 
 De vier oefententamens zijn uitgezonderd. Die uitsluiting staat in
 `conventies/conventies.md` met de grond erbij, en is in

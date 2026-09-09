@@ -38,6 +38,14 @@ zie `curriculum/uitgangspunten.md`. De hook `check-kopwoord` slaat deze vier
 bestanden daarom over, en die uitsluiting hoort hier te staan en niet alleen in
 de hookconfiguratie.
 
+**Het zijn er precies vier, en de lijst hierboven is uitputtend.**
+`extra/practice/1_recursie.ipynb` en `2_list_comprehension.ipynb` staan er
+níet bij: dat zijn oefenbestanden en geen oefententamens. Bij werkitem #178 zijn
+ze een ronde lang op die verkeerde grond buiten de kopwoordregel gehouden. Ze
+vallen er gewoon onder, en hun `## Opgaven` blijft staan omdat het een
+rubriekkop is - zie [begrippen.md](begrippen.md), *Opgave, opdracht, stap*, en
+niet omdat er een uitzondering voor ze zou gelden.
+
 Voor `handleidingen/` geldt een eigen regime. Die documenten richten zich tot de
 docent en niet tot de student, en zijn geen onderdeel van het boek: de
 Sphinx-build raakt ze niet. Van de vier conventiedocumenten binden de
@@ -104,8 +112,8 @@ zit in de aard van de ingreep. De vijf hierboven vragen per geval een oordeel
 over de inhoud - welke naam hoort deze variabele, welke cel hoort te draaien -
 en dat oordeel valt alleen te vellen door wie het bestand toch al herziet. Het
 kopwoord vroeg dat niet: er was één regel nodig, en zodra die er lag was de
-toepassing mechanisch. Wie hier een zevende afwijking bij wil schrijven, toetst
-dus eerst welk van de twee het is.
+toepassing mechanisch. Wie hier een afwijking bij wil schrijven, toetst dus
+eerst welk van de twee het is.
 
 ## Een conventie toevoegen of wijzigen
 

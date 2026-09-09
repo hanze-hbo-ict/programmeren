@@ -144,10 +144,10 @@ hij dus net zo goed als een kop op één regel. Dat is nodig, want zo staan er
 enkele in `problems/5_opstap.ipynb`.
 
 Hij valt op twee dingen: een kop van de vorm `## Opgave 3`, en een bestandsnaam
-met `instap` erin. Hij laat door wat volgens
-[begrippen.md](begrippen.md) mag blijven: de rubriekkop `# Opgaven`, de
-ongenummerde `### Opgave` boven `problems/`-materiaal, en een `Opgave`-regel
-binnen een codefence - die is materiaal en geen kop.
+met `instap` erin. Welke vormen van `Opgave` mogen blijven staat in
+[begrippen.md](begrippen.md), *Opgave, opdracht, stap*; dat document bindt en dit
+document beschrijft alleen wat de hook ervan afdekt. Daarnaast laat hij een
+`Opgave`-regel binnen een codefence door: die is materiaal en geen kop.
 
 De vier oefententamens zijn uitgezonderd met een padfilter in
 `.pre-commit-config.yaml`. Waarom, staat in
@@ -155,9 +155,23 @@ De vier oefententamens zijn uitgezonderd met een padfilter in
 configuratie: een hook met stilzwijgende uitzonderingen leert auteurs vooral hem
 te omzeilen.
 
-Wat de hook **niet** ziet is prozatekst en de nummering zelf. Of de nummers
-doorlopen, en of een uitwerkingskop zijn opgavekop spiegelt, blijft werk voor de
-beoordeling.
+**Wat de hook niet ziet**, en dat is de belangrijkste alinea hier:
+
+- **Codecellen.** Hij leest alleen markdown-cellen. Een label als
+  `# Opgave 1: maak de lijst` boven de cel die de student invult loopt er stil
+  doorheen, en `begrippen.md` bindt dat label wel - het onderscheid zit in de
+  taak en niet in de opmaak. Dit is geen theoretisch geval: bij werkitem #178
+  bleven op die manier twintig regels in `practicals/2_sequenties_en_data.ipynb`
+  en zijn uitwerking staan terwijl de telling nul meldde. Ze zijn met de hand
+  rechtgezet. De hook is er niet op uitgebreid, want een `# Opgave` in een
+  tekststring of in uitleg over de oude naam is iets anders dan een label; dat
+  onderscheid vraagt een oordeel.
+- **Prozatekst.** Een zin die naar `opgave 3` verwijst, blijft staan.
+- **De nummering zelf.** Of de nummers doorlopen, en of een uitwerkingskop zijn
+  opgavekop spiegelt, blijft werk voor de beoordeling.
+
+Wie het kopwoord meet, meet dus niet alleen met deze hook. `grep -rn 'Opgave [0-9]'
+source/` vangt de codecellen en het proza er wél bij.
 
 ## Indeling van `source/`
 
