@@ -174,29 +174,70 @@ model aanwijst en dat het onder deze regel klopt zonder te worden aangepast, is
 het bewijs dat de regel dit materiaal beschrijft in plaats van eraan wordt
 opgelegd.
 
-**Twee vormen van `Opgave` blijven staan, en dit zijn ze.** Wie er een derde
-tegenkomt, heeft een opdracht gevonden die nog de oude naam draagt.
+### Waar de regel over gaat
 
-- **`## Opgaven` als rubriekkop, ook buiten `course/`.** Hij staat boven een
-  verzameling opgaven en niet boven een taak. Vindplaatsen: `course/opgaven_2`
-  tot en met `opgaven_11`, `problems/9_basis.ipynb`, en de twee oefenbestanden
+**De regel bindt koppen en labels, niet de lopende tekst.** Een label is de
+genummerde commentaarregel boven de cel die de student invult; die telt mee,
+want het onderscheid zit in de taak en niet in de opmaak. Een zin als *"de
+opdracht is om een conditionele statement te schrijven"* is geen overtreding, en
+`source/` staat er vol mee.
+
+**Eén ding in de lopende tekst telt wél: een document mag zichzelf niet van soort
+veranderen.** Een practicum dat schrijft *"In deze opgave ga je..."* noemt
+zichzelf iets wat het niet is. Elf practicumbestanden doen dat nog; dat is een
+eigen werkitem en niet met #178 rechtgezet.
+
+### Welke vormen blijven staan
+
+Beide woorden staan hieronder uitputtend opgeschreven, met vindplaats. Wie een
+vorm tegenkomt die er niet bij staat, heeft een taak gevonden die nog de oude
+naam draagt - of een vindplaats die sinds deze lijst is bijgekomen, en dan hoort
+zij hier bij.
+
+**`Opgave`** komt nog in twee vormen voor, en in geen enkele genummerde:
+
+- **`Opgaven` als rubriekkop, ook buiten `course/`.** Hij staat boven een
+  *verzameling* en niet boven één taak - hetzij boven een reeks opgavebestanden,
+  hetzij boven een reeks taken binnen één bestand. Dertien vindplaatsen:
+  `# Opgaven` in `course/opgaven_2` tot en met `opgaven_11`, en `## Opgaven` in
+  `problems/9_basis.ipynb` en in de twee oefenbestanden
   `extra/practice/1_recursie.ipynb` en `2_list_comprehension.ipynb`.
 - **Een ongenummerde `### Opgave`, *binnen* een bestand onder `problems/`.** Dat
-  is één opgave die uit meer dan één taak bestaat en zelf geen nummer draagt;
-  hij staat er binnen en niet boven. Vindplaats: de debugopgave in
+  is één opgave die uit meer dan één taak bestaat en zelf geen nummer draagt; hij
+  staat er binnen en niet boven. Eén vindplaats: de debugopgave in
   `problems/2_opstap.ipynb`.
 
-Wat níet blijft is een **genummerde** `Opgave N`, of dat nu een kop is of een
-commentaarregel boven de cel die de student invult. Dat is een opdracht, en het
-onderscheid zit in de taak en niet in de opmaak.
+**`Opdracht`** komt in drie vormen voor:
 
-**De nummering is een kaal cijfer, doorlopend binnen het document.** Dus geen
-`1-A`, geen `2b`, en geen herstart halverwege het bestand. **Een uitwerkingskop
-spiegelt de opgavekop die hij oplost: hetzelfde nummer, geen letter.** Deelvragen
-staan in de lopende tekst, precies zoals in de opgave. Daarmee is de regel
-toetsbaar: elke werkeenheidkop in `solutions/` heeft een tegenhanger met hetzelfde
-nummer in het bestand dat hij uitwerkt - een kop, of het genummerde label boven de
-cel die de student invult. Dat is lang niet altijd een bestand onder `problems/`:
+- **`Opdracht N`, genummerd**, als kop of als label. Dat is de hoofdvorm en de
+  tabel hierboven dekt haar.
+- **`Opdrachten` als rubriekkop**, boven een reeks taken in een college of een
+  practicum. Achttien vindplaatsen, alle `## Opdrachten`: de twaalf
+  `course/practical_N.md`, `lectures/1a_intro_programmeren.md`, `2a_var_con.ipynb`,
+  `2b_strings_en_lists.ipynb`, `11a_objecten.ipynb`, en
+  `practicals/2_sequenties_en_data.ipynb` en `3_fijne_functies.ipynb`.
+- **Een ongenummerde `Opdracht`-kop**, waar een document één taak draagt in
+  plaats van een reeks. **Nummer die niet alsnog**: er is geen reeks om in mee te
+  tellen, en `problems/2_basis.ipynb` heeft juist geen *Opdracht 4* - zie
+  `handleidingen/week_2.md`. Drie vindplaatsen: `### Opdracht` in
+  `practicals/2_rochambeau.ipynb` en `problems/2_basis.ipynb`, en `## Opdracht`
+  in `practicals/4_python_bat.md`.
+
+Wat níet blijft is een **genummerde** `Opgave N`, of dat nu een kop is of een
+label. Dat is een opdracht.
+
+### De nummering
+
+**Een kaal cijfer, doorlopend binnen de reeks.** Dus geen `1-A`, geen `2b`, en
+geen herstart halverwege een reeks. Eén document mag meer dan één reeks dragen:
+`problems/3_basis` draagt `Stap 1` tot en met `6` en daarna `Opdracht 1` tot en
+met `3`, en dat zijn twee reeksen en geen herstart.
+
+**Een uitwerkingskop spiegelt de opgavekop die hij oplost: hetzelfde nummer, geen
+letter.** Deelvragen staan in de lopende tekst, precies zoals in de opgave.
+Daarmee is de regel toetsbaar: elke werkeenheidkop in `solutions/` heeft een
+tegenhanger met hetzelfde nummer in het bestand dat hij uitwerkt - een kop, of het
+genummerde label boven de cel die de student invult. Dat is lang niet altijd een bestand onder `problems/`:
 `solutions/4_midterm` werkt `lectures/4b_midterm` uit, en `2_sequenties_en_data`,
 `5a_ascii_art` en `5b_boter_kaas_eieren` werken een practicum uit.
 

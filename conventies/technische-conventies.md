@@ -139,9 +139,16 @@ boven:
 
 De hook leest **koppen**, en alleen koppen: een regel die met `#` begint, buiten
 een codefence. In notebooks leest hij de markdown-cellen, samengevoegd uit de
-regels waarin de JSON ze opslaat - een kop die daar per teken is opgeslagen ziet
-hij dus net zo goed als een kop op één regel. Dat is nodig, want zo staan er
-enkele in `problems/5_opstap.ipynb`.
+regels waarin de JSON ze opslaat - een kop die daar over meer dan één
+array-element is verdeeld ziet hij dus net zo goed als een kop in één element.
+
+**Vandaag levert die samenvoeging niets extra's op**, en dat is gemeten: van de
+1.083 koppen in de 81 notebooks onder `source/` staat er geen enkele over meer
+dan één array-element. Tot 8 september 2026 waren er twee, allebei in
+`problems/5_opstap.ipynb`, en die zijn verdwenen doordat werkitem #178 dat
+notebook opnieuw wegschreef. Het notebookformaat staat de splitsing toe, elke
+editor die een cel herschrijft kan haar terugbrengen, en een hook die een kop
+mist faalt stil - dus de samenvoeging blijft staan.
 
 Hij valt op twee dingen: een kop van de vorm `## Opgave 3`, en een bestandsnaam
 met `instap` erin. Welke vormen van `Opgave` mogen blijven staat in
