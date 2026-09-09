@@ -556,7 +556,27 @@ BLOKKEER en er volgt een tweede auteursronde met een tweede beoordelaarsronde.
 | beoordelaar redacteur | 1 | 131.656 | 9 min 56 s | BLOKKEER |
 | beoordelaar pragmaticus | 1 | 89.609 | 6 min 2 s | AKKOORD MET PUNTJES |
 | hoofdredacteur | 1 | 76.489 | 5 min 11 s | **BLOKKEER** |
-| | **totaal tot nu** | **1.310.889** | | |
+| auteur | 2 | 298.059 | 8 min 23 s | C5, moet 1 en 3 hersteld |
+| auteur | 3 | 331.037 | 7 min 5 s | C5, na poortbesluit op moet 2 |
+| beoordelaar pragmaticus | 2 | 116.726 | 7 min 27 s | AKKOORD MET PUNTJES |
+| beoordelaar onderwijskundige | 2 | 134.792 | 10 min 50 s | BLOKKEER |
+| beoordelaar eerstejaars | 2 | 190.869 | 11 min 42 s | AKKOORD MET PUNTJES |
+| beoordelaar redacteur | 2 | 155.828 | 13 min 7 s | AKKOORD MET PUNTJES |
+| hoofdredacteur | 2 | 60.845 | 4 min 42 s | **BLOKKEER** |
+| auteur | 4 | 373.526 | 7 min 16 s | C5, elf van elf criteria |
+| | **totaal** | **2.972.571** | | **gesloten zonder C7** |
+
+**De lus is niet afgemaakt.** Na auteursronde 4 heeft de vakdeskundige hem gestopt:
+*"ik heb het idee dat we wat teveel in cirkeltjes ronddraaien en veel tijd aan details
+wordt besteed. ik wil door, naar week 3, handleidingen verder schrijven etc."* Er is
+dus geen derde beoordelaarsronde en geen eindoordeel over ronde 4. Dat is een besluit
+van de vakdeskundige en geen omissie, en het staat hier zodat het niet als een
+afgeronde lus wordt gelezen. Waarom het zover kwam staat in
+[bevindingen.md](bevindingen.md), bevinding 16.
+
+**Het materiaal was na ronde 2 klaar.** Tien van de elf criteria gaan over `source/`
+en stonden vanaf `6913faae` op *gehaald*; alles daarna ging over criterium 1, dat over
+`conventies/begrippen.md` gaat.
 
 **Dit is de duurste lus tot nu toe die nog niet af is.** Een volledige M kostte bij #182
 935.978 in één doorloop; #178 staat op 1,31 miljoen mét een blokkade en een tweede
@@ -667,9 +687,17 @@ zijn tien taken als label en niet als kop. De vakdeskundige stelde daarop de zin
 Daarmee zat er geen oordeel meer in, en de drie auteursrondes ervoor kostten 254.269, 298.059 en
 331.037 tokens. **Een vierde ronde van die orde voor één vastgestelde zin is niet proportioneel.**
 
-**Of er een beoordelaar overheen is gegaan.** Ja - de vier beoordelaars draaiden hierna over de
-hele oplevering, met deze zin erin. Dat is de eerste keer dat handwerk buiten de lus binnen
-dezelfde lus is nagelezen in plaats van achteraf of niet; de eerste zeven ingrepen scoorden nul.
+**Of er een beoordelaar overheen is gegaan.** Ja - alle vier, in de tweede beoordelaarsronde van
+deze lus, met deze zin erin en met de aantekening erbij dat zij geen auteur had. Drie van de vier
+legden de zin zelf langs alle negen uitwerkingsparen en vonden geen tegenvoorbeeld. Dat is de
+eerste keer dat handwerk buiten de lus binnen dezelfde lus is nagelezen in plaats van achteraf of
+niet; de eerste zeven ingrepen scoorden nul.
+
+**Nagekomen correctie.** Deze alinea stond er eerst in de voltooid verleden tijd terwijl de
+beoordelaars nog draaiden. De redacteur ving dat als puntje: *"stelt in de voltooid verleden tijd
+vast dat de vier beoordelaars over de hele oplevering zijn gegaan; op het moment van schrijven was
+dat nog niet zo."* Het klopte alsnog, maar dat is geluk en geen meting - **een bewering die vooruit
+wordt opgeschreven is geen meting, ook niet als zij achteraf uitkomt.**
 Daar is geen tokentelling van, en er is ook geen mechanisme dat het afdwingt - dit
 kopje bestaat opdat een lege lijst zichtbaar maakt dat er niets is opgeschreven, in
 plaats van dat het lijkt of er niets is gebeurd.

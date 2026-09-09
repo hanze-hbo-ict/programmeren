@@ -654,6 +654,69 @@ twee van hen kwamen in hun oordeel uit bij precies wat erin stond.
 
 ---
 
+## 16. Een werkitem dat conventies wijzigt vindt bij elke ronde een nieuw gat
+
+Werkitem #178 kostte **2.972.571 tokens** over vier auteursrondes en twee volledige
+beoordelaarsrondes, en werd afgesloten zonder eindoordeel omdat de vakdeskundige de
+lus stopte: *"ik heb het idee dat we wat teveel in cirkeltjes ronddraaien en veel
+tijd aan details wordt besteed."* Ter vergelijking: een volledige M kostte bij #182
+935.978, en de twee zwaarste L's tot dan 1.204.000 en 2.660.000.
+
+**Het materiaal was na ronde 2 klaar.** Van de elf acceptatiecriteria gingen er tien
+over `source/`, en die stonden vanaf commit `6913faae` alle tien op *gehaald* en zijn
+daarna niet meer veranderd. Alles daarna - twee auteursrondes, vier beoordelaars, een
+hoofdredacteur, twee poortbesluiten van de vakdeskundige - ging over criterium 1, en
+criterium 1 gaat niet over het materiaal maar over `conventies/begrippen.md`.
+
+### Waarom dat niet convergeert
+
+Een criterium over `source/` is af te meten: *nul genummerde `Opgave N` buiten de
+tentamens* is een getal, en zodra het nul is blijft het nul. Een criterium over een
+conventiedocument luidt *"de vier plekken spreken elkaar niet tegen"*, en dat is geen
+telling maar een oordeel over een tekst die elke ronde langer wordt. Elke ronde die
+een gat dicht, schrijft nieuwe zinnen; elke nieuwe zin is nieuw oppervlak voor de
+volgende ronde. Zichtbaar in de opeenvolging:
+
+| Ronde | Blokkade | Waar |
+|---|---|---|
+| 1 | `technische-conventies.md` schrijft `begrippen.md` een regel toe die daar niet staat | de tekst |
+| 3 | `begrippen.md` belegt `Opgave` uitputtend en `Opdracht` in één van drie vormen | de tekst die ronde 3 schreef |
+| 4 | *(niet meer beoordeeld)* de docstring van de hook herhaalt nu de regel in plaats van ernaar te verwijzen - dezelfde fout als ronde 1, op de derde plek | de tekst die ronde 4 schreef |
+
+Die derde regel staat er niet omdat een beoordelaar hem vond, maar omdat **de auteur
+hem zelf meldde onder *Niet gedane vervolgen***. Het patroon was op dat moment al
+zichtbaar voor de rol die het veroorzaakte.
+
+### Twee dingen die dit niet zijn
+
+**Het is geen slecht werk.** Elke gevonden bevinding was juist, en drie ervan waren
+scherp: de twintig `Opgave N` in codecommentaar die de hook per constructie niet ziet,
+de toetsbare zin die voor vier van de negen uitwerkingsbestanden onwaar was, en de
+rechtvaardiging in `technische-conventies.md` die door de eigen ronde-1-ingreep onwaar
+was geworden. Zonder de lus was geen daarvan gevonden.
+
+**Het is ook geen kwestie van te strenge beoordelaars.** De weging klopte: bij de
+tweede ronde stond het drie keer AKKOORD MET PUNTJES tegen één BLOKKEER, en de
+hoofdredacteur hief die tegenspraak op met de juiste grond. Het probleem zit een laag
+eerder, in wat het criterium meet.
+
+### Wat dit verandert
+
+**Een acceptatiecriterium over een document in `conventies/` of `curriculum/` hoort
+een telling te zijn of een sluitingsvoorwaarde met een eindpunt, niet een oordeel
+over de tekst als geheel.** *"De vier plekken spreken elkaar niet tegen"* heeft geen
+eindpunt: er is altijd een volgende zin die iets toeschrijft. *"`begrippen.md` noemt
+elke in `source/` voorkomende vorm van `Opgave` en `Opdracht` bij naam, met
+vindplaats en aantal"* heeft er wel een, want de vormen zijn te tellen.
+
+**En de triage hoort te wegen of een werkitem het bindende document verandert of
+alleen het materiaal.** #178 deed allebei, en de triage woog alleen de omvang van het
+materiaal (84 koppen, 59 te wijzigen). De 84 koppen kostten één auteursronde. De vier
+regels in `begrippen.md` kostten er drie, plus twee beoordelaarsrondes en twee
+poortbesluiten.
+
+*Bewijs: `onderzoek/metingen.md`, werkitem #178. Vastgesteld 9 september 2026.*
+
 ## Open: welk model per rol
 
 *1 september 2026. Nog niet onderzocht.*
