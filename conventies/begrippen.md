@@ -194,11 +194,16 @@ onderscheid zit in de taak en niet in de opmaak.
 `1-A`, geen `2b`, en geen herstart halverwege het bestand. **Een uitwerkingskop
 spiegelt de opgavekop die hij oplost: hetzelfde nummer, geen letter.** Deelvragen
 staan in de lopende tekst, precies zoals in de opgave. Daarmee is de regel
-toetsbaar: elke werkeenheidkop in `solutions/` heeft een kop met hetzelfde nummer
-in het bestand dat hij uitwerkt. Dat is lang niet altijd een bestand onder
-`problems/`: `solutions/4_midterm` werkt `lectures/4b_midterm` uit, en
-`2_sequenties_en_data`, `5a_ascii_art` en `5b_boter_kaas_eieren` werken een
-practicum uit.
+toetsbaar: elke werkeenheidkop in `solutions/` heeft een tegenhanger met hetzelfde
+nummer in het bestand dat hij uitwerkt - een kop, of het genummerde label boven de
+cel die de student invult. Dat is lang niet altijd een bestand onder `problems/`:
+`solutions/4_midterm` werkt `lectures/4b_midterm` uit, en `2_sequenties_en_data`,
+`5a_ascii_art` en `5b_boter_kaas_eieren` werken een practicum uit.
+
+Die tweede vorm is er één en niet meer: `practicals/2_sequenties_en_data.ipynb`
+draagt zijn tien taken als `# Opdracht N:` boven de codecel waarin de student
+werkt, terwijl de uitwerking ze als kop draagt. Dat practicum is niet fout maar
+anders gebouwd, en de regel beschrijft het materiaal.
 
 **Eén uitzondering, en zij hoort hier te staan en niet in een oplevering.**
 `problems/2_opstap.ipynb` en `solutions/2_opstap.ipynb` dragen `Uitwerking A` tot

@@ -537,9 +537,139 @@ Dat laatste is het patroon van deze ronde: **vijf van de negen triages corrigeer
 bewering in het werkitem of in de opdracht die zij meekregen.** Geen daarvan was met het
 blote oog zichtbaar.
 
+## Werkitem #178 — één stelsel voor de opgaveniveaus
+
+Volledige lus, omvang L volgens triage. De lus is **nog niet gesloten**: het C7 luidt
+BLOKKEER en er volgt een tweede auteursronde met een tweede beoordelaarsronde.
+
+| Rol | Ronde | Tokens | Duur | Uitkomst |
+|---|---|---|---|---|
+| triage | | 40.544 | 2 min 45 s | LUS, L |
+| verkenner | | 103.214 | 12 min 29 s | C1b |
+| curriculumontwerper | 1 | 65.450 | 7 min 30 s | C2 |
+| verhelderaar | 1 | 97.897 | 9 min 5 s | **FAAL** |
+| curriculumontwerper | 2 | 90.305 | 11 min 36 s | C2, herontworpen |
+| verhelderaar | 2 | 111.496 | 12 min 20 s | AKKOORD, geen wijzigingen |
+| auteur | 1 | 254.269 | 13 min 29 s | C5 |
+| beoordelaar onderwijskundige | 1 | 123.652 | 10 min 11 s | BLOKKEER |
+| beoordelaar eerstejaars | 1 | 126.308 | 9 min 22 s | BLOKKEER |
+| beoordelaar redacteur | 1 | 131.656 | 9 min 56 s | BLOKKEER |
+| beoordelaar pragmaticus | 1 | 89.609 | 6 min 2 s | AKKOORD MET PUNTJES |
+| hoofdredacteur | 1 | 76.489 | 5 min 11 s | **BLOKKEER** |
+| | **totaal tot nu** | **1.310.889** | | |
+
+**Dit is de duurste lus tot nu toe die nog niet af is.** Een volledige M kostte bij #182
+935.978 in één doorloop; #178 staat op 1,31 miljoen mét een blokkade en een tweede
+auteursronde nog voor de boeg. Twee dingen verklaren het grootste deel: de verhelderaar
+faalde en dwong een volledig herontwerp (163.347 voor de twee ontwerprondes samen), en de
+auteur is met 254.269 de duurste enkele rol die tot nu toe is gemeten — acht onderdelen
+over 36 bestanden.
+
+### De vier beoordelaars vonden alle vier hetzelfde, en dat was het punt
+
+Alle vier vonden onafhankelijk de twintig `# Opgave N`-labels in de codecellen van
+`practicals/2_sequenties_en_data.ipynb` en zijn uitwerking. Geen van hen had ze van de
+orkestrator gekregen; die had ze zelf gevonden en er met opzet niets over gezegd, juist om
+te zien of de ronde ze zou opleveren.
+
+**Dat is de eerste keer dat alle vier op één bevinding uitkwamen.** Het is ook de
+bevinding die de hele oplevering blokkeerde, en de enige plek waar het defect dat #178
+wegneemt was blijven staan *binnen een bestand dat de ingreep zelf had aangeraakt*.
+
+De vier deden het wel elk op een eigen manier, en dat verschil is de waarde:
+
+- De **pragmaticus** telde: 46 treffers op `Opgave [0-9]` in `source/`, 26 in de tentamens
+  en 20 in twee bestanden — en zag daarmee als eerste dat het criterium *"nul genummerde
+  `Opgave N`"* het woord *koppen* niet bevat, terwijl het bewijs alleen koppen telt.
+- De **eerstejaars** las de pagina en vond dat de lopende tekst beide woorden in één zin
+  gebruikt: *"De eerste opgave krijg je van ons, dit is een voorbeeld van hoe je de
+  opdrachten moet maken."*
+- De **redacteur** telde de gevolgen door: wie practicum en uitwerking naast elkaar legt,
+  leest **drie** namen voor één ding.
+- De **onderwijskundige** zocht de grond op: `begrippen.md` r162 kent *opdracht* toe aan
+  "een genummerde taak binnen een document", niet aan een kop. Daarmee stond vast dat het
+  criterium niet in de engere lezing gered kon worden.
+
+De pragmaticus zette het als enige onder *zou moeten*. De hoofdredacteur hief dat op, met
+de grond van de onderwijskundige.
+
+### Eén beoordelaar tegen drie, en de ene had gelijk
+
+Bij acceptatiecriterium 1 keurden drie beoordelaars goed en de redacteur af. Alle drie de
+goedkeurders baseerden zich op dezelfde waarneming — `begrippen.md` draagt het besluit, de
+andere drie documenten verwijzen terug — en geen van hen trok de verwijzing na. De
+redacteur wel, en vond dat `technische-conventies.md` r146-149 een doorlaatregel aan
+`begrippen.md` toeschrijft die daar niet staat.
+
+De hoofdredacteur legde de twee passages zelf naast elkaar en gaf de redacteur gelijk.
+**Meerderheid is hier geen bewijs geweest:** drie rollen namen dezelfde toeschrijving over
+zonder haar te toetsen, wat precies het soort fout is dat een geïsoleerde ronde hoort te
+vangen en bijna niet ving.
+
+### Wat de rollen corrigeerden aan de orkestrator
+
+Vier keer, en drie ervan raakten iets dat al in `conventies/` of `curriculum/` was beland:
+
+- **Het poortbesluit stelde dat PGM2 alleen in cursusweek 9 een opstap heeft.** `_toc.yml`
+  r146 belegt PGM2 week 1 als cursusweek 8; het zijn er twee. De **auteur** signaleerde het
+  en schreef de meting op in plaats van het getal over te nemen. De correctie staat op de
+  issue.
+- **De toetsbare zin die de orkestrator in het poortbesluit formuleerde** — *"elke
+  werkeenheidkop in `solutions/` heeft een kop in `problems/` met hetzelfde nummer"* — is
+  onwaar voor het materiaal dat zij bindt, en stond inmiddels in `begrippen.md`. De
+  **eerstejaars** vond het: vier van de negen `solutions/`-bestanden met werkeenheidkoppen
+  hebben helemaal geen tegenhanger onder `problems/`; zij spiegelen `lectures/` en
+  `practicals/`. De auteur had de regel over de páren gedraaid en niet over de zin zoals
+  die is opgeschreven.
+- **Besluit 2 van het poortbesluit nam aan dat de veertien `Uitwerking N-X`-koppen bij
+  opdracht 1 t/m 19 hoorden.** Ze horen alle veertien bij één ongenummerde debugopgave. De
+  **auteur** paste de regel toe en niet het getal, en legde uit waarom nummeren daar juist
+  misleidend zou zijn.
+- **De kern noemde `extra/practice/1_recursie` en `2_list_comprehension` "de twee
+  toetsbestanden"** en hield ze op die grond buiten de regel. De **onderwijskundige** en de
+  **redacteur** maten dat `conventies.md` r32-39 vier andere bestanden bij naam uitzondert
+  en deze twee niet.
+
+### De verhelderaar faalde één keer, en dat was de goedkope ronde
+
+Ronde 1 kostte 97.897 en leverde FAAL. Ronde 2 kostte 111.496 en leverde AKKOORD zonder
+gevraagde wijzigingen, met tien punten om aan de auteur mee te geven. Het herontwerp
+ertussen kostte 90.305. **Samen 299.698 om te voorkomen dat een auteur van 254.269 op een
+ondeugdelijk ontwerp begon** — en de auteursronde is toch geblokkeerd, op iets wat geen van
+beide verhelderaarrondes kon zien omdat het buiten de koppen zat.
+
+### Wat de orkestrator zelf misdeed
+
+Twee keer een patroon niet geijkt, allebei in dezelfde sessie:
+
+- Een grep op `#{1,6} Opgave +[0-9]+` over `source/*.ipynb` gaf twintig treffers die als
+  koppen werden gelezen. Het waren Python-commentaarregels in codecellen — in een notebook
+  ziet `# Opgave 1` er hetzelfde uit als een H1. De conclusie ("de auteur heeft twintig
+  koppen gemist") was fout; de vondst eronder bleek toevallig wél de bevinding die de
+  ronde blokkeerde.
+- Een telling van bouwwaarschuwingen gaf "1 warning" doordat er twee `make`-processen
+  tegelijk liepen, en daarna "2" doordat het patroon `suppress_warnings=[]` uit de
+  myst-configuratieregel meetelde. Serieel en op de samenvattingsregel gemeten: schoon.
+
 ## Werk buiten de lus om
 
 Hier hoort wat met de hand is gedaan omdat het te klein leek voor een werkitem.
+
+### 9 september 2026, midden in de lus van #178
+
+**Wat het was.** Eén zin in `conventies/begrippen.md`: de toetsbare zin bij de nummeringsregel
+kreeg een clausule, zodat een genummerd label boven een codecel telt als tegenhanger van een
+uitwerkingskop. Plus twee zinnen die vastleggen dat het om precies één bestand gaat.
+
+**Waarom buiten de lus.** De auteur draaide zijn eigen toetsbare zin als controle en meldde het
+counterexample in plaats van het weg te schrijven - `practicals/2_sequenties_en_data.ipynb` draagt
+zijn tien taken als label en niet als kop. De vakdeskundige stelde daarop de zin woordelijk vast.
+Daarmee zat er geen oordeel meer in, en de drie auteursrondes ervoor kostten 254.269, 298.059 en
+331.037 tokens. **Een vierde ronde van die orde voor één vastgestelde zin is niet proportioneel.**
+
+**Of er een beoordelaar overheen is gegaan.** Ja - de vier beoordelaars draaiden hierna over de
+hele oplevering, met deze zin erin. Dat is de eerste keer dat handwerk buiten de lus binnen
+dezelfde lus is nagelezen in plaats van achteraf of niet; de eerste zeven ingrepen scoorden nul.
 Daar is geen tokentelling van, en er is ook geen mechanisme dat het afdwingt - dit
 kopje bestaat opdat een lege lijst zichtbaar maakt dat er niets is opgeschreven, in
 plaats van dat het lijkt of er niets is gebeurd.
