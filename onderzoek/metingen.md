@@ -935,6 +935,32 @@ dat gemeld omdat het alleen opvalt als systeem en thema uit elkaar lopen. Gerepa
   de editor bij een student breken **zonder dat er in de repo iets veranderde en zonder
   dat een build faalde om het te melden.** Nu vast tot op de patch, met de grond erbij.
 
+### 11 september 2026, de vier registraties uit het C4 van #198
+
+**Wat het was.** Vier besluiten van de poort vastgelegd in `curriculum/`: week 3 als
+derde erkende afwijking op de bijeenkomstindeling, `zelfaanroep` uit de leerlijnkolom,
+die kolom aangevuld met de vijftien begrippen die week 3 werkelijk introduceert, en het
+gewicht van week 3 van 20% naar 30%.
+
+**Waarom buiten de lus.** Het C2 belegde deze vier bij de auteur. De poort heeft ze
+woordelijk vastgesteld, dus er zat geen oordeel meer in - het is registratie, en
+`CLAUDE.md` zegt dat een besluit dat niet in `curriculum/` landt niet is genomen. De
+auteursrondes van #178 kostten 254k, 298k, 331k en 374k; de weeklimiet stond op 88%.
+**Vier vastleggingen laten wachten op een ronde die misschien halverwege afbreekt, is
+het besluit zelf in gevaar brengen.** Dezelfde afweging als bij de clausule in
+`begrippen.md` van 10 september.
+
+**Of er een beoordelaar overheen is gegaan.** Nog niet. De auteur raakt `leerlijn.md`
+en `uitgangspunten.md` in deze ronde niet meer, dus deze vier vallen buiten de diff die
+de twee beoordelaars van #198 zien. **Ze horen apart gelezen te worden**, en dat staat
+hier zodat het niet als gedekt telt.
+
+**Wat de meting opleverde.** Eén van de vier was geen registratie maar een correctie:
+`leerlijn.md` schreef *"P5 en A2, samen 20% van het tentamen"* terwijl de tabel drie
+regels hoger P5, P6, P7 en A2 bij week 3 zet. P6 werd weggelaten. Nagemeten tegen
+`leeruitkomsten.md`: 10 + 10 + 10 = 30%, met P7 zonder weging. **De dunste week van de
+cursus draagt dus de helft meer dan het document over zichzelf zei.**
+
 ## Hoe je een meting noteert
 
 Rol, ronde, tokens, duur, uitkomst in één regel. Bij een afgebroken run: wat er

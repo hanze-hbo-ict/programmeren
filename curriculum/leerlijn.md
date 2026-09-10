@@ -23,7 +23,7 @@ dan de week waarin het hier staat.
 |---|---|---|---|
 | 1 | Introductie, Picobot | - | state machine, staat, regels, string, algoritme |
 | 2 | Variabelen en condities | P1, P2, P3 | toekenning, variabele, operatoren, `if`, lijst, assertion |
-| 3 | Functies | P5, P6, P7, A2 | functiedefinitie, parameter, zelfaanroep, docstring |
+| 3 | Functies | P5, P6, P7, A2 | functiedefinitie, parameter, docstring, `return`, `None`/`NoneType`, `TypeError`, `NameError`, stack, frame, heap, lokale variabele, module en `import`, `range`, `sum`, `choice`, iterator, signatuur, main-functie |
 | 4 | Lussen | A1 | `for`, `while`, begrensde en onbegrensde lus, `break`, `continue`, het lusrecept |
 | 5 | Geneste lussen | A1, A3 | geneste lus, 2D-lijst, ASCII-art, bordrepresentatie |
 | 6 | Bestanden en data | bestanden † | bits, bytes, ASCII, newline, `with open`, beeldbewerking |
@@ -138,8 +138,11 @@ achtergrond. De scheefheid is kleiner dan bij de vorige meting, doordat basis in
 de weken 3 en 5 is gegroeid.
 
 **Week 3 is de dunste week van de cursus.** Met 1.561 woorden is ze bijna zes
-keer kleiner dan week 5, terwijl ze functies draagt: P5 en A2, samen 20% van het
-tentamen.
+keer kleiner dan week 5, terwijl ze functies draagt: P5, P6 en A2, samen **30%**
+van het tentamen. Hier stond eerder *"P5 en A2, samen 20%"*; dat liet P6 weg,
+terwijl die uitkomst in de tabel hierboven wel bij week 3 staat. Nagemeten tegen
+[leeruitkomsten.md](leeruitkomsten.md): P5 10%, P6 10%, A2 10%, P7 zonder weging.
+Rechtgezet bij #198 op 11 september 2026.
 
 **De structuur is compleet.** Twee beweringen die hier eerder stonden zijn
 nagemeten en bleken onjuist. Week 7 heeft wél een opstap, met dertien

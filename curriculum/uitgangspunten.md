@@ -66,12 +66,12 @@ Deze indeling verklaart de directories: `lectures/` hoort bij de eerste bijeenko
 relevant voor de vraag waar context hoort te zitten, want het werkcollege is de
 plek waar een probleem gezamenlijk stap voor stap wordt opgebouwd.
 
-#### Twee erkende afwijkingen
+#### Drie erkende afwijkingen
 
 De indeling is het uitgangspunt en niet een rooster dat elke week haalt. Bij het
 schrijven van de docentenhandleidingen (#182) zijn twee afwijkingen vastgesteld en
-erkend; ze staan hier zodat een volgende weekherziening ze niet opnieuw als
-conflict afleidt.
+erkend, en bij de herziening van week 3 (#198) een derde; ze staan hier zodat een
+volgende weekherziening ze niet opnieuw als conflict afleidt.
 
 **Week 1 volgt een flexibele indeling.** Er is geen `problems/` en geen
 `solutions/` voor week 1, en de Picobot-opdrachten beginnen in bijeenkomst 2 als
@@ -84,6 +84,15 @@ in de handleiding van week 1 zijn daarom richtsnoer en geen strak rooster.
 onderwerpen, en het werkcollege wordt gevuld door `2b` plus
 `practicals/2_rochambeau`; `practicals/2_sequenties_en_data` schuift daardoor naar
 de derde bijeenkomst, naast de drie opgavebundels.
+
+**Week 3 doet hetzelfde, en het materiaal zegt het zelf.** Week 3 heeft twee
+bestanden in `lectures/`, één in `practicals/` en drie opgavebundels. Het
+werkcollege wordt gevuld door `3b_functies_aanroepen`, waardoor
+`practicals/3_fijne_functies` naar de derde bijeenkomst schuift, naast de drie
+bundels. Dat is niet afgeleid maar afgelezen: `3b` laat de student zijn code
+opslaan als `wk3wc2.py` - werkcollege 2 - terwijl het bestand in `lectures/`
+staat. Vastgesteld door de vakdeskundige op 11 september 2026; het vraagt geen
+enkele bestandsverplaatsing.
 
 ## Het referentiemateriaal: tag `v1.0.0`
 
