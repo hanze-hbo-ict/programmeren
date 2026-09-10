@@ -52,6 +52,9 @@ elke stap af:
 - Kan ik controleren of ik het goed heb gedaan?
 - Staat er iets dat wordt verondersteld en nergens is gezegd?
 
+Bij een nieuwe pagina controleer je ook de zichtbare navigatie: vullen de TOC-kop,
+paginatitel en eerste kop elkaar aan, zonder dubbele of misleidende herhaling?
+
 Let vooral op **stilzwijgende voorkennis**: een functie, een operator, een notatie
 die zonder introductie opduikt. Dat is de meest voorkomende fout in dit materiaal
 en de lastigste om te zien voor wie het geschreven heeft.

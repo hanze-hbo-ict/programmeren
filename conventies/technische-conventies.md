@@ -198,6 +198,11 @@ De inhoudsopgave staat in `source/_toc.yml`, in het `jb-book`-formaat dat
 `sphinx-external-toc` leest. Een nieuwe pagina die niet in dit bestand staat,
 levert een build-waarschuwing op.
 
+De zichtbare paginakop vult de bovenliggende TOC-kop aan en herhaalt die niet.
+Controleer bij nieuwe pagina's de gerenderde TOC, paginatitel en eerste kop als
+één geheel: bijvoorbeeld `Uitwerkingen` → `Picobot`, niet
+`Uitwerkingen Picobot`.
+
 Weekpagina's tonen hun onderliggende pagina's met:
 
 ````markdown
