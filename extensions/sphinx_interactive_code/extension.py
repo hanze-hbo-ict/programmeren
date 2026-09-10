@@ -25,6 +25,9 @@ def _inject_i18n(app: Sphinx) -> None:
     strings = {
         "run": _("Run"),
         "loadingPython": _("Loading Python\u2026"),
+        "barReady": _("Python is ready \u2014 run the code below"),
+        "btnLoading": _("Loading\u2026"),
+        "btnReady": _("Ready"),
         "running": _("Running\u2026"),
         "inputPrompt": _("Input:"),
         "editorLoadError": _("Could not load editor: "),
