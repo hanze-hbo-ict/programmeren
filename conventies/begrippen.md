@@ -41,11 +41,12 @@ forceer geen Nederlandse vertaling. Voor dit materiaal werkt dat zo uit:
 | Functie in een klasse | **methode** | - | |
 | Waarde die je meegeeft | **argument** | - | Bij de definitie heet het een **parameter** |
 | Resultaat opleveren | **teruggeven** | - | Niet "returnen" |
-| Op het scherm tonen | **afdrukken** | printen (12×) | |
+| Op het scherm tonen | **afdrukken** | printen (11×), geprint (23×) | Het deelwoord is de grootste vorm en werd niet geteld |
 | Een programma starten | **uitvoeren** | draaien (5×) | |
 | Een functie gebruiken | **aanroepen** | oproepen (1×) | |
 | Melding bij een fout | **foutmelding** | error, exception, uitzondering | Voor het Python-mechanisme: `exception` |
 | Plek waar bestanden in staan | **directory** | map (41×), folder (22×) | Zie hieronder |
+| De eerste regel van een functie | **signatuur** | signature (9×) | Vastgesteld door de vakdeskundige op 10 september 2026 |
 
 ## Staat, en state machine
 
@@ -184,8 +185,8 @@ opdracht is om een conditionele statement te schrijven"* is geen overtreding, en
 
 **Eén ding in de lopende tekst telt wél: een document mag zichzelf niet van soort
 veranderen.** Een practicum dat schrijft *"In deze opgave ga je..."* noemt
-zichzelf iets wat het niet is. Elf practicumbestanden doen dat nog; dat is een
-eigen werkitem en niet met #178 rechtgezet.
+zichzelf iets wat het niet is. Negen practicumbestanden doen dat nog, samen elf
+keer; dat is een eigen werkitem en niet met #178 rechtgezet.
 
 ### Welke vormen blijven staan
 
@@ -238,8 +239,10 @@ letter.** Deelvragen staan in de lopende tekst, precies zoals in de opgave.
 Daarmee is de regel toetsbaar: elke werkeenheidkop in `solutions/` heeft een
 tegenhanger met hetzelfde nummer in het bestand dat hij uitwerkt - een kop, of het
 genummerde label boven de cel die de student invult. Dat is lang niet altijd een bestand onder `problems/`:
-`solutions/4_midterm` werkt `lectures/4b_midterm` uit, en `2_sequenties_en_data`,
-`5a_ascii_art` en `5b_boter_kaas_eieren` werken een practicum uit.
+`solutions/4_midterm` werkt `lectures/4b_midterm` uit, en acht uitwerkingen werken
+een practicum uit: `2_rochambeau`, `2_sequenties_en_data`, `3_fijne_functies`,
+`4_python_bat`, `5a_ascii_art`, `5b_boter_kaas_eieren`, `7a_text_genereren` en
+`8a_text_genereren`.
 
 Die tweede vorm is er één en niet meer: `practicals/2_sequenties_en_data.ipynb`
 draagt zijn tien taken als `# Opdracht N:` boven de codecel waarin de student
