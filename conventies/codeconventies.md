@@ -201,6 +201,20 @@ materiaal voordoet wat het aanleert. Een cursus die vijf docstringstijlen laat z
 leert de student dat het niet uitmaakt hoe je het opschrijft, terwijl de boodschap
 juist is dat het uitmaakt wat je opschrijft.
 
+**De reST-velden `:param:`, `:type:`, `:rtype:` en `:return:` vervallen.** Vastgesteld
+door de vakdeskundige op 10 september 2026. Dat is de Sphinx-stijl, bedoeld om
+documentatie uit code te genereren - iets wat deze cursus niet doet en wat de student
+niet leert. Zij dwingt bovendien een lange vorm af waar één regel volstaat, en dat
+botst met de hoofdvorm hierboven: het practicum van week 3 eist met zoveel woorden dat
+een docstring de argumenten én de returnwaarde beschrijft, waarmee de eenregelige
+docstring in `lectures/3b_functies_aanroepen.ipynb` fout zou zijn. Dat is zij niet.
+
+Het staan er nu **149**, verdeeld over tien bestanden, met het zwaartepunt in
+`solutions/3_basis` (32), `6_basis` (30), `7_basis` (18), `8_basis` (18) en `8_extra`
+(16). Ze worden niet in één opruimactie weggewerkt maar per week, met de herziening
+van die week mee. Tot dan is dit een bekende afwijking; wat er nieuw bij komt, draagt
+de hoofdvorm.
+
 Docstrings komen bovendien pas in week 3 aan de orde als begrip; in week 2 ziet de
 student ze al staan in gegeven code. Zie *Onderdompeling gaat vooraf aan uitleg* in
 [`../curriculum/uitgangspunten.md`](../curriculum/uitgangspunten.md).

@@ -46,6 +46,7 @@ forceer geen Nederlandse vertaling. Voor dit materiaal werkt dat zo uit:
 | Een functie gebruiken | **aanroepen** | oproepen (1×) | |
 | Melding bij een fout | **foutmelding** | error, exception, uitzondering | Voor het Python-mechanisme: `exception` |
 | Plek waar bestanden in staan | **directory** | map (41×), folder (22×) | Zie hieronder |
+| De eerste regel van een functie | **signatuur** | signature (9×) | Vastgesteld door de vakdeskundige op 10 september 2026 |
 
 ## Staat, en state machine
 
