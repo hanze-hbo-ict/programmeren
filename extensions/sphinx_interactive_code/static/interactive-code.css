@@ -63,12 +63,24 @@ interactive-code-cell {
 .sic-output.is-error { color: #dc2626; }
 
 /* Eén regel hoogte gereserveerd, zodat de sprong van leeg naar één regel uitvoer
-   geen verspringing is. En tijdens het draaien blijft de vorige uitvoer staan, alleen
-   gedoofd: dat verandert geen hoogte en dus flikkert er niets. */
-.sic-output {
+   geen verspringing is. Geldt voor beide uitvoerplekken: het kaderloze `<pre>` van
+   het thema op een notebookpagina, en ons eigen vak op een markdownpagina. */
+.sic-output,
+pre.sic-stream {
     min-height: 1.4em;
     box-sizing: content-box;
 }
 
-.sic-output.is-stale { opacity: 0.45; }
+/* Tijdens het draaien blijft de vorige uitvoer staan, alleen gedoofd: dat verandert
+   geen hoogte en dus flikkert er niets. */
+.sic-stale { opacity: 0.45; }
+
+/* Het thema maakt de onderste hoeken van een invoercel vierkant zodra er uitvoer
+   onder hangt - zo lijmt het de twee aan elkaar. Die regel mikt op `:first-child`, en
+   dat is bij ons de verborgen statische weergave. Hier dus hetzelfde, voor de
+   interactieve. */
+div.cell:has(> .sic-nb-output) > .sic-nb-interactive.cell_input {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
 

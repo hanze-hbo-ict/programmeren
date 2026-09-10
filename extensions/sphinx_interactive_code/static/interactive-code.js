@@ -195,6 +195,42 @@ class InteractiveCodeCell extends HTMLElement {
       .addEventListener("click", () => this.#run());
   }
 
+  // ---- Uitvoerplek ----------------------------------------------------------
+
+  // Op een notebookpagina staan invoer en uitvoer naast elkaar in `div.cell`, en het
+  // thema lijmt ze: zodra er iets onder de invoer hangt worden de onderste hoeken van
+  // het invoerkader vierkant, en de uitvoer krijgt zijn eigen tint en rand. Schrijven
+  // we daarin, dan ziet een interactieve cel eruit als elke andere notebookcel en
+  // hoeven wij niets te tekenen. Dat is hoe Thebe het in Jupyter Book doet.
+  //
+  // Op een markdownpagina bestaat `div.cell` niet. Dan valt het terug op het `<pre>`
+  // in onze eigen lichte DOM, dat wel een kader krijgt.
+  #outputTarget() {
+    const cell = this.closest("div.cell");
+    if (!cell) return this.querySelector(".sic-output");
+
+    let host = cell.querySelector(":scope > .sic-nb-output");
+    if (!host) {
+      host = document.createElement("div");
+      host.className = "cell_output docutils container sic-nb-output";
+      // `output stream` zonder een `.highlight`-kind is precies het patroon waar
+      // myst-nb de stdout-tint en -rand op zet.
+      host.innerHTML = '<div class="output stream notranslate"><pre class="sic-stream"></pre></div>';
+      cell.appendChild(host);
+    }
+    return host.querySelector("pre");
+  }
+
+  #markError(el, isError) {
+    const wrapper = el.closest(".output");
+    if (wrapper) {
+      wrapper.classList.toggle("stream", !isError);
+      wrapper.classList.toggle("stderr", isError);
+    } else {
+      el.classList.toggle("is-error", isError);
+    }
+  }
+
   // ---- Code execution -------------------------------------------------------
 
   async #run() {
@@ -202,14 +238,14 @@ class InteractiveCodeCell extends HTMLElement {
     if (!pyodide || !this.#editor) return;
 
     const code = this.#editor.state.doc.toString();
-    const outputEl = this.querySelector(".sic-output");
+    const outputEl = this.#outputTarget();
 
     // De vorige uitvoer blijft staan zolang het draait. Verbergen we hem hier, dan
     // zakt het vak in en groeit het meteen daarna weer terug - bij een tweede run
-    // met dezelfde uitkomst is dat puur geflikker. `is-stale` dooft hem alleen.
+    // met dezelfde uitkomst is dat puur geflikker. `sic-stale` dooft hem alleen.
     this.#setStatus(t("running"));
-    outputEl.classList.add("is-stale");
-    outputEl.classList.remove("is-error");
+    outputEl.classList.add("sic-stale");
+    this.#markError(outputEl, false);
 
     let stdout = "";
 
@@ -249,13 +285,13 @@ class InteractiveCodeCell extends HTMLElement {
       outputEl.hidden = false;
     } catch (err) {
       outputEl.textContent = err.message;
-      outputEl.classList.add("is-error");
+      this.#markError(outputEl, true);
       outputEl.hidden = false;
     } finally {
       pyodide.setStdout({ batched: console.log });
       pyodide.setStderr({ batched: console.error });
       pyodide.setStdin();
-      outputEl.classList.remove("is-stale");
+      outputEl.classList.remove("sic-stale");
       this.#setStatus("");
     }
   }
