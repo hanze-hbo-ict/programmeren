@@ -85,6 +85,27 @@ body[data-theme="dark"] {
     font-family: inherit;
 }
 
+/* Drie standen. Tijdens het laden is de knop uitgeschakeld en gedempt; daarna meldt
+   hij zich gereed en verdwijnt de aanwijzing om te klikken. De balk blijft staan: hij
+   zegt vanaf dat moment dat de pagina leeft, en dat is waar de student op wachtte. */
+.sic-bar.is-loading .sic-btn-activate {
+    cursor: progress;
+    opacity: 0.6;
+}
+
+.sic-bar.is-ready .sic-btn-activate {
+    cursor: default;
+    background: transparent;
+    color: var(--mystnb-source-margin-color, green);
+}
+
+.sic-bar.is-error .sic-bar-text { color: var(--sic-tok-error); }
+
+.sic-bar.is-error .sic-btn-activate {
+    border-color: var(--sic-tok-error);
+    background: var(--sic-tok-error);
+}
+
 /* Alleen op een markdownpagina zichtbaar; op een notebookpagina valt dit kader weg,
    zie de regel hieronder. */
 interactive-code-cell {

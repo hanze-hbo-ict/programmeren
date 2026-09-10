@@ -40,9 +40,10 @@ def _activate_bar_html() -> str:
     button = _("Activate")
     return (
         '<div class="sic-bar">'
-        f"<span>{info}</span>"
+        f'<span class="sic-bar-text">{info}</span>'
         f'<button class="sic-btn-activate" onclick="sicActivate(this)">'
-        f"{get_octicon('rocket', height='1em')} {button}</button>"
+        f'<span class="sic-btn-icon">{get_octicon("rocket", height="1em")}</span> '
+        f'<span class="sic-btn-label">{button}</span></button>'
         "</div>\n"
     )
 
