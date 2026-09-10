@@ -17,9 +17,9 @@ Deze uitwerking hoort bij [Opdracht 1 in het practicum](/practicals/1_picobot.md
 
 ```text
 0 *x** -> E 0
-0 *E** -> x 1
+0 *E** -> X 1
 1 x*** -> N 1
-1 N*** -> x 2
+1 N*** -> X 2
 2 ***x -> S 2
 2 ***S -> W 1
 ```
@@ -46,13 +46,13 @@ Lees voor de strategie ook het [doolhofcollege](/lectures/1b_picobot.md#de-right
 
 ```text
 0 **x* -> W 1
-0 **W* -> x 3
+0 **W* -> X 3
 1 ***x -> S 2
-1 ***S -> x 0
+1 ***S -> X 0
 2 *x** -> E 3
-2 *E** -> x 1
+2 *E** -> X 1
 3 x*** -> N 0
-3 N*** -> x 2
+3 N*** -> X 2
 ```
 
 Deze oplossing volgt de *right-hand rule*: Picobot houdt steeds dezelfde wand
@@ -67,10 +67,9 @@ verdeeld:
 | 2 | oost | stap oost, staat 3 | blijf staan, staat 1 |
 | 3 | noord | stap noord, staat 0 | blijf staan, staat 2 |
 
-De code gebruikt in de bewegingskolom kleine `x` voor *blijf staan*. Dat is in
-deze modelregels dezelfde overgang als de hoofdletter `X` in het college. In de
+In de bewegingskolom staat hoofdletter `X` voor *blijf staan*. In de
 omgevingskolom betekent kleine `x` iets anders: daar betekent het dat in die
-richting geen muur staat. Lees dus bijvoorbeeld `0 **W* -> x 3` als: staat 0,
+richting geen muur staat. Lees dus bijvoorbeeld `0 **W* -> X 3` als: staat 0,
 een muur in het westen, blijf staan en ga naar staat 3. Daarmee sluit de uitleg
 aan op precies de regels die hierboven staan.
 
@@ -79,7 +78,7 @@ laat Picobot een stap zetten en gaat naar de volgende staat, zoals
 `0 **x* -> W 1`: westwaarts lopen en daarna staat 1 gebruiken. Op een
 splitsing bepaalt dezelfde combinatie van staat en omgeving welke doorgang in
 de vaste draaiingsvolgorde van de right-hand-strategie wordt genomen. Zodra de
-geprobeerde richting eindigt, is er een doodlopend punt: de bewegingskolom `x`
+geprobeerde richting eindigt, is er een doodlopend punt: de bewegingskolom `X`
 laat Picobot op zijn plek staan en de nieuwe staat probeert de volgende
 richting. Bij meerdere geblokkeerde richtingen worden zulke overgangsregels
 achter elkaar uitgevoerd. Zo zijn de situaties uit het college direct te
@@ -124,16 +123,16 @@ Deze uitwerking hoort bij [Opdracht 4 in het practicum](/practicals/1_picobot.md
 ```text
 0 *E** -> W 1
 0 *x** -> E 0
-1 **W* -> x 5
+1 **W* -> X 5
 1 **x* -> W 1
 2 **x* -> W 3
 2 **W* -> E 0
 3 ***x -> S 4
-3 ***S -> x 2
+3 ***S -> X 2
 4 *x** -> E 5
-4 *E** -> x 3
+4 *E** -> X 3
 5 x*** -> N 2
-5 N*** -> x 4
+5 N*** -> X 4
 ```
 
 Hier wordt de grot in banen doorlopen. Staten 0 en 1 vormen een oost-west-
