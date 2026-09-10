@@ -760,3 +760,21 @@ onafhankelijke controle van uitwerkingen blijven apart belegd. Wat wijzigt,
 waarop dit rust en wanneer het wordt geëvalueerd staat in
 [203-proef.md](203-proef.md). Minder rollen is voorlopig een hypothese; de twee
 praktijkproeven moeten nog plaatsvinden.
+
+## 9. De titelhiërarchie staat buiten de buildcontrole
+
+*11 september 2026. Werkitem #205.*
+
+De nieuwe pagina voor Picobot stond onder het hoofdstuk **Uitwerkingen**, maar
+had zelf de kop **Uitwerkingen Picobot**. De build, linkcontrole en twee
+inhoudelijke beoordelingen signaleerden dit niet. De student zag daardoor een
+dubbele titel in de navigatie.
+
+De oorzaak was dat het werkitem navigatie als bereikbaarheid definieerde, niet als
+samenhang tussen TOC-kop, paginatitel en eerste kop. De technische controles
+controleren verwijzingen en syntax, niet deze zichtbare hiërarchie.
+
+**Wat het veranderde.** De technische conventie vraagt nu om controle van de
+gerenderde TOC en paginakoppen. De eerstejaarsbeoordelaar heeft die controle als
+expliciete stap gekregen. De concrete correctie in #205 was `Uitwerkingen Picobot`
+naar `Picobot`.
