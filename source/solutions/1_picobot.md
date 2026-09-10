@@ -2,7 +2,7 @@
 title: "Picobot"
 ---
 
-# Uitwerkingen Picobot
+# Picobot
 
 Deze uitwerkingen zijn modeloplossingen voor de vier Picobot-opdrachten uit
 week 1. Een staat is hier geen positie in de kamer, maar een fase in de
