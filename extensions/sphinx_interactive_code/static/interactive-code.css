@@ -1,15 +1,75 @@
 /* interactive-code.css — minimal structural overrides for interactive-code-cell.
    Typography, colors, and borders are intentionally left to the Sphinx theme. */
 
-/* Activation bar for myst_nb pages */
+/* De editor kiest geen kleuren; hij erft ze hier. Dit zijn de kleuren die Furo zelf
+   aan code geeft, overgenomen uit zijn `pygments.css` - licht als standaard, donker
+   onder dezelfde schakelaars die Furo gebruikt. Custom properties erven het
+   schaduw-DOM in, dus de editor komt er zonder omweg bij.
+
+   Waarom overnemen en niet zelf kiezen: dan is `# controleer jouw antwoord` in de
+   editor dezelfde kleur als in het voorbeeldblok ernaast, en volgt de cel de
+   themaschakelaar zonder dat wij daar iets voor hoeven te doen. */
+:root {
+    --sic-code-fg: #1E1E1E;
+    --sic-gutter-fg: #9ca3af;
+    --sic-gutter-border: rgba(128, 128, 128, 0.25);
+    --sic-tok-keyword: #8045E5;
+    --sic-tok-keyword-weight: normal;
+    --sic-tok-string: #163;
+    --sic-tok-comment: #515151;
+    --sic-tok-comment-style: normal;
+    --sic-tok-number: #7F4707;
+    --sic-tok-function: #00749C;
+    --sic-tok-builtin: #7F4707;
+    --sic-tok-operator: #163;
+    --sic-tok-error: #D71835;
+}
+
+body[data-theme="dark"] {
+    --sic-code-fg: #D0D0D0;
+    --sic-gutter-fg: #aaaaaa;
+    --sic-tok-keyword: #6EBF26;
+    --sic-tok-keyword-weight: bold;
+    --sic-tok-string: #ED9D13;
+    --sic-tok-comment: #ABABAB;
+    --sic-tok-comment-style: italic;
+    --sic-tok-number: #51B2FD;
+    --sic-tok-function: #71ADFF;
+    --sic-tok-builtin: #2FBCCD;
+    --sic-tok-operator: #D0D0D0;
+    --sic-tok-error: #FF3A3A;
+}
+
+/* Furo's automatische stand: donker volgen tenzij de lezer licht heeft gekozen. */
+@media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+        --sic-code-fg: #D0D0D0;
+        --sic-gutter-fg: #aaaaaa;
+        --sic-tok-keyword: #6EBF26;
+        --sic-tok-keyword-weight: bold;
+        --sic-tok-string: #ED9D13;
+        --sic-tok-comment: #ABABAB;
+        --sic-tok-comment-style: italic;
+        --sic-tok-number: #51B2FD;
+        --sic-tok-function: #71ADFF;
+        --sic-tok-builtin: #2FBCCD;
+        --sic-tok-operator: #D0D0D0;
+        --sic-tok-error: #FF3A3A;
+    }
+}
+
+/* De activeerbalk boven een notebookpagina. De kleuren komen van Furo, zodat de
+   balk met de themaknop meedraait; alleen het groen van de knop is van ons, en dat
+   is opzet - het is dezelfde `green` die myst-nb aan de linkerbalk van een invoercel
+   geeft, en het zegt: hier gebeurt iets. Wit op dat groen leest in beide standen. */
 .sic-bar {
     display: flex;
     align-items: center;
     gap: 0.8em;
     padding: 0.5em 0.9em;
     margin: 0 0 1.2em;
-    background: #f0f7ff;
-    border: 1px solid #c8deff;
+    background: var(--color-background-secondary);
+    border: 1px solid var(--color-background-border);
     border-radius: 4px;
     font-size: 0.9em;
 }
@@ -17,18 +77,20 @@
 .sic-btn-activate {
     cursor: pointer;
     padding: 0.2em 0.8em;
-    border: 1px solid #2d8a4e;
+    border: 1px solid var(--mystnb-source-margin-color, green);
     border-radius: 4px;
-    background: #4caf50;
+    background: var(--mystnb-source-margin-color, green);
     color: #fff;
     font-size: 0.9em;
     font-family: inherit;
 }
 
+/* Alleen op een markdownpagina zichtbaar; op een notebookpagina valt dit kader weg,
+   zie de regel hieronder. */
 interactive-code-cell {
     display: block;
     margin: 1em 0;
-    border: 1px solid #d1d5db;
+    border: 1px solid var(--color-background-border);
     border-radius: 6px;
     overflow: hidden;
 }
@@ -65,20 +127,20 @@ interactive-code-cell {
     cursor: pointer;
 }
 
-.sic-status { color: #9ca3af; }
-.sic-status.is-error { color: #dc2626; }
+.sic-status { color: var(--color-foreground-muted); }
+.sic-status.is-error { color: var(--sic-tok-error); }
 
 /* Output: needs white-space and monospace — functional, not cosmetic */
 .sic-output {
     margin: 0;
     padding: 0.5em 0.75em;
-    border-top: 1px solid #e5e7eb;
+    border-top: 1px solid var(--color-background-border);
     white-space: pre-wrap;
     word-break: break-word;
     font-family: monospace;
 }
 
-.sic-output.is-error { color: #dc2626; }
+.sic-output.is-error { color: var(--sic-tok-error); }
 
 /* Eén regel hoogte gereserveerd, zodat de sprong van leeg naar één regel uitvoer
    geen verspringing is. Geldt voor beide uitvoerplekken: het kaderloze `<pre>` van

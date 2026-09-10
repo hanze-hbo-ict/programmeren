@@ -145,33 +145,57 @@ class InteractiveCodeCell extends HTMLElement {
         { EditorView, keymap, lineNumbers, drawSelection, highlightActiveLine },
         { EditorState },
         { defaultKeymap, historyKeymap, history, indentWithTab },
-        { syntaxHighlighting, defaultHighlightStyle, indentOnInput, bracketMatching },
+        { syntaxHighlighting, HighlightStyle, indentOnInput, bracketMatching },
         { python },
+        { tags },
       ] = await Promise.all([
         import("https://esm.sh/@codemirror/view@6.43.11"),
         import("https://esm.sh/@codemirror/state@6.7.4"),
         import("https://esm.sh/@codemirror/commands@6.11.0"),
         import("https://esm.sh/@codemirror/language@6.12.4"),
         import("https://esm.sh/@codemirror/lang-python@6.2.1"),
+        import("https://esm.sh/@lezer/highlight@1.2.3"),
       ]);
 
-      const whiteTheme = EditorView.theme({
-        "&": { background: "#ffffff" },
-        ".cm-scroller": { background: "#ffffff" },
-        ".cm-gutters": { background: "#ffffff", borderRight: "1px solid #e5e7eb", color: "#9ca3af" },
-        ".cm-activeLineGutter": { background: "#f0f9ff" },
-        ".cm-activeLine": { background: "#f8faff" },
+      // Geen eigen kleuren. De editor is doorzichtig, zodat de achtergrond van de
+      // cel doorschijnt - die van myst-nb in een notebook, die van de pagina daarbuiten -
+      // en tekst en tokens komen uit CSS-variabelen die met het thema meedraaien.
+      // Custom properties erven het schaduw-DOM in, dus dit werkt zonder de stylesheet
+      // hier te herhalen. De gemarkeerde regel is een grijswaarde met alfa: die werkt
+      // op een lichte én een donkere ondergrond, dus daar is geen schakelaar voor nodig.
+      const inheritTheme = EditorView.theme({
+        "&": { background: "transparent", color: "var(--sic-code-fg)" },
+        ".cm-scroller": { background: "transparent" },
+        ".cm-content": { caretColor: "var(--sic-code-fg)" },
+        ".cm-gutters": {
+          background: "transparent",
+          color: "var(--sic-gutter-fg)",
+          borderRight: "1px solid var(--sic-gutter-border)",
+        },
+        ".cm-activeLine": { background: "rgba(128, 128, 128, 0.08)" },
+        ".cm-activeLineGutter": { background: "rgba(128, 128, 128, 0.08)" },
       });
+
+      const themeHighlight = HighlightStyle.define([
+        { tag: tags.keyword, color: "var(--sic-tok-keyword)", fontWeight: "var(--sic-tok-keyword-weight)" },
+        { tag: [tags.string, tags.special(tags.string)], color: "var(--sic-tok-string)" },
+        { tag: [tags.comment, tags.lineComment, tags.blockComment], color: "var(--sic-tok-comment)", fontStyle: "var(--sic-tok-comment-style)" },
+        { tag: [tags.number, tags.bool, tags.null], color: "var(--sic-tok-number)" },
+        { tag: [tags.function(tags.variableName), tags.function(tags.propertyName)], color: "var(--sic-tok-function)" },
+        { tag: [tags.standard(tags.variableName), tags.standard(tags.name)], color: "var(--sic-tok-builtin)" },
+        { tag: [tags.operator, tags.operatorKeyword], color: "var(--sic-tok-operator)" },
+        { tag: tags.invalid, color: "var(--sic-tok-error)" },
+      ]);
 
       this.#editor = new EditorView({
         state: EditorState.create({
           doc: code,
           extensions: [
             lineNumbers(), highlightActiveLine(), drawSelection(), history(),
-            syntaxHighlighting(defaultHighlightStyle, { fallback: true }),
+            syntaxHighlighting(themeHighlight, { fallback: true }),
             indentOnInput(), bracketMatching(),
             keymap.of([...defaultKeymap, ...historyKeymap, indentWithTab]),
-            python(), whiteTheme,
+            python(), inheritTheme,
           ],
         }),
         parent: editorHost,
