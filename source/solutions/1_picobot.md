@@ -11,7 +11,7 @@ richtingen een beweging en eventueel een nieuwe staat. Een `X` betekent: blijf
 staan en verander alleen van staat. Bekijk ook het [practicum Picobot](/practicals/1_picobot.md)
 en de [weekindex](/course/solutions_1.md).
 
-## Opdracht 1 — De lege kamer
+## Opdracht 1 - De lege kamer
 
 Deze uitwerking hoort bij [Opdracht 1 in het practicum](/practicals/1_picobot.md#opdracht-1-de-lege-kamer).
 
@@ -39,7 +39,7 @@ De wildcard maakt de regels onafhankelijk van muren aan de andere drie kanten.
 Controleer de uitwerking vanaf drie startposities: bij een muur, in een hoek en
 midden in de kamer. De hele kamer kleurt grijs en Picobot stopt vanzelf.
 
-## Opdracht 2 — Het doolhof
+## Opdracht 2 - Het doolhof
 
 Deze uitwerking hoort bij [Opdracht 2 in het practicum](/practicals/1_picobot.md#opdracht-2-het-doolhof).
 Lees voor de strategie ook het [doolhofcollege](/lectures/1b_picobot.md#de-right-hand-rule).
@@ -55,27 +55,40 @@ Lees voor de strategie ook het [doolhofcollege](/lectures/1b_picobot.md#de-right
 3 N*** -> x 2
 ```
 
-Deze oplossing volgt de right-hand rule: houd steeds dezelfde wand aan je
-rechterhand. In een gang gaat Picobot rechtdoor. Op een splitsing kiest hij de
-volgende richting waarmee hij de rechterwand blijft volgen. Bij een doodlopend
-punt blijft hij met `X` staan en gaat hij verder met de volgende richting. De
-vier staten bewaren de richting waarin hij daarna kijkt: west, zuid, oost en
-noord. Zo doorloopt hij alle verbonden gangen zonder voor elke positie een
-aparte staat nodig te hebben.
+Deze oplossing volgt de *right-hand rule*: Picobot houdt steeds dezelfde wand
+aan zijn rechterhand. De vier staten bewaren daarvoor de richting waarin hij
+op dat moment probeert te lopen. In deze code zijn de richtingen als volgt
+verdeeld:
 
-| Staat | Voorkeursrichting | Bij blokkade |
-|---|---|---|
-| 0 | west | staat 3 |
-| 1 | zuid | staat 0 |
-| 2 | oost | staat 1 |
-| 3 | noord | staat 2 |
+| Staat | Richting die Picobot probeert | Richting vrij | Richting geblokkeerd |
+|---|---|---|---|
+| 0 | west | stap west, staat 1 | blijf staan, staat 3 |
+| 1 | zuid | stap zuid, staat 2 | blijf staan, staat 0 |
+| 2 | oost | stap oost, staat 3 | blijf staan, staat 1 |
+| 3 | noord | stap noord, staat 0 | blijf staan, staat 2 |
 
-De `X`-regels zijn overgangsregels: Picobot blijft op het doodlopende punt
-staan, maar begint daarna met de volgende richtingsfase. Controleer de
-uitwerking vanaf drie startposities. Het hele doolhof kleurt grijs en Picobot
-stopt vanzelf.
+De code gebruikt in de bewegingskolom kleine `x` voor *blijf staan*. Dat is in
+deze modelregels dezelfde overgang als de hoofdletter `X` in het college. In de
+omgevingskolom betekent kleine `x` iets anders: daar betekent het dat in die
+richting geen muur staat. Lees dus bijvoorbeeld `0 **W* -> x 3` als: staat 0,
+een muur in het westen, blijf staan en ga naar staat 3. Daarmee sluit de uitleg
+aan op precies de regels die hierboven staan.
 
-## Opdracht 3 — De ruit
+In een gang is de richting die de staat aangeeft vrij. De bijbehorende regel
+laat Picobot een stap zetten en gaat naar de volgende staat, zoals
+`0 **x* -> W 1`: westwaarts lopen en daarna staat 1 gebruiken. Op een
+splitsing bepaalt dezelfde combinatie van staat en omgeving welke doorgang in
+de vaste draaiingsvolgorde van de right-hand-strategie wordt genomen. Zodra de
+geprobeerde richting eindigt, is er een doodlopend punt: de bewegingskolom `x`
+laat Picobot op zijn plek staan en de nieuwe staat probeert de volgende
+richting. Bij meerdere geblokkeerde richtingen worden zulke overgangsregels
+achter elkaar uitgevoerd. Zo zijn de situaties uit het college direct te
+herkennen in de bewegingen en state-overgangen van deze acht regels.
+
+Controleer de uitwerking vanaf drie startposities. Het hele doolhof kleurt
+grijs en Picobot stopt vanzelf.
+
+## Opdracht 3 - De ruit
 
 Deze uitwerking hoort bij [Opdracht 3 in het practicum](/practicals/1_picobot.md#opdracht-3-de-ruit).
 
@@ -104,7 +117,7 @@ van de ruit. Zo worden gewone randcellen en hoekcellen verschillend behandeld.
 Controleer de uitwerking vanaf drie startposities. De hele ruit kleurt grijs en
 Picobot stopt vanzelf.
 
-## Opdracht 4 — De grot
+## Opdracht 4 - De grot
 
 Deze uitwerking hoort bij [Opdracht 4 in het practicum](/practicals/1_picobot.md#opdracht-4-de-grot).
 
