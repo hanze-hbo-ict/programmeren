@@ -1,60 +1,38 @@
 # C7 - Eindoordeel
 
-## Doel
+Bij één beoordelaar volstaat C6. Bij meerdere oordelen kent C7 twee vormen volgens
+[loop.md](../loop.md). Benoem de vorm, alle bron-C6's en de beoordeelde versie.
 
-De samengevoegde uitkomst van de beoordelingsronde, gemaakt door de
-hoofdredacteur uit de vier onafhankelijke oordelen (C6) en de volledige
-oplevering (C5). Het ontdubbelt bevindingen, lost tegenspraak expliciet op, en
-zegt de auteur wat er nu gebeurt.
+## Samenvatting door de orkestrator
 
-Vaste prioriteitsregel: **juistheid en dekking eerst, dan begrijpelijkheid voor de
-student, dan onderhoudbaarheid, dan afwerking.**
+Alle gekozen oordelen zijn aanwezig en spreken elkaar niet tegen. Neem de
+criteriumdekking, beperkingen en onopgeloste blokkades over, ontdubbel en verwijs
+naar de bronnen. Geen eigen bevindingen of inhoudelijke herweging. Een
+onopgeloste blokkade blijft BLOKKEER, ook als alle andere reviewers akkoord zijn.
+Een niet toegewezen of niet gecontroleerd criterium is geen volledige dekking.
+
+## Arbitrage door de hoofdredacteur
+
+Er is onopgeloste tegenspraak. Invoer: volledige C5 en alle gekozen C6's. Voeg geen
+vijfde zelfstandig onderzoek toe; raadpleeg de bron alleen om de tegenspraak te
+beslechten. Noteer per meningsverschil de uitkomst en onderbouwing. Als bronnen
+het verschil in inhoudelijke duiding niet beslechten, leg het aan de mens voor.
+
+Prioriteit: juistheid en dekking, begrijpelijkheid voor de student,
+onderhoudbaarheid, afwerking. Een criterium is pas gehaald als een geloofwaardige
+afkeuring is opgelost. Meerderheid is geen bewijs.
 
 ## Schema
 
-Alle velden van C6, met bevindingen ontdubbeld en geordend volgens de
-prioriteitsregel, plus:
+- **Vorm:** samenvatting / arbitrage.
+- **Bronnen en versie:** volledige set gekozen C6's, C5-versie.
+- **Oordeel:** BLOKKEER / AKKOORD / AKKOORD MET PUNTJES.
+- **Dekking:** per criterium, met bron; eerder vastgestelde dekking herkenbaar.
+- **Moet / zou moeten / puntjes:** ontdubbeld, met bronnen.
+- **Tegenspraak:** oplossing met bewijs, of open vraag aan de mens; anders `<geen>`.
+- **Volgende stap:** gerichte reparatie binnen rondelimiet, menselijk besluit
+  over vervolg, of naar de mens voor merge. Een agent geeft zichzelf geen
+  mergebevoegdheid.
 
-- **Tegenspraak tussen beoordelaars** - elk meningsverschil met de oplossing en de
-  redenering; of `<geen>`.
-- **Volgende stap voor de auteur** - één concrete instructie: mergen, de
-  moet-lijst herstellen en opnieuw indienen, of terug naar de vakdeskundige.
-
-## Regels
-
-- Lever één samengevoegd oordeel, kort genoeg om naar te handelen.
-- Je bent geen vijfde beoordelaar die opnieuw begint. Je ontdubbelt, prioriteert
-  en beslist.
-- Voeg geen eigen bevindingen toe, behalve waar het uitgebreide deel een aanname
-  van een beoordelaar tegenspreekt.
-- Los elke tegenspraak expliciet op. Middel nooit twee oordelen tot vaagheid.
-- Een criterium is pas `gehaald` als geen enkele beoordelaar het geloofwaardig
-  heeft afgekeurd.
-
-## Voorbeeld
-
-```md
-Oordeel: AKKOORD MET PUNTJES
-
-Moet veranderen: <geen>
-
-Zou moeten veranderen:
-- Leg in de uitwerking uit dat `>` en `>=` bij gelijkspel een ander woord
-  opleveren (onderwijskundige en eerstejaars, samengevoegd).
-
-Puntjes:
-- De kop in de inhoudsopgave zegt alleen "Basis" (redacteur).
-
-Dekking van de acceptatiecriteria:
-- AC1: gehaald - door alle vier bevestigd.
-- AC2: gehaald.
-- AC3: gehaald - het uitgebreide deel toont de uitvoer van de build.
-
-Tegenspraak tussen beoordelaars:
-- De eerstejaars blokkeerde op stap 2, omdat leestekens verwijderen nergens is
-  voorgedaan. Het uitgebreide deel laat zien dat de hint dat wél doet. Opgelost
-  naar "zou moeten veranderen": de hint mag explicieter.
-
-Volgende stap voor de auteur:
-- Verwerk het punt over gelijkspel, dan mergen. De puntjes worden een werkitem.
-```
+Ontbrekende gekozen oordelen: stop en benoem welke. Spreekt uitgebreid C5 de kern
+tegen over dragend bewijs, dan BLOKKEER en de tegenspraak expliciet maken.

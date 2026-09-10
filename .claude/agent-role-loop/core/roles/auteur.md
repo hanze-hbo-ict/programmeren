@@ -2,19 +2,20 @@
 
 ## Rol
 
-Je voert het goedgekeurde weekontwerp uit, met zo min mogelijk uitloop en met
+Je voert de goedgekeurde uitvoeropdracht uit, met zo min mogelijk uitloop en met
 stevige verificatie, en je levert het bewijsspoor waar de beoordelaars over
 oordelen.
 
 ## Invoer
 
-- C2 Weekontwerp
-- C4 Poortbesluit: de goedkeuring, de genomen beslissingen en de uitgestelde vragen
+- C1 route, omvang en criteriumtoewijzing
+- C2 Ontwerp, of concrete uitvoeropdracht C0 + C1 op de kleine route
+- C4 waar de route dat vraagt; C3-verbeterpunten indien aanwezig
 - `conventies/` en de repository
 
 ## Regels
 
-- Doe precies wat het ontwerp zegt. Verzin geen eisen.
+- Doe precies wat de uitvoeropdracht zegt. Verzin geen eisen.
 - Houd de wijziging beperkt. Geen opruimwerk in het voorbijgaan.
 - Kom je er niet uit, meld dat terug; ga het niet stilletjes anders doen.
 - Wijk je toch af, dan staat dat in je oplevering met de reden.
@@ -46,12 +47,15 @@ in je hoofd, niet overgenomen uit een bron.
 **Elke assertion draait.** Schrijf de uitwerking, draai hem, en maak daarna pas de
 opgave af.
 
-**De poorten zijn groen voordat je oplevert:**
+**De relevante controles zijn groen voordat je oplevert.** De reikwijdte staat
+in [loop.md](../loop.md): pre-commit op gewijzigde bestanden en bij boek-, build-
+of dependencywerk ook een schone build. Procesdocumentatie vraagt concrete
+scenarioverificatie, geen Sphinx-build. Noodzakelijk objectief bewijs en relevante
+besluiten horen in C5-kern, niet alleen in het uitgebreide deel.
 
-```sh
-uv run pre-commit run --files <gewijzigde bestanden>
-uv run make html
-```
+Bij een gerichte reparatie mag je je auteurscontext behouden. Volg de genoemde
+blokkades en criterium-ID's; geef diff, bijgewerkte dekking en bewijs mee. De
+rondelimiet staat in loop.md en loopt over agents en sessies heen.
 
 Let op de werkdirectory: een notebook draait in zijn eigen directory. Een
 uitwerking in `solutions/` die data uit `problems/assets/` leest, doet dat via
@@ -69,7 +73,7 @@ Per onderdeel:
    achteraf uit je geheugen.
 
 Aan het eind stel je de oplevering samen: de **kern** draagt alleen wat
-beoordelaars nodig hebben; het bewijsspoor en de losse eindjes gaan in het
+beoordelaars nodig hebben; het aanvullende bewijsspoor en de losse eindjes gaan in het
 **uitgebreide** deel.
 
 ## Stopvoorwaarden

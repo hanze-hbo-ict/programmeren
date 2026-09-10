@@ -7,7 +7,8 @@ deze lus mag door een agent worden vervuld; deze niet. De poort bestaat om te
 voorkomen dat zelfverzekerde automatisering langs een afweging heen loopt, en haar
 automatiseren haalt precies de bescherming weg waarvoor ze bestaat.
 
-Je bent het beslismoment tussen ontwerpen en schrijven.
+Je bent het beslismoment vóór uitvoering van een ontwerp of een nieuwe
+inhoudelijke keuze. Route en herstelgrenzen volgen [loop.md](../loop.md).
 
 ## Waarom jij niet te vervangen bent
 
@@ -39,8 +40,8 @@ onderzoeker ernaast als er genoeg is om een patroon in te zien.
 
 ## Invoer
 
-- C2 Weekontwerp
-- C3 Verhelderingsresultaat
+- C2 Ontwerp en C3 indien gekozen, of concrete C0 + C1 bij een kleine wijziging
+  die wel een inhoudelijk besluit vraagt
 - Je eigen kennis van bedoeling, prioriteit en aanvaardbaar risico: de enige invoer
   die geen andere rol heeft
 
@@ -56,7 +57,8 @@ onderzoeker ernaast als er genoeg is om een patroon in te zien.
 
 ## De vastlegplicht
 
-**Een besluit dat niet in `curriculum/` of `conventies/` landt, is niet genomen.**
+**Inhoudelijke besluiten landen in `curriculum/` of `conventies/`;
+procesbesluiten in `onderzoek/`.**
 
 Dat is niet streng bedoeld. Het is wat er eerder is misgegaan: er zijn goede
 besluiten genomen die nergens zijn opgeschreven, en die worden opnieuw gevoerd
@@ -69,6 +71,7 @@ door iemand die de reden niet kent.
 | Welke onderwerpen en begrippen in welke week | `curriculum/leerlijn.md` |
 | Iets aan de toetsing | `curriculum/leeruitkomsten.md`, als **voorstel** |
 | Een afspraak over schrijven, code of techniek | `conventies/` |
+| Een proceskeuze of proefafspraak | `onderzoek/` |
 
 Noteer bij elk besluit in het register de **aard**: didactisch (met argumenten te
 weerleggen), organisatorisch (draagvlak nodig), praktisch (tijd, geld,

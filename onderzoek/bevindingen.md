@@ -744,3 +744,19 @@ waarneming, en de aanbevolen werkwijze is meten op de eigen taken, vergelijken o
 de moeilijkste tien procent, en een schaduwtest draaien voordat je omzet. Wie dit
 op redeneren alleen vastlegt in configuratie, heeft een gok die niet meer te
 weerleggen is.
+
+## Vervolg op de procesbevindingen: #203
+
+Op 10 september 2026 is een gerichte proceswijziging goedgekeurd. De grond is de
+combinatie van herhaalde ontwerprondes (#103), een niet overgedragen menselijk
+besluit (#134), de unieke eerstejaarsbevinding (#146) en uitdijend normherstel
+(#178). Dit is een vervolg op de bestaande bevindingen, geen nieuwe gemeten
+kwaliteitswinst.
+
+De maatregel: relevante besluiten en objectief bewijs in de beoordelingsinvoer,
+criteria expliciet toewijzen, gericht herstel met rondelimiet en kleinere routes
+waar verantwoordelijkheden gecombineerd kunnen worden. De eerstejaarsblik en
+onafhankelijke controle van uitwerkingen blijven apart belegd. Wat wijzigt,
+waarop dit rust en wanneer het wordt geëvalueerd staat in
+[203-proef.md](203-proef.md). Minder rollen is voorlopig een hypothese; de twee
+praktijkproeven moeten nog plaatsvinden.

@@ -4,6 +4,8 @@ In het college heb je plannen gemaakt voor Picobot. Hier vertaal je die plannen 
 
 Picobot kan je vinden op [https://www.cs.hmc.edu/picobot/](https://www.cs.hmc.edu/picobot/)
 
+Bekijk na het maken van de opdrachten de [uitwerkingen](/solutions/1_picobot.md).
+
 ## Kennismaken
 
 Picobot begint op een willekeurige locatie in een ruimte. Je kan de beginpositie van Picobot niet bepalen, deze kiest Picobot zelf. De muren van de ruimte zijn blauw, Picobot is groen, en de lege ruimte is wit. Elke keer als Picobot een stap maakt laat hij een grijs spoor achter. Als Picobot zijn hele omgeving heeft verkend, stopt hij automatisch.

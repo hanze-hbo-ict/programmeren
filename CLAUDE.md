@@ -7,13 +7,16 @@ vaste werkwijze. Lees dit voordat je iets in `source/` aanraakt.
 
 De repo is niet stukgegaan aan één slechte wijziging, maar aan veel wijzigingen die
 ieder op zich verdedigbaar waren en samen de samenhang hebben opgegeten. Daarom
-loopt een herziening via de **rollenlus**: meten voordat je beweert, één artefact
-per overdracht, en een mens tussen ontwerpen en schrijven.
+loopt een herziening via de **rollenlus**: meten voordat je beweert, gerichte artefacten
+per overdracht, onafhankelijke beoordeling en een mens vóór inhoudelijke keuzes.
 
 - **Werkitems zijn GitHub-issues**, geen bestanden. Het sjabloon staat in
   `.github/ISSUE_TEMPLATE/werkitem.yml`.
 - **De lus draai je met `/orc <issuenummer>`.** Hij start niet uit zichzelf; iemand
   typt hem in.
+- De gedeelde routenorm staat in `.claude/agent-role-loop/core/loop.md`. Triage
+  is een taak van de orkestrator; niet iedere verantwoordelijkheid vraagt een
+  aparte agent. Codex volgt dezelfde regels via `AGENTS.md`.
 - De uitleg voor mensen staat in [`rollen/rollen.md`](rollen/rollen.md), de
   definities in `.claude/agent-role-loop/core/`.
 
@@ -47,13 +50,17 @@ zoekt.
 
 ## De poorten van de machine
 
-Deze draaien vóór een beoordeling, niet erin:
+Controles draaien vóór beoordeling en volgens de reikwijdte in `loop.md`.
+Bij boek-, buildconfiguratie- of dependencywijzigingen:
 
 ```bash
 uv sync
 uv run pre-commit run --files <de bestanden die je raakte>
 uv run make clean && uv run make html    # nul waarschuwingen, nul fouten
 ```
+
+Bij uitsluitend procesdocumentatie: toepasselijke pre-commit-controles en concrete
+routescenario's; een Sphinx-build is daarvoor niet nodig.
 
 Commits op `master` zijn geblokkeerd; werk in een branch en open een pull request.
 
@@ -80,3 +87,11 @@ nageleefd hoort daar zichtbaar te zijn - de eerste zeven ingrepen scoorden nul.
 Alles wat `curriculum/` of `conventies/` raakt is een besluit van de vakdeskundige.
 Kom je zoiets tegen, leg het dan voor in plaats van het in te vullen - ook als het
 antwoord voor de hand ligt, en ook als het besluit "verander niets" luidt.
+
+## Procesexperiment #203
+
+Het goedgekeurde procesbesluit, de proefgrenzen en de uitgangsmeting staan in
+`onderzoek/203-proef.md`. Pas nieuwe routes niet midden in een lopend werkitem toe.
+Procesbesluiten worden in `onderzoek/` vastgelegd; de inhoudelijke vastlegplicht
+voor `curriculum/` en `conventies/` blijft gelden. Een instructie-PR sluit een
+werkitem met resterende praktijkproeven niet.
