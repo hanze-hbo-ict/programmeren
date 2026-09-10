@@ -872,6 +872,69 @@ een interactief programma hoort. **Elf van de achttien** blokken draaien nu mee:
 tien van `2_sequenties_en_data` en de ene van `2_extra`. De zeven die blijven liggen
 zitten in `2_basis` (vijf) en `2_rochambeau` (twee).
 
+### 10 september 2026, het visuele werk aan de interactieve cel
+
+**Wat het was.** Zeven ingrepen aan `extensions/sphinx_interactive_code/` en één aan
+`source/_static/custom.css`, na live gebruik door de vakdeskundige. Gemerged als
+`d6baa34f` (PR #199).
+
+**Waarom buiten de lus.** Dit is techniek en geen materiaal. De vakdeskundige heeft het
+eerder zo afgebakend: *"mbt techniek (de integratie en flow/activeren op een pagina),
+dat lijkt mij niet echt iets voor een lus maar wat jij en ik kunnen uitzoeken"*. Het
+werd gestuurd door schermafbeeldingen: hij keek, meldde wat er niet klopte, ik mat waar
+het vandaan kwam.
+
+**Of er een beoordelaar overheen is gegaan.** Nee. Wel vier keer een visuele controle
+door de vakdeskundige zelf, en één keer leidde die tot een terugdraaiing.
+
+#### Wat het opleverde, en wat het leerde
+
+Vier klachten, en **alle vier bleken hetzelfde patroon: wij tekenden iets wat het thema
+al levert.**
+
+| Klacht | Oorzaak | Ingreep |
+|---|---|---|
+| geflikker bij een tweede run | het uitvoervak werd vóór het draaien verborgen en daarna opnieuw gevuld | vorige uitvoer laten staan, alleen doven; regelhoogte reserveren |
+| een streep onder de uitvoer | onze uitvoer stond *binnen* `div.cell_input`, dus hadden we een eigen kader nodig om het gebonden te laten lijken | uitvoer naar `div.cell_output` naast de invoer; eigen kader weg op notebookpagina's |
+| een balk om de knop | een eigen achtergrond en `border-top`: een derde vlak in de cel | balk weg, knop los onder de code |
+| wit blok in donkere modus | een eigen CodeMirror-thema dat wit schilderde, en acht hardgecodeerde kleuren | editor doorzichtig, kleuren uit CSS-variabelen die met het thema meedraaien |
+
+**De reparatie was elke keer iets weghalen.** De CSS ging van 86 naar 104 regels, maar
+het aantal kleuren dat wij zelf kiezen ging van acht naar één.
+
+#### Twee dingen die alleen live te vinden waren
+
+**De eerste poging om ons kader weg te halen mislukte**, en de melding was: *"de cel
+staat nu los van de uitvoer."* Mijn analyse was dat de twee kaders hetzelfde deden en er
+dus één weg kon. Fout: myst-nb's kader zegt *dit is een invoercel*, het onze bond editor,
+knop en uitvoer tot één blok. Pas nadat de uitvoer naar `div.cell_output` was verhuisd -
+waar het thema haar zelf aan de cel lijmt - kon dezelfde regel wél. **Dezelfde ingreep,
+twee keer, met tegengesteld resultaat, en het verschil zat in de volgorde.**
+
+**En de donkere modus legde een fout in het thema zelf bloot.** myst-nb rekent zijn
+kleuren uit op `:root`, dus op `<html>`, met een schakelaar `:is(html, body)[data-theme]`.
+Furo zet `data-theme` op `<body>`. Als die vlag omgaat is de kleur op `<html>` al
+berekend, met alleen de `prefers-color-scheme`-stand. **Elke notebookcel op deze site
+volgde dus het besturingssysteem in plaats van de knop in de zijbalk**, en niemand had
+dat gemeld omdat het alleen opvalt als systeem en thema uit elkaar lopen. Gerepareerd in
+`source/_static/custom.css`, voor alle cellen en niet alleen de onze.
+
+#### Wat er onderweg is besloten
+
+- **Geen forks.** Stock sphinx-thebe kan geen Pyodide - nagemeten in de bron: nul
+  voorkomens van `lite`, `jupyterlite`, `pyodide` of `wasm`, en het laadt `thebe@0.8.2`
+  voor een kernel via Binder. De enige route naar Pyodide is een fork van de TU Delft,
+  van een git-URL, niet op PyPI. Onze eigen extensie is 691 regels en die houden we,
+  **met een uitstapvoorwaarde: zodra stock sphinx-thebe lite-ondersteuning op PyPI heeft,
+  opnieuw wegen.**
+- **Wel leren van Thebe.** Zijn hele stylesheet telt drie regels voor de cel en tekent
+  geen enkel kader; hij vervangt de inhoud ter plekke en laat het thema het uiterlijk
+  dragen. Dat is de maatstaf waar deze ronde op uitkwam.
+- **De CDN-versies staan vast.** De vijf CodeMirror-imports stonden op `@6`, wat bij elk
+  paginabezoek opnieuw oplost naar de nieuwste 6.x. Een breaking change in een minor kon
+  de editor bij een student breken **zonder dat er in de repo iets veranderde en zonder
+  dat een build faalde om het te melden.** Nu vast tot op de patch, met de grond erbij.
+
 ## Hoe je een meting noteert
 
 Rol, ronde, tokens, duur, uitkomst in één regel. Bij een afgebroken run: wat er
