@@ -5,12 +5,15 @@ title: "Picobot"
 # Uitwerkingen Picobot
 
 Deze uitwerkingen zijn modeloplossingen voor de vier Picobot-opdrachten uit
-week 1. Een state is hier geen positie in de kamer, maar een fase in de
-strategie. De regel kiest op basis van de huidige state en de vier zichtbare
-richtingen een beweging en eventueel een nieuwe fase. Een `X` betekent: blijf
-staan en verander alleen van state.
+week 1. Een staat is hier geen positie in de kamer, maar een fase in de
+strategie. De regel kiest op basis van de huidige staat en de vier zichtbare
+richtingen een beweging en eventueel een nieuwe staat. Een `X` betekent: blijf
+staan en verander alleen van staat. Bekijk ook het [practicum Picobot](/practicals/1_picobot.md)
+en de [weekindex](/course/solutions_1.md).
 
 ## Opdracht 1 — De lege kamer
+
+Deze uitwerking hoort bij [Opdracht 1 in het practicum](/practicals/1_picobot.md#opdracht-1-de-lege-kamer).
 
 ```text
 0 *x** -> E 0
@@ -21,20 +24,25 @@ staan en verander alleen van state.
 2 ***S -> W 1
 ```
 
-De strategie is een zigzag over alle kolommen. State 0 gaat naar het oosten
-tot de oostmuur. Daarna wisselt Picobot naar state 1 en gaat naar het noorden
-tot de noordmuur. State 2 laat hem vervolgens naar het zuiden gaan. Aan de
+De strategie is een zigzag over alle kolommen. Staat 0 gaat naar het oosten
+tot de oostmuur. Daarna wisselt Picobot naar staat 1 en gaat naar het noorden
+tot de noordmuur. Staat 2 laat hem vervolgens naar het zuiden gaan. Aan de
 zuidmuur gaat hij één vak naar het westen en begint de volgende kolom.
 
-| State | Gedrag | Overgang |
+| Staat | Gedrag | Overgang |
 |---|---|---|
 | 0 | Naar het oosten zolang dat kan | oostmuur → 1 |
 | 1 | Naar het noorden zolang dat kan | noordmuur → 2 |
 | 2 | Naar het zuiden zolang dat kan | zuidmuur → west, 1 |
 
 De wildcard maakt de regels onafhankelijk van muren aan de andere drie kanten.
+Controleer de uitwerking vanaf drie startposities: bij een muur, in een hoek en
+midden in de kamer. De hele kamer kleurt grijs en Picobot stopt vanzelf.
 
 ## Opdracht 2 — Het doolhof
+
+Deze uitwerking hoort bij [Opdracht 2 in het practicum](/practicals/1_picobot.md#opdracht-2-het-doolhof).
+Lees voor de strategie ook het [doolhofcollege](/lectures/1b_picobot.md#de-right-hand-rule).
 
 ```text
 0 **x* -> W 1
@@ -47,23 +55,29 @@ De wildcard maakt de regels onafhankelijk van muren aan de andere drie kanten.
 3 N*** -> x 2
 ```
 
-Deze oplossing volgt systematisch de gangen. De vier states staan voor de
-voorkeursrichting van de volgende rechte beweging: west, zuid, oost en noord.
-Zolang die richting open is, blijft Picobot bewegen. Bij een muur verandert hij
-van fase en probeert hij de volgende richting. Daardoor loopt hij de verbonden
-gangen door zonder dat een aparte state voor elke positie nodig is.
+Deze oplossing volgt de right-hand rule: houd steeds dezelfde wand aan je
+rechterhand. In een gang gaat Picobot rechtdoor. Op een splitsing kiest hij de
+volgende richting waarmee hij de rechterwand blijft volgen. Bij een doodlopend
+punt blijft hij met `X` staan en gaat hij verder met de volgende richting. De
+vier staten bewaren de richting waarin hij daarna kijkt: west, zuid, oost en
+noord. Zo doorloopt hij alle verbonden gangen zonder voor elke positie een
+aparte staat nodig te hebben.
 
-| State | Voorkeursrichting | Bij blokkade |
+| Staat | Voorkeursrichting | Bij blokkade |
 |---|---|---|
-| 0 | west | state 3 |
-| 1 | zuid | state 0 |
-| 2 | oost | state 1 |
-| 3 | noord | state 2 |
+| 0 | west | staat 3 |
+| 1 | zuid | staat 0 |
+| 2 | oost | staat 1 |
+| 3 | noord | staat 2 |
 
-De `X`-regels zijn overgangsregels: Picobot blijft op het kruispunt staan,
-maar begint daarna met de volgende richtingsfase.
+De `X`-regels zijn overgangsregels: Picobot blijft op het doodlopende punt
+staan, maar begint daarna met de volgende richtingsfase. Controleer de
+uitwerking vanaf drie startposities. Het hele doolhof kleurt grijs en Picobot
+stopt vanzelf.
 
 ## Opdracht 3 — De ruit
+
+Deze uitwerking hoort bij [Opdracht 3 in het practicum](/practicals/1_picobot.md#opdracht-3-de-ruit).
 
 ```text
 0 *x** -> E 0
@@ -79,16 +93,20 @@ maar begint daarna met de volgende richtingsfase.
 ```
 
 De oplossing gebruikt afwisselende verticale en horizontale bewegingen langs
-de schuine randen van de ruit. State 0 handelt de oostelijke rand af: eerst
+de schuine randen van de ruit. Staat 0 handelt de oostelijke rand af: eerst
 naar het oosten, en bij de verschillende hoekpatronen omhoog, omlaag of naar
-het westen. State 1 is de noordwaartse sweep. State 2 is de zuidwaartse sweep
+het westen. Staat 1 is de noordwaartse sweep. Staat 2 is de zuidwaartse sweep
 en kiest onderaan tussen nog verder zuid, omhoog langs de rand of één stap naar
-het westen. State 3 voert die weststap uit en brengt Picobot terug naar state 1.
+het westen. Staat 3 voert die weststap uit en brengt Picobot terug naar staat 1.
 
 De specifieke patronen (`xE*S`, `NE*x`, `NE*S` en `**WS`) herkennen de hoeken
 van de ruit. Zo worden gewone randcellen en hoekcellen verschillend behandeld.
+Controleer de uitwerking vanaf drie startposities. De hele ruit kleurt grijs en
+Picobot stopt vanzelf.
 
 ## Opdracht 4 — De grot
+
+Deze uitwerking hoort bij [Opdracht 4 in het practicum](/practicals/1_picobot.md#opdracht-4-de-grot).
 
 ```text
 0 *E** -> W 1
@@ -105,13 +123,13 @@ van de ruit. Zo worden gewone randcellen en hoekcellen verschillend behandeld.
 5 N*** -> x 4
 ```
 
-Hier wordt de grot in banen doorlopen. States 0 en 1 vormen een oost-west-
-beweging: state 0 gaat oostwaarts en keert bij de oostmuur om; state 1 gaat
-westwaarts en schakelt bij de westmuur naar de volgende fase. States 2 en 3
+Hier wordt de grot in banen doorlopen. Staten 0 en 1 vormen een oost-west-
+beweging: staat 0 gaat oostwaarts en keert bij de oostmuur om; staat 1 gaat
+westwaarts en schakelt bij de westmuur naar de volgende fase. Staten 2 en 3
 doen hetzelfde voor een volgende baan, met een overgang via het zuiden.
-States 4 en 5 verbinden de banen aan de andere kant via oost en noord.
+Staten 4 en 5 verbinden de banen aan de andere kant via oost en noord.
 
-| State | Hoofdbeweging | Functie van de overgang |
+| Staat | Hoofdbeweging | Functie van de overgang |
 |---|---|---|
 | 0 | oost | oostmuur → westwaartse fase 1 |
 | 1 | west | westmuur → verbindingsfase 5 |
@@ -120,6 +138,8 @@ States 4 en 5 verbinden de banen aan de andere kant via oost en noord.
 | 4 | oost | oostmuur → fase 3 |
 | 5 | noord | noordmuur → fase 4 |
 
-De zes states coderen dus de richting én aan welke kant van de grot de
+De zes staten coderen dus de richting én aan welke kant van de grot de
 volgende baan moet worden aangesloten. De regels met `X` verplaatsen niet,
 maar markeren alleen zo'n overgang.
+Controleer de uitwerking vanaf drie startposities. De hele grot kleurt grijs en
+Picobot stopt vanzelf.
