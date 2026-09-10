@@ -290,9 +290,22 @@ doet dit al grotendeels: van de codecellen in `solutions/` draaien er 109 en
 staan er 2 op `skip`, terwijl `practicals/` juist 60 overgeslagen cellen heeft
 tegen 1 die draait.
 
-De ongedekte flank in die tabel, de opmaak van codecellen, is op dit moment geen
-probleem: alle 525 uitvoerbare cellen voldoen al aan `ruff format`. De hook
-uitbreiden zou dat vastleggen in plaats van erop te vertrouwen.
+De ongedekte flank in die tabel is de opmaak van codecellen, en die is wél een
+probleem. Gemeten op 10 september 2026: `source/` telt **468 uitvoerbare
+codecellen**, en **120 daarvan voldoen niet aan `ruff format`**, verdeeld over 33
+bestanden. Het zwaartepunt ligt in `extra/practice/` (47 cellen in twee bestanden)
+en in de colleges van week 2, 7 en 11.
+
+Hier stond eerder dat alle 525 uitvoerbare cellen er al aan voldeden. Beide
+getallen waren mis: 525 is het aantal codecellen mét de overgeslagen erbij (773
+met inhoud, waarvan 305 op `skip-execution`), en van de 468 die werkelijk draaien
+voldoet een kwart niet. Een hook zou dit dus niet vastleggen maar meteen afgaan;
+wie hem invoert, ruimt eerst op.
+
+**IJk je meting als je dit hermeet.** `ruff format --check` op de celinhoud geeft
+465 van 468, en dat is een stukgelopen patroon: een cel eindigt doorgaans zonder
+nieuwe regel en `ruff` telt dat als een verschil. Normaliseer de laatste regel
+voordat je vergelijkt.
 
 ### Huidige verdeling
 
