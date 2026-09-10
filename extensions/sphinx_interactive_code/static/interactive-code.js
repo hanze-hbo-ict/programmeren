@@ -1,5 +1,10 @@
 // Vanilla ES module — no build step required.
 // Depends on: Pyodide (CDN), CodeMirror 6 (esm.sh CDN)
+//
+// De versies staan vast, tot op de patch. `@6` lost bij elk paginabezoek opnieuw op
+// naar de nieuwste 6.x, en dan kan een breaking change in een minor de editor bij een
+// student breken zonder dat er in deze repo iets verandert - en zonder dat een build
+// faalt om het te melden. Wie ze verhoogt, doet dat in een branch en kijkt live.
 
 const DEFAULT_PYODIDE_URL =
   "https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js";
@@ -73,6 +78,10 @@ function buildLightHtml() {
 window.sicActivate = function (btn) {
   document.querySelectorAll(".sic-nb-static").forEach(e => e.style.display = "none");
   document.querySelectorAll(".sic-nb-interactive").forEach(e => e.style.display = "");
+  // De uitvoer die bij de build is opgeslagen hoort bij de statische weergave. Laat
+  // je hem staan, dan leest de student na het activeren twee antwoorden onder elkaar:
+  // dat van de build en dat van zichzelf.
+  document.querySelectorAll("div.cell_output").forEach(e => e.style.display = "none");
   document.dispatchEvent(new CustomEvent("sic:activate"));
   btn.closest(".sic-bar").remove();
 };
@@ -136,33 +145,57 @@ class InteractiveCodeCell extends HTMLElement {
         { EditorView, keymap, lineNumbers, drawSelection, highlightActiveLine },
         { EditorState },
         { defaultKeymap, historyKeymap, history, indentWithTab },
-        { syntaxHighlighting, defaultHighlightStyle, indentOnInput, bracketMatching },
+        { syntaxHighlighting, HighlightStyle, indentOnInput, bracketMatching },
         { python },
+        { tags },
       ] = await Promise.all([
-        import("https://esm.sh/@codemirror/view@6"),
-        import("https://esm.sh/@codemirror/state@6"),
-        import("https://esm.sh/@codemirror/commands@6"),
-        import("https://esm.sh/@codemirror/language@6"),
-        import("https://esm.sh/@codemirror/lang-python@6"),
+        import("https://esm.sh/@codemirror/view@6.43.11"),
+        import("https://esm.sh/@codemirror/state@6.7.4"),
+        import("https://esm.sh/@codemirror/commands@6.11.0"),
+        import("https://esm.sh/@codemirror/language@6.12.4"),
+        import("https://esm.sh/@codemirror/lang-python@6.2.1"),
+        import("https://esm.sh/@lezer/highlight@1.2.3"),
       ]);
 
-      const whiteTheme = EditorView.theme({
-        "&": { background: "#ffffff" },
-        ".cm-scroller": { background: "#ffffff" },
-        ".cm-gutters": { background: "#ffffff", borderRight: "1px solid #e5e7eb", color: "#9ca3af" },
-        ".cm-activeLineGutter": { background: "#f0f9ff" },
-        ".cm-activeLine": { background: "#f8faff" },
+      // Geen eigen kleuren. De editor is doorzichtig, zodat de achtergrond van de
+      // cel doorschijnt - die van myst-nb in een notebook, die van de pagina daarbuiten -
+      // en tekst en tokens komen uit CSS-variabelen die met het thema meedraaien.
+      // Custom properties erven het schaduw-DOM in, dus dit werkt zonder de stylesheet
+      // hier te herhalen. De gemarkeerde regel is een grijswaarde met alfa: die werkt
+      // op een lichte én een donkere ondergrond, dus daar is geen schakelaar voor nodig.
+      const inheritTheme = EditorView.theme({
+        "&": { background: "transparent", color: "var(--sic-code-fg)" },
+        ".cm-scroller": { background: "transparent" },
+        ".cm-content": { caretColor: "var(--sic-code-fg)" },
+        ".cm-gutters": {
+          background: "transparent",
+          color: "var(--sic-gutter-fg)",
+          borderRight: "1px solid var(--sic-gutter-border)",
+        },
+        ".cm-activeLine": { background: "rgba(128, 128, 128, 0.08)" },
+        ".cm-activeLineGutter": { background: "rgba(128, 128, 128, 0.08)" },
       });
+
+      const themeHighlight = HighlightStyle.define([
+        { tag: tags.keyword, color: "var(--sic-tok-keyword)", fontWeight: "var(--sic-tok-keyword-weight)" },
+        { tag: [tags.string, tags.special(tags.string)], color: "var(--sic-tok-string)" },
+        { tag: [tags.comment, tags.lineComment, tags.blockComment], color: "var(--sic-tok-comment)", fontStyle: "var(--sic-tok-comment-style)" },
+        { tag: [tags.number, tags.bool, tags.null], color: "var(--sic-tok-number)" },
+        { tag: [tags.function(tags.variableName), tags.function(tags.propertyName)], color: "var(--sic-tok-function)" },
+        { tag: [tags.standard(tags.variableName), tags.standard(tags.name)], color: "var(--sic-tok-builtin)" },
+        { tag: [tags.operator, tags.operatorKeyword], color: "var(--sic-tok-operator)" },
+        { tag: tags.invalid, color: "var(--sic-tok-error)" },
+      ]);
 
       this.#editor = new EditorView({
         state: EditorState.create({
           doc: code,
           extensions: [
             lineNumbers(), highlightActiveLine(), drawSelection(), history(),
-            syntaxHighlighting(defaultHighlightStyle, { fallback: true }),
+            syntaxHighlighting(themeHighlight, { fallback: true }),
             indentOnInput(), bracketMatching(),
             keymap.of([...defaultKeymap, ...historyKeymap, indentWithTab]),
-            python(), whiteTheme,
+            python(), inheritTheme,
           ],
         }),
         parent: editorHost,
@@ -191,6 +224,42 @@ class InteractiveCodeCell extends HTMLElement {
       .addEventListener("click", () => this.#run());
   }
 
+  // ---- Uitvoerplek ----------------------------------------------------------
+
+  // Op een notebookpagina staan invoer en uitvoer naast elkaar in `div.cell`, en het
+  // thema lijmt ze: zodra er iets onder de invoer hangt worden de onderste hoeken van
+  // het invoerkader vierkant, en de uitvoer krijgt zijn eigen tint en rand. Schrijven
+  // we daarin, dan ziet een interactieve cel eruit als elke andere notebookcel en
+  // hoeven wij niets te tekenen. Dat is hoe Thebe het in Jupyter Book doet.
+  //
+  // Op een markdownpagina bestaat `div.cell` niet. Dan valt het terug op het `<pre>`
+  // in onze eigen lichte DOM, dat wel een kader krijgt.
+  #outputTarget() {
+    const cell = this.closest("div.cell");
+    if (!cell) return this.querySelector(".sic-output");
+
+    let host = cell.querySelector(":scope > .sic-nb-output");
+    if (!host) {
+      host = document.createElement("div");
+      host.className = "cell_output docutils container sic-nb-output";
+      // `output stream` zonder een `.highlight`-kind is precies het patroon waar
+      // myst-nb de stdout-tint en -rand op zet.
+      host.innerHTML = '<div class="output stream notranslate"><pre class="sic-stream"></pre></div>';
+      cell.appendChild(host);
+    }
+    return host.querySelector("pre");
+  }
+
+  #markError(el, isError) {
+    const wrapper = el.closest(".output");
+    if (wrapper) {
+      wrapper.classList.toggle("stream", !isError);
+      wrapper.classList.toggle("stderr", isError);
+    } else {
+      el.classList.toggle("is-error", isError);
+    }
+  }
+
   // ---- Code execution -------------------------------------------------------
 
   async #run() {
@@ -198,11 +267,14 @@ class InteractiveCodeCell extends HTMLElement {
     if (!pyodide || !this.#editor) return;
 
     const code = this.#editor.state.doc.toString();
-    const outputEl = this.querySelector(".sic-output");
+    const outputEl = this.#outputTarget();
 
+    // De vorige uitvoer blijft staan zolang het draait. Verbergen we hem hier, dan
+    // zakt het vak in en groeit het meteen daarna weer terug - bij een tweede run
+    // met dezelfde uitkomst is dat puur geflikker. `sic-stale` dooft hem alleen.
     this.#setStatus(t("running"));
-    outputEl.hidden = true;
-    outputEl.classList.remove("is-error");
+    outputEl.classList.add("sic-stale");
+    this.#markError(outputEl, false);
 
     let stdout = "";
 
@@ -234,17 +306,21 @@ class InteractiveCodeCell extends HTMLElement {
       const combined =
         stdout + (result !== undefined && result !== null ? String(result) : "");
 
+      // Vanaf de eerste run blijft het uitvoervak staan, ook als er niets is
+      // afgedrukt. Verbergen bij lege uitvoer laat het vak alsnog inklappen, en een
+      // leeg vak zegt bovendien iets waars: het heeft gedraaid en er kwam niets uit.
       const output = combined.trim();
       outputEl.textContent = output;
-      outputEl.hidden = !output;
+      outputEl.hidden = false;
     } catch (err) {
       outputEl.textContent = err.message;
-      outputEl.classList.add("is-error");
+      this.#markError(outputEl, true);
       outputEl.hidden = false;
     } finally {
       pyodide.setStdout({ batched: console.log });
       pyodide.setStderr({ batched: console.error });
       pyodide.setStdin();
+      outputEl.classList.remove("sic-stale");
       this.#setStatus("");
     }
   }

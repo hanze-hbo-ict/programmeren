@@ -1,7 +1,53 @@
-/* Project-specific overrides for the sphinx-immaterial theme.
-   Empty placeholder for now — the jupyter-book-era custom_layouts.css and
-   pdf_print.css targeted sphinx-book-theme's Bootstrap classes and don't
-   apply to Material's DOM, so they weren't carried over. */
+/* Projectspecifieke aanvullingen op het Furo-thema. */
+
+/* --------------------------------------------------------------------------
+   myst-nb volgt de themaknop niet
+
+   myst-nb rekent zijn kleuren uit op `:root`, dus op <html>:
+
+       --mystnb-source-bg-color: var(--light, ...) var(--dark, ...);
+
+   en zijn schakelaar is `:is(html, body)[data-theme="dark"]`. Furo zet
+   `data-theme` op <body>. Op het moment dat die vlag omgaat, is de kleur op
+   <html> al berekend met de waarden die daar gelden - en daar komt alleen de
+   `@media (prefers-color-scheme)`-stand aan. Gevolg: elke notebookcel volgt het
+   besturingssysteem in plaats van de knop in de zijbalk. Staat het systeem licht
+   en Furo donker, dan blijft de cel wit op een zwarte pagina.
+
+   Hier zetten we die kleuren opnieuw, op <body>, waar Furo's vlag wél geldt.
+   Custom properties erven, dus `div.cell_input` verderop pikt ze op. De waarden
+   zijn myst-nb's eigen palet; we verzinnen niets nieuws, we zetten alleen de
+   schakelaar goed.
+   -------------------------------------------------------------------------- */
+
+body[data-theme="light"] {
+    --mystnb-source-bg-color: var(--mystnb-neutral-palette-100);
+    --mystnb-source-border-color: var(--mystnb-neutral-palette-400);
+    --mystnb-stdout-bg-color: var(--mystnb-neutral-palette-50);
+    --mystnb-stdout-border-color: var(--mystnb-neutral-palette-100);
+    --mystnb-stderr-bg-color: var(--mystnb-danger-palette-50);
+    --mystnb-stderr-border-color: var(--mystnb-neutral-palette-100);
+    --mystnb-traceback-bg-color: var(--mystnb-neutral-palette-50);
+    --mystnb-traceback-border-color: var(--mystnb-danger-palette-100);
+    --mystnb-scrollbar-thumb-color: var(--mystnb-neutral-palette-400);
+    --mystnb-scrollbar-thumb-hover-color: var(--mystnb-neutral-palette-500);
+}
+
+body[data-theme="dark"] {
+    --mystnb-source-bg-color: var(--mystnb-neutral-palette-800);
+    --mystnb-source-border-color: var(--mystnb-neutral-palette-500);
+    --mystnb-stdout-bg-color: var(--mystnb-neutral-palette-900);
+    --mystnb-stdout-border-color: var(--mystnb-neutral-palette-800);
+    --mystnb-stderr-bg-color: var(--mystnb-danger-palette-900);
+    --mystnb-stderr-border-color: var(--mystnb-neutral-palette-800);
+    --mystnb-traceback-bg-color: var(--mystnb-neutral-palette-900);
+    --mystnb-traceback-border-color: var(--mystnb-danger-palette-800);
+    --mystnb-scrollbar-thumb-color: var(--mystnb-neutral-palette-500);
+    --mystnb-scrollbar-thumb-hover-color: var(--mystnb-neutral-palette-400);
+}
+
+/* Furo's automatische stand: geen `data-theme`, dan het systeem volgen. Dat doet
+   myst-nb zelf al goed, dus daar hoeft hier niets te staan. */
 
 /* Het logo is een SVG zonder eigen afmetingen en vult anders de halve zijbalk. */
 .sidebar-logo {
