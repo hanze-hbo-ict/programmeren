@@ -1,5 +1,10 @@
 // Vanilla ES module — no build step required.
 // Depends on: Pyodide (CDN), CodeMirror 6 (esm.sh CDN)
+//
+// De versies staan vast, tot op de patch. `@6` lost bij elk paginabezoek opnieuw op
+// naar de nieuwste 6.x, en dan kan een breaking change in een minor de editor bij een
+// student breken zonder dat er in deze repo iets verandert - en zonder dat een build
+// faalt om het te melden. Wie ze verhoogt, doet dat in een branch en kijkt live.
 
 const DEFAULT_PYODIDE_URL =
   "https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js";
@@ -143,11 +148,11 @@ class InteractiveCodeCell extends HTMLElement {
         { syntaxHighlighting, defaultHighlightStyle, indentOnInput, bracketMatching },
         { python },
       ] = await Promise.all([
-        import("https://esm.sh/@codemirror/view@6"),
-        import("https://esm.sh/@codemirror/state@6"),
-        import("https://esm.sh/@codemirror/commands@6"),
-        import("https://esm.sh/@codemirror/language@6"),
-        import("https://esm.sh/@codemirror/lang-python@6"),
+        import("https://esm.sh/@codemirror/view@6.43.11"),
+        import("https://esm.sh/@codemirror/state@6.7.4"),
+        import("https://esm.sh/@codemirror/commands@6.11.0"),
+        import("https://esm.sh/@codemirror/language@6.12.4"),
+        import("https://esm.sh/@codemirror/lang-python@6.2.1"),
       ]);
 
       const whiteTheme = EditorView.theme({

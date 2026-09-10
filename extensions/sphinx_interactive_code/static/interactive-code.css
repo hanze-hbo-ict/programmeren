@@ -33,14 +33,15 @@ interactive-code-cell {
     overflow: hidden;
 }
 
-/* Toolbar: flex layout + subtle background to distinguish from editor */
+/* Geen balk, alleen een knop onder de code - zoals Thebe het doet:
+   `button.thebelab-run-button { margin-left: 1.5em; margin-bottom: 0.5em; }`, en
+   verder niets. Een balk met een eigen achtergrond en een `border-top` tekent een
+   derde vlak binnen de cel, en dat is precies één streep te veel. */
 .sic-toolbar {
     display: flex;
     align-items: center;
-    gap: 0.4em;
-    padding: 0.4em 0.6em;
-    background: #f3f4f6;
-    border-top: 1px solid #e5e7eb;
+    gap: 0.6em;
+    margin: 0.4em 0 0.5em 1em;
 }
 
 .sic-btn-run {
