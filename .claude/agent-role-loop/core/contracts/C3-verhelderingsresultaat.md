@@ -13,6 +13,11 @@ al het overige reist mee als *Mee te geven aan de auteur*. Zie de ernstdrempel i
 `roles/verhelderaar.md`. Een ontwerp waarin niets meer te verbeteren valt bestaat
 niet, dus "ik vond nog iets" is op zichzelf geen grond om te falen.
 
+De verhelderaar draait alleen wanneer C1 hem kiest volgens [loop.md](../loop.md).
+Bij herstel krijgt hij de gewijzigde C2, diff en eerdere bevindingen; alleen
+geraakte onderdelen opnieuw toetsen, eerdere dekking herkenbaar overnemen.
+De rondelimiet uit loop.md geldt ook hier.
+
 ## Schema
 
 Verplichte velden:
@@ -53,28 +58,3 @@ In deze volgorde:
    herleidbaar tot een berekening en niet tot een schatting.
 5. **Besluiten** - alles wat een besluit verandert of nodig heeft, staat als open
    vraag voor de vakdeskundige en is niet zelf ingevuld.
-
-## Voorbeeld
-
-```md
-Oordeel: FAAL
-
-Reden: Het ontwerp is gegrond en de opbouw klopt, maar acceptatiecriterium 2
-heeft geen manier om vast te stellen dat het gehaald is, en de vraag over de
-methodegrens is zelf beantwoord in plaats van voorgelegd.
-
-Gevraagde wijzigingen:
-1. (Acceptatiecriteria) Maak criterium 2 toetsbaar: waaraan zie je dat de
-   opstap dekt wat de basis nodig heeft?
-2. (Open vragen) Verplaats de aanname over objectmethoden naar de open vragen.
-   Dit raakt `conventies/codeconventies.md` en is een besluit.
-
-Vragen aan de ontwerper: <geen>
-
-Risico's om te benoemen:
-- Twee nieuwe onderdelen in de laatste week van een periode.
-
-Voorwaarden voor akkoord:
-- Elk criterium heeft een genoemde manier van vaststellen.
-- Geen aannames meer over zaken die in `curriculum/` vastliggen.
-```

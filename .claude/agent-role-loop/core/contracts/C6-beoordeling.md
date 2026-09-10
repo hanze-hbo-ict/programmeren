@@ -1,110 +1,57 @@
 # C6 - Beoordeling
 
-## Doel
-
-Het onafhankelijke oordeel van één beoordelaar over de **kern** van de oplevering
-(C5). Vier beoordelaars leveren er elk één, geïsoleerd: geen van hen ziet het
-oordeel van een ander voordat het eigen oordeel af is. De beoordeling scheidt wat
-moet veranderen van wat kan veranderen, en herleidt elk acceptatiecriterium tot
-bewijs.
+Eén onafhankelijk oordeel over de C5-kern. Aantal en perspectieven volgen C1 en
+[loop.md](../loop.md). De beoordelaar heeft niet geschreven of ontworpen, begint
+in een verse context en ziet bij eerste beoordeling geen andere oordelen.
 
 ## Schema
 
-Verplichte velden:
+- **Modus:** eerste beoordeling / herstel / leesronde.
+- **Oordeel:** BLOKKEER / AKKOORD / AKKOORD MET PUNTJES.
+- **Versie en reikwijdte:** beoordeelde commit, bestanden en toegewezen criteria.
+- **Criteriumdekking:** per toegewezen criterium gehaald/niet gehaald met eigen
+  bewijs. Niet toegewezen criteria zijn *elders belegd*, met verantwoordelijke;
+  nooit stilzwijgend gehaald. Een criterium zonder verantwoordelijke is een gat.
+- **Moet veranderen:** concrete blokkades met criterium-ID en bewijs; minstens
+  één bij BLOKKEER, anders `<geen>`.
+- **Zou moeten veranderen / puntjes:** afzonderlijk, of `<geen>`.
+- **Afwijking van wat is opgegeven:** geraadpleegde bronnen buiten de invoer,
+  onverwachte gevolgen en beperkingen; of `<geen>`.
+- **Wat werkt:** benoem kort wat behouden moet blijven en waarom.
 
-- **Oordeel** - `BLOKKEER` / `AKKOORD` / `AKKOORD MET PUNTJES`.
-- **Dekking van de acceptatiecriteria** - per criterium: `gehaald` of `niet
-  gehaald`, plus het bewijs waarop je je baseert.
-- **Afwijking van wat is opgegeven** - waar de oplevering iets raakt dat niet
-  onder "wat dit raakt buiten deze week" staat; of `<geen>`.
+## Toets
 
-Optionele velden (laat leeg met `<geen>`):
+Beoordeel de opdracht en de relevante conventies; herontwerp de week niet.
+Verifieer dragende claims tegen bron en objectief bewijs. Beschikbare shell mag
+voor gerichte uitvoering, nooit voor materiaalwijzigingen, nieuwe installaties of
+GitHub-mutaties. Kun je het echte ding niet controleren, meld het ontbrekende
+bewijs; verzin geen uitvoer. De eerstejaars kijkt niet in uitwerkingen; hun
+controle ligt bij een andere rol volgens C1.
 
-- **Moet veranderen** - blokkerende bevindingen; `BLOKKEER` vraagt er minstens één.
-- **Zou moeten veranderen** - waardevol maar niet blokkerend.
-- **Puntjes** - goedkope verbeteringen en smaak.
+Een vastgelegd besluit mag een bewuste afhankelijkheid dragen. Controleer of het
+besluit werkelijk van toepassing is, niet of je de afweging opnieuw zou maken.
+Ontbreekt noodzakelijke invoer, meld precies wat mist vóór een oordeel.
 
-## Regels voor elke beoordelaar
+**Blokkeer** op aantoonbare onjuistheid, ontbrekende vereiste dekking of iets dat
+de student/uitvoerder ophoudt. Verbeterwensen en smaak zijn geen blokkade. Kijk
+naar het gevolg en of de fout stil afloopt. Budget maakt echte fouten niet groen.
 
-- Beoordeel alleen het geleverde werk en zijn acceptatiecriteria.
-- Herontwerp de week niet. Vind je dat er iets anders had moeten staan, dan is dat
-  een bevinding voor de vakdeskundige, geen oordeel over deze oplevering.
-- Wees concreet over bewijs: noem het criterium, de plek, en wat je overtuigde of
-  juist niet.
-- Ontbreekt een verplicht veld in de kern, stop dan en zeg precies wat er mist in
-  plaats van een oordeel te geven.
+## Herstelmodus
 
-## Twee modi: beoordeling en leesronde
+Invoer: bijgewerkte C5-kern, reparatiediff, eerdere blokkades met criterium-ID en
+eerdere dekking van niet-geraakte criteria. Geen maaktranscript of andere eerdere
+redeneringen. Controleer gerepareerde en daardoor geraakte criteria. Markeer
+niet-geraakte dekking als *eerder vastgesteld*, met bron en versie. Beoordeel ook
+of de diff de opgegeven reikwijdte respecteert.
 
-Het gewone geval is een **beoordeling**: vier beoordelaars, geïsoleerd, over de
-kern van één C5. Daarvoor is dit contract geschreven.
+Volledige herbeoordeling alleen onder de gronden in loop.md; leg de reden vast.
+Een nieuwe echte blokkade blijft zichtbaar, maar start niet automatisch een
+nieuwe ronde buiten de herstelgrens.
 
-Er is een tweede geval, en dat is te waardevol om te blijven improviseren. Bij een
-**leesronde** lees je bestaand materiaal dat de lus nog nooit heeft gezien. Er is
-dan geen C5, geen ontwerp en geen auteur om iets aan terug te geven; jouw oordeel
-wordt de grondslag voor een werkitem. Dat is aantoonbaar de goedkoopste manier om
-te weten wat er aan de hand is met een week die nooit is herzien - goedkoper dan de
-volle lus erop loslaten en pas achteraf ontdekken wat er speelde.
+## Leesronde
 
-Wat er in een leesronde anders geldt:
-
-- **Het veld *Dekking van de acceptatiecriteria* vervalt**, want die zijn er niet.
-  Zet in plaats daarvan neer waaraan je hebt getoetst: het vaste criterium uit
-  `conventies/conventies.md` geldt altijd, en `curriculum/leerlijn.md` zegt wat de
-  week hoort te doen. Noem per norm of zij gehaald is en waarop je dat baseert.
-- **De stopvoorwaarde over een ontbrekend verplicht veld geldt niet.** Het ontbreken
-  van de kern is hier bekend en met opzet, geen verzuim van een uitvoerder. Stop
-  dus niet; meld het en beoordeel.
-- **Het veld *Afwijking van wat is opgegeven*** gebruik je voor wat je tegenkomt
-  buiten de bestanden die je zijn opgegeven, en voor wat verder reikt dan de weken
-  die je leest. Dat scheelt het werkitem een herontdekking.
-- **Wie de leesronde start, zegt erbij dat het er een is**, welke bestanden erbij
-  horen, en dat het oordeel de grondslag voor een werkitem wordt. Zonder dat
-  vervalt een rol terug op de gewone modus en stopt hij.
-
-De weegdrempel hieronder geldt in beide modi, en in een leesronde des te meer:
-bestaand materiaal levert altijd meer bevindingen op dan één oplevering.
-
-## De weegdrempel
-
-Een beoordeling die alles opsomt wat beter kan, is niet strenger maar onbruikbaar:
-wie hem leest weet niet meer waar hij moet beginnen. Weeg daarom, en houd je aan de
-verhouding.
-
-- **Moet veranderen** is voor wat de lezer of de student ophoudt, of wat aantoonbaar
-  niet klopt. Reken op een handvol, niet op twintig. Kom je hoger uit, dan weeg je
-  waarschijnlijk niet maar tel je.
-- **Zou moeten veranderen** is voor wat het werk echt beter maakt en wat de
-  volgende ronde haalt.
-- **Puntjes** zijn goedkoop en verzamel je; ze mogen samen in één opsomming.
-
-De toets is dezelfde als bij de verhelderaar: **loopt de fout luid of stil af?** Wat
-de lezer meteen ziet en zelf herstelt, is geen blokkade. Wat er goed uitziet en het
-niet is, wel.
-
-Noem tot slot wat expliciet goed is en waarom. Dat is geen beleefdheid: wie herziet
-moet weten wat hij niet mag weggooien.
-
-## Voorbeeld
-
-```md
-Oordeel: AKKOORD MET PUNTJES
-
-Moet veranderen: <geen>
-
-Zou moeten veranderen:
-- Stap 4 kent een gelijkspel in de korte tekst, en de opgave zegt dat wel maar
-  de uitwerking legt niet uit dat `>` en `>=` een ander antwoord geven.
-
-Puntjes:
-- "Wat een tekst over zichzelf zegt" is een mooie kop maar staat niet in de
-  inhoudsopgave; daar staat alleen "Basis".
-
-Dekking van de acceptatiecriteria:
-- AC1: gehaald - de opening beschrijft auteurschapsherkenning en verwijst naar
-  een echt geval.
-- AC2: gehaald - opdracht 10 van de opstap is letterlijk het patroon van stap 3.
-- AC3: gehaald - hooks en build gemeld als groen.
-
-Afwijking van wat is opgegeven: <geen>
-```
+Op bestaand materiaal zonder C5 zijn ontbrekende C5-velden geen stopreden. De
+opdracht benoemt expliciet leesronde, bestanden en het doel: grondslag voor een
+werkitem. Vervang criteriumdekking door de normen waaraan getoetst is, waaronder
+relevante conventies en leerlijn. Dezelfde weegdrempel geldt. Publiceer het oordeel
+op het issue zodat het niet alleen in de sessiecontext blijft.

@@ -37,8 +37,10 @@ Optionele velden (laat leeg met `<geen>`):
   curriculumontwerper ze af en bevestigt de vakdeskundige ze bij de poort. Het
   laatste criterium staat vast en hoort in elk werkitem:
 
-  > Voldoet aan de conventies in `conventies/conventies.md`, en de build is
-  > schoon.
+  > Voldoet aan de toepasselijke conventies in `conventies/conventies.md`, en
+  > de toepasselijke controles zijn schoon. Voor lesmateriaal omvat dit een
+  > schone build; voor uitsluitend procesdocumentatie zijn concrete
+  > routescenario's en relevante controles voldoende.
 
 - **Randvoorwaarden** - harde grenzen: een deadline, een besluit dat vastligt, een
   leeruitkomst die gedekt moet blijven.
@@ -47,32 +49,11 @@ Optionele velden (laat leeg met `<geen>`):
   het bij lesmateriaal de meest voorkomende bron van verkeerde aannames is.
 - **Omvangschatting** - `XS` / `S` / `M` / `L` / `XL`. De triage mag hem overrulen.
 
-## Voorbeeld
+## Proceswerk en kleine routes
 
-```md
-# Herzie PGM1 week 7
-
-## Aanleiding
-Week 7 is de laatste week van PGM1 en levert af aan PGM2 week 1, dat begint met
-datastructuren. Dictionaries krijgen nu twee koppen in het college, en dat is te
-weinig voor wat daarop gebouwd wordt.
-
-## Gewenste uitkomst
-De week dekt P4 en A3 aantoonbaar, en een student die hem heeft gedaan kan een
-dictionary aanmaken, vullen en doorlopen.
-
-## Acceptatiecriteria
-1. Basis opent met een concreet probleem.
-2. De week heeft een opstap.
-3. Voldoet aan de conventies in `conventies/conventies.md`, en de build is schoon.
-
-## Randvoorwaarden
-Mutatie en objectmethoden worden hier geïntroduceerd, niet eerder.
-
-## Wat de repo niet weet
-De Markov-opgave verwijst naar vier tekstbestanden die geen van alle in de repo
-zitten. Het practicum is dus al een tijd niet uitvoerbaar.
-
-## Omvangschatting
-L
-```
+Dit contract geldt ook voor proceswerk. Benoem dan de relevante instructies en
+procesbesluiten in `onderzoek/`; verander geen curriculum als bijvangst.
+C0 + C1 vormen op een eenduidige kleine route de complete uitvoeropdracht.
+C2/C3/C4 worden alleen gemaakt wanneer de route ze vraagt; zie
+[loop.md](../loop.md). De vaste conventie- en buildvoorwaarde volgt haar
+reikwijdte: bij uitsluitend procesdocumentatie wordt geen Sphinx-build verlangd.

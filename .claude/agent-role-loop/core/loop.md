@@ -1,234 +1,170 @@
 # De rollenlus
 
-De pijplijn: de stappen, de contracten die ertussen gaan, en de plekken waar het
-pad zich splitst. De grondslag staat in [principles.md](principles.md), de
-contracten in [contracts/](contracts/), de rolprompts in [roles/](roles/). De
-uitleg voor mensen staat in [`rollen/`](../../../rollen/rollen.md).
+Dit is de gedeelde routenorm voor Claude en Codex. Contracten staan in
+[contracts/](contracts/), verantwoordelijkheden in [roles/](roles/) en de
+principes in [principles.md](principles.md). De uitleg voor mensen staat in
+[rollen/rollen.md](../../../rollen/rollen.md).
 
-Dit is een bewerking van het [role loop](https://github.com/misja/agent-role-loop)-model
-voor een redactieproces in plaats van een softwareproject. De vier principes
-gelden onverkort; de rollen en de contracten zijn bewerkt.
+## Invoering
 
-## Pijplijn
+De werkwijze van #203 geldt voor nieuw gestarte routes na goedkeuring van de
+instructie-PR. Een lopende route blijft bij zijn vastgelegde C1 en procesversie;
+raadpleeg daarvoor de versie van deze bestanden bij de startcommit. Zet haar niet
+halverwege om. Registreer bij iedere nieuwe C1 de gebruikte commit.
+De proef en het evaluatiemoment staan in
+[onderzoek/203-proef.md](../../../onderzoek/203-proef.md).
 
-```mermaid
-flowchart TD
-    W["Werkitem (C0)"] --> T{Triage}
-    T -->|"C1 AFWIJZEN"| Req["Terug, met advies"]
-    T -->|"C1 DOORLOPEND"| D["Blijft open als verzamelplek"]
-    T -->|"C1 LUS: de rollen die C1 noemt"| V["Verkenner"]
-    V -->|"C1b Bevindingen"| O["Curriculumontwerper"]
-    O -->|"C2 Weekontwerp"| C{Verhelderaar}
-    C -->|"C3 FAAL"| O
-    C -->|"C3 AKKOORD"| G{"Poort (mens)"}
-    G -->|"C4 HERZIEN"| O
-    G -->|"C4 STOP"| E1["Einde"]
-    G -->|"C4 AKKOORD"| A
-    A -->|"C5 Oplevering"| B
-    subgraph B["Beoordelaars (parallel, geïsoleerd)"]
-        direction LR
-        B1["onderwijskundige"]
-        B2["eerstejaars"]
-        B3["redacteur"]
-        B4["pragmaticus"]
-    end
-    B -->|"C6 Beoordeling (x4)"| H{Hoofdredacteur}
-    H -->|"C7 BLOKKEER"| A
-    H -->|"C7 AKKOORD"| E2["Naar de vakdeskundige om te mergen"]
-```
+## Route kiezen
 
-## Stappen
+De orkestrator schrijft C1 zelf, op basis van C0. Een aparte triage-agent is
+beschikbaar op verzoek, geen standaardstap. C1 noemt omvang, verantwoordelijkheden,
+uitvoerende agents, criteriumtoewijzing en de reden voor extra rollen.
+`DOORLOPEND` blijft open als verzamelplek; `AFWIJZEN` geeft gericht advies.
 
-| Stap | Rol | Krijgt | Levert | Door |
-|---|---|---|---|---|
-| Triage | [triage](roles/triage.md) | C0 | C1 | agent |
-| Meten | [verkenner](roles/verkenner.md) | C0, C1 | C1b | agent |
-| Ontwerpen | [curriculumontwerper](roles/curriculumontwerper.md) | C0, C1b | C2 | agent |
-| Verhelderen | [verhelderaar](roles/verhelderaar.md) | C0, C2 | C3 | agent |
-| Poort | [vakdeskundige](roles/vakdeskundige.md) | C2, C3 | C4 | **mens** |
-| Schrijven | [auteur](roles/auteur.md) | C2, C4 | C5 | agent |
-| Beoordelen | [vier beoordelaars](roles/) | C5 (kern) | C6 (x4) | agents, parallel |
-| Eindoordeel | [hoofdredacteur](roles/hoofdredacteur.md) | C5 (volledig), C6 (alle) | C7 | agent |
+Voor `LUS` gelden deze uitgangspunten:
 
-De vier beoordelaars kijken naar dezelfde kern vanuit een eigen houding:
-[onderwijskundig](roles/beoordelaar-onderwijskundige.md),
-[als eerstejaars](roles/beoordelaar-eerstejaars.md),
-[redactioneel](roles/beoordelaar-redacteur.md) en
-[pragmatisch](roles/beoordelaar-pragmaticus.md).
-
-De [eindredacteur](roles/eindredacteur.md) staat buiten de lus en draait
-periodiek over het geheel. Zijn bevindingen worden meestal werkitems met de route
-`DOORLOPEND`.
-
-## Waar het pad zich splitst
-
-1. **Triage (C1).** `LUS` gaat langs de rollen die C1 bij naam noemt, in de
-   volgorde hierboven; wat er niet staat wordt overgeslagen. Er is dus niet één
-   licht pad en één volledig pad, maar een pad per werkitem. `DOORLOPEND` blijft
-   open als verzamelplek. `AFWIJZEN` gaat terug met advies.
-2. **Verhelderaar (C3).** `AKKOORD` gaat naar de poort. `FAAL` gaat terug naar de
-   ontwerper met genummerde wijzigingen. Faalt het drie keer, dan gaat de patstelling
-   naar de mens.
-3. **Poort (C4).** `AKKOORD` laat de auteur beginnen. `HERZIEN` stuurt genoemde
-   wijzigingen terug. `STOP` beëindigt het werk. Alleen een mens vult C4 in.
-4. **Eindoordeel (C7).** `AKKOORD` en `AKKOORD MET PUNTJES` sluiten de lus.
-   `BLOKKEER` gaat terug naar de auteur met een moet-lijst.
-
-## Gelijktijdigheid
-
-De beoordelaars draaien parallel en geïsoleerd: elk krijgt dezelfde kern van C5,
-en geen van hen ziet het oordeel van een ander. Onafhankelijke gezichtspunten zijn
-de waarde; context delen laat ze samenvallen tot één.
-
-Schrijven gebeurt achter elkaar. Twee auteurs in hetzelfde materiaal leveren
-conflicten op, geen snelheid.
-
-## Wat de machine eerst doet
-
-De mechanische controles zijn groen **voordat** de oplevering naar de
-beoordelaars gaat:
-
-```sh
-uv run pre-commit run --files <gewijzigde bestanden>
-uv run make html
-```
-
-Ze zijn een toegangsvoorwaarde tot de beoordeling, geen onderdeel ervan.
-Beoordelingsaandacht besteden aan wat een hook al vaststelt, is verspilling.
-
-## De leesronde: beoordelaars buiten de lus
-
-De vier beoordelaars horen in de lus thuis, na de auteur. Maar ze kunnen ook los
-draaien, op materiaal dat de lus nog nooit heeft gezien.
-
-Doe dat **voordat** je een ongelezen week door de volle lus haalt. Gemeten: twee
-beoordelaars op twee weken kostten samen ongeveer een derde van wat één week door
-de volle lus kostte, en leverden twee werkitems vol aantoonbare defecten op. Op
-ongelezen materiaal is lezen goedkoper en opbrengender dan ontwerpen, omdat je pas
-daarna weet wat er aan de hand is - en wat er níét aan de hand is.
-
-Hun oordelen worden dan de grondslag van het werkitem: zet ze als reactie op de
-issue, want ze bestaan verder alleen in de sessiecontext en zijn duur om opnieuw te
-maken.
-
-Welke beoordelaars je kiest hangt af van wat je wilt weten. De eerstejaars vindt
-waar een student vastloopt en dat vindt niemand anders; de redacteur vindt
-dubbelingen en verhoudingen; de onderwijskundige ziet of een keuze een opzet is of
-een omissie. Vier is niet altijd nodig.
-
-Wat er in een leesronde anders geldt staat in het C6-contract, onder *Twee modi*.
-
-## Twee rollen buiten de lus
-
-De **eindredacteur** draait periodiek over het materiaal, want samenhang over de
-weken heen is vanuit één week niet zichtbaar.
-
-De **onderzoeker** doet hetzelfde voor de werkwijze. Hij leest `onderzoek/` en
-vraagt wat terugkeert, of een bevinding werkelijk is geland, en of het daarna nog
-een keer gebeurde. Die laatste vraag is de scherpste: gebeurt hetzelfde ná de
-maatregel die het moest voorkomen, dan raakt de maatregel niet de oorzaak.
-
-Ook hij draait zelden. Na één ronde is er geen patroon, en een rapport dat elke
-keer hetzelfde vindt wordt genegeerd.
-
-### Wie de lus van buitenaf ziet
-
-Er komt géén dertiende agent bij die de twaalf bekijkt. Zo iemand zou nodig hebben
-wat de rollen elkaar juist niet mogen geven, en hij zou de kosten van elke stap
-verdubbelen.
-
-Dat is ook niet nodig, want **dat uitzicht bestaat al**, verdeeld over drie posities
-die er rechtmatig over beschikken:
-
-- De **orkestrator** ziet de mechaniek: wat er draaide, wat het kostte, wat er
-  sneuvelde. Contextisolatie geldt voor de rollen; hij routeert er juist tussen.
-  Vandaar dat de meting zijn verplichting is - hij is de enige die de tokentelling
-  te zien krijgt, en die is weg zodra de sessie eindigt.
-- De **vakdeskundige** ziet het oordeel: hij leest het ontwerp, de kritiek erop en
-  later de uitkomst, en weet als enige of het de moeite waard was.
-- De **onderzoeker** ziet het patroon over de tijd, en niets anders.
-
-Die verdeling is geen compromis maar de reden dat het werkt. De bruikbaarste
-bevindingen komen voort uit het **voelen** van een fout en niet uit het lezen ervan:
-de diff van 370 regels viel op omdat een getal niet klopte met wat er net was
-gedaan. Wie achteraf een transcript leest, vindt zwakkere dingen.
-
-Wat er ontbrak was dus geen uitzicht maar een **toewijzing**. De metingen van de
-eerste twee dagen zijn opgeschreven omdat er expliciet om werd gevraagd, niet omdat
-iemand het zijn taak vond. Daarom staat het nu in `/orc` en in `CLAUDE.md`.
-
-## Gereedschap: gebruik wat er is
-
-Elke rol die een commando draait, gebruikt de standaardgereedschappen die op het
-systeem staan: `grep`, `sed`, `awk`, `find`, `python`, `git`, `jq`. Wat er verder
-aanwezig is, stel je vast in plaats van aan te nemen.
-
-**Ga er niet van uit dat `ripgrep`, `fd`, `bat` of ander vervangend gereedschap
-bestaat, en installeer nooit iets.** Wat er op de machine staat is een besluit van
-de gebruiker, niet van een rol. Draai een patroon dat je opschrijft eerst zelf, en
-draait het niet, kies dan een vorm die het wel doet - `grep -P` heeft dezelfde
-PCRE-semantiek als de meeste voorbeelden die je tegenkomt.
-
-Dit is een bijzonder geval van de verkennersregel *meet het ding zelf, niet iets
-ernaast*: een patroon dat stukloopt op een vlag die dit systeem niet kent, meet
-niets, en een patroon waarvan nul treffers het geslaagd-criterium is, slaagt dan
-altijd.
-
-## Proportionaliteit
-
-| Omvang | Wat dat betekent |
+| Werk | Route |
 |---|---|
-| Een typefout, een dode link, een naam rechtzetten | Gewoon doen - en daarna laten lezen |
-| Eén opgave herzien, een sectie toevoegen | `LUS`, met een handvol rollen |
-| Een week herzien | `LUS`, meestal met alle |
-| Beeldkwaliteit, terminologie, dode verwijzingen | `DOORLOPEND` |
-| Een vak herindelen | `AFWIJZEN`; eerst opsplitsen in weken |
+| Kleine, eenduidige correctie | auteur, onafhankelijke beoordelaar; uitvoeropdracht is C0 + C1 |
+| Overzichtelijke opgave of sectie | gecombineerde verkenner/ontwerper, mens, auteur, onafhankelijke beoordelaar |
+| Ingrijpende weekherziening | verkenner, ontwerper, verhelderaar, mens, auteur, twee onafhankelijke beoordelaars |
 
-Bij twijfel telt hoe moeilijk het terug te draaien is. Materiaal weggooien of een
-leeruitkomst verplaatsen verdient de volledige lus, ook als de wijziging klein
-oogt.
+Een verantwoordelijkheid hoeft geen eigen agent te zijn. De gecombineerde rol
+wordt uitgevoerd door `rol-curriculumontwerper` en levert C2 met meetbasis.
+Geen lege C1b, C2, C3 of C4 maken voor een stap die niet nodig is.
 
-### Twee vragen, niet één
+Voeg gericht toe:
 
-Triage beantwoordt twee vragen die los van elkaar staan.
+- **Aparte verkenner:** omstreden dragende feiten of een inventarisatie die meerdere
+  ontwerpkeuzes moet dragen. Levert C1b, zonder voorstellen.
+- **Verhelderaar:** onderling afhankelijke onderdelen of onzekerheid over de
+  uitvoerbaarheid van het verificatieplan. Toetst C2; niet automatisch na elk C2.
+- **Mens:** altijd vóór uitvoering van een ontwerp, en ook zonder ontwerp bij
+  verwijderen van materiaal, verplaatsen tussen vakken of een nieuw inhoudelijk
+  besluit. C4 kan dan naar de concrete uitvoeropdracht in C0 + C1 verwijzen.
+  Een wijziging aan curriculum of conventies vraagt de mens, niet automatisch
+  alle agents. Een al gegeven expliciet besluit vastleggen, niet opnieuw vragen.
 
-**Welke verantwoordelijkheden doet dit werk aan?** Dat is de rollenlijst in C1.
-Niet elk werkitem raakt de hele lus: iets kan meten nodig hebben en geen ontwerp,
-of geen ontwerp en wel een lezer. De vragen die dat bepalen staan in
-`roles/triage.md`.
+De omvang bepaalt de diepte: XS/S/M meet en ontwerpt alleen wat de taak nodig
+heeft; L/XL neemt de omgeving mee waar afhankelijkheden dat vragen. Een vak
+herindelen eerst opsplitsen. Bij twijfel benoemt C1 de concrete onzekerheid en
+kiest de verantwoordelijkheid die haar kan oplossen.
 
-**Hoe diep gaat elke rol die meedoet?** Dat is de omvang, en de tabel hieronder.
+## Beoordeling toewijzen
 
-Ze lopen niet gelijk op, en dat is de reden dat ze uit elkaar zijn gehaald. Een
-werkitem van omvang S kan twee rollen hard nodig hebben; een werkitem van omvang L
-kan er negen nodig hebben en op elk daarvan ondiep blijven. Wie de twee in één
-getal propt, slaat werk over dat achteraf alsnog moet gebeuren - en dan als
-reparatie op iets dat al gemerged is.
+Bij studentmateriaal is de **eerstejaars** de eerste beoordelaar. Hij krijgt geen
+uitwerkingen te zien. Bij verandering van didactische opzet komt de
+**onderwijskundige** erbij; bij een weekherziening is dit standaard de tweede.
+Bij omvangrijke redactionele wijzigingen komt de **redacteur** erbij, of vervangt
+hij de onderwijskundige als de didactiek gelijk blijft. Bij uitsluitend proces-
+of normtekst is de redacteur de eerste beoordelaar.
 
-### De omvang bindt ook de rollen die erna komen
+C1 wijst ieder acceptatiecriterium toe aan minstens één passende beoordelaar.
+C2 kan criteria toevoegen; werk die toewijzing dan vóór beoordeling bij.
+Criteria over uitwerkingen gaan naar een beoordelaar die ze mag lezen en
+verifiëren: de onderwijskundige, of bij uitsluitend redactioneel werk de redacteur.
+Voeg die rol toe als hij ontbreekt. Een klein aantal agents mag geen gat in de
+controle veroorzaken. Iedere beoordelaar toetst zijn criteria, de relevante
+conventies en objectief verificatiebewijs naast zijn eigen perspectief.
 
-Triage bepaalt een omvang en tot nu toe deed niemand daar iets mee: een klein
-werkitem kreeg dezelfde behandeling als een grote herziening. Dat is de duurste
-fout die de lus kan maken, want zij treft juist de stappen die het meeste kosten.
+De **pragmaticus** is beschikbaar op verzoek. Proportionaliteit en het onderscheid
+tussen blokkades en puntjes gelden voor elke rol en vragen geen vaste extra agent.
+De **hoofdredacteur** draait alleen bij onopgeloste tegenspraak tussen oordelen.
+Bij één beoordelaar volstaat C6. Bij meer beoordelaars zonder tegenspraak publiceert
+de orkestrator C7 als mechanische samenvatting met bronverwijzingen, zonder eigen
+bevindingen: een onopgeloste blokkade blijft BLOKKEER. Een inhoudelijk verschil van
+duiding dat bronnen niet beslechten gaat naar de mens. De mens beslist over merge.
 
-| | **XS, S, M** | **L, XL** |
+## Invoer en context
+
+| Stap | Invoer | Uitvoer |
 |---|---|---|
-| Verkenner | meet wat het werkitem vraagt en wat het ontwerp moet beslissen, en verder niets | meet ook de omgeving: terminologie, verhoudingen, wat er ooit stond |
-| Ontwerper | een checklist per onderdeel, geen apparaat eromheen | de volledige vorm, inclusief meetgereedschap waar dat draagt |
-| Verhelderaar | faalt alleen op wat de auteur ophoudt | de volledige controlevolgorde |
-| Beoordelaars | het aantal uit de weegdrempel, en niet meer | idem, maar over meer materiaal |
+| triage door orkestrator | C0, relevante staande zaken | C1 |
+| aparte verkenner indien gekozen | C0 + C1 | C1b |
+| ontwerper, eventueel gecombineerd | C0 + C1, C1b indien aanwezig | C2 met meetbasis |
+| verhelderaar indien gekozen | C0 + C1 + C2 | C3 |
+| mens indien verplicht | C2 + eventueel C3, of concrete C0 + C1 | C4 |
+| auteur | C1, C2 + C4 of C0 + C1; toepasselijk C4 en C3-verbeterpunten | C5 |
+| gekozen beoordelaars | C1-toewijzing + C5-kern | C6 per beoordelaar |
+| samenvoeging of arbitrage indien nodig | alle gekozen C6; volledige C5 bij arbitrage | C7 |
 
-De omvang staat in het C1 Triagebesluit. Wie hem niet kent, vraagt ernaar in plaats
-van de volle behandeling te kiezen omdat die veiliger voelt.
+Geef de artefacten letterlijk mee of via leesbare bestanden, inclusief relevante
+vastgestelde besluiten met exacte bronnen. Geef gerichte vindplaatsen van normen,
+geen nieuwe kopie van alle conventies. Een rol mag de oorspronkelijke bron lezen
+waar nodig; een verwijzing naar een onbereikbaar issue is geen overdracht.
 
-### Artefacten convergeren
+Iedere onafhankelijke beoordeling begint in een verse context. Geen
+maaktranscript, geen afwegingen uit het uitgebreide C5 en bij de eerste
+beoordeling geen andere oordelen. Objectief verificatiebewijs en geldende
+besluiten staan juist wél in C5-kern. De auteur mag zijn context behouden bij een
+gerichte reparatie. Schrijven gebeurt achter elkaar, onafhankelijke beoordelaars
+kunnen parallel draaien.
 
-Een herzien artefact is **korter** dan zijn voorganger, of het zegt waarom niet.
-Een reparatieronde die het ontwerp langer maakt, heeft iets anders gedaan dan
-repareren.
+## Herstellen en stoppen
 
-Let daarbij op één patroon dat de lus uit zichzelf voortbrengt: de verhelderaar
-vraagt om hardheid, de ontwerper antwoordt met apparaat, en de ronde daarna vraagt
-de verhelderaar of dat apparaat wel klopt. Zo optimaliseert de lus tegen zijn eigen
-criticus. Verifieerbaarheid is een middel; als de beschrijving van de meting langer
-wordt dan wat er gemeten moet worden, is de verhouding zoek.
+Na C3 FAAL repareert de ontwerper het bestaande C2 op de genoemde blokkades;
+geen automatische volledige herschrijving. Na C6/C7 BLOKKEER repareert de auteur
+de genoemde blokkades. Geef steeds artefact, criterium-ID's, bevindingen en
+relevante besluiten mee. Een gewijzigde scope of nieuw inhoudelijk besluit vraagt
+eerst de mens. Een HERZIEN van de mens is geen automatische reparatieronde.
+
+Per ontwerp en per oplevering is maximaal **één automatische herstelronde**
+toegestaan, inclusief herbeoordeling. De orkestrator telt dit op GitHub; een nieuwe
+agent, context of sessie zet de teller niet terug. Blijft daarna een blokkade,
+leg dan gericht doorgaan, opsplitsen of stoppen voor. Hervatten kan alleen met
+expliciet besluit en een nieuwe begrensde opdracht. Puntjes kosten geen ronde.
+
+Herbeoordeling heeft expliciet **herstelmodus**. De verse beoordelaar krijgt de
+bijgewerkte C5-kern, reparatiediff, eerdere blokkerende bevindingen met criterium-ID
+en eerdere dekking van niet-geraakte criteria. Dit is geen nieuwe blinde
+beoordeling. Hij toetst de reparatie en de daardoor geraakte criteria; overgenomen
+dekking heet *eerder vastgesteld*, niet *opnieuw onderzocht*. Gebruik dezelfde
+werkwijze bij C3-herbeoordeling van het gewijzigde ontwerp.
+
+Een volledige herbeoordeling volgt alleen bij gewijzigde scope, gedeelde
+afhankelijkheden die eerder bewijs ongeldig maken of een onbetrouwbare basis.
+Leg reden, nieuwe toewijzing en kostenafweging vast. Dit omzeilt de rondelimiet
+niet. Nieuwe echte defecten blijven zichtbaar; een budget maakt ze niet groen.
+
+## Verificatie en eindpunt
+
+Mechanische controles gaan vóór beoordeling. Draai pre-commit op geraakte
+bestanden; bij boek-, buildconfiguratie- of dependencywijzigingen ook een schone
+Sphinx-build met nul waarschuwingen en fouten. Bij uitsluitend procesdocumentatie
+is die build niet nodig: noteer reikwijdte en toepasselijke controles. Installeer
+geen nieuw gereedschap; stel vast wat beschikbaar is. Meet het ding zelf:
+uitvoer uitvoeren, een pagina bekijken, een zoekpatroon ijken vóór je nul gelooft.
+
+Elk criterium heeft een concrete eindvoorwaarde. Voor proces- of normtekst is dat
+een eindige wijzigingslijst of scenario met verwachte uitkomst; geen onbegrensd
+"alles is consistent". De auteur levert pas C5 wanneer de relevante controles
+groen zijn. Een niet uitgevoerde controle staat als niet vastgesteld, niet als groen.
+
+## GitHub en registratie
+
+C0 is een GitHub-issue, overdrachten zijn reacties op issue of PR. Iedere reactie
+bevat contract-ID en meetregel: rol, ronde, tokens, duur, omvang en uitkomst.
+Ontbrekende meetgegevens heten **niet beschikbaar**, nooit nul. Bij een afgebroken
+run noteer je wat bewaard bleef. Tokenregistratie is geen factuurbedrag.
+
+Noteer ook de kosten van orkestratie indien beschikbaar. Neem de meetregels over
+in `onderzoek/metingen.md` bij afsluiting of vóór sessie-einde. Structurele
+bevindingen krijgen bewijs en gevolg in `onderzoek/bevindingen.md`.
+Procesbesluiten landen in `onderzoek/`; inhoudelijke besluiten in `curriculum/`
+of `conventies/`. Een door de orkestrator geschreven besluittekst krijgt
+onafhankelijke redactionele beoordeling op de diff en het menselijke bronbesluit;
+dit mag onderdeel zijn van de al gekozen beoordeling.
+
+De budgetreactie tijdens de #203-proef staat in
+[onderzoek/203-proef.md](../../../onderzoek/203-proef.md). Geen automatische
+extra agentstart nadat de daar afgesproken grens is overschreden.
+
+## Buiten een werkitem
+
+Een kleine correctie mag zonder aparte issue, in een branch met PR en een
+onafhankelijke lezer volgens dezelfde criteriumtoewijzing. Noteer dit onder
+*Werk buiten de lus om* in `onderzoek/metingen.md`.
+
+Een leesronde op bestaand materiaal is beschikbaar volgens C6, niet verplicht
+vóór ieder ontwerp. De **eindredacteur** bewaakt periodiek samenhang over weken;
+de **onderzoeker** onderzoekt periodiek de werkwijze. Beiden blijven buiten de lus.

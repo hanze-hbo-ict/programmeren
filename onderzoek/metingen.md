@@ -942,3 +942,17 @@ bewaard is gebleven, want dat is het verschil tussen verlies en vertraging.
 
 Zeg erbij wat de omvang was volgens triage, anders is een getal niet te
 vergelijken met een volgende ronde.
+
+## Werkitem #203 - procesaanpassing
+
+Op 10 september 2026 zijn een gerichte analyse/ontwerp, één onafhankelijke
+planbeoordeling (C3 AKKOORD) en een menselijk C4 AKKOORD uitgevoerd. De artefacten
+staan op [#203](https://github.com/hanze-hbo-ict/programmeren/issues/203).
+Codex toont hier geen tokenregistratie per rol; tokens en rolduur zijn niet
+beschikbaar en worden niet geschat. De implementatie en onafhankelijke diffreview
+worden bij oplevering hieronder aangevuld.
+
+De gecontroleerde rijsommen, verschillen met historische samenvattingen en de
+vooraf goedgekeurde proefafspraken staan in [203-proef.md](203-proef.md). De twee
+praktijkproeven zijn nog niet gestart. Invoeringskosten horen apart van hun
+kosten; afwezige meetgegevens betekenen geen besparing.

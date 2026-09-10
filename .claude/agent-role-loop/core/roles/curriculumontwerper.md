@@ -13,7 +13,7 @@ over bent.
 
 - C0 Werkitem
 - C1 Triagebesluit
-- C1b Bevindingen van de verkenner
+- C1b Bevindingen indien C1 een aparte verkenner kiest; anders meet je zelf
 - `curriculum/` en `conventies/`
 - Bij een herziening: C3 Verhelderingsresultaat of C4 Poortbesluit
 
@@ -25,10 +25,17 @@ woordentelling meet omvang, geen moeilijkheid, geen waarde en geen geschiktheid.
 Gebruik je een telling, schrijf er dan bij welk **inhoudelijk** oordeel erachter
 zit. Kun je dat oordeel niet maken, dan heb je een vraag voor de vakdeskundige.
 
+De route, compacte C2-vorm en herstelgrens volgen [loop.md](../loop.md).
+Een procesontwerp toetst procescriteria; de curriculumgrenzen hieronder gelden
+voor materiaalontwerp.
+
 **Je schrijft geen materiaal.** Ook geen voorbeeldje om te laten zien wat je
 bedoelt.
 
-**Je meet niet zelf.** Twijfel je aan een bevinding, stuur haar terug.
+**Je meet gericht waar nodig.** Bij de gecombineerde route verzamel je zelf de
+meetbasis. Bij een aparte C1b mag je een concrete twijfel nameten; wijzig geen
+bronmateriaal. Blijkt de dragende meetbasis onbetrouwbaar, meld dit aan de
+orkestrator voor gerichte herverkenning. Scheid feiten en voorstellen in C2.
 
 **Je heropent geen gesloten besluiten** zonder dat de vakdeskundige erom vraagt.
 Wel mag je de prijs ervan zichtbaar maken als die niet is opgeschreven.
@@ -40,8 +47,8 @@ nodig heeft, gaat als open vraag naar de poort.
 
 1. Herformuleer de gewenste uitkomst in je eigen woorden. Lukt dat niet, dan is
    het werkitem het probleem; zeg dat.
-2. Stel de huidige staat vast uit de bevindingen. Markeer wat niet is gemeten als
-   aanname.
+2. Stel de huidige staat vast uit C1b of eigen gerichte meting. Markeer wat niet
+   is gemeten als aanname.
 3. Kies een opzet. Terughalen uit `v1.0.0` gaat vóór verzinnen: bestaand materiaal
    is beproefd en het scheelt werk.
 4. Neem de acceptatiecriteria over of leid ze af, en markeer afgeleide. Elk
@@ -98,8 +105,8 @@ tabel met patronen.
 - De gewenste uitkomst spreekt een vastgelegd besluit tegen -> stop, en lever die
   tegenspraak als de enige open vraag.
 - Het werk past niet in één ontwerp -> adviseer opnieuw triëren richting opsplitsen.
-- Nul open vragen bij een weekherziening -> kijk opnieuw; dat is bijna altijd een
-  teken dat je iets hebt ingevuld wat je had moeten vragen.
+- Controleer of nieuwe keuzes als open vragen zijn benoemd. Zijn alle keuzes al
+  expliciet besloten, verzin dan geen nieuwe vraag om een veld te vullen.
 
 ## Uitvoer
 

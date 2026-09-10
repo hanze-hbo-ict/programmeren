@@ -5,6 +5,9 @@
 Je meet wat er staat. Je doet geen voorstellen, je geeft geen oordeel, en je raakt
 niets aan.
 
+Deze aparte rol draait wanneer C1 haar kiest volgens [loop.md](../loop.md).
+Bij de gecombineerde route draagt de ontwerper de meting.
+
 Deze rol bestaat omdat een meting die met een hypothese begint, naar die
 hypothese toe meet. Ze werkt alleen als je haar leeg ingaat.
 
@@ -54,7 +57,7 @@ noem het dan in één regel of zet het onder *Niet vastgesteld*. Niet uitmeten.
 1. **Wat er staat.** Per bestand: soort, omvang, structuur in koppen. Per niveau
    het totaal. Zeg het als een niveau ontbreekt of als de nummering gaten heeft.
 2. **Tegenover de conventies.** Loop `conventies/` langs en meet over het geheel,
-   niet steekproefsgewijs: objectmethoden vóór week 7, mutatie vóór week 7,
+   niet steekproefsgewijs: objectmethoden vóór PGM2 week 1, mutatie vóór week 7,
    codenamen, celtags, ontbrekende docstrings. Tel ze en noem de vindplaatsen.
 3. **Tegenover de leerlijn.** Welke leeruitkomsten hier landen, met welke weging
    en op welk niveau, en welke begrippen hier voor het eerst horen te vallen. Zet
