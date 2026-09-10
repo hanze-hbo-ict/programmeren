@@ -23,7 +23,7 @@ Voor deze opgave moet je twee methodes toevoegen en een andere methode aanpassen
 
 Hierna worden deze methodes en aanpassingen gedetailleerder beschreven
 
-## opdracht 1:  De methode `cols_to_win`
+## Opdracht 1: De methode `cols_to_win`
 
 De methode `cols_to_win(self, ox)` moet een onderdeel van de klasse `Board` zijn en een enkel argument `ox` meekrijgen, die een string `'X'` of een string `'O'` bevat (de twee mogelijke spelers in het spel).
 
@@ -66,7 +66,7 @@ In [27]: b.cols_to_win('O')
 Out[27]: [0]
 ```
 
-## opdracht 2: De methode `ai_move`
+## Opdracht 2: De methode `ai_move`
 
 De methode `ai_move(self, ox)` moet ook een onderdeel zijn van de klasse `Board` en moet een enkel argument
 `ox` meekrijgen, die ofwel de string `'X'` bevat ofwel de string `'O'` (de twee mogelijke spelers in het spel).
@@ -149,7 +149,7 @@ In [45]: b.ai_move('O')
 Out[45]: 4      # moet 4 zijn
 ```
 
-## opdracht 3: De methode `host_game`
+## Opdracht 3: De methode `host_game`
 
 Pas ten slotte je methode `host_game(self)` aan zodat ofwel `'X'` ofwel `'O'` zelfstandig kan spelen;
 dat wil zeggen, dat de computer deze speler bestuurt met de methode `ai_move`.

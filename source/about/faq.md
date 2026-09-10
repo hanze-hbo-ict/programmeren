@@ -22,7 +22,7 @@ Elke week zij er drie werkcolleges. Tijdens het eerste werkcollege zal een intro
 
 Nee, aanwezigheid is bij de werkcolleges Programmeren niet verplicht. Het wordt wél aangeraden de colleges en practica te bezoeken. We behandelen veel onderwerpen en met elk college volgt een introductie van het onderwerp en kijken we terug op sommige opgaven van de week. En vaak worden ook hints gegeven die je direct kan gebruiken bij het maken van de opgaven!
 
-Maak gebruik van de werkcolleges om een begin te maken met de opgaven en vooral ook om vragen te stellen over andere opdrachten. Gebruik het ook als een vast moment om naar de campus te komen en anderen te treffen en samen te werken, dit kan je ook helpen om in een studieritme te komen.
+Maak gebruik van de werkcolleges om een begin te maken met de opdrachten en vooral ook om vragen te stellen over de opdrachten die je thuis hebt gemaakt. Gebruik het ook als een vast moment om naar de campus te komen en anderen te treffen en samen te werken, dit kan je ook helpen om in een studieritme te komen.
 
 ## Waar staan de opdrachten?
 
