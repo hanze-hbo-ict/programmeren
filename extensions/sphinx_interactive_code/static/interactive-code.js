@@ -73,6 +73,10 @@ function buildLightHtml() {
 window.sicActivate = function (btn) {
   document.querySelectorAll(".sic-nb-static").forEach(e => e.style.display = "none");
   document.querySelectorAll(".sic-nb-interactive").forEach(e => e.style.display = "");
+  // De uitvoer die bij de build is opgeslagen hoort bij de statische weergave. Laat
+  // je hem staan, dan leest de student na het activeren twee antwoorden onder elkaar:
+  // dat van de build en dat van zichzelf.
+  document.querySelectorAll("div.cell_output").forEach(e => e.style.display = "none");
   document.dispatchEvent(new CustomEvent("sic:activate"));
   btn.closest(".sic-bar").remove();
 };
@@ -200,8 +204,11 @@ class InteractiveCodeCell extends HTMLElement {
     const code = this.#editor.state.doc.toString();
     const outputEl = this.querySelector(".sic-output");
 
+    // De vorige uitvoer blijft staan zolang het draait. Verbergen we hem hier, dan
+    // zakt het vak in en groeit het meteen daarna weer terug - bij een tweede run
+    // met dezelfde uitkomst is dat puur geflikker. `is-stale` dooft hem alleen.
     this.#setStatus(t("running"));
-    outputEl.hidden = true;
+    outputEl.classList.add("is-stale");
     outputEl.classList.remove("is-error");
 
     let stdout = "";
@@ -234,9 +241,12 @@ class InteractiveCodeCell extends HTMLElement {
       const combined =
         stdout + (result !== undefined && result !== null ? String(result) : "");
 
+      // Vanaf de eerste run blijft het uitvoervak staan, ook als er niets is
+      // afgedrukt. Verbergen bij lege uitvoer laat het vak alsnog inklappen, en een
+      // leeg vak zegt bovendien iets waars: het heeft gedraaid en er kwam niets uit.
       const output = combined.trim();
       outputEl.textContent = output;
-      outputEl.hidden = !output;
+      outputEl.hidden = false;
     } catch (err) {
       outputEl.textContent = err.message;
       outputEl.classList.add("is-error");
@@ -245,6 +255,7 @@ class InteractiveCodeCell extends HTMLElement {
       pyodide.setStdout({ batched: console.log });
       pyodide.setStderr({ batched: console.error });
       pyodide.setStdin();
+      outputEl.classList.remove("is-stale");
       this.#setStatus("");
     }
   }
