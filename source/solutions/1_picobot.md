@@ -36,8 +36,6 @@ zuidmuur gaat hij één vak naar het westen en begint de volgende kolom.
 | 2 | Naar het zuiden zolang dat kan | zuidmuur → west, 1 |
 
 De wildcard maakt de regels onafhankelijk van muren aan de andere drie kanten.
-Controleer de uitwerking vanaf drie startposities: bij een muur, in een hoek en
-midden in de kamer. De hele kamer kleurt grijs en Picobot stopt vanzelf.
 
 ## Opdracht 2 - Het doolhof
 
@@ -84,9 +82,6 @@ richting. Bij meerdere geblokkeerde richtingen worden zulke overgangsregels
 achter elkaar uitgevoerd. Zo zijn de situaties uit het college direct te
 herkennen in de bewegingen en state-overgangen van deze acht regels.
 
-Controleer de uitwerking vanaf drie startposities. Het hele doolhof kleurt
-grijs en Picobot stopt vanzelf.
-
 ## Opdracht 3 - De ruit
 
 Deze uitwerking hoort bij [Opdracht 3 in het practicum](/practicals/1_picobot.md#opdracht-3-de-ruit).
@@ -113,8 +108,6 @@ het westen. Staat 3 voert die weststap uit en brengt Picobot terug naar staat 1.
 
 De specifieke patronen (`xE*S`, `NE*x`, `NE*S` en `**WS`) herkennen de hoeken
 van de ruit. Zo worden gewone randcellen en hoekcellen verschillend behandeld.
-Controleer de uitwerking vanaf drie startposities. De hele ruit kleurt grijs en
-Picobot stopt vanzelf.
 
 ## Opdracht 4 - De grot
 
@@ -153,5 +146,3 @@ Staten 4 en 5 verbinden de banen aan de andere kant via oost en noord.
 De zes staten coderen dus de richting én aan welke kant van de grot de
 volgende baan moet worden aangesloten. De regels met `X` verplaatsen niet,
 maar markeren alleen zo'n overgang.
-Controleer de uitwerking vanaf drie startposities. De hele grot kleurt grijs en
-Picobot stopt vanzelf.
