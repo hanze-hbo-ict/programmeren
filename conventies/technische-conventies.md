@@ -319,10 +319,11 @@ voordat je vergelijkt.
 | Sheets, met of zonder code | 6 | uitsluitend `lectures/` |
 | Uitvoerbare code, geen sheets | 23 | verspreid |
 | Alleen invulcellen (werkboek) | 12 | `problems/` 10, `practicals/` 2 |
-| **Geen van drieën** | **34** | `solutions/` 11, `problems/` 11, `practicals/` 7, `lectures/` 4, `extra/` 1 |
+| **Geen van drieën** | **33** | `solutions/` 11, `problems/` 11, `practicals/` 7, `lectures/` 3, `extra/` 1 |
 
-Die laatste 34 zijn markdown-documenten in een notebook-jasje; het waren er 39,
-tot de vijf van week 5 uitvoerbare cellen kregen. Twee colleges springen eruit
+Die laatste 33 zijn markdown-documenten in een notebook-jasje; het waren er 39,
+tot de vijf van week 5 uitvoerbare cellen kregen en
+`lectures/3b_functies_aanroepen` bij de herziening van week 3 een `.md` werd. Twee colleges springen eruit
 omdat ze in `lectures/` geen enkele grond hebben:
 `10a_knapzak_probleem.ipynb` en `4b_midterm.ipynb`.
 
