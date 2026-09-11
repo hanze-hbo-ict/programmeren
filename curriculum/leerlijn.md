@@ -149,7 +149,7 @@ nagemeten en bleken onjuist. Week 7 heeft wél een opstap, met dertien
 opdrachten, sinds commit `8190d95c`. En de nummering van de opstap van week 5
 loopt door zonder gat; dat is ze in de hele geschiedenis van
 `source/problems/5_opstap.ipynb` geweest. Sinds de herziening van week 5 telt die
-opstap twaalf opgaven: acht om te lezen en vier om te schrijven.
+opstap twaalf opdrachten: acht om te lezen en vier om te schrijven.
 
 ## Programmeren II
 
@@ -256,9 +256,9 @@ een patroon op dubbele indexering en een patroon op een 2D-literal: beide geven
 nul treffers op dat bestand. De enige treffer op het woord was het stringliteraal
 `x = function("lol")`. Er staat daar geen 2D-lijst.
 
-**`lectures/4b_midterm` opgave 19**, die de student vroeg de uitvoer te
+**`lectures/4b_midterm` opdracht 19**, die de student vroeg de uitvoer te
 voorspellen van een lus die `my_list[ix]` overschrijft. Die is herschreven met
-het patroon `result = result + [...]`, hetzelfde patroon dat opgave 18 ernaast al
+het patroon `result = result + [...]`, hetzelfde patroon dat opdracht 18 ernaast al
 gebruikte. Het goede antwoord is niet veranderd.
 
 Deze lijst is met tekstpatronen gemaakt en dus indicatief. Ze is het uitgangspunt
