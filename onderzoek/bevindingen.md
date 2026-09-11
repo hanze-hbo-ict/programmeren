@@ -717,6 +717,42 @@ poortbesluiten.
 
 *Bewijs: `onderzoek/metingen.md`, werkitem #178. Vastgesteld 9 september 2026.*
 
+## 17. Twee agents in één werkboom eten elkaars commits op
+
+Op 11 september 2026 draaide de auteur van #198 in de werkboom terwijl de
+orkestrator daar het werk van #196 startte: een nieuwe branch, wijzigingen aan vier
+bestanden, een commit en een push. **De eerste commit van de auteur landde daardoor
+op de branch van de orkestrator**, met vier bestanden erin die niet van hem waren.
+
+Geen van beiden merkte het op het moment zelf. De orkestrator zag een schone
+`git status` en een geslaagde push; de auteur werkte door in een werkboom die onder
+hem van branch was gewisseld. **Het kwam pas aan het licht doordat de auteur aan het
+eind zijn eigen diff tegen de basiscommit legde** in plaats van te vertrouwen op waar
+hij dacht te staan.
+
+### Waarom dit niet opvalt
+
+`git status` is schoon zolang er niets ongecommit is, en een `git checkout -b` van de
+ene actor is voor de andere onzichtbaar: hij ziet geen fout, alleen andere bestanden.
+De poorten draaien ook gewoon groen, want de inhoud klopt - alleen de *plaats* klopt
+niet. **Er is geen enkele controle in deze repo die dit vangt.** De hooks kijken naar
+bestanden, niet naar welke branch ze dragen.
+
+### Wat het veranderde
+
+- **Een agent die in de werkboom schrijft, heeft die werkboom exclusief.** Zolang een
+  auteursronde draait, start de orkestrator daar geen tweede tak. Werk dat echt
+  parallel moet, hoort in een aparte `git worktree`.
+- **Een rol die commit, controleert aan het eind zijn eigen diff tegen de basiscommit
+  die hij bij de start noteerde.** Dat is wat het hier ving, en het is de enige
+  controle die werkte.
+- De auteur van #198 heeft beide branches rechtgezet, de vreemde patch bewaard en
+  **daarna alle poorten en metingen opnieuw gedraaid**. Dat laatste is het deel dat
+  navolging verdient: een hersteloperatie maakt eerdere metingen ongeldig.
+
+*Bewijs: #198, commit `d32a8373` tegenover `a711a28f`; de nameting staat als reactie
+op dat issue. Vastgesteld 12 september 2026.*
+
 ## Open: welk model per rol
 
 *1 september 2026. Nog niet onderzocht.*
