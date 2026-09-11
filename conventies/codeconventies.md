@@ -104,13 +104,21 @@ voor een lijst van woorden.
 
 - **Nooit de kleine letter `l`.** Die is in veel lettertypen niet te
   onderscheiden van `1` of `I`, en linters merken hem aan als ambigu. Precies
-  daarom koos CS5 de hoofdletter. Het materiaal bevat nu nog 48 gevallen,
-  waaronder in de les die uitlegt hoe je functies aanroept.
-- **Geen fantasienamen.** `blaat` in
-  `source/lectures/3b_functies_aanroepen.ipynb` is er zo een. Een naam die niets
-  betekent, leert de student iets verkeerds op de plek waar hij naamgeving
-  voorgedaan krijgt. Voor voorbeelden waarin de naam er juist *niet* toe doet,
-  is `function` of `f` de gangbare keuze, en die staat al in het materiaal.
+  daarom koos CS5 de hoofdletter. In `source/` komt de naam niet meer voor.
+
+  > **Let op de meting.** Hier stond dat het materiaal er nog 48 bevatte. Bij de
+  > herziening van week 3 is dat nagemeten en niet te reproduceren: geteld als
+  > `NAME`-token in de codecellen en de ` ```python `-blokken van `source/`
+  > waren het er **acht**, alle acht in de twee colleges van week 3, en die zijn
+  > met die herziening verdwenen. Welk patroon of welk corpus tot 48 leidde is
+  > niet te achterhalen. Wie dit hermeet, ijkt zijn patroon eerst op een bekend
+  > getal.
+- **Geen fantasienamen.** Een naam die niets betekent, leert de student iets
+  verkeerds op de plek waar hij naamgeving voorgedaan krijgt. Voor voorbeelden
+  waarin de naam er juist *niet* toe doet, is `function` of `f` de gangbare
+  keuze, en die staat al in het materiaal. Tot de herziening van week 3 stond er
+  een functie `blaat` in het college over functies aanroepen; die heet nu
+  `triangle` en rekent iets uit.
 - **Niet `string` als variabelenaam.** Het materiaal leert de student
   `import string` te gebruiken voor `string.punctuation`. Een variabele met
   dezelfde naam overschaduwt die module. Gebruik `s` waar de scope kort is en
@@ -125,7 +133,7 @@ en niet met één naam per begrip: `L` werd op verschillende plekken `lst`,
 
 | begrip | namen in gebruik |
 |---|---|
-| lijst | `L` 214× · `lst` 143× · `my_list` 54× · `l` 48× · `numbers_lst` 14× |
+| lijst | `L` 214× · `lst` 143× · `my_list` 54× · `numbers_lst` 14× |
 | string | `s` 361× · `string` 142× · `text` 30× |
 | 2D-array | `a` 323× · `array` 143× |
 | karakter | `c` 138× · `char` 49× · `ch` 16× |
@@ -205,15 +213,16 @@ juist is dat het uitmaakt wat je opschrijft.
 door de vakdeskundige op 10 september 2026. Dat is de Sphinx-stijl, bedoeld om
 documentatie uit code te genereren - iets wat deze cursus niet doet en wat de student
 niet leert. Zij dwingt bovendien een lange vorm af waar één regel volstaat, en dat
-botst met de hoofdvorm hierboven: het practicum van week 3 eist met zoveel woorden dat
+botst met de hoofdvorm hierboven: het practicum van week 3 eiste met zoveel woorden dat
 een docstring de argumenten én de returnwaarde beschrijft, waarmee de eenregelige
-docstring in `lectures/3b_functies_aanroepen.ipynb` fout zou zijn. Dat is zij niet.
+docstring in `lectures/3b_functies_aanroepen.md` fout zou zijn. Dat is zij niet.
 
-Het staan er nu **149**, verdeeld over tien bestanden, met het zwaartepunt in
-`solutions/3_basis` (32), `6_basis` (30), `7_basis` (18), `8_basis` (18) en `8_extra`
-(16). Ze worden niet in één opruimactie weggewerkt maar per week, met de herziening
-van die week mee. Tot dan is dit een bekende afwijking; wat er nieuw bij komt, draagt
-de hoofdvorm.
+Het staan er nu **93**, verdeeld over zes bestanden, met het zwaartepunt in
+`solutions/6_basis` (30), `7_basis` (18), `8_basis` (18) en `8_extra` (16). Het waren
+er 149 in tien bestanden; de 56 van week 3 zijn met de herziening van die week
+verdwenen. Ze worden niet in één opruimactie weggewerkt maar per week, met de
+herziening van die week mee. Tot dan is dit een bekende afwijking; wat er nieuw bij
+komt, draagt de hoofdvorm.
 
 Docstrings komen bovendien pas in week 3 aan de orde als begrip; in week 2 ziet de
 student ze al staan in gegeven code. Zie *Onderdompeling gaat vooraf aan uitleg* in

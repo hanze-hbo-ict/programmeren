@@ -46,7 +46,7 @@ forceer geen Nederlandse vertaling. Voor dit materiaal werkt dat zo uit:
 | Een functie gebruiken | **aanroepen** | oproepen (1×) | |
 | Melding bij een fout | **foutmelding** | error, exception, uitzondering | Voor het Python-mechanisme: `exception` |
 | Plek waar bestanden in staan | **directory** | map (41×), folder (22×) | Zie hieronder |
-| De eerste regel van een functie | **signatuur** | signature (9×) | Vastgesteld door de vakdeskundige op 10 september 2026 |
+| De eerste regel van een functie | **signatuur** | signature (4×) | Vastgesteld door de vakdeskundige op 10 september 2026 |
 
 ## Staat, en state machine
 
@@ -169,11 +169,10 @@ tussen die twee is of de taak op de vorige voortbouwt. Dat sluit aan op
 stappen vraagt.
 
 `problems/3_basis` gebruikt beide woorden in één bestand: `## Stap 1` tot en met
-`## Stap 6` bouwen samen één programma op, `### Opdracht 1` tot en met
-`### Opdracht 3` staan los van elkaar. Dat de schrijfwijzer juist dat bestand als
-model aanwijst en dat het onder deze regel klopt zonder te worden aangepast, is
-het bewijs dat de regel dit materiaal beschrijft in plaats van eraan wordt
-opgelegd.
+`## Stap 6` bouwen samen één programma op, en de `### Opdracht` daarna bouwt daar
+niet op voort. Dat de schrijfwijzer juist dat bestand als model aanwijst en dat
+het onder deze regel klopt zonder te worden aangepast, is het bewijs dat de regel
+dit materiaal beschrijft in plaats van eraan wordt opgelegd.
 
 ### Waar de regel over gaat
 
@@ -220,9 +219,9 @@ zij hier bij.
 - **Een ongenummerde `Opdracht`-kop**, waar een document één taak draagt in
   plaats van een reeks. **Nummer die niet alsnog**: er is geen reeks om in mee te
   tellen, en `problems/2_basis.ipynb` heeft juist geen *Opdracht 4* - zie
-  `handleidingen/week_2.md`. Drie vindplaatsen: `### Opdracht` in
-  `practicals/2_rochambeau.ipynb` en `problems/2_basis.ipynb`, en `## Opdracht`
-  in `practicals/4_python_bat.md`.
+  `handleidingen/week_2.md`. Vier vindplaatsen: `### Opdracht` in
+  `practicals/2_rochambeau.ipynb`, `problems/2_basis.ipynb` en
+  `problems/3_basis.ipynb`, en `## Opdracht` in `practicals/4_python_bat.md`.
 
 Wat níet blijft is een **genummerde** `Opgave N`, of dat nu een kop is of een
 label. Dat is een opdracht.
@@ -231,8 +230,8 @@ label. Dat is een opdracht.
 
 **Een kaal cijfer, doorlopend binnen de reeks.** Dus geen `1-A`, geen `2b`, en
 geen herstart halverwege een reeks. Eén document mag meer dan één reeks dragen:
-`problems/3_basis` draagt `Stap 1` tot en met `6` en daarna `Opdracht 1` tot en
-met `3`, en dat zijn twee reeksen en geen herstart.
+`Stap 1` tot en met `6` gevolgd door `Opdracht 1` tot en met `3` zijn twee
+reeksen en geen herstart.
 
 **Een uitwerkingskop spiegelt de opgavekop die hij oplost: hetzelfde nummer, geen
 letter.** Deelvragen staan in de lopende tekst, precies zoals in de opgave.
