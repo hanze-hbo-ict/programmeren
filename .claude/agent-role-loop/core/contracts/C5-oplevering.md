@@ -14,6 +14,10 @@ De relevante mechanische controles zijn groen vóór oplevering; zie
   Geef ook de actuele C1-toewijzing mee.
 - **Relevante besluiten:** geldende menselijke keuzes, exacte bron en relevante
   normvindplaats. Geef de benodigde tekst mee als een bron niet bereikbaar is.
+- **Bij tekstwerk:** de geldende redactionele uitgangspunten uit C2 of C0 + C1,
+  inclusief doelgroep, tekstdoel en exacte stijlreferenties. Geef de benodigde
+  passages mee als de bron niet bereikbaar is. Dit zijn opdrachtgegevens, geen
+  verdediging van de gemaakte tekst.
 - **Gevolgen en beperkingen:** bewuste afhankelijkheden, nog niet uitgevoerde
   besluiten elders en gevolgen buiten de scope; of `<geen>`.
 - **Objectief verificatiebewijs:** controles, commando's, resultaten en wat ze

@@ -16,6 +16,12 @@ herkenbaar gescheiden van voorstellen. Route en diepte volgen [loop.md](../loop.
   wijzigingslijst of scenario met verwachte uitkomst voor proces-/normtekst.
 - **Onderdelen:** per zelfstandig beoordeelbaar onderdeel een geordende checklist,
   bestanden, afhankelijkheden, criterium-ID's en objectief eindpunt.
+- **Redactionele uitgangspunten bij tekstwerk:** per onderdeel wat de student hier
+  moet begrijpen of doen, welke voorkennis beschikbaar is, welke nieuwe begrippen
+  nodig zijn en welke uitleg later komt (met bestemming). Selecteer zelf concrete
+  passages uit het oorspronkelijke materiaal, met vindplaats en de schrijfkeuzes
+  die behouden moeten blijven. Ontbreekt een passende referentie, vermeld dat.
+  Voor een kleine correctie volstaat de relevante afspraak in C0 + C1.
 - **Verificatie:** per onderdeel `assertions-draaien` als uitgangspunt voor code;
   `uitvoer-nagerekend` of `handmatig-met-verwachte-uitkomst` met motivering.
   Bij proceswerk benoem concrete routescenario's en verwachte overdrachten.

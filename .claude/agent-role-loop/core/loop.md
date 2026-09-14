@@ -40,8 +40,10 @@ Voeg gericht toe:
 - **Verhelderaar:** onderling afhankelijke onderdelen of onzekerheid over de
   uitvoerbaarheid van het verificatieplan. Toetst C2; niet automatisch na elk C2.
 - **Mens:** altijd vóór uitvoering van een ontwerp, en ook zonder ontwerp bij
-  verwijderen van materiaal, verplaatsen tussen vakken of een nieuw inhoudelijk
+  verwijderen van leerinhoud of noodzakelijke ondersteuning, verplaatsen tussen
+  vakken of een nieuw inhoudelijk
   besluit. C4 kan dan naar de concrete uitvoeropdracht in C0 + C1 verwijzen.
+  Redactioneel schrappen binnen de goedgekeurde afbakening volgt de auteursrol.
   Een wijziging aan curriculum of conventies vraagt de mens, niet automatisch
   alle agents. Een al gegeven expliciet besluit vastleggen, niet opnieuw vragen.
 

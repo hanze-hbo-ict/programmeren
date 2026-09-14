@@ -136,8 +136,10 @@ Een beginner moet altijd weten of hij uitleg leest of iets moet doen.
 ### De vorm van een opgave
 
 Beknopt betekent niet dat er minder op de pagina staat, maar dat de student
-minder hoeft te lezen om te weten wat hij moet doen. Structuur doet dat werk,
-niet weglaten.
+minder hoeft te lezen om te weten wat hij moet doen. Gebruik daarvoor structuur
+én selectie: schrap herhaling en zinnen zonder functie. Bewaar de uitleg,
+voorbeelden en hints die de student nodig heeft. Uitleg voor een latere stap
+krijgt daar een plek, binnen de afgesproken opbouw.
 
 De vaste vorm, uitgewerkt in [`problems/3_basis`](../source/problems/3_basis.ipynb):
 
