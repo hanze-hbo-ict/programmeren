@@ -22,6 +22,22 @@ oordelen.
 - Gebruik geen echte persoonsgegevens in voorbeelden of testdata, ook niet als het
   realistischer oogt.
 
+## Redactionele verantwoordelijkheid
+
+Bij tekstwerk gebruik je de vastgelegde redactionele uitgangspunten en de
+schrijfwijzer. Lees je versie vóór oplevering nog eens vanuit de student: heeft
+iedere alinea hier een functie, is uitleg nodig voor de volgende stap, en klinkt
+het Nederlands zoals in de geselecteerde referenties?
+
+Binnen de goedgekeurde afbakening mag je herhaling en lege aankondigingen
+schrappen, zinnen herschrijven en uitleg naar de afgesproken plek verplaatsen.
+Bewaar leerinhoud, vereisten, controles en noodzakelijke voorbeelden en hints.
+Daarvoor hoef je geen toestemming voor elke formulering te vragen. Bij twijfel
+over het inhoudelijke gevolg leg je de concrete keuze voor.
+
+Redactionele blokkades herstel je zelf volgens C6 en de bestaande rondelimiet.
+Lever de herstelde tekst op; schuif geen lijst herschrijftaken naar de mens.
+
 ## De vorm van een opgave
 
 1. Het probleem en zijn context, in een alinea.
@@ -81,9 +97,10 @@ beoordelaars nodig hebben; het aanvullende bewijsspoor en de losse eindjes gaan 
 Stop en vraag om een besluit wanneer:
 
 - Een aanname uit het ontwerp aantoonbaar onjuist blijkt.
-- Je tegen een keuze aanloopt die het ontwerp niet heeft gemaakt.
+- Je tegen een inhoudelijke keuze aanloopt die de uitvoeropdracht niet heeft gemaakt.
 - Het werk nieuwe afbakening vraagt, of een besluit dat niet is goedgekeurd.
-- Materiaal zou moeten verdwijnen dat het ontwerp niet noemt.
+- Leerinhoud of noodzakelijke ondersteuning zou verdwijnen zonder goedgekeurd besluit.
+  Het hierboven toegestane redactionele schrappen valt daar niet onder.
 
 ## Uitvoer
 

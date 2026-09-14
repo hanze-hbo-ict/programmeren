@@ -814,3 +814,11 @@ controleren verwijzingen en syntax, niet deze zichtbare hiërarchie.
 gerenderde TOC en paginakoppen. De eerstejaarsbeoordelaar heeft die controle als
 expliciete stap gekregen. De concrete correctie in #205 was `Uitwerkingen Picobot`
 naar `Picobot`.
+
+## Redactionele selectie en herstel — 14 september 2026
+
+De auteursrol verbood ongenoemd materiaal te laten verdwijnen; de redacteur mocht
+alleen op verslechtering blokkeren. Daarmee kon verbeterde maar nog ontoereikende
+tekst passeren. [#214](https://github.com/hanze-hbo-ict/programmeren/issues/214)
+verduidelijkt selectie door ontwerper/auteur en beoordeling tegen de opdracht en
+schrijfwijzer. Besluit, bronbeperking en scenario's: [214-redactie.md](214-redactie.md).

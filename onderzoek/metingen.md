@@ -982,3 +982,10 @@ De gecontroleerde rijsommen, verschillen met historische samenvattingen en de
 vooraf goedgekeurde proefafspraken staan in [203-proef.md](203-proef.md). De twee
 praktijkproeven zijn nog niet gestart. Invoeringskosten horen apart van hun
 kosten; afwezige meetgegevens betekenen geen besparing.
+
+## #214 — Redactionele verantwoordelijkheid
+
+Op 14 september 2026: kleine procesroute, uitvoering door Codex en onafhankelijke
+redactionele beoordeling op GitHub. Geen boekbuild; toepasselijke pre-commit en
+concrete scenario's in [214-redactie.md](214-redactie.md). Tokens en rolduur zijn
+niet beschikbaar. Vermindering van menselijk redactiewerk is nog niet gemeten.

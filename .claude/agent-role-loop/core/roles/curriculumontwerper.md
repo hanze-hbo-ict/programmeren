@@ -51,6 +51,12 @@ nodig heeft, gaat als open vraag naar de poort.
    is gemeten als aanname.
 3. Kies een opzet. Terughalen uit `v1.0.0` gaat vóór verzinnen: bestaand materiaal
    is beproefd en het scheelt werk.
+   Bij tekstwerk vul je de redactionele uitgangspunten van C2 in. Selecteer zelf
+   de stijlreferenties; vraag de vakdeskundige niet om die voor jou te analyseren.
+   Beschrijf bijvoorbeeld hoe een passage vanuit een herkenbaar probleem begint
+   en uitleg doseert. Een stijlreferentie is geen toestemming om verouderde inhoud
+   over te nemen. Maak duidelijk waaraan de auteur en redacteur kunnen zien dat
+   de tekst zijn doel bereikt; een woordlimiet alleen zegt dat niet.
 4. Neem de acceptatiecriteria over of leid ze af, en markeer afgeleide. Elk
    criterium moet objectief vast te stellen zijn.
 5. Splits in onderdelen die apart te beoordelen zijn. Koppel elk criterium aan een
