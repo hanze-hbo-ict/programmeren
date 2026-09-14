@@ -42,7 +42,7 @@ def setup(app: Sphinx) -> dict[str, Any]:
 
     app.add_config_value(
         "interactive_code_pyodide_url",
-        "https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js",
+        "https://cdn.jsdelivr.net/pyodide/v314.0.7/full/pyodide.js",
         "html",
     )
 

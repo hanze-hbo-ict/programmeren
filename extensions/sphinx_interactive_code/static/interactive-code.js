@@ -1,13 +1,18 @@
 // Vanilla ES module — no build step required.
 // Depends on: Pyodide (CDN), CodeMirror 6 (esm.sh CDN)
 //
+// Pyodide `v314.0.7` draagt CPython 3.14.2 - gemeten in zijn `pyodide-lock.json`,
+// niet afgeleid uit het versienummer. Vanaf de 314-reeks draagt het versienummer de
+// Python-versie; daarvóór heette dezelfde reeks 0.27 (3.12.7) en 0.28 (3.13.2). De
+// repo bouwt zelf op 3.14, dus browser en build draaien nu dezelfde taalversie.
+//
 // De versies staan vast, tot op de patch. `@6` lost bij elk paginabezoek opnieuw op
 // naar de nieuwste 6.x, en dan kan een breaking change in een minor de editor bij een
 // student breken zonder dat er in deze repo iets verandert - en zonder dat een build
 // faalt om het te melden. Wie ze verhoogt, doet dat in een branch en kijkt live.
 
 const DEFAULT_PYODIDE_URL =
-  "https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js";
+  "https://cdn.jsdelivr.net/pyodide/v314.0.7/full/pyodide.js";
 
 // ---------------------------------------------------------------------------
 // i18n — strings injected by Sphinx as window.SIC_I18N, English fallbacks here
