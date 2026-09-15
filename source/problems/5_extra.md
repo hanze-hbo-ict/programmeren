@@ -4,6 +4,14 @@
 
 ![De mandelbrotverzameling in zwart op een wit vlak, met de kenmerkende gekartelde rand](images/5/640px-Mandel_zoom_00_mandelbrot_set.jpg)
 
+Bekijk als eerste indruk de [Mandelbrot-set zoom in 4K
+(video)](https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a9/Mandelbrot_set_zoom_4K.webm/Mandelbrot_set_zoom_4K.webm.720p.vp9.webm):
+
+[![Klikbare preview van de Mandelbrot-set zoom](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Mandelbrot_set_zoom_4K.webm/330px--Mandelbrot_set_zoom_4K.webm.jpg)](https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a9/Mandelbrot_set_zoom_4K.webm/Mandelbrot_set_zoom_4K.webm.720p.vp9.webm)
+
+Video: **Monaneko**, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
+via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Mandelbrot_set_zoom_4K.webm).
+
 In de [opstap](5_mandelbrot_opstap) en de [basis](5_mandelbrot_basis) heb je de
 berekening voor de mandelbrotverzameling opgebouwd. In deze extra laag maak je
 er een afbeelding van en onderzoek je wat er gebeurt als het venster, het
