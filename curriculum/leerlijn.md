@@ -245,6 +245,7 @@ als zodanig is gemarkeerd.
 | Begrip | Hoort in | Duikt op in | Opmerking |
 |---|---|---|---|
 | `while` | PGM1 week 4 | PGM1 week 2, `practicals/2_rochambeau` | Bewust; de tekst zegt erbij dat lussen later komen |
+| `choice`, en daarmee `import` | PGM1 week 3 | PGM1 week 2, `practicals/2_rochambeau` en `solutions/2_rochambeau` | Bewust; de opgave geeft de regel in de begincode met de uitleg als commentaar erachter, en de uitwerking zegt erbij hem voor nu aan te nemen. Vastgesteld door de vakdeskundige, 15 september 2026 |
 | list comprehension | PGM2 week 1 | PGM1 week 6, `practicals/6b_images` | Onderwerp van een hele PGM2-week |
 | functiedefinitie | PGM1 week 3 | PGM1 week 2, `problems/2_basis` | Als gegeven code, niet om te schrijven. De docstring in datzelfde blok is onderdompeling; of dat ook voor de `def` geldt is nog niet besloten |
 | tuple | PGM1 week 7 | PGM1 week 5, laag extra, `problems/5_extra.md` | Ongemarkeerd; introduceert ook *methode* en *object*. Buiten bereik van de herzieningen in #102/#134 |
