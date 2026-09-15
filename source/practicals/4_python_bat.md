@@ -31,7 +31,7 @@ def double_char(string):
 
 Deze oplossing volgt het [lusrecept](/lectures/4a_lussen.ipynb#het-lusrecept) uit het college. Ga na hoe:
 
-1. de verzamelvariabele `result` begint op `''`, de lege string
+1. de verzamelvariabele `result` begint op `""`, de lege string
 2. we langs de karakters van `string` lopen, dus een `for` op element
 3. er per stap `char * 2` bij komt
 4. we klaar zijn als `string` op is

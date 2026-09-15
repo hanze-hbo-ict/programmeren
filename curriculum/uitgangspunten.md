@@ -326,7 +326,7 @@ draait wel.
 | Een weekpagina vat samen wat volgt en waarop het voortbouwt | praktisch | gesloten, nog niet uitgevoerd (#167) |
 | Elk opgaveniveau hoort een uitwerking te hebben | didactisch | gesloten, nog niet uitgevoerd; 17 van de 31 ontbreken |
 | Week 4 krijgt een lusrecept van vijf vragen, in `4a_lussen` | didactisch | gesloten, **uitgevoerd** met #153; week 5 pikt het nog niet op (#163) |
-| Recursie gaat uit PGM1 week 4, op alle vier de plekken | organisatorisch | gesloten, **deels uitgevoerd**: 1 van 4 met #153 (midtermopdracht 13). `unique` (2×) en `find_number_of_decimals` staan er nog; zie ronde twee en #126 |
+| Recursie gaat in beginsel naar PGM2; `unique` blijft in PGM1 als herkenbaar iteratief voorbeeld met vooruitwijzing | organisatorisch | gesloten, uitgevoerd in #162: de overige recursieplekken zijn verwijderd; recursie wordt uitgebreider behandeld in PGM2 |
 | Eerst de weken van PGM1 afronden; het materiaal moet zo snel mogelijk live | organisatorisch | staand |
 | Een docentenhandleiding gaat per week en helpt de docent die week te geven; hij is geen leeswijzer | didactisch | gesloten, **deels uitgevoerd**: week 1 en 2 staan er met #182; de weken 3 tot en met 12 ontbreken, zie #95 |
 | Handleidingen zijn repo-materiaal en geen onderdeel van het boek | organisatorisch | gesloten, uitgevoerd |

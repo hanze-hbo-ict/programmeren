@@ -24,7 +24,7 @@ dan de week waarin het hier staat.
 | 1 | Introductie, Picobot | - | state machine, staat, regels, string, algoritme |
 | 2 | Variabelen en condities | P1, P2, P3 | toekenning, variabele, operatoren, `if`, lijst, assertion |
 | 3 | Functies | P5, P6, P7, A2 | functiedefinitie, parameter, docstring, `return`, `None`/`NoneType`, `TypeError`, `NameError`, stack, frame, heap, lokale variabele, module en `import`, `range`, `sum`, `choice`, iterator, signatuur, main-functie |
-| 4 | Lussen | A1 | `for`, `while`, begrensde en onbegrensde lus, `break`, `continue`, het lusrecept |
+| 4 | Lussen | A1 | `for`, `while`, begrensde en onbegrensde lus, `break`, `continue`, het lusrecept, `in` en `_` als gangbare expressies |
 | 5 | Geneste lussen | A1, A3 | geneste lus, 2D-lijst, ASCII-art, bordrepresentatie |
 | 6 | Bestanden en data | bestanden † | bits, bytes, ASCII, newline, `with open`, beeldbewerking |
 | 7 | Mutabiliteit en algoritmeontwerp | P4, A3 | mutatie, functiecompositie, deelprobleem, algoritmeontwerp, tuple |
@@ -113,7 +113,7 @@ PGM2 week 1: die week mag vooruitlopen op wat hier is afgesproken. Zie de rij in
 
 ### Verdeling van het opgavemateriaal
 
-Omvang in woorden per niveau, gemeten over `problems/` voor de weken 2 tot en met
+Omvang in woorden per niveau, gemeten als de som van `len("".join(cell["source"]).split())` per notebookcel over `problems/` voor de weken 2 tot en met
 7. Een ruwe maat, maar de verhoudingen zijn te groot om aan de meetmethode te
 liggen. Hermeten bij de herziening van week 5; de weken 3, 6 en 7 waren sinds de
 vorige meting ook veranderd.
@@ -122,7 +122,7 @@ vorige meting ook veranderd.
 |---|---|---|---|---|
 | 2 | 1.145 | 1.089 | 463 | 2.697 |
 | 3 | 242 | 1.143 | 176 | **1.561** |
-| 4 | 616 | 1.034 | 1.048 | 2.698 |
+| 4 | 638 | 1.100 | 1.048 | 2.786 |
 | 5 | 674 | 2.940 | **5.354** | 8.968 |
 | 6 | 353 | 1.343 | 772 | 2.468 |
 | 7 | 532 | 1.110 | **3.713** | 5.355 |
