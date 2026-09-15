@@ -822,3 +822,14 @@ alleen op verslechtering blokkeren. Daarmee kon verbeterde maar nog ontoereikend
 tekst passeren. [#214](https://github.com/hanze-hbo-ict/programmeren/issues/214)
 verduidelijkt selectie door ontwerper/auteur en beoordeling tegen de opdracht en
 schrijfwijzer. Besluit, bronbeperking en scenario's: [214-redactie.md](214-redactie.md).
+
+## Transitieve CDN-dependencies — 15 september 2026
+
+De interactieve CodeMirror-editor importeert modules via esm.sh. Een directe
+versiepin zet de transitieve graaf niet vast: caret-ranges kunnen verschillende
+module-URL's voor `@codemirror/state` opleveren. De browser behandelt die als
+verschillende modules, waardoor `instanceof`-controles falen. Werkitem [#221](https://github.com/hanze-hbo-ict/programmeren/issues/221)
+zet de state-dependency daarom expliciet vast en controleert de gebouwde editor.
+
+Deze reparatie raakt de CodeMirror-graaf, niet de Pyodide-runtime. De repo blijft
+Pyodide `v314.0.7` gebruiken. Vendoring is een afzonderlijke vervolgbeslissing.
