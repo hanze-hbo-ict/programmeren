@@ -675,6 +675,41 @@ Twee keer een patroon niet geijkt, allebei in dezelfde sessie:
 
 Hier hoort wat met de hand is gedaan omdat het te klein leek voor een werkitem.
 
+### 15 september 2026, de vergelijkingssectie van `2b` (één commit)
+
+**Wat het was.** Vier redactionele ingrepen in `lectures/2b_strings_en_lists.ipynb`, cellen
+57-67: de kop `` ## `max` of `min` `` heet nu `## Groter en kleiner` en `` ### `str`ings to
+the `max` `` heet `### Element voor element`, een dangling zin is afgemaakt, en drie typo's
+zijn weg. Plus de bijbehorende regel in `handleidingen/week_2.md`, die beide koppen bij naam
+noemt.
+
+**De aanleiding, en wat de meting ervan maakte.** De vakdeskundige signaleerde dat Opdracht 5
+(`[4,2] > [42]`, `"hoi" > "doei"`) kennis veronderstelt die nergens is besproken, en vroeg of
+zij te veel docentuitleg kost. **Die premisse bleek onjuist**: cellen 57-67 staan vier cellen
+boven de opdracht en leggen precies de regel uit, met drie voorbeelden in dezelfde vormen. De
+zes items zijn ook nagelopen op ASCII-afhankelijkheid: geen enkele kruist een
+hoofdletter/kleine-lettergrens of zet cijfers naast letters, dus alfabetische volgorde plus de
+prefixregel volstaat. Item 1 en 6 worden beslist op het eerste getal en raken de string nooit.
+
+Wat er wél aan mankeerde, en waardoor de sectie niet als uitleg wordt gevonden:
+
+- **De kop beloofde iets anders dan er stond.** `max(` en `min(` komen in het hele bestand nul
+  keer voor.
+- **De ASCII-belofte werd opgeworpen en laten vallen.** *"Intuïtief zou je denken dat dit een
+  vergelijking is op basis van de positie in het alfabet"* kondigt een weerlegging aan die
+  nooit kwam; de volgende zin bevestigde het alfabetverhaal gewoon. Daar zat de docentvraag.
+- Drie slordigheden in de uitleg van `"Mug" > "Muis"`: *de twee letters*, *alfebet*, en een
+  regel zonder punt.
+
+**Waarom buiten de lus.** Vier redactionele correcties in één sectie, op instructie van de
+vakdeskundige: *"mag idd als een enkele commit, geen loop op loslaten."* De zes
+demonstratiecellen dragen geen `skip-execution` en draaien dus bij elke build; de uitvoer die
+de student ziet is daarmee gecontroleerd.
+
+**Of er een beoordelaar overheen is gegaan.** **Nee.** Bewust niet, en dat is hier de
+aantekening waard: het contrast met de rochambeau-ingreep hierboven, waar de lezer vier
+moet-punten vond, staat in dezelfde week in ditzelfde bestand.
+
 ### 15 september 2026, de uitwerking van rochambeau (PR #216)
 
 **Wat het was.** `source/solutions/2_rochambeau.ipynb` is volledig vervangen. De oude
