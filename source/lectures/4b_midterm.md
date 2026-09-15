@@ -75,10 +75,10 @@ else:
 
 Wat drukt dit programma af?
 
-- **a.** "groep 1"
-- **b.** "groep 2"
-- **c.** "groep 3"
-- **d.** "groep 4"
+- **a.** `groep 1`
+- **b.** `groep 2`
+- **c.** `groep 3`
+- **d.** `groep 4`
 
 ## Opdracht 5
 
@@ -89,10 +89,10 @@ print(woord[-1])
 
 Wat drukt dit programma af?
 
-- **a.** "H"
-- **b.** "a"
-- **c.** "l"
-- **d.** "o"
+- **a.** `H`
+- **b.** `a`
+- **c.** `l`
+- **d.** `o`
 
 ## Opdracht 6
 
@@ -103,10 +103,10 @@ print(woord[3:6])
 
 Wat drukt dit programma af?
 
-- **a.** "nze"
-- **b.** "nzeh"
-- **c.** "zeh"
-- **d.** "zeho"
+- **a.** `nze`
+- **b.** `nzeh`
+- **c.** `zeh`
+- **d.** `zeho`
 
 ## Opdracht 7
 
@@ -117,10 +117,10 @@ print(woord[-1:1:-2])
 
 Wat drukt dit programma af?
 
-- **a.** "loceoen"
-- **b.** "azhgsho"
-- **c.** "Hneoecol"
-- **d.** ""
+- **a.** `loceoen`
+- **b.** `azhgsho`
+- **c.** `Hneoecol`
+- **d.** een lege regel
 
 ## Opdracht 8
 
