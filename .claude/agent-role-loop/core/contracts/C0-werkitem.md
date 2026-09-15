@@ -37,10 +37,11 @@ Optionele velden (laat leeg met `<geen>`):
   curriculumontwerper ze af en bevestigt de vakdeskundige ze bij de poort. Het
   laatste criterium staat vast en hoort in elk werkitem:
 
-  > Voldoet aan de toepasselijke conventies in `conventies/conventies.md`, en
-  > de toepasselijke controles zijn schoon. Voor lesmateriaal omvat dit een
-  > schone build; voor uitsluitend procesdocumentatie zijn concrete
-  > routescenario's en relevante controles voldoende.
+  > Voldoet, voor zover van toepassing, aan de toepasselijke conventies in
+  > `conventies/conventies.md`, en de toepasselijke controles zijn schoon. Voor
+  > lesmateriaal omvat dit een schone build; voor uitsluitend
+  > procesdocumentatie zijn concrete routescenario's en relevante controles
+  > voldoende.
 
 - **Randvoorwaarden** - harde grenzen: een deadline, een besluit dat vastligt, een
   leeruitkomst die gedekt moet blijven.
