@@ -711,7 +711,29 @@ een student die de twee naast elkaar legt om zichzelf na te kijken loopt daarop 
 uitwerking die klopt kan nog steeds de verkeerde uitwerking zijn**, en dat verschil meet geen
 test; daar is de lezer voor.
 
-Vijf zou-punten zijn ook verwerkt. Alles staat in `7f3eb50d`.
+Vijf zou-punten zijn ook verwerkt; alles staat in `7f3eb50d`.
+
+**Nagekomen, na lezing door de vakdeskundige.** Twee van de vier oordelen hierboven
+moesten worden bijgesteld, en de tweede bijstelling is de leerzame.
+
+*M4 klopte maar half.* `lectures/2a_var_con.ipynb` noemt `( )` als groepering in de
+operatorentabel en zegt bij het `if`-statement dat haakjes om een conditie mogen maar niet
+hoeven. De student kent haakjes dus wel; nieuw is alleen dat een regel doorloopt zolang er
+een openstaat. De alinea sluit daar nu op aan in plaats van haakjes te introduceren.
+
+*M1 betrof een erkende uitzondering.* De vakdeskundige: *"`from random import choice` is een
+uitzondering, tijdens lessen zeg ik vaak neem dit aan voor nu."* Die vooruitverwijzing stond
+nog nergens vast - de tabel *Vooruitverwijzingen om na te lopen* in `curriculum/leerlijn.md`
+had `while` voor dit bestand al staan en `choice` niet - en staat er nu in.
+
+*En mijn eerste herstel van M3 was zelf fout.* De tegenspraak was weggenomen door er een
+regel voor in de plaats te zetten: *"kies de vorm die het kortst blijft bij het aantal
+gevallen dat je hebt."* Die regel is onwaar, en dat was in het bestand zelf te meten: de
+compacte vorm is bij drie wapens al de kortste (10 regels logica tegen 17 en 22), terwijl
+diezelfde pagina zegt haar nog niet te schrijven. **Een tegenspraak wegschrijven met een
+regel die je niet hebt nagemeten, levert een nieuwe tegenspraak op.** Er staat nu één
+maatstaf - hoeveel benoemt de vorm hardop - met de gemeten getallen voor drie én vijf
+wapens erbij. Dat staat in `7492f3e2`.
 
 **Eén afwijking van de rolnorm**, door de lezer zelf gemeld: `beoordelaar-eerstejaars.md` zegt
 *"Je kijkt niet in de uitwerking"*, en hier was de uitwerking juist het artefact. De rol is
