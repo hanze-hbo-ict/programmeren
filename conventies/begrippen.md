@@ -47,6 +47,7 @@ forceer geen Nederlandse vertaling. Voor dit materiaal werkt dat zo uit:
 | Melding bij een fout | **foutmelding** | error, exception, uitzondering | Voor het Python-mechanisme: `exception` |
 | Plek waar bestanden in staan | **directory** | map (41×), folder (22×) | Zie hieronder |
 | De eerste regel van een functie | **signatuur** | signature (4×) | Vastgesteld door de vakdeskundige op 10 september 2026 |
+| Uitdrukking die waar of onwaar is en bepaalt of een blok draait | **conditie** | voorwaarde (14×) | Vastgesteld door de vakdeskundige op 15 september 2026 |
 
 ## Staat, en state machine
 
@@ -97,11 +98,6 @@ verzamelen, niet andersom, dus de bredere naam is de juiste.
 
 De term staat in `source/lectures/4a_lussen.ipynb` (het lusrecept), in
 `source/practicals/4_python_bat.md` en nu ook in de week 4-uitwerkingen.
-
-## Wegwerpvariabele
-
-In een lus waarin de waarde niet wordt gebruikt, schrijven we vaak `_` als naam.
-Dit is een gangbare wegwerpvariabele.
 
 ## Begrensde en onbegrensde lus
 

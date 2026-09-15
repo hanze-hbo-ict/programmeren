@@ -24,7 +24,7 @@ dan de week waarin het hier staat.
 | 1 | Introductie, Picobot | - | state machine, staat, regels, string, algoritme |
 | 2 | Variabelen en condities | P1, P2, P3 | toekenning, variabele, operatoren, `if`, lijst, assertion |
 | 3 | Functies | P5, P6, P7, A2 | functiedefinitie, parameter, docstring, `return`, `None`/`NoneType`, `TypeError`, `NameError`, stack, frame, heap, lokale variabele, module en `import`, `range`, `sum`, `choice`, iterator, signatuur, main-functie |
-| 4 | Lussen | A1 | `for`, `while`, begrensde en onbegrensde lus, `break`, `continue`, het lusrecept, `in` en `_` als gangbare expressies |
+| 4 | Lussen | A1 | `for`, `while`, begrensde en onbegrensde lus, `break`, `continue`, het lusrecept, de operator `in`, `_` als wegwerpvariabele |
 | 5 | Geneste lussen | A1, A3 | geneste lus, 2D-lijst, ASCII-art, bordrepresentatie |
 | 6 | Bestanden en data | bestanden † | bits, bytes, ASCII, newline, `with open`, beeldbewerking |
 | 7 | Mutabiliteit en algoritmeontwerp | P4, A3 | mutatie, functiecompositie, deelprobleem, algoritmeontwerp, tuple |
@@ -70,9 +70,11 @@ Die zin in `2_rochambeau` staat overigens al als bekende afwijking in
 `conventies/codeconventies.md`, op een andere grond: hij vertelt te vroeg dat code
 Engels is. Beide lopen mee met de herziening van week 2.
 
-**Recursie wordt in PGM1 niet onderwezen.** Week 3 laat bij de functies alleen
-zien dát een functie zichzelf kan aanroepen. De leesopdrachten daarover zijn naar
-de PGM2-recursieweek verplaatst.
+**Recursie gaat in beginsel naar PGM2 en wordt in PGM1 niet onderwezen.** Week 3
+laat bij de functies alleen zien dát een functie zichzelf kan aanroepen. De
+leesopdrachten daarover zijn naar de PGM2-recursieweek verplaatst, en sinds #162
+staat er in week 4 geen recursieve functie meer: `unique` is daar iteratief. De
+afbakening zelf staat als besluit in [uitgangspunten.md](uitgangspunten.md).
 
 **Binair en talstelsels vervallen**, en week 6 wordt de week van bestanden. De
 beeldbewerking blijft, maar dan als wat het al is: een bestand inlezen, bewerken
@@ -113,24 +115,30 @@ PGM2 week 1: die week mag vooruitlopen op wat hier is afgesproken. Zie de rij in
 
 ### Verdeling van het opgavemateriaal
 
-Omvang in woorden per niveau, gemeten als de som van `len("".join(cell["source"]).split())` per notebookcel over `problems/` voor de weken 2 tot en met
-7. Een ruwe maat, maar de verhoudingen zijn te groot om aan de meetmethode te
-liggen. Hermeten bij de herziening van week 5; de weken 3, 6 en 7 waren sinds de
-vorige meting ook veranderd.
+Omvang in woorden per niveau, gemeten over `problems/`, voor de weken 2 tot en
+met 7. De maat: per notebook de som van `len("".join(cel["source"]).split())`
+over alle cellen, en bij een `.md`-bestand het aantal woorden van het hele
+bestand. Een ruwe maat, maar de verhoudingen zijn te groot om aan de meetmethode
+te liggen.
+
+Alleen de rij van week 4 is op de huidige stand hermeten (#162); de andere rijen
+dateren van de herziening van hun eigen week en lopen dus achter. Hermeten bij de
+herziening van week 5; de weken 3, 6 en 7 waren sinds de vorige meting ook
+veranderd.
 
 | Week | opstap | basis | extra | Totaal |
 |---|---|---|---|---|
 | 2 | 1.145 | 1.089 | 463 | 2.697 |
 | 3 | 242 | 1.143 | 176 | **1.561** |
-| 4 | 638 | 1.100 | 1.048 | 2.786 |
+| 4 | 672 | 1.066 | 1.048 | 2.786 |
 | 5 | 674 | 2.940 | **5.354** | 8.968 |
 | 6 | 353 | 1.343 | 772 | 2.468 |
 | 7 | 532 | 1.110 | **3.713** | 5.355 |
-| **Totaal** | **3.562** | **8.659** | **11.526** | 23.747 |
+| **Totaal** | **3.618** | **8.691** | **11.526** | 23.835 |
 
 Drie dingen vallen op.
 
-**Het zwaartepunt ligt in de optionele laag.** Extra is 49% van het materiaal en
+**Het zwaartepunt ligt in de optionele laag.** Extra is 48% van het materiaal en
 een derde groter dan basis. Daar zitten Mandelbrot, Game of Life, Pi met
 pijltjes en beeldcompressie: precies de opgaven waarin een probleem stap voor
 stap wordt opgebouwd. Zie [uitgangspunten.md](uitgangspunten.md) voor de
