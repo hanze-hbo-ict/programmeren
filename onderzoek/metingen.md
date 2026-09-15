@@ -675,6 +675,50 @@ Twee keer een patroon niet geijkt, allebei in dezelfde sessie:
 
 Hier hoort wat met de hand is gedaan omdat het te klein leek voor een werkitem.
 
+### 15 september 2026, de uitwerking van rochambeau (PR #216)
+
+**Wat het was.** `source/solutions/2_rochambeau.ipynb` is volledig vervangen. De oude
+uitwerking is nooit door een rol geschreven: zij kwam met `79a0680e` (28 augustus 2024,
+`suzanbones`) uit `referentie/cs5/problems/rochambeau/index.md` en is daarna alleen door de
+Sphinx-migratie en een spellingronde aangeraakt. Zij loste een opgave van week 2 op met
+`import time` en zeven `time.sleep`-pauzes, een losse docstring op moduleniveau, drie takken
+die alle negen combinaties uitschrijven met regelcommentaar van 140 tekens, en een uitbreiding
+van ruim honderd regels binnen `while True:` met `break` - een lus komt in week 4. Er staan nu
+vier programma's, alle vier binnen wat de week biedt: de canonieke vorm, dezelfde met alleen
+`if` en `else`, de compacte vorm met `and`/`or`, en RPS-5 in die compacte vorm.
+
+**Waarom buiten de lus.** De vakdeskundige merkte de uitwerking aan als een grote red flag -
+*"absurd uitgewerkt/gecompliceerd in relatie tot wat de studenten weten"* - en gaf drie
+canonieke vormen woordelijk op. Daarmee zat het ontwerp er al in en bleef er één bestand over
+om te schrijven; de instructie erbij was *"de rochambeau oplossing moet iig nu per direct
+aangepakt worden"*, zonder meta-werkitem. Dat is de regel voor proportionaliteit uit
+`loop.md`: een branch met een pull request en een onafhankelijke lezer.
+
+**Of er een beoordelaar overheen is gegaan.** Ja, één: de eerstejaars, op commit `12c20d25`.
+Oordeel **NIET AKKOORD**, met vier moet-punten, en ze waren alle vier terecht:
+
+| | Wat hij vond | Bewijs |
+|---|---|---|
+| 1 | De inleiding beweerde "niets van buiten week 2" en noemde daarin `from random import choice` | `curriculum/leerlijn.md` zet *module en `import`* en `choice` in week 3; in heel week 2 komt de regel alleen voor in de gegeven begincode van het practicum |
+| 2 | Het tweede programma was niet het eerste, uitgeschreven | Het eerste stelde drie vragen over `comp`, het tweede twee: `if comp == "schaar":` ontbrak |
+| 3 | "Geen van de drie is beter dan de andere" werd twee keer weersproken | Cel 6 en cel 8 noemen elk een vorm slechter; cel 10 noemt de derde juist beter |
+| 4 | De meerregelige voorwaarde tussen haakjes was nergens geïntroduceerd | In al het week 1- en week 2-materiaal eindigt geen enkele coderegel op `(`, `[` of `,` |
+
+Punt 2 is het punt dat telt: dat is een **defect dat de vier meetronden niet vingen**. Alle vier
+de programma's waren nagerekend over elke combinatie - 9, 9, 9 en 25, nul afwijkingen - en het
+tweede programma is dan ook correct. Het is alleen niet wat de tekst erboven belooft, en juist
+een student die de twee naast elkaar legt om zichzelf na te kijken loopt daarop vast. **Een
+uitwerking die klopt kan nog steeds de verkeerde uitwerking zijn**, en dat verschil meet geen
+test; daar is de lezer voor.
+
+Vijf zou-punten zijn ook verwerkt. Alles staat in `7f3eb50d`.
+
+**Eén afwijking van de rolnorm**, door de lezer zelf gemeld: `beoordelaar-eerstejaars.md` zegt
+*"Je kijkt niet in de uitwerking"*, en hier was de uitwerking juist het artefact. De rol is
+gevraagd omdat de vraag "helpt dit een eerstejaars die zichzelf nakijkt" precies zijn vraag is.
+Of die norm een uitzondering hoort te krijgen voor `solutions/`, is een besluit voor de
+vakdeskundige en staat nog open.
+
 ### 9 september 2026, midden in de lus van #178
 
 **Wat het was.** Eén zin in `conventies/begrippen.md`: de toetsbare zin bij de nummeringsregel
