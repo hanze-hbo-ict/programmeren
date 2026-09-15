@@ -265,7 +265,7 @@ werkcollege in eigenlijke zin: je bouwt samen met de klas één programma op.
 | 4 | 10 | Strings zijn ook geïndexeerd, en negatieve indices | `2b`: `## Strings en indexering`, `### Positie`, `### Negatieve indices` |
 | | | **Pauze** | |
 | 5 | 20 | Slicen, stappen en achteruit lopen | `2b`: `### Slicing`, `### Stappen`, `### Achteruit lopen`, `### Opdracht 2`, `### Opdracht 3`, `### Opdracht 4` |
-| 6 | 10 | Vergelijken: wat is groter, en waarom | `2b`: `` ## `max` of `min` ``, `` ### `str`ings to the `max` ``, `### Opdracht 5` |
+| 6 | 10 | Vergelijken: wat is groter, en waarom | `2b`: `## Groter en kleiner`, `### Element voor element`, `### Opdracht 5` |
 | 7 | 5 | Het spel, de regels, en de begincode lezen | `2_rochambeau`: `# Rochambeau`, `## De regels`, `## Een begin` |
 | 8 | 15 | Samen opbouwen: drie wapens, drie uitkomsten | `2_rochambeau`: `## En verder!`, `### Opdracht` |
 | 9 | 5 | Afronden, en waar ze verder werken | `2_rochambeau`: `## Uitbreidingen`, `## Blijven spelen` |
