@@ -5,7 +5,7 @@ fontsize: 12pt
 geometry: margin=2.5cm
 toc: false
 monofont: DejaVuSansMono.ttf
-title: Oefententamen PGM2 2024/2025
+title: Oefententamen PGM2
 ---
 
 # Proeftoets

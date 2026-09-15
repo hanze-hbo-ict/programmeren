@@ -16,7 +16,7 @@ We gebruiken Python, versie 3. Je kan Python installeren zoals beschreven in de 
 
 ## Welke colleges zijn er?
 
-Elke week zij er drie werkcolleges. Tijdens het eerste werkcollege zal een introductie gegeven worden van het onderwerp van deze week en in de volgende werkcolleges ga je onder begeleiding bezig met de verdere opgaven van die week en is er natuurlijk volop gelegenheid voor het het stellen van vragen. De practicumdocent kan ook extra informatie of een mini-college geven als dit nodig is.
+Elke week zijn er drie werkcolleges. Tijdens het eerste werkcollege zal een introductie gegeven worden van het onderwerp van deze week en in de volgende werkcolleges ga je onder begeleiding bezig met de verdere opgaven van die week en is er natuurlijk volop gelegenheid voor het het stellen van vragen. De practicumdocent kan ook extra informatie of een mini-college geven als dit nodig is.
 
 ## Zijn colleges verplicht?
 

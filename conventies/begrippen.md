@@ -45,7 +45,7 @@ forceer geen Nederlandse vertaling. Voor dit materiaal werkt dat zo uit:
 | Een programma starten | **uitvoeren** | draaien (5×) | |
 | Een functie gebruiken | **aanroepen** | oproepen (1×) | |
 | Melding bij een fout | **foutmelding** | error, exception, uitzondering | Voor het Python-mechanisme: `exception` |
-| Plek waar bestanden in staan | **directory** | map (41×), folder (22×) | Zie hieronder |
+| Plek waar bestanden in staan | **directory** | map (1×), folder (9×) | Geteld in `source/`; zie hieronder |
 | De eerste regel van een functie | **signatuur** | signature (4×) | Vastgesteld door de vakdeskundige op 10 september 2026 |
 | Uitdrukking die waar of onwaar is en bepaalt of een blok draait | **conditie** | voorwaarde (14×) | Vastgesteld door de vakdeskundige op 15 september 2026 |
 
