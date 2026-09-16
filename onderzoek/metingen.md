@@ -675,6 +675,27 @@ Twee keer een patroon niet geijkt, allebei in dezelfde sessie:
 
 Hier hoort wat met de hand is gedaan omdat het te klein leek voor een werkitem.
 
+### 16 september 2026, de tweede CodeMirror-pin (PR #226)
+
+**Wat het was.** Drie imports in `extensions/sphinx_interactive_code/static/interactive-code.js`
+kregen de ontbrekende `?deps=`-termen, zodat `@codemirror/language` en `@codemirror/view` net zo
+hard vaststaan als `@codemirror/state` sinds #222.
+
+**Waarom buiten de lus.** Drie regels in één bestand, met een reparatie die volledig meetbaar is:
+haal de zes URL's uit het bestand, volg hun eigen imports, tel de unieke module-URL's per gedeeld
+pakket. Vier pakketten, vier keer precies één. Dat is de tabel in `loop.md` voor een kleine,
+eenduidige correctie.
+
+**Of er een beoordelaar overheen is gegaan.** **Nee.** Wel de vakdeskundige, en dat is hier de
+controle die telt: de editor laadt weer in de browser. Wat een beoordelaar had kunnen toevoegen
+is niet de meting maar de vraag of vendoren niet verstandiger is dan een derde ronde aan een
+graaf die wij niet beheren; die vraag staat in `bevindingen.md`.
+
+**De leerzame misstap zit in de aanvulling op de bevinding, niet hier.** Kort: mijn eerste opzet
+gaf alle zes de imports dezelfde volledige deps-lijst, en dat breekt precies wat het oplost -
+een pakket dat zichzelf in zijn eigen deps noemt, krijgt een eigen bouw en wordt daarmee de
+tweede instantie. Gevonden door te meten vóór de commit, niet erna.
+
 ### 15 september 2026, de vergelijkingssectie van `2b` (één commit)
 
 **Wat het was.** Vier redactionele ingrepen in `lectures/2b_strings_en_lists.ipynb`, cellen
