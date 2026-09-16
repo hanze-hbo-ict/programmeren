@@ -833,3 +833,39 @@ zet de state-dependency daarom expliciet vast en controleert de gebouwde editor.
 
 Deze reparatie raakt de CodeMirror-graaf, niet de Pyodide-runtime. De repo blijft
 Pyodide `v314.0.7` gebruiken. Vendoring is een afzonderlijke vervolgbeslissing.
+
+### Aanvulling, 16 september 2026: de pin was niet af, en de voor de hand liggende
+### reparatie breekt hem opnieuw
+
+De eerste reparatie (`67223e7b`, #222) pinde `@codemirror/state` en haalde de
+gemelde fout weg. **Twee randen van de graaf bleven een bereik:** `lang-python`
+haalde `@codemirror/language@^6.8.0`, en `commands` en `language` haalden
+`@codemirror/view` via een bereik. Dezelfde klasse fout kon dus terugkomen zodra
+bovenstrooms een `language`- of `view`-patch verscheen, alleen dan op `Language`
+of `ViewPlugin` in plaats van op `State`. `bd59892f` (#226) sluit dat.
+
+**Wat hier te leren valt, en het is niet wat je zou raden.** De voor de hand
+liggende reparatie is: geef elke import dezelfde volledige `?deps=`-lijst. Dat
+maakt het juist weer stuk. Gemeten op 16 september: met
+`state@6.7.4?deps=…,view,language,highlight` serveert esm.sh
+`/@codemirror/state@6.7.4/X-ZEB…/es2022/state.mjs`, terwijl `view` en `language`
+intern `/@codemirror/state@6.7.4/es2022/state.mjs` importeren. Twee URL's, twee
+module-instanties, en het probleem is terug in dezelfde vorm.
+
+**De regel die eruit volgt: een pakket mag zichzelf niet in zijn eigen `deps`
+noemen.** Een gedeeld pakket importeer je kaal, of met precies de deps die zijn
+afnemers ook gebruiken; wie het anders doet, maakt een derde variant.
+
+**En de controle die dit vaststelt.** Niet "staat de versie in de URL", maar:
+haal de URL's uit het bestand zelf op, volg hun eigen imports, en tel de unieke
+module-URL's per gedeeld pakket. Alles behalve 1 is fout. Op `bd59892f`:
+
+    1 @codemirror/state     /@codemirror/state@6.7.4/es2022/state.mjs
+    1 @codemirror/view      /@codemirror/view@6.43.11/X-ZEB<state>/es2022/view.mjs
+    1 @codemirror/language  /@codemirror/language@6.12.4/X-ZEB<state,view,highlight>/es2022/language.mjs
+    1 @lezer/highlight      /@lezer/highlight@1.2.3/es2022/highlight.mjs
+
+**Wat het veranderde.** De editor laadt weer; de vakdeskundige heeft dat op
+16 september in de browser vastgesteld. En de afweging over vendoren staat er
+sterker voor: twee reparaties in twee dagen aan een graaf die wij niet beheren,
+en de tweede was nodig omdat de eerste een rand miste die niemand had geteld.
