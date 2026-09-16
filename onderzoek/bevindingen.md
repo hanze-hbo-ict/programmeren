@@ -869,3 +869,72 @@ module-URL's per gedeeld pakket. Alles behalve 1 is fout. Op `bd59892f`:
 16 september in de browser vastgesteld. En de afweging over vendoren staat er
 sterker voor: twee reparaties in twee dagen aan een graaf die wij niet beheren,
 en de tweede was nodig omdat de eerste een rand miste die niemand had geteld.
+
+
+## Een scopegrens hoort niet boven de proportionaliteitsregel te staan — 16 september 2026
+
+**Wat er gebeurde.** Bij #231 droeg de opgave `problems/3_opstap.ipynb` een scheve deelvraag:
+opdracht 3 heeft een a, b én c, maar deelvraag d zei *"om je antwoord op a en b te controleren"*.
+Eén woord. C0 en het C1 legden de opgave **hard buiten scope**. De auteur hield zich daaraan en
+meldde het als niet gedaan vervolg; de onderwijskundige beoordelaar deponeerde het opnieuw als
+bevinding buiten het werkitem. De orkestrator schoof het twee keer door naar "een eigen
+werkitem", tot de vakdeskundige ingreep: *"had dat niet door een van de rollen aangepakt moeten
+worden? de auteur bijv.? ik vind dit slordig."*
+
+**Waarom dit geen incident is.** `CLAUDE.md` draagt twee regels die elkaar hier raken:
+
+- *"Proportionaliteit gaat vóór volledigheid. Een typefout, een dode link of een naam rechtzetten
+  doe je gewoon, in een branch met een pull request."*
+- en de praktijk dat een C1 de afbakening vastlegt, zodat een werkitem niet uitdijt.
+
+**Drie rollen op rij hebben de tweede boven de eerste gezet**, en alle drie konden zich beroepen
+op wat er in hun invoer stond. De auteur mocht de opgave niet aanraken. De beoordelaar had haar
+buiten zijn reikwijdte. De orkestrator had de grens zelf geschreven. Niemand deed iets fout
+binnen zijn eigen opdracht, en tóch bleef een aantoonbaar foute regel staan die met één woord te
+repareren was — en er stond een werkitem klaar om ervoor opgetuigd te worden.
+
+**Wat het veranderde.** Rechtgezet met `8b42a59d`, in dezelfde PR (#234). En de regel die eruit
+volgt, voor wie een C1 schrijft:
+
+> **Een scopegrens beschermt tegen uitdijen, niet tegen repareren.** Zij hoort te zeggen wat er
+> niet *herzien* wordt, niet dat een aantoonbare fout blijft staan. Noem in de afbakening
+> expliciet dat een typefout, een dode verwijzing of een kapotte deelvraag in een buiten-scope
+> bestand gewoon wordt rechtgezet, met vermelding in C5 — anders leest de auteur de grens
+> letterlijk, en dat is precies wat hij hoort te doen.
+
+Dit hangt samen met wat de vakdeskundige eerder in dezelfde week vroeg: *"niet te veel blijven
+hangen bij details en daar enorme issues voor optuigen."* Een werkitem openen voor één woord is
+dezelfde fout van de andere kant.
+
+## De beoordelaar krijgt geen C5-kern bij een route zonder ontwerp — 16 september 2026
+
+**Wat er gebeurde.** Twee keer op één dag, in twee verschillende routes, meldde de beoordelaar
+ongevraagd hetzelfde: hij had **geen C5-kern ontvangen**. Bij #230 de eerstejaars, bij #231 de
+onderwijskundige. Beiden kregen C0, C1 en de repository, en beiden hebben alles zelf gemeten in
+plaats van overgenomen.
+
+**Waarom het gebeurt.** `loop.md` geeft de beoordelaar als invoer *"C1-toewijzing + C5-kern"*.
+Bij de korte route — auteur en één beoordelaar, zonder verkenner, ontwerper of poort — is de
+uitvoeropdracht C0 + C1, en de C5 bestaat pas nadat de auteur klaar is. De orkestrator schreef
+de beoordelaarsopdracht op de branch en de criteria en gaf de kern niet door.
+
+**Waarom het toch een gebrek is, in de woorden van de onderwijskundige:**
+
+> *"Voor de volgende ronde hoort dit wel als bestand langs te komen, al was het maar om te kunnen
+> zien of auteur en beoordelaar dezelfde getallen meten."*
+
+Hij heeft gelijk, en het bewijs staat in ditzelfde werkitem: het C1 telde *acht* inhoudelijke
+deelvragen waar het er zeven zijn. De auteur mat het na en meldde het; de beoordelaar mat het
+onafhankelijk na en kwam op hetzelfde. **Twee onafhankelijke metingen van hetzelfde getal is
+precies wat een overdracht van de kern zichtbaar maakt** — zonder die kern was het toeval geweest
+dat beiden het opmerkten.
+
+Merk ook op wat er níét gebeurde: geen van beide beoordelaars stopte, terwijl het C6-contract
+voorschrijft te stoppen bij een ontbrekend verplicht veld. Beiden kozen bewust door te gaan en
+meldden de afwijking. Dat is de juiste afweging geweest, maar het betekent dat de norm hier
+stilzwijgend niet wordt gevolgd.
+
+**Wat het veranderde.** Nog niets in de instructies; dit is de vastlegging. Voor wie het oplost:
+de vraag is niet of de kern mee moet, maar wanneer hij bestaat. Bij een route zonder ontwerp
+levert de auteur zijn C5 vóór de beoordeling, dus de kern kán mee — de orkestrator moet hem
+alleen doorgeven in plaats van de beoordelaar rechtstreeks op de branch te zetten.

@@ -675,6 +675,71 @@ Twee keer een patroon niet geijkt, allebei in dezelfde sessie:
 
 Hier hoort wat met de hand is gedaan omdat het te klein leek voor een werkitem.
 
+### 16 september 2026, #231 — de tweede S-route, en een scoperegel die te ver reikte
+
+**Wat het was.** `source/solutions/3_opstap.ipynb` nieuw: tien cellen, drie draaiende codecellen,
+437 woorden. Plus een regel in `_toc.yml` en één woord in de opgave. PR #234, drie bestanden.
+
+**De route.** Dezelfde vorm als #230 — auteur en één beoordelaar — maar met één verschil dat
+er wél toe deed: **de beoordelaar is hier de onderwijskundige en niet de eerstejaars.** Deze
+oplevering bestaat uitsluitend uit uitwerkingen, en `loop.md` belegt criteria daarover bij een
+rol die ze mag lezen. Een eerstejaars had hier niets kunnen toetsen.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| auteur, ronde 1 | 106.234 | 11 min 34 s | C5 |
+| beoordelaar-onderwijskundige | 82.220 | 9 min 56 s | AKKOORD MET PUNTJES, 0 blokkades, 5 puntjes |
+| auteur, ronde 2 (puntjes) | 127.531 | 2 min 57 s | alle vijf verwerkt |
+| **totaal agents** | **315.985** | **circa 25 min** | |
+
+Iets duurder dan #230 (236.000), en dat is te verklaren: nieuw materiaal in plaats van een
+pagina, en een beoordelaar die een volledige Sphinx-build met koude cache draaide om te kunnen
+zien of de uitvoer op de pagina werkelijk in díé build was uitgevoerd.
+
+**Twee metingen die het navolgen waard zijn.**
+
+De auteur **ontmaskerde zijn eigen nul**. Zijn eerste meting voor criterium 2 zocht op `\bin\b`
+en vond drie treffers; alle drie bleken het Nederlandse voorzetsel *in* in het proza te zijn en
+niet de operator uit week 4. De eindmeting draait op de AST. Dat is precies het stukgelopen
+patroon waar `CLAUDE.md` voor waarschuwt, en hij liep erin en kwam eruit.
+
+En hij **bewees de schone build in plaats van hem te greppen**. `grep -icE "warning|error"` gaf 2,
+allebei de configuratiebanner van myst. Vervangen door `sphinx-build -W --keep-going` met een
+exitcode, en die geijkt door de `_toc.yml`-regel tijdelijk te verwijderen: exit 1 met
+`document isn't included in any toctree`. Daarmee is zowel de nul bewezen als aangetoond dat de
+toc-regel nodig was.
+
+**Waar ik het fout deed, en dat is de aantekening waar het om gaat.**
+
+De opgave draagt een scheve deelvraag: opdracht 3 heeft een a, b én c, maar deelvraag d zei
+*"om je antwoord op a en b te controleren"*. Eén woord. C0 en mijn C1 legden de opgave **hard
+buiten scope**, dus de auteur hield zich eraan en meldde het als niet gedaan vervolg; de
+beoordelaar deponeerde het opnieuw. **Ik heb het twee keer doorgeschoven naar een eigen
+werkitem.**
+
+De vakdeskundige: *"had dat niet door een van de rollen aangepakt moeten worden? de auteur bijv.?
+ik vind dit slordig."* Hij heeft gelijk, en `CLAUDE.md` zegt het met zoveel woorden: *"Een
+typefout, een dode link of een naam rechtzetten doe je gewoon, in een branch met een pull
+request."*
+
+**Wat hier misging is niet dat de auteur de regel volgde, maar dat ik hem schreef.** Een
+scopegrens in C1 is er om te voorkomen dat een werkitem uitdijt tot een herziening van de hele
+week. Zij hoort niet boven de proportionaliteitsregel te staan voor een woord dat aantoonbaar
+fout is. Het gevolg was bovendien precies wat de vakdeskundige eerder had gevraagd te vermijden:
+een enorm werkitem optuigen voor iets kleins. Rechtgezet met `8b42a59d`, in dezelfde PR.
+
+**Of er een beoordelaar overheen is gegaan.** Over de uitwerking: ja, de onderwijskundige, met
+vijf puntjes die alle vijf zijn verwerkt. Over de éénwoordscorrectie in de opgave: nee — die is
+door de orkestrator gedaan nadat de beoordelaar hem zelf had aangewezen, en dat staat hier in
+plaats van onzichtbaar te blijven.
+
+**Eén ding is als eigen werkitem weggezet, en terecht.** De beoordelaar mat als ijking dat
+`solutions/3_basis.ipynb` negen codecellen heeft en nul uitvoerblokken. Nagemeten: negen
+functies, **34 assertions** en nul `print`-aanroepen. De assertions draaien bij elke build en
+gaan door, dus de verificatie is echt; wat ontbreekt is het *zichtbare* bewijs. Dat is smaller
+dan het klonk en het is een lijnvraag over alle uitwerkingen, geen defect in dit bestand — zie
+**#235**.
+
 ### 16 september 2026, #230 — de eerste S-route onder de nieuwe procesversie
 
 **Wat het was.** `source/course/week_3.md` van 7 woorden naar 267: het besluit *Wat een
