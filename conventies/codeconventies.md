@@ -46,11 +46,6 @@ eigen argument:
   en wordt code iets dat een ander moet kunnen lezen. Dan valt het argument
   samen met de aanleiding.
 
-> **Bekende afwijking.** `source/practicals/2_rochambeau.ipynb` vertelt de
-> student nu al dat we onze code in het Engels schrijven. Onder deze conventie
-> is dat te vroeg. Los het op bij de herziening van week 2: laat het een
-> vooruitwijzing worden, of verplaats het naar het overgangsmoment.
-
 ### Gedeelde bestanden zijn Engels
 
 Bestanden die vanuit beide studiejaren worden gebruikt, zoals

@@ -66,10 +66,6 @@ een docstring *is* wordt pas expliciet gemaakt bij de functies van week 3, en
 daarom staat *docstring* in de kolom van week 3 en niet van week 2. Zie
 *Onderdompeling gaat vooraf aan uitleg* in [uitgangspunten.md](uitgangspunten.md).
 
-Die zin in `2_rochambeau` staat overigens al als bekende afwijking in
-`conventies/codeconventies.md`, op een andere grond: hij vertelt te vroeg dat code
-Engels is. Beide lopen mee met de herziening van week 2.
-
 **Recursie gaat in beginsel naar PGM2 en wordt in PGM1 niet onderwezen.** Week 3
 laat bij de functies alleen zien dát een functie zichzelf kan aanroepen. De
 leesopdrachten daarover zijn naar de PGM2-recursieweek verplaatst, en sinds #162
@@ -128,7 +124,7 @@ veranderd.
 
 | Week | opstap | basis | extra | Totaal |
 |---|---|---|---|---|
-| 2 | 1.145 | 1.089 | 463 | 2.697 |
+| 2 | 1.160 | 1.112 | 487 | **2.759** |
 | 3 | 242 | 1.143 | 176 | **1.561** |
 | 4 | 672 | 1.066 | 1.048 | 2.786 |
 | 5 | 674 | 2.940 | **5.354** | 8.968 |
@@ -254,6 +250,7 @@ als zodanig is gemarkeerd.
 |---|---|---|---|
 | `while` | PGM1 week 4 | PGM1 week 2, `practicals/2_rochambeau` | Bewust; de tekst zegt erbij dat lussen later komen |
 | `choice`, en daarmee `import` | PGM1 week 3 | PGM1 week 2, `practicals/2_rochambeau` en `solutions/2_rochambeau` | Bewust; de opgave geeft de regel in de begincode met de uitleg als commentaar erachter, en de uitwerking zegt erbij hem voor nu aan te nemen. Vastgesteld door de vakdeskundige, 15 september 2026 |
+| `time.sleep` en math-functies | PGM1 week 3 | PGM1 week 2, `problems/2_basis`, `solutions/2_basis`, `problems/2_extra` en `solutions/2_extra` | Bewust; als gegeven begincode, met de uitleg als commentaar erachter. Vastgesteld door de vakdeskundige, 16 september 2026 |
 | list comprehension | PGM2 week 1 | PGM1 week 6, `practicals/6b_images` | Onderwerp van een hele PGM2-week |
 | functiedefinitie | PGM1 week 3 | PGM1 week 2, `problems/2_basis` | Als gegeven code, niet om te schrijven. De docstring in datzelfde blok is onderdompeling; of dat ook voor de `def` geldt is nog niet besloten |
 | tuple | PGM1 week 7 | PGM1 week 5, laag extra, `problems/5_extra.md` | Ongemarkeerd; introduceert ook *methode* en *object*. Buiten bereik van de herzieningen in #102/#134 |
