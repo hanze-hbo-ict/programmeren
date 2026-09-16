@@ -193,9 +193,9 @@ class InteractiveCodeCell extends HTMLElement {
       ] = await Promise.all([
         import("https://esm.sh/@codemirror/view@6.43.11?deps=@codemirror/state@6.7.4"),
         import("https://esm.sh/@codemirror/state@6.7.4"),
-        import("https://esm.sh/@codemirror/commands@6.11.0?deps=@codemirror/state@6.7.4"),
-        import("https://esm.sh/@codemirror/language@6.12.4?deps=@codemirror/state@6.7.4"),
-        import("https://esm.sh/@codemirror/lang-python@6.2.1?deps=@codemirror/state@6.7.4"),
+        import("https://esm.sh/@codemirror/commands@6.11.0?deps=@codemirror/state@6.7.4,@codemirror/view@6.43.11,@codemirror/language@6.12.4,@lezer/highlight@1.2.3"),
+        import("https://esm.sh/@codemirror/language@6.12.4?deps=@codemirror/state@6.7.4,@codemirror/view@6.43.11,@lezer/highlight@1.2.3"),
+        import("https://esm.sh/@codemirror/lang-python@6.2.1?deps=@codemirror/state@6.7.4,@codemirror/view@6.43.11,@codemirror/language@6.12.4,@lezer/highlight@1.2.3"),
         import("https://esm.sh/@lezer/highlight@1.2.3"),
       ]);
 
