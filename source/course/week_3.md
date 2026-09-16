@@ -14,10 +14,8 @@ variabelen die verdwijnen zodra de functie klaar is.
 
 Aan het eind van de week kan je een probleem opdelen in functies die elk één
 ding doen, die functies zelf schrijven en testen, en ze een **docstring** geven:
-de regel die vertelt wat de functie doet. Je knoopt ze aan elkaar vanuit een
-**main-functie**, het startpunt dat de rest aanroept. In
-[week 4](/course/week_4) komen daar lussen bij, die zo'n functie net zo vaak
-uitvoeren als nodig is.
+de regel die vertelt wat de functie doet. In [week 4](/course/week_4) komen daar
+lussen bij, die zo'n functie net zo vaak uitvoeren als nodig is.
 
 ### Waar je vandaan komt
 
