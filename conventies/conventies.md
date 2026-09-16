@@ -93,16 +93,14 @@ met per geval het aantal:
   codeconventies. Beide zijn met de herziening van week 3 uit `source/`
   verdwenen; het getal 48 dat hier stond is bij die herziening nagemeten en niet
   te reproduceren.
-- Een aankondiging in week 2 dat we in het Engels programmeren, wat vooruitloopt
-  op de afgesproken overgang, zie de codeconventies.
 - 33 notebooks zonder grond om notebook te zijn, en het ontbreken van de
   browser-uitvoering die notebooks voor de student zinvol maakt, zie de
   technische conventies. Het waren er 39; de vijf van week 5 hebben nu
   uitvoerbare cellen, en `lectures/3b_functies_aanroepen` is een `.md` geworden.
-- 11 van de 22 uitwerkingen staan als markdown-blok en worden dus nooit
-  uitgevoerd, en 10 skeletcellen missen `skip-execution`, zie de technische
-  conventies. Het waren er 15; de vier uitwerkingen van week 5 draaien nu bij de
-  build.
+- Zes markdownblokken in de 25 PGM1-uitwerkingen worden bij de build niet uitgevoerd;
+  tien interactieve codecellen dragen `skip-execution`, zie de technische conventies.
+  Gemeten op de eindstand van deel C over `source/solutions/`, exclusief de twee
+  oefententamens.
 
 Deze vijf worden niet in een aparte opruimactie weggewerkt maar per bestand
 rechtgezet tijdens de inhoudelijke herziening. Ze staan hier zodat ze niet
