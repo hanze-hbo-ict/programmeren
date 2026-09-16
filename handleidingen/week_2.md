@@ -261,7 +261,7 @@ werkcollege in eigenlijke zin: je bouwt samen met de klas één programma op.
 |---|---|---|---|
 | 1 | 5 | Lesdoel: strings en lijsten, en wat je aan het eind samen bouwt | `2b`: `# Strings` |
 | 2 | 10 | Strings optellen en vermenigvuldigen | `2b`: ``## `str`ings: tekstuele data``, `### Opdracht 1` |
-| 3 | 10 | Lijsten: lengte, index, positie, en een lijst in een lijst | `2b`: `## Lists`, `### Lengte`, `### Index`, `### Positie`, `### Alle data` |
+| 3 | 10 | Lijsten: lengte, index, positie, en een lijst in een lijst | `2b`: `## Lijsten`, `### Lengte`, `### Index`, `### Positie`, `### Alle data` |
 | 4 | 10 | Strings zijn ook geïndexeerd, en negatieve indices | `2b`: `## Strings en indexering`, `### Positie`, `### Negatieve indices` |
 | | | **Pauze** | |
 | 5 | 20 | Slicen, stappen en achteruit lopen | `2b`: `### Slicing`, `### Stappen`, `### Achteruit lopen`, `### Opdracht 2`, `### Opdracht 3`, `### Opdracht 4` |
@@ -282,7 +282,7 @@ materiaal korter zijn dan de bron veronderstelde; en het afsluitblok van 5
 minuten is blok 9 geworden.
 
 **Twee koppen in `2b` bestaan twee keer.** `### Positie` en `### Slicing` staan
-allebei één keer onder `## Lists` en één keer onder `## Strings en indexering`.
+allebei één keer onder `## Lijsten` en één keer onder `## Strings en indexering`.
 Dat is opzet - het is dezelfde bewerking op een ander type - maar zeg er in de
 klas altijd bij welke van de twee je bedoelt.
 
@@ -570,7 +570,7 @@ hier wat Python doet.
 | `### Opdracht 7` | `2a_var_con.ipynb` | **a** `42`; **b** `4`; **c** `6.0`; **d** `21.0`; **e** `12` - let op de nullen bij **c** en **d**, want `/` levert altijd een floating-point getal |
 | `### Opdracht 1` | `2b_strings_en_lists.ipynb` | **a** `123123`; **b** `hanzehanzeHogeschool`; **c** `123 456` |
 | `### Opdracht 2` | `2b_strings_en_lists.ipynb` | **1** `6`; **2** `3`; **3** `5`; **4** `[4, 1]`; **5** `pi[:3]`; **6** `pi[::2]` |
-| `### Opdracht 3` | `2b_strings_en_lists.ipynb` | **1** `'pi'`; **2** `'i'`; **3** `['pi']`; **4** `'parent'`; **5** `'Yeah cs!'`; **6** `M[-5:-2]`; **7** `M[30:14:-4]` |
+| `### Opdracht 3` | `2b_strings_en_lists.ipynb` | **1** `'pi'`; **2** `'i'`; **3** `['pi']`; **4** `'parent'`; **5** `'Yeah cs!'`; **6** `s[-5:-2]`; **7** `s[30:14:-4]` |
 | `### Opdracht 4` | `2b_strings_en_lists.ipynb` | **1** `15`; **2** `[1, 4, 1, 4, 1, 4]`; **3** `pi[0] * pi[::2]` |
 | `### Opdracht 5` | `2b_strings_en_lists.ipynb` | **1** `False`; **2** `True`; **3** `False`; **4** `True`; **5** `True`; **6** `False` |
 
@@ -610,9 +610,8 @@ De volledige verantwoording per aanwijzing staat in werkitem #182.
   geschreven dat ze klopt of ze er nu nog staan of niet. Het tweede is de
   terminologie. Die vraag is met werkitem #178 beslist en uitgevoerd: een
   genummerde taak heet `Opdracht`, en de aanwijzingen hierboven noemen de
-  koppen zoals ze er nu staan. Wat nog kan wijzigen is `## Lists`, Engels waar
-  `conventies/begrippen.md` *lijst* voorschrijft. Controleer bij twijfel de kop
-  in het bestand voordat je ernaar verwijst.
+  koppen zoals ze er nu staan. De kop `## Lijsten` volgt inmiddels `conventies/begrippen.md`, volgens
+  `conventies/begrippen.md`.
 - De vier `.docx` van week 1 en 2 zijn uit `teacher_guides/` verwijderd; deze
   handleiding en `handleidingen/week_1.md` zijn er de opvolgers van. De negen
   `.docx` van week 3 tot en met 6 staan er nog en wachten op werkitem #95.
