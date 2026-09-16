@@ -675,6 +675,66 @@ Twee keer een patroon niet geijkt, allebei in dezelfde sessie:
 
 Hier hoort wat met de hand is gedaan omdat het te klein leek voor een werkitem.
 
+### 16 september 2026, #230 — de eerste S-route onder de nieuwe procesversie
+
+**Wat het was.** `source/course/week_3.md` van 7 woorden naar 267: het besluit *Wat een
+weekpagina draagt* voor de vierde keer uitgevoerd. PR #232, twee bestanden.
+
+**De route, en waarom hij kort was.** Twee rollen: **auteur → eerstejaars**. Geen
+verkenner, geen ontwerper, geen verhelderaar, geen poort, geen C7. De routenorm
+reserveert die voor een sectie of een week; dit was één bestand. Wat een verkenner zou
+meten stond in C1 — de woordentelling van de vier bestaande weekpagina's en het patroon
+dat eruit volgt — en er viel niets te ontwerpen, want het besluit lag vast en was drie
+keer uitgevoerd.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator (C1, meetbasis, PR, C7 n.v.t.) | niet beschikbaar | niet beschikbaar | route van zeven rollen naar twee |
+| auteur, ronde 1 | 76.404 | 4 min 44 s | C5, 240 woorden |
+| beoordelaar-eerstejaars | 119.155 | 8 min 23 s | AKKOORD MET PUNTJES, 0 blokkades, 5 puntjes |
+| auteur, ronde 2 (puntjes) | circa 40.000 | 9 min | 4 van 5 puntjes, plus de registerregel |
+| **totaal agents** | **circa 236.000** | **circa 22 min** | |
+
+Ter vergelijking uit dit bestand: een volledige lus op een week kostte eerder 1,2 tot
+3,0 miljoen tokens. **Een S-route die bij de omvang past kost daar ongeveer een
+twaalfde van.** Dat is geen besparingspercentage — het is ander werk — maar het laat
+zien wat de routetabel oplevert wanneer je hem volgt in plaats van de volle lus te
+draaien omdat dat de gewoonte is.
+
+**Wat de beoordeling opleverde.** Nul blokkades en vijf puntjes, waarvan er vier zijn
+verwerkt. Twee daarvan waren het lezen waard:
+
+- **De pagina beschreef week 2 anders dan de student hem beleefde.** Er stond dat week 2
+  *"programma's die van boven naar beneden aflopen"* opleverde, terwijl de grootste
+  opgave van die week van begin tot eind in `def adventure():` staat. De eerstejaars:
+  *"Als ik dan lees dat ik deze week code een naam ga geven, vraag ik me af of dat
+  taartprogramma dan iets anders was."* De auteur heeft de opgave op de huidige stand
+  nagelezen en de alinea herschreven.
+- **De pagina beloofde wat de week niet vraagt.** Gemeten: `main` komt 14 keer voor in
+  `3b_functies_aanroepen.md` en 9 keer in `3_opstap.ipynb`, maar **nul** keer in
+  `3a_functies`, `3_fijne_functies`, `3_basis` en `3_extra`. De student ziet en leest
+  een main-functie, maar schrijft er nergens zelf een. De auteur weigerde de zin stil af
+  te zwakken en meldde het als observatie. De vakdeskundige loste het anders op dan alle
+  drie de rollen hadden voorzien: *"is dat niet te veel detail voor zo'n pagina? het gaat
+  om functies leren gebruiken en aanroepen."* **De zin is geschrapt in plaats van
+  verzwakt, en daarmee verdween de bevinding in plaats van dat zij werd weggeschreven.**
+
+**Wat er buiten de lus om is gedaan, en door wie.** Twee dingen, allebei door de
+orkestrator en allebei op expliciete instructie van de vakdeskundige: de registerregel
+in `curriculum/uitgangspunten.md` r326 (*"rechtzetten maar"*, uitgevoerd door de auteur
+in ronde 2) en het schrappen van de main-functie-zin (*"prima"* op het voorstel,
+uitgevoerd door de orkestrator). **Over die laatste is geen beoordelaar gegaan.** De
+grond: het is een schrapping die een openstaande bevinding sluit, en een weggehaalde
+belofte hoeft niet opnieuw gewogen te worden. Dat is een oordeel, en het hoort hier te
+staan in plaats van onzichtbaar te blijven.
+
+**Eén ding dat de route zichtbaar maakt.** De eerstejaars meldde dat hij **geen C5-kern
+had ontvangen** — zijn invoer waren C0, C1 en de repository. Dat was mijn keuze en hij
+had er geen last van, maar hij heeft gelijk dat het zichtbaar hoort te zijn. Bij een
+route zonder ontwerp is de C5 er pas nadat de auteur klaar is; de beoordelaar krijgt dan
+de branch en de criteria, niet het verhaal van de auteur. Of dat de bedoeling is van
+*"geen maakgeschiedenis"* of een gat, is een vraag voor de onderzoeker.
+
 ### 16 september 2026, de tweede CodeMirror-pin (PR #226)
 
 **Wat het was.** Drie imports in `extensions/sphinx_interactive_code/static/interactive-code.js`
