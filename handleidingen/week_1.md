@@ -426,7 +426,8 @@ De volledige verantwoording per aanwijzing staat in werkitem #182.
 ### Wat er nog loopt
 
 - De vier `.docx` van week 1 en 2 zijn uit `teacher_guides/` verwijderd; deze
-  handleiding en `handleidingen/week_2.md` zijn er de opvolgers van. De negen
-  `.docx` van week 3 tot en met 6 staan er nog en wachten op werkitem #95.
+  handleiding en `handleidingen/week_2.md` zijn er de opvolgers van. Die van week
+  3 zijn met werkitem #237 gevolgd. De zeven `.docx` van week 4 tot en met 6 staan
+  er nog en wachten op werkitem #95.
 - Deze handleiding beschrijft het materiaal zoals het op 5 september 2026 in de
   repository staat.

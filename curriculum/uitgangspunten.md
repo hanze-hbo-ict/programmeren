@@ -718,8 +718,19 @@ onder *Reikwijdte*; mechanisch geborgd is alleen de Markdown-linting. Dit beslui
 heropent wie de handleidingen aan studenten wil tonen - dan zijn het boekpagina's
 en gelden de conventies onverkort.
 
-De `.docx` in `teacher_guides/` zijn de voorlopers hiervan. Ze blijven staan tot ze
-per week zijn herschreven; wat herschreven is, verhuist naar `handleidingen/`.
+**Elke `.docx` in `teacher_guides/` verdwijnt uiteindelijk.** Dat is geen bijproduct
+van het herschrijven maar het doel ervan. Zo'n document is een bron om uit te
+putten bij het ontwerpen - de vraag die je hem stelt is of er iets nuttigs bij zit,
+niet wat ervan overblijft - en geen voorloper om te volgen. Het uitgangspunt is dat
+een handleiding nieuw wordt ontworpen en geschreven op de **gewijzigde weekopzet**;
+zodra die handleiding er is, gaat de `.docx` van die week weg. Een handleiding
+citeert dus geen `.docx` als bron, want die is er straks niet meer.
+
+Vastgesteld door de vakdeskundige op 17 september 2026. De aanleiding was dat de
+eerdere formulering - *"wat herschreven is, verhuist naar `handleidingen/`"* - twee
+lezingen toeliet zodra je *verhuist* niet als *verwijderd* las, en dat allebei die
+lezingen in de praktijk zijn gevolgd: week 1 en 2 verwijderden hun `.docx` (#182),
+week 4 behield de zijne en citeerde er één (#239/#240).
 
 ### Leesvragen mogen fout aflopen
 
