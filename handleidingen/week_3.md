@@ -351,10 +351,11 @@ is en dat jij rondloopt.
   bepalen waar de regels staan. Het antwoord is de main-functie, met de aanroep
   onderaan.
 - **De assertion die faalt zolang het antwoord er niet staat.** Dit loopt
-  **luid** af, en juist daarom denkt de student dat de cel of het bestand stuk is.
-  Dat is hij niet: een `AssertionError` betekent dat de functie iets anders
-  teruggeeft dan de aanname zegt, en één van die twee klopt niet. Zeg erbij dat ze zelf moeten uitzoeken wélke, want vanaf
-  Opdracht 1 **c** schrijven ze de aannames zelf en kan de fout ook daar zitten.
+  **luid** af, en juist daarom denkt de student dat de cel of het bestand stuk
+  is. Dat is hij niet: een `AssertionError` betekent dat de functie iets anders
+  teruggeeft dan de aanname zegt, en één van die twee klopt niet. Zeg erbij dat
+  ze zelf moeten uitzoeken wélke, want vanaf Opdracht 1 **c** schrijven ze de
+  aannames zelf en kan de fout ook daar zitten.
 - **`range` telt tót en niet tot en met.** **Stil**, en daarom duur. In Opdracht 1
   is `triangle(5)` gelijk aan `15` en niet aan `10`, want `list(range(n + 1))`
   loopt van 0 tot en met 5. Wie de `+ 1` over het hoofd ziet, krijgt een
