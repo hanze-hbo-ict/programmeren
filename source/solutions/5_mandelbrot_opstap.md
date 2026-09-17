@@ -3,7 +3,7 @@
 ```python
 def mult(c, n):
     """Geeft c maal n terug met herhaald optellen."""
-    result = 0
+    result = 0  # verzamelvariabele
     for _ in range(n):
         result += c
     return result
@@ -11,7 +11,7 @@ def mult(c, n):
 
 def update(c, n):
     """Voert n keer z = z**2 + c uit."""
-    z = 0
+    z = 0  # verzamelvariabele voor de tussenstand
     for _ in range(n):
         z = z**2 + c
     return z
