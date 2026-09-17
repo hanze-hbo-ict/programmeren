@@ -121,10 +121,9 @@ niet in zo snel mogelijk de antwoorden verzamelen.
 | 7 | 15 | Opdrachten 14 tot en met 20: stopmoment en fouten |
 | 8 | 5 | Terugblik op het lusrecept en voorbereiding practicum |
 
-De oude `teacher_guides/4_midterm.docx` gebruikt dezelfde werkvorm: eerst
-individueel werken, daarna antwoorden in duo's vergelijken en vervolgens
-klassikaal bespreken met Python Tutor. De antwoordlijst in die docx hoort bij
-een oudere versie. Gebruik voor inhoudelijke antwoorden de actuele
+Gebruik de werkvorm: eerst individueel werken, daarna antwoorden in duo's
+vergelijken en vervolgens klassikaal bespreken met Python Tutor. Gebruik voor
+inhoudelijke antwoorden de actuele
 `source/solutions/4_midterm.ipynb`.
 
 ### Hoe je het brengt
