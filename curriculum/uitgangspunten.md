@@ -692,8 +692,9 @@ verandert, is dat een vraag over de matrijs en niet over de toets.
 
 ### Wat een docentenhandleiding is, en waar hij staat
 
-Twee besluiten, genomen door de vakdeskundige bij de poort van #182 op
-5 september 2026.
+Drie besluiten, genomen door de vakdeskundige bij de poort van #182 op
+5 september 2026; het vierde, over de `.docx`-bestanden, volgde op
+17 september 2026 bij #237.
 
 **Een docentenhandleiding gaat per week en helpt de docent die week te geven.**
 Dus niet een handleiding per college, ook niet in de weken met twee colleges. Hij

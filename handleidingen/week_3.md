@@ -142,7 +142,7 @@ materiaal mee.
 **Eén volgorde-eis die niet onderhandelbaar is.** Blok 6 blijft in deze
 bijeenkomst, ook als de tijd knelt. Opdracht 1 van
 `source/lectures/3b_functies_aanroepen.md` gebruikt morgen `list(range(n + 1))`
-en `sum(lst)`, en alle drie de opdrachten van
+en `sum(lst)`, en Opdracht 1 en 3 van
 `source/problems/3_opstap.ipynb` doen hetzelfde. Wat binnen dat blok wél kan
 vallen is `## Imports`: de drie opties daar zijn naslag.
 
@@ -350,16 +350,16 @@ is en dat jij rondloopt.
   iedereen, want dit is de eerste keer dat ze een eigen bestand schrijven en zelf
   bepalen waar de regels staan. Het antwoord is de main-functie, met de aanroep
   onderaan.
-- **De assertion die faalt zolang het antwoord er niet staat.** De student denkt
-  dat de cel of het bestand stuk is. Dat is hij niet: een `AssertionError`
-  betekent dat de functie iets anders teruggeeft dan de aanname zegt, en één van
-  die twee klopt niet. Zeg erbij dat ze zelf moeten uitzoeken wélke, want vanaf
+- **De assertion die faalt zolang het antwoord er niet staat.** Dit loopt
+  **luid** af, en juist daarom denkt de student dat de cel of het bestand stuk is.
+  Dat is hij niet: een `AssertionError` betekent dat de functie iets anders
+  teruggeeft dan de aanname zegt, en één van die twee klopt niet. Zeg erbij dat ze zelf moeten uitzoeken wélke, want vanaf
   Opdracht 1 **c** schrijven ze de aannames zelf en kan de fout ook daar zitten.
 - **`range` telt tót en niet tot en met.** **Stil**, en daarom duur. In Opdracht 1
   is `triangle(5)` gelijk aan `15` en niet aan `10`, want `list(range(n + 1))`
   loopt van 0 tot en met 5. Wie de `+ 1` over het hoofd ziet, krijgt een
-  antwoord dat er geloofwaardig uitziet. Dezelfde valkuil zit morgen in alle drie
-  de opdrachten van `source/problems/3_opstap.ipynb`.
+  antwoord dat er geloofwaardig uitziet. Dezelfde valkuil zit morgen in Opdracht
+  1 en 3 van `source/problems/3_opstap.ipynb`.
 
 ### Als het niet uitkomt
 
@@ -466,8 +466,8 @@ komt, en noem het woord lus.
 - **`interp` zonder `if` schrijven.** Dit is geen fout maar een blokkade: de
   opdracht vraagt nadrukkelijk om het zonder `if` te doen, en de student weet niet
   hoe hij moet beginnen. Het materiaal geeft de tip zelf - begin bij
-  `(hi - low)` - maar die staat in een uitklapbaar kader en wordt overgeslagen.
-  Wijs erop in plaats van de oplossing te geven.
+  `(hi - low)` - maar dat kader staat onder de opdrachttekst en wordt
+  overgelezen. Wijs erop in plaats van de oplossing te geven.
 
 ### Als het niet uitkomt
 
