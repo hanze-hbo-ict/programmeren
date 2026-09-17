@@ -32,7 +32,10 @@ afbeelding, kleuren één pixel en schrijven het bestand.
 ## Een afbeelding tekenen
 
 Kopieer je functies uit de basislaag naar `mandelbrot.py`. Schrijf daarna
-`mset()` met twee geneste lussen. Gebruik `scale` om iedere pixel naar een
+`mset()` met twee geneste lussen. Gebruik het lusrecept uit `lectures/4a_lussen`
+en beantwoord bij vraag 4 wanneer de binnenste lus klaar is met de rijen van de
+huidige kolom en wanneer de buitenste lus klaar is met alle kolommen. Gebruik
+`scale` om iedere pixel naar een
 complex getal in het bereik `-2.0 <= x <= 1.0` en `-1.0 <= y <= 1.0` te
 vertalen. Kleur punten waarvoor `in_mset(c, 50)` `True` geeft oranje en de
 andere punten zwart.

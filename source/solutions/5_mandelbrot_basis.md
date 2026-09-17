@@ -8,7 +8,7 @@ def scale(pix, pix_max, value_min, value_max):
 
 def count_inside(width, height, n):
     """Telt de rasterpunten die binnen blijven."""
-    count = 0
+    count = 0  # verzamelvariabele voor de punten die binnen blijven
     for col in range(width):
         for row in range(height):
             x = scale(col, width, -2.0, 1.0)

@@ -19,11 +19,11 @@ def update(c, n):
 
 def in_mset(c, n):
     """Geeft False terug zodra de reeks buiten de grens komt."""
-    z = 0
+    z = 0  # verzamelvariabele voor de opeenvolgende waarden van z
     for _ in range(n):
         z = z**2 + c
         if abs(z) > 2:
-            return False
+            return False  # verlaat de functie; dit is niet het einde van de lus
     return True
 
 
