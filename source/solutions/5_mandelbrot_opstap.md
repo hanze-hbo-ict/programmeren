@@ -3,7 +3,7 @@
 ```python
 def mult(c, n):
     """Geeft c maal n terug met herhaald optellen."""
-    result = 0
+    result = 0  # verzamelvariabele
     for _ in range(n):
         result += c
     return result
@@ -11,7 +11,7 @@ def mult(c, n):
 
 def update(c, n):
     """Voert n keer z = z**2 + c uit."""
-    z = 0
+    z = 0  # verzamelvariabele voor de tussenstand
     for _ in range(n):
         z = z**2 + c
     return z
@@ -19,11 +19,11 @@ def update(c, n):
 
 def in_mset(c, n):
     """Geeft False terug zodra de reeks buiten de grens komt."""
-    z = 0
+    z = 0  # verzamelvariabele voor de opeenvolgende waarden van z
     for _ in range(n):
         z = z**2 + c
         if abs(z) > 2:
-            return False
+            return False  # verlaat de functie; dit is niet het einde van de lus
     return True
 
 
