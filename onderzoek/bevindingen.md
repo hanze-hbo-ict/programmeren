@@ -753,6 +753,45 @@ bestanden, niet naar welke branch ze dragen.
 *Bewijs: #198, commit `d32a8373` tegenover `a711a28f`; de nameting staat als reactie
 op dat issue. Vastgesteld 12 september 2026.*
 
+## 18. Parallelle routes vragen een afhankelijkheids- en boardcontrole
+
+Bij #163, #239 en #237 kwamen drie samenhangproblemen tegelijk aan het licht.
+
+**Een werkitem kan niet alleen worden gelezen.** #239 maakte de week-4-
+docentenhandleiding en liet de oude `teacher_guides/4_midterm.docx` staan als bron
+voor werkvormen. #237 had een C4 om week-3-docx te verwijderen. Beide keuzes waren
+binnen hun eigen route begrijpelijk, maar samen was niet vastgelegd of oude docx na
+migratie moeten blijven of uniform verdwijnen. De parent #95 was de plek waar die
+regel al hoorde te worden bewaakt. Een C1 moet daarom parent, siblings en relevante
+eerder genomen besluiten expliciet meenemen vóór een verwijdering of verplaatsing.
+
+**De Project-status is een procesartefact.** Bij #163 stond de issue nog op
+*Triage* terwijl C1b al was gepubliceerd en de ontwerper klaarstond. De issue- en
+PR-reacties waren inhoudelijk correct, maar het board gaf een onjuiste processtand.
+Het publiceren van C1b, C2, C4, C5 en C6 moet daarom telkens ook de bijbehorende
+statusovergang controleren.
+
+**Zoeken op termen is geen volledige inhoudscontrole.** De verkenner vond nul
+treffers op `verzamelvariabele`, waarna de beoordelaars nog een ontbrekende lokale
+verwijzing bij `in_mset` en een inconsistente linkvorm vonden. Een C5/C6 moet naast
+treffers ook een kleine steekproef op paden, links en de betekenis van termen
+bevatten. In dezelfde ronde bleek een inventarispad in C1 (`4_python_bat.ipynb`)
+niet overeen te komen met het bestaande `.md`-bestand; bronpaden moeten vóór
+overdracht worden geverifieerd.
+
+**Wat dit verandert.**
+
+- C1 bevat een afhankelijkheidsoverzicht: parent, siblings, gedeelde bestanden en
+  besluiten die de scope raken.
+- Elke artefactpublicatie eindigt met een controle van de GitHub Project-status.
+- C5/C6 bevatten naast mechanische zoekacties een beperkte inhoudelijke steekproef
+  op links, paden en termgebruik.
+- Een verwijdering van oud bronmateriaal blijft geblokkeerd totdat de uniforme
+  parentbeslissing is vastgelegd.
+
+*Bewijs: #163 (C1b, C2, C5 en C6), #239/#240, #237 en parent #95. Vastgesteld
+17 september 2026.*
+
 ## Open: welk model per rol
 
 *1 september 2026. Nog niet onderzocht.*
