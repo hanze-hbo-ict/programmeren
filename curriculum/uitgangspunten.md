@@ -324,7 +324,7 @@ draait wel.
 | Studenten leveren geen werk in; opdrachten zijn oefening | organisatorisch | gesloten, **nog niet uitgevoerd**: `source/` draagt nog inleverinstructies |
 | Tot en met week 4 ligt de nadruk op lezen en begrijpen; schrijven begint wel | didactisch | staand, onderbouwd |
 | Een weekpagina vat samen wat volgt en waarop het voortbouwt | praktisch | gesloten (#167), **deels uitgevoerd**: week 1 tot en met 4 dragen hem, met #168, #169, #230 en #162; week 5 tot en met 12 zijn nog stubs van zeven tot elf woorden |
-| Elk opgaveniveau hoort een uitwerking te hebben | didactisch | gesloten, nog niet uitgevoerd; 11 van de 28 ontbreken |
+| Elk opgaveniveau hoort een uitwerking te hebben | didactisch | gesloten, nog niet uitgevoerd; 11 van de 30 ontbreken |
 | Week 4 krijgt een lusrecept van vijf vragen, in `4a_lussen` | didactisch | gesloten, **uitgevoerd** met #153; week 5 pikt het nog niet op (#163) |
 | Recursie gaat in beginsel naar PGM2; `unique` blijft in PGM1 als herkenbaar iteratief voorbeeld met vooruitwijzing | organisatorisch | gesloten, uitgevoerd in #162: de overige recursieplekken zijn verwijderd; recursie wordt uitgebreider behandeld in PGM2 |
 | Eerst de weken van PGM1 afronden; het materiaal moet zo snel mogelijk live | organisatorisch | staand |
