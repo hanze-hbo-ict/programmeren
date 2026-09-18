@@ -203,6 +203,14 @@ twee plekken half hetzelfde beweert.
 - **Hef een afhankelijkheid liever op dan haar te onthouden.** Dwingt een
   wijziging hier een wijziging daar af, maak die band dan overbodig. Kan dat
   niet, leg dan vast waar de andere plek zit.
+- **Kruisverwijzingen moeten altijd kloppen.** Een zin die zegt waar iets anders
+  staat - "dat heb je in week 2 gezien", "in het werkcollege schrijf je die
+  functie zelf" - is een bewering over ander materiaal, en die veroudert zodra
+  dat materiaal schuift. Verplaats je een onderdeel naar een andere week of een
+  andere bijeenkomst, zoek dan de zinnen op die ernaar wijzen. Een dode link
+  vangt de build; een verwijzing die nog werkt maar niet meer waar is, vangt
+  niemand. **Loopt stil af**, en dat maakt hem duur: de student leest een
+  aanwijzing die hem naar de verkeerde plek stuurt.
 
 ## Opmaak en interpunctie
 
