@@ -206,7 +206,7 @@ extra*.
 **Wat er wél uit volgt: elf ontbrekende niveau-uitwerkingen.** Dat volgt niet uit
 de regel hierboven maar uit het besluit *Elk opgaveniveau hoort een uitwerking te
 hebben*, dat elk **bestaand** niveau bindt en dus onafhankelijk is van het
-PGM2-uitstel. De meting telt 28 niveau-opgaven in `source/problems/`, waarvan 17
+PGM2-uitstel. De meting telt 30 niveau-opgaven in `source/problems/`, waarvan 19
 een gelijknamige uitwerking in `source/solutions/` hebben en 11 nog niet. Dit is
 werkitem #194 en geen werk voor de herziening van dit document. In die elf
 ontbrekende uitwerkingen gaat het concreet om de opstap van week 5 tot en met 8
