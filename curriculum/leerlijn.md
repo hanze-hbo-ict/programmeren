@@ -203,13 +203,13 @@ invulling is gemaakt; wat er nu per PGM2-week ligt, staat in
 [uitgangspunten.md](uitgangspunten.md) bij *De verdeling in opstap, basis en
 extra*.
 
-**Wat er wél uit volgt: zes ontbrekende opstapuitwerkingen.** Dat volgt niet uit
+**Wat er wél uit volgt: elf ontbrekende niveau-uitwerkingen.** Dat volgt niet uit
 de regel hierboven maar uit het besluit *Elk opgaveniveau hoort een uitwerking te
 hebben*, dat elk **bestaand** niveau bindt en dus onafhankelijk is van het
-PGM2-uitstel. `source/solutions/` heeft alleen `2_opstap`; voor de weken 3 tot en
-met 8 ontbreekt de opstapuitwerking. Vanaf week 9 ontbreken de uitwerkingen
-helemaal, en dat is een groter gat dat onder hetzelfde besluit valt. Dit is
-werkitem #194 en geen werk voor de herziening van dit document.
+PGM2-uitstel. De meting telt 28 niveau-opgaven in `source/problems/`, waarvan 17
+een gelijknamige uitwerking in `source/solutions/` hebben en 11 nog niet. Dit is
+werkitem #194 en geen werk voor de herziening van dit document. College- en
+practicumopdrachten vallen niet automatisch onder deze norm.
 
 ## Volgorde van het werk
 
