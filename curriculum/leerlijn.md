@@ -208,7 +208,9 @@ de regel hierboven maar uit het besluit *Elk opgaveniveau hoort een uitwerking t
 hebben*, dat elk **bestaand** niveau bindt en dus onafhankelijk is van het
 PGM2-uitstel. De meting telt 28 niveau-opgaven in `source/problems/`, waarvan 17
 een gelijknamige uitwerking in `source/solutions/` hebben en 11 nog niet. Dit is
-werkitem #194 en geen werk voor de herziening van dit document. College- en
+werkitem #194 en geen werk voor de herziening van dit document. In die elf
+ontbrekende uitwerkingen gaat het concreet om de opstap van week 5 tot en met 8
+en alle niveau-uitwerkingen van week 9 tot en met 11. College- en
 practicumopdrachten vallen niet automatisch onder deze norm.
 
 ## Volgorde van het werk

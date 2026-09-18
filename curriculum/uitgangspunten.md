@@ -872,13 +872,12 @@ materiaal - dan is zij een onderhoudslast in plaats van een leerlijn.
 
 ### Elk opgaveniveau hoort een uitwerking te hebben
 
-**Ieder bestaand bestand met patroon `source/problems/<week>_<niveau>`, waarbij
-`<niveau>` `opstap`, `basis` of `extra` is, hoort een gelijknamige uitwerking in
-`source/solutions/` te hebben.** Een niveau zonder uitwerking is een omissie, geen keuze.
+**Ieder bestaand bestand in `source/problems/` waarvan de bestandsnaam zonder
+extensie eindigt op `_opstap`, `_basis` of `_extra`, hoort een gelijknamige
+uitwerking in `source/solutions/` te hebben.** Een niveau zonder uitwerking is een omissie, geen keuze.
 Ziet een lezer dat opgaven geen uitwerking hebben, dan is dat een gebrek van de
 auteurs en het hoort gerepareerd te worden. Er is dus geen "de opstap heeft er
-met opzet geen". Deze norm geldt voor de 28 gemeten niveau-opgaven: 17 hebben
-een gelijknamige uitwerking en 11 nog niet. College- en practicumopdrachten
+met opzet geen". College- en practicumopdrachten
 vallen er niet automatisch onder; het feit dat daarvoor geen gelijknamige
 uitwerking bestaat, is op zichzelf geen vastgesteld tekort.
 

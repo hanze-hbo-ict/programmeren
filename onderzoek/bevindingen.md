@@ -92,12 +92,11 @@ woordelijk in de opstap terugkomen (aantoonbaar, want de kapotte nummering 1, 2,
 6, 7, 4, 5 komt in beide voor), en een verhouding van 94 voorspelvragen tegen 17
 schrijfopdrachten.
 
-Het ontbreken van een gelijknamige `solution` bij een collegeopdracht is daarmee
-geen vastgesteld tekort. De norm uit het curriculum geldt voor niveau-opgaven in
-`problems/` en hun gelijknamige uitwerkingen in `solutions/`; college- en
-practicumopdrachten hebben geen automatische solutionplicht. Een eventuele
-uitwerking of een kort antwoord in de docentenhandleiding is een afzonderlijke
-keuze.
+De afbakening van de solutionplicht staat in het besluit in
+[curriculum/uitgangspunten.md](../curriculum/uitgangspunten.md). Werkitem #253
+legt daar vast dat college- en practicumopdrachten er niet automatisch onder
+vallen; het ontbreken van een gelijknamige `solution` bij een collegeopdracht is
+daarmee geen vastgesteld tekort.
 
 **Wat het veranderde.** De leesronde is als eigen modus in het C6-contract
 opgenomen: geen dekking van acceptatiecriteria maar van de normen die er wel zijn,
