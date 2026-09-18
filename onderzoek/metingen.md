@@ -675,6 +675,30 @@ Twee keer een patroon niet geijkt, allebei in dezelfde sessie:
 
 Hier hoort wat met de hand is gedaan omdat het te klein leek voor een werkitem.
 
+### 18 september 2026, drie directe correcties (PR #249 en #250)
+
+**Wat het was.** Drie meldingen van de vakdeskundige, alle drie op dezelfde dag gemeld,
+gerepareerd en gemerged. Twee in de interactieve cel: CodeMirror sprong twee spaties in terwijl
+de code op de pagina er vier gebruikt (een `IndentationError` zodra een student in een bestaande
+functie doortypte), en Sphinx' `doctools.js` kaapte `/` naar de zoekbalk omdat het alleen
+`TEXTAREA`, `INPUT`, `SELECT` en `BUTTON` overslaat en `document.activeElement` bij een editor in
+een schaduw-DOM het element `<interactive-code-cell>` zelf is. De derde was een kop die in week 2
+*Extra* uit een code-span ontsnapte; zie de bevinding van diezelfde datum.
+
+**Waarom het buiten de lus bleef.** Drie gemeten oorzaken met elk een ingreep van één tot drie
+regels, in materiaal dat op dat moment op de site stond. Dat is de proportionaliteitsregel uit
+`CLAUDE.md`: een branch met een pull request, geen werkitem.
+
+**Ging er een beoordelaar overheen?** Nee — de vakdeskundige heeft ze zelf visueel gecontroleerd
+in een `sphinx-autobuild` op een gecombineerde branch, vóór de merge. Dat was hier ook de enige
+zinnige controle: twee van de drie zijn browsergedrag dat een agent niet kan waarnemen. De derde
+is wél gemeten: twee `<h1>` in de gebouwde pagina vóór, één na.
+
+**Twee splitsingen die de moeite waard bleken.** De twee onderwerpen kregen elk een eigen PR
+(#249 lesmateriaal, #250 de extensie), zodat ze los terug te draaien zijn. En de visuele controle
+liep op een derde, gecombineerde branch, zodat de PR's zelf ongemoeid bleven.
+
+
 ### 16 september 2026, #231 — de tweede S-route, en een scoperegel die te ver reikte
 
 **Wat het was.** `source/solutions/3_opstap.ipynb` nieuw: tien cellen, drie draaiende codecellen,
@@ -1236,3 +1260,45 @@ Op 14 september 2026: kleine procesroute, uitvoering door Codex en onafhankelijk
 redactionele beoordeling op GitHub. Geen boekbuild; toepasselijke pre-commit en
 concrete scenario's in [214-redactie.md](214-redactie.md). Tokens en rolduur zijn
 niet beschikbaar. Vermindering van menselijk redactiewerk is nog niet gemeten.
+
+## Werkitem #237 — docentenhandleiding week 3
+
+Volledige lus op een handleiding: ontwerper (met verkenning gecombineerd), poort, auteur, één
+beoordelaar. Opgeleverd op 17 september 2026 in PR #245: `handleidingen/week_3.md` nieuw, 624
+regels en 6.234 woorden, plus de `.docx`-regel in `curriculum/uitgangspunten.md`, twee verwijderde
+`teacher_guides/`-bestanden, een bijgewerkte tally in de handleidingen van week 1 en 2 en één
+kruisverwijzing in `source/lectures/3a_functies.ipynb`.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| curriculumontwerper, ronde 1 | 144.550 | 10 min 59 s | C2, zeven criteria, acht open vragen waarvan vier blokkerend |
+| orkestrator, C1-correctie | niet beschikbaar | niet beschikbaar | drie eigen fouten hersteld vóór het ontwerpherstel |
+| curriculumontwerper, ronde 2 | 172.449 | 4 min 30 s | drie blokschema's in plaats van de open vragen |
+| auteur, ronde 1 | niet beschikbaar | niet beschikbaar | C5; geen meetregel in de kern op de PR |
+| beoordelaar-onderwijskundige | 165.078 | 17 min 10 s | AKKOORD MET PUNTJES, 0 blokkades, 6 puntjes |
+| orkestrator, vier puntjes | niet beschikbaar | niet beschikbaar | zelf hersteld, geen auteursronde |
+| beoordelaar, naleesronde | 15.232 | 2 min 4 s | vier van vier akkoord |
+
+**Eén ontwerpherstel gebruikt, van de één die is toegestaan, en het lag aan de orkestrator.** Het
+C1 wees de ontwerper naar een deelkop in plaats van naar de moedersectie met de
+bijeenkomstindeling, en noemde de sectie met open vragen het zwaarste deel van het werk. Het
+ontwerp leverde daarop acht vragen waar voorstellen hoorden, waaronder één expliciete *"ik heb
+hier geen voorstel"*. De correctie op C1 en het gerichte herstel kostten 172.449 tokens; dat is
+de prijs van een onscherpe opdracht - meer dan het oorspronkelijke ontwerp kostte.
+
+**Geen opleveringsherstel.** De beoordeling gaf nul blokkades. Vier van de zes puntjes waren
+aanwijsbaar onjuist — twee onwaarheden in de tekst, één ontbrekende aantekening en een verouderde
+telling in `curriculum/uitgangspunten.md` — en zijn door de orkestrator zelf rechtgezet in vier
+zinnen in plaats van via een auteursronde. De beoordelaar las ze na (vier van vier akkoord,
+15.232 tokens). Dat is de regel *wie het zelf doet, laat het lezen*, en hier kostte hij vijf
+procent van een auteursronde.
+
+**De rollen corrigeerden de orkestrator drie keer**, en alle drie de keren met een telling: 21
+blokken in plaats van 24 (auteur én beoordelaar, onafhankelijk), twee uitwerkingen op 58
+collegeopdrachten in plaats van één (auteur, nagemeten door de beoordelaar), en deelvraag **d**
+in plaats van **c** bij Opdracht 2 van `3b` (auteur, stil rechtgezet). Zie de bevinding over het
+criterium dat dwingt na te tellen.
+
+**Wat er open bleef.** De bredere kruisverwijzingsregel uit het poortbesluit is nog nergens
+vastgelegd en is dus niet genomen; de 33 collegeopdrachten zonder uitwerking staan bij #235 en
+#95, net als de `.docx` van week 4 en de verwijzing daarnaar in `handleidingen/week_4.md`.
