@@ -92,6 +92,12 @@ woordelijk in de opstap terugkomen (aantoonbaar, want de kapotte nummering 1, 2,
 6, 7, 4, 5 komt in beide voor), en een verhouding van 94 voorspelvragen tegen 17
 schrijfopdrachten.
 
+De afbakening van de solutionplicht staat in het besluit in
+[curriculum/uitgangspunten.md](../curriculum/uitgangspunten.md). Werkitem #253
+legt daar vast dat college- en practicumopdrachten er niet automatisch onder
+vallen; het ontbreken van een gelijknamige `solution` bij een collegeopdracht is
+daarmee geen vastgesteld tekort.
+
 **Wat het veranderde.** De leesronde is als eigen modus in het C6-contract
 opgenomen: geen dekking van acceptatiecriteria maar van de normen die er wel zijn,
 geen stop op een ontbrekende kern, en de plicht voor wie hem start om te zeggen dat
