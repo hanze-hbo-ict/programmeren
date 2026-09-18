@@ -187,7 +187,7 @@ class InteractiveCodeCell extends HTMLElement {
         { EditorView, keymap, lineNumbers, drawSelection, highlightActiveLine },
         { EditorState },
         { defaultKeymap, historyKeymap, history, indentWithTab },
-        { syntaxHighlighting, HighlightStyle, indentOnInput, bracketMatching },
+        { syntaxHighlighting, HighlightStyle, indentOnInput, bracketMatching, indentUnit },
         { python },
         { tags },
       ] = await Promise.all([
@@ -236,6 +236,10 @@ class InteractiveCodeCell extends HTMLElement {
             lineNumbers(), highlightActiveLine(), drawSelection(), history(),
             syntaxHighlighting(themeHighlight, { fallback: true }),
             indentOnInput(), bracketMatching(),
+            // CodeMirror springt standaard twee spaties in; de code op deze pagina's
+            // volgt PEP 8 en springt vier in. Zonder deze regel levert doortypen in
+            // een bestaande functie een IndentationError op.
+            indentUnit.of("    "),
             keymap.of([...defaultKeymap, ...historyKeymap, indentWithTab]),
             python(), inheritTheme,
           ],
@@ -243,6 +247,14 @@ class InteractiveCodeCell extends HTMLElement {
         parent: editorHost,
         root: shadow,
       });
+
+      // Sphinx' doctools.js luistert op document-niveau mee en kaapt "/" naar de
+      // zoekbalk. Het slaat die afhandeling alleen over voor TEXTAREA, INPUT,
+      // SELECT en BUTTON, en kijkt daarvoor naar document.activeElement - dat is
+      // bij een editor in een schaduw-DOM het element <interactive-code-cell>
+      // zelf. Een deling typen bracht de student dus in de zoekbalk. Toetsen die
+      // in de editor vallen, blijven daarom in de editor.
+      editorHost.addEventListener("keydown", (event) => event.stopPropagation());
     } catch (err) {
       this.#setStatus(`${t("editorLoadError")}${err.message}`, true);
       console.error("[interactive-code] CodeMirror init failed:", err);
