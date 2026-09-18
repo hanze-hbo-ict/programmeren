@@ -977,3 +977,66 @@ stilzwijgend niet wordt gevolgd.
 de vraag is niet of de kern mee moet, maar wanneer hij bestaat. Bij een route zonder ontwerp
 levert de auteur zijn C5 vóór de beoordeling, dus de kern kán mee — de orkestrator moet hem
 alleen doorgeven in plaats van de beoordelaar rechtstreeks op de branch te zetten.
+
+## Een criterium dat dwingt na te tellen, vangt de fout in de opdracht zelf — 17 september 2026
+
+**Wat er gebeurde.** Het ontwerp van #237 leidde een zevende criterium af dat niet in het
+werkitem stond: *elk tijdsblok draagt zijn herkomst* — **B** voor een tijd uit de bron van 2023,
+**R** voor een richttijd zonder bron — en de verdeling in de verantwoording telt op tot het
+aantal blokrijen. De meetregel onder dat ontwerp vatte de drie vastgestelde tabellen samen als
+*"24 blokken, 6 om 18"*. Dat getal is overgenomen in het poortbesluit en in de auteursopdracht.
+
+De tabellen bevatten 8 + 8 + 5 = **21** rijen, 6 met **B** en 15 met **R**. De auteur nam de
+tabellen ongewijzigd over, telde de verdeling zelf en meldde de afwijking; de beoordelaar telde
+onafhankelijk na en kwam op hetzelfde. Hij vond en passant een tweede telfout: het ontwerp
+schreef *"Vier uit de bron (45 min)"* waar die vier rijen 5 + 10 + 15 + 20 = 50 minuten zijn.
+
+**Waarom het telt.** Het foute getal stond in drie opeenvolgende artefacten van dezelfde keten —
+ontwerp, poort, opdracht. Geen van de drie overschrijvingen kon het vangen, want ze schreven het
+getal over in plaats van de tabellen te tellen. Wat het wél ving was een criterium dat de auteur
+verplichtte de bron zelf te tellen om eraan te voldoen. **Een criterium dat een getal eist,
+controleert de keten die het getal doorgaf.**
+
+**Wat het veranderde.** Dit criterium gaat mee naar de volgende handleidingen. Het is bovendien
+de tegenhanger van bevinding 16: criteria over een `conventies/`-document convergeren niet omdat
+ze geen eindvoorwaarde hebben; dit criterium convergeert juist omdat het een telling is.
+
+## De reikwijdte uit C1 kan door het poortbesluit worden ingehaald — 17 september 2026
+
+**Wat er gebeurde.** Het C1 van #237 stelde vast dat er geen Sphinx-build nodig was: een
+handleiding staat in `handleidingen/` en niet in `source/`, dus de build raakt hem niet. Dat
+klopte toen het werd geschreven. Het poortbesluit voegde daarna één opdracht toe die wél een
+boekbestand raakte — een kruisverwijzing in `source/lectures/3a_functies.ipynb` — en daarmee
+vraagt `CLAUDE.md` de build alsnog. Auteur en beoordelaar draaiden hem allebei uit zichzelf, en
+hij was groen.
+
+**Waarom het gebeurt.** De reikwijdte wordt vastgesteld vóór het menselijke besluit, en een
+poortbesluit mag de afbakening veranderen. Dat is niet fout — het is waarvoor de poort bestaat —
+maar het maakt de controles uit C1 een momentopname.
+
+**Wat het veranderde.** Nog niets in de instructies. Voor wie het oplost: de goedkoopste vorm is
+dat het C4 de reikwijdte opnieuw noemt zodra het de afbakening aanpast, in plaats van de
+orkestrator te laten onthouden dat C1 is ingehaald.
+
+## Een tekstvervanging die code in proza raakt, breekt de structuur van de pagina — 18 september 2026
+
+**Wat er gebeurde.** In `source/problems/2_extra.ipynb` is `from math import *` vervangen door
+`from math import sqrt, factorial` plus een toelichtende comment op een eigen regel. De
+vervanging raakte drie plekken: de codecel, het `python`-blok in de markdown, en een **inline
+code-span in lopende tekst**. Op de eerste twee hoort de comment thuis. Op de derde kwam er een
+regeleinde in een code-span, en de tweede regel begint met `#` in kolom 0. Blokken worden vóór
+inline-elementen geparseerd en een ATX-kop mag een alinea onderbreken, dus MyST maakte er een
+kop van. De gebouwde pagina droeg twee `<h1>`: "Extra", en
+``Vooruitwijzing: deze functies komen in week 3 aan bod` zorgt dat deze module beschikbaar is in de code``.
+
+Het stond ruim een dag op de pagina van de lopende week en is door de vakdeskundige gezien, niet
+door een controle.
+
+**Waarom geen enkele poort het ving.** Een tweede `<h1>` is geldige HTML en geldige MyST; de
+build waarschuwt niet. De hooks kijken naar celtags, kopwoorden en Python-syntaxis, niet naar
+documentstructuur. En de menselijke controle keek of de code draaide — dat deed ze — niet of de
+zin eromheen nog klopte. Vergelijk bevinding 9: de titelhiërarchie staat buiten de buildcontrole.
+
+**Wat het veranderde.** Herstel in PR #249. De les is smal en bruikbaar: **code in lopende tekst
+is een citaat, geen code.** Wie een codefragment repo-breed vervangt, controleert apart waar dat
+fragment in proza voorkomt — daar mag er geen regeleinde bij, en een comment hoort er niet.
