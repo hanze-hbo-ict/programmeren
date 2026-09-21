@@ -410,10 +410,12 @@ gedaan heeft.
 - **CodingBat is onbereikbaar.** De hele bijeenkomst hangt aan één externe site,
   zonder TLS. Houd blok 2, 4 en 6 overeind, want die gaan over de vorm van de
   lus en niet over de site, en haal de tijd voor de zelfstandige blokken uit
-  `source/problems/4_basis.ipynb`: `### Opdracht 1` **b** (`power`) en
-  `### Opdracht 2` **b** (`summed_odds`) zijn dezelfde elementlus met een `if`
-  en draaien lokaal met assertions. Meld het aan wie morgen het practicum geeft,
-  want die twee zijn dan al gezien.
+  `source/problems/4_basis.ipynb`. `### Opdracht 2` **b** (`summed_odds`) is de
+  dichtstbijzijnde: dezelfde elementlus met een `if`, en de asserts staan er
+  kant-en-klaar. `### Opdracht 1` **b** (`power`) kan erachteraan, maar weet wat
+  je geeft: die is gemodelleerd op `fac` en gebruikt dus `range` zonder `if`, en
+  de tests staan er als `print`-regels die de student zelf naar asserts omzet.
+  Meld het aan wie morgen het practicum geeft, want die twee zijn dan al gezien.
 - **Je houdt tijd over.** Laat duo's `end_other` een tweede keer schrijven met
   een index die vanaf achteren telt in plaats van met `[::-1]`. Dezelfde stof
   van de andere kant, en het kost je geen voorbereiding.
@@ -670,12 +672,11 @@ twintig die er nu staan.
   lusrecept redeneerde vanuit een practicumsleuf die door CodingBat bezet zou
   zijn, en dat is sinds deze vaststelling niet meer zo. De conclusie van dat
   besluit is niet veranderd.
-- **`handleidingen/week_3.md` verwijst nog naar de oude kopnaam.** Die
-  handleiding haalt de afwijkingensectie van `curriculum/uitgangspunten.md` aan
-  onder haar vorige naam, *Drie erkende afwijkingen*, en die kop heet sinds dit
-  werkitem *Vier erkende afwijkingen*. De verwijzing loopt daardoor **stil**
-  dood: er staat nog iets, het klopt alleen niet meer. Het is één woord, en het
-  valt buiten de afbakening van dit werkitem.
+- **`handleidingen/week_3.md` is met dit werkitem meegegaan.** Die handleiding
+  haalde de afwijkingensectie van `curriculum/uitgangspunten.md` aan onder haar
+  vorige naam, *Drie erkende afwijkingen*. Het hernoemen naar *Vier* maakte dat
+  citaat stil dood, en het is hier rechtgezet in plaats van gemeld - zie de regel
+  over kruisverwijzingen in `conventies/schrijfwijzer.md`.
 - **Deze week levert geen enkele overgeleverde tijd op en is daarmee de eerste.**
   Wie hem geeft en meet, kan de eerste **B**-tijden van week 4 aanleveren. Tot
   die er zijn staan alle twintig blokken als richttijd, en zo horen ze gelezen te

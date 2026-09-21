@@ -605,7 +605,7 @@ Voor bijeenkomst 3 bestaat geen bron. Het practicum en de drie bundels zijn na
   gewijzigde weekopzet. Na deze wijziging staan er nog **zeven** `.docx` in
   `teacher_guides/`: drie van week 4 en vier van week 5 en 6. Ze wachten op
   werkitem #95. De drie van week 4 zijn er inmiddels uit en `handleidingen/week_4.md`
-  citeert ze niet meer; sinds werkitem #256 staan er nog vier, van week 5 en 6.
+  citeert ze niet meer; met `3110b335` staan er nog vier, van week 5 en 6.
 - **Kruisverwijzingen lopen stil achter als materiaal verschuift.** Eén zin in
   `source/lectures/3a_functies.ipynb` zei dat `convert_from_seconds` in het
   werkcollege wordt geschreven, terwijl die functie Opdracht 5 van het practicum
@@ -613,5 +613,5 @@ Voor bijeenkomst 3 bestaat geen bron. Het practicum en de drie bundels zijn na
   het tweede geval op rij - `source/course/week_4.md` verwees eerder naar "de
   lijsten uit week 3" terwijl lijsten uit week 2 komen - en het is de reden om na
   elke verschuiving de verwijzingen na te lopen.
-- Deze handleiding beschrijft het materiaal zoals het op **17 september 2026** in
+- Deze handleiding beschrijft het materiaal zoals het op **21 september 2026** in
   de repository staat.
