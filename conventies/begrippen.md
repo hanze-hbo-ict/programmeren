@@ -289,6 +289,14 @@ automatisch.
 - **tekst** is wat er in een string staat; **string** is het type.
 - **parameter** staat in de functiedefinitie; **argument** is wat je meegeeft
   bij de aanroep.
+- **handeling** is de algemene naam voor wat een functie met haar invoer doet;
+  **berekening** is het bijzondere geval waarin die handeling rekenwerk is. De
+  tekening bij `f(x) = 2x + 3` in `lectures/3a_functies` zet daarom *handeling*
+  onder de accolade, terwijl de zin eronder `f(2) = 2 * 2 + 3` narekent en
+  *berekening* schrijft: het algemene woord in de vorm, het bijzondere in het
+  voorbeeld. `swap_ends(s)` verwisselt twee tekens en rekent niets uit, en is
+  dus wel een handeling en geen berekening. In `source/` staan 20 vormen van
+  *handeling* tegen 23 van *berekening*; vervang ze niet over één kam.
 
 ## Engelse termen die we niet vertalen
 
