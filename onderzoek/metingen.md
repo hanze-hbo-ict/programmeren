@@ -692,6 +692,13 @@ verwijst, en de lus heeft voor die vastlegging geen eigen stap.
 **Ging er een beoordelaar overheen?** Nog niet bij het openen van de PR; de vakdeskundige
 beoordeelt de kolominvulling in de PR zelf.
 
+**Vervolg, dezelfde dag.** De begrippen van week 5 kwamen in een tweede commit op dezelfde
+branch, die pas werd gepusht nadat #261 al gemerged was; ze belandden niet in `master` en
+moesten via #262 alsnog. Daarna volgde een derde PR met de practicumopzet voor week 5 tot en
+met 7 (`curriculum/practicum-oop.md`) en de besluiten die daaruit volgden voor de opgavenlaag
+en de begrippenkolom van week 5. De referentie-oplossing uit de opzet is gedraaid; wat ze
+beweert klopt op de gecontroleerde punten.
+
 ### 18 september 2026, drie directe correcties (PR #249 en #250)
 
 **Wat het was.** Drie meldingen van de vakdeskundige, alle drie op dezelfde dag gemeld,
