@@ -664,8 +664,8 @@ twintig die er nu staan.
   is er de opvolger van; wie ze wil nalezen vindt ze in de git-geschiedenis. Dat
   volgt de regel in `curriculum/uitgangspunten.md`: zo'n document is een bron om
   uit te putten, elk exemplaar verdwijnt uiteindelijk, en het uitgangspunt is
-  nieuw ontwerp op de gewijzigde weekopzet. Er staan er nu nog **vier**, van
-  week 5 en 6. Ze wachten op werkitem #95.
+  nieuw ontwerp op de gewijzigde weekopzet. De vier van week 5 en 6 zijn met #276
+  en #280 ook verdwenen; `teacher_guides/` bestaat niet meer.
 - **De bijeenkomstindeling van week 4 is met dit werkitem vastgelegd** als
   vierde erkende afwijking in `curriculum/uitgangspunten.md`. Tegelijk is daar
   één bijzin rechtgezet die van de oude indeling uitging: het besluit over het
