@@ -1046,3 +1046,26 @@ zin eromheen nog klopte. Vergelijk bevinding 9: de titelhiërarchie staat buiten
 **Wat het veranderde.** Herstel in PR #249. De les is smal en bruikbaar: **code in lopende tekst
 is een citaat, geen code.** Wie een codefragment repo-breed vervangt, controleert apart waar dat
 fragment in proza voorkomt — daar mag er geen regeleinde bij, en een comment hoort er niet.
+
+## Een melding over werk dat je in dezelfde PR uitvoert, veroudert binnen die PR — 23 september 2026
+
+**Wat er gebeurde.** Bij #256 hernoemde de auteur een kop in `curriculum/uitgangspunten.md`
+van *Drie* naar *Vier erkende afwijkingen*. Dat maakte een citaat in `handleidingen/week_3.md`
+stil dood. Hij meldde dat netjes onder *Wat er nog loopt* in de handleiding die hij schreef,
+met de reden dat het buiten de afbakening viel. De orkestrator vond de melding terecht maar
+de conclusie niet, en repareerde het citaat alsnog in dezelfde PR - **zonder de melding weg
+te halen**. De opgeleverde tekst vertelde de volgende lezer dus dat er werk lag dat zes
+regels verderop in diezelfde commit al gedaan was. De beoordelaar ving het als moet-punt.
+
+**Waarom dit een patroon is en geen slordigheid.** Een handleiding draagt een subsectie
+*Wat er nog loopt*: een momentopname van de repository, geschreven door de rol die het
+eerst ziet. Wie daarna in dezelfde PR meer doet dan de afbakening voorzag - en dat is
+precies wat de proportionaliteitsregel aanmoedigt - maakt die momentopname onwaar zonder
+er langs te komen. Het is dezelfde soort fout als de dode kruisverwijzing uit #252, maar
+met een kortere lus: de veroorzaker en de gedupeerde tekst zitten in één commit.
+
+**Wat het veranderde.** Hersteld in `cb1d830f`. De regel die eruit volgt is smal en goed
+te onthouden: **repareer je iets wat elders als openstaand gemeld staat, zoek die melding
+dan op voordat je commit.** `grep` op het onderwerp van je reparatie is genoeg; in dit
+geval gaf `grep -rn "Drie erkende afwijkingen"` precies één treffer, en dat was de melding.
+

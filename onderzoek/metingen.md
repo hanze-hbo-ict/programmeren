@@ -1326,3 +1326,53 @@ criterium dat dwingt na te tellen.
 **Wat er open bleef.** De bredere kruisverwijzingsregel uit het poortbesluit is nog nergens
 vastgelegd en is dus niet genomen; de 33 collegeopdrachten zonder uitwerking staan bij #235 en
 #95, net als de `.docx` van week 4 en de verwijzing daarnaar in `handleidingen/week_4.md`.
+
+## Werkitem #256 — docentenhandleiding week 4 op de norm
+
+De derde handleiding, en de eerste die een bestaande norm volgde in plaats van hem
+uit te vinden. Opgeleverd op 21 september 2026 in PR #260: `handleidingen/week_4.md`
+van 232 naar 684 regels, plus twee vastleggingen in `curriculum/uitgangspunten.md`
+en drie rechtgezette verwijzingen in `handleidingen/week_3.md`.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| curriculumontwerper, ronde 1 | 164.519 | 15 min 10 s | C2; voorstel A over de bijeenkomstindeling, blokschema's met 22 blokrijen |
+| curriculumontwerper, ronde 2 | 50.487 | 8 min 51 s | herstel na het poortbesluit; blokschema 2 en 3 opnieuw, 20 rijen, 0 B |
+| auteur, ronde 1 | 280.463 | 18 min 11 s | C5; acht criteria zelf gemeten en gehaald |
+| beoordelaar-onderwijskundige | 197.993 | 17 min 47 s | AKKOORD MET PUNTJES, 0 blokkades, 1 moet-punt, 4 puntjes |
+| orkestrator, twee correctieronden | niet beschikbaar | niet beschikbaar | drie verouderde verwijzingen, daarna het moet-punt en drie puntjes |
+| **totaal agents** | **693.462** | **circa 60 min** | |
+
+Ter vergelijking: #237 (week 3) kwam op circa 497.000 met een auteur wiens tokens niet
+beschikbaar waren. De twee zijn dus niet zuiver te vergelijken, maar de richting is
+duidelijk: het volgen van een norm kostte hier **meer** dan het vaststellen ervan.
+Dat is de aanleiding voor proef 1 van #203, vastgelegd in [203-proef.md](203-proef.md).
+
+**Het poortbesluit veranderde het ontwerp, en dat was winst.** De ontwerper stelde voor
+week 4 het patroon van week 3 te laten volgen: de oefenmidterm als werkcollege, CodingBat
+in het practicum. Hij legde er eerlijk het tegensignaal bij — `practicals/4_python_bat.md`
+noemt zichzelf een werkcollege — en redeneerde dat weg als een restant. De vakdeskundige
+besliste andersom, op een grond die in geen enkel artefact stond: **de midterm wordt in
+week 5 afgenomen, dus is het practicum van week 4 het oefenmoment.** Daarmee werd het
+tegensignaal juist het bewijs, en verviel een van de twee open vragen.
+
+**De nul die het vermelden waard is.** Onder die indeling hielden de vier overgeleverde
+tijden uit `4_midterm.docx` geen stand: ze beschreven een klassikale cyclus met *geen
+overleg*, en die past niet in een practicum. Week 4 is daarmee de eerste week met
+**0 B en 20 R** - geen enkele tijd uit een bron. De beoordelaar heeft de drie `.docx`
+zelf uit `3110b335^` gelezen en de afweging bevestigd, met één aanvulling die de
+ontwerper zelf de zwakste bullet noemde: *"Start les (5 min)"* staat woordelijk boven
+alle drie de documenten en is dus een huisvorm, geen meting van deze les.
+
+**Wat de rollen aan de orkestrator corrigeerden.** De ontwerper: drie regelgetallen uit
+C1 (620/625/232, niet 619/624/233). De auteur: twee fouten in het ontwerp - een uitwijk
+die naar blok 7 wees terwijl het blok 6 is, en drie opdrachten die als `+=`, `-=` en `*=`
+werden opgevoerd terwijl het alle drie `+=` is. De beoordelaar: dat de melding over
+`week_3.md` onwaar was geworden door de reparatie zes regels verderop in dezelfde PR.
+
+**Twee keer stond een agent in de verkeerde checkout.** De ontwerper ontdekte bij het
+hervatten dat zijn shell in de hoofdcheckout stond, op een verlaten branch met drie
+niet-vastgelegde bestanden. Hij heeft al zijn dragende metingen overgedaan tegen
+`git show origin/master:<pad>` en kwam op dezelfde getallen uit, op één verfijning na.
+Zie de bevinding daarover; bevinding 17 is hiermee voor de derde keer waargenomen.
+
