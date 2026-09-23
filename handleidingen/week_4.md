@@ -44,7 +44,7 @@ afwijkt is het tweede collegebestand: `source/lectures/4b_midterm.md` schuift
 naar de derde bijeenkomst, naast de drie opgavebundels.
 
 Dat is een erkende afwijking, vastgelegd in `curriculum/uitgangspunten.md`
-§`#### Vier erkende afwijkingen` en vastgesteld door de vakdeskundige op
+§`#### Vijf erkende afwijkingen` en vastgesteld door de vakdeskundige op
 **18 september 2026**. De grond is de midterm zelf: die wordt in week 5
 afgenomen, dus is het practicum van week 4 het oefenmoment. Het materiaal wijst
 dezelfde kant op: `source/practicals/4_python_bat.md` noemt zichzelf in zijn
