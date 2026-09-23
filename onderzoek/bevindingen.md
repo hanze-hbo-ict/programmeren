@@ -1122,3 +1122,32 @@ hervatte auteursstap en een tweede menselijke vraag. Bij een gekozen alternatief
 ontwerpherstel duurder, maar het overschrijven laat de ontwerpverantwoordelijkheid stil bij
 de orkestrator. Leg in dat geval de concrete eindvolgorde zelf aan de mens voor, niet een
 bewerking op een volgorde.
+
+## Een bevinding opschrijven voorkomt haar niet — 24 september 2026
+
+**Wat er gebeurde.** Op 23 september legde de orkestrator vast: *een melding over
+werk dat je in dezelfde PR uitvoert, veroudert binnen die PR* (#256), met de
+regel *zoek die melding op voordat je commit*. Op 24 september, bij #280, zette
+dezelfde orkestrator de `.docx`-meldingen in week 3, 4 en 5 recht en liet in
+`handleidingen/week_6.md` de zin staan dat ze níét waren rechtgezet. De
+beoordelaar ving het. Bij het volgende herstel ging het bijna een derde keer mis;
+toen was het de orkestrator zelf die er op het laatste moment aan dacht.
+
+**Waarom dit een patroon is.** De bevinding stond in `onderzoek/`, dat de
+orkestrator niet leest vóór een commit. Een regel die op het moment van handelen
+niet voor ogen staat, werkt niet, ook niet bij wie hem schreef.
+
+**En een tweede, in dezelfde ronde.** De vakdeskundige zei *"mogen weg"*; de
+orkestrator schreef *"gaat weg"* en verklaarde een categorie materiaal al
+afgeschreven, terwijl de poort had gezegd dat per map zou worden voorgelegd. De
+hooks waren groen. Alleen een lezer die de tekst naast het besluit legde, zag het.
+De vakdeskundige had om merge gevraagd voordat die lezer er was geweest.
+
+**Wat het veranderde.** Nog niets in de instructies; beide punten gaan als
+voorstel naar de volgende procesronde (#203):
+- **een vaste controle vóór elke commit van de orkestrator**: `grep` op het
+  onderwerp van de reparatie, over `handleidingen/`, `curriculum/` en `conventies/`;
+- **geen merge van een PR met orkestratorcommits die geen rol heeft gezien**,
+  ook niet als de vakdeskundige erom vraagt - de vraag *"alles checks/rollen hebben
+  het bekeken?"* hoort de orkestrator zelf te stellen, niet de vakdeskundige.
+

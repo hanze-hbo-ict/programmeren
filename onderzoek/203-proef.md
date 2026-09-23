@@ -80,7 +80,7 @@ De eis dat elk tijdsblok zijn herkomst draagt blijft eveneens staan; die ving bi
 | Route en controledekking | C0 + C1 → auteur → poort → één beoordelaar; toepasselijke pre-commit, geen Sphinx-build zolang `source/` onaangeroerd blijft |
 | Historische referentie en motivering | **#256**, dezelfde soort werk op dezelfde norm, met dezelfde criteria en dezelfde controledekking. Te verkiezen boven #237, want #237 moest de norm zelf nog uitvinden |
 | Procescommit, model en meetdefinitie | bij start |
-| Referentietotaal en 70%-grens | pas vast te stellen als #256 is afgerond en geteld |
+| Referentietotaal en 70%-grens | **693.462** agenttokens (#256); de 70%-grens is **485.423** |
 | Verantwoordelijke vakdeskundige voor latere lezing/les | de vakdeskundige |
 
 **Wat deze proef kan aantonen, en wat niet.** Zij vergelijkt twee werkitems, geen
@@ -89,6 +89,41 @@ en een andere hoeveelheid bron. Een lager totaal bewijst dus niet dat de
 ontwerpstap overbodig is, alleen dat deze route voor dit soort werk goedkoper
 uitviel. Het omgekeerde is even informatief: komt de beoordelaar met blokkades
 waar #256 er geen had, dan heeft de ontwerpstap gedaan waarvoor zij bestond.
+
+### Uitkomst van proef 1, 24 september 2026
+
+| Werkitem | Agenttokens | t.o.v. #256 | Beoordeling |
+|---|---:|---:|---|
+| #256, week 4 (referentie, met ontwerpstap) | 693.462 | 100% | AKKOORD MET PUNTJES, 1 moetpunt |
+| #276, week 5 | 502.819 | 72,5% | **BLOKKEER** op 2 fouten, na één herstel AKKOORD |
+| #280, week 6 | 470.035 | 67,8% | AKKOORD MET PUNTJES, 0 blokkades |
+
+Getallen per agent zijn de cumulatieve `subagent_tokens` bij de laatste
+melding, dus inclusief herstel- en naleesronden: #276 = auteur 343.145 +
+beoordelaar 159.674; #280 = auteur 293.226 + beoordelaar 176.809. Orkestratie
+zit in geen van de drie totalen.
+
+**Wat dit zegt.** #280 zit onder de 70%-grens, #276 net erboven. Beide zijn
+goedkoper dan de referentie, en de besparing zit waar hij verwacht werd: #256
+besteedde 215.006 tokens aan ontwerp, en dat werk is in beide proeven door de
+auteur gedaan zonder dat de auteur daardoor duurder werd dan bij #256 (280.463).
+
+**Wat dit niet zegt.** Het is geen bewijs dat de ontwerpstap overbodig is. Week 5
+had maar twee lesbijeenkomsten, week 6 geen enkele afwijking van de moedertabel;
+allebei eenvoudiger dan week 4, waar de poort de indeling omgooide. En #276
+blokkeerde, wat #256 niet deed. Maar de twee fouten daar waren een verkeerd
+voorspelde uitvoer en een telling over te weinig bestanden - fouten die een
+ontwerper niet vangt en een beoordelaar wel. Na de les daaruit in de opdracht
+van #280 kwamen ze niet terug.
+
+**Wat de proef wél liet zien, en niet in de tokens staat.** Het menselijke
+poortbesluit bleef bij alle drie inhoudelijk bepalend: bij #256 de indeling, bij
+#276 dat de derde bijeenkomst het tentamen is - informatie die in geen enkel
+artefact stond. Die stap mag niet uit de korte route.
+
+**Besluit over voortzetting** ligt bij de vakdeskundige; de proef zelf geeft
+geen reden om voor een handleiding op een bestaande norm terug te gaan naar een
+ontwerpstap.
 
 ## Meten en reageren
 
