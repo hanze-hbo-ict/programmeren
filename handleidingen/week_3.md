@@ -38,7 +38,7 @@ dat anders: `source/lectures/3b_functies_aanroepen.md` vult het werkcollege, en
 naast de drie opgavebundels.
 
 Dat is een erkende afwijking, vastgelegd in `curriculum/uitgangspunten.md`
-§`#### Vier erkende afwijkingen` en vastgesteld door de vakdeskundige op
+§`#### Vijf erkende afwijkingen` en vastgesteld door de vakdeskundige op
 **11 september 2026**. De grond staat in het materiaal zelf: `3b` laat de student
 zijn code opslaan als `wk3wc2.py` - werkcollege 2 - terwijl het bestand in
 `source/lectures/` staat.
