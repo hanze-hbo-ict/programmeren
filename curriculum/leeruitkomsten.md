@@ -134,5 +134,7 @@ materiaal nauwelijks behandeld. Zie [leerlijn.md](leerlijn.md) voor de meting.
 | **PGM2 P3** (tekstbestanden) | 10% | Drie plekken, vrijwel alle in PGM1 week 7 |
 | **PGM2 P4** (excepties) | 10% | Twee plekken, en uitsluitend als gegeven code |
 
-Beide zijn kandidaat om in PGM1 te worden geïntroduceerd; bestandsinvoer sluit
-daar al aan op de Markov-opgave in week 7.
+Tekstbestanden gaan naar PGM1 week 6; excepties blijven in PGM2 en landen daar in
+week 7. Zie [uitgangspunten.md](uitgangspunten.md), *Bestanden en excepties*.
+Hier stond eerder dat beide kandidaat waren voor PGM1; dat liep achter op dat
+besluit.

@@ -675,6 +675,23 @@ Twee keer een patroon niet geijkt, allebei in dezelfde sessie:
 
 Hier hoort wat met de hand is gedaan omdat het te klein leek voor een werkitem.
 
+### 23 september 2026, curriculumbesluiten vóór het C4 van #160
+
+**Wat het was.** Vijf besluiten van de vakdeskundige vastgelegd in `curriculum/` en
+`conventies/`, als aparte PR vóór het poortbesluit van #160: de klassenstof van PGM2 week 4
+gaat naar week 5, excepties landen in week 7, de PGM2-tabel in `leerlijn.md` krijgt een kolom
+met leeruitkomsten en een met nieuwe begrippen, de verplichte opgaveniveaus worden voor heel
+PGM2 ingevuld, en docstrings en commentaar blijven Nederlands zonder overgang naar Engels. De
+keuzes kwamen van de vakdeskundige in het gesprek; de invulling per week van de twee nieuwe
+kolommen is een voorstel van de orkestrator, ter beoordeling in de PR.
+
+**Waarom het buiten de lus bleef.** Het zijn de antwoorden op open vragen uit het C2 van #160
+die `curriculum/` en `conventies/` raken. Die horen vastgelegd te zijn voordat C4 ernaar
+verwijst, en de lus heeft voor die vastlegging geen eigen stap.
+
+**Ging er een beoordelaar overheen?** Nog niet bij het openen van de PR; de vakdeskundige
+beoordeelt de kolominvulling in de PR zelf.
+
 ### 18 september 2026, drie directe correcties (PR #249 en #250)
 
 **Wat het was.** Drie meldingen van de vakdeskundige, alle drie op dezelfde dag gemeld,

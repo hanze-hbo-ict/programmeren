@@ -26,25 +26,21 @@ door de nakijkomgeving getoetst. Vertalen zou de opgave veranderen. Bovendien is
 die woordenschat dezelfde als die van Python zelf; `list`, `count` en `string`
 leert de student toch al.
 
-### Docstrings en commentaar: Nederlands, later Engels
+### Docstrings en commentaar: Nederlands, in beide vakken
 
-Voor de tekst *in* de code volgen we een langzame onderdompeling.
+Docstrings en commentaar zijn Nederlands, in PGM1 en in PGM2. Er is geen moment
+waarna het materiaal overstapt op Engels. Wie voor het eerst programmeert, heeft
+genoeg te verwerken zonder dat de uitleg ook nog in een vreemde taal staat, en
+dat houdt in PGM2 niet op.
 
-- **In het begin Nederlands.** Wie voor het eerst programmeert, heeft genoeg te
-  verwerken zonder dat de uitleg ook nog in een vreemde taal staat.
-- **Na een expliciet overgangsmoment Engels.** Op dat punt is de conventie zelf
-  het onderwerp: waarom het vakgebied Engels als lingua franca gebruikt, en wat
-  dat betekent voor code die je met anderen deelt.
+Hier stond eerder een langzame onderdompeling: eerst Nederlands, en na een
+expliciet overgangsmoment Engels. Voor dat moment waren twee kandidaten genoemd,
+het begin van PGM2 en de eerste klasse van formaat, maar er was er nooit een
+gekozen. Bij de voorbereiding van de poort van #160, de week waarin die klasse
+landt, is besloten dat er geen overgang komt. Vastgesteld door de vakdeskundige
+op 23 september 2026.
 
-De overgang is dus een les, geen stille regelwijziging. Waar precies dat moment
-komt, wordt bepaald bij de inhoudelijke herziening. Twee kandidaten, met elk een
-eigen argument:
-
-- **Het begin van PGM2.** De natuurlijke breuk; een nieuw vak, een nieuw
-  niveau.
-- **Week 11.** Daar schrijft de student voor het eerst een klasse van formaat,
-  en wordt code iets dat een ander moet kunnen lezen. Dan valt het argument
-  samen met de aanleiding.
+De uitzondering hieronder blijft staan.
 
 ### Gedeelde bestanden zijn Engels
 
@@ -191,8 +187,8 @@ materiaal moet die dus zelf voordoen.
 - **Meer regels** waar het iets toevoegt: wat de argumenten zijn, wat er
   teruggegeven wordt, en welke aannames gelden.
 - **Beschrijf wat de functie doet, niet hoe.** De code zegt hoe.
-- De taal volgt de afspraak hierboven: eerst Nederlands, na het
-  overgangsmoment Engels.
+- De taal volgt de afspraak hierboven: Nederlands, behalve in de gedeelde
+  bestanden.
 
 **De maatstaf voor de student is de lezer, niet een stijl.** Er bestaan meerdere
 docstringconventies naast elkaar, waaronder PEP 257, en wij schrijven er geen voor.
