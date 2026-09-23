@@ -46,6 +46,50 @@ Kies geen referentie alleen omdat zij duur is. Vergelijk omvang, verantwoordelij
 geleverde artefacten en controledekking. Een onvolledig beoordeelde historische
 run is geen referentie voor dezelfde kwaliteit zonder dat verschil te benoemen.
 
+## Proef 1 vastgelegd: de handleidingen van week 5 en 6 zonder ontwerpstap
+
+Vastgesteld door de vakdeskundige op 21 september 2026, op voorstel van de
+orkestrator. Dit is de S/M-proef uit de fasering hierboven.
+
+**De aanleiding is een waarneming en geen theorie.** Bij #256 - week 4 op de norm
+brengen - liep een volledige ontwerpstap met een herstelronde, terwijl er al twee
+handleidingen op die norm lagen. Wat de ontwerper deed was het model van week 3
+nalopen en op week 4 toepassen. De vakdeskundige verwoordde het zo: *"issue 256
+leest als overkill (lusresultaten) voor een eenvoudige stap"*. De ontwerpstap is
+bij deze vorm van werk het duurste onderdeel en het minst onderscheidende.
+
+**Wat de route wordt.** Voor `handleidingen/week_5.md` en `week_6.md`: C0 en C1,
+dan meteen de auteur, dan de poort bij de vakdeskundige, dan één beoordelaar.
+Geen `rol-curriculumontwerper`.
+
+De auteur krijgt `handleidingen/week_3.md` en `week_4.md` als model en meet de
+blokschema's zelf; hij levert ze als voorstel op, met de herkomstmerken erbij.
+
+**Wat er niet verdwijnt.** De poort en de beoordeling blijven allebei, en dat is
+met opzet - het zijn niet de dure stappen, en ze hebben zich in dit werk bewezen.
+Bij #256 was het menselijke poortbesluit inhoudelijk beter dan het ontwerpvoorstel
+(de oefenmidterm gaat naar het practicum omdat de midterm in week 5 valt), en bij
+#237 ving de beoordelaar twee aantoonbare onwaarheden in de opgeleverde tekst.
+De eis dat elk tijdsblok zijn herkomst draagt blijft eveneens staan; die ving bij
+#237 een telfout die door drie artefacten heen was gelopen.
+
+| Afspraak | Invulling |
+|---|---|
+| Issue en uitvoerautorisatie | nieuw werkitem onder #95 voor week 5; week 6 volgt als de proef houdt |
+| Omvang, bestanden en criteria | M; `handleidingen/week_5.md`, plus `curriculum/uitgangspunten.md` als de poort een afwijking vaststelt; de acht criteria van #256 |
+| Route en controledekking | C0 + C1 → auteur → poort → één beoordelaar; toepasselijke pre-commit, geen Sphinx-build zolang `source/` onaangeroerd blijft |
+| Historische referentie en motivering | **#256**, dezelfde soort werk op dezelfde norm, met dezelfde criteria en dezelfde controledekking. Te verkiezen boven #237, want #237 moest de norm zelf nog uitvinden |
+| Procescommit, model en meetdefinitie | bij start |
+| Referentietotaal en 70%-grens | pas vast te stellen als #256 is afgerond en geteld |
+| Verantwoordelijke vakdeskundige voor latere lezing/les | de vakdeskundige |
+
+**Wat deze proef kan aantonen, en wat niet.** Zij vergelijkt twee werkitems, geen
+twee methoden: week 5 en week 6 zijn andere weken dan week 4, met ander materiaal
+en een andere hoeveelheid bron. Een lager totaal bewijst dus niet dat de
+ontwerpstap overbodig is, alleen dat deze route voor dit soort werk goedkoper
+uitviel. Het omgekeerde is even informatief: komt de beoordelaar met blokkades
+waar #256 er geen had, dan heeft de ontwerpstap gedaan waarvoor zij bestond.
+
 ## Meten en reageren
 
 De orkestrator registreert na iedere agentstap de beschikbare tokens, duur,
