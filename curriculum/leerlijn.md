@@ -160,19 +160,44 @@ opstap twaalf opdrachten: acht om te lezen en vier om te schrijven.
 **De planning voor 2026 is leidend.** Wat het materiaal nu doet is de
 uitgangssituatie, niet de norm; het verschil tussen beide kolommen is het werk.
 
-| Week | Leidend voor 2026 | Verantwoordelijk | Materiaal nu |
-|---|---|---|---|
-| 1 | Datastructuren (lists ter herhaling, dictionaries, sets, methodeaanroep, Markov) | BRRA | Datastructuren |
-| 2 | Comprehensions (list, dict, set, range, enumerate) | HOEM | Recursie |
-| 3 | Recursie | HOEM | Algoritmen (knapzak, wisselgeld) |
-| 4 | Use it or lose it, lambda | HOEM | Objecten en dictionaries |
-| 5 | OO, klassen, encapsulatie | BRRA | Kunstmatige intelligentie |
-| 6 | Polymorfisme, overerving, duck typing | BRRA | Vier op een rij, AI-speler |
-| 7 | Operator overloading, oefentoets | BRRA | - |
+| Week | Leidend voor 2026 | Verantwoordelijk | Leeruitkomsten | Voor het eerst geïntroduceerd | Materiaal nu |
+|---|---|---|---|---|---|
+| 1 | Datastructuren (lists ter herhaling, dictionaries, sets, methodeaanroep, Markov) | BRRA | P2, A1 | dictionary, sleutel en waarde, set, methodeaanroep | Datastructuren |
+| 2 | Comprehensions (list, dict, set, range, enumerate) | HOEM | A1 | list comprehension, dict comprehension, set comprehension, `enumerate` | Recursie |
+| 3 | Recursie | HOEM | A6 | recursie, base case, recursieve aanroep | Algoritmen (knapzak, wisselgeld) |
+| 4 | Use it or lose it, lambda | HOEM | A4, A6 | use it or lose it, `lambda`, functie als argument | Objecten en dictionaries; gaat naar week 5 (#160) |
+| 5 | OO, klassen, encapsulatie | BRRA | P5, A2 | klassedefinitie, object en instantie, attribuut, constructor en `__init__`, `self`, een methode schrijven, `__repr__`, encapsulatie | Kunstmatige intelligentie; vervalt (#160) |
+| 6 | Polymorfisme, overerving, duck typing | BRRA | A2, A3 | overerving, subklasse en superklasse, `super()`, een methode overschrijven, polymorfisme, duck typing | Vier op een rij, AI-speler |
+| 7 | Operator overloading, excepties, oefentoets | BRRA | P4, P6 | operator overloading, magische methode, `__eq__`, waarde en identiteit, exception, `try`/`except`, `raise` | - |
 
 Een deel van deze onderwerpen komt in het huidige materiaal niet of nauwelijks
 voor. Dat is bekend en verwacht: de planning beschrijft waar PGM2 heen gaat, niet
 waar het staat.
+
+**De kolom *Voor het eerst geïntroduceerd* is de norm voor vooruitverwijzingen,
+net als bij PGM1.** Ze volgt *Leidend voor 2026* en niet het huidige materiaal:
+een begrip hoort niet eerder voor te komen dan de week waarin het hier staat. Wat
+PGM1 al levert, staat hier niet opnieuw. De woorden in de kolom zijn geen
+termbesluit; welke vorm het materiaal gebruikt, bijvoorbeeld *object* of
+*instantie*, *base case* of *basisgeval*, staat in `conventies/begrippen.md` of
+moet daar nog worden vastgesteld.
+
+**De kolom *Leeruitkomsten* wijst elke gewogen PGM2-uitkomst een week toe**,
+behalve twee die in PGM1 worden onderwezen en in PGM2 worden getoetst: P1
+(lussen, zie *Gaten tussen toetsing en materiaal*) en P3 (tekstbestanden, PGM1
+week 6). P7 (externe bibliotheken) heeft geen weging en geen week.
+
+**De klassenstof van week 4 gaat in zijn geheel naar week 5.** Gemeten op
+23 september 2026 gaat alles wat week 4 nu heeft over klassen: de lezingen
+`11a_objecten` en `11b_data_object`, het practicum `11_vier_op_rij_board` (de
+klasse `Board`) en de basisopgave `11_basis` (de klasse `Date`). Het
+AI-materiaal van week 5, `12_ai` en `12_vier_op_rij_AI`, verdwijnt uit die week.
+Week 4 heeft daarna nog geen materiaal voor *use it or lose it* en `lambda`.
+Besloten bij de voorbereiding van de poort van #160; **nog niet uitgevoerd**. De
+kolom *Materiaal nu* volgt zodra #160 is uitgevoerd.
+
+**Excepties landen in week 7**, naast operator overloading. Vastgesteld bij de
+voorbereiding van de poort van #160; zie *Gaten tussen toetsing en materiaal*.
 
 ## Welk niveau een week hoort te hebben
 
@@ -195,19 +220,37 @@ en basis allebei verplicht en is extra facultatief. Gemeten in
 `source/problems/` op 8 september 2026 hebben die zes weken alle drie de niveaus,
 dus er ontbreekt niets.
 
-**PGM2 blijft uitgesteld, en dat is een keuze en geen vergeten.** Vastleggen wat
-een week hoort te hebben terwijl nog niet vaststaat wát die week behandelt, is
-een besluit op drijfzand: in de tabel hierboven lopen *Leidend voor 2026* en
-*Materiaal nu* op vijf van de zeven weken uiteen. Het uitstel eindigt wanneer die
-invulling is gemaakt; wat er nu per PGM2-week ligt, staat in
-[uitgangspunten.md](uitgangspunten.md) bij *De verdeling in opstap, basis en
-extra*.
+**PGM2 is hiermee ook ingevuld.** Dit stond uitgesteld zolang niet vaststond wát
+elke PGM2-week behandelt. Sinds de PGM2-tabel een leeruitkomst en de nieuwe
+begrippen per week noemt, is de regel toe te passen. Elke PGM2-week draagt een
+leeruitkomst, dus basis is overal verplicht. Opstap is verplicht behalve in
+week 3: recursie vraagt geen nieuwe syntaxis, want een recursieve functie is een
+gewone `def` die zichzelf aanroept.
+
+| PGM2-week | Verplicht | Nieuwe syntaxis die de opstap draagt |
+|---|---|---|
+| 1 | opstap, basis | dictionary- en set-literals, methodeaanroep |
+| 2 | opstap, basis | comprehensions |
+| 3 | basis | - |
+| 4 | opstap, basis | `lambda`, functie als argument |
+| 5 | opstap, basis | `class`, `__init__`, `self` |
+| 6 | opstap, basis | subklasse, `super()` |
+| 7 | opstap, basis | magische methoden, `try`/`except`, `raise` |
+
+Een bestaand niveau telt alleen als het over het onderwerp van *Leidend voor
+2026* gaat. Gemeten in `source/problems/` op 23 september 2026 hebben de weken 1
+en 2 opstap, basis en extra, de weken 3 en 4 basis en extra, en de weken 5 tot en
+met 7 niets. Maar de opgaven van week 2 gaan over recursie en die van week 4 over
+klassen, dus die tellen voor een andere week. Wat een week mist, stelt de
+herziening van die week vast. Vastgesteld door de vakdeskundige op 23 september
+2026.
 
 **Wat er wél uit volgt: elf ontbrekende niveau-uitwerkingen.** Dat volgt niet uit
 de regel hierboven maar uit het besluit *Elk opgaveniveau hoort een uitwerking te
-hebben*, dat elk **bestaand** niveau bindt en dus onafhankelijk is van het
-PGM2-uitstel. De meting telt 30 niveau-opgaven in `source/problems/`, waarvan 19
-een gelijknamige uitwerking in `source/solutions/` hebben en 11 nog niet. Dit is
+hebben*, dat elk **bestaand** niveau bindt en dus onafhankelijk is van welke
+niveaus een week verplicht heeft. De meting telt 30 niveau-opgaven in
+`source/problems/`, waarvan 19 een gelijknamige uitwerking in `source/solutions/`
+hebben en 11 nog niet. Dit is
 werkitem #194 en geen werk voor de herziening van dit document. In die elf
 ontbrekende uitwerkingen gaat het concreet om de opstap van week 5 tot en met 8
 en alle niveau-uitwerkingen van week 9 tot en met 11. College- en
@@ -234,13 +277,13 @@ Gemeten op het voorkomen van de betreffende constructies in `source/`.
 |---|---|---|---|
 | **PGM2 P3** tekstbestanden | 10% | Drie plekken, waarvan twee in de Markov-opgave van PGM1 week 7. | Naar PGM1 week 6 |
 | ~~**PGM1 A4** recursie~~ | | **Uitgevoerd op 1 september 2026**: staat nu als PGM2 A6. Wat resteert is de 10% die in PGM1 vrijkomt. | Zie `leeruitkomsten.md`, *Voorgestelde correcties* |
-| **PGM2 P4** excepties | 10% | Bij de herziening van week 5 is `try`/`except` uit de gegeven code van `problems/5_basis` gehaald; de menukeuze wordt daar nu als string vergeleken. Excepties worden nergens in PGM1 onderwezen. | Blijft in PGM2, moet daar onderwezen worden |
+| **PGM2 P4** excepties | 10% | Bij de herziening van week 5 is `try`/`except` uit de gegeven code van `problems/5_basis` gehaald; de menukeuze wordt daar nu als string vergeleken. Excepties worden nergens in PGM1 onderwezen. | PGM2 week 7, naast operator overloading; vastgesteld op 23 september 2026 |
 | **PGM2 P1** lussen | 5% | Wordt in PGM1 onderwezen (week 4 en 5) en in PGM2 getoetst. Kan bedoeld zijn als herhaling, maar staat niet in de planning voor 2026. | open |
 | **PGM2 A5** finite state machines | geen | Komt nergens voor. | Schrappen; zie [leeruitkomsten.md](leeruitkomsten.md) |
 
 Van de twee gaten die samen 20% van het PGM2-tentamen zijn, is er daarmee één
 belegd en één belegd maar nog niet gemaakt: PGM2 moet excepties daadwerkelijk
-gaan behandelen.
+gaan behandelen, en doet dat in week 7.
 
 ## Vooruitverwijzingen om na te lopen
 
@@ -253,7 +296,7 @@ als zodanig is gemarkeerd.
 | `while` | PGM1 week 4 | PGM1 week 2, `practicals/2_rochambeau` | Bewust; de tekst zegt erbij dat lussen later komen |
 | `choice`, en daarmee `import` | PGM1 week 3 | PGM1 week 2, `practicals/2_rochambeau` en `solutions/2_rochambeau` | Bewust; de opgave geeft de regel in de begincode met de uitleg als commentaar erachter, en de uitwerking zegt erbij hem voor nu aan te nemen. Vastgesteld door de vakdeskundige, 15 september 2026 |
 | `time.sleep` en math-functies | PGM1 week 3 | PGM1 week 2, `problems/2_basis`, `solutions/2_basis`, `problems/2_extra` en `solutions/2_extra` | Bewust; als gegeven begincode, met de uitleg als commentaar erachter. Vastgesteld door de vakdeskundige, 16 september 2026 |
-| list comprehension | PGM2 week 1 | PGM1 week 6, `practicals/6b_images` | Onderwerp van een hele PGM2-week |
+| list comprehension | PGM2 week 2 | PGM1 week 6, `practicals/6b_images` | Onderwerp van een hele PGM2-week |
 | functiedefinitie | PGM1 week 3 | PGM1 week 2, `problems/2_basis` | Als gegeven code, niet om te schrijven. De docstring in datzelfde blok is onderdompeling; of dat ook voor de `def` geldt is nog niet besloten |
 | tuple | PGM1 week 7 | PGM1 week 5, laag extra, `problems/5_extra.md` | Ongemarkeerd; introduceert ook *methode* en *object*. Buiten bereik van de herzieningen in #102/#134 |
 

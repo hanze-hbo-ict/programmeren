@@ -312,7 +312,9 @@ draait wel.
 | De theoretische afsluiting is geschrapt | ervaring | gesloten |
 | Schakelingen zijn geschrapt, binair is afgeslankt | organisatorisch | gesloten, uitgevoerd |
 | De wekelijkse leesopgaven zijn vervallen | praktisch | gesloten |
-| Bestanden naar PGM1, excepties blijven in PGM2 | didactisch | staand, onderbouwd |
+| Bestanden naar PGM1, excepties blijven in PGM2 | didactisch | staand, onderbouwd; excepties landen in PGM2 week 7 (23 september 2026), **nog niet uitgevoerd** |
+| De klassenstof van PGM2 week 4 gaat naar week 5; het AI-materiaal verdwijnt uit week 5 | organisatorisch | gesloten op 23 september 2026 (#160), **nog niet uitgevoerd** |
+| Docstrings en commentaar blijven Nederlands, ook in PGM2 | didactisch | gesloten op 23 september 2026; zie `conventies/codeconventies.md` |
 | Mutatie pas vanaf PGM1 week 7, en als grens benoemd | didactisch | staand, onderbouwd |
 | Canonieke Python aanbieden, mechanisme later uitleggen | didactisch | staand, onderbouwd |
 | Het bord verandert niet in week 5; de grens wordt daar benoemd | didactisch | gesloten |
@@ -334,7 +336,7 @@ draait wel.
 | Dictionaries en de Markov-opgave verhuizen van PGM1 week 7 naar PGM2 week 1 | didactisch | staand, nog niet uitgevoerd |
 | Objecten pas in PGM2 | didactisch | staand, onderbouwd |
 | Picobot opent PGM1 | didactisch | staand, onderbouwd |
-| Opgaven in opstap, basis en extra | didactisch | **open**; sluit wanneer de PGM2-invulling er is, zie *De verdeling in opstap, basis en extra* |
+| Opgaven in opstap, basis en extra | didactisch | gesloten op 23 september 2026, **nog niet uitgevoerd** voor PGM2; de verplichte niveaus per week staan in `leerlijn.md` |
 | De student werkt lokaal in VS Code; de browser is verrijking | didactisch | staand, onderbouwd |
 | Code uitvoerbaar in de browser | praktisch | open, uitvoering wijzigt |
 
@@ -478,15 +480,15 @@ Twee gevolgen die in de herziening moeten worden opgelost:
 Dit is een spanningsveld en geen eenvoudige keuze: syntaxis moet geoefend worden
 en dat gaat het snelst kaal, terwijl relevantie juist context vereist.
 
-**Wanneer dit besluit sluit.** Het staat in het register als *open*, en een
-besluit waarvan niemand weet wat het sluit is geen open besluit maar een liggende
-vraag. Het sluit wanneer vaststaat wat elke PGM2-week behandelt: pas dan is te
-zeggen welk niveau daar verplicht is. Voor PGM1 is dat al vastgelegd, in
-[leerlijn.md](leerlijn.md), *Welk niveau een week hoort te hebben*.
+**Gesloten op 23 september 2026.** Het besluit stond open tot vaststond wat elke
+PGM2-week behandelt, want pas dan is te zeggen welk niveau daar verplicht is. Die
+invulling staat nu in de PGM2-tabel van [leerlijn.md](leerlijn.md), met per week
+de leeruitkomsten en de nieuwe begrippen. Welke niveaus elke week in PGM1 en PGM2
+verplicht heeft, staat daar bij *Welk niveau een week hoort te hebben*.
+Vastgesteld door de vakdeskundige.
 
-Zodat het uitstel een inhoud heeft en niet alleen een datum, staat hier wat er nu
-ligt. Gemeten in `source/problems/` op 8 september 2026, met PGM2 als de
-cursusweken 8 tot en met 13:
+Wat er vóór die invulling lag, gemeten in `source/problems/` op 8 september 2026,
+met PGM2 als de cursusweken 8 tot en met 13:
 
 | PGM2-week | Cursusweek | Wat er ligt |
 |---|---|---|
@@ -496,12 +498,12 @@ cursusweken 8 tot en met 13:
 | 4 | 11 | basis, extra |
 | 5 en 6 | 12 en 13 | geen opgaven; alleen college- en practicummateriaal |
 
-De weken 10 en 11 hebben dus geen opstap, en de weken 12 en 13 helemaal geen
-opgaven. Of dat een gat is hangt af van wat die weken gaan behandelen, en juist
-dat ligt nog niet vast; zie de PGM2-tabel in [leerlijn.md](leerlijn.md), waar
-*Leidend voor 2026* en *Materiaal nu* op vijf van de zeven weken uiteenlopen.
-Vastleggen wat een week hoort te hebben terwijl nog niet vaststaat wát die week
-behandelt, is een besluit op drijfzand.
+Hermeten op 23 september 2026: ongewijzigd. Of een week daarmee aan de norm
+voldoet, hangt af van of het bestaande niveau over het leidende onderwerp van die
+week gaat; zie [leerlijn.md](leerlijn.md).
+
+**Wat het besluit zou heropenen:** een wijziging in de PGM2-planning die een week
+een ander onderwerp geeft, of een week zonder leeruitkomst.
 
 ### Eén opgave over drie niveaus
 
@@ -572,6 +574,11 @@ Daaruit volgt dat de twee leeruitkomsten van plaats wisselen met recursie:
 Beide matrijzen blijven op 100% sluiten, en beide vakken toetsen voortaan wat ze
 onderwijzen. PGM2 moet excepties dan wel daadwerkelijk gaan behandelen; nu staat
 `try`/`except` daar uitsluitend in gegeven code.
+
+**Excepties landen in PGM2 week 7**, naast operator overloading. Dat is na de
+klassen in week 5 en de overerving in week 6, en dus op het punt waar beide
+redenen hierboven al gelden. Vastgesteld door de vakdeskundige op 23 september
+2026, bij de voorbereiding van de poort van #160.
 
 ### Canonieke vormen, mechanisme later
 
@@ -948,9 +955,10 @@ geïntroduceerd en docstrings niet, terwijl ze allebei in dezelfde week voorkome
 Kan de student er overheen lezen, dan mag het onderdompeling zijn; loopt hij erop
 vast, dan hoort er uitleg bij.
 
-Dit gaat over iets anders dan de "langzame onderdompeling" in
-`conventies/codeconventies.md`: die gaat over de overgang van Nederlands naar
-Engels in code, deze over een vorm tonen vóór de uitleg.
+Dit gaat over iets anders dan de "langzame onderdompeling" die
+`conventies/codeconventies.md` tot 23 september 2026 noemde: die ging over een
+overgang van Nederlands naar Engels in code, en die overgang is vervallen. Deze
+gaat over een vorm tonen vóór de uitleg.
 
 ## Een besluit toevoegen
 
