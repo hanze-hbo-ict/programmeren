@@ -1326,3 +1326,27 @@ criterium dat dwingt na te tellen.
 **Wat er open bleef.** De bredere kruisverwijzingsregel uit het poortbesluit is nog nergens
 vastgelegd en is dus niet genomen; de 33 collegeopdrachten zonder uitwerking staan bij #235 en
 #95, net als de `.docx` van week 4 en de verwijzing daarnaar in `handleidingen/week_4.md`.
+
+## Werkitem #267 - compositie als begrip van PGM2 week 5
+
+Kleine route zonder ontwerp: triage en C1 door de orkestrator, dan de mens (C4), de auteur en
+één redacteur. Omvang S. Procesversie `e04d8dcf`. Dit is geen #203-proef, omdat er nog geen
+proefissue gekozen was. Opgeleverd op 23 september 2026 in PR #278: `curriculum/leerlijn.md`,
+`conventies/begrippen.md` en één rij in `curriculum/uitgangspunten.md`.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| auteur, oplevering | 92.213 | 3 min 11 s | C5; vier criteria, pre-commit groen |
+| beoordelaar-redacteur | 43.248 | 1 min 55 s | AKKOORD MET PUNTJES, 0 blokkades, 3 puntjes |
+| auteur, hervat voor de puntjes | 108.512 | 1 min 47 s | herstelbijlage; niet vastgesteld of dit getal de eerste run meetelt |
+| beoordelaar-redacteur, vers, herstelmodus | 42.777 | 1 min 32 s | AKKOORD MET PUNTJES, 1 smaakpuntje |
+| orkestrator | niet beschikbaar | niet beschikbaar | C1, C4, C4-aanvulling, correctie, PR |
+| **totaal agents** | **286.750 of minder** | **circa 8 min** | herstelstand ontwerp 0, oplevering 0 |
+
+Puntjes kostten geen ronde. De mens besliste twee keer: eerst over de drie open vragen uit
+C0 en de reden, daarna over de registerrij (aard en status).
+
+**Wat de beoordelaar aan de orkestrator corrigeerde.** De herstel-C6 liet zien dat de
+onderbouwing in de C4-aanvulling ("zo gaat het ook bij de andere gesloten didactische
+rijen") maar half klopte. Die zin had de orkestrator zelf geschreven. Zie de bevinding van
+dezelfde datum.

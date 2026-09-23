@@ -1046,3 +1046,30 @@ zin eromheen nog klopte. Vergelijk bevinding 9: de titelhiërarchie staat buiten
 **Wat het veranderde.** Herstel in PR #249. De les is smal en bruikbaar: **code in lopende tekst
 is een citaat, geen code.** Wie een codefragment repo-breed vervangt, controleert apart waar dat
 fragment in proza voorkomt — daar mag er geen regeleinde bij, en een comment hoort er niet.
+
+## Een keuzeoptie van de orkestrator wordt de onderbouwing van de mens - 23 september 2026
+
+**Wat er gebeurde.** Bij #267 legde de orkestrator de open vragen voor als meerkeuze-opties.
+Onder elke optie stond een korte toelichting. De vakdeskundige koos een optie, en het C4
+registreerde wat bij die optie stond. Twee keer was dat geen feit maar een onderbouwing
+die de orkestrator had geschreven:
+- De reden voor de term: "*compositie* is de gangbare term; ... aggregatie voegt in week 5
+  niets toe". Die staat nu als reden van de vakdeskundige in `curriculum/leerlijn.md`.
+- De status van de registerrij: "geen heropenvoorwaarde, net als bij de meeste didactische
+  rijen". In de C4-aanvulling werd dat "zo gaat het ook bij de andere gesloten didactische
+  rijen". De verse redacteur in herstelmodus toonde aan dat dit maar half klopt. Vier oudere
+  gesloten didactische besluiten hebben wel een heropenvoorwaarde (`uitgangspunten.md` r272,
+  r507, r720, r901).
+
+**Waarom dit een patroon is.** Het C4-contract verbiedt "nieuwe inhoudelijke rechtvaardiging
+namens hem". Een meerkeuzevraag omzeilt dat verbod zonder dat iemand het merkt. De mens
+kiest, dus het klinkt als zijn besluit. Maar de woorden en de feitelijke claim erin komen
+van de orkestrator, en niemand heeft die claim gemeten. De vraag was juist gesteld omdat
+de orkestrator de reden niet zelf mocht invullen.
+
+**Wat het veranderde.** Er staat een correctie op #267 ([reactie](https://github.com/hanze-hbo-ict/programmeren/issues/267#issuecomment-5802736725)).
+De regel die eruit volgt, en die nog niet in `/orc` is vastgelegd: **een optie beschrijft
+gevolgen, geen redenen; een feitelijke claim in een optie is gemeten, anders staat hij er
+niet.** Vraag de reden open, of zet in het C4 dat de formulering van de orkestrator is en
+door de mens is gekozen. Of dit in de instructies komt, is een procesbesluit voor de
+vakdeskundige.
