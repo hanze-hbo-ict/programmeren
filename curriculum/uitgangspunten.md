@@ -66,13 +66,14 @@ Deze indeling verklaart de directories: `lectures/` hoort bij de eerste bijeenko
 relevant voor de vraag waar context hoort te zitten, want het werkcollege is de
 plek waar een probleem gezamenlijk stap voor stap wordt opgebouwd.
 
-#### Vier erkende afwijkingen
+#### Vijf erkende afwijkingen
 
 De indeling is het uitgangspunt en niet een rooster dat elke week haalt. Bij het
 schrijven van de docentenhandleidingen (#182) zijn twee afwijkingen vastgesteld en
-erkend, en bij de herziening van week 3 (#198) een derde, en bij die van week 4
-(#256) een vierde; ze staan hier zodat een volgende weekherziening ze niet
-opnieuw als conflict afleidt.
+erkend, bij de herziening van week 3 (#198) een derde, bij die van week 4
+(#256) een vierde, en bij die van week 5 (#276) een vijfde van een andere soort;
+ze staan hier zodat een volgende weekherziening ze niet opnieuw als conflict
+afleidt.
 
 **Week 1 volgt een flexibele indeling.** Er is geen `problems/` en geen
 `solutions/` voor week 1, en de Picobot-opdrachten beginnen in bijeenkomst 2 als
@@ -104,6 +105,33 @@ van week 4 het oefenmoment. Dat past bij wat een practicum is: de student werkt
 er zelfstandig onder begeleiding en neemt mee wat hij niet afkrijgt, en de
 uitwerkingen staan openbaar in `solutions/4_midterm`. Vastgesteld door de
 vakdeskundige op 18 september 2026; het vraagt geen enkele bestandsverplaatsing.
+
+**Week 5 heeft geen derde lesbijeenkomst; die sessie is het tentamen.** Anders
+dan de vier afwijkingen hierboven gaat dit niet over welke map bij welke
+bijeenkomst hoort, maar over dat een bijeenkomst zelf geen lesmoment is.
+Vastgesteld door de vakdeskundige, gemeld bij #276 op 23 september 2026:
+*"de planning is dat de laatste (derde) sessie van die week gebruikt wordt voor
+het afnemen van de midterm. er blijven in die week dus twee bijeenkomsten over
+voor het materiaal."* Bijeenkomst 1 en 2 dragen het materiaal van week 5;
+bijeenkomst 3 draagt geen lesstof, en de planning van het tentamen zelf valt
+buiten deze repository.
+
+Daarmee vervalt de plek waar het practicum normaal het overtollige
+`practicals/`-bestand opvangt. Week 5 heeft één bestand in `lectures/` en twee
+in `practicals/` (`5a_ascii_art.ipynb`, 6 opdrachten; `5b_boter_kaas_eieren.ipynb`,
+8 opdrachten), naast vijf opgavebundels in `problems/`. Met één lecture-bestand
+past bijeenkomst 1 zonder afwijking. Van de twee `practicals/`-bestanden vult
+`5b_boter_kaas_eieren` het werkcollege: het geeft de klas een volledig
+uitgewerkt voorbeeld voor de richting oost, wat zich rechtstreeks leent voor
+gezamenlijk opbouwen. `5a_ascii_art` - zes opdrachten met oplopende
+moeilijkheid en zonder gegeven tussenstap - schuift niet door naar een derde
+bijeenkomst, want die is er niet, maar naar zelfstandig werk naast de
+opgavebundels van `problems/`.
+
+Het tentamen-feit is vastgesteld door de vakdeskundige. De verdeling van de
+twee `practicals/`-bestanden over het werkcollege en het zelfstandige werk is
+een voorstel van de auteur bij #276, gemeten op 23 september 2026 en ter
+bevestiging bij de poort van dat werkitem.
 
 ## Het referentiemateriaal: tag `v1.0.0`
 
@@ -327,6 +355,7 @@ draait wel.
 | De klassenstof van PGM2 week 4 gaat naar week 5; het AI-materiaal verdwijnt uit week 5; Text-ID blijft in week 4 | organisatorisch | gesloten op 23 september 2026 (#160), **uitgevoerd** in #160 |
 | Het practicum van PGM2 week 5 tot en met 7 is één doorlopend project, `creatures.py` | didactisch | gesloten op 23 september 2026; opzet in `practicum-oop.md`, **deels uitgevoerd**: sessie 1 staat in week 5 (#160); sessie 2 en 3 volgen met de herziening van week 6 en 7 |
 | Docstrings en commentaar blijven Nederlands, ook in PGM2 | didactisch | gesloten op 23 september 2026; zie `conventies/codeconventies.md` |
+| Compositie is een begrip van PGM2 week 5; zie `leerlijn.md` en `conventies/begrippen.md` | didactisch | gesloten op 23 september 2026 (#267), **nog niet uitgevoerd**: het materiaal volgt in #268 |
 | Mutatie pas vanaf PGM1 week 7, en als grens benoemd | didactisch | staand, onderbouwd |
 | Canonieke Python aanbieden, mechanisme later uitleggen | didactisch | staand, onderbouwd |
 | Het bord verandert niet in week 5; de grens wordt daar benoemd | didactisch | gesloten |
