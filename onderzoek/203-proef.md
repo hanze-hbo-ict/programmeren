@@ -80,7 +80,7 @@ De eis dat elk tijdsblok zijn herkomst draagt blijft eveneens staan; die ving bi
 | Route en controledekking | C0 + C1 → auteur → poort → één beoordelaar; toepasselijke pre-commit, geen Sphinx-build zolang `source/` onaangeroerd blijft |
 | Historische referentie en motivering | **#256**, dezelfde soort werk op dezelfde norm, met dezelfde criteria en dezelfde controledekking. Te verkiezen boven #237, want #237 moest de norm zelf nog uitvinden |
 | Procescommit, model en meetdefinitie | bij start |
-| Referentietotaal en 70%-grens | pas vast te stellen als #256 is afgerond en geteld |
+| Referentietotaal en 70%-grens | **693.462** agenttokens (#256); de 70%-grens is **485.423** |
 | Verantwoordelijke vakdeskundige voor latere lezing/les | de vakdeskundige |
 
 **Wat deze proef kan aantonen, en wat niet.** Zij vergelijkt twee werkitems, geen
@@ -89,6 +89,52 @@ en een andere hoeveelheid bron. Een lager totaal bewijst dus niet dat de
 ontwerpstap overbodig is, alleen dat deze route voor dit soort werk goedkoper
 uitviel. Het omgekeerde is even informatief: komt de beoordelaar met blokkades
 waar #256 er geen had, dan heeft de ontwerpstap gedaan waarvoor zij bestond.
+
+### Uitkomst van proef 1, 24 september 2026
+
+| Werkitem | Agenttokens | t.o.v. #256 | Doel (≥ 30% minder) | Beoordeling |
+|---|---:|---:|---|---|
+| #256, week 4 (referentie, met ontwerpstap) | 693.462 | 100% | - | AKKOORD MET PUNTJES, 0 blokkades |
+| #276, week 5 | 502.819 | 72,5% | **niet gehaald** (27,5%) | **BLOKKEER** op 2 fouten; na één herstel AKKOORD |
+| #280, week 6 | 470.035 | 67,8% | gehaald (32,2%) | AKKOORD MET PUNTJES, 0 blokkades |
+
+**Bron.** De getallen zijn de cumulatieve `subagent_tokens` uit het
+verbruiksrapport dat de orkestrator na elke agentstap krijgt, inclusief herstel-
+en naleesronden. De rollen zelf zien hun teller niet en schreven *"niet
+beschikbaar"*; de rapportgetallen zijn op 24 september 2026 als aanvulling op
+#276 en #280 geplaatst. Orkestratie zit in geen van de drie totalen.
+
+**Drie afwijkingen van wat hier vooraf staat.**
+- Het referentietotaal had vóór de start bevestigd moeten zijn; het is achteraf
+  ingevuld, uit de meting van #256.
+- De budgetreactie is bij #276 niet uitgevoerd. Na het auteursherstel stond de
+  stand op 495.117 (71,4%); de herbeoordeling is gestart zonder de vakdeskundige
+  te vragen.
+- Het totaal van #280 bevat 28.482 beoordelaarstokens voor het nalezen van
+  orkestratorcommits. Bij #256 las geen rol de correcties van de orkestrator. De
+  twee totalen zijn op dat punt niet gelijk opgebouwd.
+
+**Wat de getallen zeggen.** Beide proeven waren goedkoper dan de referentie;
+#280 haalde het doel, #276 niet. De besparing komt uit het weglaten van de
+ontwerpstap (215.006 tokens bij #256). De auteur werd daarbij **duurder**: 343.145
+bij #276 en 293.226 bij #280, tegen 280.463 bij #256 - hij deed een deel van het
+ontwerpwerk zelf.
+
+**Wat de proef vooraf als tegenbewijs aanwees, en wat er gebeurde.** Hierboven
+staat: *"komt de beoordelaar met blokkades waar #256 er geen had, dan heeft de
+ontwerpstap gedaan waarvoor zij bestond."* Bij #276 gebeurde dat. De twee fouten
+waren een voorspelde uitvoer die niet klopte en een telling over te weinig
+bestanden; of een ontwerpstap die had voorkomen, laat de proef niet zien. Na de
+les daaruit in de opdracht van #280 kwamen ze niet terug.
+
+**De vakdeskundige.** Bij #256 veranderde het poortbesluit de indeling; bij #276
+deed een aanvulling van de vakdeskundige tijdens het schrijven dat (de derde
+bijeenkomst is het tentamen). Beide keren op grond van informatie die in geen
+enkel artefact stond. Bij #280 bevestigde de poort het voorstel.
+
+**Besluit over voortzetting** ligt bij de vakdeskundige. De proef geeft gemengde
+uitkomsten: één keer het doel gehaald zonder blokkade, één keer niet gehaald met
+een blokkade.
 
 ## Meten en reageren
 

@@ -1421,3 +1421,58 @@ voorzien, `8b_taalmodel` nieuw met vijf, `course/week_8.md` uitgeschreven, en tw
 
 Herstelstand bij afsluiting: ontwerp 0/1, oplevering 0/1. Zie de bevinding over hervatte agents
 voor waarom de twee auteursgetallen niet zijn opgeteld.
+
+## Werkitem #276 — docentenhandleiding week 5, kortere route
+
+Proef 1 van #203, eerste werkitem: geen ontwerpstap. Opgeleverd op 23 september
+2026 in PR #277: `handleidingen/week_5.md` nieuw, de vijfde erkende afwijking in
+`curriculum/uitgangspunten.md`, de twee week 5-`.docx` verwijderd.
+
+| Rol | Tokens (cumulatief) | Duur | Uitkomst |
+|---|---:|---|---|
+| auteur, ronde 1 | 324.497 | 23 min 36 s | C5; midden in het werk bijgestuurd door een C1-aanvulling |
+| beoordelaar-onderwijskundige | 151.972 | 9 min 33 s | **BLOKKEER**, 2 moetpunten |
+| auteur, herstel | 343.145 | 1 min 45 s | beide verholpen |
+| beoordelaar, herbeoordeling | 159.674 | 39 s | AKKOORD |
+| **totaal agents** | **502.819** | | 72,5% van #256 |
+
+Bron van de tokens en duren: het verbruiksrapport per agent, niet de meetregels
+van de rollen (die zeggen *niet beschikbaar*); vastgelegd op #276. Na het
+auteursherstel stond de stand op 71,4% van de referentie; de budgetreactie uit
+`203-proef.md` is niet uitgevoerd.
+
+**De C1 was onvolledig, en de vakdeskundige vulde het aan terwijl de auteur al
+schreef.** De C1 verbood aan te nemen dat het tentamen een bijeenkomst kost; de
+vakdeskundige stelde vast dat de derde bijeenkomst het tentamen ís. Het bericht
+bereikte de auteur bij zijn volgende stap en hij paste de indeling aan zonder
+herstelronde. Een tussentijdse bijsturing is goedkoper dan een blokkade achteraf.
+
+**De blokkade ving twee fouten die met één uitgevoerde cel en één volledige
+`grep` te vinden waren:** een voorspelde uitvoer (4) die 3 bleek, en een telling
+over drie van de vijf bestanden. Allebei in de opdracht van #280 als les
+opgenomen, en daar niet teruggekomen.
+
+## Werkitem #280 — docentenhandleiding week 6, kortere route
+
+Proef 1 van #203, tweede werkitem. Opgeleverd op 24 september 2026 in PR #281:
+`handleidingen/week_6.md` nieuw, de laatste twee `.docx` verwijderd -
+`teacher_guides/` bestaat niet meer. Plus de poortbesluiten en het besluit
+*Wat er niet meer toe doet, mag weg* in `curriculum/uitgangspunten.md`.
+
+| Rol | Tokens (cumulatief) | Duur | Uitkomst |
+|---|---:|---|---|
+| auteur, ronde 1 | 293.226 | 18 min 14 s | C5, 19 blokken, 0 B |
+| beoordelaar-onderwijskundige | 148.327 | 7 min 17 s | AKKOORD MET PUNTJES, 0 blokkades, 8 puntjes |
+| beoordelaar, naleesronde orkestratorcommits | 170.581 | 56 s | niet akkoord, 1 moetpunt: de besluittekst ging verder dan de vakdeskundige zei (vastgelegd op #280) |
+| beoordelaar, naleesronde herstel | 176.809 | 32 s | AKKOORD |
+| **totaal agents** | **470.035** | | 67,8% van #256 |
+
+Bron: het verbruiksrapport per agent, vastgelegd op #280. De C5 van de auteur
+schatte zelf *"circa 280.000"* en *"circa 16 minuten"*.
+
+**Drie orkestratorcommits, en twee daarvan hadden een fout die de orkestrator
+zelf had moeten vangen.** De eerste zette de `.docx`-meldingen in week 3, 4 en 5
+recht en liet de melding daarover in `week_6.md` staan - de bevinding uit #256,
+door degene die haar schreef. De derde maakte van *"mogen weg"* een *"gaat weg"*
+en verklaarde stilstaand materiaal al afgeschreven. De vakdeskundige vroeg vóór de merge of alle rollen het
+hadden gezien; pas daarop volgde de naleesronde die de fout ving.
