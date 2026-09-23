@@ -16,7 +16,7 @@ object verborgen voor de buitenwereld, en loopt alles via zijn methoden. Met een
 zichtbaar.
 
 Aan het eind van de week kun je een klasse ontwerpen die haar eigen staat
-bewaakt, en uitleggen wat dat oplevert tegenover losse functies en een
+bewaakt, en uitleggen wat dat oplevert tegenover een attribuut of een
 dictionary waar iedereen bij kan.
 
 ### Waar je vandaan komt

@@ -255,7 +255,9 @@ Python-blokken bijgekomen: `practicals/12_creatures.md` (10) en
 `problems/12_extra.md` (3). Grond 2 geldt voor geen van beide: de student werkt
 in een eigen `.py`-bestand, en de blokken zijn code om over te nemen of
 assertions om daar onderaan te zetten. Ze draaien dus niet bij de build. Bij de
-herziening zijn ze buiten de build uitgevoerd tegen een uitwerking.
+herziening zijn ze buiten de build uitgevoerd: die van `12_extra.md` tegen de
+uitwerking in `solutions/12_extra.ipynb`, die van `12_creatures.md` tegen een
+referentie-uitwerking die niet in de repo staat.
 
 ### Waarom dit zo gegroeid is
 

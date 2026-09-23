@@ -283,9 +283,13 @@ Bij een lege party loopt de lus nul keer, en blijft `strongest` dus `None`.
 :::{admonition} Hint
 :class: tip
 
-`alive_members` en `critical_members` zijn elk één list comprehension. Voor
-`heal_all` kun je `alive_members()` gebruiken.
+`alive_members` en `critical_members` schrijf je met een list comprehension, of
+met een `for`-lus die een nieuwe lijst opbouwt. Allebei is goed. Voor `heal_all`
+kun je `alive_members()` gebruiken.
 :::
+
+`critical_members` telt ook een dood wezen mee: hp `0` is een kwart van het
+maximum of minder.
 
 ```python
 vlam = Creature("Vlam", 120, 25, 10)
@@ -311,7 +315,7 @@ assert Party([]).strongest_attacker() is None
 
 members = [mos]
 small = Party(members)
-members.append(grom)
+members.append(vlam)
 assert len(small.alive_members()) == 1
 ```
 

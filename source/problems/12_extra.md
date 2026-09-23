@@ -20,17 +20,24 @@ van het spel kent. Begin met een nieuw bestand, `vier_op_een_rij.py`.
 
 Een `Board` heeft drie attributen:
 
-| Attribuut | Bevat |
-|---|---|
-| `self.data` | het bord zelf: een lijst van lijsten met tekens |
-| `self.height` | het aantal rijen |
-| `self.width` | het aantal kolommen |
+| Attribuut | Bevat | Van buiten te lezen? |
+|---|---|---|
+| `self._data` | het bord zelf: een lijst van lijsten met tekens | nee |
+| `self._height` | het aantal rijen | ja, via de property `height` |
+| `self._width` | het aantal kolommen | ja, via de property `width` |
+
+Alle drie beginnen ze met een `_`, zoals in het college: code buiten de klasse
+komt er niet rechtstreeks bij. Breedte en hoogte mag andere code wel lezen,
+bijvoorbeeld om langs alle kolommen te lopen. Daarvoor zijn de properties
+`width` en `height`, zonder setter. Het bord zelf krijgt geen property. Wie een
+steen wil zetten of wil weten of een zet mag, vraagt dat aan het bord, met de
+methoden uit deze opgave.
 
 Zes rijen en zeven kolommen is de standaard, maar je klasse kan elk formaat aan.
 Ook op een groter bord win je met vier op een rij; op een bord van 3 bij 3 wordt
 dat lastig.
 
-Elk vakje in `self.data` is een string van één teken. Een leeg vakje is `" "`,
+Elk vakje in `self._data` is een string van één teken. Een leeg vakje is `" "`,
 een spatie, en niet de lege string. De stenen van de twee spelers zijn `"X"` en
 `"O"`: de hoofdletters x en o.
 
@@ -66,7 +73,8 @@ De constructor krijgt een aantal kolommen en een aantal rijen, en geeft de
 attributen hun beginwaarde. Hij maakt ook de lijst van lijsten voor het bord,
 met een list comprehension.
 
-De constructor en een eerste versie van `__repr__` krijg je cadeau:
+De constructor, de twee properties en een eerste versie van `__repr__` krijg je
+cadeau:
 
 ```python
 class Board:
@@ -74,29 +82,39 @@ class Board:
 
     def __init__(self, width, height):
         """Maak een leeg bord met de gegeven breedte en hoogte."""
-        self.width = width
-        self.height = height
-        self.data = [[" "] * width for row in range(height)]
+        self._width = width
+        self._height = height
+        self._data = [[" "] * width for row in range(height)]
 
         # een constructor geeft niets terug
+
+    @property
+    def width(self):
+        """Het aantal kolommen, alleen om te lezen."""
+        return self._width
+
+    @property
+    def height(self):
+        """Het aantal rijen, alleen om te lezen."""
+        return self._height
 
     def __repr__(self):
         """Geeft het bord als string."""
         s = ""  # de string die we teruggeven
-        for row in range(0, self.height):
+        for row in range(0, self._height):
             s += "|"
-            for col in range(0, self.width):
-                s += self.data[row][col] + "|"
+            for col in range(0, self._width):
+                s += self._data[row][col] + "|"
             s += "\n"
 
-        s += (2 * self.width + 1) * "-"  # de onderkant van het bord
+        s += (2 * self._width + 1) * "-"  # de onderkant van het bord
 
         # hier moeten de kolomnummers nog onder
 
         return s  # het bord is compleet, geef het terug
 ```
 
-`self.data` bevat alleen wat nodig is om het spel te spelen: de stenen en de lege
+`self._data` bevat alleen wat nodig is om het spel te spelen: de stenen en de lege
 vakjes. De lijnen en de nummers eromheen maakt `__repr__`.
 
 ## Stap 2: `__repr__(self)`
@@ -198,7 +216,7 @@ over in je klasse:
         next_checker = "X"  # X begint
         for col_char in move_string:
             col = int(col_char)
-            if 0 <= col < self.width:
+            if 0 <= col < self._width:
                 self.add_move(col, next_checker)
             if next_checker == "X":
                 next_checker = "O"
@@ -377,10 +395,11 @@ spel. Een ongeldige zet vang je af met deze kleine lus:
 ```python
 users_col = -1
 while not self.allows_move(users_col):
-    users_col = int(input("Kies een kolom: "))
+    users_col = int(input(f"Keuze van {ox}: "))
 ```
 
-Die vraagt net zo lang om een kolomnummer tot er een geldig nummer komt. Lees
+Hier is `ox` de speler die aan de beurt is: `"X"` of `"O"`. De lus vraagt net zo
+lang om een kolomnummer tot er een geldig nummer komt. Lees
 `while not self.allows_move(...)` als: ga door zolang de zet *niet* mag. Het is
 hetzelfde als `while self.allows_move(...) == False`.
 
@@ -488,4 +507,6 @@ X wint -- Gefeliciteerd!
 Je hebt een klasse die het bord van Vier op een rij bijhoudt en de regels van het
 spel kent: waar een steen terechtkomt, welke zet mag en wanneer iemand gewonnen
 heeft. `host_game` gebruikt alleen die methoden, en hoeft zelf niet te weten hoe
-het bord is opgeslagen.
+het bord is opgeslagen. Andere code, zoals de computerspeler van volgende week,
+kan de breedte en de hoogte van het bord lezen, maar verandert het bord alleen
+via die methoden.
