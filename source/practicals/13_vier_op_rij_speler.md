@@ -34,7 +34,7 @@ Nadat je de AI gebouwd hebt moet je deze op minstens één van deze manieren uit
 
 ## De klasse `Board`
 
-Je kan de klasse `Board` uit je uitwerking van [vorige week](/practicals/12_vier_op_rij_AI) gebruiken.
+Je kan de klasse `Board` uit je uitwerking van de [extra opgave van vorige week](/problems/12_extra) gebruiken.
 
 :::{admonition} Bordgrootte
 :class: note

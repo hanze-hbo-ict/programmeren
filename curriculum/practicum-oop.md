@@ -7,7 +7,7 @@ week wordt geschreven, niet het materiaal zelf.
 
 | Sessie | PGM2-week | Uitgevoerd in |
 |---|---|---|
-| 1 | 5 | #160, nog niet uitgevoerd |
+| 1 | 5 | #160, uitgevoerd in `source/practicals/12_creatures.md` |
 | 2 | 6 | de herziening van week 6 |
 | 3 | 7 | de herziening van week 7 |
 

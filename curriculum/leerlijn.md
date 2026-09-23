@@ -165,8 +165,8 @@ uitgangssituatie, niet de norm; het verschil tussen beide kolommen is het werk.
 | 1 | Datastructuren (lists ter herhaling, dictionaries, sets, methodeaanroep, Markov) | BRRA | P2, A1 | dictionary, sleutel en waarde, set, methodeaanroep | Datastructuren |
 | 2 | Comprehensions (list, dict, set, range, enumerate) | HOEM | A1 | list comprehension, dict comprehension, set comprehension, `enumerate` | Recursie |
 | 3 | Recursie | HOEM | A6 | recursie, base case, recursieve aanroep | Algoritmen (knapzak, wisselgeld) |
-| 4 | Use it or lose it, lambda | HOEM | A4, A6 | use it or lose it, `lambda`, functie als argument | Objecten en dictionaries; gaat naar week 5 (#160) |
-| 5 | OO, klassen, encapsulatie | BRRA | P5, A2 | klassedefinitie, object, attribuut, constructor en `__init__`, `self`, een methode schrijven, `__repr__`, waarde en identiteit, encapsulatie, `_` voor een attribuut dat niet van buiten wordt gebruikt, `@property` en decorator | Kunstmatige intelligentie; vervalt (#160) |
+| 4 | Use it or lose it, lambda | HOEM | A4, A6 | use it or lose it, `lambda`, functie als argument | Alleen de extra-opgave Text-ID; de klassenstof staat sinds #160 in week 5 |
+| 5 | OO, klassen, encapsulatie | BRRA | P5, A2 | klassedefinitie, object, attribuut, constructor en `__init__`, `self`, een methode schrijven, `__repr__`, waarde en identiteit, encapsulatie, `_` voor een attribuut dat niet van buiten wordt gebruikt, `@property` en decorator | OO, klassen, encapsulatie: colleges `12a_objecten` en `12b_data_object`, practicum sessie 1 (`12_creatures`), opstap, basis (`Date`) en extra (`Board`) (#160) |
 | 6 | Polymorfisme, overerving, duck typing | BRRA | A2, A3 | overerving, subklasse en superklasse, `super()`, een methode overschrijven, polymorfisme, duck typing | Vier op een rij, AI-speler |
 | 7 | Operator overloading, excepties, oefentoets | BRRA | P4, P6 | operator overloading, magische methode, `__eq__`, exception, `try`/`except`, `raise` | - |
 
@@ -198,8 +198,7 @@ overloading (`__eq__`, `__lt__`, `__gt__`, `__iadd__`, `__isub__`, `__sub__`)
 horen bij week 7. Het AI-materiaal van week 5, `12_ai` en `12_vier_op_rij_AI`,
 verdwijnt uit die week naar een plek buiten `source/`. Week 4 houdt daarna alleen
 Text-ID en heeft nog geen materiaal voor *use it or lose it* en `lambda`.
-Besloten bij de voorbereiding van de poort van #160; **nog niet uitgevoerd**. De
-kolom *Materiaal nu* volgt zodra #160 is uitgevoerd.
+Besloten bij de voorbereiding van de poort van #160, en **uitgevoerd** in #160.
 
 **Excepties landen in week 7**, naast operator overloading. Vastgesteld bij de
 voorbereiding van de poort van #160; zie *Gaten tussen toetsing en materiaal*.
@@ -250,15 +249,18 @@ klassen, dus die tellen voor een andere week. Wat een week mist, stelt de
 herziening van die week vast. Vastgesteld door de vakdeskundige op 23 september
 2026.
 
-**Wat er wél uit volgt: elf ontbrekende niveau-uitwerkingen.** Dat volgt niet uit
+**Wat er wél uit volgt: negen ontbrekende niveau-uitwerkingen.** Dat volgt niet uit
 de regel hierboven maar uit het besluit *Elk opgaveniveau hoort een uitwerking te
 hebben*, dat elk **bestaand** niveau bindt en dus onafhankelijk is van welke
-niveaus een week verplicht heeft. De meting telt 30 niveau-opgaven in
-`source/problems/`, waarvan 19 een gelijknamige uitwerking in `source/solutions/`
-hebben en 11 nog niet. Dit is
-werkitem #194 en geen werk voor de herziening van dit document. In die elf
-ontbrekende uitwerkingen gaat het concreet om de opstap van week 5 tot en met 8
-en alle niveau-uitwerkingen van week 9 tot en met 11. College- en
+niveaus een week verplicht heeft. De meting telt 32 niveau-opgaven in
+`source/problems/`, waarvan 23 een gelijknamige uitwerking in `source/solutions/`
+hebben en 9 nog niet. Dit is
+werkitem #194 en geen werk voor de herziening van dit document. In die negen
+ontbrekende uitwerkingen gaat het concreet om de opstap van week 6 tot en met 9
+en alle niveau-uitwerkingen van week 9 tot en met 11. Hermeten bij #160: hier
+stond 30, 19 en 11, maar vóór #160 waren het er al 30, 20 en 10, omdat de opstap
+van week 5 inmiddels een uitwerking had. #160 haalde `11_basis` weg en voegde
+opstap, basis en extra van PGM2 week 5 toe, alle drie met uitwerking. College- en
 practicumopdrachten vallen niet automatisch onder deze norm.
 
 ## Volgorde van het werk
@@ -336,7 +338,7 @@ blijft een raakvlak vindbaar zonder dat het in een werkitem verstopt zit.
 | PGM1 week 5 | PGM1 week 7 | Week 5 sluit af op één probleem: één vakje van een raster veranderen terwijl de rest blijft staan. Beide afsluitingen verwijzen naar `source/problems/7_extra.md`, de optionele extra-laag. | Voorstel: laat `source/lectures/7a_lists_advanced.ipynb` datzelfde probleem opnemen, zodat ook de student die extra overslaat het vervolg krijgt. |
 | PGM2 week 5 | PGM2 week 6 | Het practicum is één project over drie weken: `creatures.py`, beschreven in [practicum-oop.md](practicum-oop.md). Week 5 levert de klassen `Creature` en `Party`; week 6 bouwt er subklassen, `Beast` en een duck-typed `Turret` op. | Besloten bij de voorbereiding van de poort van #160. Week 5 wordt uitgevoerd in #160; week 6 bij haar eigen herziening. |
 | PGM2 week 6 | PGM2 week 7 | Week 7 geeft de klassen uit week 6 operatoren en vervangt de stille terugvalwaarden uit week 5 en 6 door `raise`. Het practicum gooit alleen exceptions en vangt er geen af, terwijl P4 het *afhandelen* van foutcondities vraagt. | Besloten als opzet; het afvangen is een open punt voor de herziening van week 7. |
-| PGM2 week 5 | PGM2 week 6 | `practicals/13_vier_op_rij_speler.md` verwijst op r37 naar het AI-practicum van week 5 en op r338 naar `host_game`, dat alleen daar wordt gebouwd. #160 laat r37 naar `Board` wijzen, nu de extra-opgave van week 5. | De verwijzing naar `host_game` blijft een bekend gat tot de herziening van week 6. |
+| PGM2 week 5 | PGM2 week 6 | `practicals/13_vier_op_rij_speler.md` verwijst op r37 naar het AI-practicum van week 5 en op r338 naar `host_game`, dat alleen daar wordt gebouwd. Sinds #160 wijst r37 naar `Board`, nu de extra-opgave van week 5. | De verwijzing naar `host_game` blijft een bekend gat tot de herziening van week 6. |
 
 ## Onderhoud
 

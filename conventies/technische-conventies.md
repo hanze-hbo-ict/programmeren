@@ -247,9 +247,15 @@ Gemeten op `2dcd0224` gaat het om vijf bestanden:
 | `practicals/8a_text_genereren.md` | 5 | 8 |
 | `practicals/4_python_bat.md` | 1 | 4 |
 
-`practicals/1_picobot.md` en `practicals/12_vier_op_rij_AI.md` bevatten geen
-Python en zijn dus terecht markdown. Week 1 en 2 dragen verder geen
-markdown-opgaven.
+`practicals/1_picobot.md` bevat geen Python en is dus terecht markdown. Week 1
+en 2 dragen verder geen markdown-opgaven.
+
+Bij de herziening van PGM2 week 5 (#160) zijn twee markdownbestanden met
+Python-blokken bijgekomen: `practicals/12_creatures.md` (10) en
+`problems/12_extra.md` (3). Grond 2 geldt voor geen van beide: de student werkt
+in een eigen `.py`-bestand, en de blokken zijn code om over te nemen of
+assertions om daar onderaan te zetten. Ze draaien dus niet bij de build. Bij de
+herziening zijn ze buiten de build uitgevoerd tegen een uitwerking.
 
 ### Waarom dit zo gegroeid is
 
@@ -410,7 +416,7 @@ terecht af.
 Verwijs root-relatief en zonder extensie:
 
 ```markdown
-[Board](/practicals/11_vier_op_rij_board)
+[Board](/problems/12_extra)
 ```
 
 Verwijs je naar een kop *binnen* een andere pagina, dan gelden twee afwijkende
