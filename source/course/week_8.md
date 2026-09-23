@@ -17,6 +17,10 @@ bouwt ook een taalmodel: een dictionary die bijhoudt welk woord op welk woord
 volgt. In het werkcollege werk je dat uit tot een programma dat zelf tekst
 schrijft.
 
+Aan het eind van de week kun je met een dictionary gegevens opzoeken en tellen,
+met een set bepalen welke waarden er voorkomen, en uitleggen hoe een taalmodel
+met een dictionary van opvolgers nieuwe tekst maakt.
+
 ### Waar je vandaan komt
 
 In [week 7 van Programmeren 1](/course/week_7) zag je dat een lijst *mutable*

@@ -162,7 +162,7 @@ uitgangssituatie, niet de norm; het verschil tussen beide kolommen is het werk.
 
 | Week | Leidend voor 2026 | Verantwoordelijk | Leeruitkomsten | Voor het eerst geïntroduceerd | Materiaal nu |
 |---|---|---|---|---|---|
-| 1 | Datastructuren (lists ter herhaling, dictionaries, sets, methodeaanroep, Markov) | BRRA | P2, A1 | dictionary, sleutel en waarde, set, methodeaanroep | Datastructuren: colleges `8a_datastructuren` (methodeaanroep en dictionaries) en `8b_taalmodel` (sets en het Markov-model) (#273) |
+| 1 | Datastructuren (lists ter herhaling, dictionaries, sets, methodeaanroep, Markov) | BRRA | P2, A1 | dictionary, sleutel en waarde, set, methodeaanroep | Datastructuren: colleges `8a_datastructuren` (methodeaanroep en dictionaries) en `8b_taalmodel` (sets en het Markov-model), practicum `8a_text_genereren`, opstap, basis (woorden tellen) en extra (woordenschat vergelijken) (#273) |
 | 2 | Comprehensions (list, dict, set, range, enumerate) | HOEM | A1 | list comprehension, dict comprehension, set comprehension, `enumerate` | Recursie |
 | 3 | Recursie | HOEM | A6 | recursie, base case, recursieve aanroep | Algoritmen (knapzak, wisselgeld) |
 | 4 | Use it or lose it, lambda | HOEM | A4, A6 | use it or lose it, `lambda`, functie als argument | Alleen de extra-opgave Text-ID; de klassenstof staat sinds #160 in week 5 |
