@@ -630,12 +630,10 @@ vindt ze in de git-geschiedenis, bijvoorbeeld met
 
 - **Er staan geen Word-handleidingen meer.** Met de twee van week 6 is de map
   `teacher_guides/` leeg en verdwenen, en daarmee is het laatste deel van #95
-  voor PGM1 gedaan. Vier teksten zeggen nog iets anders, omdat ze een stand van
-  eerder beschrijven: `handleidingen/week_3.md` en `handleidingen/week_4.md`
-  noemen nog de `.docx` van week 5 en 6, `handleidingen/week_5.md` zegt dat er
-  nog twee van week 6 staan, en `conventies/conventies.md` spreekt onder
-  *Reikwijdte* over de `.docx` "die er staan". Dat valt buiten de afbakening
-  van dit werkitem en is hier gemeld, niet rechtgezet.
+  voor PGM1 gedaan. De meldingen daarover in `handleidingen/week_3.md`,
+  `week_4.md` en `week_5.md` zijn met dit werkitem bijgewerkt.
+  `conventies/conventies.md` spreekt onder *Reikwijdte* nog over de `.docx`
+  "die er staan"; dat is `conventies/` en ligt bij de vakdeskundige.
 - **De uitwerking van de extra is stuk**, en de opgave verwijst naar functies
   die er niet meer zijn; zie de eigenaardigheden. Gemeld, niet gerepareerd.
 - **De opstap en de basis hebben geen downloadlink** voor hun bestanden.
