@@ -380,7 +380,7 @@ draait wel.
 | Opgaven in opstap, basis en extra | didactisch | gesloten op 23 september 2026, **deels uitgevoerd** voor PGM2: week 5 heeft opstap, basis en extra (#160); de verplichte niveaus per week staan in `leerlijn.md` |
 | De student werkt lokaal in VS Code; de browser is verrijking | didactisch | staand, onderbouwd |
 | Code uitvoerbaar in de browser | praktisch | open, uitvoering wijzigt |
-| Wat er niet meer toe doet, gaat weg; we ruimen achter ons op | organisatorisch | gesloten op 24 september 2026 |
+| Wat er niet meer toe doet, mag weg; we ruimen achter ons op | organisatorisch | gesloten op 24 september 2026, **deels uitgevoerd**: `teacher_guides/` is weg (#280); welke andere directories eronder vallen, wordt voorgelegd in #282 |
 
 ### Recursie na de lussen
 
@@ -757,9 +757,10 @@ moet uitleggen hoe het materiaal in elkaar zit, dan is dat een aanwijzing dat he
 materiaal zelf niet klopt - en dan hoort dat daar gerepareerd te worden en niet
 hier beschreven. Hij is geen uitwerkingenboek: de uitwerkingen staan in `solutions/`, en
 waar die voor een collegeopdracht of een werkcollegeopdracht niet bestaan, geeft de
-handleiding een kort antwoord van hooguit een regel. Het werkcollege is op 24 september
-2026 toegevoegd door de vakdeskundige, bij #280: voor `practicals/6b_images` staat geen
-uitwerking in het boek, en de docent bouwt die opdrachten samen met de klas op. Dit besluit heropent wie kan laten zien dat een
+handleiding een kort antwoord van hooguit een regel. Het werkcollege is toegevoegd door
+de vakdeskundige op 24 september 2026, bij #280. Het voorstel daartoe kwam van de
+auteur: voor `practicals/6b_images` staat geen uitwerking in het boek, en de docent
+bouwt die opdrachten samen met de klas op. Dit besluit heropent wie kan laten zien dat een
 docent met een weekdocument het overzicht per bijeenkomst kwijtraakt.
 
 **Handleidingen zijn repo-materiaal en geen onderdeel van het boek.** Ze staan in
@@ -1025,20 +1026,18 @@ Dit gaat over iets anders dan de "langzame onderdompeling" die
 overgang van Nederlands naar Engels in code, en die overgang is vervallen. Deze
 gaat over een vorm tonen vóór de uitleg.
 
-### Wat er niet meer toe doet, gaat weg
+### Wat er niet meer toe doet, mag weg
 
 **We ruimen achter ons op.** Vastgesteld door de vakdeskundige op 24 september 2026,
 bij #280, toen met de laatste twee `.docx` ook `teacher_guides/` verdween: *"nu we het
 einde van PGM1 naderen alle leftovers/dirs die er niet meer toe doen mogen weg: we
 ruimen steeds achter ons zelf op."*
 
-Dat geldt voor bestanden en directories buiten het boek die nergens meer door worden
-gebruikt: restanten van eerdere opzetten, voorlopers die zijn herschreven, materiaal
-dat bewust stil stond in afwachting van een besluit. Het besluit is nu genomen: ze
-gaan weg zodra vaststaat dat niets ernaar verwijst. Wat weg is, blijft in de
-git-geschiedenis te vinden. Wie iets verwijdert, zoekt eerst de verwijzingen ernaar op
-en werkt die bij in dezelfde wijziging - zie de regel over kruisverwijzingen in
-`conventies/schrijfwijzer.md`.
+Welke bestanden en directories daaronder vallen, wordt niet hier beslist maar per
+directory voorgelegd aan de vakdeskundige; voor wat buiten `source/` staat gebeurt dat
+in #282. Wat weg is, blijft in de git-geschiedenis te vinden. Als werkwijze: wie iets
+verwijdert, zoekt eerst de verwijzingen ernaar op en werkt die bij in dezelfde
+wijziging - zie de regel over kruisverwijzingen in `conventies/schrijfwijzer.md`.
 
 **Te heropenen wanneer** blijkt dat verwijderd materiaal toch werd gebruikt en de
 git-geschiedenis als vindplaats niet volstaat.
