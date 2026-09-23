@@ -132,10 +132,10 @@ zijn `Creature`-objecten in `practicals/12_creatures`. Vastgesteld door de
 vakdeskundige op 23 september 2026.
 
 **Schrijf *functiecompositie* altijd voluit**, nooit afgekort tot *compositie*.
-Anders betekent hetzelfde woord in week 5 twee dingen. Zo liep het tot dit
-besluit: `lectures/12a_objecten.ipynb` schrijft in zijn terugblik *compositie* en
-*composities* waar het functiecompositie bedoelt, twee keer. Dat wordt
-rechtgezet in #268.
+Anders betekent hetzelfde woord in week 5 twee dingen. Toen dit besluit viel,
+schreef `lectures/12a_objecten.ipynb` in zijn terugblik twee keer *compositie* of
+*composities* waar het functiecompositie bedoelde; dat rechtzetten is
+werkitem #268.
 
 ## Directory, map, folder
 

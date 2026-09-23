@@ -203,11 +203,11 @@ Besloten bij de voorbereiding van de poort van #160, en **uitgevoerd** in #160.
 **Excepties landen in week 7**, naast operator overloading. Vastgesteld bij de
 voorbereiding van de poort van #160; zie *Gaten tussen toetsing en materiaal*.
 
-**Compositie hoort bij week 5.** Compositie is dat een object andere objecten
-als onderdeel heeft. Week 5 past het sinds #160 al toe: `Party` in het practicum
-`12_creatures` (stap 5) bewaart `Creature`-objecten in `self._members` en stuurt
-ze aan via hun methoden. Het besluit legt dus vast wat er al staat. De term is
-*compositie*, omdat dat de gangbare term is; de afgewezen varianten staan in
+**Compositie hoort bij week 5.** Week 5 past het begrip sinds #160 al toe:
+`Party` in het practicum `12_creatures` (stap 5) bewaart `Creature`-objecten in
+`self._members` en stuurt ze aan via hun methoden. Het besluit legt dus vast wat
+er al staat. De term is *compositie*, omdat dat de gangbare term is; wat het
+begrip inhoudt en welke varianten zijn afgewezen, staat in
 `conventies/begrippen.md`. *Functiecompositie* uit PGM1 week 7 wordt voluit
 geschreven, zodat de twee begrippen uit elkaar blijven. Aggregatie wordt niet
 benoemd: het voegt in week 5 niets toe wat *waarde en identiteit* niet al dekt.
