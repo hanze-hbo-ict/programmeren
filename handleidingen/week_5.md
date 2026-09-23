@@ -139,7 +139,12 @@ eerste opbouwen, dan zelfstandig de rest - staat al in de opdrachtstructuur van
 `5b_boter_kaas_eieren.ipynb` zelf, via de gegeven `### Voorbeeld`-cel. Beide
 werkvormen zijn dus al aanwezig in het huidige materiaal, om redenen die niets
 met de bron van 2023 te maken hebben; ze als overgenomen aanmerken zou een
-verzonnen herkomst zijn. Vandaar 0 van de 14 blokken met een **B**.
+verzonnen herkomst zijn. `5b_feest_met_functies.docx` noemt onder "Opties" ook
+drie differentiatietechnieken - kleine groepjes, een ervaren met een onervaren
+student koppelen, kapotte code op het bord laten debuggen - maar die zijn
+generiek en aan geen tijdsblok gebonden; ze zijn bekeken en bewust niet
+overgenomen, en raken het B/R-cijfer niet. Vandaar 0 van de 14 blokken met een
+**B**.
 
 Alle veertien blokken tellen op tot **90 minuten** per bijeenkomst, met een
 ongetimede pauze. **Hoe lang een bijeenkomst werkelijk duurt staat nergens in
@@ -227,7 +232,7 @@ van de eerste rij.
 
 **Blok 4.** Laat de klas eerst voorspellen wat de tel-cel bij
 `### Tellen in een raster` aflevert, vóórdat je hem uitvoert. Het antwoord is
-`4` - vier keer `"X"` in het bord van blok 3. Vraag daarna hardop: wat is hier
+`3` - drie keer `"X"` in het bord van blok 3. Vraag daarna hardop: wat is hier
 de verzamelvariabele, en wat is de startwaarde? `count` en `0`.
 
 **Blok 5.** Dit is het blok dat de week draagt. Voer `place(L, 0, 1, "O")` uit
@@ -542,11 +547,12 @@ git-geschiedenis.
 - **`curriculum/uitgangspunten.md` bevat een niet meer kloppende statusregel.**
   Het besluitenregister zegt bij *Week 4 krijgt een lusrecept van vijf vragen*:
   *"week 5 pikt het nog niet op (#163)"*. Dat klopt niet meer: het huidige
-  materiaal verwijst er vijf keer naar - eenmaal in `5a_geneste_lus.ipynb`,
-  driemaal in `problems/5_basis.ipynb` en eenmaal in `problems/5_extra.md`. Dit valt
-  buiten de afbakening van dit werkitem (alleen `handleidingen/week_5.md` en de
-  bijeenkomstindeling in `curriculum/uitgangspunten.md`) en is hier gemeld, niet
-  gerepareerd.
+  materiaal verwijst er acht keer naar, over vijf bestanden - eenmaal in
+  `5a_geneste_lus.ipynb`, driemaal in `problems/5_basis.ipynb`, eenmaal in
+  `problems/5_extra.md`, tweemaal in `problems/5_opstap.ipynb` en eenmaal in
+  `solutions/5_opstap.ipynb`. Dit valt buiten de afbakening van dit werkitem
+  (alleen `handleidingen/week_5.md` en de bijeenkomstindeling in
+  `curriculum/uitgangspunten.md`) en is hier gemeld, niet gerepareerd.
 - **Er staan nog twee Word-handleidingen in `teacher_guides/`**, van week 6.
   Ze wachten op werkitem #95.
 - **Deze week levert geen enkele overgeleverde tijd op.** Tot een docent haar
