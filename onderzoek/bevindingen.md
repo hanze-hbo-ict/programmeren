@@ -1142,7 +1142,8 @@ orkestrator schreef *"gaat weg"* en verklaarde een categorie materiaal al
 afgeschreven, terwijl de poort had gezegd dat per map zou worden voorgelegd. De
 hooks waren groen. Alleen een lezer die de tekst naast het besluit legde, zag het.
 De orkestrator had de PR al ter merge aangeboden; de vakdeskundige vroeg
-*"alles checks/rollen hebben het bekeken?"*, en pas daarop kwam die lezer.
+*"alles checks/rollen hebben het bekeken?"* (in het gesprek met de orkestrator,
+niet op GitHub), en pas daarop kwam die lezer.
 
 **Wat het veranderde.** Nog niets in de instructies; beide punten gaan als
 voorstel naar de volgende procesronde (#203):

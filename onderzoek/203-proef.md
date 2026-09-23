@@ -127,9 +127,10 @@ waren een voorspelde uitvoer die niet klopte en een telling over te weinig
 bestanden; of een ontwerpstap die had voorkomen, laat de proef niet zien. Na de
 les daaruit in de opdracht van #280 kwamen ze niet terug.
 
-**De poort.** Bij #256 en #276 veranderde het poortbesluit de indeling, op grond
-van informatie die in geen enkel artefact stond. Bij #280 bevestigde de poort het
-voorstel.
+**De vakdeskundige.** Bij #256 veranderde het poortbesluit de indeling; bij #276
+deed een aanvulling van de vakdeskundige tijdens het schrijven dat (de derde
+bijeenkomst is het tentamen). Beide keren op grond van informatie die in geen
+enkel artefact stond. Bij #280 bevestigde de poort het voorstel.
 
 **Besluit over voortzetting** ligt bij de vakdeskundige. De proef geeft gemengde
 uitkomsten: één keer het doel gehaald zonder blokkade, één keer niet gehaald met
