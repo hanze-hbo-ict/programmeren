@@ -38,7 +38,11 @@ forceer geen Nederlandse vertaling. Voor dit materiaal werkt dat zo uit:
 | De situatie waarin iets zich bevindt | **staat** | state, toestand | Maar het model heet **state machine**; zie hieronder |
 | Variabele die in een lus een resultaat opbouwt | **verzamelvariabele** | telvariabele (2×) | Zie de toelichting hieronder |
 | Sjabloon voor objecten | **klasse** | class (145×) | Het sleutelwoord is `class` |
-| Functie in een klasse | **methode** | - | |
+| Functie in een klasse | **methode** | - | Meervoud **methoden**, niet *methodes* (37×, tegen 13× methoden). Vastgesteld door de vakdeskundige op 23 september 2026 |
+| Exemplaar van een klasse | **object** | instantie (19×) | *Instantie* alleen om de verhouding te noemen: "een object is een instantie van een klasse", of "`foo` is een instantie van `Bar`" om te zeggen dat de klasse van `foo` `Bar` is. Vastgesteld door de vakdeskundige op 23 september 2026 |
+| Gegeven dat bij een object hoort, zoals `self.name` | **attribuut** | eigenschap, instance variable (16×), veld | Zo heet het in Python zelf: `AttributeError`, `getattr`. Vastgesteld door de vakdeskundige op 23 september 2026 |
+| De methode `__init__` | **constructor** | - | 30×, zonder concurrent |
+| Toestand alleen via methoden bereikbaar maken | **encapsulatie** | - | Nieuw in PGM2 week 5; niet *inkapseling*. Vastgesteld door de vakdeskundige op 23 september 2026 |
 | Waarde die je meegeeft | **argument** | - | Bij de definitie heet het een **parameter** |
 | Resultaat opleveren | **teruggeven** | - | Niet "returnen" |
 | Op het scherm tonen | **afdrukken** | printen (11×), geprint (23×) | Het deelwoord is de grootste vorm en werd niet geteld |
