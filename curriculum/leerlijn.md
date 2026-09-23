@@ -203,6 +203,21 @@ Besloten bij de voorbereiding van de poort van #160, en **uitgevoerd** in #160.
 **Excepties landen in week 7**, naast operator overloading. Vastgesteld bij de
 voorbereiding van de poort van #160; zie *Gaten tussen toetsing en materiaal*.
 
+**Min-max is de extra-opgave van week 7.** De extra-opgaven van week 5 tot en met
+7 vormen één lijn over objectgeoriënteerd programmeren, en min-max sluit die af.
+Week 5 levert `Board`. Week 6 splitst `Board` op en breidt het uit, met een
+menselijke speler en een eenvoudige AI-speler die polymorf te gebruiken zijn. Die
+AI kijkt hooguit één zet vooruit, zoals `cols_to_win` en `ai_move` in
+`practicals/12_vier_op_rij_AI.md`. Week 7 voegt de min-max-speler toe, op basis
+van `source/practicals/13_vier_op_rij_speler.md` en de sectie *Min-max* van
+`lectures/12_ai.ipynb`. Min-max past niet bij het onderwerp van week 7; het haakje
+is `__lt__`, om bordtoestanden te vergelijken. Het vraagt recursie, en die staat
+sinds week 3 ter beschikking. Vastgesteld door de vakdeskundige op 23 september
+2026, **nog niet uitgevoerd**: week 6 in #270, week 7 in #271. Tot de herziening
+van week 6 staat `13_vier_op_rij_speler` nog onder week 6 in de inhoudsopgave.
+Heropenen vraagt een reden om de lijn van drie extra-opgaven los te laten, of een
+week waar min-max beter bij het onderwerp past.
+
 ## Welk niveau een week hoort te hebben
 
 De niveaus zelf staan in [uitgangspunten.md](uitgangspunten.md); hun namen in
@@ -339,6 +354,7 @@ blijft een raakvlak vindbaar zonder dat het in een werkitem verstopt zit.
 | PGM2 week 5 | PGM2 week 6 | Het practicum is één project over drie weken: `creatures.py`, beschreven in [practicum-oop.md](practicum-oop.md). Week 5 levert de klassen `Creature` en `Party`; week 6 bouwt er subklassen, `Beast` en een duck-typed `Turret` op. | Besloten bij de voorbereiding van de poort van #160. Week 5 wordt uitgevoerd in #160; week 6 bij haar eigen herziening. |
 | PGM2 week 6 | PGM2 week 7 | Week 7 geeft de klassen uit week 6 operatoren en vervangt de stille terugvalwaarden uit week 5 en 6 door `raise`. Het practicum gooit alleen exceptions en vangt er geen af, terwijl P4 het *afhandelen* van foutcondities vraagt. | Besloten als opzet; het afvangen is een open punt voor de herziening van week 7. |
 | PGM2 week 5 | PGM2 week 6 | `practicals/13_vier_op_rij_speler.md` verwijst op r37 naar het AI-practicum van week 5 en op r338 naar `host_game`, dat alleen daar wordt gebouwd. Sinds #160 wijst r37 naar `Board`, nu de extra-opgave van week 5. | De verwijzing naar `host_game` blijft een bekend gat tot de herziening van week 6. |
+| PGM2 week 6 | PGM2 week 7 | De extra-opgave van week 6 levert de spelersklassen: een menselijke speler en een eenvoudige AI-speler, polymorf gebruikt door de spellus. De extra-opgave van week 7 voegt daar een min-max-speler aan toe, in dezelfde structuur. | Besloten door de vakdeskundige op 23 september 2026. Uit te voeren in #270 en #271; het ontwerp van week 7 wacht op de spelersstructuur van week 6. |
 
 ## Onderhoud
 

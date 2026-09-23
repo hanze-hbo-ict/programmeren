@@ -675,6 +675,22 @@ Twee keer een patroon niet geijkt, allebei in dezelfde sessie:
 
 Hier hoort wat met de hand is gedaan omdat het te klein leek voor een werkitem.
 
+### 23 september 2026, min-max naar de extra-opgave van PGM2 week 7
+
+**Wat het was.** Een besluit van de vakdeskundige vastgelegd in `curriculum/leerlijn.md`
+(een alinea en een regel in *Wat een week aan een latere week aflevert*) en in het
+besluitenregister van `curriculum/uitgangspunten.md`. Het besluit: min-max is de
+extra-opgave van week 7, als afsluiting van een lijn van drie extra-opgaven over
+Vier op een rij. Het kwam in het gesprek waarin de werkitems #267 tot en met #271 werden
+opgesteld; daar stond het alleen in de werkitems, en een besluit dat niet in
+`curriculum/` landt, is niet genomen.
+
+**Waarom het buiten de lus bleef.** Het is de vastlegging van een genomen besluit,
+geen herziening van materiaal. `source/` is niet geraakt.
+
+**Ging er een beoordelaar overheen?** Nog niet bij het openen van de PR; de
+vakdeskundige leest de formulering in de PR zelf.
+
 ### 23 september 2026, curriculumbesluiten vóór het C4 van #160
 
 **Wat het was.** Vijf besluiten van de vakdeskundige vastgelegd in `curriculum/` en

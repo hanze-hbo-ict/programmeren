@@ -315,6 +315,7 @@ draait wel.
 | Bestanden naar PGM1, excepties blijven in PGM2 | didactisch | staand, onderbouwd; excepties landen in PGM2 week 7 (23 september 2026), **nog niet uitgevoerd** |
 | De klassenstof van PGM2 week 4 gaat naar week 5; het AI-materiaal verdwijnt uit week 5; Text-ID blijft in week 4 | organisatorisch | gesloten op 23 september 2026 (#160), **uitgevoerd** in #160 |
 | Het practicum van PGM2 week 5 tot en met 7 is één doorlopend project, `creatures.py` | didactisch | gesloten op 23 september 2026; opzet in `practicum-oop.md`, **deels uitgevoerd**: sessie 1 staat in week 5 (#160); sessie 2 en 3 volgen met de herziening van week 6 en 7 |
+| De extra-opgaven van PGM2 week 5 tot en met 7 vormen één lijn over Vier op een rij; min-max is de extra-opgave van week 7 | didactisch | gesloten op 23 september 2026; zie `leerlijn.md`, **nog niet uitgevoerd**: week 6 in #270, week 7 in #271 |
 | Docstrings en commentaar blijven Nederlands, ook in PGM2 | didactisch | gesloten op 23 september 2026; zie `conventies/codeconventies.md` |
 | Mutatie pas vanaf PGM1 week 7, en als grens benoemd | didactisch | staand, onderbouwd |
 | Canonieke Python aanbieden, mechanisme later uitleggen | didactisch | staand, onderbouwd |
