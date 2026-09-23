@@ -166,9 +166,9 @@ uitgangssituatie, niet de norm; het verschil tussen beide kolommen is het werk.
 | 2 | Comprehensions (list, dict, set, range, enumerate) | HOEM | A1 | list comprehension, dict comprehension, set comprehension, `enumerate` | Recursie |
 | 3 | Recursie | HOEM | A6 | recursie, base case, recursieve aanroep | Algoritmen (knapzak, wisselgeld) |
 | 4 | Use it or lose it, lambda | HOEM | A4, A6 | use it or lose it, `lambda`, functie als argument | Objecten en dictionaries; gaat naar week 5 (#160) |
-| 5 | OO, klassen, encapsulatie | BRRA | P5, A2 | klassedefinitie, object, attribuut, constructor en `__init__`, `self`, een methode schrijven, `__repr__`, encapsulatie | Kunstmatige intelligentie; vervalt (#160) |
+| 5 | OO, klassen, encapsulatie | BRRA | P5, A2 | klassedefinitie, object, attribuut, constructor en `__init__`, `self`, een methode schrijven, `__repr__`, waarde en identiteit, encapsulatie, `_` voor een attribuut dat niet van buiten wordt gebruikt, `@property` en decorator | Kunstmatige intelligentie; vervalt (#160) |
 | 6 | Polymorfisme, overerving, duck typing | BRRA | A2, A3 | overerving, subklasse en superklasse, `super()`, een methode overschrijven, polymorfisme, duck typing | Vier op een rij, AI-speler |
-| 7 | Operator overloading, excepties, oefentoets | BRRA | P4, P6 | operator overloading, magische methode, `__eq__`, waarde en identiteit, exception, `try`/`except`, `raise` | - |
+| 7 | Operator overloading, excepties, oefentoets | BRRA | P4, P6 | operator overloading, magische methode, `__eq__`, exception, `try`/`except`, `raise` | - |
 
 Een deel van deze onderwerpen komt in het huidige materiaal niet of nauwelijks
 voor. Dat is bekend en verwacht: de planning beschrijft waar PGM2 heen gaat, niet
@@ -187,12 +187,17 @@ behalve twee die in PGM1 worden onderwezen en in PGM2 worden getoetst: P1
 (lussen, zie *Gaten tussen toetsing en materiaal*) en P3 (tekstbestanden, PGM1
 week 6). P7 (externe bibliotheken) heeft geen weging en geen week.
 
-**De klassenstof van week 4 gaat in zijn geheel naar week 5.** Gemeten op
-23 september 2026 gaat alles wat week 4 nu heeft over klassen: de lezingen
-`11a_objecten` en `11b_data_object`, het practicum `11_vier_op_rij_board` (de
-klasse `Board`) en de basisopgave `11_basis` (de klasse `Date`). Het
-AI-materiaal van week 5, `12_ai` en `12_vier_op_rij_AI`, verdwijnt uit die week.
-Week 4 heeft daarna nog geen materiaal voor *use it or lose it* en `lambda`.
+**De klassenstof van week 4 gaat naar week 5.** Gemeten op 23 september 2026
+gaan de lezingen `11a_objecten` en `11b_data_object`, het practicum
+`11_vier_op_rij_board` (de klasse `Board`) en de basisopgave `11_basis` (de
+klasse `Date`) over klassen; de extra-opgave `11_extra` (Text-ID) niet, en die
+blijft in week 4. In week 5 wordt het practicum sessie 1 van
+[practicum-oop.md](practicum-oop.md), en `Board` wordt de extra-opgave. Van
+`11_basis` gaat alleen mee wat bij week 5 hoort: de onderdelen over operator
+overloading (`__eq__`, `__lt__`, `__gt__`, `__iadd__`, `__isub__`, `__sub__`)
+horen bij week 7. Het AI-materiaal van week 5, `12_ai` en `12_vier_op_rij_AI`,
+verdwijnt uit die week naar een plek buiten `source/`. Week 4 houdt daarna alleen
+Text-ID en heeft nog geen materiaal voor *use it or lose it* en `lambda`.
 Besloten bij de voorbereiding van de poort van #160; **nog niet uitgevoerd**. De
 kolom *Materiaal nu* volgt zodra #160 is uitgevoerd.
 
@@ -233,7 +238,7 @@ gewone `def` die zichzelf aanroept.
 | 2 | opstap, basis | comprehensions |
 | 3 | basis | - |
 | 4 | opstap, basis | `lambda`, functie als argument |
-| 5 | opstap, basis | `class`, `__init__`, `self` |
+| 5 | opstap, basis | `class`, `__init__`, `self`, `@property` |
 | 6 | opstap, basis | subklasse, `super()` |
 | 7 | opstap, basis | magische methoden, `try`/`except`, `raise` |
 
@@ -329,6 +334,9 @@ blijft een raakvlak vindbaar zonder dat het in een werkitem verstopt zit.
 | PGM1 week 5 | PGM1 week 7 | Week 5 levert `create_board` en `print_board` als vermogen; `source/problems/7_extra.md` regels 36-114 leert ze nu vanaf nul aan. | Voorstel: laat week 7 ernaar verwijzen in plaats van ze opnieuw aan te leren. |
 | PGM1 week 5 | PGM1 week 7 | `[[0] * 3] * 3` en de waarschuwing daarbij horen in week 7, naast aliasing en `deepcopy`. De constructie bijt pas zodra je erin toewijst, en dat gebeurt in week 5 niet. | Besloten in het weekontwerp van week 5, uit te voeren bij de herziening van week 7. |
 | PGM1 week 5 | PGM1 week 7 | Week 5 sluit af op één probleem: één vakje van een raster veranderen terwijl de rest blijft staan. Beide afsluitingen verwijzen naar `source/problems/7_extra.md`, de optionele extra-laag. | Voorstel: laat `source/lectures/7a_lists_advanced.ipynb` datzelfde probleem opnemen, zodat ook de student die extra overslaat het vervolg krijgt. |
+| PGM2 week 5 | PGM2 week 6 | Het practicum is één project over drie weken: `creatures.py`, beschreven in [practicum-oop.md](practicum-oop.md). Week 5 levert de klassen `Creature` en `Party`; week 6 bouwt er subklassen, `Beast` en een duck-typed `Turret` op. | Besloten bij de voorbereiding van de poort van #160. Week 5 wordt uitgevoerd in #160; week 6 bij haar eigen herziening. |
+| PGM2 week 6 | PGM2 week 7 | Week 7 geeft de klassen uit week 6 operatoren en vervangt de stille terugvalwaarden uit week 5 en 6 door `raise`. Het practicum gooit alleen exceptions en vangt er geen af, terwijl P4 het *afhandelen* van foutcondities vraagt. | Besloten als opzet; het afvangen is een open punt voor de herziening van week 7. |
+| PGM2 week 5 | PGM2 week 6 | `practicals/13_vier_op_rij_speler.md` verwijst op r37 naar het AI-practicum van week 5 en op r338 naar `host_game`, dat alleen daar wordt gebouwd. #160 laat r37 naar `Board` wijzen, nu de extra-opgave van week 5. | De verwijzing naar `host_game` blijft een bekend gat tot de herziening van week 6. |
 
 ## Onderhoud
 
