@@ -166,7 +166,7 @@ uitgangssituatie, niet de norm; het verschil tussen beide kolommen is het werk.
 | 2 | Comprehensions (list, dict, set, range, enumerate) | HOEM | A1 | list comprehension, dict comprehension, set comprehension, `enumerate` | Recursie |
 | 3 | Recursie | HOEM | A6 | recursie, base case, recursieve aanroep | Algoritmen (knapzak, wisselgeld) |
 | 4 | Use it or lose it, lambda | HOEM | A4, A6 | use it or lose it, `lambda`, functie als argument | Objecten en dictionaries; gaat naar week 5 (#160) |
-| 5 | OO, klassen, encapsulatie | BRRA | P5, A2 | klassedefinitie, object en instantie, attribuut, constructor en `__init__`, `self`, een methode schrijven, `__repr__`, encapsulatie | Kunstmatige intelligentie; vervalt (#160) |
+| 5 | OO, klassen, encapsulatie | BRRA | P5, A2 | klassedefinitie, object, attribuut, constructor en `__init__`, `self`, een methode schrijven, `__repr__`, encapsulatie | Kunstmatige intelligentie; vervalt (#160) |
 | 6 | Polymorfisme, overerving, duck typing | BRRA | A2, A3 | overerving, subklasse en superklasse, `super()`, een methode overschrijven, polymorfisme, duck typing | Vier op een rij, AI-speler |
 | 7 | Operator overloading, excepties, oefentoets | BRRA | P4, P6 | operator overloading, magische methode, `__eq__`, waarde en identiteit, exception, `try`/`except`, `raise` | - |
 
@@ -178,9 +178,9 @@ waar het staat.
 net als bij PGM1.** Ze volgt *Leidend voor 2026* en niet het huidige materiaal:
 een begrip hoort niet eerder voor te komen dan de week waarin het hier staat. Wat
 PGM1 al levert, staat hier niet opnieuw. De woorden in de kolom zijn geen
-termbesluit; welke vorm het materiaal gebruikt, bijvoorbeeld *object* of
-*instantie*, *base case* of *basisgeval*, staat in `conventies/begrippen.md` of
-moet daar nog worden vastgesteld.
+termbesluit; welke vorm het materiaal gebruikt, staat in `conventies/begrippen.md`.
+Voor week 5 is dat vastgesteld (*object*, *attribuut*, *constructor*,
+*encapsulatie*); voor *base case* of *basisgeval* nog niet.
 
 **De kolom *Leeruitkomsten* wijst elke gewogen PGM2-uitkomst een week toe**,
 behalve twee die in PGM1 worden onderwezen en in PGM2 worden getoetst: P1
