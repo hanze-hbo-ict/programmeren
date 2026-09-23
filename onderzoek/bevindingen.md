@@ -1095,3 +1095,30 @@ gevolgen, geen redenen; een feitelijke claim in een optie is gemeten, anders sta
 niet.** Vraag de reden open, of zet in het C4 dat de formulering van de orkestrator is en
 door de mens is gekozen. Of dit in de instructies komt, is een procesbesluit voor de
 vakdeskundige.
+
+## Een hervatte agent meldt zijn tokens als lopend totaal — 23 september 2026
+
+**Wat er gebeurde.** Bij #273 kreeg de auteur na zijn oplevering twee gerichte opdrachten in
+dezelfde context: de volgorde van `8b` en daarna de puntjes. De harness meldde achtereenvolgens
+179.339, 220.224 en 244.873 tokens. Het getal loopt op, ook na een stap met 13 toolaanroepen. Het
+lijkt dus het lopende totaal van de agent te zijn en niet het verbruik van die ene stap. Uit de
+melding zelf is dat niet vast te stellen.
+
+**Waarom het ertoe doet.** De proef van #203 vergelijkt tokens per werkitem met een referentie.
+Wie de drie getallen optelt, rekent de eerste oplevering drie keer mee. Wie alleen het laatste
+neemt, gaat ervan uit dat het een totaal is, en dat is niet bewezen. Juist de goedkope route die
+`loop.md` aanbeveelt, *dezelfde auteurscontext mag blijven*, maakt de meting dus dubbelzinnig.
+
+**Wat het veranderde.** In [metingen.md](metingen.md) staan de hervatte stappen bij #273 als
+*niet vastgesteld*, met het gemelde getal ernaast, en ze tellen niet mee in het totaal. Voor de
+proeven van #203 moet de meetdefinitie vooraf zeggen of een hervatte agent als één run met zijn
+laatste getal telt. Dat hoort de vakdeskundige vast te stellen bij de keuze van de referentie.
+
+**Tweede waarneming, dezelfde route.** De mens koos in het poortbesluit het alternatief (grens B)
+in plaats van de aanbeveling. De orkestrator schreef de gevolgen ervan zelf over in het C4 en
+formuleerde er één onnauwkeurig: *E en F wisselen*. Dat gaf een volgorde die de sets tussen het
+model en het genereren zette. De auteur meldde het als afwijking, en de correctie kostte een
+hervatte auteursstap en een tweede menselijke vraag. Bij een gekozen alternatief is een
+ontwerpherstel duurder, maar het overschrijven laat de ontwerpverantwoordelijkheid stil bij
+de orkestrator. Leg in dat geval de concrete eindvolgorde zelf aan de mens voor, niet een
+bewerking op een volgorde.

@@ -1399,3 +1399,25 @@ C0 en de reden, daarna over de registerrij (aard en status).
 onderbouwing in de C4-aanvulling ("zo gaat het ook bij de andere gesloten didactische
 rijen") maar half klopte. Die zin had de orkestrator zelf geschreven. Zie de bevinding van
 dezelfde datum.
+
+## Werkitem #273 — college PGM2 week 1 gesplitst, met opdrachten
+
+Route *overzichtelijke opgave of sectie*, omvang M, procescommit `e04d8dcf`, geen #203-proef.
+Opgeleverd op 23 september 2026 in PR #279: `8a_datastructuren` ingekort en van drie opdrachten
+voorzien, `8b_taalmodel` nieuw met vijf, `course/week_8.md` uitgeschreven, en twee regels in
+`curriculum/` (leerlijn r165, uitgangspunten, statusregel weekpagina).
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| curriculumontwerper (gecombineerd) | 113.950 | 8 min 26 s | C2, grens A aanbevolen, vier open vragen |
+| orkestrator, C1, C4 en C4-aanvulling | niet beschikbaar | niet beschikbaar | mens koos grens B; C4 formuleerde de volgorde van 8b onnauwkeurig |
+| auteur, oplevering | 179.339 | 11 min 12 s | C5, alle controles groen |
+| auteur, volgorde 8b (hervat) | niet vastgesteld; harness meldt 220.224 | 4 min 58 s | volgorde E, D, F, G |
+| beoordelaar-eerstejaars | 78.192 | 4 min 36 s | AKKOORD MET PUNTJES, 0 blokkades, 5 puntjes |
+| beoordelaar-onderwijskundige | 80.715 | 4 min 42 s | AKKOORD MET PUNTJES, 0 blokkades, 3 puntjes |
+| auteur, puntjes (hervat) | niet vastgesteld; harness meldt 244.873 | 4 min 38 s | 8 puntjes verwerkt |
+| beoordelaar-onderwijskundige, naleesronde | 41.839 | 2 min 20 s | AKKOORD, 8/8 opgelost |
+| **vastgesteld totaal agents** | **494.035** | | exclusief de twee hervatte auteursstappen |
+
+Herstelstand bij afsluiting: ontwerp 0/1, oplevering 0/1. Zie de bevinding over hervatte agents
+voor waarom de twee auteursgetallen niet zijn opgeteld.
