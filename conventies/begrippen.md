@@ -43,6 +43,7 @@ forceer geen Nederlandse vertaling. Voor dit materiaal werkt dat zo uit:
 | Gegeven dat bij een object hoort, zoals `self.name` | **attribuut** | eigenschap, instance variable (16×), veld | Zo heet het in Python zelf: `AttributeError`, `getattr`. Vastgesteld door de vakdeskundige op 23 september 2026 |
 | De methode `__init__` | **constructor** | - | 30×, zonder concurrent |
 | Toestand alleen via methoden bereikbaar maken | **encapsulatie** | - | Nieuw in PGM2 week 5; niet *inkapseling*. Vastgesteld door de vakdeskundige op 23 september 2026 |
+| Object dat andere objecten als onderdeel heeft | **compositie** | - | Nieuw in PGM2 week 5; niet *objectcompositie*, *samenstelling* of *heeft-een-relatie*. *Functiecompositie* nooit afkorten tot *compositie*; zie hieronder. Vastgesteld door de vakdeskundige op 23 september 2026 |
 | Waarde die je meegeeft | **argument** | - | Bij de definitie heet het een **parameter** |
 | Resultaat opleveren | **teruggeven** | - | Niet "returnen" |
 | Op het scherm tonen | **afdrukken** | printen (11×), geprint (23×) | Het deelwoord is de grootste vorm en werd niet geteld |
@@ -121,6 +122,20 @@ Wat er in geen geval mag staan is *oneindige herhaling* voor `while`. Die
 formulering is uit CS5 overgeërfd, is onjuist - een `while` is niet oneindig, het
 aantal herhalingen ligt alleen niet vooraf vast - en zij is bij de herziening van
 week 4 verwijderd.
+
+## Compositie en functiecompositie
+
+Twee begrippen met hetzelfde woord erin. *Functiecompositie* hoort bij PGM1
+week 7 en gaat over functies; **compositie** hoort bij PGM2 week 5 en gaat over
+objecten: een object dat andere objecten als onderdeel heeft, zoals `Party` met
+zijn `Creature`-objecten in `practicals/12_creatures`. Vastgesteld door de
+vakdeskundige op 23 september 2026.
+
+**Schrijf *functiecompositie* altijd voluit**, nooit afgekort tot *compositie*.
+Anders betekent hetzelfde woord in week 5 twee dingen. Toen dit besluit viel,
+schreef `lectures/12a_objecten.ipynb` in zijn terugblik twee keer *compositie* of
+*composities* waar het functiecompositie bedoelde; dat rechtzetten is
+werkitem #268.
 
 ## Directory, map, folder
 

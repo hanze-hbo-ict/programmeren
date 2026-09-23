@@ -327,6 +327,7 @@ draait wel.
 | De klassenstof van PGM2 week 4 gaat naar week 5; het AI-materiaal verdwijnt uit week 5; Text-ID blijft in week 4 | organisatorisch | gesloten op 23 september 2026 (#160), **uitgevoerd** in #160 |
 | Het practicum van PGM2 week 5 tot en met 7 is één doorlopend project, `creatures.py` | didactisch | gesloten op 23 september 2026; opzet in `practicum-oop.md`, **deels uitgevoerd**: sessie 1 staat in week 5 (#160); sessie 2 en 3 volgen met de herziening van week 6 en 7 |
 | Docstrings en commentaar blijven Nederlands, ook in PGM2 | didactisch | gesloten op 23 september 2026; zie `conventies/codeconventies.md` |
+| Compositie is een begrip van PGM2 week 5; zie `leerlijn.md` en `conventies/begrippen.md` | didactisch | gesloten op 23 september 2026 (#267), **nog niet uitgevoerd**: het materiaal volgt in #268 |
 | Mutatie pas vanaf PGM1 week 7, en als grens benoemd | didactisch | staand, onderbouwd |
 | Canonieke Python aanbieden, mechanisme later uitleggen | didactisch | staand, onderbouwd |
 | Het bord verandert niet in week 5; de grens wordt daar benoemd | didactisch | gesloten |
