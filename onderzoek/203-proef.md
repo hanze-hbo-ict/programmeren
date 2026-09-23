@@ -92,38 +92,48 @@ waar #256 er geen had, dan heeft de ontwerpstap gedaan waarvoor zij bestond.
 
 ### Uitkomst van proef 1, 24 september 2026
 
-| Werkitem | Agenttokens | t.o.v. #256 | Beoordeling |
-|---|---:|---:|---|
-| #256, week 4 (referentie, met ontwerpstap) | 693.462 | 100% | AKKOORD MET PUNTJES, 1 moetpunt |
-| #276, week 5 | 502.819 | 72,5% | **BLOKKEER** op 2 fouten, na één herstel AKKOORD |
-| #280, week 6 | 470.035 | 67,8% | AKKOORD MET PUNTJES, 0 blokkades |
+| Werkitem | Agenttokens | t.o.v. #256 | Doel (≥ 30% minder) | Beoordeling |
+|---|---:|---:|---|---|
+| #256, week 4 (referentie, met ontwerpstap) | 693.462 | 100% | - | AKKOORD MET PUNTJES, 0 blokkades |
+| #276, week 5 | 502.819 | 72,5% | **niet gehaald** (27,5%) | **BLOKKEER** op 2 fouten; na één herstel AKKOORD |
+| #280, week 6 | 470.035 | 67,8% | gehaald (32,2%) | AKKOORD MET PUNTJES, 0 blokkades |
 
-Getallen per agent zijn de cumulatieve `subagent_tokens` bij de laatste
-melding, dus inclusief herstel- en naleesronden: #276 = auteur 343.145 +
-beoordelaar 159.674; #280 = auteur 293.226 + beoordelaar 176.809. Orkestratie
-zit in geen van de drie totalen.
+**Bron.** De getallen zijn de cumulatieve `subagent_tokens` uit het
+verbruiksrapport dat de orkestrator na elke agentstap krijgt, inclusief herstel-
+en naleesronden. De rollen zelf zien hun teller niet en schreven *"niet
+beschikbaar"*; de rapportgetallen zijn op 24 september 2026 als aanvulling op
+#276 en #280 geplaatst. Orkestratie zit in geen van de drie totalen.
 
-**Wat dit zegt.** #280 zit onder de 70%-grens, #276 net erboven. Beide zijn
-goedkoper dan de referentie, en de besparing zit waar hij verwacht werd: #256
-besteedde 215.006 tokens aan ontwerp, en dat werk is in beide proeven door de
-auteur gedaan zonder dat de auteur daardoor duurder werd dan bij #256 (280.463).
+**Drie afwijkingen van wat hier vooraf staat.**
+- Het referentietotaal had vóór de start bevestigd moeten zijn; het is achteraf
+  ingevuld, uit de meting van #256.
+- De budgetreactie is bij #276 niet uitgevoerd. Na het auteursherstel stond de
+  stand op 495.117 (71,4%); de herbeoordeling is gestart zonder de vakdeskundige
+  te vragen.
+- Het totaal van #280 bevat 28.482 beoordelaarstokens voor het nalezen van
+  orkestratorcommits. Bij #256 las geen rol de correcties van de orkestrator. De
+  twee totalen zijn op dat punt niet gelijk opgebouwd.
 
-**Wat dit niet zegt.** Het is geen bewijs dat de ontwerpstap overbodig is. Week 5
-had maar twee lesbijeenkomsten, week 6 geen enkele afwijking van de moedertabel;
-allebei eenvoudiger dan week 4, waar de poort de indeling omgooide. En #276
-blokkeerde, wat #256 niet deed. Maar de twee fouten daar waren een verkeerd
-voorspelde uitvoer en een telling over te weinig bestanden - fouten die een
-ontwerper niet vangt en een beoordelaar wel. Na de les daaruit in de opdracht
-van #280 kwamen ze niet terug.
+**Wat de getallen zeggen.** Beide proeven waren goedkoper dan de referentie;
+#280 haalde het doel, #276 niet. De besparing komt uit het weglaten van de
+ontwerpstap (215.006 tokens bij #256). De auteur werd daarbij **duurder**: 343.145
+bij #276 en 293.226 bij #280, tegen 280.463 bij #256 - hij deed een deel van het
+ontwerpwerk zelf.
 
-**Wat de proef wél liet zien, en niet in de tokens staat.** Het menselijke
-poortbesluit bleef bij alle drie inhoudelijk bepalend: bij #256 de indeling, bij
-#276 dat de derde bijeenkomst het tentamen is - informatie die in geen enkel
-artefact stond. Die stap mag niet uit de korte route.
+**Wat de proef vooraf als tegenbewijs aanwees, en wat er gebeurde.** Hierboven
+staat: *"komt de beoordelaar met blokkades waar #256 er geen had, dan heeft de
+ontwerpstap gedaan waarvoor zij bestond."* Bij #276 gebeurde dat. De twee fouten
+waren een voorspelde uitvoer die niet klopte en een telling over te weinig
+bestanden; of een ontwerpstap die had voorkomen, laat de proef niet zien. Na de
+les daaruit in de opdracht van #280 kwamen ze niet terug.
 
-**Besluit over voortzetting** ligt bij de vakdeskundige; de proef zelf geeft
-geen reden om voor een handleiding op een bestaande norm terug te gaan naar een
-ontwerpstap.
+**De poort.** Bij #256 en #276 veranderde het poortbesluit de indeling, op grond
+van informatie die in geen enkel artefact stond. Bij #280 bevestigde de poort het
+voorstel.
+
+**Besluit over voortzetting** ligt bij de vakdeskundige. De proef geeft gemengde
+uitkomsten: één keer het doel gehaald zonder blokkade, één keer niet gehaald met
+een blokkade.
 
 ## Meten en reageren
 
