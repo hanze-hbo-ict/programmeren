@@ -201,8 +201,8 @@ zij hier bij.
 
 - **`Opgaven` als rubriekkop, ook buiten `course/`.** Hij staat boven een
   *verzameling* en niet boven één taak - hetzij boven een reeks opgavebestanden,
-  hetzij boven een reeks taken binnen één bestand. Dertien vindplaatsen:
-  `# Opgaven` in `course/opgaven_2` tot en met `opgaven_11`, en `## Opgaven` in
+  hetzij boven een reeks taken binnen één bestand. Veertien vindplaatsen:
+  `# Opgaven` in `course/opgaven_2` tot en met `opgaven_12`, en `## Opgaven` in
   `problems/9_basis.ipynb` en in de twee oefenbestanden
   `extra/practice/1_recursie.ipynb` en `2_list_comprehension.ipynb`.
 - **Een ongenummerde `### Opgave`, *binnen* een bestand onder `problems/`.** Dat
@@ -215,9 +215,10 @@ zij hier bij.
 - **`Opdracht N`, genummerd**, als kop of als label. Dat is de hoofdvorm en de
   tabel hierboven dekt haar.
 - **`Opdrachten` als rubriekkop**, boven een reeks taken in een college of een
-  practicum. Achttien vindplaatsen, alle `## Opdrachten`: de twaalf
-  `course/practical_N.md`, `lectures/1a_intro_programmeren.md`, `2a_var_con.ipynb`,
-  `2b_strings_en_lists.ipynb`, `11a_objecten.ipynb`, en
+  practicum. Zeventien vindplaatsen, alle `## Opdrachten`: elf van de twaalf
+  `course/practical_N.md`, alle behalve `practical_11`, dat nog geen practicum
+  heeft, en verder `lectures/1a_intro_programmeren.md`, `2a_var_con.ipynb`,
+  `2b_strings_en_lists.ipynb`, `12a_objecten.ipynb`, en
   `practicals/2_sequenties_en_data.ipynb` en `3_fijne_functies.ipynb`.
 - **Een ongenummerde `Opdracht`-kop**, waar een document één taak draagt in
   plaats van een reeks. **Nummer die niet alsnog**: er is geen reeks om in mee te

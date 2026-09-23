@@ -313,8 +313,8 @@ draait wel.
 | Schakelingen zijn geschrapt, binair is afgeslankt | organisatorisch | gesloten, uitgevoerd |
 | De wekelijkse leesopgaven zijn vervallen | praktisch | gesloten |
 | Bestanden naar PGM1, excepties blijven in PGM2 | didactisch | staand, onderbouwd; excepties landen in PGM2 week 7 (23 september 2026), **nog niet uitgevoerd** |
-| De klassenstof van PGM2 week 4 gaat naar week 5; het AI-materiaal verdwijnt uit week 5; Text-ID blijft in week 4 | organisatorisch | gesloten op 23 september 2026 (#160), **nog niet uitgevoerd** |
-| Het practicum van PGM2 week 5 tot en met 7 is één doorlopend project, `creatures.py` | didactisch | gesloten op 23 september 2026; opzet in `practicum-oop.md`, **nog niet uitgevoerd** |
+| De klassenstof van PGM2 week 4 gaat naar week 5; het AI-materiaal verdwijnt uit week 5; Text-ID blijft in week 4 | organisatorisch | gesloten op 23 september 2026 (#160), **uitgevoerd** in #160 |
+| Het practicum van PGM2 week 5 tot en met 7 is één doorlopend project, `creatures.py` | didactisch | gesloten op 23 september 2026; opzet in `practicum-oop.md`, **deels uitgevoerd**: sessie 1 staat in week 5 (#160); sessie 2 en 3 volgen met de herziening van week 6 en 7 |
 | Docstrings en commentaar blijven Nederlands, ook in PGM2 | didactisch | gesloten op 23 september 2026; zie `conventies/codeconventies.md` |
 | Mutatie pas vanaf PGM1 week 7, en als grens benoemd | didactisch | staand, onderbouwd |
 | Canonieke Python aanbieden, mechanisme later uitleggen | didactisch | staand, onderbouwd |
@@ -326,8 +326,8 @@ draait wel.
 | Onderdompeling mag vooraf gaan aan uitleg | didactisch | staand; de grens is nog een afleiding |
 | Studenten leveren geen werk in; opdrachten zijn oefening | organisatorisch | gesloten, **nog niet uitgevoerd**: `source/` draagt nog inleverinstructies |
 | Tot en met week 4 ligt de nadruk op lezen en begrijpen; schrijven begint wel | didactisch | staand, onderbouwd |
-| Een weekpagina vat samen wat volgt en waarop het voortbouwt | praktisch | gesloten (#167), **deels uitgevoerd**: week 1 tot en met 4 dragen hem, met #168, #169, #230 en #162; week 5 tot en met 12 zijn nog stubs van zeven tot elf woorden |
-| Elk opgaveniveau hoort een uitwerking te hebben | didactisch | gesloten, nog niet uitgevoerd; 11 van de 30 ontbreken |
+| Een weekpagina vat samen wat volgt en waarop het voortbouwt | praktisch | gesloten (#167), **deels uitgevoerd**: week 1 tot en met 4 dragen hem, met #168, #169, #230 en #162; week 12 (PGM2 week 5) draagt hem sinds #160; week 5 tot en met 11 zijn nog stubs |
+| Elk opgaveniveau hoort een uitwerking te hebben | didactisch | gesloten, nog niet uitgevoerd; 9 van de 32 ontbreken (hermeten bij #160) |
 | Week 4 krijgt een lusrecept van vijf vragen, in `4a_lussen` | didactisch | gesloten, **uitgevoerd** met #153; week 5 pikt het nog niet op (#163) |
 | Recursie gaat in beginsel naar PGM2; `unique` blijft in PGM1 als herkenbaar iteratief voorbeeld met vooruitwijzing | organisatorisch | gesloten, uitgevoerd in #162: de overige recursieplekken zijn verwijderd; recursie wordt uitgebreider behandeld in PGM2 |
 | Eerst de weken van PGM1 afronden; het materiaal moet zo snel mogelijk live | organisatorisch | staand |
@@ -337,7 +337,7 @@ draait wel.
 | Dictionaries en de Markov-opgave verhuizen van PGM1 week 7 naar PGM2 week 1 | didactisch | staand, nog niet uitgevoerd |
 | Objecten pas in PGM2 | didactisch | staand, onderbouwd |
 | Picobot opent PGM1 | didactisch | staand, onderbouwd |
-| Opgaven in opstap, basis en extra | didactisch | gesloten op 23 september 2026, **nog niet uitgevoerd** voor PGM2; de verplichte niveaus per week staan in `leerlijn.md` |
+| Opgaven in opstap, basis en extra | didactisch | gesloten op 23 september 2026, **deels uitgevoerd** voor PGM2: week 5 heeft opstap, basis en extra (#160); de verplichte niveaus per week staan in `leerlijn.md` |
 | De student werkt lokaal in VS Code; de browser is verrijking | didactisch | staand, onderbouwd |
 | Code uitvoerbaar in de browser | praktisch | open, uitvoering wijzigt |
 
