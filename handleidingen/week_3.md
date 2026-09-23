@@ -605,7 +605,8 @@ Voor bijeenkomst 3 bestaat geen bron. Het practicum en de drie bundels zijn na
   gewijzigde weekopzet. Na deze wijziging staan er nog **zeven** `.docx` in
   `teacher_guides/`: drie van week 4 en vier van week 5 en 6. Ze wachten op
   werkitem #95. De drie van week 4 zijn er inmiddels uit en `handleidingen/week_4.md`
-  citeert ze niet meer; met `3110b335` staan er nog vier, van week 5 en 6.
+  citeert ze niet meer. Met #276 en #280 verdwenen ook die van week 5 en 6; sindsdien
+  bestaat `teacher_guides/` niet meer.
 - **Kruisverwijzingen lopen stil achter als materiaal verschuift.** Eén zin in
   `source/lectures/3a_functies.ipynb` zei dat `convert_from_seconds` in het
   werkcollege wordt geschreven, terwijl die functie Opdracht 5 van het practicum

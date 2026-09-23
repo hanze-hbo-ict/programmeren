@@ -553,8 +553,8 @@ git-geschiedenis.
   `solutions/5_opstap.ipynb`. Dit valt buiten de afbakening van dit werkitem
   (alleen `handleidingen/week_5.md` en de bijeenkomstindeling in
   `curriculum/uitgangspunten.md`) en is hier gemeld, niet gerepareerd.
-- **Er staan nog twee Word-handleidingen in `teacher_guides/`**, van week 6.
-  Ze wachten op werkitem #95.
+- **De twee Word-handleidingen van week 6 zijn met #280 verdwenen**, en daarmee
+  bestaat `teacher_guides/` niet meer.
 - **Deze week levert geen enkele overgeleverde tijd op.** Tot een docent haar
   geeft en de klok erbij houdt, staan alle veertien blokken als richttijd, en
   zo horen ze gelezen te worden.
