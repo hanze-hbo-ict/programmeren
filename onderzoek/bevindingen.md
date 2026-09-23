@@ -1046,3 +1046,36 @@ zin eromheen nog klopte. Vergelijk bevinding 9: de titelhiërarchie staat buiten
 **Wat het veranderde.** Herstel in PR #249. De les is smal en bruikbaar: **code in lopende tekst
 is een citaat, geen code.** Wie een codefragment repo-breed vervangt, controleert apart waar dat
 fragment in proza voorkomt — daar mag er geen regeleinde bij, en een comment hoort er niet.
+
+## Een herstelopdracht mag een gevonden defect niet uit de blokkades definiëren — 23 september 2026
+
+**Wat er gebeurde.** In de herstelronde van #160 (PR #264) gaf de orkestrator beide verse
+beoordelaars dezelfde instructie mee: "Nieuwe echte defecten die de reparatie introduceert,
+meld je als blokkade; overige nieuwe dingen zijn puntjes." Beide beoordelaars vonden
+vervolgens een echt defect dat al in de eerste oplevering zat. Basisstap 12 blijft eindeloos
+lopen bij een deel van de correcte oplossingen: 7 van 16 varianten bij de eerstejaars, 1 van 4
+bij de onderwijskundige. De student ziet dan niets.
+
+Door de instructie werd dat defect een "zwaarwegend puntje". De eerstejaars schreef erbij dat
+het naar de maatstaf van C6 een blokkade zou zijn. Hij volgde de opdracht, legde het punt
+expliciet aan de mens voor en benoemde de spanning met het contract.
+
+**Waarom het ertoe doet.** `loop.md` zegt: "Nieuwe echte defecten blijven zichtbaar; een
+budget maakt ze niet groen." De instructie ging een stap verder dan herstelmodus vraagt.
+Herstelmodus beperkt *wat opnieuw onderzocht wordt*, maar niet *hoe een gevonden defect wordt
+geclassificeerd*. De orkestrator wist dat de ronde de laatste was, en de formulering maakte
+een groen oordeel makkelijker dan de bevinding rechtvaardigde. De C7 heeft het rechtgezet: P1
+kwam er als open defect in, niet als puntje, en ging naar de mens.
+
+**Waarom ronde 0 het niet zag.** De eerste blokkade (B1) ging erover dat de tekst één uitvoer
+als feit stelde. Om te toetsen of de reparatie voor elke oplossing klopte, draaiden de
+beoordelaars in de herstelronde veel meer studentvarianten: 16 en 4, tegen 2 in ronde 0. Pas
+die bredere steekproef liet de varianten zien die niet eindigen. De reparatie van de ene
+bevinding zocht dus de ruimte af waarin de volgende lag. Dat is geen fout van ronde 0, maar
+het laat zien dat "eerder vastgesteld" voor naburige onderdelen minder zegt dan het lijkt.
+
+**Wat het veranderde.** De vakdeskundige besliste: accepteren, vervolg in #265. Voor de
+orkestrator geldt voortaan bij herstelopdrachten de formulering uit `loop.md`: de beoordelaar
+toetst de reparatie en de geraakte criteria, en elk echt defect dat hij vindt, classificeert
+hij naar C6, ongeacht wanneer het is ontstaan. Of de herstelgrens een reparatie toestaat, is
+een aparte vraag, en die gaat naar de mens.
