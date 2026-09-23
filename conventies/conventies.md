@@ -23,11 +23,9 @@ De conventies gelden voor `source/`, het materiaal dat de student ziet.
 
 Ze gelden **niet** voor de documenten in `conventies/` zelf, en niet voor de
 verzameling niet-gemigreerd materiaal buiten `source/` (`ontwikkeling/`,
-`readings/`, `teacher_guides/`, `topics/`, `problems/context/` en verwante
-directories). Dat materiaal staat bewust stil in afwachting van een beslissing over
-wat ermee gebeurt. Voor `teacher_guides/` geldt dat nog steeds voor de `.docx` die
-er staan; wat daaruit is herschreven, verhuist naar `handleidingen/` en valt onder
-het regime hieronder.
+`readings/`, `topics/`, `problems/context/` en verwante directories). Wat daarvan
+niet meer toe doet, gaat weg; zie *Wat er niet meer toe doet, gaat weg* in
+`curriculum/uitgangspunten.md`.
 
 **Eén uitzondering binnen `source/`:** de vier oefententamens
 (`extra/practice/pgm1_examen.ipynb`, `extra/practice/PGM2_examen.md`,
