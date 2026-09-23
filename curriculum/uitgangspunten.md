@@ -66,12 +66,13 @@ Deze indeling verklaart de directories: `lectures/` hoort bij de eerste bijeenko
 relevant voor de vraag waar context hoort te zitten, want het werkcollege is de
 plek waar een probleem gezamenlijk stap voor stap wordt opgebouwd.
 
-#### Drie erkende afwijkingen
+#### Vier erkende afwijkingen
 
 De indeling is het uitgangspunt en niet een rooster dat elke week haalt. Bij het
 schrijven van de docentenhandleidingen (#182) zijn twee afwijkingen vastgesteld en
-erkend, en bij de herziening van week 3 (#198) een derde; ze staan hier zodat een
-volgende weekherziening ze niet opnieuw als conflict afleidt.
+erkend, en bij de herziening van week 3 (#198) een derde, en bij die van week 4
+(#256) een vierde; ze staan hier zodat een volgende weekherziening ze niet
+opnieuw als conflict afleidt.
 
 **Week 1 volgt een flexibele indeling.** Er is geen `problems/` en geen
 `solutions/` voor week 1, en de Picobot-opdrachten beginnen in bijeenkomst 2 als
@@ -93,6 +94,16 @@ bundels. Dat is niet afgeleid maar afgelezen: `3b` laat de student zijn code
 opslaan als `wk3wc2.py` - werkcollege 2 - terwijl het bestand in `lectures/`
 staat. Vastgesteld door de vakdeskundige op 11 september 2026; het vraagt geen
 enkele bestandsverplaatsing.
+
+**Week 4 legt de oefenmidterm in het practicum.** Week 4 heeft twee bestanden in
+`lectures/`, één in `practicals/` en drie opgavebundels. Het werkcollege wordt
+gevuld door `practicals/4_python_bat` - de pagina noemt zichzelf ook zo - en
+`lectures/4b_midterm` schuift naar de derde bijeenkomst, naast de drie bundels.
+De grond is de midterm zelf: die wordt in week 5 afgenomen, dus is het practicum
+van week 4 het oefenmoment. Dat past bij wat een practicum is: de student werkt
+er zelfstandig onder begeleiding en neemt mee wat hij niet afkrijgt, en de
+uitwerkingen staan openbaar in `solutions/4_midterm`. Vastgesteld door de
+vakdeskundige op 18 september 2026; het vraagt geen enkele bestandsverplaatsing.
 
 ## Het referentiemateriaal: tag `v1.0.0`
 
@@ -817,8 +828,29 @@ stopmoment. Dat idee komt uit *How to Design Programs*, waar het aantonen dát e
 functie eindigt een aparte ontwerpstap is.
 
 **Het landt in `4a_lussen`**, na "Denken in lussen", en niet in een tweede college.
-Een tweede college verplaatst de oefenmidterm naar de practicumsleuf, en die is
-bezet door CodingBat - het enige zelfcontrolerende schrijfwerk van de week.
+Een tweede college kost de week haar werkcollege, en dat is CodingBat - twaalf
+opgaven zelfstandig schrijven met directe feedback, en daarmee het grootste
+zelfcontrolerende schrijfwerk van de week. Wat er dan overblijft is een
+practicum waarin de oefenmidterm en de drie bundels al naast elkaar staan.
+
+De oorspronkelijke formulering zei dat een tweede college de oefenmidterm naar
+de practicumsleuf zou verplaatsen "en die is bezet door CodingBat". Dat klopte
+bij de indeling van vóór #256; sinds 18 september 2026 vult CodingBat het
+werkcollege en ligt de oefenmidterm in het practicum. De conclusie verandert
+niet.
+
+**"Enige" is met #256 niet meer letterlijk waar, en dat is met opzet niet
+rechtgetrokken door CodingBat te verkleinen.** `source/problems/4_basis.ipynb`
+draagt sinds die herziening één opgave met kant-en-klare asserts
+(`summed_odds`); de opgave ernaast (`power`) heeft alleen print-tests die de
+student zelf omzet, en `until_a_repeat` raadt met willekeur en laat zich niet
+vast toetsen. Vastgesteld door de vakdeskundige op 23 september 2026: de
+CodingBat-opgaven zijn op zichzelf nuttig, en dat één andere opgave ook
+zelfcontrolerend is, is geen reden om CodingBat te verplaatsen of te
+verkleinen. Een auteur mag er bij een latere herziening een goede, eigen plek
+voor vinden. De formulering hierboven noemt daarom niet langer "enige" maar
+"grootste"; de conclusie dat het recept niet in een tweede college landt,
+blijft ongewijzigd.
 
 **Het gearchiveerde `lectures/4b_lussen_ontwerpen.ipynb` is niet overgenomen.**
 Dat notebook (commit `587e3800`, verwijderde branch `pgm1-25-26`, juli 2025) deed
