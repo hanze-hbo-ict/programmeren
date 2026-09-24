@@ -675,6 +675,26 @@ Twee keer een patroon niet geijkt, allebei in dezelfde sessie:
 
 Hier hoort wat met de hand is gedaan omdat het te klein leek voor een werkitem.
 
+### 24 september 2026, `make clean` wist de notebookcache niet
+
+**Wat het was.** `make clean` voerde `rm -rf build/*` uit. Die glob slaat verborgen mappen over,
+en myst-nb bewaart de notebookcache in `build/.jupyter_cache`. Na een clean bleef de cache dus
+staan. `conventies/technische-conventies.md` zegt al dat `make clean` "build/ en de
+notebook-cache" verwijdert; alleen het `Makefile` deed dat niet. Het doel wist nu de hele map
+`build/`. Opgemerkt tijdens #268; zie de sectie van dat werkitem.
+
+**Waarom het buiten de lus bleef.** Eén gemeten oorzaak en een ingreep van één regel. De
+vakdeskundige koos op 24 september 2026 in de sessie van de orkestrator voor "de correctie in
+een eigen PR", niet voor een werkitem.
+
+**Gemeten.** In een verse worktree gaf een eerste build 72 keer *Executed notebook*. Daarna
+`make clean`: `build/` bestaat niet meer. Een tweede build gaf opnieuw 72 keer *Executed
+notebook*, 0 waarschuwingen en 0 fouten. Beide builds meldden daarnaast 15 keer *Using cached
+notebook*. Dat zijn notebooks met dezelfde code, die binnen één build een cachepost delen (ID 3
+en 4); dat getal hangt niet af van de clean.
+
+**Ging er een beoordelaar overheen?** Nog niet bij het openen van de PR.
+
 ### 23 september 2026, curriculumbesluiten vóór het C4 van #160
 
 **Wat het was.** Vijf besluiten van de vakdeskundige vastgelegd in `curriculum/` en
