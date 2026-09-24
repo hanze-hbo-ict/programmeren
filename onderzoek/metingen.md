@@ -675,6 +675,39 @@ Twee keer een patroon niet geijkt, allebei in dezelfde sessie:
 
 Hier hoort wat met de hand is gedaan omdat het te klein leek voor een werkitem.
 
+### 24 september 2026, achteraf-lezing van onbeoordeelde orkestratortekst (PR #284)
+
+**Wat het was.** Een leesronde door `rol-beoordelaar-redacteur` over tekst die de
+orkestrator schreef en die zonder rol op `master` kwam: #252, #255, #258, #275,
+commit `cb1d830f` (in #260), en de verslagen #251 en #274. De C6 en twee vervolgen
+staan op #203.
+
+**Waarom buiten de lus.** Geen nieuw werk maar een gemiste stap: `/orc` schrijft voor
+dat een besluitdiff van de orkestrator onafhankelijk wordt getoetst vóór het
+merge-aanbod, en dat was bij deze PR's niet gebeurd. Aanleiding was de vraag van de
+vakdeskundige *"waarom waren hier de rollen niet gedraaid en moest ik er om vragen?"*.
+
+| Stap | Tokens (cumulatief) | Duur | Uitkomst |
+|---|---:|---|---|
+| redacteur, eerste poging | niet vastgesteld | - | afgebroken bij het einde van de vorige sessie, vóór enige beoordeling |
+| redacteur, C6 | 163.427 | 13 min 2 s | BLOKKEER op #258, #275, #251, #274 (10 moetpunten, alle corrigeren) |
+| redacteur, herstel | 180.910 | 1 min 32 s | AKKOORD MET PUNTJES; 1 moetpunt deels, 1 nieuwe onjuiste bewering |
+| redacteur, puntjes | 189.325 | 51 s | AKKOORD |
+
+Bron: het verbruiksrapport per agent. Orkestratie niet meegeteld.
+
+**Wat het vond.** Geen besluit bleek onjuist vastgelegd; niets is teruggedraaid. De
+fouten zaten eromheen: een telling in een conventie, een datering (#275), toeschrijvingen
+aan de verkeerde rol, getallen zonder bron op GitHub, en één conclusie die niet uit de
+meting volgde. In het herstel zette de orkestrator nog één onjuiste bewering op GitHub
+(dat de C6 van #256 op PR #260 stond); de tweede ronde ving die.
+
+**Besluit van de vakdeskundige bij deze ronde.** Bij #275 wees de redacteur erop dat de
+formulering (*"geen reden om CodingBat te verplaatsen of te verkleinen … een goede, eigen
+plek"*) strenger is dan wat de vakdeskundige zei (*"auteur mag er een goede plek voor
+vinden"*). De vakdeskundige koos op 24 september 2026 voor de strenge formulering; de
+tekst blijft zoals hij staat.
+
 ### 23 september 2026, curriculumbesluiten vóór het C4 van #160
 
 **Wat het was.** Vijf besluiten van de vakdeskundige vastgelegd in `curriculum/` en
