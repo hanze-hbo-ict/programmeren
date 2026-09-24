@@ -211,8 +211,8 @@ begrip inhoudt en welke varianten zijn afgewezen, staat in
 `conventies/begrippen.md`. *Functiecompositie* uit PGM1 week 7 wordt voluit
 geschreven, zodat de twee begrippen uit elkaar blijven. Aggregatie wordt niet
 benoemd: het voegt in week 5 niets toe wat *waarde en identiteit* niet al dekt.
-Vastgesteld door de vakdeskundige op 23 september 2026, met #267; het materiaal
-volgt in #268.
+Vastgesteld door de vakdeskundige op 23 september 2026, met #267, en
+**uitgevoerd** in #268.
 
 ## Welk niveau een week hoort te hebben
 

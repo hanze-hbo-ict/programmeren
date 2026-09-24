@@ -246,9 +246,11 @@ assert repr(grom) == "Creature(Grom, level 2, hp 19/46, attack 11, defense 4)"
 
 ## Stap 5: de klasse `Party`
 
-Een `Party` is een groep wezens. Ook hier geldt het uitgangspunt: de party leest
-nooit een ruwe waarde uit een wezen, maar vraagt het wezen iets of laat het iets
-doen.
+Een `Party` is een groep wezens: een object dat andere objecten als onderdeel
+heeft. Dat is compositie, net als de studiegroep in het
+[college](/lectures/12a_objecten.ipynb#compositie). Ook hier geldt het
+uitgangspunt: de party leest nooit een ruwe waarde uit een wezen, maar vraagt het
+wezen iets of laat het iets doen.
 
 | Methode | Doet |
 |---|---|
@@ -263,8 +265,10 @@ Een lege party maak je met `Party([])`.
 
 **Waarom een kopie.** Bewaar je de lijst die je meekrijgt zelf, dan kan de code
 die hem meegaf hem nog steeds veranderen, buiten `add` om. Met
-`self._members = list(creatures)` bewaar je een nieuwe lijst met dezelfde
-wezens erin, en komt niemand anders meer bij de lijst van de party.
+`self._members = list(creatures)` bewaar je een nieuwe lijst, en komt niemand
+anders meer bij de lijst van de party. Alleen de lijst is nieuw: de wezens erin
+zijn dezelfde objecten als daarbuiten, net als de studenten in de studiegroep uit
+het college. Valt `vlam` hieronder `grom` aan, dan ziet de party dat dus ook.
 
 **`strongest_attacker` leest geen enkel getal.** Hij vraagt de wezens zelf wie
 sterker is:
