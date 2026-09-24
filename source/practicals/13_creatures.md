@@ -285,8 +285,8 @@ assert repr(Wolf("Grijs")) == "Creature(Grijs, level 1, hp 50/50, attack 15, def
 
 Een wachttoren is geen wezen. Hij heeft geen hp en geen vaste aanvalskracht, en
 geen enkele versie van een methode uit `Creature` past bij hem. Toch kan hij
-meevechten, als hij de methoden en attributen heeft die een gevecht gebruikt,
-met methoden die op zijn eigen manier werken.
+meevechten, als hij de methoden en attributen heeft die een gevecht gebruikt.
+Hij vult ze op zijn eigen manier in.
 
 Een `Turret` werkt helemaal anders dan een `Creature`:
 
@@ -479,10 +479,10 @@ Hetzelfde gebeurt met `critical_members`, want een toren heeft geen
 aanvalskracht om te vergelijken.
 
 Dat is de keerzijde van duck typing. Niemand controleert vooraf of een object de
-methoden heeft die later nodig zijn. De fout komt pas op het moment dat de
-ontbrekende methode wordt aangeroepen, en dat kan lang nadat de toren in de party
-is gezet. Welke methoden een object nodig heeft, hangt af van wat je ermee doet:
-voor `battle` volstaat een toren, voor `heal_all` niet.
+methoden en attributen heeft die later nodig zijn. De fout komt pas op het moment
+dat de ontbrekende methode of het ontbrekende attribuut wordt gebruikt, en dat kan
+lang nadat de toren in de party is gezet. Wat een object nodig heeft, hangt af van
+wat je ermee doet: voor `battle` volstaat een toren, voor `heal_all` niet.
 
 ## Vragen om over na te denken
 
