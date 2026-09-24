@@ -614,5 +614,5 @@ Voor bijeenkomst 3 bestaat geen bron. Het practicum en de drie bundels zijn na
   het tweede geval op rij - `source/course/week_4.md` verwees eerder naar "de
   lijsten uit week 3" terwijl lijsten uit week 2 komen - en het is de reden om na
   elke verschuiving de verwijzingen na te lopen.
-- Deze handleiding beschrijft het materiaal zoals het op **21 september 2026** in
+- Deze handleiding beschrijft het materiaal zoals het op **23 september 2026** in
   de repository staat.
