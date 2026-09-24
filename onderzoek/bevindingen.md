@@ -1136,8 +1136,8 @@ bij de onderwijskundige. De student ziet dan niets.
 Beide meldden het als puntje, maar met een verschillende reden. De eerstejaars noemde het een
 "zwaarwegend puntje" en schreef erbij dat het naar de maatstaf van C6 een blokkade zou zijn.
 Hij volgde de opdracht, legde het punt expliciet aan de mens voor en benoemde de spanning met
-het contract. De onderwijskundige noemde de instructie niet en gaf een inhoudelijke reden: "de hint van
-stap 10 stuurt naar `while self_copy.is_before(d2_copy)`". Alleen bij de eerstejaars is
+het contract. De onderwijskundige noemde de instructie niet en gaf een inhoudelijke reden:
+"de hint van stap 10 stuurt naar `while self_copy.is_before(d2_copy)`". Alleen bij de eerstejaars is
 de instructie dus aantoonbaar de reden voor de classificatie.
 
 **Waarom het ertoe doet.** `loop.md` zegt: "Nieuwe echte defecten blijven zichtbaar; een
@@ -1158,8 +1158,9 @@ zegt dan het lijkt.
 
 **Wat het veranderde.** De vakdeskundige besliste over P1: accepteren, vervolg in #265. Over
 de herstelopdracht zelf is niets besloten. Wat eruit volgt, is een afleiding en geen bestaande
-formulering: `loop.md` (herstelmodus) en `C6-beoordeling.md` (*Herstelmodus*) beperken wat de
-beoordelaar opnieuw toetst, en zeggen dat een nieuwe echte blokkade zichtbaar blijft. Een
+formulering. Herstelmodus in `loop.md` en in `C6-beoordeling.md` beperkt wat de beoordelaar
+opnieuw toetst. `loop.md` zegt verderop dat nieuwe echte defecten zichtbaar blijven, en
+C6 *Herstelmodus* dat een nieuwe echte blokkade zichtbaar blijft. Een
 herstelopdracht die de classificatie van gevonden defecten zelf voorschrijft, gaat daartegenin.
 `/orc` en `loop.md` zijn niet aangepast. Of de herstelopdracht in `/orc` een vaste formulering
 krijgt, is een procesbesluit voor de vakdeskundige.
