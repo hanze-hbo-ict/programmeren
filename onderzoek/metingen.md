@@ -738,7 +738,11 @@ die `curriculum/` en `conventies/` raken. Die horen vastgelegd te zijn voordat C
 verwijst, en de lus heeft voor die vastlegging geen eigen stap.
 
 **Ging er een beoordelaar overheen?** Nog niet bij het openen van de PR; de vakdeskundige
-beoordeelt de kolominvulling in de PR zelf.
+beoordeelt de kolominvulling in de PR zelf. Achteraf wel: de onderwijskundige van #264 toetste
+de besluitdiffs van #261 tot en met #263 redactioneel tegen het C4. Er ontbrak niets, maar er
+stond meer in dan het C4 noemde: de twee kolommen voor alle weken, een heropeningsgrond en twee
+redactionele punten in `begrippen.md`. De vakdeskundige heeft alles bevestigd (C4-aanvulling 2
+op #160).
 
 **Vervolg, dezelfde dag.** De begrippen van week 5 kwamen in een tweede commit op dezelfde
 branch, die pas werd gepusht nadat #261 al gemerged was; ze belandden niet in `master` en
@@ -1374,6 +1378,53 @@ criterium dat dwingt na te tellen.
 **Wat er open bleef.** De bredere kruisverwijzingsregel uit het poortbesluit is nog nergens
 vastgelegd en is dus niet genomen; de 33 collegeopdrachten zonder uitwerking staan bij #235 en
 #95, net als de `.docx` van week 4 en de verwijzing daarnaar in `handleidingen/week_4.md`.
+
+## Werkitem #160 — PGM2 week 5, van kunstmatige intelligentie naar klassen en encapsulatie
+
+Omvang L. De route startte onder de oude pijplijn en is op 11 september 2026 op verzoek van
+de mens omgezet naar de #203-lus (procesversie `48a108be`). Geen #203-proefissue, dus zonder
+budgetgrens; wel de herstelgrens van één ronde per ontwerp en per oplevering. PR #264, vervolg
+in #265.
+
+| Rol | Ronde | Tokens | Duur | Uitkomst |
+|---|---|---|---|---|
+| triage (oude route) | | 41.152 | 2 min 4 s | LUS, L |
+| verkenner | 0 | 82.977 | 5 min 58 s | C1b |
+| curriculumontwerper | 0 | 93.152 | 8 min 19 s | C2, acht open vragen |
+| verhelderaar | 0 | 126.190 | 9 min 59 s | AKKOORD, zes verbeterpunten |
+| auteur | 0 | 375.221 | 27 min 47 s | C5, 46 bestanden |
+| beoordelaar eerstejaars | 0 | 105.457 | 5 min 34 s | BLOKKEER (B1, B2) |
+| beoordelaar onderwijskundige | 0 | 163.592 | 7 min 10 s | BLOKKEER (B1) |
+| auteur (nieuwe context) | herstel 1 | 151.098 | 9 min 8 s | herstelbijlage, 11 bestanden |
+| beoordelaar eerstejaars | herstel 1 | 63.140 | 4 min 16 s | AKKOORD MET PUNTJES |
+| beoordelaar onderwijskundige | herstel 1 | 99.469 | 3 min 52 s | AKKOORD MET PUNTJES |
+| | **totaal** | **1.301.448** | | B1, B2 opgelost; P1 naar #265 |
+
+Orkestratie en de C7's: niet beschikbaar. Tokens zijn harnesstellingen, geen factuurbedrag.
+
+**Vier menselijke besluitmomenten, het C4 meegeteld.** Het C4 zelf (acht open vragen plus
+een practicumopzet, vastgelegd in #261 tot en met #263). Daarna drie aanvullingen:
+- over de oplevering: normtekst die de auteur buiten de C4-lijst had bijgewerkt, de vorm van
+  `problems/12_basis.ipynb` als geaccepteerde afwijking van *De vorm van een opgave*, en de
+  redactionele toets van #261 tot en met #263;
+- over de voorlegpunten uit de C7 van #264;
+- over P1.
+
+Geen van die momenten was een herhaling van een eerder besluit.
+
+**De auteur meldde zijn eigen buitenronde.** De eerste auteur werkte tellingen en statussen in
+`curriculum/` en `conventies/` bij die niet in de C4-lijst stonden. Hij zette dat bovenaan in
+de C5 als iets wat de vakdeskundige moest toetsen. De onderwijskundige vond vervolgens elke
+wijziging gemeten of afgeleid.
+
+**De scratchpad viel halverwege weg.** De omgeving verklaarde de scratchpad onbruikbaar terwijl
+beide beoordelaars van ronde 0 liepen. Hun C6 stond daardoor alleen in de handback en is van
+daaruit letterlijk op de PR gezet. De eerste auteurscontext kon daarna niet worden hervat. Een
+nieuwe auteur deed de herstelronde en las C5, C6 en C7 van GitHub. Dat ging zonder verlies,
+omdat alle artefacten al op GitHub stonden.
+
+**P1 werd pas in de herstelronde zichtbaar.** Zie in [bevindingen.md](bevindingen.md) *Een
+herstelopdracht mag een gevonden defect niet uit de blokkades definiëren* (23 september 2026).
 
 ## Werkitem #256 — docentenhandleiding week 4 op de norm
 

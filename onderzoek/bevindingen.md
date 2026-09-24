@@ -1123,6 +1123,48 @@ ontwerpherstel duurder, maar het overschrijven laat de ontwerpverantwoordelijkhe
 de orkestrator. Leg in dat geval de concrete eindvolgorde zelf aan de mens voor, niet een
 bewerking op een volgorde.
 
+## Een herstelopdracht mag een gevonden defect niet uit de blokkades definiëren — 23 september 2026
+
+**Wat er gebeurde.** In de herstelronde van #160 (PR #264) gaf de orkestrator beide verse
+beoordelaars deze instructie mee: "Nieuwe echte defecten die de reparatie introduceert,
+meld je als blokkade; overige nieuwe dingen zijn puntjes." De opdracht zelf staat niet op
+GitHub; de aanhaling komt van de orkestrator die haar schreef. Beide beoordelaars vonden
+vervolgens een echt defect dat al in de eerste oplevering zat. Basisstap 12 blijft eindeloos
+lopen bij een deel van de correcte oplossingen: 7 van 16 varianten bij de eerstejaars, 1 van 4
+bij de onderwijskundige. De student ziet dan niets.
+
+Beide meldden het als puntje, maar met een verschillende reden. De eerstejaars noemde het een
+"zwaarwegend puntje" en schreef erbij dat het naar de maatstaf van C6 een blokkade zou zijn.
+Hij volgde de opdracht, legde het punt expliciet aan de mens voor en benoemde de spanning met
+het contract. De onderwijskundige noemde de instructie niet en gaf een inhoudelijke reden:
+"de hint van stap 10 stuurt naar `while self_copy.is_before(d2_copy)`". Alleen bij de eerstejaars is
+de instructie dus aantoonbaar de reden voor de classificatie.
+
+**Waarom het ertoe doet.** `loop.md` zegt: "Nieuwe echte defecten blijven zichtbaar; een
+budget maakt ze niet groen." De instructie ging een stap verder dan herstelmodus vraagt.
+Herstelmodus beperkt *wat opnieuw onderzocht wordt*, maar niet *hoe een gevonden defect wordt
+geclassificeerd*. De orkestrator wist dat de ronde de laatste was, en de formulering maakte
+een groen oordeel makkelijker dan de bevinding rechtvaardigde. De C7 heeft het rechtgezet: het
+oordeel bleef AKKOORD MET PUNTJES, maar P1 werd apart van de overige puntjes als open defect
+aan de mens voorgelegd.
+
+**Waarom ronde 0 het niet zag.** De eerste blokkade (B1) ging erover dat de tekst één uitvoer
+als feit stelde. Om te toetsen of de reparatie voor elke oplossing klopte, draaiden de
+beoordelaars in de herstelronde veel meer studentvarianten: 16 en 4, tegen twee per
+beoordelaar in ronde 0. Pas die bredere steekproef liet de varianten zien die niet eindigen.
+De reparatie van de ene bevinding zocht dus de ruimte af waarin de volgende lag. Dat is geen
+fout van ronde 0, maar het laat zien dat "eerder vastgesteld" voor naburige onderdelen minder
+zegt dan het lijkt.
+
+**Wat het veranderde.** De vakdeskundige besliste over P1: accepteren, vervolg in #265. Over
+de herstelopdracht zelf is niets besloten. Wat eruit volgt, is een afleiding en geen bestaande
+formulering. Herstelmodus in `loop.md` en in `C6-beoordeling.md` beperkt wat de beoordelaar
+opnieuw toetst. `loop.md` zegt verderop dat nieuwe echte defecten zichtbaar blijven, en
+C6 *Herstelmodus* dat een nieuwe echte blokkade zichtbaar blijft. Een
+herstelopdracht die de classificatie van gevonden defecten zelf voorschrijft, gaat daartegenin.
+`/orc` en `loop.md` zijn niet aangepast. Of de herstelopdracht in `/orc` een vaste formulering
+krijgt, is een procesbesluit voor de vakdeskundige.
+
 ## Een bevinding opschrijven voorkomt haar niet — 24 september 2026
 
 **Wat er gebeurde.** Op 23 september legde de orkestrator vast: *een melding over
