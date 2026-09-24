@@ -38,7 +38,7 @@ dat anders: `source/lectures/3b_functies_aanroepen.md` vult het werkcollege, en
 naast de drie opgavebundels.
 
 Dat is een erkende afwijking, vastgelegd in `curriculum/uitgangspunten.md`
-§`#### Drie erkende afwijkingen` en vastgesteld door de vakdeskundige op
+§`#### Vijf erkende afwijkingen` en vastgesteld door de vakdeskundige op
 **11 september 2026**. De grond staat in het materiaal zelf: `3b` laat de student
 zijn code opslaan als `wk3wc2.py` - werkcollege 2 - terwijl het bestand in
 `source/lectures/` staat.
@@ -604,16 +604,9 @@ Voor bijeenkomst 3 bestaat geen bron. Het practicum en de drie bundels zijn na
   `.docx` verdwijnt uiteindelijk, en het uitgangspunt is nieuw ontwerp op de
   gewijzigde weekopzet. Na deze wijziging staan er nog **zeven** `.docx` in
   `teacher_guides/`: drie van week 4 en vier van week 5 en 6. Ze wachten op
-  werkitem #95.
-- **Week 4 moet zijn drie nog kwijt** - `4_midterm.docx`, `4_turtles.docx` en
-  `4_unplugged_rec.docx`. Die handleiding is langs een andere route opgeleverd en
-  wordt hier niet aangeraakt.
-- **`handleidingen/week_4.md` citeert `teacher_guides/4_midterm.docx`** als bron
-  voor de werkvorm van de oefenmidterm. Zodra dat bestand weg is, is dat een dode
-  verwijzing. Dat is geen slordigheid van week 4 maar het gevolg van een regel die
-  er toen nog niet was: de inhoud van die alinea is bruikbaar en hoort te blijven,
-  alleen de verwijzing moet eruit. Het hoort bij werkitem #95 en valt buiten dit
-  werkitem.
+  werkitem #95. De drie van week 4 zijn er inmiddels uit en `handleidingen/week_4.md`
+  citeert ze niet meer. Met #276 en #280 verdwenen ook die van week 5 en 6; sindsdien
+  bestaat `teacher_guides/` niet meer.
 - **Kruisverwijzingen lopen stil achter als materiaal verschuift.** Eén zin in
   `source/lectures/3a_functies.ipynb` zei dat `convert_from_seconds` in het
   werkcollege wordt geschreven, terwijl die functie Opdracht 5 van het practicum
@@ -621,5 +614,5 @@ Voor bijeenkomst 3 bestaat geen bron. Het practicum en de drie bundels zijn na
   het tweede geval op rij - `source/course/week_4.md` verwees eerder naar "de
   lijsten uit week 3" terwijl lijsten uit week 2 komen - en het is de reden om na
   elke verschuiving de verwijzingen na te lopen.
-- Deze handleiding beschrijft het materiaal zoals het op **17 september 2026** in
+- Deze handleiding beschrijft het materiaal zoals het op **21 september 2026** in
   de repository staat.
