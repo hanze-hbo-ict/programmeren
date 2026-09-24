@@ -737,14 +737,18 @@ opgesteld; daar stond het alleen in de werkitems, en een besluit dat niet in
 geen herziening van materiaal. `source/` is niet geraakt.
 
 **Ging er een beoordelaar overheen?** Nog niet bij het openen van de PR; de
-vakdeskundige leest de formulering in de PR zelf.
+vakdeskundige leest de formulering in de PR zelf. Op 24 september 2026 wel: een redacteur
+las de bijgewerkte PR (AKKOORD MET PUNTJES, zie de reactie op PR #272). Zijn acht puntjes
+zijn verwerkt; de regel van #270 in de afleveringstabel is daarbij niet aangepast.
 
 **Bijgewerkt op 24 september 2026 (PR #272).** De PR lag open terwijl #270 week 6 uitvoerde.
 Daardoor waren drie passages verouderd: week 6 heette nog niet uitgevoerd,
 `13_vier_op_rij_speler` stond volgens de tekst nog onder week 6, en week 7 wachtte nog op de
-spelersstructuur. Die passages zijn bijgewerkt naar de stand na #270. Twee formuleringen van
+spelersstructuur. Die passages zijn bijgewerkt naar de stand na #270. Drie formuleringen van
 de orkestrator zijn vervangen:
 - "past niet bij het onderwerp" wordt "past niet helemaal", zoals in #271;
+- "het haakje is `__lt__`" wordt "`__lt__` kan dienen om bordtoestanden te vergelijken",
+  zoals in #271;
 - de heropenvoorwaarde komt nu van de vakdeskundige: min-max past goed bij de extra-opgaven
   van week 5 en 6, en het vervangen daarvan is een reden om te heroverwegen.
 

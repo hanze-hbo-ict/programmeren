@@ -355,7 +355,7 @@ draait wel.
 | Bestanden naar PGM1, excepties blijven in PGM2 | didactisch | staand, onderbouwd; excepties landen in PGM2 week 7 (23 september 2026), **nog niet uitgevoerd** |
 | De klassenstof van PGM2 week 4 gaat naar week 5; het AI-materiaal verdwijnt uit week 5; Text-ID blijft in week 4 | organisatorisch | gesloten op 23 september 2026 (#160), **uitgevoerd** in #160 |
 | Het practicum van PGM2 week 5 tot en met 7 is één doorlopend project, `creatures.py` | didactisch | gesloten op 23 september 2026; opzet in `practicum-oop.md`, **deels uitgevoerd**: sessie 1 staat in week 5 (#160), sessie 2 in week 6 (#270); sessie 3 volgt met de herziening van week 7 |
-| De extra-opgaven van PGM2 week 5 tot en met 7 vormen één lijn over Vier op een rij; min-max is de extra-opgave van week 7 | didactisch | gesloten op 23 september 2026; zie `leerlijn.md`, **deels uitgevoerd**: week 5 en 6 staan (#160, #270); min-max in week 7 volgt in #271 |
+| De extra-opgaven van PGM2 week 5 tot en met 7 vormen één lijn over objectgeoriënteerd programmeren, met Vier op een rij; min-max is de extra-opgave van week 7 | didactisch | gesloten op 23 september 2026; zie `leerlijn.md`, **deels uitgevoerd**: week 5 en 6 staan (#160, #270); min-max in week 7 volgt in #271 |
 | Docstrings en commentaar blijven Nederlands, ook in PGM2 | didactisch | gesloten op 23 september 2026; zie `conventies/codeconventies.md` |
 | Compositie is een begrip van PGM2 week 5; zie `leerlijn.md` en `conventies/begrippen.md` | didactisch | gesloten op 23 september 2026 (#267), **uitgevoerd** in #268 |
 | Mutatie pas vanaf PGM1 week 7, en als grens benoemd | didactisch | staand, onderbouwd |

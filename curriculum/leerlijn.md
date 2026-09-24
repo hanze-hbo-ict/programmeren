@@ -207,16 +207,17 @@ voorbereiding van de poort van #160; zie *Gaten tussen toetsing en materiaal*.
 
 **Min-max is de extra-opgave van week 7.** De extra-opgaven van week 5 tot en met
 7 vormen één lijn over objectgeoriënteerd programmeren, en min-max sluit die af.
-Week 5 levert `Board`. Week 6 levert de spelers in `problems/13_extra.md`:
-`Player`, `HumanPlayer` en `SimpleAIPlayer`, die één zet vooruitkijkt, polymorf
-gebruikt door `Board.host_game(px, po)`. Week 7 voegt de min-max-speler toe, op
-basis van `source/practicals/13_vier_op_rij_speler.md` en de sectie *Min-max* van
-`lectures/12_ai.ipynb`. Min-max past niet helemaal bij het onderwerp van week 7;
-`__lt__` kan dienen om bordtoestanden te vergelijken. Het vraagt recursie, en die
-staat sinds week 3 ter beschikking. Min-max past wel goed bij de extra-opgaven van
-week 5 en 6. Vastgesteld door de vakdeskundige op 23 september 2026; week 6 is
-**uitgevoerd** in #270, week 7 is **nog niet uitgevoerd** (#271). Heropenen als de
-extra-opgaven van week 5 en 6 worden vervangen.
+Week 5 levert `Board`. Week 6 levert in `problems/13_extra.md` de spelers die
+`Board.host_game(px, po)` polymorf gebruikt, waaronder `SimpleAIPlayer`, die één
+zet vooruitkijkt. Week 7 voegt de min-max-speler toe, op basis van
+`practicals/13_vier_op_rij_speler.md` en de sectie *Min-max* van
+`lectures/12_ai.ipynb`; of die sectie terugkomt in een college van week 7, is nog
+open in #271. Min-max past niet helemaal bij het onderwerp van week 7; `__lt__`
+kan dienen om bordtoestanden te vergelijken. Het vraagt recursie, en die staat
+sinds week 3 ter beschikking. Vastgesteld door de vakdeskundige op 23 september
+2026; week 6 is **uitgevoerd** in #270, week 7 is **nog niet uitgevoerd** (#271).
+Op 24 september 2026 voegde de vakdeskundige toe: min-max past goed bij de
+extra-opgaven van week 5 en 6. Heropenen als die worden vervangen.
 
 **Compositie hoort bij week 5.** Week 5 past het begrip sinds #160 al toe:
 `Party` in het practicum `12_creatures` (stap 5) bewaart `Creature`-objecten in
@@ -376,7 +377,7 @@ blijft een raakvlak vindbaar zonder dat het in een werkitem verstopt zit.
 | PGM2 week 6 | PGM2 week 7 | Week 7 geeft de klassen uit week 6 operatoren en vervangt de stille terugvalwaarden uit week 5 en 6 door `raise`. Het practicum gooit alleen exceptions en vangt er geen af, terwijl P4 het *afhandelen* van foutcondities vraagt. Week 6 levert (#270): `Beast`, `Dragon`, `Wolf`, `Goblin`, `Healer`, `Turret`, `battle_round` en `battle(side_a, side_b, max_rounds)`; `special_move` op `Creature` valt stil terug op een gewone aanval. Wat afwijkt van de opzet van sessie 3: alle vier de wezens hebben standaardwaarden, dus `Dragon("Ember")` werkt; `__repr__` noemt nog steeds `Creature(...)`, ook bij een subklasse, en `type(self).__name__` is in week 6 vermeden, dus de zin in sessie 3 dat `__repr__` "al sinds Sessie 1" `self.__class__` gebruikt, klopt niet; de limieten van `Turret` zijn attributen van het object, geen klasse-attributen. | Besloten als opzet; het afvangen is een open punt voor de herziening van week 7. De afwijkingen zijn besloten bij de poort van #270 (V8, V9, V10) en gaan als aflevering naar #271. |
 | PGM2 week 5 | PGM2 week 6 | `practicals/13_vier_op_rij_speler.md` verwijst op r37 naar het AI-practicum van week 5 en op r338 naar `host_game`, dat alleen daar wordt gebouwd. Sinds #160 wijst r37 naar `Board`, nu de extra-opgave van week 5. | Afgehandeld in #270: week 6 bouwt `host_game(px, po)` in `problems/13_extra.md`, en `13_vier_op_rij_speler` staat sinds #270 in de inhoudsopgave onder PGM2 week 7, met ongewijzigde inhoud (V5). Het bestand zelf, met `play_game` en de controle op `'human'` op r338, wordt herzien in #271. |
 | PGM2 week 6 | PGM2 week 7 | De extra-opgave `problems/13_extra.md` legt de spelersinterface vast waarop week 7 voortbouwt: elke speler heeft een attribuut `ox` en een methode `next_move(board)` die een kolom teruggeeft waarin een zet mag; `Board.host_game(px, po)` gebruikt van een speler alleen die twee, zonder typecontrole; `Player.next_move` valt terug op de meest linkse kolom, en `Board` heeft `cols_to_win(ox)`. Een volgende speler, in #271, past in deze structuur als subklasse van `Player`, waarvoor `host_game` niet verandert. Het toernooi vervalt (V3). | Besloten bij de poort van #270 (24 september 2026). Uit te voeren in #271; of het toernooi ook in week 7 vervalt, is daar te bevestigen. |
-| PGM2 week 6 | PGM2 week 7 | De extra-opgave van week 7 voegt aan de spelers uit week 6 een min-max-speler toe, in de structuur van de regel hierboven. | Besloten door de vakdeskundige op 23 september 2026. Uit te voeren in #271. |
+| PGM2 week 6 | PGM2 week 7 | De extra-opgave van week 7 voegt een min-max-speler toe aan de spelers uit week 6, als volgende speler in de spelersinterface van `problems/13_extra.md`. | Besloten door de vakdeskundige op 23 september 2026. Uit te voeren in #271. |
 
 ## Onderhoud
 
