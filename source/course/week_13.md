@@ -15,8 +15,8 @@ argument weglaat.
 Bij **polymorfisme** geeft één aanroep ander gedrag, afhankelijk van het object.
 Een lus die bij elk wezen `special_move` aanroept, hoeft niet te weten of ze een
 draak of een genezer voor zich heeft. Bij **duck typing** doet een object mee
-omdat het de methoden heeft die worden aangeroepen, ook als het geen subklasse is
-van dezelfde klasse.
+omdat het de methoden en attributen heeft die worden gebruikt, ook als het geen
+subklasse is van dezelfde klasse.
 
 Een subklasse gebruik je als het nieuwe ding een soort is van het oude: een
 deeltijdstudent is een student. Heeft het nieuwe ding zulke objecten als

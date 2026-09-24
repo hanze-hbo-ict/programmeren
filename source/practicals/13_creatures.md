@@ -286,7 +286,7 @@ assert repr(Wolf("Grijs")) == "Creature(Grijs, level 1, hp 50/50, attack 15, def
 Een wachttoren is geen wezen. Hij heeft geen hp en geen vaste aanvalskracht, en
 geen enkele versie van een methode uit `Creature` past bij hem. Toch kan hij
 meevechten, als hij de methoden en attributen heeft die een gevecht gebruikt,
-elk met zijn eigen werking.
+met methoden die op zijn eigen manier werken.
 
 Een `Turret` werkt helemaal anders dan een `Creature`:
 
