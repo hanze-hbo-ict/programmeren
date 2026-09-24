@@ -1683,3 +1683,27 @@ De vakdeskundige besliste vijf keer:
 in de basis, had de eerstejaars het feit wel in de hand. Het C6 van de eerstejaars zegt bij AC2
 *"450 (via de formule in De regels, want `599 * 75 // 100` zou 449 geven)"*, maar geeft
 toch *gehaald*. De eerstejaars rekende met de tabel en niet met de zin die de tabel tegensprak.
+
+## Werkitem #294 - drie zinnen over duck typing in PGM2 week 6
+
+Kleine route zonder ontwerp en zonder poort: C1 door de orkestrator, dan de auteur en één
+eerstejaars. Omvang XS, procescommit `9ba14267`. Dit is geen #203-proef. De drie puntjes kwamen
+uit de herstellezing van de redacteur bij #270; de vakdeskundige besloot op 24 september 2026 ze
+in een eigen werkitem op te pakken. Opgeleverd in PR #296 op 24 september 2026:
+`source/lectures/13b_polymorfisme.ipynb` (cel 13) en `source/practicals/13_creatures.md`
+(twee alinea's), 7+/7- regels.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator: C1, overdrachten, PR, meetregels | niet beschikbaar | niet beschikbaar | LUS, XS |
+| auteur, oplevering | 56.988 | 3 min 12 s | C5, vier criteria, pre-commit en build schoon |
+| beoordelaar-eerstejaars | 29.159 | 1 min 8 s | AKKOORD MET PUNTJES, 0 blokkades, 1 puntje |
+| **totaal agents** | **86.147** | **circa 4 min 20 s** | herstelstand oplevering 0/1 |
+
+Bron: `subagent_tokens` uit de verbruiksmelding na elke agentstap. De rollen zelf schreven
+*niet beschikbaar*.
+
+Het puntje van de eerstejaars (r289: *"Hij vult ze op zijn eigen manier in"*, waarbij *ze* ook
+op attributen slaat) is niet verwerkt. De vakdeskundige besloot tot merge zoals opgeleverd. Deze
+meetregels staan op verzoek van de vakdeskundige in dezelfde PR. Geen beoordelaar heeft ze
+gelezen.
