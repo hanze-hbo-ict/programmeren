@@ -675,6 +675,30 @@ Twee keer een patroon niet geijkt, allebei in dezelfde sessie:
 
 Hier hoort wat met de hand is gedaan omdat het te klein leek voor een werkitem.
 
+### 24 september 2026, de em-dash alleen verboden in het boek
+
+**Wat het was.** Een besluit van de vakdeskundige vastgelegd in `conventies/schrijfwijzer.md`
+(*Opmaak en interpunctie*): *"em-dashes mogen niet in werk wat gepubliceerd wordt. is prima in
+interne documenten"*. Aanleiding was puntje 4 van de redacteur op PR #291, over een em-dash in
+een kop van deze file. De vakdeskundige liet die kop staan. PR #292.
+
+**Waarom het buiten de lus bleef.** Het is de vastlegging van een expliciet gegeven besluit van
+één zin, zonder ontwerpkeuze.
+
+**Bekend en bewust gelaten.** De schrijfwijzer zegt bij deze regel: "Het materiaal voldoet hier
+nu al aan". Dat klopt niet. In `source/solutions/4_extra.ipynb` staan 3 em-dashes op 2 regels
+(r73 en r113; `grep -roP '\x{2014}' source | wc -l` geeft 3). Volgens de redacteur zitten ze erin
+sinds de herziening van week 4 (`a20337e9`, `2bf46a94`). De vakdeskundige besloot op 24 september
+2026 ze voorlopig te laten staan.
+
+**Ging er een beoordelaar overheen?** Ja, een verse redacteur, op de diff en het letterlijke
+besluit (33.685 tokens, 2 min 23 s). Oordeel: AKKOORD MET PUNTJES, 0 blokkades. De orkestrator
+had in de PR-beschrijving *twee* em-dashes geteld: `grep -n` telt regels en geen voorkomens. De
+puntjes over de afbakening (*het boek*, en een verwijzing naar *Reikwijdte*) zijn verwerkt. Op
+de twee vragen die de redacteur opriep, antwoordde de vakdeskundige *"Allebei ja"*: de
+toestemming geldt ook voor de en-dash, en `README.md` telt als intern. Die aanvulling is
+vastgelegd zonder nieuwe nalezing.
+
 ### 24 september 2026, `make clean` wist de notebookcache niet
 
 **Wat het was.** `make clean` voerde `rm -rf build/*` uit. Die glob slaat verborgen mappen over,
