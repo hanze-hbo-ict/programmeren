@@ -1479,7 +1479,8 @@ hadden gezien; pas daarop volgde de naleesronde die de fout ving.
 
 ## Werkitem #268 — compositie in het materiaal van PGM2 week 5
 
-Route *overzichtelijke opgave of sectie*, samen met #269 ontworpen. Omvang M, procescommit
+Route *overzichtelijke opgave of sectie*, samen met #269 ontworpen, met twee beoordelaars in
+plaats van één (C1: er komen een uitleg en een oefening met uitwerking bij). Omvang M, procescommit
 `5d101066`, geen #203-proef. Eén C2 en één C4 voor beide werkitems. Het C4 draaide de volgorde
 om, zodat #268 eerst ging. Opgeleverd op 24 september 2026 in PR #285, gemerged als
 `7aa5c2b1`. Het gaat om:
@@ -1505,9 +1506,15 @@ om, zodat #268 eerst ging. Opgeleverd op 24 september 2026 in PR #285, gemerged 
 Herstelstand bij afsluiting: ontwerp 0/1, oplevering #268 0/1. Puntjes kostten geen ronde. De
 auteur schreef in de eerste herstelbijlage zelf 1/1. De orkestrator zette dat op de PR recht.
 
-De mens besliste na het C7 twee keer. De plaats van opdracht 3 bleef ongewijzigd, en alle
-puntjes werden verwerkt. Na de herstelnalezing volgde nog één bijzin, zonder nieuwe nalezing.
-De orkestrator heeft de diff van die bijzin wel mechanisch nagekeken.
+De mens besliste na het C7 vier keer:
+1. De plaats van opdracht 3 blijft.
+2. Alle puntjes worden verwerkt.
+3. Na de herstelnalezing komt eerst de bijzin uit puntje A erbij. Die kreeg geen nieuwe
+   nalezing; de orkestrator keek de diff van die ene regel mechanisch na.
+4. PR #285 wordt gemerged.
+
+Het vierde telt mee omdat de merge volgens `loop.md` een besluit van de mens is. Vóór het C7
+besliste de mens daarnaast één keer, in het C4, over zeven open vragen en drie vervolgvragen.
 
 **De herstelnalezing ving wat de reparatie opriep.** Puntje 3 maakte de uitvoer in het college
 leesbaar. De verse eerstejaars maakte daarna opdracht 3 zelf, en zag dat een student die zijn
@@ -1524,9 +1531,12 @@ orkestrator:
   bestaat `build/.jupyter_cache` nog.
 - De tweede regel van `clean` wist `source/.jupyter_cache`, en die map bestaat niet.
 
-Een notebook met gewijzigde code wordt wel opnieuw uitgevoerd, want de cache kijkt naar de
-code. Onveranderde code na een wijziging in de dependencies wordt dat niet. Hier kon het geen
+Een notebook met gewijzigde code wordt wel opnieuw uitgevoerd. De cache kijkt naar de
+codecellen, hun metadata en de `kernelspec`, maar niet naar cel-id's en niet naar de versies van
+de dependencies. Onveranderde code na een wijziging in de dependencies wordt dus niet opnieuw
+uitgevoerd. Hier kon het geen
 kwaad: de code was vóór de hernummering uitgevoerd, en de nalezer voerde de geraakte
-collegecellen zelf uit. De poort *schone build* in `CLAUDE.md` belooft bij dependencywijzigingen
-wel meer dan hij nu doet. Het herstel van `clean` is niet in deze wijziging meegenomen; het is
-voorgelegd aan de vakdeskundige.
+collegecellen zelf uit. Bij een dependencywijziging vragen `CLAUDE.md` en `loop.md` (*Verificatie
+en eindpunt*) om `make clean && make html`. Die combinatie voerde onveranderde notebooks dus niet
+opnieuw uit. De vakdeskundige koos op 24 september 2026 voor een correctie in een eigen PR:
+#287, genoteerd onder *Werk buiten de lus om*.
