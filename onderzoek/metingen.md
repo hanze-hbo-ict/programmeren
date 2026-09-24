@@ -694,7 +694,10 @@ cached notebook*, in beide gevallen voor dezelfde notebooks: 12 keer ID 4, 2 kee
 ID 21. Die notebooks hebben dezelfde code als een notebook dat eerder in dezelfde build draaide,
 en delen daarom diens cachepost. Dat getal hangt niet af van de clean.
 
-**Ging er een beoordelaar overheen?** Nog niet bij het openen van de PR.
+**Ging er een beoordelaar overheen?** Ja, een verse redacteur, twee keer. De eerste ronde gaf
+BLOKKEER (40.834 tokens, 3 min 24 s): de notitie noemde twee cache-ID's, maar de logs tonen er
+drie. De orkestrator had dat getal niet geteld. Na het herstel gaf een tweede, verse redacteur
+AKKOORD (27.066 tokens, 1 min 20 s). Beide oordelen staan op PR #287.
 
 ### 23 september 2026, curriculumbesluiten vóór het C4 van #160
 
