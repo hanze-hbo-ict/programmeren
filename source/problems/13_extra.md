@@ -124,9 +124,9 @@ assert p.next_move(b) == 1
 ```
 
 De meest linkse kolom is geen goede zet. Het is een standaard: een subklasse die
-niets beters weet, valt erop terug. Of een standaardzet die niet goed is wel een
-goede standaard is, is een vraag die terugkomt. In week 7 leer je hoe een
-superklasse kan afdwingen dat een subklasse een methode overschrijft.
+niets beters weet, valt erop terug. Of een zet die niet goed is wel een goede
+standaard is, kun je je afvragen. In week 7 leer je hoe een superklasse kan
+afdwingen dat een subklasse een methode overschrijft.
 
 ## Stap 3: `HumanPlayer`
 

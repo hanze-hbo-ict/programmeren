@@ -19,7 +19,7 @@ eind van dit practicum nog steeds te slagen.
 
 Heb je week 5 niet af, download dan
 {download}`de eindstand van week 5 </practicals/assets/creatures.py>` en begin
-daarmee.
+daarmee. De assertions van week 5 staan daar al onderaan.
 
 ## Wat je gaat maken
 
@@ -284,8 +284,9 @@ assert repr(Wolf("Grijs")) == "Creature(Grijs, level 1, hp 50/50, attack 15, def
 ## Stap 6: een wachttoren die meevecht
 
 Een wachttoren is geen wezen. Hij heeft geen hp en geen vaste aanvalskracht, en
-geen enkele methode van `Creature` past bij hem. Toch kan hij meevechten, als hij
-de methoden heeft die een gevecht gebruikt.
+geen enkele versie van een methode uit `Creature` past bij hem. Toch kan hij
+meevechten, als hij methoden met dezelfde namen heeft als die een gevecht
+gebruikt, elk met zijn eigen werking.
 
 Een `Turret` werkt helemaal anders dan een `Creature`:
 
@@ -328,11 +329,12 @@ Schrijf de vier methoden die een gevecht nodig heeft:
 `random.randint(a, b)` geeft een willekeurig geheel getal van `a` tot en met `b`.
 :::
 
-Een `Turret` is geen subklasse van `Creature`, maar hij heeft wel de methoden die
-een gevecht aanroept. Dat heet **duck typing**, naar het
-spreekwoord *als het loopt als een eend en kwaakt als een eend, dan is het een
-eend*. Voor een aanroep telt niet van welke klasse een object is, maar alleen of
-het de methode heeft die wordt aangeroepen.
+Een `Turret` is geen subklasse van `Creature`, maar hij heeft wel de methoden en
+attributen die een gevecht gebruikt, zoals `special_move`, `is_alive` en `name`.
+Dat heet **duck typing**, naar het spreekwoord *als het loopt als een eend en
+kwaakt als een eend, dan is het een eend*. Voor een aanroep telt niet van welke
+klasse een object is, maar alleen of het de methoden en attributen heeft die
+worden gebruikt.
 
 De schade van een toren is elke keer anders. De assertions kijken daarom niet
 naar één getal, maar naar wat voor elke worp moet gelden:
@@ -359,7 +361,9 @@ assert toren.special_move(vlam).startswith("Wachttoren vergrendelt en vuurt")
 ```
 
 De stro-pop in de eerste lus heeft verdediging `0`, zodat `take_damage` precies
-de schade van de toren teruggeeft.
+de schade van de toren teruggeeft. In de laatste assertion geeft
+`s.startswith(t)` `True` als de string `s` begint met de string `t`: het getal
+aan het eind van de zin is elke keer anders, het begin niet.
 
 Kijk ook naar de een na laatste assertion. `attack` van `Creature` roept
 `target.take_damage(...)` aan, en een toren heeft `take_damage`. Een draak kan

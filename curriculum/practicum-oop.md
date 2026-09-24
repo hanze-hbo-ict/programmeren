@@ -30,13 +30,15 @@ Bij de poort van #270 (24 september 2026) is voor sessie 2 besloten:
   (`hp=40, attack=8, defense=2`) en `Healer` (`hp=60, attack=3, defense=5`)
   krijgen ze, zoals in de bijlage. Het besluit over `Party` in week 5 blijft staan.
 - **`Turret` en de lus over meerdere rondes** (V9). De limieten van `Turret`
-  worden attributen van het object in `__init__`, geen klasse-attributen: die
-  staan niet in de leerlijn. De lus wordt een functie
-  `battle(side_a, side_b, max_rounds)` met een vaste doelkeuze, het eerste levende
-  lid van de andere partij, en een maximum aantal rondes als argument zonder
-  standaardwaarde. Dat `Turret` in een `Party` `strongest_attacker`,
-  `critical_members` en `heal_all` breekt, wordt in de tekst besproken als risico
-  van duck typing.
+  worden attributen van het object in `__init__`, geen klasse-attributen. De lus
+  krijgt een vaste doelkeuze en een maximum aantal rondes. Dat `Turret` in een
+  `Party` `strongest_attacker`, `critical_members` en `heal_all` breekt, wordt in
+  de tekst besproken als risico van duck typing. *Uitgevoerd als* (#270, een
+  keuze van de auteur, geen besluit): een functie
+  `battle(side_a, side_b, max_rounds)`, met als doelwit het eerste levende lid van
+  de andere partij en `max_rounds` als argument zonder standaardwaarde; als
+  reden voor de attributen van het object is aangehouden dat klasse-attributen
+  niet in de leerlijn staan.
 - **`__repr__` van een subklasse** (V10). Een `Dragon` drukt zich af als
   `Creature(...)`, zoals de `__repr__` van week 5 dat doet; daar komt een vraag
   over in het practicum. `type(self).__name__` wordt vermeden. Wat sessie 3 over

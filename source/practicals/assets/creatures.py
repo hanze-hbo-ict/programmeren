@@ -106,3 +106,70 @@ class Party:
         """Laat elk levend lid genezen met amount."""
         for creature in self.alive_members():
             creature.heal(amount)
+
+
+# De assertions van week 5, stap 1 tot en met 5.
+
+assert repr(Creature("Vlam", 120, 25, 10)) == (
+    "Creature(Vlam, level 1, hp 120/120, attack 25, defense 10)"
+)
+assert repr(Creature("Pech", -5, 0, -3)) == (
+    "Creature(Pech, level 1, hp 1/1, attack 1, defense 0)"
+)
+
+grom = Creature("Grom", 40, 8, 2)
+assert grom.take_damage(12) == 10
+assert grom.is_alive()
+assert not grom.is_critical()
+assert grom.take_damage(22) == 20
+assert grom.is_critical()
+grom.heal(100)
+assert not grom.is_critical()
+assert grom.take_damage(1) == 0
+assert grom.take_damage(500) == 498
+assert not grom.is_alive()
+
+vlam = Creature("Vlam", 120, 25, 10)
+assert vlam.hp == 120
+vlam.hp = 200
+assert vlam.hp == 120
+vlam.hp = -5
+assert vlam.hp == 0
+assert vlam.level == 1
+
+vlam = Creature("Vlam", 120, 25, 10)
+grom = Creature("Grom", 40, 8, 2)
+assert vlam.attack(grom) == 23
+assert grom.hp == 17
+assert grom.attack(vlam) == 0
+assert vlam.is_stronger_than(grom)
+assert not grom.is_stronger_than(vlam)
+grom.level_up()
+assert grom.level == 2
+assert repr(grom) == "Creature(Grom, level 2, hp 19/46, attack 11, defense 4)"
+
+vlam = Creature("Vlam", 120, 25, 10)
+grom = Creature("Grom", 40, 8, 2)
+mos = Creature("Mos", 60, 3, 5)
+party = Party([grom, mos])
+party.add(vlam)
+assert party.strongest_attacker() is vlam
+assert len(party.alive_members()) == 3
+
+vlam.attack(grom)
+vlam.attack(grom)
+assert not grom.is_alive()
+assert len(party.alive_members()) == 2
+assert len(party.critical_members()) == 1
+
+vlam.attack(mos)
+party.heal_all(10)
+assert mos.hp == 50
+assert grom.hp == 0
+
+assert Party([]).strongest_attacker() is None
+
+members = [mos]
+small = Party(members)
+members.append(vlam)
+assert len(small.alive_members()) == 1
