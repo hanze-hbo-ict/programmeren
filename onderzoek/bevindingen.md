@@ -1153,7 +1153,6 @@ voorstel naar de volgende procesronde (#203):
   ook niet als de vakdeskundige erom vraagt - de vraag *"alles checks/rollen hebben
   het bekeken?"* hoort de orkestrator zelf te stellen, niet de vakdeskundige.
 
-
 ## Een getal dat de orkestrator opschrijft, heeft hij niet altijd geteld - 24 september 2026
 
 **Wat er gebeurde.** Na #268 schreef de orkestrator twee korte vastleggingen. In beide stond een
@@ -1163,8 +1162,8 @@ getal dat hij niet had geteld. Een verse redacteur gaf daarop in beide gevallen 
   de bijzin en de merge. De bijzin stond in de lijdende vorm, alsof hij vanzelf kwam. Zie de
   [reviews op PR #286](https://github.com/hanze-hbo-ict/programmeren/pull/286).
 - **PR #287**, de correctie van `make clean`. Volgens de tekst hoorden de 15 meldingen *Using
-  cached notebook* bij *"ID 3 en 4"*. De logs tonen drie cacheposten: 12 meldingen voor ID 4,
-  2 voor ID 3 en 1 voor ID 21. De orkestrator had de ID's overgenomen uit de eerste acht regels
+  cached notebook* per build bij *"ID 3 en 4"*. De logs tonen drie cacheposten: per build 12
+  meldingen voor ID 4, 2 voor ID 3 en 1 voor ID 21. De orkestrator had de ID's overgenomen uit de eerste acht regels
   van `grep -B1 'Using cached notebook'`, zonder ze met `grep | sort | uniq -c` te tellen. Dat
   is zijn eigen verklaring; op GitHub staat alleen de latere telling in de herstelbijlage. Zie
   de [reviews op PR #287](https://github.com/hanze-hbo-ict/programmeren/pull/287).
@@ -1186,14 +1185,15 @@ dezelfde rij als eerdere orkestratortekst die niet naast de bron werd gelegd:
 - *"E en F wisselen"* bij #273;
 - de keuzeoptie bij #267.
 
-Dat staat in de twee bevindingen van 23 september en die van 24 september hierboven.
+Dat staat in de bevindingen over #267 en #273 (beide 23 september) en over #280 (24 september)
+hierboven.
 
 **Wat er gebeurde met de nalezing.** Beide PR's gingen naar een verse redacteur voordat ze ter
 merge werden aangeboden. Voor #287 was dat geen keuze: `loop.md` (*Buiten een werkitem*) vraagt
 bij een kleine correctie buiten de lus al om *"een onafhankelijke lezer"*. Die regel stond er
 ook al toen de vorige bevinding haar tweede voorstel deed. Voor #286, de metingen van een
-werkitem, staat er geen regel. `orc.md` vraagt alleen bij een besluitdiff om een onafhankelijke
-redactionele toets. Daar vroeg de orkestrator zelf om de nalezing, zonder verzoek van de
+werkitem, staat er geen regel. `loop.md` (*GitHub en registratie*) en `orc.md` vragen alleen bij
+een besluittekst om een onafhankelijke redactionele toets. Daar vroeg de orkestrator zelf om de nalezing, zonder verzoek van de
 vakdeskundige.
 
 De vier nalezingen kostten samen 109.744 tokens voor #286 (75.623 eerste beoordeling, 34.121
