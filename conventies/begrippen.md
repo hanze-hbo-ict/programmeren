@@ -44,6 +44,9 @@ forceer geen Nederlandse vertaling. Voor dit materiaal werkt dat zo uit:
 | De methode `__init__` | **constructor** | - | 30×, zonder concurrent |
 | Toestand alleen via methoden bereikbaar maken | **encapsulatie** | - | Nieuw in PGM2 week 5; niet *inkapseling*. Vastgesteld door de vakdeskundige op 23 september 2026 |
 | Object dat andere objecten als onderdeel heeft | **compositie** | - | Nieuw in PGM2 week 5; niet *objectcompositie*, *samenstelling* of *heeft-een-relatie*. *Functiecompositie* nooit afkorten tot *compositie*; zie hieronder. Vastgesteld door de vakdeskundige op 23 september 2026 |
+| Wat er in een object staat: de waarden van zijn attributen | **waarde** | - | Tegenover **identiteit**. Niet *gelijkheid*. Vastgesteld door de vakdeskundige op 23 september 2026 |
+| Welk object het is, los van wat erin staat | **identiteit** | - | Nagevraagd met `is`. Tegenover **waarde**. Vastgesteld door de vakdeskundige op 23 september 2026 |
+| Wat een variabele bevat: ze wijst een object aan | **verwijzing** | - | Niet *aliasing*. Wijzen twee namen hetzelfde object aan, dan is de ene "een tweede naam voor hetzelfde object". Vastgesteld door de vakdeskundige op 23 september 2026 |
 | Waarde die je meegeeft | **argument** | - | Bij de definitie heet het een **parameter** |
 | Resultaat opleveren | **teruggeven** | - | Niet "returnen" |
 | Op het scherm tonen | **afdrukken** | printen (11×), geprint (23×) | Het deelwoord is de grootste vorm en werd niet geteld |
@@ -238,9 +241,10 @@ zij hier bij.
 - **Een ongenummerde `Opdracht`-kop**, waar een document één taak draagt in
   plaats van een reeks. **Nummer die niet alsnog**: er is geen reeks om in mee te
   tellen, en `problems/2_basis.ipynb` heeft juist geen *Opdracht 4* - zie
-  `handleidingen/week_2.md`. Vier vindplaatsen: `### Opdracht` in
-  `practicals/2_rochambeau.ipynb`, `problems/2_basis.ipynb` en
-  `problems/3_basis.ipynb`, en `## Opdracht` in `practicals/4_python_bat.md`.
+  `handleidingen/week_2.md`. Vijf vindplaatsen: `### Opdracht` in
+  `practicals/2_rochambeau.ipynb`, `problems/2_basis.ipynb`,
+  `problems/3_basis.ipynb` en `lectures/12b_data_object.ipynb`, en
+  `## Opdracht` in `practicals/4_python_bat.md`.
 
 Wat níet blijft is een **genummerde** `Opgave N`, of dat nu een kop is of een
 label. Dat is een opdracht.
