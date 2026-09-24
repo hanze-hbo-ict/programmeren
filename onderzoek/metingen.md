@@ -675,6 +675,30 @@ Twee keer een patroon niet geijkt, allebei in dezelfde sessie:
 
 Hier hoort wat met de hand is gedaan omdat het te klein leek voor een werkitem.
 
+### 24 september 2026, `make clean` wist de notebookcache niet
+
+**Wat het was.** `make clean` voerde `rm -rf build/*` uit. Die glob slaat verborgen mappen over,
+en myst-nb bewaart de notebookcache in `build/.jupyter_cache`. Na een clean bleef de cache dus
+staan. `conventies/technische-conventies.md` zegt al dat `make clean` "build/ en de
+notebook-cache" verwijdert; alleen het `Makefile` deed dat niet. Het doel wist nu de hele map
+`build/`. Opgemerkt tijdens #268; zie de sectie *Werkitem #268* (PR #286).
+
+**Waarom het buiten de lus bleef.** Eén gemeten oorzaak en een ingreep van één regel. De
+vakdeskundige koos op 24 september 2026 in de sessie van de orkestrator: *"Maak de correctie in
+een eigen PR"*. Er kwam dus geen werkitem.
+
+**Gemeten.** In een verse worktree gaf een eerste build 72 keer *Executed notebook*. Daarna
+`make clean`: `build/` bestaat niet meer. Een tweede build gaf opnieuw 72 keer *Executed
+notebook*, 0 Sphinx-waarschuwingen en 0 fouten. Beide builds meldden daarnaast 15 keer *Using
+cached notebook*, in beide gevallen voor dezelfde notebooks: 12 keer ID 4, 2 keer ID 3 en 1 keer
+ID 21. Die notebooks hebben dezelfde code als een notebook dat eerder in dezelfde build draaide,
+en delen daarom diens cachepost. Dat getal hangt niet af van de clean.
+
+**Ging er een beoordelaar overheen?** Ja, een verse redacteur, twee keer. De eerste ronde gaf
+BLOKKEER (40.834 tokens, 3 min 24 s): de notitie noemde twee cache-ID's, maar de logs tonen er
+drie. De orkestrator had dat getal niet geteld. Na het herstel gaf een tweede, verse redacteur
+AKKOORD (27.066 tokens, 1 min 20 s). Beide oordelen staan op PR #287.
+
 ### 23 september 2026, curriculumbesluiten vóór het C4 van #160
 
 **Wat het was.** Vijf besluiten van de vakdeskundige vastgelegd in `curriculum/` en
