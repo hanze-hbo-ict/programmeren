@@ -871,10 +871,10 @@ bij de indeling van vóór #256; sinds 18 september 2026 vult CodingBat het
 werkcollege en ligt de oefenmidterm in het practicum. De conclusie verandert
 niet.
 
-**"Enige" is met #256 niet meer letterlijk waar, en dat is met opzet niet
-rechtgetrokken door CodingBat te verkleinen.** `source/problems/4_basis.ipynb`
-draagt sinds die herziening één opgave met kant-en-klare asserts
-(`summed_odds`); de opgave ernaast (`power`) heeft alleen print-tests die de
+**"Enige" klopte niet letterlijk, en dat is met opzet niet rechtgetrokken door
+CodingBat te verkleinen.** `source/problems/4_basis.ipynb` draagt één opgave met
+kant-en-klare asserts (`summed_odds`), al sinds de migratie naar `source/`; het
+viel op bij de herziening van de week 4-handleiding (#256); de opgave ernaast (`power`) heeft alleen print-tests die de
 student zelf omzet, en `until_a_repeat` raadt met willekeur en laat zich niet
 vast toetsen. Vastgesteld door de vakdeskundige op 23 september 2026: de
 CodingBat-opgaven zijn op zichzelf nuttig, en dat één andere opgave ook

@@ -1303,6 +1303,8 @@ kruisverwijzing in `source/lectures/3a_functies.ipynb`.
 | orkestrator, vier puntjes | niet beschikbaar | niet beschikbaar | zelf hersteld, geen auteursronde |
 | beoordelaar, naleesronde | 15.232 | 2 min 4 s | vier van vier akkoord |
 
+Bron van de beoordelaarsgetallen: het verbruiksrapport per agent, vastgelegd op #237.
+
 **Eén ontwerpherstel gebruikt, van de één die is toegestaan, en het lag aan de orkestrator.** Het
 C1 wees de ontwerper naar een deelkop in plaats van naar de moedersectie met de
 bijeenkomstindeling, en noemde de sectie met open vragen het zwaarste deel van het werk. Het
@@ -1314,11 +1316,11 @@ de prijs van een onscherpe opdracht - meer dan het oorspronkelijke ontwerp kostt
 aanwijsbaar onjuist — twee onwaarheden in de tekst, één ontbrekende aantekening en een verouderde
 telling in `curriculum/uitgangspunten.md` — en zijn door de orkestrator zelf rechtgezet in vier
 zinnen in plaats van via een auteursronde. De beoordelaar las ze na (vier van vier akkoord,
-15.232 tokens). Dat is de regel *wie het zelf doet, laat het lezen*, en hier kostte hij vijf
-procent van een auteursronde.
+15.232 tokens). Dat is de regel *wie het zelf doet, laat het lezen*.
 
-**De rollen corrigeerden de orkestrator drie keer**, en alle drie de keren met een telling: 21
-blokken in plaats van 24 (auteur én beoordelaar, onafhankelijk), twee uitwerkingen op 58
+**De rollen corrigeerden de keten drie keer**, en alle drie de keren met een telling: 21
+blokken in plaats van 24 - een getal uit de meetregel van de ontwerper, door de orkestrator
+overgenomen in C4 en de opdracht (auteur én beoordelaar, onafhankelijk), twee uitwerkingen op 58
 collegeopdrachten in plaats van één (auteur, nagemeten door de beoordelaar), en deelvraag **d**
 in plaats van **c** bij Opdracht 2 van `3b` (auteur, stil rechtgezet). Zie de bevinding over het
 criterium dat dwingt na te tellen.
@@ -1343,10 +1345,12 @@ en drie rechtgezette verwijzingen in `handleidingen/week_3.md`.
 | orkestrator, twee correctieronden | niet beschikbaar | niet beschikbaar | drie verouderde verwijzingen, daarna het moet-punt en drie puntjes |
 | **totaal agents** | **693.462** | **circa 60 min** | |
 
+Bron: het verbruiksrapport per agent, vastgelegd op #256; de rollen gaven zelf geen teller.
+
 Ter vergelijking: #237 (week 3) kwam op circa 497.000 met een auteur wiens tokens niet
-beschikbaar waren. De twee zijn dus niet zuiver te vergelijken, maar de richting is
-duidelijk: het volgen van een norm kostte hier **meer** dan het vaststellen ervan.
-Dat is de aanleiding voor proef 1 van #203, vastgelegd in [203-proef.md](203-proef.md).
+beschikbaar waren. De twee zijn niet te vergelijken: zonder de auteur komt #256 op
+412.999. De aanleiding voor proef 1 van #203 was niet dit getal maar het oordeel van de
+vakdeskundige over de omvang van de lus; zie [203-proef.md](203-proef.md).
 
 **Het poortbesluit veranderde het ontwerp, en dat was winst.** De ontwerper stelde voor
 week 4 het patroon van week 3 te laten volgen: de oefenmidterm als werkcollege, CodingBat
@@ -1360,21 +1364,22 @@ tegensignaal juist het bewijs, en verviel een van de twee open vragen.
 tijden uit `4_midterm.docx` geen stand: ze beschreven een klassikale cyclus met *geen
 overleg*, en die past niet in een practicum. Week 4 is daarmee de eerste week met
 **0 B en 20 R** - geen enkele tijd uit een bron. De beoordelaar heeft de drie `.docx`
-zelf uit `3110b335^` gelezen en de afweging bevestigd, met één aanvulling die de
-ontwerper zelf de zwakste bullet noemde: *"Start les (5 min)"* staat woordelijk boven
-alle drie de documenten en is dus een huisvorm, geen meting van deze les.
+zelf uit `3110b335^` gelezen en de afweging bevestigd, inclusief de observatie uit
+C2 ronde 2 van de ontwerper dat *"Start les (5 min)"* woordelijk boven alle drie de
+documenten staat en dus een huisvorm is, geen meting van deze les.
 
 **Wat de rollen aan de orkestrator corrigeerden.** De ontwerper: drie regelgetallen uit
 C1 (620/625/232, niet 619/624/233). De auteur: twee fouten in het ontwerp - een uitwijk
 die naar blok 7 wees terwijl het blok 6 is, en drie opdrachten die als `+=`, `-=` en `*=`
 werden opgevoerd terwijl het alle drie `+=` is. De beoordelaar: dat de melding over
-`week_3.md` onwaar was geworden door de reparatie zes regels verderop in dezelfde PR.
+`week_3.md` onwaar was geworden door een reparatie in een latere commit van dezelfde PR.
 
-**Twee keer stond een agent in de verkeerde checkout.** De ontwerper ontdekte bij het
+**Een agent stond in de verkeerde checkout.** De ontwerper ontdekte bij het
 hervatten dat zijn shell in de hoofdcheckout stond, op een verlaten branch met drie
 niet-vastgelegde bestanden. Hij heeft al zijn dragende metingen overgedaan tegen
 `git show origin/master:<pad>` en kwam op dezelfde getallen uit, op één verfijning na.
-Zie de bevinding daarover; bevinding 17 is hiermee voor de derde keer waargenomen.
+Verwant aan bevinding 17, maar niet hetzelfde mechanisme: daar deelden twee agents één
+worktree, hier stond één agent buiten de zijne.
 
 ## Werkitem #267 - compositie als begrip van PGM2 week 5
 

@@ -994,7 +994,7 @@ aantal blokrijen. De meetregel onder dat ontwerp vatte de drie vastgestelde tabe
 
 De tabellen bevatten 8 + 8 + 5 = **21** rijen, 6 met **B** en 15 met **R**. De auteur nam de
 tabellen ongewijzigd over, telde de verdeling zelf en meldde de afwijking; de beoordelaar telde
-onafhankelijk na en kwam op hetzelfde. Hij vond en passant een tweede telfout: het ontwerp
+onafhankelijk na en kwam op hetzelfde. De auteur ving bovendien een tweede telfout op: het ontwerp
 schreef *"Vier uit de bron (45 min)"* waar die vier rijen 5 + 10 + 15 + 20 = 50 minuten zijn.
 
 **Waarom het telt.** Het foute getal stond in drie opeenvolgende artefacten van dezelfde keten —
@@ -1054,8 +1054,9 @@ van *Drie* naar *Vier erkende afwijkingen*. Dat maakte een citaat in `handleidin
 stil dood. Hij meldde dat netjes onder *Wat er nog loopt* in de handleiding die hij schreef,
 met de reden dat het buiten de afbakening viel. De orkestrator vond de melding terecht maar
 de conclusie niet, en repareerde het citaat alsnog in dezelfde PR - **zonder de melding weg
-te halen**. De opgeleverde tekst vertelde de volgende lezer dus dat er werk lag dat zes
-regels verderop in diezelfde commit al gedaan was. De beoordelaar ving het als moet-punt.
+te halen**. De melding stond in `6a76797c` (`week_4.md`), de reparatie kwam in `a9b9954c`
+(`week_3.md`); de opgeleverde tekst vertelde de volgende lezer dus dat er werk lag dat
+een latere commit in dezelfde PR al had gedaan. De beoordelaar ving het als moet-punt.
 
 **Waarom dit een patroon is en geen slordigheid.** Een handleiding draagt een subsectie
 *Wat er nog loopt*: een momentopname van de repository, geschreven door de rol die het
