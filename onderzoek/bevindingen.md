@@ -1157,39 +1157,54 @@ voorstel naar de volgende procesronde (#203):
 ## Een getal dat de orkestrator opschrijft, heeft hij niet altijd geteld - 24 september 2026
 
 **Wat er gebeurde.** Na #268 schreef de orkestrator twee korte vastleggingen. In beide stond een
-getal dat hij niet had geteld, en in beide gaf een verse redacteur daarop BLOKKEER:
+getal dat hij niet had geteld. Een verse redacteur gaf daarop in beide gevallen BLOKKEER:
 - **PR #286**, de metingen van #268. Er stond: *"De mens besliste na het C7 twee keer."* Het
-  waren er vier: de plaats van opdracht 3, het verwerken van de puntjes, de bijzin en de merge.
-  De bijzin stond in de lijdende vorm, alsof hij vanzelf kwam. Dat oordeel staat als
-  [review op PR #286](https://github.com/hanze-hbo-ict/programmeren/pull/286).
-- **PR #287**, de correctie van `make clean`. Er stond dat de 15 gedeelde cacheposten bij
-  *"ID 3 en 4"* hoorden. Volgens de logs zijn het er drie: 12 keer ID 4, 2 keer ID 3 en 1 keer
-  ID 21. De orkestrator had twee ID's uit een uitsnede van het log overgenomen, in plaats van
-  ze te tellen met `grep | sort | uniq -c`. Dat oordeel staat als
-  [review op PR #287](https://github.com/hanze-hbo-ict/programmeren/pull/287).
+  waren er vier, als je de merge meetelt: de plaats van opdracht 3, het verwerken van de puntjes,
+  de bijzin en de merge. De bijzin stond in de lijdende vorm, alsof hij vanzelf kwam. Zie de
+  [reviews op PR #286](https://github.com/hanze-hbo-ict/programmeren/pull/286).
+- **PR #287**, de correctie van `make clean`. Volgens de tekst hoorden de 15 meldingen *Using
+  cached notebook* bij *"ID 3 en 4"*. De logs tonen drie cacheposten: 12 meldingen voor ID 4,
+  2 voor ID 3 en 1 voor ID 21. De orkestrator had de ID's overgenomen uit de eerste acht regels
+  van `grep -B1 'Using cached notebook'`, zonder ze met `grep | sort | uniq -c` te tellen. Dat
+  is zijn eigen verklaring; op GitHub staat alleen de latere telling in de herstelbijlage. Zie
+  de [reviews op PR #287](https://github.com/hanze-hbo-ict/programmeren/pull/287).
 
-In dezelfde sessie noemde de orkestrator bovendien in een taakprompt een basiscommit (*"4a…"*)
-die niet bestond. De beoordelaar merkte dat op; het oordeel veranderde er niet door.
+In dezelfde sessie noemde de orkestrator in een taakprompt ook een basiscommit (*"4a…"*) die
+niet bestond. De beoordelaar merkte het op; het oordeel veranderde er niet door.
 
-**Waarom dit een patroon is.** `CLAUDE.md` zegt *meet het ding zelf*. De orkestrator doet dat
-wel bij beweringen over het materiaal, maar niet bij de getallen in zijn eigen verslag. Het
-aantal besluiten en een aantal cacheposten voelen als samenvatting, niet als meting, en worden
-dus uit het geheugen opgeschreven. Het is dezelfde soort fout als bij #280 (*"gaat weg"* waar
-de vakdeskundige *"mogen weg"* zei): orkestratortekst die naast de bron gelegd moet worden en
-dat niet vanzelf wordt. Ook de voorbeelden uit de bevinding van 23 september over #273
-(*"E en F wisselen"*) en #267 horen in deze rij.
+En toen deze bevinding zelf de eerste keer werd beoordeeld, stonden er weer twee onjuiste
+beweringen in. Er stond *"de 15 gedeelde cacheposten"*, maar het waren 15 meldingen en drie
+cacheposten. En er stond dat de nalezing van #287 nog niet in de instructies stond. Zie de
+[review op PR #288](https://github.com/hanze-hbo-ict/programmeren/pull/288).
 
-**Wat er deze keer anders ging.** Beide PR's gingen naar een verse redacteur voordat ze ter merge
-werden aangeboden. De orkestrator vroeg daar zelf om, zonder dat de vakdeskundige erom vroeg.
-Dat is het tweede voorstel uit de vorige bevinding. Het staat nog niet in de instructies en
-werd hier toch toegepast. Beide fouten zijn zo vóór de merge gevonden en kostten elk één
-herstelronde: 75.623 + 34.121 tokens voor #286 en 40.834 + 27.066 tokens voor #287. Dit rust
-op één sessie.
+**Waarom dit een patroon is.** `CLAUDE.md` zegt *meet het ding zelf*. De getallen hierboven zijn
+geen beweringen over het materiaal. Ze staan in het verslag van de orkestrator zelf. Het
+vermoeden is dat zulke getallen als samenvatting voelen en niet als meting, zodat ze uit een
+uitsnede of uit het geheugen worden overgenomen. Dat vermoeden is niet gemeten. De fout hoort in
+dezelfde rij als eerdere orkestratortekst die niet naast de bron werd gelegd:
+- *"gaat weg"*, waar de vakdeskundige bij #280 *"mogen weg"* zei;
+- *"E en F wisselen"* bij #273;
+- de keuzeoptie bij #267.
 
-**Wat het veranderde.** De twee blokkades zijn hersteld in PR #286 en PR #287. In de
-instructies is nog niets veranderd. Er gaan twee voorstellen naar de volgende procesronde (#203):
+Dat staat in de twee bevindingen van 23 september en die van 24 september hierboven.
+
+**Wat er gebeurde met de nalezing.** Beide PR's gingen naar een verse redacteur voordat ze ter
+merge werden aangeboden. Voor #287 was dat geen keuze: `loop.md` (*Buiten een werkitem*) vraagt
+bij een kleine correctie buiten de lus al om *"een onafhankelijke lezer"*. Die regel stond er
+ook al toen de vorige bevinding haar tweede voorstel deed. Voor #286, de metingen van een
+werkitem, staat er geen regel. `orc.md` vraagt alleen bij een besluitdiff om een onafhankelijke
+redactionele toets. Daar vroeg de orkestrator zelf om de nalezing, zonder verzoek van de
+vakdeskundige.
+
+De vier nalezingen kostten samen 109.744 tokens voor #286 (75.623 eerste beoordeling, 34.121
+herstelbeoordeling) en 67.900 voor #287 (40.834 en 27.066). Daarin zitten niet de afgebroken
+eerste run op #286, die door de sessielimiet stopte en geen telling heeft, en het herstelwerk van
+de orkestrator. Dit rust op één sessie.
+
+**Wat het veranderde.** De blokkades zijn hersteld in PR #286, #287 en #288. In de instructies is
+niets veranderd. Er gaan twee voorstellen naar de volgende procesronde (#203):
 - **Een getal in orkestratortekst komt met de opdracht die het opleverde**, in de herstelbijlage
-  of in de PR-beschrijving. Een getal zonder opdracht is niet gemeten, en dan hoort het er niet
-  te staan.
-- **Maak het tweede voorstel van de vorige bevinding vast**, geen merge van orkestratortekst
-  zonder onafhankelijke lezer. Deze sessie laat zien dat het werkt, en ook dat het nodig blijft.
+  of in de PR-beschrijving. Een getal zonder die opdracht is niet gemeten.
+- **Breid de lezerregel uit `loop.md` uit tot alle orkestratortekst**, dus ook tot de metingen en
+  bevindingen van een werkitem. Nu geldt ze alleen buiten een werkitem en bij een besluitdiff.
+  Dat past het tweede voorstel van de vorige bevinding aan, omdat een deel ervan al vastlag.
