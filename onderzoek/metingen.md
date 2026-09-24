@@ -1633,3 +1633,53 @@ zie #290.
 Dit is de tweede keer, na #268, dat een verse nalezer iets vindt dat pas zichtbaar wordt door de
 reparatie van puntjes. Het verschil: bij #268 was het gevonden probleem zelf nieuw, hier was
 vooral de toegang tot een bestaand probleem nieuw.
+
+## Werkitem #270 - PGM2 week 6: overerving, polymorfisme en duck typing
+
+Route *ingrijpende weekherziening*, met de verkenner en de ontwerper samengevoegd tot één rol:
+ontwerper (die zelf meet), verhelderaar, poort, auteur en daarna eerstejaars en onderwijskundige.
+Omvang L, procescommit `723688ac`. Dit is de L-proef van #203; zie
+[203-proef.md](203-proef.md). Opgeleverd in PR #293 en gemerged als `7fca5564` op
+24 september 2026. Het gaat om:
+- twee colleges (`13a`, `13b`);
+- practicum sessie 2 (`13_creatures.md`), met de eindstand van week 5 als download;
+- een opstap, een basis (kassabon) en een extra-opgave (spelers en `host_game(px, po)`);
+- drie uitwerkingen en vier weekpagina's;
+- boekhouding in `curriculum/` en `conventies/`.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator: C1, overdrachten, C4-registraties, C7's | niet beschikbaar | niet beschikbaar | LUS, L |
+| curriculumontwerper (gecombineerd met verkenning) | 200.332 | 13 min 32 s | C2, 16 criteria, 12 voorlegpunten |
+| verhelderaar | 112.219 | 6 min 46 s | AKKOORD, 16 verbeterpunten |
+| auteur, oplevering | 388.349 | 34 min 19 s | C5, controles groen |
+| beoordelaar-eerstejaars | 141.195 | 10 min 31 s | AKKOORD MET PUNTJES, 0 blokkades, 9 puntjes |
+| beoordelaar-onderwijskundige | 141.034 | 11 min 29 s | BLOKKEER, 2 blokkades (AC2, AC14), 6 puntjes |
+| auteur, herstel 1 van 1 (hervat) | niet beschikbaar | circa 18 min (volgens de rol) | B1, B2 en alle puntjes verwerkt |
+| beoordelaar-onderwijskundige, herstelmodus | 73.605 | 2 min 44 s | AKKOORD MET PUNTJES, 2 puntjes |
+| beoordelaar-redacteur, lezing orkestratordiff | 32.095 | 1 min 17 s | BLOKKEER, 1 blokkade, 5 puntjes |
+| beoordelaar-redacteur, herstellezing | 30.822 | 1 min 14 s | AKKOORD MET PUNTJES, 4 puntjes, waarvan 3 in #294 |
+| **vastgesteld totaal agents** | **1.119.651** | | zonder het auteursherstel |
+
+Bron: `subagent_tokens` uit de verbruiksmelding na elke agentstap. Het auteursherstel heeft geen
+melding. De rol leverde zijn herstel af en stopte daarna op de sessielimiet (HTTP 429). De
+melding die volgde, had status *failed* en geen verbruik.
+
+Herstelstand bij afsluiting: ontwerp 0/1 en oplevering 1/1. De orkestratordiff na de oplevering
+viel buiten de rondelimiet. Het is werk dat de vakdeskundige vroeg bij het mergebesluit, en het
+is twee keer gelezen.
+
+De vakdeskundige besliste vijf keer:
+1. De L-proef met #160 als referentie.
+2. Het C4 op twaalf voorlegpunten en de spelersinterface. Twee daarvan weken af van de
+   aanbeveling van de ontwerper: V2 (twee colleges in plaats van één) en V3 (het toernooi vervalt
+   helemaal, ook niet naar week 7).
+3. Gericht doorgaan na het C7 BLOKKEER, met een herziene grens van 1.250.000.
+4. Bij het mergebesluit: de puntjes rechtzetten, `begrippen.md` laten aansluiten en `cols_to_win`
+   laten staan.
+5. Merge, en de drie laatste puntjes in #294.
+
+**Beide blokkades van de oplevering vond alleen de onderwijskundige.** Voor B1, de afrondingsregel
+in de basis, had de eerstejaars het feit wel in de hand. Het C6 van de eerstejaars zegt bij AC2
+*"450 (via de formule in De regels, want `599 * 75 // 100` zou 449 geven)"*, maar geeft
+toch *gehaald*. De eerstejaars rekende met de tabel en niet met de zin die de tabel tegensprak.
