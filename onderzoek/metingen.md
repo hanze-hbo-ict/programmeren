@@ -694,10 +694,12 @@ in #265.
 
 Orkestratie en de C7's: niet beschikbaar. Tokens zijn harnesstellingen, geen factuurbedrag.
 
-**Vier menselijke besluitmomenten na C4.** Het C4 zelf (acht open vragen plus een
-practicumopzet, vastgelegd in #261 tot en met #263). Daarna drie aanvullingen:
-- over normtekst die de auteur buiten de C4-lijst had bijgewerkt;
-- over de voorlegpunten uit beide C6's;
+**Vier menselijke besluitmomenten, het C4 meegeteld.** Het C4 zelf (acht open vragen plus
+een practicumopzet, vastgelegd in #261 tot en met #263). Daarna drie aanvullingen:
+- over de oplevering: normtekst die de auteur buiten de C4-lijst had bijgewerkt, de vorm van
+  `problems/12_basis.ipynb` als geaccepteerde afwijking van *De vorm van een opgave*, en de
+  redactionele toets van #261 tot en met #263;
+- over de voorlegpunten uit de C7 van #264;
 - over P1.
 
 Geen van die momenten was een herhaling van een eerder besluit.
@@ -705,8 +707,7 @@ Geen van die momenten was een herhaling van een eerder besluit.
 **De auteur meldde zijn eigen buitenronde.** De eerste auteur werkte tellingen en statussen in
 `curriculum/` en `conventies/` bij die niet in de C4-lijst stonden. Hij zette dat bovenaan in
 de C5 als iets wat de vakdeskundige moest toetsen. De onderwijskundige vond vervolgens elke
-wijziging gemeten of afgeleid. Het werkte zoals `CLAUDE.md` het wil: niet zelf beslissen, wel
-voorleggen.
+wijziging gemeten of afgeleid.
 
 **De scratchpad viel halverwege weg.** De omgeving verklaarde de scratchpad onbruikbaar terwijl
 beide beoordelaars van ronde 0 liepen. Hun C6 stond daardoor alleen in de handback en is van
