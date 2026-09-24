@@ -1476,3 +1476,57 @@ recht en liet de melding daarover in `week_6.md` staan - de bevinding uit #256,
 door degene die haar schreef. De derde maakte van *"mogen weg"* een *"gaat weg"*
 en verklaarde stilstaand materiaal al afgeschreven. De vakdeskundige vroeg vóór de merge of alle rollen het
 hadden gezien; pas daarop volgde de naleesronde die de fout ving.
+
+## Werkitem #268 — compositie in het materiaal van PGM2 week 5
+
+Route *overzichtelijke opgave of sectie*, samen met #269 ontworpen. Omvang M, procescommit
+`5d101066`, geen #203-proef. Eén C2 en één C4 voor beide werkitems. Het C4 draaide de volgorde
+om, zodat #268 eerst ging. Opgeleverd op 24 september 2026 in PR #285, gemerged als
+`7aa5c2b1`. Het gaat om:
+- een compositiesectie en opdracht 3 in `12a_objecten`, en *functiecompositie* voluit;
+- opstap opdracht 11 met uitwerking;
+- stap 5 van `12_creatures`;
+- één zin in `week_12.md`;
+- drie statusregels in `curriculum/` en `conventies/`.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| curriculumontwerper (gecombineerd), gedeeld met #269 | 143.204 | 9 min 45 s | C2, zeven open vragen |
+| orkestrator, C1 en C4 | niet beschikbaar | niet beschikbaar | de mens week bij V3, V4/V5 en V6 af van het C2 |
+| auteur, eerste run | niet beschikbaar | niet beschikbaar | afgebroken op verzoek van de vakdeskundige; er bleef alleen een lege branch over |
+| auteur, oplevering | 163.612 | 9 min 5 s | C5, criteria 268-1 t/m 268-9, controles groen |
+| beoordelaar-eerstejaars | 54.304 | 2 min 13 s | AKKOORD MET PUNTJES, 0 blokkades, 4 puntjes |
+| beoordelaar-onderwijskundige | 78.020 | 3 min 53 s | AKKOORD MET PUNTJES, 0 blokkades, 6 puntjes |
+| auteur, puntjes (hervat) | niet vastgesteld; de harness meldt 181.983 | 2 min 29 s | 6 puntjes verwerkt |
+| beoordelaar-eerstejaars, vers, herstelmodus | 49.753 | 2 min 10 s | AKKOORD MET PUNTJES, 1 nieuw puntje |
+| auteur, bijzin (hervat) | niet vastgesteld; de harness meldt 185.638 | 46 s | 1 regel |
+| **vastgesteld totaal agents** | **488.893** | | inclusief het gedeelde C2, exclusief de hervatte stappen |
+
+Herstelstand bij afsluiting: ontwerp 0/1, oplevering #268 0/1. Puntjes kostten geen ronde. De
+auteur schreef in de eerste herstelbijlage zelf 1/1. De orkestrator zette dat op de PR recht.
+
+De mens besliste na het C7 twee keer. De plaats van opdracht 3 bleef ongewijzigd, en alle
+puntjes werden verwerkt. Na de herstelnalezing volgde nog één bijzin, zonder nieuwe nalezing.
+De orkestrator heeft de diff van die bijzin wel mechanisch nagekeken.
+
+**De herstelnalezing ving wat de reparatie opriep.** Puntje 3 maakte de uitvoer in het college
+leesbaar. De verse eerstejaars maakte daarna opdracht 3 zelf, en zag dat een student die zijn
+voorspelling met `print` controleert, dezelfde onleesbare lijst terugkrijgt. Met het
+studentnummer uit opdracht 2 erbij wordt die zelfs langer. Wie de opdracht alleen leest, ziet
+dat niet; wie hem uitvoert wel.
+
+**De build na de reparatie draaide de notebooks niet opnieuw.** Na een hernummering van
+cel-id's meldde `make clean && make html` *Using cached notebook*. De oorzaak is gemeten door de
+orkestrator:
+- `source/conf.py` zet `nb_execution_mode = "cache"`, en myst-nb bewaart die cache in
+  `build/.jupyter_cache`.
+- `make clean` voert `rm -rf build/*` uit, en die glob slaat verborgen mappen over. Na een clean
+  bestaat `build/.jupyter_cache` nog.
+- De tweede regel van `clean` wist `source/.jupyter_cache`, en die map bestaat niet.
+
+Een notebook met gewijzigde code wordt wel opnieuw uitgevoerd, want de cache kijkt naar de
+code. Onveranderde code na een wijziging in de dependencies wordt dat niet. Hier kon het geen
+kwaad: de code was vóór de hernummering uitgevoerd, en de nalezer voerde de geraakte
+collegecellen zelf uit. De poort *schone build* in `CLAUDE.md` belooft bij dependencywijzigingen
+wel meer dan hij nu doet. Het herstel van `clean` is niet in deze wijziging meegenomen; het is
+voorgelegd aan de vakdeskundige.
