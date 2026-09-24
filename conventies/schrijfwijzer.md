@@ -219,6 +219,12 @@ twee plekken half hetzelfde beweert.
   em-dash en geen en-dash.** Het materiaal voldoet hier nu al aan; deze regel
   legt dat vast. De em-dash is de meest herkenbare tell van modeltekst, en
   daarmee de enige harde, toetsbare uitwerking van de regel hierboven.
+  Het verbod op de em-dash en de en-dash geldt voor wat gepubliceerd wordt: het
+  boek, dus `source/` (zie *Reikwijdte* in [conventies.md](conventies.md)). In
+  interne documenten buiten het boek, zoals die in `curriculum/`, `conventies/`
+  en `onderzoek/`, en ook in `README.md`, mogen ze wel. Vastgesteld door de
+  vakdeskundige op 24 september 2026, naar aanleiding van de beoordeling van
+  PR #291.
 - Spaarzaam met vetgedrukte tekst en opsommingen; alleen waar ze de structuur
   echt verhelderen.
 - Verwijs naar bestanden en directories als inline code.

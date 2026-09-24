@@ -710,6 +710,82 @@ plek"*) strenger is dan wat de vakdeskundige zei (*"auteur mag er een goede plek
 vinden"*). De vakdeskundige koos op 24 september 2026 voor de strenge formulering (in
 het gesprek; niet op GitHub); de tekst blijft zoals hij staat, en de bevestiging staat
 bij het besluit in `curriculum/uitgangspunten.md`.
+### 24 september 2026, de em-dash alleen verboden in het boek
+
+**Wat het was.** Een besluit van de vakdeskundige vastgelegd in `conventies/schrijfwijzer.md`
+(*Opmaak en interpunctie*): *"em-dashes mogen niet in werk wat gepubliceerd wordt. is prima in
+interne documenten"*. Aanleiding was puntje 4 van de redacteur op PR #291, over een em-dash in
+een kop van deze file. De vakdeskundige liet die kop staan. PR #292.
+
+**Waarom het buiten de lus bleef.** Het is de vastlegging van een expliciet gegeven besluit van
+één zin, zonder ontwerpkeuze.
+
+**Bekend en bewust gelaten.** De schrijfwijzer zegt bij deze regel: "Het materiaal voldoet hier
+nu al aan". Dat klopt niet. In `source/solutions/4_extra.ipynb` staan 3 em-dashes op 2 regels
+(r73 en r113; `grep -roP '\x{2014}' source | wc -l` geeft 3). Volgens de redacteur zitten ze erin
+sinds de herziening van week 4 (`a20337e9`, `2bf46a94`). De vakdeskundige besloot op 24 september
+2026 ze voorlopig te laten staan.
+
+**Ging er een beoordelaar overheen?** Ja, een verse redacteur, op de diff en het letterlijke
+besluit (33.685 tokens, 2 min 23 s). Oordeel: AKKOORD MET PUNTJES, 0 blokkades. De orkestrator
+had in de PR-beschrijving *twee* em-dashes geteld: `grep -n` telt regels en geen voorkomens. De
+puntjes over de afbakening (*het boek*, en een verwijzing naar *Reikwijdte*) zijn verwerkt. Op
+de twee vragen die de redacteur opriep, antwoordde de vakdeskundige *"Allebei ja"*: de
+toestemming geldt ook voor de en-dash, en `README.md` telt als intern. Die aanvulling is
+vastgelegd zonder nieuwe nalezing.
+
+### 24 september 2026, `make clean` wist de notebookcache niet
+
+**Wat het was.** `make clean` voerde `rm -rf build/*` uit. Die glob slaat verborgen mappen over,
+en myst-nb bewaart de notebookcache in `build/.jupyter_cache`. Na een clean bleef de cache dus
+staan. `conventies/technische-conventies.md` zegt al dat `make clean` "build/ en de
+notebook-cache" verwijdert; alleen het `Makefile` deed dat niet. Het doel wist nu de hele map
+`build/`. Opgemerkt tijdens #268; zie de sectie *Werkitem #268* (PR #286).
+
+**Waarom het buiten de lus bleef.** Eén gemeten oorzaak en een ingreep van één regel. De
+vakdeskundige koos op 24 september 2026 in de sessie van de orkestrator: *"Maak de correctie in
+een eigen PR"*. Er kwam dus geen werkitem.
+
+**Gemeten.** In een verse worktree gaf een eerste build 72 keer *Executed notebook*. Daarna
+`make clean`: `build/` bestaat niet meer. Een tweede build gaf opnieuw 72 keer *Executed
+notebook*, 0 Sphinx-waarschuwingen en 0 fouten. Beide builds meldden daarnaast 15 keer *Using
+cached notebook*, in beide gevallen voor dezelfde notebooks: 12 keer ID 4, 2 keer ID 3 en 1 keer
+ID 21. Die notebooks hebben dezelfde code als een notebook dat eerder in dezelfde build draaide,
+en delen daarom diens cachepost. Dat getal hangt niet af van de clean.
+
+**Ging er een beoordelaar overheen?** Ja, een verse redacteur, twee keer. De eerste ronde gaf
+BLOKKEER (40.834 tokens, 3 min 24 s): de notitie noemde twee cache-ID's, maar de logs tonen er
+drie. De orkestrator had dat getal niet geteld. Na het herstel gaf een tweede, verse redacteur
+AKKOORD (27.066 tokens, 1 min 20 s). Beide oordelen staan op PR #287.
+
+### 23 september 2026, min-max naar de extra-opgave van PGM2 week 7
+
+**Wat het was.** Een besluit van de vakdeskundige vastgelegd in `curriculum/leerlijn.md`
+(een alinea en een regel in *Wat een week aan een latere week aflevert*) en in het
+besluitenregister van `curriculum/uitgangspunten.md`. Het besluit: min-max is de
+extra-opgave van week 7, als afsluiting van een lijn van drie extra-opgaven over
+Vier op een rij. Het kwam in het gesprek waarin de werkitems #267 tot en met #271 werden
+opgesteld; daar stond het alleen in de werkitems, en een besluit dat niet in
+`curriculum/` landt, is niet genomen.
+
+**Waarom het buiten de lus bleef.** Het is de vastlegging van een genomen besluit,
+geen herziening van materiaal. `source/` is niet geraakt.
+
+**Ging er een beoordelaar overheen?** Nog niet bij het openen van de PR; de
+vakdeskundige leest de formulering in de PR zelf. Op 24 september 2026 wel: een redacteur
+las de bijgewerkte PR (AKKOORD MET PUNTJES, zie de reactie op PR #272). Zijn acht puntjes
+zijn verwerkt; de regel van #270 in de afleveringstabel is daarbij niet aangepast.
+
+**Bijgewerkt op 24 september 2026 (PR #272).** De PR lag open terwijl #270 week 6 uitvoerde.
+Daardoor waren drie passages verouderd: week 6 heette nog niet uitgevoerd,
+`13_vier_op_rij_speler` stond volgens de tekst nog onder week 6, en week 7 wachtte nog op de
+spelersstructuur. Die passages zijn bijgewerkt naar de stand na #270. Drie formuleringen van
+de orkestrator zijn vervangen:
+- "past niet bij het onderwerp" wordt "past niet helemaal", zoals in #271;
+- "het haakje is `__lt__`" wordt "`__lt__` kan dienen om bordtoestanden te vergelijken",
+  zoals in #271;
+- de heropenvoorwaarde komt nu van de vakdeskundige: min-max past goed bij de extra-opgaven
+  van week 5 en 6, en het vervangen daarvan is een reden om te heroverwegen.
 
 ### 23 september 2026, curriculumbesluiten vóór het C4 van #160
 
@@ -726,7 +802,11 @@ die `curriculum/` en `conventies/` raken. Die horen vastgelegd te zijn voordat C
 verwijst, en de lus heeft voor die vastlegging geen eigen stap.
 
 **Ging er een beoordelaar overheen?** Nog niet bij het openen van de PR; de vakdeskundige
-beoordeelt de kolominvulling in de PR zelf.
+beoordeelt de kolominvulling in de PR zelf. Achteraf wel: de onderwijskundige van #264 toetste
+de besluitdiffs van #261 tot en met #263 redactioneel tegen het C4. Er ontbrak niets, maar er
+stond meer in dan het C4 noemde: de twee kolommen voor alle weken, een heropeningsgrond en twee
+redactionele punten in `begrippen.md`. De vakdeskundige heeft alles bevestigd (C4-aanvulling 2
+op #160).
 
 **Vervolg, dezelfde dag.** De begrippen van week 5 kwamen in een tweede commit op dezelfde
 branch, die pas werd gepusht nadat #261 al gemerged was; ze belandden niet in `master` en
@@ -1365,6 +1445,53 @@ criterium dat dwingt na te tellen.
 vastgelegd en is dus niet genomen; de 33 collegeopdrachten zonder uitwerking staan bij #235 en
 #95, net als de `.docx` van week 4 en de verwijzing daarnaar in `handleidingen/week_4.md`.
 
+## Werkitem #160 — PGM2 week 5, van kunstmatige intelligentie naar klassen en encapsulatie
+
+Omvang L. De route startte onder de oude pijplijn en is op 11 september 2026 op verzoek van
+de mens omgezet naar de #203-lus (procesversie `48a108be`). Geen #203-proefissue, dus zonder
+budgetgrens; wel de herstelgrens van één ronde per ontwerp en per oplevering. PR #264, vervolg
+in #265.
+
+| Rol | Ronde | Tokens | Duur | Uitkomst |
+|---|---|---|---|---|
+| triage (oude route) | | 41.152 | 2 min 4 s | LUS, L |
+| verkenner | 0 | 82.977 | 5 min 58 s | C1b |
+| curriculumontwerper | 0 | 93.152 | 8 min 19 s | C2, acht open vragen |
+| verhelderaar | 0 | 126.190 | 9 min 59 s | AKKOORD, zes verbeterpunten |
+| auteur | 0 | 375.221 | 27 min 47 s | C5, 46 bestanden |
+| beoordelaar eerstejaars | 0 | 105.457 | 5 min 34 s | BLOKKEER (B1, B2) |
+| beoordelaar onderwijskundige | 0 | 163.592 | 7 min 10 s | BLOKKEER (B1) |
+| auteur (nieuwe context) | herstel 1 | 151.098 | 9 min 8 s | herstelbijlage, 11 bestanden |
+| beoordelaar eerstejaars | herstel 1 | 63.140 | 4 min 16 s | AKKOORD MET PUNTJES |
+| beoordelaar onderwijskundige | herstel 1 | 99.469 | 3 min 52 s | AKKOORD MET PUNTJES |
+| | **totaal** | **1.301.448** | | B1, B2 opgelost; P1 naar #265 |
+
+Orkestratie en de C7's: niet beschikbaar. Tokens zijn harnesstellingen, geen factuurbedrag.
+
+**Vier menselijke besluitmomenten, het C4 meegeteld.** Het C4 zelf (acht open vragen plus
+een practicumopzet, vastgelegd in #261 tot en met #263). Daarna drie aanvullingen:
+- over de oplevering: normtekst die de auteur buiten de C4-lijst had bijgewerkt, de vorm van
+  `problems/12_basis.ipynb` als geaccepteerde afwijking van *De vorm van een opgave*, en de
+  redactionele toets van #261 tot en met #263;
+- over de voorlegpunten uit de C7 van #264;
+- over P1.
+
+Geen van die momenten was een herhaling van een eerder besluit.
+
+**De auteur meldde zijn eigen buitenronde.** De eerste auteur werkte tellingen en statussen in
+`curriculum/` en `conventies/` bij die niet in de C4-lijst stonden. Hij zette dat bovenaan in
+de C5 als iets wat de vakdeskundige moest toetsen. De onderwijskundige vond vervolgens elke
+wijziging gemeten of afgeleid.
+
+**De scratchpad viel halverwege weg.** De omgeving verklaarde de scratchpad onbruikbaar terwijl
+beide beoordelaars van ronde 0 liepen. Hun C6 stond daardoor alleen in de handback en is van
+daaruit letterlijk op de PR gezet. De eerste auteurscontext kon daarna niet worden hervat. Een
+nieuwe auteur deed de herstelronde en las C5, C6 en C7 van GitHub. Dat ging zonder verlies,
+omdat alle artefacten al op GitHub stonden.
+
+**P1 werd pas in de herstelronde zichtbaar.** Zie in [bevindingen.md](bevindingen.md) *Een
+herstelopdracht mag een gevonden defect niet uit de blokkades definiëren* (23 september 2026).
+
 ## Werkitem #256 — docentenhandleiding week 4 op de norm
 
 De derde handleiding, en de eerste die een bestaande norm volgde in plaats van hem
@@ -1517,3 +1644,186 @@ recht en liet de melding daarover in `week_6.md` staan - de bevinding uit #256,
 door degene die haar schreef. De derde maakte van *"mogen weg"* een *"gaat weg"*
 en verklaarde stilstaand materiaal al afgeschreven. De vakdeskundige vroeg vóór de merge of alle rollen het
 hadden gezien; pas daarop volgde de naleesronde die de fout ving.
+
+## Werkitem #268 — compositie in het materiaal van PGM2 week 5
+
+Route *overzichtelijke opgave of sectie*, samen met #269 ontworpen, met twee beoordelaars in
+plaats van één (C1: er komen een uitleg en een oefening met uitwerking bij). Omvang M, procescommit
+`5d101066`, geen #203-proef. Eén C2 en één C4 voor beide werkitems. Het C4 draaide de volgorde
+om, zodat #268 eerst ging. Opgeleverd op 24 september 2026 in PR #285, gemerged als
+`7aa5c2b1`. Het gaat om:
+- een compositiesectie en opdracht 3 in `12a_objecten`, en *functiecompositie* voluit;
+- opstap opdracht 11 met uitwerking;
+- stap 5 van `12_creatures`;
+- één zin in `week_12.md`;
+- drie statusregels in `curriculum/` en `conventies/`.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| curriculumontwerper (gecombineerd), gedeeld met #269 | 143.204 | 9 min 45 s | C2, zeven open vragen |
+| orkestrator, C1 en C4 | niet beschikbaar | niet beschikbaar | de mens week bij V3, V4/V5 en V6 af van het C2 |
+| auteur, eerste run | niet beschikbaar | niet beschikbaar | afgebroken op verzoek van de vakdeskundige; er bleef alleen een lege branch over |
+| auteur, oplevering | 163.612 | 9 min 5 s | C5, criteria 268-1 t/m 268-9, controles groen |
+| beoordelaar-eerstejaars | 54.304 | 2 min 13 s | AKKOORD MET PUNTJES, 0 blokkades, 4 puntjes |
+| beoordelaar-onderwijskundige | 78.020 | 3 min 53 s | AKKOORD MET PUNTJES, 0 blokkades, 6 puntjes |
+| auteur, puntjes (hervat) | niet vastgesteld; de harness meldt 181.983 | 2 min 29 s | 6 puntjes verwerkt |
+| beoordelaar-eerstejaars, vers, herstelmodus | 49.753 | 2 min 10 s | AKKOORD MET PUNTJES, 1 nieuw puntje |
+| auteur, bijzin (hervat) | niet vastgesteld; de harness meldt 185.638 | 46 s | 1 regel |
+| **vastgesteld totaal agents** | **488.893** | | inclusief het gedeelde C2, exclusief de hervatte stappen |
+
+Herstelstand bij afsluiting: ontwerp 0/1, oplevering #268 0/1. Puntjes kostten geen ronde. De
+auteur schreef in de eerste herstelbijlage zelf 1/1. De orkestrator zette dat op de PR recht.
+
+De mens besliste na het C7 vier keer:
+1. De plaats van opdracht 3 blijft.
+2. Alle puntjes worden verwerkt.
+3. Na de herstelnalezing komt eerst de bijzin uit puntje A erbij. Die kreeg geen nieuwe
+   nalezing; de orkestrator keek de diff van die ene regel mechanisch na.
+4. PR #285 wordt gemerged.
+
+Het vierde telt mee omdat de merge volgens `loop.md` een besluit van de mens is. Vóór het C7
+besliste de mens daarnaast één keer, in het C4, over zeven open vragen en drie vervolgvragen.
+
+**De herstelnalezing ving wat de reparatie opriep.** Puntje 3 maakte de uitvoer in het college
+leesbaar. De verse eerstejaars maakte daarna opdracht 3 zelf, en zag dat een student die zijn
+voorspelling met `print` controleert, dezelfde onleesbare lijst terugkrijgt. Met het
+studentnummer uit opdracht 2 erbij wordt die zelfs langer. Wie de opdracht alleen leest, ziet
+dat niet; wie hem uitvoert wel.
+
+**De build na de reparatie draaide de notebooks niet opnieuw.** Na een hernummering van
+cel-id's meldde `make clean && make html` *Using cached notebook*. De oorzaak is gemeten door de
+orkestrator:
+- `source/conf.py` zet `nb_execution_mode = "cache"`, en myst-nb bewaart die cache in
+  `build/.jupyter_cache`.
+- `make clean` voert `rm -rf build/*` uit, en die glob slaat verborgen mappen over. Na een clean
+  bestaat `build/.jupyter_cache` nog.
+- De tweede regel van `clean` wist `source/.jupyter_cache`, en die map bestaat niet.
+
+Een notebook met gewijzigde code wordt wel opnieuw uitgevoerd. De cache kijkt naar de
+codecellen, hun metadata en de `kernelspec`, maar niet naar cel-id's en niet naar de versies van
+de dependencies. Onveranderde code na een wijziging in de dependencies wordt dus niet opnieuw
+uitgevoerd. Hier kon het geen
+kwaad: de code was vóór de hernummering uitgevoerd, en de nalezer voerde de geraakte
+collegecellen zelf uit. Bij een dependencywijziging vragen `CLAUDE.md` en `loop.md` (*Verificatie
+en eindpunt*) om `make clean && make html`. Die combinatie voerde onveranderde notebooks dus niet
+opnieuw uit. De vakdeskundige koos op 24 september 2026 voor een correctie in een eigen PR:
+#287, genoteerd onder *Werk buiten de lus om*.
+
+## Werkitem #269 — waarde en identiteit in het materiaal van PGM2 week 5
+
+Route *overzichtelijke opgave of sectie*, samen met #268 ontworpen, met twee beoordelaars (C1).
+Omvang M, procescommit `5d101066`, geen #203-proef. Het C2 en het C4 zijn gedeeld met #268; hun
+kosten staan daar. Het C4 legde #269 als tweede oplevering vast. Opgeleverd op 24 september 2026
+in PR #289, gemerged als `620f0dd5`. Het gaat om:
+- een sectie *Waarde en identiteit* met één opdracht aan het eind van `12b_data_object`;
+- opstap opdracht 12 met uitwerking;
+- `is` in plaats van `id()` in `12_basis` stap 1 tot en met 3;
+- één zin in `week_12.md`;
+- *waarde*, *identiteit* en *verwijzing* in `conventies/begrippen.md`, en `is` in
+  `curriculum/leerlijn.md` r169.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator, overdrachten en C7 | niet beschikbaar | niet beschikbaar | mechanische C7, geen tegenspraak |
+| auteur, oplevering | 173.327 | 11 min 58 s | C5, criteria 269-1 t/m 269-9 en B, controles groen |
+| beoordelaar-eerstejaars | 79.355 | 3 min 23 s | AKKOORD MET PUNTJES, 0 blokkades, 3 puntjes |
+| beoordelaar-onderwijskundige | 66.142 | 4 min 10 s | AKKOORD MET PUNTJES, 0 blokkades, 3 puntjes |
+| auteur, puntjes (hervat) | niet vastgesteld; de harness meldt 185.139 | 2 min 33 s | 3 puntjes verwerkt |
+| beoordelaar-eerstejaars, vers, herstelmodus | 27.998 | 1 min 13 s | AKKOORD MET PUNTJES, 2 puntjes buiten de oplevering (`7a`) |
+| **vastgesteld totaal agents** | **346.822** | | exclusief het gedeelde C2 (bij #268) en de hervatte stap |
+
+Herstelstand bij afsluiting: ontwerp 0/1, oplevering #269 0/1. Puntjes kostten geen ronde.
+
+De mens besliste na het C7 twee keer:
+1. Puntje 1 tot en met 3 worden verwerkt, en puntje 4 gaat naar #265. De verwerking staat in
+   de herstelbijlage op PR #289. De doorverwijzing staat in een
+   [reactie op #265](https://github.com/hanze-hbo-ict/programmeren/issues/265#issuecomment-5812541934).
+2. PR #289 wordt gemerged, en `7a_lists_advanced` moet alsnog worden herzien. Dat laatste
+   wijzigt V3 uit het C4 (*geen apart werkitem voor `7a`*). Het werkitem is #290.
+
+**De herstelnalezing ving opnieuw wat de reparatie opriep.** Puntje 1 verplaatste de link naar
+`7a` van een passage met `is` op strings naar de sectie *Lists en shallow copy*, waarin twee namen
+één lijst aanwijzen. De verse eerstejaars volgde die link. Het anker komt uit op een kop die een
+toewijzing een *copy* noemt. De eerste uitlegtekst eronder is cel 60: "de shadow copy `M`
+verwijst nog steeds naar `L`", met namen die in die sectie niet voorkomen. Cel 60 stond al in de
+meetbasis van het C2. De kop is voor het eerst gemeld in de herstelnalezing. Nieuw was vooral dat
+de link van week 5 er nu op uitkomt. Het herziene besluit over `7a` volgde op die waarneming;
+zie #290.
+
+Dit is de tweede keer, na #268, dat een verse nalezer iets vindt dat pas zichtbaar wordt door de
+reparatie van puntjes. Het verschil: bij #268 was het gevonden probleem zelf nieuw, hier was
+vooral de toegang tot een bestaand probleem nieuw.
+
+## Werkitem #270 - PGM2 week 6: overerving, polymorfisme en duck typing
+
+Route *ingrijpende weekherziening*, met de verkenner en de ontwerper samengevoegd tot één rol:
+ontwerper (die zelf meet), verhelderaar, poort, auteur en daarna eerstejaars en onderwijskundige.
+Omvang L, procescommit `723688ac`. Dit is de L-proef van #203; zie
+[203-proef.md](203-proef.md). Opgeleverd in PR #293 en gemerged als `7fca5564` op
+24 september 2026. Het gaat om:
+- twee colleges (`13a`, `13b`);
+- practicum sessie 2 (`13_creatures.md`), met de eindstand van week 5 als download;
+- een opstap, een basis (kassabon) en een extra-opgave (spelers en `host_game(px, po)`);
+- drie uitwerkingen en vier weekpagina's;
+- boekhouding in `curriculum/` en `conventies/`.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator: C1, overdrachten, C4-registraties, C7's | niet beschikbaar | niet beschikbaar | LUS, L |
+| curriculumontwerper (gecombineerd met verkenning) | 200.332 | 13 min 32 s | C2, 16 criteria, 12 voorlegpunten |
+| verhelderaar | 112.219 | 6 min 46 s | AKKOORD, 16 verbeterpunten |
+| auteur, oplevering | 388.349 | 34 min 19 s | C5, controles groen |
+| beoordelaar-eerstejaars | 141.195 | 10 min 31 s | AKKOORD MET PUNTJES, 0 blokkades, 9 puntjes |
+| beoordelaar-onderwijskundige | 141.034 | 11 min 29 s | BLOKKEER, 2 blokkades (AC2, AC14), 6 puntjes |
+| auteur, herstel 1 van 1 (hervat) | niet beschikbaar | circa 18 min (volgens de rol) | B1, B2 en alle puntjes verwerkt |
+| beoordelaar-onderwijskundige, herstelmodus | 73.605 | 2 min 44 s | AKKOORD MET PUNTJES, 2 puntjes |
+| beoordelaar-redacteur, lezing orkestratordiff | 32.095 | 1 min 17 s | BLOKKEER, 1 blokkade, 5 puntjes |
+| beoordelaar-redacteur, herstellezing | 30.822 | 1 min 14 s | AKKOORD MET PUNTJES, 4 puntjes, waarvan 3 in #294 |
+| **vastgesteld totaal agents** | **1.119.651** | | zonder het auteursherstel |
+
+Bron: `subagent_tokens` uit de verbruiksmelding na elke agentstap. Het auteursherstel heeft geen
+melding. De rol leverde zijn herstel af en stopte daarna op de sessielimiet (HTTP 429). De
+melding die volgde, had status *failed* en geen verbruik.
+
+Herstelstand bij afsluiting: ontwerp 0/1 en oplevering 1/1. De orkestratordiff na de oplevering
+viel buiten de rondelimiet. Het is werk dat de vakdeskundige vroeg bij het mergebesluit, en het
+is twee keer gelezen.
+
+De vakdeskundige besliste vijf keer:
+1. De L-proef met #160 als referentie.
+2. Het C4 op twaalf voorlegpunten en de spelersinterface. Twee daarvan weken af van de
+   aanbeveling van de ontwerper: V2 (twee colleges in plaats van één) en V3 (het toernooi vervalt
+   helemaal, ook niet naar week 7).
+3. Gericht doorgaan na het C7 BLOKKEER, met een herziene grens van 1.250.000.
+4. Bij het mergebesluit: de puntjes rechtzetten, `begrippen.md` laten aansluiten en `cols_to_win`
+   laten staan.
+5. Merge, en de drie laatste puntjes in #294.
+
+**Beide blokkades van de oplevering vond alleen de onderwijskundige.** Voor B1, de afrondingsregel
+in de basis, had de eerstejaars het feit wel in de hand. Het C6 van de eerstejaars zegt bij AC2
+*"450 (via de formule in De regels, want `599 * 75 // 100` zou 449 geven)"*, maar geeft
+toch *gehaald*. De eerstejaars rekende met de tabel en niet met de zin die de tabel tegensprak.
+
+## Werkitem #294 - drie zinnen over duck typing in PGM2 week 6
+
+Kleine route zonder ontwerp en zonder poort: C1 door de orkestrator, dan de auteur en één
+eerstejaars. Omvang XS, procescommit `9ba14267`. Dit is geen #203-proef. De drie puntjes kwamen
+uit de herstellezing van de redacteur bij #270; de vakdeskundige besloot op 24 september 2026 ze
+in een eigen werkitem op te pakken. Opgeleverd in PR #296 op 24 september 2026:
+`source/lectures/13b_polymorfisme.ipynb` (cel 13) en `source/practicals/13_creatures.md`
+(twee alinea's), 7+/7- regels.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator: C1, overdrachten, PR, meetregels | niet beschikbaar | niet beschikbaar | LUS, XS |
+| auteur, oplevering | 56.988 | 3 min 12 s | C5, vier criteria, pre-commit en build schoon |
+| beoordelaar-eerstejaars | 29.159 | 1 min 8 s | AKKOORD MET PUNTJES, 0 blokkades, 1 puntje |
+| **totaal agents** | **86.147** | **circa 4 min 20 s** | herstelstand oplevering 0/1 |
+
+Bron: `subagent_tokens` uit de verbruiksmelding na elke agentstap. De rollen zelf schreven
+*niet beschikbaar*.
+
+Het puntje van de eerstejaars (r289: *"Hij vult ze op zijn eigen manier in"*, waarbij *ze* ook
+op attributen slaat) is niet verwerkt. De vakdeskundige besloot tot merge zoals opgeleverd. Deze
+meetregels staan op verzoek van de vakdeskundige in dezelfde PR. Geen beoordelaar heeft ze
+gelezen.

@@ -136,6 +136,68 @@ enkel artefact stond. Bij #280 bevestigde de poort het voorstel.
 uitkomsten: één keer het doel gehaald zonder blokkade, één keer niet gehaald met
 een blokkade.
 
+## Proef 2 vastgelegd en uitgevoerd: PGM2 week 6 (#270), L
+
+Vastgesteld door de vakdeskundige op 24 september 2026, vóór de eerste agentstart, op voorstel
+van de orkestrator ([C1-aanvulling](https://github.com/hanze-hbo-ict/programmeren/issues/270#issuecomment-5813619807)).
+
+| Afspraak | Invulling |
+|---|---|
+| Issue en uitvoerautorisatie | #270 |
+| Omvang, bestanden en criteria | L; de negen criteria van C0; bestanden volgen uit C2 |
+| Route en controledekking | ontwerper die zelf meet (geen aparte verkenner) → verhelderaar → poort → auteur → eerstejaars + onderwijskundige; pre-commit en een schone Sphinx-build |
+| Historische referentie en motivering | **#160** (PGM2 week 5): hetzelfde soort werk in hetzelfde vak en op hetzelfde practicumproject, met dezelfde beoordelaars en een volledige kwaliteitsbasis. #160 draaide al onder de #203-loop (`48a108be`), dus deze proef vergelijkt een route *met* en *zonder* aparte verkenner, niet het oude proces met het nieuwe. |
+| Procescommit, model en meetdefinitie | `723688ac`; Claude Opus 5.5; cumulatieve `subagent_tokens` uit de verbruiksmelding na elke agentstap, zonder orkestratie |
+| Referentietotaal en 70%-grens | 1.260.296 (de meetregels op #160 en PR #264, zonder de oude triage-agent); grens **882.207** |
+| Verantwoordelijke voor latere lezing en les | de vakdeskundige |
+
+### Uitkomst van proef 2, 24 september 2026
+
+| Fase | #160 (referentie) | #270 |
+|---|---:|---:|
+| verkenner + ontwerper | 82.977 + 93.152 = 176.129 | 200.332 (gecombineerd) |
+| verhelderaar | 126.190 | 112.219 |
+| auteur, oplevering | 375.221 | 388.349 |
+| twee beoordelaars | 269.049 | 282.229 |
+| auteur, herstel | 151.098 | **niet beschikbaar** |
+| herstelbeoordeling | 162.609 (twee beoordelaars) | 73.605 (één beoordelaar) |
+| lezing orkestratordiff | - | 62.917 (twee lezingen) |
+| **totaal** | **1.260.296** | **1.119.651 plus het onbekende auteursherstel** |
+
+- **Doel niet gehaald.** Na de beoordeling stond de stand op 983.129, al boven de grens van
+  882.207. De vakdeskundige koos gericht doorgaan, met een herziene grens van 1.250.000.
+- **Tegen de herziene grens niet vast te stellen**, want het auteursherstel stopte op de
+  sessielimiet zonder verbruiksmelding.
+- **Vergelijkbaar deel.** Zonder de lezingen van de orkestratordiff, die #160 niet had, is het
+  bekende totaal 1.056.734: 83,8% van de referentie, plus het herstel.
+
+*Achteraf, niet in de afspraken vooraf.* Het C2 vulde de criteria aan tot zestien. De
+orkestrator legde vóór de keuze ook #134, #103 en #168 als referentie voor, met hun beperkingen.
+Dat gebeurde in het gesprek met de vakdeskundige en staat niet op GitHub.
+
+**Wat de proef liet zien.** Het samenvoegen van verkenner en ontwerper bespaarde niets. De
+gecombineerde stap kostte 200.332 tokens, tegen 176.129 voor de twee losse stappen bij #160. Van
+de bekende fasen had alleen de herstelbeoordeling een groot verschil: 89.004 tokens minder. De
+verhelderaar was 13.971 goedkoper. Zonder het auteursherstel en zonder de lezingen van de
+orkestratordiff is het bekende verschil netto 52.464 tokens. Of #270 per saldo goedkoper was dan
+#160, is niet vast te stellen. Het auteursherstel kostte bij #160 151.098 tokens. Kostte het bij
+#270 minstens 203.562 (1.260.296 min 1.056.734), dan was er geen besparing.
+
+Het verschil in de herstelbeoordeling komt uit de uitkomst van de beoordeling, en niet uit de
+regels. De herstelregels in `loop.md` zijn bij `48a108be` en `723688ac` gelijk. Bij #160
+blokkeerden beide beoordelaars (PR #264, *"B1 (AC3, beide beoordelaars)"*), bij #270 alleen de
+onderwijskundige. Daardoor volgde maar één herstelbeoordeling. Het komt niet uit de route die
+deze proef testte.
+
+**Kwaliteit.** De verhelderaar gaf AKKOORD. De poort week bij twee van de twaalf voorlegpunten af van de
+aanbeveling: V2 (twee colleges in plaats van één, wat de omvang vergrootte) en V3 (het toernooi
+vervalt helemaal). De oplevering kreeg twee
+terechte blokkades, net als #160, en beide waren na één herstel opgelost. De lezing van de
+orkestratordiff ving een plek die de orkestrator had gemist; zie de bevinding *Een zoekpatroon uit bekende
+formuleringen vindt alleen bekende formuleringen* in `bevindingen.md`. Een waarneming in de les is er nog niet: *niet vastgesteld*.
+
+**Besluit over voortzetting** ligt bij de vakdeskundige, met beide proeven nu uitgevoerd.
+
 ## Meten en reageren
 
 De orkestrator registreert na iedere agentstap de beschikbare tokens, duur,

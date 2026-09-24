@@ -19,8 +19,10 @@ html:
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
+# De hele map, niet $(BUILDDIR)/*: die glob slaat verborgen mappen over, en myst-nb
+# bewaart de notebookcache in $(BUILDDIR)/.jupyter_cache.
 clean:
-	rm -rf $(BUILDDIR)/*
+	rm -rf $(BUILDDIR)
 	rm -rf $(SOURCEDIR)/.jupyter_cache
 
 # Ook `extensions/` volgen: de stijlen en de JavaScript van de interactieve cellen
