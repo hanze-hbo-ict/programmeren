@@ -694,8 +694,10 @@ sinds de herziening van week 4 (`a20337e9`, `2bf46a94`). De vakdeskundige besloo
 **Ging er een beoordelaar overheen?** Ja, een verse redacteur, op de diff en het letterlijke
 besluit (33.685 tokens, 2 min 23 s). Oordeel: AKKOORD MET PUNTJES, 0 blokkades. De orkestrator
 had in de PR-beschrijving *twee* em-dashes geteld: `grep -n` telt regels en geen voorkomens. De
-puntjes over de afbakening (*het boek*, en een verwijzing naar *Reikwijdte*) zijn verwerkt. De
-vraag of de toestemming ook voor de en-dash geldt, ligt bij de vakdeskundige.
+puntjes over de afbakening (*het boek*, en een verwijzing naar *Reikwijdte*) zijn verwerkt. Op
+de twee vragen die de redacteur opriep, antwoordde de vakdeskundige *"Allebei ja"*: de
+toestemming geldt ook voor de en-dash, en `README.md` telt als intern. Die aanvulling is
+vastgelegd zonder nieuwe nalezing.
 
 ### 24 september 2026, `make clean` wist de notebookcache niet
 
