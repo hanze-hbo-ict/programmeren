@@ -880,7 +880,8 @@ raadt met willekeur en laat zich niet vast toetsen. Vastgesteld door de vakdesku
 CodingBat-opgaven zijn op zichzelf nuttig, en dat één andere opgave ook
 zelfcontrolerend is, is geen reden om CodingBat te verplaatsen of te
 verkleinen. Een auteur mag er bij een latere herziening een goede, eigen plek
-voor vinden. De formulering hierboven noemt daarom niet langer "enige" maar
+voor vinden. Deze formulering is strenger dan de oorspronkelijke woorden en is door
+de vakdeskundige bevestigd op 24 september 2026. De formulering hierboven noemt daarom niet langer "enige" maar
 "grootste"; de conclusie dat het recept niet in een tweede college landt,
 blijft ongewijzigd.
 

@@ -679,22 +679,24 @@ Hier hoort wat met de hand is gedaan omdat het te klein leek voor een werkitem.
 
 **Wat het was.** Een leesronde door `rol-beoordelaar-redacteur` over tekst die de
 orkestrator schreef en die zonder rol op `master` kwam: #252, #255, #258, #275,
-commit `cb1d830f` (in #260), en de verslagen #251 en #274. De C6 en twee vervolgen
-staan op #203.
+commit `cb1d830f` (in #260), en de verslagen #251 en #274. De C6, drie vervolgen en
+de meetregels staan op #203.
 
 **Waarom buiten de lus.** Geen nieuw werk maar een gemiste stap: `/orc` schrijft voor
 dat een besluitdiff van de orkestrator onafhankelijk wordt getoetst vóór het
 merge-aanbod, en dat was bij deze PR's niet gebeurd. Aanleiding was de vraag van de
-vakdeskundige *"waarom waren hier de rollen niet gedraaid en moest ik er om vragen?"*.
+vakdeskundige *"waarom waren hier de rollen niet gedraaid en moest ik er om vragen?"*
+(in het gesprek; niet op GitHub).
 
 | Stap | Tokens (cumulatief) | Duur | Uitkomst |
 |---|---:|---|---|
-| redacteur, eerste poging | niet vastgesteld | - | afgebroken bij het einde van de vorige sessie, vóór enige beoordeling |
+| redacteur, eerste poging | niet vastgesteld | - | afgebroken door de orkestrator bij het einde van de vorige sessie; niets geplaatst |
 | redacteur, C6 | 163.427 | 13 min 2 s | BLOKKEER op #258, #275, #251, #274 (10 moetpunten, alle corrigeren) |
 | redacteur, herstel | 180.910 | 1 min 32 s | AKKOORD MET PUNTJES; 1 moetpunt deels, 1 nieuwe onjuiste bewering |
 | redacteur, puntjes | 189.325 | 51 s | AKKOORD |
+| redacteur, vervolg 3 (deze vastlegging) | 196.661 | 59 s | AKKOORD MET PUNTJES |
 
-Bron: het verbruiksrapport per agent. Orkestratie niet meegeteld.
+Bron: het verbruiksrapport per agent, vastgelegd op #203. Orkestratie niet meegeteld.
 
 **Wat het vond.** Geen besluit bleek onjuist vastgelegd; niets is teruggedraaid. De
 fouten zaten eromheen: een telling in een conventie, een datering (#275), toeschrijvingen
@@ -705,8 +707,9 @@ meting volgde. In het herstel zette de orkestrator nog één onjuiste bewering o
 **Besluit van de vakdeskundige bij deze ronde.** Bij #275 wees de redacteur erop dat de
 formulering (*"geen reden om CodingBat te verplaatsen of te verkleinen … een goede, eigen
 plek"*) strenger is dan wat de vakdeskundige zei (*"auteur mag er een goede plek voor
-vinden"*). De vakdeskundige koos op 24 september 2026 voor de strenge formulering; de
-tekst blijft zoals hij staat.
+vinden"*). De vakdeskundige koos op 24 september 2026 voor de strenge formulering (in
+het gesprek; niet op GitHub); de tekst blijft zoals hij staat, en de bevestiging staat
+bij het besluit in `curriculum/uitgangspunten.md`.
 
 ### 23 september 2026, curriculumbesluiten vóór het C4 van #160
 
