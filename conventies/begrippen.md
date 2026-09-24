@@ -315,7 +315,7 @@ automatisch.
   onder de accolade, terwijl de zin eronder `f(2) = 2 * 2 + 3` narekent en
   *berekening* schrijft: het algemene woord in de vorm, het bijzondere in het
   voorbeeld. `swap_ends(s)` verwisselt twee tekens en rekent niets uit, en is
-  dus wel een handeling en geen berekening. Vervang het ene woord dus niet
+  wel een handeling en geen berekening. Vervang het ene woord daarom niet
   automatisch door het andere.
 
 ## Engelse termen die we niet vertalen

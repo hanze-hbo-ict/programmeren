@@ -681,5 +681,5 @@ twintig die er nu staan.
   Wie hem geeft en meet, kan de eerste **B**-tijden van week 4 aanleveren. Tot
   die er zijn staan alle twintig blokken als richttijd, en zo horen ze gelezen te
   worden.
-- Deze handleiding beschrijft het materiaal zoals het op **21 september 2026** in
+- Deze handleiding beschrijft het materiaal zoals het op **23 september 2026** in
   de repository staat.
