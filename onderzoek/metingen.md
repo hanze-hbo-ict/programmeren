@@ -681,17 +681,18 @@ Hier hoort wat met de hand is gedaan omdat het te klein leek voor een werkitem.
 en myst-nb bewaart de notebookcache in `build/.jupyter_cache`. Na een clean bleef de cache dus
 staan. `conventies/technische-conventies.md` zegt al dat `make clean` "build/ en de
 notebook-cache" verwijdert; alleen het `Makefile` deed dat niet. Het doel wist nu de hele map
-`build/`. Opgemerkt tijdens #268; zie de sectie van dat werkitem.
+`build/`. Opgemerkt tijdens #268; zie de sectie *Werkitem #268* (PR #286).
 
 **Waarom het buiten de lus bleef.** Eén gemeten oorzaak en een ingreep van één regel. De
-vakdeskundige koos op 24 september 2026 in de sessie van de orkestrator voor "de correctie in
-een eigen PR", niet voor een werkitem.
+vakdeskundige koos op 24 september 2026 in de sessie van de orkestrator: *"Maak de correctie in
+een eigen PR"*. Er kwam dus geen werkitem.
 
 **Gemeten.** In een verse worktree gaf een eerste build 72 keer *Executed notebook*. Daarna
 `make clean`: `build/` bestaat niet meer. Een tweede build gaf opnieuw 72 keer *Executed
-notebook*, 0 waarschuwingen en 0 fouten. Beide builds meldden daarnaast 15 keer *Using cached
-notebook*. Dat zijn notebooks met dezelfde code, die binnen één build een cachepost delen (ID 3
-en 4); dat getal hangt niet af van de clean.
+notebook*, 0 Sphinx-waarschuwingen en 0 fouten. Beide builds meldden daarnaast 15 keer *Using
+cached notebook*, in beide gevallen voor dezelfde notebooks: 12 keer ID 4, 2 keer ID 3 en 1 keer
+ID 21. Die notebooks hebben dezelfde code als een notebook dat eerder in dezelfde build draaide,
+en delen daarom diens cachepost. Dat getal hangt niet af van de clean.
 
 **Ging er een beoordelaar overheen?** Nog niet bij het openen van de PR.
 
