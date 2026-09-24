@@ -723,6 +723,35 @@ BLOKKEER (40.834 tokens, 3 min 24 s): de notitie noemde twee cache-ID's, maar de
 drie. De orkestrator had dat getal niet geteld. Na het herstel gaf een tweede, verse redacteur
 AKKOORD (27.066 tokens, 1 min 20 s). Beide oordelen staan op PR #287.
 
+### 23 september 2026, min-max naar de extra-opgave van PGM2 week 7
+
+**Wat het was.** Een besluit van de vakdeskundige vastgelegd in `curriculum/leerlijn.md`
+(een alinea en een regel in *Wat een week aan een latere week aflevert*) en in het
+besluitenregister van `curriculum/uitgangspunten.md`. Het besluit: min-max is de
+extra-opgave van week 7, als afsluiting van een lijn van drie extra-opgaven over
+Vier op een rij. Het kwam in het gesprek waarin de werkitems #267 tot en met #271 werden
+opgesteld; daar stond het alleen in de werkitems, en een besluit dat niet in
+`curriculum/` landt, is niet genomen.
+
+**Waarom het buiten de lus bleef.** Het is de vastlegging van een genomen besluit,
+geen herziening van materiaal. `source/` is niet geraakt.
+
+**Ging er een beoordelaar overheen?** Nog niet bij het openen van de PR; de
+vakdeskundige leest de formulering in de PR zelf. Op 24 september 2026 wel: een redacteur
+las de bijgewerkte PR (AKKOORD MET PUNTJES, zie de reactie op PR #272). Zijn acht puntjes
+zijn verwerkt; de regel van #270 in de afleveringstabel is daarbij niet aangepast.
+
+**Bijgewerkt op 24 september 2026 (PR #272).** De PR lag open terwijl #270 week 6 uitvoerde.
+Daardoor waren drie passages verouderd: week 6 heette nog niet uitgevoerd,
+`13_vier_op_rij_speler` stond volgens de tekst nog onder week 6, en week 7 wachtte nog op de
+spelersstructuur. Die passages zijn bijgewerkt naar de stand na #270. Drie formuleringen van
+de orkestrator zijn vervangen:
+- "past niet bij het onderwerp" wordt "past niet helemaal", zoals in #271;
+- "het haakje is `__lt__`" wordt "`__lt__` kan dienen om bordtoestanden te vergelijken",
+  zoals in #271;
+- de heropenvoorwaarde komt nu van de vakdeskundige: min-max past goed bij de extra-opgaven
+  van week 5 en 6, en het vervangen daarvan is een reden om te heroverwegen.
+
 ### 23 september 2026, curriculumbesluiten vóór het C4 van #160
 
 **Wat het was.** Vijf besluiten van de vakdeskundige vastgelegd in `curriculum/` en
