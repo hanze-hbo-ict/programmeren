@@ -285,8 +285,8 @@ assert repr(Wolf("Grijs")) == "Creature(Grijs, level 1, hp 50/50, attack 15, def
 
 Een wachttoren is geen wezen. Hij heeft geen hp en geen vaste aanvalskracht, en
 geen enkele versie van een methode uit `Creature` past bij hem. Toch kan hij
-meevechten, als hij methoden met dezelfde namen heeft als die een gevecht
-gebruikt, elk met zijn eigen werking.
+meevechten, als hij de methoden en attributen heeft die een gevecht gebruikt,
+elk met zijn eigen werking.
 
 Een `Turret` werkt helemaal anders dan een `Creature`:
 
@@ -521,7 +521,7 @@ Je hebt vijf nieuwe soorten strijders, en het meeste van hun gedrag staat maar o
 één plek. Wat alle wezens delen, staat in `Creature`; wat alleen beesten delen, in
 `Beast`; en elke subklasse schrijft alleen wat anders is. `battle_round` en
 `battle` werken met al die soorten, en met een wachttoren die helemaal geen wezen
-is, omdat ze alleen de methoden aanroepen die elke strijder heeft.
+is, omdat ze alleen de methoden en attributen gebruiken die elke strijder heeft.
 
 Op een paar plekken valt je code nu nog stilletjes terug: bij foute invoer in de
 constructor, en bij een subklasse die `special_move` vergeet. In week 7 kom je
