@@ -15,6 +15,9 @@ object verborgen voor de buitenwereld, en loopt alles via zijn methoden. Met een
 `_` voor de naam van een attribuut en met `@property` maak je dat in Python
 zichtbaar.
 
+Bij **compositie** heeft een object andere objecten als onderdeel, zoals een
+studiegroep die uit studenten bestaat.
+
 Aan het eind van de week kun je een klasse ontwerpen die haar eigen staat
 bewaakt, en uitleggen wat dat oplevert tegenover een attribuut of een
 dictionary waar iedereen bij kan.
