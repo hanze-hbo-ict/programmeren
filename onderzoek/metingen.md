@@ -1658,7 +1658,7 @@ Omvang L, procescommit `723688ac`. Dit is de L-proef van #203; zie
 | auteur, herstel 1 van 1 (hervat) | niet beschikbaar | circa 18 min (volgens de rol) | B1, B2 en alle puntjes verwerkt |
 | beoordelaar-onderwijskundige, herstelmodus | 73.605 | 2 min 44 s | AKKOORD MET PUNTJES, 2 puntjes |
 | beoordelaar-redacteur, lezing orkestratordiff | 32.095 | 1 min 17 s | BLOKKEER, 1 blokkade, 5 puntjes |
-| beoordelaar-redacteur, herstellezing | 30.822 | 1 min 14 s | AKKOORD MET PUNTJES, 3 puntjes (#294) |
+| beoordelaar-redacteur, herstellezing | 30.822 | 1 min 14 s | AKKOORD MET PUNTJES, 4 puntjes, waarvan 3 in #294 |
 | **vastgesteld totaal agents** | **1.119.651** | | zonder het auteursherstel |
 
 Bron: `subagent_tokens` uit de verbruiksmelding na elke agentstap. Het auteursherstel heeft geen
@@ -1671,9 +1671,9 @@ is twee keer gelezen.
 
 De vakdeskundige besliste vijf keer:
 1. De L-proef met #160 als referentie.
-2. Het C4 op twaalf voorlegpunten en de spelersinterface. Vier daarvan weken af van de
-   aanbeveling van de ontwerper: V2 (twee colleges), V3 (het toernooi vervalt helemaal), V6 (alle
-   drie) en V7 (geen *tussenklasse*).
+2. Het C4 op twaalf voorlegpunten en de spelersinterface. Twee daarvan weken af van de
+   aanbeveling van de ontwerper: V2 (twee colleges in plaats van één) en V3 (het toernooi vervalt
+   helemaal, ook niet naar week 7).
 3. Gericht doorgaan na het C7 BLOKKEER, met een herziene grens van 1.250.000.
 4. Bij het mergebesluit: de puntjes rechtzetten, `begrippen.md` laten aansluiten en `cols_to_win`
    laten staan.

@@ -1225,7 +1225,7 @@ het patroon ving alleen de formuleringen die ik al kende."*
 voordat je een nul vertrouwt*. Die ijking bewijst dat het patroon werkt. Ze bewijst niet dat het
 patroon alles vangt. Een patroon dat uit de bekende gevallen is opgebouwd, haalt zijn ijking
 altijd, en daarom is de nul erna geen bewijs van volledigheid. Bij het gelijktrekken van een term
-is volledigheid juist waar het om draait.
+draait het om volledigheid.
 
 **Wat het veranderde.** De weekpagina is hersteld in `6a45a921`, en een verse redacteur heeft de
 reparatie gelezen. De regel *wie het zelf doet, laat het lezen* ving hier een echt defect in
@@ -1238,21 +1238,22 @@ patroon op de oude formulering meet hoeveel gevallen er over zijn, niet hoeveel 
 
 **Wat er gebeurde.** Bij #270 leverde de hervatte auteur zijn herstel volledig af: een
 herstelbijlage, de bijgewerkte C5-kern en commit `669c1fe7`. Daarna stopte hij op de sessielimiet
-(HTTP 429, `req_011CfNLibVDp2Xev4pRA5LjP`). De melding van de harness had de status *failed* en
-geen `subagent_tokens`. Van de agentstap die bij de L-proef het meest onzeker was, ontbreekt zo
+(HTTP 429). De taakmelding van de harness aan de orkestrator had de status *failed*, request-ID
+`req_011CfNLibVDp2Xev4pRA5LjP`, en geen `subagent_tokens`. Van de agentstap die bij de L-proef het meest onzeker was, ontbreekt zo
 het verbruik.
 
 **Waarom het ertoe doet.** De budgetreactie uit [203-proef.md](203-proef.md) hangt af van een
 cumulatieve stand na elke agentstap. Door deze ene ontbrekende melding kon de herziene grens van
 1.250.000 niet worden getoetst. De proef eindigt daardoor op *niet vast te stellen* in plaats van
-op een getal. Er speelde nog iets mee. De bevinding van 23 september hierboven vroeg al om vooraf
-vast te leggen hoe een hervatte agent telt. Die afspraak is bij de start van #270 niet gemaakt.
+op een getal. Er speelde nog iets mee. De bevinding *Een hervatte agent meldt zijn tokens als lopend
+totaal* (23 september) vroeg al om vooraf vast te leggen hoe een hervatte agent telt. Die afspraak is bij de start van #270 niet gemaakt.
 Dat had hier niets uitgemaakt, want er kwam geen getal. Maar het is de tweede keer dat de
-hervatte auteur de meting van een proef onzeker maakt.
+hervatte auteur de meting van een werkitem onzeker maakt. De eerste keer was #273, dat geen
+proef was.
 
 **Wat het veranderde.** In [metingen.md](metingen.md) staat de stap als *niet beschikbaar*, en in
 de uitkomst van proef 2 staat het totaal als *1.119.651 plus het onbekende auteursherstel*. Er is
 niet geschat. In de instructies is niets veranderd. Voorstel voor de evaluatie van #203: **leg de
-telling van een hervatte agent vast bij de keuze van de referentie** (de bevinding van 23
-september), en **noteer bij een melding zonder verbruik vóór de volgende agentstart dat de
+telling van een hervatte agent vast bij de keuze van de referentie** (de bevinding over het
+lopende totaal), en **noteer bij een melding zonder verbruik vóór de volgende agentstart dat de
 budgetcontrole vervalt**, zodat de mens weet dat hij zonder stand beslist.
