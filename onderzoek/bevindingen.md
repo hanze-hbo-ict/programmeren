@@ -1153,3 +1153,43 @@ voorstel naar de volgende procesronde (#203):
   ook niet als de vakdeskundige erom vraagt - de vraag *"alles checks/rollen hebben
   het bekeken?"* hoort de orkestrator zelf te stellen, niet de vakdeskundige.
 
+
+## Een getal dat de orkestrator opschrijft, heeft hij niet altijd geteld - 24 september 2026
+
+**Wat er gebeurde.** Na #268 schreef de orkestrator twee korte vastleggingen. In beide stond een
+getal dat hij niet had geteld, en in beide gaf een verse redacteur daarop BLOKKEER:
+- **PR #286**, de metingen van #268. Er stond: *"De mens besliste na het C7 twee keer."* Het
+  waren er vier: de plaats van opdracht 3, het verwerken van de puntjes, de bijzin en de merge.
+  De bijzin stond in de lijdende vorm, alsof hij vanzelf kwam. Dat oordeel staat als
+  [review op PR #286](https://github.com/hanze-hbo-ict/programmeren/pull/286).
+- **PR #287**, de correctie van `make clean`. Er stond dat de 15 gedeelde cacheposten bij
+  *"ID 3 en 4"* hoorden. Volgens de logs zijn het er drie: 12 keer ID 4, 2 keer ID 3 en 1 keer
+  ID 21. De orkestrator had twee ID's uit een uitsnede van het log overgenomen, in plaats van
+  ze te tellen met `grep | sort | uniq -c`. Dat oordeel staat als
+  [review op PR #287](https://github.com/hanze-hbo-ict/programmeren/pull/287).
+
+In dezelfde sessie noemde de orkestrator bovendien in een taakprompt een basiscommit (*"4a…"*)
+die niet bestond. De beoordelaar merkte dat op; het oordeel veranderde er niet door.
+
+**Waarom dit een patroon is.** `CLAUDE.md` zegt *meet het ding zelf*. De orkestrator doet dat
+wel bij beweringen over het materiaal, maar niet bij de getallen in zijn eigen verslag. Het
+aantal besluiten en een aantal cacheposten voelen als samenvatting, niet als meting, en worden
+dus uit het geheugen opgeschreven. Het is dezelfde soort fout als bij #280 (*"gaat weg"* waar
+de vakdeskundige *"mogen weg"* zei): orkestratortekst die naast de bron gelegd moet worden en
+dat niet vanzelf wordt. Ook de voorbeelden uit de bevinding van 23 september over #273
+(*"E en F wisselen"*) en #267 horen in deze rij.
+
+**Wat er deze keer anders ging.** Beide PR's gingen naar een verse redacteur voordat ze ter merge
+werden aangeboden. De orkestrator vroeg daar zelf om, zonder dat de vakdeskundige erom vroeg.
+Dat is het tweede voorstel uit de vorige bevinding. Het staat nog niet in de instructies en
+werd hier toch toegepast. Beide fouten zijn zo vóór de merge gevonden en kostten elk één
+herstelronde: 75.623 + 34.121 tokens voor #286 en 40.834 + 27.066 tokens voor #287. Dit rust
+op één sessie.
+
+**Wat het veranderde.** De twee blokkades zijn hersteld in PR #286 en PR #287. In de
+instructies is nog niets veranderd. Er gaan twee voorstellen naar de volgende procesronde (#203):
+- **Een getal in orkestratortekst komt met de opdracht die het opleverde**, in de herstelbijlage
+  of in de PR-beschrijving. Een getal zonder opdracht is niet gemeten, en dan hoort het er niet
+  te staan.
+- **Maak het tweede voorstel van de vorige bevinding vast**, geen merge van orkestratortekst
+  zonder onafhankelijke lezer. Deze sessie laat zien dat het werkt, en ook dat het nodig blijft.
