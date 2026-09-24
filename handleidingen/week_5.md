@@ -30,13 +30,15 @@ erkende afwijking, vastgelegd in `curriculum/uitgangspunten.md`
 | 2 | Werkcollege | `source/practicals/5b_boter_kaas_eieren.ipynb` |
 | 3 | Tentamen | Geen nieuw lesmateriaal - zie sectie 4 |
 
-**Twee bestanden dragen deze week geen begeleide bijeenkomst.**
+**Zes onderdelen dragen deze week geen begeleide bijeenkomst.**
 `source/practicals/5a_ascii_art.ipynb` (6 opdrachten) en de vijf opgavebundels
-in `source/problems/` - `5_opstap.ipynb`, `5_basis.ipynb`,
-`5_mandelbrot_opstap.md`, `5_mandelbrot_basis.md` en `5_extra.md` - zijn
-zelfstandig werk, dat plaatsvindt náást bijeenkomst 1 en 2 in plaats van in een
-eigen derde bijeenkomst. Zie *De bijeenkomstindeling van week 5* hieronder voor
-de reden.
+in `source/problems/` zijn zelfstandig werk, dat plaatsvindt náást bijeenkomst
+1 en 2 in plaats van in een eigen derde bijeenkomst. `5_opstap.ipynb`,
+`5_basis.ipynb`, `5_mandelbrot_opstap.md` en `5_mandelbrot_basis.md` horen bij
+de verplichte route; de eerste twee bouwen het rasterwerk op en de twee
+Mandelbrot-opgaven vormen samen de verplichte kern. `5_extra.md` is de
+facultatieve PNG-verkenning en heeft geen inlever- of tentamenroute. Zie *De
+bijeenkomstindeling van week 5* hieronder voor de reden.
 
 Daarnaast staan er vier overzichtspagina's die je zelf niet hoeft te
 behandelen: `source/course/week_5.md` (`## Geneste lussen en 2D-lijsten`) vat
