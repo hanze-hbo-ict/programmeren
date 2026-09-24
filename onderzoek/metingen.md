@@ -1591,16 +1591,21 @@ in PR #289, gemerged als `620f0dd5`. Het gaat om:
 Herstelstand bij afsluiting: ontwerp 0/1, oplevering #269 0/1. Puntjes kostten geen ronde.
 
 De mens besliste na het C7 twee keer:
-1. Puntje 1 tot en met 3 worden verwerkt, en puntje 4 gaat naar #265. Dat gebeurde in een
+1. Puntje 1 tot en met 3 worden verwerkt, en puntje 4 gaat naar #265. De verwerking staat in
+   de herstelbijlage op PR #289. De doorverwijzing staat in een
    [reactie op #265](https://github.com/hanze-hbo-ict/programmeren/issues/265#issuecomment-5812541934).
 2. PR #289 wordt gemerged, en `7a_lists_advanced` moet alsnog worden herzien. Dat laatste
    wijzigt V3 uit het C4 (*geen apart werkitem voor `7a`*). Het werkitem is #290.
 
 **De herstelnalezing ving opnieuw wat de reparatie opriep.** Puntje 1 verplaatste de link naar
-`7a` van een passage met `is` op strings naar een passage met twee namen voor één lijst. De verse
-eerstejaars volgde die link en kwam direct uit bij `7a` cel 60 ("de shadow copy `M` verwijst nog
-steeds naar `L`", met namen die in die sectie niet voorkomen), onder een kop die een toewijzing
-een *kopie* noemt. De onjuistheden in `7a` stonden al in de meetbasis van het C2. Nieuw was dat
-de link van week 5 er nu op uitkomt. Die waarneming leidde tot het herziene besluit over `7a`.
-Het is de tweede keer na #268 dat een verse nalezer iets vindt dat pas ontstaat door de
-reparatie van puntjes.
+`7a` van een passage met `is` op strings naar de sectie *Lists en shallow copy*, waarin twee namen
+één lijst aanwijzen. De verse eerstejaars volgde die link. Het anker komt uit op een kop die een
+toewijzing een *copy* noemt. De eerste uitlegtekst eronder is cel 60: "de shadow copy `M`
+verwijst nog steeds naar `L`", met namen die in die sectie niet voorkomen. Cel 60 stond al in de
+meetbasis van het C2. De kop is voor het eerst gemeld in de herstelnalezing. Nieuw was vooral dat
+de link van week 5 er nu op uitkomt. Het herziene besluit over `7a` volgde op die waarneming;
+zie #290.
+
+Dit is de tweede keer, na #268, dat een verse nalezer iets vindt dat pas zichtbaar wordt door de
+reparatie van puntjes. Het verschil: bij #268 was het gevonden probleem zelf nieuw, hier was
+vooral de toegang tot een bestaand probleem nieuw.
