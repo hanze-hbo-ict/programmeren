@@ -44,6 +44,12 @@ forceer geen Nederlandse vertaling. Voor dit materiaal werkt dat zo uit:
 | De methode `__init__` | **constructor** | - | 30×, zonder concurrent |
 | Toestand alleen via methoden bereikbaar maken | **encapsulatie** | - | Nieuw in PGM2 week 5; niet *inkapseling*. Vastgesteld door de vakdeskundige op 23 september 2026 |
 | Object dat andere objecten als onderdeel heeft | **compositie** | - | Nieuw in PGM2 week 5; niet *objectcompositie*, *samenstelling* of *heeft-een-relatie*. *Functiecompositie* nooit afkorten tot *compositie*; zie hieronder. Vastgesteld door de vakdeskundige op 23 september 2026 |
+| Een klasse krijgt de attributen en methoden van een andere klasse mee | **overerving** | - | Nieuw in PGM2 week 6. Vastgesteld door de vakdeskundige op 24 september 2026, bij de poort van #270 |
+| De klasse die erft | **subklasse** | subclass (practicum-oop) | Nieuw in PGM2 week 6; zie *Overerving* hieronder. Vastgesteld door de vakdeskundige op 24 september 2026 |
+| De klasse waarvan geërfd wordt | **superklasse** | basisclass (practicum-oop, 2×) | Nieuw in PGM2 week 6; niet *basisclass* en niet *basisklasse*. Vastgesteld door de vakdeskundige op 24 september 2026 |
+| Een subklasse geeft een geërfde methode een eigen versie | **overschrijven** (een methode) | override, overriden (practicum-oop) | Nieuw in PGM2 week 6. Vastgesteld door de vakdeskundige op 24 september 2026 |
+| Dezelfde aanroep geeft ander gedrag, afhankelijk van het object | **polymorfisme** | - | Nieuw in PGM2 week 6. Vastgesteld door de vakdeskundige op 24 september 2026 |
+| Een object doet mee omdat het de aangeroepen methoden heeft, niet omdat het van een bepaalde klasse is | **duck typing** | - | Nieuw in PGM2 week 6; Engels, want er is geen ingeburgerd Nederlands (regel 2). Vastgesteld door de vakdeskundige op 24 september 2026 |
 | Wat er in een object staat: de waarden van zijn attributen | **waarde** | - | Tegenover **identiteit**. Niet *gelijkheid*. Vastgesteld door de vakdeskundige op 23 september 2026 |
 | Welk object het is, los van wat erin staat | **identiteit** | - | Nagevraagd met `is`. Tegenover **waarde**. Vastgesteld door de vakdeskundige op 23 september 2026 |
 | Wat een variabele bevat: ze wijst een object aan | **verwijzing** | - | Niet *aliasing*. Wijzen twee namen hetzelfde object aan, dan is de ene "een tweede naam voor hetzelfde object". Vastgesteld door de vakdeskundige op 23 september 2026 |
@@ -139,6 +145,25 @@ Anders betekent hetzelfde woord in week 5 twee dingen. Toen dit besluit viel,
 schreef `lectures/12a_objecten.ipynb` in zijn terugblik twee keer *compositie* of
 *composities* waar het functiecompositie bedoelde; dat is rechtgezet in
 werkitem #268.
+
+## Overerving
+
+Vastgesteld door de vakdeskundige op 24 september 2026, bij de poort van #270.
+De woorden van de leerlijn worden de termen: *overerving*, *subklasse*,
+*superklasse* en *(een methode) overschrijven*, naast *polymorfisme* en *duck
+typing*. *Klasse* is al vastgesteld, dus de samenstellingen volgen het
+Nederlandse woord en niet *subclass* of *override* uit `curriculum/practicum-oop.md`.
+
+**Tussenklasse wordt geen term.** Een klasse als `Beast` in het practicum, die
+tussen `Creature` en `Dragon` staat, is subklasse en superklasse tegelijk, en zo
+schrijft het materiaal het ook. **Basisclass wordt superklasse**: die vorm stond
+twee keer in de discussievragen van sessie 2 van `practicum-oop.md`.
+
+**Is een blijft gewone taal**, net als *heeft* bij compositie, waar
+*heeft-een-relatie* al is afgewezen: "een draak is een wezen", niet "een
+is-een-relatie". Het materiaal zet overerving en compositie tegenover elkaar met
+die twee gewone werkwoorden, in `lectures/13b_polymorfisme.ipynb`, de basisopgave
+en het practicum van PGM2 week 6.
 
 ## Directory, map, folder
 
@@ -325,7 +350,8 @@ automatisch.
 ## Engelse termen die we niet vertalen
 
 `string`, `dictionary`, `integer`, `float`, `list comprehension`, `recursie`,
-`debuggen`, `commit`, `branch`, `assertion`, `docstring`, `index`, `slice`.
+`debuggen`, `commit`, `branch`, `assertion`, `docstring`, `index`, `slice`,
+`duck typing`.
 
 Introduceer zo'n term bij eerste gebruik kort in het Nederlands. Voor
 eerstejaars is die ene toelichting nodig; daarna volstaat de term.

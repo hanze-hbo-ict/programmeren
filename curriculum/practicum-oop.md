@@ -8,7 +8,7 @@ week wordt geschreven, niet het materiaal zelf.
 | Sessie | PGM2-week | Uitgevoerd in |
 |---|---|---|
 | 1 | 5 | #160, uitgevoerd in `source/practicals/12_creatures.md` |
-| 2 | 6 | de herziening van week 6 |
+| 2 | 6 | #270, uitgevoerd in `source/practicals/13_creatures.md` |
 | 3 | 7 | de herziening van week 7 |
 
 Bij de uitvoering gelden de conventies zoals altijd: de tekst spreekt de student
@@ -21,6 +21,32 @@ besloten, bij de voorbereiding van de poort van #160:
 - **Sessie 3 gooit alleen exceptions en vangt er geen af.** Leeruitkomst P4 vraagt
   het afhandelen van foutcondities; dat is een open punt voor de herziening van
   week 7. Zie `leerlijn.md`, *Wat een week aan een latere week aflevert*.
+
+Bij de poort van #270 (24 september 2026) is voor sessie 2 besloten:
+
+- **Standaardwaarden voor parameters komen in week 6** (V8). Het begrip staat nu
+  in de leerlijn bij week 6, dus `attack(self, target, bonus=0)` en de
+  standaardwaarden van `Dragon` en `Wolf` blijven zoals hieronder. Ook `Goblin`
+  (`hp=40, attack=8, defense=2`) en `Healer` (`hp=60, attack=3, defense=5`)
+  krijgen ze, zoals in de bijlage. Het besluit over `Party` in week 5 blijft staan.
+- **`Turret` en de lus over meerdere rondes** (V9). De limieten van `Turret`
+  worden attributen van het object in `__init__`, geen klasse-attributen: die
+  staan niet in de leerlijn. De lus wordt een functie
+  `battle(side_a, side_b, max_rounds)` met een vaste doelkeuze, het eerste levende
+  lid van de andere partij, en een maximum aantal rondes als argument zonder
+  standaardwaarde. Dat `Turret` in een `Party` `strongest_attacker`,
+  `critical_members` en `heal_all` breekt, wordt in de tekst besproken als risico
+  van duck typing.
+- **`__repr__` van een subklasse** (V10). Een `Dragon` drukt zich af als
+  `Creature(...)`, zoals de `__repr__` van week 5 dat doet; daar komt een vraag
+  over in het practicum. `type(self).__name__` wordt vermeden. Wat sessie 3 over
+  `self.__class__` in `__repr__` zegt, is een aflevering naar #271.
+- **Stille terugval in `special_move`** (V4), zoals hieronder; een gemarkeerde
+  vooruitverwijzing naar week 7 mag.
+- **Een beginstand** (V12): de eindstand van week 5 staat als download in
+  `source/practicals/assets/creatures.py`, voor wie week 5 niet af heeft.
+- **Termen** (V7): *subklasse*, *superklasse* en *overschrijven*, niet
+  *subclass*, *basisclass* of *override*; zie `conventies/begrippen.md`.
 
 Wat hieronder staat is de opzet zoals aangeleverd.
 
