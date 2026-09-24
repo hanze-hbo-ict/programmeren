@@ -1564,3 +1564,48 @@ collegecellen zelf uit. Bij een dependencywijziging vragen `CLAUDE.md` en `loop.
 en eindpunt*) om `make clean && make html`. Die combinatie voerde onveranderde notebooks dus niet
 opnieuw uit. De vakdeskundige koos op 24 september 2026 voor een correctie in een eigen PR:
 #287, genoteerd onder *Werk buiten de lus om*.
+
+## Werkitem #269 — waarde en identiteit in het materiaal van PGM2 week 5
+
+Route *overzichtelijke opgave of sectie*, samen met #268 ontworpen, met twee beoordelaars (C1).
+Omvang M, procescommit `5d101066`, geen #203-proef. Het C2 en het C4 zijn gedeeld met #268; hun
+kosten staan daar. Het C4 legde #269 als tweede oplevering vast. Opgeleverd op 24 september 2026
+in PR #289, gemerged als `620f0dd5`. Het gaat om:
+- een sectie *Waarde en identiteit* met één opdracht aan het eind van `12b_data_object`;
+- opstap opdracht 12 met uitwerking;
+- `is` in plaats van `id()` in `12_basis` stap 1 tot en met 3;
+- één zin in `week_12.md`;
+- *waarde*, *identiteit* en *verwijzing* in `conventies/begrippen.md`, en `is` in
+  `curriculum/leerlijn.md` r169.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator, overdrachten en C7 | niet beschikbaar | niet beschikbaar | mechanische C7, geen tegenspraak |
+| auteur, oplevering | 173.327 | 11 min 58 s | C5, criteria 269-1 t/m 269-9 en B, controles groen |
+| beoordelaar-eerstejaars | 79.355 | 3 min 23 s | AKKOORD MET PUNTJES, 0 blokkades, 3 puntjes |
+| beoordelaar-onderwijskundige | 66.142 | 4 min 10 s | AKKOORD MET PUNTJES, 0 blokkades, 3 puntjes |
+| auteur, puntjes (hervat) | niet vastgesteld; de harness meldt 185.139 | 2 min 33 s | 3 puntjes verwerkt |
+| beoordelaar-eerstejaars, vers, herstelmodus | 27.998 | 1 min 13 s | AKKOORD MET PUNTJES, 2 puntjes buiten de oplevering (`7a`) |
+| **vastgesteld totaal agents** | **346.822** | | exclusief het gedeelde C2 (bij #268) en de hervatte stap |
+
+Herstelstand bij afsluiting: ontwerp 0/1, oplevering #269 0/1. Puntjes kostten geen ronde.
+
+De mens besliste na het C7 twee keer:
+1. Puntje 1 tot en met 3 worden verwerkt, en puntje 4 gaat naar #265. De verwerking staat in
+   de herstelbijlage op PR #289. De doorverwijzing staat in een
+   [reactie op #265](https://github.com/hanze-hbo-ict/programmeren/issues/265#issuecomment-5812541934).
+2. PR #289 wordt gemerged, en `7a_lists_advanced` moet alsnog worden herzien. Dat laatste
+   wijzigt V3 uit het C4 (*geen apart werkitem voor `7a`*). Het werkitem is #290.
+
+**De herstelnalezing ving opnieuw wat de reparatie opriep.** Puntje 1 verplaatste de link naar
+`7a` van een passage met `is` op strings naar de sectie *Lists en shallow copy*, waarin twee namen
+één lijst aanwijzen. De verse eerstejaars volgde die link. Het anker komt uit op een kop die een
+toewijzing een *copy* noemt. De eerste uitlegtekst eronder is cel 60: "de shadow copy `M`
+verwijst nog steeds naar `L`", met namen die in die sectie niet voorkomen. Cel 60 stond al in de
+meetbasis van het C2. De kop is voor het eerst gemeld in de herstelnalezing. Nieuw was vooral dat
+de link van week 5 er nu op uitkomt. Het herziene besluit over `7a` volgde op die waarneming;
+zie #290.
+
+Dit is de tweede keer, na #268, dat een verse nalezer iets vindt dat pas zichtbaar wordt door de
+reparatie van puntjes. Het verschil: bij #268 was het gevonden probleem zelf nieuw, hier was
+vooral de toegang tot een bestaand probleem nieuw.
