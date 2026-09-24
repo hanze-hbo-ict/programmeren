@@ -1208,3 +1208,51 @@ niets veranderd. Er gaan twee voorstellen naar de volgende procesronde (#203):
 - **Breid de lezerregel uit `loop.md` uit tot alle orkestratortekst**, dus ook tot de metingen en
   bevindingen van een werkitem. Nu geldt ze alleen buiten een werkitem en bij een besluitdiff.
   Dat past het tweede voorstel van de vorige bevinding aan, omdat een deel ervan al vastlag.
+
+## Een zoekpatroon uit bekende formuleringen vindt alleen bekende formuleringen - 24 september 2026
+
+**Wat er gebeurde.** Bij #270 vroeg de vakdeskundige de omschrijving van duck typing in
+`conventies/begrippen.md` te laten aansluiten op het materiaal: "methoden en attributen" in plaats
+van "de aangeroepen methoden". De orkestrator zocht de plekken met de formuleringen die hij al
+kende en trok er zeven gelijk (commit `6b06cadb`). De verplichte redactionele lezing van die diff
+vond een achtste: `source/course/week_13.md` r17-18, *"omdat het de methoden heeft die worden
+aangeroepen"*. Dat is de weekpagina, de eerste plek waar de student het begrip leest. De redacteur
+vond de zin niet met een patroon maar met een brede zoektocht op "duck", en schreef over zijn eigen
+patroon: *"Mijn patroon vond in `669c1fe7` de 7 bekende gevallen en er blijven er nu 0 over, dus
+het patroon ving alleen de formuleringen die ik al kende."*
+
+**Waarom het ertoe doet.** De regel in `CLAUDE.md` luidt: *ijk elk patroon op een bekend getal
+voordat je een nul vertrouwt*. Die ijking bewijst dat het patroon werkt. Ze bewijst niet dat het
+patroon alles vangt. Een patroon dat uit de bekende gevallen is opgebouwd, haalt zijn ijking
+altijd, en daarom is de nul erna geen bewijs van volledigheid. Bij het gelijktrekken van een term
+is volledigheid juist waar het om draait.
+
+**Wat het veranderde.** De weekpagina is hersteld in `6a45a921`, en een verse redacteur heeft de
+reparatie gelezen. De regel *wie het zelf doet, laat het lezen* ving hier een echt defect in
+orkestratortekst, en dat was de reden om hem te volgen. In de instructies is niets veranderd.
+Voorstel voor de volgende procesronde (#203): **zoek bij het gelijktrekken van een term op de term
+zelf** (hier "duck"), en beoordeel elke treffer. Zoek niet alleen op de oude formulering. Een
+patroon op de oude formulering meet hoeveel gevallen er over zijn, niet hoeveel er waren.
+
+## Een agent die op de sessielimiet stopt, levert zijn verbruik niet af - 24 september 2026
+
+**Wat er gebeurde.** Bij #270 leverde de hervatte auteur zijn herstel volledig af: een
+herstelbijlage, de bijgewerkte C5-kern en commit `669c1fe7`. Daarna stopte hij op de sessielimiet
+(HTTP 429, `req_011CfNLibVDp2Xev4pRA5LjP`). De melding van de harness had de status *failed* en
+geen `subagent_tokens`. Van de agentstap die bij de L-proef het meest onzeker was, ontbreekt zo
+het verbruik.
+
+**Waarom het ertoe doet.** De budgetreactie uit [203-proef.md](203-proef.md) hangt af van een
+cumulatieve stand na elke agentstap. Door deze ene ontbrekende melding kon de herziene grens van
+1.250.000 niet worden getoetst. De proef eindigt daardoor op *niet vast te stellen* in plaats van
+op een getal. Er speelde nog iets mee. De bevinding van 23 september hierboven vroeg al om vooraf
+vast te leggen hoe een hervatte agent telt. Die afspraak is bij de start van #270 niet gemaakt.
+Dat had hier niets uitgemaakt, want er kwam geen getal. Maar het is de tweede keer dat de
+hervatte auteur de meting van een proef onzeker maakt.
+
+**Wat het veranderde.** In [metingen.md](metingen.md) staat de stap als *niet beschikbaar*, en in
+de uitkomst van proef 2 staat het totaal als *1.119.651 plus het onbekende auteursherstel*. Er is
+niet geschat. In de instructies is niets veranderd. Voorstel voor de evaluatie van #203: **leg de
+telling van een hervatte agent vast bij de keuze van de referentie** (de bevinding van 23
+september), en **noteer bij een melding zonder verbruik vóór de volgende agentstart dat de
+budgetcontrole vervalt**, zodat de mens weet dat hij zonder stand beslist.
