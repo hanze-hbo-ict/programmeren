@@ -18,6 +18,10 @@ zichtbaar.
 Bij **compositie** heeft een object andere objecten als onderdeel, zoals een
 studiegroep die uit studenten bestaat.
 
+Je leert ook **waarde** en **identiteit** uit elkaar houden: twee namen kunnen
+hetzelfde object aanwijzen, en dan zie je een wijziging via de ene naam ook via
+de andere.
+
 Aan het eind van de week kun je een klasse ontwerpen die haar eigen staat
 bewaakt, en uitleggen wat dat oplevert tegenover een attribuut of een
 dictionary waar iedereen bij kan.
