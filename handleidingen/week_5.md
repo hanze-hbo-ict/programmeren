@@ -30,7 +30,7 @@ erkende afwijking, vastgelegd in `curriculum/uitgangspunten.md`
 | 2 | Werkcollege | `source/practicals/5b_boter_kaas_eieren.ipynb` |
 | 3 | Tentamen | Geen nieuw lesmateriaal - zie sectie 4 |
 
-**Twee bestanden dragen deze week geen begeleide bijeenkomst.**
+**Zes onderdelen dragen deze week geen begeleide bijeenkomst.**
 `source/practicals/5a_ascii_art.ipynb` (6 opdrachten) en de vijf opgavebundels
 in `source/problems/` zijn zelfstandig werk, dat plaatsvindt náást bijeenkomst
 1 en 2 in plaats van in een eigen derde bijeenkomst. `5_opstap.ipynb`,

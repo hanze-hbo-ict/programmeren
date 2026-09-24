@@ -21,9 +21,10 @@ geen derde lesmoment met nieuwe leerstof.
 | Bijeenkomst 3 | Tentamen | Geen nieuwe leerstof |
 
 De ASCII-art-opgave hoort bij de zelfstudie. Lees vóór die opgave de korte
-uitleg over `print(..., end=...)` in het college; `end=` zorgt ervoor dat een
-volgende afdruk op dezelfde regel begint. De Mandelbrot-opstap en -basis vormen
-samen de verplichte kern van deze week. [`5_extra`](../problems/5_extra) is
+uitleg over `print(..., end=...)` in [`5a_ascii_art`](../practicals/5a_ascii_art),
+direct na de openingszin; `end=` zorgt ervoor dat een volgende afdruk op dezelfde
+regel begint. De Mandelbrot-opstap en -basis vormen samen de verplichte kern van
+deze week. [`5_extra`](../problems/5_extra) is
 facultatief: daarin maak je een PNG en verken je varianten. Die PNG-verkenning
 is geen voorwaarde voor het tentamen.
 
