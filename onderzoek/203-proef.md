@@ -46,6 +46,158 @@ Kies geen referentie alleen omdat zij duur is. Vergelijk omvang, verantwoordelij
 geleverde artefacten en controledekking. Een onvolledig beoordeelde historische
 run is geen referentie voor dezelfde kwaliteit zonder dat verschil te benoemen.
 
+## Proef 1 vastgelegd: de handleidingen van week 5 en 6 zonder ontwerpstap
+
+Vastgesteld door de vakdeskundige op 21 september 2026, op voorstel van de
+orkestrator. Dit is de S/M-proef uit de fasering hierboven.
+
+**De aanleiding is een waarneming en geen theorie.** Bij #256 - week 4 op de norm
+brengen - liep een volledige ontwerpstap met een herstelronde, terwijl er al twee
+handleidingen op die norm lagen. Wat de ontwerper deed was het model van week 3
+nalopen en op week 4 toepassen. De vakdeskundige verwoordde het zo: *"issue 256
+leest als overkill (lusresultaten) voor een eenvoudige stap"*. De ontwerpstap is
+bij deze vorm van werk het duurste onderdeel en het minst onderscheidende.
+
+**Wat de route wordt.** Voor `handleidingen/week_5.md` en `week_6.md`: C0 en C1,
+dan meteen de auteur, dan de poort bij de vakdeskundige, dan één beoordelaar.
+Geen `rol-curriculumontwerper`.
+
+De auteur krijgt `handleidingen/week_3.md` en `week_4.md` als model en meet de
+blokschema's zelf; hij levert ze als voorstel op, met de herkomstmerken erbij.
+
+**Wat er niet verdwijnt.** De poort en de beoordeling blijven allebei, en dat is
+met opzet - het zijn niet de dure stappen, en ze hebben zich in dit werk bewezen.
+Bij #256 was het menselijke poortbesluit inhoudelijk beter dan het ontwerpvoorstel
+(de oefenmidterm gaat naar het practicum omdat de midterm in week 5 valt), en bij
+#237 ving de beoordelaar twee aantoonbare onwaarheden in de opgeleverde tekst.
+De eis dat elk tijdsblok zijn herkomst draagt blijft eveneens staan; die ving bij
+#237 een telfout die door drie artefacten heen was gelopen.
+
+| Afspraak | Invulling |
+|---|---|
+| Issue en uitvoerautorisatie | nieuw werkitem onder #95 voor week 5; week 6 volgt als de proef houdt |
+| Omvang, bestanden en criteria | M; `handleidingen/week_5.md`, plus `curriculum/uitgangspunten.md` als de poort een afwijking vaststelt; de acht criteria van #256 |
+| Route en controledekking | C0 + C1 → auteur → poort → één beoordelaar; toepasselijke pre-commit, geen Sphinx-build zolang `source/` onaangeroerd blijft |
+| Historische referentie en motivering | **#256**, dezelfde soort werk op dezelfde norm, met dezelfde criteria en dezelfde controledekking. Te verkiezen boven #237, want #237 moest de norm zelf nog uitvinden |
+| Procescommit, model en meetdefinitie | bij start |
+| Referentietotaal en 70%-grens | **693.462** agenttokens (#256); de 70%-grens is **485.423** |
+| Verantwoordelijke vakdeskundige voor latere lezing/les | de vakdeskundige |
+
+**Wat deze proef kan aantonen, en wat niet.** Zij vergelijkt twee werkitems, geen
+twee methoden: week 5 en week 6 zijn andere weken dan week 4, met ander materiaal
+en een andere hoeveelheid bron. Een lager totaal bewijst dus niet dat de
+ontwerpstap overbodig is, alleen dat deze route voor dit soort werk goedkoper
+uitviel. Het omgekeerde is even informatief: komt de beoordelaar met blokkades
+waar #256 er geen had, dan heeft de ontwerpstap gedaan waarvoor zij bestond.
+
+### Uitkomst van proef 1, 24 september 2026
+
+| Werkitem | Agenttokens | t.o.v. #256 | Doel (≥ 30% minder) | Beoordeling |
+|---|---:|---:|---|---|
+| #256, week 4 (referentie, met ontwerpstap) | 693.462 | 100% | - | AKKOORD MET PUNTJES, 0 blokkades |
+| #276, week 5 | 502.819 | 72,5% | **niet gehaald** (27,5%) | **BLOKKEER** op 2 fouten; na één herstel AKKOORD |
+| #280, week 6 | 470.035 | 67,8% | gehaald (32,2%) | AKKOORD MET PUNTJES, 0 blokkades |
+
+**Bron.** De getallen zijn de cumulatieve `subagent_tokens` uit het
+verbruiksrapport dat de orkestrator na elke agentstap krijgt, inclusief herstel-
+en naleesronden. De rollen zelf zien hun teller niet en schreven *"niet
+beschikbaar"*; de rapportgetallen zijn op 24 september 2026 als aanvulling op
+#276 en #280 geplaatst. Orkestratie zit in geen van de drie totalen.
+
+**Drie afwijkingen van wat hier vooraf staat.**
+- Het referentietotaal had vóór de start bevestigd moeten zijn; het is achteraf
+  ingevuld, uit de meting van #256.
+- De budgetreactie is bij #276 niet uitgevoerd. Na het auteursherstel stond de
+  stand op 495.117 (71,4%); de herbeoordeling is gestart zonder de vakdeskundige
+  te vragen.
+- Het totaal van #280 bevat 28.482 beoordelaarstokens voor het nalezen van
+  orkestratorcommits. Bij #256 las geen rol de correcties van de orkestrator. De
+  twee totalen zijn op dat punt niet gelijk opgebouwd.
+
+**Wat de getallen zeggen.** Beide proeven waren goedkoper dan de referentie;
+#280 haalde het doel, #276 niet. De besparing komt uit het weglaten van de
+ontwerpstap (215.006 tokens bij #256). De auteur werd daarbij **duurder**: 343.145
+bij #276 en 293.226 bij #280, tegen 280.463 bij #256 - hij deed een deel van het
+ontwerpwerk zelf.
+
+**Wat de proef vooraf als tegenbewijs aanwees, en wat er gebeurde.** Hierboven
+staat: *"komt de beoordelaar met blokkades waar #256 er geen had, dan heeft de
+ontwerpstap gedaan waarvoor zij bestond."* Bij #276 gebeurde dat. De twee fouten
+waren een voorspelde uitvoer die niet klopte en een telling over te weinig
+bestanden; of een ontwerpstap die had voorkomen, laat de proef niet zien. Na de
+les daaruit in de opdracht van #280 kwamen ze niet terug.
+
+**De vakdeskundige.** Bij #256 veranderde het poortbesluit de indeling; bij #276
+deed een aanvulling van de vakdeskundige tijdens het schrijven dat (de derde
+bijeenkomst is het tentamen). Beide keren op grond van informatie die in geen
+enkel artefact stond. Bij #280 bevestigde de poort het voorstel.
+
+**Besluit over voortzetting** ligt bij de vakdeskundige. De proef geeft gemengde
+uitkomsten: één keer het doel gehaald zonder blokkade, één keer niet gehaald met
+een blokkade.
+
+## Proef 2 vastgelegd en uitgevoerd: PGM2 week 6 (#270), L
+
+Vastgesteld door de vakdeskundige op 24 september 2026, vóór de eerste agentstart, op voorstel
+van de orkestrator ([C1-aanvulling](https://github.com/hanze-hbo-ict/programmeren/issues/270#issuecomment-5813619807)).
+
+| Afspraak | Invulling |
+|---|---|
+| Issue en uitvoerautorisatie | #270 |
+| Omvang, bestanden en criteria | L; de negen criteria van C0; bestanden volgen uit C2 |
+| Route en controledekking | ontwerper die zelf meet (geen aparte verkenner) → verhelderaar → poort → auteur → eerstejaars + onderwijskundige; pre-commit en een schone Sphinx-build |
+| Historische referentie en motivering | **#160** (PGM2 week 5): hetzelfde soort werk in hetzelfde vak en op hetzelfde practicumproject, met dezelfde beoordelaars en een volledige kwaliteitsbasis. #160 draaide al onder de #203-loop (`48a108be`), dus deze proef vergelijkt een route *met* en *zonder* aparte verkenner, niet het oude proces met het nieuwe. |
+| Procescommit, model en meetdefinitie | `723688ac`; Claude Opus 5.5; cumulatieve `subagent_tokens` uit de verbruiksmelding na elke agentstap, zonder orkestratie |
+| Referentietotaal en 70%-grens | 1.260.296 (de meetregels op #160 en PR #264, zonder de oude triage-agent); grens **882.207** |
+| Verantwoordelijke voor latere lezing en les | de vakdeskundige |
+
+### Uitkomst van proef 2, 24 september 2026
+
+| Fase | #160 (referentie) | #270 |
+|---|---:|---:|
+| verkenner + ontwerper | 82.977 + 93.152 = 176.129 | 200.332 (gecombineerd) |
+| verhelderaar | 126.190 | 112.219 |
+| auteur, oplevering | 375.221 | 388.349 |
+| twee beoordelaars | 269.049 | 282.229 |
+| auteur, herstel | 151.098 | **niet beschikbaar** |
+| herstelbeoordeling | 162.609 (twee beoordelaars) | 73.605 (één beoordelaar) |
+| lezing orkestratordiff | - | 62.917 (twee lezingen) |
+| **totaal** | **1.260.296** | **1.119.651 plus het onbekende auteursherstel** |
+
+- **Doel niet gehaald.** Na de beoordeling stond de stand op 983.129, al boven de grens van
+  882.207. De vakdeskundige koos gericht doorgaan, met een herziene grens van 1.250.000.
+- **Tegen de herziene grens niet vast te stellen**, want het auteursherstel stopte op de
+  sessielimiet zonder verbruiksmelding.
+- **Vergelijkbaar deel.** Zonder de lezingen van de orkestratordiff, die #160 niet had, is het
+  bekende totaal 1.056.734: 83,8% van de referentie, plus het herstel.
+
+*Achteraf, niet in de afspraken vooraf.* Het C2 vulde de criteria aan tot zestien. De
+orkestrator legde vóór de keuze ook #134, #103 en #168 als referentie voor, met hun beperkingen.
+Dat gebeurde in het gesprek met de vakdeskundige en staat niet op GitHub.
+
+**Wat de proef liet zien.** Het samenvoegen van verkenner en ontwerper bespaarde niets. De
+gecombineerde stap kostte 200.332 tokens, tegen 176.129 voor de twee losse stappen bij #160. Van
+de bekende fasen had alleen de herstelbeoordeling een groot verschil: 89.004 tokens minder. De
+verhelderaar was 13.971 goedkoper. Zonder het auteursherstel en zonder de lezingen van de
+orkestratordiff is het bekende verschil netto 52.464 tokens. Of #270 per saldo goedkoper was dan
+#160, is niet vast te stellen. Het auteursherstel kostte bij #160 151.098 tokens. Kostte het bij
+#270 minstens 203.562 (1.260.296 min 1.056.734), dan was er geen besparing.
+
+Het verschil in de herstelbeoordeling komt uit de uitkomst van de beoordeling, en niet uit de
+regels. De herstelregels in `loop.md` zijn bij `48a108be` en `723688ac` gelijk. Bij #160
+blokkeerden beide beoordelaars (PR #264, *"B1 (AC3, beide beoordelaars)"*), bij #270 alleen de
+onderwijskundige. Daardoor volgde maar één herstelbeoordeling. Het komt niet uit de route die
+deze proef testte.
+
+**Kwaliteit.** De verhelderaar gaf AKKOORD. De poort week bij twee van de twaalf voorlegpunten af van de
+aanbeveling: V2 (twee colleges in plaats van één, wat de omvang vergrootte) en V3 (het toernooi
+vervalt helemaal). De oplevering kreeg twee
+terechte blokkades, net als #160, en beide waren na één herstel opgelost. De lezing van de
+orkestratordiff ving een plek die de orkestrator had gemist; zie de bevinding *Een zoekpatroon uit bekende
+formuleringen vindt alleen bekende formuleringen* in `bevindingen.md`. Een waarneming in de les is er nog niet: *niet vastgesteld*.
+
+**Besluit over voortzetting** ligt bij de vakdeskundige, met beide proeven nu uitgevoerd.
+
 ## Meten en reageren
 
 De orkestrator registreert na iedere agentstap de beschikbare tokens, duur,

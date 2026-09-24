@@ -2,7 +2,6 @@
 
 ![Schotel](/images/saucer.png)
 
-## Objecten en klassen
+## Use it or lose it en `lambda`
 
-```{tableofcontents}
-```
+Het materiaal voor deze week volgt nog.

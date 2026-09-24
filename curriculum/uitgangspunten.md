@@ -66,12 +66,14 @@ Deze indeling verklaart de directories: `lectures/` hoort bij de eerste bijeenko
 relevant voor de vraag waar context hoort te zitten, want het werkcollege is de
 plek waar een probleem gezamenlijk stap voor stap wordt opgebouwd.
 
-#### Drie erkende afwijkingen
+#### Vijf erkende afwijkingen
 
 De indeling is het uitgangspunt en niet een rooster dat elke week haalt. Bij het
 schrijven van de docentenhandleidingen (#182) zijn twee afwijkingen vastgesteld en
-erkend, en bij de herziening van week 3 (#198) een derde; ze staan hier zodat een
-volgende weekherziening ze niet opnieuw als conflict afleidt.
+erkend, bij de herziening van week 3 (#198) een derde, bij die van week 4
+(#256) een vierde, en bij die van week 5 (#276) een vijfde van een andere soort;
+ze staan hier zodat een volgende weekherziening ze niet opnieuw als conflict
+afleidt.
 
 **Week 1 volgt een flexibele indeling.** Er is geen `problems/` en geen
 `solutions/` voor week 1, en de Picobot-opdrachten beginnen in bijeenkomst 2 als
@@ -93,6 +95,43 @@ bundels. Dat is niet afgeleid maar afgelezen: `3b` laat de student zijn code
 opslaan als `wk3wc2.py` - werkcollege 2 - terwijl het bestand in `lectures/`
 staat. Vastgesteld door de vakdeskundige op 11 september 2026; het vraagt geen
 enkele bestandsverplaatsing.
+
+**Week 4 legt de oefenmidterm in het practicum.** Week 4 heeft twee bestanden in
+`lectures/`, één in `practicals/` en drie opgavebundels. Het werkcollege wordt
+gevuld door `practicals/4_python_bat` - de pagina noemt zichzelf ook zo - en
+`lectures/4b_midterm` schuift naar de derde bijeenkomst, naast de drie bundels.
+De grond is de midterm zelf: die wordt in week 5 afgenomen, dus is het practicum
+van week 4 het oefenmoment. Dat past bij wat een practicum is: de student werkt
+er zelfstandig onder begeleiding en neemt mee wat hij niet afkrijgt, en de
+uitwerkingen staan openbaar in `solutions/4_midterm`. Vastgesteld door de
+vakdeskundige op 18 september 2026; het vraagt geen enkele bestandsverplaatsing.
+
+**Week 5 heeft geen derde lesbijeenkomst; die sessie is het tentamen.** Anders
+dan de vier afwijkingen hierboven gaat dit niet over welke map bij welke
+bijeenkomst hoort, maar over dat een bijeenkomst zelf geen lesmoment is.
+Vastgesteld door de vakdeskundige, gemeld bij #276 op 23 september 2026:
+*"de planning is dat de laatste (derde) sessie van die week gebruikt wordt voor
+het afnemen van de midterm. er blijven in die week dus twee bijeenkomsten over
+voor het materiaal."* Bijeenkomst 1 en 2 dragen het materiaal van week 5;
+bijeenkomst 3 draagt geen lesstof, en de planning van het tentamen zelf valt
+buiten deze repository.
+
+Daarmee vervalt de plek waar het practicum normaal het overtollige
+`practicals/`-bestand opvangt. Week 5 heeft één bestand in `lectures/` en twee
+in `practicals/` (`5a_ascii_art.ipynb`, 6 opdrachten; `5b_boter_kaas_eieren.ipynb`,
+8 opdrachten), naast vijf opgavebundels in `problems/`. Met één lecture-bestand
+past bijeenkomst 1 zonder afwijking. Van de twee `practicals/`-bestanden vult
+`5b_boter_kaas_eieren` het werkcollege: het geeft de klas een volledig
+uitgewerkt voorbeeld voor de richting oost, wat zich rechtstreeks leent voor
+gezamenlijk opbouwen. `5a_ascii_art` - zes opdrachten met oplopende
+moeilijkheid en zonder gegeven tussenstap - schuift niet door naar een derde
+bijeenkomst, want die is er niet, maar naar zelfstandig werk naast de
+opgavebundels van `problems/`.
+
+Het tentamen-feit is vastgesteld door de vakdeskundige. De verdeling van de
+twee `practicals/`-bestanden over het werkcollege en het zelfstandige werk is
+een voorstel van de auteur bij #276, gemeten op 23 september 2026 en ter
+bevestiging bij de poort van dat werkitem.
 
 ## Het referentiemateriaal: tag `v1.0.0`
 
@@ -286,7 +325,8 @@ schrijven met de signature `(char, row_start, col_start, array, n)`.
 `board.py` wordt niet aangeraakt.** Omdat `board.py` de functies zelf definieert,
 importeert het nooit het werk van de student en breekt de afwijking mechanisch
 niets. `board.py` wordt op precies één plek aangeboden:
-`practicals/13_vier_op_rij_speler.md` regel 343, PGM2 week 6.
+`practicals/13_vier_op_rij_speler.md` regel 343. Dat practicum stond onder PGM2
+week 6 en staat sinds #270 in de inhoudsopgave onder PGM2 week 7.
 
 ## Besluitenregister
 
@@ -313,9 +353,10 @@ draait wel.
 | Schakelingen zijn geschrapt, binair is afgeslankt | organisatorisch | gesloten, uitgevoerd |
 | De wekelijkse leesopgaven zijn vervallen | praktisch | gesloten |
 | Bestanden naar PGM1, excepties blijven in PGM2 | didactisch | staand, onderbouwd; excepties landen in PGM2 week 7 (23 september 2026), **nog niet uitgevoerd** |
-| De klassenstof van PGM2 week 4 gaat naar week 5; het AI-materiaal verdwijnt uit week 5; Text-ID blijft in week 4 | organisatorisch | gesloten op 23 september 2026 (#160), **nog niet uitgevoerd** |
-| Het practicum van PGM2 week 5 tot en met 7 is één doorlopend project, `creatures.py` | didactisch | gesloten op 23 september 2026; opzet in `practicum-oop.md`, **nog niet uitgevoerd** |
+| De klassenstof van PGM2 week 4 gaat naar week 5; het AI-materiaal verdwijnt uit week 5; Text-ID blijft in week 4 | organisatorisch | gesloten op 23 september 2026 (#160), **uitgevoerd** in #160 |
+| Het practicum van PGM2 week 5 tot en met 7 is één doorlopend project, `creatures.py` | didactisch | gesloten op 23 september 2026; opzet in `practicum-oop.md`, **deels uitgevoerd**: sessie 1 staat in week 5 (#160), sessie 2 in week 6 (#270); sessie 3 volgt met de herziening van week 7 |
 | Docstrings en commentaar blijven Nederlands, ook in PGM2 | didactisch | gesloten op 23 september 2026; zie `conventies/codeconventies.md` |
+| Compositie is een begrip van PGM2 week 5; zie `leerlijn.md` en `conventies/begrippen.md` | didactisch | gesloten op 23 september 2026 (#267), **uitgevoerd** in #268 |
 | Mutatie pas vanaf PGM1 week 7, en als grens benoemd | didactisch | staand, onderbouwd |
 | Canonieke Python aanbieden, mechanisme later uitleggen | didactisch | staand, onderbouwd |
 | Het bord verandert niet in week 5; de grens wordt daar benoemd | didactisch | gesloten |
@@ -324,10 +365,10 @@ draait wel.
 | Het oefententamen is representatief en verandert voorlopig niet | organisatorisch | staand |
 | Leesvragen mogen fout aflopen; de fout is het antwoord | didactisch | staand, onderbouwd |
 | Onderdompeling mag vooraf gaan aan uitleg | didactisch | staand; de grens is nog een afleiding |
-| Studenten leveren geen werk in; opdrachten zijn oefening | organisatorisch | gesloten, **nog niet uitgevoerd**: `source/` draagt nog inleverinstructies |
+| Studenten leveren geen werk in; opdrachten zijn oefening | organisatorisch | gesloten, **nog niet uitgevoerd**: `source/` draagt nog inleverinstructies. Het toernooi met bonuspunten uit het oude AI-materiaal komt niet terug in week 6 (#270, V3) |
 | Tot en met week 4 ligt de nadruk op lezen en begrijpen; schrijven begint wel | didactisch | staand, onderbouwd |
-| Een weekpagina vat samen wat volgt en waarop het voortbouwt | praktisch | gesloten (#167), **deels uitgevoerd**: week 1 tot en met 4 dragen hem, met #168, #169, #230 en #162; week 5 tot en met 12 zijn nog stubs van zeven tot elf woorden |
-| Elk opgaveniveau hoort een uitwerking te hebben | didactisch | gesloten, nog niet uitgevoerd; 11 van de 30 ontbreken |
+| Een weekpagina vat samen wat volgt en waarop het voortbouwt | praktisch | gesloten (#167), **deels uitgevoerd**: week 1 tot en met 4 dragen hem, met #168, #169, #230 en #162; week 12 (PGM2 week 5) draagt hem sinds #160, week 8 (PGM2 week 1) sinds #273 en week 13 (PGM2 week 6) sinds #270; week 5 tot en met 7 en 9 tot en met 11 zijn nog stubs |
+| Elk opgaveniveau hoort een uitwerking te hebben | didactisch | gesloten, nog niet uitgevoerd; 9 van de 35 ontbreken (hermeten bij #270) |
 | Week 4 krijgt een lusrecept van vijf vragen, in `4a_lussen` | didactisch | gesloten, **uitgevoerd** met #153; week 5 pikt het nog niet op (#163) |
 | Recursie gaat in beginsel naar PGM2; `unique` blijft in PGM1 als herkenbaar iteratief voorbeeld met vooruitwijzing | organisatorisch | gesloten, uitgevoerd in #162: de overige recursieplekken zijn verwijderd; recursie wordt uitgebreider behandeld in PGM2 |
 | Eerst de weken van PGM1 afronden; het materiaal moet zo snel mogelijk live | organisatorisch | staand |
@@ -337,9 +378,10 @@ draait wel.
 | Dictionaries en de Markov-opgave verhuizen van PGM1 week 7 naar PGM2 week 1 | didactisch | staand, nog niet uitgevoerd |
 | Objecten pas in PGM2 | didactisch | staand, onderbouwd |
 | Picobot opent PGM1 | didactisch | staand, onderbouwd |
-| Opgaven in opstap, basis en extra | didactisch | gesloten op 23 september 2026, **nog niet uitgevoerd** voor PGM2; de verplichte niveaus per week staan in `leerlijn.md` |
+| Opgaven in opstap, basis en extra | didactisch | gesloten op 23 september 2026, **deels uitgevoerd** voor PGM2: week 5 en 6 hebben opstap, basis en extra (#160, #270); de verplichte niveaus per week staan in `leerlijn.md` |
 | De student werkt lokaal in VS Code; de browser is verrijking | didactisch | staand, onderbouwd |
 | Code uitvoerbaar in de browser | praktisch | open, uitvoering wijzigt |
+| Wat er niet meer toe doet, mag weg; we ruimen achter ons op | organisatorisch | gesloten op 24 september 2026, **deels uitgevoerd**: `teacher_guides/` is weg (#280); welke andere directories eronder vallen, wordt voorgelegd in #282 |
 
 ### Recursie na de lussen
 
@@ -715,8 +757,11 @@ eraan te verankeren, niet om de inhoud na te vertellen. Merk je dat een handleid
 moet uitleggen hoe het materiaal in elkaar zit, dan is dat een aanwijzing dat het
 materiaal zelf niet klopt - en dan hoort dat daar gerepareerd te worden en niet
 hier beschreven. Hij is geen uitwerkingenboek: de uitwerkingen staan in `solutions/`, en
-waar die voor een collegeopdracht niet bestaan, geeft de handleiding een kort
-antwoord van hooguit een regel. Dit besluit heropent wie kan laten zien dat een
+waar die voor een collegeopdracht of een werkcollegeopdracht niet bestaan, geeft de
+handleiding een kort antwoord van hooguit een regel. Het werkcollege is toegevoegd door
+de vakdeskundige op 24 september 2026, bij #280. Het voorstel daartoe kwam van de
+auteur: voor `practicals/6b_images` staat geen uitwerking in het boek, en de docent
+bouwt die opdrachten samen met de klas op. Dit besluit heropent wie kan laten zien dat een
 docent met een weekdocument het overzicht per bijeenkomst kwijtraakt.
 
 **Handleidingen zijn repo-materiaal en geen onderdeel van het boek.** Ze staan in
@@ -816,8 +861,29 @@ stopmoment. Dat idee komt uit *How to Design Programs*, waar het aantonen dát e
 functie eindigt een aparte ontwerpstap is.
 
 **Het landt in `4a_lussen`**, na "Denken in lussen", en niet in een tweede college.
-Een tweede college verplaatst de oefenmidterm naar de practicumsleuf, en die is
-bezet door CodingBat - het enige zelfcontrolerende schrijfwerk van de week.
+Een tweede college kost de week haar werkcollege, en dat is CodingBat - twaalf
+opgaven zelfstandig schrijven met directe feedback, en daarmee het grootste
+zelfcontrolerende schrijfwerk van de week. Wat er dan overblijft is een
+practicum waarin de oefenmidterm en de drie bundels al naast elkaar staan.
+
+De oorspronkelijke formulering zei dat een tweede college de oefenmidterm naar
+de practicumsleuf zou verplaatsen "en die is bezet door CodingBat". Dat klopte
+bij de indeling van vóór #256; sinds 18 september 2026 vult CodingBat het
+werkcollege en ligt de oefenmidterm in het practicum. De conclusie verandert
+niet.
+
+**"Enige" is met #256 niet meer letterlijk waar, en dat is met opzet niet
+rechtgetrokken door CodingBat te verkleinen.** `source/problems/4_basis.ipynb`
+draagt sinds die herziening één opgave met kant-en-klare asserts
+(`summed_odds`); de opgave ernaast (`power`) heeft alleen print-tests die de
+student zelf omzet, en `until_a_repeat` raadt met willekeur en laat zich niet
+vast toetsen. Vastgesteld door de vakdeskundige op 23 september 2026: de
+CodingBat-opgaven zijn op zichzelf nuttig, en dat één andere opgave ook
+zelfcontrolerend is, is geen reden om CodingBat te verplaatsen of te
+verkleinen. Een auteur mag er bij een latere herziening een goede, eigen plek
+voor vinden. De formulering hierboven noemt daarom niet langer "enige" maar
+"grootste"; de conclusie dat het recept niet in een tweede college landt,
+blijft ongewijzigd.
 
 **Het gearchiveerde `lectures/4b_lussen_ontwerpen.ipynb` is niet overgenomen.**
 Dat notebook (commit `587e3800`, verwijderde branch `pgm1-25-26`, juli 2025) deed
@@ -960,6 +1026,22 @@ Dit gaat over iets anders dan de "langzame onderdompeling" die
 `conventies/codeconventies.md` tot 23 september 2026 noemde: die ging over een
 overgang van Nederlands naar Engels in code, en die overgang is vervallen. Deze
 gaat over een vorm tonen vóór de uitleg.
+
+### Wat er niet meer toe doet, mag weg
+
+**We ruimen achter ons op.** Vastgesteld door de vakdeskundige op 24 september 2026,
+bij #280, toen met de laatste twee `.docx` ook `teacher_guides/` verdween: *"nu we het
+einde van PGM1 naderen alle leftovers/dirs die er niet meer toe doen mogen weg: we
+ruimen steeds achter ons zelf op."*
+
+Welke bestanden en directories daaronder vallen, wordt niet hier beslist maar per
+directory voorgelegd aan de vakdeskundige; voor wat buiten `source/` staat gebeurt dat
+in #282. Wat weg is, blijft in de git-geschiedenis te vinden. Als werkwijze: wie iets
+verwijdert, zoekt eerst de verwijzingen ernaar op en werkt die bij in dezelfde
+wijziging - zie de regel over kruisverwijzingen in `conventies/schrijfwijzer.md`.
+
+**Te heropenen wanneer** blijkt dat verwijderd materiaal toch werd gebruikt en de
+git-geschiedenis als vindplaats niet volstaat.
 
 ## Een besluit toevoegen
 

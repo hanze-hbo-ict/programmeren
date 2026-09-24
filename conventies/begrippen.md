@@ -43,6 +43,16 @@ forceer geen Nederlandse vertaling. Voor dit materiaal werkt dat zo uit:
 | Gegeven dat bij een object hoort, zoals `self.name` | **attribuut** | eigenschap, instance variable (16×), veld | Zo heet het in Python zelf: `AttributeError`, `getattr`. Vastgesteld door de vakdeskundige op 23 september 2026 |
 | De methode `__init__` | **constructor** | - | 30×, zonder concurrent |
 | Toestand alleen via methoden bereikbaar maken | **encapsulatie** | - | Nieuw in PGM2 week 5; niet *inkapseling*. Vastgesteld door de vakdeskundige op 23 september 2026 |
+| Object dat andere objecten als onderdeel heeft | **compositie** | - | Nieuw in PGM2 week 5; niet *objectcompositie*, *samenstelling* of *heeft-een-relatie*. *Functiecompositie* nooit afkorten tot *compositie*; zie hieronder. Vastgesteld door de vakdeskundige op 23 september 2026 |
+| Een klasse krijgt de attributen en methoden van een andere klasse mee | **overerving** | - | Nieuw in PGM2 week 6. Vastgesteld door de vakdeskundige op 24 september 2026, bij de poort van #270 |
+| De klasse die erft | **subklasse** | subclass (practicum-oop) | Nieuw in PGM2 week 6; zie *Overerving* hieronder. Vastgesteld door de vakdeskundige op 24 september 2026 |
+| De klasse waarvan geërfd wordt | **superklasse** | basisclass (practicum-oop, 2×) | Nieuw in PGM2 week 6; niet *basisclass* en niet *basisklasse*. Vastgesteld door de vakdeskundige op 24 september 2026 |
+| Een subklasse geeft een geërfde methode een eigen versie | **overschrijven** (een methode) | override, overriden (practicum-oop) | Nieuw in PGM2 week 6. Vastgesteld door de vakdeskundige op 24 september 2026 |
+| Dezelfde aanroep geeft ander gedrag, afhankelijk van het object | **polymorfisme** | - | Nieuw in PGM2 week 6. Vastgesteld door de vakdeskundige op 24 september 2026 |
+| Een object doet mee omdat het de methoden en attributen heeft die worden gebruikt, niet omdat het van een bepaalde klasse is | **duck typing** | - | Nieuw in PGM2 week 6; Engels, want er is geen ingeburgerd Nederlands (regel 2). Vastgesteld door de vakdeskundige op 24 september 2026 |
+| Wat er in een object staat: de waarden van zijn attributen | **waarde** | - | Tegenover **identiteit**. Niet *gelijkheid*. Vastgesteld door de vakdeskundige op 23 september 2026 |
+| Welk object het is, los van wat erin staat | **identiteit** | - | Nagevraagd met `is`. Tegenover **waarde**. Vastgesteld door de vakdeskundige op 23 september 2026 |
+| Wat een variabele bevat: ze wijst een object aan | **verwijzing** | - | Niet *aliasing*. Wijzen twee namen hetzelfde object aan, dan is de ene "een tweede naam voor hetzelfde object". Vastgesteld door de vakdeskundige op 23 september 2026 |
 | Waarde die je meegeeft | **argument** | - | Bij de definitie heet het een **parameter** |
 | Resultaat opleveren | **teruggeven** | - | Niet "returnen" |
 | Op het scherm tonen | **afdrukken** | printen (11×), geprint (23×) | Het deelwoord is de grootste vorm en werd niet geteld |
@@ -121,6 +131,39 @@ Wat er in geen geval mag staan is *oneindige herhaling* voor `while`. Die
 formulering is uit CS5 overgeërfd, is onjuist - een `while` is niet oneindig, het
 aantal herhalingen ligt alleen niet vooraf vast - en zij is bij de herziening van
 week 4 verwijderd.
+
+## Compositie en functiecompositie
+
+Twee begrippen met hetzelfde woord erin. *Functiecompositie* hoort bij PGM1
+week 7 en gaat over functies; **compositie** hoort bij PGM2 week 5 en gaat over
+objecten: een object dat andere objecten als onderdeel heeft, zoals `Party` met
+zijn `Creature`-objecten in `practicals/12_creatures`. Vastgesteld door de
+vakdeskundige op 23 september 2026.
+
+**Schrijf *functiecompositie* altijd voluit**, nooit afgekort tot *compositie*.
+Anders betekent hetzelfde woord in week 5 twee dingen. Toen dit besluit viel,
+schreef `lectures/12a_objecten.ipynb` in zijn terugblik twee keer *compositie* of
+*composities* waar het functiecompositie bedoelde; dat is rechtgezet in
+werkitem #268.
+
+## Overerving
+
+Vastgesteld door de vakdeskundige op 24 september 2026, bij de poort van #270.
+De woorden van de leerlijn worden de termen: *overerving*, *subklasse*,
+*superklasse* en *(een methode) overschrijven*, naast *polymorfisme* en *duck
+typing*. *Klasse* is al vastgesteld, dus de samenstellingen volgen het
+Nederlandse woord en niet *subclass* of *override* uit `curriculum/practicum-oop.md`.
+
+**Tussenklasse wordt geen term.** Een klasse als `Beast` in het practicum, die
+tussen `Creature` en `Dragon` staat, is subklasse en superklasse tegelijk, en zo
+schrijft het materiaal het ook. **Basisclass wordt superklasse**: die vorm stond
+twee keer in de discussievragen van sessie 2 van `practicum-oop.md`.
+
+**Is een blijft gewone taal**, net als *heeft* bij compositie, waar
+*heeft-een-relatie* al is afgewezen: "een draak is een wezen", niet "een
+is-een-relatie". Het materiaal zet overerving en compositie tegenover elkaar met
+die twee gewone werkwoorden, in `lectures/13b_polymorfisme.ipynb`, de basisopgave
+en het practicum van PGM2 week 6.
 
 ## Directory, map, folder
 
@@ -201,8 +244,8 @@ zij hier bij.
 
 - **`Opgaven` als rubriekkop, ook buiten `course/`.** Hij staat boven een
   *verzameling* en niet boven één taak - hetzij boven een reeks opgavebestanden,
-  hetzij boven een reeks taken binnen één bestand. Dertien vindplaatsen:
-  `# Opgaven` in `course/opgaven_2` tot en met `opgaven_11`, en `## Opgaven` in
+  hetzij boven een reeks taken binnen één bestand. Veertien vindplaatsen:
+  `# Opgaven` in `course/opgaven_2` tot en met `opgaven_12`, en `## Opgaven` in
   `problems/9_basis.ipynb` en in de twee oefenbestanden
   `extra/practice/1_recursie.ipynb` en `2_list_comprehension.ipynb`.
 - **Een ongenummerde `### Opgave`, *binnen* een bestand onder `problems/`.** Dat
@@ -215,16 +258,18 @@ zij hier bij.
 - **`Opdracht N`, genummerd**, als kop of als label. Dat is de hoofdvorm en de
   tabel hierboven dekt haar.
 - **`Opdrachten` als rubriekkop**, boven een reeks taken in een college of een
-  practicum. Achttien vindplaatsen, alle `## Opdrachten`: de twaalf
-  `course/practical_N.md`, `lectures/1a_intro_programmeren.md`, `2a_var_con.ipynb`,
-  `2b_strings_en_lists.ipynb`, `11a_objecten.ipynb`, en
+  practicum. Zeventien vindplaatsen, alle `## Opdrachten`: elf van de twaalf
+  `course/practical_N.md`, alle behalve `practical_11`, dat nog geen practicum
+  heeft, en verder `lectures/1a_intro_programmeren.md`, `2a_var_con.ipynb`,
+  `2b_strings_en_lists.ipynb`, `12a_objecten.ipynb`, en
   `practicals/2_sequenties_en_data.ipynb` en `3_fijne_functies.ipynb`.
 - **Een ongenummerde `Opdracht`-kop**, waar een document één taak draagt in
   plaats van een reeks. **Nummer die niet alsnog**: er is geen reeks om in mee te
   tellen, en `problems/2_basis.ipynb` heeft juist geen *Opdracht 4* - zie
-  `handleidingen/week_2.md`. Vier vindplaatsen: `### Opdracht` in
-  `practicals/2_rochambeau.ipynb`, `problems/2_basis.ipynb` en
-  `problems/3_basis.ipynb`, en `## Opdracht` in `practicals/4_python_bat.md`.
+  `handleidingen/week_2.md`. Vijf vindplaatsen: `### Opdracht` in
+  `practicals/2_rochambeau.ipynb`, `problems/2_basis.ipynb`,
+  `problems/3_basis.ipynb` en `lectures/12b_data_object.ipynb`, en
+  `## Opdracht` in `practicals/4_python_bat.md`.
 
 Wat níet blijft is een **genummerde** `Opgave N`, of dat nu een kop is of een
 label. Dat is een opdracht.
@@ -305,7 +350,8 @@ automatisch.
 ## Engelse termen die we niet vertalen
 
 `string`, `dictionary`, `integer`, `float`, `list comprehension`, `recursie`,
-`debuggen`, `commit`, `branch`, `assertion`, `docstring`, `index`, `slice`.
+`debuggen`, `commit`, `branch`, `assertion`, `docstring`, `index`, `slice`,
+`duck typing`.
 
 Introduceer zo'n term bij eerste gebruik kort in het Nederlands. Voor
 eerstejaars is die ene toelichting nodig; daarna volstaat de term.

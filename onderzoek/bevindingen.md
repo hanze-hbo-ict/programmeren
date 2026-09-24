@@ -1047,6 +1047,82 @@ zin eromheen nog klopte. Vergelijk bevinding 9: de titelhiërarchie staat buiten
 is een citaat, geen code.** Wie een codefragment repo-breed vervangt, controleert apart waar dat
 fragment in proza voorkomt — daar mag er geen regeleinde bij, en een comment hoort er niet.
 
+## Een melding over werk dat je in dezelfde PR uitvoert, veroudert binnen die PR — 23 september 2026
+
+**Wat er gebeurde.** Bij #256 hernoemde de auteur een kop in `curriculum/uitgangspunten.md`
+van *Drie* naar *Vier erkende afwijkingen*. Dat maakte een citaat in `handleidingen/week_3.md`
+stil dood. Hij meldde dat netjes onder *Wat er nog loopt* in de handleiding die hij schreef,
+met de reden dat het buiten de afbakening viel. De orkestrator vond de melding terecht maar
+de conclusie niet, en repareerde het citaat alsnog in dezelfde PR - **zonder de melding weg
+te halen**. De opgeleverde tekst vertelde de volgende lezer dus dat er werk lag dat zes
+regels verderop in diezelfde commit al gedaan was. De beoordelaar ving het als moet-punt.
+
+**Waarom dit een patroon is en geen slordigheid.** Een handleiding draagt een subsectie
+*Wat er nog loopt*: een momentopname van de repository, geschreven door de rol die het
+eerst ziet. Wie daarna in dezelfde PR meer doet dan de afbakening voorzag - en dat is
+precies wat de proportionaliteitsregel aanmoedigt - maakt die momentopname onwaar zonder
+er langs te komen. Het is dezelfde soort fout als de dode kruisverwijzing uit #252, maar
+met een kortere lus: de veroorzaker en de gedupeerde tekst zitten in één commit.
+
+**Wat het veranderde.** Hersteld in `cb1d830f`. De regel die eruit volgt is smal en goed
+te onthouden: **repareer je iets wat elders als openstaand gemeld staat, zoek die melding
+dan op voordat je commit.** `grep` op het onderwerp van je reparatie is genoeg; in dit
+geval gaf `grep -rn "Drie erkende afwijkingen"` precies één treffer, en dat was de melding.
+
+## Een keuzeoptie van de orkestrator wordt de onderbouwing van de mens - 23 september 2026
+
+**Wat er gebeurde.** Bij #267 legde de orkestrator de open vragen voor als meerkeuze-opties.
+Onder elke optie stond een korte toelichting. De vakdeskundige koos een optie, en het C4
+registreerde wat bij die optie stond. Twee keer was dat geen feit maar een onderbouwing
+die de orkestrator had geschreven:
+- De reden voor de term: "*compositie* is de gangbare term; ... aggregatie voegt in week 5
+  niets toe". Die staat nu als reden van de vakdeskundige in `curriculum/leerlijn.md`.
+- De status van de registerrij: "geen heropenvoorwaarde, net als bij de meeste didactische
+  rijen". In de C4-aanvulling werd dat "zo gaat het ook bij de andere gesloten didactische
+  rijen". De verse redacteur in herstelmodus toonde aan dat dit maar half klopt. Vier oudere
+  gesloten didactische besluiten hebben wel een heropenvoorwaarde (`uitgangspunten.md` r272,
+  r507, r720, r901).
+
+**Waarom dit een patroon is.** Het C4-contract verbiedt "nieuwe inhoudelijke rechtvaardiging
+namens hem". Een meerkeuzevraag omzeilt dat verbod zonder dat iemand het merkt. De mens
+kiest, dus het klinkt als zijn besluit. Maar de woorden en de feitelijke claim erin komen
+van de orkestrator, en niemand heeft die claim gemeten. De vraag was juist gesteld omdat
+de orkestrator de reden niet zelf mocht invullen.
+
+**Wat het veranderde.** Er staat een correctie op #267 ([reactie](https://github.com/hanze-hbo-ict/programmeren/issues/267#issuecomment-5802736725)).
+De regel die eruit volgt, en die nog niet in `/orc` is vastgelegd: **een optie beschrijft
+gevolgen, geen redenen; een feitelijke claim in een optie is gemeten, anders staat hij er
+niet.** Vraag de reden open, of zet in het C4 dat de formulering van de orkestrator is en
+door de mens is gekozen. Of dit in de instructies komt, is een procesbesluit voor de
+vakdeskundige.
+
+## Een hervatte agent meldt zijn tokens als lopend totaal — 23 september 2026
+
+**Wat er gebeurde.** Bij #273 kreeg de auteur na zijn oplevering twee gerichte opdrachten in
+dezelfde context: de volgorde van `8b` en daarna de puntjes. De harness meldde achtereenvolgens
+179.339, 220.224 en 244.873 tokens. Het getal loopt op, ook na een stap met 13 toolaanroepen. Het
+lijkt dus het lopende totaal van de agent te zijn en niet het verbruik van die ene stap. Uit de
+melding zelf is dat niet vast te stellen.
+
+**Waarom het ertoe doet.** De proef van #203 vergelijkt tokens per werkitem met een referentie.
+Wie de drie getallen optelt, rekent de eerste oplevering drie keer mee. Wie alleen het laatste
+neemt, gaat ervan uit dat het een totaal is, en dat is niet bewezen. Juist de goedkope route die
+`loop.md` aanbeveelt, *dezelfde auteurscontext mag blijven*, maakt de meting dus dubbelzinnig.
+
+**Wat het veranderde.** In [metingen.md](metingen.md) staan de hervatte stappen bij #273 als
+*niet vastgesteld*, met het gemelde getal ernaast, en ze tellen niet mee in het totaal. Voor de
+proeven van #203 moet de meetdefinitie vooraf zeggen of een hervatte agent als één run met zijn
+laatste getal telt. Dat hoort de vakdeskundige vast te stellen bij de keuze van de referentie.
+
+**Tweede waarneming, dezelfde route.** De mens koos in het poortbesluit het alternatief (grens B)
+in plaats van de aanbeveling. De orkestrator schreef de gevolgen ervan zelf over in het C4 en
+formuleerde er één onnauwkeurig: *E en F wisselen*. Dat gaf een volgorde die de sets tussen het
+model en het genereren zette. De auteur meldde het als afwijking, en de correctie kostte een
+hervatte auteursstap en een tweede menselijke vraag. Bij een gekozen alternatief is een
+ontwerpherstel duurder, maar het overschrijven laat de ontwerpverantwoordelijkheid stil bij
+de orkestrator. Leg in dat geval de concrete eindvolgorde zelf aan de mens voor, niet een
+bewerking op een volgorde.
+
 ## Een herstelopdracht mag een gevonden defect niet uit de blokkades definiëren — 23 september 2026
 
 **Wat er gebeurde.** In de herstelronde van #160 (PR #264) gaf de orkestrator beide verse
@@ -1079,3 +1155,138 @@ orkestrator geldt voortaan bij herstelopdrachten de formulering uit `loop.md`: d
 toetst de reparatie en de geraakte criteria, en elk echt defect dat hij vindt, classificeert
 hij naar C6, ongeacht wanneer het is ontstaan. Of de herstelgrens een reparatie toestaat, is
 een aparte vraag, en die gaat naar de mens.
+
+## Een bevinding opschrijven voorkomt haar niet — 24 september 2026
+
+**Wat er gebeurde.** Op 23 september legde de orkestrator vast: *een melding over
+werk dat je in dezelfde PR uitvoert, veroudert binnen die PR* (#256), met de
+regel *zoek die melding op voordat je commit*. Op 23 september 's avonds, bij #280 (`8eedf9aa`), zette
+dezelfde orkestrator de `.docx`-meldingen in week 3, 4 en 5 recht en liet in
+`handleidingen/week_6.md` de zin staan dat ze níét waren rechtgezet. De
+beoordelaar ving het. Bij het volgende herstel ging het bijna een derde keer mis (zie het commitbericht van `b0169ec8`);
+toen was het de orkestrator zelf die er op het laatste moment aan dacht.
+
+**Waarom dit een patroon is.** De bevinding stond in `onderzoek/`, dat de
+orkestrator niet leest vóór een commit. Een regel die op het moment van handelen
+niet voor ogen staat, werkt niet, ook niet bij wie hem schreef.
+
+**En een tweede, in dezelfde ronde.** De vakdeskundige zei *"mogen weg"*; de
+orkestrator schreef *"gaat weg"* en verklaarde een categorie materiaal al
+afgeschreven, terwijl de poort had gezegd dat per map zou worden voorgelegd. De
+hooks waren groen. Alleen een lezer die de tekst naast het besluit legde, zag het.
+De orkestrator had de PR al ter merge aangeboden; de vakdeskundige vroeg
+*"alles checks/rollen hebben het bekeken?"* (in het gesprek met de orkestrator,
+niet op GitHub), en pas daarop kwam die lezer.
+
+**Wat het veranderde.** Nog niets in de instructies; beide punten gaan als
+voorstel naar de volgende procesronde (#203):
+- **een vaste controle vóór elke commit van de orkestrator**: `grep` op het
+  onderwerp van de reparatie, over `handleidingen/`, `curriculum/` en `conventies/`;
+- **geen merge van een PR met orkestratorcommits die geen rol heeft gezien**,
+  ook niet als de vakdeskundige erom vraagt - de vraag *"alles checks/rollen hebben
+  het bekeken?"* hoort de orkestrator zelf te stellen, niet de vakdeskundige.
+
+## Een getal dat de orkestrator opschrijft, heeft hij niet altijd geteld - 24 september 2026
+
+**Wat er gebeurde.** Na #268 schreef de orkestrator twee korte vastleggingen. In beide stond een
+getal dat hij niet had geteld. Een verse redacteur gaf daarop in beide gevallen BLOKKEER:
+- **PR #286**, de metingen van #268. Er stond: *"De mens besliste na het C7 twee keer."* Het
+  waren er vier, als je de merge meetelt: de plaats van opdracht 3, het verwerken van de puntjes,
+  de bijzin en de merge. De bijzin stond in de lijdende vorm, alsof hij vanzelf kwam. Zie de
+  [reviews op PR #286](https://github.com/hanze-hbo-ict/programmeren/pull/286).
+- **PR #287**, de correctie van `make clean`. Volgens de tekst hoorden de 15 meldingen *Using
+  cached notebook* per build bij *"ID 3 en 4"*. De logs tonen drie cacheposten: per build 12
+  meldingen voor ID 4, 2 voor ID 3 en 1 voor ID 21. De orkestrator had de ID's overgenomen uit de eerste acht regels
+  van `grep -B1 'Using cached notebook'`, zonder ze met `grep | sort | uniq -c` te tellen. Dat
+  is zijn eigen verklaring; op GitHub staat alleen de latere telling in de herstelbijlage. Zie
+  de [reviews op PR #287](https://github.com/hanze-hbo-ict/programmeren/pull/287).
+
+In dezelfde sessie noemde de orkestrator in een taakprompt ook een basiscommit (*"4a…"*) die
+niet bestond. De beoordelaar merkte het op; het oordeel veranderde er niet door.
+
+En toen deze bevinding zelf de eerste keer werd beoordeeld, stonden er weer twee onjuiste
+beweringen in. Er stond *"de 15 gedeelde cacheposten"*, maar het waren 15 meldingen en drie
+cacheposten. En er stond dat de nalezing van #287 nog niet in de instructies stond. Zie de
+[review op PR #288](https://github.com/hanze-hbo-ict/programmeren/pull/288).
+
+**Waarom dit een patroon is.** `CLAUDE.md` zegt *meet het ding zelf*. De getallen hierboven zijn
+geen beweringen over het materiaal. Ze staan in het verslag van de orkestrator zelf. Het
+vermoeden is dat zulke getallen als samenvatting voelen en niet als meting, zodat ze uit een
+uitsnede of uit het geheugen worden overgenomen. Dat vermoeden is niet gemeten. De fout hoort in
+dezelfde rij als eerdere orkestratortekst die niet naast de bron werd gelegd:
+- *"gaat weg"*, waar de vakdeskundige bij #280 *"mogen weg"* zei;
+- *"E en F wisselen"* bij #273;
+- de keuzeoptie bij #267.
+
+Dat staat in de bevindingen over #267 en #273 (beide 23 september) en over #280 (24 september)
+hierboven.
+
+**Wat er gebeurde met de nalezing.** Beide PR's gingen naar een verse redacteur voordat ze ter
+merge werden aangeboden. Voor #287 was dat geen keuze: `loop.md` (*Buiten een werkitem*) vraagt
+bij een kleine correctie buiten de lus al om *"een onafhankelijke lezer"*. Die regel stond er
+ook al toen de vorige bevinding haar tweede voorstel deed. Voor #286, de metingen van een
+werkitem, staat er geen regel. `loop.md` (*GitHub en registratie*) en `orc.md` vragen alleen bij
+een besluittekst om een onafhankelijke redactionele toets. Daar vroeg de orkestrator zelf om de nalezing, zonder verzoek van de
+vakdeskundige.
+
+De vier nalezingen kostten samen 109.744 tokens voor #286 (75.623 eerste beoordeling, 34.121
+herstelbeoordeling) en 67.900 voor #287 (40.834 en 27.066). Daarin zitten niet de afgebroken
+eerste run op #286, die door de sessielimiet stopte en geen telling heeft, en het herstelwerk van
+de orkestrator. Dit rust op één sessie.
+
+**Wat het veranderde.** De blokkades zijn hersteld in PR #286, #287 en #288. In de instructies is
+niets veranderd. Er gaan twee voorstellen naar de volgende procesronde (#203):
+- **Een getal in orkestratortekst komt met de opdracht die het opleverde**, in de herstelbijlage
+  of in de PR-beschrijving. Een getal zonder die opdracht is niet gemeten.
+- **Breid de lezerregel uit `loop.md` uit tot alle orkestratortekst**, dus ook tot de metingen en
+  bevindingen van een werkitem. Nu geldt ze alleen buiten een werkitem en bij een besluitdiff.
+  Dat past het tweede voorstel van de vorige bevinding aan, omdat een deel ervan al vastlag.
+
+## Een zoekpatroon uit bekende formuleringen vindt alleen bekende formuleringen - 24 september 2026
+
+**Wat er gebeurde.** Bij #270 vroeg de vakdeskundige de omschrijving van duck typing in
+`conventies/begrippen.md` te laten aansluiten op het materiaal: "methoden en attributen" in plaats
+van "de aangeroepen methoden". De orkestrator zocht de plekken met de formuleringen die hij al
+kende en trok er zeven gelijk (commit `6b06cadb`). De verplichte redactionele lezing van die diff
+vond een achtste: `source/course/week_13.md` r17-18, *"omdat het de methoden heeft die worden
+aangeroepen"*. Dat is de weekpagina, de eerste plek waar de student het begrip leest. De redacteur
+vond de zin niet met een patroon maar met een brede zoektocht op "duck", en schreef over zijn eigen
+patroon: *"Mijn patroon vond in `669c1fe7` de 7 bekende gevallen en er blijven er nu 0 over, dus
+het patroon ving alleen de formuleringen die ik al kende."*
+
+**Waarom het ertoe doet.** De regel in `CLAUDE.md` luidt: *ijk elk patroon op een bekend getal
+voordat je een nul vertrouwt*. Die ijking bewijst dat het patroon werkt. Ze bewijst niet dat het
+patroon alles vangt. Een patroon dat uit de bekende gevallen is opgebouwd, haalt zijn ijking
+altijd, en daarom is de nul erna geen bewijs van volledigheid. Bij het gelijktrekken van een term
+draait het om volledigheid.
+
+**Wat het veranderde.** De weekpagina is hersteld in `6a45a921`, en een verse redacteur heeft de
+reparatie gelezen. De regel *wie het zelf doet, laat het lezen* ving hier een echt defect in
+orkestratortekst, en dat was de reden om hem te volgen. In de instructies is niets veranderd.
+Voorstel voor de volgende procesronde (#203): **zoek bij het gelijktrekken van een term op de term
+zelf** (hier "duck"), en beoordeel elke treffer. Zoek niet alleen op de oude formulering. Een
+patroon op de oude formulering meet hoeveel gevallen er over zijn, niet hoeveel er waren.
+
+## Een agent die op de sessielimiet stopt, levert zijn verbruik niet af - 24 september 2026
+
+**Wat er gebeurde.** Bij #270 leverde de hervatte auteur zijn herstel volledig af: een
+herstelbijlage, de bijgewerkte C5-kern en commit `669c1fe7`. Daarna stopte hij op de sessielimiet
+(HTTP 429). De taakmelding van de harness aan de orkestrator had de status *failed*, request-ID
+`req_011CfNLibVDp2Xev4pRA5LjP`, en geen `subagent_tokens`. Van de agentstap die bij de L-proef het meest onzeker was, ontbreekt zo
+het verbruik.
+
+**Waarom het ertoe doet.** De budgetreactie uit [203-proef.md](203-proef.md) hangt af van een
+cumulatieve stand na elke agentstap. Door deze ene ontbrekende melding kon de herziene grens van
+1.250.000 niet worden getoetst. De proef eindigt daardoor op *niet vast te stellen* in plaats van
+op een getal. Er speelde nog iets mee. De bevinding *Een hervatte agent meldt zijn tokens als lopend
+totaal* (23 september) vroeg al om vooraf vast te leggen hoe een hervatte agent telt. Die afspraak is bij de start van #270 niet gemaakt.
+Dat had hier niets uitgemaakt, want er kwam geen getal. Maar het is de tweede keer dat de
+hervatte auteur de meting van een werkitem onzeker maakt. De eerste keer was #273, dat geen
+proef was.
+
+**Wat het veranderde.** In [metingen.md](metingen.md) staat de stap als *niet beschikbaar*, en in
+de uitkomst van proef 2 staat het totaal als *1.119.651 plus het onbekende auteursherstel*. Er is
+niet geschat. In de instructies is niets veranderd. Voorstel voor de evaluatie van #203: **leg de
+telling van een hervatte agent vast bij de keuze van de referentie** (de bevinding over het
+lopende totaal), en **noteer bij een melding zonder verbruik vóór de volgende agentstart dat de
+budgetcontrole vervalt**, zodat de mens weet dat hij zonder stand beslist.

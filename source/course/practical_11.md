@@ -1,6 +1,3 @@
 # Practicum
 
-## Opdrachten
-
-```{tableofcontents}
-```
+Het practicum voor deze week volgt nog.
