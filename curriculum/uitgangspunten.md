@@ -374,6 +374,7 @@ draait wel.
 | Leesvragen mogen fout aflopen; de fout is het antwoord | didactisch | staand, onderbouwd |
 | Onderdompeling mag vooraf gaan aan uitleg | didactisch | staand; de grens is nog een afleiding |
 | Studenten leveren geen werk in; opdrachten zijn oefening | organisatorisch | gesloten, **nog niet uitgevoerd**: `source/` draagt nog inleverinstructies. Het toernooi met bonuspunten uit het oude AI-materiaal komt niet terug in week 6 (#270, V3) en ook niet in week 7 (#271, VP2) |
+| Het verbod op het eigen BSN in `problems/3_basis` vervalt | didactisch | gesloten op 25 september 2026 (#309), **uitgevoerd** in #309 |
 | Tot en met week 4 ligt de nadruk op lezen en begrijpen; schrijven begint wel | didactisch | staand, onderbouwd |
 | Een weekpagina vat samen wat volgt en waarop het voortbouwt | praktisch | gesloten (#167), **deels uitgevoerd**: week 1 tot en met 4 dragen hem, met #168, #169, #230 en #162; week 12 (PGM2 week 5) draagt hem sinds #160, week 8 (PGM2 week 1) sinds #273, week 13 (PGM2 week 6) sinds #270 en week 14 (PGM2 week 7) sinds #271; week 5 tot en met 7 en 9 tot en met 11 zijn nog stubs |
 | Elk opgaveniveau hoort een uitwerking te hebben | didactisch | gesloten, nog niet uitgevoerd; 9 van de 38 ontbreken (hermeten bij #271) |
@@ -1007,6 +1008,33 @@ er ogenschijnlijk gelijkwaardig bij, en is de aflopende steun die het materiaal
 biedt niet uitgelegd.
 
 Vastgesteld bij de poort van #168.
+
+### Geen verbod op het eigen burgerservicenummer
+
+De BSN-opgave van week 3 nodigt de student uit zijn eigen nummer na te rekenen.
+Negentien cellen verder stond tot 25 september 2026 een kader dat het
+tegenovergestelde zei: *"Reken je eigen BSN op papier na als je wilt, maar typ hem
+niet in. Een BSN hoort niet in code te staan, ook niet in een oefening."* De
+uitnodiging stamt van 26 augustus 2026, en de waarschuwing die er toen bij hoorde
+ging over inleveren; het kader kwam er op 11 september 2026 bij en maakte er een
+verbod van. De grond onder dat inleverargument was toen al vervallen - zie
+*Studenten leveren niets in* hierboven.
+
+**Besluit: het verbod vervalt.** Vastgesteld door de vakdeskundige op
+25 september 2026, naar aanleiding van #309: *"voor de aard en context van het
+probleem vind ik een verbod too much"*. Een student mag zijn eigen nummer intypen
+en door zijn eigen code halen.
+
+**Wat ervoor in de plaats kwam, is afgeleid en niet vastgesteld.** Het besluit
+wijst het verbod af en zegt niet wat er dan wel hoort te staan. De opgave houdt nu
+één opmerking over, in gewone tekst en zonder kader: het notebook blijft als
+bestand staan, dus wie zijn map later deelt of online zet, neemt zijn nummer mee.
+Die opmerking gaat over het bestand en niet over een BSN in code. Te bevestigen of
+bij te stellen bij de eerstvolgende poort.
+
+**Te heropenen wanneer** studentenwerk toch ergens wordt ingeleverd of gedeeld, of
+wanneer de opleiding een regel stelt over persoonsgegevens in oefenmateriaal die
+het materiaal moet volgen.
 
 ### Onderdompeling gaat vooraf aan uitleg
 
