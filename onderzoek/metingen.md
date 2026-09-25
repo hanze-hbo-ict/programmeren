@@ -1827,3 +1827,82 @@ Het puntje van de eerstejaars (r289: *"Hij vult ze op zijn eigen manier in"*, wa
 op attributen slaat) is niet verwerkt. De vakdeskundige besloot tot merge zoals opgeleverd. Deze
 meetregels staan op verzoek van de vakdeskundige in dezelfde PR. Geen beoordelaar heeft ze
 gelezen.
+
+## Werkitem #271 - PGM2 week 7: operator overloading en exceptions
+
+Route *ingrijpende weekherziening*, met de verkenner en de ontwerper samengevoegd tot één rol:
+ontwerper (die zelf meet), verhelderaar, poort, auteur en daarna eerstejaars en onderwijskundige.
+Omvang L, procescommit `3e57c6e6`. Dit is geen #203-proef, dus er gold geen budgetgrens.
+Opgeleverd in PR #304. Het gaat om:
+- één college (`14a`);
+- practicum sessie 3 (`14_creatures.md`), met de eindstand van week 6 als download;
+- een opstap, een basis (`Date` met operatoren en een constructor die gooit) en een extra-opgave
+  (min-max als subklasse van `Player`);
+- drie uitwerkingen en vier weekpagina's;
+- aanpassingen in week 6 (`isinstance` en `self.__class__.__name__` in `13b`, het practicum en de
+  opstap);
+- `13_vier_op_rij_speler.md` en `board.py` naar `practicals/` buiten `source/`;
+- boekhouding in `curriculum/` en `conventies/`.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator: C1, overdrachten, C4 en aanvullingen, C7's, PR | niet beschikbaar | niet beschikbaar | LUS, L |
+| curriculumontwerper (gecombineerd met verkenning) | 216.435 | 16 min 16 s | C2, 8 afgeleide criteria, 12 voorlegpunten |
+| verhelderaar | 123.767 | 5 min 16 s | FAAL, 2 blokkades (VP5, VP10), 14 verbeterpunten |
+| curriculumontwerper, herstel 1 van 1 (hervat) | 11.270 | 1 min 13 s | B1, B2 en V1 hersteld |
+| verhelderaar, herstelmodus | 63.754 | 2 min 27 s | AKKOORD, 7 verbeterpunten |
+| auteur, oplevering (afgebroken en hervat) | 435.870 | 47 min 38 s | C5, controles groen |
+| beoordelaar-eerstejaars | 161.059 | 9 min 6 s | AKKOORD MET PUNTJES, 0 blokkades, 7 puntjes |
+| beoordelaar-onderwijskundige | 194.358 | 7 min 51 s | BLOKKEER, 1 blokkade (besluitdiff VP5), 8 puntjes |
+| auteur, herstel 1 van 1 en AC-W6b (hervat) | 34.526 | 7 min 5 s | B1, AC-W6b, 8 van 10 puntjes |
+| beoordelaar-onderwijskundige, herstelmodus | 70.341 | 3 min 1 s | AKKOORD MET PUNTJES, 4 puntjes |
+| beoordelaar-eerstejaars, herstelmodus | 69.189 | 4 min 11 s | AKKOORD MET PUNTJES, 5 puntjes |
+| auteur, puntjes na het laatste C7 (hervat) | 13.862 | 5 min 54 s | 6 van 6 puntjes verwerkt, controles groen |
+| beoordelaar-redacteur, lezing puntjesdiff en deze tekst | volgt na de lezing |  |  |
+| **vastgesteld totaal agents** | **1.394.431** | | zonder de lezing van de redacteur |
+
+Bron: `subagent_tokens` uit de verbruiksmelding na elke agentstap. De rollen zelf schreven
+*niet beschikbaar*. Voor een hervatte context is het getal het verschil met de vorige melding van
+dezelfde agent, volgens de bevinding *Een hervatte agent meldt zijn tokens als lopend totaal*.
+
+**Twee getallen zijn onzeker.** De eerste auteursrun stopte op de sessielimiet (HTTP 429,
+`req_011CfPyhSZyz5JvREUNxw9oE`), zonder verbruiksmelding. Bewaard bleven vijf commits op een lokale
+branch. De hervatte run maakte de controles af en meldde 435.870. Of daarin het afgebroken deel
+volledig zit, is niet vastgesteld. Het auteursherstel kwam op 34.526, voor 13 bestanden. Dat is
+laag vergeleken met de andere stappen, maar het is wat gemeten is.
+
+**Herstelstand bij afsluiting:** ontwerp 1/1, oplevering 1/1. De scope-aanvulling AC-W6b (de
+opstap van week 6) en de puntjes na het laatste C7 vielen buiten de rondelimiet. De vakdeskundige
+vroeg er zelf om.
+
+**De vakdeskundige besliste vier keer:**
+1. Het C4 op twaalf voorlegpunten. Bij VP3 (één college in plaats van twee) en VP4 (het
+   oefententamen naar week 7) week het antwoord af van de aanbeveling. Bij VP7, VP8 en VP10 koos
+   de vakdeskundige iets dat niet tussen de opties stond:
+   - `self.__class__` en `isinstance` naar week 6;
+   - `NotImplemented` weg;
+   - voor min-max een absolute schaal met `min` voor X en `max` voor O, en `tbt` blijft.
+2. Drie vervolgvragen van de orkestrator bij VP8 en VP11.
+3. `isinstance` en `__class__` ook in de opstap van week 6, op de open vraag uit het C5.
+4. De puntjes na het laatste C7 rechtzetten en deze meting overnemen.
+
+**De poort ving een vakinhoudelijke fout die twee rollen misten.** Het C2 schreef bij VP8: *"de
+gespiegelde aanroep bij `>` werkt alleen omdat `NotImplemented` bestaat"*. De verhelderaar
+toetste het C2 twee keer en liet de zin staan. De vakdeskundige schreef: *"volgens mij werkt
+Creature > Dragon omdat __gt__ niet bestaat maar __lt__ wel, en heeft dat niet met NotImplemented
+te maken"*. De orkestrator mat het na: een klasse met alleen `__lt__`, zonder
+`return NotImplemented`, geeft bij `>` het goede antwoord. Technisch klopte de zin van het C2,
+want `object.__gt__` geeft zelf `NotImplemented` terug. Didactisch was de conclusie fout: de
+student hoeft `NotImplemented` niet te schrijven. De verhelderaar toetst ambiguïteit en
+uitvoerbaarheid, niet of een vakinhoudelijke bewering klopt. Dat hoort zo, maar dan is de poort
+de enige plek waar dit wordt gevangen.
+
+**Ook het voorstel voor min-max kwam van de poort.** Het C2 en de orkestrator schreven dat
+`__lt__` op `Board` niet kan, omdat een bord niet weet voor wie het scoort. De vakdeskundige liet
+zien dat een absolute schaal (-100, 0, 100) dat bezwaar oplost. Het uiteindelijke ontwerp
+(variant 1) is van de vakdeskundige. Dat past bij de alinea *De vakdeskundige* onder de uitkomst
+van proef 1 in [203-proef.md](203-proef.md): ook hier veranderde de vakdeskundige de opzet, op
+grond van kennis die in geen enkel artefact stond.
+
+**De enige blokkade van de oplevering zat in de besluittekst, niet in het lesmateriaal.** Zie de
+bevinding *De auteur schrijft een reden bij het besluit* in [bevindingen.md](bevindingen.md).
