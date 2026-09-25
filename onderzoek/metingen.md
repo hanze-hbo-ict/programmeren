@@ -1912,3 +1912,60 @@ grond van kennis die in geen enkel artefact stond.
 
 **De enige blokkade van de oplevering zat in de besluittekst, niet in het lesmateriaal.** Zie de
 bevinding *De auteur schrijft een reden bij het besluit* in [bevindingen.md](bevindingen.md).
+
+## Werkitem #305 — de elfproef van week 3
+
+Volle lus op één opgave: ontwerper met gecombineerde verkenning, poort, auteur,
+twee beoordelaars. Opgeleverd op 25 september 2026 in PR #306: de telling in
+`source/problems/3_basis.ipynb` en `source/solutions/3_basis.ipynb` wordt
+0-gebaseerd en heet *index*, het testnummer wordt `900000132`, de instructie
+"gebruik je eerdere functie" staat in de hoofdtekst, en `weighted_sum` krijgt in
+de uitwerking een lopende som.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| curriculumontwerper (gecombineerd) | 142.078 | 19 min 10 s | C2; vier voorstellen met kosten, acht criteria |
+| auteur | 177.853 | 28 min 46 s | C5; acht criteria zelf gemeten |
+| beoordelaar-eerstejaars | 91.139 | 9 min 27 s | AKKOORD MET PUNTJES, 0 blokkades |
+| beoordelaar-onderwijskundige | niet beschikbaar | niet beschikbaar | AKKOORD, 0 puntjes |
+| **totaal agents** | **411.070 plus de onderwijskundige** | | |
+
+**Waarom de onderwijskundige niet beschikbaar is.** De eerste start liep vast op
+de sessielimiet van de opdrachtgever (HTTP 429, `req_011CfQAZmCiKDAks7Hn5FHbq`),
+vóór enige beoordeling; de beoordeling is daarna door een andere agent afgemaakt,
+buiten het verbruiksrapport van deze orkestrator. Niet beschikbaar is geen nul.
+
+**Nul herstelronden.** Ontwerp 0 van 1, oplevering 0 van 1. Beide beoordelaars
+akkoord in de eerste ronde. Dat is het eerste werkitem in deze reeks zonder een
+enkele herstelronde.
+
+**De bevinding kwam van de vakdeskundige, niet uit een rol.** Studenten vroegen
+of ze `i + 1` moesten gebruiken. De leesronde van #298 had week 3 niet in scope,
+en geen beoordelaar had de opgave op dit punt eerder gelezen.
+
+**Wat de rollen aan de orkestrator corrigeerden.** De ontwerper: drie fouten in
+C0. Het bestand heet `2b_strings_en_lists.ipynb` en niet `2b`; de bewering "nul
+treffers op `naam = naam <operator>` in week 3" was fout — het zijn er vijf,
+omdat het patroon van de orkestrator eiste dat de regel ermee begon en niet was
+geijkt op een bekend getal; en van de twee verschuivingsvarianten overleefde er
+maar één de eerste assertie, niet twee. De auteur: *positie* stond tien keer in
+de twee notebooks, niet negen.
+
+**Een meting die het ontwerp veranderde.** De ontwerper stelde vast dat het
+defect niet in de assertiecel zat maar in de **voorbeeldtabel**: bij het oude
+nummer `999000032` is `digit_at(N, 0)` → `9` even goed verenigbaar met `bsn[0]`
+als met `bsn[1]`, doordat de eerste drie cijfers alle drie een 9 zijn. Daarom
+werd het nummer vervangen en niet alleen de assertie verplaatst. Bij
+`900000132` vangen de eerste voorbeeldrij én de eerste assertie beide
+verschuivingen.
+
+**De vakdeskundige beantwoordde een aanname die geen rol kon meten.** De
+ontwerper markeerde expliciet dat hij geen bron in de repo vond voor de
+`999`-vorm van test-BSN's en dat zijn voorstel op dat punt een aanname was. Het
+antwoord — *"testnummers mogen gewijzigd worden, de 999 is ook ooit maar zo
+gekozen"* — maakte het duurdere voorstel mogelijk.
+
+**K7 was het criterium zonder vangnet.** Het handrekenwerk in de inleiding wordt
+door geen enkele assertie gedekt, terwijl de student het natrekt met zijn eigen
+nummer. Beide beoordelaars hebben het zelf nagerekend; de eerstejaars controleerde
+daarnaast alle 26 voorbeeldrijen in de opgave.
