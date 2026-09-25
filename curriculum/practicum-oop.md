@@ -19,8 +19,9 @@ besloten, bij de voorbereiding van de poort van #160:
   opdracht wordt zo herschreven dat `creatures=None` niet voorkomt; het begrip
   staat niet in de leerlijn.
 - **Sessie 3 gooit alleen exceptions en vangt er geen af.** Leeruitkomst P4 vraagt
-  het afhandelen van foutcondities; dat is een open punt voor de herziening van
-  week 7. Zie `leerlijn.md`, *Wat een week aan een latere week aflevert*.
+  het afhandelen van foutcondities. Bij de poort van #271 is besloten dat het
+  afvangen een eigen opgave krijgt in de basisopgave van week 7 (VP1); het
+  practicum blijft alleen gooien. Zie `leerlijn.md`, *Excepties landen in week 7*.
 
 Bij de poort van #270 (24 september 2026) is voor sessie 2 besloten:
 
@@ -42,13 +43,44 @@ Bij de poort van #270 (24 september 2026) is voor sessie 2 besloten:
 - **`__repr__` van een subklasse** (V10). Een `Dragon` drukt zich af als
   `Creature(...)`, zoals de `__repr__` van week 5 dat doet; daar komt een vraag
   over in het practicum. `type(self).__name__` wordt vermeden. Wat sessie 3 over
-  `self.__class__` in `__repr__` zegt, is een aflevering naar #271.
+  `self.__class__` in `__repr__` zegt, is een aflevering naar #271. **Herroepen bij
+  de poort van #271** (VP7): zie hieronder.
 - **Stille terugval in `special_move`** (V4), zoals hieronder; een gemarkeerde
   vooruitverwijzing naar week 7 mag.
 - **Een beginstand** (V12): de eindstand van week 5 staat als download in
   `source/practicals/assets/creatures.py`, voor wie week 5 niet af heeft.
 - **Termen** (V7): *subklasse*, *superklasse* en *overschrijven*, niet
   *subclass*, *basisclass* of *override*; zie `conventies/begrippen.md`.
+
+Bij de poort van #271 (25 september 2026) is besloten, voor sessie 2 en 3:
+
+- **`self.__class__` en `isinstance` komen in week 6** (VP7, VP8). In sessie 2
+  gebruikt `__repr__` voortaan `self.__class__.__name__`, dus een `Dragon` drukt
+  zich af als `Dragon(...)`; de vraag daarover in het practicum van week 6
+  vervalt. `isinstance` komt in week 6 naast duck typing, en `battle_round` blijft
+  bewust zonder die controle. Sessie 3 gebruikt `self.__class__(...)` in
+  `__mul__` en `self.__class__.__name__` in de melding van `NotImplementedError`,
+  zoals hieronder. De zin dat `__repr__` die truc "al sinds Sessie 1" gebruikt,
+  wordt: sinds sessie 2. Dit herroept V10.
+- **Geen `NotImplemented`** (VP8). Bij een argument van een ander type geeft
+  `__eq__` `False`; `__lt__`, `__le__`, `__add__`, `__sub__` en `__mul__`
+  controleren met `isinstance` en gooien een `TypeError`. De gespiegelde aanroep
+  (`>` via `__lt__`) blijft een stap, uitgelegd zonder `NotImplemented`. De
+  discussievraag *"Waarom `NotImplemented` teruggeven ..."* vervalt. Dit wijkt af
+  van de code in sessie 3 hieronder.
+- **`+=` op `Party`** (VP5). `Party` krijgt alleen `__add__` en `__sub__`, die een
+  nieuwe `Party` maken. De discussievraag over `__iadd__` blijft staan. `Date` in
+  de basisopgave krijgt wel `__iadd__`/`__isub__`, die het object veranderen: dat
+  spreekt elkaar niet tegen, want bij een lijst veranderen `+` en `-` niets en mag
+  `+=` het object veranderen.
+- **Alleen `Creature.special_move` gooit** een `NotImplementedError` (VP6). Geen
+  *abc*. De assertions van week 6 die daardoor vervallen, noemt de tekst.
+- **`Turret` in `sorted`**: een toevoeging aan sessie 3. `sorted` over een lijst
+  met een wachttoren erin geeft een `TypeError`, als vervolg op *Wat duck typing
+  niet belooft* in week 6.
+- **Een beginstand van week 6** (VP12) staat als download in
+  `source/practicals/assets/`, met de assertions van week 5 en 6 onderaan, en volgt
+  week 6 na de wijzigingen hierboven.
 
 Wat hieronder staat is de opzet zoals aangeleverd.
 

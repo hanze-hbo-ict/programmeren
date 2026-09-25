@@ -167,7 +167,7 @@ uitgangssituatie, niet de norm; het verschil tussen beide kolommen is het werk.
 | 3 | Recursie | HOEM | A6 | recursie, base case, recursieve aanroep | Algoritmen (knapzak, wisselgeld) |
 | 4 | Use it or lose it, lambda | HOEM | A4, A6 | use it or lose it, `lambda`, functie als argument | Alleen de extra-opgave Text-ID; de klassenstof staat sinds #160 in week 5 |
 | 5 | OO, klassen, encapsulatie | BRRA | P5, A2 | klassedefinitie, object, attribuut, constructor en `__init__`, `self`, een methode schrijven, `__repr__`, waarde en identiteit, `is`, encapsulatie, `_` voor een attribuut dat niet van buiten wordt gebruikt, `@property` en decorator, compositie | OO, klassen, encapsulatie: colleges `12a_objecten` en `12b_data_object`, practicum sessie 1 (`12_creatures`), opstap, basis (`Date`) en extra (`Board`) (#160) |
-| 6 | Polymorfisme, overerving, duck typing | BRRA | A2, A3 | overerving, subklasse en superklasse, `super()`, een methode overschrijven, standaardwaarde voor een parameter, polymorfisme, duck typing | Polymorfisme, overerving, duck typing: colleges `13a_overerving` en `13b_polymorfisme`, practicum sessie 2 (`13_creatures`), opstap, basis (kassabon) en extra (spelers voor `Board`) (#270) |
+| 6 | Polymorfisme, overerving, duck typing | BRRA | A2, A3 | overerving, subklasse en superklasse, `super()`, een methode overschrijven, standaardwaarde voor een parameter, polymorfisme, duck typing, `isinstance`, `self.__class__` en `__name__` | Polymorfisme, overerving, duck typing: colleges `13a_overerving` en `13b_polymorfisme`, practicum sessie 2 (`13_creatures`), opstap, basis (kassabon) en extra (spelers voor `Board`) (#270) |
 | 7 | Operator overloading, excepties, oefentoets | BRRA | P4, P6 | operator overloading, magische methode, `__eq__`, exception, `try`/`except`, `raise` | - |
 
 Een deel van deze onderwerpen komt in het huidige materiaal niet of nauwelijks
@@ -182,7 +182,9 @@ termbesluit; welke vorm het materiaal gebruikt, staat in `conventies/begrippen.m
 Voor week 5 is dat vastgesteld (*object*, *attribuut*, *constructor*,
 *encapsulatie*, *compositie*, *waarde*, *identiteit*, *verwijzing*), en voor
 week 6 ook (*overerving*, *subklasse*, *superklasse*, *overschrijven*,
-*polymorfisme*, *duck typing*, #270); voor *base case* of *basisgeval* nog niet.
+*polymorfisme*, *duck typing*, #270) en week 7 (*magische methode*, *operator
+overloading*, een exception *gooien*, *afvangen* en *afhandelen*, #271); voor
+*base case* of *basisgeval* nog niet.
 
 **De kolom *Leeruitkomsten* wijst elke gewogen PGM2-uitkomst een week toe**,
 behalve twee die in PGM1 worden onderwezen en in PGM2 worden getoetst: P1
@@ -204,6 +206,20 @@ Besloten bij de voorbereiding van de poort van #160, en **uitgevoerd** in #160.
 
 **Excepties landen in week 7**, naast operator overloading. Vastgesteld bij de
 voorbereiding van de poort van #160; zie *Gaten tussen toetsing en materiaal*.
+De eigen opgave voor het afvangen staat in de **basisopgave**: de constructor van
+`Date` gooit een `ValueError` bij een datum die niet bestaat, en de student zet
+een lijst datumstrings om naar `Date`-objecten en vangt de ongeldige af. De
+syntaxis staat in de opstap. Het practicum gooit alleen exceptions en vangt er
+geen af (`practicum-oop.md`). Vastgesteld door de vakdeskundige op 25 september
+2026, bij de poort van #271 (VP1).
+
+**`NotImplemented` komt niet in de leerlijn.** Een operator van een eigen klasse
+die een argument van een ander type krijgt, geeft bij `__eq__` `False` terug; de
+andere operators controleren het type met `isinstance` en gooien een
+`TypeError`. Dat `a > b` werkt met alleen `__lt__`, legt het materiaal uit
+zonder dat de student `NotImplemented` schrijft. Vastgesteld door de
+vakdeskundige op 25 september 2026, bij de poort van #271 (VP8); dit wijkt af van
+de code in sessie 3 van `practicum-oop.md`.
 
 **Min-max is de extra-opgave van week 7.** De extra-opgaven van week 5 tot en met
 7 vormen één lijn over objectgeoriënteerd programmeren, en min-max sluit die af.
@@ -211,13 +227,26 @@ Week 5 levert `Board`. Week 6 levert in `problems/13_extra.md` de spelers die
 `Board.host_game(px, po)` polymorf gebruikt, waaronder `SimpleAIPlayer`, die één
 zet vooruitkijkt. Week 7 voegt de min-max-speler toe, op basis van
 `practicals/13_vier_op_rij_speler.md` en de sectie *Min-max* van
-`lectures/12_ai.ipynb`; of die sectie terugkomt in een college van week 7, is nog
-open in #271. Min-max past niet helemaal bij het onderwerp van week 7; `__lt__`
-kan dienen om bordtoestanden te vergelijken. Het vraagt recursie, en die staat
+`lectures/12_ai.ipynb`. Min-max past niet helemaal bij het onderwerp van week 7;
+`__lt__` kan dienen om bordtoestanden te vergelijken. Het vraagt recursie, en die staat
 sinds week 3 ter beschikking. Vastgesteld door de vakdeskundige op 23 september
 2026; week 6 is **uitgevoerd** in #270, week 7 is **nog niet uitgevoerd** (#271).
 Op 24 september 2026 voegde de vakdeskundige toe: min-max past goed bij de
 extra-opgaven van week 5 en 6. Heropenen als die worden vervangen.
+
+Bij de poort van #271 (25 september 2026) besloot de vakdeskundige over de
+uitvoering. Min-max wordt uitgelegd in de extra-opgave zelf; de sectie *Min-max*
+komt niet terug in een college, en de genetische algoritmen uit `12_ai` blijven
+buiten `source/` (VP3). Het toernooi vervalt ook in week 7 (VP2). `Board` krijgt
+een methode `score()` met een absolute schaal: `-100` als X wint, `0` bij
+onbeslist, `100` als O wint. De recursie geeft waarden op die schaal terug; X
+kiest het minimum en O het maximum. Dat vervangt de schaal 0/50/100 en *"100 min
+de beste score van de tegenstander"*. De min-max-speler is een subklasse van
+`Player` met de constructor `(ox, tbt, ply)`, en `host_game` verandert niet.
+`next_move` maakt voor elke kolom waarin een zet mag een `ScoredMove(col,
+waarde)`, een kleine klasse met `__lt__` en `__eq__`; X bepaalt de beste waarde
+met `min`, O met `max`, en uit de zetten met die waarde kiest `tiebreak_move`
+volgens `tbt`: `'LEFT'`, `'RIGHT'` of `'RANDOM'` (VP10).
 
 **Compositie hoort bij week 5.** Week 5 past het begrip sinds #160 al toe:
 `Party` in het practicum `12_creatures` (stap 5) bewaart `Creature`-objecten in
@@ -237,6 +266,18 @@ constructors van `Dragon`, `Wolf`, `Goblin` en `Healer`, en `Dragon("Ember")` in
 sessie 3. Week 6 introduceert haar daarom, in de opstap en in het college
 `13a_overerving`. Vastgesteld door de vakdeskundige op 24 september 2026, bij de
 poort van #270, en **uitgevoerd** in #270.
+
+**`isinstance`, `self.__class__` en `__name__` horen bij week 6.** Ze gaan over
+de klasse van een object, en daarmee over polymorfisme. Week 6 introduceert ze in
+het college `13b_polymorfisme` en in het practicum `13_creatures`: `__repr__` van
+`Creature` gebruikt voortaan `self.__class__.__name__`, zodat een `Dragon` zich
+als `Dragon(...)` afdrukt. `isinstance` wordt ingevoerd naast duck typing: code
+die met `isinstance` controleert, laat een object dat alleen de goede methoden
+heeft niet meer meedoen. Daarom blijven `battle_round` en `host_game` zonder die
+controle. Week 7 gebruikt `self.__class__(...)` in `Creature.__mul__`. Dit
+herroept de keuze bij de poort van #270 dat `type(self).__name__` in week 6
+vermeden wordt (V10). Vastgesteld door de vakdeskundige op 25 september 2026, bij
+de poort van #271 (VP7 en VP8).
 
 ## Welk niveau een week hoort te hebben
 

@@ -50,6 +50,11 @@ forceer geen Nederlandse vertaling. Voor dit materiaal werkt dat zo uit:
 | Een subklasse geeft een geërfde methode een eigen versie | **overschrijven** (een methode) | override, overriden (practicum-oop) | Nieuw in PGM2 week 6. Vastgesteld door de vakdeskundige op 24 september 2026 |
 | Dezelfde aanroep geeft ander gedrag, afhankelijk van het object | **polymorfisme** | - | Nieuw in PGM2 week 6. Vastgesteld door de vakdeskundige op 24 september 2026 |
 | Een object doet mee omdat het de methoden en attributen heeft die worden gebruikt, niet omdat het van een bepaalde klasse is | **duck typing** | - | Nieuw in PGM2 week 6; Engels, want er is geen ingeburgerd Nederlands (regel 2). Vastgesteld door de vakdeskundige op 24 september 2026 |
+| Een methode die Python zelf aanroept onder bepaalde omstandigheden, zoals `__eq__` bij `==` | **magische methode** | dunder, speciale methode | Nieuw in PGM2 week 7. *Dunder* beschrijft alleen de vorm van de naam, met twee underscores ervoor en erachter, zoals `__init__`; *magische methode* beschrijft dat Python haar zelf aanroept. Vastgesteld door de vakdeskundige op 25 september 2026, bij de poort van #271 |
+| Een operator eigen gedrag geven voor objecten van een eigen klasse | **operator overloading** | een operator herdefiniëren (oude `11_basis`) | Nieuw in PGM2 week 7; Engels, want er is geen ingeburgerd Nederlands (regel 2). Vastgesteld door de vakdeskundige op 25 september 2026 |
+| Een exception laten optreden, met `raise` | **gooien** (een exception) | raisen (practicum-oop), opwerpen | Nieuw in PGM2 week 7. Vastgesteld door de vakdeskundige op 25 september 2026 |
+| Een exception opvangen, met `try`/`except` | **afvangen** (een exception) | opvangen | Nieuw in PGM2 week 7. Vastgesteld door de vakdeskundige op 25 september 2026 |
+| Wat het `except`-blok met de fout doet | **afhandelen** | - | Het doel van het afvangen, zoals leeruitkomst P4 het noemt: foutcondities afhandelen. Vastgesteld door de vakdeskundige op 25 september 2026 |
 | Wat er in een object staat: de waarden van zijn attributen | **waarde** | - | Tegenover **identiteit**. Niet *gelijkheid*. Vastgesteld door de vakdeskundige op 23 september 2026 |
 | Welk object het is, los van wat erin staat | **identiteit** | - | Nagevraagd met `is`. Tegenover **waarde**. Vastgesteld door de vakdeskundige op 23 september 2026 |
 | Wat een variabele bevat: ze wijst een object aan | **verwijzing** | - | Niet *aliasing*. Wijzen twee namen hetzelfde object aan, dan is de ene "een tweede naam voor hetzelfde object". Vastgesteld door de vakdeskundige op 23 september 2026 |
@@ -351,7 +356,7 @@ automatisch.
 
 `string`, `dictionary`, `integer`, `float`, `list comprehension`, `recursie`,
 `debuggen`, `commit`, `branch`, `assertion`, `docstring`, `index`, `slice`,
-`duck typing`.
+`duck typing`, `operator overloading`.
 
 Introduceer zo'n term bij eerste gebruik kort in het Nederlands. Voor
 eerstejaars is die ene toelichting nodig; daarna volstaat de term.

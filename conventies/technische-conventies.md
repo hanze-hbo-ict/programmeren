@@ -250,6 +250,10 @@ Gemeten op `2dcd0224` gaat het om vijf bestanden:
 `practicals/1_picobot.md` bevat geen Python en is dus terecht markdown. Week 1
 en 2 dragen verder geen markdown-opgaven.
 
+`practicals/13_vier_op_rij_speler.md` staat sinds #271 niet meer in `source/`,
+maar in `practicals/` in de root van de repository, samen met `board.py`. De
+tabel hierboven is de meting van toen.
+
 Bij de herziening van PGM2 week 5 (#160) zijn twee markdownbestanden met
 Python-blokken bijgekomen: `practicals/12_creatures.md` (10) en
 `problems/12_extra.md` (3). Grond 2 geldt voor geen van beide: de student werkt

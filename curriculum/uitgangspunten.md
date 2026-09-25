@@ -326,7 +326,14 @@ schrijven met de signature `(char, row_start, col_start, array, n)`.
 importeert het nooit het werk van de student en breekt de afwijking mechanisch
 niets. `board.py` wordt op precies één plek aangeboden:
 `practicals/13_vier_op_rij_speler.md` regel 343. Dat practicum stond onder PGM2
-week 6 en staat sinds #270 in de inhoudsopgave onder PGM2 week 7.
+week 6 en sinds #270 in de inhoudsopgave onder PGM2 week 7.
+
+**Bij de poort van #271 (25 september 2026) besloot de vakdeskundige dat beide
+samen uit `source/` gaan** (VP11): het practicum naar `practicals/` in de
+root van de repository, en `board.py` mee naar `practicals/assets/`. De inhoud van
+het practicum leeft voort in de extra-opgave van PGM2 week 7. Het besluit over de
+parameternamen blijft staan, maar raakt het boek niet meer: `board.py` wordt
+nergens in `source/` meer aangeboden.
 
 ## Besluitenregister
 
@@ -361,12 +368,12 @@ draait wel.
 | Mutatie pas vanaf PGM1 week 7, en als grens benoemd | didactisch | staand, onderbouwd |
 | Canonieke Python aanbieden, mechanisme later uitleggen | didactisch | staand, onderbouwd |
 | Het bord verandert niet in week 5; de grens wordt daar benoemd | didactisch | gesloten |
-| De parameternamen van `board.py` blijven zoals ze zijn | praktisch | gesloten |
+| De parameternamen van `board.py` blijven zoals ze zijn | praktisch | gesloten; sinds #271 staat `board.py` buiten `source/` |
 | De vastgestelde matrijs wijzigt niet als bijvangst; bevindingen gaan naar *Voorgestelde correcties* | organisatorisch | staand, onderbouwd |
 | Het oefententamen is representatief en verandert voorlopig niet | organisatorisch | staand |
 | Leesvragen mogen fout aflopen; de fout is het antwoord | didactisch | staand, onderbouwd |
 | Onderdompeling mag vooraf gaan aan uitleg | didactisch | staand; de grens is nog een afleiding |
-| Studenten leveren geen werk in; opdrachten zijn oefening | organisatorisch | gesloten, **nog niet uitgevoerd**: `source/` draagt nog inleverinstructies. Het toernooi met bonuspunten uit het oude AI-materiaal komt niet terug in week 6 (#270, V3) |
+| Studenten leveren geen werk in; opdrachten zijn oefening | organisatorisch | gesloten, **nog niet uitgevoerd**: `source/` draagt nog inleverinstructies. Het toernooi met bonuspunten uit het oude AI-materiaal komt niet terug in week 6 (#270, V3) en ook niet in week 7 (#271, VP2) |
 | Tot en met week 4 ligt de nadruk op lezen en begrijpen; schrijven begint wel | didactisch | staand, onderbouwd |
 | Een weekpagina vat samen wat volgt en waarop het voortbouwt | praktisch | gesloten (#167), **deels uitgevoerd**: week 1 tot en met 4 dragen hem, met #168, #169, #230 en #162; week 12 (PGM2 week 5) draagt hem sinds #160, week 8 (PGM2 week 1) sinds #273 en week 13 (PGM2 week 6) sinds #270; week 5 tot en met 7 en 9 tot en met 11 zijn nog stubs |
 | Elk opgaveniveau hoort een uitwerking te hebben | didactisch | gesloten, nog niet uitgevoerd; 9 van de 35 ontbreken (hermeten bij #270) |
