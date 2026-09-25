@@ -250,6 +250,10 @@ Gemeten op `2dcd0224` gaat het om vijf bestanden:
 `practicals/1_picobot.md` bevat geen Python en is dus terecht markdown. Week 1
 en 2 dragen verder geen markdown-opgaven.
 
+`practicals/13_vier_op_rij_speler.md` staat sinds #271 niet meer in `source/`,
+maar in `practicals/` in de root van de repository, samen met `board.py`. De
+tabel hierboven is de meting van toen.
+
 Bij de herziening van PGM2 week 5 (#160) zijn twee markdownbestanden met
 Python-blokken bijgekomen: `practicals/12_creatures.md` (10) en
 `problems/12_extra.md` (3). Grond 2 geldt voor geen van beide: de student werkt
@@ -269,6 +273,13 @@ buiten de build uitgevoerd: die van `13_extra.md` tegen de uitwerking in
 die niet in de repo staat, per stap en samen met de assertions van
 `12_creatures.md`. De beginstand daarvan, de eindstand van week 5, staat wel in de
 repo: `practicals/assets/creatures.py`.
+
+Bij de herziening van PGM2 week 7 (#271) kwamen er weer twee bij:
+`practicals/14_creatures.md` (19) en `problems/14_extra.md` (9). Grond 2 geldt ook
+hier niet, om dezelfde reden. De blokken van `14_extra.md` draaien in de build via
+de uitwerking in `solutions/14_extra.ipynb`. Die van `14_creatures.md` zijn buiten de
+build uitgevoerd, samen met de eindstand van week 6 in
+`practicals/assets/week_6/creatures.py` en de assertions van week 5 en 6.
 
 ### Waarom dit zo gegroeid is
 
@@ -454,7 +465,7 @@ Een bestand dat geen pagina is, koppel je met de `download`-rol. Een gewone
 Markdown-link geeft een build-waarschuwing.
 
 ```markdown
-{download}`begincode voor de klasse Board </problems/assets/board.py>`
+{download}`de eindstand van week 6 </practicals/assets/week_6/creatures.py>`
 ```
 
 ### Overige middelen

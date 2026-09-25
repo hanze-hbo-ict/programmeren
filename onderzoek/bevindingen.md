@@ -1300,3 +1300,48 @@ niet geschat. In de instructies is niets veranderd. Voorstel voor de evaluatie v
 telling van een hervatte agent vast bij de keuze van de referentie** (de bevinding over het
 lopende totaal), en **noteer bij een melding zonder verbruik vóór de volgende agentstart dat de
 budgetcontrole vervalt**, zodat de mens weet dat hij zonder stand beslist.
+
+## De auteur schrijft een reden bij het besluit - 25 september 2026
+
+**Wat er gebeurde.** Bij #271 legde de auteur de besluiten van de poort vast in `curriculum/`
+(O7a), zoals het C4 vroeg. Twee keer schreef de auteur daarbij een reden die de vakdeskundige niet
+had gegeven:
+- In `curriculum/practicum-oop.md`, onder *"Bij de poort van #271 is besloten"*, bij VP5: *"dat
+  spreekt elkaar niet tegen, want bij een lijst veranderen `+` en `-` niets en mag `+=` het object
+  veranderen"*. Die reden was ook onjuist, want een lijst heeft geen `-`. De onderwijskundige
+  blokkeerde de oplevering erop. Het was de enige blokkade.
+- In `curriculum/leerlijn.md`, bij het besluit *"Ja, ook in de opstap"*, geschreven in de
+  herstelronde: *"zodat de opstap de nieuwe syntaxis van de week draagt"*. Deze reden klopt wel,
+  want ze volgt uit een bestaande regel. De onderwijskundige in herstelmodus noemde het een
+  puntje, *"hetzelfde soort toevoeging als bij B1"*.
+
+De tweede keer gebeurde het in dezelfde auteurscontext, nadat de herstelopdracht de eerste keer
+letterlijk had benoemd.
+
+**Waarom dit een patroon is.** De bevinding *Een keuzeoptie van de orkestrator wordt de
+onderbouwing van de mens* (23 september) beschrijft hetzelfde bij de orkestrator, die een reden
+in een optie zet. Hier doet de auteur het, bij het vastleggen. Het C4-contract verbiedt
+"nieuwe inhoudelijke rechtvaardiging namens hem" voor wie het C4 schrijft. Voor wie het C4 later
+in `curriculum/` uitschrijft, staat dat verbod nergens. Een besluittekst zonder reden leest
+kaal, dus de schrijver vult er een aan. Het gevaar zit in de plek: een zin onder *"is besloten"*
+leest als het woord van de vakdeskundige.
+
+**Wat het veranderde.** Beide zinnen zijn in PR #304 aangepast. De eerste keer ving de
+onderwijskundige het, omdat het C1 van #271 (*"de onderwijskundige dekt ook ... de besluitdiffs in
+`curriculum/` en `conventies/`, getoetst tegen het C4"*) en het C4 die toets aan de beoordeling
+toevoegden. Dat was een keuze voor dit werkitem, geen vaste regel: `loop.md` (*GitHub en
+registratie*) schrijft de onafhankelijke redactionele toets alleen voor bij een besluittekst die
+de orkestrator schrijft. Een besluittekst van de auteur valt daar niet onder. De opdracht aan de
+auteur verbood het niet, en een benoeming in de herstelopdracht voorkwam de tweede keer niet.
+
+Voorstel voor de instructies, een procesbesluit voor de vakdeskundige: **zet in de auteursrol bij
+het vastleggen van een besluit dat alleen het letterlijke besluit en zijn datum worden
+vastgelegd. Een reden alleen als de vakdeskundige die gaf, en dan als citaat.** Daarbij hoort
+de vraag of de regel in `loop.md` over de redactionele toets van besluittekst ook moet gelden
+voor besluittekst die de auteur schrijft. Nu noemt die regel alleen de orkestrator.
+
+**Tweede waarneming, bij een bestaande bevinding.** *Een agent die op de sessielimiet stopt,
+levert zijn verbruik niet af* (24 september) gebeurde opnieuw. De eerste auteursrun van #271
+stopte op HTTP 429 zonder verbruiksmelding. Dit keer is de context hervat, en die meldde
+daarna een getal. Of dat getal het afgebroken deel bevat, is uit de melding niet af te leiden.
+Het staat in [metingen.md](metingen.md) met dat voorbehoud.

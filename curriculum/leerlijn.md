@@ -167,8 +167,8 @@ uitgangssituatie, niet de norm; het verschil tussen beide kolommen is het werk.
 | 3 | Recursie | HOEM | A6 | recursie, base case, recursieve aanroep | Algoritmen (knapzak, wisselgeld) |
 | 4 | Use it or lose it, lambda | HOEM | A4, A6 | use it or lose it, `lambda`, functie als argument | Alleen de extra-opgave Text-ID; de klassenstof staat sinds #160 in week 5 |
 | 5 | OO, klassen, encapsulatie | BRRA | P5, A2 | klassedefinitie, object, attribuut, constructor en `__init__`, `self`, een methode schrijven, `__repr__`, waarde en identiteit, `is`, encapsulatie, `_` voor een attribuut dat niet van buiten wordt gebruikt, `@property` en decorator, compositie | OO, klassen, encapsulatie: colleges `12a_objecten` en `12b_data_object`, practicum sessie 1 (`12_creatures`), opstap, basis (`Date`) en extra (`Board`) (#160) |
-| 6 | Polymorfisme, overerving, duck typing | BRRA | A2, A3 | overerving, subklasse en superklasse, `super()`, een methode overschrijven, standaardwaarde voor een parameter, polymorfisme, duck typing | Polymorfisme, overerving, duck typing: colleges `13a_overerving` en `13b_polymorfisme`, practicum sessie 2 (`13_creatures`), opstap, basis (kassabon) en extra (spelers voor `Board`) (#270) |
-| 7 | Operator overloading, excepties, oefentoets | BRRA | P4, P6 | operator overloading, magische methode, `__eq__`, exception, `try`/`except`, `raise` | - |
+| 6 | Polymorfisme, overerving, duck typing | BRRA | A2, A3 | overerving, subklasse en superklasse, `super()`, een methode overschrijven, standaardwaarde voor een parameter, polymorfisme, duck typing, `isinstance`, `self.__class__` en `__name__` | Polymorfisme, overerving, duck typing: colleges `13a_overerving` en `13b_polymorfisme`, practicum sessie 2 (`13_creatures`), opstap, basis (kassabon) en extra (spelers voor `Board`) (#270) |
+| 7 | Operator overloading, excepties, oefentoets | BRRA | P4, P6 | operator overloading, magische methode, `__eq__`, exception, `try`/`except`, `raise` | Operator overloading en exceptions: college `14a_operatoren_en_exceptions`, practicum sessie 3 (`14_creatures`), opstap, basis (`Date` met operatoren, en datums inlezen met `try`/`except`) en extra (min-max), en het oefententamen onder dezelfde week (#271) |
 
 Een deel van deze onderwerpen komt in het huidige materiaal niet of nauwelijks
 voor. Dat is bekend en verwacht: de planning beschrijft waar PGM2 heen gaat, niet
@@ -182,7 +182,9 @@ termbesluit; welke vorm het materiaal gebruikt, staat in `conventies/begrippen.m
 Voor week 5 is dat vastgesteld (*object*, *attribuut*, *constructor*,
 *encapsulatie*, *compositie*, *waarde*, *identiteit*, *verwijzing*), en voor
 week 6 ook (*overerving*, *subklasse*, *superklasse*, *overschrijven*,
-*polymorfisme*, *duck typing*, #270); voor *base case* of *basisgeval* nog niet.
+*polymorfisme*, *duck typing*, #270) en week 7 (*magische methode*, *operator
+overloading*, een exception *gooien*, *afvangen* en *afhandelen*, #271); voor
+*base case* of *basisgeval* nog niet.
 
 **De kolom *Leeruitkomsten* wijst elke gewogen PGM2-uitkomst een week toe**,
 behalve twee die in PGM1 worden onderwezen en in PGM2 worden getoetst: P1
@@ -204,6 +206,20 @@ Besloten bij de voorbereiding van de poort van #160, en **uitgevoerd** in #160.
 
 **Excepties landen in week 7**, naast operator overloading. Vastgesteld bij de
 voorbereiding van de poort van #160; zie *Gaten tussen toetsing en materiaal*.
+De eigen opgave voor het afvangen staat in de **basisopgave**: de constructor van
+`Date` gooit een `ValueError` bij een datum die niet bestaat, en de student zet
+een lijst datumstrings om naar `Date`-objecten en vangt de ongeldige af. De
+syntaxis staat in de opstap. Het practicum gooit alleen exceptions en vangt er
+geen af (`practicum-oop.md`). Vastgesteld door de vakdeskundige op 25 september
+2026, bij de poort van #271 (VP1).
+
+**`NotImplemented` komt niet in de leerlijn.** Een operator van een eigen klasse
+die een argument van een ander type krijgt, geeft bij `__eq__` `False` terug; de
+andere operators controleren het type met `isinstance` en gooien een
+`TypeError`. Dat `a > b` werkt met alleen `__lt__`, legt het materiaal uit
+zonder dat de student `NotImplemented` schrijft. Vastgesteld door de
+vakdeskundige op 25 september 2026, bij de poort van #271 (VP8); dit wijkt af van
+de code in sessie 3 van `practicum-oop.md`.
 
 **Min-max is de extra-opgave van week 7.** De extra-opgaven van week 5 tot en met
 7 vormen één lijn over objectgeoriënteerd programmeren, en min-max sluit die af.
@@ -211,13 +227,28 @@ Week 5 levert `Board`. Week 6 levert in `problems/13_extra.md` de spelers die
 `Board.host_game(px, po)` polymorf gebruikt, waaronder `SimpleAIPlayer`, die één
 zet vooruitkijkt. Week 7 voegt de min-max-speler toe, op basis van
 `practicals/13_vier_op_rij_speler.md` en de sectie *Min-max* van
-`lectures/12_ai.ipynb`; of die sectie terugkomt in een college van week 7, is nog
-open in #271. Min-max past niet helemaal bij het onderwerp van week 7; `__lt__`
-kan dienen om bordtoestanden te vergelijken. Het vraagt recursie, en die staat
+`lectures/12_ai.ipynb`. Min-max past niet helemaal bij het onderwerp van week 7;
+`__lt__` kan dienen om bordtoestanden te vergelijken. Het vraagt recursie, en die staat
 sinds week 3 ter beschikking. Vastgesteld door de vakdeskundige op 23 september
-2026; week 6 is **uitgevoerd** in #270, week 7 is **nog niet uitgevoerd** (#271).
+2026; week 6 is **uitgevoerd** in #270, week 7 in #271.
 Op 24 september 2026 voegde de vakdeskundige toe: min-max past goed bij de
 extra-opgaven van week 5 en 6. Heropenen als die worden vervangen.
+
+Bij de poort van #271 (25 september 2026) besloot de vakdeskundige over de
+uitvoering. Min-max wordt uitgelegd in de extra-opgave zelf; de sectie *Min-max*
+komt niet terug in een college, en de genetische algoritmen uit `12_ai` blijven
+buiten `source/` (VP3). Het toernooi vervalt ook in week 7 (VP2). `Board` krijgt
+een methode `score()` met een absolute schaal: `-100` als X wint, `0` bij
+onbeslist, `100` als O wint. De recursie geeft waarden op die schaal terug; X
+kiest het minimum en O het maximum. Dat vervangt de schaal 0/50/100 en *"100 min
+de beste score van de tegenstander"*. De min-max-speler is een subklasse van
+`Player` met de constructor `(ox, tbt, ply)`, en `host_game` verandert niet.
+`next_move` maakt voor elke kolom waarin een zet mag een `ScoredMove(col,
+waarde)`, een kleine klasse met `__lt__` en `__eq__`; X bepaalt de beste waarde
+met `min`, O met `max`, en uit de zetten met die waarde kiest `tiebreak_move`
+volgens `tbt`: `'LEFT'`, `'RIGHT'` of `'RANDOM'` (VP10). **Uitgevoerd** in #271, in
+`problems/14_extra.md`; `practicals/13_vier_op_rij_speler.md` staat sinds #271
+buiten `source/` (VP11).
 
 **Compositie hoort bij week 5.** Week 5 past het begrip sinds #160 al toe:
 `Party` in het practicum `12_creatures` (stap 5) bewaart `Creature`-objecten in
@@ -237,6 +268,21 @@ constructors van `Dragon`, `Wolf`, `Goblin` en `Healer`, en `Dragon("Ember")` in
 sessie 3. Week 6 introduceert haar daarom, in de opstap en in het college
 `13a_overerving`. Vastgesteld door de vakdeskundige op 24 september 2026, bij de
 poort van #270, en **uitgevoerd** in #270.
+
+**`isinstance`, `self.__class__` en `__name__` horen bij week 6.** Ze gaan over
+de klasse van een object, en daarmee over polymorfisme. Week 6 introduceert ze in
+het college `13b_polymorfisme` en in het practicum `13_creatures`: `__repr__` van
+`Creature` gebruikt voortaan `self.__class__.__name__`, zodat een `Dragon` zich
+als `Dragon(...)` afdrukt. `isinstance` wordt ingevoerd naast duck typing: code
+die met `isinstance` controleert, laat een object dat alleen de goede methoden
+heeft niet meer meedoen. Daarom blijven `battle_round` en `host_game` zonder die
+controle. Week 7 gebruikt `self.__class__(...)` in `Creature.__mul__`. Dit
+herroept de keuze bij de poort van #270 dat `type(self).__name__` in week 6
+vermeden wordt (V10). Vastgesteld door de vakdeskundige op 25 september 2026, bij
+de poort van #271 (VP7 en VP8). Op 25 september 2026, bij de herstelronde van #271,
+besloot de vakdeskundige dat ze ook in de opstap van week 6 komen: *"Ja, ook in de
+opstap"*. Daarom staan ze ook in de tabel onder *Welk niveau een week hoort te
+hebben*, bij de syntaxis die de opstap van week 6 draagt.
 
 ## Welk niveau een week hoort te hebben
 
@@ -273,7 +319,7 @@ gewone `def` die zichzelf aanroept.
 | 3 | basis | - |
 | 4 | opstap, basis | `lambda`, functie als argument |
 | 5 | opstap, basis | `class`, `__init__`, `self`, `@property` |
-| 6 | opstap, basis | subklasse, `super()`, standaardwaarde voor een parameter |
+| 6 | opstap, basis | subklasse, `super()`, standaardwaarde voor een parameter, `isinstance`, `self.__class__.__name__` |
 | 7 | opstap, basis | magische methoden, `try`/`except`, `raise` |
 
 Een bestaand niveau telt alleen als het over het onderwerp van *Leidend voor
@@ -282,7 +328,8 @@ en 2 opstap, basis en extra, de weken 3 en 4 basis en extra, en de weken 5 tot e
 met 7 niets. Maar de opgaven van week 2 gaan over recursie en die van week 4 over
 klassen, dus die tellen voor een andere week. Wat een week mist, stelt de
 herziening van die week vast. Vastgesteld door de vakdeskundige op 23 september
-2026.
+2026. Sindsdien hebben de weken 5, 6 en 7 opstap, basis en extra gekregen, in
+werkitem #160, #270 en #271.
 
 **Wat er wél uit volgt: negen ontbrekende niveau-uitwerkingen.** Dat volgt niet uit
 de regel hierboven maar uit het besluit *Elk opgaveniveau hoort een uitwerking te
@@ -297,7 +344,9 @@ stond 30, 19 en 11, maar vóór #160 waren het er al 30, 20 en 10, omdat de opst
 van week 5 inmiddels een uitwerking had. #160 haalde `11_basis` weg en voegde
 opstap, basis en extra van PGM2 week 5 toe, alle drie met uitwerking. Hermeten
 bij #270: 32, 23 en 9 werden 35, 26 en 9, want #270 voegde opstap, basis en
-extra van PGM2 week 6 toe, alle drie met uitwerking. College- en
+extra van PGM2 week 6 toe, alle drie met uitwerking. Hermeten bij #271: 38, 29 en
+9, want #271 voegde opstap, basis en extra van PGM2 week 7 toe, alle drie met
+uitwerking. College- en
 practicumopdrachten vallen niet automatisch onder deze norm.
 
 ## Volgorde van het werk
@@ -321,13 +370,12 @@ Gemeten op het voorkomen van de betreffende constructies in `source/`.
 |---|---|---|---|
 | **PGM2 P3** tekstbestanden | 10% | Drie plekken, waarvan twee in de Markov-opgave van PGM1 week 7. | Naar PGM1 week 6 |
 | ~~**PGM1 A4** recursie~~ | | **Uitgevoerd op 1 september 2026**: staat nu als PGM2 A6. Wat resteert is de 10% die in PGM1 vrijkomt. | Zie `leeruitkomsten.md`, *Voorgestelde correcties* |
-| **PGM2 P4** excepties | 10% | Bij de herziening van week 5 is `try`/`except` uit de gegeven code van `problems/5_basis` gehaald; de menukeuze wordt daar nu als string vergeleken. Excepties worden nergens in PGM1 onderwezen. | PGM2 week 7, naast operator overloading; vastgesteld op 23 september 2026 |
+| **PGM2 P4** excepties | 10% | Bij de herziening van week 5 is `try`/`except` uit de gegeven code van `problems/5_basis` gehaald; de menukeuze wordt daar nu als string vergeleken. Excepties worden nergens in PGM1 onderwezen. | PGM2 week 7, naast operator overloading; vastgesteld op 23 september 2026, **uitgevoerd** in #271: opstap, college en basisopgave |
 | **PGM2 P1** lussen | 5% | Wordt in PGM1 onderwezen (week 4 en 5) en in PGM2 getoetst. Kan bedoeld zijn als herhaling, maar staat niet in de planning voor 2026. | open |
 | **PGM2 A5** finite state machines | geen | Komt nergens voor. | Schrappen; zie [leeruitkomsten.md](leeruitkomsten.md) |
 
-Van de twee gaten die samen 20% van het PGM2-tentamen zijn, is er daarmee één
-belegd en één belegd maar nog niet gemaakt: PGM2 moet excepties daadwerkelijk
-gaan behandelen, en doet dat in week 7.
+Van de twee gaten die samen 20% van het PGM2-tentamen zijn, zijn er daarmee twee
+belegd. Excepties behandelt PGM2 sinds #271 in week 7.
 
 ## Vooruitverwijzingen om na te lopen
 
@@ -369,15 +417,15 @@ blijft een raakvlak vindbaar zonder dat het in een werkitem verstopt zit.
 | PGM1 week 7 | PGM2 week 1 | Week 7 levert **tuples en tuple unpacking**. PGM2 week 1 doorloopt dictionaries met `.items()` en pakt de paren uit met `for word, count in ...`; `lectures/8a_datastructuren.ipynb` verwijst er expliciet naar terug. Het materiaal van week 7 bevat op dit moment geen enkele tuple. | Besloten met beide docenten op 1 september 2026. Uit te voeren bij de herziening van week 7 (#102). PGM2 week 1 loopt hier met opzet op vooruit; dat is geen defect in die week. |
 | PGM1 week 4 | PGM2 week 1 | Week 4 levert de termen **begrensde** en **onbegrensde lus**, die `leeruitkomsten.md` r83 als PGM2 P1 toetst (5%, toepassen). Het materiaal gebruikte ze tot 1 september 2026 nergens. | Besloten bij de poort van #146, uit te voeren in datzelfde werkitem. |
 | PGM1 week 4 | PGM1 week 5 | Week 4 levert het **lusrecept**: vijf vragen waarvan de **vierde** het stopmoment is (*"Wanneer is het klaar?"*); de vijfde gaat over wat je teruggeeft. Week 5 bouwt erop voort met geneste lussen, en `unique` sluit week 4 af op precies het probleem dat week 5 opent - een lus in een lus. | Besloten bij de poort van #146. |
-| PGM1 week 5 | PGM2 week 7 | De vier zoekfuncties uit `practicals/5b_boter_kaas_eieren.ipynb` hebben andere parameternamen dan de gelijknamige functies in `source/problems/assets/board.py` regels 173-224. | Besloten, laten zoals het is: `board.py` definieert ze zelf en importeert het werk van de student nooit. Zie het besluitenregister in [uitgangspunten.md](uitgangspunten.md). Tot #270 stond hier PGM2 week 6; sinds #270 staat `practicals/13_vier_op_rij_speler.md`, het enige bestand dat `board.py` aanbiedt, in de inhoudsopgave onder PGM2 week 7. |
+| PGM1 week 5 | PGM2 week 7 | De vier zoekfuncties uit `practicals/5b_boter_kaas_eieren.ipynb` hebben andere parameternamen dan de gelijknamige functies in `board.py` regels 173-224, tot #271 `source/problems/assets/board.py` en sindsdien `practicals/assets/board.py`. | Besloten, laten zoals het is: `board.py` definieert ze zelf en importeert het werk van de student nooit. Zie het besluitenregister in [uitgangspunten.md](uitgangspunten.md). Tot #270 stond hier PGM2 week 6. Sinds #271 staan `board.py` en `practicals/13_vier_op_rij_speler.md`, het enige bestand dat het aanbiedt, buiten `source/` in `practicals/` (VP11); het raakvlak met het boek is daarmee vervallen. |
 | PGM1 week 5 | PGM1 week 7 | Week 5 levert `create_board` en `print_board` als vermogen; `source/problems/7_extra.md` regels 36-114 leert ze nu vanaf nul aan. | Voorstel: laat week 7 ernaar verwijzen in plaats van ze opnieuw aan te leren. |
 | PGM1 week 5 | PGM1 week 7 | `[[0] * 3] * 3` en de waarschuwing daarbij horen in week 7, naast aliasing en `deepcopy`. De constructie bijt pas zodra je erin toewijst, en dat gebeurt in week 5 niet. | Besloten in het weekontwerp van week 5, uit te voeren bij de herziening van week 7. |
 | PGM1 week 5 | PGM1 week 7 | Week 5 sluit af op één probleem: één vakje van een raster veranderen terwijl de rest blijft staan. Beide afsluitingen verwijzen naar `source/problems/7_extra.md`, de optionele extra-laag. | Voorstel: laat `source/lectures/7a_lists_advanced.ipynb` datzelfde probleem opnemen, zodat ook de student die extra overslaat het vervolg krijgt. |
 | PGM2 week 5 | PGM2 week 6 | Het practicum is één project over drie weken: `creatures.py`, beschreven in [practicum-oop.md](practicum-oop.md). Week 5 levert de klassen `Creature` en `Party`; week 6 bouwt er subklassen, `Beast` en een duck-typed `Turret` op. Wie week 5 niet af heeft, begint met de eindstand in `source/practicals/assets/creatures.py`. | Besloten bij de voorbereiding van de poort van #160. Week 5 is uitgevoerd in #160, week 6 in #270 (`practicals/13_creatures.md`). |
-| PGM2 week 6 | PGM2 week 7 | Week 7 geeft de klassen uit week 6 operatoren en vervangt de stille terugvalwaarden uit week 5 en 6 door `raise`. Het practicum gooit alleen exceptions en vangt er geen af, terwijl P4 het *afhandelen* van foutcondities vraagt. Week 6 levert (#270): `Beast`, `Dragon`, `Wolf`, `Goblin`, `Healer`, `Turret`, `battle_round` en `battle(side_a, side_b, max_rounds)`; `special_move` op `Creature` valt stil terug op een gewone aanval. Wat afwijkt van de opzet van sessie 3: alle vier de wezens hebben standaardwaarden, dus `Dragon("Ember")` werkt; `__repr__` noemt nog steeds `Creature(...)`, ook bij een subklasse, en `type(self).__name__` is in week 6 vermeden, dus de zin in sessie 3 dat `__repr__` "al sinds Sessie 1" `self.__class__` gebruikt, klopt niet; de limieten van `Turret` zijn attributen van het object, geen klasse-attributen. | Besloten als opzet; het afvangen is een open punt voor de herziening van week 7. De afwijkingen zijn besloten bij de poort van #270 (V8, V9, V10) en gaan als aflevering naar #271. |
-| PGM2 week 5 | PGM2 week 6 | `practicals/13_vier_op_rij_speler.md` verwijst op r37 naar het AI-practicum van week 5 en op r338 naar `host_game`, dat alleen daar wordt gebouwd. Sinds #160 wijst r37 naar `Board`, nu de extra-opgave van week 5. | Afgehandeld in #270: week 6 bouwt `host_game(px, po)` in `problems/13_extra.md`, en `13_vier_op_rij_speler` staat sinds #270 in de inhoudsopgave onder PGM2 week 7, met ongewijzigde inhoud (V5). Het bestand zelf, met `play_game` en de controle op `'human'` op r338, wordt herzien in #271. |
-| PGM2 week 6 | PGM2 week 7 | De extra-opgave `problems/13_extra.md` legt de spelersinterface vast waarop week 7 voortbouwt: elke speler heeft een attribuut `ox` en een methode `next_move(board)` die een kolom teruggeeft waarin een zet mag; `Board.host_game(px, po)` gebruikt van een speler alleen die twee, zonder typecontrole; `Player.next_move` valt terug op de meest linkse kolom, en `Board` heeft `cols_to_win(ox)`. Een volgende speler, in #271, past in deze structuur als subklasse van `Player`, waarvoor `host_game` niet verandert. Het toernooi vervalt (V3). | Besloten bij de poort van #270 (24 september 2026). Uit te voeren in #271; of het toernooi ook in week 7 vervalt, is daar te bevestigen. |
-| PGM2 week 6 | PGM2 week 7 | De extra-opgave van week 7 voegt een min-max-speler toe aan de spelers uit week 6, als volgende speler in de spelersinterface van `problems/13_extra.md`. | Besloten door de vakdeskundige op 23 september 2026. Uit te voeren in #271. |
+| PGM2 week 6 | PGM2 week 7 | Week 7 geeft de klassen uit week 6 operatoren en vervangt de stille terugvalwaarden uit week 5 en 6 door `raise`. Het practicum gooit alleen exceptions en vangt er geen af, terwijl P4 het *afhandelen* van foutcondities vraagt. Week 6 levert (#270): `Beast`, `Dragon`, `Wolf`, `Goblin`, `Healer`, `Turret`, `battle_round` en `battle(side_a, side_b, max_rounds)`; `special_move` op `Creature` valt stil terug op een gewone aanval. Wat afwijkt van de opzet van sessie 3: alle vier de wezens hebben standaardwaarden, dus `Dragon("Ember")` werkt; `__repr__` noemde tot #271 `Creature(...)`, ook bij een subklasse, en `type(self).__name__` was in week 6 vermeden, dus de zin in sessie 3 dat `__repr__` "al sinds Sessie 1" `self.__class__` gebruikt, klopte niet; de limieten van `Turret` zijn attributen van het object, geen klasse-attributen. | Besloten als opzet. De afwijkingen zijn besloten bij de poort van #270 (V8, V9, V10). **Uitgevoerd** in #271 (`practicals/14_creatures.md`): het afvangen staat in de basisopgave (VP1); V10 is herroepen, en `__repr__` gebruikt sinds week 6 `self.__class__.__name__` (VP7). |
+| PGM2 week 5 | PGM2 week 6 | `practicals/13_vier_op_rij_speler.md` verwijst op r37 naar het AI-practicum van week 5 en op r338 naar `host_game`, dat alleen daar wordt gebouwd. Sinds #160 wijst r37 naar `Board`, nu de extra-opgave van week 5. | Afgehandeld in #270: week 6 bouwt `host_game(px, po)` in `problems/13_extra.md`, en `13_vier_op_rij_speler` staat sinds #270 in de inhoudsopgave onder PGM2 week 7, met ongewijzigde inhoud (V5). Het bestand zelf, met `play_game` en de controle op `'human'` op r338, staat sinds #271 buiten `source/` (VP11); de inhoud leeft voort in `problems/14_extra.md`. |
+| PGM2 week 6 | PGM2 week 7 | De extra-opgave `problems/13_extra.md` legt de spelersinterface vast waarop week 7 voortbouwt: elke speler heeft een attribuut `ox` en een methode `next_move(board)` die een kolom teruggeeft waarin een zet mag; `Board.host_game(px, po)` gebruikt van een speler alleen die twee, zonder typecontrole; `Player.next_move` valt terug op de meest linkse kolom, en `Board` heeft `cols_to_win(ox)`. Een volgende speler, in #271, past in deze structuur als subklasse van `Player`, waarvoor `host_game` niet verandert. Het toernooi vervalt (V3). | Besloten bij de poort van #270 (24 september 2026). **Uitgevoerd** in #271: `MinimaxPlayer` is een subklasse van `Player`, en `host_game` is ongewijzigd. Het toernooi vervalt ook in week 7 (VP2). |
+| PGM2 week 6 | PGM2 week 7 | De extra-opgave van week 7 voegt een min-max-speler toe aan de spelers uit week 6, als volgende speler in de spelersinterface van `problems/13_extra.md`. | Besloten door de vakdeskundige op 23 september 2026. **Uitgevoerd** in #271 (`problems/14_extra.md`). |
 
 ## Onderhoud
 
