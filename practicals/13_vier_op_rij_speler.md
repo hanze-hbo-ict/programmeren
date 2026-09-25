@@ -340,7 +340,7 @@ kunnen laten spelen, maar ook tegen een mens. Dat wil zeggen dat als `px` of `po
 :::{admonition} Zelf schrijven?
 :class: note
 
-Je mag natuurlijk `play_game` zelf schrijven, als je dat een leuke uitdaging vindt. Anders kan je deze methode vinden in de {download}`begincode voor de klasse Board </problems/assets/board.py>`.
+Je mag natuurlijk `play_game` zelf schrijven, als je dat een leuke uitdaging vindt. Anders kan je deze methode vinden in de [begincode voor de klasse Board](assets/board.py).
 :::
 
 Probeer de voorbeelden hieronder; deze zijn niet afhankelijk van een willekeurige waarde, dus je kan ze goed gebruiken om `play_game` en je AI voor Vier op een rij te testen!
