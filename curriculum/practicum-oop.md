@@ -9,7 +9,7 @@ week wordt geschreven, niet het materiaal zelf.
 |---|---|---|
 | 1 | 5 | #160, uitgevoerd in `source/practicals/12_creatures.md` |
 | 2 | 6 | #270, uitgevoerd in `source/practicals/13_creatures.md` |
-| 3 | 7 | de herziening van week 7 |
+| 3 | 7 | #271, uitgevoerd in `source/practicals/14_creatures.md` |
 
 Bij de uitvoering gelden de conventies zoals altijd: de tekst spreekt de student
 aan, niet de docent, en de termen volgen `conventies/begrippen.md`. Daarnaast is

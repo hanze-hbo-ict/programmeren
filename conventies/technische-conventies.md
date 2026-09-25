@@ -274,6 +274,13 @@ die niet in de repo staat, per stap en samen met de assertions van
 `12_creatures.md`. De beginstand daarvan, de eindstand van week 5, staat wel in de
 repo: `practicals/assets/creatures.py`.
 
+Bij de herziening van PGM2 week 7 (#271) kwamen er weer twee bij:
+`practicals/14_creatures.md` (19) en `problems/14_extra.md` (9). Grond 2 geldt ook
+hier niet, om dezelfde reden. De blokken van `14_extra.md` draaien in de build via
+de uitwerking in `solutions/14_extra.ipynb`. Die van `14_creatures.md` zijn buiten de
+build uitgevoerd, samen met de eindstand van week 6 in
+`practicals/assets/week_6/creatures.py` en de assertions van week 5 en 6.
+
 ### Waarom dit zo gegroeid is
 
 In de oorspronkelijke opzet waren de colleges notebooks omdat ze als sheets
