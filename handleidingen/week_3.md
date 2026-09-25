@@ -460,8 +460,8 @@ komt, en noem het woord lus.
   achter elkaar. Wie alleen `"hond"` en `"python"` test, ziet niets.
 - **De lengtecontrole die bij `has_nine_digits` vooraan moet.** In
   `source/problems/3_basis.ipynb` roept `is_valid` eerst `has_nine_digits` aan en
-  pas daarna `weighted_sum`. Staat die volgorde andersom, dan knalt de negende
-  positie eruit bij een te kort nummer. Dat loopt **luid** af, met een
+  pas daarna `weighted_sum`. Staat die volgorde andersom, dan knalt index 8
+  eruit bij een te kort nummer. Dat loopt **luid** af, met een
   `IndexError` op een regel waar de reden niet zichtbaar is - de fout zit in de
   aanroep erboven en niet in de functie die stukloopt.
 - **`interp` zonder `if` schrijven.** Dit is geen fout maar een blokkade: de
