@@ -26,7 +26,7 @@ dan de week waarin het hier staat.
 | 3 | Functies | P5, P6, P7, A2 | functiedefinitie, parameter, docstring, `return`, `None`/`NoneType`, `TypeError`, `NameError`, stack, frame, heap, lokale variabele, module en `import`, `range`, `sum`, `choice`, iterator, signatuur, main-functie |
 | 4 | Lussen | A1 | `for`, `while`, begrensde en onbegrensde lus, `break`, `continue`, het lusrecept, de operator `in`, `_` als wegwerpvariabele |
 | 5 | Geneste lussen | A1, A3 | geneste lus, 2D-lijst, ASCII-art, bordrepresentatie |
-| 6 | Bestanden en data | bestanden † | bits, bytes, ASCII, newline, `with open`, beeldbewerking |
+| 6 | Bestanden, data en run-length encoding | bestanden † | bits, bytes, ASCII, newline, `with open`, beeldbewerking, run-length encoding |
 | 7 | Mutabiliteit en algoritmeontwerp | P4, A3 | mutatie, functiecompositie, deelprobleem, algoritmeontwerp, tuple |
 
 † De leeruitkomst over tekstbestanden staat nu in de PGM2-matrijs en wisselt van
@@ -128,14 +128,14 @@ veranderd.
 | 3 | 242 | 1.143 | 176 | **1.561** |
 | 4 | 672 | 1.066 | 1.048 | 2.786 |
 | 5 | 674 | 2.940 | **5.354** | 8.968 |
-| 6 | 353 | 1.343 | 772 | 2.468 |
+| 6 | 381 | 1.377 | 335 | 2.093 |
 | 7 | 532 | 1.110 | **3.713** | 5.355 |
-| **Totaal** | **3.618** | **8.691** | **11.526** | 23.835 |
+| **Totaal** | **3.646** | **8.725** | **11.089** | 23.460 |
 
 Drie dingen vallen op.
 
-**Het zwaartepunt ligt in de optionele laag.** Extra is 48% van het materiaal en
-een derde groter dan basis. Daar zitten Mandelbrot, Game of Life, Pi met
+**Het zwaartepunt ligt in de optionele laag.** Extra is 47% van het materiaal en
+ruim een kwart groter dan basis. Daar zitten Mandelbrot, Game of Life, Pi met
 pijltjes en beeldcompressie: precies de opgaven waarin een probleem stap voor
 stap wordt opgebouwd. Zie [uitgangspunten.md](uitgangspunten.md) voor de
 achtergrond. De scheefheid is kleiner dan bij de vorige meting, doordat basis in

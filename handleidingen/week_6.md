@@ -504,10 +504,10 @@ waar het materiaal zegt waar de grens van een uitkomst ligt.
   met de tekening op papier van gisteren erbij.
 - **Iemand is na een halfuur met de basis klaar.** Stuur hem naar
   `source/problems/6_extra.ipynb` en laat hem eerst op papier de
-  streepjesafbeelding comprimeren: vier runs van 16 worden vier bytes, 32
-  tekens. Weet wel dat de opgave een getal als zeven binaire cijfers vraagt, en
-  dat het omrekenen naar binair deze week nergens wordt uitgelegd. Die student
-  heeft van jou een hint nodig, of de ruimte om het zelf uit te zoeken.
+  streepjesafbeelding beschrijven: vier runs van 16 worden
+  `[["0", 16], ["1", 16], ["0", 16], ["1", 16]]`. De student hoeft geen
+  getallen naar binair om te zetten; vraag daarna naar de lege invoer en de
+  inverse-eigenschap.
 
 **Wat je niet inkort.** Blok 3, het peilmoment. En blok 1, want zonder
 bestanden op de goede plek begint niemand.
@@ -544,24 +544,15 @@ bestanden op de goede plek begint niemand.
 - **De opstap en de basis geven geen downloadlink** voor de bestanden die ze
   lezen; zie sectie 4. In de elf bestanden van de week staat één
   `{download}`, die van `fraaie_plaatjes.zip`.
-- **`source/problems/6_extra.ipynb` verwijst naar functies die er niet meer
-  zijn.** De opgave zegt dat je *"functies die je bij de basis opdrachten hebt
-  geschreven"* mag gebruiken, maar de basis gaat nu over DNA en heeft geen
-  functie die een getal binair schrijft - en die heeft `compress` wel nodig.
-  Het is een restant van de tijd dat binair in deze week stond. Onder de
-  voorbeelden staat bovendien *"`compress` en `decompress` in actie"*, terwijl
-  de functie `uncompress` heet.
-- **De uitwerking van de extra klopt niet.** `source/solutions/6_extra.ipynb`
-  roept `count`, `num_to_base_b` en `base_b_to_num` aan, en geen van die drie
-  is ergens in `source/` gedefinieerd. Vul je ze zelf aan, dan blijkt
-  `uncompress` de runs in omgekeerde volgorde terug te zetten: de
-  streepjesafbeelding uit de opgave komt terug als
-  `1111111111111111000000000000000011111111111111110000000000000000`, terwijl
-  ze met zestien nullen begon. De enige test in de opgave,
-  `uncompress(compress(64 * "0"))`, merkt dat niet, omdat één run niet van
-  volgorde kan wisselen. De uitwerking staat als leestekst en niet als
-  draaiende cel, en daarom ziet de build het niet. Geef haar niet als
-  controle aan een student.
+- **De extra gebruikt run-length encoding.** `source/problems/6_extra.ipynb`
+  beschrijft een geldige invoer als een binaire string van maximaal 64 tekens en
+  geeft de runs terug als tweeelementige lijsten `[pixel, aantal]`. De lege
+  invoer is expliciet beschreven. Studenten hoeven geen getallen naar binair
+  om te rekenen; de lijst is hier een compacte beschrijving van de pixels.
+- **De uitwerking van de extra draait.** `source/solutions/6_extra.ipynb` bevat
+  codecellen voor `compress` en `uncompress`, met assertions voor lege invoer,
+  enkele en afwisselende runs, de maximale lengte en de inverse-eigenschap. De
+  runs worden in hun oorspronkelijke volgorde teruggezet.
 - **Buiten het boek staat een oude uitwerking van het werkcollege**,
   `solutions/6b_images.ipynb` in de hoofdmap van de repository, niet in
   `source/`. Haar `mirror_vert` loopt vast op `im_pix.get_wh()`
@@ -616,9 +607,9 @@ spiegelingen van het werkcollege en bij de extra van het practicum.
 getallen en zeven opdrachten: een test op oneven, getallen omrekenen naar
 binair en terug, een binaire teller, en hetzelfde voor het drietallig stelsel,
 alle recursief. Die rekenkunde is vervallen met het besluit §`### Schakelingen
-en binair` in `curriculum/uitgangspunten.md`. Eén spoor ervan staat nog in de
-extra, die een getal binair moet schrijven zonder dat de week het uitlegt; zie
-de eigenaardigheden hierboven.
+en binair` in `curriculum/uitgangspunten.md`. De extra gebruikt nog wel binaire
+strings als pixels, maar leert geen binaire omzetting: de run-lijst bevat gewone
+decimale aantallen.
 
 Beide documenten zijn met dit werkitem uit de repository verwijderd, volgens de
 regel in `curriculum/uitgangspunten.md`
@@ -633,8 +624,8 @@ vindt ze in de git-geschiedenis, bijvoorbeeld met
   voor PGM1 gedaan. De meldingen daarover in `handleidingen/week_3.md`,
   `week_4.md` en `week_5.md` zijn met dit werkitem bijgewerkt, net als
   *Reikwijdte* in `conventies/conventies.md`.
-- **De uitwerking van de extra is stuk**, en de opgave verwijst naar functies
-  die er niet meer zijn; zie de eigenaardigheden. Gemeld, niet gerepareerd.
+- **De extra is facultatief en gebruikt run-length encoding.** De uitwerking
+  bevat uitvoerbare codecellen en tests; zie de eigenaardigheden hierboven.
 - **De opstap en de basis hebben geen downloadlink** voor hun bestanden.
   Gemeld, niet gerepareerd.
 - **De opstap van week 6 heeft nog geen uitwerking.** Dat staat in #194.
