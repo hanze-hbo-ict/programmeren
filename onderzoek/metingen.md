@@ -1858,18 +1858,21 @@ Opgeleverd in PR #304. Het gaat om:
 | beoordelaar-onderwijskundige, herstelmodus | 70.341 | 3 min 1 s | AKKOORD MET PUNTJES, 4 puntjes |
 | beoordelaar-eerstejaars, herstelmodus | 69.189 | 4 min 11 s | AKKOORD MET PUNTJES, 5 puntjes |
 | auteur, puntjes na het laatste C7 (hervat) | 13.862 | 5 min 54 s | 6 van 6 puntjes verwerkt, controles groen |
-| beoordelaar-redacteur, lezing puntjesdiff en deze tekst | volgt na de lezing |  |  |
-| **vastgesteld totaal agents** | **1.394.431** | | zonder de lezing van de redacteur |
+| beoordelaar-redacteur, lezing puntjesdiff en deze tekst | 81.597 | 4 min 22 s | puntjesdiff akkoord; BLOKKEER op deze tekst, 1 blokkade (bronvermelding in de bevinding), 5 puntjes |
+| beoordelaar-redacteur, herstellezing van deze tekst | wordt ingevuld na de lezing | | |
+| **vastgesteld totaal agents** | **1.476.028** | | zonder de herstellezing; wordt bijgewerkt na de lezing |
 
 Bron: `subagent_tokens` uit de verbruiksmelding na elke agentstap. De rollen zelf schreven
 *niet beschikbaar*. Voor een hervatte context is het getal het verschil met de vorige melding van
 dezelfde agent, volgens de bevinding *Een hervatte agent meldt zijn tokens als lopend totaal*.
 
-**Twee getallen zijn onzeker.** De eerste auteursrun stopte op de sessielimiet (HTTP 429,
-`req_011CfPyhSZyz5JvREUNxw9oE`), zonder verbruiksmelding. Bewaard bleven vijf commits op een lokale
-branch. De hervatte run maakte de controles af en meldde 435.870. Of daarin het afgebroken deel
-volledig zit, is niet vastgesteld. Het auteursherstel kwam op 34.526, voor 13 bestanden. Dat is
-laag vergeleken met de andere stappen, maar het is wat gemeten is.
+**Onzeker zijn de getallen van hervatte contexten.** De eerste auteursrun stopte op de
+sessielimiet (HTTP 429, `req_011CfPyhSZyz5JvREUNxw9oE`), zonder verbruiksmelding. Bewaard bleven
+vijf commits op een lokale branch. De hervatte run maakte de controles af en meldde 435.870. Of
+daarin het afgebroken deel volledig zit, is niet vastgesteld. De latere stappen van dezelfde
+auteurscontext (34.526 en 13.862) en het ontwerpherstel (11.270) zijn berekend als verschil tussen
+twee meldingen. Dat klopt alleen als de melding een lopend totaal is, en dat is niet bewezen; zie
+de bevinding *Een hervatte agent meldt zijn tokens als lopend totaal*.
 
 **Herstelstand bij afsluiting:** ontwerp 1/1, oplevering 1/1. De scope-aanvulling AC-W6b (de
 opstap van week 6) en de puntjes na het laatste C7 vielen buiten de rondelimiet. De vakdeskundige
@@ -1882,14 +1885,15 @@ vroeg er zelf om.
    - `self.__class__` en `isinstance` naar week 6;
    - `NotImplemented` weg;
    - voor min-max een absolute schaal met `min` voor X en `max` voor O, en `tbt` blijft.
-2. Drie vervolgvragen van de orkestrator bij VP8 en VP11.
+2. Drie vervolgvragen van de orkestrator bij VP7, VP8 en VP11.
 3. `isinstance` en `__class__` ook in de opstap van week 6, op de open vraag uit het C5.
-4. De puntjes na het laatste C7 rechtzetten en deze meting overnemen.
+4. *"Zet de puntjes recht en neem de metingen en bevindingen over in onderzoek"*, geregistreerd
+   als [C4-aanvulling](https://github.com/hanze-hbo-ict/programmeren/issues/271#issuecomment-5831435845).
 
 **De poort ving een vakinhoudelijke fout die twee rollen misten.** Het C2 schreef bij VP8: *"de
 gespiegelde aanroep bij `>` werkt alleen omdat `NotImplemented` bestaat"*. De verhelderaar
 toetste het C2 twee keer en liet de zin staan. De vakdeskundige schreef: *"volgens mij werkt
-Creature > Dragon omdat __gt__ niet bestaat maar __lt__ wel, en heeft dat niet met NotImplemented
+Creature > Dragon omdat \_\_gt\_\_ niet bestaat maar \_\_lt\_\_ wel, en heeft dat niet met NotImplemented
 te maken"*. De orkestrator mat het na: een klasse met alleen `__lt__`, zonder
 `return NotImplemented`, geeft bij `>` het goede antwoord. Technisch klopte de zin van het C2,
 want `object.__gt__` geeft zelf `NotImplemented` terug. Didactisch was de conclusie fout: de

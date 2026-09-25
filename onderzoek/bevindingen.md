@@ -1326,13 +1326,19 @@ in `curriculum/` uitschrijft, staat dat verbod nergens. Een besluittekst zonder 
 kaal, dus de schrijver vult er een aan. Het gevaar zit in de plek: een zin onder *"is besloten"*
 leest als het woord van de vakdeskundige.
 
-**Wat het veranderde.** Beide zinnen zijn in PR #304 aangepast. De redactionele toets van de
-besluitdiff tegen het C4, die `loop.md` voorschrijft, ving het de eerste keer. Die regel werkt
-dus. De opdracht aan de auteur verbood het niet, en een benoeming in de herstelopdracht
-voorkwam de tweede keer niet. Voorstel voor de instructies, een procesbesluit voor de
-vakdeskundige: **zet in de auteursrol bij het vastleggen van een besluit dat alleen het
-letterlijke besluit en zijn datum worden vastgelegd. Een reden alleen als de vakdeskundige die
-gaf, en dan als citaat.**
+**Wat het veranderde.** Beide zinnen zijn in PR #304 aangepast. De eerste keer ving de
+onderwijskundige het, omdat het C1 van #271 (*"de onderwijskundige dekt ook ... de besluitdiffs in
+`curriculum/` en `conventies/`, getoetst tegen het C4"*) en het C4 die toets aan de beoordeling
+toevoegden. Dat was een keuze voor dit werkitem, geen vaste regel: `loop.md` (*GitHub en
+registratie*) schrijft de onafhankelijke redactionele toets alleen voor bij een besluittekst die
+de orkestrator schrijft. Een besluittekst van de auteur valt daar niet onder. De opdracht aan de
+auteur verbood het niet, en een benoeming in de herstelopdracht voorkwam de tweede keer niet.
+
+Voorstel voor de instructies, een procesbesluit voor de vakdeskundige: **zet in de auteursrol bij
+het vastleggen van een besluit dat alleen het letterlijke besluit en zijn datum worden
+vastgelegd. Een reden alleen als de vakdeskundige die gaf, en dan als citaat.** Daarbij hoort
+de vraag of de regel in `loop.md` over de redactionele toets van besluittekst ook moet gelden
+voor besluittekst die de auteur schrijft. Nu noemt die regel alleen de orkestrator.
 
 **Tweede waarneming, bij een bestaande bevinding.** *Een agent die op de sessielimiet stopt,
 levert zijn verbruik niet af* (24 september) gebeurde opnieuw. De eerste auteursrun van #271
