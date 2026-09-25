@@ -45,7 +45,7 @@ De uitzondering hieronder blijft staan.
 ### Gedeelde bestanden zijn Engels
 
 Bestanden die vanuit beide studiejaren worden gebruikt, zoals
-`problems/assets/board.py`, `practicals/assets/file_and_dictionary_examples.py`
+`board.py` (sinds #271 buiten `source/`, in `practicals/assets/`), `practicals/assets/file_and_dictionary_examples.py`
 en `lectures/assets/markov.py`, kunnen niet twee talen tegelijk hebben. Die zijn
 Engels. Dat is een bewuste uitzondering, geen slordigheid.
 

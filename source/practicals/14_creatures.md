@@ -199,12 +199,13 @@ Schrijf `__mul__(self, n)` in `Creature`:
 
 | `n` | Resultaat |
 |---|---|
-| een positief geheel getal | een `Party` met `n` nieuwe wezens |
+| een positieve integer | een `Party` met `n` nieuwe wezens |
 | `0` | een lege `Party`: een leeg leger is geen fout |
-| een negatief geheel getal | een `ValueError` |
-| geen geheel getal, zoals `2.5` | een `TypeError` |
+| een negatieve integer | een `ValueError` |
+| geen integer, zoals `2.5` | een `TypeError` |
 
-Kies de foutmeldingen zelf, bijvoorbeeld
+Of `n` een integer is, vraag je met `isinstance(n, int)`: `isinstance` werkt ook
+met een ingebouwd type als `int`. Kies de foutmeldingen zelf, bijvoorbeeld
 `"een wezen kun je niet met een negatief getal vermenigvuldigen"`.
 
 ```python
@@ -313,7 +314,7 @@ Vervang `special_move` van `Creature` door:
 
 `Dragon`, `Wolf`, `Goblin` en `Healer` overschrijven `special_move` al, en `Turret`
 heeft een eigen versie. Voor hen verandert er niets. Een gewoon `Creature` en een
-`Beast` hebben geen eigen versie: bij hen gooit `special_move` nu de foutmelding.
+`Beast` hebben geen eigen versie: bij hen gooit `special_move` nu de exception.
 
 **Hierdoor vervallen assertions van week 6.**
 

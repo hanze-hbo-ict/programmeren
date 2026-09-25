@@ -316,7 +316,7 @@ laten stappen.
 
 ### De parameternamen van `board.py` blijven zoals ze zijn
 
-`source/problems/assets/board.py` roept op regels 91-94 vier zoekfuncties aan en
+`board.py`, tot #271 `source/problems/assets/board.py`, roept op regels 91-94 vier zoekfuncties aan en
 definieert ze op regels 173-224 zelf opnieuw, met de signature
 `(ch, r_start, c_start, a, n)`. Practicum 5b laat de student dezelfde functies
 schrijven met de signature `(char, row_start, col_start, array, n)`.
@@ -375,7 +375,7 @@ draait wel.
 | Onderdompeling mag vooraf gaan aan uitleg | didactisch | staand; de grens is nog een afleiding |
 | Studenten leveren geen werk in; opdrachten zijn oefening | organisatorisch | gesloten, **nog niet uitgevoerd**: `source/` draagt nog inleverinstructies. Het toernooi met bonuspunten uit het oude AI-materiaal komt niet terug in week 6 (#270, V3) en ook niet in week 7 (#271, VP2) |
 | Tot en met week 4 ligt de nadruk op lezen en begrijpen; schrijven begint wel | didactisch | staand, onderbouwd |
-| Een weekpagina vat samen wat volgt en waarop het voortbouwt | praktisch | gesloten (#167), **deels uitgevoerd**: week 1 tot en met 4 dragen hem, met #168, #169, #230 en #162; week 12 (PGM2 week 5) draagt hem sinds #160, week 8 (PGM2 week 1) sinds #273 en week 13 (PGM2 week 6) sinds #270 en week 14 (PGM2 week 7) sinds #271; week 5 tot en met 7 en 9 tot en met 11 zijn nog stubs |
+| Een weekpagina vat samen wat volgt en waarop het voortbouwt | praktisch | gesloten (#167), **deels uitgevoerd**: week 1 tot en met 4 dragen hem, met #168, #169, #230 en #162; week 12 (PGM2 week 5) draagt hem sinds #160, week 8 (PGM2 week 1) sinds #273, week 13 (PGM2 week 6) sinds #270 en week 14 (PGM2 week 7) sinds #271; week 5 tot en met 7 en 9 tot en met 11 zijn nog stubs |
 | Elk opgaveniveau hoort een uitwerking te hebben | didactisch | gesloten, nog niet uitgevoerd; 9 van de 38 ontbreken (hermeten bij #271) |
 | Week 4 krijgt een lusrecept van vijf vragen, in `4a_lussen` | didactisch | gesloten, **uitgevoerd** met #153; week 5 pikt het nog niet op (#163) |
 | Recursie gaat in beginsel naar PGM2; `unique` blijft in PGM1 als herkenbaar iteratief voorbeeld met vooruitwijzing | organisatorisch | gesloten, uitgevoerd in #162: de overige recursieplekken zijn verwijderd; recursie wordt uitgebreider behandeld in PGM2 |

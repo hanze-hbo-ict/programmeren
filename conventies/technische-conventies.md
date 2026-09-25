@@ -465,7 +465,7 @@ Een bestand dat geen pagina is, koppel je met de `download`-rol. Een gewone
 Markdown-link geeft een build-waarschuwing.
 
 ```markdown
-{download}`begincode voor de klasse Board </problems/assets/board.py>`
+{download}`de eindstand van week 6 </practicals/assets/week_6/creatures.py>`
 ```
 
 ### Overige middelen
