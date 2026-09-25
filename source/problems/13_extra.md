@@ -251,6 +251,9 @@ per beurt. Hij is **geen** subklasse van `Player`, maar hij heeft wel een attrib
 `ox` en een methode `next_move(board)`. Meer heeft `host_game` niet nodig: dat is
 duck typing.
 
+`host_game` vraagt dus ook niet met `isinstance` of een speler een `Player` is, en
+dat is met opzet: met die controle kon een `ScriptedPlayer` niet meespelen.
+
 | Methode | Doet |
 |---|---|
 | `__init__(self, ox, moves)` | slaat `ox` op in `self.ox`, en een kopie van de lijst `moves` |

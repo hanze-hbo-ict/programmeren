@@ -26,7 +26,7 @@ daarmee. De assertions van week 5 staan daar al onderaan.
 | Stap | Wat | Doet |
 |---|---|---|
 | 1 | `special_move` op `Creature` | een gewone aanval, voor elk wezen |
-| 2 | `Dragon`, `Goblin` en `Healer` | drie soorten wezens, elk met een eigen `special_move` |
+| 2 | `Dragon`, `Goblin` en `Healer` | drie soorten wezens, elk met een eigen `special_move` en met hun eigen naam in `__repr__` |
 | 3 | een lus over gemengde wezens | één aanroep, ander gedrag per soort |
 | 4 | `Beast`, en een bonus op `attack` | wat twee soorten delen, op één plek |
 | 5 | `Dragon` onder `Beast`, en `Wolf` | twee beesten die op een andere manier woedend worden |
@@ -102,14 +102,40 @@ Schrijf `Goblin` en `Healer` op dezelfde manier. Ook zij zijn een subklasse van
 roep je `special_move` bij elk wezen op dezelfde manier aan, en dat heb je in de
 volgende stap nodig.
 
+### De naam van de klasse in `__repr__`
+
+Druk een draak af, en je ziet `Creature(Vlam, level 1, ...)`. Die tekst komt uit
+`__repr__` van `Creature`, die een draak heeft geërfd, en daar staat het woord
+`Creature` letterlijk in.
+
+Een object weet zelf van welke klasse het is. `self.__class__` is de klasse van
+het object, en `self.__class__.__name__` de naam van die klasse, als string:
+
+| Aanroep | Resultaat |
+|---|---|
+| `Dragon("Vlam").__class__.__name__` | `"Dragon"` |
+| `Goblin("Grom").__class__.__name__` | `"Goblin"` |
+| `Creature("Pop", 200, 1, 0).__class__.__name__` | `"Creature"` |
+
+Vervang in `__repr__` van `Creature` het woord `Creature` door
+`{self.__class__.__name__}`. De eerste regel van de f-string wordt dan:
+
+```python
+            f"{self.__class__.__name__}({self.name}, level {self._level}, "
+```
+
+Nu drukt een draak zich af als `Dragon(...)` en een goblin als `Goblin(...)`,
+terwijl `__repr__` nog steeds maar op één plek staat. Een gewoon wezen blijft
+`Creature(...)`, dus de assertions van week 5 slagen nog.
+
 ```python
 vlam = Dragon("Vlam")
 grom = Goblin("Grom")
 mos = Healer("Mos")
-assert repr(vlam) == "Creature(Vlam, level 1, hp 120/120, attack 25, defense 10)"
-assert repr(grom) == "Creature(Grom, level 1, hp 40/40, attack 8, defense 2)"
+assert repr(vlam) == "Dragon(Vlam, level 1, hp 120/120, attack 25, defense 10)"
+assert repr(grom) == "Goblin(Grom, level 1, hp 40/40, attack 8, defense 2)"
 assert repr(Healer("Varen", 80)) == (
-    "Creature(Varen, level 1, hp 80/80, attack 3, defense 5)"
+    "Healer(Varen, level 1, hp 80/80, attack 3, defense 5)"
 )
 assert vlam.special_move(grom) == "Vlam spuwt vuur en doet 23 schade!"
 assert grom.special_move(mos) == "Grom gooit een puntige steen en doet 3 schade!"
@@ -125,9 +151,6 @@ assert vlam.is_stronger_than(grom)
 
 De laatste regel roept `is_stronger_than` aan, en die staat niet in `Dragon`.
 Een draak heeft haar geërfd van `Creature`.
-
-Kijk ook naar de eerste assertion: een draak drukt zichzelf af als
-`Creature(...)`. Daar komt aan het eind een vraag over.
 
 ## Stap 3: één aanroep, ander gedrag
 
@@ -278,7 +301,7 @@ assert vlam.special_move(pop) == "Vlam spuwt vuur en doet 25 schade!"
 vlam.enrage()
 assert vlam.special_move(pop) == "Vlam spuwt vuur en doet 35 schade!"
 assert pop.hp == 80
-assert repr(Wolf("Grijs")) == "Creature(Grijs, level 1, hp 50/50, attack 15, defense 5)"
+assert repr(Wolf("Grijs")) == "Wolf(Grijs, level 1, hp 50/50, attack 15, defense 5)"
 ```
 
 ## Stap 6: een wachttoren die meevecht
@@ -336,6 +359,16 @@ kwaakt als een eend, dan is het een eend*. Voor een aanroep telt niet van welke
 klasse een object is, maar alleen of het de methoden en attributen heeft die
 worden gebruikt.
 
+Van welke klasse een object is, kun je wel vragen. `isinstance(x, K)` geeft
+`True` als `x` een object is van de klasse `K`, of van een subklasse van `K`:
+
+| Aanroep | Resultaat |
+|---|---|
+| `isinstance(Dragon("Vlam"), Dragon)` | `True` |
+| `isinstance(Dragon("Vlam"), Creature)` | `True`: een draak is een wezen |
+| `isinstance(Goblin("Grom"), Dragon)` | `False` |
+| `isinstance(Turret(), Creature)` | `False`: een toren is geen wezen |
+
 De schade van een toren is elke keer anders. De assertions kijken daarom niet
 naar één getal, maar naar wat voor elke worp moet gelden:
 
@@ -358,6 +391,8 @@ toren = Turret()
 vlam = Dragon("Vlam")
 assert vlam.attack(toren) == 25
 assert toren.special_move(vlam).startswith("Wachttoren vergrendelt en vuurt")
+assert isinstance(vlam, Creature)
+assert not isinstance(toren, Creature)
 ```
 
 De stro-pop in de eerste lus heeft verdediging `0`, zodat `take_damage` precies
@@ -365,7 +400,7 @@ de schade van de toren teruggeeft. In de laatste assertion geeft
 `s.startswith(t)` `True` als de string `s` begint met de string `t`: het getal
 aan het eind van de zin is elke keer anders, het begin niet.
 
-Kijk ook naar de een na laatste assertion. `attack` van `Creature` roept
+Kijk ook naar de assertion `vlam.attack(toren) == 25`. `attack` van `Creature` roept
 `target.take_damage(...)` aan, en een toren heeft `take_damage`. Een draak kan
 een toren dus aanvallen, zonder dat `Creature` iets van torens weet.
 
@@ -388,6 +423,11 @@ def battle_round(attacker, defender):
 `battle_round` gebruikt van de aanvaller alleen `special_move`, en van de
 verdediger alleen `is_alive` en `name`. Het maakt dus niet uit of de strijders een
 `Dragon`, een `Healer` of een `Turret` zijn.
+
+`battle_round` controleert ook niet met `isinstance` of een strijder een
+`Creature` is, en dat is met opzet. Met die controle kon de wachttoren niet
+meevechten, terwijl hij alles heeft wat `battle_round` gebruikt. Bij duck typing
+vraag je niet van welke klasse een object is.
 
 ```python
 vlam = Dragon("Vlam")
@@ -486,9 +526,9 @@ wat je ermee doet: voor `battle` volstaat een toren, voor `heal_all` niet.
 
 ## Vragen om over na te denken
 
-1. Stel dat `battle_round` wél zou moeten weten van welke klasse zijn argumenten
-   zijn. Wat zou het dan moeten controleren, en wat moet je veranderen als er een
-   nieuwe soort wezen bijkomt? Waarom is dat slechter?
+1. Stel dat `battle_round` met `isinstance` wél zou kijken van welke klasse zijn
+   argumenten zijn. Wat zou het dan moeten controleren, en wat moet je veranderen
+   als er een nieuwe soort wezen bijkomt? Waarom is dat slechter?
 2. `battle_round` roept `attack` en `take_damage` niet zelf aan, alleen
    `special_move` en `is_alive`. Stel dat het `attacker.attack(defender)` zou
    aanroepen. Is een kleiner aantal methoden dat een functie nodig heeft altijd
@@ -511,9 +551,6 @@ wat je ermee doet: voor `battle` volstaat een toren, voor `heal_all` niet.
    dan een reden om alle wezens via `Beast` te laten lopen?
 7. Een `Party` heeft wezens, en een `Dragon` is een wezen. Waarom erft `Party`
    niet van `Creature`? Wat zou er misgaan als dat wel zo was?
-8. `print(Dragon("Vlam"))` drukt `Creature(Vlam, ...)` af, en niet
-   `Dragon(Vlam, ...)`. Waar komt die tekst vandaan? Wat zou je moeten doen om bij
-   een draak `Dragon(...)` te zien, en bij een wolf `Wolf(...)`?
 
 ## Tot slot
 
