@@ -70,9 +70,8 @@ Bij de poort van #271 (25 september 2026) is besloten, voor sessie 2 en 3:
   van de code in sessie 3 hieronder.
 - **`+=` op `Party`** (VP5). `Party` krijgt alleen `__add__` en `__sub__`, die een
   nieuwe `Party` maken. De discussievraag over `__iadd__` blijft staan. `Date` in
-  de basisopgave krijgt wel `__iadd__`/`__isub__`, die het object veranderen: dat
-  spreekt elkaar niet tegen, want bij een lijst veranderen `+` en `-` niets en mag
-  `+=` het object veranderen.
+  de basisopgave krijgt wel `__iadd__`/`__isub__`, die het object veranderen en
+  `self` teruggeven.
 - **Alleen `Creature.special_move` gooit** een `NotImplementedError` (VP6). Geen
   *abc*. De assertions van week 6 die daardoor vervallen, noemt de tekst.
 - **`Turret` in `sorted`**: een toevoeging aan sessie 3. `sorted` over een lijst
