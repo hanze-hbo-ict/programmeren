@@ -1859,12 +1859,14 @@ Opgeleverd in PR #304. Het gaat om:
 | beoordelaar-eerstejaars, herstelmodus | 69.189 | 4 min 11 s | AKKOORD MET PUNTJES, 5 puntjes |
 | auteur, puntjes na het laatste C7 (hervat) | 13.862 | 5 min 54 s | 6 van 6 puntjes verwerkt, controles groen |
 | beoordelaar-redacteur, lezing puntjesdiff en deze tekst | 81.597 | 4 min 22 s | puntjesdiff akkoord; BLOKKEER op deze tekst, 1 blokkade (bronvermelding in de bevinding), 5 puntjes |
-| beoordelaar-redacteur, herstellezing van deze tekst | wordt ingevuld na de lezing | | |
-| **vastgesteld totaal agents** | **1.476.028** | | zonder de herstellezing; wordt bijgewerkt na de lezing |
+| beoordelaar-redacteur, herstellezing van deze tekst | 31.051 | 1 min 10 s | AKKOORD, 0 blokkades, 0 puntjes |
+| **vastgesteld totaal agents** | **1.507.079** | | zonder orkestratie |
 
 Bron: `subagent_tokens` uit de verbruiksmelding na elke agentstap. De rollen zelf schreven
 *niet beschikbaar*. Voor een hervatte context is het getal het verschil met de vorige melding van
 dezelfde agent, volgens de bevinding *Een hervatte agent meldt zijn tokens als lopend totaal*.
+
+De laatste rij en het totaal zijn na de herstellezing mechanisch ingevuld door de orkestrator; geen beoordelaar heeft die twee getallen gelezen.
 
 **Onzeker zijn de getallen van hervatte contexten.** De eerste auteursrun stopte op de
 sessielimiet (HTTP 429, `req_011CfPyhSZyz5JvREUNxw9oE`), zonder verbruiksmelding. Bewaard bleven
