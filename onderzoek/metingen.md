@@ -1969,3 +1969,53 @@ gekozen"* — maakte het duurdere voorstel mogelijk.
 door geen enkele assertie gedekt, terwijl de student het natrekt met zijn eigen
 nummer. Beide beoordelaars hebben het zelf nagerekend; de eerstejaars controleerde
 daarnaast alle 26 voorbeeldrijen in de opgave.
+
+## Werkitem #309 — het BSN-verbod in week 3
+
+Kleine route: auteur en één beoordelaar, zonder ontwerp. Het inhoudelijke besluit
+was al genomen toen de route begon. Opgeleverd op 25 september 2026 in PR #310:
+het `warning`-kader in `source/problems/3_basis.ipynb` vervalt, er blijft één
+opmerking in lopende tekst over, en het besluit staat in
+`curriculum/uitgangspunten.md` §*Geen verbod op het eigen burgerservicenummer*.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| auteur | 171.781 | 17 min 23 s | C5; zes criteria zelf gemeten |
+| beoordelaar-redacteur | 102.248 | 10 min 2 s | AKKOORD MET PUNTJES, 0 blokkades, 2 puntjes |
+| **totaal agents** | **274.029** | | |
+
+Geen herstelronde: oplevering 0 van 1. Geen C7; bij één beoordelaar volstaat C6.
+
+**De bevinding kwam uit een andere lus.** De eerstejaars vond de tegenspraak bij
+#305, als puntje, en meldde er expliciet bij dat het bestaande tekst betrof die
+buiten die PR viel. Dat is de eerste keer in deze reeks dat een puntje uit de ene
+beoordeling een eigen werkitem werd in plaats van te blijven staan.
+
+**De herkomst verklaarde de tegenspraak.** Nagetrokken vóór het werkitem:
+`9cbd3cff` (26 augustus 2026) bracht de uitnodiging om het eigen nummer door de
+code te halen, met als waarschuwing *"Haal je eigen nummer eruit voordat je dit
+notebook inlevert of deelt"* - twee gronden. `d32a8373` (11 september 2026)
+maakte er een verbod van (*"typ hem niet in"*, *"hoort niet in code te staan"*).
+De inlevergrond was op dat moment al vervallen: *Studenten leveren niets in*
+staat vastgelegd sinds `6355c24a` (2 september 2026), negen dagen eerder. De
+deelgrond was niet vervallen, en dat is precies wat er nu nog staat.
+
+**Wat de beoordelaar toevoegde dat de orkestrator miste.** Die twee gronden in de
+oorspronkelijke waarschuwing had de orkestrator niet gemeten; hij zag alleen de
+inlevergrond in het commitbericht. Daardoor onderbouwde de redacteur de
+proportionaliteit scherper dan het werkitem zelf deed.
+
+**De scheiding tussen besluit en afleiding hield stand.** Het besluit van de
+vakdeskundige wijst een verbod af en zegt niet wat er dan wel hoort te staan. De
+vervangende opmerking staat in `uitgangspunten.md` in een eigen alinea die opent
+met *"Wat ervoor in de plaats kwam, is afgeleid en niet vastgesteld"*, met een
+moment eraan vast om haar te bevestigen. Eerder in deze reeks ging dat mis: toen
+werd *mogen weg* opgeschreven als *gaat weg* en verklaarde een besluittekst een
+categorie materiaal al afgeschreven die nog voorgelegd moest worden. De redacteur
+toetste dit als zwaarste criterium en stelde vast dat het zich hier niet voordoet.
+
+**Een meetval, genoteerd omdat hij zich herhaalt.** Een markdowncel in een
+notebook wordt als lijst van regels bewaard. Een zoekpatroon over een zin die in
+de JSON over twee elementen loopt geeft nul, ook als de zin er letterlijk staat:
+`hoort niet in code` gaf 0 treffers op de versie waar die zin woordelijk stond.
+Auteur en beoordelaar ijkten hun patronen daarom op de ouderversie.
