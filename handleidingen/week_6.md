@@ -395,8 +395,8 @@ uitwerkingen `source/solutions/6_basis.ipynb` en
 
 Dit is zelfstandig werk onder begeleiding. Je legt weinig uit en loopt veel
 rond. De opstap oefent lezen en schrijven in zeven kleine opdrachten, de basis
-bouwt in zes stappen een programma dat een DNA-profiel herkent, en de extra
-comprimeert een zwart-witafbeelding.
+bouwt in zes stappen een programma dat een DNA-profiel herkent, en de
+facultatieve extra zet een tekst-raster om in een nieuw zwart-witbeeld.
 
 **Regel de bestanden vóór de bijeenkomst.** De opstap zegt *"In `assets/`
 staan twee bestandjes"* en de basis *"De sequenties ... staan in
@@ -413,7 +413,7 @@ de basis staan nergens op de pagina.
 | 2 | 25 | Zelfstandig: de opstap bij `## Bestanden lezen`, of de basis tot en met stap 3 | `## Bestanden lezen`, `` ## Stap 1: `strip_newline(line)` `` t/m `` ## Stap 3: `count_repeats(sequence, pattern, start)` `` | zelfstandig, docent loopt rond | R |
 | | | **Pauze** | | | |
 | 3 | 10 | Peilmoment, klassikaal: wat er aan het eind van een regel hangt | opstap `### Opdracht 7`, basis `` ## Stap 1: `strip_newline(line)` `` | klassikaal | R |
-| 4 | 35 | Vrije ruimte: de basis afmaken, de extra, of wat van het werkcollege is blijven liggen | `` ## Stap 4: `longest_match(sequence, pattern)` `` t/m `` ## Stap 6: `identify(sequence, patterns, database)` ``, `## Beeldcompressie` | zelfstandig | R |
+| 4 | 35 | Vrije ruimte: de basis afmaken, de extra, of wat van het werkcollege is blijven liggen | `` ## Stap 4: `longest_match(sequence, pattern)` `` t/m `` ## Stap 6: `identify(sequence, patterns, database)` ``, `## Van tekst naar beeld` | zelfstandig | R |
 | 5 | 10 | Afronden: wat het programma níet zegt, en waar de database straks staat | `## Tot slot` | docent | R |
 
 Vijf blokken, 90 minuten, alle vijf richttijd. Voor deze bijeenkomst bestaat
@@ -503,11 +503,10 @@ waar het materiaal zegt waar de grens van een uitkomst ligt.
 - **Het werkcollege is blijven liggen.** Doe de spiegelingen hier, in blok 4,
   met de tekening op papier van gisteren erbij.
 - **Iemand is na een halfuur met de basis klaar.** Stuur hem naar
-  `source/problems/6_extra.ipynb` en laat hem eerst op papier de
-  streepjesafbeelding comprimeren: vier runs van 16 worden vier bytes, 32
-  tekens. Weet wel dat de opgave een getal als zeven binaire cijfers vraagt, en
-  dat het omrekenen naar binair deze week nergens wordt uitgelegd. Die student
-  heeft van jou een hint nodig, of de ruimte om het zelf uit te zoeken.
+  `source/problems/6_extra.ipynb`. Laat hem `assets/patroon.txt` lezen,
+  eerst de geldige rechthoek controleren en daarna bedenken hoe één `.` of `#`
+  een blok van 8 bij 8 RGB-pixels wordt. Het verwachte beeld is 96 bij 64
+  pixels en heet `patroon.png`.
 
 **Wat je niet inkort.** Blok 3, het peilmoment. En blok 1, want zonder
 bestanden op de goede plek begint niemand.
@@ -544,24 +543,16 @@ bestanden op de goede plek begint niemand.
 - **De opstap en de basis geven geen downloadlink** voor de bestanden die ze
   lezen; zie sectie 4. In de elf bestanden van de week staat één
   `{download}`, die van `fraaie_plaatjes.zip`.
-- **`source/problems/6_extra.ipynb` verwijst naar functies die er niet meer
-  zijn.** De opgave zegt dat je *"functies die je bij de basis opdrachten hebt
-  geschreven"* mag gebruiken, maar de basis gaat nu over DNA en heeft geen
-  functie die een getal binair schrijft - en die heeft `compress` wel nodig.
-  Het is een restant van de tijd dat binair in deze week stond. Onder de
-  voorbeelden staat bovendien *"`compress` en `decompress` in actie"*, terwijl
-  de functie `uncompress` heet.
-- **De uitwerking van de extra klopt niet.** `source/solutions/6_extra.ipynb`
-  roept `count`, `num_to_base_b` en `base_b_to_num` aan, en geen van die drie
-  is ergens in `source/` gedefinieerd. Vul je ze zelf aan, dan blijkt
-  `uncompress` de runs in omgekeerde volgorde terug te zetten: de
-  streepjesafbeelding uit de opgave komt terug als
-  `1111111111111111000000000000000011111111111111110000000000000000`, terwijl
-  ze met zestien nullen begon. De enige test in de opgave,
-  `uncompress(compress(64 * "0"))`, merkt dat niet, omdat één run niet van
-  volgorde kan wisselen. De uitwerking staat als leestekst en niet als
-  draaiende cel, en daarom ziet de build het niet. Geef haar niet als
-  controle aan een student.
+- **`source/problems/6_extra.ipynb` is facultatief.** De opgave leest de
+  voorbeeldasset `source/problems/assets/patroon.txt` en maakt met de bestaande
+  `png.py` een nieuw bestand. Dit is een tekst-naar-beeldroute; `6b_images`
+  bewerkt bestaande beelden. Geldige invoer is niet-leeg, rechthoekig en bevat
+  alleen `.` en `#`; de vaste schaalfactor is 8.
+- **De uitwerking van de extra is uitvoerbaar.**
+  `source/solutions/6_extra.ipynb` bevat Nederlandse docstrings, assertions
+  voor invoer, rasterafmetingen, RGB-pixels, schaalfactor en uitvoerafmetingen.
+  Voor het schrijven moet `fraaie_plaatjes.zip` uit het werkcollege zijn
+  uitgepakt, zodat `png.py` beschikbaar is.
 - **Buiten het boek staat een oude uitwerking van het werkcollege**,
   `solutions/6b_images.ipynb` in de hoofdmap van de repository, niet in
   `source/`. Haar `mirror_vert` loopt vast op `im_pix.get_wh()`
@@ -616,9 +607,10 @@ spiegelingen van het werkcollege en bij de extra van het practicum.
 getallen en zeven opdrachten: een test op oneven, getallen omrekenen naar
 binair en terug, een binaire teller, en hetzelfde voor het drietallig stelsel,
 alle recursief. Die rekenkunde is vervallen met het besluit §`### Schakelingen
-en binair` in `curriculum/uitgangspunten.md`. Eén spoor ervan staat nog in de
-extra, die een getal binair moet schrijven zonder dat de week het uitlegt; zie
-de eigenaardigheden hierboven.
+en binair` in `curriculum/uitgangspunten.md`. De extra van deze week gebruikt
+geen binaire rekenkunde: de invoer is tekst met `.` en `#`, en de uitvoer is een
+RGB-raster. De bestaande PNG-route wordt alleen gebruikt om het nieuwe bestand
+te schrijven.
 
 Beide documenten zijn met dit werkitem uit de repository verwijderd, volgens de
 regel in `curriculum/uitgangspunten.md`
@@ -633,8 +625,9 @@ vindt ze in de git-geschiedenis, bijvoorbeeld met
   voor PGM1 gedaan. De meldingen daarover in `handleidingen/week_3.md`,
   `week_4.md` en `week_5.md` zijn met dit werkitem bijgewerkt, net als
   *Reikwijdte* in `conventies/conventies.md`.
-- **De uitwerking van de extra is stuk**, en de opgave verwijst naar functies
-  die er niet meer zijn; zie de eigenaardigheden. Gemeld, niet gerepareerd.
+- **#303 herijkt de extra.** De opgave leest `assets/patroon.txt` en maakt met
+  schaalfactor 8 `patroon.png`; de uitvoerbare oplossing controleert invoer,
+  pixels en afmetingen. #115 blijft open en wordt na deze solution herijkt.
 - **De opstap en de basis hebben geen downloadlink** voor hun bestanden.
   Gemeld, niet gerepareerd.
 - **De opstap van week 6 heeft nog geen uitwerking.** Dat staat in #194.

@@ -128,15 +128,15 @@ veranderd.
 | 3 | 242 | 1.143 | 176 | **1.561** |
 | 4 | 672 | 1.066 | 1.048 | 2.786 |
 | 5 | 674 | 2.940 | **5.354** | 8.968 |
-| 6 | 353 | 1.343 | 772 | 2.468 |
+| 6 | 381 | 1.377 | 290 | 2.048 |
 | 7 | 532 | 1.110 | **3.713** | 5.355 |
-| **Totaal** | **3.618** | **8.691** | **11.526** | 23.835 |
+| **Totaal** | **3.646** | **8.725** | **11.044** | 23.415 |
 
 Drie dingen vallen op.
 
 **Het zwaartepunt ligt in de optionele laag.** Extra is 48% van het materiaal en
 een derde groter dan basis. Daar zitten Mandelbrot, Game of Life, Pi met
-pijltjes en beeldcompressie: precies de opgaven waarin een probleem stap voor
+pijltjes en tekst-naar-beeld: precies de opgaven waarin een probleem stap voor
 stap wordt opgebouwd. Zie [uitgangspunten.md](uitgangspunten.md) voor de
 achtergrond. De scheefheid is kleiner dan bij de vorige meting, doordat basis in
 de weken 3 en 5 is gegroeid.
