@@ -279,9 +279,10 @@ heeft niet meer meedoen. Daarom blijven `battle_round` en `host_game` zonder die
 controle. Week 7 gebruikt `self.__class__(...)` in `Creature.__mul__`. Dit
 herroept de keuze bij de poort van #270 dat `type(self).__name__` in week 6
 vermeden wordt (V10). Vastgesteld door de vakdeskundige op 25 september 2026, bij
-de poort van #271 (VP7 en VP8). Bij de herstelronde van #271 voegde de vakdeskundige
-toe dat ze ook in de opstap van week 6 komen (*"Ja, ook in de opstap"*), zodat de
-opstap de nieuwe syntaxis van de week draagt.
+de poort van #271 (VP7 en VP8). Op 25 september 2026, bij de herstelronde van #271,
+besloot de vakdeskundige dat ze ook in de opstap van week 6 komen: *"Ja, ook in de
+opstap"*. Daarom staan ze ook in de tabel onder *Welk niveau een week hoort te
+hebben*, bij de syntaxis die de opstap van week 6 draagt.
 
 ## Welk niveau een week hoort te hebben
 
