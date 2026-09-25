@@ -545,7 +545,8 @@ bestanden op de goede plek begint niemand.
   lezen; zie sectie 4. In de elf bestanden van de week staat één
   `{download}`, die van `fraaie_plaatjes.zip`.
 - **De extra gebruikt run-length encoding.** `source/problems/6_extra.ipynb`
-  beschrijft een geldige invoer als een binaire string van maximaal 64 tekens en
+  beschrijft een run als een aaneengesloten blok gelijke tekens of pixels en een
+  geldige invoer als een binaire string van maximaal 64 tekens en
   geeft de runs terug als tweeelementige lijsten `[pixel, aantal]`. De lege
   invoer is expliciet beschreven. Studenten hoeven geen getallen naar binair
   om te rekenen; de lijst is hier een compacte beschrijving van de pixels.
