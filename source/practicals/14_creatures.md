@@ -53,6 +53,8 @@ zijn hp, zijn aanvalskracht en zijn verdediging bij elkaar opgeteld.
 
 Geef `Creature` daarna een methode `__eq__(self, other)`: twee wezens zijn gelijk
 als ze even sterk zijn. Is `other` geen `Creature`, dan geeft `__eq__` `False`.
+`__eq__` is een magische methode: je roept haar niet zelf aan, maar Python doet
+dat bij `==`.
 
 ```python
     def __eq__(self, other):
