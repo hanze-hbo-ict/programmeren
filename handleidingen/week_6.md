@@ -259,7 +259,7 @@ dezelfde manier: **samen de eerste, dan de rest zelf.**
 | # | Min | Wat er gebeurt | Materiaal, met de letterlijke kop | Werkvorm | Herkomst |
 |---|---:|---|---|---|---|
 | 1 | 10 | Aftrap: de zip uitpakken, Pillow controleren, `fraaie_plaatjes.py` draaien en `out.png` bekijken | `## Voorbereiding`, `## Onze PNG module`, `## Opdracht 1: Uitproberen` | docent doet voor, klas doet mee | R |
-| 2 | 10 | De vorm van `im_pix`: een lijst van rijen, een rij van pixels, een pixel van drie getallen; en luminantie | `### Datastructuur`, `### Luminantie`, `### Spelen met pixels` | docent, raster op het bord | R |
+| 2 | 10 | De vorm van `im_pix`: een lijst van rijen, een rij van pixels, een pixel als lijst van drie kleurwaarden; en luminantie | `### Datastructuur`, `### Luminantie`, `### Spelen met pixels` | docent, raster op het bord | R |
 | 3 | 20 | **Samen `greyscale`**: alleen wat er per pixel gebeurt, verandert | `` ## Opdracht 2: `greyscale()` `` | klassikaal, klas dicteert, docent typt | R |
 | 4 | 10 | Zelf `binarize`: `greyscale` met een `if` erin | `` ## Opdracht 3: `binarize(thresh)` `` | zelfstandig, docent loopt rond | R |
 | | | **Pauze** | | | |
@@ -278,7 +278,7 @@ vanuit de map waar de bestanden staan. Het programma meldt de afmeting van
 
 ```text
 in.png bevat een afbeelding 42x16 PNG in RGB modus.
-De eerste twee pixels van de eerste rij zijn [(255, 0, 0), (255, 0, 0)]
+De eerste twee pixels van de eerste rij zijn [[255, 0, 0], [255, 0, 0]]
 Bestand out.png opslaan...out.png opgeslagen.
 ```
 
@@ -290,7 +290,8 @@ werken, verandert die bestandsnaam.
 **Blok 2.** Teken het voorbeeld uit `### Datastructuur` op het bord, twee rijen
 van drie pixels, en zet het naast het bord van vorige week. Een pixel op rij
 `r` en kolom `c` is `im_pix[r][c]`, precies zoals `L[row][col]`; het enige
-nieuwe is dat er op elke plek geen teken staat maar drie getallen. Loop dan de
+nieuwe is dat er op elke plek geen teken staat maar een lijst van drie
+kleurwaarden. Loop dan de
 twee lussen van `invert` langs - `for row in im_pix`, `for pixel in row` - en
 wijs erop dat er een **nieuwe** rij en een **nieuwe** afbeelding worden
 opgebouwd, en dat `im_pix` zelf niet verandert. Eindig bij `### Luminantie`:
@@ -345,16 +346,6 @@ van de andere kant: hoe maak je zo'n bestand kleiner.
   deze repository, komt die niet: waarden boven 255 worden zonder melding op
   255 gezet, en de afbeelding wordt alleen te licht. Zeg dat de hint in het
   materiaal hier niet meer klopt.
-- **Een pixel is geen lijst maar een tuple.** **Luid**: wie de pixel ter
-  plekke wil aanpassen met `pixel[0] = ...`, krijgt
-  `TypeError: 'tuple' object does not support item assignment`. Het materiaal
-  schrijft "een lijst van drie integers", maar de uitvoer van blok 1 laat
-  ronde haakjes zien. Dat is geen ramp: het dwingt precies af wat deze week de
-  regel is, een nieuwe pixel maken in plaats van de oude veranderen.
-- **`spam.png` heeft vier getallen per pixel.** **Luid**, en alleen op dat
-  bestand: `spam.png` is RGBA, en `red, green, blue = pixel` geeft
-  `ValueError: too many values to unpack (expected 3, got 4)`. Op `in.png` gaat
-  het goed. Wie met `pixel[0]`, `pixel[1]` en `pixel[2]` werkt, merkt niets.
 - **`binarize` met de gelijkheid aan de verkeerde kant**
   (`` ## Opdracht 3: `binarize(thresh)` ``). **Stil**: wie schrijft "wit als de
   luminantie groter is dan de drempel", krijgt bij drempel 0 op `spam.png`
@@ -519,10 +510,6 @@ bestanden op de goede plek begint niemand.
   `### Spelen met pixels` staat *"de geneste lus in de functie `convert`"* en
   *"zoals in `convert`"*, maar de gegeven functie heet `invert`. Zeg het
   voordat iemand ernaar zoekt.
-- **Het werkcollege beschrijft een pixel anders dan hij is.** Het materiaal
-  zegt "een lijst van drie integers"; `get_rgb` geeft tuples, en bij
-  `spam.png` vier getallen in plaats van drie. Zie *Waar het vastloopt* in
-  sectie 3.
 - **Er staan twee zinnen dubbel in het werkcollege.** Onder
   `## Opdracht 1: Uitproberen` staat *"Door dit te doen wordt de functie
   `invert()` uitgevoerd"* twee keer, en onder `` ## Opdracht 2: `greyscale()` ``
