@@ -50,7 +50,7 @@ Bijvoorbeeld:
 ```python
 assert check_extension("tentamen.docx", ".exe") == False
 assert check_extension("program.exe", ".exe") == True
-assert check_extension("wk8ex1.py", ".py") == True
+assert check_extension("example.py", ".py") == True
 ```
 
 ## Opgave 2 _Even op vele manieren_ (15pt)
