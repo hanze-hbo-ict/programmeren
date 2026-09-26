@@ -335,10 +335,10 @@ werkitem #160, #270 en #271.
 de regel hierboven maar uit het besluit *Elk opgaveniveau hoort een uitwerking te
 hebben*, dat elk **bestaand** niveau bindt en dus onafhankelijk is van welke
 niveaus een week verplicht heeft. De meting telt 35 niveau-opgaven in
-`source/problems/`, waarvan 26 een gelijknamige uitwerking in `source/solutions/`
-hebben en 9 nog niet. Dit is
-werkitem #194 en geen werk voor de herziening van dit document. In die negen
-ontbrekende uitwerkingen gaat het concreet om de opstap van week 6 tot en met 9
+`source/problems/`, waarvan 27 een gelijknamige uitwerking in `source/solutions/`
+hebben en 8 nog niet. Dit is
+werkitem #194 en geen werk voor de herziening van dit document. In die acht
+ontbrekende uitwerkingen gaat het concreet om de opstap van week 7 tot en met 9
 en alle niveau-uitwerkingen van week 9 tot en met 11. Hermeten bij #160: hier
 stond 30, 19 en 11, maar vóór #160 waren het er al 30, 20 en 10, omdat de opstap
 van week 5 inmiddels een uitwerking had. #160 haalde `11_basis` weg en voegde

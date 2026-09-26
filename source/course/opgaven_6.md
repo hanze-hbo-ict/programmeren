@@ -5,6 +5,6 @@
 ```{tableofcontents}
 ```
 
-De basis opgave is een zelftest om te checken of je de stof van deze week hebt begrepen  
-De opstap opgaven zijn er om je te helpen als je moeite hebt  
-De extra opgaven zijn er om je uit te dagen.
+De basisopgave is een zelftest om te controleren of je de stof van deze week begrijpt.
+De opstapopgave helpt je als je extra oefening nodig hebt. De extraopgave is
+facultatief en verdiept de route van tekstdata naar een beeldbestand.
