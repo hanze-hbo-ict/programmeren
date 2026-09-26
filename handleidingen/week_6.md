@@ -503,9 +503,11 @@ waar het materiaal zegt waar de grens van een uitkomst ligt.
 - **Het werkcollege is blijven liggen.** Doe de spiegelingen hier, in blok 4,
   met de tekening op papier van gisteren erbij.
 - **Iemand is na een halfuur met de basis klaar.** Stuur hem naar
-  `source/problems/6_extra.ipynb`. Laat hem `assets/patroon.txt` lezen,
+  `source/problems/6_extra.ipynb`. Laat hem het meegeleverde bestand
+  `source/problems/assets/patroon.txt` downloaden via de link op de studentpagina
+  en lezen,
   eerst de geldige rechthoek controleren en daarna bedenken hoe één `.` of `#`
-  een blok van 8 bij 8 RGB-pixels wordt. Het verwachte beeld is 96 bij 64
+  een blok van 8 bij 8 RGB-pixels wordt. Het verwachte beeld is 128 bij 128
   pixels en heet `patroon.png`.
 
 **Wat je niet inkort.** Blok 3, het peilmoment. En blok 1, want zonder
@@ -543,11 +545,13 @@ bestanden op de goede plek begint niemand.
 - **De opstap en de basis geven geen downloadlink** voor de bestanden die ze
   lezen; zie sectie 4. In de elf bestanden van de week staat één
   `{download}`, die van `fraaie_plaatjes.zip`.
-- **`source/problems/6_extra.ipynb` is facultatief.** De opgave leest de
-  voorbeeldasset `source/problems/assets/patroon.txt` en maakt met de bestaande
+- **`source/problems/6_extra.ipynb` is facultatief.** De student downloadt de
+  meegeleverde asset via de link [`patroon.txt`](../source/problems/assets/patroon.txt)
+  op de studentpagina. De opgave leest die asset uit
+  `source/problems/assets/patroon.txt` en maakt met de bestaande
   `png.py` een nieuw bestand. Dit is een tekst-naar-beeldroute; `6b_images`
   bewerkt bestaande beelden. Geldige invoer is niet-leeg, rechthoekig en bevat
-  alleen `.` en `#`; de vaste schaalfactor is 8.
+  alleen `.` en `#`; de vaste schaalfactor is 8 en 16×16 wordt 128×128.
 - **De uitwerking van de extra is uitvoerbaar.**
   `source/solutions/6_extra.ipynb` bevat Nederlandse docstrings, assertions
   voor invoer, rasterafmetingen, RGB-pixels, schaalfactor en uitvoerafmetingen.
