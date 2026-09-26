@@ -1,16 +1,23 @@
 # Extra: Game of Life
 
-Deze extra gebruikt hetzelfde raster als de basis: een rechthoekige lijst van
-lijsten met `0` voor dood en `1` voor levend. De kern is klaar vóór je hier
-begint. Je mag `copy_board` gebruiken; ontwerp die niet opnieuw.
+Game of Life is een facultatieve uitdaging. Je kunt deze opgave zelfstandig
+starten: alle benodigde afspraken en functies staan hier. De minimale kern van
+de week blijft de opstap en basis.
 
-## Regels en rand
+## Raster en rand
 
-Coördinaten buiten het bord tellen als een dode cel en worden nooit geschreven.
-De vier regels zijn: minder dan twee buren sterft; twee of drie blijft leven;
-precies drie maakt een dode cel levend; anders blijft de cel dood.
+Een bord is een rechthoekige lijst van lijsten. \`0\` betekent een dode cel en \`1\`
+een levende cel. \`board[row][col]\` is de cel op rij \`row\` en kolom \`col\`.
+Coördinaten buiten het bord tellen als dode cellen; buiten het bord wordt nooit
+geschreven.
 
-Begin met dit 5x5-blinkerbord en controleer de gegeven generatie.
+De regels zijn: een levende cel met minder dan twee of meer dan drie buren sterft;
+met twee of drie buren blijft zij leven; een dode cel met precies drie buren wordt
+levend. In alle andere gevallen blijft de cel dood.
+
+## Startbord en functies
+
+Begin met deze verticale 5x5-blinker:
 
 ```python
 bord = [
@@ -29,8 +36,31 @@ def copy_board(board):
     return result
 ```
 
-Gebruik het skelet uit de basis voor `count_neighbors`, `next_cell` en
-`next_generation`. Voeg minstens deze assertions toe:
+`copy_board` is gegeven. Gebruik haar om de volgende generatie onafhankelijk op
+te bouwen. Ontwerp zelf de drie andere functies. Dit skelet staat volledig in
+deze extra, zodat je geen andere opgave hoeft te kopiëren:
+
+```python
+def count_neighbors(board, row, col):
+    # loop over de acht relatieve buurposities
+    # tel buiten het bord als 0
+    pass
+
+
+def next_cell(board, row, col):
+    # gebruik count_neighbors en de regels hierboven
+    pass
+
+
+def next_generation(board):
+    result = copy_board(board)
+    # bereken elke cel uit board en schrijf alleen naar result
+    pass
+```
+
+## Test je tussenstappen
+
+Test een hoek, rand en binnen-cel met dit bord:
 
 ```python
 voorbeeld = [
@@ -43,7 +73,22 @@ voorbeeld = [
 assert count_neighbors(voorbeeld, 0, 0) == 1  # hoek
 assert count_neighbors(voorbeeld, 0, 2) == 2  # rand
 assert count_neighbors(voorbeeld, 2, 2) == 2  # binnenkant
+```
 
+De eerste generatie van de blinker is:
+
+```text
+00000       00000
+00100       00000
+00100  ->   01110
+00100       00000
+00000       00000
+```
+
+Leg deze verwachte waarde vast met een assertion. Controleer ook dat het
+invoerbord na \`next_generation\` onveranderd is:
+
+```python
 origineel = copy_board(bord)
 assert next_generation(bord) == [
     [0, 0, 0, 0, 0],
@@ -55,6 +100,7 @@ assert next_generation(bord) == [
 assert bord == origineel
 ```
 
-Breid daarna uit met twee of meer generaties en een afdrukfunctie. Visualisatie is
-optioneel. Stop zodra de basisgeneratie en randgevallen werken; extra patronen
-mogen geen voorwaarde voor de kern worden.
+Breid alleen daarna uit met twee of meer generaties en eventueel een
+afdrukfunctie. Visualisatie en extra patronen zijn facultatief. Als je tijd
+krap is, stop je na de gegeven generatie en assertions; de extra mag de
+verplichte kern niet verdringen.
