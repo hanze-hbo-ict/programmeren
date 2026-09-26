@@ -396,7 +396,7 @@ uitwerkingen `source/solutions/6_opstap.ipynb`,
 Dit is zelfstandig werk onder begeleiding. Je legt weinig uit en loopt veel
 rond. De opstap oefent lezen en schrijven in zeven kleine opdrachten, de basis
 bouwt in zes stappen een programma dat een DNA-profiel herkent, en de extra
-comprimeert een zwart-witafbeelding.
+maakt uit tekstdata een klein beeldbestand.
 
 **Regel de bestanden vóór de bijeenkomst.** De opstapdownload `6_opstap.zip`
 bevat `assets/woorden.txt` en `assets/metingen.txt`; pak hem uit naast het
@@ -411,7 +411,7 @@ werkcollege-download bevat de facade en de afbeeldingen.
 | 2 | 25 | Zelfstandig: de opstap bij `## Bestanden lezen`, of de basis tot en met stap 3 | `## Bestanden lezen`, `` ## Stap 1: `strip_newline(line)` `` t/m `` ## Stap 3: `count_repeats(sequence, pattern, start)` `` | zelfstandig, docent loopt rond | R |
 | | | **Pauze** | | | |
 | 3 | 10 | Peilmoment, klassikaal: wat er aan het eind van een regel hangt | opstap `### Opdracht 7`, basis `` ## Stap 1: `strip_newline(line)` `` | klassikaal | R |
-| 4 | 35 | Vrije ruimte: de basis afmaken, de extra, of wat van het werkcollege is blijven liggen | `` ## Stap 4: `longest_match(sequence, pattern)` `` t/m `` ## Stap 6: `identify(sequence, patterns, database)` ``, `## Beeldcompressie` | zelfstandig | R |
+| 4 | 35 | Vrije ruimte: de basis afmaken, de extra, of wat van het werkcollege is blijven liggen | `` ## Stap 4: `longest_match(sequence, pattern)` `` t/m `` ## Stap 6: `identify(sequence, patterns, database)` ``, `## Van tekst naar beeld` | zelfstandig | R |
 | 5 | 10 | Afronden: wat het programma níet zegt, en waar de database straks staat | `## Tot slot` | docent | R |
 
 Vijf blokken, 90 minuten, alle vijf richttijd. Voor deze bijeenkomst bestaat
@@ -468,9 +468,9 @@ waar het materiaal zegt waar de grens van een uitkomst ligt.
 ### Waar het vastloopt
 
 - **Het bestand is er niet, of Python zoekt op een andere plek.** **Luid**:
-  `FileNotFoundError`. Dit wordt deze bijeenkomst de meest gestelde vraag,
-  omdat de pagina's geen downloadlink geven. Vraag altijd eerst: waar staat het
-  bestand, en vanuit welke map draai je?
+  `FileNotFoundError`. De opstap zegt waar `6_opstap.zip` moet worden uitgepakt;
+  controleer bij deze fout alsnog waar het bestand staat en vanuit welke map je
+  draait.
 - **`"w"` binnen de lus in `### Opdracht 7` van de opstap.** **Stil**: wie
   `lang.txt` voor elk woord opnieuw opent, houdt aan het eind alleen `mango`
   over. Het waarschuwingskader van de opgave zegt het, maar staat onder de
@@ -600,9 +600,8 @@ spiegelingen van het werkcollege en bij de extra van het practicum.
 getallen en zeven opdrachten: een test op oneven, getallen omrekenen naar
 binair en terug, een binaire teller, en hetzelfde voor het drietallig stelsel,
 alle recursief. Die rekenkunde is vervallen met het besluit §`### Schakelingen
-en binair` in `curriculum/uitgangspunten.md`. Eén spoor ervan staat nog in de
-extra, die een getal binair moet schrijven zonder dat de week het uitlegt; zie
-de eigenaardigheden hierboven.
+en binair` in `curriculum/uitgangspunten.md`; de huidige extra gebruikt deze
+route niet.
 
 Beide documenten zijn met dit werkitem uit de repository verwijderd, volgens de
 regel in `curriculum/uitgangspunten.md`
