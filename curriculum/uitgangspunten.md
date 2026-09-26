@@ -375,6 +375,7 @@ draait wel.
 | Onderdompeling mag vooraf gaan aan uitleg | didactisch | staand; de grens is nog een afleiding |
 | Studenten leveren geen werk in; opdrachten zijn oefening | organisatorisch | gesloten, **nog niet uitgevoerd**: `source/` draagt nog inleverinstructies. Het toernooi met bonuspunten uit het oude AI-materiaal komt niet terug in week 6 (#270, V3) en ook niet in week 7 (#271, VP2) |
 | Het verbod op het eigen BSN in `problems/3_basis` vervalt | didactisch | gesloten op 25 september 2026 (#309), **uitgevoerd** in #309 |
+| De facultatieve extra van PGM1 week 6 is tekstbestand → RGB-raster → PNG met een vaste vergroting; zij blijft naast `6b_images` en draagt geen nieuwe leeruitkomst | didactisch | gesloten op 25 september 2026 (#303, C4), **in uitvoering** via PR #312 |
 | Tot en met week 4 ligt de nadruk op lezen en begrijpen; schrijven begint wel | didactisch | staand, onderbouwd |
 | Een weekpagina vat samen wat volgt en waarop het voortbouwt | praktisch | gesloten (#167), **deels uitgevoerd**: week 1 tot en met 4 dragen hem, met #168, #169, #230 en #162; week 12 (PGM2 week 5) draagt hem sinds #160, week 8 (PGM2 week 1) sinds #273, week 13 (PGM2 week 6) sinds #270 en week 14 (PGM2 week 7) sinds #271; week 5 tot en met 7 en 9 tot en met 11 zijn nog stubs |
 | Elk opgaveniveau hoort een uitwerking te hebben | didactisch | gesloten, nog niet uitgevoerd; 9 van de 38 ontbreken (hermeten bij #271) |
@@ -391,6 +392,17 @@ draait wel.
 | De student werkt lokaal in VS Code; de browser is verrijking | didactisch | staand, onderbouwd |
 | Code uitvoerbaar in de browser | praktisch | open, uitvoering wijzigt |
 | Wat er niet meer toe doet, mag weg; we ruimen achter ons op | organisatorisch | gesloten op 24 september 2026, **deels uitgevoerd**: `teacher_guides/` is weg (#280); welke andere directories eronder vallen, wordt voorgelegd in #282 |
+
+### Facultatieve extra van week 6
+
+De extra van PGM1 week 6 blijft facultatief en verdiept de bestaande weekketen
+**Bestanden en data**: de student leest `patroon.txt`, bouwt een RGB-raster en
+schrijft `patroon.png` met de bestaande `save_rgb`-route. De meegeleverde asset
+is 16×16; de vergroting is vast 8, dus de uitvoer is 128×128. De opdracht staat
+naast `6b_images`: zij bewerkt geen bestaand beeld en vraagt geen filters,
+geometrische transformaties, compressie, binaire rekenkunde of nieuwe library.
+De extra draagt geen nieuwe leeruitkomst; opstap en basis blijven de route voor
+de weekuitkomst over tekstbestanden.
 
 ### Recursie na de lussen
 
