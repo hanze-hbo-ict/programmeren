@@ -377,8 +377,8 @@ draait wel.
 | Het verbod op het eigen BSN in `problems/3_basis` vervalt | didactisch | gesloten op 25 september 2026 (#309), **uitgevoerd** in #309 |
 | De facultatieve extra van PGM1 week 6 is tekstbestand → RGB-raster → PNG met een vaste vergroting; zij blijft naast `6b_images` en draagt geen nieuwe leeruitkomst | didactisch | gesloten op 25 september 2026 (#303, C4), **uitgevoerd** in #312; samenhang gecontroleerd in #313 |
 | Tot en met week 4 ligt de nadruk op lezen en begrijpen; schrijven begint wel | didactisch | staand, onderbouwd |
-| Een weekpagina vat samen wat volgt en waarop het voortbouwt | praktisch | gesloten (#167), **deels uitgevoerd**: week 1 tot en met 4 dragen hem, met #168, #169, #230 en #162; week 6 draagt hem sinds #313; week 12 (PGM2 week 5) draagt hem sinds #160, week 8 (PGM2 week 1) sinds #273, week 13 (PGM2 week 6) sinds #270, week 14 (PGM2 week 7) sinds #271 en week 9 (PGM2 week 2) sinds #326; week 5, 7, 10 en 11 zijn nog stubs, al heeft week 10 sinds #326 een sectie over het recursiemateriaal |
-| Elk opgaveniveau hoort een uitwerking te hebben | didactisch | gesloten, **deels uitgevoerd**; 8 van de 41 ontbreken (hermeten in #326; de telling staat in `leerlijn.md`) |
+| Een weekpagina vat samen wat volgt en waarop het voortbouwt | praktisch | gesloten (#167), **deels uitgevoerd**: week 1 tot en met 4 dragen hem, met #168, #169, #230 en #162; week 6 draagt hem sinds #313; week 12 (PGM2 week 5) draagt hem sinds #160, week 8 (PGM2 week 1) sinds #273, week 13 (PGM2 week 6) sinds #270, week 14 (PGM2 week 7) sinds #271, week 9 (PGM2 week 2) sinds #326 en week 10 (PGM2 week 3) sinds #332; week 5, 7 en 11 zijn nog stubs, al zegt week 11 sinds #332 in een feitelijke zin welk materiaal er staat |
+| Elk opgaveniveau hoort een uitwerking te hebben | didactisch | gesloten, **deels uitgevoerd**; 5 van de 41 ontbreken (hermeten in #332; de telling staat in `leerlijn.md`) |
 | Week 4 krijgt een lusrecept van vijf vragen, in `4a_lussen` | didactisch | gesloten, **uitgevoerd** met #153; week 5 pikt het nog niet op (#163) |
 | Recursie gaat in beginsel naar PGM2; `unique` blijft in PGM1 als herkenbaar iteratief voorbeeld met vooruitwijzing | organisatorisch | gesloten, uitgevoerd in #162: de overige recursieplekken zijn verwijderd; recursie wordt uitgebreider behandeld in PGM2 |
 | Eerst de weken van PGM1 afronden; het materiaal moet zo snel mogelijk live | organisatorisch | staand |
@@ -445,10 +445,13 @@ Twee dingen die er wél uit volgen:
    probleem. Daarmee staat het op eigen benen in plaats van als vreemde variant
    op iets dat de student net geleerd heeft, en dat is precies de framing die het
    esoterisch doet lijken.
-2. **Recursie wordt in PGM1 niet onderwezen.** Wat er in PGM1 week 3 over te
-   vinden is, is bewust smal: bij de functies wordt getoond dát een functie
-   zichzelf kan aanroepen, en niets meer. Het gedrag zelf wordt pas in PGM2
-   bestudeerd. Dat is geen omissie maar het besluit in uitvoering.
+2. **Recursie wordt in PGM1 niet onderwezen.** PGM1 laat geen zelfaanroepende
+   functie zien, en PGM2 week 3 begint bij nul: daar leert de student dat een
+   functie zichzelf kan aanroepen, en hoe dat werkt. Dat is geen omissie maar het
+   besluit in uitvoering. Hier stond eerder dat PGM1 week 3 bij de functies
+   toont dát een functie zichzelf kan aanroepen; gemeten bij #332 doet het
+   materiaal dat nergens. Rechtgezet op besluit van de vakdeskundige, 30
+   september 2026, bij de poort van #332 (VP7); PGM1 wordt niet aangevuld.
 
    Leeruitkomst **A4** stond daardoor in de verkeerde toetsmatrijs: PGM1 beloofde
    ontwerpen van recursieve oplossingen op creëren-niveau voor 10% van het
