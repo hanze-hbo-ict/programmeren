@@ -1348,14 +1348,16 @@ Het staat in [metingen.md](metingen.md) met dat voorbehoud.
 
 ## De orkestrator meet een gat en behandelt het als nieuw - 30 september 2026
 
-**Wat er gebeurde.** Drie keer in één sessie legde de orkestrator iets aan de vakdeskundige voor,
-of schreef het in een opdracht als open vraag, terwijl het al besloten was en ergens vastlag.
+**Wat er gebeurde.** Drie keer in drie dagen legde de orkestrator iets aan de vakdeskundige voor,
+of schreef het in een opdracht aan een rol als open vraag, terwijl het al besloten was en ergens
+vastlag. De eerste twee op 28 september, het derde op 30 september.
 
-- **Recursie in de midterm.** Het C2-briefing van de toetsontwikkelaar noemde als derde
+- **Recursie in de midterm.** De opdracht aan de toetsontwikkelaar noemde als derde
   voorlegging: *"De elf itemplaatsen met recursie [...] toetsen dus stof die niet meer wordt
   onderwezen."* De verplaatsing van de recursie-uitkomst naar PGM2 staat in
-  `curriculum/uitgangspunten.md`, én in de manifesten van `data/pgm1/2021-*` die de orkestrator
-  zelf vier dagen eerder had geschreven: *"bewaard als referentie, niet als voorbeeld"*. De
+  `curriculum/uitgangspunten.md`, én in de manifesten die de orkestrator de dag
+  ervoor zelf had geschreven: *"bewaard als referentie, niet als voorbeeld"* - in de ANS-repo,
+  `data/pgm1/2021-*/toets.md`, en dus niet hier te vinden. De
   vakdeskundige: *"daar hebben we het over gehad verdorie"*.
 - **De overlap met de oefenmidterm.** Aan de toetsontwikkelaar doorgegeven als risico dat
   voorgelegd moest worden. Het wás de werkwijze van de vakdeskundige, die een dag eerder had
@@ -1379,14 +1381,16 @@ opgeschreven.
 Het kost meer dan een verkeerde vraag. Een voorlegging die niet nodig is kost een wachtmoment in
 een lus die op menselijke poorten draait, en bij de midterm was dat tien dagen voor een afname.
 Erger is dat het zich voortplant: de toetsontwikkelaar behandelde recursie als open vraag omdat
-de briefing dat zei, tot de orkestrator hem tijdens de rit corrigeerde. Een rol kan een besluit
+de opdracht dat zei, tot de orkestrator hem tijdens de rit corrigeerde. Een rol kan een besluit
 niet terugvinden dat de orkestrator hem niet noemt.
 
 **Wat het veranderde.** Bij #102 staat de vastgelegde lijn nu als aparte reactie, met per
 besluit de vindplaats en een lijst van wat een herontwerp niet mag doen. Bij #341 is het
-criterium over de afwijking ingetrokken. De werkregel die hieruit volgt en die de orkestrator
-aanhoudt: **vóór je iets als gat of als open vraag opschrijft, zoek in `curriculum/`,
-`conventies/` en de gesloten werkitems of het al beslist is - en noem in de opdracht aan een rol
-de vindplaats, niet alleen de conclusie.** Dat kost een minuut en had alle drie voorkomen.
+criterium over de afwijking ingetrokken.
 
-De vakdeskundige, bij het vastleggen hiervan: *"want je mist steeds veel"*.
+**Voorstel voor de instructies, een procesbesluit voor de vakdeskundige:** `CLAUDE.md` draagt de
+ene helft van de regel; laat het ook de keerzijde dragen. Iets als: *vóór je iets als gat of als
+open vraag opschrijft, zoek in `curriculum/`, `conventies/` en de gesloten werkitems of het al
+beslist is - en noem in de opdracht aan een rol de vindplaats, niet alleen de conclusie.* Zolang
+die regel alleen hier staat, hangt hij aan wie deze bevinding toevallig leest, en dat is precies
+de afhankelijkheid die de bevinding beschrijft.
