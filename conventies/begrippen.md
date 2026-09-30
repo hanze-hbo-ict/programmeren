@@ -63,6 +63,9 @@ forceer geen Nederlandse vertaling. Voor dit materiaal werkt dat zo uit:
 | Op het scherm tonen | **afdrukken** | printen (11×), geprint (23×) | Het deelwoord is de grootste vorm en werd niet geteld |
 | Een programma starten | **uitvoeren** | draaien (5×) | |
 | Een functie gebruiken | **aanroepen** | oproepen (1×) | |
+| De aanroep waarmee een functie zichzelf aanroept | **recursieve aanroep** | - | Nieuw in PGM2 week 3. Vastgesteld door de vakdeskundige op 30 september 2026, bij de poort van #332 (VP2) |
+| Het geval waarin een recursieve functie zichzelf níet aanroept, maar meteen een antwoord teruggeeft | **basisgeval** | base case (30×) | Nieuw in PGM2 week 3; niet *base case*. Zie *Basisgeval en recursief geval* hieronder. Vastgesteld door de vakdeskundige op 30 september 2026, bij de poort van #332 (VP2) |
+| Het geval met de recursieve aanroep | **recursief geval** | recursieve case (6×), recursie case (3×), recursive case (6×) | Nieuw in PGM2 week 3. Vastgesteld door de vakdeskundige op 30 september 2026, bij de poort van #332 (VP2) |
 | Melding bij een fout | **foutmelding** | error, exception, uitzondering | Voor het Python-mechanisme: `exception` |
 | Plek waar bestanden in staan | **directory** | map (1×), folder (9×) | Geteld in `source/`; zie hieronder |
 | De eerste regel van een functie | **signatuur** | signature (4×) | Vastgesteld door de vakdeskundige op 10 september 2026 |
@@ -199,6 +202,26 @@ zin hierboven, en de bestandsnamen `folders.png` en `finder_folders.png`. Een
 hook met vijf uitzonderingen leert auteurs vooral hem te omzeilen. Dit is werk
 voor de veegronde van de eindredacteur, die terminologie toch al meet.
 
+## Basisgeval en recursief geval
+
+Vastgesteld door de vakdeskundige op 30 september 2026, bij de poort van #332
+(VP2). Een recursieve functie heeft een **basisgeval**, waarin ze zichzelf niet
+aanroept, en een **recursief geval**, met de **recursieve aanroep**. Een functie
+kan van beide meer dan één hebben.
+
+De aanbeveling was *base case*, volgens regel 2 hierboven: in `source/` stond
+*base case* 30 keer tegen *basisgeval* 3 keer, gemeten op `bfcdeff`. De
+vakdeskundige koos het Nederlandse woord.
+De tegenhanger stond er als *recursieve case*, *recursie case* en *recursive case*,
+samen 15 regels in de twee colleges van week 3; die basterdvormen vervallen.
+
+**Waar *base case* nog staat.** Het materiaal dat bij #332 ongewijzigd naar week 4
+verhuisde, `lectures/11a_knapzak_probleem.ipynb` en
+`problems/opdrachten/caesar_op_orde/index.md`, en het bevroren oefententamen met
+zijn uitwerking, `solutions/PGM2_examen.ipynb`, zeggen *base case* tot hun eigen
+herziening. Dat is een bekende afwijking; de aflevertabel in
+`curriculum/leerlijn.md` noemt haar.
+
 ## Opgave, opdracht, stap
 
 Deze woorden liepen door elkaar: hetzelfde soort taak heette in het ene bestand
@@ -249,10 +272,11 @@ zij hier bij.
 
 - **`Opgaven` als rubriekkop, ook buiten `course/`.** Hij staat boven een
   *verzameling* en niet boven één taak - hetzij boven een reeks opgavebestanden,
-  hetzij boven een reeks taken binnen één bestand. Vijftien vindplaatsen:
-  `# Opgaven` in `course/opgaven_2` tot en met `opgaven_14`, en `## Opgaven` in
-  `problems/10_recursie_basis.ipynb` en in het oefenbestand
-  `extra/practice/1_recursie.ipynb`.
+  hetzij boven een reeks taken binnen één bestand. Dertien vindplaatsen:
+  `# Opgaven` in `course/opgaven_2` tot en met `opgaven_14`. Tot #332 stond
+  `## Opgaven` ook in `problems/10_recursie_basis.ipynb` en in het oefenbestand
+  `extra/practice/1_recursie.ipynb`; de basis heeft sindsdien stappen, en het
+  oefenbestand is verwijderd.
 - **Een ongenummerde `### Opgave`, *binnen* een bestand onder `problems/`.** Dat
   is één opgave die uit meer dan één taak bestaat en zelf geen nummer draagt; hij
   staat er binnen en niet boven. Eén vindplaats: de debugopgave in
@@ -263,11 +287,17 @@ zij hier bij.
 - **`Opdracht N`, genummerd**, als kop of als label. Dat is de hoofdvorm en de
   tabel hierboven dekt haar.
 - **`Opdrachten` als rubriekkop**, boven een reeks taken in een college of een
-  practicum. Zeventien vindplaatsen, alle `## Opdrachten`: elf van de twaalf
-  `course/practical_N.md`, alle behalve `practical_11`, dat nog geen practicum
-  heeft, en verder `lectures/1a_intro_programmeren.md`, `2a_var_con.ipynb`,
-  `2b_strings_en_lists.ipynb`, `12a_objecten.ipynb`, en
-  `practicals/2_sequenties_en_data.ipynb` en `3_fijne_functies.ipynb`.
+  practicum. Zevenentwintig vindplaatsen, alle `## Opdrachten`, gemeten bij #332:
+  alle dertien `course/practical_N.md`, en verder
+  `lectures/1a_intro_programmeren.md`, `2a_var_con.ipynb`,
+  `2b_strings_en_lists.ipynb`, `8a_datastructuren.ipynb`, `8b_taalmodel.ipynb`,
+  `9a_list_comprehensions.ipynb`, `9b_dict_en_set_comprehensions.ipynb`,
+  `10b_recursief_ontwerpen.ipynb`, `12a_objecten.ipynb`, `13a_overerving.ipynb`,
+  `13b_polymorfisme.ipynb` en `14a_operatoren_en_exceptions.ipynb`, en
+  `practicals/2_sequenties_en_data.ipynb` en `3_fijne_functies.ipynb`. Hier
+  stonden er zeventien, met `practical_11` als uitzondering omdat week 4 nog geen
+  practicum had; dat heeft het sinds #332 wel. De colleges van PGM2 week 1, 2, 6
+  en 7 ontbraken in die telling.
 - **Een ongenummerde `Opdracht`-kop**, waar een document één taak draagt in
   plaats van een reeks. **Nummer die niet alsnog**: er is geen reeks om in mee te
   tellen, en `problems/2_basis.ipynb` heeft juist geen *Opdracht 4* - zie

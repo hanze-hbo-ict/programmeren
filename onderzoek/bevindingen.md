@@ -1413,3 +1413,73 @@ de start de bevindingen over het meten raadplegen.
   Dit is een variant van *Een zoekpatroon uit bekende formuleringen vindt alleen bekende
   formuleringen* (24 september): de ijking bewijst dat het patroon werkt, niet dat het alles
   vangt. De issue #328 is aangevuld.
+
+## Een besluit naar de letter uitgevoerd, pas zichtbaar door een meting - 30 september 2026
+
+**Wat er gebeurde.**
+- Bij #332 was werkcollege stap 3 (`has_extension`) inhoudelijk opgave 1 van het oefententamen.
+  De vakdeskundige besliste: *"Stap 3 een andere functie geven."*
+- De auteur schreef `same_extension`. Dat is een andere functie met een andere naam en andere
+  argumenten, maar in hetzelfde domein, met dezelfde `.exe`-context en drie van de vier takken
+  gelijk.
+- De verse beoordelaar in herstelmodus vergeleek beide functies op 40 invoeren. Ze vielen op 39
+  samen. Hij noemde dat een puntje voor de vakdeskundige: *"Aan de letter van het besluit is
+  voldaan. Of het ook aan de bedoeling voldoet, is een oordeel van de vakdeskundige."*
+- De vakdeskundige besliste: *"Nee, verder weg van het tentamen."*
+
+**Waarom het ertoe doet.**
+- Een kort besluit laat ruimte. De auteur vult die ruimte met de kleinste wijziging die aan de
+  woorden voldoet.
+- Dat lijkt op *De auteur maakt van een voorzichtige reden een feit* (30 september). Daar werd de
+  reden van een besluit te stellig; hier werd de bedoeling te smal gelezen.
+- Wat het zichtbaar maakte, was geen lezing maar een meting: het aantal invoeren waarop de twee
+  functies samenvallen. Zonder dat getal was het verschil een kwestie van smaak geweest.
+
+**Wat het veranderde.**
+- De vervolgopdracht gaf de bedoeling een meetbare vorm: stap 3 buiten het domein van extensies,
+  met een gemeten vergelijking met `check_extension` in de C5.
+- De nieuwe `safe_name` valt op hoogstens 14 van de 40 invoeren samen. Een tussenversie die op
+  37/40 uitkwam, verwierp de auteur zelf.
+- De vervolgronde kostte 39.275 tokens voor de auteur en 49.284 voor de herstellezing.
+- In de instructies is niets veranderd. **Voorstel** voor de evaluatie van #203: geef een
+  besluit dat een verschil vraagt ("anders dan", "verder weg van") in de opdracht aan de auteur
+  een meetbare eindvoorwaarde mee. Laat de auteur die eindvoorwaarde zelf meten, en de
+  beoordelaar natrekken.
+
+## Drie bekende patronen keerden terug bij #332 - 30 september 2026
+
+Drie bestaande bevindingen gebeurden bij #332 opnieuw. De bevindingen stonden er al; ze hebben
+de herhaling niet voorkomen.
+
+**1. *De auteur schrijft een reden bij het besluit* (25 september), voor de vierde keer.**
+- `conventies/begrippen.md` kreeg bij het termbesluit: *"De vakdeskundige koos het Nederlandse
+  woord, dat voor een beginner doorzichtiger is."*
+- Het C4 van #332 noemt geen reden. De bijzin kwam uit de aanbeveling van de ontwerper bij VP2
+  (*"Onzeker: basisgeval is voor een beginner doorzichtiger"*). Een overweging uit het ontwerp
+  werd zo een motief van de vakdeskundige.
+- De onderwijskundige ving het als puntje, omdat haar toewijzing voor de beoordeling ook de
+  besluitdiff tegen het C4 omvatte. Het is geschrapt in `6cc6afa`.
+- Het voorstel van 25 september staat nog open in #331.
+
+**2. *Een zoekpatroon uit bekende formuleringen vindt alleen bekende formuleringen* (24 september).**
+- De auteur toetste AC4 met `lambda|key\s*=` en een AST-scan op `ast.Lambda`. Beide waren geijkt.
+- Beide beoordelaars vonden onafhankelijk een functie als waarde:
+  `for f in [positives_loop, ...]:`. Het patroon zocht naar de bekende vormen van *functie als
+  argument*, niet naar het begrip.
+- Het was de enige blokkade van de oplevering. Hersteld in `73962fb`, en de herstelbeoordeling
+  zocht met een ruimere AST-scan.
+
+**3. *De bestaande meetpraktijk voor een hervatte agent werd niet geraadpleegd* (30 september).**
+- De orkestrator gaf na het herstel van de auteur eerst op GitHub en aan de vakdeskundige twee
+  totalen (*"999.009 of 1.399.676"*). Pas daarna las hij de melding als lopend totaal. Hij
+  raadpleegde [metingen.md](metingen.md) pas bij het afsluiten, en daar rekent men al sinds #271
+  met het verschil.
+- De uitkomst is dezelfde, maar de volgorde is de verkeerde. Het is precies de herhaling die deze
+  bevinding al beschreef, op de dag dat ze werd opgeschreven.
+- Er was geen budgetgrens, dus er is geen besluit op de telling genomen.
+
+**Wat het veranderde.** In dit werkitem: niets meer dan de herstellingen hierboven. Wel bevestigt
+het de lijn van *Een bevinding opschrijven voorkomt haar niet* (24 september). Voor alle drie
+ligt een voorstel klaar dat de instructies zou veranderen: #331 voor de eerste en de derde, en het
+voorstel van 24 september voor de tweede. Geen van de drie is opgenomen. Dat is een procesbesluit
+voor de vakdeskundige, niet voor de orkestrator.
