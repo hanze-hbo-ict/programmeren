@@ -5,4 +5,10 @@
 ```{tableofcontents}
 ```
 
-De extra opgave is er om je uit te dagen.
+De opgaven over algoritmen, een basis en een extra, staan hier sinds de
+herziening van week 3 en zijn nog niet herzien. Text-ID is een tweede extra
+opgave.
+
+De basis opgave is een zelftest om te checken of je de stof van deze week hebt begrepen  
+De extra opgaven zijn er om je uit te dagen.  
+In *Caesar op orde* schrijf je een reeks functies met conditionele statements, recursie en list comprehensions.
