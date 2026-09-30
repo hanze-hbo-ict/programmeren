@@ -1424,8 +1424,9 @@ de start de bevindingen over het meten raadplegen.
   argumenten, maar in hetzelfde domein, met dezelfde `.exe`-context en drie van de vier takken
   gelijk.
 - De verse beoordelaar in herstelmodus vergeleek beide functies op 40 invoeren. Ze vielen op 39
-  samen. Hij noemde dat een puntje voor de vakdeskundige: *"Aan de letter van het besluit is
-  voldaan. Of het ook aan de bedoeling voldoet, is een oordeel van de vakdeskundige."*
+  samen. De beoordelaar noemde dat een puntje voor de vakdeskundige: *"Aan de letter van het besluit is
+  voldaan. Of het ook aan de bedoeling voldoet, is een oordeel van de vakdeskundige, en ik heb de afweging niet opnieuw
+  gemaakt."*
 - De vakdeskundige besliste: *"Nee, verder weg van het tentamen."*
 
 **Waarom het ertoe doet.**
@@ -1433,7 +1434,7 @@ de start de bevindingen over het meten raadplegen.
   bestaande.
 - Het lijkt op *De auteur maakt van een voorzichtige reden een feit* (30 september). Daar werd de
   reden van een besluit te stellig; hier werd het besluit smal uitgevoerd.
-- De beoordelaar legde een getal naast zijn lezing: het aantal invoeren waarop de twee functies
+- De beoordelaar legde een getal naast de eigen lezing: het aantal invoeren waarop de twee functies
   samenvallen. Of dat getal het besluit van de vakdeskundige droeg, staat nergens.
 
 **Wat het veranderde.**
