@@ -93,6 +93,7 @@ class PageRuntime {
     this.#active = { runId, callbacks, timer: null, grace: null };
     return this.start(url).then(() => new Promise((resolve) => {
       this.#active.resolve = resolve;
+      if (this.#interrupt) Atomics.store(this.#interrupt, 0, 0);
       this.#active.timer = setTimeout(() => this.#stop("timeout"), EXECUTION_TIMEOUT_MS);
       this.#worker.postMessage({ type: "run", generation: this.#generation, runId, code });
     })).catch((error) => {
@@ -117,6 +118,8 @@ class PageRuntime {
     const active = this.#active;
     if (!active) return;
     clearTimeout(active.timer); clearTimeout(active.grace);
+    active.callbacks.cleanup?.();
+    if (this.#interrupt) Atomics.store(this.#interrupt, 0, 0);
     this.#active = null;
     active.resolve(result);
   }
@@ -146,6 +149,7 @@ class PageRuntime {
     Atomics.store(control, 1, Math.min(bytes.length, view.length));
     Atomics.store(control, 0, 1); Atomics.notify(control, 0);
   }
+
 }
 PageRuntime.nextRunId = 0;
 const pageRuntime = new PageRuntime();
@@ -231,6 +235,7 @@ class InteractiveCodeCell extends HTMLElement {
   #editor = null;
   #activateHandler = null;
   #statusEl = null;
+  #inputDialog = null;
 
   connectedCallback() {
     if (this.dataset.dormant === "true") {
@@ -384,12 +389,18 @@ class InteractiveCodeCell extends HTMLElement {
       dialog.className = "sic-input-dialog";
       dialog.innerHTML = `<label>${t("inputPrompt")} <input autofocus></label><button type="submit">${t("run")}</button><button type="button" data-cancel>${t("inputCancel")}</button>`;
       outputEl.parentElement.appendChild(dialog);
+      this.#inputDialog = dialog;
       const input = dialog.querySelector("input");
-      const close = (value) => { dialog.remove(); pageRuntime.answer(buffer, value); resolve(); };
+      const close = (value) => { dialog.remove(); this.#inputDialog = null; pageRuntime.answer(buffer, value); resolve(); };
       dialog.addEventListener("submit", (event) => { event.preventDefault(); close(input.value); });
       dialog.querySelector("[data-cancel]").addEventListener("click", () => { dialog.remove(); pageRuntime.cancel(); resolve(); });
       input.focus();
     });
+  }
+
+  #closeInput() {
+    this.#inputDialog?.remove();
+    this.#inputDialog = null;
   }
 
   // ---- Uitvoerplek ----------------------------------------------------------
@@ -449,6 +460,7 @@ class InteractiveCodeCell extends HTMLElement {
       const result = await pageRuntime.run(code, {
         output: (text, isError) => { outputEl.textContent += text; this.#markError(outputEl, isError); outputEl.hidden = false; },
         input: (buffer) => this.#askInput(buffer, outputEl),
+        cleanup: () => this.#closeInput(),
       }, this.dataset.pyodideUrl || DEFAULT_PYODIDE_URL);
       if (result.kind === "result") outputEl.textContent += result.value;
       if (result.kind === "python" || result.kind === "interrupt") {

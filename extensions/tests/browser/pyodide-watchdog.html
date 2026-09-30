@@ -6,11 +6,13 @@
 <h1>Pyodide watchdog</h1>
 <p id="report">Laden…</p>
 <script>addEventListener("error", (event) => { document.querySelector("#report").textContent += `\\nJS error: ${event.message}`; });</script>
-<div class="case"><interactive-code-cell>print(2 + 2)</interactive-code-cell></div>
+<div class="case"><interactive-code-cell>x = 41
+print(x + 1)</interactive-code-cell></div>
 <div class="case"><interactive-code-cell>while True: pass</interactive-code-cell></div>
 <div class="case"><interactive-code-cell>raise ValueError("voorbeeld")</interactive-code-cell></div>
 <div class="case"><interactive-code-cell>naam = input("Naam? ")
 print(naam)</interactive-code-cell></div>
+<div class="case"><interactive-code-cell>print(globals().get("x", "MISSING"))</interactive-code-cell></div>
 <script>
   const report = document.querySelector("#report");
   report.textContent = [
@@ -21,17 +23,35 @@ print(naam)</interactive-code-cell></div>
   ].join("\\n");
   if (new URLSearchParams(location.search).has("auto")) {
     const started = performance.now();
+    const waitFor = (output, text) => new Promise((resolve) => {
+      const observer = new MutationObserver(() => {
+        if (output.textContent.includes(text)) { observer.disconnect(); resolve(); }
+      });
+      observer.observe(output, { childList: true, characterData: true, subtree: true });
+    });
     setTimeout(() => {
       const loopButton = document.querySelectorAll(".sic-btn-run")[1];
       loopButton.click();
       const output = loopButton.closest("interactive-code-cell").querySelector(".sic-output");
-      const observer = new MutationObserver(() => {
-        if (output.textContent.includes("te lang")) {
-          report.textContent += `\\nauto timeout: ${(performance.now() - started).toFixed(0)} ms`;
-          observer.disconnect();
-        }
+      waitFor(output, "te lang").then(async () => {
+        report.textContent += `\\nauto timeout: ${(performance.now() - started).toFixed(0)} ms`;
+        const buttons = document.querySelectorAll(".sic-btn-run");
+        const retryOutput = buttons[0].closest("interactive-code-cell").querySelector(".sic-output");
+        buttons[0].click(); await waitFor(retryOutput, "42");
+        report.textContent += "\\nauto retry: 42";
+        const errorOutput = buttons[2].closest("interactive-code-cell").querySelector(".sic-output");
+        buttons[2].click(); await waitFor(errorOutput, "Python-fout");
+        report.textContent += "\\nauto exception: Python-fout";
+        if (globalThis.crossOriginIsolated) {
+          buttons[3].click();
+          await new Promise((resolve) => {
+            const check = () => document.querySelector(".sic-input-dialog") ? resolve() : setTimeout(check, 50);
+            check();
+          });
+          document.querySelector(".sic-input-dialog [data-cancel]").click();
+          report.textContent += document.querySelector(".sic-input-dialog") ? "\\nauto input: cleanup-fout" : "\\nauto input: geannuleerd";
+        } else report.textContent += "\\nauto input: overgeslagen zonder cross-origin isolation";
       });
-      observer.observe(output, { childList: true, characterData: true, subtree: true });
     }, 5000);
   }
 </script>

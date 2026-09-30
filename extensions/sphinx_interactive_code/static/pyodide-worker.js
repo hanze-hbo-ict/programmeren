@@ -22,7 +22,8 @@ async function start(message) {
       if (!response.ok) throw new Error(`Pyodide laden mislukt (HTTP ${response.status})`);
       return response.text();
     });
-    const loadPyodide = new Function(`${source}\nreturn loadPyodide;`)();
+    const pyodideExports = new Function(`${source}\nreturn loadPyodide;`)();
+    const loadPyodide = pyodideExports.loadPyodide || pyodideExports;
     if (!loadPyodide) throw new Error("loadPyodide ontbreekt in de geladen runtime");
     pyodide = await loadPyodide({ indexURL: message.url.replace(/pyodide\.js$/, "") });
     if (message.interruptBuffer) {
