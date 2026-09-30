@@ -354,9 +354,14 @@ automatisch.
 
 ## Engelse termen die we niet vertalen
 
-`string`, `dictionary`, `integer`, `float`, `list comprehension`, `recursie`,
+`string`, `dictionary`, `integer`, `float`, `list comprehension`,
+`dict comprehension`, `set comprehension`, `comprehension`, `recursie`,
 `debuggen`, `commit`, `branch`, `assertion`, `docstring`, `index`, `slice`,
 `duck typing`, `operator overloading`.
+
+*Dict comprehension*, *set comprehension* en het verzamelwoord *comprehension*
+blijven Engels, net als *list comprehension*. Vastgesteld door de vakdeskundige
+op 30 september 2026, bij de poort van #326 (VP2).
 
 Introduceer zo'n term bij eerste gebruik kort in het Nederlands. Voor
 eerstejaars is die ene toelichting nodig; daarna volstaat de term.
