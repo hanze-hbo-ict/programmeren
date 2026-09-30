@@ -33,6 +33,11 @@ def _inject_i18n(app: Sphinx) -> None:
         "editorLoadError": _("Could not load editor: "),
         "pythonLoadError": _("Could not load Python: "),
         "pyodideLoadError": _("Could not load Pyodide from "),
+        "timeout": _("The execution took too long and was stopped. Recreate earlier variables and imports."),
+        "cancelled": _("The execution was cancelled; the Python environment was restarted."),
+        "pythonError": _("Python error: "),
+        "workerError": _("The Python environment could not start: "),
+        "inputCancel": _("Cancel input"),
     }
     app.add_js_file(None, body=f"window.SIC_I18N = {json.dumps(strings, ensure_ascii=False)};")
 

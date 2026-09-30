@@ -29,30 +29,126 @@ const _I18N_DEFAULTS = {
   editorLoadError: "Could not load editor: ",
   pythonLoadError: "Could not load Python: ",
   pyodideLoadError: "Could not load Pyodide from ",
+  timeout: "De uitvoering duurde te lang en is afgebroken. Eerdere variabelen en imports moet je opnieuw aanmaken.",
+  cancelled: "De uitvoering is geannuleerd; de Python-omgeving is opnieuw gestart.",
+  pythonError: "Python-fout: ",
+  workerError: "De Python-omgeving kon niet worden gestart: ",
+  inputCancel: "Invoer annuleren",
 };
 
 function t(key) {
   return window.SIC_I18N?.[key] ?? _I18N_DEFAULTS[key];
 }
 
-// ---------------------------------------------------------------------------
-// Pyodide singleton — loaded once per page, shared across all cells
-// ---------------------------------------------------------------------------
+const EXECUTION_TIMEOUT_MS = 5000;
+const INTERRUPT_GRACE_MS = 250;
 
-let _pyodidePromise = null;
+class PageRuntime {
+  #worker = null;
+  #generation = 0;
+  #ready = null;
+  #active = null;
+  #url = null;
+  #interrupt = null;
 
-function getPyodide(url) {
-  if (_pyodidePromise) return _pyodidePromise;
-  _pyodidePromise = new Promise((resolve, reject) => {
-    const script = document.createElement("script");
-    script.src = url;
-    script.onload = () =>
-      window.loadPyodide().then(resolve).catch(reject);
-    script.onerror = () => reject(new Error(`${t("pyodideLoadError")}${url}`));
-    document.head.appendChild(script);
-  });
-  return _pyodidePromise;
+  constructor() {
+    this.#newWorker();
+  }
+
+  #newWorker() {
+    this.#generation += 1;
+    const generation = this.#generation;
+    this.#worker?.terminate();
+    this.#worker = new Worker(new URL("./pyodide-worker.js", import.meta.url), { type: "module" });
+    this.#ready = new Promise((resolve, reject) => {
+      const onMessage = (event) => {
+        const message = event.data;
+        if (message.generation !== generation) return;
+        if (message.type === "ready") resolve(message);
+        if (message.type === "load-error") reject(new Error(message.message));
+      };
+      this.#worker.addEventListener("message", onMessage);
+      this.#worker.addEventListener("error", (event) => reject(event.error || new Error(event.message)));
+    });
+    this.#worker.addEventListener("message", (event) => this.#message(event.data));
+    this.#worker.addEventListener("error", (event) => this.#message({
+      type: "worker-error", generation, runId: this.#active?.runId, message: event.message,
+    }));
+    this.#worker.addEventListener("error", (event) => console.error("[interactive-code] worker error:", event.message));
+  }
+
+  start(url) {
+    if (this.#url === url) return this.#ready;
+    this.#url = url;
+    const buffer = self.crossOriginIsolated && typeof SharedArrayBuffer !== "undefined"
+      ? new SharedArrayBuffer(4) : null;
+    this.#interrupt = buffer ? new Int32Array(buffer) : null;
+    this.#worker.postMessage({ type: "start", generation: this.#generation, url, interruptBuffer: buffer });
+    return this.#ready;
+  }
+
+  run(code, callbacks, url) {
+    if (this.#active) return Promise.reject(new Error("Er draait al een cel."));
+    const runId = `${this.#generation}:${++PageRuntime.nextRunId}`;
+    this.#active = { runId, callbacks, timer: null, grace: null };
+    return this.start(url).then(() => new Promise((resolve) => {
+      this.#active.resolve = resolve;
+      this.#active.timer = setTimeout(() => this.#stop("timeout"), EXECUTION_TIMEOUT_MS);
+      this.#worker.postMessage({ type: "run", generation: this.#generation, runId, code });
+    })).catch((error) => {
+      this.#active = null;
+      return { kind: "worker", message: error?.message || String(error) };
+    });
+  }
+
+  cancel() { if (this.#active) this.#stop("cancelled"); }
+
+  #message(message) {
+    const active = this.#active;
+    if (!active || message.generation !== this.#generation || message.runId !== active.runId) return;
+    if (message.type === "stdout" || message.type === "stderr") active.callbacks.output(message.text, message.type === "stderr");
+    if (message.type === "input-buffer") active.callbacks.input(message.buffer);
+    if (message.type === "result") this.#finish({ kind: "result", value: message.value });
+    if (message.type === "error") this.#finish({ kind: message.kind, message: message.message });
+    if (message.type === "worker-error") this.#finish({ kind: "worker", message: message.message });
+  }
+
+  #finish(result) {
+    const active = this.#active;
+    if (!active) return;
+    clearTimeout(active.timer); clearTimeout(active.grace);
+    this.#active = null;
+    active.resolve(result);
+  }
+
+  #stop(kind) {
+    const active = this.#active;
+    if (!active) return;
+    if (kind === "timeout" && this.#interrupt) {
+      Atomics.store(this.#interrupt, 0, 2);
+      active.grace = setTimeout(() => this.#hardStop(kind), INTERRUPT_GRACE_MS);
+    } else this.#hardStop(kind);
+  }
+
+  #hardStop(kind) {
+    const active = this.#active;
+    if (!active) return;
+    this.#finish({ kind });
+    this.#newWorker();
+    this.#url = null;
+  }
+
+  answer(buffer, value) {
+    const bytes = new TextEncoder().encode(value);
+    const view = new Uint8Array(buffer, 8);
+    view.set(bytes.slice(0, view.length));
+    const control = new Int32Array(buffer, 0, 2);
+    Atomics.store(control, 1, Math.min(bytes.length, view.length));
+    Atomics.store(control, 0, 1); Atomics.notify(control, 0);
+  }
 }
+PageRuntime.nextRunId = 0;
+const pageRuntime = new PageRuntime();
 
 // ---------------------------------------------------------------------------
 // Octicon SVG icons (inline, no external dependency)
@@ -109,7 +205,7 @@ window.sicActivate = function (btn) {
 
   // De URL komt van de eerste cel op de pagina; ze delen er één.
   const cel = document.querySelector("interactive-code-cell");
-  getPyodide(cel?.dataset.pyodideUrl || DEFAULT_PYODIDE_URL).then(
+  pageRuntime.start(cel?.dataset.pyodideUrl || DEFAULT_PYODIDE_URL).then(
     () => {
       bar.classList.remove("is-loading");
       bar.classList.add("is-ready");
@@ -180,7 +276,7 @@ class InteractiveCodeCell extends HTMLElement {
 
     // Start Pyodide loading in the background - het is een WASM-runtime en het duurt
     // merkbaar lang. (Hier stond "~10 s"; dat getal is nooit in deze repo gemeten.)
-    const pyodidePromise = getPyodide(pyodideUrl);
+    const pyodidePromise = pageRuntime.start(pyodideUrl);
 
     try {
       const [
@@ -278,6 +374,24 @@ class InteractiveCodeCell extends HTMLElement {
       .addEventListener("click", () => this.#run());
   }
 
+  #setRunButtons(disabled) {
+    document.querySelectorAll(".sic-btn-run").forEach((button) => { button.disabled = disabled; });
+  }
+
+  #askInput(buffer, outputEl) {
+    return new Promise((resolve) => {
+      const dialog = document.createElement("form");
+      dialog.className = "sic-input-dialog";
+      dialog.innerHTML = `<label>${t("inputPrompt")} <input autofocus></label><button type="submit">${t("run")}</button><button type="button" data-cancel>${t("inputCancel")}</button>`;
+      outputEl.parentElement.appendChild(dialog);
+      const input = dialog.querySelector("input");
+      const close = (value) => { dialog.remove(); pageRuntime.answer(buffer, value); resolve(); };
+      dialog.addEventListener("submit", (event) => { event.preventDefault(); close(input.value); });
+      dialog.querySelector("[data-cancel]").addEventListener("click", () => { dialog.remove(); pageRuntime.cancel(); resolve(); });
+      input.focus();
+    });
+  }
+
   // ---- Uitvoerplek ----------------------------------------------------------
 
   // Op een notebookpagina staan invoer en uitvoer naast elkaar in `div.cell`, en het
@@ -317,8 +431,7 @@ class InteractiveCodeCell extends HTMLElement {
   // ---- Code execution -------------------------------------------------------
 
   async #run() {
-    const pyodide = await getPyodide(this.dataset.pyodideUrl || DEFAULT_PYODIDE_URL);
-    if (!pyodide || !this.#editor) return;
+    if (!this.#editor) return;
 
     const code = this.#editor.state.doc.toString();
     const outputEl = this.#outputTarget();
@@ -327,54 +440,38 @@ class InteractiveCodeCell extends HTMLElement {
     // zakt het vak in en groeit het meteen daarna weer terug - bij een tweede run
     // met dezelfde uitkomst is dat puur geflikker. `sic-stale` dooft hem alleen.
     this.#setStatus(t("running"));
+    this.#setRunButtons(true);
+    outputEl.textContent = "";
     outputEl.classList.add("sic-stale");
     this.#markError(outputEl, false);
 
-    let stdout = "";
-
     try {
-      // `write` in plaats van `batched`: dat laatste levert pas iets op bij een
-      // nieuwe regel, en de vraag van `input("Geef een getal: ")` heeft er geen.
-      // Zonder dit staat de vraag nog in de buffer op het moment dat we hem als
-      // label nodig hebben.
-      const uit = new TextDecoder();
-      const fout = new TextDecoder();
-      pyodide.setStdout({ write: (buf) => { stdout += uit.decode(buf, { stream: true }); return buf.length; } });
-      pyodide.setStderr({ write: (buf) => { stdout += fout.decode(buf, { stream: true }); return buf.length; } });
-
-      // Zonder stdin valt elke input() om met een I/O-fout. De browser heeft een
-      // synchrone prompt, en dat is precies wat Pyodide hier verwacht. Wat er na de
-      // laatste nieuwe regel in de uitvoer staat is de vraag die het programma net
-      // heeft gesteld; dat is het label. Het antwoord gaat ook de uitvoer in, anders
-      // leest het transcript als een gesprek waarin de helft ontbreekt.
-      pyodide.setStdin({
-        stdin: () => {
-          const vraag = stdout.slice(stdout.lastIndexOf("\n") + 1).trim();
-          const antwoord = window.prompt(vraag || t("inputPrompt")) ?? "";
-          stdout += antwoord + "\n";
-          return antwoord + "\n";
-        },
-      });
-
-      const result = await pyodide.runPythonAsync(code);
-      const combined =
-        stdout + (result !== undefined && result !== null ? String(result) : "");
-
-      // Vanaf de eerste run blijft het uitvoervak staan, ook als er niets is
-      // afgedrukt. Verbergen bij lege uitvoer laat het vak alsnog inklappen, en een
-      // leeg vak zegt bovendien iets waars: het heeft gedraaid en er kwam niets uit.
-      const output = combined.trim();
-      outputEl.textContent = output;
+      const result = await pageRuntime.run(code, {
+        output: (text, isError) => { outputEl.textContent += text; this.#markError(outputEl, isError); outputEl.hidden = false; },
+        input: (buffer) => this.#askInput(buffer, outputEl),
+      }, this.dataset.pyodideUrl || DEFAULT_PYODIDE_URL);
+      if (result.kind === "result") outputEl.textContent += result.value;
+      if (result.kind === "python" || result.kind === "interrupt") {
+        outputEl.textContent += `${t("pythonError")}${result.message}`;
+        this.#markError(outputEl, true);
+      }
+      if (result.kind === "timeout") {
+        outputEl.textContent = t("timeout"); this.#markError(outputEl, true);
+      }
+      if (result.kind === "cancelled") {
+        outputEl.textContent = t("cancelled"); this.#markError(outputEl, true);
+      }
+      if (result.kind === "load" || result.kind === "worker") {
+        outputEl.textContent = `${t("workerError")}${result.message}`; this.#markError(outputEl, true);
+      }
       outputEl.hidden = false;
     } catch (err) {
       outputEl.textContent = err.message;
       this.#markError(outputEl, true);
       outputEl.hidden = false;
     } finally {
-      pyodide.setStdout({ batched: console.log });
-      pyodide.setStderr({ batched: console.error });
-      pyodide.setStdin();
       outputEl.classList.remove("sic-stale");
+      this.#setRunButtons(false);
       this.#setStatus("");
     }
   }
