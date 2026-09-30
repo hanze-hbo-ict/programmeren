@@ -163,8 +163,8 @@ uitgangssituatie, niet de norm; het verschil tussen beide kolommen is het werk.
 | Week | Leidend voor 2026 | Verantwoordelijk | Leeruitkomsten | Voor het eerst geïntroduceerd | Materiaal nu |
 |---|---|---|---|---|---|
 | 1 | Datastructuren (lists ter herhaling, dictionaries, sets, methodeaanroep, Markov) | BRRA | P2, A1 | dictionary, sleutel en waarde, set, methodeaanroep | Datastructuren: colleges `8a_datastructuren` (methodeaanroep en dictionaries) en `8b_taalmodel` (sets en het Markov-model), practicum `8a_text_genereren`, opstap, basis (woorden tellen) en extra (woordenschat vergelijken) (#273) |
-| 2 | Comprehensions (list, dict, set, range, enumerate) | HOEM | A1 | list comprehension, dict comprehension, set comprehension, `enumerate` | Recursie |
-| 3 | Recursie | HOEM | A6 | recursie, base case, recursieve aanroep | Algoritmen (knapzak, wisselgeld) |
+| 2 | Comprehensions (list, dict, set, range, enumerate) | HOEM | A1; zie de opmerking bij *Voorgestelde correcties* in [leeruitkomsten.md](leeruitkomsten.md) | list comprehension, dict comprehension, set comprehension, `enumerate`, `zip`, de conditionele expressie `a if c else b` | Comprehensions: colleges `9a_list_comprehensions` (list comprehension met `range`, `enumerate`, `zip` en `a if c else b`) en `9b_dict_en_set_comprehensions` (dict en set comprehension, geneste comprehension, lus of comprehension), werkcollege `9_register`, opstap, basis (van lus naar comprehension en terug) en extra (een toernooi) (#326) |
+| 3 | Recursie | HOEM | A6 | recursie, base case, recursieve aanroep | Tijdelijk twee onderwerpen (#326): recursie, met colleges `10b_intro_recursie` en `10c_recursief`, practicum `10_recursieve_functies` en opstap, basis en extra (`10_recursie_*`), tot #326 het materiaal van week 2; en algoritmen (knapzak, wisselgeld) |
 | 4 | Use it or lose it, lambda | HOEM | A4, A6 | use it or lose it, `lambda`, functie als argument | Alleen de extra-opgave Text-ID; de klassenstof staat sinds #160 in week 5 |
 | 5 | OO, klassen, encapsulatie | BRRA | P5, A2 | klassedefinitie, object, attribuut, constructor en `__init__`, `self`, een methode schrijven, `__repr__`, waarde en identiteit, `is`, encapsulatie, `_` voor een attribuut dat niet van buiten wordt gebruikt, `@property` en decorator, compositie | OO, klassen, encapsulatie: colleges `12a_objecten` en `12b_data_object`, practicum sessie 1 (`12_creatures`), opstap, basis (`Date`) en extra (`Board`) (#160) |
 | 6 | Polymorfisme, overerving, duck typing | BRRA | A2, A3 | overerving, subklasse en superklasse, `super()`, een methode overschrijven, standaardwaarde voor een parameter, polymorfisme, duck typing, `isinstance`, `self.__class__` en `__name__` | Polymorfisme, overerving, duck typing: colleges `13a_overerving` en `13b_polymorfisme`, practicum sessie 2 (`13_creatures`), opstap, basis (kassabon) en extra (spelers voor `Board`) (#270) |
@@ -183,8 +183,9 @@ Voor week 5 is dat vastgesteld (*object*, *attribuut*, *constructor*,
 *encapsulatie*, *compositie*, *waarde*, *identiteit*, *verwijzing*), en voor
 week 6 ook (*overerving*, *subklasse*, *superklasse*, *overschrijven*,
 *polymorfisme*, *duck typing*, #270) en week 7 (*magische methode*, *operator
-overloading*, een exception *gooien*, *afvangen* en *afhandelen*, #271); voor
-*base case* of *basisgeval* nog niet.
+overloading*, een exception *gooien*, *afvangen* en *afhandelen*, #271) en week 2
+(*comprehension*, *list comprehension*, *dict comprehension* en *set
+comprehension*, #326); voor *base case* of *basisgeval* nog niet.
 
 **De kolom *Leeruitkomsten* wijst elke gewogen PGM2-uitkomst een week toe**,
 behalve twee die in PGM1 worden onderwezen en in PGM2 worden getoetst: P1
@@ -203,6 +204,54 @@ horen bij week 7. Het AI-materiaal van week 5, `12_ai` en `12_vier_op_rij_AI`,
 verdwijnt uit die week naar een plek buiten `source/`. Week 4 houdt daarna alleen
 Text-ID en heeft nog geen materiaal voor *use it or lose it* en `lambda`.
 Besloten bij de voorbereiding van de poort van #160, en **uitgevoerd** in #160.
+
+**Week 2 is de week van comprehensions; het recursiemateriaal staat tijdelijk in
+week 3.** Tot #326 ging het materiaal van week 2 over recursie, terwijl de
+planning daar comprehensions zet en recursie in week 3. Bij #326 besloot de
+vakdeskundige op 30 september 2026: *"Alleen week 2."* Week 2 kreeg nieuw
+materiaal over comprehensions. Het recursiemateriaal verhuisde ongewijzigd naar
+week 3, in de inhoudsopgave en op de weekpagina, en staat daar naast het
+knapzak- en wisselgeldmateriaal; herzien is het niet. De zes bestanden kregen
+een naam van week 10: `lectures/10b_intro_recursie`, `lectures/10c_recursief`,
+`practicals/10_recursieve_functies` en `problems/10_recursie_opstap`,
+`10_recursie_basis` en `10_recursie_extra`. Dat de gepubliceerde URL's daardoor
+veranderen, is aanvaard (VP5). Week 3 draagt daarom tijdelijk twee onderwerpen,
+met twee reeksen niveaus die in de inhoudsopgave het onderwerp in hun titel
+hebben. Tijdelijk, omdat week 3 en 4 op de planning brengen een apart werkitem
+is. **Uitgevoerd** in #326.
+
+**De opzet van week 2.** Besloten door de vakdeskundige op 30 september 2026,
+bij de poort van #326:
+
+- *"twee colleges; het werkcollege is het derde college"* (VP4);
+- een extra-opgave, *"maar liever niet weer opnieuw over tekst vergelijken.
+  Bedenk iets creatiefs om met wat complexere comprehensions te doen (bv genest
+  of meerdere types combineren)"* (VP6). De extra heeft daarmee een andere
+  context dan de basis, en wijkt voor deze opgave af van *Eén opgave over drie
+  niveaus* in [uitgangspunten.md](uitgangspunten.md);
+- het losse oefenbestand over list comprehensions in `extra/practice/` is bron
+  voor het nieuwe materiaal en wordt daarna verwijderd, met zijn afbeelding
+  (VP1): week 3 en 4 gaan niet over comprehensions.
+
+Uitgevoerd in #326, met deze keuzes van de auteur: het eerste college behandelt
+de list comprehension, met een filter, `range`, `enumerate`, `zip` en de
+conditionele expressie; het tweede dict en set comprehensions, de lijst van
+lijsten en de geneste comprehension, en wanneer een lus de betere keuze blijft.
+De context van de extra is een toernooi.
+
+**Welke syntaxis week 2 draagt.** Een comprehension met één `for` en een
+optioneel filter, over een lijst, een string, `range`, `.items()`, `enumerate`
+en `zip`; de conditionele expressie `a if c else b`, ook in de expressie van een
+comprehension; en de geneste comprehension, een comprehension in een
+comprehension. Twee `for`-clausules in één comprehension komen niet in de week;
+de vakdeskundige: *"Dubbele for hoeft niet (dat kan denk ik altijd geschreven
+worden als een geneste lc)"*. Generator expressions ook niet: *"je kan in sum ook
+een echte lc stoppen immers"*; waar een som of telling nodig is, gebruikt het
+materiaal `sum([...])` met een list comprehension. Een ongebruikte lusvariabele heet `_`,
+ook in een comprehension (`conventies/codeconventies.md`). `zip` en
+`a if c else b` zijn daarmee nieuwe syntaxis van week 2, en staan zo in de tabel
+hierboven en in de tabel *Welk niveau een week hoort te hebben*. Vastgesteld door de
+vakdeskundige op 30 september 2026, bij de poort van #326 (VP7).
 
 **Excepties landen in week 7**, naast operator overloading. Vastgesteld bij de
 voorbereiding van de poort van #160; zie *Gaten tussen toetsing en materiaal*.
@@ -315,7 +364,7 @@ gewone `def` die zichzelf aanroept.
 | PGM2-week | Verplicht | Nieuwe syntaxis die de opstap draagt |
 |---|---|---|
 | 1 | opstap, basis | dictionary- en set-literals, methodeaanroep |
-| 2 | opstap, basis | comprehensions |
+| 2 | opstap, basis | comprehensions, `zip`, de conditionele expressie `a if c else b` |
 | 3 | basis | - |
 | 4 | opstap, basis | `lambda`, functie als argument |
 | 5 | opstap, basis | `class`, `__init__`, `self`, `@property` |
@@ -329,24 +378,32 @@ met 7 niets. Maar de opgaven van week 2 gaan over recursie en die van week 4 ove
 klassen, dus die tellen voor een andere week. Wat een week mist, stelt de
 herziening van die week vast. Vastgesteld door de vakdeskundige op 23 september
 2026. Sindsdien hebben de weken 5, 6 en 7 opstap, basis en extra gekregen, in
-werkitem #160, #270 en #271.
+werkitem #160, #270 en #271, en week 2 in #326; de opgaven over recursie staan
+sinds #326 in week 3.
 
-**Wat er wél uit volgt: negen ontbrekende niveau-uitwerkingen.** Dat volgt niet uit
+**Wat er wél uit volgt: acht ontbrekende niveau-uitwerkingen.** Dat volgt niet uit
 de regel hierboven maar uit het besluit *Elk opgaveniveau hoort een uitwerking te
 hebben*, dat elk **bestaand** niveau bindt en dus onafhankelijk is van welke
-niveaus een week verplicht heeft. De meting telt 35 niveau-opgaven in
-`source/problems/`, waarvan 27 een gelijknamige uitwerking in `source/solutions/`
+niveaus een week verplicht heeft. De meting telt 41 niveau-opgaven in
+`source/problems/`, waarvan 33 een gelijknamige uitwerking in `source/solutions/`
 hebben en 8 nog niet. Dit is
 werkitem #194 en geen werk voor de herziening van dit document. In die acht
-ontbrekende uitwerkingen gaat het concreet om de opstap van week 7 tot en met 9
-en alle niveau-uitwerkingen van week 9 tot en met 11. Hermeten bij #160: hier
+ontbrekende uitwerkingen gaat het concreet om de opstap van PGM1 week 7 en van
+PGM2 week 1, en om alle niveau-uitwerkingen van PGM2 week 3 en 4: de basis en de
+extra van de algoritmen, de opstap, de basis en de extra van recursie
+(`10_recursie_*`, tot #326 `9_*`) en de extra van week 4. Hermeten bij #160: hier
 stond 30, 19 en 11, maar vóór #160 waren het er al 30, 20 en 10, omdat de opstap
 van week 5 inmiddels een uitwerking had. #160 haalde `11_basis` weg en voegde
 opstap, basis en extra van PGM2 week 5 toe, alle drie met uitwerking. Hermeten
 bij #270: 32, 23 en 9 werden 35, 26 en 9, want #270 voegde opstap, basis en
 extra van PGM2 week 6 toe, alle drie met uitwerking. Hermeten bij #271: 38, 29 en
 9, want #271 voegde opstap, basis en extra van PGM2 week 7 toe, alle drie met
-uitwerking. College- en
+uitwerking. Hermeten bij #326: vóór #326 waren het 38, 30 en 8, en niet 38, 29 en
+9; de kop zei toen negen en de lopende tekst 35, 27 en 8. #326 voegde opstap,
+basis en extra van PGM2 week 2 toe, alle drie met uitwerking: 41, 33 en 8. De
+maat: elk bestand in `source/problems/` waarvan de naam zonder extensie eindigt
+op `_opstap`, `_basis` of `_extra`, met of zonder gelijknamig bestand in
+`source/solutions/`. College- en
 practicumopdrachten vallen niet automatisch onder deze norm.
 
 ## Volgorde van het werk
@@ -388,9 +445,17 @@ als zodanig is gemarkeerd.
 | `while` | PGM1 week 4 | PGM1 week 2, `practicals/2_rochambeau` | Bewust; de tekst zegt erbij dat lussen later komen |
 | `choice`, en daarmee `import` | PGM1 week 3 | PGM1 week 2, `practicals/2_rochambeau` en `solutions/2_rochambeau` | Bewust; de opgave geeft de regel in de begincode met de uitleg als commentaar erachter, en de uitwerking zegt erbij hem voor nu aan te nemen. Vastgesteld door de vakdeskundige, 15 september 2026 |
 | `time.sleep` en math-functies | PGM1 week 3 | PGM1 week 2, `problems/2_basis`, `solutions/2_basis`, `problems/2_extra` en `solutions/2_extra` | Bewust; als gegeven begincode, met de uitleg als commentaar erachter. Vastgesteld door de vakdeskundige, 16 september 2026 |
-| list comprehension | PGM2 week 2 | PGM1 week 6, `practicals/6b_images` | Onderwerp van een hele PGM2-week |
+| list comprehension, en een generator expression | PGM2 week 2; generator expressions komen niet in de leerlijn | PGM1 week 6, `solutions/6_extra.ipynb`: r80 (`[pixel[:] for pixel in brede_regel]`) en r132 (`sum(1 for regel in raster for teken in regel if ...)`) | Moet een `for`-lus worden; #328 |
+| functie als argument (`key=`) | PGM2 week 4 | PGM2 week 2, laag extra, `problems/9_extra` | Bewust; als vooruitblik aan het eind, met een functieverwijzing en zonder lambda, niet om te schrijven. Vastgesteld door de vakdeskundige, 30 september 2026 |
 | functiedefinitie | PGM1 week 3 | PGM1 week 2, `problems/2_basis` | Als gegeven code, niet om te schrijven. De docstring in datzelfde blok is onderdompeling; of dat ook voor de `def` geldt is nog niet besloten |
 | tuple | PGM1 week 7 | PGM1 week 5, laag extra, `problems/5_extra.md` | Ongemarkeerd; introduceert ook *methode* en *object*. Buiten bereik van de herzieningen in #102/#134 |
+
+De rij over list comprehension wees tot #326 naar `practicals/6b_images`. Daar
+staat sinds `d85d30a` (24 september 2026) geen comprehension meer; de rij wijst
+nu naar de uitwerking van de extra-opgave van dezelfde week, waar de vakdeskundige
+er een zag en waar ook een generator expression staat. Gemeten op 30 september
+2026 met een AST-scan van de codecellen. Bijgewerkt op besluit van de
+vakdeskundige, 30 september 2026, bij de poort van #326 (VP8).
 
 Twee regels stonden hier eerder en zijn nagemeten en geschrapt.
 
@@ -425,6 +490,8 @@ blijft een raakvlak vindbaar zonder dat het in een werkitem verstopt zit.
 | PGM2 week 6 | PGM2 week 7 | Week 7 geeft de klassen uit week 6 operatoren en vervangt de stille terugvalwaarden uit week 5 en 6 door `raise`. Het practicum gooit alleen exceptions en vangt er geen af, terwijl P4 het *afhandelen* van foutcondities vraagt. Week 6 levert (#270): `Beast`, `Dragon`, `Wolf`, `Goblin`, `Healer`, `Turret`, `battle_round` en `battle(side_a, side_b, max_rounds)`; `special_move` op `Creature` valt stil terug op een gewone aanval. Wat afwijkt van de opzet van sessie 3: alle vier de wezens hebben standaardwaarden, dus `Dragon("Ember")` werkt; `__repr__` noemde tot #271 `Creature(...)`, ook bij een subklasse, en `type(self).__name__` was in week 6 vermeden, dus de zin in sessie 3 dat `__repr__` "al sinds Sessie 1" `self.__class__` gebruikt, klopte niet; de limieten van `Turret` zijn attributen van het object, geen klasse-attributen. | Besloten als opzet. De afwijkingen zijn besloten bij de poort van #270 (V8, V9, V10). **Uitgevoerd** in #271 (`practicals/14_creatures.md`): het afvangen staat in de basisopgave (VP1); V10 is herroepen, en `__repr__` gebruikt sinds week 6 `self.__class__.__name__` (VP7). |
 | PGM2 week 5 | PGM2 week 6 | `practicals/13_vier_op_rij_speler.md` verwijst op r37 naar het AI-practicum van week 5 en op r338 naar `host_game`, dat alleen daar wordt gebouwd. Sinds #160 wijst r37 naar `Board`, nu de extra-opgave van week 5. | Afgehandeld in #270: week 6 bouwt `host_game(px, po)` in `problems/13_extra.md`, en `13_vier_op_rij_speler` staat sinds #270 in de inhoudsopgave onder PGM2 week 7, met ongewijzigde inhoud (V5). Het bestand zelf, met `play_game` en de controle op `'human'` op r338, staat sinds #271 buiten `source/` (VP11); de inhoud leeft voort in `problems/14_extra.md`. |
 | PGM2 week 6 | PGM2 week 7 | De extra-opgave `problems/13_extra.md` legt de spelersinterface vast waarop week 7 voortbouwt: elke speler heeft een attribuut `ox` en een methode `next_move(board)` die een kolom teruggeeft waarin een zet mag; `Board.host_game(px, po)` gebruikt van een speler alleen die twee, zonder typecontrole; `Player.next_move` valt terug op de meest linkse kolom, en `Board` heeft `cols_to_win(ox)`. Een volgende speler, in #271, past in deze structuur als subklasse van `Player`, waarvoor `host_game` niet verandert. Het toernooi vervalt (V3). | Besloten bij de poort van #270 (24 september 2026). **Uitgevoerd** in #271: `MinimaxPlayer` is een subklasse van `Player`, en `host_game` is ongewijzigd. Het toernooi vervalt ook in week 7 (VP2). |
+| PGM2 week 2 | PGM2 week 3, 5, 6 en 7 | Week 2 levert comprehensions. Latere weken gebruiken ze zonder ze uit te leggen, alle met één `for` en eventueel een filter: `caesar_op_orde` en `course/opgaven_10.md` (week 3), `practicals/12_creatures.md` r290 en `problems/12_extra.md` r87 (week 5), `problems/13_opstap` (week 6), en `problems/14_opstap`, `problems/14_basis` en `practicals/14_creatures.md` (week 7). | Uitgevoerd in #326; de latere weken zijn daarvoor niet aangepast. |
+| PGM2 week 2 | PGM2 week 5 | Week 2 leert `_` voor een ongebruikte lusvariabele, ook in een comprehension. `Board` in `problems/12_extra.md` r87 schrijft `[[" "] * width for row in range(height)]`, met `row` in plaats van `_`. | Besloten door de vakdeskundige op 30 september 2026 (VP7): recht te zetten in #327. |
 | PGM2 week 6 | PGM2 week 7 | De extra-opgave van week 7 voegt een min-max-speler toe aan de spelers uit week 6, als volgende speler in de spelersinterface van `problems/13_extra.md`. | Besloten door de vakdeskundige op 23 september 2026. **Uitgevoerd** in #271 (`problems/14_extra.md`). |
 
 ## Onderhoud

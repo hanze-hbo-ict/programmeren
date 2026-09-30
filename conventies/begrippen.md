@@ -249,10 +249,10 @@ zij hier bij.
 
 - **`Opgaven` als rubriekkop, ook buiten `course/`.** Hij staat boven een
   *verzameling* en niet boven één taak - hetzij boven een reeks opgavebestanden,
-  hetzij boven een reeks taken binnen één bestand. Veertien vindplaatsen:
-  `# Opgaven` in `course/opgaven_2` tot en met `opgaven_12`, en `## Opgaven` in
-  `problems/9_basis.ipynb` en in de twee oefenbestanden
-  `extra/practice/1_recursie.ipynb` en `2_list_comprehension.ipynb`.
+  hetzij boven een reeks taken binnen één bestand. Vijftien vindplaatsen:
+  `# Opgaven` in `course/opgaven_2` tot en met `opgaven_14`, en `## Opgaven` in
+  `problems/10_recursie_basis.ipynb` en in het oefenbestand
+  `extra/practice/1_recursie.ipynb`.
 - **Een ongenummerde `### Opgave`, *binnen* een bestand onder `problems/`.** Dat
   is één opgave die uit meer dan één taak bestaat en zelf geen nummer draagt; hij
   staat er binnen en niet boven. Eén vindplaats: de debugopgave in
@@ -354,9 +354,14 @@ automatisch.
 
 ## Engelse termen die we niet vertalen
 
-`string`, `dictionary`, `integer`, `float`, `list comprehension`, `recursie`,
+`string`, `dictionary`, `integer`, `float`, `list comprehension`,
+`dict comprehension`, `set comprehension`, `comprehension`, `recursie`,
 `debuggen`, `commit`, `branch`, `assertion`, `docstring`, `index`, `slice`,
 `duck typing`, `operator overloading`.
+
+*Dict comprehension*, *set comprehension* en het verzamelwoord *comprehension*
+blijven Engels, net als *list comprehension*. Vastgesteld door de vakdeskundige
+op 30 september 2026, bij de poort van #326 (VP2).
 
 Introduceer zo'n term bij eerste gebruik kort in het Nederlands. Voor
 eerstejaars is die ene toelichting nodig; daarna volstaat de term.

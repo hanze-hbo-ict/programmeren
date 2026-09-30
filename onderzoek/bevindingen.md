@@ -1345,3 +1345,71 @@ levert zijn verbruik niet af* (24 september) gebeurde opnieuw. De eerste auteurs
 stopte op HTTP 429 zonder verbruiksmelding. Dit keer is de context hervat, en die meldde
 daarna een getal. Of dat getal het afgebroken deel bevat, is uit de melding niet af te leiden.
 Het staat in [metingen.md](metingen.md) met dat voorbehoud.
+
+## De auteur maakt van een voorzichtige reden een feit - 30 september 2026
+
+**Wat er gebeurde.** Bij #326 legde de auteur het poortbesluit over dubbele `for`-clausules vast in
+`curriculum/leerlijn.md`: *"komen niet in de week, want die zijn altijd als geneste comprehension
+te schrijven"*. De vakdeskundige had gezegd: *"Dubbele for hoeft niet (dat kan denk ik altijd
+geschreven worden als een geneste lc)"*. De auteur maakte van dat *denk ik* een feit, en dat feit
+is onjuist: `[x for r in m for x in r]` geeft een platte lijst, `[[x for x in r] for r in m]` een
+lijst van lijsten. De onderwijskundige blokkeerde de oplevering erop (PR #330, B1). Het was de
+enige blokkade, net als bij #271.
+
+**Waarom dit de bevinding van 25 september bevestigt.** *De auteur schrijft een reden bij het
+besluit* beschreef twee gevallen bij #271, waarvan één onjuist. Hier gebeurt het een derde keer,
+in een variant: de reden kwam van de vakdeskundige, maar de voorzichtigheid verdween. Het C4 van
+#326 citeerde het besluit letterlijk. Het zei er niet bij dat alleen het citaat mag worden
+vastgelegd. Het voorstel van 25 september (in de auteursrol: alleen het letterlijke besluit met
+datum, en een reden alleen als citaat) is nog niet in de instructies opgenomen.
+
+**Wat het veranderde.** In het herstel (`62e597f`) staat nu het citaat met bron. Omdat het C2 (AC12)
+en het C4 de toets tegen de besluiten aan de onderwijskundige gaven, werd het gevangen. Dat is opnieuw een
+keuze per werkitem, geen vaste regel. Het voorstel van 25 september ligt er dus met drie gevallen
+in plaats van twee. Het is een procesbesluit voor de vakdeskundige.
+
+## De bestaande meetpraktijk voor een hervatte agent werd niet geraadpleegd - 30 september 2026
+
+**Wat er gebeurde.** Bij #326 werden twee agents hervat: de ontwerper voor zijn herstel en de
+auteur voor het zijne. De orkestrator noteerde op GitHub steeds twee lezingen: het gemelde getal
+als verbruik van de stap, of het verschil met de vorige melding. Hij deed dat zonder te weten dat
+de vraag al in [bevindingen.md](bevindingen.md) stond. *Een hervatte agent meldt zijn tokens als
+lopend totaal* (23 september) beschrijft hetzelfde bij #273 en houdt het lopende totaal
+voor aannemelijk (*"Het lijkt dus"*), maar *"uit de melding zelf ... niet vast te stellen"*. De meetdefinitie hoort de
+vakdeskundige vast te stellen. [metingen.md](metingen.md) rekent sinds #271 met het verschil, met
+dat voorbehoud erbij. Ook bij #326 liep het getal op na weinig toolaanroepen: 140.027 → 157.171
+na 8 aanroepen, en 422.605 → 440.576 na 13. Dat steunt het vermoeden, maar bewijst het niet.
+
+**Nog een keer hetzelfde, in de eerste versie van deze bevinding.** De orkestrator schreef eerst
+dat de bevinding van 23 september dat lopende totaal al had vastgesteld (*"had dat al
+vastgesteld"*), en liet de hoge lezing
+in metingen.md *vervallen*. Daarmee maakte hij van een voorzichtige uitspraak een feit, en nam hij
+een meetkeuze die bij de vakdeskundige ligt. Dat is het patroon van de bevinding hierboven, nu bij
+de orkestrator zelf. Een redactionele lezing van de orkestratordiff, die de orkestrator liet uitvoeren volgens de
+regel *wie het zelf doet, laat het lezen*, ving het (PR #330).
+
+**Waarom het ertoe doet.** Dit volgt het patroon van *Een bevinding opschrijven voorkomt haar
+niet* (24 september): de bevinding en de praktijk stonden er, maar de orkestrator raadpleegde ze
+niet op het moment dat het ertoe deed. Er was geen budgetgrens, dus er is op de telling geen
+besluit genomen. In een proef van #203 hangt de budgetreactie wel aan de telling, en dan beslist
+de lezing welke stand de mens krijgt voorgelegd.
+
+**Wat het veranderde.** In [metingen.md](metingen.md) telt #326 zoals #271: het verschil tussen
+twee meldingen, met het voorbehoud, en met de hoge lezing ernaast. In de instructies is niets
+veranderd. Het voorstel van 23 en 24 september staat nog open: leg de telling van een hervatte
+agent vast in de meetdefinitie. Aanvullend voorstel voor de evaluatie van #203: laat `/orc` bij
+de start de bevindingen over het meten raadplegen.
+
+**Twee kleinere waarnemingen uit hetzelfde werkitem.**
+- *De orkestrator vroeg rollen zonder schrijfgereedschap om een bestand te schrijven.* De
+  verhelderaar en de beoordelaars hebben alleen lees- en zoekgereedschap. Het eerste C3 kwam
+  daarom als tekst terug, met de melding dat het pad niet te schrijven was. De orkestrator zette
+  het letterlijk neer. Latere opdrachten vroegen om tekst. Dat kost niets, maar een opdracht die
+  niet uitvoerbaar is, zet een rol aan het improviseren.
+- *Een zoekpatroon met een uitgesloten tekenklasse miste een treffer.* Voor #328 zocht de
+  orkestrator comprehensions met `[^\[\]{}()]` tussen haakje en `for`. De list comprehension
+  `[pixel[:] for pixel in brede_regel]` in `solutions/6_extra.ipynb` r80 viel daardoor weg,
+  terwijl de ijking op een eenvoudige comprehension slaagde. De AST-scan van de auteur vond hem wel.
+  Dit is een variant van *Een zoekpatroon uit bekende formuleringen vindt alleen bekende
+  formuleringen* (24 september): de ijking bewijst dat het patroon werkt, niet dat het alles
+  vangt. De issue #328 is aangevuld.
