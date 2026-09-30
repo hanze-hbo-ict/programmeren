@@ -675,6 +675,31 @@ Twee keer een patroon niet geijkt, allebei in dezelfde sessie:
 
 Hier hoort wat met de hand is gedaan omdat het te klein leek voor een werkitem.
 
+### 30 september 2026, `.gitignore` en een bevinding (PR #342 en #343)
+
+**Wat het was.** Twee ingrepen met de hand: vier regels in `.gitignore` voor de bestanden
+die de opgaven en uitwerkingen van week 6 tijdens de build aanmaken (PR #342), en een
+nieuwe bevinding in `onderzoek/bevindingen.md` over de orkestrator die een gat als nieuw
+behandelt (PR #343).
+
+**Waarom buiten de lus.** Vier regels configuratie en een bevinding halen de drempel voor
+een werkitem niet; `CLAUDE.md` noemt dit het geval waarin je het gewoon doet, in een
+branch met een pull request.
+
+**Is er een beoordelaar overheen gegaan.** Ja - `rol-beoordelaar-redacteur`, op verzoek
+van de vakdeskundige (*"ja, redacteur op beide PR's"*), vóór het merge-aanbod. Het C6
+staat onverkort op beide PR's. Uitkomst: #342 AKKOORD, #343 AKKOORD MET PUNTJES, nul
+blokkades. Vier van de zes puntjes zijn verwerkt in commit `82f0c7e`; de redacteur mat
+bovendien dat de reactie bij #102 §*Mutabiliteit* op r235-310 zette terwijl de sectie tot
+r337 loopt, en die reactie is rechtgezet.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| beoordelaar-redacteur | 2.714.155 | 7 min 8 s | #342 AKKOORD, #343 AKKOORD MET PUNTJES, 0 blokkades, 6 puntjes |
+
+Dit is de achtste ingreep onder deze kop en de tweede met een beoordelaar erop. De eerste
+zeven scoorden nul; zie de regel *wie het zelf doet, laat het lezen* in `CLAUDE.md`.
+
 ### 24 september 2026, achteraf-lezing van onbeoordeelde orkestratortekst (PR #284)
 
 **Wat het was.** Een leesronde door `rol-beoordelaar-redacteur` over tekst die de
