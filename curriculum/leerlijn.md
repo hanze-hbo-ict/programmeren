@@ -218,32 +218,36 @@ een naam van week 10: `lectures/10b_intro_recursie`, `lectures/10c_recursief`,
 veranderen, is aanvaard (VP5). Week 3 draagt daarom tijdelijk twee onderwerpen,
 met twee reeksen niveaus die in de inhoudsopgave het onderwerp in hun titel
 hebben. Tijdelijk, omdat week 3 en 4 op de planning brengen een apart werkitem
-is; dat werkitem beslist ook wat er met het knapzak- en wisselgeldmateriaal
-gebeurt en waar *use it or lose it* landt. **Uitgevoerd** in #326.
+is. **Uitgevoerd** in #326.
 
-**De opzet van week 2.** Twee colleges, met het werkcollege als derde
-bijeenkomst (VP4). Het eerste college behandelt de list comprehension, met een
-filter, `range`, `enumerate`, `zip` en de conditionele expressie; het tweede
-dict en set comprehensions, de lijst van lijsten en de geneste comprehension, en
-wanneer een lus de betere keuze blijft. De extra-opgave heeft een eigen context,
-een toernooi, en niet de tekstcontext van de basis: de vakdeskundige vroeg om
-complexere comprehensions, genest of met verschillende types gecombineerd, en
-niet opnieuw om tekst vergelijken. Voor deze opgave wijkt dat af van *Eén
-opgave over drie niveaus* in [uitgangspunten.md](uitgangspunten.md) (VP6). Het
-losse oefenbestand over list comprehensions in `extra/practice/` was bron voor
-het nieuwe materiaal en is daarna verwijderd, met zijn afbeelding: week 3 en 4
-gaan niet over comprehensions en hebben het niet nodig (VP1). Vastgesteld door de
-vakdeskundige op 30 september 2026, bij de poort van #326, en ook **uitgevoerd**
-in #326.
+**De opzet van week 2.** Besloten door de vakdeskundige op 30 september 2026,
+bij de poort van #326:
+
+- *"twee colleges; het werkcollege is het derde college"* (VP4);
+- een extra-opgave, *"maar liever niet weer opnieuw over tekst vergelijken.
+  Bedenk iets creatiefs om met wat complexere comprehensions te doen (bv genest
+  of meerdere types combineren)"* (VP6). De extra heeft daarmee een andere
+  context dan de basis, en wijkt voor deze opgave af van *Eén opgave over drie
+  niveaus* in [uitgangspunten.md](uitgangspunten.md);
+- het losse oefenbestand over list comprehensions in `extra/practice/` is bron
+  voor het nieuwe materiaal en wordt daarna verwijderd, met zijn afbeelding
+  (VP1): week 3 en 4 gaan niet over comprehensions.
+
+Uitgevoerd in #326, met deze keuzes van de auteur: het eerste college behandelt
+de list comprehension, met een filter, `range`, `enumerate`, `zip` en de
+conditionele expressie; het tweede dict en set comprehensions, de lijst van
+lijsten en de geneste comprehension, en wanneer een lus de betere keuze blijft.
+De context van de extra is een toernooi.
 
 **Welke syntaxis week 2 draagt.** Een comprehension met één `for` en een
 optioneel filter, over een lijst, een string, `range`, `.items()`, `enumerate`
 en `zip`; de conditionele expressie `a if c else b`, ook in de expressie van een
 comprehension; en de geneste comprehension, een comprehension in een
-comprehension. Twee `for`-clausules in één comprehension komen niet in de week,
-want die zijn altijd als geneste comprehension te schrijven. Generator
-expressions ook niet: waar een som of telling nodig is, gebruikt het materiaal
-`sum([...])` met een list comprehension. Een ongebruikte lusvariabele heet `_`,
+comprehension. Twee `for`-clausules in één comprehension komen niet in de week;
+de vakdeskundige: *"Dubbele for hoeft niet (dat kan denk ik altijd geschreven
+worden als een geneste lc)"*. Generator expressions ook niet: *"je kan in sum ook
+een echte lc stoppen immers"*; waar een som of telling nodig is, gebruikt het
+materiaal `sum([...])` met een list comprehension. Een ongebruikte lusvariabele heet `_`,
 ook in een comprehension (`conventies/codeconventies.md`). `zip` en
 `a if c else b` zijn daarmee nieuwe syntaxis van week 2, en staan zo in de tabel
 hierboven en in de tabel *Welk niveau een week hoort te hebben*. Vastgesteld door de
