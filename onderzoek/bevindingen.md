@@ -1345,3 +1345,60 @@ levert zijn verbruik niet af* (24 september) gebeurde opnieuw. De eerste auteurs
 stopte op HTTP 429 zonder verbruiksmelding. Dit keer is de context hervat, en die meldde
 daarna een getal. Of dat getal het afgebroken deel bevat, is uit de melding niet af te leiden.
 Het staat in [metingen.md](metingen.md) met dat voorbehoud.
+
+## De auteur maakt van een voorzichtige reden een feit - 30 september 2026
+
+**Wat er gebeurde.** Bij #326 legde de auteur het poortbesluit over dubbele `for`-clausules vast in
+`curriculum/leerlijn.md`: *"komen niet in de week, want die zijn altijd als geneste comprehension
+te schrijven"*. De vakdeskundige had gezegd: *"Dubbele for hoeft niet (dat kan denk ik altijd
+geschreven worden als een geneste lc)"*. De auteur maakte van dat *denk ik* een feit, en dat feit
+is onjuist: `[x for r in m for x in r]` geeft een platte lijst, `[[x for x in r] for r in m]` een
+lijst van lijsten. De onderwijskundige blokkeerde de oplevering erop (PR #330, B1). Het was de
+enige blokkade, net als bij #271.
+
+**Waarom dit de bevinding van 25 september bevestigt.** *De auteur schrijft een reden bij het
+besluit* beschreef twee gevallen bij #271, waarvan één onjuist. Hier gebeurt het een derde keer,
+in een variant: de reden kwam van de vakdeskundige, maar de voorzichtigheid verdween. Het C4 van
+#326 citeerde het besluit letterlijk. Het zei er niet bij dat alleen het citaat mag worden
+vastgelegd. Het voorstel van 25 september (in de auteursrol: alleen het letterlijke besluit met
+datum, en een reden alleen als citaat) is nog niet in de instructies opgenomen.
+
+**Wat het veranderde.** In het herstel (`62e597f`) staat nu het citaat met bron. Omdat het C1 de
+toets tegen het C4 bij AC12 aan de onderwijskundige gaf, werd het gevangen. Dat is opnieuw een
+keuze per werkitem, geen vaste regel. Het voorstel van 25 september ligt er dus met drie gevallen
+in plaats van twee. Het is een procesbesluit voor de vakdeskundige.
+
+## Een bestaande bevinding over de meting werd niet geraadpleegd - 30 september 2026
+
+**Wat er gebeurde.** Bij #326 werden twee agents hervat: de ontwerper voor zijn herstel en de
+auteur voor het zijne. De orkestrator noteerde op GitHub steeds twee lezingen, omdat hij niet kon
+vaststellen of het gemelde getal een lopend totaal was. Het tussentotaal kwam daardoor op
+*1.068.685 of 1.631.317* te staan. Maar *Een hervatte agent meldt zijn tokens als lopend totaal*
+(23 september) had dat al vastgesteld, met drie oplopende meldingen bij #273. Ook hier liep het
+getal op met weinig toolaanroepen: 140.027 → 157.171 na 8 aanroepen, en 422.605 → 440.576 na 13.
+
+**Waarom het ertoe doet.** Het is het patroon van *Een bevinding opschrijven voorkomt haar niet*
+(24 september), nu bij de orkestrator zelf. De bevinding stond er en was van toepassing, maar
+niemand las haar op het moment dat het ertoe deed. Er was geen budgetgrens, dus er is geen
+verkeerd besluit op genomen. In een proef van #203 had de hoge lezing de budgetreactie
+onterecht kunnen doen afgaan.
+
+**Wat het veranderde.** In [metingen.md](metingen.md) telt #326 met het verschil tussen twee
+meldingen, en de hoge lezing vervalt, met verwijzing. In de instructies is niets veranderd.
+Voorstel voor de evaluatie van #203: laat `/orc` bij de start de koppen van de bevindingen onder
+*meten* raadplegen, of neem de telling van een hervatte agent op in de meetdefinitie van
+`loop.md`, zodat die niet in een bevinding blijft staan.
+
+**Twee kleinere waarnemingen uit hetzelfde werkitem.**
+- *De orkestrator vroeg rollen zonder schrijfgereedschap om een bestand te schrijven.* De
+  verhelderaar en de beoordelaars hebben alleen lees- en zoekgereedschap. Het eerste C3 kwam
+  daarom als tekst terug, met de melding dat het pad niet te schrijven was. De orkestrator zette
+  het letterlijk neer. Latere opdrachten vroegen om tekst. Dat kost niets, maar een opdracht die
+  niet uitvoerbaar is, zet een rol aan het improviseren.
+- *Een zoekpatroon met een uitgesloten tekenklasse miste een treffer.* Voor #328 zocht de
+  orkestrator comprehensions met `[^\[\]{}()]` tussen haakje en `for`. De list comprehension
+  `[pixel[:] for pixel in brede_regel]` in `solutions/6_extra.ipynb` r80 viel daardoor weg,
+  terwijl de ijking op een eenvoudige comprehension slaagde. De AST-scan van de auteur vond hem wel.
+  Dit is een variant van *Een zoekpatroon uit bekende formuleringen vindt alleen bekende
+  formuleringen* (24 september): de ijking bewijst dat het patroon werkt, niet dat het alles
+  vangt. De issue #328 is aangevuld.

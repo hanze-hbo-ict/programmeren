@@ -2019,3 +2019,64 @@ notebook wordt als lijst van regels bewaard. Een zoekpatroon over een zin die in
 de JSON over twee elementen loopt geeft nul, ook als de zin er letterlijk staat:
 `hoort niet in code` gaf 0 treffers op de versie waar die zin woordelijk stond.
 Auteur en beoordelaar ijkten hun patronen daarom op de ouderversie.
+
+## Werkitem #326 - PGM2 week 2: comprehensions
+
+Route *ingrijpende weekherziening*, met de verkenner en de ontwerper samengevoegd tot één rol:
+ontwerper (die zelf meet), verhelderaar, poort, auteur, en daarna eerstejaars en
+onderwijskundige. Omvang L, procescommit `8da47f96`. Geen proef van #203. Vóór het ontwerp koos
+de vakdeskundige de afbakening *"Alleen week 2"*: het recursiemateriaal verhuist ongewijzigd
+naar week 3, en week 3 en 4 op de planning brengen wordt een apart werkitem. Opgeleverd in
+PR #330. Het gaat om:
+- twee colleges (`9a`, `9b`);
+- een werkcollege (`9_register`);
+- een opstap, een basis en een extra (een toernooi);
+- vier uitwerkingen en een weekpagina;
+- zes recursiebestanden, hernoemd naar week 10;
+- het verwijderde oefenbestand `2_list_comprehension`;
+- boekhouding in `curriculum/` en `conventies/`.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator: C0, C1, overdrachten, C4-registraties, C7's | niet beschikbaar | niet beschikbaar | LUS, L |
+| curriculumontwerper (gecombineerd met verkenning) | 140.027 | 9 min 6 s | C2, 14 criteria, 9 voorlegpunten |
+| verhelderaar | 75.594 | 3 min 20 s | FAAL, 2 blokkades, 9 verbeterpunten |
+| curriculumontwerper, herstel 1 van 1 (hervat) | 17.144 | 1 min 41 s | VP10 erbij, AC5-patroon vervangen en geijkt |
+| verhelderaar, herstelmodus | 68.186 | 2 min 25 s | AKKOORD, 4 verbeterpunten |
+| auteur, oplevering | 422.605 | 34 min 33 s | C5, controles groen |
+| beoordelaar-eerstejaars | 108.886 | 5 min 51 s | AKKOORD MET PUNTJES, 0 blokkades, 6 puntjes |
+| beoordelaar-onderwijskundige | 150.881 | 7 min 42 s | BLOKKEER, 1 blokkade (AC12), 11 puntjes |
+| auteur, herstel 1 van 1 (hervat) | 17.971 | 5 min 23 s | B1, P4 en 8 puntjes verwerkt |
+| beoordelaar-onderwijskundige, herstelmodus | 67.391 | 2 min 17 s | AKKOORD MET PUNTJES, 1 puntje |
+| **totaal agents** | **1.068.685** | | exclusief de lezing van deze orkestratordiff |
+
+**Bron.** De tokens komen uit de `subagent_tokens` van de verbruiksmelding na elke agentstap. Een
+hervatte agent meldt een lopend totaal. De twee hersteltellingen zijn daarom het verschil met de
+vorige melding van dezelfde agent: 157.171 − 140.027 voor de ontwerper, en 440.576 − 422.605
+voor de auteur. Tijdens de lus noteerde de orkestrator ook een hoge lezing (1.631.317), waarin
+beide gemelde getallen volledig meetellen. Die lezing vervalt. Zie de bevinding *Een hervatte
+agent meldt zijn tokens als lopend totaal* (23 september) en de bevinding van 30 september in
+[bevindingen.md](bevindingen.md).
+
+Herstelstand bij afsluiting: ontwerp 1/1 en oplevering 1/1.
+
+De vakdeskundige besliste zes keer:
+1. De afbakening *"Alleen week 2"*, vóór het ontwerp.
+2. Het C4 op tien voorlegpunten. Zeven daarvan weken af van de aanbeveling van de ontwerper of
+   vulden haar aan: VP1, VP3, VP4, VP5, VP6, VP7 en VP10. Twee invullingen van de orkestrator
+   (VP1 en VP8) zijn apart bevestigd.
+3. De drie vervolgwerkitems: #327, #328 en #329. Week 3 en 4 nog niet.
+4. De reikwijdte van AC15: de dode verwijzingen buiten de vier mappen blijven staan.
+5. Drie puntjes na de beoordeling: P4 (verplaatsen), P8 en P9 (laten).
+6. Merge: nog open.
+
+**De blokkade van de oplevering kwam uit het vastleggen, niet uit het materiaal.** De
+onderwijskundige blokkeerde op één zin in `curriculum/leerlijn.md`. Die zin maakte van de
+voorzichtige reden van de vakdeskundige (*"dat kan denk ik altijd geschreven worden als een
+geneste lc"*) een vaststaand feit, en dat feit is onjuist. Het is de derde keer dat een auteur
+bij het vastleggen een reden schrijft. Zie [bevindingen.md](bevindingen.md), 30 september.
+
+**Beide rondes van de verhelderaar vingen iets.** Het eerste C3 vond een AC5-controle die altijd
+nul zou geven, doordat `\|` in een markdowntabel als letterlijk teken in `grep -E` terechtkwam.
+Het vond ook een voorlegpunt waarvan de grond door de eigen meetbasis werd weersproken. Beide
+zouden de poort en de beoordeling ongemerkt zijn gepasseerd.
