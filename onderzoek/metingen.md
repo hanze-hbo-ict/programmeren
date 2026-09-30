@@ -2091,3 +2091,73 @@ voor AC5 stil kon falen (onder meer `\|` in een markdowntabel); het C3 zegt daar
 valt wel op bij de ijking"*. De tweede blokkade was een voorlegpunt waarvan de grond door de eigen
 meetbasis werd weersproken, zodat de poort op een onjuiste grond zou beslissen. Het herstel voegde
 één voorlegpunt toe (VP10), en de vakdeskundige nam dat met een aanvulling over.
+
+## Werkitem #332 - PGM2 week 3: recursie
+
+**Route en omvang.**
+- Route *ingrijpende weekherziening*. De verkenner en de ontwerper zijn samengevoegd tot één rol: de ontwerper meet zelf.
+- Volgorde: ontwerper, verhelderaar, poort, auteur, en daarna de eerstejaars en de onderwijskundige.
+- Omvang L, procescommit `bfcdeffd`. Geen proef van #203.
+- Vóór het ontwerp koos de vakdeskundige de afbakening *"Alleen week 3"*. Het algoritmemateriaal verhuist daarom ongewijzigd naar week 4, en week 4 wordt een apart werkitem (#335).
+
+**Opgeleverd in PR #334:**
+- twee colleges (`10a_recursie`, `10b_recursief_ontwerpen`);
+- een werkcollege (`10_directory_doorzoeken`);
+- een opstap, een basis (Scrabble) en een extra (potjeslatijn);
+- vier uitwerkingen en een weekpagina;
+- het algoritmemateriaal en `caesar_op_orde`, ongewijzigd verhuisd naar week 4;
+- het verwijderde oefenbestand `1_recursie`;
+- de vastlegging in `curriculum/`, `conventies/` en twee handleidingen.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator: C0, C1, overdrachten, C4-registratie, C7, registraties | niet beschikbaar | niet beschikbaar | LUS, L |
+| curriculumontwerper (gecombineerd met verkenning) | 228.193 | 12 min 31 s | C2, 14 criteria, 8 voorlegpunten |
+| verhelderaar | 111.426 | 4 min 17 s | AKKOORD, 10 verbeterpunten, 5 vragen |
+| auteur, oplevering | 400.667 | 29 min 0 s | C5, controles groen |
+| beoordelaar-eerstejaars | 95.376 | 5 min 36 s | BLOKKEER, 1 blokkade (AC4/AC13), 5 puntjes |
+| beoordelaar-onderwijskundige | 137.108 | 6 min 28 s | BLOKKEER, 1 blokkade (AC4), 7 puntjes |
+| auteur, herstel 1 van 1 (hervat) | 26.239 | 6 min 46 s | B1, besluit stap 3 en 7 puntjes verwerkt |
+| beoordelaar-onderwijskundige, herstelmodus | 65.211 | 3 min 29 s | AKKOORD MET PUNTJES, 2 puntjes |
+| auteur, begrensde vervolgopdracht (hervat) | 39.275 | 8 min 13 s | stap 3 en 4 vervangen, P2 |
+| beoordelaar-onderwijskundige, herstellezing vervolg | 49.284 | 2 min 23 s | AKKOORD MET PUNTJES, 2 puntjes |
+| **totaal agents** | **1.152.779** | | |
+
+**Bron.** De tokens komen uit de `subagent_tokens` van de verbruiksmelding na elke agentstap. De
+twee rijen van de hervatte auteur zijn berekend als verschil met de vorige melding van dezelfde
+agent: 426.906 − 400.667 voor het herstel, en 466.181 − 426.906 voor de vervolgopdracht. Dat is
+de praktijk van #271 en #326, met hetzelfde voorbehoud: dat de melding een lopend totaal is, is
+aannemelijk, maar niet bewezen. Tellen alle meldingen volledig, dan is het totaal 1.980.352.
+Welke telling geldt, stelt de vakdeskundige vast (bevinding van 23 september).
+
+**Rondes.**
+- Herstelstand bij afsluiting: ontwerp 0/1 (niet gebruikt) en oplevering 1/1.
+- Na de herstelgrens gaf de vakdeskundige expliciet één begrensde vervolgronde, met één
+  herstellezing (PR #334).
+- De lezing van deze orkestratordiff staat hieronder.
+
+**De vakdeskundige besliste vijf keer:**
+1. De afbakening *"Alleen week 3"*, vóór het ontwerp.
+2. Het C4 op acht voorlegpunten. Twee daarvan weken af van de aanbeveling van de ontwerper:
+   VP1 (de voorbeeldpagina blijft) en VP2 (*basisgeval* en *recursief geval*).
+3. Drie puntjes na de beoordeling:
+   - werkcollege stap 3 krijgt een andere functie;
+   - de extra wordt later bekeken;
+   - de voorbeeldpagina blijft, want *"de voorbeelden in extra mogen hergebruikt worden in de
+     lopende tekst van de week (graag zelfs)"*.
+4. Na de herstelbeoordeling:
+   - *"Nee, verder weg van het tentamen"*, met de begrensde vervolgronde;
+   - P2 meenemen;
+   - de metingen vastleggen;
+   - het werkitem voor week 4 aanmaken.
+5. Merge: nog open.
+
+**Wat de beoordeling ving.**
+- **Dezelfde blokkade, onafhankelijk van elkaar.** Beide beoordelaars vonden de functielijst in de
+  testcel van opstap-opdracht 12, een vooruitverwijzing naar *functie als argument*. De geijkte
+  patronen van de auteur (`lambda|key=` en een AST-scan op `ast.Lambda`) konden die vorm niet zien.
+  Zie [bevindingen.md](bevindingen.md), 30 september.
+- **Een besluit dat naar de letter was uitgevoerd.** De herstelbeoordeling mat dat de nieuwe
+  stap 3 op 39 van de 40 invoeren samenviel met de tentamenopgave. Pas daardoor kon de
+  vakdeskundige vaststellen dat de uitvoering haar besluit naar de letter volgde, maar niet naar
+  de bedoeling.
