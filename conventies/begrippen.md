@@ -211,7 +211,7 @@ kan van beide meer dan één hebben.
 
 De aanbeveling was *base case*, volgens regel 2 hierboven: in `source/` stond
 *base case* 30 keer tegen *basisgeval* 3 keer, gemeten op `bfcdeff`. De
-vakdeskundige koos het Nederlandse woord, dat voor een beginner doorzichtiger is.
+vakdeskundige koos het Nederlandse woord.
 De tegenhanger stond er als *recursieve case*, *recursie case* en *recursive case*,
 samen 15 regels in de twee colleges van week 3; die basterdvormen vervallen.
 
