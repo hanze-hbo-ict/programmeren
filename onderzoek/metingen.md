@@ -675,6 +675,78 @@ Twee keer een patroon niet geijkt, allebei in dezelfde sessie:
 
 Hier hoort wat met de hand is gedaan omdat het te klein leek voor een werkitem.
 
+### 30 september 2026, `.gitignore` en een bevinding (PR #342 en #343)
+
+**Wat het was.** Twee ingrepen met de hand: vier regels in `.gitignore` voor de bestanden
+die de opgaven en uitwerkingen van week 6 tijdens de build aanmaken (PR #342), en een
+nieuwe bevinding in `onderzoek/bevindingen.md` over de orkestrator die een gat als nieuw
+behandelt (PR #343).
+
+**Waarom buiten de lus.** Vier regels configuratie en een bevinding halen de drempel voor
+een werkitem niet; `CLAUDE.md` noemt dit het geval waarin je het gewoon doet, in een
+branch met een pull request.
+
+**Ging er een beoordelaar overheen?** Ja, `rol-beoordelaar-redacteur`, vier keer.
+
+De eerste ronde kwam op verzoek van de vakdeskundige (*"ja, redacteur op beide PR's"*) en
+las beide PR's: #342 AKKOORD, #343 AKKOORD MET PUNTJES, nul blokkades. Alle zes puntjes
+op #343 zijn verwerkt in `71a9dcb4`. Hij mat bovendien dat de reactie bij #102
+§*Mutabiliteit* op r235-310 zette terwijl de sectie tot r337 loopt; die reactie is
+rechtgezet.
+
+De tweede ronde las de twee commits die de orkestrator daarna zelf op de branch zette -
+de verwerking en deze ingang - omdat een merge-aanbod pas mag als elke eigen commit langs
+een rol is geweest. Die ronde **blokkeerde**, en op alle drie de punten terecht: deze
+ingang noemde een commit `82f0c7e` die in geen enkele repo bestaat, telde zichzelf als
+*"de achtste ingreep onder deze kop"* terwijl er twintig `###`-ingangen onder staan, en
+zei dat vier van de zes puntjes waren verwerkt terwijl het er zes waren. Alle drie zijn
+rechtgezet in de commit die deze alinea meebrengt. Een verzonnen commit-hash in de PR
+die de bevinding *noem de vindplaats* draagt, is het scherpste bewijs voor die bevinding
+dat deze sessie heeft opgeleverd.
+
+De derde ronde toetste dat herstel. De drie blokkades waren opgeheven, maar diezelfde
+commit had `claude.restart` en `codex.restart` meegenomen - twee sessiebestanden die een
+`git add -A` opveegde - waarmee de opsomming *twee ingrepen* hierboven niet meer klopte
+met wat de branch droeg. Ze zijn eruit gehaald. De orkestrator gaf die ronde bovendien
+`88e15d14` als de te beoordelen commit; door een amend was dat toen al `dafb450d`. Dat is
+dezelfde fout als de eerste blokkade, en de vierde keer in deze twee PR's dat een
+identifier uit de orkestrator niet klopte: hij schreef hem op zonder hem te lezen.
+
+De vierde ronde las een commit die pas bij het mergen ontstond. `origin/master` bleek 43
+commits vooruit te lopen op de basis van deze branch, zodat #343 ook na de merge van #342
+nog conflicteerde. De catch-up-merge `4950d184` loste één conflict op, in
+`onderzoek/bevindingen.md`, waar master en deze branch allebei onderaan een bevinding
+hadden gezet. Uitkomst: AKKOORD MET PUNTJES, nul blokkades. De redacteur reconstrueerde
+beide bestanden bytegelijk uit hun ouders en stelde vast dat de mergeboom van
+`origin/master` verschilt in precies twee bestanden, allebei in `onderzoek/`.
+
+Twee van zijn puntjes gaan opnieuw over meten. Het bewijs voor *nul verwijderde regels*
+stond in de opdracht als `grep -c '^-'`, en dat geeft door de diffkop altijd 1; het
+gedraaide commando gebruikte `^-[^-]` en gaf wel nul, maar wat er stond was niet
+reproduceerbaar. `git diff --numstat` kent die valkuil niet en is voortaan de vorm voor
+deze controle. Zijn tweede punt, dat het tijdstip 14:23 UTC nergens terug te vinden was,
+klopt niet: het is de commitdatum van `9edbe126`, een van de twee mastercommits op
+`bevindingen.md`, en die is afgelezen. Dat hij drie kandidaten naast elkaar legde en deze
+niet vond, is wel de reden om zo'n tijdstip met zijn commit erbij op te schrijven.
+
+| Rol | Ronde | Tokens | Duur | Uitkomst |
+|---|---|---|---|---|
+| beoordelaar-redacteur | 1 | 2.714.155 | 7 min 8 s | #342 AKKOORD (2 puntjes), #343 AKKOORD MET PUNTJES (6 puntjes), 0 blokkades |
+| beoordelaar-redacteur | 2, vers | 67.757 | 4 min 54 s | **BLOKKEER**, 3 blokkades, 5 puntjes |
+| beoordelaar-redacteur | 3, herstel | 54.253 | 4 min 22 s | **BLOKKEER** op 1 nieuw punt; de 3 blokkades van ronde 2 opgeheven |
+| beoordelaar-redacteur | 4, catch-up-merge | 61.332 | 5 min 9 s | AKKOORD MET PUNTJES, 0 blokkades, 5 puntjes |
+
+Herstelstand: oplevering 1/1 gebruikt, en daarmee op. Er is geen C5 en geen werkitem,
+maar de grens uit `loop.md` telt hier mee omdat ronde 2 een blokkade gaf. Het herstel van
+ronde 3 ging daarom niet opnieuw langs een rol. Ronde 4 telt niet mee in die grens: zij is
+geen herstelronde maar de regel *wie het zelf doet, laat het lezen*, toegepast op een
+commit die pas bij het mergen ontstond.
+
+Deze alinea, de alinea's over ronde 4 en de vierde regel in de tabel zijn erna door de
+orkestrator toegevoegd en zijn zelf niet gelezen. Daar houdt de ketting op: een registratie
+van een lezing die zelf opnieuw gelezen moet worden, eindigt nergens. De vakdeskundige gaf
+opdracht beide PR's te mergen, #342 eerst; de resterende puntjes staan zichtbaar op de PR.
+
 ### 24 september 2026, achteraf-lezing van onbeoordeelde orkestratortekst (PR #284)
 
 **Wat het was.** Een leesronde door `rol-beoordelaar-redacteur` over tekst die de

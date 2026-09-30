@@ -1534,3 +1534,52 @@ vakdeskundige:
 - leg een antwoord van de mens dat een genomen besluit kan raken, naast het C4. Vraag dan
   expliciet of het besluit verandert, voordat de volgende agentstap begint;
 - zet in een optielabel elk gevolg dat iets verwijdert of verplaatst.
+
+## De orkestrator meet een gat en behandelt het als nieuw - 30 september 2026
+
+**Wat er gebeurde.** Drie keer in drie dagen legde de orkestrator iets aan de vakdeskundige voor,
+of schreef het in een opdracht aan een rol als open vraag, terwijl het al besloten was en ergens
+vastlag. De eerste twee op 28 september, het derde op 30 september.
+
+- **Recursie in de midterm.** De opdracht aan de toetsontwikkelaar noemde als derde
+  voorlegging: *"De elf itemplaatsen met recursie [...] toetsen dus stof die niet meer wordt
+  onderwezen."* De verplaatsing van de recursie-uitkomst naar PGM2 staat in
+  `curriculum/uitgangspunten.md`, én in de manifesten `data/pgm1/2021-*/toets.md` - die staan
+  in de ANS-repo en zijn hier dus niet te vinden - die de orkestrator de dag ervoor zelf had
+  geschreven: *"bewaard als referentie, niet als voorbeeld"*. De vakdeskundige: *"daar hebben
+  we het over gehad verdorie"*.
+- **De overlap met de oefenmidterm.** Aan de toetsontwikkelaar doorgegeven als risico dat
+  voorgelegd moest worden. Het wás de werkwijze van de vakdeskundige, die een dag eerder had
+  gezegd dat de toets de oefening qua opzet moest weerspiegelen. De meting die de orkestrator
+  als bewijs meestuurde - achttien van de twintig concepten vallen samen - was de bevestiging
+  dat die werkwijze werkte, niet een probleem.
+- **Het ontbrekende werkcollege van week 7.** Opgeschreven in #341 als een afwijking die de
+  auteur meet en de vakdeskundige vaststelt, zoals bij week 1 tot en met 5. Het was een gat dat
+  commit `92df099e` had achtergelaten. En bij het heropenen van #102 noemde de orkestrator de
+  vastgelegde lijn - de mutatiegrens, de verhuizing van objectmethoden naar PGM2 week 1 - met
+  geen woord, terwijl die in `curriculum/uitgangspunten.md` §*Mutabiliteit: een grens die we
+  bewaken* over 75 regels is onderbouwd.
+
+**Waarom dit een patroon is.** Steeds dezelfde volgorde: de orkestrator meet de huidige staat,
+vindt een gat, en behandelt het gat als nieuw. De stap die ontbreekt is zoeken of het gat het
+gevolg van een besluit is. `CLAUDE.md` legt de ene helft van die regel vast - *"een besluit dat
+niet in `curriculum/` of `conventies/` landt, is niet genomen"* - maar de keerzijde staat er
+niet: wat er wél in staat, ís genomen, en dat geldt ook voor wat de orkestrator zelf heeft
+opgeschreven.
+
+Het kost meer dan een verkeerde vraag. Een voorlegging die niet nodig is kost een wachtmoment in
+een lus die op menselijke poorten draait, en bij de midterm was dat tien dagen voor een afname.
+Erger is dat het zich voortplant: de toetsontwikkelaar behandelde recursie als open vraag omdat
+de opdracht dat zei, tot de orkestrator hem tijdens de rit corrigeerde. Een rol kan een besluit
+niet terugvinden dat de orkestrator hem niet noemt.
+
+**Wat het veranderde.** Bij #102 staat de vastgelegde lijn nu als aparte reactie, met per
+besluit de vindplaats en een lijst van wat een herontwerp niet mag doen. Bij #341 is het
+criterium over de afwijking ingetrokken.
+
+Voorstel voor de instructies, een procesbesluit voor de vakdeskundige: **`CLAUDE.md` draagt de
+ene helft van deze regel; laat het ook de keerzijde dragen. Zoek, vóór je iets als gat of als
+open vraag opschrijft, in `curriculum/`, `conventies/` en de gesloten werkitems of het al
+beslist is, en noem in de opdracht aan een rol de vindplaats en niet alleen de conclusie.**
+Zolang die regel alleen hier staat, hangt hij aan wie deze bevinding toevallig leest, en dat is
+precies de afhankelijkheid die de bevinding beschrijft.
