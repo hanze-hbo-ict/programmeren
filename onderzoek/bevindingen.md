@@ -1499,32 +1499,38 @@ voor de vakdeskundige, niet voor de orkestrator.
   - *"Opgaan en verwijderen"*, de aanbeveling;
   - *"Laten staan, opstap nieuw"*;
   - *"Opgaan, voorbeeldpagina blijft"*.
-- De vakdeskundige koos de derde. Het label noemde alleen de voorbeeldpagina. Dat het oefenbestand
-  zou verdwijnen, stond pas in de toelichting eronder: *"Het oefenbestand gaat op in de opstap en
-  verdwijnt"*.
+- De vakdeskundige koos de derde. Het label noemde het opgaan van het oefenbestand, maar niet dat
+  het daarna zou verdwijnen. Dat stond alleen in de toelichting eronder: *"Het oefenbestand gaat
+  op in de opstap en verdwijnt"*. Het label van de eerste optie noemde het verwijderen wel.
 - Het C4 registreerde *"wordt daarna verwijderd"*, en de auteur verwijderde het bestand in
   `a78cf1c`.
 - Na de eerste beoordeling vroeg de orkestrator iets over de voorbeeldpagina. Het antwoord van de
-  vakdeskundige begon met: *"Dat klopt niet; de opgaven in extra moeten wel blijven, maar de
+  vakdeskundige luidde: *"Dat klopt niet; de opgaven in extra moeten wel blijven, maar de
   voorbeelden in extra mogen hergebruikt worden in de lopende tekst van de week (graag zelfs)"*.
-- De orkestrator betrok die zin alleen op de voorbeeldpagina. Hij zag niet dat *"de opgaven in
-  extra moeten wel blijven"* ook ging over het oefenbestand, dat op dat moment al verwijderd was.
-- Na de merge van PR #334 zei de vakdeskundige: *"Je hebt de extra oefeningen voor recursie
-  gewist."* Het terugzetten staat nu in #338.
+- De orkestrator betrok die zin alleen op de voorbeeldpagina, en legde hem niet naast het C4.
+  Een andere lezing lag voor de hand: de zin onderscheidt *opgaven* van *voorbeelden*, en het
+  oefenbestand bevatte de opgaven. Die lezing wordt gesteund door wat de vakdeskundige na de merge
+  van PR #334 zei: *"Je hebt de extra oefeningen voor recursie gewist."* Het terugzetten staat nu
+  in #338.
 
 **Waarom het ertoe doet.**
-- Twee dingen liepen hier in elkaar. Het eerste is een bekend patroon: een gevolg stond in de
-  toelichting van een optie en niet in het label. Zie *Een keuzeoptie van de orkestrator wordt de
-  onderbouwing van de mens* (23 september). Daar ging het om een reden, hier om een gevolg.
-- Het tweede is nieuw. Een later antwoord sprak het eerdere besluit tegen, en die tegenspraak is
-  niet als zodanig behandeld. De orkestrator las het antwoord binnen de vraag die hij had gesteld,
-  en niet tegen de besluiten die al genomen waren.
-- De vakdeskundige merkte het pas na de merge. Geen van de beoordelingen en lezingen noemde het;
-  het verwijderen was conform het C4.
+- Het nieuwe patroon: een later antwoord kon een eerder besluit tegenspreken, en die mogelijke
+  tegenspraak is niet als zodanig behandeld. De orkestrator las het antwoord binnen de vraag die
+  hij had gesteld, en niet tegen de besluiten die al genomen waren.
+- De lezing van de orkestratordiff van #332 had het verwijderen van `1_recursie` en het volledige
+  antwoord allebei in handen. Ze verbond de twee niet. Geen van de beoordelingen en lezingen noemde
+  de tegenspraak; het verwijderen was conform het C4.
+- De vakdeskundige meldde het na de merge.
+- Mogelijk speelde ook de optie mee: het label van de gekozen optie noemde het verdwijnen niet,
+  terwijl het label ernaast dat wel deed. Dat de vakdeskundige de toelichting miste, is een
+  vermoeden. Het wordt gesteund door de latere uitspraak, maar de bron zegt het niet. Het is
+  verwant aan *Een keuzeoptie van de orkestrator wordt de onderbouwing van de mens*
+  (23 september): ook daar registreerde het C4 wat in de toelichting van een optie stond. Het
+  onderscheid tussen label en toelichting is nieuw.
 
 **Wat het veranderde.** De besluiten over het terugzetten staan in #338. In de instructies is
 niets veranderd. **Voorstel** voor de evaluatie van #203, een procesbesluit voor de
 vakdeskundige:
-- zet in een optielabel elk gevolg dat iets verwijdert of verplaatst;
-- leg een antwoord van de mens dat een genomen besluit raakt, naast het C4. Vraag dan expliciet
-  of het besluit verandert, voordat de volgende agentstap begint.
+- leg een antwoord van de mens dat een genomen besluit kan raken, naast het C4. Vraag dan
+  expliciet of het besluit verandert, voordat de volgende agentstap begint;
+- zet in een optielabel elk gevolg dat iets verwijdert of verplaatst.
