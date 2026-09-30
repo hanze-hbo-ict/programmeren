@@ -38,12 +38,13 @@ bestanden daarom over, en die uitsluiting hoort hier te staan en niet alleen in
 de hookconfiguratie.
 
 **Het zijn er precies vier, en de lijst hierboven is uitputtend.**
-`extra/practice/1_recursie.ipynb` en `2_list_comprehension.ipynb` staan er
-níet bij: dat zijn oefenbestanden en geen oefententamens. Bij werkitem #178 zijn
-ze een ronde lang op die verkeerde grond buiten de kopwoordregel gehouden. Ze
-vallen er gewoon onder, en hun `## Opgaven` blijft staan omdat het een
+`extra/practice/1_recursie.ipynb` staat er níet bij: dat is een oefenbestand en
+geen oefententamen. Bij werkitem #178 is het, samen met het oefenbestand over
+list comprehensions, een ronde lang op die verkeerde grond buiten de
+kopwoordregel gehouden; dat tweede bestand is met werkitem #326 verwijderd. Het
+valt er gewoon onder, en zijn `## Opgaven` blijft staan omdat het een
 rubriekkop is - zie [begrippen.md](begrippen.md), *Opgave, opdracht, stap*, en
-niet omdat er een uitzondering voor ze zou gelden.
+niet omdat er een uitzondering voor zou gelden.
 
 Voor `handleidingen/` geldt een eigen regime. Die documenten richten zich tot de
 docent en niet tot de student, en zijn geen onderdeel van het boek: de
