@@ -686,19 +686,42 @@ behandelt (PR #343).
 een werkitem niet; `CLAUDE.md` noemt dit het geval waarin je het gewoon doet, in een
 branch met een pull request.
 
-**Is er een beoordelaar overheen gegaan.** Ja - `rol-beoordelaar-redacteur`, op verzoek
-van de vakdeskundige (*"ja, redacteur op beide PR's"*), vóór het merge-aanbod. Het C6
-staat onverkort op beide PR's. Uitkomst: #342 AKKOORD, #343 AKKOORD MET PUNTJES, nul
-blokkades. Vier van de zes puntjes zijn verwerkt in commit `82f0c7e`; de redacteur mat
-bovendien dat de reactie bij #102 §*Mutabiliteit* op r235-310 zette terwijl de sectie tot
-r337 loopt, en die reactie is rechtgezet.
+**Ging er een beoordelaar overheen?** Ja, `rol-beoordelaar-redacteur`, drie keer.
 
-| Rol | Tokens | Duur | Uitkomst |
-|---|---|---|---|
-| beoordelaar-redacteur | 2.714.155 | 7 min 8 s | #342 AKKOORD, #343 AKKOORD MET PUNTJES, 0 blokkades, 6 puntjes |
+De eerste ronde kwam op verzoek van de vakdeskundige (*"ja, redacteur op beide PR's"*) en
+las beide PR's: #342 AKKOORD, #343 AKKOORD MET PUNTJES, nul blokkades. Alle zes puntjes
+op #343 zijn verwerkt in `71a9dcb4`. Hij mat bovendien dat de reactie bij #102
+§*Mutabiliteit* op r235-310 zette terwijl de sectie tot r337 loopt; die reactie is
+rechtgezet.
 
-Dit is de achtste ingreep onder deze kop en de tweede met een beoordelaar erop. De eerste
-zeven scoorden nul; zie de regel *wie het zelf doet, laat het lezen* in `CLAUDE.md`.
+De tweede ronde las de twee commits die de orkestrator daarna zelf op de branch zette -
+de verwerking en deze ingang - omdat een merge-aanbod pas mag als elke eigen commit langs
+een rol is geweest. Die ronde **blokkeerde**, en op alle drie de punten terecht: deze
+ingang noemde een commit `82f0c7e` die in geen enkele repo bestaat, telde zichzelf als
+*"de achtste ingreep onder deze kop"* terwijl er twintig `###`-ingangen onder staan, en
+zei dat vier van de zes puntjes waren verwerkt terwijl het er zes waren. Alle drie zijn
+rechtgezet in de commit die deze alinea meebrengt. Een verzonnen commit-hash in de PR
+die de bevinding *noem de vindplaats* draagt, is het scherpste bewijs voor die bevinding
+dat deze sessie heeft opgeleverd.
+
+De derde ronde toetste dat herstel. De drie blokkades waren opgeheven, maar diezelfde
+commit had `claude.restart` en `codex.restart` meegenomen - twee sessiebestanden die een
+`git add -A` opveegde - waarmee de opsomming *twee ingrepen* hierboven niet meer klopte
+met wat de branch droeg. Ze zijn eruit gehaald. De orkestrator gaf die ronde bovendien
+`88e15d14` als de te beoordelen commit; door een amend was dat toen al `dafb450d`. Dat is
+dezelfde fout als de eerste blokkade, en de vierde keer in deze twee PR's dat een
+identifier uit de orkestrator niet klopte: hij schreef hem op zonder hem te lezen.
+
+| Rol | Ronde | Tokens | Duur | Uitkomst |
+|---|---|---|---|---|
+| beoordelaar-redacteur | 1 | 2.714.155 | 7 min 8 s | #342 AKKOORD (2 puntjes), #343 AKKOORD MET PUNTJES (6 puntjes), 0 blokkades |
+| beoordelaar-redacteur | 2, vers | 67.757 | 4 min 54 s | **BLOKKEER**, 3 blokkades, 5 puntjes |
+| beoordelaar-redacteur | 3, herstel | 54.253 | 4 min 22 s | **BLOKKEER** op 1 nieuw punt; de 3 blokkades van ronde 2 opgeheven |
+
+Herstelstand: oplevering 1/1 gebruikt, en daarmee op. Er is geen C5 en geen werkitem,
+maar de grens uit `loop.md` telt hier mee omdat ronde 2 een blokkade gaf. Het herstel van
+ronde 3 gaat daarom niet opnieuw langs een rol: de merge is een besluit van de
+vakdeskundige, met de resterende puntjes op de PR zichtbaar.
 
 ### 24 september 2026, achteraf-lezing van onbeoordeelde orkestratortekst (PR #284)
 
