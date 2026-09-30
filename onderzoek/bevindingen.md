@@ -1514,15 +1514,15 @@ voor de vakdeskundige, niet voor de orkestrator.
   in #338.
 
 **Waarom het ertoe doet.**
-- Het nieuwe patroon: een later antwoord kon een eerder besluit tegenspreken, en die mogelijke
-  tegenspraak is niet als zodanig behandeld. De orkestrator las het antwoord binnen de vraag die
+- Het nieuwe patroon: een later antwoord sprak een eerder besluit tegen, en die tegenspraak is
+  niet als zodanig behandeld. De orkestrator las het antwoord binnen de vraag die
   hij had gesteld, en niet tegen de besluiten die al genomen waren.
 - De lezing van de orkestratordiff van #332 had het verwijderen van `1_recursie` en het volledige
   antwoord allebei in handen. Ze verbond de twee niet. Geen van de beoordelingen en lezingen noemde
   de tegenspraak; het verwijderen was conform het C4.
 - De vakdeskundige meldde het na de merge.
-- Mogelijk speelde ook de optie mee: het label van de gekozen optie noemde het verdwijnen niet,
-  terwijl het label ernaast dat wel deed. Dat de vakdeskundige de toelichting miste, is een
+- Mogelijk speelde ook de optie mee, met het verschil tussen de labels dat hierboven onder *Wat er
+  gebeurde* staat. Dat de vakdeskundige de toelichting miste, is een
   vermoeden. Het wordt gesteund door de latere uitspraak, maar de bron zegt het niet. Het is
   verwant aan *Een keuzeoptie van de orkestrator wordt de onderbouwing van de mens*
   (23 september): ook daar registreerde het C4 wat in de toelichting van een optie stond. Het
