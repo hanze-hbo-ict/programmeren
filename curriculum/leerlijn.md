@@ -123,37 +123,40 @@ over alle cellen, en bij een `.md`-bestand het aantal woorden van het hele
 bestand. Een ruwe maat, maar de verhoudingen zijn te groot om aan de meetmethode
 te liggen.
 
-Alleen de rijen van week 4 (#162) en week 7 (#102) zijn op de huidige stand
-hermeten; de andere rijen dateren van de herziening van hun eigen week en lopen
-dus achter. Hermeten bij de herziening van week 5; de weken 3, 6 en 7 waren sinds
-de vorige meting ook veranderd.
+Alleen de rijen van week 4 en week 7 staan op de huidige stand; beide zijn bij #102
+hermeten. De vier andere rijen dateren van de herziening van hun eigen week, en
+alle vier wijken af van wat `problems/` nu bevat. Hermeten bij de herziening van
+week 5.
 
 | Week | opstap | basis | extra | Totaal |
 |---|---|---|---|---|
 | 2 | 1.160 | 1.112 | 487 | **2.759** |
 | 3 | 242 | 1.143 | 176 | **1.561** |
-| 4 | 672 | 1.066 | 1.048 | 2.786 |
+| 4 | 678 | 1.066 | 1.048 | 2.792 |
 | 5 | 674 | 2.940 | **5.354** | 8.968 |
 | 6 | 365 | 1.353 | 309 | 2.027 |
 | 7 | 316 | 464 | 447 | 1.227 |
-| **Totaal** | **3.429** | **8.078** | **7.821** | 19.328 |
+| **Totaal** | **3.435** | **8.078** | **7.821** | 19.334 |
 
-Drie dingen vallen op.
+Drie dingen vallen op, met één voorbehoud.
 
-**Het zwaartepunt ligt in de optionele laag.** Extra is 48% van het materiaal en
-een derde groter dan basis. Daar zitten Mandelbrot, Game of Life, Pi met
-pijltjes en tekst-naar-beeld: precies de opgaven waarin een probleem stap voor
-stap wordt opgebouwd. Zie [uitgangspunten.md](uitgangspunten.md) voor de
-achtergrond. De scheefheid is kleiner dan bij de vorige meting, doordat basis in
-de weken 3 en 5 is gegroeid.
+**Basis en extra liggen vlak bij elkaar.** Extra is 7.821 woorden, 40,5% van het
+materiaal, en daarmee 257 woorden kleiner dan basis. Hier stond eerder *"Het
+zwaartepunt ligt in de optionele laag"*: extra was 48% van het materiaal en een
+derde groter dan basis. Die scheefheid is met de hermeting van week 7 bij #102
+verdwenen, want de extra van die week meet 447 woorden in plaats van de 3.713 die
+hier stond. In de extra zitten Mandelbrot, Game of Life, Pi met pijltjes en
+tekst-naar-beeld: precies de opgaven waarin een probleem stap voor stap wordt
+opgebouwd. Zie [uitgangspunten.md](uitgangspunten.md) voor de achtergrond.
 
-**Let op de meetdatum van dit percentage.** Het is berekend op de tabel zoals die
-vóór de hermeting van week 7 bij #102 stond. Van de zes rijen staan nu alleen
-week 4 en week 7 op de huidige stand; wie de verhouding opnieuw wil beweren,
-hermeet eerst de andere vier.
+**Het voorbehoud: deze verhouding rust op vier rijen die achterlopen.** Alleen week
+4 en week 7 zijn op de huidige stand hermeten, en de vier andere rijen wijken alle
+vier af van wat `problems/` nu bevat. Zolang die niet zijn hermeten is de verhouding
+tussen de niveaus een indicatie en geen vaststelling; wie er een besluit op wil
+bouwen, hermeet eerst die vier.
 
-**Week 3 is de dunste week van de cursus.** Met 1.561 woorden is ze bijna zes
-keer kleiner dan week 5, terwijl ze functies draagt: P5, P6 en A2, samen **30%**
+**Week 3 is na week 7 de dunste week van de cursus.** Met 1.561 woorden is ze bijna
+zes keer kleiner dan week 5, terwijl ze functies draagt: P5, P6 en A2, samen **30%**
 van het tentamen. Hier stond eerder *"P5 en A2, samen 20%"*; dat liet P6 weg,
 terwijl die uitkomst in de tabel hierboven wel bij week 3 staat. Nagemeten tegen
 [leeruitkomsten.md](leeruitkomsten.md): P5 10%, P6 10%, A2 10%, P7 zonder weging.
