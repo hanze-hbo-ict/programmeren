@@ -447,12 +447,13 @@ Twee dingen die er wél uit volgen:
    esoterisch doet lijken.
 2. **Recursie wordt in PGM1 niet onderwezen.** PGM1 laat geen zelfaanroepende
    functie zien, en PGM2 week 3 begint bij nul: daar leert de student dat een
-   functie zichzelf kan aanroepen, en hoe dat werkt. Dat is geen omissie maar het
-   besluit in uitvoering. Hier stond eerder dat PGM1 week 3 bij de functies
+   functie zichzelf kan aanroepen, en hoe dat werkt. Dat is geen omissie maar
+   het besluit in uitvoering. Hier stond eerder dat PGM1 week 3 bij de functies
    toont dát een functie zichzelf kan aanroepen; gemeten bij #332 doet het
    materiaal van PGM1 dat nergens, op de terugvalfunctie `count_char` in het
-   oefententamen `extra/practice/pgm1_examen.ipynb` na (zie `leerlijn.md`). Rechtgezet op besluit van de vakdeskundige, 30
-   september 2026, bij de poort van #332 (VP7); PGM1 wordt niet aangevuld.
+   oefententamen `extra/practice/pgm1_examen.ipynb` na (zie `leerlijn.md`).
+   Rechtgezet op besluit van de vakdeskundige, 30 september 2026, bij de poort
+   van #332 (VP7); PGM1 wordt niet aangevuld.
 
    Leeruitkomst **A4** stond daardoor in de verkeerde toetsmatrijs: PGM1 beloofde
    ontwerpen van recursieve oplossingen op creëren-niveau voor 10% van het
