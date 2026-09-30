@@ -1519,8 +1519,8 @@ voor de vakdeskundige, niet voor de orkestrator.
 - Het tweede is nieuw. Een later antwoord sprak het eerdere besluit tegen, en die tegenspraak is
   niet als zodanig behandeld. De orkestrator las het antwoord binnen de vraag die hij had gesteld,
   en niet tegen de besluiten die al genomen waren.
-- De vakdeskundige merkte het pas na de merge. Twee beoordelaars en twee lezingen hadden het niet
-  gezien, omdat het verwijderen conform het C4 was.
+- De vakdeskundige merkte het pas na de merge. Geen van de beoordelingen en lezingen noemde het;
+  het verwijderen was conform het C4.
 
 **Wat het veranderde.** De besluiten over het terugzetten staan in #338. In de instructies is
 niets veranderd. **Voorstel** voor de evaluatie van #203, een procesbesluit voor de
