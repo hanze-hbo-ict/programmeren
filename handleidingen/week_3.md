@@ -267,8 +267,8 @@ Acht blokken, 90 minuten. Vier ervan steunen op de bron, samen 50 minuten
 waarvan 45 werkelijk overgeleverd; de andere vier zijn richttijd.
 
 **Wat er ten opzichte van 2023 is veranderd.** Van de 90 bronminuten ging 55 over
-recursie, en die stof staat nu in `source/lectures/9a_intro_recursie.ipynb` en
-`source/lectures/9b_recursief.ipynb`. Die 55 minuten vervallen dus volledig.
+recursie, en die stof staat nu in `source/lectures/10b_intro_recursie.ipynb` en
+`source/lectures/10c_recursief.ipynb`. Die 55 minuten vervallen dus volledig.
 Daarvoor komen de vier secties die in het huidige materiaal het meeste dragen en
 in de bron geen blok hadden: de quiz (10), de stack (20), de assertions (5) en
 het afsluitblok (5). Blok 6 kreeg er 5 minuten bij op het bronblok, omdat de
@@ -580,9 +580,9 @@ drie huidige opdrachten van `3a` komen in de bron helemaal niet voor.
 Uit de bron voor het tweede college is **het lesdoel zelf** niet overgenomen. Dat
 luidde
 *"Introductie recursie met behulp van turtles"*, en 55 van de 90 minuten ging
-daarover. Recursie staat nu in week 9, in
-`source/lectures/9a_intro_recursie.ipynb` en
-`source/lectures/9b_recursief.ipynb`; in de week 3-bestanden komen de woorden
+daarover. Recursie staat nu in week 10 (PGM2 week 3), in
+`source/lectures/10b_intro_recursie.ipynb` en
+`source/lectures/10c_recursief.ipynb`; in de week 3-bestanden komen de woorden
 recursie en recursief geen enkele keer voor. Wat van die docx overeind blijft is
 de openingsstructuur en het idee om met turtle te werken - dat laatste zit in
 Opdracht 2 van het huidige `3b`.

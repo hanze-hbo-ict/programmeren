@@ -251,7 +251,7 @@ zij hier bij.
   *verzameling* en niet boven één taak - hetzij boven een reeks opgavebestanden,
   hetzij boven een reeks taken binnen één bestand. Veertien vindplaatsen:
   `# Opgaven` in `course/opgaven_2` tot en met `opgaven_12`, en `## Opgaven` in
-  `problems/9_basis.ipynb` en in de twee oefenbestanden
+  `problems/10_recursie_basis.ipynb` en in de twee oefenbestanden
   `extra/practice/1_recursie.ipynb` en `2_list_comprehension.ipynb`.
 - **Een ongenummerde `### Opgave`, *binnen* een bestand onder `problems/`.** Dat
   is één opgave die uit meer dan één taak bestaat en zelf geen nummer draagt; hij
