@@ -1374,17 +1374,19 @@ in plaats van twee. Het is een procesbesluit voor de vakdeskundige.
 auteur voor het zijne. De orkestrator noteerde op GitHub steeds twee lezingen: het gemelde getal
 als verbruik van de stap, of het verschil met de vorige melding. Hij deed dat zonder te weten dat
 de vraag al in [bevindingen.md](bevindingen.md) stond. *Een hervatte agent meldt zijn tokens als
-lopend totaal* (23 september) beschrijft hetzelfde bij #273 en noemt het lopende totaal
-waarschijnlijk, maar *"uit de melding zelf ... niet vast te stellen"*. De meetdefinitie hoort de
+lopend totaal* (23 september) beschrijft hetzelfde bij #273 en houdt het lopende totaal
+voor aannemelijk (*"Het lijkt dus"*), maar *"uit de melding zelf ... niet vast te stellen"*. De meetdefinitie hoort de
 vakdeskundige vast te stellen. [metingen.md](metingen.md) rekent sinds #271 met het verschil, met
 dat voorbehoud erbij. Ook bij #326 liep het getal op na weinig toolaanroepen: 140.027 → 157.171
 na 8 aanroepen, en 422.605 → 440.576 na 13. Dat steunt het vermoeden, maar bewijst het niet.
 
 **Nog een keer hetzelfde, in de eerste versie van deze bevinding.** De orkestrator schreef eerst
-dat de bevinding van 23 september het lopende totaal *"had dat al vastgesteld"*, en liet de hoge lezing
+dat de bevinding van 23 september dat lopende totaal al had vastgesteld (*"had dat al
+vastgesteld"*), en liet de hoge lezing
 in metingen.md *vervallen*. Daarmee maakte hij van een voorzichtige uitspraak een feit, en nam hij
 een meetkeuze die bij de vakdeskundige ligt. Dat is het patroon van de bevinding hierboven, nu bij
-de orkestrator zelf. De verplichte redactionele lezing van de orkestratordiff ving het (PR #330).
+de orkestrator zelf. Een redactionele lezing van de orkestratordiff, die de orkestrator liet uitvoeren volgens de
+regel *wie het zelf doet, laat het lezen*, ving het (PR #330).
 
 **Waarom het ertoe doet.** Dit volgt het patroon van *Een bevinding opschrijven voorkomt haar
 niet* (24 september): de bevinding en de praktijk stonden er, maar de orkestrator raadpleegde ze

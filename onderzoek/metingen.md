@@ -2048,7 +2048,9 @@ PR #330. Het gaat om:
 | beoordelaar-onderwijskundige | 150.881 | 7 min 42 s | BLOKKEER, 1 blokkade (AC12), 11 puntjes |
 | auteur, herstel 1 van 1 (hervat) | 17.971 | 5 min 23 s | B1, P4 en 8 puntjes verwerkt |
 | beoordelaar-onderwijskundige, herstelmodus | 67.391 | 2 min 17 s | AKKOORD MET PUNTJES, 1 puntje |
-| **totaal agents** | **1.068.685** | | exclusief de lezing van deze orkestratordiff |
+| beoordelaar-redacteur, lezing orkestratordiff | 49.427 | 1 min 57 s | BLOKKEER, 2 blokkades, 4 puntjes |
+| beoordelaar-redacteur, herstellezing | 55.360 | 2 min 0 s | AKKOORD MET PUNTJES, 3 puntjes |
+| **totaal agents** | **1.173.472** | | |
 
 **Bron.** De tokens komen uit de `subagent_tokens` van de verbruiksmelding na elke agentstap. De
 twee hersteltellingen zijn berekend als verschil met de vorige melding van dezelfde, hervatte
@@ -2056,8 +2058,12 @@ agent: 157.171 − 140.027 voor de ontwerper, en 440.576 − 422.605 voor de aut
 als de melding een lopend totaal is, en dat is niet bewezen; zie de bevinding *Een hervatte agent
 meldt zijn tokens als lopend totaal* (23 september). Deze telling volgt dezelfde praktijk als bij
 #271. Het oplopen van het getal na weinig toolaanroepen (8 en 13) steunt het vermoeden, maar
-bewijst het niet. Tellen beide meldingen volledig, dan is het totaal 1.631.317. Welke telling
+bewijst het niet. Tellen beide meldingen volledig, dan is het totaal 1.736.104. Welke telling
 geldt, stelt de vakdeskundige vast (bevinding van 23 september).
+
+De twee rijen van de redacteur, het totaal en de hoge lezing zijn na de herstellezing mechanisch
+ingevuld door de orkestrator, net als de drie puntjes van die lezing; geen beoordelaar heeft die
+laatste wijzigingen gelezen.
 
 Herstelstand bij afsluiting: ontwerp 1/1 en oplevering 1/1.
 
