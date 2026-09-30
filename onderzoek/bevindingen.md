@@ -1363,31 +1363,40 @@ in een variant: de reden kwam van de vakdeskundige, maar de voorzichtigheid verd
 vastgelegd. Het voorstel van 25 september (in de auteursrol: alleen het letterlijke besluit met
 datum, en een reden alleen als citaat) is nog niet in de instructies opgenomen.
 
-**Wat het veranderde.** In het herstel (`62e597f`) staat nu het citaat met bron. Omdat het C1 de
-toets tegen het C4 bij AC12 aan de onderwijskundige gaf, werd het gevangen. Dat is opnieuw een
+**Wat het veranderde.** In het herstel (`62e597f`) staat nu het citaat met bron. Omdat het C2 (AC12)
+en het C4 de toets tegen de besluiten aan de onderwijskundige gaven, werd het gevangen. Dat is opnieuw een
 keuze per werkitem, geen vaste regel. Het voorstel van 25 september ligt er dus met drie gevallen
 in plaats van twee. Het is een procesbesluit voor de vakdeskundige.
 
-## Een bestaande bevinding over de meting werd niet geraadpleegd - 30 september 2026
+## De bestaande meetpraktijk voor een hervatte agent werd niet geraadpleegd - 30 september 2026
 
 **Wat er gebeurde.** Bij #326 werden twee agents hervat: de ontwerper voor zijn herstel en de
-auteur voor het zijne. De orkestrator noteerde op GitHub steeds twee lezingen, omdat hij niet kon
-vaststellen of het gemelde getal een lopend totaal was. Het tussentotaal kwam daardoor op
-*1.068.685 of 1.631.317* te staan. Maar *Een hervatte agent meldt zijn tokens als lopend totaal*
-(23 september) had dat al vastgesteld, met drie oplopende meldingen bij #273. Ook hier liep het
-getal op met weinig toolaanroepen: 140.027 → 157.171 na 8 aanroepen, en 422.605 → 440.576 na 13.
+auteur voor het zijne. De orkestrator noteerde op GitHub steeds twee lezingen: het gemelde getal
+als verbruik van de stap, of het verschil met de vorige melding. Hij deed dat zonder te weten dat
+de vraag al in [bevindingen.md](bevindingen.md) stond. *Een hervatte agent meldt zijn tokens als
+lopend totaal* (23 september) beschrijft hetzelfde bij #273 en noemt het lopende totaal
+waarschijnlijk, maar *"uit de melding zelf ... niet vast te stellen"*. De meetdefinitie hoort de
+vakdeskundige vast te stellen. [metingen.md](metingen.md) rekent sinds #271 met het verschil, met
+dat voorbehoud erbij. Ook bij #326 liep het getal op na weinig toolaanroepen: 140.027 → 157.171
+na 8 aanroepen, en 422.605 → 440.576 na 13. Dat steunt het vermoeden, maar bewijst het niet.
 
-**Waarom het ertoe doet.** Het is het patroon van *Een bevinding opschrijven voorkomt haar niet*
-(24 september), nu bij de orkestrator zelf. De bevinding stond er en was van toepassing, maar
-niemand las haar op het moment dat het ertoe deed. Er was geen budgetgrens, dus er is geen
-verkeerd besluit op genomen. In een proef van #203 had de hoge lezing de budgetreactie
-onterecht kunnen doen afgaan.
+**Nog een keer hetzelfde, in de eerste versie van deze bevinding.** De orkestrator schreef eerst
+dat de bevinding van 23 september het lopende totaal *"had dat al vastgesteld"*, en liet de hoge lezing
+in metingen.md *vervallen*. Daarmee maakte hij van een voorzichtige uitspraak een feit, en nam hij
+een meetkeuze die bij de vakdeskundige ligt. Dat is het patroon van de bevinding hierboven, nu bij
+de orkestrator zelf. De verplichte redactionele lezing van de orkestratordiff ving het (PR #330).
 
-**Wat het veranderde.** In [metingen.md](metingen.md) telt #326 met het verschil tussen twee
-meldingen, en de hoge lezing vervalt, met verwijzing. In de instructies is niets veranderd.
-Voorstel voor de evaluatie van #203: laat `/orc` bij de start de koppen van de bevindingen onder
-*meten* raadplegen, of neem de telling van een hervatte agent op in de meetdefinitie van
-`loop.md`, zodat die niet in een bevinding blijft staan.
+**Waarom het ertoe doet.** Dit volgt het patroon van *Een bevinding opschrijven voorkomt haar
+niet* (24 september): de bevinding en de praktijk stonden er, maar de orkestrator raadpleegde ze
+niet op het moment dat het ertoe deed. Er was geen budgetgrens, dus er is op de telling geen
+besluit genomen. In een proef van #203 hangt de budgetreactie wel aan de telling, en dan beslist
+de lezing welke stand de mens krijgt voorgelegd.
+
+**Wat het veranderde.** In [metingen.md](metingen.md) telt #326 zoals #271: het verschil tussen
+twee meldingen, met het voorbehoud, en met de hoge lezing ernaast. In de instructies is niets
+veranderd. Het voorstel van 23 en 24 september staat nog open: leg de telling van een hervatte
+agent vast in de meetdefinitie. Aanvullend voorstel voor de evaluatie van #203: laat `/orc` bij
+de start de bevindingen over het meten raadplegen.
 
 **Twee kleinere waarnemingen uit hetzelfde werkitem.**
 - *De orkestrator vroeg rollen zonder schrijfgereedschap om een bestand te schrijven.* De

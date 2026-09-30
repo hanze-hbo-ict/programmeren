@@ -2050,13 +2050,14 @@ PR #330. Het gaat om:
 | beoordelaar-onderwijskundige, herstelmodus | 67.391 | 2 min 17 s | AKKOORD MET PUNTJES, 1 puntje |
 | **totaal agents** | **1.068.685** | | exclusief de lezing van deze orkestratordiff |
 
-**Bron.** De tokens komen uit de `subagent_tokens` van de verbruiksmelding na elke agentstap. Een
-hervatte agent meldt een lopend totaal. De twee hersteltellingen zijn daarom het verschil met de
-vorige melding van dezelfde agent: 157.171 − 140.027 voor de ontwerper, en 440.576 − 422.605
-voor de auteur. Tijdens de lus noteerde de orkestrator ook een hoge lezing (1.631.317), waarin
-beide gemelde getallen volledig meetellen. Die lezing vervalt. Zie de bevinding *Een hervatte
-agent meldt zijn tokens als lopend totaal* (23 september) en de bevinding van 30 september in
-[bevindingen.md](bevindingen.md).
+**Bron.** De tokens komen uit de `subagent_tokens` van de verbruiksmelding na elke agentstap. De
+twee hersteltellingen zijn berekend als verschil met de vorige melding van dezelfde, hervatte
+agent: 157.171 − 140.027 voor de ontwerper, en 440.576 − 422.605 voor de auteur. Dat klopt alleen
+als de melding een lopend totaal is, en dat is niet bewezen; zie de bevinding *Een hervatte agent
+meldt zijn tokens als lopend totaal* (23 september). Deze telling volgt dezelfde praktijk als bij
+#271. Het oplopen van het getal na weinig toolaanroepen (8 en 13) steunt het vermoeden, maar
+bewijst het niet. Tellen beide meldingen volledig, dan is het totaal 1.631.317. Welke telling
+geldt, stelt de vakdeskundige vast (bevinding van 23 september).
 
 Herstelstand bij afsluiting: ontwerp 1/1 en oplevering 1/1.
 
@@ -2073,10 +2074,14 @@ De vakdeskundige besliste zes keer:
 **De blokkade van de oplevering kwam uit het vastleggen, niet uit het materiaal.** De
 onderwijskundige blokkeerde op één zin in `curriculum/leerlijn.md`. Die zin maakte van de
 voorzichtige reden van de vakdeskundige (*"dat kan denk ik altijd geschreven worden als een
-geneste lc"*) een vaststaand feit, en dat feit is onjuist. Het is de derde keer dat een auteur
-bij het vastleggen een reden schrijft. Zie [bevindingen.md](bevindingen.md), 30 september.
+geneste lc"*) een vaststaand feit, en dat feit is onjuist. Het is een variant van wat bij #271 twee
+keer gebeurde, toen een auteur bij het vastleggen een eigen reden schreef. Zie
+[bevindingen.md](bevindingen.md), 30 september.
 
-**Beide rondes van de verhelderaar vingen iets.** Het eerste C3 vond een AC5-controle die altijd
-nul zou geven, doordat `\|` in een markdowntabel als letterlijk teken in `grep -E` terechtkwam.
-Het vond ook een voorlegpunt waarvan de grond door de eigen meetbasis werd weersproken. Beide
-zouden de poort en de beoordeling ongemerkt zijn gepasseerd.
+**Wat het eerste C3 ving.** De eerste blokkade was een tegenspraak in het ontwerp: AC5 sloot `key=`
+uit, terwijl O4 een vooruitblik op `sorted(..., key=...)` plande. Volgens het C3 had pas de
+beoordelaar gemerkt welke lezing bedoeld was. Onder dezelfde blokkade stond dat het zoekpatroon
+voor AC5 stil kon falen (onder meer `\|` in een markdowntabel); het C3 zegt daarover zelf *"Dat
+valt wel op bij de ijking"*. De tweede blokkade was een voorlegpunt waarvan de grond door de eigen
+meetbasis werd weersproken, zodat de poort op een onjuiste grond zou beslissen. Het herstel voegde
+één voorlegpunt toe (VP10), en de vakdeskundige nam dat met een aanvulling over.
