@@ -1489,3 +1489,42 @@ ligt een voorstel klaar dat de instructies zou veranderen: #331 (*Leg vast hoe d
 besluiten vastlegt en hoe een hervatte agent telt*) voor de eerste en de derde, en het
 voorstel van 24 september voor de tweede. Geen van de drie is opgenomen. Dat is een procesbesluit
 voor de vakdeskundige, niet voor de orkestrator.
+
+## Een tegensprekend antwoord van de mens niet als tegenspraak herkend - 30 september 2026
+
+**Wat er gebeurde.**
+- Bij de poort van #332 legde de orkestrator VP1 voor als meerkeuzevraag, over het oefenbestand
+  `extra/practice/1_recursie.ipynb` en de voorbeeldpagina.
+- Drie opties:
+  - *"Opgaan en verwijderen"*, de aanbeveling;
+  - *"Laten staan, opstap nieuw"*;
+  - *"Opgaan, voorbeeldpagina blijft"*.
+- De vakdeskundige koos de derde. Het label noemde alleen de voorbeeldpagina. Dat het oefenbestand
+  zou verdwijnen, stond pas in de toelichting eronder: *"Het oefenbestand gaat op in de opstap en
+  verdwijnt"*.
+- Het C4 registreerde *"wordt daarna verwijderd"*, en de auteur verwijderde het bestand in
+  `a78cf1c`.
+- Na de eerste beoordeling vroeg de orkestrator iets over de voorbeeldpagina. Het antwoord van de
+  vakdeskundige begon met: *"Dat klopt niet; de opgaven in extra moeten wel blijven, maar de
+  voorbeelden in extra mogen hergebruikt worden in de lopende tekst van de week (graag zelfs)"*.
+- De orkestrator betrok die zin alleen op de voorbeeldpagina. Hij zag niet dat *"de opgaven in
+  extra moeten wel blijven"* ook ging over het oefenbestand, dat op dat moment al verwijderd was.
+- Na de merge van PR #334 zei de vakdeskundige: *"Je hebt de extra oefeningen voor recursie
+  gewist."* Het terugzetten staat nu in #338.
+
+**Waarom het ertoe doet.**
+- Twee dingen liepen hier in elkaar. Het eerste is een bekend patroon: een gevolg stond in de
+  toelichting van een optie en niet in het label. Zie *Een keuzeoptie van de orkestrator wordt de
+  onderbouwing van de mens* (23 september). Daar ging het om een reden, hier om een gevolg.
+- Het tweede is nieuw. Een later antwoord sprak het eerdere besluit tegen, en die tegenspraak is
+  niet als zodanig behandeld. De orkestrator las het antwoord binnen de vraag die hij had gesteld,
+  en niet tegen de besluiten die al genomen waren.
+- De vakdeskundige merkte het pas na de merge. Twee beoordelaars en twee lezingen hadden het niet
+  gezien, omdat het verwijderen conform het C4 was.
+
+**Wat het veranderde.** De besluiten over het terugzetten staan in #338. In de instructies is
+niets veranderd. **Voorstel** voor de evaluatie van #203, een procesbesluit voor de
+vakdeskundige:
+- zet in een optielabel elk gevolg dat iets verwijdert of verplaatst;
+- leg een antwoord van de mens dat een genomen besluit raakt, naast het C4. Vraag dan expliciet
+  of het besluit verandert, voordat de volgende agentstap begint.
