@@ -1414,33 +1414,36 @@ de start de bevindingen over het meten raadplegen.
   formuleringen* (24 september): de ijking bewijst dat het patroon werkt, niet dat het alles
   vangt. De issue #328 is aangevuld.
 
-## Een besluit naar de letter uitgevoerd, pas zichtbaar door een meting - 30 september 2026
+## Een besluit naar de letter uitgevoerd - 30 september 2026
 
 **Wat er gebeurde.**
 - Bij #332 was werkcollege stap 3 (`has_extension`) inhoudelijk opgave 1 van het oefententamen.
-  De vakdeskundige besliste: *"Stap 3 een andere functie geven."*
+  De onderwijskundige zag dat bij het lezen (C6, puntje 1). De vakdeskundige besliste: *"Stap 3
+  een andere functie geven."*
 - De auteur schreef `same_extension`. Dat is een andere functie met een andere naam en andere
   argumenten, maar in hetzelfde domein, met dezelfde `.exe`-context en drie van de vier takken
   gelijk.
 - De verse beoordelaar in herstelmodus vergeleek beide functies op 40 invoeren. Ze vielen op 39
-  samen. Hij noemde dat een puntje voor de vakdeskundige: *"Aan de letter van het besluit is
-  voldaan. Of het ook aan de bedoeling voldoet, is een oordeel van de vakdeskundige."*
+  samen. De beoordelaar noemde dat een puntje voor de vakdeskundige: *"Aan de letter van het besluit is
+  voldaan. Of het ook aan de bedoeling voldoet, is een oordeel van de vakdeskundige, en ik heb de afweging niet opnieuw
+  gemaakt."*
 - De vakdeskundige besliste: *"Nee, verder weg van het tentamen."*
 
 **Waarom het ertoe doet.**
-- Een kort besluit laat ruimte. De auteur vult die ruimte met de kleinste wijziging die aan de
-  woorden voldoet.
-- Dat lijkt op *De auteur maakt van een voorzichtige reden een feit* (30 september). Daar werd de
-  reden van een besluit te stellig; hier werd de bedoeling te smal gelezen.
-- Wat het zichtbaar maakte, was geen lezing maar een meting: het aantal invoeren waarop de twee
-  functies samenvallen. Zonder dat getal was het verschil een kwestie van smaak geweest.
+- Het is één geval. Een kort besluit liet hier ruimte, en de uitvoering bleef dicht bij het
+  bestaande.
+- Het lijkt op *De auteur maakt van een voorzichtige reden een feit* (30 september). Daar werd de
+  reden van een besluit te stellig; hier werd het besluit smal uitgevoerd.
+- De beoordelaar legde een getal naast de eigen lezing: het aantal invoeren waarop de twee functies
+  samenvallen. Of dat getal het besluit van de vakdeskundige droeg, staat nergens.
 
 **Wat het veranderde.**
-- De vervolgopdracht gaf de bedoeling een meetbare vorm: stap 3 buiten het domein van extensies,
+- De vervolgopdracht gaf het besluit een meetbare vorm: stap 3 buiten het domein van extensies,
   met een gemeten vergelijking met `check_extension` in de C5.
-- De nieuwe `safe_name` valt op hoogstens 14 van de 40 invoeren samen. Een tussenversie die op
-  37/40 uitkwam, verwierp de auteur zelf.
-- De vervolgronde kostte 39.275 tokens voor de auteur en 49.284 voor de herstellezing.
+- De nieuwe `safe_name` valt bij een echte extensie op hoogstens 14 van de 40 invoeren samen. Een
+  tussenversie die op 37/40 uitkwam, verwierp de auteur zelf.
+- Wat de vervolgronde kostte, staat in [metingen.md](metingen.md) onder *Werkitem #332*, met het
+  voorbehoud over de telling van een hervatte agent.
 - In de instructies is niets veranderd. **Voorstel** voor de evaluatie van #203: geef een
   besluit dat een verschil vraagt ("anders dan", "verder weg van") in de opdracht aan de auteur
   een meetbare eindvoorwaarde mee. Laat de auteur die eindvoorwaarde zelf meten, en de
@@ -1462,7 +1465,8 @@ de herhaling niet voorkomen.
 - Het voorstel van 25 september staat nog open in #331.
 
 **2. *Een zoekpatroon uit bekende formuleringen vindt alleen bekende formuleringen* (24 september).**
-- De auteur toetste AC4 met `lambda|key\s*=` en een AST-scan op `ast.Lambda`. Beide waren geijkt.
+- De auteur toetste AC4 met `lambda|key\s*=` (geijkt op `9_extra`) en een AST-scan op
+  `ast.Lambda` (zonder vermelde ijking).
 - Beide beoordelaars vonden onafhankelijk een functie als waarde:
   `for f in [positives_loop, ...]:`. Het patroon zocht naar de bekende vormen van *functie als
   argument*, niet naar het begrip.
@@ -1478,8 +1482,10 @@ de herhaling niet voorkomen.
   bevinding al beschreef, op de dag dat ze werd opgeschreven.
 - Er was geen budgetgrens, dus er is geen besluit op de telling genomen.
 
-**Wat het veranderde.** In dit werkitem: niets meer dan de herstellingen hierboven. Wel bevestigt
+**Wat het veranderde.** In dit werkitem alleen de herstellingen bij punt 1 en 2; bij punt 3 bleef
+de uitkomst dezelfde. Wel bevestigt
 het de lijn van *Een bevinding opschrijven voorkomt haar niet* (24 september). Voor alle drie
-ligt een voorstel klaar dat de instructies zou veranderen: #331 voor de eerste en de derde, en het
+ligt een voorstel klaar dat de instructies zou veranderen: #331 (*Leg vast hoe de auteur
+besluiten vastlegt en hoe een hervatte agent telt*) voor de eerste en de derde, en het
 voorstel van 24 september voor de tweede. Geen van de drie is opgenomen. Dat is een procesbesluit
 voor de vakdeskundige, niet voor de orkestrator.

@@ -2121,20 +2121,26 @@ meetbasis werd weersproken, zodat de poort op een onjuiste grond zou beslissen. 
 | beoordelaar-onderwijskundige, herstelmodus | 65.211 | 3 min 29 s | AKKOORD MET PUNTJES, 2 puntjes |
 | auteur, begrensde vervolgopdracht (hervat) | 39.275 | 8 min 13 s | stap 3 en 4 vervangen, P2 |
 | beoordelaar-onderwijskundige, herstellezing vervolg | 49.284 | 2 min 23 s | AKKOORD MET PUNTJES, 2 puntjes |
-| **totaal agents** | **1.152.779** | | |
+| beoordelaar-redacteur, lezing orkestratordiff | 89.284 | 3 min 40 s | BLOKKEER, 2 blokkades, 8 puntjes |
+| beoordelaar-redacteur, herstellezing orkestratordiff | 47.370 | 2 min 7 s | AKKOORD MET PUNTJES, 4 puntjes |
+| **totaal agents** | **1.289.433** | | |
 
 **Bron.** De tokens komen uit de `subagent_tokens` van de verbruiksmelding na elke agentstap. De
 twee rijen van de hervatte auteur zijn berekend als verschil met de vorige melding van dezelfde
 agent: 426.906 − 400.667 voor het herstel, en 466.181 − 426.906 voor de vervolgopdracht. Dat is
 de praktijk van #271 en #326, met hetzelfde voorbehoud: dat de melding een lopend totaal is, is
-aannemelijk, maar niet bewezen. Tellen alle meldingen volledig, dan is het totaal 1.980.352.
+aannemelijk, maar niet bewezen. Tellen alle meldingen volledig, dan is het totaal 2.117.006.
 Welke telling geldt, stelt de vakdeskundige vast (bevinding van 23 september).
 
 **Rondes.**
 - Herstelstand bij afsluiting: ontwerp 0/1 (niet gebruikt) en oplevering 1/1.
 - Na de herstelgrens gaf de vakdeskundige expliciet één begrensde vervolgronde, met één
   herstellezing (PR #334).
-- De lezing van deze orkestratordiff staat hieronder.
+- De redactionele lezing van deze orkestratordiff staat in de tabel. Ze liep nog toen de
+  vakdeskundige tot merge besloot. De correcties die de orkestrator op grond van die lezing
+  maakte, staan in PR #337, met een herstellezing. De vier puntjes van die herstellezing (N1-N4)
+  zijn daarna mechanisch verwerkt door de orkestrator; geen beoordelaar heeft die laatste
+  wijzigingen gelezen.
 
 **De vakdeskundige besliste vijf keer:**
 1. De afbakening *"Alleen week 3"*, vóór het ontwerp.
@@ -2143,21 +2149,25 @@ Welke telling geldt, stelt de vakdeskundige vast (bevinding van 23 september).
 3. Drie puntjes na de beoordeling:
    - werkcollege stap 3 krijgt een andere functie;
    - de extra wordt later bekeken;
-   - de voorbeeldpagina blijft, want *"de voorbeelden in extra mogen hergebruikt worden in de
-     lopende tekst van de week (graag zelfs)"*.
+   - over de overlap tussen `extra/` en de week: *"de opgaven in extra moeten wel blijven, maar
+     de voorbeelden in extra mogen hergebruikt worden in de lopende tekst van de week (graag
+     zelfs)"*. `extra/` bleef daarom ongewijzigd.
 4. Na de herstelbeoordeling:
    - *"Nee, verder weg van het tentamen"*, met de begrensde vervolgronde;
    - P2 meenemen;
    - de metingen vastleggen;
    - het werkitem voor week 4 aanmaken.
-5. Merge: nog open.
+5. Merge: *"merge het en maak een nieuw werkitem voor de puntjes"*. Gemerged als `2715b1e`;
+   de puntjes staan in #336.
 
 **Wat de beoordeling ving.**
 - **Dezelfde blokkade, onafhankelijk van elkaar.** Beide beoordelaars vonden de functielijst in de
-  testcel van opstap-opdracht 12, een vooruitverwijzing naar *functie als argument*. De geijkte
-  patronen van de auteur (`lambda|key=` en een AST-scan op `ast.Lambda`) konden die vorm niet zien.
-  Zie [bevindingen.md](bevindingen.md), 30 september.
+  testcel van opstap-opdracht 12, een vooruitverwijzing naar *functie als argument*. Het geijkte
+  patroon van de auteur (`lambda|key\s*=`) en de AST-scan op `ast.Lambda`, zonder vermelde
+  ijking, konden die vorm niet zien.
+  Zie [bevindingen.md](bevindingen.md), *Drie bekende patronen keerden terug bij #332*, punt 2.
 - **Een besluit dat naar de letter was uitgevoerd.** De herstelbeoordeling mat dat de nieuwe
-  stap 3 op 39 van de 40 invoeren samenviel met de tentamenopgave. Pas daardoor kon de
-  vakdeskundige vaststellen dat de uitvoering haar besluit naar de letter volgde, maar niet naar
-  de bedoeling.
+  stap 3 op 39 van de 40 invoeren samenviel met de tentamenopgave, en noemde dat een puntje voor
+  de vakdeskundige: *"Aan de letter van het besluit is voldaan. Of het ook aan de bedoeling
+  voldoet, is een oordeel van de vakdeskundige, en ik heb de afweging niet opnieuw gemaakt."* De vakdeskundige besliste: *"Nee, verder weg van
+  het tentamen."*
