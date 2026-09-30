@@ -355,7 +355,8 @@ Die laatste 33 zijn markdown-documenten in een notebook-jasje; het waren er 39,
 tot de vijf van week 5 uitvoerbare cellen kregen en
 `lectures/3b_functies_aanroepen` bij de herziening van week 3 een `.md` werd. Twee colleges springen eruit
 omdat ze in `lectures/` geen enkele grond hebben:
-`10a_knapzak_probleem.ipynb` en `4b_midterm.ipynb`.
+`11a_knapzak_probleem.ipynb` (tot #332 `10a_knapzak_probleem.ipynb`) en
+`4b_midterm.ipynb`.
 
 Dit wordt niet in één actie omgezet. Per document wordt bij de herziening
 bepaald welke grond geldt, en daarmee welk formaat. Voor uitwerkingen speelt de

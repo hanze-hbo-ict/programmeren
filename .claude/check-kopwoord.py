@@ -45,7 +45,8 @@ import re
 import sys
 
 # Een genummerde werkeenheidkop. De dubbele punt staat er los in, want
-# `lectures/9b_recursief.ipynb` schreef zowel `## Opgave: 1` als `## Opgave 2:`.
+# `lectures/10c_recursief.ipynb` (tot #326 `9b_recursief`) schreef zowel
+# `## Opgave: 1` als `## Opgave 2:`.
 GENUMMERD = re.compile(r"^#{1,6}\s+Opgave\s*:?\s+\d+\b")
 FENCE = re.compile(r"^(`{3,}|~{3,})")
 INSTAP = re.compile(r"(^|[/_])instap([_.]|$)", re.IGNORECASE)

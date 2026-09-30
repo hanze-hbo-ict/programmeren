@@ -1346,6 +1346,195 @@ stopte op HTTP 429 zonder verbruiksmelding. Dit keer is de context hervat, en di
 daarna een getal. Of dat getal het afgebroken deel bevat, is uit de melding niet af te leiden.
 Het staat in [metingen.md](metingen.md) met dat voorbehoud.
 
+## De auteur maakt van een voorzichtige reden een feit - 30 september 2026
+
+**Wat er gebeurde.** Bij #326 legde de auteur het poortbesluit over dubbele `for`-clausules vast in
+`curriculum/leerlijn.md`: *"komen niet in de week, want die zijn altijd als geneste comprehension
+te schrijven"*. De vakdeskundige had gezegd: *"Dubbele for hoeft niet (dat kan denk ik altijd
+geschreven worden als een geneste lc)"*. De auteur maakte van dat *denk ik* een feit, en dat feit
+is onjuist: `[x for r in m for x in r]` geeft een platte lijst, `[[x for x in r] for r in m]` een
+lijst van lijsten. De onderwijskundige blokkeerde de oplevering erop (PR #330, B1). Het was de
+enige blokkade, net als bij #271.
+
+**Waarom dit de bevinding van 25 september bevestigt.** *De auteur schrijft een reden bij het
+besluit* beschreef twee gevallen bij #271, waarvan één onjuist. Hier gebeurt het een derde keer,
+in een variant: de reden kwam van de vakdeskundige, maar de voorzichtigheid verdween. Het C4 van
+#326 citeerde het besluit letterlijk. Het zei er niet bij dat alleen het citaat mag worden
+vastgelegd. Het voorstel van 25 september (in de auteursrol: alleen het letterlijke besluit met
+datum, en een reden alleen als citaat) is nog niet in de instructies opgenomen.
+
+**Wat het veranderde.** In het herstel (`62e597f`) staat nu het citaat met bron. Omdat het C2 (AC12)
+en het C4 de toets tegen de besluiten aan de onderwijskundige gaven, werd het gevangen. Dat is opnieuw een
+keuze per werkitem, geen vaste regel. Het voorstel van 25 september ligt er dus met drie gevallen
+in plaats van twee. Het is een procesbesluit voor de vakdeskundige.
+
+## De bestaande meetpraktijk voor een hervatte agent werd niet geraadpleegd - 30 september 2026
+
+**Wat er gebeurde.** Bij #326 werden twee agents hervat: de ontwerper voor zijn herstel en de
+auteur voor het zijne. De orkestrator noteerde op GitHub steeds twee lezingen: het gemelde getal
+als verbruik van de stap, of het verschil met de vorige melding. Hij deed dat zonder te weten dat
+de vraag al in [bevindingen.md](bevindingen.md) stond. *Een hervatte agent meldt zijn tokens als
+lopend totaal* (23 september) beschrijft hetzelfde bij #273 en houdt het lopende totaal
+voor aannemelijk (*"Het lijkt dus"*), maar *"uit de melding zelf ... niet vast te stellen"*. De meetdefinitie hoort de
+vakdeskundige vast te stellen. [metingen.md](metingen.md) rekent sinds #271 met het verschil, met
+dat voorbehoud erbij. Ook bij #326 liep het getal op na weinig toolaanroepen: 140.027 → 157.171
+na 8 aanroepen, en 422.605 → 440.576 na 13. Dat steunt het vermoeden, maar bewijst het niet.
+
+**Nog een keer hetzelfde, in de eerste versie van deze bevinding.** De orkestrator schreef eerst
+dat de bevinding van 23 september dat lopende totaal al had vastgesteld (*"had dat al
+vastgesteld"*), en liet de hoge lezing
+in metingen.md *vervallen*. Daarmee maakte hij van een voorzichtige uitspraak een feit, en nam hij
+een meetkeuze die bij de vakdeskundige ligt. Dat is het patroon van de bevinding hierboven, nu bij
+de orkestrator zelf. Een redactionele lezing van de orkestratordiff, die de orkestrator liet uitvoeren volgens de
+regel *wie het zelf doet, laat het lezen*, ving het (PR #330).
+
+**Waarom het ertoe doet.** Dit volgt het patroon van *Een bevinding opschrijven voorkomt haar
+niet* (24 september): de bevinding en de praktijk stonden er, maar de orkestrator raadpleegde ze
+niet op het moment dat het ertoe deed. Er was geen budgetgrens, dus er is op de telling geen
+besluit genomen. In een proef van #203 hangt de budgetreactie wel aan de telling, en dan beslist
+de lezing welke stand de mens krijgt voorgelegd.
+
+**Wat het veranderde.** In [metingen.md](metingen.md) telt #326 zoals #271: het verschil tussen
+twee meldingen, met het voorbehoud, en met de hoge lezing ernaast. In de instructies is niets
+veranderd. Het voorstel van 23 en 24 september staat nog open: leg de telling van een hervatte
+agent vast in de meetdefinitie. Aanvullend voorstel voor de evaluatie van #203: laat `/orc` bij
+de start de bevindingen over het meten raadplegen.
+
+**Twee kleinere waarnemingen uit hetzelfde werkitem.**
+- *De orkestrator vroeg rollen zonder schrijfgereedschap om een bestand te schrijven.* De
+  verhelderaar en de beoordelaars hebben alleen lees- en zoekgereedschap. Het eerste C3 kwam
+  daarom als tekst terug, met de melding dat het pad niet te schrijven was. De orkestrator zette
+  het letterlijk neer. Latere opdrachten vroegen om tekst. Dat kost niets, maar een opdracht die
+  niet uitvoerbaar is, zet een rol aan het improviseren.
+- *Een zoekpatroon met een uitgesloten tekenklasse miste een treffer.* Voor #328 zocht de
+  orkestrator comprehensions met `[^\[\]{}()]` tussen haakje en `for`. De list comprehension
+  `[pixel[:] for pixel in brede_regel]` in `solutions/6_extra.ipynb` r80 viel daardoor weg,
+  terwijl de ijking op een eenvoudige comprehension slaagde. De AST-scan van de auteur vond hem wel.
+  Dit is een variant van *Een zoekpatroon uit bekende formuleringen vindt alleen bekende
+  formuleringen* (24 september): de ijking bewijst dat het patroon werkt, niet dat het alles
+  vangt. De issue #328 is aangevuld.
+
+## Een besluit naar de letter uitgevoerd - 30 september 2026
+
+**Wat er gebeurde.**
+- Bij #332 was werkcollege stap 3 (`has_extension`) inhoudelijk opgave 1 van het oefententamen.
+  De onderwijskundige zag dat bij het lezen (C6, puntje 1). De vakdeskundige besliste: *"Stap 3
+  een andere functie geven."*
+- De auteur schreef `same_extension`. Dat is een andere functie met een andere naam en andere
+  argumenten, maar in hetzelfde domein, met dezelfde `.exe`-context en drie van de vier takken
+  gelijk.
+- De verse beoordelaar in herstelmodus vergeleek beide functies op 40 invoeren. Ze vielen op 39
+  samen. De beoordelaar noemde dat een puntje voor de vakdeskundige: *"Aan de letter van het besluit is
+  voldaan. Of het ook aan de bedoeling voldoet, is een oordeel van de vakdeskundige, en ik heb de afweging niet opnieuw
+  gemaakt."*
+- De vakdeskundige besliste: *"Nee, verder weg van het tentamen."*
+
+**Waarom het ertoe doet.**
+- Het is één geval. Een kort besluit liet hier ruimte, en de uitvoering bleef dicht bij het
+  bestaande.
+- Het lijkt op *De auteur maakt van een voorzichtige reden een feit* (30 september). Daar werd de
+  reden van een besluit te stellig; hier werd het besluit smal uitgevoerd.
+- De beoordelaar legde een getal naast de eigen lezing: het aantal invoeren waarop de twee functies
+  samenvallen. Of dat getal het besluit van de vakdeskundige droeg, staat nergens.
+
+**Wat het veranderde.**
+- De vervolgopdracht gaf het besluit een meetbare vorm: stap 3 buiten het domein van extensies,
+  met een gemeten vergelijking met `check_extension` in de C5.
+- De nieuwe `safe_name` valt bij een echte extensie op hoogstens 14 van de 40 invoeren samen. Een
+  tussenversie die op 37/40 uitkwam, verwierp de auteur zelf.
+- Wat de vervolgronde kostte, staat in [metingen.md](metingen.md) onder *Werkitem #332*, met het
+  voorbehoud over de telling van een hervatte agent.
+- In de instructies is niets veranderd. **Voorstel** voor de evaluatie van #203: geef een
+  besluit dat een verschil vraagt ("anders dan", "verder weg van") in de opdracht aan de auteur
+  een meetbare eindvoorwaarde mee. Laat de auteur die eindvoorwaarde zelf meten, en de
+  beoordelaar natrekken.
+
+## Drie bekende patronen keerden terug bij #332 - 30 september 2026
+
+Drie bestaande bevindingen gebeurden bij #332 opnieuw. De bevindingen stonden er al; ze hebben
+de herhaling niet voorkomen.
+
+**1. *De auteur schrijft een reden bij het besluit* (25 september), voor de vierde keer.**
+- `conventies/begrippen.md` kreeg bij het termbesluit: *"De vakdeskundige koos het Nederlandse
+  woord, dat voor een beginner doorzichtiger is."*
+- Het C4 van #332 noemt geen reden. De bijzin kwam uit de aanbeveling van de ontwerper bij VP2
+  (*"Onzeker: basisgeval is voor een beginner doorzichtiger"*). Een overweging uit het ontwerp
+  werd zo een motief van de vakdeskundige.
+- De onderwijskundige ving het als puntje, omdat haar toewijzing voor de beoordeling ook de
+  besluitdiff tegen het C4 omvatte. Het is geschrapt in `6cc6afa`.
+- Het voorstel van 25 september staat nog open in #331.
+
+**2. *Een zoekpatroon uit bekende formuleringen vindt alleen bekende formuleringen* (24 september).**
+- De auteur toetste AC4 met `lambda|key\s*=` (geijkt op `9_extra`) en een AST-scan op
+  `ast.Lambda` (zonder vermelde ijking).
+- Beide beoordelaars vonden onafhankelijk een functie als waarde:
+  `for f in [positives_loop, ...]:`. Het patroon zocht naar de bekende vormen van *functie als
+  argument*, niet naar het begrip.
+- Het was de enige blokkade van de oplevering. Hersteld in `73962fb`, en de herstelbeoordeling
+  zocht met een ruimere AST-scan.
+
+**3. *De bestaande meetpraktijk voor een hervatte agent werd niet geraadpleegd* (30 september).**
+- De orkestrator gaf na het herstel van de auteur eerst op GitHub en aan de vakdeskundige twee
+  totalen (*"999.009 of 1.399.676"*). Pas daarna las hij de melding als lopend totaal. Hij
+  raadpleegde [metingen.md](metingen.md) pas bij het afsluiten, en daar rekent men al sinds #271
+  met het verschil.
+- De uitkomst is dezelfde, maar de volgorde is de verkeerde. Het is precies de herhaling die deze
+  bevinding al beschreef, op de dag dat ze werd opgeschreven.
+- Er was geen budgetgrens, dus er is geen besluit op de telling genomen.
+
+**Wat het veranderde.** In dit werkitem alleen de herstellingen bij punt 1 en 2; bij punt 3 bleef
+de uitkomst dezelfde. Wel bevestigt
+het de lijn van *Een bevinding opschrijven voorkomt haar niet* (24 september). Voor alle drie
+ligt een voorstel klaar dat de instructies zou veranderen: #331 (*Leg vast hoe de auteur
+besluiten vastlegt en hoe een hervatte agent telt*) voor de eerste en de derde, en het
+voorstel van 24 september voor de tweede. Geen van de drie is opgenomen. Dat is een procesbesluit
+voor de vakdeskundige, niet voor de orkestrator.
+
+## Een tegensprekend antwoord van de mens niet als tegenspraak herkend - 30 september 2026
+
+**Wat er gebeurde.**
+- Bij de poort van #332 legde de orkestrator VP1 voor als meerkeuzevraag, over het oefenbestand
+  `extra/practice/1_recursie.ipynb` en de voorbeeldpagina.
+- Drie opties:
+  - *"Opgaan en verwijderen"*, de aanbeveling;
+  - *"Laten staan, opstap nieuw"*;
+  - *"Opgaan, voorbeeldpagina blijft"*.
+- De vakdeskundige koos de derde. Het label noemde het opgaan van het oefenbestand, maar niet dat
+  het daarna zou verdwijnen. Dat stond alleen in de toelichting eronder: *"Het oefenbestand gaat
+  op in de opstap en verdwijnt"*. Het label van de eerste optie noemde het verwijderen wel.
+- Het C4 registreerde *"wordt daarna verwijderd"*, en de auteur verwijderde het bestand in
+  `a78cf1c`.
+- Na de eerste beoordeling vroeg de orkestrator iets over de voorbeeldpagina. Het antwoord van de
+  vakdeskundige luidde: *"Dat klopt niet; de opgaven in extra moeten wel blijven, maar de
+  voorbeelden in extra mogen hergebruikt worden in de lopende tekst van de week (graag zelfs)"*.
+- De orkestrator betrok die zin alleen op de voorbeeldpagina, en legde hem niet naast het C4.
+  Een andere lezing lag voor de hand: de zin onderscheidt *opgaven* van *voorbeelden*, en het
+  oefenbestand bevatte de opgaven. Die lezing wordt gesteund door wat de vakdeskundige na de merge
+  van PR #334 zei: *"Je hebt de extra oefeningen voor recursie gewist."* Het terugzetten staat nu
+  in #338.
+
+**Waarom het ertoe doet.**
+- Het nieuwe patroon: een later antwoord sprak een eerder besluit tegen, en die tegenspraak is
+  niet als zodanig behandeld. De orkestrator las het antwoord binnen de vraag die
+  hij had gesteld, en niet tegen de besluiten die al genomen waren.
+- De lezing van de orkestratordiff van #332 had het verwijderen van `1_recursie` en het volledige
+  antwoord allebei in handen. Ze verbond de twee niet. Geen van de beoordelingen en lezingen noemde
+  de tegenspraak; het verwijderen was conform het C4.
+- De vakdeskundige meldde het na de merge.
+- Mogelijk speelde ook de optie mee, met het verschil tussen de labels dat hierboven onder *Wat er
+  gebeurde* staat. Dat de vakdeskundige de toelichting miste, is een
+  vermoeden. Het wordt gesteund door de latere uitspraak, maar de bron zegt het niet. Het is
+  verwant aan *Een keuzeoptie van de orkestrator wordt de onderbouwing van de mens*
+  (23 september): ook daar registreerde het C4 wat in de toelichting van een optie stond. Het
+  onderscheid tussen label en toelichting is nieuw.
+
+**Wat het veranderde.** De besluiten over het terugzetten staan in #338. In de instructies is
+niets veranderd. **Voorstel** voor de evaluatie van #203, een procesbesluit voor de
+vakdeskundige:
+- leg een antwoord van de mens dat een genomen besluit kan raken, naast het C4. Vraag dan
+  expliciet of het besluit verandert, voordat de volgende agentstap begint;
+- zet in een optielabel elk gevolg dat iets verwijdert of verplaatst.
+
 ## De orkestrator meet een gat en behandelt het als nieuw - 30 september 2026
 
 **Wat er gebeurde.** Drie keer in drie dagen legde de orkestrator iets aan de vakdeskundige voor,
