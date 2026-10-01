@@ -2280,3 +2280,33 @@ Issues, PR en reviews liepen via de REST-API.
 `source/projects/picobot.md:280` en `source/solutions/14_extra.ipynb:42`, en de
 tegenwoordige tijd in `curriculum/leerlijn.md` r558 kolom 3. Merge-besluit: nog niet
 genomen.
+
+## Werkitem #328 - comprehensions in PGM1 week 6 vervangen door for-lussen
+
+Route: LUS, XS, procesversie `ab3ce8b`. Auteur, één beoordelaar (onderwijskundige),
+geen verkenner, ontwerper of verhelderaar. Het besluit lag al bij de vakdeskundige
+(#326, C4 VP8). PR #349, `Closes #328`.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator (C1, PR, C6-plaatsing) | niet beschikbaar | niet beschikbaar | C1 LUS/XS |
+| auteur | 76.617 (verbruiksrapport) | 13 min 30 s | C5; 2 bestanden, +16/-8 |
+| beoordelaar-onderwijskundige | 31.422 (verbruiksrapport) | 49 s | AKKOORD MET PUNTJES, 0 blokkades, 3 puntjes |
+| **totaal agents** | **108.039** | | |
+
+Geen herstelronde: oplevering 0 van 1, ontwerp 0 van 0. Eén beoordelaar, dus geen C7.
+
+**Wat de orkestrator zelf mat.** De auteur bekeek van de build alleen de staart. De
+orkestrator herhaalde `make clean && make html` met volledig log: `build succeeded.`,
+0 regels met `WARNING:`, `ERROR:` of `CRITICAL:`. De orkestrator telde in C1 dertien
+bestanden voor de scan; de glob geeft er twaalf. De auteur vond dat, de meetnoot in
+`leerlijn.md` zegt twaalf. De twee treffers zaten er in, dus de ijking bleef geldig.
+
+**Omgeving.** `gh` was niet ingelogd en de GitHub-MCP heeft geen projecttool, dus
+Status op project 4 is niet gezet; de stap staat in de C1-reactie.
+
+**Open punten voor de vakdeskundige** (niet aangeraakt): `handleidingen/week_6.md`
+r518-521 meldt een list comprehension in het werkcollege (opdracht 4) die er sinds
+`d85d30a` niet meer staat, en verwijst naar de geschrapte rij. De uitwerking van
+`6_extra` heeft geen vaste ankerwaarde meer voor `zwarte_bron` (puntje A).
+Merge-besluit: nog niet genomen.

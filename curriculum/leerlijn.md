@@ -508,18 +508,24 @@ als zodanig is gemarkeerd.
 | `while` | PGM1 week 4 | PGM1 week 2, `practicals/2_rochambeau` | Bewust; de tekst zegt erbij dat lussen later komen |
 | `choice`, en daarmee `import` | PGM1 week 3 | PGM1 week 2, `practicals/2_rochambeau` en `solutions/2_rochambeau` | Bewust; de opgave geeft de regel in de begincode met de uitleg als commentaar erachter, en de uitwerking zegt erbij hem voor nu aan te nemen. Vastgesteld door de vakdeskundige, 15 september 2026 |
 | `time.sleep` en math-functies | PGM1 week 3 | PGM1 week 2, `problems/2_basis`, `solutions/2_basis`, `problems/2_extra` en `solutions/2_extra` | Bewust; als gegeven begincode, met de uitleg als commentaar erachter. Vastgesteld door de vakdeskundige, 16 september 2026 |
-| list comprehension, en een generator expression | PGM2 week 2; generator expressions komen niet in de leerlijn | PGM1 week 6, `solutions/6_extra.ipynb`: r80 (`[pixel[:] for pixel in brede_regel]`) en r132 (`sum(1 for regel in raster for teken in regel if ...)`) | Moet een `for`-lus worden; #328 |
 | functie als argument (`key=`) | PGM2 week 4 | PGM2 week 2, laag extra, `problems/9_extra` | Bewust; als vooruitblik aan het eind, met een functieverwijzing en zonder lambda, niet om te schrijven. Vastgesteld door de vakdeskundige, 30 september 2026 |
 | *use it or lose it*: bij elk element kiezen of je het gebruikt, met twee recursieve aanroepen | PGM2 week 4 | PGM2 week 3, `lectures/10b_recursief_ontwerpen`, *Tot slot* | Bewust; als gemarkeerde vooruitblik aan het eind (*kan ik dit bedrag precies betalen?*), zonder de term, niet om te schrijven. Vastgesteld door de vakdeskundige, 30 september 2026, bij de poort van #332 (VP8) |
 | functiedefinitie | PGM1 week 3 | PGM1 week 2, `problems/2_basis` | Als gegeven code, niet om te schrijven. De docstring in datzelfde blok is onderdompeling; of dat ook voor de `def` geldt is nog niet besloten |
 | tuple | PGM1 week 7 | PGM1 week 5, laag extra, `problems/5_extra.md` | Ongemarkeerd; introduceert ook *methode* en *object*. Buiten bereik van de herzieningen in #102/#134 |
 
 De rij over list comprehension wees tot #326 naar `practicals/6b_images`. Daar
-staat sinds `d85d30a` (24 september 2026) geen comprehension meer; de rij wijst
-nu naar de uitwerking van de extra-opgave van dezelfde week, waar de vakdeskundige
-er een zag en waar ook een generator expression staat. Gemeten op 30 september
-2026 met een AST-scan van de codecellen. Bijgewerkt op besluit van de
-vakdeskundige, 30 september 2026, bij de poort van #326 (VP8).
+staat sinds `d85d30a` (24 september 2026) geen comprehension meer; de rij wees
+daarna naar de uitwerking van de extra-opgave van dezelfde week, waar de
+vakdeskundige er een zag en waar ook een generator expression stond. Die twee
+zijn in #328 vervangen door `for`-lussen en de rij is geschrapt. PGM1 week 6
+heeft nu geen comprehension en geen generator expression meer. Gemeten op
+1 oktober 2026 met een AST-scan (list-, set- en dict-comprehension en
+generator expression) over de codecellen en `python`-blokken van de twaalf
+bestanden van week 6 (`lectures/6*`, `practicals/6*`, `problems/6_*`,
+`solutions/6_*`, `course/*6*`): twee treffers vóór de wijziging, beide in
+`solutions/6_extra.ipynb`, nul erna. Geschrapt op besluit van de vakdeskundige,
+30 september 2026, bij de poort van #326 (VP8): die vorm moet uit week 6, ook
+als `for`-lus.
 
 Twee regels stonden hier eerder en zijn nagemeten en geschrapt.
 
