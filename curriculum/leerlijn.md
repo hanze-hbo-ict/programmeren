@@ -123,40 +123,49 @@ over alle cellen, en bij een `.md`-bestand het aantal woorden van het hele
 bestand. Een ruwe maat, maar de verhoudingen zijn te groot om aan de meetmethode
 te liggen.
 
-Alleen de rij van week 4 is op de huidige stand hermeten (#162); de andere rijen
-dateren van de herziening van hun eigen week en lopen dus achter. Hermeten bij de
-herziening van week 5; de weken 3, 6 en 7 waren sinds de vorige meting ook
-veranderd.
+Alleen de rijen van week 4 en week 7 staan op de huidige stand; beide zijn bij #102
+hermeten. De vier andere rijen dateren van de herziening van hun eigen week, en
+alle vier wijken af van wat `problems/` nu bevat. Hermeten bij de herziening van
+week 5.
 
 | Week | opstap | basis | extra | Totaal |
 |---|---|---|---|---|
 | 2 | 1.160 | 1.112 | 487 | **2.759** |
 | 3 | 242 | 1.143 | 176 | **1.561** |
-| 4 | 672 | 1.066 | 1.048 | 2.786 |
+| 4 | 678 | 1.066 | 1.048 | 2.792 |
 | 5 | 674 | 2.940 | **5.354** | 8.968 |
 | 6 | 365 | 1.353 | 309 | 2.027 |
-| 7 | 532 | 1.110 | **3.713** | 5.355 |
-| **Totaal** | **3.630** | **8.701** | **11.063** | 23.394 |
+| 7 | 316 | 464 | 447 | 1.227 |
+| **Totaal** | **3.435** | **8.078** | **7.821** | 19.334 |
 
-Drie dingen vallen op.
+Drie dingen vallen op, met één voorbehoud.
 
-**Het zwaartepunt ligt in de optionele laag.** Extra is 48% van het materiaal en
-een derde groter dan basis. Daar zitten Mandelbrot, Game of Life, Pi met
-pijltjes en tekst-naar-beeld: precies de opgaven waarin een probleem stap voor
-stap wordt opgebouwd. Zie [uitgangspunten.md](uitgangspunten.md) voor de
-achtergrond. De scheefheid is kleiner dan bij de vorige meting, doordat basis in
-de weken 3 en 5 is gegroeid.
+**Basis en extra liggen vlak bij elkaar.** Extra is 7.821 woorden, 40,5% van het
+materiaal, en daarmee 257 woorden kleiner dan basis. Hier stond eerder *"Het
+zwaartepunt ligt in de optionele laag"*: extra was 48% van het materiaal en een
+derde groter dan basis. Die scheefheid is met de hermeting van week 7 bij #102
+verdwenen, want de extra van die week meet 447 woorden in plaats van de 3.713 die
+hier stond. In de extra zitten Mandelbrot, Game of Life, Pi met pijltjes en
+tekst-naar-beeld: precies de opgaven waarin een probleem stap voor stap wordt
+opgebouwd. Zie [uitgangspunten.md](uitgangspunten.md) voor de achtergrond.
 
-**Week 3 is de dunste week van de cursus.** Met 1.561 woorden is ze bijna zes
-keer kleiner dan week 5, terwijl ze functies draagt: P5, P6 en A2, samen **30%**
+**Het voorbehoud: deze verhouding rust op vier rijen die achterlopen.** Alleen week
+4 en week 7 zijn op de huidige stand hermeten, en de vier andere rijen wijken alle
+vier af van wat `problems/` nu bevat. Zolang die niet zijn hermeten is de verhouding
+tussen de niveaus een indicatie en geen vaststelling; wie er een besluit op wil
+bouwen, hermeet eerst die vier.
+
+**Week 3 is na week 7 de dunste week van de cursus.** Met 1.561 woorden is ze bijna
+zes keer kleiner dan week 5, terwijl ze functies draagt: P5, P6 en A2, samen **30%**
 van het tentamen. Hier stond eerder *"P5 en A2, samen 20%"*; dat liet P6 weg,
 terwijl die uitkomst in de tabel hierboven wel bij week 3 staat. Nagemeten tegen
 [leeruitkomsten.md](leeruitkomsten.md): P5 10%, P6 10%, A2 10%, P7 zonder weging.
 Rechtgezet bij #198 op 11 september 2026.
 
 **De structuur is compleet.** Twee beweringen die hier eerder stonden zijn
-nagemeten en bleken onjuist. Week 7 heeft wél een opstap, met dertien
-opdrachten, sinds commit `8190d95c`. En de nummering van de opstap van week 5
+nagemeten en bleken onjuist. Week 7 heeft wél een opstap, sinds commit
+`8190d95c`; die telde er toen dertien en telt er sinds de herziening van de week
+met `92df099e` vier. En de nummering van de opstap van week 5
 loopt door zonder gat; dat is ze in de hele geschiedenis van
 `source/problems/5_opstap.ipynb` geweest. Sinds de herziening van week 5 telt die
 opstap twaalf opdrachten: acht om te lezen en vier om te schrijven.
@@ -440,17 +449,19 @@ werkitem #160, #270 en #271, en week 2 in #326; de opgaven over recursie staan
 sinds #326 in week 3. Sinds #332 heeft week 3 opstap, basis en extra over
 recursie, en staan de basis en de extra over algoritmen in week 4, naast Text-ID.
 
-**Wat er wél uit volgt: vijf ontbrekende niveau-uitwerkingen.** Dat volgt niet uit
+**Wat er wél uit volgt: vier ontbrekende niveau-uitwerkingen.** Dat volgt niet uit
 de regel hierboven maar uit het besluit *Elk opgaveniveau hoort een uitwerking te
 hebben*, dat elk **bestaand** niveau bindt en dus onafhankelijk is van welke
 niveaus een week verplicht heeft. De meting telt 41 niveau-opgaven in
-`source/problems/`, waarvan 36 een gelijknamige uitwerking in `source/solutions/`
-hebben en 5 nog niet. Dit is
-werkitem #194 en geen werk voor de herziening van dit document. In die vijf
-ontbrekende uitwerkingen gaat het concreet om de opstap van PGM1 week 7 en van
+`source/problems/`, waarvan 37 een gelijknamige uitwerking in `source/solutions/`
+hebben en 4 nog niet. Dit is
+werkitem #194 en geen werk voor de herziening van dit document. In die vier
+ontbrekende uitwerkingen gaat het concreet om de opstap van
 PGM2 week 1, en om de drie niveaus van PGM2 week 4: de basis en de extra over
 algoritmen (`11_algoritmen_basis` en `11_algoritmen_extra`, tot #332 `10_basis`
-en `10_extra`) en de extra Text-ID (`11_extra`). Hermeten bij #332: vóór #332
+en `10_extra`) en de extra Text-ID (`11_extra`). Hermeten bij #102: 41, 36 en 5
+werden 41, 37 en 4, want #102 voegde de uitwerking van de opstap van PGM1 week 7
+toe. Hermeten bij #332: vóór #332
 41, 33 en 8; #332 voegde uitwerkingen toe voor opstap, basis en extra van
 PGM2 week 3 en verhuisde de twee algoritmeniveaus zonder uitwerking naar week 4:
 41, 36 en 5. Tot #332 hoorden daar ook de opstap, de basis en de extra over

@@ -15,10 +15,16 @@ Dit document is voor auteurs, niet voor studenten. Het staat bewust buiten
 
 ### Namen zijn Engels, vanaf week 1
 
-Functienamen en de parameters die bij een opdracht horen, zijn Engels. Dat is
-geen wens maar een vaststelling: alle functienamen in het materiaal zijn het al,
-in beide studiejaren. Tot de herziening van week 5 was er één uitzondering,
-`s_afwijking` in `solutions/5_basis`; die heet nu `std_dev`.
+Functienamen en de parameters die bij een opdracht horen, zijn Engels. Dat is geen
+wens maar vrijwel een vaststelling: een scan over alle functiedefinities in
+`source/` telt 295 unieke functienamen, en daarvan zijn er drie niet Engels.
+`midden_van` staat in `lectures/7a_lists_advanced` en in `solutions/7_opstap`, en de
+opgave `problems/7_opstap` vraagt die naam met zoveel woorden. `generaties` staat in
+`problems/7_basis` en `solutions/7_basis`. `alfabet_word` staat in
+`solutions/PGM2_examen`, een van de vier oefententamens die bij besluit bevroren
+zijn. Hier stond dat alle functienamen het al waren en dat `s_afwijking` in
+`solutions/5_basis` tot de herziening van week 5 de enige uitzondering was; die heet
+inderdaad `std_dev`, maar de drie hierboven staan er nog.
 
 Daar zijn goede redenen voor. De naam van een functie *is* de opdracht:
 `flipside`, `count_vowels` en `num_to_base_b` staan in de opgavetekst en worden
@@ -162,13 +168,19 @@ bijbehorende methodes" in PGM1, maar wordt daar al jaren niet meer op
 getoetst. Dat staat als voorgestelde correctie in
 [`curriculum/leeruitkomsten.md`](../curriculum/leeruitkomsten.md#voorgestelde-correcties).
 
-**Het materiaal volgt deze regel nog niet.** `lectures/7a_lists_advanced.ipynb`
-introduceert `.append()` nu nog expliciet als methode (vier keer, plus één keer
-in `problems/7_opstap.ipynb`), en `problems/5_extra.md` (PGM1 week 5, laag
-extra) introduceert methode, object én tuple zelfs nog eerder, via
+**Het materiaal volgt deze regel nog niet.** `problems/5_extra.md` (PGM1 week 5,
+laag extra) introduceert methode, object én tuple vóór PGM2 week 1, via
 `image.plot_point(...)` en `image.save_file()`. Dat is bekend en hoort te
 worden rechtgezet bij de herziening van PGM1 week 7 (issue #102) — het is nu
 nog geen conventie die te handhaven is.
+
+**Week 7 volgt de regel inmiddels wel.** Hier stond dat
+`lectures/7a_lists_advanced.ipynb` `.append()` vier keer expliciet als methode
+introduceert, plus één keer in `problems/7_opstap.ipynb`. Commit `92df099e`, de
+herziening van week 7, heeft die vijf vindplaatsen verwijderd. In de vier
+week-7-bronnen (`7a_lists_advanced`, `7_opstap`, `7_basis` en `7_extra`) staat
+`.append(` nu nul keer, geijkt op `lectures/8a_datastructuren.ipynb`, dat er zes
+heeft.
 
 :::{note}
 Het woord *methode* komt in week 1 wel voor, in `lectures/1a_intro_programmeren`,
