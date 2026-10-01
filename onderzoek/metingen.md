@@ -2310,3 +2310,43 @@ r518-521 meldt een list comprehension in het werkcollege (opdracht 4) die er sin
 `d85d30a` niet meer staat, en verwijst naar de geschrapte rij. De uitwerking van
 `6_extra` heeft geen vaste ankerwaarde meer voor `zwarte_bron` (puntje A).
 Merge-besluit: nog niet genomen.
+
+## Werkitem #336 - twee puntjes in het werkcollege van PGM2 week 3
+
+Route: LUS, XS, procesversie `c91c40a`. Auteur, twee beoordelaars (eerstejaars en
+onderwijskundige), geen verkenner, ontwerper of verhelderaar. De onderwijskundige
+kwam erbij omdat AC2 over de uitwerking gaat. PR #350, `Closes #336`.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator (C1, PR, C6-plaatsing, C7) | niet beschikbaar | niet beschikbaar | C1 LUS/XS; C7 mechanisch |
+| auteur | 66.033 (verbruiksrapport) | 4 min 58 s | C5; 2 bestanden, +8/-6 |
+| beoordelaar-eerstejaars | 27.795 (verbruiksrapport) | 1 min 4 s | AKKOORD MET PUNTJES, 0 blokkades, 1 puntje |
+| beoordelaar-onderwijskundige | 33.531 (verbruiksrapport) | 1 min 35 s | AKKOORD, 0 blokkades |
+| **totaal agents** | **127.359** | | |
+
+Geen herstelronde: oplevering 0 van 1, geen ontwerp. Geen tegenspraak, dus geen
+hoofdredacteur.
+
+**Afwijking in de overdracht.** De orkestrator vergat de C1-tekst in de opdracht aan
+de auteur en stuurde hem direct na via een bericht met het pad naar het bestand. De
+auteur las hem vóór het schrijven en vergeleek hem met de reactie op de issue (C5,
+bewijsspoor).
+
+**Omgeving.** De lokale `master` liep 86 commits achter `origin/master`. Daardoor
+ontbrak het werkcollege lokaal. Bijgewerkt met fast-forward vóór C1. De issue stond
+niet op project 4; de orkestrator voegde hem toe en zette Status via `gh`.
+
+**Wat de beoordelaars zelf maten.** Beide schreven een foute variant (de naam na de
+inhoud) en lieten die tegen de echte testcel falen. De onderwijskundige draaide
+pre-commit niet zelf, omdat de hook die outputs stript bestanden kan wijzigen. Die
+toetste het buildlog en de bestandsinhoud, en nam de pre-commit-uitvoer uit de
+C5-kern over.
+
+**Puntje en merge.** De vakdeskundige vroeg de `ascii_letters`-zin vóór de zin over
+`SAFE_CHARS` te zetten, het puntje van de eerstejaars, en daarna te mergen. De
+orkestrator verplaatste de zin zelf, op die expliciete opdracht. Daarna: pre-commit
+groen, en een schone build met `Build finished`, 0 `WARNING:`, 0 `ERROR` en 103
+omgevingsmeldingen van `IPKernelApp`. De gerenderde hint heeft de nieuwe volgorde.
+Geen onafhankelijke lezing van deze orkestratorcommit: de opdracht was verplaatsen
+en dan mergen, en de zin zelf was al beoordeeld.
