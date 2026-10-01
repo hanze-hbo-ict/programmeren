@@ -2343,6 +2343,10 @@ pre-commit niet zelf, omdat de hook die outputs stript bestanden kan wijzigen. D
 toetste het buildlog en de bestandsinhoud, en nam de pre-commit-uitvoer uit de
 C5-kern over.
 
-**Open punt voor de vakdeskundige:** het puntje van de eerstejaars, de
-`ascii_letters`-zin vóór de zin over `SAFE_CHARS` zetten. Merge-besluit: nog niet
-genomen.
+**Puntje en merge.** De vakdeskundige vroeg de `ascii_letters`-zin vóór de zin over
+`SAFE_CHARS` te zetten, het puntje van de eerstejaars, en daarna te mergen. De
+orkestrator verplaatste de zin zelf, op die expliciete opdracht. Daarna: pre-commit
+groen, en een schone build met `Build finished`, 0 `WARNING:`, 0 `ERROR` en 103
+omgevingsmeldingen van `IPKernelApp`. De gerenderde hint heeft de nieuwe volgorde.
+Geen onafhankelijke lezing van deze orkestratorcommit: de opdracht was verplaatsen
+en dan mergen, en de zin zelf was al beoordeeld.
