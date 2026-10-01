@@ -1606,7 +1606,8 @@ dat de lokale `master` 86 commits achterliep en dat daardoor het werkcollege lok
 en erachter staat *"Bijgewerkt met fast-forward vóór C1"*. Daar is de verouderde tak dus
 gezien en rechtgezet voordat er gemeten werd. Bij #102 is hij niet gezien. Dezelfde
 omgevingsfout, de ene keer gevangen en de andere keer niet, en geen van beide keren een regel
-geworden: het stond er als omgevingsfeit en niet als bevinding. In deze repo wordt via
+geworden - bij #336 stond het er als omgevingsfeit, en bij #102 pas hier als bevinding. In deze
+repo wordt via
 pull requests op GitHub gemerged en volgt de lokale tak niet mee; een meting tegen de
 werkkopie meet dan de stand van de laatste keer dat iemand `git pull` deed.
 
@@ -1625,8 +1626,8 @@ vraagt en niet alleen het opheffen van een blokkade.
 `master` of tegen de werkkopie zonder eerst `git fetch origin`, en noem als meetbasis de
 korte hash van de commit van `origin/master` die je werkelijk hebt gelezen.** Een C1 of
 werkitem dat *"origin/master"* zegt zonder hash is niet te controleren, en daardoor waren deze
-drie artefacten pas een dag later vindbaar fout. Neergelegd bij de evaluatie van #203; de twee
-rechtzettingen die dit al opleverde staan op #102 en #341.
+drie artefacten pas een dag later vindbaar fout. Dit voorstel staat als invoer voor de evaluatie
+op #203; de twee rechtzettingen die het al opleverde staan op #102 en #341.
 
 ## Rollen in één route delen de scratchpad van de orkestrator - 1 oktober 2026
 
@@ -1651,8 +1652,8 @@ standhield, niet dat zij van goede wil afhing.
 **Voorstel voor de instructies, een procesbesluit voor de vakdeskundige: geef een rol alleen
 de bestanden die hij nodig heeft, op een pad dat niet ook de artefacten van andere rollen
 bevat.** Een aparte map per overdracht is genoeg; waaraan je zou zien dat het werkt is dat
-een beoordelaar geen afweging meer hoeft te melden over wat hij niet heeft geopend.
-Neergelegd bij de evaluatie van #203.
+een beoordelaar geen afweging meer hoeft te melden over wat hij niet heeft geopend. Dit voorstel
+staat als invoer voor de evaluatie op #203.
 
 **Het kwam in de ronde erna meteen terug.** De redacteur die deze registratie las, kreeg
 dezelfde map aangewezen en vond daar de artefacten van alle rollen van deze route, inclusief
@@ -1685,5 +1686,5 @@ bevestigd en is #351 geworden; zonder die tweede poging was dat werkitem er niet
 **Voorstel voor de instructies, een procesbesluit voor de vakdeskundige: zoek een zin van meer
 dan een paar woorden nooit regelgewijs.** Sla de regels plat vóór het zoeken, of zoek op een
 fragment dat zeker binnen één regel valt. En ijk een nul op een vindplaats die net zo lang is
-als wat je zoekt, niet op een kort woord dat overal past. Neergelegd bij de evaluatie van
-#203.
+als wat je zoekt, niet op een kort woord dat overal past. Dit voorstel staat als invoer voor de
+evaluatie op #203.

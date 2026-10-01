@@ -2397,7 +2397,9 @@ open en wordt gedragen door #346.
 **Dat poortbesluit stond eerst nergens.** Het is aan de auteur meegegeven als besluit van de
 vakdeskundige zonder dat het op GitHub was vastgelegd, en de redacteur die deze registratie las
 vond een bewering zonder bron en blokkeerde daarop. Het staat nu als C4-aanvulling op PR #344,
-achteraf. Volgens `CLAUDE.md` was het tot dat moment niet genomen. Het is de spiegel van de
+achteraf. De uitkomst landde wel in `curriculum/`, in `6d45c520`; wat ontbrak was de vindbare
+besluittekst met het open deel erin, en dat is wat `CLAUDE.md` met *"niet in een commitbericht of
+een gesprek"* bedoelt. Het is de spiegel van de
 bevinding *De orkestrator meet een gat en behandelt het als nieuw*: daar werd een vastgelegd
 besluit niet aan een rol genoemd, hier werd een niet-vastgelegd besluit wel aan een rol
 genoemd.
@@ -2428,7 +2430,9 @@ beoordelaars melden daarnaast dat hun eigen eerste zoekpatroon een fout getal of
 en dat alleen de ijking dat ving.
 
 **Poorten.** Viermaal gedraaid: door de auteur na elk van zijn twee opleveringen en
-onafhankelijk door de orkestrator op `9b99bfb7` en op `42b363d5`. Pre-commit zes van zes;
+onafhankelijk door de orkestrator op `9b99bfb7` en op `42b363d5`. Zes buildaanroepen over die
+vier gelegenheden: de auteur draaide bij zijn tweede oplevering tweemaal, omdat de eerste run op
+een `CancelledError` afbrak. Pre-commit zes van zes;
 `build succeeded.` met nul Sphinx-waarschuwingen en nul fouten. De 106 `WARNING`-regels in het
 log zijn alle 106 omgevingsmeldingen van `IPKernelApp`, één per kernelstart. Niet vastgesteld,
 bij alle vier de runs: de basislijn van dat aantal, want er is geen log van vóór de wijziging.
@@ -2447,7 +2451,9 @@ gemeten vóór deze route begon. Zie de bevinding
 **Ging er een beoordelaar over deze registratie?** Ja, `rol-beoordelaar-redacteur`, in een
 leesronde op PR #352, vóór een merge-voorstel. Die ronde gaf **BLOKKEER** op twee punten, beide
 terecht: het poortbesluit hierboven dat nergens was vastgelegd, en *"driemaal"* bij een
-opsomming die vier poortruns noemt. Zeven puntjes, waarvan vijf verwerkt. Op `onderzoek/` is van
+opsomming die vier poortruns noemt. Zeven puntjes, alle zeven verwerkt, één als melding. De
+herbeoordeling hief beide blokkades op en vond zeven nieuwe puntjes; de twee feitelijke daarvan,
+een telling en een bestemming die niet bestond, zijn rechtgezet. Op `onderzoek/` is van
 de zes pre-commit-hooks alleen `no-commit-to-master` van toepassing en een Sphinx-build raakt
 deze bestanden niet, dus die lezing was het enige net onder deze tekst.
 
