@@ -695,8 +695,11 @@ dat achttien regels lager nog een vierde keer onveranderd stond, een getal dat a
 sectie werd toegeschreven terwijl het uit één tabel komt, en *"een vindplaats die niet
 bestaat"* terwijl de plicht in `orc.md` en `loop.md` wél staat, in andere woorden - de
 onderzoeker schreef dat voorbehoud op en de orkestrator liet het bij de overname vallen.
-Ook *"ongeveer dertig verwijzingen"* bleek 42; de hertelling gaf eerst 38 omdat het patroon
-niet case-insensitive was. Verwerkt, met dit kader eromheen.
+Ook *"ongeveer dertig verwijzingen"* klopte niet, en drie hertellingen erna evenmin: het
+patroon was eerst niet case-insensitive, daarna niet plat over regeleinden, en de
+correctiecommits voegden onderweg zelf verwijzingen toe. Dat getal is er bij het besluit van
+de vakdeskundige uit gehaald in plaats van voor een vierde keer gemeten; het hoort bij het
+werkitem over het hernummeren. Verwerkt, met dit kader eromheen.
 
 | Rol | Ronde | Tokens | Duur | Uitkomst |
 |---|---|---|---|---|
@@ -770,7 +773,7 @@ niet vond, is wel de reden om zo'n tijdstip met zijn commit erbij op te schrijve
 
 **Het tokengetal van ronde 1 staat als niet vastgesteld.** Bij de onderzoeksronde van
 1 oktober 2026 bleek het intern onmogelijk: 2.714.155 tokens in 7 minuten voor het lezen
-van vier `.gitignore`-regels en één bevinding is 380.395 per minuut, waar de drie ronden
+van vier `.gitignore`-regels en één bevinding is 380.489 per minuut, waar de drie ronden
 erna over dezelfde twee PR's op 13.828, 12.424 en 11.909 per minuut uitkomen: gewogen
 12.717, dus een factor 30 tegen het gemiddelde en 27,5 tegen de hoogste.
 Het is het enige agentstap-getal van die orde in dit bestand en het overtreft elk
@@ -2553,16 +2556,16 @@ prozaregel zonder motivering - precies wat bevinding 9 verbood.
 beweringen in deze bestanden klopten niet tegen hun eigen bron, en die zijn rechtgezet in
 dezelfde ronde: de samenvattingsregel onder *Werk buiten de lus om* die zeventien
 ingrepen en nul beoordelaars noemde, het tokengetal van 2.714.155 dat intern onmogelijk
-is, en de grond onder bevinding 14, die een ongeteld getal en een niet-bestaande
-vindplaats aanvoerde. De orkestrator heeft alle drie zelf nagemeten voordat hij ze
-rechtzette.
+is, en de grond onder bevinding 14, die een ongeteld getal aanvoerde en een plicht alleen
+in `CLAUDE.md` zocht terwijl zij in `.claude/` in andere woorden ook staat. De orkestrator
+heeft alle drie zelf nagemeten voordat hij ze rechtzette.
 
 **Wat er open bleef.** Twee dubbele nummers in `bevindingen.md` - `## 9.` en `## 14.`
-staan elk twee keer, boven vier verschillende bevindingen - met **42** verwijzingen op
-nummer in `onderzoek/`, 18 in `bevindingen.md` en 24 in `metingen.md`, en 44 als je het
-tweede getal in *"bevindingen 7 en 13"* meetelt. Hier stond eerder *"ongeveer dertig"*; die
-schatting was 40% te laag, en de eerste hertelling gaf 38 doordat het patroon niet
-case-insensitive was en vier treffers met een hoofdletter wegvielen. Hernummeren raakt al
+staan elk twee keer, boven vier verschillende bevindingen - en een flink aantal
+verwijzingen op nummer in `onderzoek/`. Hoeveel precies staat hier met opzet niet: elke
+poging dat getal op te schrijven liep mis, drie keer achter elkaar, mede doordat de
+correctiecommits er zelf verwijzingen aan toevoegden. Het wordt één keer geteld in het
+werkitem over het hernummeren, met de commit waarop geteld is erbij. Hernummeren raakt al
 die verwijzingen, dus de orkestrator heeft het als vormkeuze bij de vakdeskundige gelegd.
 Dat wijkt af van de onderzoeker, die het onder *registratiewerk, langs een rol* plaatste met
 *"raakt geen besluit en is te meten"*; de afwijking zit in de 42 verwijzingen, niet in de

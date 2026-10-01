@@ -581,29 +581,29 @@ van de drie. Het is een tijdigheidsprobleem - twee waren al gemerged, en een bes
 in `curriculum/` is precies het soort tekst waar volgende rollen op gaan staan.
 
 **Waarom de bestaande regel niet volstaat.** *Wie het zelf doet, laat het lezen* staat als
-spreuk alleen in `CLAUDE.md`, en is in de eerste tabel onder *Werk buiten de lus om* in
-`metingen.md` - de vijftien ingrepen tot en met #169 - **elf van de vijftien keer niet
-nageleefd**. Dat is bevinding 9 nog eens: een regel is geen borging.
+spreuk alleen in `CLAUDE.md`, en is in de tabel van vijftien ingrepen onder *Werk buiten de
+lus om* in `metingen.md` **elf van de vijftien keer niet nageleefd**. Dat is bevinding 9 nog
+eens: een regel is geen borging.
 
 Hier stonden eerder twee dingen die niet klopten, rechtgezet op 1 oktober 2026 bij de
 onderzoeksronde. Er stond *"zeventien van de zeventien keer niet nageleefd"*, met de hele
-sectie als bron; nageteld draagt de eerste tabel achttien rijen waarvan drie paren hetzelfde
-werk beschrijven, dus vijftien ingrepen, waarvan drie achteraf wél een lezer kregen en bij
-één de vraag niet van toepassing is. Over de **hele** sectie, die inmiddels drieëndertig
-ingrepen telt, is het beeld gunstiger: acht met een lezer tegen vierentwintig zonder. Die
-latere ingrepen bestonden nog niet toen deze bevinding werd geschreven, en daarom staat het
-getal nu bij de tabel waar het uit komt en niet bij de sectie.
+sectie als bron; nageteld draagt die tabel achttien rijen waarvan drie paren hetzelfde werk
+beschrijven, dus vijftien ingrepen, waarvan drie achteraf wél een lezer kregen en bij één de
+vraag niet van toepassing is. Het getal staat nu bij de tabel waar het uit komt. Wat de héle
+sectie zegt staat hier met opzet niet: dat is een tweede telling over een bron die blijft
+groeien, en twee leesronden lang was juist die samenvatting de fout.
 
 En er stond dat de regel *"al in `CLAUDE.md` en in `/orc`"* staat. De spreuk zelf komt in
 `.claude/` nergens voor, geijkt op de ene treffer in `CLAUDE.md` - maar de plicht bestaat
 daar wél in andere woorden: `.claude/commands/orc.md` laat een door de orkestrator
-geschreven besluitdiff onafhankelijk redactioneel toetsen vóór de PR, en `loop.md` eist in
-§*Buiten een werkitem* een onafhankelijke lezer en bij door de orkestrator geschreven
-besluittekst een redactionele beoordeling. De scherpte van deze bevinding zit dus niet in een
-ontbrekende vindplaats, maar in wat bevinding 9 al zei: die plicht staat er als regel en niet
-als handeling, en bij de herschrijving van #203 is de stap die haar wél een handeling maakte
-teruggezet naar proza. Rechtzetten zonder dat erbij te zeggen zou van een voorzichtige
-vaststelling een feit maken, en daarover gaat een andere bevinding in dit bestand.
+geschreven besluitdiff onafhankelijk redactioneel toetsen vóór de PR, `loop.md` eist in
+§*Buiten een werkitem* een onafhankelijke lezer bij een kleine correctie, en §*GitHub en
+registratie* eist een redactionele beoordeling op door de orkestrator geschreven
+besluittekst. De scherpte van deze bevinding zit dus niet in een ontbrekende vindplaats, maar
+in wat bevinding 9 al zei: die plicht staat er als regel en niet als handeling, en bij de
+herschrijving van #203 is de stap die haar wél een handeling maakte teruggezet naar proza.
+Rechtzetten zonder dat erbij te zeggen zou van een voorzichtige vaststelling een feit maken,
+en daarover gaat een andere bevinding in dit bestand.
 
 En een bevinding hier opschrijven verandert dat niet. Gemeten: van alle
 roldefinities verwijzen alleen `vakdeskundige.md` en `onderzoeker.md` naar
