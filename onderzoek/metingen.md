@@ -731,10 +731,19 @@ niet vond, is wel de reden om zo'n tijdstip met zijn commit erbij op te schrijve
 
 | Rol | Ronde | Tokens | Duur | Uitkomst |
 |---|---|---|---|---|
-| beoordelaar-redacteur | 1 | 2.714.155 | 7 min 8 s | #342 AKKOORD (2 puntjes), #343 AKKOORD MET PUNTJES (6 puntjes), 0 blokkades |
+| beoordelaar-redacteur | 1 | 2.714.155, **niet vastgesteld** | 7 min 8 s | #342 AKKOORD (2 puntjes), #343 AKKOORD MET PUNTJES (6 puntjes), 0 blokkades |
 | beoordelaar-redacteur | 2, vers | 67.757 | 4 min 54 s | **BLOKKEER**, 3 blokkades, 5 puntjes |
 | beoordelaar-redacteur | 3, herstel | 54.253 | 4 min 22 s | **BLOKKEER** op 1 nieuw punt; de 3 blokkades van ronde 2 opgeheven |
 | beoordelaar-redacteur | 4, catch-up-merge | 61.332 | 5 min 9 s | AKKOORD MET PUNTJES, 0 blokkades, 5 puntjes |
+
+**Het tokengetal van ronde 1 staat als niet vastgesteld.** Bij de onderzoeksronde van
+1 oktober 2026 bleek het intern onmogelijk: 2.714.155 tokens in 7 minuten voor het lezen
+van vier `.gitignore`-regels en één bevinding is circa 380.000 per minuut, waar de drie
+ronden erna over dezelfde twee PR's op circa 14.000 per minuut uitkomen, een factor 28.
+Het is het enige agentstap-getal van die orde in dit bestand en het overtreft elk
+routetotaal op één na. Of de harness het zo meldde is niet meer na te gaan; het getal
+blijft staan met dit voorbehoud, want weghalen zou de melding wissen in plaats van haar
+te wegen. Het telt niet mee in een vergelijking.
 
 Herstelstand: oplevering 1/1 gebruikt, en daarmee op. Er is geen C5 en geen werkitem,
 maar de grens uit `loop.md` telt hier mee omdat ronde 2 een blokkade gaf. Het herstel van
@@ -1228,10 +1237,19 @@ gelezen:
 | Het poortbesluit vastgelegd in `curriculum/` en `conventies/` (#152) | Vastlegplicht na C4 | **nee** |
 | De body van #146 herschreven tot kaart | Leesbaarheid, geen materiaal | **nee** |
 
-**Zeventien ingrepen in totaal, nul beoordelaars.** Bij de eerste zeven leverden er
-drie een reparatie op die een redacteur zou hebben gevangen (bevinding 4); bij deze
-zes leverde de laatste er vier op, want de consistentiecontrole vond vier issues met
-een achterhaalde bewering (bevinding 10).
+**Vijftien ingrepen, elf zonder beoordelaar.** Nageteld op 1 oktober 2026, omdat hier
+*"Zeventien ingrepen in totaal, nul beoordelaars"* stond en dat tegen de tabel erboven
+niet klopt. De tabel draagt achttien rijen, waarvan drie paren hetzelfde werk beschrijven
+- twee letterlijk gelijk, en #152 twee keer in andere woorden - dus vijftien ingrepen. Van
+die vijftien kregen **drie** achteraf een lezer, waarvan één meteen `BLOKKEER`, bij **één**
+is de vraag niet van toepassing omdat de bron twee beoordelaars was, en **elf** kregen er
+geen. De oude formulering sprak de alinea eronder tegen, die zegt dat de laatste drie wél
+zijn gelezen. Waar die drie dubbele rijen uit komen is **niet vastgesteld**; ze blijven
+staan, want een register schoon maken is geen meting.
+
+Bij de eerste zeven leverden er drie een reparatie op die een redacteur zou hebben
+gevangen (bevinding 4); bij deze zes leverde de laatste er vier op, want de
+consistentiecontrole vond vier issues met een achterhaalde bewering (bevinding 10).
 
 **De laatste drie zijn wél gelezen**, en dat is het eerste gevolg van stap 5b uit
 `/orc`: sinds die stap bestaat, gaat elke vastlegging in `curriculum/` of
@@ -2462,3 +2480,51 @@ met een aanleiding die niet klopt), #345 (vastleggen of een uitwerking een gelab
 variant mag dragen), #346 (de woordentabel volledig hermeten), #351 (twee achterhaalde
 beweringen over week 3). En een voorwaarde bij het sluiten: `conventies/codeconventies.md`
 verwijst met naam naar #102 als de plek waar de `.append()`-conventie wordt rechtgezet.
+
+## Onderzoeksronde - 1 oktober 2026
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| onderzoeker | 183.955 | 11 min 44 s | 10 bevindingen over de werkwijze, 3 aanbevelingen, 9 maatregelen nagegaan en in orde, 5 punten niet vast te stellen |
+
+Eerste keer dat deze rol draaide. Afbakening door de vakdeskundige: één familie, namelijk
+beweringen die misgaan en of de maatregelen die daarover zijn opgeschreven de oorzaak
+raken. Niet de hele werkwijze, omdat een rapport dat tien dingen wil veranderen wordt
+genegeerd.
+
+**Hij verwierp de formulering van de hypothese die hij meekreeg.** De orkestrator
+vermoedde dat de maatregelen het patroon niet hadden gestopt. Gemeten valt het uiteen in
+twee mechanismen, en voor het grootste werkt er wél iets: van de veertien bevindingen
+tussen 24 september en 1 oktober gaan er acht over een bron die niet is geraadpleegd
+terwijl hij bestond, en juist daar heeft de verse lezer achteraf acht keer geblokkeerd.
+Zijn herformulering: de lus heeft in deze familie één controle die werkt, en dat is
+detectie achteraf; preventie is nooit geprobeerd, omdat elk preventievoorstel geparkeerd
+staat.
+
+**Zijn zwaarste vondst.** Veertien bevindingen, nul instructiewijzigingen, zestien
+voorstelpunten die wachten op de evaluatie van #203 - en die evaluatie is zelf niet
+uitgevoerd, terwijl `203-proef.md` r16-18 nog zegt dat de proeven en het evaluatiebesluit
+openstaan en r93 en r154 van datzelfde bestand hun uitkomsten dragen. Daarnaast vier
+maatregelen die in `bevindingen.md` als uitgevoerd staan en niet in de instructies staan,
+waaronder stap 5b van `/orc`, die bij de herschrijving van #203 is teruggezet naar één
+prozaregel zonder motivering - precies wat bevinding 9 verbood.
+
+**Het dossier bleek zelf een exemplaar van zijn eigen bevindingenfamilie.** Drie
+beweringen in deze bestanden klopten niet tegen hun eigen bron, en die zijn rechtgezet in
+dezelfde ronde: de samenvattingsregel onder *Werk buiten de lus om* die zeventien
+ingrepen en nul beoordelaars noemde, het tokengetal van 2.714.155 dat intern onmogelijk
+is, en de grond onder bevinding 14, die een ongeteld getal en een niet-bestaande
+vindplaats aanvoerde. De orkestrator heeft alle drie zelf nagemeten voordat hij ze
+rechtzette.
+
+**Wat er open bleef.** Twee dubbele nummers in `bevindingen.md` - `## 9.` en `## 14.`
+staan elk twee keer, boven vier verschillende bevindingen - met ongeveer dertig
+verwijzingen op nummer in `onderzoek/`. Hernummeren raakt die verwijzingen, dus dat is een
+vormkeuze en geen meting; voorgelegd aan de vakdeskundige. Verder de tegenspraak tussen
+`loop.md` r113 en de sectie *Buiten een werkitem* over de rondelimiet, en zijn drie
+aanbevelingen; die staan als invoer op #203.
+
+**Zonder Bash.** Deze rol heeft Read, Glob en Grep en geen shell, dus geen commit, hash of
+GitHub-draad is door hem geverifieerd. Dat staat in zijn rapport onder *niet vastgesteld*
+en niet als nul. Wat hij wél kon toetsen - of een maatregel in `.claude/` is geland - is de
+toets waar deze ronde om begon.

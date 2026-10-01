@@ -580,10 +580,19 @@ gemeten criterium, correct uitgevoerd, en het ding zelf niet nagekeken.
 van de drie. Het is een tijdigheidsprobleem - twee waren al gemerged, en een besluit
 in `curriculum/` is precies het soort tekst waar volgende rollen op gaan staan.
 
-**Waarom de bestaande regel niet volstaat.** *Wie het zelf doet, laat het lezen*
-staat al in `CLAUDE.md` en in `/orc`, en is **zeventien van de zeventien keer niet
-nageleefd** (`metingen.md`, *Werk buiten de lus om*). Dat is bevinding 9 nog eens:
-een regel is geen borging.
+**Waarom de bestaande regel niet volstaat.** *Wie het zelf doet, laat het lezen* staat in
+`CLAUDE.md`, en is **elf van de vijftien keer niet nageleefd** (`metingen.md`, *Werk buiten
+de lus om*). Dat is bevinding 9 nog eens: een regel is geen borging.
+
+> Twee getallen in deze alinea zijn op 1 oktober 2026 rechtgezet, bij de onderzoeksronde.
+> Er stond *"zeventien van de zeventien keer niet nageleefd"*; nageteld draagt de tabel
+> achttien rijen waarvan drie paren hetzelfde werk beschrijven, dus vijftien ingrepen,
+> waarvan drie achteraf wél een lezer kregen en bij één de vraag niet van toepassing is.
+> En er stond dat de regel *"al in `CLAUDE.md` en in `/orc`"* staat; `/orc` en de rest van
+> `.claude/` geven nul treffers op die regel, geijkt op de ene treffer in `CLAUDE.md`.
+> De strekking van deze bevinding verandert daardoor niet - elf van de vijftien is nog
+> steeds het merendeel - maar zij rustte op een ongeteld getal en een vindplaats die niet
+> bestaat, en dat is precies waar zij zelf over gaat.
 
 En een bevinding hier opschrijven verandert dat niet. Gemeten: van alle
 roldefinities verwijzen alleen `vakdeskundige.md` en `onderzoeker.md` naar
