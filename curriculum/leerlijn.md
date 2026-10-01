@@ -123,44 +123,46 @@ over alle cellen, en bij een `.md`-bestand het aantal woorden van het hele
 bestand. Een ruwe maat, maar de verhoudingen zijn te groot om aan de meetmethode
 te liggen.
 
-Alleen de rijen van week 4 en week 7 staan op de huidige stand; beide zijn bij #102
-hermeten. De vier andere rijen dateren van de herziening van hun eigen week, en
-alle vier wijken af van wat `problems/` nu bevat. Hermeten bij de herziening van
-week 5.
+Alle zes rijen zijn in één ronde hermeten, op 1 oktober 2026 bij #346, op commit
+`5e4bd0ba`. Week 5 telt vijf bestanden en niet drie: `5_mandelbrot_opstap` en
+`5_mandelbrot_basis` staan in `source/_toc.yml` onder de opgaven van die week en
+heten in `source/course/week_5.md` verplichte kernopgaven, dus ze tellen bij opstap
+en basis mee. De rijen van week 4 en week 7 komen op dezelfde getallen uit als
+bij #102 en dienden hier als ijkpunt voor de meetmethode.
 
 | Week | opstap | basis | extra | Totaal |
 |---|---|---|---|---|
-| 2 | 1.160 | 1.112 | 487 | **2.759** |
-| 3 | 242 | 1.143 | 176 | **1.561** |
+| 2 | 1.161 | 1.119 | 510 | 2.790 |
+| 3 | 252 | 1.326 | 741 | 2.319 |
 | 4 | 678 | 1.066 | 1.048 | 2.792 |
-| 5 | 674 | 2.940 | **5.354** | 8.968 |
-| 6 | 365 | 1.353 | 309 | 2.027 |
+| 5 | 958 | 3.224 | 389 | 4.571 |
+| 6 | 396 | 1.386 | 312 | 2.094 |
 | 7 | 316 | 464 | 447 | 1.227 |
-| **Totaal** | **3.435** | **8.078** | **7.821** | 19.334 |
+| **Totaal** | **3.761** | **8.585** | **3.447** | 15.793 |
 
-Drie dingen vallen op, met één voorbehoud.
+Drie dingen vallen op.
 
-**Basis en extra liggen vlak bij elkaar.** Extra is 7.821 woorden, 40,5% van het
-materiaal, en daarmee 257 woorden kleiner dan basis. Hier stond eerder *"Het
-zwaartepunt ligt in de optionele laag"*: extra was 48% van het materiaal en een
-derde groter dan basis. Die scheefheid is met de hermeting van week 7 bij #102
-verdwenen, want de extra van die week meet 447 woorden in plaats van de 3.713 die
-hier stond. In de extra zitten Mandelbrot, Game of Life, Pi met pijltjes en
-tekst-naar-beeld: precies de opgaven waarin een probleem stap voor stap wordt
-opgebouwd. Zie [uitgangspunten.md](uitgangspunten.md) voor de achtergrond.
+**Extra is de kleinste van de drie lagen.** Extra meet 3.447 woorden, 21,8% van het
+materiaal: 5.138 minder dan basis en 314 minder dan opstap. Hier stond eerder *"Het
+zwaartepunt ligt in de optionele laag"*, met 48% en een derde meer dan basis; bij de
+hermeting van week 7 voor #102 werd dat 40,5% en 257 woorden minder dan basis, en na
+deze volledige hermeting is het 21,8%. Het verschil zit in week 5 en week 7: hun
+extra meet 389 en 447 woorden, waar 5.354 en 3.713 stonden. In de extra zitten
+Mandelbrot, Game of Life, Pi met pijltjes en tekst-naar-beeld: precies de opgaven
+waarin een probleem stap voor stap wordt opgebouwd. Of het zwaartepunt hier hoort te
+liggen, beslist deze meting niet; die vraag ligt bij de vakdeskundige. Zie
+[uitgangspunten.md](uitgangspunten.md) voor de herverdeling die hierachter zit - de
+tabel daar is van 1 september 2026 en beschrijft de toestand ervóór.
 
-**Het voorbehoud: deze verhouding rust op vier rijen die achterlopen.** Alleen week
-4 en week 7 zijn op de huidige stand hermeten, en de vier andere rijen wijken alle
-vier af van wat `problems/` nu bevat. Zolang die niet zijn hermeten is de verhouding
-tussen de niveaus een indicatie en geen vaststelling; wie er een besluit op wil
-bouwen, hermeet eerst die vier.
-
-**Week 3 is na week 7 de dunste week van de cursus.** Met 1.561 woorden is ze bijna
-zes keer kleiner dan week 5, terwijl ze functies draagt: P5, P6 en A2, samen **30%**
-van het tentamen. Hier stond eerder *"P5 en A2, samen 20%"*; dat liet P6 weg,
-terwijl die uitkomst in de tabel hierboven wel bij week 3 staat. Nagemeten tegen
-[leeruitkomsten.md](leeruitkomsten.md): P5 10%, P6 10%, A2 10%, P7 zonder weging.
-Rechtgezet bij #198 op 11 september 2026.
+**Week 3 is de derde week van onder af.** Onderaan staan week 7 (1.227) en week 6
+(2.094), dan week 3 met 2.319 woorden, ongeveer de helft van week 5 (4.571). Hier
+stond dat ze na week 7 de dunste week was en bijna zes keer kleiner dan week 5, en
+dat rustte op de rijen van week 3, 5 en 6 die toen achterliepen. Week 3 draagt
+functies: P5, P6 en A2, samen **30%** van het tentamen. Hier stond eerder *"P5 en A2,
+samen 20%"*; dat liet P6 weg, terwijl die uitkomst in de PGM1-tabel bovenaan wel bij
+week 3 staat. Nagemeten tegen [leeruitkomsten.md](leeruitkomsten.md): P5 10%, P6 10%,
+A2 10%, P7 zonder weging. Rechtgezet bij #198 op 11 september 2026. Wat deze omvang
+bij dat gewicht betekent, beslist deze meting niet; die vraag ligt bij #351.
 
 **De structuur is compleet.** Twee beweringen die hier eerder stonden zijn
 nagemeten en bleken onjuist. Week 7 heeft wél een opstap, sinds commit
