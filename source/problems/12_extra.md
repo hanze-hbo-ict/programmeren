@@ -84,7 +84,7 @@ class Board:
         """Maak een leeg bord met de gegeven breedte en hoogte."""
         self._width = width
         self._height = height
-        self._data = [[" "] * width for row in range(height)]
+        self._data = [[" "] * width for _ in range(height)]
 
         # een constructor geeft niets terug
 
