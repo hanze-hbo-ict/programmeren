@@ -2350,3 +2350,84 @@ groen, en een schone build met `Build finished`, 0 `WARNING:`, 0 `ERROR` en 103
 omgevingsmeldingen van `IPKernelApp`. De gerenderde hint heeft de nieuwe volgorde.
 Geen onafhankelijke lezing van deze orkestratorcommit: de opdracht was verplaatsen
 en dan mergen, en de zin zelf was al beoordeeld.
+
+## Werkitem #102 - PGM1 week 7: het ontbrekende werkcollege en de opstapuitwerking
+
+Route: LUS, M, procesversie `c650a8b5`. Gecombineerde verkenner/ontwerper, mens, auteur,
+twee beoordelaars (eerstejaars en onderwijskundige). Geen aparte verkenner en geen
+verhelderaar; de tweede beoordelaar kwam erbij omdat criterium 5 over een uitwerking gaat en
+de eerstejaars die niet mag zien. PR #344, merge `ac196ec6`.
+
+Tweede route over dit werkitem. De eerste sloot met PR #315; wat openbleef was niet het
+resultaat daarvan maar twee dingen die nooit in de plaats kwamen toen er materiaal wegging.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator (C1, C4-voorlegging, C7, poorten, PR) | niet beschikbaar | niet beschikbaar | C1 LUS/M; tweemaal C7 mechanisch |
+| curriculumontwerper (C2) | 113.457 | 8 min 49 s | C2 met drie onderdelen, 9 criteria, 2 voorleggingen |
+| auteur (C5) | 253.563 | 33 min 51 s | C5; 9 bestanden, +753/-23 |
+| beoordelaar-eerstejaars (ronde 1) | 83.541 | 8 min 19 s | AKKOORD MET PUNTJES, 0 blokkades, 8 puntjes |
+| beoordelaar-onderwijskundige (ronde 1) | 135.131 | 14 min 55 s | **BLOKKEER**, 1 blokkade, 9 puntjes |
+| auteur (herstel) | 183.621 | 22 min 16 s | B1 opgeheven, 11 puntjes verwerkt; 4 bestanden, +83/-50 |
+| beoordelaar-eerstejaars (herstel) | 78.021 | 6 min 46 s | AKKOORD MET PUNTJES, 0 blokkades, 4 puntjes |
+| beoordelaar-onderwijskundige (herstel) | 120.050 | 10 min 40 s | AKKOORD MET PUNTJES, 0 blokkades, 5 puntjes |
+| **totaal agents** | **967.384** | | |
+
+Herstelstand: oplevering 1 van 1 gebruikt. Geen tegenspraak tussen de oordelen, dus geen
+hoofdredacteur. De budgetreactie van #203 was niet uitvoerbaar: het C1 bevestigde geen
+referentietotaal, dus er is geen 70%-grens en geen besparingspercentage vast te stellen.
+
+**De blokkade kwam uit een gevolg en niet uit een criterium.** De auteur hermat onder
+criterium 10 de woordenrij van week 7 van 5.355 naar 1.227, en daarmee werd een conclusie
+tien regels hoger in `curriculum/leerlijn.md` onwaar: *"Extra is 48% van het materiaal en een
+derde groter dan basis"* was 40,5% geworden en 257 woorden kleiner dan basis. De
+onderwijskundige vond het en bakende de reparatie zelf af - de getallen volgen mechanisch uit
+de tabel en zijn werk voor de auteur, of de conclusie nog geldt is een curriculumuitspraak.
+Die afbakening is overgenomen en de vakdeskundige besliste over de conclusie.
+
+**De auteur vond in de herstelronde een fout die beide beoordelaars hadden gemist, en het was
+zijn eigen.** `leerlijn.md` zei *"Week 3 is de dunste week van de cursus"*; door zijn eigen
+hermeting stond week 7 op 1.227 tegen 1.561 voor week 3. Hij meldde het in plaats van het
+stil mee te nemen, en veranderde alleen het rangwoord. Dezelfde zin staat ook in
+`curriculum/uitgangspunten.md`, buiten de reparatiescope; dat is #351 geworden.
+
+**Drie partijen toetsten dezelfde zin onafhankelijk op de machine.** De zin in cel 14 van het
+werkcollege, die uitlegt waarom van onder naar boven de regel realiseert, is door de auteur
+(4.944 borden), de eerstejaars (5.036) en de onderwijskundige (5.008) elk tegen een eigen
+implementatie van de regel gelegd, alle drie met nul afwijkingen en alle drie geijkt op de
+foute variant, die op respectievelijk 3.663, 3.875 en 3.866 borden afwijkt. De
+onderwijskundige gaf er een analytisch bewijs bij.
+
+**Drie van de negen resterende puntjes zijn door de herstelronde zelf veroorzaakt.** Het
+zwaarste vonden beide beoordelaars onafhankelijk: de cel heet *"Het plan: vier
+deelproblemen"* en de nieuwe denkopdracht eronder vraagt de student er drie te noemen. De
+herstelgrens was op, dus ze blijven zichtbaar op de PR staan.
+
+**IJkingen die reproduceerbaar waren.** De auteur ijkte elke telling op de oude waarde vóór
+hij de nieuwe opschreef, en de onderwijskundige reproduceerde ze alle drie exact: 672 op
+`a20337e9`, 4 en 1 op `92df099e^`, 6 in `lectures/8a_datastructuren.ipynb`. Beide
+beoordelaars melden daarnaast dat hun eigen eerste zoekpatroon een fout getal of een nul gaf
+en dat alleen de ijking dat ving.
+
+**Poorten.** Driemaal gedraaid: door de auteur na elke oplevering en onafhankelijk door de
+orkestrator op `9b99bfb7` en op `42b363d5`. Pre-commit zes van zes; `build succeeded.` met
+nul Sphinx-waarschuwingen en nul fouten. De 106 `WARNING`-regels in het log zijn alle 106
+omgevingsmeldingen van `IPKernelApp`, één per kernelstart. Niet vastgesteld, bij alle drie de
+runs: de basislijn van dat aantal, want er is geen log van vóór de wijziging.
+
+**Isolatie.** De onderwijskundige stelde vast dat alle rollen in deze route dezelfde
+scratchpad van de orkestrator delen. Hij las daar uitsluitend de twee buildlogs en het
+poortverslag en opende de artefacten van de andere rollen uitdrukkelijk niet, om zijn blinde
+beoordeling niet te breken. Zie de bevinding daarover in
+[bevindingen.md](bevindingen.md).
+
+**Omgeving.** De lokale `master` liep 43 commits achter `origin/master`, en daar is tegen
+gemeten vóór deze route begon. Zie de bevinding
+*De orkestrator meet tegen een stilstaande lokale master* in
+[bevindingen.md](bevindingen.md).
+
+**Wat deze route openliet.** #341 (de handleiding van week 7, niet langer geblokkeerd maar
+met een aanleiding die niet klopt), #345 (vastleggen of een uitwerking een gelabelde foute
+variant mag dragen), #346 (de woordentabel volledig hermeten), #351 (twee achterhaalde
+beweringen over week 3). En een voorwaarde bij het sluiten: `conventies/codeconventies.md`
+verwijst met naam naar #102 als de plek waar de `.append()`-conventie wordt rechtgezet.
