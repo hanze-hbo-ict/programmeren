@@ -2639,7 +2639,8 @@ Route: LUS, XS, procesversie `b61acbfe`. Auteur, één beoordelaar (redacteur). 
 |---|---|---|---|
 | orkestrator (C1, PR, C5-plaatsing) | niet beschikbaar | niet beschikbaar | C1 LUS/XS |
 | auteur | 96.168 | 6 min 48 s | C5; 2 bestanden, +20/-8 |
-| beoordelaar-redacteur | **nog niet beschikbaar** | **nog niet beschikbaar** | **liep nog bij sessie-einde** |
+| beoordelaar-redacteur | 119.467 | 12 min 48 s | AKKOORD MET PUNTJES, 0 blokkades, 6 puntjes |
+| **totaal agents** | **215.635** | | |
 
 **Wat er stond.** Een besluitalinea in `curriculum/uitgangspunten.md` zei dat week 3 de dunste
 week van de cursus is en P5 en A2 draagt, samen 20% van het tentamen. Beide helften onjuist: de
@@ -2660,5 +2661,26 @@ in plaats van open. Hij raakte het niet aan en legde het voor, met de vaststelli
 dragende reden van het besluit niet de superlatief was maar *"alles wat er lag is elders
 terechtgekomen"*, en dat die overeind staat.
 
-**Niet vastgesteld bij sessie-einde:** de uitkomst van de beoordeling, het verbruik van de
-redacteur, en of de merge is gedaan. Zie PR #357.
+**De beoordeling kwam alsnog binnen vóór sessie-einde.** Alle vier criteria gehaald, nul
+blokkades. De redacteur reproduceerde de zwaarste bewering - dat er geen vierde kopie is - met
+een eigen instrument, eigen patronen en een eigen ijking, inclusief een patroon dat de auteur
+niet had gebruikt. Hij bevestigde ook dat niet-aanraken van de achterhaalde premisse de juiste
+keuze was.
+
+**Een procesfout van de orkestrator, door de rol gevangen.** Halverwege die beoordeling zette de
+orkestrator de werkkopie op branch `meting-346-351` om deze metingen vast te leggen. Daardoor
+stond `curriculum/` bij de beoordelaar twee regels korter dan in de commit die hij beoordeelde
+en schoven alle regelnummers onder r37 met twee. Hij ving het op een regelnummer dat niet meer
+rijmde, pakte de hele boom van `8411c334` uit met `git show`, controleerde de md5 tegen het
+object en draaide zijn volledige meetbatterij opnieuw; de uitkomsten waren identiek.
+
+Dat het goed afliep is zijn verdienste en niet die van de inrichting. Een beoordelaar leest de
+werkkopie, en de orkestrator die hem beoordeelt mag die niet onder hem omzetten. Met een aparte
+worktree per rol was dit niet gebeurd. Dit raakt dezelfde familie als de bevinding over de
+gedeelde scratchpad van 1 oktober: de isolatie die `loop.md` voor een beoordeling eist hangt aan
+de discipline van de rol en niet aan de inrichting.
+
+**Niet vastgesteld bij sessie-einde:** of de merge van PR #357 is gedaan, en de zes puntjes van
+de redacteur zijn niet verwerkt. Twee daarvan horen in een volgende ronde mee: de precedentclaim
+voor de vorm van de rectificatie klopt niet, en `uitgangspunten.md` draagt nu een tweede
+verwijzing naar #356 die #356 niet kent. Dat laatste is op #356 gemeld.
