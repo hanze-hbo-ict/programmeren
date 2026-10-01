@@ -433,10 +433,20 @@ doen dat allemaal. Met recursie zijn dus ook de functie-opgaven meeverhuisd naar
 PGM2.
 
 Daardoor heeft **PGM1 week 3 geen inhoudelijke opgave meer**, ook niet in het
-referentiemateriaal: alles wat er lag is elders terechtgekomen. Het is de dunste
-week van de cursus terwijl ze P5 en A2 draagt, samen 20% van het tentamen. Dat is
-geen slordigheid maar een gevolg van dit besluit, en het betekent dat hier nieuw
-materiaal geschreven moet worden in plaats van teruggehaald.
+referentiemateriaal: alles wat er lag is elders terechtgekomen. Zij is na week 7 en
+week 6 de derde week van onder af, en zij draagt P5, P6 en A2, samen **30%** van het
+tentamen; de woordentabel staat in [leerlijn.md](leerlijn.md). Dat is geen
+slordigheid maar een gevolg van dit besluit, en het betekent dat hier nieuw materiaal
+geschreven moet worden in plaats van teruggehaald.
+
+Hier stond *"Het is de dunste week van de cursus terwijl ze P5 en A2 draagt, samen
+20% van het tentamen"*; beide helften waren onjuist. De tentamenbijdrage liet P6 weg
+en is bij #198 op 11 september 2026 in [leerlijn.md](leerlijn.md) al rechtgezet naar
+30%, nagemeten tegen [leeruitkomsten.md](leeruitkomsten.md); deze kopie is toen
+gemist. De superlatief rustte op een woordentabel waarvan vier rijen achterliepen, en
+de volledige hermeting bij #346 op 1 oktober 2026 zet week 3 derde van onder.
+Rechtgezet bij #351 op 1 oktober 2026. Wat deze omvang bij dit tentamengewicht
+betekent, ligt bij #356.
 
 Twee dingen die er wél uit volgen:
 
