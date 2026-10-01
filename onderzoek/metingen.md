@@ -2243,3 +2243,40 @@ Welke telling geldt, stelt de vakdeskundige vast (bevinding van 23 september).
   de vakdeskundige: *"Aan de letter van het besluit is voldaan. Of het ook aan de bedoeling
   voldoet, is een oordeel van de vakdeskundige, en ik heb de afweging niet opnieuw gemaakt."* De vakdeskundige besliste: *"Nee, verder weg van
   het tentamen."*
+
+## Werkitem #327 - `_` voor de ongebruikte lusvariabele in Board (PGM2 week 5)
+
+Kleine route (XS): auteur en twee beoordelaars, zonder ontwerp, verkenner of
+verhelderaar. Het inhoudelijke besluit lag al vast (C4 VP7 van #326). Procesversie:
+`9238131`. Opgeleverd in PR #347 (commit `5421e0b`): `row` wordt `_` in
+`source/problems/12_extra.md` r87 en de spiegelregel in
+`source/solutions/12_extra.ipynb`; `curriculum/leerlijn.md` r558 meldt het besluit
+als uitgevoerd.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator (C1, PR, C7) | niet beschikbaar | niet beschikbaar | C1 LUS/XS; C7 mechanisch |
+| auteur | 65.346 | 3 min 22 s | C5; 3 bestanden, +3/-3 |
+| beoordelaar-eerstejaars | 18.130 | 24 s | AKKOORD, 0 blokkades, 1 puntje |
+| beoordelaar-redacteur | 25.685 | 38 s | AKKOORD MET PUNTJES, 0 blokkades, 2 puntjes |
+| **totaal agents** | **109.161** | | |
+
+Geen herstelronde: oplevering 0 van 1, ontwerp 0 van 1. Geen tegenspraak, dus geen
+hoofdredacteur.
+
+**Wat de orkestrator zelf mat.** De auteur bekeek van de build alleen de staart en
+schreef "nul waarschuwingen" als afgeleid. De orkestrator herhaalde de schone build
+met volledig log: `build succeeded`, 103 regels `[IPKernelApp] WARNING | Kernel is
+running over TCP without encryption` (omgevingsmelding), 0 andere `WARNING`/`ERROR`.
+De gebouwde pagina's tonen `for _ in range(height)` en niet meer `for row in
+range(height)`.
+
+**Omgeving.** GitHub GraphQL was niet beschikbaar en de GitHub-MCP verbond niet bij
+de start, dus Status op project 4 is niet gezet; de stap staat in de C1-reactie.
+Issues, PR en reviews liepen via de REST-API.
+
+**Open punten voor de vakdeskundige** (niet aangeraakt): ongebruikte `i` in
+`source/solutions/12_basis.ipynb` (4x), hetzelfde comprehension-patroon in
+`source/projects/picobot.md:280` en `source/solutions/14_extra.ipynb:42`, en de
+tegenwoordige tijd in `curriculum/leerlijn.md` r558 kolom 3. Merge-besluit: nog niet
+genomen.
