@@ -1583,3 +1583,108 @@ open vraag opschrijft, in `curriculum/`, `conventies/` en de gesloten werkitems 
 beslist is, en noem in de opdracht aan een rol de vindplaats en niet alleen de conclusie.**
 Zolang die regel alleen hier staat, hangt hij aan wie deze bevinding toevallig leest, en dat is
 precies de afhankelijkheid die de bevinding beschrijft.
+
+## De orkestrator meet tegen een stilstaande lokale master - 1 oktober 2026
+
+**Wat er gebeurde.** Drie artefacten van 30 september zijn gemeten tegen een tak die 43
+commits achterliep. De lokale `master` stond op `79ddba40` van 26 september 22:46;
+`origin/master` stond op dat moment al op `a83bd990` van 30 september 17:33. Het C1 bij #102
+noemt `79ddba40` bovendien *"`origin/master`"*, en dat was het niet.
+
+- **Werkitem #341** noemt in zijn aanleiding *"`handleidingen/` telt zes bestanden"* en vraagt om
+  *"`handleidingen/week_7.md`, nieuw"*. Dat bestand bestond al: 341 regels, commit
+  `1f207a89`, gemerged als PR #320 op 26 september 23:36, vier dagen vóór het werkitem werd
+  geschreven. `79ddba40` is precies de commit vóór die merge.
+- **De heropening van #102** en **het C1 daaronder** zijn tegen dezelfde boom gemeten. Hun
+  twee dragende gaten hielden bij hermeting wel stand - week 7 is nog steeds de enige week
+  van veertien zonder bestand in `source/practicals/`, en `source/solutions/7_opstap.ipynb`
+  ontbrak werkelijk - maar dat is geluk en geen methode.
+
+**Waarom dit een patroon is.** Het is niet de eerste keer, en het verschil met de vorige keer
+is het punt. De registratie van #336 in [metingen.md](metingen.md) noteert onder *Omgeving*
+dat de lokale `master` 86 commits achterliep en dat daardoor het werkcollege lokaal ontbrak -
+en erachter staat *"Bijgewerkt met fast-forward vóór C1"*. Daar is de verouderde tak dus
+gezien en rechtgezet voordat er gemeten werd. Bij #102 is hij niet gezien. Dezelfde
+omgevingsfout, de ene keer gevangen en de andere keer niet, en geen van beide keren een regel
+geworden - bij #336 stond het er als omgevingsfeit, en bij #102 pas hier als bevinding. In deze
+repo wordt via
+pull requests op GitHub gemerged en volgt de lokale tak niet mee; een meting tegen de
+werkkopie meet dan de stand van de laatste keer dat iemand `git pull` deed.
+
+Het verschil met een gewone meetfout is dat deze fout **werk uitvindt dat al gedaan is**. Een
+gat dat je op een oude boom meet, is soms geen gat. Dat is de keerzijde van de bevinding
+*De orkestrator meet een gat en behandelt het als nieuw* (30 september): daar was het gat het
+gevolg van een besluit, hier van een merge die de meter niet had gezien.
+
+**Wat het veranderde.** Bij #102 staat de meetbasis rechtgezet als aparte reactie, met de
+twee gaten hermeten op `95b3743a` en alle vindplaatsen uit het C1 opnieuw nagelopen; één
+regelnummer was verschoven. Bij #341 is gemeten dat het bestand bestaat en is het werkitem
+voorgelegd aan de vakdeskundige, omdat de aanleiding niet klopt en het daarmee een besluit
+vraagt en niet alleen het opheffen van een blokkade.
+
+**Voorstel voor de instructies, een procesbesluit voor de vakdeskundige: meet nooit tegen
+`master` of tegen de werkkopie zonder eerst `git fetch origin`, en noem als meetbasis de
+korte hash van de commit van `origin/master` die je werkelijk hebt gelezen.** Een C1 of
+werkitem dat *"origin/master"* zegt zonder hash is niet te controleren, en daardoor waren deze
+drie artefacten pas een dag later vindbaar fout. Dit voorstel staat als invoer voor de evaluatie
+op #203; de twee rechtzettingen die het al opleverde staan op #102 en #341.
+
+## Rollen in één route delen de scratchpad van de orkestrator - 1 oktober 2026
+
+**Wat er gebeurde.** Bij de beoordeling van #102 stelde de onderwijskundige vast dat de
+scratchpad die hij voor de buildlogs kreeg aangewezen dezelfde map is waarin de orkestrator de
+artefacten van alle andere rollen van die route had neergezet: het volledige C2, het C5, het
+C4 en de C6 van de andere beoordelaar. Hij meldde het zelf, en schreef erbij dat hij er
+uitsluitend de twee buildlogs en het poortverslag had gelezen en de rest uitdrukkelijk niet
+had geopend, om zijn blinde beoordeling niet te breken.
+
+**Waarom het ertoe doet.** `loop.md` eist dat iedere onafhankelijke beoordeling in een verse
+context begint: geen maaktranscript, geen afwegingen uit het uitgebreide C5, en bij de eerste
+beoordeling geen andere oordelen. Die eis werd hier gedragen door de discipline van de rol en
+niet door de inrichting. Een beoordelaar die de buildlogs *moet* lezen om criterium 7 te
+toetsen, krijgt de rest in dezelfde map mee; dat de isolatie standhield is hier vastgesteld
+voor één rol in één ronde, en het is geen controle.
+
+**Wat het veranderde.** Nog niets. Het is hier opgeschreven omdat de rol het vond en omdat
+het zonder vastlegging onzichtbaar blijft: in de artefacten staat alleen dat de isolatie
+standhield, niet dat zij van goede wil afhing.
+
+**Voorstel voor de instructies, een procesbesluit voor de vakdeskundige: geef een rol alleen
+de bestanden die hij nodig heeft, op een pad dat niet ook de artefacten van andere rollen
+bevat.** Een aparte map per overdracht is genoeg; waaraan je zou zien dat het werkt is dat
+een beoordelaar geen afweging meer hoeft te melden over wat hij niet heeft geopend. Dit voorstel
+staat als invoer voor de evaluatie op #203.
+
+**Het kwam in de ronde erna meteen terug.** De redacteur die deze registratie las, kreeg
+dezelfde map aangewezen en vond daar de artefacten van alle rollen van deze route, inclusief
+de twee C7's die hij als bron moest gebruiken. Hij meldde dat bij één patroonzoektocht twee
+van die bestanden hebben meegedraaid. Twee rollen, twee rondes, dezelfde toestand, allebei
+door de rol zelf gemeld en niet door de inrichting gevangen.
+
+## Een regelafbreking maakt een zoekpatroon blind - 1 oktober 2026
+
+**Wat er gebeurde.** Vier keer op één dag gaf een zoekpatroon nul omdat de gezochte zin over
+twee regels liep, in bestanden die rond 92 tekens afbreken.
+
+- De onderwijskundige zocht bij #102 vijf gewijzigde passages terug in de gerenderde HTML en
+  kreeg drie valse nullen voordat hij de regelafbreking doorhad. Hij loste het op door de
+  HTML plat te slaan vóór het zoeken, en noteerde het in zijn C6.
+- De orkestrator zocht in `curriculum/uitgangspunten.md` naar *"dunste week van de cursus"* en
+  kreeg nul, terwijl de zin er staat: *"Het is de dunste"* eindigt de ene regel en *"week van
+  de cursus"* begint de volgende. Met de regels plat geslagen is de treffer er wel.
+
+**Waarom dit geen variant is van een bekende bevinding.** *Een zoekpatroon uit bekende
+formuleringen vindt alleen bekende formuleringen* (24 september) gaat over een patroon dat te
+nauw is geformuleerd. Hier is het patroon juist exact goed en is het **bestand** anders
+opgemaakt dan de zoeker aanneemt. De ijkregel uit `CLAUDE.md` vangt het alleen als je ijkt op
+een vindplaats die zelf over twee regels loopt, en dat is precies wat niemand doet: je ijkt op
+iets korts dat je zeker weet, en dat staat op één regel.
+
+**Wat het veranderde.** De vindplaats in `uitgangspunten.md` is met een geijkt patroon
+bevestigd en is #351 geworden; zonder die tweede poging was dat werkitem er niet.
+
+**Voorstel voor de instructies, een procesbesluit voor de vakdeskundige: zoek een zin van meer
+dan een paar woorden nooit regelgewijs.** Sla de regels plat vóór het zoeken, of zoek op een
+fragment dat zeker binnen één regel valt. En ijk een nul op een vindplaats die net zo lang is
+als wat je zoekt, niet op een kort woord dat overal past. Dit voorstel staat als invoer voor de
+evaluatie op #203.
