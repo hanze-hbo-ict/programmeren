@@ -2360,6 +2360,9 @@ de eerstejaars die niet mag zien. PR #344, merge `ac196ec6`.
 
 Tweede route over dit werkitem. De eerste sloot met PR #315; wat openbleef was niet het
 resultaat daarvan maar twee dingen die nooit in de plaats kwamen toen er materiaal wegging.
+Het C2 leverde negen acceptatiecriteria, waarvan twee afgeleid; het C4 voegde er een tiende aan
+toe over twee verouderde getallen in `curriculum/leerlijn.md`. Verderop staat *criterium 10*
+daarom naast een tabel die negen noemt.
 
 | Rol | Tokens | Duur | Uitkomst |
 |---|---|---|---|
@@ -2375,7 +2378,11 @@ resultaat daarvan maar twee dingen die nooit in de plaats kwamen toen er materia
 
 Herstelstand: oplevering 1 van 1 gebruikt. Geen tegenspraak tussen de oordelen, dus geen
 hoofdredacteur. De budgetreactie van #203 was niet uitvoerbaar: het C1 bevestigde geen
-referentietotaal, dus er is geen 70%-grens en geen besparingspercentage vast te stellen.
+referentietotaal, dus er is geen 70%-grens en geen besparingspercentage vast te stellen. Dat is
+de tweede keer: `onderzoek/203-proef.md` r107-112 noteert bij de eerste proef al dat het
+referentietotaal vóór de start bevestigd had moeten zijn en dat de budgetreactie bij #276 niet
+is uitgevoerd. Of daar een regel in `203-proef.md` of een eigen bevinding bij hoort, is een
+procesbesluit en ligt bij de vakdeskundige.
 
 **De blokkade kwam uit een gevolg en niet uit een criterium.** De auteur hermat onder
 criterium 10 de woordenrij van week 7 van 5.355 naar 1.227, en daarmee werd een conclusie
@@ -2383,7 +2390,17 @@ tien regels hoger in `curriculum/leerlijn.md` onwaar: *"Extra is 48% van het mat
 derde groter dan basis"* was 40,5% geworden en 257 woorden kleiner dan basis. De
 onderwijskundige vond het en bakende de reparatie zelf af - de getallen volgen mechanisch uit
 de tabel en zijn werk voor de auteur, of de conclusie nog geldt is een curriculumuitspraak.
-Die afbakening is overgenomen en de vakdeskundige besliste over de conclusie.
+Die afbakening is overgenomen. De vakdeskundige besloot dat kop en conclusie naar de tabel
+worden herschreven; of het zwaartepunt inhoudelijk in de optionele laag hoort te liggen bleef
+open en wordt gedragen door #346.
+
+**Dat poortbesluit stond eerst nergens.** Het is aan de auteur meegegeven als besluit van de
+vakdeskundige zonder dat het op GitHub was vastgelegd, en de redacteur die deze registratie las
+vond een bewering zonder bron en blokkeerde daarop. Het staat nu als C4-aanvulling op PR #344,
+achteraf. Volgens `CLAUDE.md` was het tot dat moment niet genomen. Het is de spiegel van de
+bevinding *De orkestrator meet een gat en behandelt het als nieuw*: daar werd een vastgelegd
+besluit niet aan een rol genoemd, hier werd een niet-vastgelegd besluit wel aan een rol
+genoemd.
 
 **De auteur vond in de herstelronde een fout die beide beoordelaars hadden gemist, en het was
 zijn eigen.** `leerlijn.md` zei *"Week 3 is de dunste week van de cursus"*; door zijn eigen
@@ -2391,8 +2408,9 @@ hermeting stond week 7 op 1.227 tegen 1.561 voor week 3. Hij meldde het in plaat
 stil mee te nemen, en veranderde alleen het rangwoord. Dezelfde zin staat ook in
 `curriculum/uitgangspunten.md`, buiten de reparatiescope; dat is #351 geworden.
 
-**Drie partijen toetsten dezelfde zin onafhankelijk op de machine.** De zin in cel 14 van het
-werkcollege, die uitlegt waarom van onder naar boven de regel realiseert, is door de auteur
+**Drie partijen toetsten dezelfde zin onafhankelijk op de machine.** De zin in de slotsectie
+*Wat je hier hebt gedaan* van het werkcollege, die uitlegt waarom van onder naar boven de regel
+realiseert, is door de auteur
 (4.944 borden), de eerstejaars (5.036) en de onderwijskundige (5.008) elk tegen een eigen
 implementatie van de regel gelegd, alle drie met nul afwijkingen en alle drie geijkt op de
 foute variant, die op respectievelijk 3.663, 3.875 en 3.866 borden afwijkt. De
@@ -2409,11 +2427,11 @@ hij de nieuwe opschreef, en de onderwijskundige reproduceerde ze alle drie exact
 beoordelaars melden daarnaast dat hun eigen eerste zoekpatroon een fout getal of een nul gaf
 en dat alleen de ijking dat ving.
 
-**Poorten.** Driemaal gedraaid: door de auteur na elke oplevering en onafhankelijk door de
-orkestrator op `9b99bfb7` en op `42b363d5`. Pre-commit zes van zes; `build succeeded.` met
-nul Sphinx-waarschuwingen en nul fouten. De 106 `WARNING`-regels in het log zijn alle 106
-omgevingsmeldingen van `IPKernelApp`, één per kernelstart. Niet vastgesteld, bij alle drie de
-runs: de basislijn van dat aantal, want er is geen log van vóór de wijziging.
+**Poorten.** Viermaal gedraaid: door de auteur na elk van zijn twee opleveringen en
+onafhankelijk door de orkestrator op `9b99bfb7` en op `42b363d5`. Pre-commit zes van zes;
+`build succeeded.` met nul Sphinx-waarschuwingen en nul fouten. De 106 `WARNING`-regels in het
+log zijn alle 106 omgevingsmeldingen van `IPKernelApp`, één per kernelstart. Niet vastgesteld,
+bij alle vier de runs: de basislijn van dat aantal, want er is geen log van vóór de wijziging.
 
 **Isolatie.** De onderwijskundige stelde vast dat alle rollen in deze route dezelfde
 scratchpad van de orkestrator delen. Hij las daar uitsluitend de twee buildlogs en het
@@ -2425,6 +2443,13 @@ beoordeling niet te breken. Zie de bevinding daarover in
 gemeten vóór deze route begon. Zie de bevinding
 *De orkestrator meet tegen een stilstaande lokale master* in
 [bevindingen.md](bevindingen.md).
+
+**Ging er een beoordelaar over deze registratie?** Ja, `rol-beoordelaar-redacteur`, in een
+leesronde op PR #352, vóór een merge-voorstel. Die ronde gaf **BLOKKEER** op twee punten, beide
+terecht: het poortbesluit hierboven dat nergens was vastgelegd, en *"driemaal"* bij een
+opsomming die vier poortruns noemt. Zeven puntjes, waarvan vijf verwerkt. Op `onderzoek/` is van
+de zes pre-commit-hooks alleen `no-commit-to-master` van toepassing en een Sphinx-build raakt
+deze bestanden niet, dus die lezing was het enige net onder deze tekst.
 
 **Wat deze route openliet.** #341 (de handleiding van week 7, niet langer geblokkeerd maar
 met een aanleiding die niet klopt), #345 (vastleggen of een uitwerking een gelabelde foute

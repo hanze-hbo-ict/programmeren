@@ -1591,7 +1591,7 @@ commits achterliep. De lokale `master` stond op `79ddba40` van 26 september 22:4
 `origin/master` stond op dat moment al op `a83bd990` van 30 september 17:33. Het C1 bij #102
 noemt `79ddba40` bovendien *"`origin/master`"*, en dat was het niet.
 
-- **Werkitem #341** opent met *"`handleidingen/` telt zes bestanden"* en vraagt om
+- **Werkitem #341** noemt in zijn aanleiding *"`handleidingen/` telt zes bestanden"* en vraagt om
   *"`handleidingen/week_7.md`, nieuw"*. Dat bestand bestond al: 341 regels, commit
   `1f207a89`, gemerged als PR #320 op 26 september 23:36, vier dagen vóór het werkitem werd
   geschreven. `79ddba40` is precies de commit vóór die merge.
@@ -1600,10 +1600,13 @@ noemt `79ddba40` bovendien *"`origin/master`"*, en dat was het niet.
   van veertien zonder bestand in `source/practicals/`, en `source/solutions/7_opstap.ipynb`
   ontbrak werkelijk - maar dat is geluk en geen methode.
 
-**Waarom dit een patroon is.** Het is niet de eerste keer. De registratie van #336 in
-[metingen.md](metingen.md) noteert onder *Omgeving* dat de lokale `master` 86 commits
-achterliep en dat daardoor het werkcollege lokaal ontbrak. Daar is het als omgevingsfeit
-opgeschreven en niet als bevinding, en dus is er niets mee gebeurd. In deze repo wordt via
+**Waarom dit een patroon is.** Het is niet de eerste keer, en het verschil met de vorige keer
+is het punt. De registratie van #336 in [metingen.md](metingen.md) noteert onder *Omgeving*
+dat de lokale `master` 86 commits achterliep en dat daardoor het werkcollege lokaal ontbrak -
+en erachter staat *"Bijgewerkt met fast-forward vóór C1"*. Daar is de verouderde tak dus
+gezien en rechtgezet voordat er gemeten werd. Bij #102 is hij niet gezien. Dezelfde
+omgevingsfout, de ene keer gevangen en de andere keer niet, en geen van beide keren een regel
+geworden: het stond er als omgevingsfeit en niet als bevinding. In deze repo wordt via
 pull requests op GitHub gemerged en volgt de lokale tak niet mee; een meting tegen de
 werkkopie meet dan de stand van de laatste keer dat iemand `git pull` deed.
 
@@ -1621,8 +1624,9 @@ vraagt en niet alleen het opheffen van een blokkade.
 **Voorstel voor de instructies, een procesbesluit voor de vakdeskundige: meet nooit tegen
 `master` of tegen de werkkopie zonder eerst `git fetch origin`, en noem als meetbasis de
 korte hash van de commit van `origin/master` die je werkelijk hebt gelezen.** Een C1 of
-werkitem dat *"origin/master"* zegt zonder hash is niet te controleren, en precies dat maakte
-deze drie artefacten pas een dag later vindbaar fout.
+werkitem dat *"origin/master"* zegt zonder hash is niet te controleren, en daardoor waren deze
+drie artefacten pas een dag later vindbaar fout. Neergelegd bij de evaluatie van #203; de twee
+rechtzettingen die dit al opleverde staan op #102 en #341.
 
 ## Rollen in één route delen de scratchpad van de orkestrator - 1 oktober 2026
 
@@ -1648,6 +1652,13 @@ standhield, niet dat zij van goede wil afhing.
 de bestanden die hij nodig heeft, op een pad dat niet ook de artefacten van andere rollen
 bevat.** Een aparte map per overdracht is genoeg; waaraan je zou zien dat het werkt is dat
 een beoordelaar geen afweging meer hoeft te melden over wat hij niet heeft geopend.
+Neergelegd bij de evaluatie van #203.
+
+**Het kwam in de ronde erna meteen terug.** De redacteur die deze registratie las, kreeg
+dezelfde map aangewezen en vond daar de artefacten van alle rollen van deze route, inclusief
+de twee C7's die hij als bron moest gebruiken. Hij meldde dat bij één patroonzoektocht twee
+van die bestanden hebben meegedraaid. Twee rollen, twee rondes, dezelfde toestand, allebei
+door de rol zelf gemeld en niet door de inrichting gevangen.
 
 ## Een regelafbreking maakt een zoekpatroon blind - 1 oktober 2026
 
@@ -1674,4 +1685,5 @@ bevestigd en is #351 geworden; zonder die tweede poging was dat werkitem er niet
 **Voorstel voor de instructies, een procesbesluit voor de vakdeskundige: zoek een zin van meer
 dan een paar woorden nooit regelgewijs.** Sla de regels plat vóór het zoeken, of zoek op een
 fragment dat zeker binnen één regel valt. En ijk een nul op een vindplaats die net zo lang is
-als wat je zoekt, niet op een kort woord dat overal past.
+als wat je zoekt, niet op een kort woord dat overal past. Neergelegd bij de evaluatie van
+#203.
