@@ -123,40 +123,51 @@ over alle cellen, en bij een `.md`-bestand het aantal woorden van het hele
 bestand. Een ruwe maat, maar de verhoudingen zijn te groot om aan de meetmethode
 te liggen.
 
-Alleen de rij van week 4 is op de huidige stand hermeten (#162); de andere rijen
-dateren van de herziening van hun eigen week en lopen dus achter. Hermeten bij de
-herziening van week 5; de weken 3, 6 en 7 waren sinds de vorige meting ook
-veranderd.
+Alle zes rijen zijn in één ronde hermeten, op 1 oktober 2026 bij #346, op commit
+`5e4bd0ba`. Week 5 telt vijf bestanden en niet drie: `5_mandelbrot_opstap` en
+`5_mandelbrot_basis` staan in `source/_toc.yml` onder de opgaven van die week en
+heten in `source/course/week_5.md` verplichte kernopgaven, dus ze tellen bij opstap
+en basis mee. De rijen van week 4 en week 7 komen op dezelfde getallen uit als
+bij #102 en dienden hier als ijkpunt voor de meetmethode.
 
 | Week | opstap | basis | extra | Totaal |
 |---|---|---|---|---|
-| 2 | 1.160 | 1.112 | 487 | **2.759** |
-| 3 | 242 | 1.143 | 176 | **1.561** |
-| 4 | 672 | 1.066 | 1.048 | 2.786 |
-| 5 | 674 | 2.940 | **5.354** | 8.968 |
-| 6 | 365 | 1.353 | 309 | 2.027 |
-| 7 | 532 | 1.110 | **3.713** | 5.355 |
-| **Totaal** | **3.630** | **8.701** | **11.063** | 23.394 |
+| 2 | 1.161 | 1.119 | 510 | 2.790 |
+| 3 | 252 | 1.326 | 741 | 2.319 |
+| 4 | 678 | 1.066 | 1.048 | 2.792 |
+| 5 | 958 | 3.224 | 389 | 4.571 |
+| 6 | 396 | 1.386 | 312 | 2.094 |
+| 7 | 316 | 464 | 447 | 1.227 |
+| **Totaal** | **3.761** | **8.585** | **3.447** | 15.793 |
 
 Drie dingen vallen op.
 
-**Het zwaartepunt ligt in de optionele laag.** Extra is 48% van het materiaal en
-een derde groter dan basis. Daar zitten Mandelbrot, Game of Life, Pi met
-pijltjes en tekst-naar-beeld: precies de opgaven waarin een probleem stap voor
-stap wordt opgebouwd. Zie [uitgangspunten.md](uitgangspunten.md) voor de
-achtergrond. De scheefheid is kleiner dan bij de vorige meting, doordat basis in
-de weken 3 en 5 is gegroeid.
+**Extra is de kleinste van de drie lagen.** Extra meet 3.447 woorden, 21,8% van het
+materiaal: 5.138 minder dan basis en 314 minder dan opstap. Hier stond eerder *"Het
+zwaartepunt ligt in de optionele laag"*, met 48% en een derde meer dan basis; bij de
+hermeting van week 7 voor #102 werd dat 40,5% en 257 woorden minder dan basis, en na
+deze volledige hermeting is het 21,8%. Het verschil zit in week 5 en week 7: hun
+extra meet 389 en 447 woorden, waar 5.354 en 3.713 stonden. In de extra zitten
+Mandelbrot, Game of Life, Pi met pijltjes en tekst-naar-beeld: precies de opgaven
+waarin een probleem stap voor stap wordt opgebouwd. Of het zwaartepunt hier hoort te
+liggen, beslist deze meting niet; die vraag ligt bij de vakdeskundige. Zie
+[uitgangspunten.md](uitgangspunten.md) voor de herverdeling die hierachter zit - de
+tabel daar is van 1 september 2026 en beschrijft de toestand ervóór.
 
-**Week 3 is de dunste week van de cursus.** Met 1.561 woorden is ze bijna zes
-keer kleiner dan week 5, terwijl ze functies draagt: P5, P6 en A2, samen **30%**
-van het tentamen. Hier stond eerder *"P5 en A2, samen 20%"*; dat liet P6 weg,
-terwijl die uitkomst in de tabel hierboven wel bij week 3 staat. Nagemeten tegen
-[leeruitkomsten.md](leeruitkomsten.md): P5 10%, P6 10%, A2 10%, P7 zonder weging.
-Rechtgezet bij #198 op 11 september 2026.
+**Week 3 is de derde week van onder af.** Onderaan staan week 7 (1.227) en week 6
+(2.094), dan week 3 met 2.319 woorden, ongeveer de helft van week 5 (4.571). Hier
+stond dat ze na week 7 de dunste week was en bijna zes keer kleiner dan week 5, en
+dat rustte op de rijen van week 3, 5 en 6 die toen achterliepen. Week 3 draagt
+functies: P5, P6 en A2, samen **30%** van het tentamen. Hier stond eerder *"P5 en A2,
+samen 20%"*; dat liet P6 weg, terwijl die uitkomst in de PGM1-tabel bovenaan wel bij
+week 3 staat. Nagemeten tegen [leeruitkomsten.md](leeruitkomsten.md): P5 10%, P6 10%,
+A2 10%, P7 zonder weging. Rechtgezet bij #198 op 11 september 2026. Wat deze omvang
+bij dat gewicht betekent, beslist deze meting niet; die vraag ligt bij #351.
 
 **De structuur is compleet.** Twee beweringen die hier eerder stonden zijn
-nagemeten en bleken onjuist. Week 7 heeft wél een opstap, met dertien
-opdrachten, sinds commit `8190d95c`. En de nummering van de opstap van week 5
+nagemeten en bleken onjuist. Week 7 heeft wél een opstap, sinds commit
+`8190d95c`; die telde er toen dertien en telt er sinds de herziening van de week
+met `92df099e` vier. En de nummering van de opstap van week 5
 loopt door zonder gat; dat is ze in de hele geschiedenis van
 `source/problems/5_opstap.ipynb` geweest. Sinds de herziening van week 5 telt die
 opstap twaalf opdrachten: acht om te lezen en vier om te schrijven.
@@ -516,21 +527,22 @@ recursie, en staan de basis en de extra over algoritmen in week 4, naast Text-ID
 Sinds #335 heeft week 4 een opstap, twee basisniveaus en twee extra's over *use it
 or lose it* en `lambda`, en is Text-ID weg.
 
-**Wat er wél uit volgt: twee ontbrekende niveau-uitwerkingen.** Dat volgt niet uit
+**Wat er wél uit volgt: één ontbrekende niveau-uitwerking.** Dat volgt niet uit
 de regel hierboven maar uit het besluit *Elk opgaveniveau hoort een uitwerking te
 hebben*, dat elk **bestaand** niveau bindt en dus onafhankelijk is van welke
 niveaus een week verplicht heeft. De meting telt 43 niveau-opgaven in
-`source/problems/`, waarvan 41 een gelijknamige uitwerking in `source/solutions/`
-hebben en 2 nog niet. Dit is
-werkitem #194 en geen werk voor de herziening van dit document. In die twee
-ontbrekende uitwerkingen gaat het concreet om de opstap van PGM1 week 7 en van
-PGM2 week 1 (`7_opstap` en `8_opstap`). Hermeten bij #335: vóór #335 41, 36 en 5;
-werkitem #335 gaf de basis en de extra over algoritmen een uitwerking, verwijderde Text-ID
-(`11_extra`), en voegde `11_opstap`, `11_lambda_basis` en `11_tshirt_extra` toe,
-alle drie met uitwerking: 43, 41 en 2. Tot #335 hoorden bij de ontbrekende ook de
-drie niveaus van PGM2 week 4: de basis en de extra over algoritmen
-(`11_algoritmen_basis` en `11_algoritmen_extra`, tot #332 `10_basis` en `10_extra`)
-en de extra Text-ID (`11_extra`). Hermeten bij #332: vóór #332
+`source/problems/`, waarvan 42 een gelijknamige uitwerking in `source/solutions/`
+hebben en 1 nog niet. Dit is
+werkitem #194 en geen werk voor de herziening van dit document. Die ene
+ontbrekende uitwerking is de opstap van PGM2 week 1 (`8_opstap`). Hermeten bij
+werkitem #335: vóór #335 41, 37 en 4; #335 gaf de basis en de extra over
+algoritmen een uitwerking, verwijderde Text-ID (`11_extra`), en voegde
+`11_opstap`, `11_lambda_basis` en `11_tshirt_extra` toe, alle drie met
+uitwerking: 43, 42 en 1. Tot #335 hoorden bij de ontbrekende ook de drie niveaus
+van PGM2 week 4: de basis en de extra over algoritmen (`11_algoritmen_basis` en
+`11_algoritmen_extra`, tot #332 `10_basis` en `10_extra`) en de extra Text-ID
+(`11_extra`). Hermeten bij #102: 41, 36 en 5 werden 41, 37 en 4, want #102
+voegde de uitwerking van de opstap van PGM1 week 7 toe. Hermeten bij #332: vóór #332
 41, 33 en 8; #332 voegde uitwerkingen toe voor opstap, basis en extra van
 PGM2 week 3 en verhuisde de twee algoritmeniveaus zonder uitwerking naar week 4:
 41, 36 en 5. Tot #332 hoorden daar ook de opstap, de basis en de extra over

@@ -377,15 +377,15 @@ draait wel.
 | Het verbod op het eigen BSN in `problems/3_basis` vervalt | didactisch | gesloten op 25 september 2026 (#309), **uitgevoerd** in #309 |
 | De facultatieve extra van PGM1 week 6 is tekstbestand → RGB-raster → PNG met een vaste vergroting; zij blijft naast `6b_images` en draagt geen nieuwe leeruitkomst | didactisch | gesloten op 25 september 2026 (#303, C4), **uitgevoerd** in #312; samenhang gecontroleerd in #313 |
 | Tot en met week 4 ligt de nadruk op lezen en begrijpen; schrijven begint wel | didactisch | staand, onderbouwd |
-| Een weekpagina vat samen wat volgt en waarop het voortbouwt | praktisch | gesloten (#167), **deels uitgevoerd**: week 1 tot en met 4 dragen hem, met #168, #169, #230 en #162; week 6 draagt hem sinds #313; week 12 (PGM2 week 5) draagt hem sinds #160, week 8 (PGM2 week 1) sinds #273, week 13 (PGM2 week 6) sinds #270, week 14 (PGM2 week 7) sinds #271, week 9 (PGM2 week 2) sinds #326, week 10 (PGM2 week 3) sinds #332 en week 11 (PGM2 week 4) sinds #335; week 5 en 7 zijn nog stubs |
-| Elk opgaveniveau hoort een uitwerking te hebben | didactisch | gesloten, **deels uitgevoerd**; 2 van de 43 ontbreken (hermeten in #335; de telling staat in `leerlijn.md`) |
+| Een weekpagina vat samen wat volgt en waarop het voortbouwt | praktisch | gesloten (#167), **deels uitgevoerd**: week 1 tot en met 4 dragen hem, met #168, #169, #230 en #162; week 6 draagt hem sinds #313; week 12 (PGM2 week 5) draagt hem sinds #160, week 8 (PGM2 week 1) sinds #273, week 13 (PGM2 week 6) sinds #270, week 14 (PGM2 week 7) sinds #271, week 9 (PGM2 week 2) sinds #326, week 10 (PGM2 week 3) sinds #332 en week 11 (PGM2 week 4) sinds #335; week 7 draagt sinds #102 een route, een tijdpad over drie bijeenkomsten en een uitvalpad; week 5 is nog een stub |
+| Elk opgaveniveau hoort een uitwerking te hebben | didactisch | gesloten, **deels uitgevoerd**; 1 van de 43 ontbreekt (hermeten in #332, bij #102, dat de opstap van PGM1 week 7 toevoegde, en bij #335; de telling staat in `leerlijn.md`) |
 | Week 4 krijgt een lusrecept van vijf vragen, in `4a_lussen` | didactisch | gesloten, **uitgevoerd** met #153; week 5 pikt het nog niet op (#163) |
 | Recursie gaat in beginsel naar PGM2; `unique` blijft in PGM1 als herkenbaar iteratief voorbeeld met vooruitwijzing | organisatorisch | gesloten, uitgevoerd in #162: de overige recursieplekken zijn verwijderd; recursie wordt uitgebreider behandeld in PGM2 |
 | Eerst de weken van PGM1 afronden; het materiaal moet zo snel mogelijk live | organisatorisch | staand |
 | Een docentenhandleiding gaat per week en helpt de docent die week te geven; hij is geen leeswijzer | didactisch | gesloten, **deels uitgevoerd**: week 1 en 2 staan er met #182; de weken 3 tot en met 12 ontbreken, zie #95 |
 | Handleidingen zijn repo-materiaal en geen onderdeel van het boek | organisatorisch | gesloten, uitgevoerd |
 | Objectmethoden pas vanaf PGM2 week 1, los van de mutatiegrens in PGM1 week 7 | didactisch | staand, onderbouwd |
-| Dictionaries en de Markov-opgave verhuizen van PGM1 week 7 naar PGM2 week 1 | didactisch | staand, nog niet uitgevoerd |
+| Dictionaries en de Markov-opgave verhuizen van PGM1 week 7 naar PGM2 week 1 | didactisch | staand, **uitgevoerd**: PGM2 week 1 kreeg de datastructuren en de Markov-opgave met #148, PGM1 week 7 raakte ze kwijt met #315 |
 | Objecten pas in PGM2 | didactisch | staand, onderbouwd |
 | Picobot opent PGM1 | didactisch | staand, onderbouwd |
 | Opgaven in opstap, basis en extra | didactisch | gesloten op 23 september 2026, **deels uitgevoerd** voor PGM2: week 5 en 6 hebben opstap, basis en extra (#160, #270); de verplichte niveaus per week staan in `leerlijn.md` |

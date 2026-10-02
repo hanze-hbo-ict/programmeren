@@ -290,8 +290,9 @@ zij hier bij.
 - **`Opdracht N`, genummerd**, als kop of als label. Dat is de hoofdvorm en de
   tabel hierboven dekt haar.
 - **`Opdrachten` als rubriekkop**, boven een reeks taken in een college of een
-  practicum. Negenentwintig vindplaatsen, alle `## Opdrachten`, gemeten bij #335:
-  alle dertien `course/practical_N.md`, en verder
+  practicum. Dertig vindplaatsen, alle `## Opdrachten`, gemeten bij #332 en
+  hermeten bij #102, dat `practical_7.md` toevoegde, en bij #335:
+  alle veertien `course/practical_N.md`, en verder
   `lectures/1a_intro_programmeren.md`, `2a_var_con.ipynb`,
   `2b_strings_en_lists.ipynb`, `8a_datastructuren.ipynb`, `8b_taalmodel.ipynb`,
   `9a_list_comprehensions.ipynb`, `9b_dict_en_set_comprehensions.ipynb`,
