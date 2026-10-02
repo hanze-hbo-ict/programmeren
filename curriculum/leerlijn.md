@@ -35,9 +35,11 @@ plaats met recursie. Zie [leeruitkomsten.md](leeruitkomsten.md).
 Vier dingen die aan deze indeling zijn veranderd, en waarom:
 
 **Week 3 heeft een opgave met context gekregen**, de controle van een
-burgerservicenummer met de elfproef. De week droeg P5 en A2 op het dunste
-materiaal van de cursus, en er lag nergens iets om op terug te vallen. Zie
-[uitgangspunten.md](uitgangspunten.md) voor waarom niet.
+burgerservicenummer met de elfproef. De week droeg P5, P6 en A2, en er lag nergens
+iets om op terug te vallen. Zie [uitgangspunten.md](uitgangspunten.md) voor waarom
+niet. Hier stond *"De week droeg P5 en A2 op het dunste materiaal van de cursus"*;
+dat liet P6 weg, en de superlatief klopt niet met de woordentabel hieronder, die
+week 3 derde van onder zet. Rechtgezet bij #351 op 1 oktober 2026.
 
 **De termen zijn *begrensde* en *onbegrensde* lus.** Het materiaal noemde
 `while` tot 1 september 2026 "oneindige herhaling", overgeërfd uit CS5. Dat is
@@ -162,7 +164,7 @@ functies: P5, P6 en A2, samen **30%** van het tentamen. Hier stond eerder *"P5 e
 samen 20%"*; dat liet P6 weg, terwijl die uitkomst in de PGM1-tabel bovenaan wel bij
 week 3 staat. Nagemeten tegen [leeruitkomsten.md](leeruitkomsten.md): P5 10%, P6 10%,
 A2 10%, P7 zonder weging. Rechtgezet bij #198 op 11 september 2026. Wat deze omvang
-bij dat gewicht betekent, beslist deze meting niet; die vraag ligt bij #351.
+bij dat gewicht betekent, beslist deze meting niet; die vraag ligt bij #356.
 
 **De structuur is compleet.** Twee beweringen die hier eerder stonden zijn
 nagemeten en bleken onjuist. Week 7 heeft wél een opstap, sinds commit
