@@ -69,9 +69,10 @@ richttijd zonder bron is.
 
 **Beide handleidingen van 2023 gaan over stof die niet meer in week 6 staat.**
 De eerste, *Ceasar op orde*, liet de klas `rot13` doornemen en een
-Caesar-code kraken; die opgave staat nu in
+Caesar-code kraken. Het kraken staat nu in
 `source/problems/opdrachten/caesar_op_orde/index.md`, onder
-`source/course/opgaven_11.md` in PGM2 week 4. In de elf bestanden van week 6
+`source/course/opgaven_11.md` in PGM2 week 4, als `decipher`; `rot13` staat daar
+sinds #335 niet meer in. In de elf bestanden van week 6
 komen `Caesar`, `rot13`, `encipher` en `decipher` nul keer voor. De tweede,
 *Decimaal en verder*, liet de klas getallen omrekenen naar binair en ternair,
 en die rekenkunde is met het besluit over binair vervallen. Beide gebruikten

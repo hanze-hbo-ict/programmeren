@@ -360,7 +360,7 @@ draait wel.
 | Schakelingen zijn geschrapt, binair is afgeslankt | organisatorisch | gesloten, uitgevoerd |
 | De wekelijkse leesopgaven zijn vervallen | praktisch | gesloten |
 | Bestanden naar PGM1, excepties blijven in PGM2 | didactisch | staand, onderbouwd; excepties landen in PGM2 week 7 (23 september 2026), **uitgevoerd** in #271 |
-| De klassenstof van PGM2 week 4 gaat naar week 5; het AI-materiaal verdwijnt uit week 5; Text-ID blijft in week 4 | organisatorisch | gesloten op 23 september 2026 (#160), **uitgevoerd** in #160 |
+| De klassenstof van PGM2 week 4 gaat naar week 5; het AI-materiaal verdwijnt uit week 5; Text-ID blijft in week 4 | organisatorisch | gesloten op 23 september 2026 (#160), **uitgevoerd** in #160; Text-ID is met #335 uit week 4 verwijderd (VP5, zie `leerlijn.md`) |
 | Het practicum van PGM2 week 5 tot en met 7 is één doorlopend project, `creatures.py` | didactisch | gesloten op 23 september 2026; opzet in `practicum-oop.md`, **uitgevoerd**: sessie 1 staat in week 5 (#160), sessie 2 in week 6 (#270), sessie 3 in week 7 (#271) |
 | De extra-opgaven van PGM2 week 5 tot en met 7 vormen één lijn over objectgeoriënteerd programmeren, met Vier op een rij; min-max is de extra-opgave van week 7 | didactisch | gesloten op 23 september 2026; zie `leerlijn.md`, **uitgevoerd**: week 5 en 6 staan (#160, #270), min-max in week 7 (#271) |
 | Docstrings en commentaar blijven Nederlands, ook in PGM2 | didactisch | gesloten op 23 september 2026; zie `conventies/codeconventies.md` |
@@ -377,8 +377,8 @@ draait wel.
 | Het verbod op het eigen BSN in `problems/3_basis` vervalt | didactisch | gesloten op 25 september 2026 (#309), **uitgevoerd** in #309 |
 | De facultatieve extra van PGM1 week 6 is tekstbestand → RGB-raster → PNG met een vaste vergroting; zij blijft naast `6b_images` en draagt geen nieuwe leeruitkomst | didactisch | gesloten op 25 september 2026 (#303, C4), **uitgevoerd** in #312; samenhang gecontroleerd in #313 |
 | Tot en met week 4 ligt de nadruk op lezen en begrijpen; schrijven begint wel | didactisch | staand, onderbouwd |
-| Een weekpagina vat samen wat volgt en waarop het voortbouwt | praktisch | gesloten (#167), **deels uitgevoerd**: week 1 tot en met 4 dragen hem, met #168, #169, #230 en #162; week 6 draagt hem sinds #313; week 12 (PGM2 week 5) draagt hem sinds #160, week 8 (PGM2 week 1) sinds #273, week 13 (PGM2 week 6) sinds #270, week 14 (PGM2 week 7) sinds #271, week 9 (PGM2 week 2) sinds #326 en week 10 (PGM2 week 3) sinds #332; week 5, 7 en 11 zijn nog stubs, al zegt week 11 sinds #332 in een feitelijke zin welk materiaal er staat |
-| Elk opgaveniveau hoort een uitwerking te hebben | didactisch | gesloten, **deels uitgevoerd**; 5 van de 41 ontbreken (hermeten in #332; de telling staat in `leerlijn.md`) |
+| Een weekpagina vat samen wat volgt en waarop het voortbouwt | praktisch | gesloten (#167), **deels uitgevoerd**: week 1 tot en met 4 dragen hem, met #168, #169, #230 en #162; week 6 draagt hem sinds #313; week 12 (PGM2 week 5) draagt hem sinds #160, week 8 (PGM2 week 1) sinds #273, week 13 (PGM2 week 6) sinds #270, week 14 (PGM2 week 7) sinds #271, week 9 (PGM2 week 2) sinds #326, week 10 (PGM2 week 3) sinds #332 en week 11 (PGM2 week 4) sinds #335; week 5 en 7 zijn nog stubs |
+| Elk opgaveniveau hoort een uitwerking te hebben | didactisch | gesloten, **deels uitgevoerd**; 2 van de 43 ontbreken (hermeten in #335; de telling staat in `leerlijn.md`) |
 | Week 4 krijgt een lusrecept van vijf vragen, in `4a_lussen` | didactisch | gesloten, **uitgevoerd** met #153; week 5 pikt het nog niet op (#163) |
 | Recursie gaat in beginsel naar PGM2; `unique` blijft in PGM1 als herkenbaar iteratief voorbeeld met vooruitwijzing | organisatorisch | gesloten, uitgevoerd in #162: de overige recursieplekken zijn verwijderd; recursie wordt uitgebreider behandeld in PGM2 |
 | Eerst de weken van PGM1 afronden; het materiaal moet zo snel mogelijk live | organisatorisch | staand |
