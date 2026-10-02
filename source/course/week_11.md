@@ -15,12 +15,14 @@ moet sorteren. Een kleine functie schrijf je daarvoor ter plekke op, als
 lambda-functie met `lambda`.
 
 Het eerste college gaat over *use it or lose it*, met het wisselgeld en de
-knapzak. Dat heb je nodig voor het tweede deel van de opstap, voor de basis over
-algoritmen, voor de twee extra's en voor het werkcollege, waarin je uitrekent met
-hoeveel munten je een bedrag betaalt. Het tweede college gaat over `sorted`,
+knapzak. Dat heb je nodig voor het eerste deel van de opstap, voor de basis over
+algoritmen, voor de extra over de periodieke tshirt en voor het werkcollege, waarin
+je uitrekent met hoeveel munten je een bedrag betaalt. De extra over het pijlenpad
+probeert ook keuzes uit, maar met een recursieve aanroep in een lus over de keuzes,
+zoals in het werkcollege van week 3. Het tweede college gaat over `sorted`,
 `max` en `min` met `key=`, over `lambda`, en over een eigen functie met een
-functieparameter. Dat heb je nodig voor het eerste deel van de opstap en voor de
-basis over `lambda`. *Caesar op orde* herhaalt de stof van beide colleges.
+functieparameter. Dat heb je nodig voor de andere twee delen van de opstap en voor
+de basis over `lambda`. *Caesar op orde* herhaalt de stof van beide colleges.
 
 Aan het eind van de week kun je bij een probleem met keuzes beide keuzes
 recursief uitproberen en de beste kiezen, en kun je een functie meegeven als

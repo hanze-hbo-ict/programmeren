@@ -330,6 +330,16 @@ sluit af met twee opdrachten (`count_ways` en `most_items`), `11b` met twee (een
 afspeellijst sorteren en `count_matching`). `11b` verbindt de twee onderwerpen met
 `subset_items` en `max(use_it, lose_it, key=sum)`.
 
+Na de beoordeling besloot de vakdeskundige op 2 oktober 2026, in
+[PR #360](https://github.com/hanze-hbo-ict/programmeren/pull/360#issuecomment-5951946263):
+*"Maak de paginatitels basis en extra onderscheidend."* De eerste kop van de twee
+basisniveaus en de twee extra's van week 4, en die van hun uitwerkingen, is daarom
+gelijk aan hun titel in de inhoudsopgave: *Algoritmen: basis*, *Lambda: basis*,
+*Algoritmen: extra* en *Periodieke tshirt: extra*. Het niveauwoord blijft erin
+staan, zoals [begrippen.md](../conventies/begrippen.md), *De drie opgaveniveaus*,
+vraagt. Alleen in week 4 hadden twee niveaubestanden dezelfde kop; andere weken
+zijn niet aangepast.
+
 **Uitgevoerd** in #332, met deze keuzes van de auteur: de basis heeft één
 context, Scrabble, en `transcribe` is vervallen; de extra is potjeslatijn in drie
 stappen.

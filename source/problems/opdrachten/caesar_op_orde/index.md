@@ -6,7 +6,7 @@ Zorg bij elke opdracht dat je de naam precies zo schrijft zoals dit wordt opgege
 
 ## De functie `encipher(s, n)`
 
-Schrijf een functie `encipher(s, n)` die als argumenten een string `s` en een (niet negatieve) integer 'n' met een waarde tussen `0` en `25` verwacht. De functie `encipher` moet een nieuwe string teruggeven waarin de letters in `s` met `n` letters voorwaarts zijn "geroteerd" in het alfabet, en terug naar het begin van het alfabet als dat nodig is.
+Schrijf een functie `encipher(s, n)` die als argumenten een string `s` en een (niet negatieve) integer `n` met een waarde tussen `0` en `25` verwacht. De functie `encipher` moet een nieuwe string teruggeven waarin de letters in `s` met `n` letters voorwaarts zijn "geroteerd" in het alfabet, en terug naar het begin van het alfabet als dat nodig is.
 
 Bij dit probleem mag je ervan uitgaan dat hoofdletters "geroteerd" worden naar hoofdletters, kleine letters naar kleine letters en dat alle andere tekens *niet* veranderd worden. Als we bijvoorbeeld de letter
 `'y'` 3 posities willen verschuiven, krijgen we de `'b'` en als we de letter `'Y'` 3 posities willen verschuiven krijgen we `'B'`.
@@ -19,7 +19,7 @@ In Python kan je de test `if "a" <= c <= "z":` gebruiken om te controleren of ee
 
 Je mag `encipher` schrijven hoe je wilt, mits je functioneel programmeren gebruikt. Je mag dus elke combinatie van *conditionele statements*, *recursie* en *list comprehensions* gebruiken.
 
-We raden je aan een hulpfunctie te schrijven die een enkel karakter `n` plaatsen roteert, terug naar het begin als dat nodig is. Deze hulpfunctie zou je kunnen gebruiken om de karakters in de string één voor ééń te versleutelen. Je moet zelf bepalen hoe je dat doet!
+We raden je aan een hulpfunctie te schrijven die een enkel karakter `n` plaatsen roteert, terug naar het begin als dat nodig is. Deze hulpfunctie zou je kunnen gebruiken om de karakters in de string één voor één te versleutelen. Je moet zelf bepalen hoe je dat doet!
 
 :::{admonition} Een hulpfunctie `rot(c, n)`
 :class: tip
@@ -62,7 +62,7 @@ Als je de tip volgt en een hulpfunctie `rot(c, n)` schrijft, dan heb je twee mog
         return L[0] + list_to_str(L[1:])
 
 
-    assert list_to_str(['h', 'a', 'n', 'z', 'e']) == 'hanze'
+    assert list_to_str(["h", "a", "n", "z", "e"]) == "hanze"
     ```
 
 Hoe je `encipher` ook schrijft, zorg dat je de functie test! Hier is een begin:
@@ -101,7 +101,7 @@ Tot slot, onthoud dat:
 
 Omgekeerd krijgt `decipher(s)` een string `s` met een (Nederlandstalige) tekst die al versleuteld is. De functie `decipher` moet, voorzover mogelijk, de *originele* tekst teruggeven, dit zal een rotatie (mogelijk ook `0`) zijn van het argument `s`.
 
-Wees bewust dat sommige strings meer dan één "ontsleuteling" kunnen hebben. Bovendien is het moeilijk of soms zelfs onmogelijk om hele korte strings goed te ontsleutelen. De functie `decipher` hoeft dus ook niet *perfect* te zijn, maar moet wel vrijwel altijd werken met langere stukken Nederlandse tekst, bijvoorbeeld zinnen van 8 of meer woorden. Het is dus geen probleem als een enkel woord of een korte zinnen niet goed worden ontsleuteld.
+Wees bewust dat sommige strings meer dan één "ontsleuteling" kunnen hebben. Bovendien is het moeilijk of soms zelfs onmogelijk om hele korte strings goed te ontsleutelen. De functie `decipher` hoeft dus ook niet *perfect* te zijn, maar moet wel vrijwel altijd werken met langere stukken Nederlandse tekst, bijvoorbeeld zinnen van 8 of meer woorden. Het is dus geen probleem als een enkel woord of een korte zin niet goed worden ontsleuteld.
 
 :::{admonition} Alle rotaties, en dan de beste
 :class: tip
@@ -138,9 +138,9 @@ In [3]: decipher('Lvkeg lvyon')
 Out[3]: 'Tdsmo tdgwv'  # Dit is fout! Maar is hier geen probleem...
 ```
 
-Ook hier raden we jou aan om deze voorbeelden (in ieder geval de eerste twee!) om te zetten naar `assert` statements.
+Ook hier raden we jou aan om de eerste twee voorbeelden om te zetten naar `assert` statements. Het derde voorbeeld niet: welke foute uitkomst je bij zo'n korte zin krijgt, hangt af van hoe je de score berekent. Met een andere score kan daar iets anders uitkomen, en ook dat is geen probleem.
 
-Merk verder op dat het laatste voorbeeld laat zien dat onze ontsleutelaar het niet goed doet bij sommige korte zinnen. Dit is geen probleem!  Naarmate de zinnen langer worden, moet de ontsleutelaar er steeds meer goed hebben, maar hij hoeft enkele woorden of korte zinnen niet goed te hebben, voor korte strings zijn er immers zeer waarschijnlijk rotaties met meer "Nederlandsige" letters dan het origineel!
+Merk verder op dat het laatste voorbeeld laat zien dat onze ontsleutelaar het niet goed doet bij sommige korte zinnen. Dit is geen probleem!  Naarmate de zinnen langer worden, moet de ontsleutelaar er steeds meer goed hebben, maar hij hoeft enkele woorden of korte zinnen niet goed te hebben, want voor korte strings zijn er zeer waarschijnlijk rotaties met meer "Nederlandsige" letters dan het origineel!
 
 Hier is een functie om de kans per letter te bepalen:
 
@@ -251,7 +251,7 @@ Out[3]: [0, 0, 0, 1, 1, 1, 1]
 :::{admonition} Binaire eenvoud
 :class: hint
 
-Dit probleem is veel *makkelijker* dan gewoon sorteren! Maak gebruik van het feit dat de lijst `L` alleen maar `0` of `1` kan bevatten.
+Dit probleem is veel *makkelijker* dan sorteren in het algemeen! Maak gebruik van het feit dat de lijst `L` alleen maar `0` of `1` kan bevatten.
 :::
 
 ## De functie `gensort(L)`
@@ -359,9 +359,9 @@ Als meerdere resultaten van gelijke lengte mogelijk zijn dan maakt het niet uit 
 
 Gebruik de volgende strategie:
 
-* Als de eerste twee karakters gelijk zijn, gebruik ze dan!
+* Als de eerste karakters van `s` en `t` gelijk zijn, dus `s[0]` en `t[0]`, gebruik ze dan!
 
-* Als de eerste twee karakters niet gelijk zijn, pas dan twee keer recursie toe: je zou dit *use it or lose it or lose it* kunnen noemen!
+* Als `s[0]` en `t[0]` niet gelijk zijn, pas dan twee keer recursie toe: je zou dit *use it or lose it or lose it* kunnen noemen!
 
 * Gebruik voor de eerste "lose it" recursie om de eerste letter van het ene argument weg te gooien:
 
@@ -377,7 +377,7 @@ Gebruik de volgende strategie:
 
     Hier moet je nog wat details invullen...
 
-* Geef ten slotte de *betere* van de twee resultaten terug, je moet hier nog even bedenken wat "beter" in dit geval betekent!
+* Geef ten slotte de *betere* van de twee resultaten terug. Bedenk zelf wat "beter" in dit geval betekent. Met `max(result1, result2, key=...)` uit het [tweede college van deze week](/lectures/11b_functie_als_argument) kies je de betere in één regel.
 :::
 
 ## De functie `make_change(amount, coins)`
