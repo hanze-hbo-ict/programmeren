@@ -171,7 +171,7 @@ uitgangssituatie, niet de norm; het verschil tussen beide kolommen is het werk.
 | 1 | Datastructuren (lists ter herhaling, dictionaries, sets, methodeaanroep, Markov) | BRRA | P2, A1 | dictionary, sleutel en waarde, set, methodeaanroep | Datastructuren: colleges `8a_datastructuren` (methodeaanroep en dictionaries) en `8b_taalmodel` (sets en het Markov-model), practicum `8a_text_genereren`, opstap, basis (woorden tellen) en extra (woordenschat vergelijken) (#273) |
 | 2 | Comprehensions (list, dict, set, range, enumerate) | HOEM | A1; zie de opmerking bij *Voorgestelde correcties* in [leeruitkomsten.md](leeruitkomsten.md) | list comprehension, dict comprehension, set comprehension, `enumerate`, `zip`, de conditionele expressie `a if c else b` | Comprehensions: colleges `9a_list_comprehensions` (list comprehension met `range`, `enumerate`, `zip` en `a if c else b`) en `9b_dict_en_set_comprehensions` (dict en set comprehension, geneste comprehension, lus of comprehension), werkcollege `9_register`, opstap, basis (van lus naar comprehension en terug) en extra (een toernooi) (#326) |
 | 3 | Recursie | HOEM | A6 | recursie, basisgeval, recursief geval, recursieve aanroep | Recursie: colleges `10a_recursie` (hoe een recursieve functie werkt, het basisgeval, frames op de stack) en `10b_recursief_ontwerpen` (basisgeval, kleiner probleem, combineren), werkcollege `10_directory_doorzoeken`, opstap (lezen en naspelen, schrijven), basis (Scrabble) en extra (potjeslatijn) (#332) |
-| 4 | Use it or lose it, lambda | HOEM | A4, A6 | use it or lose it, `lambda`, functie als argument | Use it or lose it en `lambda`: colleges `11a_use_it_or_lose_it` (*use it or lose it* met `exact_change` en de knapzak) en `11b_functie_als_argument` (`sorted`, `max` en `min` met `key=`, `lambda`, een eigen functie met een functieparameter), werkcollege `11_wisselgeld`, opstap, twee basisniveaus (*Algoritmen: basis*, het nijlpaarddiner, en *Lambda: basis*, een uitslag), twee extra's (*Algoritmen: extra*, het pijlenpad, en de periodieke tshirt) en de verdiepende opdracht `caesar_op_orde` (#335). De klassenstof staat sinds #160 in week 5 |
+| 4 | Use it or lose it, lambda | HOEM | A4, A6 | use it or lose it, `lambda`, functie als argument | Use it or lose it en `lambda`: colleges `11a_use_it_or_lose_it` (*use it or lose it* met `exact_change` en de knapzak) en `11b_functie_als_argument` (`sorted`, `max` en `min` met `key=`, `lambda`, een eigen functie met een functieparameter), werkcollege `11_wisselgeld`, opstap, twee basisniveaus (*Basis: algoritmen*, het nijlpaarddiner, en *Basis: lambda*, een uitslag), twee extra's (*Extra: algoritmen*, het pijlenpad, en de periodieke tshirt) en de verdiepende opdracht `caesar_op_orde` (#335). De klassenstof staat sinds #160 in week 5 |
 | 5 | OO, klassen, encapsulatie | BRRA | P5, A2 | klassedefinitie, object, attribuut, constructor en `__init__`, `self`, een methode schrijven, `__repr__`, waarde en identiteit, `is`, encapsulatie, `_` voor een attribuut dat niet van buiten wordt gebruikt, `@property` en decorator, compositie | OO, klassen, encapsulatie: colleges `12a_objecten` en `12b_data_object`, practicum sessie 1 (`12_creatures`), opstap, basis (`Date`) en extra (`Board`) (#160) |
 | 6 | Polymorfisme, overerving, duck typing | BRRA | A2, A3 | overerving, subklasse en superklasse, `super()`, een methode overschrijven, standaardwaarde voor een parameter, polymorfisme, duck typing, `isinstance`, `self.__class__` en `__name__` | Polymorfisme, overerving, duck typing: colleges `13a_overerving` en `13b_polymorfisme`, practicum sessie 2 (`13_creatures`), opstap, basis (kassabon) en extra (spelers voor `Board`) (#270) |
 | 7 | Operator overloading, excepties, oefentoets | BRRA | P4, P6 | operator overloading, magische methode, `__eq__`, exception, `try`/`except`, `raise` | Operator overloading en exceptions: college `14a_operatoren_en_exceptions`, practicum sessie 3 (`14_creatures`), opstap, basis (`Date` met operatoren, en datums inlezen met `try`/`except`) en extra (min-max), en het oefententamen onder dezelfde week (#271) |
@@ -332,13 +332,21 @@ afspeellijst sorteren en `count_matching`). `11b` verbindt de twee onderwerpen m
 
 Na de beoordeling besloot de vakdeskundige op 2 oktober 2026, in
 [PR #360](https://github.com/hanze-hbo-ict/programmeren/pull/360#issuecomment-5951946263):
-*"Maak de paginatitels basis en extra onderscheidend."* De eerste kop van de twee
-basisniveaus en de twee extra's van week 4, en die van hun uitwerkingen, is daarom
-gelijk aan hun titel in de inhoudsopgave: *Algoritmen: basis*, *Lambda: basis*,
-*Algoritmen: extra* en *Periodieke tshirt: extra*. Het niveauwoord blijft erin
-staan, zoals [begrippen.md](../conventies/begrippen.md), *De drie opgaveniveaus*,
-vraagt. Alleen in week 4 hadden twee niveaubestanden dezelfde kop; andere weken
-zijn niet aangepast.
+*"Maak de paginatitels basis en extra onderscheidend."* Na de nalezing besloot de
+vakdeskundige dezelfde dag dat die titels met het niveauwoord beginnen, zoals in
+PGM1 week 5 (`# Basis: Mandelbrot op een raster`):
+*"Draai de volgorde hier om, zodat het ook met niveau begint"*
+([PR #360](https://github.com/hanze-hbo-ict/programmeren/pull/360#issuecomment-5952253135)).
+De titels zijn daarmee *Basis: algoritmen*, *Basis: lambda*, *Extra: algoritmen*
+en *Extra: periodieke tshirt*; de eerdere titels hierboven zijn daardoor
+vervangen.
+Het niveauwoord staat erin, zoals [begrippen.md](../conventies/begrippen.md),
+*De drie opgaveniveaus*, vraagt.
+
+**Uitgevoerd** in #335, met deze keuze van de auteur: de eerste kop van de vier
+niveaubestanden en van hun uitwerkingen is gelijk aan hun titel in de
+inhoudsopgave. Alleen in week 4 hadden twee niveaubestanden dezelfde kop; andere
+weken zijn niet aangepast.
 
 **Uitgevoerd** in #332, met deze keuzes van de auteur: de basis heeft één
 context, Scrabble, en `transcribe` is vervallen; de extra is potjeslatijn in drie
