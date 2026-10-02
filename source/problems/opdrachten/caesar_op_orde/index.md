@@ -1,12 +1,12 @@
 # Caesar op orde
 
-In deze opgave ga je een aantal functies schrijven met behulp van *functioneel programmeren*, dat wil zeggen, conditionele statements, recursie en/of list comprehensions.
+In deze opgave ga je een aantal functies schrijven met behulp van *functioneel programmeren*, dat wil zeggen, conditionele statements, recursie en/of list comprehensions. Je herhaalt er de stof van week 3 en 4: recursie, *use it or lose it* en `key=`.
 
 Zorg bij elke opdracht dat je de naam precies zo schrijft zoals dit wordt opgegeven, inclusief hoofd-en kleine letters. Voeg verder aan elke functie een *docstring* toe waar je kort uitlegt wat de argumenten van de functie zijn en wat de functie doet.
 
 ## De functie `encipher(s, n)`
 
-Schrijf een functie `encipher(s, n)` die als argumenten een string `s` en een (niet negatieve) integer 'n' met een waarde tussen `0` en `25` verwacht. De functie `encipher` moet een nieuwe string teruggeven waarin de letters in `s` met `n` letters voorwaarts zijn "geroteerd" in het alfabet, en terug naar het begin van het alfabet als dat nodig is.
+Schrijf een functie `encipher(s, n)` die als argumenten een string `s` en een (niet negatieve) integer `n` met een waarde tussen `0` en `25` verwacht. De functie `encipher` moet een nieuwe string teruggeven waarin de letters in `s` met `n` letters voorwaarts zijn "geroteerd" in het alfabet, en terug naar het begin van het alfabet als dat nodig is.
 
 Bij dit probleem mag je ervan uitgaan dat hoofdletters "geroteerd" worden naar hoofdletters, kleine letters naar kleine letters en dat alle andere tekens *niet* veranderd worden. Als we bijvoorbeeld de letter
 `'y'` 3 posities willen verschuiven, krijgen we de `'b'` en als we de letter `'Y'` 3 posities willen verschuiven krijgen we `'B'`.
@@ -19,12 +19,12 @@ In Python kan je de test `if "a" <= c <= "z":` gebruiken om te controleren of ee
 
 Je mag `encipher` schrijven hoe je wilt, mits je functioneel programmeren gebruikt. Je mag dus elke combinatie van *conditionele statements*, *recursie* en *list comprehensions* gebruiken.
 
-We raden je aan een hulpfunctie te schrijven die een enkel karakter `n` plaatsen roteert, terug naar het begin als dat nodig is. Deze hulpfunctie zou je kunnen gebruiken om de karakters in de string één voor ééń te versleutelen. Je moet zelf bepalen hoe je dat doet!
+We raden je aan een hulpfunctie te schrijven die een enkel karakter `n` plaatsen roteert, terug naar het begin als dat nodig is. Deze hulpfunctie zou je kunnen gebruiken om de karakters in de string één voor één te versleutelen. Je moet zelf bepalen hoe je dat doet!
 
 :::{admonition} Een hulpfunctie `rot(c, n)`
 :class: tip
 
-Schrijf een functie `rot(c, n)` die een enkel karakter `c` `n` plaatsen voorwaarts roteert in het alfabet. De functie `rot13(c)` die je eerder hebt gezien lijkt heel erg op `rot(c, n)`!
+Schrijf een functie `rot(c, n)` die een enkel karakter `c` `n` plaatsen voorwaarts roteert in het alfabet.
 
 Bedenk dat je soms terug naar het begin van het alfabet moet en dat tekens die geen letter zijn *niet* veranderen. Controleer vervolgens met `assert` statements of de functie `rot(c, n)` werkt:
 
@@ -42,11 +42,9 @@ Bedenk verder dat je de ingebouwde functies `ord` en `chr` die een string met é
 * ... en `chr(97)` geeft `'a'` terug.
 :::
 
-<!-- TODO verwijzing DNA-naar-RNA opnemen -->
+Als je de tip volgt en een hulpfunctie `rot(c, n)` schrijft, dan heb je twee mogelijkheden:
 
-Als je de tip volgt en een hulpfunctie`rot(c, n)` schrijft dan kan je:
-
-* je kan het met behulp van `rot(c, n)` een string letter voor letter recursief doorlopen, met een lege string `s` als base case.
+* je kan met behulp van `rot(c, n)` een string letter voor letter recursief doorlopen, met de lege string als basisgeval.
 
 * je kan ook list comprehensions gebruiken om `rot(c, n)` meerdere keren toe te passen.
 
@@ -58,15 +56,13 @@ Als je de tip volgt en een hulpfunctie`rot(c, n)` schrijft dan kan je:
 
     ```python
     def list_to_str(L):
-        """L must be a list of characters;
-           this function returns a single string made from them.
-        """
+        """Geeft de tekens uit de lijst L aan elkaar geplakt als één string."""
         if len(L) == 0:
             return ""
         return L[0] + list_to_str(L[1:])
 
 
-    assert list_to_str(['h', 'a', 'n', 'z', 'e']) == 'hanze'
+    assert list_to_str(["h", "a", "n", "z", "e"]) == "hanze"
     ```
 
 Hoe je `encipher` ook schrijft, zorg dat je de functie test! Hier is een begin:
@@ -105,29 +101,24 @@ Tot slot, onthoud dat:
 
 Omgekeerd krijgt `decipher(s)` een string `s` met een (Nederlandstalige) tekst die al versleuteld is. De functie `decipher` moet, voorzover mogelijk, de *originele* tekst teruggeven, dit zal een rotatie (mogelijk ook `0`) zijn van het argument `s`.
 
-Wees bewust dat sommige strings meer dan één "ontsleuteling" kunnen hebben. Bovendien is het moeilijk of soms zelfs onmogelijk om hele korte strings goed te ontsleutelen. De functie `decipher` hoeft dus ook niet *perfect* te zijn, maar moet wel vrijwel altijd werken met langere stukken Nederlandse tekst, bijvoorbeeld zinnen van 8 of meer woorden. Het is dus geen probleem als een enkel woord of een korte zinnen niet goed worden ontsleuteld.
+Wees bewust dat sommige strings meer dan één "ontsleuteling" kunnen hebben. Bovendien is het moeilijk of soms zelfs onmogelijk om hele korte strings goed te ontsleutelen. De functie `decipher` hoeft dus ook niet *perfect* te zijn, maar moet wel vrijwel altijd werken met langere stukken Nederlandse tekst, bijvoorbeeld zinnen van 8 of meer woorden. Het is dus geen probleem als een enkel woord of een korte zin niet goed worden ontsleuteld.
 
-:::{admonition} Lists of lists
+:::{admonition} Alle rotaties, en dan de beste
 :class: tip
 
-Het is handig om te beginnen met het genereren van *alle mogelijke versleutelingen*, bijvoorbeeld via:
+Het is handig om te beginnen met het genereren van *alle mogelijke ontsleutelingen*, bijvoorbeeld via:
 
 ```python
 L = [... for n in range(26)]
 ```
 
-Vervolgens is het handig om de `LoL` "lists of lists", oftewel de  "lijst van lijsten"-techniek te gebruiken om elk element van `L` een score te geven. Het kan handig zijn om nog even op te zoeken hoe dat werkt.
+Geef daarna elke rotatie in `L` een score die zegt hoe Nederlands ze eruitziet, en kies de rotatie met de hoogste score. Dat kan in één regel met `max` en `key=`, zoals in het [tweede college van deze week](/lectures/11b_functie_als_argument):
 
 ```python
-lists = [... for x in L]
+max(L, key=...)
 ```
 
-Je mag zelf bepalen hoe je "Nederlandstaligheid" een score geeft, hier een paar aanknopingspunten:
-
-* Je kan kijken naar het voorbeeld met `best_word` dat het woord zocht met de hoogste Scrabble score in een lijst woorden. Dat lijkt heel aardig op wat je hier wilt doen!
-* Kijk daarna nog eens terug naar het college over `min` en `max` om te zien hoe je de "lijst van lijsten" `lists` kan gebruiken
-
-<!-- TODO verwijzing naar college -->
+Achter `key=` zet je een functie die bij een string zijn score teruggeeft. Dat lijkt op `best_word` uit de [basisopgave van week 3](/problems/10_basis), die het woord met de hoogste Scrabble-score zocht.
 :::
 
 Een mogelijke aanpak is het gebruik van letterfrequenties, hieronder is een functie gegeven met de frequenties per letter en deze kan je gebruiken in de opgave. Je zou ook Scrabble scores kunnen proberen (want deze zijn ook gebaseerd op letterfrequenties). Je mag zelf extra heuristieken ("vuistregels") bedenken en verder mag je ook kleine hulpfuncties toevoegen om te helpen met het schrijven van `decipher`.
@@ -147,19 +138,18 @@ In [3]: decipher('Lvkeg lvyon')
 Out[3]: 'Tdsmo tdgwv'  # Dit is fout! Maar is hier geen probleem...
 ```
 
-Ook hier raden we jou aan om deze voorbeelden (in ieder geval de eerste twee!) om te zetten naar `assert` statements.
+Ook hier raden we jou aan om de eerste twee voorbeelden om te zetten naar `assert` statements. Het derde voorbeeld niet: welke foute uitkomst je bij zo'n korte zin krijgt, hangt af van hoe je de score berekent. Met een andere score kan daar iets anders uitkomen, en ook dat is geen probleem.
 
-Merk verder op dat het laatste voorbeeld laat zien dat onze ontsleutelaar het niet goed doet bij sommige korte zinnen. Dit is geen probleem!  Naarmate de zinnen langer worden, moet de ontsleutelaar er steeds meer goed hebben, maar hij hoeft enkele woorden of korte zinnen niet goed te hebben, voor korte strings zijn er immers zeer waarschijnlijk rotaties met meer "Nederlandsige" letters dan het origineel!
+Merk verder op dat het laatste voorbeeld laat zien dat onze ontsleutelaar het niet goed doet bij sommige korte zinnen. Dit is geen probleem!  Naarmate de zinnen langer worden, moet de ontsleutelaar er steeds meer goed hebben, maar hij hoeft enkele woorden of korte zinnen niet goed te hebben, want voor korte strings zijn er zeer waarschijnlijk rotaties met meer "Nederlandsige" letters dan het origineel!
 
 Hier is een functie om de kans per letter te bepalen:
 
 ```python
 # tabel met kansen per letter
 def letter_prob(c):
-    """If c is an alphabetic character,
-    we return its monogram probability (for Dutch),
-    otherwise we return 1.0.  We ignore capitalization.
-    Adapted from
+    """Geeft de kans op letter c in Nederlandse tekst, of 1.0 als c geen letter is.
+
+    Hoofdletters tellen als kleine letters. Bewerkt naar
     https://www.sttmedia.com/characterfrequency-nederlands
     """
     if c == "e" or c == "E":
@@ -229,19 +219,22 @@ Schrijf een functie `blsort(L)` die als argument een lijst `L` accepteert en een
 
 `blsort` hoeft alleen maar lijsten met *binaire cijfers* te sorteren, dat wil zeggen, deze functie mag en moet ervan uitgaan dat `L` altijd een lijst met alleen `0`'en en `1`'en is.
 
-Je mag de ingebouwde Python functie `sort` niet gebruiken om dit probleem op te lossen! Je mag ook je zelfgeschreven sorteerfunctie (deze wordt later gevraagd) niet gebruiken.
+Je mag de ingebouwde sorteerfuncties `sorted(L)` en `L.sort()` niet gebruiken om dit probleem op te lossen! Je mag ook je zelfgeschreven sorteerfunctie (deze wordt later gevraagd) niet gebruiken.
 
 Verder mag je elke andere functionele techniek gebruiken om `blsort` te implementeren. In het bijzonder is het handig te bedenken hoe je gebruik kan maken van de beperking dat het argument `L` een binaire lijst is, dit is een belangrijke beperking!
 
-<!-- TODO verwijzing naar eerste gebruik count(e, L) -->
-
-Een functie die sommigen handig vinden is `count(e, L)`, een hulpfunctie die je eerder al hebt gezien. Kopieer deze of probeer het opnieuw te schrijven, het belangrijkste onderdeel is:
+Een hulpfunctie die sommigen handig vinden is `count(e, L)`. Die telt hoe vaak `e` voorkomt in `L`:
 
 ```python
-lc = [1 for x in L if x == e]
+def count(e, L):
+    """Geeft hoe vaak e voorkomt in L."""
+    return sum([1 for x in L if x == e])
+
+
+assert count(1, [1, 0, 1]) == 2
 ```
 
-Voeg `count(e, L)` toe aan jouw bestand toevoegen, en dan kun je deze functie gebruiken om te kijken hoe vaak `e` voorkomt in `L`.
+Zet `count(e, L)` in je bestand, dan kun je hem gebruiken in `blsort`.
 
 Hier zijn een paar voorbeelden:
 
@@ -258,14 +251,29 @@ Out[3]: [0, 0, 0, 1, 1, 1, 1]
 :::{admonition} Binaire eenvoud
 :class: hint
 
-Dit probleem is veel *makkelijker* dan gewoon sorteren! Maak gebruik van het feit dat de lijst `L` alleen maar `0` of `1` kan bevatten.
+Dit probleem is veel *makkelijker* dan sorteren in het algemeen! Maak gebruik van het feit dat de lijst `L` alleen maar `0` of `1` kan bevatten.
 :::
 
 ## De functie `gensort(L)`
 
-<!-- TODO verwijzing opnemen naar eerste gebruik rem_one -->
+Gebruik recursie om een algemene sorteerfunctie `gensort(L)` te schrijven die een lijst `L` accepteert en een lijst teruggeeft met dezelfde elementen als `L`, maar in *oplopende* volgorde. Je kan hiervoor de ingebouwde Python functie `max` (of `min`, als je deze liever hebt) gebruiken, en de functie `rem_one` hieronder. Recursie, dat wil zeggen het sorteren van de *rest* van de lijst, is hier handig.
 
-Gebruik recursie om een algemene sorteerfunctie `gensort(L)` te schrijven die een lijst `L` accepteert en een lijst teruggeeft met dezelfde elementen als `L`, maar in *oplopende* volgorde. Je kan hiervoor de ingebouwde Python functie `max` (of `min`, als je deze liever hebt) gebruiken, en de functie `rem_one` die je al eerder hebt gezien. Recursie, dat wil zeggen het sorteren van de *rest* van de lijst, is hier handig.
+`rem_one(e, L)` haalt `e` één keer uit de lijst `L`: de eerste keer dat hij voorkomt.
+
+```python
+def rem_one(e, L):
+    """Geeft L zonder de eerste e; staat e niet in L, dan L zelf."""
+    if L == []:  # basisgeval
+        return []
+    elif L[0] == e:  # basisgeval: de eerste e gevonden
+        return L[1:]
+    else:  # recursief geval
+        return [L[0]] + rem_one(e, L[1:])
+
+
+assert rem_one(8, [7, 8, 9, 8]) == [7, 9, 8]
+assert rem_one(5, [7, 8]) == [7, 8]
+```
 
 Je ziet hier een paar voorbeelden:
 
@@ -288,10 +296,8 @@ Schrijf een functie `lingo(s, t)` die twee strings `s` en `t` accepteert en een 
 De Lingo-score is het aantal tekens in `s` dat ook voorkomt in `t`. Herhaalde letters tellen vaker, mits ze vaker voorkomen in beide strings, hoe dit werkt wordt duidelijker in de onderstaande voorbeelden. Je hoeft er bij deze functie geen rekening mee
 te houden of de letters op dezelfde plek staan. Merk op dat alhoewel Lingo traditioneel gespeeld wordt met woorden van 5 (of 6) letters, de lengte van de woorden in deze functie niet beperkt is!
 
-<!-- TODO wordt verwezen naar handige hulpfuncties behandeld in college, welke? -->
-
 Er zijn meerdere manieren om dit probleem op te lossen, een aantal daarvan gebruikt kleinere hulpfuncties. Het staat je vrij om
-zulke hulpfuncties toe te voegen als je dat handig vindt. Het zou kunnen dat je al nuttige hulpfuncties bent tegengekomen die hier van toepassing kunnen zijn.
+zulke hulpfuncties toe te voegen als je dat handig vindt. Een versie van `rem_one` uit `gensort` die een teken uit een string haalt, kan hier bijvoorbeeld van pas komen.
 
 Merk op dat als `s` of `t` een lege string is, de Lingo-score `0` moet zijn!
 
@@ -317,72 +323,9 @@ In [4]: lingo('gattaca', '') # geef 0 terug bij een lege string
 Out[4]: 0
 ```
 
-## De functie `exact_change(target_amount, L)`
-
-Schrijf een functie `exact_change(target_amount, L)` die als argument een (niet-negatieve) integer `target_amount` en een lijst `L` met (niet-negatieve) integers accepteert en een boolean waarde (`True` of `False`) teruggeeft.
-
-De functie geeft `True` terug als het mogelijk is om `target_amount` te halen door een aantal (of alle) waarden in `L` bij elkaar op te tellen. Als dit *niet* mogelijk is zal de functie `False` teruggeven.
-
-`L` zou bijvoorbeeld de munten in jouw portemonnee kunnen voorstellen en `target_amount` de prijs van iets dat je wilt kopen. In dit geval bepaalt de functie `exact_change` of je dat product wel of niet *precies* kan betalen (wisselgeld krijg je niet ...).
-
-Hier zijn een paar voorbeelden van `exact_change`. Let op dat je `0` *altijd* precies kan betalen, en dat je een negatief bedrag *nooit* precies kan betalen: dit zijn twee, maar niet alle, base cases!
-
-```ipython
-In [1]: exact_change(42, [25, 1, 25, 10, 5, 1])
-Out[1]: True
-
-In [2]: exact_change(42, [25, 1, 25, 10, 5])
-Out[2]: False
-
-In [3]: exact_change(42, [23, 1, 23, 100])
-Out[3]: False
-
-In [4]: exact_change(42, [23, 17, 2, 100])
-Out[4]: True
-
-In [5]: exact_change(42, [25, 16, 2, 15])
-Out[5]: True  # de 16 moet "overgeslagen" kunnen worden...
-
-In [6]: exact_change(0, [4, 5, 6])
-Out[6]: True
-
-In [7]: exact_change(-47, [4, 5, 6])
-Out[7]: False
-
-In [8]: exact_change(0, [])
-Out[8]: True
-
-In [9]: exact_change(42, [])
-Out[9]: False
-```
-
-:::{admonition} Use it or lose it
-:class: tip
-
-Dit probleem kan net zoals `lcs`, hieronder, worden opgelost door *twee* keer recursie toe te passen en beide resultaten een naam te geven.
-
-* Voor het eerste geval kan je proberen het probleem op te lossen *zonder* de eerste munt, dit is het *lose-it* geval!
-
-    Je kan zelfs de variabelenaam `loseit` gebruiken, als in
-
-    ```python
-    loseit = exact_change(...)
-    ```
-
-* Voor het tweede geval kan je proberen het probleem op te lossen *met* de eerste munt, dit is het *use-it* geval!
-
-    Je kan hierbij dan de variabelenaam `useit` gebruiken, als in
-
-    ```python
-    useit = exact_change(...)
-    ```
-
-* Vervolgens kan je jouw code de geschikte boolean waarde laten bepalen om terug te geven op basis van de twee resultaten: je gaat hier letterlijk de `or` van *use it or lose it* toepassen!
-:::
-
 ## De functie `lcs(s, t)`
 
-De laatste algoritmische uitdaging heeft alles met DNA-matching te maken!
+Deze algoritmische uitdaging heeft alles met DNA-matching te maken!
 
 Schrijf een functie `lcs(s, t)` die twee strings `s` en `t` accepteert. De functie geeft een string terug die de langste gemeenschappelijke deelrij (LCS, *longest common subsequence*) is die `s` en `t` met elkaar delen.
 
@@ -416,9 +359,9 @@ Als meerdere resultaten van gelijke lengte mogelijk zijn dan maakt het niet uit 
 
 Gebruik de volgende strategie:
 
-* Als de eerste twee karakters gelijk zijn, gebruik ze dan!
+* Als de eerste karakters van `s` en `t` gelijk zijn, dus `s[0]` en `t[0]`, gebruik ze dan!
 
-* Als de eerste twee karakters niet gelijk zijn, pas dan twee keer recursie toe: je zou dit *use it or lose it or lose it* kunnen noemen!
+* Als `s[0]` en `t[0]` niet gelijk zijn, pas dan twee keer recursie toe: je zou dit *use it or lose it or lose it* kunnen noemen!
 
 * Gebruik voor de eerste "lose it" recursie om de eerste letter van het ene argument weg te gooien:
 
@@ -434,27 +377,25 @@ Gebruik de volgende strategie:
 
     Hier moet je nog wat details invullen...
 
-* Geef ten slotte de *betere* van de twee resultaten terug, je moet hier nog even bedenken wat "beter" in dit geval betekent!
+* Geef ten slotte de *betere* van de twee resultaten terug. Bedenk zelf wat "beter" in dit geval betekent. Met `max(result1, result2, key=...)` uit het [tweede college van deze week](/lectures/11b_functie_als_argument) kies je de betere in één regel.
 :::
 
-## Bonusopgave
+## De functie `make_change(amount, coins)`
 
-Kan je nog geen genoeg krijgen van algoritmes? Hier is een optionele bonusopgave om het ontwerp van algoritmes te oefenen! Het bouwt voort op `exact_change`, maar is moeilijker omdat:
+De laatste functie bouwt voort op `exact_change` uit het [eerste college van deze week](/lectures/11a_use_it_or_lose_it), maar is moeilijker omdat:
 
-* Het de gebruikte munten moet teruggeven
-* Het ook `False` kan teruggeven, en je een aantal gevallen moet afhandelen *na* de recursie...
+* ze de gebruikte munten moet teruggeven;
+* ze ook `False` kan teruggeven, en je een aantal gevallen moet afhandelen *na* de recursie.
 
-### De functie `make_change(target_amount, L)`
+Schrijf de functie `make_change(amount, coins)`, met dezelfde argumenten als `exact_change`. De functie moet bepalen welke munten uit `coins` gebruikt kunnen worden om `amount` te betalen.
 
-Schrijf voor maximaal 7 bonuspunten de functie `make_change(target_amount, L)`, de argumenten zijn gelijk aan de functie `exact_change` die je eerder hebt geschreven. De functie moet bepalen welke waarden uit `L` gebruikt kunnen worden om `target_amount` te betalen.
-
-In plaats van `True` of `False` terug te geven zoals bij `exact_change` moet de functie `make_change` een *lijst* teruggeven van munten uit `L` die samen optellen tot `target_amount`. Als geen lijst kan worden samengesteld zal de functie `False` teruggeven. Als meer dan één lijst met waarden uit `L` mogelijk is mag de functie elk geldig antwoord teruggeven.
+In plaats van `True` of `False` terug te geven zoals bij `exact_change` moet de functie `make_change` een *lijst* teruggeven van munten uit `coins` die samen optellen tot `amount`. Als geen lijst kan worden samengesteld zal de functie `False` teruggeven. Als meer dan één lijst met munten uit `coins` mogelijk is mag de functie elk geldig antwoord teruggeven.
 
 De *volgorde* van de waarden in het antwoord maakt niet uit, maar het is logisch om dezelfde volgorde aan te houden als van de oorspronkelijke lijst.
 
 Je hoeft `exact_change` niet als hulpfunctie te gebruiken, maar het mag wel!
 
-De voorbeelden hieronder tonen hoe `make_change` moet werken, dit zijn dezelfde voorbeelden als bij `exact_change` hierboven. Bovendien is de ingebouwde Python-functie `sorted` gebruikt voor gevallen waar het resultaat een niet-lege lijst is zodat het resultaat een duidelijke volgorde heeft:
+De voorbeelden hieronder tonen hoe `make_change` moet werken. Let op dat je `0` *altijd* precies kan betalen, en dat je een negatief bedrag *nooit* precies kan betalen. Waar het resultaat een niet-lege lijst is, staat er `sorted` omheen, zodat het resultaat een duidelijke volgorde heeft:
 
 ```ipython
 In [1]: sorted(make_change(42, [25, 1, 25, 10, 5, 1]))

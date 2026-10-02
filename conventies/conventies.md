@@ -92,10 +92,12 @@ met per geval het aantal:
   codeconventies. Beide zijn met de herziening van week 3 uit `source/`
   verdwenen; het getal 48 dat hier stond is bij die herziening nagemeten en niet
   te reproduceren.
-- 33 notebooks zonder grond om notebook te zijn, en het ontbreken van de
+- 27 notebooks zonder grond om notebook te zijn, en het ontbreken van de
   browser-uitvoering die notebooks voor de student zinvol maakt, zie de
   technische conventies. Het waren er 39; de vijf van week 5 hebben nu
-  uitvoerbare cellen, en `lectures/3b_functies_aanroepen` is een `.md` geworden.
+  uitvoerbare cellen, `lectures/3b_functies_aanroepen` is een `.md` geworden, en
+  bij de herziening van PGM2 week 4 (#335) kregen vijf notebooks een grond en
+  verdween Text-ID.
 - Zes markdownblokken in de 25 PGM1-uitwerkingen worden bij de build niet uitgevoerd;
   tien interactieve codecellen dragen `skip-execution`, zie de technische conventies.
   Gemeten op de eindstand van deel C over `source/solutions/`, exclusief de twee

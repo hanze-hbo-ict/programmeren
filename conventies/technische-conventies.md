@@ -347,16 +347,23 @@ voordat je vergelijkt.
 | Grond voor notebook | Aantal | Waar |
 |---|---|---|
 | Sheets, met of zonder code | 6 | uitsluitend `lectures/` |
-| Uitvoerbare code, geen sheets | 23 | verspreid |
-| Alleen invulcellen (werkboek) | 12 | `problems/` 10, `practicals/` 2 |
-| **Geen van drieën** | **33** | `solutions/` 11, `problems/` 11, `practicals/` 7, `lectures/` 3, `extra/` 1 |
+| Uitvoerbare code, geen sheets | 31 | verspreid |
+| Alleen invulcellen (werkboek) | 18 | `problems/` 15, `practicals/` 3 |
+| **Geen van drieën** | **27** | `solutions/` 11, `problems/` 8, `practicals/` 5, `lectures/` 2, `extra/` 1 |
 
-Die laatste 33 zijn markdown-documenten in een notebook-jasje; het waren er 39,
+Die laatste 27 zijn markdown-documenten in een notebook-jasje; het waren er 39,
 tot de vijf van week 5 uitvoerbare cellen kregen en
-`lectures/3b_functies_aanroepen` bij de herziening van week 3 een `.md` werd. Twee colleges springen eruit
-omdat ze in `lectures/` geen enkele grond hebben:
-`11a_knapzak_probleem.ipynb` (tot #332 `10a_knapzak_probleem.ipynb`) en
-`4b_midterm.ipynb`.
+`lectures/3b_functies_aanroepen` bij de herziening van week 3 een `.md` werd. Bij werkitem #335
+kwamen er zes notebooks van PGM2 week 4 uit, als delta en niet als volledige
+hertelling. Het college over de knapzak, nu `11a_use_it_or_lose_it`, kreeg
+uitvoerbare code; het werkcollege `11_wisselgeld` en de basis en de extra over
+algoritmen kregen invulcellen; de periodieke tshirt verhuisde van `practicals/` naar
+`problems/11_tshirt_extra` en kreeg ook invulcellen; en Text-ID
+(`problems/11_extra`) is verwijderd. Daarnaast kwamen er nieuwe notebooks bij die
+niet in deze rij vallen: het college `11b_functie_als_argument` en zes uitwerkingen
+met uitvoerbare code, en `11_opstap` en `11_lambda_basis` met invulcellen. Eén
+college springt eruit omdat het in `lectures/` geen enkele grond heeft:
+`4b_midterm.ipynb`. Tot #335 gold dat ook voor het college over de knapzak.
 
 Dit wordt niet in één actie omgezet. Per document wordt bij de herziening
 bepaald welke grond geldt, en daarmee welk formaat. Voor uitwerkingen speelt de
