@@ -955,7 +955,6 @@ is wél gemeten: twee `<h1>` in de gebouwde pagina vóór, één na.
 (#249 lesmateriaal, #250 de extensie), zodat ze los terug te draaien zijn. En de visuele controle
 liep op een derde, gecombineerde branch, zodat de PR's zelf ongemoeid bleven.
 
-
 ### 16 september 2026, #231 — de tweede S-route, en een scoperegel die te ver reikte
 
 **Wat het was.** `source/solutions/3_opstap.ipynb` nieuw: tien cellen, drie draaiende codecellen,
@@ -2629,6 +2628,73 @@ hoort te liggen, en wat de omvang van week 3 bij haar tentamengewicht betekent. 
 bij beide en legde ze voor, conform het C1; ze staan nu als **#356**. Zonder die drager zouden ze
 bij het sluiten van #346 zijn verdampt, en dat is precies wat `CLAUDE.md` over niet-vastgelegde
 besluiten zegt.
+
+## Werkitem #335 - PGM2 week 4: use it or lose it en lambda
+
+**Route en omvang.**
+- Route *ingrijpende weekherziening*, met een aparte verkenner.
+- Volgorde: verkenner, ontwerper, verhelderaar, poort, auteur, en daarna de eerstejaars en de
+  onderwijskundige.
+- Omvang XL, procescommit `d7202964`. Geen proef van #203; geen referentie en geen budgetgrens.
+- In C0 ontbraken de gewenste uitkomst en de criteria. De orkestrator vroeg ernaar. De
+  vakdeskundige koos *Planning volledig*, met caesar binnen het werkitem, potjeslatijn apart
+  (#359) en criteria op voorstel van de orkestrator.
+
+**Opgeleverd in PR #360:**
+- twee colleges (`11a_use_it_or_lose_it`, `11b_functie_als_argument`);
+- een werkcollege (`11_wisselgeld`);
+- een opstap, twee basisniveaus en twee extra's, met zes uitwerkingen;
+- een herziene `caesar_op_orde`;
+- Text-ID verwijderd;
+- de vastlegging in `curriculum/`, `conventies/` en een handleiding.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator: inname, C1, overdrachten, C4-registratie, C7, registraties, titelcommit `47c2b54f` | niet beschikbaar | niet beschikbaar | LUS, XL |
+| verkenner | 187.038 | 11 min 49 s | C1b |
+| curriculumontwerper | 123.407 | 8 min 0 s | C2, 14 criteria, 11 voorlegpunten |
+| verhelderaar | 82.101 | 4 min 4 s | FAAL, 1 blokkade (deelsplitsing, AC8) |
+| curriculumontwerper, herstel 1 van 1 (hervat) | 46.044 | 3 min 22 s | C2 ronde 2 |
+| verhelderaar, herstelmodus | 102.268 | 3 min 44 s | AKKOORD, 10 verbeterpunten |
+| auteur, oplevering | 380.408 | 37 min 28 s | C5, controles groen |
+| beoordelaar-eerstejaars en -onderwijskundige, eerste start | niet beschikbaar | niet beschikbaar | afgebroken op verzoek van de vakdeskundige, geen C6 bewaard |
+| beoordelaar-eerstejaars | 136.484 | 6 min 24 s | AKKOORD MET PUNTJES, 7 puntjes |
+| beoordelaar-onderwijskundige | 147.727 | 6 min 58 s | AKKOORD MET PUNTJES, 5 puntjes |
+| auteur, puntjesreparatie (hervat) | 42.625 | 8 min 7 s | 8 puntjes opgelost |
+| beoordelaar-onderwijskundige, nalezing puntjesreparatie | 70.598 | 3 min 48 s | AKKOORD MET PUNTJES, 2 puntjes |
+| **totaal agents** | **1.318.700** | | |
+
+**Bron.** De tokens komen uit de `subagent_tokens` van de verbruiksmelding na elke agentstap. De
+twee rijen van een hervatte agent zijn berekend als verschil met de vorige melding van dezelfde
+agent: 169.451 − 123.407 voor de ontwerper en 423.033 − 380.408 voor de auteur. Dat is de
+praktijk van #271, met hetzelfde voorbehoud: dat de melding een lopend totaal is, is aannemelijk
+maar niet bewezen. Tellen alle meldingen volledig, dan is het totaal 1.822.515. Welke telling
+geldt, stelt de vakdeskundige vast. Op GitHub stond eerst de hoge lezing als verbruik; zie de
+bevinding van 2 oktober.
+
+**Rondes.** Herstelstand bij afsluiting: ontwerp 1/1, oplevering 0/1. De puntjesreparatie
+kostte geen ronde.
+
+**De vakdeskundige besliste zes keer:**
+1. Bij de inname: de uitkomst, caesar, potjeslatijn en wie de criteria opstelt. Daarna: akkoord
+   op de concept-criteria.
+2. Het C4 op elf voorlegpunten, met twee afwijkingen van de aanbeveling. Bij VP3 blijft de tshirt
+   als extra opgave, en de auteur kiest waar `num_coins` en `exact_change` komen. Bij VP9 is het
+   één oplevering in plaats van twee.
+3. Pauze en hervatting van de beoordeling.
+4. Na de C7: alle puntjes oplossen, onderscheidende paginatitels, en een werkitem voor het signaal
+   over *creëren* (#361).
+5. Na de nalezing: de titels beginnen met het niveauwoord, zonder agentbeoordeling (*"ik
+   controleer het straks zelf"*). De orkestrator voerde dit uit.
+6. Merge: nog open bij het schrijven van deze meting.
+
+**Wat de lus ving.**
+- De verhelderaar zag dat de voorgestelde deelsplitsing leerinhoud weghaalde zonder dat te
+  documenteren. Het voorstel gebruikte ook `key=` vóór de introductie ervan.
+- De verkenner vond inconsistente asserts in de nijlpaardopgave, een dubbele 1 in het pijlenpad,
+  en vijf `TODO`'s in caesar in plaats van de vier die C0 noemde.
+- Beide beoordelaars vonden onafhankelijk van elkaar dezelfde opsomming die verkeerd rendert, en
+  dezelfde onjuiste zin over de gelijke tijd.
 
 ## Werkitem #351 - twee achterhaalde beweringen over week 3
 

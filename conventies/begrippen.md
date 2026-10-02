@@ -66,6 +66,9 @@ forceer geen Nederlandse vertaling. Voor dit materiaal werkt dat zo uit:
 | De aanroep waarmee een functie zichzelf aanroept | **recursieve aanroep** | - | Nieuw in PGM2 week 3. Vastgesteld door de vakdeskundige op 30 september 2026, bij de poort van #332 (VP2) |
 | Het geval waarin een recursieve functie zichzelf níet aanroept, maar meteen een antwoord teruggeeft | **basisgeval** | base case (30×) | Nieuw in PGM2 week 3; niet *base case*. Zie *Basisgeval en recursief geval* hieronder. Vastgesteld door de vakdeskundige op 30 september 2026, bij de poort van #332 (VP2) |
 | Het geval met de recursieve aanroep | **recursief geval** | recursieve case (6×), recursie case (3×), recursive case (6×) | Nieuw in PGM2 week 3. Vastgesteld door de vakdeskundige op 30 september 2026, bij de poort van #332 (VP2) |
+| Bij elk element twee keuzes uitproberen, het gebruiken of het laten liggen, met twee recursieve aanroepen | **use it or lose it** | forget it (in `11a` tot #335) | Nieuw in PGM2 week 4; Engels, zie *Engelse termen die we niet vertalen*. De twee keuzes heten *use it* en *lose it*, in code `use_it` en `lose_it`; *forget it* vervalt. Vastgesteld door de vakdeskundige op 2 oktober 2026, bij de poort van #335 (VP8) |
+| Een functie zonder naam, opgeschreven met het sleutelwoord `lambda` | **lambda-functie** | - | Nieuw in PGM2 week 4; niet *lambda-expressie* en niet *anonieme functie*. Het sleutelwoord zelf heet `lambda`, in code-opmaak. Vastgesteld door de vakdeskundige op 2 oktober 2026, bij de poort van #335 (VP8) |
+| Een functie aan een andere functie geven, die haar zelf aanroept | **functie als argument**, met het werkwoord **meegeven** | - | Nieuw in PGM2 week 4. Voor de functie achter `key=` is er geen aparte term. Vastgesteld door de vakdeskundige op 2 oktober 2026, bij de poort van #335 (VP8) |
 | Melding bij een fout | **foutmelding** | error, exception, uitzondering | Voor het Python-mechanisme: `exception` |
 | Plek waar bestanden in staan | **directory** | map (1×), folder (9×) | Geteld in `source/`; zie hieronder |
 | De eerste regel van een functie | **signatuur** | signature (4×) | Vastgesteld door de vakdeskundige op 10 september 2026 |
@@ -215,12 +218,12 @@ vakdeskundige koos het Nederlandse woord.
 De tegenhanger stond er als *recursieve case*, *recursie case* en *recursive case*,
 samen 15 regels in de twee colleges van week 3; die basterdvormen vervallen.
 
-**Waar *base case* nog staat.** Het materiaal dat bij #332 ongewijzigd naar week 4
-verhuisde, `lectures/11a_knapzak_probleem.ipynb` en
-`problems/opdrachten/caesar_op_orde/index.md`, en het bevroren oefententamen met
-zijn uitwerking, `solutions/PGM2_examen.ipynb`, zeggen *base case* tot hun eigen
-herziening. Dat is een bekende afwijking; de aflevertabel in
-`curriculum/leerlijn.md` noemt haar.
+**Waar *base case* nog staat.** Alleen in het bevroren oefententamen met zijn
+uitwerking, `solutions/PGM2_examen.ipynb`; dat zegt *base case* tot zijn eigen
+herziening. Dat is een bekende afwijking. Het college over de knapzak en
+`problems/opdrachten/caesar_op_orde/index.md`, die bij #332 ongewijzigd naar
+week 4 verhuisden, zijn in #335 herzien en zeggen nu *basisgeval*; het college heet
+sindsdien `lectures/11a_use_it_or_lose_it.ipynb`.
 
 ## Opgave, opdracht, stap
 
@@ -287,13 +290,14 @@ zij hier bij.
 - **`Opdracht N`, genummerd**, als kop of als label. Dat is de hoofdvorm en de
   tabel hierboven dekt haar.
 - **`Opdrachten` als rubriekkop**, boven een reeks taken in een college of een
-  practicum. Achtentwintig vindplaatsen, alle `## Opdrachten`, gemeten bij #332 en
-  hermeten bij #102, dat `practical_7.md` toevoegde:
+  practicum. Dertig vindplaatsen, alle `## Opdrachten`, gemeten bij #332 en
+  hermeten bij #102, dat `practical_7.md` toevoegde, en bij #335:
   alle veertien `course/practical_N.md`, en verder
   `lectures/1a_intro_programmeren.md`, `2a_var_con.ipynb`,
   `2b_strings_en_lists.ipynb`, `8a_datastructuren.ipynb`, `8b_taalmodel.ipynb`,
   `9a_list_comprehensions.ipynb`, `9b_dict_en_set_comprehensions.ipynb`,
-  `10b_recursief_ontwerpen.ipynb`, `12a_objecten.ipynb`, `13a_overerving.ipynb`,
+  `10b_recursief_ontwerpen.ipynb`, `11a_use_it_or_lose_it.ipynb`,
+  `11b_functie_als_argument.ipynb`, `12a_objecten.ipynb`, `13a_overerving.ipynb`,
   `13b_polymorfisme.ipynb` en `14a_operatoren_en_exceptions.ipynb`, en
   `practicals/2_sequenties_en_data.ipynb` en `3_fijne_functies.ipynb`. Hier
   stonden er zeventien, met `practical_11` als uitzondering omdat week 4 nog geen
@@ -388,11 +392,14 @@ automatisch.
 `string`, `dictionary`, `integer`, `float`, `list comprehension`,
 `dict comprehension`, `set comprehension`, `comprehension`, `recursie`,
 `debuggen`, `commit`, `branch`, `assertion`, `docstring`, `index`, `slice`,
-`duck typing`, `operator overloading`.
+`duck typing`, `operator overloading`, `use it or lose it`.
 
 *Dict comprehension*, *set comprehension* en het verzamelwoord *comprehension*
 blijven Engels, net als *list comprehension*. Vastgesteld door de vakdeskundige
 op 30 september 2026, bij de poort van #326 (VP2).
+
+*Use it or lose it* blijft Engels, ook *use it* en *lose it* voor de twee keuzes.
+Vastgesteld door de vakdeskundige op 2 oktober 2026, bij de poort van #335 (VP8).
 
 Introduceer zo'n term bij eerste gebruik kort in het Nederlands. Voor
 eerstejaars is die ene toelichting nodig; daarna volstaat de term.
