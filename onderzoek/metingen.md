@@ -2586,7 +2586,7 @@ in `curriculum/` is. PR #355, `Closes #346`.
 
 | Rol | Tokens | Duur | Uitkomst |
 |---|---|---|---|
-| orkestrator (C1, PR, C6-plaatsing) | niet beschikbaar | niet beschikbaar | C1 LUS/S |
+| orkestrator (C1, PR, C5- en C6-plaatsing) | niet beschikbaar | niet beschikbaar | C1 LUS/S |
 | auteur | 112.851 | 8 min 32 s | C5; 1 bestand, +35/-33 |
 | beoordelaar-redacteur | 89.175 | 8 min 26 s | **BLOKKEER**, 1 blokkade, 7 puntjes |
 | **totaal agents** | **202.026** | | |
@@ -2595,8 +2595,8 @@ Geen herstelronde gebruikt: de blokkade zat niet in het bestand.
 
 **De uitkomst draaide de conclusie om.** Extra ging van 7.821 naar 3.447 woorden en werd daarmee
 de kleinste van de drie lagen, 21,8% van het materiaal en 5.138 onder basis. De reeks is
-48% → 40,5% → 21,8%. De verschuiving zit bij week 5 (extra 5.354 → 389) en week 7 (3.713 → 447),
-beide gevolg van uitgevoerde herverdelingsbesluiten; week 3 ging de andere kant op, van 176 naar
+48% → 40,5% → 21,8%. De verschuiving zit bij week 5 (extra 5.354 → 389) in deze ronde en bij
+week 7 (3.713 → 447) al bij #102, beide gevolg van uitgevoerde herverdelingsbesluiten; week 3 ging de andere kant op, van 176 naar
 741. Het register liep dus jaren achter op besluiten die al waren uitgevoerd.
 
 **De blokkade zat in de oplevering en niet in het materiaal.** De redacteur reproduceerde alle
@@ -2619,7 +2619,7 @@ reproduceerden. Hij maakte de enige methodische keuze aanwijsbaar in plaats van 
 twee mandelbrotbestanden tellen mee bij opstap en basis van week 5 omdat `source/_toc.yml` ze
 onder `course/opgaven_5` hangt en `course/week_5.md` ze verplichte kernopgaven noemt. De
 redacteur stelde vast dat de getelde verzameling voor alle zes weken exact de `opgaven_N`-secties
-van `_toc.yml` volgt. En hij vond een echte valkuil: in `4_basis.ipynb` is `cells[].source` bij
+van `_toc.yml` volgt. De auteur vond daarbij een echte valkuil: in `4_basis.ipynb` is `cells[].source` bij
 sommige cellen een string in plaats van een lijst, waardoor een naïeve telling 90 geeft in plaats
 van 1.066.
 
@@ -2699,35 +2699,37 @@ kostte geen ronde.
 ## Werkitem #351 - twee achterhaalde beweringen over week 3
 
 Route: LUS, XS, procesversie `b61acbfe`. Auteur, één beoordelaar (redacteur). PR #357,
-`Closes #351`. **Deze ingang is geschreven vóór sessie-einde; de beoordeling liep nog.**
+`Closes #351`. Geen herstelronde gebruikt: oplevering 0 van 1, want puntjes kosten geen ronde.
 
 | Rol | Tokens | Duur | Uitkomst |
 |---|---|---|---|
-| orkestrator (C1, PR, C5-plaatsing) | niet beschikbaar | niet beschikbaar | C1 LUS/XS |
+| orkestrator (C1, PR, C5- en C6-plaatsing) | niet beschikbaar | niet beschikbaar | C1 LUS/XS |
 | auteur | 96.168 | 6 min 48 s | C5; 2 bestanden, +20/-8 |
 | beoordelaar-redacteur | 119.467 | 12 min 48 s | AKKOORD MET PUNTJES, 0 blokkades, 6 puntjes |
 | **totaal agents** | **215.635** | | |
 
-**Wat er stond.** Een besluitalinea in `curriculum/uitgangspunten.md` zei dat week 3 de dunste
-week van de cursus is en P5 en A2 draagt, samen 20% van het tentamen. Beide helften onjuist: de
-20% was bij #198 al naar 30% rechtgezet omdat P6 wegviel, en deze kopie was toen gemist; de
-superlatief was door de hermeting van #346 onwaar, want week 6 en week 7 zijn dunner. Een derde
-kopie van dezelfde weglating stond in `leerlijn.md`, veertig regels boven de alinea die haar
-rectificeert.
+**Wat er stond.** Een besluitalinea in `curriculum/uitgangspunten.md` zei dat week 3 de
+dunste week van de cursus is en P5 en A2 draagt, samen 20% van het tentamen. Beide helften
+onjuist: de 20% was bij #198 al naar 30% rechtgezet omdat de oude som P6 weg liet, en deze
+kopie was toen gemist; de superlatief was door de hermeting van #346 onwaar, want week 6 en
+week 7 zijn dunner. Een derde kopie van dezelfde weglating stond in `leerlijn.md`, ruim
+honderd regels boven de alinea die haar rectificeert.
 
 **De auteur nam de getallen niet over maar verwees naar de tabel.** Zijn grond: een vierde kopie
 van dezelfde meting is precies het mechanisme waardoor deze tegenspraak is ontstaan. Dat is de
 les van #346 toegepast in de ronde erna.
 
-**En hij vond iets dat het C1 niet had gezien.** De premisse van dezelfde alinea - *"Daardoor
-heeft PGM1 week 3 geen inhoudelijke opgave meer"* - en haar slotzin *"hier moet nieuw materiaal
-geschreven worden"* zijn zelf achterhaald: week 3 heeft bij #309 de BSN-opgave met de elfproef
-gekregen, en `grep -ril "elfproef" source/` geeft drie bestanden. Het besluit is dus uitgevoerd
-in plaats van open. Hij raakte het niet aan en legde het voor, met de vaststelling dat de
+**En hij vond iets dat het C1 niet had gezien.** De premisse van dezelfde alinea -
+*"Daardoor heeft PGM1 week 3 geen inhoudelijke opgave meer"* - en haar slotzin *"hier moet
+nieuw materiaal geschreven worden"* zijn zelf achterhaald: week 3 heeft de BSN-opgave met de
+elfproef al sinds commit `c9f38c91` van 26 augustus 2026 (*"Give week 3 a problem with a
+context: the BSN check"*); #305 en #309 wijzigden erbinnen de telling en het verbodskader,
+en `grep -ril "elfproef" source/` geeft drie bestanden. Het besluit is dus uitgevoerd in
+plaats van open. Hij raakte het niet aan en legde het voor, met de vaststelling dat de
 dragende reden van het besluit niet de superlatief was maar *"alles wat er lag is elders
 terechtgekomen"*, en dat die overeind staat.
 
-**De beoordeling kwam alsnog binnen vóór sessie-einde.** Alle vier criteria gehaald, nul
+**De beoordeling.** Alle vier criteria gehaald, nul
 blokkades. De redacteur reproduceerde de zwaarste bewering - dat er geen vierde kopie is - met
 een eigen instrument, eigen patronen en een eigen ijking, inclusief een patroon dat de auteur
 niet had gebruikt. Hij bevestigde ook dat niet-aanraken van de achterhaalde premisse de juiste
@@ -2741,10 +2743,14 @@ rijmde, pakte de hele boom van `8411c334` uit met `git show`, controleerde de md
 object en draaide zijn volledige meetbatterij opnieuw; de uitkomsten waren identiek.
 
 Dat het goed afliep is zijn verdienste en niet die van de inrichting. Een beoordelaar leest de
-werkkopie, en de orkestrator die hem beoordeelt mag die niet onder hem omzetten. Met een aparte
-worktree per rol was dit niet gebeurd. Dit raakt dezelfde familie als de bevinding over de
-gedeelde scratchpad van 1 oktober: de isolatie die `loop.md` voor een beoordeling eist hangt aan
-de discipline van de rol en niet aan de inrichting.
+werkkopie, en de orkestrator die hem beoordeelt mag die niet onder hem omzetten.
+
+**En dit is geen nieuwe familie.** Bevinding 17, *Twee agents in één werkboom eten elkaars
+commits op*, draagt onder *Wat het veranderde* al de regel *"Werk dat echt parallel moet, hoort
+in een aparte `git worktree`"*. Die regel stond dus op papier en is niet gevolgd; dit is het
+tweede voorval, en het eerste met de maatregel al vastgelegd. Zie de bevinding daar. De
+maatregel is inmiddels uitgevoerd: de leesronde op déze registratie draaide in een eigen
+worktree.
 
 **Niet vastgesteld bij sessie-einde:** of de merge van PR #357 is gedaan, en de zes puntjes van
 de redacteur zijn niet verwerkt. Twee daarvan horen in een volgende ronde mee: de precedentclaim
