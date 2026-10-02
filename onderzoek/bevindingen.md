@@ -1583,3 +1583,32 @@ open vraag opschrijft, in `curriculum/`, `conventies/` en de gesloten werkitems 
 beslist is, en noem in de opdracht aan een rol de vindplaats en niet alleen de conclusie.**
 Zolang die regel alleen hier staat, hangt hij aan wie deze bevinding toevallig leest, en dat is
 precies de afhankelijkheid die de bevinding beschrijft.
+
+## De meetpraktijk voor een hervatte agent werd voor de derde keer niet geraadpleegd - 2 oktober 2026
+
+**Wat er gebeurde.** Bij #335 werden twee agents hervat: de ontwerper voor zijn herstel en de
+auteur voor de puntjesreparatie. De orkestrator noteerde op GitHub steeds het gemelde getal als
+verbruik van die stap. Bij de auteur ging hij verder: aan de vakdeskundige meldde hij dat de
+reparatie, met 423.033 tokens, *"meer dan de hele oorspronkelijke oplevering"* kostte. Hij
+kondigde ook aan dat als bevinding vast te leggen, als bewijs dat hervatten duur is. De
+praktijk in [metingen.md](metingen.md) rekent sinds #271 met het verschil tussen twee meldingen
+van dezelfde agent. Volgens die praktijk was de reparatie 42.625 tokens. De orkestrator zag de
+fout pas bij het schrijven van de metingen, toen hij de tabel van #332 opende. De correctie
+staat op #335 en PR #360.
+
+**Waarom dit een patroon is.** Het is dezelfde fout als bij #273 (23 september) en #326
+(30 september), en de bevinding van 30 september beschrijft precies dit. Nieuw is de richting.
+De vorige keren stonden er twee lezingen naast elkaar. Nu werd de hoge lezing gebruikt als
+onderbouwing van een tegengestelde conclusie, en die was bijna als bevinding vastgelegd. Een
+bevinding die op een verkeerde telling rust, stuurt de werkwijze de verkeerde kant op. Ook hier
+bleken de toolaanroepen de aanwijzing: 7 aanroepen voor +46.044, en 27 voor +42.625.
+
+**Wat het veranderde.** De tellingen op GitHub zijn gecorrigeerd, met beide lezingen. In
+[metingen.md](metingen.md) telt #335 met het verschil, en de hoge lezing staat ernaast. In de
+instructies is niets veranderd.
+
+Voorstel, een procesbesluit voor de vakdeskundige. Het voorstel van 23, 24 en 30 september staat
+nog open: leg de telling van een hervatte agent vast in de meetdefinitie in `/orc`, op de plek
+waar de orkestrator de meetregel schrijft, en niet alleen hier. Drie keer dezelfde fout na twee
+bevindingen laat zien dat een bevinding die de orkestrator niet op het moment zelf leest, hem
+niet bereikt.
