@@ -955,7 +955,6 @@ is wél gemeten: twee `<h1>` in de gebouwde pagina vóór, één na.
 (#249 lesmateriaal, #250 de extensie), zodat ze los terug te draaien zijn. En de visuele controle
 liep op een derde, gecombineerde branch, zodat de PR's zelf ongemoeid bleven.
 
-
 ### 16 september 2026, #231 — de tweede S-route, en een scoperegel die te ver reikte
 
 **Wat het was.** `source/solutions/3_opstap.ipynb` nieuw: tien cellen, drie draaiende codecellen,
@@ -2578,6 +2577,58 @@ GitHub-draad is door hem geverifieerd. Dat staat in zijn rapport onder *niet vas
 en niet als nul. Wat hij wél kon toetsen - of een maatregel in `.claude/` is geland - is de
 toets waar deze ronde om begon.
 
+## Werkitem #346 - de woordentabel in leerlijn.md volledig hermeten
+
+Route: LUS, S, procesversie `5e4bd0ba`. Auteur, één beoordelaar (redacteur), geen verkenner,
+ontwerper of verhelderaar: de maat staat in het bestand zelf en de criteria stonden in de body.
+De redacteur en niet de eerstejaars, omdat `source/` alleen is gemeten en de wijziging normtekst
+in `curriculum/` is. PR #355, `Closes #346`.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator (C1, PR, C5- en C6-plaatsing) | niet beschikbaar | niet beschikbaar | C1 LUS/S |
+| auteur | 112.851 | 8 min 32 s | C5; 1 bestand, +35/-33 |
+| beoordelaar-redacteur | 89.175 | 8 min 26 s | **BLOKKEER**, 1 blokkade, 7 puntjes |
+| **totaal agents** | **202.026** | | |
+
+Geen herstelronde gebruikt: de blokkade zat niet in het bestand.
+
+**De uitkomst draaide de conclusie om.** Extra ging van 7.821 naar 3.447 woorden en werd daarmee
+de kleinste van de drie lagen, 21,8% van het materiaal en 5.138 onder basis. De reeks is
+48% → 40,5% → 21,8%. De verschuiving zit bij week 5 (extra 5.354 → 389) in deze ronde en bij
+week 7 (3.713 → 447) al bij #102, beide gevolg van uitgevoerde herverdelingsbesluiten; week 3 ging de andere kant op, van 176 naar
+741. Het register liep dus jaren achter op besluiten die al waren uitgevoerd.
+
+**De blokkade zat in de oplevering en niet in het materiaal.** De redacteur reproduceerde alle
+achttien celwaarden, alle zeven totalen en alle zes afgeleide beweringen exact, en verklaarde de
+vier criteria gehaald. Wat niet klopte was de alternatieve totaalrij in de C5-reactie, voor het
+geval de twee mandelbrotbestanden niet meetellen: er stond 3.324 / 8.361 / 3.447 / 15.136,
+terwijl het 3.520 / 8.389 / 3.447 / 15.356 is - en die drie kolommen sommeerden tot 15.132 en
+niet tot de 15.136 ernaast, dus er was geen lezing waaronder het klopte. Rechtgezet in een
+reactie; het bestand had geen wijziging nodig.
+
+**Hij meldde zelf dat hij die fout niet had mogen vinden.** De onjuiste rij stond in de sectie
+*Uitgebreid* van de C5, en het C6-contract geeft hem alleen de kern. In de kern stond de
+uitkomst correct. Had hij zich aan zijn reikwijdte gehouden, dan was dit getal blijven staan -
+en een getal in een PR-reactie wordt door niets gecontroleerd, terwijl dit juist het getal was
+dat de vakdeskundige nodig heeft als hij de enige methodische keuze anders beslist.
+
+**Wat deze route goed deed.** De auteur ijkte zijn methode op week 4 en week 7 vóór hij een
+nieuw getal opschreef; die twee rijen waren bij #102 gemeten en tweemaal nagerekend, en ze
+reproduceerden. Hij maakte de enige methodische keuze aanwijsbaar in plaats van impliciet: de
+twee mandelbrotbestanden tellen mee bij opstap en basis van week 5 omdat `source/_toc.yml` ze
+onder `course/opgaven_5` hangt en `course/week_5.md` ze verplichte kernopgaven noemt. De
+redacteur stelde vast dat de getelde verzameling voor alle zes weken exact de `opgaven_N`-secties
+van `_toc.yml` volgt. De auteur vond daarbij een echte valkuil: in `4_basis.ipynb` is `cells[].source` bij
+sommige cellen een string in plaats van een lijst, waardoor een naïeve telling 90 geeft in plaats
+van 1.066.
+
+**Twee vragen bleven open en kregen een drager.** Waar het zwaartepunt tussen de opgaveniveaus
+hoort te liggen, en wat de omvang van week 3 bij haar tentamengewicht betekent. De auteur stopte
+bij beide en legde ze voor, conform het C1; ze staan nu als **#356**. Zonder die drager zouden ze
+bij het sluiten van #346 zijn verdampt, en dat is precies wat `CLAUDE.md` over niet-vastgelegde
+besluiten zegt.
+
 ## Werkitem #335 - PGM2 week 4: use it or lose it en lambda
 
 **Route en omvang.**
@@ -2644,3 +2695,64 @@ kostte geen ronde.
   en vijf `TODO`'s in caesar in plaats van de vier die C0 noemde.
 - Beide beoordelaars vonden onafhankelijk van elkaar dezelfde opsomming die verkeerd rendert, en
   dezelfde onjuiste zin over de gelijke tijd.
+
+## Werkitem #351 - twee achterhaalde beweringen over week 3
+
+Route: LUS, XS, procesversie `b61acbfe`. Auteur, één beoordelaar (redacteur). PR #357,
+`Closes #351`. Geen herstelronde gebruikt: oplevering 0 van 1, want puntjes kosten geen ronde.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator (C1, PR, C5- en C6-plaatsing) | niet beschikbaar | niet beschikbaar | C1 LUS/XS |
+| auteur | 96.168 | 6 min 48 s | C5; 2 bestanden, +20/-8 |
+| beoordelaar-redacteur | 119.467 | 12 min 48 s | AKKOORD MET PUNTJES, 0 blokkades, 6 puntjes |
+| **totaal agents** | **215.635** | | |
+
+**Wat er stond.** Een besluitalinea in `curriculum/uitgangspunten.md` zei dat week 3 de
+dunste week van de cursus is en P5 en A2 draagt, samen 20% van het tentamen. Beide helften
+onjuist: de 20% was bij #198 al naar 30% rechtgezet omdat de oude som P6 weg liet, en deze
+kopie was toen gemist; de superlatief was door de hermeting van #346 onwaar, want week 6 en
+week 7 zijn dunner. Een derde kopie van dezelfde weglating stond in `leerlijn.md`, ruim
+honderd regels boven de alinea die haar rectificeert.
+
+**De auteur nam de getallen niet over maar verwees naar de tabel.** Zijn grond: een vierde kopie
+van dezelfde meting is precies het mechanisme waardoor deze tegenspraak is ontstaan. Dat is de
+les van #346 toegepast in de ronde erna.
+
+**En hij vond iets dat het C1 niet had gezien.** De premisse van dezelfde alinea -
+*"Daardoor heeft PGM1 week 3 geen inhoudelijke opgave meer"* - en haar slotzin *"hier moet
+nieuw materiaal geschreven worden"* zijn zelf achterhaald: week 3 heeft de BSN-opgave met de
+elfproef al sinds commit `c9f38c91` van 26 augustus 2026 (*"Give week 3 a problem with a
+context: the BSN check"*); #305 en #309 wijzigden erbinnen de telling en het verbodskader,
+en `grep -ril "elfproef" source/` geeft drie bestanden. Het besluit is dus uitgevoerd in
+plaats van open. Hij raakte het niet aan en legde het voor, met de vaststelling dat de
+dragende reden van het besluit niet de superlatief was maar *"alles wat er lag is elders
+terechtgekomen"*, en dat die overeind staat.
+
+**De beoordeling.** Alle vier criteria gehaald, nul
+blokkades. De redacteur reproduceerde de zwaarste bewering - dat er geen vierde kopie is - met
+een eigen instrument, eigen patronen en een eigen ijking, inclusief een patroon dat de auteur
+niet had gebruikt. Hij bevestigde ook dat niet-aanraken van de achterhaalde premisse de juiste
+keuze was.
+
+**Een procesfout van de orkestrator, door de rol gevangen.** Halverwege die beoordeling zette de
+orkestrator de werkkopie op branch `meting-346-351` om deze metingen vast te leggen. Daardoor
+stond `curriculum/` bij de beoordelaar twee regels korter dan in de commit die hij beoordeelde
+en schoven alle regelnummers onder r37 met twee. Hij ving het op een regelnummer dat niet meer
+rijmde, pakte de hele boom van `8411c334` uit met `git show`, controleerde de md5 tegen het
+object en draaide zijn volledige meetbatterij opnieuw; de uitkomsten waren identiek.
+
+Dat het goed afliep is zijn verdienste en niet die van de inrichting. Een beoordelaar leest de
+werkkopie, en de orkestrator die hem beoordeelt mag die niet onder hem omzetten.
+
+**En dit is geen nieuwe familie.** Bevinding 17, *Twee agents in één werkboom eten elkaars
+commits op*, draagt onder *Wat het veranderde* al de regel *"Werk dat echt parallel moet, hoort
+in een aparte `git worktree`"*. Die regel stond dus op papier en is niet gevolgd; dit is het
+tweede voorval, en het eerste met de maatregel al vastgelegd. Zie de bevinding daar. De
+maatregel is inmiddels uitgevoerd: de leesronde op déze registratie draaide in een eigen
+worktree.
+
+**Niet vastgesteld bij sessie-einde:** of de merge van PR #357 is gedaan, en de zes puntjes van
+de redacteur zijn niet verwerkt. Twee daarvan horen in een volgende ronde mee: de precedentclaim
+voor de vorm van de rectificatie klopt niet, en `uitgangspunten.md` draagt nu een tweede
+verwijzing naar #356 die #356 niet kent. Dat laatste is op #356 gemeld.

@@ -779,6 +779,34 @@ bestanden, niet naar welke branch ze dragen.
 *Bewijs: #198, commit `d32a8373` tegenover `a711a28f`; de nameting staat als reactie
 op dat issue. Vastgesteld 12 september 2026.*
 
+### Tweede voorval, 2 oktober 2026 - met de regel al op papier
+
+Het gebeurde opnieuw, en nu stond de maatregel hierboven al drie weken opgeschreven.
+Tijdens de beoordeling van #351 zette de orkestrator de werkkopie op een andere branch
+om de metingen vóór sessie-einde vast te leggen. Daardoor stond `curriculum/` bij de
+beoordelaar twee regels korter dan in de commit die hij beoordeelde, en schoven alle
+regelnummers onder r37 met twee.
+
+**Wat het ving, is precies de tweede maatregel hierboven.** De redacteur merkte het
+aan een regelnummer dat niet meer rijmde, pakte de hele boom van `8411c334` uit met
+`git show`, controleerde de md5 tegen het object en draaide zijn volledige
+meetbatterij opnieuw; de uitkomsten waren identiek. Hij ankerde dus op de commit in
+plaats van op de werkkopie, en dat is wat bij #198 ook als enige werkte.
+
+Het verschil met het eerste voorval is dat er toen geen regel was en nu wel. De eerste
+maatregel - *een agent die in de werkboom schrijft, heeft die werkboom exclusief* - is
+geschreven voor een auteur die commit, en de orkestrator heeft haar niet op zichzelf
+toegepast terwijl een beoordelaar las. Een beoordelaar schrijft niet, maar hij leest
+regelnummers, en die zijn even kwetsbaar.
+
+**Wat het veranderde.** De leesronde op de registratie van #346 en #351 draaide in een
+eigen `git worktree`, de maatregel die hierboven al stond. Dat werkte: die rol meldde
+geen verschuiving. De bredere vraag of elke rol standaard een eigen worktree hoort te
+krijgen in plaats van op afspraak, staat als voorstel bij de evaluatie van #203.
+
+*Bewijs: de beoordeling van #351 op PR #357, sectie Afwijking; de registratie in
+[metingen.md](metingen.md) bij werkitem #351. Gemeten 2 oktober 2026.*
+
 ## 18. Parallelle routes vragen een afhankelijkheids- en boardcontrole
 
 Bij #163, #239 en #237 kwamen drie samenhangproblemen tegelijk aan het licht.
