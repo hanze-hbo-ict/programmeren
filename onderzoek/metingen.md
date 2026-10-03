@@ -2756,3 +2756,75 @@ worktree.
 de redacteur zijn niet verwerkt. Twee daarvan horen in een volgende ronde mee: de precedentclaim
 voor de vorm van de rectificatie klopt niet, en `uitgangspunten.md` draagt nu een tweede
 verwijzing naar #356 die #356 niet kent. Dat laatste is op #356 gemeld.
+
+## Werkitem #333 - het oefenbestand met list comprehensions teruggezet
+
+Route: LUS, M, procesversie `ae63df3a`. Auteur, twee beoordelaars (eerstejaars en
+onderwijskundige). Geen verkenner, ontwerper of verhelderaar: de meting stond met haar ijking
+in de body en de vier ontwerpbesluiten waren op 30 september door de vakdeskundige genomen.
+Geen C4, omdat leerinhoud wordt teruggezet op grond van die besluiten en `loop.md` zegt een al
+gegeven expliciet besluit vast te leggen en niet opnieuw te vragen. PR #362, `Closes #333`.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator (C1, PR, poorten, C6-plaatsing, C7) | niet beschikbaar | niet beschikbaar | C1 LUS/M |
+| auteur | 192.872 | 45 min 22 s | C5; 8 bestanden, +1094/-90 |
+| beoordelaar-eerstejaars | 104.931 | 10 min 27 s | AKKOORD MET PUNTJES, 0 blokkades, 8 puntjes |
+| beoordelaar-onderwijskundige | 149.527 | 16 min 6 s | AKKOORD MET PUNTJES, 0 blokkades, 7 puntjes |
+| **totaal agents** | **447.330** | | |
+
+Herstelstand: oplevering 0 van 1 - geen blokkade, dus geen herstelronde. Geen tegenspraak, dus
+geen hoofdredacteur.
+
+**Drie partijen telden hetzelfde, elk met een eigen patroon.** De rubriekkop *Opgaven* gaat van
+dertien naar veertien, en alle drie ijkten op de dertien van `ae63df3a` - precies het getal dat
+`begrippen.md` eerder noemde. De niet-overlap van de zeven nieuwe namen is drie keer apart
+gemeten met `mult_of_five` (13 treffers, alle in het oefenbestand) als bewijs dat het patroon
+werkt. Ook de celvergelijking tegen de herstelbron is drie keer gedraaid en gaf drie keer
+dezelfde vier `replace`-blokken. Dat is wat een *zoals het was*-claim narekenbaar maakt.
+
+**De auteur ijkte een poort op fouten die hij zelf aanbracht.** Een kapotte kruisverwijzing gaf
+`myst.xref_missing`, een onware assertie gaf `CellExecutionError`, en hij zette beide terug met
+`cmp` als controle. Daarmee betekent een leeg waarschuwingsbestand werkelijk dat elke assertie
+slaagt, in plaats van alleen stilte. Hij draaide de build bovendien met `sphinx-build -w
+<warnfile>` in plaats van `make html`, waardoor de nul direct afleesbaar is en niet uit 106
+`IPKernelApp`-omgevingsmeldingen hoeft te worden gevist. Die vorm is overgenomen.
+
+**Twee defecten in het teruggezette materiaal, geen van beide een blokkade.** `add_tax` keurt
+`p * (1 + t / 100)` af omdat dat `10.700000000000001` geeft, terwijl twee andere formuleringen
+slagen; de eerstejaars vond het doordat hij alle opgaven zelf maakte. En de `zipper`-uitwerking
+lost op met indices: `zip(` komt nul keer voor in het oefenbestand en twee keer in de opstap,
+terwijl `leerlijn.md` VP7 `zip` juist als nieuwe syntaxis van week 2 aanwijst. Criterium 1 vroeg
+het bestand *zoals het was*, dus beide blijven staan; ze zijn met de hele redactionele lijst
+opgevoerd als **#363**.
+
+**Een derde dubbeling die de meting in de body niet kon vinden.** Het vriespunt staat in college
+`9a` (19 treffers), in `problems/9_opstap` (14), in `solutions/9_opstap` (12) en in het
+teruggezette bestand (16), geijkt op nul in een onverwant bestand. De body zocht op
+*functienaam*, en `above_below_freeze` staat daar terecht als *niet terug in week 9* - de
+context wel. De body noemt die beperking zelf; dit is er het gevolg van.
+
+**Twee verouderde regelnummers in het werkitem zelf.** Criterium 4 wees naar `leerlijn.md` r232
+voor VP1, waar iets anders staat; de auteur meldde het in plaats van het stil op te lossen. De
+onderwijskundige vond een tweede, in de randvoorwaarden. Zijn advies voor een volgende C1:
+verwijs naar een kopnaam en niet naar een regelnummer. Overgenomen.
+
+**Een poort die groen is zonder te kijken.** De onderwijskundige stelde vast dat
+`check-notebook-tags` het teruggezette bestand niet controleert: `rubriek()` geeft voor
+`source/extra/practice/` de waarde `extra`, en die valt buiten de takken voor
+`problems`/`practicals` en `solutions`. Groen betekent daar *niet gekeken*. Dat veranderde het
+oordeel niet, want het bestand draagt zijn eigen uitwerkingen en die draaien aantoonbaar, maar
+het hoort bij de waarde van het bewijs.
+
+**Isolatie.** Beide beoordelaars draaiden in een eigen `git worktree`, de maatregel uit bevinding
+17. Geen van beiden meldde een verschuiving van de werkkopie. Dat is het eerste werkitem waarin
+die maatregel vooraf is ingericht in plaats van achteraf gerepareerd.
+
+**Over deze ingang zelf.** Zij is geschreven ná de merge, nadat de vakdeskundige ernaar vroeg, en
+dat is de derde keer op rij. Bij #346 en #351 kwam de registratie er pas omdat de sessie afliep.
+De grond is te meten: `/orc` r105 en `loop.md` r153 zeggen allebei *"bij afsluiting of vóór
+sessie-einde"*, en *afsluiting* is nergens gedefinieerd - de merge, het sluiten van het issue, of
+het eind van de sessie. Het is dus een regel met een vage trigger en geen stap in de route, en
+dat is wat bevinding 9 een maatregel noemt die een regel is in plaats van een handeling. Als
+voorstel voor de evaluatie van #203: maak van het overnemen van de meetregels een genummerde stap
+van `/orc`, direct na de merge, in plaats van een plicht aan het eind.
