@@ -376,13 +376,31 @@ bij de poort van #326:
   niveaus* in [uitgangspunten.md](uitgangspunten.md);
 - het losse oefenbestand over list comprehensions in `extra/practice/` is bron
   voor het nieuwe materiaal en wordt daarna verwijderd, met zijn afbeelding
-  (VP1): week 3 en 4 gaan niet over comprehensions.
+  (VP1): week 3 en 4 gaan niet over comprehensions. **Met #333 herzien**; zie de
+  alinea hieronder.
 
 Uitgevoerd in #326, met deze keuzes van de auteur: het eerste college behandelt
 de list comprehension, met een filter, `range`, `enumerate`, `zip` en de
 conditionele expressie; het tweede dict en set comprehensions, de lijst van
 lijsten en de geneste comprehension, en wanneer een lus de betere keuze blijft.
 De context van de extra is een toernooi.
+
+**VP1 is herzien: het oefenbestand komt terug.** Het verwijderen was een
+vergissing. Niet alles uit de bron was in het nieuwe materiaal terechtgekomen -
+zes van de twaalf opgaven kwamen in week 2 niet terug - en een student die na
+die week losse oefening met comprehensions zoekt, vond die nergens meer.
+Besloten door de vakdeskundige op 30 september 2026, bij werkitem #333. Het
+oefenbestand staat sindsdien weer als
+`extra/practice/2_list_comprehension.ipynb` onder *Oefening*, met
+`images/mul_table.png` en met de opgaven zoals ze waren. Twee opgaven zijn
+vervangen, omdat `only_evens` en `ngram` in de weekstof blijven staan (college
+`9a` en `9_basis` stap 4): in het oefenbestand staan `only_leaps` en
+`running_totals` in hun plaats. De dubbelingen zijn in de opstap weggenomen en
+niet in het oefenbestand: `mult_of_five`, `divisible_by`, `zipper`,
+`count_vowels` en `mul_table` zijn in `problems/9_opstap` vervangen door
+`squares`, `without`, `highest`, `count_above` en `staircase`, die dezelfde
+syntaxis op dezelfde plek oefenen. De colleges en de andere niveaus van week 2
+zijn niet aangepast. **Uitgevoerd** in #333.
 
 **Welke syntaxis week 2 draagt.** Een comprehension met één `for` en een
 optioneel filter, over een lijst, een string, `range`, `.items()`, `enumerate`
