@@ -2756,3 +2756,120 @@ worktree.
 de redacteur zijn niet verwerkt. Twee daarvan horen in een volgende ronde mee: de precedentclaim
 voor de vorm van de rectificatie klopt niet, en `uitgangspunten.md` draagt nu een tweede
 verwijzing naar #356 die #356 niet kent. Dat laatste is op #356 gemeld.
+
+## Werkitem #333 - het oefenbestand met list comprehensions teruggezet
+
+Route: LUS, M, procesversie `ae63df3a`. Auteur, twee beoordelaars (eerstejaars en
+onderwijskundige). Geen verkenner, ontwerper of verhelderaar: de meting stond met haar ijking
+in de body en de vier ontwerpbesluiten waren op 30 september door de vakdeskundige genomen.
+Geen C4, omdat leerinhoud wordt teruggezet op grond van die besluiten en `loop.md` zegt een al
+gegeven expliciet besluit vast te leggen en niet opnieuw te vragen. PR #362, `Closes #333`.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator (C1, PR, poorten, C6-plaatsing, C7) | niet beschikbaar | niet beschikbaar | C1 LUS/M |
+| auteur | 192.872 | 45 min 22 s | C5; 8 bestanden, +1094/-90 |
+| beoordelaar-eerstejaars | 104.931 | 10 min 27 s | AKKOORD MET PUNTJES, 0 blokkades, 8 puntjes |
+| beoordelaar-onderwijskundige | 149.527 | 16 min 6 s | AKKOORD MET PUNTJES, 0 blokkades, 7 puntjes |
+| **totaal agents** | **447.330** | | |
+
+Herstelstand: oplevering 0 van 1 - geen blokkade, dus geen herstelronde. Geen tegenspraak, dus
+geen hoofdredacteur.
+
+**Dezelfde getallen, onafhankelijk geteld, met elk een eigen patroon.** De rubriekkop *Opgaven*
+gaat van dertien naar veertien; auteur, onderwijskundige en orkestrator telden dat elk apart
+en ijkten alle drie op de dertien van `ae63df3a` - precies het getal dat `begrippen.md`
+eerder noemde. De niet-overlap van de zeven nieuwe namen is **vier** keer gemeten, want de
+eerstejaars draaide de `mult_of_five`-ijking (13 treffers, alle in het oefenbestand) ook
+zelf. Ook de celvergelijking tegen de herstelbron is drie keer gedraaid en gaf drie keer
+dezelfde vier `replace`-blokken. Dat is wat een *zoals het was*-claim narekenbaar maakt.
+
+**De auteur ijkte een poort op fouten die hij zelf aanbracht.** Een kapotte kruisverwijzing gaf
+`myst.xref_missing`, een onware assertie gaf `CellExecutionError`, en hij zette beide terug met
+`cmp` als controle. Daarmee betekent een leeg waarschuwingsbestand werkelijk dat elke assertie
+slaagt, in plaats van alleen stilte. Hij draaide de build bovendien met `sphinx-build -w
+<warnfile>` in plaats van `make html`, waardoor de nul direct afleesbaar is en niet uit 106
+`IPKernelApp`-omgevingsmeldingen hoeft te worden gevist. Die vorm is overgenomen.
+
+**Twee defecten in het teruggezette materiaal, geen van beide een blokkade.** `add_tax` keurt
+`p * (1 + t / 100)` af omdat dat `10.700000000000001` geeft, terwijl de drie andere
+formuleringen die de eerstejaars draaide wel slagen; hij vond het doordat hij alle opgaven zelf
+maakte. En de onderwijskundige vond dat de
+`zipper`-uitwerking met indices oplost: `zip(` komt nul keer voor in het oefenbestand en twee
+keer in de opstap,
+terwijl `leerlijn.md` VP7 `zip` juist als nieuwe syntaxis van week 2 aanwijst. Criterium 1 vroeg
+het bestand *zoals het was*, dus beide blijven staan; ze zijn met de hele redactionele lijst
+opgevoerd als **#363**.
+
+**Drie punten gingen naar de vakdeskundige, en twee ervan hebben geen eigen drager.** De auteur
+legde er twee voor, de onderwijskundige bevestigde beide en voegde een derde toe.
+
+1. *Twee docstringtalen in één bestand* - acht Engelse en twee Nederlandse op twaalf opgaven.
+   **Drager: #363**, als punt 3 van de redactionele lijst.
+2. *`divisible_by` dubbelt met PGM2 week 3.* Oordeel van de onderwijskundige: **laten staan**,
+   met een grond die het beeld omdraait - `problems/10_opstap.ipynb` opdracht 12 zegt met zoveel
+   woorden dat de student daar dezelfde functie op drie manieren schrijft voor het oefententamen.
+   Geen dubbeling maar een voorzet. **Geen drager**; vastgelegd in deze ingang, want er is niets
+   te doen behalve het niet opnieuw ontdekken.
+3. *Het vriespunt staat op drie plekken binnen bereik van week 2.* Gemeten met
+   `(?i)dooi|vorst|vries|freez|temperature` over samengevoegde celbronnen: college `9a` 19,
+   `problems/9_opstap` 14, `solutions/9_opstap` 12, het teruggezette bestand 16, geijkt op nul in
+   `problems/5_basis.ipynb` en `lectures/4a_lussen.ipynb`. Het patroon is gevoelig: `temperat` in
+   plaats van `temperature` geeft 19/15/13/16. De body van #333 zocht op *functienaam*, en
+   `above_below_freeze` staat daar terecht als *niet terug in week 9* - de context wel; de body
+   noemt die beperking zelf. Oordeel van de onderwijskundige: **geen defect**, want het college
+   doet de conditionele expressie voor en het oefenbestand vraagt een hulpfunctie omdat er drie
+   uitkomsten zijn. **Geen drager**; zelfde reden als bij 2.
+
+**Twee verouderde regelnummers in het werkitem zelf.** Criterium 4 wees naar `leerlijn.md` r232
+voor VP1, waar iets anders staat; de auteur meldde het in plaats van het stil op te lossen.
+Het tweede, in de randvoorwaarden, vonden de eerstejaars en de onderwijskundige
+onafhankelijk van elkaar; zij publiceerden zeven minuten na elkaar en lazen blind. Zijn
+advies voor een volgende C1: verwijs naar een kopnaam en niet naar een regelnummer.
+Overgenomen.
+
+**Een poort die groen is zonder te kijken.** De onderwijskundige stelde vast dat
+`check-notebook-tags` het teruggezette bestand niet controleert: `rubriek()` geeft voor
+`source/extra/practice/` de waarde `extra`, en die valt buiten de takken voor
+`problems`/`practicals` en `solutions`. Groen betekent daar *niet gekeken*. Dat veranderde het
+oordeel niet, want het bestand draagt zijn eigen uitwerkingen en die draaien aantoonbaar, maar
+het hoort bij de waarde van het bewijs.
+
+**Isolatie.** Beide beoordelaars draaiden in een eigen `git worktree`, de maatregel uit bevinding
+17, *Twee agents in één werkboom eten elkaars commits op*. Geen van beiden meldde een
+verschuiving van de werkkopie. In dit bestand is dit de eerste ingang waarin die maatregel vooraf
+is ingericht in plaats van achteraf gerepareerd; of het elders al eens is gedaan zonder het op te
+schrijven, is niet vast te stellen.
+
+**Over deze ingang zelf, en wanneer registraties werkelijk worden geschreven.** Zij is er pas 29
+minuten ná de merge, nadat de vakdeskundige ernaar vroeg. Hier stond eerst *"de derde keer op
+rij"*; dat is nageteld en onjuist, en het weggelaten geval is juist het interessantste.
+
+| werkitem | PR gemerged | registratiecommit | verhouding |
+|---|---|---|---|
+| #346 | #355, 1 okt 23:30 | `d433477f`, 23:52 | 22 min ná de merge |
+| #351 | #357, 2 okt 19:48 | `d433477f`, 1 okt 23:52 | ruim een dag **vóór** de merge |
+| #335 | #360, 2 okt 14:32 | `acb6de28`, 14:27 | **5 min vóór**, als commit ín PR #360 |
+| #333 | #362, 3 okt 23:16 | `fdc6b04d`, 23:45 | 29 min ná de merge |
+
+Twee van de vier zijn dus ná de merge geschreven en ze staan niet op rij: #335 ligt er in beide
+volgordes tussen. Dat ene geval **deed het goed**, en op de manier die hieronder wordt
+voorgesteld: de meting als commit in de pull request van het werkitem zelf, geschreven vóór de
+merge. De ingang van #335 zegt dat ook met zoveel woorden (*"Merge: nog open bij het schrijven
+van deze meting"*). Zonder dat geval leest de reeks als een patroon dat er niet is; mét dat geval
+staat er een werkend voorbeeld.
+
+De grond blijft wel staan en is te meten: `/orc` r105 en `loop.md` r153 zeggen allebei *"bij
+afsluiting of vóór sessie-einde"*, en *afsluiting* is nergens in `core/` of in `/orc` als
+procesmoment gedefinieerd - de merge, het sluiten van het issue, of het eind van de sessie. De
+trigger is dus vaag, en de twee keren dat de registratie laat kwam, kwam zij pas toen iemand
+ernaar vroeg of de sessie afliep.
+
+**Voorstel voor de evaluatie van #203:** maak van het overnemen van de meetregels een genummerde
+stap van `/orc`, uit te voeren in de pull request van het werkitem zelf, zoals bij #335. Wat dat
+verandert is niet de aard van de maatregel - het blijft een instructie in een document, en
+bevinding 9, *Een regel is geen borging*, waarschuwt juist daartegen - maar de plaats en de
+trigger: een genummerde stap in een route die van boven naar beneden wordt afgelopen, wordt
+overgeslagen als hij ontbreekt, terwijl een plicht aan het eind pas mist als iemand het merkt.
+Waaraan je zou zien dat het werkt: de volgende vier registraties staan in de PR van hun eigen
+werkitem, en geen enkele komt er op verzoek.
