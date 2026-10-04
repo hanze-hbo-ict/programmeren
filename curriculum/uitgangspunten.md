@@ -791,18 +791,31 @@ onderwijs krijgt waarin de student de vorm van de oplossing zelf bepaalt.
 de PGM1-matrijs wordt 80% toepassen en 20% analyseren en sluit op 100%.
 
 De grond is de niveauvergelijking hieronder. Analyseren stond in de matrijs op 10%
-en wordt in het oefententamen op 27,8% gemeten. A3 was de enige bestemming die dat
+en komt in het oefententamen op 27,8% uit. A3 was de enige hele bestemming die dat
 verschil kleiner maakt in plaats van groter: van 17,8 procentpunt te laag naar
 7,8. Naar A1 of A2 zou toepassen op 90% hebben gebracht en dus verder van de
-gemeten 72,2% af.
+gemeten 72,2% af. Een gesplitste bestemming, 5% naar A3 en 5% naar A1, maakt het
+analyseren-verschil ook kleiner, maar brengt beide verschillen op 12,8 procentpunt
+waar de hele bestemming ze allebei op 7,8 zet.
 
 **Te heropenen wanneer** het oefententamen wordt herzien, want de meting hieronder
 is daarop geijkt en op niets anders.
 
 #### Wat het oefententamen per niveau toetst
 
-Zeven opgaven, 90 punten, gemeten op `source/extra/practice/pgm1_examen.ipynb`.
+Zeven opgaven, 90 punten, geteld op `source/extra/practice/pgm1_examen.ipynb`.
 Opgave 7 is intern verdeeld: 7a telt 10 punten, 7b telt 15.
+
+**De punten zijn geteld, de niveaus zijn gelezen.** Dat een opgave 10 punten telt
+staat in het notebook; welk niveau zij vraagt staat er niet. Die toekenning is een
+lezing van de opgavetekst tegen de taxonomie van de matrijs zelf, en waar dit
+document 72,2% en 27,8% *gemeten* noemt, zijn de punten geteld en de niveaus
+gelezen. Een andere lezing geeft een ander getal: wie opgave 5 als analyseren
+leest omdat de student het verband tussen de twee lussen zelf moet uitvinden,
+komt op 35 van de 90 punten analyseren uit, 38,9% in plaats van 27,8%. Dat is
+een meningsverschil over één opgave en niet de teloptelfout die hieronder aan de
+orde komt - en juist daarom staat hieronder van elke opgave waarop haar niveau
+berust. Wie het anders leest, moet dat op diezelfde opgavetekst verantwoorden.
 
 | Niveau | Opgaven | Punten | Aandeel |
 |---|---|---|---|
@@ -824,6 +837,17 @@ de opdeling voor: *"Maak gebruik van lus(sen), de functie `count_char(zin, let)`
 en een lijst met alle letters van het alfabet."* De student voert daar een gegeven
 ontwerp uit.
 
+**De vier overige opgaven dragen hun vorm in de opgavetekst, en tellen daarom als
+toepassen.** Opgave 1 (10 punten) geeft de variabelenamen, de opbrengsten en de
+prijzen, en zegt per stap wat er berekend en geprint moet worden. Opgave 2 (10
+punten) geeft de categoriegrenzen als tabel en vraagt met zoveel woorden om een
+*"conditioneel statement"*. Opgave 4 (10 punten) noemt de constructie zelf - *"een
+while lus"* - en toont de volledige voorbeeldsessie met de uitvoer erbij. Opgave 5
+(10 punten) schrijft *"Gebruik een dubbele lusconstructie"* voor en doet twee
+aanroepen met hun uitvoer voor. Zij is wel de opgave waar een andere lezing het
+meest voor de hand ligt: de dubbele lus is voorgeschreven en de uitvoer is
+voorgedaan, maar wat de binnenste lus moet aflopen leidt de student zelf af.
+
 #### Waarom deze meting per niveau gaat en niet per uitkomst
 
 Punten zijn per **niveau** te verdelen en niet per **uitkomst**, want één opgave
@@ -838,12 +862,13 @@ Wie deze alinea overslaat, komt op een vijfde getal uit.
 
 Hier stond eerder dat A3 *"met 15 punten iets zwaarder wordt getoetst dan de
 matrijs zegt - niet genoeg voor een verdubbeling"*. Op zijn eigen vergelijking
-klopt dat: tegen opgave 6 alleen rechtvaardigt A3 ongeveer 15%. Maar die
-vergelijking meet A3 tegen zijn eigen drager, en dat is juist de
-uitkomstvergelijking die niet sluit. De 10 punten van opgave 3 zijn analytisch
-werk zonder uitkomst om op te landen, waardoor A3 tegen alleen opgave 6 meten de
-analytische last van de toets stelselmatig te laag uitkomt. Op de vergelijking die
-wél sluit, is 20% analyseren tegen 27,8% gemeten nog altijd aan de lage kant.
+klopt dat: tegen opgave 6 alleen rechtvaardigt A3 16,7% - 15 van de 90 punten, en
+dat is het derde van de drie getallen hierboven. Maar die vergelijking meet A3
+tegen zijn eigen drager, en dat is juist de uitkomstvergelijking die niet sluit.
+De 10 punten van opgave 3 zijn analytisch werk zonder uitkomst om op te landen,
+waardoor A3 tegen alleen opgave 6 meten de analytische last van de toets
+stelselmatig te laag uitkomt. Op de vergelijking die wél sluit, is 20% analyseren
+tegen 27,8% gemeten nog altijd aan de lage kant.
 
 #### Wat hiermee niet is opgelost
 
@@ -862,8 +887,8 @@ in de getallen is geen grond voor een grotere ingreep dan de scheefheid die zij
 oplost. De vraag hoort bij #329, waar de uitkomsten van beide vakken worden
 doorgelicht.
 
-Zolang het oefententamen niet verandert, is dit een vraag over de matrijs en niet
-over de toets.
+Zolang het oefententamen niet verandert, is het gat rond A2 een vraag over de
+matrijs en niet over de toets.
 
 ### Wat een docentenhandleiding is, en waar hij staat
 

@@ -108,13 +108,14 @@ Totaal: 70% toepassen, 30% creëren. Samen 100%.
 
 Vier leeruitkomsten hebben geen weging in het tentamen. Dat hoeft geen fout te
 zijn, maar het verdient per geval een besluit, want een leeruitkomst zonder
-toetsing is een belofte die niemand nakijkt. Daartussen staan de overige
-bevindingen over de matrijs: formuleringen en plaatsingen die niet meer
-beschrijven wat de vakken doen, en wat inmiddels is uitgevoerd.
+toetsing is een belofte die niemand nakijkt. Zij staan in de eerste vier rijen;
+daaronder volgen de overige bevindingen over de matrijs: formuleringen en
+plaatsingen die niet meer beschrijven wat de vakken doen, en wat inmiddels is
+uitgevoerd.
 
 | Uitkomst | Bevinding | Voorstel |
 |---|---|---|
-| **PGM2 A5** (finite state machines) | Niet onderwezen, niet getoetst, en de bijbehorende theoretische afsluiting is bewust losgelaten. Zie [uitgangspunten.md](uitgangspunten.md). | **Schrappen.** |
+| **PGM2 A5** (finite state machines) | Niet onderwezen, niet getoetst, en de bijbehorende theoretische afsluiting is bewust losgelaten. Zie [uitgangspunten.md](uitgangspunten.md), *De theoretische afsluiting*. | **Schrappen.** |
 | **PGM1 P7** (docstrings) | Wél onderwezen en overal in het materiaal toegepast, maar niet getoetst. | Weging geven of expliciet als vormeis opnemen. |
 | **PGM2 P6** (operator overloading) | Wél onderwezen, en in de planning voor 2026 krijgt het een hele week. | Weging geven, of de week heroverwegen. |
 | **PGM2 P7** (externe bibliotheken) | Verspreid aanwezig, niet als onderwerp behandeld. | Besluiten of dit een leeruitkomst moet blijven. |
