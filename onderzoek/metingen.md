@@ -2883,14 +2883,15 @@ studentmateriaal bij komt en geen student `curriculum/` leest. PR #365, `Closes 
 | Rol | Tokens | Duur | Uitkomst |
 |---|---|---|---|
 | orkestrator (C1, C4-voorlegging, PR, C6-plaatsing) | niet beschikbaar | niet beschikbaar | C1 LUS/S |
-| curriculumontwerper (C2) | 93.961 | 9 min 38 s | C2, vier onderdelen, twee voorleggingen |
+| curriculumontwerper (C2) | 93.961 | 9 min 38 s | C2, vier onderdelen, één voorlegging met twee vragen |
 | auteur (C5) | 162.109 | 10 min 3 s | C5; 3 bestanden, +130/-35 |
 | beoordelaar-redacteur (C6) | 155.148 | 11 min 10 s | AKKOORD MET PUNTJES, 0 blokkades, 10 puntjes |
 | auteur (puntjes) | 114.504 | 6 min 50 s | 6 puntjes verwerkt; 2 bestanden, +41/-15 |
 | **totaal agents** | **525.722** | | |
 
 Herstelstand: oplevering **0 van 1** - geen blokkade, dus geen herstelronde. De puntjesronde
-kostte er geen, conform `loop.md`. Bij één beoordelaar volstaat C6; geen C7.
+kostte er geen, conform `loop.md`. Bij één beoordelaar volstaat C6; geen C7. Van de tien puntjes
+zijn er zes verwerkt, vielen er drie buiten de afbakening en ging er één over de C5-tekst zelf.
 
 **De C1 van 4 september 2026 is vervangen in plaats van overgenomen.** Die was van vóór de
 werkwijze van #203, de route was nooit gestart, en de aanleiding bleek op drie van de vier
@@ -2900,7 +2901,7 @@ liep niet. Wat overbleef was scherper dan wat er stond: de matrijs telde op tot 
 geen enkele uitkomst op creëren-niveau.
 
 **De dragende vondst is methodisch en niet een vierde getal.** Er stonden drie getallen voor
-dezelfde niveauverdeling in de repo - 44%, 56% en 16,7% - en de ontwerper legde uit waarom ze
+dit ene feit in de repo - 44%, 56% en 16,7% - en de ontwerper legde uit waarom ze
 alle drie verdedigbaar leken: **punten zijn per niveau te verdelen en niet per uitkomst**, want
 één opgave realiseert meerdere uitkomsten tegelijk. Opgave 3 raakt P5, P6 en P7; opgave 7a raakt
 P5, P6 en A1. Wie per uitkomst optelt, telt dezelfde punten meermaals en komt op elk gewenst
@@ -2925,11 +2926,13 @@ aanvullende patronen naar wat het had moeten vangen, en stelde vast dat er geen 
 meer is: de keuze haalt de controle. Zijn conclusie erover telt: de beoordeling was mogelijk
 **omdat de auteur zijn eigen omweg had gemeld** in plaats van hem te laten staan.
 
-**Een vijfde variant van de patroonval.** De redacteur kreeg bij een nevencontrole een nul op
-`% van het tentamen` omdat er `**` tussen staat, en ving die zelf op. Naast
-niet-case-insensitief, regelgewijs over een afgebroken zin, een patroon op een tabelkolom en
-`git diff | grep '^-'` is dit de vijfde vorm waarin een patroon in deze repo stilletjes nul
-gaf.
+**Nog een vorm van de patroonval.** De redacteur kreeg bij een nevencontrole een nul op
+`% van het tentamen` omdat er `**` tussen staat, en ving die zelf op. Hoeveel vormen het dossier
+inmiddels kent is niet geteld, en hier stond eerst *"de vijfde"* met een reeks erbij waarvan twee
+leden niet kloppen: `git diff | grep '^-'` gaf geen stille nul maar een valse **1** door de
+diffkop, en een patroon *op* een tabelkolom staat nergens - het gedocumenteerde geval is een
+patroon dat *in* een tabel stond en daardoor `\|` droeg, waardoor de alternatie wegviel. Een
+rangtelwoord zonder telling is precies de fout die de ingang hierboven in zichzelf rechtzet.
 
 **Het zwaarste puntje raakte de aard van het bewijs.** De niveautoekenning stond in de bindende
 laag als *meting*, terwijl alleen de punten gemeten zijn en wélk niveau een opgave vraagt een
@@ -2947,11 +2950,33 @@ dat PGM2 P7 zijn grond in `leerlijn.md` mist. A2 blijft een uitkomst met gewicht
 in de toets; dat staat in de nieuwe sectie en is bij #329 belegd. Drie puntjes van de redacteur
 vielen buiten de afbakening en blijven staan, waaronder het blokcitaat *Formele status* dat zegt
 dat de correcties niet zijn doorgevoerd boven een tabel met inmiddels twee uitgevoerde rijen -
-dat raakt de vorm van een vastgestelde matrijs en is een besluit van de vakdeskundige.
+dat raakt de vorm van een vastgestelde matrijs en is een besluit van de vakdeskundige. Die drie
+hebben geen drager: ze staan hier en nergens anders, want er is niets te doen behalve ze niet
+opnieuw ontdekken.
 
-**Over de vorm van deze ingang.** Het voorstel bij de evaluatie van #203 luidt dat de meetregels
-in de pull request van het werkitem zelf horen, zoals #335 deed. Dat is hier **niet** toegepast,
-en met reden: de beoordeling van PR #365 was afgerond toen de merge aan de orde kwam, dus de
-registratie in die PR zetten zou haar aan de lezing hebben onttrokken. Dat is een aanvulling op
-het voorstel die de praktijk oplevert: de stap hoort vóór de beoordeling te vallen en niet vlak
-voor de merge, anders ruilt zij een vergeten registratie in voor een ongelezen registratie.
+**Over de vorm van deze ingang.** Het voorstel bij de evaluatie van #203 luidt dat het overnemen
+van de meetregels een genummerde stap van `/orc` wordt, uit te voeren in de pull request van het
+werkitem zelf, zoals bij #335; wat dat verandert is de plaats én de trigger. Hier is het niet
+toegepast: de C6 van PR #365 was al afgerond toen de merge aan de orde kwam, dus die beoordeling
+kon de registratie niet meer meenemen en een aparte lezing was hoe dan ook nodig. Dát die lezing
+moet plaatsvinden staat al vast en is geen vondst van deze route: `orc.md` en `loop.md` vragen
+beide een onafhankelijke redactionele toetsing van een door de orkestrator geschreven
+besluittekst vóór de PR ter merge wordt aangeboden.
+
+Hier stond eerst dat de stap daarom vóór de beoordeling hoort te vallen. Deze ingang weerlegt dat
+zelf: drie van haar vijf tabelrijen en vier van haar alinea's kunnen er pas ná de beoordeling
+staan - de redacteursrij, de puntjesrij en het totaal bestaan dan nog niet. **Voorstel voor de
+evaluatie van #203:** een registratie die haar eigen beoordeling rapporteert, kan niet vóór die
+beoordeling af zijn, dus voor dat geval is de eigen PR met een eigen lezing de vorm, en voor een
+registratie die dat niet doet de genummerde stap in de PR van het werkitem zelf. Waaraan je zou
+zien dat het werkt: elke volgende registratie die haar eigen C6 vermeldt, staat in een eigen PR
+met een gelezen oordeel erop. Welke van de twee vormen de norm wordt, ligt bij de evaluatie van
+#203 en is hier niet beslist.
+
+**Ging er een beoordelaar overheen?** Ja. `rol-beoordelaar-redacteur` las deze ingang op
+`f01798ef` in een eigen worktree en gaf **BLOKKEER**: drie moetpunten en zes puntjes, met de twee
+zwaarste op de alinea hierboven en op die over de patroonval. Beide zijn hierboven herschreven en
+de zes puntjes zijn verwerkt, op één na: dat het commitbericht *vijf agentstappen* zegt waar er
+vier gemeten zijn, blijft in de geschiedenis staan en is in de PR-beschrijving rechtgezet. Meetregel van die ronde: beoordelaar-redacteur, C6 ronde 1,
+**129.104 tokens, 12 min 51 s**, omvang S (één bestand, +82/-0), uitkomst BLOKKEER. Het herstel
+is van de orkestrator, die ook de ingang schreef; herstelstand registratie **1 van 1**.
