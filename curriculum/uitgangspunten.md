@@ -371,6 +371,8 @@ draait wel.
 | De parameternamen van `board.py` blijven zoals ze zijn | praktisch | gesloten; sinds #271 staat `board.py` buiten `source/` |
 | De vastgestelde matrijs wijzigt niet als bijvangst; bevindingen gaan naar *Voorgestelde correcties* | organisatorisch | staand, onderbouwd |
 | Het oefententamen is representatief en verandert voorlopig niet | organisatorisch | staand |
+| PGM1 houdt geen gewicht op creëren-niveau; dat is een keuze en geen restant | didactisch | gesloten op 4 oktober 2026 (#104, C4), **uitgevoerd**: de PGM1-matrijs kent geen rij op dat niveau |
+| Het gewicht dat A4 achterliet gaat naar A3; de PGM1-matrijs wordt 80% toepassen en 20% analyseren | organisatorisch | gesloten op 4 oktober 2026 (#104, C4), **uitgevoerd** in dezelfde wijziging |
 | Leesvragen mogen fout aflopen; de fout is het antwoord | didactisch | staand, onderbouwd |
 | Onderdompeling mag vooraf gaan aan uitleg | didactisch | staand; de grens is nog een afleiding |
 | Studenten leveren geen werk in; opdrachten zijn oefening | organisatorisch | gesloten, **nog niet uitgevoerd**: `source/` draagt nog inleverinstructies. Het toernooi met bonuspunten uit het oude AI-materiaal komt niet terug in week 6 (#270, V3) en ook niet in week 7 (#271, VP2) |
@@ -482,9 +484,13 @@ way) that there are some things that a computer provably cannot accomplish."*
 Picobot opent die boog, de theorie sluit hem.
 
 Bij hbo-studenten sloeg dat niet aan: te abstract. Het is geprobeerd en
-losgelaten. Gevolg: Picobot blijft, de sluiting komt niet terug, en leeruitkomst
-A5 over finite state machines hoort daarmee uit de toetsmatrijs. Zie
-[leeruitkomsten.md](leeruitkomsten.md).
+losgelaten. Picobot blijft, de sluiting komt niet terug.
+
+**Dat besluit is genomen; het gevolg voor A5 is nog een voorstel.** Leeruitkomst
+A5 over finite state machines staat gewoon in de PGM2-matrijs, zonder weging. Dat
+zij daaruit geschrapt wordt, staat als voorstel in de rij *PGM2 A5* onder
+*Voorgestelde correcties* in [leeruitkomsten.md](leeruitkomsten.md) en is niet
+bekrachtigd. Pas dat besluit haalt haar uit de matrijs.
 
 ### Schakelingen en binair
 
@@ -746,35 +752,143 @@ De prioriteit ligt bij het **afronden van PGM1 per week**: onderwerp, opgaven,
 uitwerkingen en docentenhandleiding compleet, zodat het materiaal live kan. Wat
 daar niet aan bijdraagt, wacht.
 
-Dat betekent twee dingen voor wat er openstaat.
-
 **Het oefententamen verandert voorlopig niet.** Het is representatief voor het
 tentamen dat wordt afgenomen; de onderwerpen en de aard van de vragen wijken
 nauwelijks af. Vastgesteld door de vakdeskundige, want het echte tentamen staat
 niet in de repository.
 
-**De weging in de toetsmatrijs wacht.** Met de verplaatsing van de
-recursie-uitkomst naar PGM2 telt PGM1 90% en is er geen uitkomst op
-creëren-niveau meer. Dat is een reële vraag, maar niet er een die het afronden
-van een week in de weg staat, en zij is beter te beantwoorden als de weken af
-zijn. Zie *Voorgestelde correcties* in [leeruitkomsten.md](leeruitkomsten.md).
+De weging in de toetsmatrijs van PGM1 wachtte op diezelfde prioriteit. Zij is op
+4 oktober 2026 herzien; zie *De weging van de PGM1-matrijs* hieronder.
 
-Bij die weging hoort één meting die de afweging bepaalt en die eerder verkeerd is
-weergegeven. Van de negentig punten in het PGM1-oefententamen vraagt alleen
-**opgave 6** (15 punten) om zelf een aanpak bedenken. Opgave 7 is met 25 punten de
-grootste, maar schrijft de opdeling voor: *"Maak gebruik van lus(sen), de functie
-`count_char(zin, let)` en een lijst met alle letters van het alfabet."* De student
-voert daar een gegeven ontwerp uit.
+### De weging van de PGM1-matrijs
 
-Dat raakt twee uitkomsten. **A3** (ontwerpen, analyseren, 10%) wordt met 15 punten
-iets zwaarder getoetst dan de matrijs zegt - niet genoeg voor een verdubbeling.
-En **A2** (problemen opdelen, 10%) zou juist door opgave 7 gedragen moeten worden,
-maar die opgave doet het opdelen voor de student. Vijfentwintig punten die een
-uitkomst zouden moeten dragen en het niet doen.
+Twee besluiten van de vakdeskundige, genomen op 4 oktober 2026 bij de poort
+van #104. Ze staan apart, want het tweede volgt niet uit het eerste.
 
-Wie de weging later herziet: de vraag is niet alleen hoe de percentages moeten,
-maar of de toets toetst wat hij zegt te toetsen. Zolang het oefententamen niet
-verandert, is dat een vraag over de matrijs en niet over de toets.
+**PGM1 houdt geen gewicht op creëren-niveau.** Dat is een keuze, geen restant van
+de verplaatsing van A4.
+
+De matrijs legt het verschil tussen de twee vakken zelf niet op ontwerpen
+tegenover niet-ontwerpen, maar op eenvoudig tegenover complexer: PGM1 A3 zegt
+*"eenvoudige computationele problemen"* en staat op analyseren, PGM2 A4 zegt
+*"complexere"* en staat op creëren. Opgave 6, het enige vrije ontwerpwerk in het
+PGM1-oefententamen, valt daarmee in de eigen taxonomie van de matrijs op
+analyseren. PGM1 mist dus geen creërenwerk; PGM1 heeft het begrip creëren voor een
+introductievak niet nodig. Daar komt bij dat de toets nul van de negentig punten
+op dat niveau vraagt, dat recursie in PGM1 bij besluit niet wordt onderwezen (zie
+*Recursie na de lussen*), en dat de creërenband van PGM2 rust op stof die PGM1
+niet geeft. Voor het profiel dat na PGM1 stopt weegt een creëreneis het zwaarst,
+en juist daar staat geen onderwijs tegenover dat haar draagt.
+
+Er staat nergens in `curriculum/` of `conventies/` een eis die creërenniveau per
+vak voorschrijft of uitsluit. Dit besluit vult dat gat.
+
+**Te heropenen wanneer** buiten de repository alsnog een eis blijkt te gelden dat
+elk vak elk niveau dekt - in de HBO-i-afspraken of in de OER - of wanneer PGM1
+onderwijs krijgt waarin de student de vorm van de oplossing zelf bepaalt.
+
+**Het gewicht dat A4 achterliet, 10%, gaat naar A3.** A3 gaat van 10% naar 20%;
+de PGM1-matrijs wordt 80% toepassen en 20% analyseren en sluit op 100%.
+
+De grond is de niveauvergelijking hieronder. Analyseren stond in de matrijs op 10%
+en komt in het oefententamen op 27,8% uit. A3 was de enige hele bestemming die dat
+verschil kleiner maakt in plaats van groter: van 17,8 procentpunt te laag naar
+7,8. Naar A1 of A2 zou toepassen op 90% hebben gebracht en dus verder van de
+gemeten 72,2% af. Een gesplitste bestemming, 5% naar A3 en 5% naar A1, maakt het
+analyseren-verschil ook kleiner, maar brengt beide verschillen op 12,8 procentpunt
+waar de hele bestemming ze allebei op 7,8 zet.
+
+**Te heropenen wanneer** het oefententamen wordt herzien, want de meting hieronder
+is daarop geijkt en op niets anders.
+
+#### Wat het oefententamen per niveau toetst
+
+Zeven opgaven, 90 punten, geteld op `source/extra/practice/pgm1_examen.ipynb`.
+Opgave 7 is intern verdeeld: 7a telt 10 punten, 7b telt 15.
+
+**De punten zijn geteld, de niveaus zijn gelezen.** Dat een opgave 10 punten telt
+staat in het notebook; welk niveau zij vraagt staat er niet. Die toekenning is een
+lezing van de opgavetekst tegen de taxonomie van de matrijs zelf, en waar dit
+document 72,2% en 27,8% *gemeten* noemt, zijn de punten geteld en de niveaus
+gelezen. Een andere lezing geeft een ander getal: wie opgave 5 als analyseren
+leest omdat de student het verband tussen de twee lussen zelf moet uitvinden,
+komt op 35 van de 90 punten analyseren uit, 38,9% in plaats van 27,8%. Dat is
+een meningsverschil over één opgave en niet de teloptelfout die hieronder aan de
+orde komt - en juist daarom staat hieronder van elke opgave waarop haar niveau
+berust. Wie het anders leest, moet dat op diezelfde opgavetekst verantwoorden.
+
+| Niveau | Opgaven | Punten | Aandeel |
+|---|---|---|---|
+| Toepassen | 1, 2, 4, 5, 7a, 7b | 65 | 72,2% |
+| Analyseren | 3, 6 | 25 | 27,8% |
+| Creëren | geen | 0 | 0% |
+
+**Opgave 6 en opgave 3 vormen het analytische deel.** Opgave 6 (15 punten) reikt
+geen aanpak aan: de student bedenkt zelf een algoritme voor de langste substring
+die vooraan én achteraan staat, en de beperking tot `len()` en `range()` sluit de
+uitweg via stringmethoden af. Opgave 3 (10 punten) laat een gegeven functie
+herstellen en vraagt dus om een gegeven geheel uiteen te rafelen. Analyseren is in
+deze matrijs niet *ontwerpen* maar precies dat; een eerdere lezing die alleen
+opgave 6 telde, kwam daardoor op 15 van de 90 uit en onderschatte de analytische
+last van de toets met 10 punten.
+
+**Opgave 7 telt als toepassen, al is zij met 25 punten de grootste.** Zij schrijft
+de opdeling voor: *"Maak gebruik van lus(sen), de functie `count_char(zin, let)`
+en een lijst met alle letters van het alfabet."* De student voert daar een gegeven
+ontwerp uit.
+
+**De vier overige opgaven dragen hun vorm in de opgavetekst, en tellen daarom als
+toepassen.** Opgave 1 (10 punten) geeft de variabelenamen, de opbrengsten en de
+prijzen, en zegt per stap wat er berekend en geprint moet worden. Opgave 2 (10
+punten) geeft de categoriegrenzen als tabel en vraagt met zoveel woorden om een
+*"conditioneel statement"*. Opgave 4 (10 punten) noemt de constructie zelf - *"een
+while lus"* - en toont de volledige voorbeeldsessie met de uitvoer erbij. Opgave 5
+(10 punten) schrijft *"Gebruik een dubbele lusconstructie"* voor en doet twee
+aanroepen met hun uitvoer voor. Zij is wel de opgave waar een andere lezing het
+meest voor de hand ligt: de dubbele lus is voorgeschreven en de uitvoer is
+voorgedaan, maar wat de binnenste lus moet aflopen leidt de student zelf af.
+
+#### Waarom deze meting per niveau gaat en niet per uitkomst
+
+Punten zijn per **niveau** te verdelen en niet per **uitkomst**, want één opgave
+realiseert meerdere uitkomsten tegelijk: opgave 3 raakt P5, P6 en P7, opgave 7a
+raakt P5, P6 en A1. Wie per uitkomst optelt, telt dezelfde punten meermaals en kan
+op elk gewenst percentage uitkomen. Elke opgave vraagt wél één hoogste niveau, en
+daarom is de niveauverdeling de enige vergelijking die de matrijs aankan.
+
+Dat is geen detail. Er stonden drie getallen voor dit ene feit in de repository -
+44%, 56% en 16,7% - en alle drie leken verdedigbaar omdat ze per uitkomst telden.
+Wie deze alinea overslaat, komt op een vijfde getal uit.
+
+Hier stond eerder dat A3 *"met 15 punten iets zwaarder wordt getoetst dan de
+matrijs zegt - niet genoeg voor een verdubbeling"*. Op zijn eigen vergelijking
+klopt dat: tegen opgave 6 alleen rechtvaardigt A3 16,7% - 15 van de 90 punten, en
+dat is het derde van de drie getallen hierboven. Maar die vergelijking meet A3
+tegen zijn eigen drager, en dat is juist de uitkomstvergelijking die niet sluit.
+De 10 punten van opgave 3 zijn analytisch werk zonder uitkomst om op te landen,
+waardoor A3 tegen alleen opgave 6 meten de analytische last van de toets
+stelselmatig te laag uitkomt. Op de vergelijking die wél sluit, is 20% analyseren
+tegen 27,8% gemeten nog altijd aan de lage kant.
+
+#### Wat hiermee niet is opgelost
+
+**A2** (problemen opdelen, 10%, toepassen) heeft in de hele toets geen drager.
+Opgave 7 is de enige plek waar opdelen aan de orde is, en zij doet het opdelen
+voor de student. Vijfentwintig punten die een uitkomst zouden moeten dragen en het
+niet doen.
+
+Dit werkitem lost dat niet op. A2 zijn weging afnemen en ook die 10% aan A3 geven
+zou de matrijs op de getallen beter laten sluiten - 70% toepassen en 30%
+analyseren tegen 72,2% en 27,8% gemeten - maar het maakt van A2 een leeruitkomst
+zonder toetsing, *"een belofte die niemand nakijkt"* in de woorden van
+[leeruitkomsten.md](leeruitkomsten.md), en het haalt week 3 van 30% naar 20%
+tentamengewicht: precies de verhouding die bij #356 ter discussie staat. Pasvorm
+in de getallen is geen grond voor een grotere ingreep dan de scheefheid die zij
+oplost. De vraag hoort bij #329, waar de uitkomsten van beide vakken worden
+doorgelicht.
+
+Zolang het oefententamen niet verandert, is het gat rond A2 een vraag over de
+matrijs en niet over de toets.
 
 ### Wat een docentenhandleiding is, en waar hij staat
 

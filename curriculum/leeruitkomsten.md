@@ -35,11 +35,12 @@ bindende document niet gedeeld en niet gevolgd in de tijd.
 | **P7** | Student past docstrings toe om functies te documenteren. | SRe1 | - | **geen** |
 | **A1** | Student implementeert eenvoudige algoritmes door middel van functioneel programmeren. | SRe1 | Toepassen | 15% |
 | **A2** | Student verdeelt eenvoudige computationele problemen in kleinere deelproblemen. | SRe1 | Toepassen | 10% |
-| **A3** | Student ontwerpt algoritmes om eenvoudige computationele problemen op te lossen. | OP-I | Analyseren | 10% |
+| **A3** | Student ontwerpt algoritmes om eenvoudige computationele problemen op te lossen. | OP-I | Analyseren | 20% |
 
-Totaal: 80% toepassen, 10% analyseren. **Samen 90%**; de 10% die met de
-verplaatsing van A4 vrijkwam is nog niet herverdeeld, en PGM1 heeft daarmee geen
-uitkomst op creëren-niveau. Zie *Voorgestelde correcties*.
+Totaal: 80% toepassen, 20% analyseren. **Samen 100%.** PGM1 heeft geen uitkomst
+op creëren-niveau; dat is een besluit en geen gat. Zie
+[uitgangspunten.md](uitgangspunten.md), *De weging van de PGM1-matrijs*, voor
+beide besluiten en voor de meting waarop ze rusten.
 
 > De eerder vermelde verdeling "70% toepassen" klopte niet met de som van de rijen,
 > ook vóór deze wijziging niet.
@@ -107,23 +108,29 @@ Totaal: 70% toepassen, 30% creëren. Samen 100%.
 
 Vier leeruitkomsten hebben geen weging in het tentamen. Dat hoeft geen fout te
 zijn, maar het verdient per geval een besluit, want een leeruitkomst zonder
-toetsing is een belofte die niemand nakijkt.
+toetsing is een belofte die niemand nakijkt. Zij staan in de eerste vier rijen;
+daaronder volgen de overige bevindingen over de matrijs: formuleringen en
+plaatsingen die niet meer beschrijven wat de vakken doen, en wat inmiddels is
+uitgevoerd.
 
 | Uitkomst | Bevinding | Voorstel |
 |---|---|---|
-| **PGM2 A5** (finite state machines) | Niet onderwezen, niet getoetst, en de bijbehorende theoretische afsluiting is bewust losgelaten. Zie [uitgangspunten.md](uitgangspunten.md). | **Schrappen.** |
+| **PGM2 A5** (finite state machines) | Niet onderwezen, niet getoetst, en de bijbehorende theoretische afsluiting is bewust losgelaten. Zie [uitgangspunten.md](uitgangspunten.md), *De theoretische afsluiting*. | **Schrappen.** |
 | **PGM1 P7** (docstrings) | Wél onderwezen en overal in het materiaal toegepast, maar niet getoetst. | Weging geven of expliciet als vormeis opnemen. |
 | **PGM2 P6** (operator overloading) | Wél onderwezen, en in de planning voor 2026 krijgt het een hele week. | Weging geven, of de week heroverwegen. |
 | **PGM2 P7** (externe bibliotheken) | Verspreid aanwezig, niet als onderwerp behandeld. | Besluiten of dit een leeruitkomst moet blijven. |
-| **PGM1: 10% onverdeeld, en geen creëren-niveau** | Met het vertrek van A4 telt de PGM1-matrijs 90% en heeft het vak geen enkele uitkomst op creëren-niveau meer. Dat laatste is niet vanzelf een gebrek - PGM1 is een introductievak - maar het is wel een keuze die niemand expliciet heeft gemaakt. De veegronde stelde bovendien vast dat het oefententamen 40 van de 90 punten aan ontwerpwerk besteedt, tegen 10% analyseren in de matrijs. | Herverdelen binnen PGM1. De meting wijst richting A3 (ontwerpen, analyseren), dat nu 10% weegt terwijl de toets er aanzienlijk meer aan besteedt. |
+| ~~**PGM1: de weging van de matrijs**~~ | **Uitgevoerd op 4 oktober 2026.** Het gewicht dat A4 achterliet is aan A3 toegekend: A3 weegt 20% en de matrijs sluit op 100%. Dat PGM1 geen uitkomst op creëren-niveau heeft, is daarbij als keuze vastgelegd en niet als restant. De grond, de niveaumeting van het oefententamen en wat beide besluiten zou heropenen staan in [uitgangspunten.md](uitgangspunten.md), *De weging van de PGM1-matrijs*. | Gedaan. |
 | **PGM1 P4** (lijsten/strings en de bijbehorende methodes) | Het methodes-deel wordt al jaren niet meer in PGM1 onderwezen of getoetst. Vanaf de herziening van PGM1 week 7 en PGM2 week 1 introduceert PGM1 geen objectmethoden meer; dat verschuift volledig naar PGM2 week 1. Zie [leerlijn.md](leerlijn.md) en [uitgangspunten.md](uitgangspunten.md). | Herformuleren tot wat lijsten/strings betreft zonder de methodes, of het methodes-deel schrappen. |
 | **PGM1 A1** (*functioneel*) en **PGM2 A1** (*imperatief*) | De twee A1's gaan nog uit van de oorspronkelijke indeling van PGM1 en PGM2. Recursie, en daarmee het functionele deel, zit al een paar jaar in PGM2, en `for` en `while` zijn naar PGM1 verplaatst. De comprehensionweek, PGM2 week 2, dekt daardoor feitelijk PGM1 A1, terwijl `leerlijn.md` haar onder PGM2 A1 zet. Opgemerkt door de vakdeskundige op 30 september 2026, bij de poort van #326 (VP3); de matrijs is daarbij niet aangepast. | De leeruitkomsten van PGM1 en PGM2 een keer doorlichten; zie #329. Tot dan houdt PGM2 week 2 in `leerlijn.md` A1, met een verwijzing naar deze opmerking. |
+| **PGM2 P1** (lussen) | PGM1 toetst lussen voor 20 van de 90 punten (opgave 4 en 5) en onderwijst ze in week 4 en 5, terwijl de lusuitkomst als PGM2 P1 voor 5% in de andere matrijs staat en in geen enkele PGM2-week voorkomt; `leerlijn.md` zet dat gat op "open". Dit is het spiegelbeeld van de A4-verplaatsing, en het raakt dezelfde A1-formulering als de rij hierboven. Gemeten bij #104. | Meenemen in de doorlichting van #329, samen met de rij hierboven. |
+| **PGM1 week 6** (bestanden) | Week 6 noemt in `leerlijn.md` geen PGM1-uitkomst maar "bestanden", met een voetnoot naar de PGM2-matrijs. Bestanden worden in week 6 wel onderwezen en in PGM1 niet getoetst; de uitkomst is PGM2 P3. Eén van de zeven PGM1-weken draagt daarmee geen uitkomst van de matrijs die het eigen tentamen beschrijft. Gemeten bij #104. | Meenemen in de doorlichting van #329. |
+| **PGM2 P7** (externe bibliotheken) in `leerlijn.md` | Vier PGM2-uitkomsten komen in geen enkele week voor. Voor P1, P3 en A5 staat de grond in *Gaten tussen toetsing en materiaal* in [leerlijn.md](leerlijn.md), voor P7 niet; de bevinding over P7 hierboven is daar dus niet terug te vinden. Gemeten bij #104. | Meenemen in de doorlichting van #329. |
 
 Daarnaast staat één uitkomst in de verkeerde matrijs:
 
 | Uitkomst | Bevinding | Voorstel |
 |---|---|---|
-| ~~**PGM1 A4** (recursie)~~ | **Uitgevoerd op 1 september 2026.** De uitkomst staat nu als **PGM2 A6**. Zij stond op creëren-niveau voor 10% van het PGM1-tentamen terwijl recursie in PGM1 niet wordt onderwezen; het PGM2-tentamen besteedt er 30 van de 90 punten aan. PGM2 telde vóór de verplaatsing 90% en komt er nu mee op 100% uit. | Gedaan. Wat resteert: de 10% die in PGM1 vrijkomt, zie de rij hieronder. |
+| ~~**PGM1 A4** (recursie)~~ | **Uitgevoerd op 1 september 2026.** De uitkomst staat nu als **PGM2 A6**. Zij stond op creëren-niveau voor 10% van het PGM1-tentamen terwijl recursie in PGM1 niet wordt onderwezen; het PGM2-tentamen besteedt er 30 van de 90 punten aan. PGM2 telde vóór de verplaatsing 90% en komt er nu mee op 100% uit. | Gedaan. Het gewicht dat in PGM1 achterbleef is op 4 oktober 2026 aan A3 toegekend; zie de rij over de weging van de matrijs hierboven. |
 
 ## Gaten tussen toetsing en onderwijs
 
