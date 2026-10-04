@@ -2873,3 +2873,85 @@ trigger: een genummerde stap in een route die van boven naar beneden wordt afgel
 overgeslagen als hij ontbreekt, terwijl een plicht aan het eind pas mist als iemand het merkt.
 Waaraan je zou zien dat het werkt: de volgende vier registraties staan in de PR van hun eigen
 werkitem, en geen enkele komt er op verzoek.
+
+## Werkitem #104 - de toetsmatrijs van PGM1 tegen het oefententamen
+
+Route: LUS, S, procesversie `fd197871`. Gecombineerde verkenner/ontwerper, mens, auteur, één
+beoordelaar (redacteur). Geen verhelderaar; de eerstejaars viel af omdat er geen
+studentmateriaal bij komt en geen student `curriculum/` leest. PR #365, `Closes #104`.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator (C1, C4-voorlegging, PR, C6-plaatsing) | niet beschikbaar | niet beschikbaar | C1 LUS/S |
+| curriculumontwerper (C2) | 93.961 | 9 min 38 s | C2, vier onderdelen, twee voorleggingen |
+| auteur (C5) | 162.109 | 10 min 3 s | C5; 3 bestanden, +130/-35 |
+| beoordelaar-redacteur (C6) | 155.148 | 11 min 10 s | AKKOORD MET PUNTJES, 0 blokkades, 10 puntjes |
+| auteur (puntjes) | 114.504 | 6 min 50 s | 6 puntjes verwerkt; 2 bestanden, +41/-15 |
+| **totaal agents** | **525.722** | | |
+
+Herstelstand: oplevering **0 van 1** - geen blokkade, dus geen herstelronde. De puntjesronde
+kostte er geen, conform `loop.md`. Bij één beoordelaar volstaat C6; geen C7.
+
+**De C1 van 4 september 2026 is vervangen in plaats van overgenomen.** Die was van vóór de
+werkwijze van #203, de route was nooit gestart, en de aanleiding bleek op drie van de vier
+vaststellingen ingehaald: de totaalregel klopte inmiddels, A4 was met #140 naar PGM2 verhuisd,
+en A5 raakt PGM2. `loop.md` §*Invoering* laat een **lopende** route bij zijn vastgelegde C1; deze
+liep niet. Wat overbleef was scherper dan wat er stond: de matrijs telde op tot 90% en PGM1 had
+geen enkele uitkomst op creëren-niveau.
+
+**De dragende vondst is methodisch en niet een vierde getal.** Er stonden drie getallen voor
+dezelfde niveauverdeling in de repo - 44%, 56% en 16,7% - en de ontwerper legde uit waarom ze
+alle drie verdedigbaar leken: **punten zijn per niveau te verdelen en niet per uitkomst**, want
+één opgave realiseert meerdere uitkomsten tegelijk. Opgave 3 raakt P5, P6 en P7; opgave 7a raakt
+P5, P6 en A1. Wie per uitkomst optelt, telt dezelfde punten meermaals en komt op elk gewenst
+percentage uit. Die zin staat nu in `uitgangspunten.md`, en zonder haar komt de volgende meting
+op een vijfde getal uit.
+
+Zijn eigen meting, per niveau: toepassen 65 van 90 (72,2%), analyseren 25 van 90 (27,8%),
+creëren 0. Ontwerper, auteur, redacteur en orkestrator hebben die onafhankelijk nagerekend.
+
+**Het poortbesluit stond vastgelegd vóór het aan de auteur werd meegegeven.** Dat is de les van
+de blokkade op PR #344, waar een besluit als *besluit van de vakdeskundige* aan een rol werd
+meegegeven zonder dat het ergens stond. Hier eerst de C4-reactie, daarna de opdracht.
+
+**De controle die bijna geen controle meer was.** Criterium 8 toetste met een patroon op vier
+woorden of er nog een vindplaats was die het punt als open beschrijft. De auteur vermeed die
+vier woorden in zijn nieuwe tekst en schreef *"het gewicht dat A4 achterliet"* - met de
+reden erbij: een treffer in een zin die het gewicht juist tóekent maakt het onderscheid
+tussen een geslaagde opruiming en een achtergebleven open punt onleesbaar. De orkestrator
+legde de redacteur uitdrukkelijk de vraag voor of dat de controle omzeilt of haalt. Hij
+**vertrouwde het patroon niet**, juist omdat het was vermeden, zocht semantisch met vier
+aanvullende patronen naar wat het had moeten vangen, en stelde vast dat er geen vindplaats
+meer is: de keuze haalt de controle. Zijn conclusie erover telt: de beoordeling was mogelijk
+**omdat de auteur zijn eigen omweg had gemeld** in plaats van hem te laten staan.
+
+**Een vijfde variant van de patroonval.** De redacteur kreeg bij een nevencontrole een nul op
+`% van het tentamen` omdat er `**` tussen staat, en ving die zelf op. Naast
+niet-case-insensitief, regelgewijs over een afgebroken zin, een patroon op een tabelkolom en
+`git diff | grep '^-'` is dit de vijfde vorm waarin een patroon in deze repo stilletjes nul
+gaf.
+
+**Het zwaarste puntje raakte de aard van het bewijs.** De niveautoekenning stond in de bindende
+laag als *meting*, terwijl alleen de punten gemeten zijn en wélk niveau een opgave vraagt een
+lezing is - het C2 noemde het een aanname en de C5 een beperking, maar dat voorbehoud was niet in
+`uitgangspunten.md` geland. Het staat er nu, met de andere lezing van opgave 5 en haar getal
+erbij (35 van 90, 38,9%), en met het onderscheid tussen de twee soorten fout: een andere
+niveaulezing is een meningsverschil over één opgave, de drie oude getallen waren een
+teloptelfout. Zonder dat onderscheid zou de nieuwe alinea de waarschuwing eronder hebben
+ondergraven.
+
+**Wat de route openliet.** Drie bevindingen staan als rijen in *Voorgestelde correcties* met
+verwijzing naar **#329**: dat PGM1 de lussen toetst voor 20 van de 90 punten terwijl de
+lusuitkomst in de PGM2-matrijs staat, dat PGM1 week 6 aan geen enkele PGM1-uitkomst bijdraagt, en
+dat PGM2 P7 zijn grond in `leerlijn.md` mist. A2 blijft een uitkomst met gewicht en zonder drager
+in de toets; dat staat in de nieuwe sectie en is bij #329 belegd. Drie puntjes van de redacteur
+vielen buiten de afbakening en blijven staan, waaronder het blokcitaat *Formele status* dat zegt
+dat de correcties niet zijn doorgevoerd boven een tabel met inmiddels twee uitgevoerde rijen -
+dat raakt de vorm van een vastgestelde matrijs en is een besluit van de vakdeskundige.
+
+**Over de vorm van deze ingang.** Het voorstel bij de evaluatie van #203 luidt dat de meetregels
+in de pull request van het werkitem zelf horen, zoals #335 deed. Dat is hier **niet** toegepast,
+en met reden: de beoordeling van PR #365 was afgerond toen de merge aan de orde kwam, dus de
+registratie in die PR zetten zou haar aan de lezing hebben onttrokken. Dat is een aanvulling op
+het voorstel die de praktijk oplevert: de stap hoort vóór de beoordeling te vallen en niet vlak
+voor de merge, anders ruilt zij een vergeten registratie in voor een ongelezen registratie.
