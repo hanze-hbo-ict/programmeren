@@ -675,6 +675,21 @@ Twee keer een patroon niet geijkt, allebei in dezelfde sessie:
 
 Hier hoort wat met de hand is gedaan omdat het te klein leek voor een werkitem.
 
+### 5 oktober 2026, een getal uit een oordeel is ook een overgenomen getal (PR #367)
+
+**Wat het was.** Eén bevinding in `bevindingen.md`: bij het herstel van PR #366 nam de
+orkestrator het bewijs van de redacteur letterlijk over - *"drie van de vijf tabelrijen"* -
+zonder het na te tellen; de tabel heeft zes rijen. De verse redacteur van de herstelronde
+ving het en merkte op dat het getal ongewijzigd uit zijn eigen vorige oordeel kwam. Dat
+voegt een bron toe aan de bevinding van 24 september, die een uitsnede of het geheugen
+vermoedde.
+
+**Waarom buiten de lus.** Een correctie op `onderzoek/` die geen besluit raakt en geen
+materiaal, dus volgens `CLAUDE.md` in een branch met een pull request. De vakdeskundige
+vroeg erom nadat de orkestrator het als los punt had voorgelegd.
+
+**Ging er een beoordelaar overheen?** <in te vullen>
+
 ### 1 oktober 2026, het dossier rechtgezet na de onderzoeksronde (PR #354)
 
 **Wat het was.** Drie beweringen in dit bestand en in `bevindingen.md` die niet klopten
