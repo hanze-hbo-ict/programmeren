@@ -2873,3 +2873,121 @@ trigger: een genummerde stap in een route die van boven naar beneden wordt afgel
 overgeslagen als hij ontbreekt, terwijl een plicht aan het eind pas mist als iemand het merkt.
 Waaraan je zou zien dat het werkt: de volgende vier registraties staan in de PR van hun eigen
 werkitem, en geen enkele komt er op verzoek.
+
+## Werkitem #104 - de toetsmatrijs van PGM1 tegen het oefententamen
+
+Route: LUS, S, procesversie `fd197871`. Gecombineerde verkenner/ontwerper, mens, auteur, één
+beoordelaar (redacteur). Geen verhelderaar; de eerstejaars viel af omdat er geen
+studentmateriaal bij komt en geen student `curriculum/` leest. PR #365, `Closes #104`.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator (C1, C4-voorlegging, PR, C6-plaatsing) | niet beschikbaar | niet beschikbaar | C1 LUS/S |
+| curriculumontwerper (C2) | 93.961 | 9 min 38 s | C2, vier onderdelen, één voorlegging met twee vragen |
+| auteur (C5) | 162.109 | 10 min 3 s | C5; 3 bestanden, +130/-35 |
+| beoordelaar-redacteur (C6) | 155.148 | 11 min 10 s | AKKOORD MET PUNTJES, 0 blokkades, 10 puntjes |
+| auteur (puntjes) | 114.504 | 6 min 50 s | 6 puntjes verwerkt; 2 bestanden, +41/-15 |
+| **totaal agents** | **525.722** | | |
+
+Herstelstand: oplevering **0 van 1** - geen blokkade, dus geen herstelronde. De puntjesronde
+kostte er geen, conform `loop.md`. Bij één beoordelaar volstaat C6; geen C7. Van de tien puntjes
+zijn er zes verwerkt, vielen er drie buiten de afbakening en ging er één over de C5-tekst zelf.
+
+**De C1 van 4 september 2026 is vervangen in plaats van overgenomen.** Die was van vóór de
+werkwijze van #203, de route was nooit gestart, en de aanleiding bleek op drie van de vier
+vaststellingen ingehaald: de totaalregel klopte inmiddels, A4 was met #140 naar PGM2 verhuisd,
+en A5 raakt PGM2. `loop.md` §*Invoering* laat een **lopende** route bij zijn vastgelegde C1; deze
+liep niet. Wat overbleef was scherper dan wat er stond: de matrijs telde op tot 90% en PGM1 had
+geen enkele uitkomst op creëren-niveau.
+
+**De dragende vondst is methodisch en niet een vierde getal.** Er stonden drie getallen voor
+dit ene feit in de repo - 44%, 56% en 16,7% - en de ontwerper legde uit waarom ze
+alle drie verdedigbaar leken: **punten zijn per niveau te verdelen en niet per uitkomst**, want
+één opgave realiseert meerdere uitkomsten tegelijk. Opgave 3 raakt P5, P6 en P7; opgave 7a raakt
+P5, P6 en A1. Wie per uitkomst optelt, telt dezelfde punten meermaals en komt op elk gewenst
+percentage uit. Die zin staat nu in `uitgangspunten.md`, en zonder haar komt de volgende meting
+op een vijfde getal uit.
+
+Zijn eigen meting, per niveau: toepassen 65 van 90 (72,2%), analyseren 25 van 90 (27,8%),
+creëren 0. Ontwerper, auteur, redacteur en orkestrator hebben die onafhankelijk nagerekend.
+
+**Het poortbesluit stond vastgelegd vóór het aan de auteur werd meegegeven.** Dat is de les van
+de blokkade op PR #344, waar een besluit als *besluit van de vakdeskundige* aan een rol werd
+meegegeven zonder dat het ergens stond. Hier eerst de C4-reactie, daarna de opdracht.
+
+**De controle die bijna geen controle meer was.** Criterium 8 toetste met een patroon op vier
+woorden of er nog een vindplaats was die het punt als open beschrijft. De auteur vermeed die
+vier woorden in zijn nieuwe tekst en schreef *"het gewicht dat A4 achterliet"* - met de
+reden erbij: een treffer in een zin die het gewicht juist tóekent maakt het onderscheid
+tussen een geslaagde opruiming en een achtergebleven open punt onleesbaar. De orkestrator
+legde de redacteur uitdrukkelijk de vraag voor of dat de controle omzeilt of haalt. Hij
+**vertrouwde het patroon niet**, juist omdat het was vermeden, zocht semantisch met vier
+aanvullende patronen naar wat het had moeten vangen, en stelde vast dat er geen vindplaats
+meer is: de keuze haalt de controle. Zijn conclusie erover telt: de beoordeling was mogelijk
+**omdat de auteur zijn eigen omweg had gemeld** in plaats van hem te laten staan.
+
+**Nog een vorm van de patroonval.** De redacteur kreeg bij een nevencontrole een nul op
+`% van het tentamen` omdat er `**` tussen staat, en ving die zelf op. Hoeveel vormen het dossier
+inmiddels kent is niet geteld, en hier stond eerst *"de vijfde"* met een reeks erbij waarvan twee
+leden niet kloppen: `git diff | grep '^-'` gaf geen stille nul maar een valse **1** door de
+diffkop (r758-760), en een patroon *op* een tabelkolom staat nergens - het gedocumenteerde geval
+is een patroon dat *in* een tabel stond en daardoor `\|` droeg, waardoor de alternatie wegviel
+(`bevindingen.md` r50-54). Een
+rangtelwoord zonder telling is precies de fout die de ingang hierboven in zichzelf rechtzet.
+
+**Het zwaarste puntje raakte de aard van het bewijs.** De niveautoekenning stond in de bindende
+laag als *meting*, terwijl alleen de punten gemeten zijn en wélk niveau een opgave vraagt een
+lezing is - het C2 noemde het een aanname en de C5 een beperking, maar dat voorbehoud was niet in
+`uitgangspunten.md` geland. Het staat er nu, met de andere lezing van opgave 5 en haar getal
+erbij (35 van 90, 38,9%), en met het onderscheid tussen de twee soorten fout: een andere
+niveaulezing is een meningsverschil over één opgave, de drie oude getallen waren een
+teloptelfout. Zonder dat onderscheid zou de nieuwe alinea de waarschuwing eronder hebben
+ondergraven.
+
+**Wat de route openliet.** Drie bevindingen staan als rijen in *Voorgestelde correcties* met
+verwijzing naar **#329**: dat PGM1 de lussen toetst voor 20 van de 90 punten terwijl de
+lusuitkomst in de PGM2-matrijs staat, dat PGM1 week 6 aan geen enkele PGM1-uitkomst bijdraagt, en
+dat PGM2 P7 zijn grond in `leerlijn.md` mist. A2 blijft een uitkomst met gewicht en zonder drager
+in de toets; dat staat in de nieuwe sectie en is bij #329 belegd. Drie puntjes van de redacteur
+vielen buiten de afbakening en blijven staan, waaronder het blokcitaat *Formele status* dat zegt
+dat de correcties niet zijn doorgevoerd boven een tabel met inmiddels twee uitgevoerde rijen -
+dat raakt de vorm van een vastgestelde matrijs en is een besluit van de vakdeskundige. Van die drie
+is alleen dat er één een keuze; de andere twee wijzen een passage aan die door dit werkitem is
+ingehaald, één in `bevindingen.md` en één in `uitgangspunten.md`. Geen van de drie heeft een
+drager, en voor die twee is er dus wel iets te doen.
+
+**Over de vorm van deze ingang.** Het voorstel bij de evaluatie van #203 luidt dat het overnemen
+van de meetregels een genummerde stap van `/orc` wordt, uit te voeren in de pull request van het
+werkitem zelf, zoals bij #335; wat dat verandert is de plaats én de trigger. Hier is het niet
+toegepast: de C6 van PR #365 was al afgerond toen de merge aan de orde kwam, dus die beoordeling
+kon de registratie niet meer meenemen en een aparte lezing was hoe dan ook nodig. Dát die lezing
+moet plaatsvinden staat al vast en is geen vondst van deze route: `loop.md` vraagt een
+onafhankelijke redactionele toetsing van een door de orkestrator geschreven besluittekst, en
+`orc.md` zet haar vóór het mergeaanbod. Beide schrijven over een besluittekst en deze ingang is
+een registratie met een voorstel erin, maar de lezing is langs diezelfde lijn gedaan.
+
+Hier stond eerst dat de stap daarom vóór de beoordeling hoort te vallen. Deze ingang weerlegt dat
+zelf: drie van haar zes tabelrijen kunnen er pas ná de beoordeling staan, want de redacteursrij,
+de puntjesrij en het totaal bestaan dan nog niet. **Voorstel voor de
+evaluatie van #203:** een registratie die haar eigen beoordeling rapporteert, kan niet vóór die
+beoordeling af zijn, dus voor dat geval is de eigen PR met een eigen lezing de vorm, en voor een
+registratie die dat niet doet de genummerde stap in de PR van het werkitem zelf. Waaraan je zou
+zien dat het werkt: elke volgende registratie die haar eigen C6 vermeldt, staat in een eigen PR
+met een gelezen oordeel erop. Welke van de twee vormen de norm wordt, ligt bij de evaluatie van
+#203 en is hier niet beslist.
+
+**Ging er een beoordelaar overheen?** Ja. `rol-beoordelaar-redacteur` las deze ingang op
+`f01798ef` in een eigen worktree en gaf **BLOKKEER**: drie moetpunten en zes puntjes. Alle drie de
+moetpunten lagen op deze alinea en op die over de patroonval; beide zijn herschreven en de zes
+puntjes zijn verwerkt, op één na: dat het commitbericht *vijf agentstappen* zegt waar er vier
+gemeten zijn, blijft in de geschiedenis staan en is in de PR-beschrijving rechtgezet. Een verse
+redacteur toetste dat herstel op `9f9b8e1e` en gaf **AKKOORD MET PUNTJES**: drie van drie
+blokkades opgeheven, nul nieuwe, zes puntjes - waaronder dat deze alinea *"vijf tabelrijen"* zei
+waar de tabel er zes heeft, een getal dat ongeteld uit zijn eigen vorige oordeel was overgenomen.
+Die zes zijn hierin verwerkt.
+
+Meetregels van de twee leesronden: beoordelaar-redacteur, C6 ronde 1, **129.104 tokens,
+12 min 51 s**, BLOKKEER; en ronde 2 in herstelmodus, **85.034 tokens, 7 min 58 s**, AKKOORD MET
+PUNTJES. Omvang S, één bestand: +82/-0 in ronde 1, reparatie +41/-16 in ronde 2. Het herstel is
+van de orkestrator, die ook de ingang schreef; herstelstand registratie **1 van 1** en daarmee
+op de grens.
