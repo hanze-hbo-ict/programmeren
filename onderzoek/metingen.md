@@ -688,7 +688,14 @@ vermoedde.
 materiaal, dus volgens `CLAUDE.md` in een branch met een pull request. De vakdeskundige
 vroeg erom nadat de orkestrator het als los punt had voorgelegd.
 
-**Ging er een beoordelaar overheen?** <in te vullen>
+**Ging er een beoordelaar overheen?** Ja, `rol-beoordelaar-redacteur`, en die leesronde gaf
+**BLOKKEER** met vier moetpunten en acht puntjes: **130.031 tokens, 14 min 25 s**, omvang S
+(twee bestanden, +59/-0). Twee van de vier moetpunten waren dezelfde fout als de fout die de
+bevinding beschrijft. De bevinding nam het citaat van de redacteur over met twee ongetelde
+noemers - vijf tabelrijen en zes vetgeleide alinea's, terwijl het er zes en acht zijn - en nam
+uit het tweede oordeel *"negen regels"* over, terwijl het er tweeëndertig zijn. Verder haalde
+zij *meet voor je doorgeeft* cursief aan als staande regel; die staat nergens in de repository,
+en de regel die er wél staat is *"meet het ding zelf"* in `CLAUDE.md`. Alle vier zijn hersteld.
 
 ### 1 oktober 2026, het dossier rechtgezet na de onderzoeksronde (PR #354)
 

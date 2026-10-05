@@ -1781,46 +1781,60 @@ Beide zijn bij het oplossen van de conflicten hermeten en rechtgezet. Een `git f
 vergelijking tegen `origin/master` bij de inname had dit voorkomen. Dat onderstreept het
 voorstel van 1 oktober.
 
-## Een getal uit een oordeel is ook een overgenomen getal - 4 oktober 2026
+## Een getal uit een oordeel is ook een overgenomen getal - 5 oktober 2026
 
 **Wat er gebeurde.** Bij de registratie van #104 in PR #366 las een redacteur de ingang en gaf
 **BLOKKEER** op drie moetpunten. Een ervan was dat de slotalinea beweerde dat een registratie
 vóór de beoordeling hoort te vallen, terwijl de ingang zich zelf weerlegt. Zijn bewijs luidde:
 *"Drie van de vijf tabelrijen en vier van de zes vetgeleide alinea's bestaan pas ná de
 beoordeling."* De orkestrator nam dat bewijs over in zijn herstel - *"drie van haar vijf
-tabelrijen en vier van haar alinea's"* - en telde het niet na. De tabel heeft **zes** rijen onder
-de scheidingsregel; vijf klopt alleen onder de ongenoemde lezing waarin de orkestratorrij, die
-geen meetgegevens heeft, niet meetelt. Een verse redacteur ving het in de herstelbeoordeling en
-schreef erbij dat het getal ongewijzigd uit zijn eigen vorige oordeel kwam.
+tabelrijen en vier van haar alinea's"* - en telde het niet na.
 
-Het stond negen regels onder de alinea die in hetzelfde herstel was rechtgezet omdat zij een
-rangtelwoord zonder telling gebruikte.
+Geen van beide noemers klopt. Nageteld op `f01798ef`: de tabel heeft **zes** rijen onder de
+scheidingsregel, en vijf klopt alleen als je de orkestratorrij weglaat, de enige zonder
+tokengetal - een criterium dat er niet bij stond. De sectie heeft **acht** vetgeleide alinea's,
+niet zes, op dertien alinea's in totaal. Een verse redacteur ving de eerste in de
+herstelbeoordeling en schreef erbij dat het getal ongewijzigd uit zijn eigen vorige oordeel
+kwam; de tweede is pas bij de lezing van déze bevinding geteld, omdat zij hier als citaat werd
+doorgegeven zonder dat iemand hem had nageteld.
+
+De telling stond bovendien in dezelfde sectie als de alinea die in datzelfde herstel was
+rechtgezet omdat zij een rangtelwoord zonder telling gebruikte: in `9f9b8e1e` eindigt die alinea
+op r2935 en staat de telling op r2967. Hoe dicht erboven precies, is bij het opschrijven van deze
+bevinding opnieuw uit het vorige oordeel overgenomen in plaats van gemeten - *"negen regels"*,
+terwijl het er tweeëndertig zijn. Dezelfde fout dus, bij het opschrijven van de bevinding erover,
+en opnieuw gevonden door de lezing en niet door de schrijver.
 
 **Waarom dit een patroon is.** De bevinding van 24 september, *Een getal dat de orkestrator
-opschrijft, heeft hij niet altijd geteld*, vermoedde dat zulke getallen als samenvatting voelen
-en niet als meting. Dit geval voegt er een bron aan toe die het vermoeden niet dekt. De getallen
-daar kwamen uit een uitsnede of uit het geheugen; dit kwam uit een artefact dat de orkestrator
-net volledig had gelezen, van een rol die het zelf had opgeschreven als bewijs. Dat is precies de
-vorm waarin een getal geen meting meer lijkt te vragen: het staat in een oordeel, het ondersteunt
-een blokkade die juist is, en het overnemen voelt als trouw aan de bron in plaats van als een
-nieuwe bewering. De rol die het getal opschreef, had het zelf ook niet geteld.
+opschrijft, heeft hij niet altijd geteld*, vermoedt dat zulke getallen als samenvatting voelen en
+niet als meting, en noemt dat vermoeden ongemeten. Dit geval voegt er een bron aan toe die het
+niet dekt: niet een uitsnede of het geheugen, maar een artefact dat de orkestrator net volledig
+had gelezen, van een rol die het getal zelf had opgeschreven als bewijs. Dat is de vorm waarin
+een getal geen meting meer lijkt te vragen - het staat in een oordeel, het ondersteunt een
+blokkade die juist is, en het overnemen voelt als trouw aan de bron in plaats van als een nieuwe
+bewering. De rol die het opschreef had het zelf ook niet geteld, en de rol die hém naschreef
+evenmin.
 
-Daarmee geldt *meet voor je doorgeeft* niet alleen voor getallen uit een issue of een rolmelding,
-zoals de bevinding van 1 oktober over de stilstaande lokale master en die van 24 september laten
-zien, maar ook voor een getal uit een oordeel dat je zojuist hebt gelezen.
+`CLAUDE.md` §*Meten* zegt *"meet het ding zelf, niet iets ernaast"*. Wat dit geval toevoegt is dat
+een oordeel van een rol ook *iets ernaast* is zodra je er een getal uit overneemt, hoe zorgvuldig
+het ook is opgeschreven en hoe volledig je het ook hebt gelezen.
 
-**Ging er een beoordelaar overheen?** <in te vullen>
+De lezing van deze bevinding staat op PR #367 en gaf zelf **BLOKKEER**; wat die ronde kostte en
+wat zij ving, staat bij de ingang onder *Werk buiten de lus om* in `metingen.md`.
 
 **Wat het veranderde.** Het getal is nageteld en rechtgezet in `7450b6a3`, met de alineatelling
-eruit omdat die na het herstel niet meer klopte; de ingang staat zo in `695d5cb0`. Twee dingen
-voor de evaluatie van #203, bovenop de twee voorstellen van 24 september:
+eruit; de ingang staat zo in `695d5cb0`. De tweede noemer van het citaat is hier nageteld. Twee
+punten gaan naar de evaluatie van #203, bovenop de twee voorstellen van 24 september; geen van
+beide is hier beslist.
 
-- **Een getal uit een oordeel is een overgenomen getal.** Het voorstel dat een getal in
-  orkestratortekst met de opdracht komt die het opleverde, dekt dit geval niet: de opdracht was
-  *lees deze ingang*. Wat het wel dekt is de telling zelf - wie een getal uit een artefact
-  overneemt, telt het na of schrijft erbij dat hij het niet heeft geteld.
-- **De lezerregel is hier vrijwillig toegepast en ving meer dan de registratie.** Het tweede
-  voorstel van 24 september was die regel uit te breiden tot alle orkestratortekst, dus ook tot
-  de metingen van een werkitem. Bij #366 is dat zonder verzoek gedaan: twee ronden, 129.104 en
-  85.034 tokens, en zij vingen drie blokkades, deze herhaling, en een reeks van vier patroonvallen
-  waarvan twee leden niet tegen het eigen dossier klopten.
+- **Voorstel: wie een getal uit een artefact overneemt, telt het na of schrijft erbij dat hij het
+  niet heeft geteld.** Het eerste voorstel van 24 september vraagt dat een getal met de opdracht
+  komt die het opleverde. Bij een getal uit een oordeel is die opdracht *lees dit artefact*, en
+  dan is de vraag of de telling erachter ooit is gedaan niet te beantwoorden. Het gaat dus om de
+  telling, niet om de opdracht.
+- **Voor de evaluatie: de lezerregel heeft hier meer gevangen dan de registratie zelf.** Het
+  tweede voorstel van 24 september was die regel uit te breiden tot alle orkestratortekst, dus
+  ook tot de metingen van een werkitem. Bij #366 is dat gedaan terwijl `loop.md` en `orc.md` naar
+  de letter alleen een *besluittekst* noemen en dit een registratie met een voorstel is - dat
+  onderscheid is vastgesteld in puntje 4 van de herstelbeoordeling. Die twee ronden kostten
+  129.104 en 85.034 tokens en leverden drie blokkades plus de herhaling hierboven op.
