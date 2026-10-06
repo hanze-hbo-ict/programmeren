@@ -3021,3 +3021,92 @@ Meetregels van de twee leesronden: beoordelaar-redacteur, C6 ronde 1, **129.104 
 PUNTJES. Omvang S, één bestand: +82/-0 in ronde 1, reparatie +41/-16 in ronde 2. Het herstel is
 van de orkestrator, die ook de ingang schreef; herstelstand registratie **1 van 1** en daarmee
 op de grens.
+
+## Werkitem #368 - wanneer een lusvariabele een naam krijgt die de les draagt
+
+Route: LUS, S, startcommit `f3db28e6`; de routenorm in `core/` was sinds `dd3c2552` onveranderd.
+Gecombineerde verkenner/ontwerper, mens, auteur, één beoordelaar (redacteur). Geen verhelderaar;
+de eerstejaars viel af omdat er geen studentmateriaal bij komt, de onderwijskundige omdat de
+didactische keuze bij de poort lag en niet in de uitvoering. PR #369, `Closes #368`. Geen
+#203-proef: die is geparkeerd, dus geen referentietotaal en geen 70%-grens.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator (C1, C1-aanvulling, C4-registratie, PR, C6-plaatsing) | niet beschikbaar | niet beschikbaar | C1 LUS/S |
+| curriculumontwerper (C2) | 94.165 | 27 min 20 s | C2, drie onderdelen, vijf bevindingen, drie open vragen |
+| auteur (C5, herstel, puntjes) | 214.049 | 13 min 49 s + 6 min 8 s + 2 min 26 s | C5; 1 bestand, +126/-1 over drie commits |
+| beoordelaar-redacteur (C6 ronde 1) | 99.034 | niet vergelijkbaar | BLOKKEER, 2 moetpunten, 7 puntjes |
+| beoordelaar-redacteur (C6 ronde 2, herstelmodus) | 99.956 | 9 min 55 s | AKKOORD MET PUNTJES, 0 blokkades, 3 puntjes |
+| **totaal agents** | **507.204** | | |
+
+De auteurstelling is cumulatief over zijn drie ronden; de meldingen gaven 159.465 na de eerste,
+200.090 na het herstel en 214.049 na de puntjes. De duur van ronde 1 van de beoordeling staat
+als *niet vergelijkbaar*: de melding gaf 5 uur 50 minuten wandklok, en de rol tekende zelf aan
+dat daar wachttijd buiten zijn eigen werk in zit en dat zijn metingen samen onder een minuut
+draaien. Herstelstand: oplevering **1 van 1** - één blokkade, één herstelronde, en de
+puntjesronde kostte er geen. Bij één beoordelaar volstaat C6; geen C7.
+
+**Het werkitem kwam uit een observatie van de vakdeskundige en niet uit een veegronde.** Hij
+vergeleek zijn eigen uitwerking van `print_triangle` met die in `solutions/5a_ascii_art.ipynb`
+en vroeg welke verschillen opvielen. Daaruit bleek dat het typewoordenboek `i`, `j`, `k` als dé
+lusindex noemde, terwijl `source/` bij geneste lussen en bij recursie al namen gebruikte die de
+les dragen - en dat die praktijk nergens was opgeschreven. De onbalans zat dus niet tussen zijn
+keuze en het materiaal, maar tussen het materiaal en wat erover vastlag.
+
+**De ontwerper verwierp de ruwe telling die het werkitem droeg, en verving haar door een
+betere.** De C0 zette `for row` 35 en `for col` 30 tegen `for i` 46, maar die 46 is álle gebruik
+van `i`; daarmee vergelijkt de telling geneste lussen met alle lussen. Hij telde daarom de
+geneste lus zelf: 83 in `source/`, buitenste `row` 19, `i` 19, `ix1` 11, `regel` 5, `col` 4. Zijn
+dragende vondst was echter niet die verdeling maar een tegenspraak: het college dat geneste
+lussen onderwijst gebruikt in zijn zeven geneste lussen **nul** keer `i`, terwijl de uitwerkingen
+van dezelfde week er zeven van hun acht met `i` doen. De les en haar eigen uitwerkingen spraken
+elkaar tegen, en de conventie stond aan de kant van de uitwerkingen.
+
+**De poort verwierp een aanbeveling van de ontwerper door haar aanname te weerleggen.** Hij
+beval aan `ix` en `ix1`/`ix2` als gelijkwaardige korte index op te nemen, omdat het college dat
+al doet en het nul wijzigingen kost - met de comment *"# ix is de gebruikelijke afkorting voor
+index"* als grond. De vakdeskundige: `ix` is niet didactisch gekozen maar door een auteursrol
+bedacht, `i` is als index canoniek genoeg, en studenten viel `ix` ook op. Daarmee viel ook het
+risico weg dat de ontwerper eraan verbond: de regel brandmerkt geen materiaal dat het goed doet,
+hij wijst aan wat al afweek. Het naslepen van `ix` lag al belegd in `codeconventies.md` r140-143,
+dat zegt dat zulke naamafwijkingen per bestand bij de inhoudelijke herziening worden rechtgezet.
+
+**De zwaarste blokkade was een getal dat niet volgde uit zijn eigen methode.** De auteur schreef
+`rest` 52 in code en 82 in proza, met de grensbepaling erbij zoals criterium 3 vroeg. De
+beoordelaar kwam op 51/83 en wees de ene vindplaats aan die het verschil maakt:
+`source/projects/picobot.md` heeft een ingesprongen ` ```ipython `-fence met daarin de regel
+*"... rest van het programma overgeslagen ..."* - Nederlands proza in een codefence. De
+opgeschreven methode noemde `ipython` niet en noemde wel `{code-cell} python`, dat nul keer in
+het corpus voorkomt. Het herstel inventariseerde alle infostrings (`python` 486, `text` 86,
+`ipython` 32, `console` 8, `{code-cell} python` 0) en rekende `ipython` als proza, want een
+transcript mét uitvoer was al uitgesloten. De herstelbeoordeling stelde daarna structureel vast
+dat die keuze geen ander getal kán raken: over de inhoud van alle 32 `ipython`-fences samen komt
+`rest` één keer voor en komen `first`, `mine`, `other`, `def __` en `for ` nul keer.
+
+**Vier keer gaf een rol een getal door dat niemand had geteld, en de laatste keer corrigeerde de
+auteur de orkestrator.** De bevinding van 5 oktober (`bevindingen.md`, *Een getal uit een oordeel
+is ook een overgenomen getal*) beschrijft de vorm; deze route voegt er twee gevallen aan toe. De
+orkestrator wees in C0 en C1 naar een verkeerde vindplaats voor besluit VP7 - `codeconventies.md`
+r89 in plaats van `curriculum/leerlijn.md` r676 - omdat hij die regel uit #348 had overgenomen in
+plaats van geopend; de ontwerper ving het en de orkestrator zette het recht in een C1-aanvulling.
+En bij de puntjesronde gaf de orkestrator een bewering uit het tweede oordeel door - dat alleen
+de C0 en de eerste auteursmeting van 51/83 afweken - zonder haar te toetsen aan zijn **eigen**
+C1-aanvulling, waarin hij zelf een derde splitsing had gemeten (43/91). De auteur ving dat, nam
+het puntje in gecorrigeerde vorm over en claimde de pijplijn die hij niet had gezien niet. Dat
+een rol het patroon naar bóven toe rechtzet, is nieuw in het dossier.
+
+**Wat de route openliet.** Eén punt gaat naar de vakdeskundige: `curriculum/leerlijn.md` r676
+beschrijft de afwijking in `problems/12_extra.md` r87 nog als bestaand, terwijl die sinds #327
+`for _ in range(height)` leest - en de nieuwe regel verwijst nu naar die rij, zodat zij voor twee
+documenten dragend is geworden. De auteur weigerde één puntje beargumenteerd: een datum bij de
+twee besluiten, omdat het C4 er geen noemt en een datum die hij niet heeft gelezen in een
+conventie als vaststaand gegeven gaat leven. Het naslepen van `i`/`j` en van de ongebruikte `j`
+in `solutions/5a_ascii_art.ipynb` blijft bij **#348**; die vindplaats is daar aangetekend.
+
+**Over de vorm van deze ingang.** De vakdeskundige koos bij het afsluiten voor het voorstel dat
+bij #203 ligt: het overnemen van de meetregels als genummerde stap in de pull request van het
+werkitem zelf. Voor déze route kon dat niet meer, want PR #369 was al gemerged toen de keuze
+viel - precies de beperking die de ingang van #104 aanwees. Deze ingang staat daarom in een eigen
+PR, en **geen rol heeft haar gelezen**: de vakdeskundige koos de eenvoudigste variant, zonder
+aparte leesronde. Dat staat hier omdat de regel *wie het zelf doet, laat het lezen* zichtbaar
+hoort te zijn waar zij niet is nageleefd.
