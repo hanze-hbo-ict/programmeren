@@ -694,8 +694,16 @@ vroeg erom nadat de orkestrator het als los punt had voorgelegd.
 bevinding beschrijft. De bevinding nam het citaat van de redacteur over met twee ongetelde
 noemers - vijf tabelrijen en zes vetgeleide alinea's, terwijl het er zes en acht zijn - en nam
 uit het tweede oordeel *"negen regels"* over, terwijl het er tweeëndertig zijn. Verder haalde
-zij *meet voor je doorgeeft* cursief aan als staande regel; die staat nergens in de repository,
-en de regel die er wél staat is *"meet het ding zelf"* in `CLAUDE.md`. Alle vier zijn hersteld.
+zij *meet voor je doorgeeft* cursief aan als staande regel; die staat nergens anders in de
+repository, en de regel die er wél staat is *"meet het ding zelf"* in `CLAUDE.md`.
+
+De herstelronde erna gaf **opnieuw BLOKKEER**, op één moetpunt: **100.999 tokens, 9 min 14 s**.
+Drie van de vier waren hersteld, maar bij de hertelling was de noemer meegekomen uit het vorige
+oordeel - *dertien alinea's*, waar dertien het aantal blokken is en elf het aantal alinea's. De
+derde keer dezelfde fout, nu in de reparatie ervan. Daarmee was de herstelgrens bereikt. **De
+vakdeskundige koos rechtzetten en mergen zonder derde leesronde**, op de grond dat de blokkade
+één bijzin was en de noemer inmiddels twee keer onafhankelijk geteld. Die laatste ingreep en de
+vijf puntjes van de herstelronde zijn dus niet meer gelezen.
 
 ### 1 oktober 2026, het dossier rechtgezet na de onderzoeksronde (PR #354)
 

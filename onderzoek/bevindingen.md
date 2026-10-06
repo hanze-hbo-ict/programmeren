@@ -1793,16 +1793,16 @@ tabelrijen en vier van haar alinea's"* - en telde het niet na.
 Geen van beide noemers klopt. Nageteld op `f01798ef`: de tabel heeft **zes** rijen onder de
 scheidingsregel, en vijf klopt alleen als je de orkestratorrij weglaat, de enige zonder
 tokengetal - een criterium dat er niet bij stond. De sectie heeft **acht** vetgeleide alinea's,
-niet zes, op dertien alinea's in totaal. Een verse redacteur ving de eerste in de
-herstelbeoordeling en schreef erbij dat het getal ongewijzigd uit zijn eigen vorige oordeel
-kwam; de tweede is pas bij de lezing van déze bevinding geteld, omdat zij hier als citaat werd
-doorgegeven zonder dat iemand hem had nageteld.
+niet zes: dertien blokken, waarvan één kop en één tabel, dus elf alinea's. Een verse redacteur
+ving het eerste getal in de herstelbeoordeling en schreef erbij dat het ongewijzigd uit zijn
+eigen vorige oordeel kwam; het tweede is pas bij de lezing van déze bevinding geteld, omdat het
+hier als citaat werd doorgegeven zonder dat iemand het had nageteld.
 
 De telling stond bovendien in dezelfde sectie als de alinea die in datzelfde herstel was
 rechtgezet omdat zij een rangtelwoord zonder telling gebruikte: in `9f9b8e1e` eindigt die alinea
-op r2935 en staat de telling op r2967. Hoe dicht erboven precies, is bij het opschrijven van deze
-bevinding opnieuw uit het vorige oordeel overgenomen in plaats van gemeten - *"negen regels"*,
-terwijl het er tweeëndertig zijn. Dezelfde fout dus, bij het opschrijven van de bevinding erover,
+op r2935 en staat de telling 32 regels lager, op r2967. Hoe groot die afstand was, is bij het
+opschrijven van deze bevinding opnieuw uit het vorige oordeel overgenomen in plaats van gemeten -
+*"negen regels"* - en daarmee ook de richting, want de telling stond eronder en niet erboven. Dezelfde fout dus, bij het opschrijven van de bevinding erover,
 en opnieuw gevonden door de lezing en niet door de schrijver.
 
 **Waarom dit een patroon is.** De bevinding van 24 september, *Een getal dat de orkestrator
@@ -1819,8 +1819,9 @@ evenmin.
 een oordeel van een rol ook *iets ernaast* is zodra je er een getal uit overneemt, hoe zorgvuldig
 het ook is opgeschreven en hoe volledig je het ook hebt gelezen.
 
-De lezing van deze bevinding staat op PR #367 en gaf zelf **BLOKKEER**; wat die ronde kostte en
-wat zij ving, staat bij de ingang onder *Werk buiten de lus om* in `metingen.md`.
+De lezing van deze bevinding gaf zelf **BLOKKEER**, twee ronden achter elkaar; zie de
+[reacties op PR #367](https://github.com/hanze-hbo-ict/programmeren/pull/367). Wat die ronden
+kostten en wat zij vingen, staat bij de ingang onder *Werk buiten de lus om* in `metingen.md`.
 
 **Wat het veranderde.** Het getal is nageteld en rechtgezet in `7450b6a3`, met de alineatelling
 eruit; de ingang staat zo in `695d5cb0`. De tweede noemer van het citaat is hier nageteld. Twee
@@ -1834,7 +1835,9 @@ beide is hier beslist.
   telling, niet om de opdracht.
 - **Voor de evaluatie: de lezerregel heeft hier meer gevangen dan de registratie zelf.** Het
   tweede voorstel van 24 september was die regel uit te breiden tot alle orkestratortekst, dus
-  ook tot de metingen van een werkitem. Bij #366 is dat gedaan terwijl `loop.md` en `orc.md` naar
-  de letter alleen een *besluittekst* noemen en dit een registratie met een voorstel is - dat
-  onderscheid is vastgesteld in puntje 4 van de herstelbeoordeling. Die twee ronden kostten
-  129.104 en 85.034 tokens en leverden drie blokkades plus de herhaling hierboven op.
+  ook tot de metingen van een werkitem. Bij #366 is dat gedaan terwijl de norm iets smallers
+  vraagt: `loop.md` noemt een *besluittekst*, `orc.md` een *besluitdiff* getoetst tegen het C4, en
+  dit is een registratie met een voorstel erin. Dat onderscheid is vastgesteld in puntje 4 van de
+  [herstelbeoordeling op PR #366](https://github.com/hanze-hbo-ict/programmeren/pull/366). Die
+  twee ronden kostten 129.104 en 85.034 tokens en leverden drie blokkades plus de herhaling
+  hierboven op.
