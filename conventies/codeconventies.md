@@ -89,13 +89,123 @@ alle 15 een lijst, `d` in alle 8 een dictionary.
 | `L` | lijst |
 | `d` | dictionary |
 | `n` | aantal of grootte |
-| `i`, `j`, `k` | lusindex |
+| `i`, `j`, `k` | lusindex; zie de scoperegel hieronder |
 | `x`, `y` | getal of coördinaat; generiek, niet typegebonden |
 | `b`, `p` | grondtal en exponent, waar de formule ze zo noemt |
 | `_` | bewust ongebruikt |
 
 Samenstellingen volgen hetzelfde idee: `LoL` voor een lijst van lijsten, `LoW`
 voor een lijst van woorden.
+
+### Wanneer een korte index, en wanneer een naam die de les draagt
+
+Of een lusvariabele `i` heet of `row`, hangt niet af van de vorm van de lus maar
+van wat de variabele betekent. Er zijn drie gevallen, en ze sluiten elkaar uit.
+
+| De variabele | Dan | Zoals |
+|---|---|---|
+| is alleen een positie, en je leest het element erdoor | een korte index | `for i in range(len(L))` met `L[i]` |
+| is een dimensie of een deel dat de les bij naam noemt | die naam | `for row` en `for col`; `first` en `rest` |
+| wordt niet gelezen | `_` | besluit VP7, zie hieronder |
+
+**Een korte index** past waar de variabele niets anders aanwijst dan een plek in
+één rij. Dat geldt ook voor een geneste lus, zolang de twee variabelen geen rij
+en geen kolom zijn: `min_diff` in `lectures/5a_geneste_lus.ipynb` loopt over
+paren uit één lijst, en daar zijn het twee posities. Dat die twee in dat college
+`ix1` en `ix2` heten, is de naamafwijking bij *index* uit *Huidige staat*
+hieronder; die wordt per bestand rechtgezet. Het geval zelf is een korte index.
+
+**Een naam die de les draagt** hoort waar de variabele het ding aanwijst dat de
+les bij naam noemt. Het materiaal kent er twee.
+
+Bij een geneste lus over een raster zijn dat `row` en `col`. In de les wordt
+gehamerd op denken in rijen, en in de kolommen binnen een rij. Die twee namen
+wijzen daar rechtstreeks naar, en de berekening eromheen wordt er leesbaar van:
+`width - row` zegt wat het is, en `width - i` in `solutions/5a_ascii_art.ipynb`
+zegt dat niet.
+
+Gemeten over de code in `source/`: van de 83 geneste lussen heeft de buitenste
+lus 19× `row` (met `col` als binnenste, 17×), 19× `i` (met `j`), 11× `ix1` (met
+`ix2`), 5× `regel` en 4× `col`. De `i`-vorm staat in vijf bestanden, de andere
+buitenste namen samen in 27. Zwaarder dan die verhouding weegt waar ze staan:
+het college dat dit onderwerp onderwijst, `lectures/5a_geneste_lus.ipynb`,
+gebruikt in zijn zeven geneste lussen geen `i`, terwijl de uitwerking van
+dezelfde week, `solutions/5a_ascii_art.ipynb`, dat in zeven van haar acht wel
+doet. De les en haar eigen uitwerking spraken elkaar tegen; deze regel kiest de
+kant van de les. Methode: elke `for`-regel met binnen haar blok een dieper
+ingesprongen `for`-regel, per codecel of fence geteld en nooit over een
+celgrens heen.
+
+Bij recursie zijn dat `first` en `rest`: het geval dat je zelf afhandelt, en de
+rest die je aan de recursie overlaat. Dat is het mantra van de recursieweken,
+letterlijk in de namen.
+
+**De toets** is of het proza de naam moet terugvertalen. Moet het dat, dan
+draagt de naam zijn betekenis niet. `solutions/5a_ascii_art.ipynb` schrijft
+`for i in range(0, width)` in `print_triangle`, en legt twee cellen later uit
+dat we "gebruik [maken] van de regel waarop we zitten (`i`)". Die terugvertaling
+is het signaal.
+
+**Wordt de variabele niet gelezen, dan is er niets te kiezen.** Dan heet zij
+`_`, ook in een comprehension. Dat is besluit VP7, vastgelegd in
+[`curriculum/leerlijn.md`](../curriculum/leerlijn.md) r676, en het staat
+hierboven in het typewoordenboek als "bewust ongebruikt". Deze regel gaat over
+de lusvariabele die wél gelezen wordt: `for row in range(height)` zonder dat
+`row` ergens gelezen wordt, valt onder VP7 en niet hieronder. Over VP7 legt deze
+regel niets nieuws vast.
+
+**De code in de recursieweken houdt `first` en `rest`.** Het mantra "jij bent
+verantwoordelijk voor het eerste geval, de recursie voor de rest" blijft in het
+proza, waar het leeft; `mine` komt niet in de code. De grond is dat er voldoende
+afstand zit tussen de onderwerpen en hun opgaven. Dat is ook de reden
+om `other` niet aan *de rest* te binden: in `source/` is `other` de andere
+operand, in 17 signaturen van operatormethoden (`__eq__` 7×, `__lt__` 7×,
+`__gt__` 2× en `__sub__` 1×) verdeeld over zes bestanden, en dat is de
+Python-conventie en niet onze keuze. Besloten door de vakdeskundige bij de poort
+van #368.
+
+**Dat `rest` twee dingen betekent, blijft zo, en dat is een keuze.** Van de
+zestien toekenningen aan `rest` in de code zijn er zes de resterende lijst —
+`rest = items[1:]` naast `first = items[0]`, alle in PGM2 week 4 — en zeven de
+uitkomst van de recursieve aanroep, zoals `rest = fac(n - 1)` en
+`rest = largest(L[1:])` in PGM2 week 3. Twee zijn een placeholder in
+`lectures/10b_recursief_ontwerpen`, en één, `rest = both - klauw` in
+`practicals/14_creatures.md`, staat er los van. Tussen die twee onderwerpen en
+hun opgaven zit voldoende afstand, dus één naam voor twee betekenissen hindert
+de student hier niet. Daarom bindt deze regel aan de betekenis en niet aan de
+naam. Dit is geen bekende afwijking die op een opruimactie wacht: het is een
+verschil met een grond. Besloten door de vakdeskundige bij de poort van #368.
+
+De tellingen bij recursie, over heel `source/`: `first` 29× in code en 6× in
+proza, `rest` 52× in code en 82× in proza. Over de 32 bestanden van PGM2 week 3
+en 4 alleen: `first` 20× en 5×, `rest` 44× en 52×. `mine` komt in `source/` nul
+keer voor, in code noch in proza. `other` komt in die 32 bestanden nul keer voor
+en in de rest van `source/` 81× in code en 47× in proza.
+
+> **Let op de meting.** Een eerdere telling gaf voor `rest` 59 in code en 74 in
+> proza. Het totaal reproduceert — 134 — maar de splitsing niet, en drie
+> pogingen gaven drie verschillende splitsingen. Wat schuift is de grens tussen
+> code en proza, niet het aantal vindplaatsen. De grens die hierboven is
+> gebruikt: het corpus is alle 228 `.ipynb`-, `.md`- en `.py`-bestanden onder
+> `source/`; *code* is de codecellen van notebooks, de ` ```python `- en
+> ` ```{code-cell} python `-fences in markdown — zowel in `.md`-bestanden als in
+> markdowncellen — en de hele inhoud van een `.py`-bestand; *proza* is al het
+> overige in markdown, inclusief de fence-regels zelf en de inline code-spans;
+> celuitvoer, celmetadata en de JSON-structuur van een notebook doen niet mee.
+> Geteld met een woordgrens om het hele woord, in kleine letters. PGM2 week 3 en
+> 4 zijn de bestanden waarvan de naam begint met `10` of `11`, plus `opgaven_`,
+> `practical_`, `solutions_` en `week_` met 10 of 11 erachter. Wie dit hermeet,
+> ijkt zijn patroon eerst op een bekend getal: `.append(` geeft 6 in
+> `lectures/8a_datastructuren.ipynb` en 0 in de vier week-7-bronnen, zoals
+> *Objectmethoden* hieronder zegt.
+
+**Binnen één bestand is de keuze overal dezelfde**, en binnen één week ook. Dat
+is dezelfde eis als bij de twee naamgevingssystemen hieronder: welke naam wint
+mag per bestand verschillen, maar niet per lus.
+
+Deze regel is niet bedacht. Het college dat geneste lussen onderwijst, maakt het
+onderscheid al binnen één bestand: een korte index in `compute_sum` en in
+`min_diff`, en `row` en `col` in `print_board`. We schrijven het alleen op.
 
 ### Wat niet mag
 
