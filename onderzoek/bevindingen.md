@@ -1832,7 +1832,41 @@ beide is hier beslist.
   niet heeft geteld.** Het eerste voorstel van 24 september vraagt dat een getal met de opdracht
   komt die het opleverde. Bij een getal uit een oordeel is die opdracht *lees dit artefact*, en
   dan is de vraag of de telling erachter ooit is gedaan niet te beantwoorden. Het gaat dus om de
-  telling, niet om de opdracht.
+  telling, niet om de opdracht. **Aanvulling van 6 oktober:** een regelnummer in een ander
+  document valt hieronder, en bovendien veroudert het; verwijs naar de sectie waar de verwijzing
+  een merge kan overleven.
+**Nog drie gevallen, bij #368 op 6 oktober 2026, en één ervan is van de andere kant gevonden.**
+
+1. **Een regelnummer is ook een getal.** De orkestrator schreef in de C0 en de C1 van #368 dat
+   besluit VP7 is vastgelegd in `conventies/codeconventies.md` r89. Die regel is
+   `| `L` | lijst |`; de `_`-rij staat op r95 zonder besluitnummer, en het besluit zelf staat in
+   `curriculum/leerlijn.md` r676. Hij had de vindplaats uit #348 overgenomen in plaats van haar te
+   openen. De ontwerper ving het bij zijn hermeting, en de orkestrator zette het recht in een
+   C1-aanvulling op de issue.
+2. **De auteur corrigeerde de orkestrator.** Bij de puntjesronde gaf de orkestrator een bewering
+   uit het tweede beoordelingsoordeel door: dat van de splitsing 51/83 alleen de C0 (59/74) en de
+   eerste auteursmeting (52/82) afweken. Hij toetste die niet aan zijn **eigen** C1-aanvulling,
+   waarin hij zelf een derde splitsing had gemeten: 43/91. De auteur ving het, nam het puntje in
+   gecorrigeerde vorm over en claimde de meetpijplijn die hij niet had gezien niet. Tot nu stond
+   dit patroon in het dossier als iets wat de orkestrator doet en een beoordelaar vangt; dat een
+   rol het naar bóven toe rechtzet is nieuw, en het is het sterkste bewijs dat de maatregel niet
+   van de richting afhangt.
+3. **Eén variant die hier niet thuishoort maar wel op hetzelfde lijkt.** In de registratie van
+   #368 typte de orkestrator twee getallen verkeerd over die hij net had gelezen: 94.161 voor
+   94.165 en 507.200 voor 507.204. Hij ving het zelf vóór de commit. Dat is overtypen en geen
+   overnemen - de telling was gedaan - en het hoort hier alleen bij omdat het symptoom gelijk is
+   en de remedie niet: tegen overtypen helpt natellen van de som, tegen overnemen helpt de
+   telling zelf doen.
+
+**Een verwijzing veroudert bij de eerste merge die haar raakt.** Geval 1 heeft een staartje dat
+het patroon uitbreidt. De registratie van #368 schreef dat het naslepen van `ix` al belegd lag in
+`codeconventies.md` r140-143 - juist op het moment van schrijven, want zo stond het in het C2 en
+het C4, die de uitgangsversie citeerden. Dezelfde route voegde daarna 121 regels aan dat bestand
+toe, en sindsdien leest r140-143 de alinea over `first` en `rest` terwijl de bedoelde passage op
+r265-268 staat. Een regelnummer dat naar een ander document wijst is dus niet alleen een getal
+dat geteld moet worden, het is er ook een dat verschuift. Wie naar een passage verwijst die hij
+niet in dezelfde commit vastzet, noemt de sectie en niet de regel.
+
 - **Voor de evaluatie: de lezerregel heeft hier meer gevangen dan de registratie zelf.** Het
   tweede voorstel van 24 september was die regel uit te breiden tot alle orkestratortekst, dus
   ook tot de metingen van een werkitem. Bij #366 is dat gedaan terwijl de norm iets smallers

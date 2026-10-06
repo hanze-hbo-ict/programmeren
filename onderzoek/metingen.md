@@ -675,6 +675,24 @@ Twee keer een patroon niet geijkt, allebei in dezelfde sessie:
 
 Hier hoort wat met de hand is gedaan omdat het te klein leek voor een werkitem.
 
+### 6 oktober 2026, de bevinding over het overgenomen getal aangevuld (PR #371)
+
+**Wat het was.** Drie gevallen uit de route van #368 toegevoegd aan de bevinding van 5
+oktober: de orkestrator die een regelnummer voor besluit VP7 overnam zonder het te openen,
+de auteur die de orkestrator corrigeerde op een bewering uit een beoordelingsoordeel, en
+het overtypen van twee getallen in de registratie als variant die er wel op lijkt maar een
+andere remedie vraagt. Plus één uitbreiding die uit het eerste geval volgt: een
+regelnummer dat naar een ander document wijst veroudert bij de eerste merge die dat
+document raakt - wat in de registratie van #368 zelf gebeurde. Die verwijzing is in
+dezelfde commit rechtgezet naar de sectienaam.
+
+**Waarom buiten de lus.** Een correctie op `onderzoek/` die geen besluit raakt en geen
+materiaal, dus volgens `CLAUDE.md` in een branch met een pull request. De vakdeskundige
+vroeg erom bij het afsluiten van #368, zodat het dossier consistent is met wat die route
+heeft laten zien.
+
+**Ging er een beoordelaar overheen?** <in te vullen>
+
 ### 5 oktober 2026, een getal uit een oordeel is ook een overgenomen getal (PR #367)
 
 **Wat het was.** Eén bevinding in `bevindingen.md`: bij het herstel van PR #366 nam de
@@ -3068,8 +3086,11 @@ al doet en het nul wijzigingen kost - met de comment *"# ix is de gebruikelijke 
 index"* als grond. De vakdeskundige: `ix` is niet didactisch gekozen maar door een auteursrol
 bedacht, `i` is als index canoniek genoeg, en studenten viel `ix` ook op. Daarmee viel ook het
 risico weg dat de ontwerper eraan verbond: de regel brandmerkt geen materiaal dat het goed doet,
-hij wijst aan wat al afweek. Het naslepen van `ix` lag al belegd in `codeconventies.md` r140-143,
-dat zegt dat zulke naamafwijkingen per bestand bij de inhoudelijke herziening worden rechtgezet.
+hij wijst aan wat al afweek. Het naslepen van `ix` lag al belegd onder
+*Huidige staat* in `codeconventies.md`, dat zegt dat zulke naamafwijkingen per bestand bij de
+inhoudelijke herziening worden rechtgezet. Hier stond eerst r140-143, de regels zoals het C2 en
+het C4 ze citeerden; door de 121 regels die deze route zelf toevoegde wijzen die nummers nu naar
+iets anders.
 
 **De zwaarste blokkade was een getal dat niet volgde uit zijn eigen methode.** De auteur schreef
 `rest` 52 in code en 82 in proza, met de grensbepaling erbij zoals criterium 3 vroeg. De
