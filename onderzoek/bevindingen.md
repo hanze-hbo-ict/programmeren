@@ -1780,3 +1780,64 @@ twee tellingen die #102 al had veranderd:
 Beide zijn bij het oplossen van de conflicten hermeten en rechtgezet. Een `git fetch` met een
 vergelijking tegen `origin/master` bij de inname had dit voorkomen. Dat onderstreept het
 voorstel van 1 oktober.
+
+## Een getal uit een oordeel is ook een overgenomen getal - 5 oktober 2026
+
+**Wat er gebeurde.** Bij de registratie van #104 in PR #366 las een redacteur de ingang en gaf
+**BLOKKEER** op drie moetpunten. Een ervan was dat de slotalinea beweerde dat een registratie
+vóór de beoordeling hoort te vallen, terwijl de ingang zich zelf weerlegt. Zijn bewijs luidde:
+*"Drie van de vijf tabelrijen en vier van de zes vetgeleide alinea's bestaan pas ná de
+beoordeling."* De orkestrator nam dat bewijs over in zijn herstel - *"drie van haar vijf
+tabelrijen en vier van haar alinea's"* - en telde het niet na.
+
+Geen van beide noemers klopt. Nageteld op `f01798ef`: de tabel heeft **zes** rijen onder de
+scheidingsregel, en vijf klopt alleen als je de orkestratorrij weglaat, de enige zonder
+tokengetal - een criterium dat er niet bij stond. De sectie heeft **acht** vetgeleide alinea's,
+niet zes: dertien blokken, waarvan één kop en één tabel, dus elf alinea's. Een verse redacteur
+ving het eerste getal in de herstelbeoordeling en schreef erbij dat het ongewijzigd uit zijn
+eigen vorige oordeel kwam; het tweede is pas bij de lezing van déze bevinding geteld, omdat het
+hier als citaat werd doorgegeven zonder dat iemand het had nageteld.
+
+De telling stond bovendien in dezelfde sectie als de alinea die in datzelfde herstel was
+rechtgezet omdat zij een rangtelwoord zonder telling gebruikte: in `9f9b8e1e` eindigt die alinea
+op r2935 en staat de telling 32 regels lager, op r2967. Hoe groot die afstand was, is bij het
+opschrijven van deze bevinding opnieuw uit het vorige oordeel overgenomen in plaats van gemeten -
+*"negen regels"* - en daarmee ook de richting, want de telling stond eronder en niet erboven. Dezelfde fout dus, bij het opschrijven van de bevinding erover,
+en opnieuw gevonden door de lezing en niet door de schrijver.
+
+**Waarom dit een patroon is.** De bevinding van 24 september, *Een getal dat de orkestrator
+opschrijft, heeft hij niet altijd geteld*, vermoedt dat zulke getallen als samenvatting voelen en
+niet als meting, en noemt dat vermoeden ongemeten. Dit geval voegt er een bron aan toe die het
+niet dekt: niet een uitsnede of het geheugen, maar een artefact dat de orkestrator net volledig
+had gelezen, van een rol die het getal zelf had opgeschreven als bewijs. Dat is de vorm waarin
+een getal geen meting meer lijkt te vragen - het staat in een oordeel, het ondersteunt een
+blokkade die juist is, en het overnemen voelt als trouw aan de bron in plaats van als een nieuwe
+bewering. De rol die het opschreef had het zelf ook niet geteld, en de rol die hém naschreef
+evenmin.
+
+`CLAUDE.md` §*Meten* zegt *"meet het ding zelf, niet iets ernaast"*. Wat dit geval toevoegt is dat
+een oordeel van een rol ook *iets ernaast* is zodra je er een getal uit overneemt, hoe zorgvuldig
+het ook is opgeschreven en hoe volledig je het ook hebt gelezen.
+
+De lezing van deze bevinding gaf zelf **BLOKKEER**, twee ronden achter elkaar; zie de
+[reacties op PR #367](https://github.com/hanze-hbo-ict/programmeren/pull/367). Wat die ronden
+kostten en wat zij vingen, staat bij de ingang onder *Werk buiten de lus om* in `metingen.md`.
+
+**Wat het veranderde.** Het getal is nageteld en rechtgezet in `7450b6a3`, met de alineatelling
+eruit; de ingang staat zo in `695d5cb0`. De tweede noemer van het citaat is hier nageteld. Twee
+punten gaan naar de evaluatie van #203, bovenop de twee voorstellen van 24 september; geen van
+beide is hier beslist.
+
+- **Voorstel: wie een getal uit een artefact overneemt, telt het na of schrijft erbij dat hij het
+  niet heeft geteld.** Het eerste voorstel van 24 september vraagt dat een getal met de opdracht
+  komt die het opleverde. Bij een getal uit een oordeel is die opdracht *lees dit artefact*, en
+  dan is de vraag of de telling erachter ooit is gedaan niet te beantwoorden. Het gaat dus om de
+  telling, niet om de opdracht.
+- **Voor de evaluatie: de lezerregel heeft hier meer gevangen dan de registratie zelf.** Het
+  tweede voorstel van 24 september was die regel uit te breiden tot alle orkestratortekst, dus
+  ook tot de metingen van een werkitem. Bij #366 is dat gedaan terwijl de norm iets smallers
+  vraagt: `loop.md` noemt een *besluittekst*, `orc.md` een *besluitdiff* getoetst tegen het C4, en
+  dit is een registratie met een voorstel erin. Dat onderscheid is vastgesteld in puntje 4 van de
+  [herstelbeoordeling op PR #366](https://github.com/hanze-hbo-ict/programmeren/pull/366). Die
+  twee ronden kostten 129.104 en 85.034 tokens en leverden drie blokkades plus de herhaling
+  hierboven op.
