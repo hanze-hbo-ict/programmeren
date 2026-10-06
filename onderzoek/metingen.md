@@ -691,7 +691,18 @@ materiaal, dus volgens `CLAUDE.md` in een branch met een pull request. De vakdes
 vroeg erom bij het afsluiten van #368, zodat het dossier consistent is met wat die route
 heeft laten zien.
 
-**Ging er een beoordelaar overheen?** <in te vullen>
+**Ging er een beoordelaar overheen?** **Nee.** De orkestrator raadde een leesronde aan, met
+als grond dat de vorige lezing op ditzelfde bestand vijf fouten vond waarvan twee hetzelfde
+patroon; de vakdeskundige koos de eenvoudige weg. Daarmee is dit de tweede ingreep in twee
+dagen die ongelezen wordt gemerged, na de registratie van #368 hierboven. Dat staat hier
+omdat de regel *wie het zelf doet, laat het lezen* zichtbaar hoort te zijn waar zij niet is
+nageleefd, en omdat de eerste zeven ingrepen van deze reeks er nul op scoorden.
+
+Wat er wél onder is gedaan: de poort is gedraaid, en elke bewering in de aanvulling is bij
+het schrijven tegen zijn bron gelegd - `codeconventies.md` r89 en r95, `curriculum/leerlijn.md`
+r676, de 43/91 in de eigen C1-aanvulling, en de vier getallen uit de subagentmeldingen. Eén
+meting ging daarbij bijna fout en is in de PR-beschrijving aangetekend: een `grep` op `VP7`
+met `head -3` kapte de treffer op r676 af en leek haar te weerleggen.
 
 ### 5 oktober 2026, een getal uit een oordeel is ook een overgenomen getal (PR #367)
 
