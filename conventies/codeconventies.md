@@ -104,13 +104,13 @@ van wat de variabele betekent. Er zijn drie gevallen, en ze sluiten elkaar uit.
 
 | De variabele | Dan | Zoals |
 |---|---|---|
-| wijst alleen een plek aan, en de les heeft er geen eigen woord voor | een korte index | `for i in range(len(L))` met `L[i]` |
+| wijst alleen een plek aan die de les niet bij naam noemt, en je leest het element erdoor | een korte index | `for i in range(len(L))` met `L[i]` |
 | wijst iets aan dat de les wél bij naam noemt | die naam | `for row` en `for col`; `first` en `rest` |
 | wordt niet gelezen | `_` | besluit VP7, zie hieronder |
 
-**Een korte index** past waar de variabele alleen een plek aanwijst en de les
-daar geen eigen woord voor heeft. Dat geldt ook voor een geneste lus, zolang de
-twee variabelen geen rij en geen kolom zijn: `min_diff` in
+**Een korte index** past waar de variabele alleen een plek aanwijst die de les
+niet bij naam noemt, en je het element erdoor leest. Dat geldt ook voor een
+geneste lus, zolang de twee variabelen geen rij en geen kolom zijn: `min_diff` in
 `lectures/5a_geneste_lus.ipynb` loopt over paren uit één lijst, en daar zijn het
 twee posities. Dat die twee in dat college `ix1` en `ix2` heten, is de
 naamafwijking bij *index* uit *Huidige staat* hieronder; die wordt per bestand
@@ -145,9 +145,10 @@ letterlijk in de namen.
 draagt de naam zijn betekenis niet. `solutions/5a_ascii_art.ipynb` schrijft in
 `print_triangle` `for i in range(0, width)` met daarbinnen
 `for j in range(0, i + 1)`, en de markdowncel direct erna moet beide namen
-terugvertalen: "het regelnummer is gelijk aan het aantal symbolen" voor `i`, en
-"de eerste `j`-lus (de kolomlus)" voor `j`. Het proza levert daar de woorden
-*regel* en *kolom* die de namen zelf niet dragen. Dat is het signaal.
+terugvertalen: "het regelnummer is gelijk aan het aantal symbolen dat afgedrukt
+moet worden" voor `i`, en "de eerste `j`-lus (de kolomlus)" voor `j`. Het proza
+levert daar de woorden *regel* en *kolom* die de namen zelf niet dragen. Dat is
+het signaal.
 
 **Wordt de variabele niet gelezen, dan is er niets te kiezen.** Dan heet zij
 `_`, ook in een comprehension. Dat is besluit VP7, vastgelegd in
@@ -186,9 +187,12 @@ keer voor, in code noch in proza. `other` komt in die 32 bestanden nul keer voor
 en in de rest van `source/` 81× in code en 47× in proza.
 
 > **Let op de meting.** Een eerdere telling gaf voor `rest` 59 in code en 74 in
-> proza, samen 133. Het totaal komt vrijwel uit — hier 134, één verschil — maar
-> de splitsing niet, en latere tellingen gaven telkens een andere verdeling. Wat
-> schuift is de grens tussen code en proza, niet het aantal vindplaatsen.
+> proza, samen 133. Welke grens tot die splitsing leidde is niet te achterhalen,
+> en het ene vindplaatsverschil met het totaal hieronder ook niet. Elke telling
+> daarna komt wel op 134, en daarbinnen hangt de verdeling tussen code en proza
+> volledig aan de grens die je kiest. Daarom staat die grens hier uitgeschreven:
+> met deze grens is het 51 en 83, en een tweede meting met dezelfde grens kwam
+> op hetzelfde getal.
 >
 > De grens die hierboven is gebruikt, gemeten op commit `f3db28e6`. Het corpus
 > is alle 228 `.ipynb`-, `.md`- en `.py`-bestanden onder `source/`. *Code* is de
