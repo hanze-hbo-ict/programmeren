@@ -3142,3 +3142,34 @@ viel - precies de beperking die de ingang van #104 aanwees. Deze ingang staat da
 PR, en **geen rol heeft haar gelezen**: de vakdeskundige koos de eenvoudigste variant, zonder
 aparte leesronde. Dat staat hier omdat de regel *wie het zelf doet, laat het lezen* zichtbaar
 hoort te zijn waar zij niet is nageleefd.
+
+## Werkitem #265 - PGM2 week 5: basisstap 12 bleef hangen, plus restpunten uit #160
+
+Route: LUS, S, procesversie `7cd3338c`. Auteur, daarna eerstejaars en onderwijskundige
+parallel. Geen ontwerp; de meting stond al in C0. PR #372, `Closes #265`. Geen herstelronde
+gebruikt: oplevering 0 van 1. Na het eerste C7 (AKKOORD MET PUNTJES) koos de vakdeskundige een
+gerichte aanpassing op een puntje (C4 op PR #372); die kreeg een verse lezing in herstelmodus.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator (C1, PR, plaatsing C5/C6, C4, twee C7's) | niet beschikbaar | niet beschikbaar | C1 LUS/S |
+| auteur | 127.847 | 12 min 3 s | C5; 6 bestanden, +30/-27; 6 varianten |
+| beoordelaar-eerstejaars | 52.939 | 2 min 57 s | AKKOORD MET PUNTJES, 0 blokkades, 3 puntjes |
+| beoordelaar-onderwijskundige | 69.641 | 4 min 22 s | AKKOORD MET PUNTJES, 0 blokkades, 4 puntjes |
+| auteur, hervat (aanpassing na C4) | niet vastgesteld (gemeld 160.223) | 8 min 32 s | 3 bestanden, +13/-12 |
+| beoordelaar-eerstejaars, herstelmodus | 39.084 | 1 min 36 s | AKKOORD MET PUNTJES, 1 puntje |
+| beoordelaar-onderwijskundige, herstelmodus | 58.868 | 2 min 58 s | AKKOORD MET PUNTJES, 2 puntjes |
+| **totaal agents, bekend** | **348.379** | | plus de aanpassingsstap |
+
+De hervatte auteur meldde 160.223; volgens de bevinding *Een hervatte agent meldt zijn tokens als
+lopend totaal* is dat vermoedelijk zijn totaal over beide stappen. Klopt dat, dan kostte de
+aanpassing 32.376 en het werkitem 380.755. Het is niet vastgesteld en telt niet mee.
+
+**Wat de beoordeling opleverde.** Geen blokkades, maar beide beoordelaars legden onafhankelijk
+hetzelfde didactische punt voor: zonder `dow` zag de student bij de gangbare uitvoer
+(`30/02/2021`, dan `01/03/2021`) niets vreemds, terwijl vraag 2 vroeg welke methode een fout
+maakte. De auteur had dat zelf als beperking gemeld. De vakdeskundige koos een gerichte
+aanpassing; met `yesterday` ziet de student nu `29/02/2021`.
+
+**Niet vastgesteld bij sessie-einde:** de merge van PR #372. Bewust gelaten: een `yesterday` met
+zoeklus laat stap 12 nog hangen (hing ook met de oude code), ter kennisname bij de vakdeskundige.
