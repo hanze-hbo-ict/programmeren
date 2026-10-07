@@ -183,7 +183,7 @@ uitgangssituatie, niet de norm; het verschil tussen beide kolommen is het werk.
 |---|---|---|---|---|---|
 | 1 | Datastructuren (lists ter herhaling, dictionaries, sets, methodeaanroep, Markov) | BRRA | P2, A1 | dictionary, sleutel en waarde, set, methodeaanroep | Datastructuren: colleges `8a_datastructuren` (methodeaanroep en dictionaries) en `8b_taalmodel` (sets en het Markov-model), practicum `8a_text_genereren`, opstap, basis (woorden tellen) en extra (woordenschat vergelijken) (#273) |
 | 2 | Comprehensions (list, dict, set, range, enumerate) | HOEM | A1; zie de opmerking bij *Voorgestelde correcties* in [leeruitkomsten.md](leeruitkomsten.md) | list comprehension, dict comprehension, set comprehension, `enumerate`, `zip`, de conditionele expressie `a if c else b` | Comprehensions: colleges `9a_list_comprehensions` (list comprehension met `range`, `enumerate`, `zip` en `a if c else b`) en `9b_dict_en_set_comprehensions` (dict en set comprehension, geneste comprehension, lus of comprehension), werkcollege `9_register`, opstap, basis (van lus naar comprehension en terug) en extra (een toernooi) (#326) |
-| 3 | Recursie | HOEM | A6 | recursie, basisgeval, recursief geval, recursieve aanroep | Recursie: colleges `10a_recursie` (hoe een recursieve functie werkt, het basisgeval, frames op de stack) en `10b_recursief_ontwerpen` (basisgeval, kleiner probleem, combineren), werkcollege `10_directory_doorzoeken`, opstap (lezen en naspelen, schrijven), basis (Scrabble) en extra (potjeslatijn) (#332) |
+| 3 | Recursie | HOEM | A6 | recursie, basisgeval, recursief geval, recursieve aanroep | Recursie: colleges `10a_recursie` (hoe een recursieve functie werkt, het basisgeval, frames op de stack) en `10b_recursief_ontwerpen` (basisgeval, kleiner probleem, combineren), werkcollege `10_directory_doorzoeken`, opstap (lezen en naspelen, schrijven), basis (Scrabble) en extra (potjeslatijn, heen en terug) (#332, #359) |
 | 4 | Use it or lose it, lambda | HOEM | A4, A6 | use it or lose it, `lambda`, functie als argument | Use it or lose it en `lambda`: colleges `11a_use_it_or_lose_it` (*use it or lose it* met `exact_change` en de knapzak) en `11b_functie_als_argument` (`sorted`, `max` en `min` met `key=`, `lambda`, een eigen functie met een functieparameter), werkcollege `11_wisselgeld`, opstap, twee basisniveaus (*Basis: algoritmen*, het nijlpaarddiner, en *Basis: lambda*, een uitslag), twee extra's (*Extra: algoritmen*, het pijlenpad, en de periodieke tshirt) en de verdiepende opdracht `caesar_op_orde` (#335). De klassenstof staat sinds #160 in week 5 |
 | 5 | OO, klassen, encapsulatie | BRRA | P5, A2 | klassedefinitie, object, attribuut, constructor en `__init__`, `self`, een methode schrijven, `__repr__`, waarde en identiteit, `is`, encapsulatie, `_` voor een attribuut dat niet van buiten wordt gebruikt, `@property` en decorator, compositie | OO, klassen, encapsulatie: colleges `12a_objecten` en `12b_data_object`, practicum sessie 1 (`12_creatures`), opstap, basis (`Date`) en extra (`Board`) (#160) |
 | 6 | Polymorfisme, overerving, duck typing | BRRA | A2, A3 | overerving, subklasse en superklasse, `super()`, een methode overschrijven, standaardwaarde voor een parameter, polymorfisme, duck typing, `isinstance`, `self.__class__` en `__name__` | Polymorfisme, overerving, duck typing: colleges `13a_overerving` en `13b_polymorfisme`, practicum sessie 2 (`13_creatures`), opstap, basis (kassabon) en extra (spelers voor `Board`) (#270) |
@@ -384,7 +384,19 @@ weken zijn niet aangepast.
 
 **Uitgevoerd** in #332, met deze keuzes van de auteur: de basis heeft één
 context, Scrabble, en `transcribe` is vervallen; de extra is potjeslatijn in drie
-stappen.
+stappen. **Met #359 herzien**; zie de alinea hieronder.
+
+**De extra van week 3 is zwaarder gemaakt.** Over de moeilijkheid van de extra
+besloot de vakdeskundige bij #332 op 30 september 2026: *"Nu laten, later
+bekijken."* ([PR #334](https://github.com/hanze-hbo-ict/programmeren/pull/334#issuecomment-5912385276)).
+Bij #359 koos de vakdeskundige op 7 oktober 2026 als uitkomst *"Potjeslatijn
+zwaarder"*: *"De context blijft. Er komen stappen bij of in de plaats die qua
+recursie verder gaan dan de basis"*. Bij de criteria, op voorstel van de
+orkestrator aanvaard: *"Een zin vertalen telt niet, want dat doet `high_scoring`
+in de basis al."* **Uitgevoerd** in #359, met deze keuze van de auteur: de extra is
+potjeslatijn in vijf stappen. Stap 4 en 5 vertalen terug; in stap 4 roept
+`back_to_front` zichzelf aan op een string die even lang is, met één medeklinker
+minder aan het eind.
 
 **De opzet van week 2.** Besloten door de vakdeskundige op 30 september 2026,
 bij de poort van #326:

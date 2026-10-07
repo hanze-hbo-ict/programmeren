@@ -3211,3 +3211,37 @@ treffers waar het er 12 waren: `curriculum/leerlijn.md` was vergeten.
 **Build-tijdstip.** Het buildlog van de auteur bij de puntjesstap was zeven seconden ouder dan
 de commit; de herstelbeoordelaar merkte dat op. De orkestrator bouwde daarna zelf
 `697464c9`: exit 0, 0 regels `WARNING:`/`ERROR:`/`CRITICAL:`, `build succeeded`.
+
+## Werkitem #359 - de extra van PGM2 week 3 (potjeslatijn) zwaarder gemaakt
+
+Route: LUS, S, procesversie `f447f0f6`. C0 had geen gewenste uitkomst en geen
+acceptatiecriteria. Bij de inname koos de vakdeskundige *"Potjeslatijn zwaarder"* en
+keurde de vakdeskundige zes criteria van de orkestrator goed (reactie op #359). Geen ontwerp; de
+auteur koos de stappen. Daarna eerstejaars en onderwijskundige parallel. PR #374,
+`Closes #359`. Oplevering: 0 van 1 herstelrondes gebruikt. Na het C7 (AKKOORD MET
+PUNTJES) koos de vakdeskundige *"Puntjes laten verwerken"*; de aanpassing kreeg een
+verse lezing van de onderwijskundige in herstelmodus. Daarna: *"Zo mergen"*.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator (inname, C1, PR, plaatsing C5/C6, C7) | niet beschikbaar | niet beschikbaar | C1 LUS/S |
+| auteur | 154.446 | 16 min 18 s | C5; 3 bestanden, +213/-7; extra 598 → 1.036 woorden |
+| beoordelaar-eerstejaars | 41.202 | 2 min 34 s | AKKOORD MET PUNTJES, 0 blokkades, 5 puntjes |
+| beoordelaar-onderwijskundige | 54.793 | 3 min 13 s | AKKOORD MET PUNTJES, 0 blokkades, 6 puntjes |
+| auteur, hervat (puntjes na besluit) | niet vastgesteld (gemeld 167.188) | 3 min 57 s | 2 bestanden, +16/-11 |
+| beoordelaar-onderwijskundige, herstelmodus | 53.332 | 2 min 28 s | AKKOORD MET PUNTJES, 0 blokkades, 3 puntjes |
+| **totaal agents, bekend** | **303.773** | | plus de puntjesstap |
+
+Is 167.188 een lopend totaal (zie de bevinding *Een hervatte agent meldt zijn tokens
+als lopend totaal*), dan kostte de puntjesstap 12.742 en het werkitem 316.515. Dat is
+niet vastgesteld.
+
+**Wat de beoordeling opleverde.** Beide beoordelaars zagen los van elkaar dat stap 4
+met een `while`-lus kon. Dan valt juist het deel weg dat de extra zwaarder maakt. Op
+één punt liepen ze uiteen: de eerstejaars wilde meer in de hint van stap 4, de
+onderwijskundige minder. De vakdeskundige koos voor minder. De herstelbeoordelaar
+vond daarna dat de nieuwe specificatie, die het resultaat beschrijft, een
+tellerrecursie toelaat. De vakdeskundige liet dat zo.
+
+**Voor #356.** De extra van week 3 telt nu 1.066 woorden. De basis telt er 995 en de
+opstap 1.307 (methode `leerlijn.md` r122-124).
