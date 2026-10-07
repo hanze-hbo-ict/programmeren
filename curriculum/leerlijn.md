@@ -297,9 +297,9 @@ over de links naar de voorbeeldpagina in het niet-gemigreerde
 Het oefenbestand staat sindsdien weer als `extra/practice/1_recursie.ipynb`
 onder *Oefening*, met dezelfde elf opgaven, Nederlandse docstrings en
 uitwerkingen. De voorbeeldpagina is verwijderd. Opstap-opdracht 5 tot en met 10,
-die uit het oefenbestand kwamen, zijn vervangen door `add`, `length`,
-`flip_bits`, `no_punctuation`, `only_odds` en `is_palindrome`; `add` en `length`
-komen uit de voorbeeldpagina. **Uitgevoerd** in #338.
+die uit het oefenbestand kwamen, zijn vervangen door `add`, `product`,
+`flip_bits`, `no_punctuation`, `only_odds` en `is_palindrome`; `add` komt uit de
+voorbeeldpagina. **Uitgevoerd** in #338.
 
 **Week 4 is de week van *use it or lose it* en `lambda`.** Tot #335 stond in
 week 4 alleen het algoritmemateriaal uit week 3, ongewijzigd: een college over
