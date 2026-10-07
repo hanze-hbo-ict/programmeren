@@ -453,16 +453,12 @@ Verwijs root-relatief en zonder extensie:
 ```
 
 Verwijs je naar een kop *binnen* een andere pagina, dan gelden twee afwijkende
-regels tegelijk:
-
-```markdown
-[power](/extra/examples/recursie.md#powerb-p)
-```
+regels tegelijk.
 
 1. **De extensie is verplicht.** Zonder `.md` herkent MyST de link niet als
    documentverwijzing en wordt het anker nooit opgezocht.
 2. **De slug is die van MyST, niet die van de HTML.** MyST maakt zijn anker
-   door leestekens te *verwijderen*, niet te vervangen. De kop
+   door leestekens te *verwijderen*, niet te vervangen. Een kop als
    `` ## `power(b, p)` `` krijgt in de HTML `id="power-b-p"`, maar MyST zoekt
    op `powerb-p`. Kopieer het anker dus niet uit de gerenderde pagina.
 
