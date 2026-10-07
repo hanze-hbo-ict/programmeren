@@ -263,7 +263,7 @@ De klasse `World` heeft een aantal gegevens nodig om de toestand van de wereld b
 * `self.prow`, de huidige rij waarin Picobot zich bevindt (dit zal veranderen).
 * `self.pcol`, de huidige kolom waarin Picobot zich bevindt (dit zal veranderen).
 * `self.state`, de huidige toestand van Picobot (dit zal veranderen).
-* `self.room`, een lijst-van-lijsten die de tweedimensionale ruimte bevat waarin Picobot zich bevindt (dit lijkt heel erg op `self.data` in `Board` uit Vier op een rij).
+* `self.room`, een lijst-van-lijsten die de tweedimensionale ruimte bevat waarin Picobot zich bevindt (dit lijkt heel erg op `self._data` in `Board` uit Vier op een rij).
 * `self.prog`, een object van het type `Program` die de simulatie van Picobot bestuurt.
 
 Als je nog andere instantievariabelen wilt gebruiken kan dat natuurlijk.
@@ -286,7 +286,7 @@ class World:
 Die lege list is niet de uiteindelijke waarde voor `self.room`! Deze verandert nog!
 :::
 
-Je kan terugkijken naar de implementatie van de klasse `Board` uit Vier op een rij als een voorbeeld van hoe je een ruimte in Picobot wilt opslaan; het beginpunt hierboven lijkt daar op! Merk op dat, net als `self.data` bij Vier op een rij, het een redelijke aanpak voor het maken van `self.room` is om een lijst van rijen te maken, die ieder een rij van kolommen is, die ieder een string van één karakter is.
+Je kan terugkijken naar de implementatie van de klasse `Board` uit Vier op een rij als een voorbeeld van hoe je een ruimte in Picobot wilt opslaan; het beginpunt hierboven lijkt daar op! Merk op dat, net als `self._data` bij Vier op een rij, het een redelijke aanpak voor het maken van `self.room` is om een lijst van rijen te maken, die ieder een rij van kolommen is, die ieder een string van één karakter is.
 
 Je moet bovendien zorgen dat de ***buitenrand*** van `self.room` muren bevat, misschien met het karakter `'W'`, of
 wat je maar wilt. Als je je ASCII-weergave extra mooi wilt maken kan je `'-'` voor horizontale muren, `'|'` voor verticale muren en `+` voor kruisingen gebruiken!
