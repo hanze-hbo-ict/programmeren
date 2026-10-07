@@ -254,7 +254,7 @@ de poort van #332 besloot de vakdeskundige verder:
 - het oefenbestand `extra/practice/1_recursie.ipynb` is bron voor de
   schrijfopdrachten in de opstap, en is daarna verwijderd; de Support-pagina
   `extra/examples/recursie.md` blijft, met Nederlandse docstrings en de termen
-  hieronder (VP1);
+  hieronder (VP1). **Met #338 herzien**; zie de alinea onder deze lijst;
 - de termen zijn *basisgeval* en *recursief geval*, naast *recursieve aanroep*
   voor de aanroep zelf. *Base case*, *recursieve case*, *recursie case* en
   *recursive case* verdwijnen uit het materiaal van week 3. Het verhuisde college
@@ -279,6 +279,27 @@ de poort van #332 besloot de vakdeskundige verder:
 - `caesar_op_orde` staat ongewijzigd in week 4, onder `opgaven_11` (VP6);
 - het tweede college sluit af met een gemarkeerde vooruitblik op week 4, zonder
   de term *use it or lose it*; zie *Vooruitverwijzingen om na te lopen* (VP8).
+
+**VP1 is herzien: het oefenbestand komt terug, de voorbeeldpagina gaat weg.**
+Bij #338 besloot de vakdeskundige op 30 september 2026: *"Je hebt de extra
+oefeningen voor recursie gewist. Maak een werkitem om ze terug te zetten en waar
+ze gebruikt zijn in week 3, daar nieuwe opgaven te kiezen."* Dezelfde dag, over
+de uitvoering: *"Wat betreft het oude bestand, dat mag aangepast worden aan de
+nieuwe conventies. De auteur mag zelf vervangende opdrachten kiezen."* En:
+*"Bovendien mag de auteur deze vervangende opdrachten kiezen uit
+extra/examples/recursie.md, dat bestand is niet meer nodig (benoem bij het
+werkitem dat de voorbeelden daarin ook in de hoofdtekst mogen)"*. Bij de poort
+van #338 besloot de vakdeskundige op 7 oktober 2026 over het voorbeeldanker naar
+die pagina in `conventies/technische-conventies.md`: *"Voorbeeld schrappen"*; en
+over de links naar de voorbeeldpagina in het niet-gemigreerde
+`problems/opdrachten/feest_met_functies/index.md`: *"Links verwijderen"*.
+
+Het oefenbestand staat sindsdien weer als `extra/practice/1_recursie.ipynb`
+onder *Oefening*, met dezelfde elf opgaven, Nederlandse docstrings en
+uitwerkingen. De voorbeeldpagina is verwijderd. Opstap-opdracht 5 tot en met 10,
+die uit het oefenbestand kwamen, zijn vervangen door `add`, `product`,
+`flip_bits`, `no_punctuation`, `only_odds` en `is_palindrome`; `add` komt uit de
+voorbeeldpagina. **Uitgevoerd** in #338.
 
 **Week 4 is de week van *use it or lose it* en `lambda`.** Tot #335 stond in
 week 4 alleen het algoritmemateriaal uit week 3, ongewijzigd: een college over

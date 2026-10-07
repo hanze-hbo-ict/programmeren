@@ -23,17 +23,17 @@ def leng(s):
         return 1 + leng(s[1:])
 ```
 
-In de bovenstaande code zie je de functie `leng` die we al eerder hebben behandeld en je terug kan vinden in de [voorbeelden van recursie](/examples/recursie.md). Het bestand ga je verder aanvullen met functies die je in deze opgave gaat uitwerken.
+In de bovenstaande code zie je de functie `leng` die we al eerder hebben behandeld en je terug kan vinden in de voorbeelden van recursie. Het bestand ga je verder aanvullen met functies die je in deze opgave gaat uitwerken.
 
 ## Recursie toepassen
 
-In deze opgave moeten de functies `mult`, `dot`, `ind`, `scrabble_score` en `transcribe` worden uitgewerkt met behulp van recursie. Gebruik de functies `power`, `mymax`, `leng` en `vwl` die je al eerder hebt gezien (en terug kan vinden in de [voorbeelden van recursie](/examples/recursie.md)) als basis voor het ontwerp van jouw functies.
+In deze opgave moeten de functies `mult`, `dot`, `ind`, `scrabble_score` en `transcribe` worden uitgewerkt met behulp van recursie. Gebruik de functies `power`, `mymax`, `leng` en `vwl` die je al eerder hebt gezien (en terug kan vinden in de voorbeelden van recursie) als basis voor het ontwerp van jouw functies.
 
 ### Recursie visualiseren
 
 Je kan [Python Tutor](http://www.pythontutor.com/visualize.html) gebruiken om beter inzicht te verkrijgen in hoe recursie werkt. Let op, om de aanroep van de functie in Python Tutor te visualiseren moet je de recursieve functie definiëren (schrijven) én de functie ook aanroepen, bijvoorbeeld direct onder de functie.
 
-Hier is een voorbeeld die je in Python Tutor kan gebruiken en uitproberen (ook deze functie kan je terugvinden in de [voorbeelden van recursie](/examples/recursie.md)):
+Hier is een voorbeeld die je in Python Tutor kan gebruiken en uitproberen (ook deze functie kan je terugvinden in de voorbeelden van recursie):
 
 ```python
 def mylen(s):
@@ -119,7 +119,7 @@ assert flipside("") == "ergfout"
 
 ### `mult(n, m)`
 
-De functie `mult(n, m)` moet het product (de vermenigvuldiging) van de twee gehele getallen `n` en `m` als resultaat teruggeven. Omdat het een beetje te gemakkelijk zou zijn om de vermenigvuldigingsoperator `*` te gebruiken mag je **alleen** maar gebruik maken van `+`, `-` (om negatieve getallen te maken), in combinatie met recursie. Gebruik de [`power`](/extra/examples/recursie.html#power-b-p) functie die eerder is behandeld als voorbeeld. Een mogelijke uitvoer kan zijn:
+De functie `mult(n, m)` moet het product (de vermenigvuldiging) van de twee gehele getallen `n` en `m` als resultaat teruggeven. Omdat het een beetje te gemakkelijk zou zijn om de vermenigvuldigingsoperator `*` te gebruiken mag je **alleen** maar gebruik maken van `+`, `-` (om negatieve getallen te maken), in combinatie met recursie. Gebruik de `power` functie die eerder is behandeld als voorbeeld. Een mogelijke uitvoer kan zijn:
 
 ```ipython
 In [1]: mult(6, 7)
@@ -151,7 +151,7 @@ De functie `dot(L, k)` moet het *inwendig product* (*inproduct* of *dot product*
 Wat is het inproduct? Het inproduct van twee lijsten (die in deze context dan *vectoren* genoemd worden) is de som van de producten van de elementen die op dezelfde positie staan in de twee vectoren. Bijvoorbeeld, het inproduct van de lijsten `[5, 3]` en `[6, 4]` zal `5 * 6` plus `3 * 4` zijn wat gelijk staat aan `42`.
 :::
 
-Je kan deze opdracht vergelijken met het voorbeeld `mylen` dat eerder is besproken, maar houd er rekening mee dat je nu te maken hebt met *twee* lijsten en geen strings! In de [voorbeelden van recursie](/examples/recursie.md) is de functie `leng` een beetje aangepast zodat het zowel lijsten als strings kan verwerken!
+Je kan deze opdracht vergelijken met het voorbeeld `mylen` dat eerder is besproken, maar houd er rekening mee dat je nu te maken hebt met *twee* lijsten en geen strings! In de voorbeelden van recursie is de functie `leng` een beetje aangepast zodat het zowel lijsten als strings kan verwerken!
 
 Een mogelijke uitvoer kan je hier zien. Let op dat het resultaat steeds een *decimaal* getal is en niet een heel getal, dit kan je bereiken door een *floating point* getal in de *base case* te gebruiken.
 
@@ -225,7 +225,7 @@ if e not in L:
 De syntax `in` en `not in` voor het controleren of een element zich wel of niet in een sequentie bevindt is in het geval van `ind` erg handig!
 :::
 
-De functie `ind` lijkt net als `dot` vermoedelijk het meeste op het voorbeeld `leng` in de [voorbeelden van recursie](/examples/recursie.md).
+De functie `ind` lijkt net als `dot` vermoedelijk het meeste op het voorbeeld `leng` in de voorbeelden van recursie.
 
 Hier zijn een aantal tests die je voor deze functie kan gebruiken:
 
@@ -287,7 +287,7 @@ Schrijf nu zelf een aantal tests voor `letter_score`, de functie zal ook worden 
 :::{admonition} `letter_score`
 :class: tip
 
-Gebruik de functie `letter_score` die je eerder hebt uitgewerkt en pas recursie toe. Vergelijk dit met het voorbeeld `vwl` dat eerder is besproken, maar bedenk dat je *verschillende* waardes moet toevoegen voor elke letter. Zie de [voorbeelden van recursie](/examples/recursie.md) voor de functie `vwl`.
+Gebruik de functie `letter_score` die je eerder hebt uitgewerkt en pas recursie toe. Vergelijk dit met het voorbeeld `vwl` dat eerder is besproken, maar bedenk dat je *verschillende* waardes moet toevoegen voor elke letter. Zie de voorbeelden van recursie voor de functie `vwl`.
 :::
 
 Hier zijn een paar voorbeelden:
@@ -346,7 +346,7 @@ def one_dna_to_rna(c):
     # vul verder aan met andere vervangingsregels ...
 ```
 
-Je kan het voorbeeld `vwl` in de [voorbeelden van recursie](/examples/recursie.md) aanpassen, maar let op dat je nu *strings* moet samenvoegen in plaats van getallen op te tellen!
+Je kan het voorbeeld `vwl` in de voorbeelden van recursie aanpassen, maar let op dat je nu *strings* moet samenvoegen in plaats van getallen op te tellen!
 
 Hier zijn een paar voorbeelden van `transcribe`:
 

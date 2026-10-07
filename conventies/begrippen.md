@@ -275,14 +275,13 @@ zij hier bij.
 
 - **`Opgaven` als rubriekkop, ook buiten `course/`.** Hij staat boven een
   *verzameling* en niet boven één taak - hetzij boven een reeks opgavebestanden,
-  hetzij boven een reeks taken binnen één bestand. Veertien vindplaatsen:
+  hetzij boven een reeks taken binnen één bestand. Vijftien vindplaatsen:
   `# Opgaven` in `course/opgaven_2` tot en met `opgaven_14`, en `## Opgaven` in
-  het oefenbestand `extra/practice/2_list_comprehension.ipynb`, dat met #333 is
-  teruggezet. Hermeten bij #333 en geijkt op de dertien van vóór die
-  terugzetting. Tot #332 stond `## Opgaven` ook in
-  `problems/10_recursie_basis.ipynb` en in het oefenbestand
-  `extra/practice/1_recursie.ipynb`; de basis heeft sindsdien stappen, en dat
-  oefenbestand is verwijderd.
+  de oefenbestanden `extra/practice/2_list_comprehension.ipynb`, dat met #333 is
+  teruggezet, en `extra/practice/1_recursie.ipynb`, dat met #338 is teruggezet.
+  Hermeten bij #338 en geijkt op de veertien van vóór die terugzetting. Tot #332
+  stond `## Opgaven` ook in `problems/10_recursie_basis.ipynb`; de basis heeft
+  sindsdien stappen.
 - **Een ongenummerde `### Opgave`, *binnen* een bestand onder `problems/`.** Dat
   is één opgave die uit meer dan één taak bestaat en zelf geen nummer draagt; hij
   staat er binnen en niet boven. Eén vindplaats: de debugopgave in

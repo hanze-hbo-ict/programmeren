@@ -3173,3 +3173,41 @@ aanpassing; met `yesterday` ziet de student nu `29/02/2021`.
 
 **Niet vastgesteld bij sessie-einde:** de merge van PR #372. Bewust gelaten: een `yesterday` met
 zoeklus laat stap 12 nog hangen (hing ook met de oude code), ter kennisname bij de vakdeskundige.
+
+## Werkitem #338 - het oefenbestand recursie teruggezet, opstap 5-10 vervangen
+
+Route: LUS, S, procesversie `77589d2a`. Geen ontwerp: de inhoudelijke keuzes stonden al in de
+reacties op C0 (30 september). Wel een poort vóór de auteur, voor de twee plekken die AC6 aan
+ontwerp of poort liet (C4, 7 oktober). Daarna de auteur, en de eerstejaars en de
+onderwijskundige parallel. PR #373, `Closes #338`. Oplevering: 0 van 1 herstelrondes gebruikt.
+Na het C7 (AKKOORD MET PUNTJES) koos de vakdeskundige *"Puntjes eerst laten verwerken"*; de
+aanpassing kreeg een verse lezing van de onderwijskundige in herstelmodus.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator (C1, C4, correctie, PR, plaatsing C5/C6, C7, eigen build) | niet beschikbaar | niet beschikbaar | C1 LUS/S |
+| auteur | 179.163 | 11 min 21 s | C5; 11 bestanden, +936/-216 |
+| beoordelaar-eerstejaars | 69.054 | 2 min 55 s | AKKOORD MET PUNTJES, 0 blokkades, 3 puntjes |
+| beoordelaar-onderwijskundige | 70.755 | 3 min 37 s | AKKOORD MET PUNTJES, 0 blokkades, 2 puntjes |
+| auteur, hervat (puntjes na besluit) | niet vastgesteld (gemeld 191.323) | 3 min 30 s | 3 bestanden, +20/-18 |
+| beoordelaar-onderwijskundige, herstelmodus | 36.938 | 1 min 18 s | AKKOORD, 0 puntjes |
+| **totaal agents, bekend** | **355.910** | | plus de puntjesstap |
+
+Volgens de bevinding *Een hervatte agent meldt zijn tokens als lopend totaal* is 191.323 het
+totaal van de auteur over beide stappen. Klopt dat, dan kostte de puntjesstap 12.160 en het
+werkitem 368.070. Dat is niet vastgesteld en telt niet mee.
+
+**Wat de beoordeling opleverde.** Geen blokkades. De eerstejaars vond als enige dat de nieuwe
+opdracht 6 (`length(L)`) dezelfde opdracht was als `counting(L)` in college 10b. Dat is precies
+de dubbeling die het werkitem wilde weghalen, alleen nu tussen opstap en college. De
+onderwijskundige behandelde dat doorgegeven punt niet. De vakdeskundige liet het verwerken
+(`product(L)`).
+
+**Fouten van de orkestrator, gecorrigeerd op #338.** Het C4-gevolg zei *"0 treffers"* voor
+AC6. Dat was mijn eigen afleiding en geen besluit van de vakdeskundige. Het botste met het
+letterlijke citaat dat AC4 eist. De auteur meldde het als beperking. De ijking in C1 telde 11
+treffers waar het er 12 waren: `curriculum/leerlijn.md` was vergeten.
+
+**Build-tijdstip.** Het buildlog van de auteur bij de puntjesstap was zeven seconden ouder dan
+de commit; de herstelbeoordelaar merkte dat op. De orkestrator bouwde daarna zelf
+`697464c9`: exit 0, 0 regels `WARNING:`/`ERROR:`/`CRITICAL:`, `build succeeded`.
