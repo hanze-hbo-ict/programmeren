@@ -382,8 +382,9 @@ Opgaven worden getest met `assert`. Dat is de standaardvorm in dit materiaal:
 
 ### Geen `is` in PGM1
 
-PGM1 gebruikt geen `is` en geen `is not`. `is` vraagt naar identiteit, en dat
-begrip wordt pas in PGM2 week 5 ingevoerd; zie
+PGM1 gebruikt geen `is` en geen `is not`. Dat geldt voor heel PGM1: de weken 1
+tot en met 7, en ook het oefententamen en zijn uitwerking. `is` vraagt naar
+identiteit, en dat begrip wordt pas in PGM2 week 5 ingevoerd; zie
 [`curriculum/leerlijn.md`](../curriculum/leerlijn.md) en *identiteit* in
 [begrippen.md](begrippen.md).
 
@@ -396,33 +397,12 @@ assert is_digit("x") == False
 assert dbl_pr(20) == None
 ```
 
-Dat is geen canonieke Python: ruff meldt deze vormen als E712 en E711. De hooks
-dwingen die regels niet af; ze controleren alleen de opmaak. Toch is dit de vorm,
-omdat de student in PGM1 alleen `==` kent, en omdat `== False` een functie vangt
-die `None` teruggeeft. Vastgesteld door de vakdeskundige op 9 oktober 2026, bij
-werkitem #377.
-
-**Twee practica van PGM1 gebruiken een andere vorm.** Zij toetsen een
-boolean-uitkomst met `assert f()` en `assert not f()`, elk in het practicum en in
-de uitwerking:
-
-| Bestand | `assert not f()` | `assert f()` |
-|---|---|---|
-| `practicals/5b_boter_kaas_eieren.ipynb` | 17 | 15 |
-| `solutions/5b_boter_kaas_eieren.ipynb` | 25 | 17 |
-| `practicals/7b_vallende_korrels.ipynb` | 3 | 1 |
-| `solutions/7b_vallende_korrels.ipynb` | 3 | 1 |
-
-Gemeten op 9 oktober 2026 met een AST-scan over de codecellen en
-`python`-blokken van PGM1 week 1-7: een `assert` waarvan de test `not` met een
-aanroep is, of een kale aanroep. Elders in PGM1 komen beide vormen niet voor.
-`is` en `is not` staan sinds #377 nergens meer in PGM1, geijkt op de 22 in PGM2
-week 5.
-
-**Of de regel ook over die 82 asserts gaat, is niet besloten.** Werkitem #377
-heeft alleen de asserts omgezet die het zelf introduceerde; het heeft deze vier
-bestanden niet aangeraakt. Zolang dat besluit niet is genomen, bindt de regel
-hierboven wie een assertion schrijft of herziet, en niet deze vier bestanden.
+Dat is geen canonieke Python. Ruff heeft er de regels E712 en E711 voor, maar die
+staan niet in zijn standaardselectie, en de hooks draaien geen `ruff check`: van
+Python controleren zij de syntaxis en de opmaak (`ruff format --check`). Toch is
+dit de vorm, omdat de student in PGM1 `==` kent en `is` niet, en omdat `== False`
+een functie vangt die `None` teruggeeft. Vastgesteld door de vakdeskundige op
+9 oktober 2026, bij werkitem #377.
 
 ## Opmaak
 
