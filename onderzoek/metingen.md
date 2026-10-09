@@ -3358,32 +3358,45 @@ niets teruggeeft. Nagemeten op de itemdiff: 147 regels
 verwijderd en 70 regels met `is`/`is not` tegen `None`, `True` of `False`. Die 147 vallen in
 62 bij `8c49d8fe` en 85 bij `bdf63511`, en dat is dezelfde splitsing die de twee C5's melden.
 
-**Eigen nameting op de gemergede boom** (`f41c61cc`), AST over codecellen, over
-` ```python `- en ` ```ipython `-fences in markdowncellen en over dezelfde fences in
-`.md`-bestanden, met PGM2 als ijking. Het corpus is het weeknummer in de bestandsnaam: 1 tot
-en met 7 is PGM1, 8 tot en met 14 is PGM2, en de twee examenbestanden gaan op hun naam. *Kale
-assert* betekent hier `assert <aanroep>`, dus de vorm die deze route omzette.
+**Eigen nameting op de gemergede boom** (`f41c61cc`). AST over de codecellen van de
+notebooks en over de ` ```python `-, ` ```ipython `- en ` ```ipython3 `-fences in
+markdowncellen en in `.md`-bestanden, met PGM2 als ijking. Twee keuzes bepalen de getallen en
+horen er dus bij. De fences worden geparseerd **zoals ze staan**, met hun inspringing: een
+ingesprongen fragment geeft een parseerfout en komt bij de rest terecht in plaats van stil
+mee te tellen. En het corpus is het weeknummer vooraan de bestandsnaam: 1 tot en met 7 is
+PGM1, 8 tot en met 14 is PGM2. De vier oefententamens beginnen niet met een cijfer en staan
+daarom apart, net als de twee installatiebestanden van week 0. *Kale assert* betekent hier
+`assert <aanroep>`, dus de vorm die deze route omzette.
 
-| | bestanden | kale assert | `assert not` | `is` | `is not` |
-|---|---:|---:|---:|---:|---:|
-| PGM1 (week 1-7 plus `PGM1_examen`) | 75 | 0 | 0 | 0 | 0 |
-| PGM2 (week 8-14), ijking | 69 | 40 | 74 | 32 | 16 |
+| | bestanden | kale assert | `assert not` | `is` | `is not` | `try` |
+|---|---:|---:|---:|---:|---:|---:|
+| PGM1 week 1-7 | 72 | 0 | 0 | 0 | 0 | 1 |
+| PGM1 oefententamen: toets en uitwerking | 2 | 0 | 0 | 0 | 0 | 0 |
+| PGM2 week 8-14, ijking | 69 | 40 | 74 | 32 | 16 | 12 |
+| PGM2 oefententamens | 2 | 0 | 0 | 14 | 0 | 0 |
 
-Dezelfde scan geeft voor `ast.Try` PGM1 **1** - de ene in `solutions/6_extra` - tegen **12**
-in PGM2. Die nul voor de kale assert geldt de omgezette vorm en niet elke assert op
-waarheidswaarde: `solutions/6_extra` heeft nog `assert png_beschikbaar`, en dat is een van de
-twee truthiness-asserts die met #386 meegaan.
+De twee bestanden van week 0 geven over de hele rij nul. Die ene `try` is de bekende in
+`solutions/6_extra`, die bij besluit blijft staan; de nul voor de kale assert geldt de
+omgezette vorm en niet elke assert op waarheidswaarde, want datzelfde bestand heeft nog
+`assert png_beschikbaar` - een van de twee truthiness-asserts die met #386 meegaan.
 
-Binnen dat corpus parseren **37** PGM1-blokken niet - uitvoer, pseudocode en fragmenten - en
-die zijn apart met grep nagelopen in plaats van weggelaten: 19 treffers op `is`, alle 19
-Nederlands proza in een uitvoerblok van `problems/4_extra.ipynb` (*"dus pi is 4.0"*), nul
-echte. Dat getal hangt aan de fencetalen: neem je ook ` ```text ` en ` ```console ` mee, dan
-zijn het **84** blokken en **43** treffers. Ook die 43 zijn alle 43 regel voor regel gelezen
-en geen daarvan is een Python-`is`: de telwoordentabel van `2_extra`, een regel uit een
-`NameError`, een elfproefzin, en één pseudocoderegel in `lectures/5a_geneste_lus.ipynb`
-(*"if profit is > max-so-far:"*), die geen Python is en ook geen proza. De nul van PGM1 staat
-dus naast een ijking die niet nul is en naast een rest die onder beide afbakeningen is
-nagelopen.
+**De rest, die niet parseert, is nagelopen in plaats van weggelaten.** In PGM1 week 1-7
+parseren **27** blokken niet - uitvoer, pseudocode en fragmenten. Met grep geven zij **20**
+treffers op `is`: 19 in een uitvoerblok van `problems/4_extra.ipynb` (*"dus pi is 4.0"*) en
+één in `lectures/4a_lussen.ipynb`, een ingesprongen fence van één regel met
+`print("number is", number)` - een stringliteral. Geen Python-`is`. Neem je ook ` ```text `
+en ` ```console ` mee, waarvan PGM1 er 35 heeft, dan zijn het **53** blokken en **44**
+treffers; die zijn alle 44 gelezen en geen daarvan is Python-`is` - 21 vormen de
+telwoordentabel van `problems/2_extra.ipynb`, en verder een regel uit een `NameError`, een
+elfproefzin en één pseudocoderegel (*"if profit is > max-so-far:"*).
+
+Die wijdere afbakening laat ook zien waarom de claim op de nauwe staat. Zij levert in PGM1
+**drie** `ast.Is`-knopen op die geen `is` zijn: *"low is 1.0"*, *"hi is 9.0"* en
+*"fraction is 0.25"*, uitvoer in een `text`-blok van `practicals/3_fijne_functies.ipynb` die
+per ongeluk geldige Python is. Een corpus dat te wijd is, geeft dus valse treffers, en een
+corpus dat te smal is, gaf eerder in dit werkitem een valse nul. De nul van PGM1 staat hier
+naast een ijking die niet nul is, naast een rest die onder beide afbakeningen regel voor
+regel is gelezen, en naast de afbakening waarmee de volgende haar kan nameten.
 
 **Wat de route openliet.** AC1 en AC7 blijven **deels**: de `try` in `solutions/6_extra` vangt
 een `png`-import op die in de build niet beschikbaar is, en dat raakt een keuze over wat de

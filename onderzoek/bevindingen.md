@@ -1924,13 +1924,14 @@ niet in dezelfde commit vastzet, noemt de sectie en niet de regel.
 ## Twee orkestratorsessies draaiden één werkitem - 9 oktober 2026
 
 **Wat er gebeurde.** (Alle tijden hieronder lokaal, +02:00.) Aan #377 werkten twee
-orkestratorsessies tegelijk, met twee GitHub-identiteiten: `ralfvandenbroek` schreef C1, de eerste C4's, de C5-kern en de
-beoordelingen van ronde 1 en de herstelronde; `misja` nam de route vanaf diezelfde
-herstelronde over zonder te weten dat zij liep. De tweede sessie fetchte om 10:33, zag de
-branchkop `441028b1` van 10:27 en de aankondiging *"herstelronde 1 gestart"* van 10:38,
-concludeerde *aangekondigd maar niet uitgevoerd*, en startte om ongeveer 10:49 een tweede
-auteur op dezelfde ronde. De auteur van de eerste sessie had op dat moment al gepusht -
-`8c49d8fe`, 10:43 - en de twee herbeoordelingen stonden om 10:50 op de PR.
+orkestratorsessies tegelijk, met twee GitHub-identiteiten. `ralfvandenbroek` schreef C1, de
+eerste C4's, de C5-kern en de beoordelingen van ronde 1 en de herstelronde; `misja` nam de
+route vanaf diezelfde herstelronde over zonder te weten dat zij liep. De tweede sessie
+fetchte om 10:33, zag de branchkop `441028b1` van 10:27 en de reactie van 10:38 waarin de
+eerste sessie herstelronde 1/1 als gestart aankondigde, concludeerde *aangekondigd maar niet
+uitgevoerd*, en startte om ongeveer 10:49 een tweede auteur op dezelfde ronde. De auteur van
+de eerste sessie had op dat moment al gepusht - `8c49d8fe`, 10:43 - en de twee
+herbeoordelingen stonden om 10:50 op de PR.
 
 De tweede auteur draaide dus de hele ronde opnieuw: 137.861 tokens, 18 min 24 s, 51
 gereedschapsaanroepen. **Hij ving het zelf.** Zijn C5 opent met een afwijking vooraf: *"De
@@ -1945,9 +1946,9 @@ openliet. **In haar eigen ronde heeft geen enkele rol die commit gelezen**: de t
 herbeoordelingen waren al gepubliceerd toen hij landde, en het C7 van die ronde noteert hem
 daarom als *niet beoordeeld*. Pas in de vervolgronde namen beide beoordelaars hem in de diff
 mee, en toen was hij door `bdf63511` al geheel vervangen. Een tweede orkestrator op dezelfde
-ronde levert dus niet alleen dubbel werk op, maar ook een wijziging in `conventies/` die
-buiten de beoordeling van haar eigen ronde valt en die niemand had gemist als zij was
-weggebleven.
+Dubbel werk is dus niet het enige wat een tweede orkestrator op dezelfde ronde oplevert: er
+komt een wijziging in `conventies/` uit die buiten de beoordeling van haar eigen ronde valt
+en die niemand had gemist als zij was weggebleven.
 
 **Waarom dit geen variant is van de twee bestaande bevindingen.** Bevinding 17 gaat over twee
 agents in één werkboom, en de maatregel daar is boomexclusiviteit. Bevinding 18 gaat over
@@ -2085,13 +2086,12 @@ zijn besluit niet had opgeroepen.
 *tokens: niet beschikbaar*, één ervan met de uitleg *"niet beschikbaar in deze sessie; de
 orkestrator leest ze van de agentstart"*. Ze waren wél beschikbaar. Elke agent die klaar is,
 levert een verbruiksmelding met `subagent_tokens`, `tool_uses` en `duration_ms` af in de
-sessie, en die meldingen
-staan in het sessielog van de orkestrator op het tijdstip dat hij het artefact
-plaatste: de melding van de vervolgronde kwam om 14:17:55 binnen met 185.013 tokens, en de C5
-met *niet beschikbaar* ging om 14:19:22 online (tijden lokaal, +02:00). Achteraf uit het log
-gehaald: negen ronden, **931.369 tokens**, elk met duur en aantal gereedschapsaanroepen. Ze
-staan in de registratie
-van #377 in [metingen.md](metingen.md).
+sessie, en die meldingen staan in het sessielog van de orkestrator op het tijdstip dat hij
+het artefact plaatste: de melding van de vervolgronde kwam om 14:17:55 binnen met 185.013
+tokens, en de C5 met *niet beschikbaar* ging om 14:19:22 online (tijden lokaal, +02:00).
+Achteraf uit het log gehaald: negen ronden, **931.369 tokens**, elk met duur en aantal
+gereedschapsaanroepen. Ze staan in de registratie van #377 in
+[metingen.md](metingen.md).
 
 Er zit een tweede helft in: waar de duur ontbrak, kwam er een schatting in plaats van de
 melding, en geen van de drie schattingen klopte. De vervolgronde werd uit de mtimes van
@@ -2111,17 +2111,17 @@ heb het nu niet bij de hand*, en dat is dezelfde fout als een nul vertrouwen die
 stukgelopen patroon komt: een lege uitkomst die niet is geijkt. Zij staat in de drukste
 familie van dit bestand - *Een hervatte agent meldt zijn tokens als lopend totaal* (23
 september), *Een agent die op de sessielimiet stopt, levert zijn verbruik niet af* (24
-september), *De meetpraktijk voor een hervatte agent* (30 september en 2 oktober) en *Een
+september), *De meetpraktijk voor een hervatte agent werd voor de derde keer niet
+geraadpleegd* (2 oktober, met een voorganger op 30 september) en *Een
 getal uit een oordeel is ook een overgenomen getal* (5 oktober) - en voegt eraan toe wat die
 alle niet beschrijven: niet een getal dat verkeerd is doorgegeven, maar een getal dat is
 weggelaten terwijl het er lag. De rij *aanvulling na C4* in de registratie is tegelijk een
 geval van de eerste: op GitHub staat zij als *"niet beschikbaar (de agent werd hervat)"*, in
 de tabel als 3.773 in 28 s, uit het verschil van twee cumulatieve meldingen.
 
-Het bijzondere is dat de bron hier niet moeilijk te vinden was. Hij stond in de eigen
-sessie, en `metingen.md` opent
-met de zin dat de getallen uit *"de tokentelling die de orkestrator per subagent terugkrijgt"*
-komen en *"verder alleen in de sessiecontext"* bestaan.
+Het bijzondere is dat de bron hier niet moeilijk te vinden was. Hij stond in de eigen sessie,
+en `metingen.md` opent met de zin dat de getallen uit *"de tokentelling die de orkestrator per
+subagent terugkrijgt"* komen en *"verder alleen in de sessiecontext"* bestaan.
 
 **Wat het veranderde.** De negen getallen zijn achteraf uit het log gehaald en staan in
 die registratie, met de schatting die te laag was erbij. De negende ronde - de dubbele
