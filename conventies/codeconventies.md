@@ -380,6 +380,44 @@ Opgaven worden getest met `assert`. Dat is de standaardvorm in dit materiaal:
   string, of nul als invoer laat vaak zien of de student het echt begrepen
   heeft.
 
+### Geen `is` in PGM1
+
+PGM1 gebruikt geen `is` en geen `is not`. `is` vraagt naar identiteit, en dat
+begrip wordt pas in PGM2 week 5 ingevoerd; zie
+[`curriculum/leerlijn.md`](../curriculum/leerlijn.md) en *identiteit* in
+[begrippen.md](begrippen.md).
+
+Een assertion op een boolean-uitkomst schrijf je in PGM1 daarom met `== True` of
+`== False`, en een assertion op `None` met `== None`:
+
+```python
+assert is_digit("7") == True
+assert is_digit("x") == False
+assert dbl_pr(20) == None
+```
+
+Dat is geen canonieke Python: ruff meldt deze vormen als E712 en E711. De hooks
+dwingen die regels niet af; ze controleren alleen de opmaak. Toch is dit de vorm,
+omdat de student in PGM1 alleen `==` kent, en omdat `== False` een functie vangt
+die `None` teruggeeft. Vastgesteld door de vakdeskundige op 9 oktober 2026, bij
+werkitem #377.
+
+**Het materiaal volgt deze regel nog niet overal.** Twee practica van PGM1
+toetsen een boolean-uitkomst met `assert f()` en `assert not f()`:
+
+| Bestand | `assert not f()` | `assert f()` |
+|---|---|---|
+| `practicals/5b_boter_kaas_eieren.ipynb` | 17 | 15 |
+| `solutions/5b_boter_kaas_eieren.ipynb` | 25 | 17 |
+| `practicals/7b_vallende_korrels.ipynb` | 3 | 1 |
+| `solutions/7b_vallende_korrels.ipynb` | 3 | 1 |
+
+Ze worden rechtgezet wanneer die bestanden aan de beurt zijn. Gemeten op
+9 oktober 2026 met een AST-scan over de codecellen en `python`-blokken van PGM1
+week 1-7: een `assert` waarvan de test `not` met een aanroep is, of een kale
+aanroep. Elders in PGM1 komen beide vormen niet voor. `is` en `is not` staan
+sinds #377 nergens meer in PGM1, geijkt op de 22 in PGM2 week 5.
+
 ## Opmaak
 
 Alle Python in ` ```python `-fences volgt `ruff format`, en de pre-commit hook
