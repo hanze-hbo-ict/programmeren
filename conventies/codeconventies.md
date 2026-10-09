@@ -380,6 +380,30 @@ Opgaven worden getest met `assert`. Dat is de standaardvorm in dit materiaal:
   string, of nul als invoer laat vaak zien of de student het echt begrepen
   heeft.
 
+## Geen `is` in PGM1
+
+PGM1 gebruikt geen `is` en geen `is not`. Dat geldt voor heel PGM1: de weken 1
+tot en met 7, en ook het oefententamen en zijn uitwerking. `is` vraagt naar
+identiteit, en dat begrip wordt pas in PGM2 week 5 ingevoerd; zie
+[`curriculum/leerlijn.md`](../curriculum/leerlijn.md) en *identiteit* in
+[begrippen.md](begrippen.md).
+
+Een assertion op een boolean-uitkomst schrijf je in PGM1 daarom met `== True` of
+`== False`, en een assertion op `None` met `== None`:
+
+```python
+assert is_digit("7") == True
+assert is_digit("x") == False
+assert dbl_pr(20) == None
+```
+
+Dat is geen canonieke Python. Ruff heeft er de regels E712 en E711 voor, maar die
+staan niet in zijn standaardselectie, en de hooks draaien geen `ruff check`: van
+Python controleren zij de syntaxis en de opmaak (`ruff format --check`). Toch is
+dit de vorm, omdat de student in PGM1 `==` kent en `is` niet, en omdat `== False`
+een functie vangt die `None` teruggeeft. Vastgesteld door de vakdeskundige op
+9 oktober 2026, bij werkitem #377.
+
 ## Opmaak
 
 Alle Python in ` ```python `-fences volgt `ruff format`, en de pre-commit hook

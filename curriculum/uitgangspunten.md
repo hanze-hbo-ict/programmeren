@@ -359,7 +359,7 @@ draait wel.
 | De theoretische afsluiting is geschrapt | ervaring | gesloten |
 | Schakelingen zijn geschrapt, binair is afgeslankt | organisatorisch | gesloten, uitgevoerd |
 | De wekelijkse leesopgaven zijn vervallen | praktisch | gesloten |
-| Bestanden naar PGM1, excepties blijven in PGM2 | didactisch | staand, onderbouwd; excepties landen in PGM2 week 7 (23 september 2026), **uitgevoerd** in #271 |
+| Bestanden naar PGM1, excepties blijven in PGM2 | didactisch | staand, onderbouwd; excepties landen in PGM2 week 7 (23 september 2026), **uitgevoerd** in #271; in PGM1 **deels uitgevoerd** in #377 (9 oktober 2026): `try`/`except` is uit de colleges, opgaven en uitwerkingen van week 1-7 gehaald, behalve in `solutions/6_extra`, waar het een ontbrekende `png`-module opvangt; dat is belegd in #386 |
 | De klassenstof van PGM2 week 4 gaat naar week 5; het AI-materiaal verdwijnt uit week 5; Text-ID blijft in week 4 | organisatorisch | gesloten op 23 september 2026 (#160), **uitgevoerd** in #160; Text-ID is met #335 uit week 4 verwijderd (VP5, zie `leerlijn.md`) |
 | Het practicum van PGM2 week 5 tot en met 7 is één doorlopend project, `creatures.py` | didactisch | gesloten op 23 september 2026; opzet in `practicum-oop.md`, **uitgevoerd**: sessie 1 staat in week 5 (#160), sessie 2 in week 6 (#270), sessie 3 in week 7 (#271) |
 | De extra-opgaven van PGM2 week 5 tot en met 7 vormen één lijn over objectgeoriënteerd programmeren, met Vier op een rij; min-max is de extra-opgave van week 7 | didactisch | gesloten op 23 september 2026; zie `leerlijn.md`, **uitgevoerd**: week 5 en 6 staan (#160, #270), min-max in week 7 (#271) |
@@ -370,7 +370,7 @@ draait wel.
 | Het bord verandert niet in week 5; de grens wordt daar benoemd | didactisch | gesloten |
 | De parameternamen van `board.py` blijven zoals ze zijn | praktisch | gesloten; sinds #271 staat `board.py` buiten `source/` |
 | De vastgestelde matrijs wijzigt niet als bijvangst; bevindingen gaan naar *Voorgestelde correcties* | organisatorisch | staand, onderbouwd |
-| Het oefententamen is representatief en verandert voorlopig niet | organisatorisch | staand |
+| Het oefententamen is representatief en verandert voorlopig niet; bij PGM1 volgt de vorm de conventies | organisatorisch | staand; op 9 oktober 2026 (#377) verduidelijkt voor het oefententamen van PGM1: de bevriezing betreft daar de onderwerpen, de aard van de vragen en het niveau, niet de vorm. Eerste geval, **uitgevoerd**: de drie `is`-asserts in `solutions/PGM1_examen.ipynb` zijn omgezet naar `== True`/`== False` zonder dat een vraag, een onderwerp of een niveau veranderde. Of dat oefententamen de overige conventies volgt, is niet gemeten |
 | PGM1 houdt geen gewicht op creëren-niveau; dat is een keuze en geen restant | didactisch | gesloten op 4 oktober 2026 (#104, C4), **uitgevoerd**: de PGM1-matrijs kent geen rij op dat niveau |
 | Het gewicht dat A4 achterliet gaat naar A3; de PGM1-matrijs wordt 80% toepassen en 20% analyseren | organisatorisch | gesloten op 4 oktober 2026 (#104, C4), **uitgevoerd** in dezelfde wijziging |
 | Leesvragen mogen fout aflopen; de fout is het antwoord | didactisch | staand, onderbouwd |
@@ -756,6 +756,21 @@ daar niet aan bijdraagt, wacht.
 tentamen dat wordt afgenomen; de onderwerpen en de aard van de vragen wijken
 nauwelijks af. Vastgesteld door de vakdeskundige, want het echte tentamen staat
 niet in de repository.
+
+**Bij het oefententamen van PGM1 gaat de bevriezing over de inhoud en niet over
+de vorm.** Wat daar vastligt zijn de onderwerpen, de aard van de vragen en het
+niveau. De conventies gelden er wel: dat oefententamen staat in `source/` en
+valt dus onder `conventies/conventies.md`, dat onder *Reikwijdte* één
+uitzondering voor zijn `Opgave N`-koppen vastlegt. Vastgesteld door de
+vakdeskundige op 9 oktober 2026 bij werkitem #377, in deze woorden: *"het
+tentamen verandert niet inhoudelijk, maar moet wel PGM1 zaken/details
+aanhouden"*.
+
+Het eerste geval is de `is`-regel. In #377 zijn de drie asserts met `is` in
+`solutions/PGM1_examen.ipynb` omgezet naar `== True` en `== False`; zie *Geen
+`is` in PGM1* in [codeconventies.md](../conventies/codeconventies.md). Er
+veranderde geen vraag, geen onderwerp en geen niveau, en de toets zelf,
+`extra/practice/pgm1_examen.ipynb`, bleef onaangeroerd.
 
 De weging in de toetsmatrijs van PGM1 wachtte op diezelfde prioriteit. Zij is op
 4 oktober 2026 herzien; zie *De weging van de PGM1-matrijs* hieronder.
