@@ -243,6 +243,51 @@ ze staat op de plek waar een rol toch al langskomt.
 Wat er niet is veranderd: een leesronde begint nog steeds zonder een plek waar
 staat wat er over dit materiaal al besloten is. **Deels opgelost.**
 
+### Meting, 9 oktober 2026: de eerste veegronde mét werkitem (#375)
+
+#375 gaf de eindredacteur voor het eerst een C0, met het veld *Wat de repo niet
+weet*. Dat veld bevatte drie punten: deze bevinding, de kosten van de vorige
+ronde, en dat de PGM2-bevindingen uit #124 geparkeerd waren voor overleg met de
+PGM2-docent. Geen van de drie was kennis waarvan een conclusie in het rapport
+afhing.
+
+**Er volgde geen verkeerde conclusie.** De orkestrator heeft bij de bespreking
+acht bevindingen nagemeten op `71f82f94`: A1a, A1c, A1d, A2, B1, B2, B3 en B4.
+Ze hielden stand, op één ondertelling na: `wk10ex3.py` staat twee keer in het
+practicum en niet één keer. B4 ving zelfs een verkeerde premisse in een eerdere
+issue. #348 vroeg of `_` geldt in weken *"waar de student het nog niet kent"*,
+terwijl de leerlijn het in PGM1 week 4 introduceert.
+
+**Wat verkeerde conclusies voorkwam, was niet het veld.** Het rapport had een
+sectie *Niet vastgesteld* met vier punten die het niet kon beslissen. Twee daarvan
+bleken precies de kennis te vragen die buiten de repo lag:
+
+- of `is True` in asserts bewust is (de vakdeskundige: nee, eruit; #377)
+- of *werkcollege* en *practicum* hetzelfde bedoelen
+
+Bij het tweede punt beschreef de repo zelf het verkeerde model. Volgens
+`uitgangspunten.md` r58-67 is het werkcollege `practicals/` en het practicum
+`problems/`. Volgens de vakdeskundige zijn er twee colleges en een practicum, en
+zijn de opgaven huiswerk (#380). Een rol die de repo als waarheid had genomen,
+had hier verkeerd geconcludeerd. De eindredacteur deed dat niet, omdat hij het
+openliet. De roldefinitie vraagt die sectie niet: `grep -i "niet vastgesteld"`
+op `.claude/agent-role-loop/core/roles/eindredacteur.md` geeft 0. De ijking van
+dat patroon is het rapport zelf, dat de kop draagt.
+
+**Wat alleen in de bespreking boven kwam.** Drie dingen stonden niet in het veld
+en niet in de repo: de indeling van de week, dat het PGM1-oefententamen later
+wordt rechtgetrokken, en dat de extra rond `minimax.md` later komt. Ze kwamen
+pas boven toen de vakdeskundige per bevinding besliste. Het veld vangt wat de
+schrijver van het werkitem vooraf weet. Wat een bevinding pas oproept, vangt het
+niet.
+
+**Wat het veranderde.** Nog niets aan de werkwijze. De meting wijst op een
+goedkopere borging dan het veld: een verplichte sectie *Niet vastgesteld* in het
+rapport van de eindredacteur, met per punt de vraag aan de vakdeskundige. Dat is
+een procesbesluit voor de vakdeskundige en is hier niet ingevoerd. **Deels
+opgelost**, met als nieuw gegeven dat het rapport zelf de kennisvraag kan
+dragen, zonder een C0.
+
 ---
 
 ## 8. Het register hield de stand van de discussie bij, niet die van het materiaal

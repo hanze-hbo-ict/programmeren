@@ -3245,3 +3245,43 @@ tellerrecursie toelaat. De vakdeskundige liet dat zo.
 
 **Voor #356.** De extra van week 3 telt nu 1.066 woorden. De basis telt er 995 en de
 opstap 1.307 (methode `leerlijn.md` r122-124).
+
+## Werkitem #375 - veegronde PGM2 na de herziening van alle zeven weken
+
+Route: LUS, M, op een route die niet in de tabel van `loop.md` staat: een veegronde door
+`rol-eindredacteur` met een C0, voor het eerst (bevinding 7). Procesversie `71f82f94`.
+Geen agentbeoordelaar; de vakdeskundige toetste criteria 1-5, de orkestrator criteria 6
+en 7 mechanisch (C1 op #375). Gesloten op 9 oktober 2026 door de vakdeskundige, na een
+bespreking van alle bevindingen. Geen PR: de veegronde wijzigde niets.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator (C1, mechanische controle, bespreking, zeven C0's) | niet beschikbaar | niet beschikbaar | C1 LUS/M; besluitenoverzicht op #375 |
+| eindredacteur | 283.044 | 23 min 43 s | 20 bevindingen (2 zwaar, 6 middel, 12 licht), geen wijzigingen |
+
+**Tegen de vorige ronde.** #124 besloeg de hele cursus en kostte 174.232 tokens en 27
+minuten. #375 besloeg PGM2 plus de overgang vanuit PGM1 (106 bestanden) en kostte 62%
+meer tokens in 12% minder tijd. De reikwijdte was kleiner, maar de opdracht zwaarder: het
+C0 vroeg per criterium een geijkte meting, de stand van zeven geparkeerde bevindingen en
+van #348 en #115, en een meting over elke weekovergang. Het rapport noemt twaalf eigen
+scripts. Of die opdracht de extra kosten verklaart, is niet vastgesteld.
+
+**Wat de bespreking opleverde.** Zeven werkitems: #377 (vooruitverwijzingen uit PGM1),
+#378 (f-string in PGM1), #379 (lusvariabelen, sluit #348), #380 (de indeling van de week),
+#381 (PGM2-veegpunten), #382 (uitwerkingen) en #383 (curriculum en conventies). C11 en C12
+leverden geen werkitem op; C10 ging als reactie naar #363. Op drie punten week het besluit
+af van het advies van de orkestrator:
+
+- *is* uit PGM1 halen in plaats van als vaste vorm toestaan
+- *magische methode* naar week 5 in plaats van een gemarkeerde vooruitwijzing
+- de belofte over `with` schrappen in plaats van het mechanisme in week 7 uitleggen
+
+Op twee punten ging de vakdeskundige terug op een eerste keuze nadat de orkestrator die
+had gemeten. F-strings uit heel PGM2 halen werd introductie in PGM1, toen bleek dat PGM2
+week 5-7 ze op 54 plekken gebruikt. Kaal `open`/`close` werd `with`, toen bleek dat
+`close()` een objectmethode is.
+
+**Steekproef.** Acht bevindingen nagemeten; één ondertelling (`wk10ex3.py` 2× in plaats
+van 1×). Eén telverschil dat geen fout is: de eindredacteur telde f-strings als alle
+`ast.JoinedStr`-knopen, dus ook die in een formaatspecificatie (PGM2 week 1: 9), de
+orkestrator alleen de buitenste (week 1: 5). Zie bevinding 7, *Meting, 9 oktober 2026*.
