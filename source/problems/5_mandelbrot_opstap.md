@@ -56,8 +56,8 @@ def in_mset(c, n):
     ...
 
 
-assert in_mset(0 + 0j, 25) is True
-assert in_mset(3 + 4j, 25) is False
+assert in_mset(0 + 0j, 25)
+assert not in_mset(3 + 4j, 25)
 ```
 
 Je hebt nu de rekenkern. In de basislaag gebruik je die kern voor een raster.
