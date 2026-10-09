@@ -3291,9 +3291,10 @@ orkestrator alleen de buitenste (week 1: 5). Zie bevinding 7, *Meting, 9 oktober
 Route: LUS, M, startcommit en procesversie `17e790e3`. Auteur, eerstejaars en
 onderwijskundige; geen verkenner, ontwerper of verhelderaar, omdat de inhoudelijke keuzes
 bij de bespreking van #375 al waren gemaakt en C0 alle vindplaatsen al mat. De redacteur
-kwam er later bij voor de twee besluitdiffs, volgens stap 5b van `/orc`. PR #385 met
-`Refs #377`, zeven commits, gemerged als `f41c61cc`: 24 bestanden, +383/-222.
-Twee orkestratorsessies draaiden deze route tegelijk; zie de bevinding *Twee
+kwam er later bij voor de twee besluitdiffs, volgens `orc.md` §*Ontwerpen en besluiten*: een
+door de orkestrator geschreven besluitdiff gaat langs een onafhankelijke redactionele toets
+vóór de merge. PR #385 met `Refs #377`, zeven commits, gemerged als `f41c61cc`: 24 bestanden,
++383/-222. Twee orkestratorsessies draaiden deze route tegelijk; zie de bevinding *Twee
 orkestratorsessies draaiden één werkitem* in [bevindingen.md](bevindingen.md).
 
 | Rol | Tokens | Duur | Uitkomst |
@@ -3304,7 +3305,7 @@ orkestratorsessies draaiden één werkitem* in [bevindingen.md](bevindingen.md).
 | eerstejaars, ronde 1 | 52.508 | 4 min 8 s | BLOKKEER (B1, B2; 3 puntjes) |
 | onderwijskundige, ronde 1 | 77.933 | 4 min 47 s | AKKOORD MET PUNTJES (0 blokkades, 6 puntjes) |
 | auteur, herstel 1 | 23.655 | 5 min 12 s | B1 en B2 hersteld; 11 bestanden, +101/-63 (`8c49d8fe`) |
-| auteur, herstel 1, tweede sessie | 137.861 | 18 min 24 s | dezelfde ronde dubbel; geen eigen commit |
+| auteur, herstel 1, tweede sessie | 137.861 | 18 min 24 s | dezelfde ronde dubbel; 1 bestand, +13/-7 (`995234fb`), door geen rol gelezen |
 | eerstejaars, herstel 1 | 37.875 | 2 min 7 s | AKKOORD MET PUNTJES (B1, B2 opgelost) |
 | onderwijskundige, herstel 1 | 45.368 | 3 min 29 s | BLOKKEER (B3 op AC8, tekstueel) |
 | auteur, begrensde tekstopdracht | niet beschikbaar | niet beschikbaar | afgebroken op de sessielimiet (HTTP 429); niets bewaard |
@@ -3319,18 +3320,27 @@ orkestratorsessies draaiden één werkitem* in [bevindingen.md](bevindingen.md).
 | **totaal agents, bekend** | **1.339.265** | | 17 agentstappen, waarvan 1 afgebroken zonder resultaat |
 
 Orkestratie: niet beschikbaar, in beide sessies. De zeven rijen van de eerste sessie komen
-uit haar afmelding op PR #385, als verschil in cumulatieve `subagent_tokens`; de negen van de
+uit de afmelding van de sessie `ralfvandenbroek` op PR #385 - daar *Afmelding van de tweede
+orkestratorsessie* genoemd - als verschil in cumulatieve `subagent_tokens`; de negen van de
 tweede zijn achteraf uit de verbruiksmeldingen in haar eigen sessielog gehaald, nadat zij ze
 op GitHub als *niet beschikbaar* had gepubliceerd. Dat is de bevinding *Niet beschikbaar
-stond in de eigen sessie*. Waar die meldingen een duur geven, staat die hier; de duur die de
-orkestrator eerder uit
-scratchpad-mtimes schatte (*"18 min 40 s"* voor de vervolgronde) was te laag, de melding geeft
-23 min 34 s.
+stond in de eigen sessie*. Waar die meldingen een duur geven, staat die hier, en die vervangt
+op drie plaatsen een eerder gepubliceerde schatting. Tweemaal was de schatting te hoog: de
+begrenzingsronde stond op *"circa 35 minuten tot commit"* en meet 5 min 46 s, de
+herbeoordeling van de onderwijskundige op *"ca. 20 min, waarvan ca. 10 min `make clean &&
+make html`"* en meet 13 min 56 s. Eénmaal te laag: de vervolgronde, geschat uit
+scratchpad-mtimes op *"18 min 40 s"*, meet 23 min 34 s. De melding meet de agent, een
+wandklokschatting meet ook wat ernaast gebeurde; welke van de twee een lezer wil, hangt van
+zijn vraag af, en daarom staan beide hier.
 
 **Herstelstand.** Oplevering **1 van 1**, en die ene ronde is door twee sessies tegelijk
-gedraaid. Daarna liepen vier gerichte ronden op expliciete menselijke autorisatie, elk met een
-eigen C4 en een eigen beoordeling; de automatische teller bleef verbruikt en is niet
-teruggezet. Vier blokkades in totaal: B1 (`assert not f()` gebruikt in week 3 een operator die
+gedraaid. Daarna gaf de vakdeskundige vijf keer een gerichte autorisatie; vier ronden kwamen
+af, elk met een eigen C4 en een eigen beoordeling. De vijfde is de afgebroken tekstopdracht
+uit de tabel: zij liep op het C4 *Gericht: alleen tekst*, dat de bewering over `is` wilde
+inperken, en dat besluit is daarna omgekeerd door het C4 dat de volledige omzetting koos. De
+automatische teller bleef verbruikt en is niet teruggezet.
+
+Vier blokkades in totaal: B1 (`assert not f()` gebruikt in week 3 een operator die
 nog niet is ingevoerd en laat een functie die `None` teruggeeft stil passeren), B2 (de
 assertvorm stond niet in `conventies/`), B3 (de nieuwe conventietekst beweerde dat `is`
 nergens meer in PGM1 staat, terwijl het oefententamen er drie had) en B4 (de begrenzingstekst
@@ -3339,34 +3349,52 @@ gerepareerd, B3 is opgelost door de bewering waar te maken in plaats van haar te
 en B4 verviel toen de orkestrator de clausule introk die zij bestreed.
 
 **Wat er inhoudelijk gebeurde.** PGM1 kent sinds deze route geen `is`, geen `is not`, geen
-`try`/`except`, geen `file.read()` buiten `with`, geen objectmethode behalve `PNGImage` en
-geen comprehension. De assertvorm werd `== True` / `== False`, met `== None` waar de les juist
-is dat een functie zonder `return` niets teruggeeft. Nagemeten op de itemdiff: 147 regels
+`file.read()` buiten `with`, geen objectmethode behalve `PNGImage` en geen comprehension. Van
+`try`/`except` is één voorkomen over, in `solutions/6_extra`, en dat staat er bij besluit; de
+afspraak is dus *geen `try`/`except` behalve die ene*, niet *geen*. De assertvorm werd
+`== True` / `== False`, met `== None` waar de les juist is dat een functie zonder `return`
+niets teruggeeft. Nagemeten op de itemdiff: 147 regels
 `== True`/`== False` toegevoegd (69 en 78), 5 keer `== None`, 48 regels `assert not`
 verwijderd en 70 regels met `is`/`is not` tegen `None`, `True` of `False`. Die 147 vallen in
 62 bij `8c49d8fe` en 85 bij `bdf63511`, en dat is dezelfde splitsing die de twee C5's melden.
 
-**Eigen nameting op de gemergede boom** (`f41c61cc`), AST over codecellen, `python`-fences in
-markdowncellen en `.md`-fences, met PGM2 als ijking:
+**Eigen nameting op de gemergede boom** (`f41c61cc`), AST over codecellen, over
+` ```python `- en ` ```ipython `-fences in markdowncellen en over dezelfde fences in
+`.md`-bestanden, met PGM2 als ijking. Het corpus is het weeknummer in de bestandsnaam: 1 tot
+en met 7 is PGM1, 8 tot en met 14 is PGM2, en de twee examenbestanden gaan op hun naam. *Kale
+assert* betekent hier `assert <aanroep>`, dus de vorm die deze route omzette.
 
 | | bestanden | kale assert | `assert not` | `is` | `is not` |
 |---|---:|---:|---:|---:|---:|
 | PGM1 (week 1-7 plus `PGM1_examen`) | 75 | 0 | 0 | 0 | 0 |
 | PGM2 (week 8-14), ijking | 69 | 40 | 74 | 32 | 16 |
 
-Zevenendertig PGM1-blokken parseren niet - uitvoer, pseudocode en fragmenten - en die zijn
-apart met grep nagelopen in plaats van weggelaten. Negentien treffers op `is`, alle negentien
+Dezelfde scan geeft voor `ast.Try` PGM1 **1** - de ene in `solutions/6_extra` - tegen **12**
+in PGM2. Die nul voor de kale assert geldt de omgezette vorm en niet elke assert op
+waarheidswaarde: `solutions/6_extra` heeft nog `assert png_beschikbaar`, en dat is een van de
+twee truthiness-asserts die met #386 meegaan.
+
+Binnen dat corpus parseren **37** PGM1-blokken niet - uitvoer, pseudocode en fragmenten - en
+die zijn apart met grep nagelopen in plaats van weggelaten: 19 treffers op `is`, alle 19
 Nederlands proza in een uitvoerblok van `problems/4_extra.ipynb` (*"dus pi is 4.0"*), nul
-echte. De nul van PGM1 staat dus naast een ijking die niet nul is en naast een nagelopen rest.
+echte. Dat getal hangt aan de fencetalen: neem je ook ` ```text ` en ` ```console ` mee, dan
+zijn het **84** blokken en **43** treffers. Ook die 43 zijn alle 43 regel voor regel gelezen
+en geen daarvan is een Python-`is`: de telwoordentabel van `2_extra`, een regel uit een
+`NameError`, een elfproefzin, en één pseudocoderegel in `lectures/5a_geneste_lus.ipynb`
+(*"if profit is > max-so-far:"*), die geen Python is en ook geen proza. De nul van PGM1 staat
+dus naast een ijking die niet nul is en naast een rest die onder beide afbakeningen is
+nagelopen.
 
 **Wat de route openliet.** AC1 en AC7 blijven **deels**: de `try` in `solutions/6_extra` vangt
 een `png`-import op die in de build niet beschikbaar is, en dat raakt een keuze over wat de
 build mag die sinds #103/#136 openstaat. De vakdeskundige besloot die `try` te laten staan en
 het werk te beleggen in **#386**, samen met de twee truthiness-asserts in dat bestand. Drie
 puntjes gaan naar de veegronde: dat *"het oefententamen van PGM1"* toets en uitwerking nergens
-bij naam samenneemt, dat `codeconventies.md` §*Huidige staat* voor de PGM2-grond alleen op
-`uitgangspunten.md` leunt, en een dode verwijzing in `uitgangspunten.md` naar een regel die
-`conventies/schrijfwijzer.md` niet heeft. De overgang in PGM2 week 5 terug naar de canonieke
+bij naam samenneemt, dat `codeconventies.md` §*Namen zijn Engels, vanaf week 1* voor de
+PGM2-grond alleen op `uitgangspunten.md` leunt, en dat `uitgangspunten.md` §*Wat er niet meer
+toe doet, mag weg* voor het opzoeken van verwijzingen bij **verwijderen** naar de
+kruisverwijzingsregel in `conventies/schrijfwijzer.md` §*Samenhang bewaken* wijst, die over
+**verplaatsen** gaat. De overgang in PGM2 week 5 terug naar de canonieke
 `assert f()` is nergens benoemd; dat is een leerlijnvraag voor een eigen werkitem.
 
 **Over de vorm van deze ingang.** Zij staat in een eigen PR en is door de orkestrator

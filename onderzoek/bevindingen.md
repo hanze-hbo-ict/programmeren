@@ -1923,8 +1923,8 @@ niet in dezelfde commit vastzet, noemt de sectie en niet de regel.
 
 ## Twee orkestratorsessies draaiden één werkitem - 9 oktober 2026
 
-**Wat er gebeurde.** Aan #377 werkten twee orkestratorsessies tegelijk, met twee
-GitHub-identiteiten: `ralfvandenbroek` schreef C1, de eerste C4's, de C5-kern en de
+**Wat er gebeurde.** (Alle tijden hieronder lokaal, +02:00.) Aan #377 werkten twee
+orkestratorsessies tegelijk, met twee GitHub-identiteiten: `ralfvandenbroek` schreef C1, de eerste C4's, de C5-kern en de
 beoordelingen van ronde 1 en de herstelronde; `misja` nam de route vanaf diezelfde
 herstelronde over zonder te weten dat zij liep. De tweede sessie fetchte om 10:33, zag de
 branchkop `441028b1` van 10:27 en de aankondiging *"herstelronde 1 gestart"* van 10:38,
@@ -1938,10 +1938,25 @@ opdracht noemt `441028b1` als laatste commit. Dat is niet de stand. Op de branch
 mijn start al `8c49d8fe`."* Niet de orkestrator die hem startte, maar de rol die op de boom
 keek, zag dat de opdracht van een achterhaalde stand uitging.
 
+Gratis was die dubbele ronde niet. Omdat hij de stand zag, schreef hij geen tweede versie van
+het werk, maar hij zette er wél additief één commit op: `995234fb`, 11:04:11, dertien regels
+in `conventies/codeconventies.md`, die de scopevraag over `5b` en `7b` in de conventietekst
+openliet. **In haar eigen ronde heeft geen enkele rol die commit gelezen**: de twee
+herbeoordelingen waren al gepubliceerd toen hij landde, en het C7 van die ronde noteert hem
+daarom als *niet beoordeeld*. Pas in de vervolgronde namen beide beoordelaars hem in de diff
+mee, en toen was hij door `bdf63511` al geheel vervangen. Een tweede orkestrator op dezelfde
+ronde levert dus niet alleen dubbel werk op, maar ook een wijziging in `conventies/` die
+buiten de beoordeling van haar eigen ronde valt en die niemand had gemist als zij was
+weggebleven.
+
 **Waarom dit geen variant is van de twee bestaande bevindingen.** Bevinding 17 gaat over twee
 agents in één werkboom, en de maatregel daar is boomexclusiviteit. Bevinding 18 gaat over
 parallelle routes op het bord, en de maatregel daar is een afhankelijkheidscontrole tussen
-werkitems. Dit is één route met twéé orkestrators, en daarvoor staat nergens iets. Niets in
+werkitems. Met `995234fb` erbij is de afstand tot 17 kleiner dan zij lijkt - er landde
+inderdaad een commit van de ene actor op de branch waar de andere aan werkte - maar de
+maatregel van 17 dekt het niet: de twee auteurs zaten niet in één werkboom, ze werkten vanuit
+twee sessies op dezelfde branch, met ieder een eigen boom. Dit is één route met twéé
+orkestrators, en daarvoor staat nergens iets. Niets in
 deze repo wijst een route aan een sessie toe: de Status op het bord is één veld dat iedereen
 kan zetten, een issue heeft geen eigenaar, en de branch draagt geen spoor van wie haar
 bestuurt. De enige signalen waren GitHub-tijdstempels, en die stonden in drie verschillende
@@ -1964,7 +1979,8 @@ andere. Haar meetregels staan in die afmelding, zodat de registratie van #377 in
   één orkestrator.** Wie een werkitem hervat, zegt dat eerst op de issue en kijkt of daar al
   zo'n claim staat; staat er een aankondiging die jonger is dan de branchkop, dan loopt die
   stap en vraag je de mens. En fetch opnieuw vlak vóór elke agentstart, niet alleen bij de
-  inname: de fetch van 10:33 was juist en bij het handelen om 10:49 achterhaald.
+  inname: de fetch van 10:33 was juist en bij het handelen om 10:49 achterhaald. Dit voorstel
+  staat als invoer voor de evaluatie van #203.
 
 ## Een meting over notebooks las alleen de codecellen - 9 oktober 2026
 
@@ -1998,10 +2014,20 @@ meet, mist precies de bestanden waar de vorm het meest zichtbaar is voor de stud
 PR #385, en het besluit dat eruit volgde - alle resterende asserts omzetten - werd op het
 juiste getal genomen. De nameting in de registratie van #377 in
 [metingen.md](metingen.md) leest codecellen, `python`-fences in markdowncellen en
-`.md`-fences, en loopt de 37 blokken die niet parseren apart met grep na in plaats van ze te
-laten vallen; die gaven negentien treffers op `is`, alle negentien Nederlands proza in een
-uitvoerblok (*"dus pi is 4.0"*). Een nul die naast een ijking én een nagelopen rest staat, is
-pas een nul.
+`.md`-fences, en loopt de blokken die niet parseren apart met grep na in plaats van ze te
+laten vallen - onder twee afbakeningen, zodat het getal zelf navolgbaar is. Een nul die naast
+een ijking én een nagelopen rest staat, is pas een nul.
+
+**Tweede geval, dezelfde dag, in een werkvoorraad.** De registratie van #377 stuurde een
+puntje naar de veegronde dat eveneens uit een ongeijkte nul kwam: dat `uitgangspunten.md`
+verwijst naar een kruisverwijzingsregel die `conventies/schrijfwijzer.md` niet heeft. De
+auteursrol die dat opschreef beriep zich op `grep -rn 'kruisverwijzing' conventies/` - nul
+treffers - en de regel staat er wél, in §*Samenhang bewaken*, beginnend met een hoofdletter:
+**"Kruisverwijzingen moeten altijd kloppen."** Met `-i` is er één treffer. Niemand ving het bij
+de bronronde; de lezer van de registratie ving het, en op dat moment lag er al een
+veegrondepuntje dat iemand had laten repareren wat klopt. Een stukgelopen patroon levert dus
+niet alleen een verkeerd besluit op, maar ook werk dat niet bestaat - en dat is duurder,
+omdat het pas opvalt als iemand het oppakt.
 
 ## De orkestrator schreef in een C4 een clausule die de mens niet had genomen - 9 oktober 2026
 
@@ -2025,12 +2051,21 @@ Het C4-contract verbiedt nieuwe inhoudelijke rechtvaardiging namens de mens, maa
 het C4 zelf: de mens leest zijn eigen besluit terug in woorden die hij niet koos, en voor de
 auteur is het C4 de bron.
 
-Bevinding 14 - *Niets toetst wat de orkestrator schrijft* - is geantwoord met stap 5b van
-`/orc`: schrijft de orkestrator naar `curriculum/` of `conventies/`, dan gaat die diff langs
-de redacteur. En `orc.md` zegt daar: getoetst **tegen het C4**. Dat is waarom stap 5b dit niet
-had hoeven vangen - de diff klopte met het C4, want de clausule stond er zelf in. De redacteur
-ving het doordat hij verder keek dan de norm vraagt en de diff ook tegen het *menselijke*
-besluit legde. De maatregel werkte hier dus beter dan hij is opgeschreven.
+Bevinding 14 - *Niets toetst wat de orkestrator schrijft* - is geantwoord met de maatregel
+die nu als slotalinea van `orc.md` §*Ontwerpen en besluiten* staat: schrijft de orkestrator
+naar `curriculum/` of `conventies/`, dan gaat die diff langs een onafhankelijke redactionele
+toets vóór de merge. En die alinea zegt: getoetst **tegen het C4**. Dat is waarom de maatregel
+dit niet had hoeven vangen - de diff klopte met het C4, want de clausule stond er zelf in. De
+redacteur ving het doordat hij verder keek dan de norm vraagt en de diff ook tegen het
+*menselijke* besluit legde. De maatregel werkte hier dus beter dan hij is opgeschreven.
+
+Twee dingen horen hierbij. De maatregel was in `/orc` eerst een genummerde **stap 5b**, en is
+bij de herschrijving van #203 proza geworden; `metingen.md` noteert die overgang zelf twee
+keer, en bevinding 14 noemt juist dat terugzetten naar proza haar zwakte. Deze bevinding
+voegt er een tweede zwakte aan toe die niets met de vorm te maken heeft: ook als handeling
+zou zij tegen het verkeerde artefact toetsen. En de orkestrator citeerde bij het opschrijven
+van deze bevinding eerst *stap 5b* als bestaande stap, in een dossier dat op twee plaatsen
+vastlegt dat zij dat niet meer is - gevonden door de lezer van deze registratie.
 
 **Wat het kostte.** De stap die alleen door de clausule bestaat is de herbeoordeling: 46.797
 tokens en 2 min 49 s. De blokkade zelf kostte geen ronde, want de automatische herstelronde
@@ -2041,7 +2076,8 @@ zijn besluit niet had opgeroepen.
   toets van een besluitdiff gaat tegen het menselijke besluit én het C4, niet tegen het C4
   alleen.** En: wat in een C4 niet letterlijk van de mens komt, staat er als zodanig bij - de
   regel die bij de bevinding van 23 september al is voorgesteld, nu met een tweede geval en
-  een aanwijsbare blokkade erachter.
+  een aanwijsbare blokkade erachter. Dit voorstel staat als invoer voor de evaluatie van het
+  procesexperiment #203.
 
 ## *Niet beschikbaar* stond in de eigen sessie - 9 oktober 2026
 
@@ -2049,25 +2085,41 @@ zijn besluit niet had opgeroepen.
 *tokens: niet beschikbaar*, één ervan met de uitleg *"niet beschikbaar in deze sessie; de
 orkestrator leest ze van de agentstart"*. Ze waren wél beschikbaar. Elke agent die klaar is,
 levert een verbruiksmelding met `subagent_tokens`, `tool_uses` en `duration_ms` af in de
-sessie, en die
-meldingen staan in het sessielog van de orkestrator op het tijdstip dat hij het artefact
+sessie, en die meldingen
+staan in het sessielog van de orkestrator op het tijdstip dat hij het artefact
 plaatste: de melding van de vervolgronde kwam om 14:17:55 binnen met 185.013 tokens, en de C5
-met *niet beschikbaar* ging om 14:19:22 online. Achteraf uit het log gehaald: negen ronden,
-**931.369 tokens**, elk met duur en aantal gereedschapsaanroepen. Ze staan in de registratie
+met *niet beschikbaar* ging om 14:19:22 online (tijden lokaal, +02:00). Achteraf uit het log
+gehaald: negen ronden, **931.369 tokens**, elk met duur en aantal gereedschapsaanroepen. Ze
+staan in de registratie
 van #377 in [metingen.md](metingen.md).
 
-Er zit een tweede helft in. Waar de orkestrator de duur niet dacht te hebben, schatte hij haar
-uit de mtimes van scratchpadbestanden en schreef *"18 min 40 s (gemeten op de mtimes van het
-eerste en het laatste scratchpadbestand)"*. De melding zegt 23 min 34 s. De schatting zag er
-zorgvuldiger uit dan *niet beschikbaar*, met methode en al, en was vijf minuten mis - omdat
-scratchpadbestanden het begin en het einde van het werk niet afbakenen.
+Er zit een tweede helft in: waar de duur ontbrak, kwam er een schatting in plaats van de
+melding, en geen van de drie schattingen klopte. De vervolgronde werd uit de mtimes van
+scratchpadbestanden geschat op *"18 min 40 s"* en meet 23 min 34 s - vijf minuten te laag,
+omdat die bestanden het begin en het einde van het werk niet afbakenen. De twee andere gaan de
+andere kant op en veel verder: de begrenzingsronde stond gepubliceerd als *"circa 35 minuten
+tot commit"* en meet **5 min 46 s**, en de herbeoordeling van de onderwijskundige als *"ca. 20
+min, waarvan ca. 10 min `make clean && make html`"* en meet **13 min 56 s**. Een wandklok
+tussen twee momenten in de sessie meet ook alles wat ernaast gebeurde, inclusief wachten op de
+mens; de melding meet de agent. Dat zijn twee verschillende grootheden, en de gepubliceerde
+getallen zeiden niet welke van de twee ze waren.
 
 **Waarom dit een patroon is.** `loop.md` zegt: *"Ontbrekende meetgegevens heten niet
 beschikbaar, nooit nul."* Die regel beschermt tegen een verzonnen nul en zegt niets over de
 vraag of het getal werkelijk ontbreekt. Daardoor werd *niet beschikbaar* het antwoord op *ik
 heb het nu niet bij de hand*, en dat is dezelfde fout als een nul vertrouwen die uit een
-stukgelopen patroon komt: een lege uitkomst die niet is geijkt. Het bijzondere is dat de
-bron hier niet moeilijk te vinden was. Hij stond in de eigen sessie, en `metingen.md` opent
+stukgelopen patroon komt: een lege uitkomst die niet is geijkt. Zij staat in de drukste
+familie van dit bestand - *Een hervatte agent meldt zijn tokens als lopend totaal* (23
+september), *Een agent die op de sessielimiet stopt, levert zijn verbruik niet af* (24
+september), *De meetpraktijk voor een hervatte agent* (30 september en 2 oktober) en *Een
+getal uit een oordeel is ook een overgenomen getal* (5 oktober) - en voegt eraan toe wat die
+alle niet beschrijven: niet een getal dat verkeerd is doorgegeven, maar een getal dat is
+weggelaten terwijl het er lag. De rij *aanvulling na C4* in de registratie is tegelijk een
+geval van de eerste: op GitHub staat zij als *"niet beschikbaar (de agent werd hervat)"*, in
+de tabel als 3.773 in 28 s, uit het verschil van twee cumulatieve meldingen.
+
+Het bijzondere is dat de bron hier niet moeilijk te vinden was. Hij stond in de eigen
+sessie, en `metingen.md` opent
 met de zin dat de getallen uit *"de tokentelling die de orkestrator per subagent terugkrijgt"*
 komen en *"verder alleen in de sessiecontext"* bestaan.
 
@@ -2082,4 +2134,6 @@ bevinding van 5 oktober noteert ook een getal dat pas bij het opschrijven is nag
   geschreven bij de verbruiksmelding, niet bij het artefact.** De orkestrator leest de melding
   zodra een rol klaar is en zet rol, tokens, duur en aantal aanroepen in de reactie waarin
   hij het artefact plaatst. *Niet beschikbaar* staat er pas nadat hij gekeken heeft, en met
-  waar hij keek. Een schatting draagt haar methode én de reden dat de melding ontbreekt.
+  waar hij keek. Een schatting draagt haar methode én de reden dat de melding ontbreekt, en
+  zegt welke grootheid zij schat: de agent of de wandklok. Dit voorstel staat als invoer voor
+  de evaluatie van #203.
