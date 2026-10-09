@@ -370,7 +370,7 @@ draait wel.
 | Het bord verandert niet in week 5; de grens wordt daar benoemd | didactisch | gesloten |
 | De parameternamen van `board.py` blijven zoals ze zijn | praktisch | gesloten; sinds #271 staat `board.py` buiten `source/` |
 | De vastgestelde matrijs wijzigt niet als bijvangst; bevindingen gaan naar *Voorgestelde correcties* | organisatorisch | staand, onderbouwd |
-| Het oefententamen is representatief en verandert inhoudelijk voorlopig niet; de vorm volgt de conventies | organisatorisch | staand; op 9 oktober 2026 (#377) verduidelijkt: de bevriezing betreft de onderwerpen, de aard van de vragen en het niveau, niet de vorm. Eerste geval, **uitgevoerd**: de drie `is`-asserts in `solutions/PGM1_examen.ipynb` zijn omgezet naar `== True`/`== False` zonder dat een vraag, een onderwerp of een niveau veranderde. Of het oefententamen de overige conventies volgt, is niet gemeten |
+| Het oefententamen is representatief en verandert voorlopig niet; bij PGM1 volgt de vorm de conventies | organisatorisch | staand; op 9 oktober 2026 (#377) verduidelijkt voor het oefententamen van PGM1: de bevriezing betreft daar de onderwerpen, de aard van de vragen en het niveau, niet de vorm. Eerste geval, **uitgevoerd**: de drie `is`-asserts in `solutions/PGM1_examen.ipynb` zijn omgezet naar `== True`/`== False` zonder dat een vraag, een onderwerp of een niveau veranderde. Of dat oefententamen de overige conventies volgt, is niet gemeten |
 | PGM1 houdt geen gewicht op creëren-niveau; dat is een keuze en geen restant | didactisch | gesloten op 4 oktober 2026 (#104, C4), **uitgevoerd**: de PGM1-matrijs kent geen rij op dat niveau |
 | Het gewicht dat A4 achterliet gaat naar A3; de PGM1-matrijs wordt 80% toepassen en 20% analyseren | organisatorisch | gesloten op 4 oktober 2026 (#104, C4), **uitgevoerd** in dezelfde wijziging |
 | Leesvragen mogen fout aflopen; de fout is het antwoord | didactisch | staand, onderbouwd |
@@ -752,18 +752,19 @@ De prioriteit ligt bij het **afronden van PGM1 per week**: onderwerp, opgaven,
 uitwerkingen en docentenhandleiding compleet, zodat het materiaal live kan. Wat
 daar niet aan bijdraagt, wacht.
 
-**Het oefententamen verandert inhoudelijk voorlopig niet.** Het is
-representatief voor het tentamen dat wordt afgenomen; de onderwerpen en de aard
-van de vragen wijken nauwelijks af. Vastgesteld door de vakdeskundige, want het
-echte tentamen staat niet in de repository.
+**Het oefententamen verandert voorlopig niet.** Het is representatief voor het
+tentamen dat wordt afgenomen; de onderwerpen en de aard van de vragen wijken
+nauwelijks af. Vastgesteld door de vakdeskundige, want het echte tentamen staat
+niet in de repository.
 
-**De bevriezing gaat over de inhoud en niet over de vorm.** Wat vastligt zijn de
-onderwerpen, de aard van de vragen en het niveau. De conventies gelden er wel:
-het oefententamen staat in `source/` en valt dus onder
-`conventies/conventies.md`, dat onder *Reikwijdte* één uitzondering voor zijn
-`Opgave N`-koppen vastlegt. Vastgesteld door de vakdeskundige op 9 oktober 2026
-bij werkitem #377, in deze woorden: *"het tentamen verandert niet inhoudelijk,
-maar moet wel PGM1 zaken/details aanhouden"*.
+**Bij het oefententamen van PGM1 gaat de bevriezing over de inhoud en niet over
+de vorm.** Wat daar vastligt zijn de onderwerpen, de aard van de vragen en het
+niveau. De conventies gelden er wel: dat oefententamen staat in `source/` en
+valt dus onder `conventies/conventies.md`, dat onder *Reikwijdte* één
+uitzondering voor zijn `Opgave N`-koppen vastlegt. Vastgesteld door de
+vakdeskundige op 9 oktober 2026 bij werkitem #377, in deze woorden: *"het
+tentamen verandert niet inhoudelijk, maar moet wel PGM1 zaken/details
+aanhouden"*.
 
 Het eerste geval is de `is`-regel. In #377 zijn de drie asserts met `is` in
 `solutions/PGM1_examen.ipynb` omgezet naar `== True` en `== False`; zie *Geen

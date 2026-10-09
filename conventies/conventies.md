@@ -33,10 +33,10 @@ per directory voorgelegd, zie *Wat er niet meer toe doet, mag weg* in
 `solutions/PGM1_examen.ipynb` en `solutions/PGM2_examen.ipynb`) houden hun
 `Opgave N`-koppen. Een tentamenvraag is geen opgave, opdracht of stap in de zin
 van [begrippen.md](begrippen.md), en daarop rust de uitzondering; dat het
-oefententamen bij besluit bevroren is, geldt alleen zijn inhoud en vrijwaart de
-vorm niet. Zie `curriculum/uitgangspunten.md`. De hook `check-kopwoord` slaat
-deze vier bestanden daarom over, en die uitsluiting hoort hier te staan en niet
-alleen in de hookconfiguratie.
+oefententamen van PGM1 bij besluit bevroren is, geldt alleen zijn inhoud en
+vrijwaart zijn vorm niet. Zie `curriculum/uitgangspunten.md`. De hook
+`check-kopwoord` slaat deze vier bestanden daarom over, en die uitsluiting hoort
+hier te staan en niet alleen in de hookconfiguratie.
 
 **Het zijn er precies vier, en de lijst hierboven is uitputtend.** Een
 oefenbestand is geen oefententamen. Bij werkitem #178 zijn de twee oefenbestanden
