@@ -380,7 +380,7 @@ Opgaven worden getest met `assert`. Dat is de standaardvorm in dit materiaal:
   string, of nul als invoer laat vaak zien of de student het echt begrepen
   heeft.
 
-### Geen `is` in PGM1
+## Geen `is` in PGM1
 
 PGM1 gebruikt geen `is` en geen `is not`. Dat geldt voor heel PGM1: de weken 1
 tot en met 7, en ook het oefententamen en zijn uitwerking. `is` vraagt naar
