@@ -402,8 +402,9 @@ omdat de student in PGM1 alleen `==` kent, en omdat `== False` een functie vangt
 die `None` teruggeeft. Vastgesteld door de vakdeskundige op 9 oktober 2026, bij
 werkitem #377.
 
-**Het materiaal volgt deze regel nog niet overal.** Twee practica van PGM1
-toetsen een boolean-uitkomst met `assert f()` en `assert not f()`:
+**Twee practica van PGM1 gebruiken een andere vorm.** Zij toetsen een
+boolean-uitkomst met `assert f()` en `assert not f()`, elk in het practicum en in
+de uitwerking:
 
 | Bestand | `assert not f()` | `assert f()` |
 |---|---|---|
@@ -412,11 +413,16 @@ toetsen een boolean-uitkomst met `assert f()` en `assert not f()`:
 | `practicals/7b_vallende_korrels.ipynb` | 3 | 1 |
 | `solutions/7b_vallende_korrels.ipynb` | 3 | 1 |
 
-Ze worden rechtgezet wanneer die bestanden aan de beurt zijn. Gemeten op
-9 oktober 2026 met een AST-scan over de codecellen en `python`-blokken van PGM1
-week 1-7: een `assert` waarvan de test `not` met een aanroep is, of een kale
-aanroep. Elders in PGM1 komen beide vormen niet voor. `is` en `is not` staan
-sinds #377 nergens meer in PGM1, geijkt op de 22 in PGM2 week 5.
+Gemeten op 9 oktober 2026 met een AST-scan over de codecellen en
+`python`-blokken van PGM1 week 1-7: een `assert` waarvan de test `not` met een
+aanroep is, of een kale aanroep. Elders in PGM1 komen beide vormen niet voor.
+`is` en `is not` staan sinds #377 nergens meer in PGM1, geijkt op de 22 in PGM2
+week 5.
+
+**Of de regel ook over die 82 asserts gaat, is niet besloten.** Werkitem #377
+heeft alleen de asserts omgezet die het zelf introduceerde; het heeft deze vier
+bestanden niet aangeraakt. Zolang dat besluit niet is genomen, bindt de regel
+hierboven wie een assertion schrijft of herziet, en niet deze vier bestanden.
 
 ## Opmaak
 
