@@ -49,6 +49,11 @@ Bij de poort van #270 (24 september 2026) is voor sessie 2 besloten:
   vooruitverwijzing naar week 7 mag.
 - **Een beginstand** (V12): de eindstand van week 5 staat als download in
   `source/practicals/assets/creatures.py`, voor wie week 5 niet af heeft.
+  **Herroepen op 19 oktober 2026, bij de poort van #382:** de download is
+  verwijderd, en wie week 5 niet af heeft, begint met de uitwerking
+  `source/solutions/12_creatures.ipynb`. Grond van de vakdeskundige: *"we hebben
+  de losse versie toch niet nodig? studenten kunnen die immers als ze willen
+  reconstrueren uit de uitwerking"*.
 - **Termen** (V7): *subklasse*, *superklasse* en *overschrijven*, niet
   *subclass*, *basisclass* of *override*; zie `conventies/begrippen.md`.
 
@@ -79,7 +84,9 @@ Bij de poort van #271 (25 september 2026) is besloten, voor sessie 2 en 3:
   niet belooft* in week 6.
 - **Een beginstand van week 6** (VP12) staat als download in
   `source/practicals/assets/`, met de assertions van week 5 en 6 onderaan, en volgt
-  week 6 na de wijzigingen hierboven.
+  week 6 na de wijzigingen hierboven. **Herroepen op 19 oktober 2026, bij de poort
+  van #382:** de download is verwijderd, en wie week 6 niet af heeft, begint met
+  de uitwerking `source/solutions/13_creatures.ipynb`. Grond: zie V12.
 
 Wat hieronder staat is de opzet zoals aangeleverd.
 
