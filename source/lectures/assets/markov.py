@@ -2,13 +2,11 @@ import random
 
 
 def create_dictionary(text):
-    """Creates a dictionary based on the argument 'text', storing what
-    words follow what.
+    """Maakt een dictionary die bijhoudt welke woorden in text op welk woord volgen.
 
-    In the output dictionary 'words_follow', the keys are words, and
-    each of the values is a list of strings of words that have followed
-    that specific word in the provided text. This list of words can
-    contain duplicates.
+    In de dictionary words_follow die de functie teruggeeft, zijn de sleutels
+    woorden. Elke waarde is een lijst met de woorden die in text op dat woord
+    volgden. Een woord kan meer dan één keer in zo'n lijst staan.
     """
     words_follow = {}
     previous_word = "$"
@@ -21,15 +19,16 @@ def create_dictionary(text):
         else:
             words_follow[previous_word] += [next_word]
 
-        previous_word = "$" if next_word[-1] in ".?!" else next_word
+        if next_word[-1] in ".?!":
+            previous_word = "$"
+        else:
+            previous_word = next_word
 
     return words_follow
 
 
 def generate_text(words_follow, number_of_words):
-    """Generates a text of length 'number_of_words' based on the markov
-    dictionary 'words_follow'.
-    """
+    """Genereert een tekst van number_of_words woorden met de Markov-dictionary words_follow."""
     previous_word = "$"
     text = ""
 

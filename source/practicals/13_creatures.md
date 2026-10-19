@@ -119,7 +119,9 @@ het object, en `self.__class__.__name__` de naam van die klasse, als string:
 | `Creature("Pop", 200, 1, 0).__class__.__name__` | `"Creature"` |
 
 Vervang in `__repr__` van `Creature` het woord `Creature` door
-`{self.__class__.__name__}`. De eerste regel van de f-string wordt dan:
+`{self.__class__.__name__}`. `__repr__` geeft een f-string terug, die je uit
+PGM1 kent, dus op de plek van de accolades komt de naam van de klasse. De
+eerste regel van de f-string wordt dan:
 
 ```python
             f"{self.__class__.__name__}({self.name}, level {self._level}, "

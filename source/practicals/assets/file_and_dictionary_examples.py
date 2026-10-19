@@ -8,24 +8,21 @@
 
 
 def count_words(filename):
-    """Word-counting function.
+    """Telt de woorden in een bestand.
 
-    Opens a file named 'filename', reads it,
-    and returns the number of words in the file.
+    Opent het bestand met de naam filename, leest het
+    en geeft het aantal woorden in het bestand terug.
 
-    Example: wc('a.txt')
+    Voorbeeld: count_words("a.txt") geeft 20
     """
     # Eerst moeten we het bestand "openen" (net als het openen van een boek
     # om dat te lezen). We vragen Python om de encoding "utf-8" te gebruiken,
     # omdat dat meer tekens dan ASCII accepteert.
-    fhand = open(filename, encoding="utf-8")
-
-    # Lees nu de hele inhoud van het bestand in een string met de naam "text",
-    # en sluit het bestand. Merk op dat dit alleen werkt voor relatief kleine
-    # bestanden; grotere bestanden moet je regel voor regel lezen door
-    # 'f.readline()' in een lus aan te roepen.
-    text = fhand.read()
-    fhand.close()
+    with open(filename, encoding="utf-8") as file:
+        # Lees nu de hele inhoud van het bestand in een string met de naam
+        # "text". Merk op dat dit alleen werkt voor relatief kleine
+        # bestanden; grotere bestanden moet je regel voor regel lezen.
+        text = file.read()
 
     # De tekst van het bestand is één lange string. Gebruik "split" om
     # de tekst op te delen in "woorden" begrensd door whitespace.
@@ -36,20 +33,19 @@ def count_words(filename):
 
 
 def count_vocab(filename):
-    """Vocabulary-counting function.
+    """Telt hoe vaak elk woord in een bestand voorkomt.
 
-    Opens a file named 'filename', reads it, and breaks it into words.
-    Then, for each word, counts how many times it occurs.
-    Prints a message giving the number of distinct words in the file,
-    and then returns a dictionary in which each word is a key and
-    the word's frequency is the value.
+    Opent het bestand met de naam filename, leest het en deelt het op in
+    woorden. Telt daarna voor elk woord hoe vaak het voorkomt. Drukt het
+    aantal woorden en het aantal verschillende woorden af, en geeft een
+    dictionary terug met elk woord als sleutel en het aantal keer dat het
+    voorkomt als waarde.
 
-    Example: vc('a.txt') might print 3 and return
-    {'I': 2, 'love': 3, 'spam': 42}
+    Voorbeeld: count_vocab("a.txt") drukt 20 en 13 af en geeft
+    {"Ik": 3, "wil": 2, "taarten": 2, "en": 3, ...}
     """
-    fhand = open(filename, encoding="utf-8")
-    text = fhand.read()
-    fhand.close()
+    with open(filename, encoding="utf-8") as file:
+        text = file.read()
 
     words = text.split()
     print("Er zijn", len(words), "woorden.")
@@ -62,5 +58,5 @@ def count_vocab(filename):
             vocab_count[word] += 1
 
     print("Er zijn", len(vocab_count), "*verschillende* woorden.\n")
-    # op deze manier kunnen we de gegevens in d later gebruiken!
+    # op deze manier kunnen we de gegevens in vocab_count later gebruiken!
     return vocab_count
