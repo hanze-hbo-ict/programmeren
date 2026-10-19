@@ -3285,3 +3285,43 @@ week 5-7 ze op 54 plekken gebruikt. Kaal `open`/`close` werd `with`, toen bleek 
 van 1×). Eén telverschil dat geen fout is: de eindredacteur telde f-strings als alle
 `ast.JoinedStr`-knopen, dus ook die in een formaatspecificatie (PGM2 week 1: 9), de
 orkestrator alleen de buitenste (week 1: 5). Zie bevinding 7, *Meting, 9 oktober 2026*.
+
+## Werkitem #382 - uitwerkingen voor de creatures-practica van PGM2 en voor 8_opstap
+
+Route: LUS, M, procesversie `17e790e3`. Gecombineerde verkenner/ontwerper, poort,
+auteur, daarna eerstejaars en onderwijskundige parallel. Geen #203-proef, dus geen
+referentie en geen budgetgrens. PR #389, `Closes #382`, gemerged op 19 oktober 2026
+(`0b637406`). Ontwerp: 0 van 1 herstelrondes gebruikt. Oplevering: 1 van 1.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator (C1, C2/C4-registratie, PR, plaatsing C5/C6, twee C7's) | niet beschikbaar | niet beschikbaar | C1 LUS/M |
+| curriculumontwerper (gecombineerd) | 130.516 | 5 min 51 s | C2; 4 voorlegpunten, 5 nieuwe criteria |
+| auteur, oplevering (afgebroken op een API-verbindingsfout, hervat) | 215.913 | 3 min 41 s na hervatting; daarvoor niet beschikbaar | C5; 12 bestanden, +2278/-624 |
+| beoordelaar-eerstejaars | 31.376 | 1 min 47 s | BLOKKEER, 1 blokkade (C4-11), 1 puntje |
+| beoordelaar-onderwijskundige | 89.952 | 11 min 55 s | AKKOORD MET PUNTJES, 0 blokkades, 3 puntjes |
+| auteur, herstel (hervat) | niet vastgesteld (gemeld 226.021) | 3 min 31 s | 3 bestanden, +9/-7 |
+| beoordelaar-eerstejaars, herstelmodus | 18.583 | 33 s | AKKOORD |
+| **totaal agents, bekend** | **486.340** | | plus de herstelstap |
+
+De afgebroken eerste auteursrun gaf geen verbruiksmelding. De melding na de hervatting
+(215.913 bij 3 toolaanroepen) is vermoedelijk het lopende totaal, inclusief die run; dat is
+niet vastgesteld. Is 226.021 eveneens een lopend totaal, dan kostte het herstel 10.108 en het
+werkitem 496.448. Dat is niet vastgesteld en telt niet mee. De orkestrator telde de twee
+meldingen eerst op en meldde 712.361 op de PR; gecorrigeerd op #382 en PR #389 (zie de
+bevinding van 19 oktober in `bevindingen.md`).
+
+**Wat de poort opleverde.** De vakdeskundige week bij V1 af van de aanbeveling (de eindstand
+als uitwerking, met een nieuwe download voor week 7). Zijn grond: *"we hebben de losse
+versie toch niet nodig? studenten kunnen die immers als ze willen reconstrueren uit de
+uitwerking"*. De downloads van week 5 en 6 vervielen en V12/VP12 in `practicum-oop.md`
+werden herroepen. Daardoor was het eerstejaarsperspectief nodig, dat C1 al voorwaardelijk
+had opgenomen. V3 en V4 gingen naar #383, net als later het puntje over de zichtbaarheid van
+uitwerkingen als beginstand.
+
+**Wat de beoordeling opleverde.** Eén terechte blokkade, en alleen de eerstejaars vond
+haar: de beginstand-passage van week 7 noemde `import random` niet. Het uitvoerbewijs van de
+auteur dekte dat niet, want hij voerde alle codecellen uit in plaats van wat de tekst laat
+overnemen. Na één herstel was het opgelost. De onderwijskundige mat zelf (nbclient, een
+AST-vergelijking met de oude eindstanden, 500 runs) en aanvaardde de wijziging in
+`leerlijn.md` r704 buiten de lijst van C4.
