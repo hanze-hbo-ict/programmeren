@@ -3325,3 +3325,40 @@ auteur dekte dat niet, want hij voerde alle codecellen uit in plaats van wat de 
 overnemen. Na één herstel was het opgelost. De onderwijskundige mat zelf (nbclient, een
 AST-vergelijking met de oude eindstanden, 500 runs) en aanvaardde de wijziging in
 `leerlijn.md` r704 buiten de lijst van C4.
+
+## Werkitem #381 - de veegpunten uit #375 in het PGM2-materiaal
+
+Route: LUS, L in breedte, procesversie `48544bdb`. Geen ontwerper en geen verkenner: de
+punten waren per stuk al besloten (C0, 9 oktober 2026). Vier open keuzes gingen direct naar de
+mens (C4). Daarna de auteur, en eerstejaars en redacteur parallel. Geen #203-proef, dus geen
+referentie en geen budgetgrens. PR #392, `Closes #381`, gemerged op 19 oktober 2026
+(`5522e9ca`). Oplevering: 0 van 1 herstelrondes gebruikt. De puntjes kostten geen ronde.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator (C1, drie C4-registraties, twee nieuwe items, PR, plaatsing C5/C6, twee C7's) | niet beschikbaar | niet beschikbaar | C1 LUS |
+| auteur, oplevering + stopvraag | 240.506 (lopend totaal) | 18 min 22 s + 1 min 11 s | C5; 9 commits, 33 paden, +279/-507 |
+| beoordelaar-eerstejaars (afgebroken op de sessielimiet, hervat) | 70.804 na hervatting; daarvoor niet beschikbaar | niet beschikbaar (de wandklok bevat de wachttijd) | AKKOORD MET PUNTJES, 0 blokkades, 9 puntjes |
+| beoordelaar-redacteur (afgebroken op de sessielimiet, hervat) | 65.663 na hervatting; daarvoor niet beschikbaar | niet beschikbaar (idem) | AKKOORD MET PUNTJES, 0 blokkades, 4 puntjes |
+| auteur, puntjes (zelfde context) | 43.449 (283.955 - 240.506) | 8 min 42 s + 3 min 32 s | 6 commits, 6 bestanden, +48/-34 |
+| beoordelaar-eerstejaars, nalezing puntjes | 43.530 | 1 min 50 s | AKKOORD MET PUNTJES, 2 puntjes |
+| beoordelaar-redacteur, nalezing puntjes | 52.189 | 2 min 15 s | AKKOORD MET PUNTJES, 3 puntjes |
+| **totaal agents, bekend** | **516.141** | | plus het deel van beide beoordelaars vóór de sessielimiet |
+
+De auteursmeldingen (231.891, 240.506, 274.936, 283.955) lopen op met kleine stappen bij
+weinig toolaanroepen. Het zijn dus lopende totalen; alleen de laatste telt. Of 70.804 en 65.663
+de afgebroken runs bevatten, is niet vastgesteld: de afgebroken runs gaven geen melding.
+
+**Wat de poort opleverde.** Vier vragen vóór het schrijven (nummering, terugverwijzing,
+afsplitsen, één PR). De vakdeskundige liet V3 eerst toelichten en koos daarna een apart item
+(#391). De stopvraag van de auteur (*jeugdklasse*) werd *omschrijven*. Na de beoordeling liet
+de vakdeskundige elf puntjes oplossen, waarvan vier fouten die al vóór de PR bestonden. Het
+voorstel om de datumnotatie van `Date` te vereenvoudigen bleek ruim 120 regels in vijf
+bestanden en de opgave `parse_dates` van week 7 te raken. Het werd #393.
+
+**Wat de beoordeling opleverde.** Geen blokkades. De eerstejaars vond vier fouten in het
+Markov-practicum die er al vóór de PR stonden, waaronder een verwachte dictionary die de
+leestekens wegliet. Dat kwam doordat de eerstejaars de verwachte uitvoer nadraaide. Bij het
+oplossen bleek dat de uitwerking `generate_text` teruggaf, terwijl de opdracht om afdrukken
+vroeg. Zonder ontwerpstap deed de auteur weinig ontwerpwerk: één stopvraag, en vier
+afwijkingen die de redacteur alle vier door een criterium gedekt vond.

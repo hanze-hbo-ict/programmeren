@@ -1754,6 +1754,14 @@ de twee C7's die hij als bron moest gebruiken. Hij meldde dat bij één patroonz
 van die bestanden hebben meegedraaid. Twee rollen, twee rondes, dezelfde toestand, allebei
 door de rol zelf gemeld en niet door de inrichting gevangen.
 
+**En bij #381 botste het (19 oktober 2026).** De auteur, twee beoordelaars en twee nalezers
+kregen allemaal dezelfde scratchpad. De auteur meldde bij de puntjes dat een hulpscript
+`nb.py` in die map *"door iets anders overschreven"* was, en week uit naar een eigen submap.
+Dat is geen leesprobleem meer maar schrijfinterferentie: rollen die tegelijk of na elkaar
+draaien, overschrijven elkaars gereedschap. De orkestrator had het voorstel hierboven niet
+toegepast. Pas bij de nalezing kreeg elke rol een eigen submap (`nalezing-ej/`,
+`nalezing-red/`).
+
 ## Een regelafbreking maakt een zoekpatroon blind - 1 oktober 2026
 
 **Wat er gebeurde.** Vier keer op één dag gaf een zoekpatroon nul omdat de gezochte zin over
@@ -1781,6 +1789,16 @@ dan een paar woorden nooit regelgewijs.** Sla de regels plat vóór het zoeken, 
 fragment dat zeker binnen één regel valt. En ijk een nul op een vindplaats die net zo lang is
 als wat je zoekt, niet op een kort woord dat overal past. Dit voorstel staat als invoer voor de
 evaluatie op #203.
+
+**Dezelfde blindheid door JSON-escaping (#381, 19 oktober 2026).** De orkestrator zocht in
+`solutions/14_basis.ipynb` naar `split\(.?/` en kreeg 0. In de notebookbron staat
+`text.split(\"/\")`: het aanhalingsteken is ge-escaped, en het patroon stond maar één teken
+toe tussen het haakje en de schuine streep. Ook hier was het patroon goed en het bestand anders
+opgemaakt. Het werd pas gevonden door de cellen geparsed te lezen. Zonder die tweede stap had
+de vakdeskundige het advies gekregen dat de nieuwe datumnotatie alleen verwachte uitvoer raakt.
+Daarmee was de opgave `parse_dates` van week 7 gemist. Het patroon was geijkt, maar op een
+string zonder aanhalingsteken. **Gevolg:** zoek in notebooks op geparste cellen, niet op de
+JSON-bron, zodra het patroon een aanhalingsteken of backslash kan raken.
 
 ## De meetpraktijk voor een hervatte agent werd voor de derde keer niet geraadpleegd - 2 oktober 2026
 
