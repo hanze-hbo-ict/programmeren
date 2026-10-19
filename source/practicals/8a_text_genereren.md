@@ -49,7 +49,7 @@ Formeel gezegd heet het proces dat we gebruiken om deze zinnen te genereren een 
 
 ## Teksten analyseren en genereren
 
-In het eerste deel van dit practicum implementeer je een Markovproces van de eerste orde om teksten mee te genereren. Om deze functie te schrijven heb je twee andere functies nodig: (1) één om een bestand te verwerken en een dictionary van geldige woordcombinaties te maken en (2) een andere om de nieuwe tekst daadwerkelijk te genereren.
+In het eerste deel van dit practicum implementeer je een Markovproces van de eerste orde om teksten mee te genereren. Daarvoor schrijf je twee functies: (1) één om een bestand te verwerken en een dictionary van geldige woordcombinaties te maken, en (2) een andere om met die dictionary de nieuwe tekst te genereren.
 
 Als je hier geen speciale code voor schrijft zal je programma woorden als verschillend beschouwen zelfs als ze alleen maar verschillen in hoofdletters of leestekens. Dit is voor dit practicum geen probleem: `spam`, `Spam` en `spam.` (met punt erachter) mag je allemaal als verschillende woorden beschouwen.
 
