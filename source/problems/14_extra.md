@@ -248,15 +248,17 @@ Loop over de kolommen, en geef elke kolom zo een waarde:
    zoals ervoor, net als bij `cols_to_win`.
 
 De recursie zit in de laatste stap: `opponent.scored_moves` roept
-`opponent.scores_for` aan, met één ply minder. Na `self.ply` lagen is de ply `0`,
-en daar stopt het.
+`opponent.scores_for` aan, met één ply minder. Dat is de recursieve aanroep, zoals
+je die in week 3 hebt leren schrijven. Na `self.ply` lagen is de ply `0`, en daar
+stopt het: ply `0` is het basisgeval uit punt 2, waarin de speler niet verder kijkt
+en de waarde meteen `board.score()` is.
 
 :::{admonition} Waarom één ply minder?
 :class: tip
 
 Kijk jij vier zetten vooruit en is de eerste zet de jouwe, dan blijven er voor de
-tegenstander nog drie over. Zo werkt de recursie naar het geval waarin niemand
-meer vooruitkijkt: ply `0`.
+tegenstander nog drie over. Zo werkt de recursie naar het basisgeval, waarin
+niemand meer vooruitkijkt: ply `0`.
 :::
 
 Test `scores_for` op dit bord, met `set_board("1211244445")`:
