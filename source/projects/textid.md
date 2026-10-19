@@ -122,7 +122,7 @@ Dit zou niets moeten afdrukken; als je code niet werkt krijg je een `AssertionEr
 
 De methode `make_sentence_lengths(self)` moet de tekst in `self.text` gebruiken om de dictionary `self.sentence_lengths` te vullen.
 
-Je kan hier voorbouwen op de code die je eerder hebt geschreven voor de [Markov-opgave](/problems/opdrachten/tekst_genereren/index) om het einde van zinnen te herkennen.
+Je kan hier voorbouwen op de code die je eerder hebt geschreven voor het [Markov-practicum](/practicals/8a_text_genereren) om het einde van zinnen te herkennen.
 
 Je kan onderstaande code gebruiken om je resultaten te controleren.
 

@@ -27,9 +27,9 @@ def generate_text(words_follow, n_words):
 
 ## Python's dictionaries gebruiken
 
-Je doel bij deze opgave is om een programma te schrijven dat uit zichzelf "betekenisvolle" tekst kan genereren! Je gaat dit doel bereiken door het schrijven van een algoritme dat met behulp van zogeheten Markovprocessen tekst genereert.
+Je doel bij dit practicum is om een programma te schrijven dat uit zichzelf "betekenisvolle" tekst kan genereren! Je gaat dit doel bereiken door het schrijven van een algoritme dat met behulp van zogeheten Markovprocessen tekst genereert.
 
-Deze opgave gebruikt een Python-dictionary om tekst te modelleren; en daarna te genereren.
+Dit practicum gebruikt een Python-dictionary om tekst te modelleren; en daarna te genereren.
 
 ### Voorbeeldcode
 
@@ -49,13 +49,13 @@ Formeel gezegd heet het proces dat we gebruiken om deze zinnen te genereren een 
 
 ## Teksten analyseren en genereren
 
-In het eerste deel van deze opgave implementeer je een Markovproces van de eerste orde om teksten mee te genereren. Om deze functie te schrijven heb je twee andere functies nodig: (1) één om een bestand te verwerken en een dictionary van geldige woordcombinaties te maken en (2) een andere om de nieuwe tekst daadwerkelijk te genereren.
+In het eerste deel van dit practicum implementeer je een Markovproces van de eerste orde om teksten mee te genereren. Om deze functie te schrijven heb je twee andere functies nodig: (1) één om een bestand te verwerken en een dictionary van geldige woordcombinaties te maken en (2) een andere om de nieuwe tekst daadwerkelijk te genereren.
 
-Als je hier geen speciale code voor schrijft zal je programma woorden als verschillend beschouwen zelfs als ze alleen maar verschillen in hoofdletters of leestekens. Dit is voor deze opgave geen probleem: `spam`, `Spam` en `spam.` (met punt erachter) mag je allemaal als verschillende woorden beschouwen.
+Als je hier geen speciale code voor schrijft zal je programma woorden als verschillend beschouwen zelfs als ze alleen maar verschillen in hoofdletters of leestekens. Dit is voor dit practicum geen probleem: `spam`, `Spam` en `spam.` (met punt erachter) mag je allemaal als verschillende woorden beschouwen.
 
 Hier zijn de details over de twee functies die je moet schrijven:
 
-## Opdracht 2: De functie `create_dictionary`
+## Opdracht 1: De functie `create_dictionary`
 
 `create_dictionary(filename)` krijgt een string als argument mee, wat de naam van een tekstbestand is dat wat voorbeeldtekst bevat. Het moet een dictionary teruggeven waarvan de sleutels woorden zijn die in de tekst voorkomen en waarvan de waardes lijsten met woorden zijn die op het sleutelwoord kunnen volgen. Merk op dat je een manier moet bedenken waarop je bijhoudt hoe vaak een woord op het sleutelwoord volgt. Dat wil zeggen dat als het woord "fiets" twee keer zo vaak wordt gevolgd door het woord "kopen" als door het woord "repareren", je dictionary deze informatie ook moet bevatten. Je kan bijvoorbeeld het woord meerdere keren opnemen in de lijst.
 
@@ -153,7 +153,7 @@ Om je code te controleren, kan je de volgende tekst in een plat tekstbestand zet
 A B A. A B C. B A C. C C C.
 ```
 
-Sla dit bestand op als `test.txt` in dezelfde directory waar je bestand `wk10ex3.py` staat. Kijk dan of je dictionary `words_follow` hetzelfde is als in het voorbeeld hieronder:
+Sla dit bestand op als `test.txt` in dezelfde directory als je Python-bestand. Kijk dan of je dictionary `words_follow` hetzelfde is als in het voorbeeld hieronder:
 
 ```ipython
 In [2]: words_follow
@@ -202,7 +202,7 @@ Out[2]:
 'en': ['42', 'spam.', 'taarten']}
 ```
 
-## Opdracht 3: De functie `generate_text`
+## Opdracht 2: De functie `generate_text`
 
 `generate_text(words_follow, n_words)` krijgt een dictionary met woordovergangen (gemaakt door je functie `create_dictionary` van hierboven) mee, en een positieve integer `n_words`. Hiermee moet `generate_text` een string van `n_words` woorden afdrukken.
 
@@ -210,7 +210,7 @@ Het eerste woord moet willekeurig gekozen zijn uit de woorden die kunnen volgen 
 
 Laat `'$'` niet terugkomen in de uitvoertekst; het is alleen een interne markering voor je functie.
 
-In deze opgave hoef je de woorden in het tekstbestand *niet* te ontdoen van leestekens. Laat leestekens staan zoals ze in de tekst voorkomen; en als je woorden genereert, hoef je je geen zorgen te maken als de gegenereerde tekst niet eindigt op een geldig leesteken, dat wil zeggen, je zou kunnen eindigen zonder punt, maar dat is prima. De tekst die je genereert zal niet perfect zijn, maar je kan verrast worden door hoe goed hij is!
+In dit practicum hoef je de woorden in het tekstbestand *niet* te ontdoen van leestekens. Laat leestekens staan zoals ze in de tekst voorkomen; en als je woorden genereert, hoef je je geen zorgen te maken als de gegenereerde tekst niet eindigt op een geldig leesteken, dat wil zeggen, je zou kunnen eindigen zonder punt, maar dat is prima. De tekst die je genereert zal niet perfect zijn, maar je kan verrast worden door hoe goed hij is!
 
 Je mag ervan uitgaan dat er geen leestekens op zichzelf (of andere randgevallen) in de invoer voorkomen. Het beste kan je bij zulke onverwachte gevallen gewoonweg een nieuwe zin beginnen. In het specifieke geval dat je bij een woord uitkomt dat alleen maar als het laatste woord in je trainingsdata voorkomt (dat wil zeggen dat er geen opvolgende woorden zijn), dan kan je gewoon verder gaan met het genereren van tekst vanaf het startsymbool `$`.
 
@@ -226,7 +226,7 @@ Out[4]: A B A. C C C. B A B C. A C. B A. C C C C C C.
 
 ## Een gegenereerd essay van 500 woorden
 
-Voor het laatste deel van deze opdracht moet je een interessant tekstbestand vinden, hiermee een Markovmodel van de eerste orde maken, en zelf wat tekst genereren! Een kunstmatig essay dus.
+Voor het laatste deel van dit practicum moet je een interessant tekstbestand vinden, hiermee een Markovmodel van de eerste orde maken, en zelf wat tekst genereren! Een kunstmatig essay dus.
 
 Je kan zelf kiezen welke invoertekst je wilt gebruiken, en die mag ook best Engels zijn! Je kan bijvoorbeeld willekeurige [scenes uit het werk van Shakespeare](https://ocw.mit.edu/ans7870/6/6.006/s08/lecturenotes/files/t8.shakespeare.txt) gebruiken... ook kindergedichtjes kunnen (soms) goed werken. Je kan ook songteksten, speeches, of je eigen werk gebruiken; alles is mogelijk.
 
@@ -239,7 +239,7 @@ Probeer gegenereerde essays niet te gebruiken als *echte* essays!
 :::{admonition} Platte-tekstbestanden
 :class: tip
 
-De makkelijkste manier om een platte-tekstbestand te maken dat je als invoer kan gebruiken is door de tekst te kopiëren van waar je hem gezien hebt via het menu of Control-C (Command-C op een Mac), en daarna een leeg tekstbestand te openen met Kladblok (Windows) of Teksteditor (Mac). Sla je `.txt`-bestand met platte tekst, bijvoorbeeld `spam.txt`, op in dezelfde directory als je bestand `wk10ex3.py`.
+De makkelijkste manier om een platte-tekstbestand te maken dat je als invoer kan gebruiken is door de tekst te kopiëren van waar je hem gezien hebt via het menu of Control-C (Command-C op een Mac), en daarna een leeg tekstbestand te openen met Kladblok (Windows) of Teksteditor (Mac). Sla je `.txt`-bestand met platte tekst, bijvoorbeeld `spam.txt`, op in dezelfde directory als je Python-bestand.
 :::
 
 :::{admonition} Teksteditor op Mac
