@@ -76,7 +76,7 @@ Onthoud dat, als je `or` gebruikt, je elke test helemaal moet uitschrijven, bijv
 if word[-1] == '.' or word[-1] == '?' or ...
 ```
 
-Je herinnert je misschien het alternatief met `in` (van het controleren van klinkers in een vorige opgave...): `if word[-1] in '.!':`
+Je herinnert je misschien het alternatief met `in` (van het controleren van klinkers in een vorige opgave...): `if word[-1] in '.?!':`
 :::
 
 ### Strategie
@@ -96,39 +96,47 @@ for new_word in words:
     previous_word = ...
 ```
 
-Als de gegeven zin `Ik lust spam. Ik eet taart!` is, moet de inhoud van d na het uitvoeren van deze code gelijk zijn aan `{'$': ['Ik', 'Ik'], 'Ik': ['lust', 'eet'], 'lust': ['spam'], 'eet' : ['taart']}`.
+Als de gegeven zin `Ik lust spam. Ik eet taart!` is, moet de inhoud van `words_follow` na het uitvoeren van de complete code gelijk zijn aan `{'$': ['Ik', 'Ik'], 'Ik': ['lust', 'eet'], 'lust': ['spam.'], 'eet': ['taart!']}`. De leestekens blijven aan de woorden vastzitten.
 
-Verder heb je code gezien waarmee je woorden kan tellen:
+Verder heb je code gezien waarmee je woorden kan tellen. Het is de functie `count_vocab` uit de voorbeeldcode hierboven:
 
 ```python
 def count_vocab(filename):
-    """Telt hoeveel verschillende woorden er in een bestand staan"""
-    # bestand lezen
-    with open(filename) as file:
+    """Telt hoe vaak elk woord in een bestand voorkomt.
+
+    Opent het bestand met de naam filename, leest het en deelt het op in
+    woorden. Telt daarna voor elk woord hoe vaak het voorkomt. Drukt het
+    aantal woorden en het aantal verschillende woorden af, en geeft een
+    dictionary terug met elk woord als sleutel en het aantal keer dat het
+    voorkomt als waarde.
+
+    Voorbeeld: count_vocab("a.txt") drukt 20 en 13 af en geeft
+    {"Ik": 3, "wil": 2, "taarten": 2, "en": 3, ...}
+    """
+    with open(filename, encoding="utf-8") as file:
         text = file.read()
 
-    # woorden tellen
     words = text.split()
-    print("Er zijn", len(words), "woorden")
+    print("Er zijn", len(words), "woorden.")
 
-    # het aantal keer dat elk woord voorkomt tellen
-    word_count = {}
+    vocab_count = {}
     for word in words:
-        if word not in word_count:
-            word_count[word] = 1
+        if word not in vocab_count:
+            vocab_count[word] = 1
         else:
-            word_count[word] += 1
-    print("Er zijn", len(word_count), "verschillende woorden")
+            vocab_count[word] += 1
 
-    # word_count teruggeven voor andere code
-    return word_count
+    print("Er zijn", len(vocab_count), "*verschillende* woorden.\n")
+    # op deze manier kunnen we de gegevens in vocab_count later gebruiken!
+    return vocab_count
 ```
 
-In het bijzonder heb je *wel* de code om bestanden te lezen bovenaan de functie nodig, maar **niet** de code om woorden te tellen daaronder...
+Daarvan heb je *wel* het begin nodig: het `with`-blok dat het bestand leest, en `words = text.split()`, dat de tekst in woorden opdeelt. De code om woorden te tellen daaronder, van de eerste `print` tot en met de `return`, heb je **niet** nodig.
 
-In plaats daarvan heb je de code over `new_word` en `previous_word` uit het andere fragment nodig. Hier is het resultaat:
+In plaats daarvan heb je de code over `new_word` en `previous_word` uit het eerste fragment nodig, `words_follow = {}` inbegrepen. Hier is het resultaat:
 
 ```python
+words_follow = {}
 previous_word = "$"
 
 for new_word in words:
@@ -214,14 +222,16 @@ In dit practicum hoef je de woorden in het tekstbestand *niet* te ontdoen van le
 
 Je mag ervan uitgaan dat er geen leestekens op zichzelf (of andere randgevallen) in de invoer voorkomen. Het beste kan je bij zulke onverwachte gevallen gewoonweg een nieuwe zin beginnen. In het specifieke geval dat je bij een woord uitkomt dat alleen maar als het laatste woord in je trainingsdata voorkomt (dat wil zeggen dat er geen opvolgende woorden zijn), dan kan je gewoon verder gaan met het genereren van tekst vanaf het startsymbool `$`.
 
-Hier zijn twee voorbeelden die de dictionary `words_follow` van hierboven gebruiken. Je eigen uitvoer zal verschillen omdat de woorden willekeurig gekozen zijn, maar ze zouden er op moeten lijken:
+Hier zijn twee voorbeelden met de dictionary uit `test.txt` van hierboven. Je eigen uitvoer zal verschillen omdat de woorden willekeurig gekozen zijn, maar ze zouden er op moeten lijken:
 
 ```ipython
-In [3]: generate_text(d, 20)
-Out[3]: B C. C C C. C C C C C C C C C C C. C C C. A
+In [1]: words_follow = create_dictionary('test.txt')
 
-In [4]: generate_text(d, 20)
-Out[4]: A B A. C C C. B A B C. A C. B A. C C C C C C.
+In [2]: generate_text(words_follow, 20)
+B C. C C C. C C C C C C C C C C C. C C C. A
+
+In [3]: generate_text(words_follow, 20)
+A B A. C C C. B A B C. A C. B A. C C C C C C.
 ```
 
 ## Een gegenereerd essay van 500 woorden
