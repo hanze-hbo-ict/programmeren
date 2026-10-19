@@ -17,9 +17,10 @@ Je werkt verder in je `creatures.py` van week 5, met de klassen `Creature` en
 `Party` en de assertions eronder. Laat die assertions staan: ze horen aan het
 eind van dit practicum nog steeds te slagen.
 
-Heb je week 5 niet af, download dan
-{download}`de eindstand van week 5 </practicals/assets/creatures.py>` en begin
-daarmee. De assertions van week 5 staan daar al onderaan.
+Heb je week 5 niet af, begin dan met de
+[uitwerking van week 5](/solutions/12_creatures). Neem de klassen en de
+assertions daaruit over in je `creatures.py`, in dezelfde volgorde. De cel die met
+opzet een foutmelding geeft, neem je niet over.
 
 ## Wat je gaat maken
 

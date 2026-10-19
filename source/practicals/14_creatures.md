@@ -16,10 +16,11 @@ exception gooien in plaats van stil terug te vallen.
 Je werkt verder in je `creatures.py` van week 6, met alle klassen en de assertions
 van week 5 en 6 eronder.
 
-Heb je week 6 niet af, download dan
-{download}`de eindstand van week 6 </practicals/assets/week_6/creatures.py>` en
-begin daarmee. Sla het bestand op als `creatures.py`. De assertions van week 5 en
-6 staan al onderaan.
+Heb je week 6 niet af, begin dan met de
+[uitwerking van week 6](/solutions/13_creatures). Neem `import random`, de
+klassen, de functies en de assertions van week 5 en 6 daaruit over in je
+`creatures.py`, in dezelfde volgorde. De cel die met opzet een foutmelding geeft,
+neem je niet over.
 
 Een paar van die assertions slagen na dit practicum niet meer, omdat je code
 bewust anders gaat werken. Bij de stap waar dat gebeurt, staat welke het zijn en
