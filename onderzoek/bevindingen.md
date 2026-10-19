@@ -1920,3 +1920,42 @@ niet in dezelfde commit vastzet, noemt de sectie en niet de regel.
   [herstelbeoordeling op PR #366](https://github.com/hanze-hbo-ict/programmeren/pull/366). Die
   twee ronden kostten 129.104 en 85.034 tokens en leverden drie blokkades plus de herhaling
   hierboven op.
+
+## Uitvoerbewijs voor een instructie voert de instructie uit, en een hervatte agent werd voor de vierde keer opgeteld - 19 oktober 2026
+
+**Wat er gebeurde, eerste deel.** Bij #382 vervielen de downloads met de eindstand van week 5
+en 6. Wie achterloopt, neemt de beginstand voortaan over uit de uitwerking van de vorige week.
+De passage in `practicals/14_creatures.md` somde op wat de student overneemt: *"de klassen, de
+functies en de assertions"*. Als bewijs voerde de auteur alle codecellen zonder celtag uit,
+300 keer zonder fout. In de uitwerking staat `import random` in dezelfde cel als
+`class Creature`, dus die regel draaide mee, terwijl de tekst hem niet noemde. De eerstejaars,
+die de uitwerking niet mag zien, las de opsomming letterlijk en gaf BLOKKEER: wie haar volgt,
+krijgt een `NameError`. Na het herstel nam de auteur uit de uitwerking met `ast` alleen wat de
+tekst noemt. IJking op de oude tekst gaf de `NameError` wel.
+
+**Waarom het ertoe doet.** Het bewijs mat het materiaal, terwijl het criterium (C4-11) over de
+instructie ging. Dat is *meet het ding zelf, niet iets ernaast* (`CLAUDE.md` §*Meten*), in een
+vorm die nog niet beschreven stond: het uitgevoerde ding was echt en compleet, maar het was
+niet het ding dat de student krijgt. De eerstejaars ving het juist omdat die rol de uitwerking
+niet kende. Bij een route met alleen de onderwijskundige was het waarschijnlijk doorgegaan;
+die meet tegen de uitwerking. Dat is niet vastgesteld.
+
+**Wat er gebeurde, tweede deel.** De orkestrator telde de twee meldingen van de hervatte
+auteur op (215.913 + 226.021) en meldde 712.361 op PR #389, voor de merge. Dat is de fout uit
+*Een hervatte agent meldt zijn tokens als lopend totaal* (23 september), voor de vierde keer;
+zie *De meetpraktijk voor een hervatte agent werd voor de derde keer niet geraadpleegd*
+(2 oktober). De toolaanroepen wezen er opnieuw op: 3 aanroepen bij de melding van 215.913.
+De orkestrator zag het pas toen hij `metingen.md` opende om de tabel te schrijven. Daar staat
+de praktijk, en niet in `/orc`, waar de meetregel wordt geschreven.
+
+**Wat het veranderde.** De telling is op #382 en PR #389 gecorrigeerd; in `metingen.md` telt
+het herstel als niet vastgesteld. In de instructies is niets veranderd. Twee voorstellen voor
+de vakdeskundige, geen van beide beslist:
+
+- **Hervatte agent.** Het voorstel van 23 september, 30 september en 2 oktober staat nog
+  open: leg de telling van een hervatte agent vast in `/orc`, bij de meetregel. Vier keer
+  dezelfde fout na drie bevindingen bevestigt wat de bevinding van 2 oktober al concludeerde:
+  een bevinding die de orkestrator niet op het moment zelf leest, bereikt hem niet.
+- **Uitvoerbewijs.** Laat de auteursrol bij een instructie die de student code laat
+  overnemen, uitvoeren wat de instructie noemt, en niet het bestand waaruit wordt overgenomen.
+  Eén geval; of het vaker speelt, is niet gemeten.
