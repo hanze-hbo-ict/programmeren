@@ -33,7 +33,7 @@ Dit practicum gebruikt een Python-dictionary om tekst te modelleren; en daarna t
 
 ### Voorbeeldcode
 
-Je kan een paar voorbeelden vinden van hoe je in Python dictionary's kan gebruiken om tekst te analyseren met een *vocabulaireteller* (in tegenstelling tot een woordenteller) in {download}`deze voorbeeldcode; dit kan je gebruiken als naslagwerk voor wat je nodig hebt... <assets/file_and_dictionary_examples.py>`
+Je kan een paar voorbeelden vinden van hoe je in Python dictionaries kan gebruiken om tekst te analyseren met een *vocabulaireteller* (in tegenstelling tot een woordenteller) in {download}`deze voorbeeldcode; dit kan je gebruiken als naslagwerk voor wat je nodig hebt... <assets/file_and_dictionary_examples.py>`
 
 ## Tekst genereren met Markovprocessen
 
