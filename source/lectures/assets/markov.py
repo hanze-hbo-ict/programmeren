@@ -19,7 +19,10 @@ def create_dictionary(text):
         else:
             words_follow[previous_word] += [next_word]
 
-        previous_word = "$" if next_word[-1] in ".?!" else next_word
+        if next_word[-1] in ".?!":
+            previous_word = "$"
+        else:
+            previous_word = next_word
 
     return words_follow
 
