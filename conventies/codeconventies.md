@@ -143,12 +143,10 @@ letterlijk in de namen.
 
 **De toets** is of het proza de naam moet terugvertalen. Moet het dat, dan
 draagt de naam zijn betekenis niet. `solutions/5a_ascii_art.ipynb` schrijft in
-`print_triangle` `for i in range(0, width)` met daarbinnen
-`for j in range(0, i + 1)`, en de markdowncel direct erna moet beide namen
-terugvertalen: "het regelnummer is gelijk aan het aantal symbolen dat afgedrukt
-moet worden" voor `i`, en "de eerste `j`-lus (de kolomlus)" voor `j`. Het proza
-levert daar de woorden *regel* en *kolom* die de namen zelf niet dragen. Dat is
-het signaal.
+`print_triangle` `for i in range(0, width)`, en de markdowncel direct erna
+moet die naam terugvertalen: "het regelnummer is gelijk aan het aantal symbolen
+dat afgedrukt moet worden". Het proza levert daar het woord *regel* dat de naam
+zelf niet draagt. Dat is het signaal.
 
 **Wordt de variabele niet gelezen, dan is er niets te kiezen.** Dan heet zij
 `_`, ook in een comprehension. Dat is besluit VP7, vastgelegd in
