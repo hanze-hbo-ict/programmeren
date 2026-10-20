@@ -3362,3 +3362,40 @@ leestekens wegliet. Dat kwam doordat de eerstejaars de verwachte uitvoer nadraai
 oplossen bleek dat de uitwerking `generate_text` teruggaf, terwijl de opdracht om afdrukken
 vroeg. Zonder ontwerpstap deed de auteur weinig ontwerpwerk: één stopvraag, en vier
 afwijkingen die de redacteur alle vier door een criterium gedekt vond.
+
+## Werkitem #379 - ongebruikte lusvariabelen heten `_` (VP7), sluit #348
+
+Route: LUS, S, procesversie `eee8fc98`. Kleine route: auteur, daarna eerstejaars en redacteur
+parallel. Geen ontwerper of verkenner; het besluit lag vast (VP7, bevestigd bij #375). Geen
+#203-proef, dus geen referentie en geen budgetgrens. PR #397, `Closes #379` en `Closes #348`,
+gemerged op 20 oktober 2026 (`9d44bdd9`). Oplevering: 0 van 1 herstelrondes gebruikt. De puntjes
+kostten geen ronde.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator (C1, twee C4-registraties, PR, plaatsing C5/C6, C7) | niet beschikbaar | niet beschikbaar | C1 LUS/S |
+| auteur, oplevering + stopvraag + puntjes (zelfde context) | 141.115 (lopend totaal) | 7 min 0 s + 3 min 54 s + 4 min 45 s | C5; 3 commits, 14 bestanden, 41 hernoemingen |
+| beoordelaar-eerstejaars | 37.097 | 2 min 8 s | AKKOORD MET PUNTJES, 0 blokkades, 1 puntje |
+| beoordelaar-redacteur | 47.732 | 2 min 29 s | AKKOORD MET PUNTJES, 0 blokkades, 2 puntjes |
+| beoordelaar-redacteur, nalezing puntjes | 28.076 | 1 min 31 s | AKKOORD MET PUNTJES, 2 puntjes |
+| **totaal agents** | **254.020** | | |
+
+De auteursmeldingen (104.515, 123.044, 141.115) lopen op met kleine stappen bij weinig
+toolaanroepen (30, 10, 12). Het zijn dus lopende totalen; alleen de laatste telt. De
+orkestrator telde ze in de C7 op PR #397 eerst op (312.388) en meldde de vakdeskundige een
+bovengrens van 481.579. Dat is dezelfde fout als bij #382 (zie de bevinding van 19 oktober in
+`bevindingen.md`). De correctie staat op PR #397.
+
+**Wat de poort opleverde.** De stopvoorwaarde uit C1 (twijfel of een naam didactisch nodig
+is) ging af bij `solutions/5a_ascii_art.ipynb` cel 3 en 6, waar het proza op de oude namen
+leunde. De vakdeskundige liet hernoemen en het proza aanpassen; het voorbeeld in
+`codeconventies.md` volgde. Na de beoordeling koos de vakdeskundige *luswaarde* in plaats van
+*teller* en een nieuwe telling van de geneste lussen. Bij `5_opstap` Opdracht 1 (`for x`
+binnen `for x`, mogelijk een valkuil) besloot hij: *"de eerste opgave zou niet meteen een
+valkuil moeten zijn"*.
+
+**Wat de beoordeling opleverde.** Geen blokkades. Beide beoordelaars maten zelf en
+onafhankelijk van het script van de auteur; hun tellingen weken af in afbakening maar
+dekten dezelfde rest. De nieuwe telling in `codeconventies.md` is door de redacteur
+onafhankelijk nageteld en op de oorspronkelijke commit `bcf93842` geijkt; daarbij bleek dat
+de vastgelegde getallen al vóór dit werkitem achterliepen (#377). Twee puntjes staan op #395.
