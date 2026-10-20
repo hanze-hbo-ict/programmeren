@@ -70,6 +70,6 @@ bruikbaarste bevindingen kwamen voort uit het merken dat een getal niet klopte m
 wat er net was gedaan, niet uit het achteraf lezen van een transcript.
 
 Periodiek las de **onderzoeker** dit alles en vroeg wat eruit volgde: wat keerde
-terug, is een bevinding werkelijk geland, en gebeurde het daarna nog een keer. Die
+terug, was een bevinding werkelijk geland, en gebeurde het daarna nog een keer. Die
 rol stond buiten de lus, naast de eindredacteur, en draaide zelden. Haar laatste
 oplevering is het retrospectief dat deze track heeft afgesloten.
