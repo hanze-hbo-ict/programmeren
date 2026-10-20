@@ -3399,3 +3399,35 @@ onafhankelijk van het script van de auteur; hun tellingen weken af in afbakening
 dekten dezelfde rest. De nieuwe telling in `codeconventies.md` is door de redacteur
 onafhankelijk nageteld en op de oorspronkelijke commit `bcf93842` geijkt; daarbij bleek dat
 de vastgelegde getallen al vóór dit werkitem achterliepen (#377). Twee puntjes staan op #395.
+
+## Werkitem #391 - de overgang naar de canonieke asserts in PGM2 week 5
+
+Route: LUS, S, procesversie `5abffb04`. Geen ontwerper of verkenner: C0 gaf de opties en de
+orkestrator mat de dragende feiten in C1. Daarna de poort, de auteur en eerstejaars en
+redacteur parallel. Geen #203-proef, dus geen referentie en geen budgetgrens. PR #399,
+`Refs #391`, gemerged op 20 oktober 2026 (`65474f84`). Oplevering: 0 van 1 herstelrondes
+gebruikt.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator (C1 met meetbasis, C4-registratie, PR, plaatsing C5/C6, C7, nieuw item #400) | niet beschikbaar | niet beschikbaar | C1 LUS/S |
+| auteur | 86.224 | 5 min 47 s | C5; 4 bestanden, +51/-1 |
+| beoordelaar-eerstejaars | 62.638 | 2 min 4 s | AKKOORD, 0 blokkades |
+| beoordelaar-redacteur | 35.127 | 1 min 25 s | AKKOORD MET PUNTJES, 0 blokkades, 1 voorlegpunt, 2 puntjes |
+| **totaal agents** | **183.989** | | |
+
+Iedere rol draaide één keer, dus elke melding is een eigen totaal. De rollen noteerden zelf
+*niet beschikbaar*; de getallen komen uit de verbruiksmelding.
+
+**Wat de meting in C1 opleverde.** De overgang valt precies in week 5: PGM2 week 3 en 4
+hebben 94 asserts met `== True/False/None` en geen kale, vanaf week 5 zijn ze alle kaal, ook
+in het practicum `12_creatures`, dat C0 niet noemde. Weken 6 en 7 hebben er samen 72. Daarmee
+was de optie *week 5 terugzetten* zichtbaar een verschuiving van de breuk naar week 6. De
+vakdeskundige koos op alle drie de voorlegpunten de aanbeveling: uitleggen in `12b`, een
+verwijzing van één zin in `12_basis` en `12_creatures`, en `is None` erbij.
+
+**Wat de beoordeling opleverde.** Geen blokkades. De auteur beperkte de gelijkwaardigheid
+van `== False` en `not x` zelf tot booleans en legde de `None`-valkuil voor. De redacteur
+maakte er een voorlegpunt van. De eerstejaars zag dat `not` in PGM1 nergens wordt uitgelegd,
+terwijl het in 8 coderegels voorkomt. De vakdeskundige liet daar #400 van maken. De
+valkuil en de kopnaam van de conventie bleven onbeslist.
