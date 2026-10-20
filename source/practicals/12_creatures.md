@@ -116,6 +116,9 @@ De eerste twee krijg je cadeau:
 Neem ze over in je klasse, geef ze een docstring en schrijf `is_alive` en
 `is_critical` zelf.
 
+Waarom de assertions hieronder geen `== True` of `== False` meer hebben, lees je
+in het [college over `is` en `==`](/lectures/12b_data_object.ipynb#is-en-).
+
 ```python
 grom = Creature("Grom", 40, 8, 2)
 assert grom.take_damage(12) == 10
