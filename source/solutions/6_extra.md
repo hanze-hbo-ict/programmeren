@@ -6,7 +6,8 @@ Uitwerking van [de extra-opgave](/problems/6_extra). `save_rgb` komt uit de
 die zip uit en zet dit programma in dezelfde directory, dan slaagt de import.
 
 Het pad `../problems/assets/patroon.txt` hieronder loopt van deze uitwerking
-naar de asset; in de opgave zelf is dat gewoon `assets/patroon.txt`.
+naar de asset in de repository. Draai je het programma zelf, dan wijs je naar
+het `patroon.txt` dat je bij de opgave hebt gedownload.
 
 ```python
 def read_raster(filename):
