@@ -1,5 +1,13 @@
 # De rollenlus als experiment
 
+> **Gesloten op 20 oktober 2026.** Deze map is een archief en wordt niet meer
+> bijgehouden: er komen geen metingen, bevindingen of procesbesluiten meer bij, en
+> wat er staat blijft staan zoals het is opgeschreven - ook waar het in de
+> tegenwoordige tijd spreekt over een werkwijze die sindsdien is veranderd. De
+> ingang is [`retrospectief.md`](retrospectief.md), de laatste oplevering van de
+> onderzoekersrol; die rol is met de track vervallen. De lus zelf blijft en staat
+> beschreven in [`../rollen/rollen.md`](../rollen/rollen.md).
+
 Dit is de onderzoekskant van deze repository. Hier staat wat we over de
 **werkwijze** leren, gescheiden van het werk aan het materiaal zelf.
 
@@ -40,6 +48,7 @@ Waar een bevinding op één waarneming rust, staat dat erbij.
 
 | | |
 |---|---|
+| [`retrospectief.md`](retrospectief.md) | Wat de hele reeks heeft opgeleverd; de ingang tot dit archief |
 | [`metingen.md`](metingen.md) | Wat een ronde kost, per rol, per keer |
 | [`bevindingen.md`](bevindingen.md) | Wat we over de werkwijze hebben geleerd, met het bewijs en wat het veranderde |
 
@@ -48,20 +57,19 @@ mensen) en in `../.claude/agent-role-loop/core/` (de definities die de agents
 lezen). Dit document beschrijft niet hoe de lus werkt; het beschrijft wat we ervan
 leren.
 
-## Hoe je hieraan bijdraagt
+## Hoe dit is bijgehouden
 
-Noteer een meting zodra een rol klaar is, want de gegevens bestaan verder alleen in
-de sessiecontext. Dat is een verplichting van de orkestrator: alleen die krijgt de
-tokentelling te zien. Noteer een bevinding zodra iets misgaat op een manier die niet
-aan dat ene geval ligt - en schrijf erbij wat het veranderde, want een bevinding
-zonder gevolg is een anekdote.
+Een meting werd genoteerd zodra een rol klaar was, want de gegevens bestonden verder
+alleen in de sessiecontext; dat was een verplichting van de orkestrator, omdat alleen
+die de tokentelling te zien kreeg. Een bevinding werd genoteerd zodra iets misging op
+een manier die niet aan dat ene geval lag, met erbij wat het veranderde - een
+bevinding zonder gevolg is een anekdote.
 
-Wie de bevinding opschrijft, is degene die de fout voelde. Dat is met opzet zo: de
-bruikbaarste bevindingen van deze week kwamen voort uit het merken dat een getal
-niet klopte met wat er net was gedaan, niet uit het achteraf lezen van een
-transcript.
+Wie de bevinding opschreef, was degene die de fout voelde. Dat was met opzet zo: de
+bruikbaarste bevindingen kwamen voort uit het merken dat een getal niet klopte met
+wat er net was gedaan, niet uit het achteraf lezen van een transcript.
 
-Periodiek leest de **onderzoeker** dit alles en vraagt wat eruit volgt: wat keert
+Periodiek las de **onderzoeker** dit alles en vroeg wat eruit volgde: wat keerde
 terug, is een bevinding werkelijk geland, en gebeurde het daarna nog een keer. Die
-rol staat buiten de lus, naast de eindredacteur, en draait zelden - na één ronde is
-er geen patroon.
+rol stond buiten de lus, naast de eindredacteur, en draaide zelden. Haar laatste
+oplevering is het retrospectief dat deze track heeft afgesloten.
