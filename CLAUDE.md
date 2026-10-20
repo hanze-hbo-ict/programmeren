@@ -35,10 +35,11 @@ een sectie of een week. Zie de tabel in `.claude/agent-role-loop/core/loop.md`.
 - **Een besluit dat niet in `curriculum/` of `conventies/` landt, is niet genomen.**
   Dat is de harde regel van deze repo. Schrijf het op waar de volgende het
   terugvindt, niet in een commitbericht of een gesprek.
-- Een **procesbesluit** - een keuze over de werkwijze zelf - landde tot 20 oktober
-  2026 in `onderzoek/`. Nu die map een archief is, is nog niet besloten waar zo'n
-  besluit landt; dat ligt bij de vakdeskundige (werkitem #406). Tot dat besluit is
-  het expliciete menselijke besluit op GitHub de bron.
+- Een **procesbesluit** - een keuze over de werkwijze zelf - landt in de instructie
+  die hij wijzigt: `core/loop.md`, `.claude/commands/orc.md`, de betrokken rolprompt
+  of het betrokken contract. Daarnaast komt er één regel in het register
+  `.claude/agent-role-loop/core/procesbesluiten.md`: datum, besluit, bron en de
+  bestanden waarin het is ingevoerd.
 
 ## Meten
 
