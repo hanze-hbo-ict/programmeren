@@ -1241,9 +1241,9 @@ git-geschiedenis als vindplaats niet volstaat.
 ### F-strings en uitvoer
 
 PGM1 basis week 5 introduceert eenvoudige f-stringinterpolatie vóór de begincode,
-met een verplichte opdracht waarin de student zelf een meldingsstring maakt en
-die afzonderlijk afdrukt. Stringconstructie en afdrukken zijn verschillende
-handelingen. Meerdere argumenten bij `print` blijven volwaardig geldig.
+met een verplichte opdracht waarin de student zelf een vraag naar de dagkoers
+met het gegeven dagnummer maakt en die afzonderlijk afdrukt. Stringconstructie
+en afdrukken zijn verschillende handelingen. Meerdere argumenten bij `print` blijven volwaardig geldig.
 
 Kolomopmaak is een ondersteund hulpmiddel: gebruikte notatie wordt aangereikt en
 verklaard en mag worden overgenomen of opgezocht. Zelf uitlijning ontwerpen of
