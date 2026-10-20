@@ -14,9 +14,10 @@ Zie [loop.md](../loop.md) voor wanneer de poort nodig is.
 - **Vereiste wijzigingen:** verplicht bij HERZIEN, anders `<geen>`.
 - **Genomen beslissingen:** antwoorden en gekozen afbakening.
 - **Uitgestelde vragen:** expliciet veilig uitgesteld, of `<geen>`.
-- **Waar vastgelegd:** inhoudelijke besluiten in `curriculum/` of `conventies/`,
-  procesbesluiten in `onderzoek/`. Noem wat nog in de uitvoerings-PR wordt
-  vastgelegd; het GitHub-besluit is de bron, geen vervanging van die registratie.
+- **Waar vastgelegd:** inhoudelijke besluiten in `curriculum/` of `conventies/`;
+  voor een procesbesluit is nog geen plek belegd (werkitem #406). Noem wat nog in
+  de uitvoerings-PR wordt vastgelegd; het GitHub-besluit is de bron, geen
+  vervanging van die registratie.
 - **Vervolggrens:** bij hervatten na de rondelimiet: welke concrete vervolgopdracht
   en hoeveel extra rondes zijn toegestaan. Anders geldt de grens in loop.md.
 

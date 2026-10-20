@@ -31,5 +31,6 @@ Een meetbaar eindpunt voorkomt dat het proces nieuw werk blijft veroorzaken.
 De mens beslist vóór uitvoering van een ontwerp en bij nieuwe inhoudelijke
 keuzes, ook op een kleine route. Een expliciet besluit wordt geregistreerd als
 C4; een agent verzint het niet. De mens houdt zeggenschap over merge en over
-vervolgwerk buiten de vastgelegde grenzen. Procesbesluiten staan in `onderzoek/`,
-inhoudelijke besluiten in `curriculum/` of `conventies/`.
+vervolgwerk buiten de vastgelegde grenzen. Inhoudelijke besluiten staan in
+`curriculum/` of `conventies/`; waar een procesbesluit landt is nog niet besloten
+(werkitem #406).

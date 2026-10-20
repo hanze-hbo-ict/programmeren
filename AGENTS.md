@@ -15,6 +15,7 @@ herstelmodus krijgt alleen de expliciete herstelbijlage volgens C6. De auteur
 mag zijn context behouden bij gerichte reparatie. Roltooling volgt de taak en de
 werkelijke Codex-permissies; `.claude/settings.local.json` verleent hier geen rechten.
 
-Noem ontbrekende meetgegevens als niet beschikbaar. Verzonnen tokenaantallen of
-onvergelijkbare Claude/Codex-totalen zijn geen procesmeting. Neem procesbesluiten
-en resultaten op in `onderzoek/`. De mens beslist over merge.
+De meetregel bij een overdracht noemt rol, ronde, omvang en uitkomst; tokens en
+duur horen er niet meer bij. Noem een ontbrekend gegeven als niet beschikbaar en
+nooit als nul. `onderzoek/` is op 20 oktober 2026 als archief gesloten en krijgt
+geen nieuwe metingen of bevindingen. De mens beslist over merge.
