@@ -68,10 +68,11 @@ reviewers wijzigen geen materiaal of GitHub-status en installeren niets.
   Geen zelf ingevuld besluit. Houd C3-verbeterpunten bij de auteursinvoer.
 
 Inhoudelijke besluiten worden in curriculum/conventies vastgelegd; waar een
-proceskeuze landt is nog niet besloten (werkitem #406) en het menselijke besluit op
-GitHub is tot die tijd de bron. Een door jou geschreven besluitdiff laat je onafhankelijk
-redactioneel toetsen tegen het C4 vóór de PR ter merge wordt aangeboden. Dit mag
-in de gekozen beoordeling worden opgenomen; het hoeft geen aparte ronde te zijn.
+proceskeuze landt is nog niet besloten (werkitem #406) en het menselijke besluit
+op GitHub is tot die tijd de bron. Een door jou geschreven besluitdiff laat je
+onafhankelijk redactioneel toetsen tegen het C4 vóór de PR ter merge wordt
+aangeboden. Dit mag in de gekozen beoordeling worden opgenomen; het hoeft geen
+aparte ronde te zijn.
 
 ## Schrijven en beoordelen
 
@@ -80,7 +81,7 @@ in de gekozen beoordeling worden opgenomen; het hoeft geen aparte ronde te zijn.
    Relevante controles zijn groen vóór C5; bewijs staat in de kern.
 2. Open een PR met de C5-kern als beschrijving en uitgebreid als reactie.
    Gebruik `Closes #$ARGUMENTS` alleen als deze PR het hele werkitem afrondt.
-   Bij resterende proef of vervolgwerk: `Refs #$ARGUMENTS`; de issue blijft open.
+   Bij resterend vervolgwerk: `Refs #$ARGUMENTS`; de issue blijft open.
 3. Controleer de criteriumtoewijzing en benodigde invoer. Status Beoordeling.
    Start alleen de gekozen beoordelaars, onafhankelijk en zo mogelijk parallel.
    Geef C5-kern en C1-toewijzing. Houd uitwerkingscode buiten de eerstejaarsinvoer;
@@ -96,7 +97,7 @@ in de gekozen beoordeling worden opgenomen; het hoeft geen aparte ronde te zijn.
    loop.md. Dezelfde auteurscontext mag blijven; de beoordelaar is vers en krijgt
    de expliciete herstelbijlage. Noteer de rondeteller op GitHub.
 6. De mens beslist over merge. Pas daarna Status Klaar als het werkitem geheel
-   af is. Bij resterende proef blijft de issue open en staat de volgende stap erop.
+   af is. Blijft er vervolgwerk, dan blijft de issue open met de volgende stap.
 
 ## Rondes en meetregel
 
@@ -114,4 +115,5 @@ wat bleef. Gebruik exact het opgeleverde artefact, geen overgetypte reconstructi
 Lees je een verbruiksmelding van een agent, dan is die van een **hervatte** agent
 cumulatief: neem het verschil met de vorige melding van diezelfde agent. Je legt
 geen tokens meer vast, maar een dubbel geteld getal leidt tot de verkeerde keuze
-over doorgaan, splitsen of stoppen.
+bij de herstelgrens in loop.md, waar je gericht doorgaan, opsplitsen of stoppen
+voorlegt.
