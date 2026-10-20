@@ -3417,6 +3417,24 @@ voor dezelfde soort ingang zónder leesronde; hier is zij er wel, omdat alle vie
 bevindingen van 9 oktober in [bevindingen.md](bevindingen.md) over fouten van de orkestrator
 zelf gaan. Het oordeel van die lezer staat op de pull request van deze ingang.
 
+**Wat deze ingang zelf kostte.** De redacteur las haar twee keer: de eerste beoordeling
+180.740 tokens in 17 min 54 s, met BLOKKEER op vijf punten, en de herbeoordeling 156.214
+tokens in 16 min 40 s, met BLOKKEER op één punt. Samen **336.954 tokens** voor zes fouten in
+deze tekst. Vijf ervan waren feitelijk: een commit die de tabel als *"geen eigen commit"*
+opvoerde terwijl `995234fb` bestaat, de onware bewering dat PGM1 sinds deze route geen
+`try`/`except` kent, een dode verwijzing die wél bestaat (de case-sensitieve grep van de
+bronronde miste haar), een niet-bestaande processtap, en een verkeerde sectienaam. De zesde
+was rekenkundig: de wijde afbakening gaf meer blokken dan PGM1 fences heeft. De hertelling
+bracht vier getallen terug - 72 bestanden in plaats van 75, nauw 27 blokken met 20 treffers
+in plaats van 37 met 19, wijd 53 met 44 in plaats van 84 met 43, en vier examenbestanden in
+plaats van twee - en liet de nullen en de ijking 40/74/32/16 ongemoeid; die waren door beide
+lezers onafhankelijk gereproduceerd. De orkestratie van deze ingang is niet beschikbaar: zij
+liep in dezelfde sessie als de tweede orkestratorsessie hierboven. De herstelgrens raakte
+daarmee verbruikt, en op 20 oktober 2026 koos de vakdeskundige mergen zonder derde leesronde
+(`59aa9800`); de hertelling en de samenvoeging met `master` zijn dus door geen rol gelezen,
+en deze alinea evenmin. De drie veegpuntjes staan sinds diezelfde dag op #395, en de
+leerlijnvraag over de canonieke `assert f()` is #391 geworden en afgerond.
+
 ## Werkitem #382 - uitwerkingen voor de creatures-practica van PGM2 en voor 8_opstap
 
 Route: LUS, M, procesversie `17e790e3`. Gecombineerde verkenner/ontwerper, poort,
