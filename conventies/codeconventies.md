@@ -152,7 +152,7 @@ het signaal.
 
 **Wordt de variabele niet gelezen, dan is er niets te kiezen.** Dan heet zij
 `_`, ook in een comprehension. Dat is besluit VP7, vastgelegd in
-[`curriculum/leerlijn.md`](../curriculum/leerlijn.md) r676, en het staat
+[`curriculum/leerlijn.md`](../curriculum/leerlijn.md) r446-447, en het staat
 hierboven in het typewoordenboek als "bewust ongebruikt". Deze regel gaat over
 de lusvariabele die wél gelezen wordt: `for row in range(height)` zonder dat
 `row` ergens gelezen wordt, valt onder VP7 en niet hieronder. Over VP7 legt deze

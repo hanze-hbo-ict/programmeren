@@ -277,7 +277,7 @@ class World:
         self.pcol = initial_col
         self.state = 0
         self.prog = program
-        self.room = [[" "] * WIDTH for row in range(HEIGHT)]
+        self.room = [[" "] * WIDTH for _ in range(HEIGHT)]
 ```
 
 :::{admonition} `self.room`
