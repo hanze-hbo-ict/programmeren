@@ -368,8 +368,11 @@ krijgt om ván te leren.
 
 ## Assertions
 
-Opgaven worden getest met `assert`. Dat is de standaardvorm in dit materiaal:
-144 codeblokken bevatten er een, meestal twee of drie.
+Opgaven worden getest met `assert`. Dat is de standaardvorm in dit materiaal: van
+de 1.965 codeblokken in `source/` - codecellen en ` ```python `-fences, geteld
+zoals bij de tabel hieronder - bevatten **656** er minstens een. Drie is daarin
+zowel de mediaan als het meest voorkomende aantal; de helft van die blokken heeft
+er twee of drie, en het grootste heeft er 43.
 
 - Een opgave levert de student assertions waarmee hij kan zien of zijn functie
   klopt, of vraagt hem er zelf een aantal te schrijven.
@@ -378,6 +381,40 @@ Opgaven worden getest met `assert`. Dat is de standaardvorm in dit materiaal:
 - Dek ook een randgeval, niet alleen het gewone geval. Een lege lijst, een lege
   string, of nul als invoer laat vaak zien of de student het echt begrepen
   heeft.
+
+**Assertions staan buiten de functie die ze testen.** Je schrijft ze op
+modulehoogte onder de functie, of in een eigen testfunctie. Die tweede vorm wordt
+onderwezen in `lectures/3b_functies_aanroepen`, sectie *Assertions in een eigen
+functie*: een `testing()` naast `main()`, met de assertions erin en onderaan de
+aanroep `testing()`. Beide vormen mogen.
+
+Een assertion in de body van een werkende functie gebruiken we **niet**. Daar
+controleert hij de invoer in plaats van de uitkomst, en zo'n melding is voor de
+student niet te onderscheiden van een fout in zijn eigen werk - precies wat het
+punt hierboven verbiedt.
+
+Het materiaal volgde die regel al bijna overal. Een AST-telling over de codecellen
+én de ` ```python `-fences van heel `source/`, die per `assert` nagaat of er een
+`def` omheen staat en zo ja of dat een testfunctie is, geeft drie soorten:
+
+| Soort | Aantal | Waar |
+|---|---:|---|
+| op modulehoogte, onder de functie | **2.270** | 113 bestanden |
+| in een eigen testfunctie | **2** | `lectures/3b_functies_aanroepen` |
+| in de body van een werkende functie | **0** | nergens meer |
+
+De 2.270 op modulehoogte verdelen zich over PGM1 (weken 1 tot en met 7: 559),
+PGM2 (weken 8 tot en met 14: 1.486), de twee oefenbestanden in `extra/practice`
+(156), de uitwerkingen van de oefententamens (42) en `projects/`, `support/` en
+`problems/opdrachten/` (27).
+
+De derde rij stond op **14** toen dit werd besloten, alle veertien in
+`solutions/6_extra`: voorwaardecontroles als `assert len(raster) > 0` en
+`assert len(pixels) == 128`. Bij werkitem #408 zijn ze eruit gehaald. Elf
+vervielen, omdat het testblok op modulehoogte in datzelfde bestand de uitkomst
+al sterker vastlegt; drie staan nu als test in dat blok.
+
+Vastgesteld door de vakdeskundige op 20 oktober 2026, bij werkitem #408.
 
 ## Geen `is` in PGM1
 

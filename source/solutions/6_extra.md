@@ -16,32 +16,19 @@ def read_raster(filename):
         raster = []
         for regel in bestand:
             raster = raster + [regel[:-1]]
-    assert len(raster) > 0
-    breedte = len(raster[0])
-    assert breedte > 0
-    for regel in raster:
-        assert len(regel) == breedte
-        assert len(regel) > 0
-        for teken in regel:
-            assert teken == "." or teken == "#"
     return raster
 ```
 
 ```python
 def raster_to_pixels(raster):
     """Zet . en # om in witte en zwarte RGB-lijsten."""
-    assert len(raster) > 0
-    breedte = len(raster[0])
-    assert breedte > 0
     pixels = []
     for regel in raster:
-        assert len(regel) == breedte
         pixelregel = []
         for teken in regel:
             if teken == ".":
                 pixelregel = pixelregel + [[255, 255, 255]]
             else:
-                assert teken == "#"
                 pixelregel = pixelregel + [[0, 0, 0]]
         pixels = pixels + [pixelregel]
     return pixels
@@ -50,11 +37,6 @@ def raster_to_pixels(raster):
 ```python
 def scale_pixels(pixels):
     """Maak van iedere pixel een blok van 8 bij 8 pixels."""
-    assert len(pixels) > 0
-    breedte = len(pixels[0])
-    assert breedte > 0
-    for regel in pixels:
-        assert len(regel) == breedte
     geschaald = []
     for regel in pixels:
         brede_regel = []
@@ -75,18 +57,22 @@ from png import save_rgb
 
 def write_pattern_image(pixels):
     """Schrijf de geschaalde pixels als patroon.png."""
-    assert len(pixels) == 128
-    assert len(pixels[0]) == 128
     save_rgb(pixels, "patroon.png")
 ```
 
 Daarmee is het programma compleet. Het blok hieronder controleert de vier
-functies op de meegeleverde asset en schrijft `patroon.png` weg.
+functies op de meegeleverde asset en schrijft `patroon.png` weg. De assertions
+staan hier en niet in de functies zelf: zo testen ze wat er uit een functie
+komt, en dat is wat je wilt weten.
 
 ```python
 raster = read_raster("../problems/assets/patroon.txt")
 assert len(raster) == 16
 assert len(raster[0]) == 16
+for regel in raster:
+    assert len(regel) == 16
+    for teken in regel:
+        assert teken == "." or teken == "#"
 pixels = raster_to_pixels(raster)
 assert len(pixels) == 16
 assert len(pixels[0]) == 16
@@ -98,6 +84,8 @@ assert klein == [[[255, 255, 255], [0, 0, 0]]]
 geschaald = scale_pixels(pixels)
 assert len(geschaald) == 128
 assert len(geschaald[0]) == 128
+for regel in geschaald:
+    assert len(regel) == 128
 assert geschaald[16][32] == [0, 0, 0]
 assert geschaald[0][0] == [255, 255, 255]
 
