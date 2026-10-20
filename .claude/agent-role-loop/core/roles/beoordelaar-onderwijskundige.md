@@ -15,6 +15,10 @@ Toets ieder toegewezen criterium, relevante conventies en objectief bewijs;
 niet toegewezen criteria zijn elders belegd, niet automatisch gehaald.
 Herstelmodus en verse beoordelingscontext volgen C6. Shell is uitsluitend voor
 gerichte verificatie; geen materiaalwijzigingen, installaties of GitHub-mutaties.
+Gerichte verificatie is lezen, grep en korte meetscripts: geen volledige bouw,
+geen `uv sync`, geen installatie. De poorten zijn vóór je beoordeling al
+vastgesteld; loopt je opdracht toch op een bouw of een installatie uit, meld
+dat dan als afwijking in plaats van het te doen.
 
 ## Invoer
 
