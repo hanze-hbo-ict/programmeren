@@ -125,9 +125,10 @@ wijzen daar rechtstreeks naar, en de berekening eromheen wordt er leesbaar van:
 `width - row` zegt wat het is, en `width - i` in `solutions/5a_ascii_art.ipynb`
 zegt dat niet.
 
-Gemeten over de code in `source/`: van de 83 geneste lussen heeft de buitenste
-lus 19× `row` (met `col` als binnenste, 17×), 19× `i` (met `j`), 11× `ix1` (met
-`ix2`), 5× `regel` en 4× `col`. De `i`-vorm staat in vijf bestanden, de andere
+Gemeten over de code in `source/`: van de 84 geneste lussen heeft de buitenste
+lus 18× `row` (met `col` als binnenste, 17×), 20× `i` (met `j` als binnenste,
+9×), 9× `ix1` (met `ix2`), 8× `_`, 5× `regel` en 4× `col`. De `i`-vorm staat in
+zes bestanden, de andere
 buitenste namen samen in 27. Zwaarder dan die verhouding weegt waar ze staan:
 het college dat dit onderwerp onderwijst, `lectures/5a_geneste_lus.ipynb`,
 gebruikt in zijn zeven geneste lussen geen `i`, terwijl de uitwerking van
@@ -143,16 +144,14 @@ letterlijk in de namen.
 
 **De toets** is of het proza de naam moet terugvertalen. Moet het dat, dan
 draagt de naam zijn betekenis niet. `solutions/5a_ascii_art.ipynb` schrijft in
-`print_triangle` `for i in range(0, width)` met daarbinnen
-`for j in range(0, i + 1)`, en de markdowncel direct erna moet beide namen
-terugvertalen: "het regelnummer is gelijk aan het aantal symbolen dat afgedrukt
-moet worden" voor `i`, en "de eerste `j`-lus (de kolomlus)" voor `j`. Het proza
-levert daar de woorden *regel* en *kolom* die de namen zelf niet dragen. Dat is
-het signaal.
+`print_triangle` `for i in range(0, width)`, en de markdowncel direct erna
+moet die naam terugvertalen: "het regelnummer is gelijk aan het aantal symbolen
+dat afgedrukt moet worden". Het proza levert daar het woord *regel* dat de naam
+zelf niet draagt. Dat is het signaal.
 
 **Wordt de variabele niet gelezen, dan is er niets te kiezen.** Dan heet zij
 `_`, ook in een comprehension. Dat is besluit VP7, vastgelegd in
-[`curriculum/leerlijn.md`](../curriculum/leerlijn.md) r676, en het staat
+[`curriculum/leerlijn.md`](../curriculum/leerlijn.md) r446-447, en het staat
 hierboven in het typewoordenboek als "bewust ongebruikt". Deze regel gaat over
 de lusvariabele die wél gelezen wordt: `for row in range(height)` zonder dat
 `row` ergens gelezen wordt, valt onder VP7 en niet hieronder. Over VP7 legt deze
