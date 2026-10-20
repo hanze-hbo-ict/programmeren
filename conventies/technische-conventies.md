@@ -315,6 +315,11 @@ De twee formaten worden verschillend gecontroleerd, en geen van beide volledig:
 | Codecel **zonder** `skip-execution` | nee | ja, bij de build |
 | Codecel **met** `skip-execution` | nee | nee |
 
+Syntax- en opmaakcontrole van een Python-fence bewijst geen uitvoering. Voer
+gewijzigde voorbeelden ook los uit en vergelijk getoonde tekst met de werkelijk
+geproduceerde uitvoer. Bekijk de gebouwde pagina voordat je beweert dat zichtbare
+regels of kolommen goed worden weergegeven; broncode of CSS bewijst dat niet.
+
 De laatste rij is de enige plek waar code door niets wordt gecontroleerd. Dat is
 geen ontwerpfout maar de prijs van interactiviteit: een cel die de lezer zelf
 moet uitvoeren, moet leeg aankomen.

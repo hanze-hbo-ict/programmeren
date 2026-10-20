@@ -386,6 +386,7 @@ draait wel.
 | Eerst de weken van PGM1 afronden; het materiaal moet zo snel mogelijk live | organisatorisch | staand |
 | Een docentenhandleiding gaat per week en helpt de docent die week te geven; hij is geen leeswijzer | didactisch | gesloten, **deels uitgevoerd**: week 1 en 2 staan er met #182; de weken 3 tot en met 12 ontbreken, zie #95 |
 | Handleidingen zijn repo-materiaal en geen onderdeel van het boek | organisatorisch | gesloten, uitgevoerd |
+| Eenvoudige f-stringinterpolatie verplicht in PGM1 basis week 5; opmaak blijft ondersteund | didactisch | gesloten, uitgevoerd; #378/C4 en akkoord op C2, 20 oktober 2026; zie *F-strings en uitvoer* |
 | Objectmethoden pas vanaf PGM2 week 1, los van de mutatiegrens in PGM1 week 7 | didactisch | staand, onderbouwd |
 | Dictionaries en de Markov-opgave verhuizen van PGM1 week 7 naar PGM2 week 1 | didactisch | staand, **uitgevoerd**: PGM2 week 1 kreeg de datastructuren en de Markov-opgave met #148, PGM1 week 7 raakte ze kwijt met #315 |
 | Objecten pas in PGM2 | didactisch | staand, onderbouwd |
@@ -1236,6 +1237,28 @@ wijziging - zie de regel over kruisverwijzingen in `conventies/schrijfwijzer.md`
 
 **Te heropenen wanneer** blijkt dat verwijderd materiaal toch werd gebruikt en de
 git-geschiedenis als vindplaats niet volstaat.
+
+### F-strings en uitvoer
+
+PGM1 basis week 5 introduceert eenvoudige f-stringinterpolatie vóór de begincode,
+met een verplichte opdracht waarin de student zelf een meldingsstring maakt en
+die afzonderlijk afdrukt. Stringconstructie en afdrukken zijn verschillende
+handelingen. Meerdere argumenten bij `print` blijven volwaardig geldig.
+
+Kolomopmaak is een ondersteund hulpmiddel: gebruikte notatie wordt aangereikt en
+verklaard en mag worden overgenomen of opgezocht. Zelf uitlijning ontwerpen of
+formatcodes onthouden is geen zelfstandig PGM1-leerdoel. Correcte uitvoer met
+andere kolombreedtes voldoet als inhoud en rij- en kolomverbanden kloppen.
+Leeruitkomsten en gewichten veranderen niet.
+
+PGM2 mag eenvoudige interpolatie als voorkennis veronderstellen, maar geen
+zelfstandige beheersing van datumcodes zoals `02d` en `04d`. Die blijven lokale
+ondersteuning vragen. Het Date-ontwerp en de uitlegvolgorde worden in #393
+beslist; #378 verandert geen PGM2-materiaal.
+
+Vastgesteld door de vakdeskundige bij #378/C4 en het akkoord op het C2-ontwerp
+op 20 oktober 2026. Te heropenen wanneer de toepassing of voorkennis een andere
+introductieplek of leergrens vraagt.
 
 ## Een besluit toevoegen
 
