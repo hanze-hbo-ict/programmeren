@@ -668,9 +668,9 @@ heeft nu geen comprehension en geen generator expression meer. Gemeten op
 generator expression) over de codecellen en `python`-blokken van de twaalf
 bestanden van week 6 (`lectures/6*`, `practicals/6*`, `problems/6_*`,
 `solutions/6_*`, `course/*6*`): twee treffers vóór de wijziging, beide in
-`solutions/6_extra.ipynb`, nul erna. Geschrapt op besluit van de vakdeskundige,
-30 september 2026, bij de poort van #326 (VP8): die vorm moet uit week 6, ook
-als `for`-lus.
+`solutions/6_extra.ipynb` (toen nog een notebook), nul erna. Geschrapt op
+besluit van de vakdeskundige, 30 september 2026, bij de poort van #326 (VP8):
+die vorm moet uit week 6, ook als `for`-lus.
 
 Twee regels stonden hier eerder en zijn nagemeten en geschrapt.
 
