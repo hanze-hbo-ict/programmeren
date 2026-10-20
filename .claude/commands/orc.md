@@ -18,15 +18,19 @@ project- en veld-ID's; labels uit oude routes bepalen niet welke agents starten.
 
 1. Lees de issue met `gh issue view $ARGUMENTS --json title,body,labels,comments`.
    Ontbreekt nummer of gewenste uitkomst, vraag gericht om wat nodig is.
-2. Raadpleeg open doorlopende issues en geparkeerde gevolgen die het werk raken.
+2. Draai `git fetch origin` vóórdat je meet, en noem als meetbasis de korte hash
+   van de commit van `origin/master` die je werkelijk hebt gelezen. De lokale
+   `master` kan tientallen commits achterlopen, en een meetbasis die alleen
+   "origin/master" zegt is niet te controleren.
+3. Raadpleeg open doorlopende issues en geparkeerde gevolgen die het werk raken.
    Leg de relevante koppelingen vast bij C0/C1. Een nieuw inhoudelijk besluit
    gaat naar de mens. Voor bestaand expliciet akkoord vraag je geen herhaling.
-3. Bij hervatten lees je de bestaande C1, procesversie, besluiten, ronde- en
-   budgetstand. Een lopende route blijft onder haar startversie. Start een nieuwe
+4. Bij hervatten lees je de bestaande C1, procesversie, besluiten en rondestand.
+   Een lopende route blijft onder haar startversie. Start een nieuwe
    route: zet Status Triage en schrijf zelf C1 volgens de routenorm. Publiceer
    verantwoordelijkheden, uitvoerende agents en criteriumtoewijzing.
    Een aparte `rol-triage` alleen op verzoek.
-4. AFWIJZEN: publiceer advies; sluit de issue alleen als het werk vervalt of
+5. AFWIJZEN: publiceer advies; sluit de issue alleen als het werk vervalt of
    elders is belegd. DOORLOPEND: label en laat open. LUS: voer alleen de gekozen
    stappen uit. Maak geen lege contracten voor overgeslagen stappen.
 
@@ -37,6 +41,12 @@ met exacte bron. Plak de tekst of schrijf hem naar een leesbaar bestand. Verwijs
 niet uitsluitend naar een issue die de rol niet kan ophalen. Geef relevante
 normvindplaatsen mee en laat de rol de bron gericht lezen; geen nieuwe
 samenvattingslaag naast curriculum/conventies onderhouden.
+
+Elke overdracht krijgt een **eigen pad**, een aparte map, die niet ook de
+artefacten van andere rollen bevat. Een beoordelaar die er de buildlogs moet lezen,
+krijgt anders het C2, het volledige C5 en de oordelen van anderen in dezelfde map
+mee, en dan hangt zijn isolatie aan wat hij niet opent in plaats van aan de
+inrichting.
 
 Begin een onafhankelijke rol zonder gesprekshistorie. Geen volledige transcripts
 overdragen. Ontbreekt een rolwrapper, meld het pad in `.claude/agents/` in plaats
@@ -57,8 +67,9 @@ reviewers wijzigen geen materiaal of GitHub-status en installeren niets.
   antwoord als C4. HERZIEN geeft een gerichte opdracht terug, STOP beëindigt.
   Geen zelf ingevuld besluit. Houd C3-verbeterpunten bij de auteursinvoer.
 
-Inhoudelijke besluiten worden in curriculum/conventies vastgelegd, proceskeuzes
-in onderzoek. Een door jou geschreven besluitdiff laat je onafhankelijk
+Inhoudelijke besluiten worden in curriculum/conventies vastgelegd; waar een
+proceskeuze landt is nog niet besloten (werkitem #406) en het menselijke besluit op
+GitHub is tot die tijd de bron. Een door jou geschreven besluitdiff laat je onafhankelijk
 redactioneel toetsen tegen het C4 vóór de PR ter merge wordt aangeboden. Dit mag
 in de gekozen beoordeling worden opgenomen; het hoeft geen aparte ronde te zijn.
 
@@ -87,20 +98,20 @@ in de gekozen beoordeling worden opgenomen; het hoeft geen aparte ronde te zijn.
 6. De mens beslist over merge. Pas daarna Status Klaar als het werkitem geheel
    af is. Bij resterende proef blijft de issue open en staat de volgende stap erop.
 
-## Rondes, budget en metingen
+## Rondes en meetregel
 
 Volg de herstelgrens in loop.md. Houd ontwerp- en opleveringsherstel apart bij;
 een nieuwe agent of sessie reset niets. Een volledige herbeoordeling vraagt een
 expliciete grond en omzeilt de grens niet. Bij overschrijding wacht de volgende
 agentstart op een menselijk besluit met een begrensde vervolgopdracht.
 
-Voor #203-proeven gelden tevens `onderzoek/203-proef.md` en de vooraf gekozen
-referentie. Controleer budget na iedere agentstap; bij overschrijding registreer
-je de stand en leg je gericht doorgaan, splitsen of stoppen voor. Onderbreek geen
-lopende stap. Niet vergelijkbare gegevens leveren geen besparingspercentage.
+Sluit elk gepubliceerd artefact af met **rol, ronde, omvang en uitkomst**. Tokens
+en duur horen er niet meer bij, en `onderzoek/` is sinds 20 oktober 2026 een
+archief: metingen en bevindingen worden daar niet meer bijgeschreven. Een
+ontbrekend gegeven is niet beschikbaar en geen nul. Bij afgebroken werk noteer je
+wat bleef. Gebruik exact het opgeleverde artefact, geen overgetypte reconstructie.
 
-Sluit elk gepubliceerd artefact af met rol, ronde, tokens, duur, omvang en
-uitkomst. Niet beschikbaar is geen nul. Bij afgebroken werk noteer je wat bleef.
-Gebruik exact het opgeleverde artefact, geen overgetypte reconstructie. Neem
-metingen over in `onderzoek/metingen.md` bij afsluiting of vóór sessie-einde;
-structurele bevindingen in `onderzoek/bevindingen.md`, met bewijs en gevolg.
+Lees je een verbruiksmelding van een agent, dan is die van een **hervatte** agent
+cumulatief: neem het verschil met de vorige melding van diezelfde agent. Je legt
+geen tokens meer vast, maar een dubbel geteld getal leidt tot de verkeerde keuze
+over doorgaan, splitsen of stoppen.
