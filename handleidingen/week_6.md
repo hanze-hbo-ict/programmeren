@@ -33,7 +33,7 @@ samen voor de student, en `source/course/practical_6.md`,
 `source/course/opgaven_6.md` en `source/course/solutions_6.md` zijn de
 omslagpagina's boven het werkcollege, de opgaven en de uitwerkingen. Er zijn
 drie uitwerkingen, `source/solutions/6_opstap.ipynb`,
-`source/solutions/6_basis.ipynb` en `source/solutions/6_extra.ipynb`, en ze
+`source/solutions/6_basis.ipynb` en `source/solutions/6_extra.md`, en ze
 zijn openbaar voor de student. De opstapuitwerking is de uitvoering van #194;
 voor het werkcollege staat er geen uitwerking in het boek.
 
@@ -383,7 +383,7 @@ de stap op papier in blok 5.
 Materiaal: de drie opgavebundels `source/problems/6_opstap.ipynb`,
 `source/problems/6_basis.ipynb` en `source/problems/6_extra.ipynb`, met de
 uitwerkingen `source/solutions/6_opstap.ipynb`,
-`source/solutions/6_basis.ipynb` en `source/solutions/6_extra.ipynb`.
+`source/solutions/6_basis.ipynb` en `source/solutions/6_extra.md`.
 
 Dit is zelfstandig werk onder begeleiding. Je legt weinig uit en loopt veel
 rond. De opstap oefent lezen en schrijven in zeven kleine opdrachten, de basis

@@ -354,7 +354,7 @@ voordat je vergelijkt.
 | Grond voor notebook | Aantal | Waar |
 |---|---|---|
 | Sheets, met of zonder code | 6 | uitsluitend `lectures/` |
-| Uitvoerbare code, geen sheets | 31 | verspreid |
+| Uitvoerbare code, geen sheets | 30 | verspreid |
 | Alleen invulcellen (werkboek) | 18 | `problems/` 15, `practicals/` 3 |
 | **Geen van drieën** | **27** | `solutions/` 11, `problems/` 8, `practicals/` 5, `lectures/` 2, `extra/` 1 |
 
@@ -371,6 +371,27 @@ niet in deze rij vallen: het college `11b_functie_als_argument` en zes uitwerkin
 met uitvoerbare code, en `11_opstap` en `11_lambda_basis` met invulcellen. Eén
 college springt eruit omdat het in `lectures/` geen enkele grond heeft:
 `4b_midterm.ipynb`. Tot #335 gold dat ook voor het college over de knapzak.
+
+Bij werkitem #386 kwam `solutions/6_extra` uit de tweede rij: 31 wordt 30, ook
+als delta en niet als volledige hertelling. Gemeten op `00c03b2a`: dat notebook
+had vijf codecellen en één markdowncel, geen enkele cel droeg een tag, en het
+draaide dus volledig bij de build - grond 2 gold ervoor. Op 20 oktober 2026 is
+besloten dat deze uitwerking uitgaat van de situatie van de student en niet van
+die van de build: `save_rgb` komt uit de `png.py` van het werkcollege
+`practicals/6b_images`, en die module zit alleen in
+`problems/assets/fraaie_plaatjes.zip` en staat nergens in `source/`. Daarmee
+verviel grond 2 en is het bestand een `.md` geworden, met de code in vijf
+` ```python `-fences.
+
+**Wat dat kost, volgens de verificatietabel hierboven.** Syntax en opmaak van
+die vijf fences worden nog gecontroleerd, uitvoeren niet meer: de assertions van
+deze uitwerking draaien niet bij de build. Dat geldt ook voor
+`solutions/5_mandelbrot_basis.md` en `solutions/5_mandelbrot_opstap.md`;
+`solutions/1_picobot.md` bevat geen Python. Deze afwijking is het doorlopende
+werkitem [#115](https://github.com/hanze-hbo-ict/programmeren/issues/115). Bij
+de herziening van #386 zijn de vijf fences buiten de build uitgevoerd, als één
+script naast de `png.py` uit de zip: alle assertions slagen en `patroon.png`
+komt uit als 128 bij 128 pixels die exact overeenkomen met `patroon.txt`.
 
 Dit wordt niet in één actie omgezet. Per document wordt bij de herziening
 bepaald welke grond geldt, en daarmee welk formaat. Voor uitwerkingen speelt de
