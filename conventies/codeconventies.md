@@ -125,9 +125,10 @@ wijzen daar rechtstreeks naar, en de berekening eromheen wordt er leesbaar van:
 `width - row` zegt wat het is, en `width - i` in `solutions/5a_ascii_art.ipynb`
 zegt dat niet.
 
-Gemeten over de code in `source/`: van de 83 geneste lussen heeft de buitenste
-lus 19× `row` (met `col` als binnenste, 17×), 19× `i` (met `j`), 11× `ix1` (met
-`ix2`), 5× `regel` en 4× `col`. De `i`-vorm staat in vijf bestanden, de andere
+Gemeten over de code in `source/`: van de 84 geneste lussen heeft de buitenste
+lus 18× `row` (met `col` als binnenste, 17×), 20× `i` (met `j` als binnenste,
+9×), 9× `ix1` (met `ix2`), 8× `_`, 5× `regel` en 4× `col`. De `i`-vorm staat in
+zes bestanden, de andere
 buitenste namen samen in 27. Zwaarder dan die verhouding weegt waar ze staan:
 het college dat dit onderwerp onderwijst, `lectures/5a_geneste_lus.ipynb`,
 gebruikt in zijn zeven geneste lussen geen `i`, terwijl de uitwerking van
