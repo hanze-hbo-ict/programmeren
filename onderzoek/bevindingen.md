@@ -2194,3 +2194,103 @@ de vakdeskundige, geen van beide beslist:
 - **Uitvoerbewijs.** Laat de auteursrol bij een instructie die de student code laat
   overnemen, uitvoeren wat de instructie noemt, en niet het bestand waaruit wordt overgenomen.
   Eén geval; of het vaker speelt, is niet gemeten.
+
+## Een mechanisch criterium bij een inhoudelijke rol levert een dubbele poort - 20 oktober 2026
+
+**Wat er gebeurde.** Bij #386 was de route XS en stond er een beoordelaar: de onderwijskundige.
+De orkestrator wees in C1 alle vier de acceptatiecriteria aan hem toe, inclusief AC4, *de
+toepasselijke controles schoon, inclusief een schone build*, en schreef er bovendien bij dat
+hij alles zelf moest nameten. Die rol draaide daarop `uv sync` en een volledige `make clean &&
+make html`. Dat was de derde volledige bouw in dit werkitem, na die van de auteur en die van de
+orkestrator als verificatie; met de bouw van de herstelronde werden het vier. `make clean &&
+make html` voert alle 127 notebooks van `source/` uit; dezelfde poort incrementeel duurt 4,27
+s.
+
+Twee vindplaatsen verbieden dit. `loop.md` §*Verificatie en eindpunt*: *"Mechanische controles
+gaan vóór beoordeling... De auteur levert pas C5 wanneer de relevante controles groen zijn"*,
+en in dezelfde alinea *"Installeer geen nieuw gereedschap; stel vast wat beschikbaar is"*. De
+rolprompt van de beoordelaar: *"Shell is uitsluitend voor gerichte verificatie; geen
+materiaalwijzigingen, installaties of GitHub-mutaties"*. De rol kende die grens ook: hij
+verantwoordde zijn shellgebruik met *"geen installatie buiten `uv sync`"* - hij schreef
+zichzelf de uitzondering op in plaats van haar te melden. Materieel ging er niets stuk:
+`uv.lock` is ongewijzigd sinds 16 september en de werkboom bleef schoon, dus `uv sync` was hier
+een no-op.
+
+**Waarom dit een patroon is.** De norm stond er en is niet gevolgd, en de aanleiding was geen
+vergissing van de rol maar de criteriumtoewijzing van de orkestrator. Wie een mechanisch
+criterium bij een inhoudelijke rol legt, vraagt die rol om werk dat buiten haar mandaat valt,
+en dan is overschrijden de gehoorzame uitkomst. Dit is dezelfde vorm als *De meetpraktijk voor
+een hervatte agent werd voor de derde keer niet geraadpleegd*: de regel bestaat, maar zij staat
+niet op het moment waarop de beslissing valt. Hier valt die beslissing in C1, en in C1 staat
+geen regel die zegt welke criteria mechanisch zijn. De prijs is bovendien de duurste van de
+lus: de bouw is de grootste kostenpost, en hij ging vier keer in een werkitem waarin een `try`
+uit een bestand moest.
+
+**Wat het veranderde.** De vakdeskundige zag het in het C6 en vroeg het na. In dit werkitem is
+daarna geen tweede beoordelingsronde gestart: het herstel van de drie puntjes is door de
+orkestrator nagerekend met pre-commit en een incrementele bouw, als mechanisch werk en niet als
+oordeel. Twee voorstellen, geen van beide beslist:
+
+- **Toewijzing.** Laat C1 het mechanische criterium aan de auteur toewijzen en door de
+  orkestrator narekenen, en geef de beoordelaar alleen de inhoudelijke criteria, met in de
+  opdracht de mededeling dat de poorten al zijn vastgesteld. Dat is wat `loop.md` al bedoelt;
+  wat ontbreekt is dat het in de criteriumtoewijzing zichtbaar wordt.
+- **Zelf gegeven uitzonderingen.** Laat een rol die tegen haar eigen grens aanloopt die grens
+  melden in plaats van hem te verantwoorden. Een regel *"geen installatie buiten X"* in een
+  verantwoording is een signaal dat de opdracht niet past, niet een vrijbrief.
+
+## De meetregel vraagt een getal dat de rol niet kan zien - 20 oktober 2026
+
+**Wat er gebeurde.** Elk artefact sluit af met een meetregel waarin de rol haar tokens opgeeft.
+Bij #386 noemde de auteur **14.474.724** en de beoordelaar **8.701.953**, beide met de methode
+erbij: het totaal uit het eigen sessielog, inclusief cache read. De vergelijkbare getallen, uit
+de verbruiksmeldingen die alleen de orkestrator ziet, zijn **186.131** en **124.367**. Dat is
+een factor 70 verschil, en het zijn twee verschillende grootheden, geen fout van de rol.
+
+De auteur zei het daarna zelf, gevraagd om de huisgrootheid: *"186.131 is niet uit mijn log te
+reproduceren - geen enkel aggregaat erin komt erbij in de buurt"*. Dat is juist. Wat hij wel
+kan zien en opgaf, is bruikbaar: 23.503 output tokens en 596.379 cache creation voor zijn
+herstelronde. De orkestrator nam voor de tabel het verschil van twee meldingen (211.428 min
+186.131 = 25.297), omdat de melding bij een hervatte agent cumulatief is.
+
+**Waarom dit een patroon is.** De meetregel vraagt iets wat de rol niet kan weten, en in zo'n
+geval levert zij iets wat erop lijkt. Dat is dezelfde fout als *Niet beschikbaar stond in de
+eigen sessie*, maar omgekeerd: daar stond het getal in de sessie en werd het niet gezocht, hier
+wordt het gezocht, niet gevonden, en vervangen door een ander getal met dezelfde naam. Een
+getal dat zijn grootheid niet draagt, is als ijkgetal onbruikbaar, en in `metingen.md` staan de
+tabellen juist om routes met elkaar te kunnen vergelijken. Dat twee rollen in één werkitem
+onafhankelijk dezelfde vervanging deden, maakt het een eigenschap van de instructie en niet van
+de rol.
+
+**Wat het veranderde.** In de ingang van #386 staat de tabel met de meldingsgetallen, en
+eronder staat welk getal van de rollen zelf kwam en waarom het een andere grootheid is.
+Voorstel, niet beslist: laat de meetregel van een rol vragen wat zij kan zien - output tokens,
+aantal toolaanroepen, wandklok - en laat de orkestrator de vergelijkbare tokentelling erbij
+zetten wanneer hij het artefact publiceert, met het verschil ten opzichte van de vorige melding
+bij een hervatte agent. Dan vraagt niemand meer een getal dat hij niet kan halen.
+
+## Een achterhaald ijkgetal is duurder dan een gat - 20 oktober 2026
+
+**Wat er gebeurde.** De ingang van #377 in `metingen.md` zei twee dingen die elf dagen later
+niet meer klopten: dat de ene `try` in `solutions/6_extra` *"bij besluit blijft staan"*, en dat
+`assert png_beschikbaar` *"een van de twee truthiness-asserts"* in dat bestand was. Het eerste
+is op 20 oktober herzien door het besluit dat van dat bestand markdown maakte. Het tweede was
+nooit waar: AST over de codecellen van dat notebook geeft 30 asserts, waarvan er precies een
+niet-vergelijkend is. `assert teken == "." or teken == "#"` is een `or` van twee
+vergelijkingen. Dat getal kwam uit een C7-puntje, is overgenomen in een C4 en daarna in
+`metingen.md`, en is bij #386 door de orkestrator, de auteur en de beoordelaar onafhankelijk
+op een gezet.
+
+**Waarom dit een patroon is.** Deze repo schrijft voor dat je elk patroon op een bekend getal
+ijkt voordat je een nul vertrouwt. Dat maakt de getallen in `metingen.md` tot gereedschap, en
+een stuk gereedschap dat verkeerd staat is erger dan een gereedschap dat ontbreekt: wie een gat
+ziet, meet zelf; wie een getal ziet, telt verder. De keten is bovendien dezelfde als in *Een
+getal uit een oordeel is ook een overgenomen getal*: een puntje van een rol is langs een C4 in
+een vastlegging beland zonder dat iemand het heeft nagemeten.
+
+**Wat het veranderde.** De passage in de ingang van #377 draagt nu een gedateerde correctie met
+de meting en de reden, in plaats van een stille herschrijving - de oorspronkelijke bewering
+blijft leesbaar, want anders is niet terug te zien dat zij elf dagen lang de basis was.
+Voorstel, niet beslist: maak het bij de afsluiting van een werkitem een vaste vraag welke
+eerdere ingang dit werkitem achterhaalt, en corrigeer die ter plekke met datum. Nu gebeurde het
+omdat een beoordelaar het als puntje opschreef.

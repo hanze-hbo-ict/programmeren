@@ -3376,9 +3376,19 @@ daarom apart, net als de twee installatiebestanden van week 0. *Kale assert* bet
 | PGM2 oefententamens | 2 | 0 | 0 | 14 | 0 | 0 |
 
 De twee bestanden van week 0 geven over de hele rij nul. Die ene `try` is de bekende in
-`solutions/6_extra`, die bij besluit blijft staan; de nul voor de kale assert geldt de
-omgezette vorm en niet elke assert op waarheidswaarde, want datzelfde bestand heeft nog
-`assert png_beschikbaar` - een van de twee truthiness-asserts die met #386 meegaan.
+`solutions/6_extra`. Zij bleef hier bij besluit staan en is op 20 oktober 2026 met **#386**
+vervallen, toen dat bestand markdown werd; de afspraak *geen `try`/`except` behalve die ene*
+geldt dus alleen voor de periode tussen 9 en 20 oktober 2026. De nul voor de kale assert geldt
+de omgezette vorm en niet elke assert op waarheidswaarde, want datzelfde bestand had toen nog
+`assert png_beschikbaar`.
+
+**Correctie van 20 oktober 2026.** Hierboven stond *"een van de twee truthiness-asserts"*, en
+dat getal staat ook in de C7-puntjes en het C4 van 9 oktober. Het was er **een**. Nagemeten met
+AST over de codecellen van `00c03b2a:source/solutions/6_extra.ipynb`: 30 asserts, waarvan er
+precies een niet-vergelijkend is (`assert png_beschikbaar`, codecel 4 regel 11).
+`assert teken == "." or teken == "#"` is een `or` van twee vergelijkingen en telt dus niet mee.
+De auteur en de beoordelaar van #386 kwamen onafhankelijk op hetzelfde uit. Zie de bevinding
+*Een achterhaald ijkgetal is duurder dan een gat*.
 
 **De rest, die niet parseert, is nagelopen in plaats van weggelaten.** In PGM1 week 1-7
 parseren **27** blokken niet - uitvoer, pseudocode en fragmenten. Met grep geven zij **20**
@@ -3580,3 +3590,82 @@ van `== False` en `not x` zelf tot booleans en legde de `None`-valkuil voor. De 
 maakte er een voorlegpunt van. De eerstejaars zag dat `not` in PGM1 nergens wordt uitgelegd,
 terwijl het in 8 coderegels voorkomt. De vakdeskundige liet daar #400 van maken. De
 valkuil en de kopnaam van de conventie bleven onbeslist.
+
+## Werkitem #386 - de `try` uit `solutions/6_extra`
+
+Route: LUS, XS, startcommit en procesversie `00c03b2a`. Afgesplitst van #377. Geen verkenner,
+ontwerper of verhelderaar: het was een besluit, niet een ontwerp. Auteur en een beoordelaar
+(onderwijskundige). PR #403 met `Closes #386`, zes commits, gemerged als `6c8ea078`:
+6 bestanden, +151/-173.
+
+| Rol | Tokens | Duur | Toolaanroepen | Uitkomst |
+|---|---:|---|---:|---|
+| orkestrator (C1, voorlegging, twee C4's, PR, verificatie) | niet beschikbaar | niet beschikbaar | | lopende sessie |
+| auteur, oplevering 1 | 186.131 | 27 min 59 s | 66 | C5; 5 bestanden, 4 commits (`beb90cc2`) |
+| beoordelaar-onderwijskundige | 124.367 | 12 min 13 s | 74 | AKKOORD MET PUNTJES (0 blokkades, 7 puntjes) |
+| auteur, herstel 1 | 25.297 | 8 min 54 s | 19 | P1, P4 en P6 (`dc20fae3`) |
+| **totaal agents, bekend** | **335.795** | | **159** | 3 agentstappen |
+
+De herstelronde is als **verschil** genomen: de verbruiksmelding van een hervatte agent is
+cumulatief (211.428 - 186.131). Beide rollen noemden in hun eigen meetregel een cachetotaal
+(14.474.724 en 8.701.953); dat is een andere grootheid dan deze tabel. Zie de bevinding
+*De meetregel vraagt een getal dat de rol niet kan zien*.
+
+**Twee poortbesluiten.** De triage legde vier wegen voor om de `try` weg te krijgen zonder de
+build te breken. Het eerste C4 verwierp ze alle vier: *"we gaan er van uit dat png.py aanwezig
+is en Pillow ed bij de student is geinstalleerd, dus geen van je suggesties, het moet daar
+weg"*. Daarop meette de orkestrator na of dat uitvoerbaar was en legde een tweede voorlegging
+neer: `png.py` bestaat nergens in de boom (alleen in twee zips), geen enkel notebook in
+`source/` importeert een eigen module, en de build voert dit notebook uit - een
+onvoorwaardelijke import geeft daar dus een `ModuleNotFoundError`. Het tweede C4 sneed dat
+door: *"als dat het probleem is, zet solutions/6_extra om naar een markdown bestand en klaar"*,
+met als expliciet aanvaarde prijs dat de asserts in dit bestand niet meer door de build worden
+gecontroleerd. Dat de auteur daar niet binnen twee minuten op zijn stopvoorwaarde stuitte, komt
+doordat de orkestrator die meting vóór de agentstart deed en niet erna.
+
+**Nameting, drie keer onafhankelijk** (auteur, orkestrator, beoordelaar, elk met een eigen
+script): `ast.Try` over PGM1 week 1-7 is **0** op `dc20fae3`, **1** op `00c03b2a` en **3** op
+`17e790e3`, geijkt op **12** in PGM2 week 8-14 met dezelfde verdeling over vijf bestanden. Een
+van die twaalf staat in een `python`-fence in een markdowncel (`problems/14_opstap` cel 17),
+dus een scan over alleen codecellen geeft daar 11: de valse nul van #377 is hier aantoonbaar
+niet opgetreden. De 27 PGM1-blokken die niet parseren zijn met grep nagelopen, nul treffers.
+
+**Omdat de build dit bestand niet meer uitvoert, is het buiten de build geverifieerd.** De vijf
+fences met een regex uit de `.md` getrokken, geconcateneerd tot een script, gedraaid naast de
+echte `png.py` uit `fraaie_plaatjes.zip`: exitcode 0, **28** geslaagde asserts, en
+`patroon.png` als 128 bij 128 RGB met **0** afwijkende pixels tegenover `patroon.txt`. Die
+controle is geijkt door de verwachting om te draaien (256 van 256 afwijkingen). Auteur en
+beoordelaar deden haar onafhankelijk van elkaar. Dit is de werkwijze die het verlies van de
+bouwcontrole compenseert; zij hoort bij elke volgende uitwerking die naar markdown gaat.
+
+**Herstelstand.** Oplevering 1 van 1, herstel 1 van 1 verbruikt, nul blokkades. Van de zeven
+puntjes zijn er drie uitgevoerd: P1 (`handleidingen/week_6.md` r36 en r386 verwezen naar het
+verdwenen notebook - de enige onjuistheid die de oplevering zelf maakte, en `handleidingen/`
+zit niet in de Sphinx-build, dus geen poort dekt het), P6 (`assert
+write_pattern_image.__name__ == ...`, die na de echte slotaanroep per constructie niet meer kon
+falen) en P4 (een bepaling bij een gedateerd meetverslag). Geen tweede beoordelingsronde: er
+waren nul blokkades en het herstel bleef binnen de reikwijdte die het C6 zelf aanwees; de
+orkestrator rekende de poorten na.
+
+**Wat de poorten kostten.** Vier volledige bouwen in een XS-werkitem: twee van de auteur, een
+van de beoordelaar en een van de orkestrator als verificatie. `make clean && make html` voert
+alle 127 notebooks uit; na het herstel deed een incrementele `make html` hetzelfde werk in
+**4,27 s**, met nul waarschuwingen. Een van die vier bouwen was er een te veel omdat de
+orkestrator het mechanische criterium aan een inhoudelijke rol toewees; zie de bevinding
+daarover.
+
+**Wat de route openliet.** De bullet in `conventies/conventies.md` §*Bekende afwijkingen* is
+niet reproduceerbaar: gemeten 30 bestanden, 9 blokken en 11 `skip-execution`-cellen tegenover
+25, 6 en 10. Het verschil tussen 7 en 9 blijkt een definitiekeuze (tellen `python`-fences in
+markdowncellen van notebooks mee?), dus het getal is niet fout maar onbepaald. Doorgegeven aan
+#115 met de meting erbij, samen met twee aanpalende waarnemingen: de tabel in §*Huidige
+verdeling* sommeert tot 81 terwijl `source/` 127 notebooks heeft, en dit werkitem laat de
+stapel niet-uitgevoerde blokken juist groeien van 4 naar 9. #136 (welke `png.py`) en #103/#136
+(mag de build schrijven) zijn niet geraakt en blijven open.
+
+**Over de vorm van deze ingang.** Zij staat in een eigen PR en is door de orkestrator
+geschreven, dus gaat zij volgens *wie het zelf doet, laat het lezen* langs een lezer. Op
+20 oktober 2026 koos de vakdeskundige hier geen leesronde, zoals bij #368 - met de vraag erbij
+of deze administratie haar prijs verdient. Die vraag is terecht: de registratie van #377 kostte
+in leesronden alleen 336.954 tokens, en dat is net zoveel als heel #386 (335.795). De
+retrospectieve lezing door de onderzoeker moet erover gaan.
