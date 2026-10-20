@@ -59,7 +59,9 @@ wanneer je die pet op hebt, in een eigen werkitem.
 
 **Inhoudelijke besluiten landen in `curriculum/` of `conventies/`.** Waar een
 procesbesluit landt, is sinds de sluiting van de onderzoekstrack nog niet besloten;
-dat is een open vraag aan jou (werkitem #406).
+dat is een open vraag aan jou (werkitem #406). Tot je die beantwoordt, is jouw
+expliciete besluit op GitHub de bron - en die staat dus niet op een plek waar de
+volgende hem vanzelf terugvindt.
 
 Dat is niet streng bedoeld. Het is wat er eerder is misgegaan: er zijn goede
 besluiten genomen die nergens zijn opgeschreven, en die worden opnieuw gevoerd
@@ -72,7 +74,7 @@ door iemand die de reden niet kent.
 | Welke onderwerpen en begrippen in welke week | `curriculum/leerlijn.md` |
 | Iets aan de toetsing | `curriculum/leeruitkomsten.md`, als **voorstel** |
 | Een afspraak over schrijven, code of techniek | `conventies/` |
-| Een proceskeuze over de werkwijze | nog niet belegd; zie werkitem #406 |
+| Een proceskeuze over de werkwijze | nog niet belegd (werkitem #406); tot dan je besluit op GitHub |
 
 Noteer bij elk besluit in het register de **aard**: didactisch (met argumenten te
 weerleggen), organisatorisch (draagvlak nodig), praktisch (tijd, geld,

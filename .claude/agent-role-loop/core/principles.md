@@ -33,4 +33,4 @@ keuzes, ook op een kleine route. Een expliciet besluit wordt geregistreerd als
 C4; een agent verzint het niet. De mens houdt zeggenschap over merge en over
 vervolgwerk buiten de vastgelegde grenzen. Inhoudelijke besluiten staan in
 `curriculum/` of `conventies/`; waar een procesbesluit landt is nog niet besloten
-(werkitem #406).
+(werkitem #406) en tot dat besluit is het menselijke besluit op GitHub de bron.

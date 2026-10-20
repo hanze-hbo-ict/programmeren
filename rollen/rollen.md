@@ -49,9 +49,10 @@ voorkomt dat een nieuw agentstartje een onbeperkte lus wordt.
 ## Wat vastligt en wat gecontroleerd wordt
 
 Inhoudelijke besluiten landen in `curriculum/` of `conventies/`. Waar een
-procesbesluit landt, is nog niet besloten: `onderzoek/` is op 20 oktober 2026 als
-archief gesloten en krijgt niets nieuws meer. De bron is het expliciete menselijke
-besluit op GitHub; een gesprek of commitbericht alleen is geen overdracht.
+procesbesluit landt, is nog niet besloten (werkitem #406): `onderzoek/` is op
+20 oktober 2026 als archief gesloten en krijgt niets nieuws meer. De bron is het
+expliciete menselijke besluit op GitHub; een gesprek of commitbericht alleen is
+geen overdracht.
 
 Mechanische controles gaan vóór beoordeling en gelden volgens hun reikwijdte.
 Een schone build bewijst geen leesbare pagina en een slagende assertion bewijst
