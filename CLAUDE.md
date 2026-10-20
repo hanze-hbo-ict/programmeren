@@ -73,7 +73,8 @@ Commits op `master` zijn geblokkeerd; werk in een branch en open een pull reques
 Deze werkwijze is als experiment gedraaid en bijgesteld op grond van wat er misging.
 Die onderzoekstrack is op 20 oktober 2026 gesloten: `onderzoek/` is een archief dat
 niet meer wordt bijgehouden, en er worden geen tokentellingen, metingen of
-bevindingen meer vastgelegd. De lus zelf blijft onveranderd.
+bevindingen meer vastgelegd. De lus blijft; wat verviel is het meten en vastleggen
+als onderzoek, en de onderzoekersrol die daarop zat.
 
 **Draai je de lus**, dan draagt elk artefact zijn eigen meetregel - rol, ronde,
 omvang en uitkomst; zie `/orc`. Die staat in de reactie waarin je het artefact
@@ -89,3 +90,6 @@ een branch met een pull request en langs een onafhankelijke lezer.
 Alles wat `curriculum/` of `conventies/` raakt is een besluit van de vakdeskundige.
 Kom je zoiets tegen, leg het dan voor in plaats van het in te vullen - ook als het
 antwoord voor de hand ligt, en ook als het besluit "verander niets" luidt.
+
+De werkwijze zelf - de lus, de rollen, de contracten en de poorten - is net zo zijn
+besluit, en niet dat van een agent die er net tegenaan loopt.
