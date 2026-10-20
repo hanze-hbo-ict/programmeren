@@ -368,8 +368,11 @@ krijgt om ván te leren.
 
 ## Assertions
 
-Opgaven worden getest met `assert`. Dat is de standaardvorm in dit materiaal:
-144 codeblokken bevatten er een, meestal twee of drie.
+Opgaven worden getest met `assert`. Dat is de standaardvorm in dit materiaal: van
+de 1.965 codeblokken in `source/` - codecellen en ` ```python `-fences, geteld
+zoals bij de tabel hieronder - bevatten **656** er minstens een. Drie is daarin
+zowel de mediaan als het meest voorkomende aantal; de helft van die blokken heeft
+er twee of drie, en het grootste heeft er 43.
 
 - Een opgave levert de student assertions waarmee hij kan zien of zijn functie
   klopt, of vraagt hem er zelf een aantal te schrijven.
