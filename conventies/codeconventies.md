@@ -403,6 +403,13 @@ dit de vorm, omdat de student in PGM1 `==` kent en `is` niet, en omdat `== False
 een functie vangt die `None` teruggeeft. Vastgesteld door de vakdeskundige op
 9 oktober 2026, bij werkitem #377.
 
+**Vanaf PGM2 week 5 geldt de canonieke vorm:** `assert x`, `assert not x` en
+`assert x is None`. Dan kent de student `is`. De overgang wordt uitgelegd in
+`lectures/12b_data_object`, sectie *`is` en `==`*, en `problems/12_basis` en
+`practicals/12_creatures` verwijzen daarnaar bij hun eerste assertion in de
+nieuwe vorm. Vastgesteld door de vakdeskundige op 20 oktober 2026, bij
+werkitem #391.
+
 ## Opmaak
 
 Alle Python in ` ```python `-fences volgt `ruff format`, en de pre-commit hook
