@@ -3416,3 +3416,149 @@ aangeboden - de regel *wie het zelf doet, laat het lezen*. Bij #368 koos de vakd
 voor dezelfde soort ingang zónder leesronde; hier is zij er wel, omdat alle vier de
 bevindingen van 9 oktober in [bevindingen.md](bevindingen.md) over fouten van de orkestrator
 zelf gaan. Het oordeel van die lezer staat op de pull request van deze ingang.
+
+## Werkitem #382 - uitwerkingen voor de creatures-practica van PGM2 en voor 8_opstap
+
+Route: LUS, M, procesversie `17e790e3`. Gecombineerde verkenner/ontwerper, poort,
+auteur, daarna eerstejaars en onderwijskundige parallel. Geen #203-proef, dus geen
+referentie en geen budgetgrens. PR #389, `Closes #382`, gemerged op 19 oktober 2026
+(`0b637406`). Ontwerp: 0 van 1 herstelrondes gebruikt. Oplevering: 1 van 1.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator (C1, C2/C4-registratie, PR, plaatsing C5/C6, twee C7's) | niet beschikbaar | niet beschikbaar | C1 LUS/M |
+| curriculumontwerper (gecombineerd) | 130.516 | 5 min 51 s | C2; 4 voorlegpunten, 5 nieuwe criteria |
+| auteur, oplevering (afgebroken op een API-verbindingsfout, hervat) | 215.913 | 3 min 41 s na hervatting; daarvoor niet beschikbaar | C5; 12 bestanden, +2278/-624 |
+| beoordelaar-eerstejaars | 31.376 | 1 min 47 s | BLOKKEER, 1 blokkade (C4-11), 1 puntje |
+| beoordelaar-onderwijskundige | 89.952 | 11 min 55 s | AKKOORD MET PUNTJES, 0 blokkades, 3 puntjes |
+| auteur, herstel (hervat) | niet vastgesteld (gemeld 226.021) | 3 min 31 s | 3 bestanden, +9/-7 |
+| beoordelaar-eerstejaars, herstelmodus | 18.583 | 33 s | AKKOORD |
+| **totaal agents, bekend** | **486.340** | | plus de herstelstap |
+
+De afgebroken eerste auteursrun gaf geen verbruiksmelding. De melding na de hervatting
+(215.913 bij 3 toolaanroepen) is vermoedelijk het lopende totaal, inclusief die run; dat is
+niet vastgesteld. Is 226.021 eveneens een lopend totaal, dan kostte het herstel 10.108 en het
+werkitem 496.448. Dat is niet vastgesteld en telt niet mee. De orkestrator telde de twee
+meldingen eerst op en meldde 712.361 op de PR; gecorrigeerd op #382 en PR #389 (zie de
+bevinding van 19 oktober in `bevindingen.md`).
+
+**Wat de poort opleverde.** De vakdeskundige week bij V1 af van de aanbeveling (de eindstand
+als uitwerking, met een nieuwe download voor week 7). Zijn grond: *"we hebben de losse
+versie toch niet nodig? studenten kunnen die immers als ze willen reconstrueren uit de
+uitwerking"*. De downloads van week 5 en 6 vervielen en V12/VP12 in `practicum-oop.md`
+werden herroepen. Daardoor was het eerstejaarsperspectief nodig, dat C1 al voorwaardelijk
+had opgenomen. V3 en V4 gingen naar #383, net als later het puntje over de zichtbaarheid van
+uitwerkingen als beginstand.
+
+**Wat de beoordeling opleverde.** Eén terechte blokkade, en alleen de eerstejaars vond
+haar: de beginstand-passage van week 7 noemde `import random` niet. Het uitvoerbewijs van de
+auteur dekte dat niet, want hij voerde alle codecellen uit in plaats van wat de tekst laat
+overnemen. Na één herstel was het opgelost. De onderwijskundige mat zelf (nbclient, een
+AST-vergelijking met de oude eindstanden, 500 runs) en aanvaardde de wijziging in
+`leerlijn.md` r704 buiten de lijst van C4.
+
+## Werkitem #381 - de veegpunten uit #375 in het PGM2-materiaal
+
+Route: LUS, L in breedte, procesversie `48544bdb`. Geen ontwerper en geen verkenner: de
+punten waren per stuk al besloten (C0, 9 oktober 2026). Vier open keuzes gingen direct naar de
+mens (C4). Daarna de auteur, en eerstejaars en redacteur parallel. Geen #203-proef, dus geen
+referentie en geen budgetgrens. PR #392, `Closes #381`, gemerged op 19 oktober 2026
+(`5522e9ca`). Oplevering: 0 van 1 herstelrondes gebruikt. De puntjes kostten geen ronde.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator (C1, drie C4-registraties, twee nieuwe items, PR, plaatsing C5/C6, twee C7's) | niet beschikbaar | niet beschikbaar | C1 LUS |
+| auteur, oplevering + stopvraag | 240.506 (lopend totaal) | 18 min 22 s + 1 min 11 s | C5; 9 commits, 33 paden, +279/-507 |
+| beoordelaar-eerstejaars (afgebroken op de sessielimiet, hervat) | 70.804 na hervatting; daarvoor niet beschikbaar | niet beschikbaar (de wandklok bevat de wachttijd) | AKKOORD MET PUNTJES, 0 blokkades, 9 puntjes |
+| beoordelaar-redacteur (afgebroken op de sessielimiet, hervat) | 65.663 na hervatting; daarvoor niet beschikbaar | niet beschikbaar (idem) | AKKOORD MET PUNTJES, 0 blokkades, 4 puntjes |
+| auteur, puntjes (zelfde context) | 43.449 (283.955 - 240.506) | 8 min 42 s + 3 min 32 s | 6 commits, 6 bestanden, +48/-34 |
+| beoordelaar-eerstejaars, nalezing puntjes | 43.530 | 1 min 50 s | AKKOORD MET PUNTJES, 2 puntjes |
+| beoordelaar-redacteur, nalezing puntjes | 52.189 | 2 min 15 s | AKKOORD MET PUNTJES, 3 puntjes |
+| **totaal agents, bekend** | **516.141** | | plus het deel van beide beoordelaars vóór de sessielimiet |
+
+De auteursmeldingen (231.891, 240.506, 274.936, 283.955) lopen op met kleine stappen bij
+weinig toolaanroepen. Het zijn dus lopende totalen; alleen de laatste telt. Of 70.804 en 65.663
+de afgebroken runs bevatten, is niet vastgesteld: de afgebroken runs gaven geen melding.
+
+**Wat de poort opleverde.** Vier vragen vóór het schrijven (nummering, terugverwijzing,
+afsplitsen, één PR). De vakdeskundige liet V3 eerst toelichten en koos daarna een apart item
+(#391). De stopvraag van de auteur (*jeugdklasse*) werd *omschrijven*. Na de beoordeling liet
+de vakdeskundige elf puntjes oplossen, waarvan vier fouten die al vóór de PR bestonden. Het
+voorstel om de datumnotatie van `Date` te vereenvoudigen bleek ruim 120 regels in vijf
+bestanden en de opgave `parse_dates` van week 7 te raken. Het werd #393.
+
+**Wat de beoordeling opleverde.** Geen blokkades. De eerstejaars vond vier fouten in het
+Markov-practicum die er al vóór de PR stonden, waaronder een verwachte dictionary die de
+leestekens wegliet. Dat kwam doordat de eerstejaars de verwachte uitvoer nadraaide. Bij het
+oplossen bleek dat de uitwerking `generate_text` teruggaf, terwijl de opdracht om afdrukken
+vroeg. Zonder ontwerpstap deed de auteur weinig ontwerpwerk: één stopvraag, en vier
+afwijkingen die de redacteur alle vier door een criterium gedekt vond.
+
+## Werkitem #379 - ongebruikte lusvariabelen heten `_` (VP7), sluit #348
+
+Route: LUS, S, procesversie `eee8fc98`. Kleine route: auteur, daarna eerstejaars en redacteur
+parallel. Geen ontwerper of verkenner; het besluit lag vast (VP7, bevestigd bij #375). Geen
+#203-proef, dus geen referentie en geen budgetgrens. PR #397, `Closes #379` en `Closes #348`,
+gemerged op 20 oktober 2026 (`9d44bdd9`). Oplevering: 0 van 1 herstelrondes gebruikt. De puntjes
+kostten geen ronde.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator (C1, twee C4-registraties, PR, plaatsing C5/C6, C7) | niet beschikbaar | niet beschikbaar | C1 LUS/S |
+| auteur, oplevering + stopvraag + puntjes (zelfde context) | 141.115 (lopend totaal) | 7 min 0 s + 3 min 54 s + 4 min 45 s | C5; 3 commits, 14 bestanden, 41 hernoemingen |
+| beoordelaar-eerstejaars | 37.097 | 2 min 8 s | AKKOORD MET PUNTJES, 0 blokkades, 1 puntje |
+| beoordelaar-redacteur | 47.732 | 2 min 29 s | AKKOORD MET PUNTJES, 0 blokkades, 2 puntjes |
+| beoordelaar-redacteur, nalezing puntjes | 28.076 | 1 min 31 s | AKKOORD MET PUNTJES, 2 puntjes |
+| **totaal agents** | **254.020** | | |
+
+De auteursmeldingen (104.515, 123.044, 141.115) lopen op met kleine stappen bij weinig
+toolaanroepen (30, 10, 12). Het zijn dus lopende totalen; alleen de laatste telt. De
+orkestrator telde ze in de C7 op PR #397 eerst op (312.388) en meldde de vakdeskundige een
+bovengrens van 481.579. Dat is dezelfde fout als bij #382 (zie de bevinding van 19 oktober in
+`bevindingen.md`). De correctie staat op PR #397.
+
+**Wat de poort opleverde.** De stopvoorwaarde uit C1 (twijfel of een naam didactisch nodig
+is) ging af bij `solutions/5a_ascii_art.ipynb` cel 3 en 6, waar het proza op de oude namen
+leunde. De vakdeskundige liet hernoemen en het proza aanpassen; het voorbeeld in
+`codeconventies.md` volgde. Na de beoordeling koos de vakdeskundige *luswaarde* in plaats van
+*teller* en een nieuwe telling van de geneste lussen. Bij `5_opstap` Opdracht 1 (`for x`
+binnen `for x`, mogelijk een valkuil) besloot hij: *"de eerste opgave zou niet meteen een
+valkuil moeten zijn"*.
+
+**Wat de beoordeling opleverde.** Geen blokkades. Beide beoordelaars maten zelf en
+onafhankelijk van het script van de auteur; hun tellingen weken af in afbakening maar
+dekten dezelfde rest. De nieuwe telling in `codeconventies.md` is door de redacteur
+onafhankelijk nageteld en op de oorspronkelijke commit `bcf93842` geijkt; daarbij bleek dat
+de vastgelegde getallen al vóór dit werkitem achterliepen (#377). Twee puntjes staan op #395.
+
+## Werkitem #391 - de overgang naar de canonieke asserts in PGM2 week 5
+
+Route: LUS, S, procesversie `5abffb04`. Geen ontwerper of verkenner: C0 gaf de opties en de
+orkestrator mat de dragende feiten in C1. Daarna de poort, de auteur en eerstejaars en
+redacteur parallel. Geen #203-proef, dus geen referentie en geen budgetgrens. PR #399,
+`Refs #391`, gemerged op 20 oktober 2026 (`65474f84`). Oplevering: 0 van 1 herstelrondes
+gebruikt.
+
+| Rol | Tokens | Duur | Uitkomst |
+|---|---|---|---|
+| orkestrator (C1 met meetbasis, C4-registratie, PR, plaatsing C5/C6, C7, nieuw item #400) | niet beschikbaar | niet beschikbaar | C1 LUS/S |
+| auteur | 86.224 | 5 min 47 s | C5; 4 bestanden, +51/-1 |
+| beoordelaar-eerstejaars | 62.638 | 2 min 4 s | AKKOORD, 0 blokkades |
+| beoordelaar-redacteur | 35.127 | 1 min 25 s | AKKOORD MET PUNTJES, 0 blokkades, 1 voorlegpunt, 2 puntjes |
+| **totaal agents** | **183.989** | | |
+
+Iedere rol draaide één keer, dus elke melding is een eigen totaal. De rollen noteerden zelf
+*niet beschikbaar*; de getallen komen uit de verbruiksmelding.
+
+**Wat de meting in C1 opleverde.** De overgang valt precies in week 5: PGM2 week 3 en 4
+hebben 94 asserts met `== True/False/None` en geen kale, vanaf week 5 zijn ze alle kaal, ook
+in het practicum `12_creatures`, dat C0 niet noemde. Weken 6 en 7 hebben er samen 72. Daarmee
+was de optie *week 5 terugzetten* zichtbaar een verschuiving van de breuk naar week 6. De
+vakdeskundige koos op alle drie de voorlegpunten de aanbeveling: uitleggen in `12b`, een
+verwijzing van één zin in `12_basis` en `12_creatures`, en `is None` erbij.
+
+**Wat de beoordeling opleverde.** Geen blokkades. De auteur beperkte de gelijkwaardigheid
+van `== False` en `not x` zelf tot booleans en legde de `None`-valkuil voor. De redacteur
+maakte er een voorlegpunt van. De eerstejaars zag dat `not` in PGM1 nergens wordt uitgelegd,
+terwijl het in 8 coderegels voorkomt. De vakdeskundige liet daar #400 van maken. De
+valkuil en de kopnaam van de conventie bleven onbeslist.

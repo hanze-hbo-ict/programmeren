@@ -6,9 +6,9 @@
 
 Deze week laat je je eigen klassen meedoen met de operatoren van Python. Python
 vertaalt `a == b` naar de aanroep `a.__eq__(b)`, en `a < b` naar `a.__lt__(b)`.
-Zo'n methode, die Python zelf aanroept, heet een **magische methode**. Schrijf je
-er een in je klasse, dan bepaal jij wat de operator bij jouw objecten doet. Dat
-heet **operator overloading**.
+Zo'n methode, die Python zelf aanroept, is een magische methode, net als
+`__init__` en `__repr__` uit week 5. Schrijf je er een in je klasse, dan bepaal
+jij wat de operator bij jouw objecten doet. Dat heet **operator overloading**.
 
 Daarna leer je een fout melden. Met `raise` **gooi** je een **exception**: de
 methode stopt meteen, en de fout valt op waar hij ontstaat, in plaats van dat het

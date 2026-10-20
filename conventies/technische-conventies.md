@@ -272,15 +272,21 @@ te nemen of assertions om daar onderaan te zetten. Bij de herziening zijn ze
 buiten de build uitgevoerd: die van `13_extra.md` tegen de uitwerking in
 `solutions/13_extra.ipynb`, die van `13_creatures.md` tegen een referentie-uitwerking
 die niet in de repo staat, per stap en samen met de assertions van
-`12_creatures.md`. De beginstand daarvan, de eindstand van week 5, staat wel in de
-repo: `practicals/assets/creatures.py`.
+`12_creatures.md`. De beginstand daarvan, de eindstand van week 5, stond tot #382
+als download in de repo.
 
 Bij de herziening van PGM2 week 7 (#271) kwamen er weer twee bij:
 `practicals/14_creatures.md` (19) en `problems/14_extra.md` (9). Grond 2 geldt ook
 hier niet, om dezelfde reden. De blokken van `14_extra.md` draaien in de build via
 de uitwerking in `solutions/14_extra.ipynb`. Die van `14_creatures.md` zijn buiten de
-build uitgevoerd, samen met de eindstand van week 6 in
-`practicals/assets/week_6/creatures.py` en de assertions van week 5 en 6.
+build uitgevoerd, samen met de eindstand van week 6, die tot #382 als download in
+de repo stond, en de assertions van week 5 en 6.
+
+Sinds #382 draaien de assertions van de drie creatures-practica wel in de build,
+in de uitwerkingen `solutions/12_creatures.ipynb`, `13_creatures.ipynb` en
+`14_creatures.ipynb`. De twee eindstanden zijn toen verwijderd: de uitwerking van
+een week is de beginstand van de volgende (V12 en VP12 in
+`curriculum/practicum-oop.md`).
 
 ### Waarom dit zo gegroeid is
 
@@ -470,7 +476,7 @@ Een bestand dat geen pagina is, koppel je met de `download`-rol. Een gewone
 Markdown-link geeft een build-waarschuwing.
 
 ```markdown
-{download}`de eindstand van week 6 </practicals/assets/week_6/creatures.py>`
+{download}`het voorbeeldbestand a.txt </practicals/assets/a.txt>`
 ```
 
 ### Overige middelen

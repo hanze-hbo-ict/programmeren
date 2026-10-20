@@ -1754,6 +1754,14 @@ de twee C7's die hij als bron moest gebruiken. Hij meldde dat bij één patroonz
 van die bestanden hebben meegedraaid. Twee rollen, twee rondes, dezelfde toestand, allebei
 door de rol zelf gemeld en niet door de inrichting gevangen.
 
+**En bij #381 botste het (19 oktober 2026).** De auteur, twee beoordelaars en twee nalezers
+kregen allemaal dezelfde scratchpad. De auteur meldde bij de puntjes dat een hulpscript
+`nb.py` in die map *"door iets anders overschreven"* was, en week uit naar een eigen submap.
+Dat is geen leesprobleem meer maar schrijfinterferentie: rollen die tegelijk of na elkaar
+draaien, overschrijven elkaars gereedschap. De orkestrator had het voorstel hierboven niet
+toegepast. Pas bij de nalezing kreeg elke rol een eigen submap (`nalezing-ej/`,
+`nalezing-red/`).
+
 ## Een regelafbreking maakt een zoekpatroon blind - 1 oktober 2026
 
 **Wat er gebeurde.** Vier keer op één dag gaf een zoekpatroon nul omdat de gezochte zin over
@@ -1781,6 +1789,16 @@ dan een paar woorden nooit regelgewijs.** Sla de regels plat vóór het zoeken, 
 fragment dat zeker binnen één regel valt. En ijk een nul op een vindplaats die net zo lang is
 als wat je zoekt, niet op een kort woord dat overal past. Dit voorstel staat als invoer voor de
 evaluatie op #203.
+
+**Dezelfde blindheid door JSON-escaping (#381, 19 oktober 2026).** De orkestrator zocht in
+`solutions/14_basis.ipynb` naar `split\(.?/` en kreeg 0. In de notebookbron staat
+`text.split(\"/\")`: het aanhalingsteken is ge-escaped, en het patroon stond maar één teken
+toe tussen het haakje en de schuine streep. Ook hier was het patroon goed en het bestand anders
+opgemaakt. Het werd pas gevonden door de cellen geparsed te lezen. Zonder die tweede stap had
+de vakdeskundige het advies gekregen dat de nieuwe datumnotatie alleen verwachte uitvoer raakt.
+Daarmee was de opgave `parse_dates` van week 7 gemist. Het patroon was geijkt, maar op een
+string zonder aanhalingsteken. **Gevolg:** zoek in notebooks op geparste cellen, niet op de
+JSON-bron, zodra het patroon een aanhalingsteken of backslash kan raken.
 
 ## De meetpraktijk voor een hervatte agent werd voor de derde keer niet geraadpleegd - 2 oktober 2026
 
@@ -2137,3 +2155,42 @@ bevinding van 5 oktober noteert ook een getal dat pas bij het opschrijven is nag
   waar hij keek. Een schatting draagt haar methode én de reden dat de melding ontbreekt, en
   zegt welke grootheid zij schat: de agent of de wandklok. Dit voorstel staat als invoer voor
   de evaluatie van #203.
+
+## Uitvoerbewijs voor een instructie voert de instructie uit, en een hervatte agent werd voor de vierde keer opgeteld - 19 oktober 2026
+
+**Wat er gebeurde, eerste deel.** Bij #382 vervielen de downloads met de eindstand van week 5
+en 6. Wie achterloopt, neemt de beginstand voortaan over uit de uitwerking van de vorige week.
+De passage in `practicals/14_creatures.md` somde op wat de student overneemt: *"de klassen, de
+functies en de assertions"*. Als bewijs voerde de auteur alle codecellen zonder celtag uit,
+300 keer zonder fout. In de uitwerking staat `import random` in dezelfde cel als
+`class Creature`, dus die regel draaide mee, terwijl de tekst hem niet noemde. De eerstejaars,
+die de uitwerking niet mag zien, las de opsomming letterlijk en gaf BLOKKEER: wie haar volgt,
+krijgt een `NameError`. Na het herstel nam de auteur uit de uitwerking met `ast` alleen wat de
+tekst noemt. IJking op de oude tekst gaf de `NameError` wel.
+
+**Waarom het ertoe doet.** Het bewijs mat het materiaal, terwijl het criterium (C4-11) over de
+instructie ging. Dat is *meet het ding zelf, niet iets ernaast* (`CLAUDE.md` §*Meten*), in een
+vorm die nog niet beschreven stond: het uitgevoerde ding was echt en compleet, maar het was
+niet het ding dat de student krijgt. De eerstejaars ving het juist omdat die rol de uitwerking
+niet kende. Bij een route met alleen de onderwijskundige was het waarschijnlijk doorgegaan;
+die meet tegen de uitwerking. Dat is niet vastgesteld.
+
+**Wat er gebeurde, tweede deel.** De orkestrator telde de twee meldingen van de hervatte
+auteur op (215.913 + 226.021) en meldde 712.361 op PR #389, voor de merge. Dat is de fout uit
+*Een hervatte agent meldt zijn tokens als lopend totaal* (23 september), voor de vierde keer;
+zie *De meetpraktijk voor een hervatte agent werd voor de derde keer niet geraadpleegd*
+(2 oktober). De toolaanroepen wezen er opnieuw op: 3 aanroepen bij de melding van 215.913.
+De orkestrator zag het pas toen hij `metingen.md` opende om de tabel te schrijven. Daar staat
+de praktijk, en niet in `/orc`, waar de meetregel wordt geschreven.
+
+**Wat het veranderde.** De telling is op #382 en PR #389 gecorrigeerd; in `metingen.md` telt
+het herstel als niet vastgesteld. In de instructies is niets veranderd. Twee voorstellen voor
+de vakdeskundige, geen van beide beslist:
+
+- **Hervatte agent.** Het voorstel van 23 september, 30 september en 2 oktober staat nog
+  open: leg de telling van een hervatte agent vast in `/orc`, bij de meetregel. Vier keer
+  dezelfde fout na drie bevindingen bevestigt wat de bevinding van 2 oktober al concludeerde:
+  een bevinding die de orkestrator niet op het moment zelf leest, bereikt hem niet.
+- **Uitvoerbewijs.** Laat de auteursrol bij een instructie die de student code laat
+  overnemen, uitvoeren wat de instructie noemt, en niet het bestand waaruit wordt overgenomen.
+  Eén geval; of het vaker speelt, is niet gemeten.
