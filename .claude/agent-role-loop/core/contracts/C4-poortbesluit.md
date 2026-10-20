@@ -15,9 +15,10 @@ Zie [loop.md](../loop.md) voor wanneer de poort nodig is.
 - **Genomen beslissingen:** antwoorden en gekozen afbakening.
 - **Uitgestelde vragen:** expliciet veilig uitgesteld, of `<geen>`.
 - **Waar vastgelegd:** inhoudelijke besluiten in `curriculum/` of `conventies/`;
-  voor een procesbesluit is nog geen plek belegd (werkitem #406). Noem wat nog in
-  de uitvoerings-PR wordt vastgelegd; het GitHub-besluit is de bron, geen
-  vervanging van die registratie.
+  een procesbesluit in de instructie die hij wijzigt, plus één regel in
+  [procesbesluiten.md](../procesbesluiten.md). Noem wat nog in de uitvoerings-PR
+  wordt vastgelegd; het GitHub-besluit is de bron, geen vervanging van die
+  registratie.
 - **Vervolggrens:** bij hervatten na de rondelimiet: welke concrete vervolgopdracht
   en hoeveel extra rondes zijn toegestaan. Anders geldt de grens in loop.md.
 

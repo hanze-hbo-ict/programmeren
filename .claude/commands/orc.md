@@ -67,9 +67,9 @@ reviewers wijzigen geen materiaal of GitHub-status en installeren niets.
   antwoord als C4. HERZIEN geeft een gerichte opdracht terug, STOP beëindigt.
   Geen zelf ingevuld besluit. Houd C3-verbeterpunten bij de auteursinvoer.
 
-Inhoudelijke besluiten worden in curriculum/conventies vastgelegd; waar een
-proceskeuze landt is nog niet besloten (werkitem #406) en het menselijke besluit
-op GitHub is tot die tijd de bron. Een door jou geschreven besluitdiff laat je
+Inhoudelijke besluiten worden in curriculum/conventies vastgelegd; een proceskeuze
+landt in de instructie die hij wijzigt, plus één regel in het register
+`core/procesbesluiten.md`. Een door jou geschreven besluitdiff laat je
 onafhankelijk redactioneel toetsen tegen het C4 vóór de PR ter merge wordt
 aangeboden. Dit mag in de gekozen beoordeling worden opgenomen; het hoeft geen
 aparte ronde te zijn.

@@ -67,6 +67,11 @@ Voeg die rol toe als hij ontbreekt. Een klein aantal agents mag geen gat in de
 controle veroorzaken. Iedere beoordelaar toetst zijn criteria, de relevante
 conventies en objectief verificatiebewijs naast zijn eigen perspectief.
 
+Het **mechanische** criterium - pre-commit en een schone build - wijs je niet aan
+een beoordelaar toe: de auteur levert het bewijs, de orkestrator rekent het na, en
+de beoordelaarsopdracht meldt dat de poorten al zijn vastgesteld. Zie *Verificatie
+en eindpunt*.
+
 De **pragmaticus** is beschikbaar op verzoek. Proportionaliteit en het onderscheid
 tussen blokkades en puntjes gelden voor elke rol en vragen geen vaste extra agent.
 De **hoofdredacteur** draait alleen bij onopgeloste tegenspraak tussen oordelen.
@@ -128,7 +133,8 @@ niet. Nieuwe echte defecten blijven zichtbaar; een budget maakt ze niet groen.
 
 ## Verificatie en eindpunt
 
-Mechanische controles gaan vóór beoordeling. Draai pre-commit op geraakte
+Mechanische controles gaan vóór beoordeling en worden niet aan een beoordelaar
+toegewezen; zie *Beoordeling toewijzen*. Draai pre-commit op geraakte
 bestanden; bij boek-, buildconfiguratie- of dependencywijzigingen ook een schone
 Sphinx-build met nul waarschuwingen en fouten. Bij uitsluitend procesdocumentatie
 is die build niet nodig: noteer reikwijdte en toepasselijke controles. Installeer
@@ -150,10 +156,11 @@ gesloten en `onderzoek/` is sindsdien een archief dat geen metingen of bevinding
 meer krijgt. Een ontbrekend gegeven heet **niet beschikbaar**, nooit nul. Bij een
 afgebroken run noteer je wat bewaard bleef.
 
-Inhoudelijke besluiten landen in `curriculum/` of `conventies/`. Waar een
-procesbesluit landt, is sinds de sluiting van de onderzoekstrack nog niet besloten
-(werkitem #406); tot dat besluit is het expliciete menselijke besluit op GitHub de
-bron. Een door de orkestrator geschreven besluittekst krijgt
+Inhoudelijke besluiten landen in `curriculum/` of `conventies/`. Een procesbesluit
+landt in de instructie die hij wijzigt - deze routenorm, `/orc`, de betrokken
+rolprompt of het betrokken contract - plus één regel in het register
+[procesbesluiten.md](procesbesluiten.md), dat geen onderbouwing draagt en zelf
+onder voorbehoud staat. Een door de orkestrator geschreven besluittekst krijgt
 onafhankelijke redactionele beoordeling op de diff en het menselijke bronbesluit;
 dit mag onderdeel zijn van de al gekozen beoordeling.
 
