@@ -3669,3 +3669,42 @@ geschreven, dus gaat zij volgens *wie het zelf doet, laat het lezen* langs een l
 of deze administratie haar prijs verdient. Die vraag is terecht: de registratie van #377 kostte
 in leesronden alleen 336.954 tokens, en dat is net zoveel als heel #386 (335.795). De
 retrospectieve lezing door de onderzoeker moet erover gaan.
+
+## Onderzoeksronde - 20 oktober 2026
+
+| Rol | Tokens | Duur | Toolaanroepen | Uitkomst |
+|---|---:|---|---:|---|
+| onderzoeker | 203.897 (verbruiksmelding) | 13 min 8 s | 50 | [retrospectief.md](retrospectief.md), 750 regels |
+
+Tweede keer dat deze rol draaide; de eerste was 1 oktober 2026 (hierboven). Afbakening door de
+vakdeskundige: een verslag van de ervaringen met de lus, leesbaar voor buitenstaanders, in de
+repo onder `onderzoek/` en buiten het onderwijsmateriaal. Vijf vragen: wat het corpus kan
+dragen, welke bevindingen landden en welke terugkeerden, wat een route en wat de administratie
+kost, het bewijs voor en tegen de kernhypothese, en wat eruit volgt.
+
+De rol gaf zelf **17.052 output tokens over 22 toolaanroepen** op en zei erbij dat dat een
+andere grootheid is dan de tabel hierboven, omdat zij de verbruiksmelding niet kan zien. Dat is
+precies de vorm die de bevinding *De meetregel vraagt een getal dat de rol niet kan zien*
+voorstelt, en zij is hier voor het eerst gevolgd.
+
+**Twee correcties van de rol op haar eigen opdracht**, beide door de orkestrator nagemeten en
+juist. Ten eerste: de opdracht zei dat deze rol nog nooit had gedraaid, en dat is onjuist; de
+ronde van 1 oktober 2026 staat hierboven met de regel *"Eerste keer dat deze rol draaide"*. Ten
+tweede: de corpusgetallen die de orkestrator meegaf, waren gemeten op `6c8ea078` en dus een
+commit oud. `git diff --stat 6c8ea078..1f595e4b -- onderzoek/` geeft +192 regels, en dat
+verklaart elk van de vier afwijkingen die de rol vond. Dat is de bevinding *De orkestrator meet
+tegen een stilstaande lokale master* in haar mildste vorm, nu binnen dezelfde sessie.
+
+**Wat het retrospectief zelf vaststelt**, kort: het corpus draagt een gevalsbeschrijving en
+geen statistiek, zeven grenzen staan benoemd, de kernhypothese zoals `README.md` haar stelt is
+niet toetsbaar omdat er geen route met een enkele agent bestaat, de administratie van zes
+registraties kostte ten minste 1.434.050 tokens aan leesronden, en drie patronen keerden vier,
+drie en twee keer terug met hun maatregel al op papier maar nergens in een instructie. Drie
+voorstellen liggen als invoer voor de evaluatie van #203.
+
+**Over de vorm van deze ingang en van het verslag.** Het verslag is het artefact van een
+onafhankelijke rol en is verbatim geplaatst; de orkestrator heeft er een los `###`-teken uit
+gehaald waar de rol een kop over twee regels had afgebroken, en vier regelafbrekingen
+verschoven zodat geen regel met `#` begint (pymarkdown MD018). Geen woord gewijzigd; een
+woordelijke vergelijking met het opgeleverde artefact geeft als enige verschil dat ene
+`###`-teken. Deze ingang is wel van de orkestrator en is niet gelezen.
