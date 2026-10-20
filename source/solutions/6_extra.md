@@ -118,6 +118,5 @@ for bron_rij in range(16):
         for rij in range(bron_rij * 8, (bron_rij + 1) * 8):
             for kolom in range(bron_kolom * 8, (bron_kolom + 1) * 8):
                 assert geschaald[rij][kolom] == kleur
-assert write_pattern_image.__name__ == "write_pattern_image"
 write_pattern_image(geschaald)
 ```
