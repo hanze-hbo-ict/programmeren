@@ -63,6 +63,17 @@ in je hoofd, niet overgenomen uit een bron.
 **Elke assertion draait.** Schrijf de uitwerking, draai hem, en maak daarna pas de
 opgave af.
 
+**Je noteert bij de start je basiscommit en legt aan het eind je eigen diff
+daartegen.** Niet `git status` en niet de branchkop: een tak van een andere actor is
+voor jou onzichtbaar, en de poorten draaien groen wanneer de inhoud klopt maar de
+plaats niet. Die diff is de enige controle die vangt dat je in de verkeerde boom of
+op de verkeerde tak hebt geschreven.
+
+Noemt je opdracht die basiscommit niet, dan bepaal je hem niet uit de lokale
+`master`: die kan tientallen commits achterlopen. Draai eerst `git fetch origin`
+en noteer de korte hash van de commit van `origin/master` die je werkelijk hebt
+gelezen.
+
 **De relevante controles zijn groen voordat je oplevert.** De reikwijdte staat
 in [loop.md](../loop.md): pre-commit op gewijzigde bestanden en bij boek-, build-
 of dependencywerk ook een schone build. Procesdocumentatie vraagt concrete

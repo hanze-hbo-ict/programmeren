@@ -28,15 +28,15 @@ niet meer" ook een bruikbaar antwoord.
 Bij de poort ben je **vakdeskundige**: is dit ontwerp goed voor dit vak, en wat
 besluit ik over de open vragen. Dat is waar de rest van dit document over gaat.
 
-Daarnaast ben je **initiator van het experiment**: deugt deze werkwijze, en moet er
-iets aan veranderen. Dat is een andere vraag met ander bewijs - niet het materiaal
-maar `onderzoek/`, en niet dit werkitem maar de reeks.
+Daarnaast ben je **eigenaar van de werkwijze**: deugt deze lus, en moet er iets aan
+veranderen. Dat is een andere vraag met ander bewijs - niet het materiaal maar de
+instructies, en niet dit werkitem maar de reeks. Wat de werkwijze tot 20 oktober
+2026 heeft geleerd staat in `onderzoek/`, dat sindsdien een archief is.
 
 Houd ze uit elkaar. Een lus die op dit werkitem hindert, is niet vanzelf een lus
 die niet deugt; en een werkwijze die je wilt bijstellen, stel je niet bij midden in
-een ronde. Merk je bij de poort iets over de werkwijze zelf, noteer het dan in
-`onderzoek/bevindingen.md` en besluit erover wanneer je die pet op hebt - met de
-onderzoeker ernaast als er genoeg is om een patroon in te zien.
+een ronde. Merk je bij de poort iets over de werkwijze zelf, besluit er dan over
+wanneer je die pet op hebt, in een eigen werkitem.
 
 ## Invoer
 
@@ -57,8 +57,11 @@ onderzoeker ernaast als er genoeg is om een patroon in te zien.
 
 ## De vastlegplicht
 
-**Inhoudelijke besluiten landen in `curriculum/` of `conventies/`;
-procesbesluiten in `onderzoek/`.**
+**Inhoudelijke besluiten landen in `curriculum/` of `conventies/`.** Waar een
+procesbesluit landt, is sinds de sluiting van de onderzoekstrack nog niet besloten;
+dat is een open vraag aan jou (werkitem #406). Tot je die beantwoordt, is jouw
+expliciete besluit op GitHub de bron - en die staat dus niet op een plek waar de
+volgende hem vanzelf terugvindt.
 
 Dat is niet streng bedoeld. Het is wat er eerder is misgegaan: er zijn goede
 besluiten genomen die nergens zijn opgeschreven, en die worden opnieuw gevoerd
@@ -71,7 +74,7 @@ door iemand die de reden niet kent.
 | Welke onderwerpen en begrippen in welke week | `curriculum/leerlijn.md` |
 | Iets aan de toetsing | `curriculum/leeruitkomsten.md`, als **voorstel** |
 | Een afspraak over schrijven, code of techniek | `conventies/` |
-| Een proceskeuze of proefafspraak | `onderzoek/` |
+| Een proceskeuze over de werkwijze | nog niet belegd (werkitem #406); tot dan je besluit op GitHub |
 
 Noteer bij elk besluit in het register de **aard**: didactisch (met argumenten te
 weerleggen), organisatorisch (draagvlak nodig), praktisch (tijd, geld,

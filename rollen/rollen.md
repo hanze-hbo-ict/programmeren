@@ -19,9 +19,9 @@ zonder de geschiedenis van het maken.
 
 Die scheiding hoeft niet voor iedere verantwoordelijkheid een nieuwe agent te
 betekenen. De eerdere volledige lus veroorzaakte veel herhaald leeswerk en hele
-herstelrondes voor kleine veranderingen. Met #203 wordt daarom een kleinere
-route beproefd. De onderbouwing, het menselijke besluit en de evaluatie staan in
-[onderzoek/203-proef.md](../onderzoek/203-proef.md). Minder rollen is een te toetsen
+herstelrondes voor kleine veranderingen. Daarom gaat een route sinds #203 met zo
+min mogelijk rollen; de onderbouwing en het menselijke besluit staan in
+[onderzoek/203-proef.md](../onderzoek/203-proef.md). Minder rollen is een gemaakte
 keuze, geen bewezen garantie op gelijke kwaliteit.
 
 ## Hoe een herziening loopt
@@ -43,23 +43,25 @@ de hoofdredacteur erbij. Hij arbitreert; hij begint geen extra onderzoek.
 
 Een reparatie krijgt een gerichte herbeoordeling. Eerder beoordeelde dekking
 blijft herkenbaar; gewijzigde criteria worden opnieuw onderzocht. Dezelfde auteur
-kan repareren, maar de beoordelaar begint in een verse context. Rondelimieten en
-budgetafspraken voorkomen dat een nieuw agentstartje een onbeperkte lus wordt.
+kan repareren, maar de beoordelaar begint in een verse context. De rondelimiet
+voorkomt dat een nieuw agentstartje een onbeperkte lus wordt.
 
 ## Wat vastligt en wat gecontroleerd wordt
 
-Inhoudelijke besluiten landen in `curriculum/` of `conventies/`. Procesbesluiten
-landen in `onderzoek/`. De bron is het expliciete menselijke besluit op GitHub;
-een gesprek of commitbericht alleen is geen overdracht.
+Inhoudelijke besluiten landen in `curriculum/` of `conventies/`. Waar een
+procesbesluit landt, is nog niet besloten (werkitem #406): `onderzoek/` is op
+20 oktober 2026 als archief gesloten en krijgt niets nieuws meer. De bron is het
+expliciete menselijke besluit op GitHub; een gesprek of commitbericht alleen is
+geen overdracht.
 
 Mechanische controles gaan vóór beoordeling en gelden volgens hun reikwijdte.
 Een schone build bewijst geen leesbare pagina en een slagende assertion bewijst
 geen juiste uitleg. De onafhankelijke beoordeling richt zich op het oordeel dat
 overblijft en op bewijs dat de criteria werkelijk zijn gehaald.
 
-De eindredacteur bekijkt periodiek de samenhang tussen weken. De onderzoeker
-bekijkt periodiek de werkwijze en vraagt of maatregelen het probleem daarna
-werkelijk verminderden. Beiden staan buiten afzonderlijke werkitems.
+De eindredacteur bekijkt periodiek de samenhang tussen weken en staat buiten
+afzonderlijke werkitems. Tot 20 oktober 2026 deed een onderzoekersrol hetzelfde
+voor de werkwijze; die rol is met de onderzoekstrack vervallen.
 
 ## Waar wat staat
 
@@ -70,4 +72,4 @@ werkelijk verminderden. Beiden staan buiten afzonderlijke werkitems.
 | Codex-ingang | `AGENTS.md` |
 | Werkitem en overdrachten | GitHub-issue en PR |
 | Wat inhoudelijk vastligt | `curriculum/`, `conventies/` |
-| Procesbesluiten, metingen en bevindingen | `onderzoek/` |
+| Wat de werkwijze tot 20 oktober 2026 leerde, als archief | `onderzoek/` |

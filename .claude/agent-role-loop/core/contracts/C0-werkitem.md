@@ -53,7 +53,8 @@ Optionele velden (laat leeg met `<geen>`):
 ## Proceswerk en kleine routes
 
 Dit contract geldt ook voor proceswerk. Benoem dan de relevante instructies en
-procesbesluiten in `onderzoek/`; verander geen curriculum als bijvangst.
+eerder genomen procesbesluiten; die van vóór 20 oktober 2026 staan in
+`onderzoek/`, als archief. Verander geen curriculum als bijvangst.
 C0 + C1 vormen op een eenduidige kleine route de complete uitvoeropdracht.
 C2/C3/C4 worden alleen gemaakt wanneer de route ze vraagt; zie
 [loop.md](../loop.md). De vaste conventie- en buildvoorwaarde volgt haar

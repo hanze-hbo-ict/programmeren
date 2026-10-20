@@ -63,8 +63,9 @@ geschreven. Kom je een fout tegen, dan zegt die iets over deze werkwijze en niet
 alleen over die pagina; we horen het graag, zie [Bijdragen](#bijdragen).
 
 De stappen, de rollen en de contracten ertussen staan in
-[`rollen/rollen.md`](rollen/rollen.md). Wat de werkwijze kost en wat eraan misgaat
-staat in [`onderzoek/`](onderzoek/).
+[`rollen/rollen.md`](rollen/rollen.md). Wat de werkwijze heeft gekost en wat eraan
+misging staat in [`onderzoek/`](onderzoek/), het archief van de onderzoekstrack die
+op 20 oktober 2026 is gesloten.
 
 ## Conventies
 

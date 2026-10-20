@@ -7,12 +7,10 @@ principes in [principles.md](principles.md). De uitleg voor mensen staat in
 
 ## Invoering
 
-De werkwijze van #203 geldt voor nieuw gestarte routes na goedkeuring van de
-instructie-PR. Een lopende route blijft bij zijn vastgelegde C1 en procesversie;
-raadpleeg daarvoor de versie van deze bestanden bij de startcommit. Zet haar niet
-halverwege om. Registreer bij iedere nieuwe C1 de gebruikte commit.
-De proef en het evaluatiemoment staan in
-[onderzoek/203-proef.md](../../../onderzoek/203-proef.md).
+Een gewijzigde werkwijze geldt voor routes die na de instructie-PR starten. Een
+lopende route blijft bij zijn vastgelegde C1 en procesversie; raadpleeg daarvoor de
+versie van deze bestanden bij de startcommit. Zet haar niet halverwege om.
+Registreer bij iedere nieuwe C1 de gebruikte commit.
 
 ## Route kiezen
 
@@ -145,28 +143,26 @@ groen zijn. Een niet uitgevoerde controle staat als niet vastgesteld, niet als g
 ## GitHub en registratie
 
 C0 is een GitHub-issue, overdrachten zijn reacties op issue of PR. Iedere reactie
-bevat contract-ID en meetregel: rol, ronde, tokens, duur, omvang en uitkomst.
-Ontbrekende meetgegevens heten **niet beschikbaar**, nooit nul. Bij een afgebroken
-run noteer je wat bewaard bleef. Tokenregistratie is geen factuurbedrag.
+bevat contract-ID en meetregel: **rol, ronde, omvang en uitkomst**. De ronde en de
+uitkomst heeft de lus zelf nodig, voor de herstelgrens en voor wat er bleef liggen.
+Tokens en duur horen er niet meer bij: de onderzoekstrack is op 20 oktober 2026
+gesloten en `onderzoek/` is sindsdien een archief dat geen metingen of bevindingen
+meer krijgt. Een ontbrekend gegeven heet **niet beschikbaar**, nooit nul. Bij een
+afgebroken run noteer je wat bewaard bleef.
 
-Noteer ook de kosten van orkestratie indien beschikbaar. Neem de meetregels over
-in `onderzoek/metingen.md` bij afsluiting of vóór sessie-einde. Structurele
-bevindingen krijgen bewijs en gevolg in `onderzoek/bevindingen.md`.
-Procesbesluiten landen in `onderzoek/`; inhoudelijke besluiten in `curriculum/`
-of `conventies/`. Een door de orkestrator geschreven besluittekst krijgt
+Inhoudelijke besluiten landen in `curriculum/` of `conventies/`. Waar een
+procesbesluit landt, is sinds de sluiting van de onderzoekstrack nog niet besloten
+(werkitem #406); tot dat besluit is het expliciete menselijke besluit op GitHub de
+bron. Een door de orkestrator geschreven besluittekst krijgt
 onafhankelijke redactionele beoordeling op de diff en het menselijke bronbesluit;
 dit mag onderdeel zijn van de al gekozen beoordeling.
-
-De budgetreactie tijdens de #203-proef staat in
-[onderzoek/203-proef.md](../../../onderzoek/203-proef.md). Geen automatische
-extra agentstart nadat de daar afgesproken grens is overschreden.
 
 ## Buiten een werkitem
 
 Een kleine correctie mag zonder aparte issue, in een branch met PR en een
-onafhankelijke lezer volgens dezelfde criteriumtoewijzing. Noteer dit onder
-*Werk buiten de lus om* in `onderzoek/metingen.md`.
+onafhankelijke lezer volgens dezelfde criteriumtoewijzing. Dat laatste is de regel
+*wie het zelf doet, laat het lezen*; er wordt niets meer over genoteerd.
 
 Een leesronde op bestaand materiaal is beschikbaar volgens C6, niet verplicht
-vóór ieder ontwerp. De **eindredacteur** bewaakt periodiek samenhang over weken;
-de **onderzoeker** onderzoekt periodiek de werkwijze. Beiden blijven buiten de lus.
+vóór ieder ontwerp. De **eindredacteur** bewaakt periodiek samenhang over weken en
+blijft buiten de lus.

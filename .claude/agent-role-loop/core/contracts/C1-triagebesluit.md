@@ -23,7 +23,6 @@ staande zaken. Een verantwoordelijkheid hoeft geen aparte agent te zijn.
 - **Menselijk besluit:** nodig/vastgelegd/niet nodig, met reden en bron.
 - **Herstelstand:** bij start nul per ontwerp en oplevering; volgende rondes en
   besluiten worden op GitHub geregistreerd volgens loop.md.
-- **Proefafspraken:** verwijzing indien dit een #203-proef is, anders `<geen>`.
 - **Advies:** verplicht bij AFWIJZEN, anders `<geen>`.
 
 DOORLOPEND blijft open als verzamelplek. AFWIJZEN adviseert een kleinere opdracht
