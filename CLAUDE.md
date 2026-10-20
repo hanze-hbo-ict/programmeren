@@ -35,6 +35,10 @@ een sectie of een week. Zie de tabel in `.claude/agent-role-loop/core/loop.md`.
 - **Een besluit dat niet in `curriculum/` of `conventies/` landt, is niet genomen.**
   Dat is de harde regel van deze repo. Schrijf het op waar de volgende het
   terugvindt, niet in een commitbericht of een gesprek.
+- Een **procesbesluit** - een keuze over de werkwijze zelf - landde tot 20 oktober
+  2026 in `onderzoek/`. Nu die map een archief is, is nog niet besloten waar zo'n
+  besluit landt; dat ligt bij de vakdeskundige (werkitem #406). Tot dat besluit is
+  het expliciete menselijke besluit op GitHub de bron.
 
 ## Meten
 
@@ -64,34 +68,24 @@ routescenario's; een Sphinx-build is daarvoor niet nodig.
 
 Commits op `master` zijn geblokkeerd; werk in een branch en open een pull request.
 
-## Noteer wat de werkwijze leert
+## De werkwijze zelf
 
-Deze werkwijze is een experiment en wordt bijgesteld op grond van wat er misgaat.
-Gaat er iets mis op een manier die niet aan dat ene geval ligt, noteer het dan in
-[`onderzoek/bevindingen.md`](onderzoek/bevindingen.md) - met het bewijs en met wat
-het veranderde, want een bevinding zonder gevolg is een anekdote.
+Deze werkwijze is als experiment gedraaid en bijgesteld op grond van wat er misging.
+Die onderzoekstrack is op 20 oktober 2026 gesloten: `onderzoek/` is een archief dat
+niet meer wordt bijgehouden, en er worden geen tokentellingen, metingen of
+bevindingen meer vastgelegd. De lus zelf blijft onveranderd.
 
-**Draai je de lus**, dan draagt elk artefact zijn eigen meetregel; zie `/orc`. Die
-staat in de reactie waarin je het artefact plaatst, zodat vergeten niet een stap
-overslaan is maar een onvolledig artefact plaatsen.
+**Draai je de lus**, dan draagt elk artefact zijn eigen meetregel - rol, ronde,
+omvang en uitkomst; zie `/orc`. Die staat in de reactie waarin je het artefact
+plaatst, zodat vergeten niet een stap overslaan is maar een onvolledig artefact
+plaatsen.
 
-**Doe je het met de hand** - omdat het te klein leek voor een werkitem - dan is er
-geen tokentelling en dwingt niets je iets op te schrijven. Zet het dan zelf onder
-*Werk buiten de lus om* in [`onderzoek/metingen.md`](onderzoek/metingen.md): wat het
-was, waarom het buiten de lus bleef, en of er achteraf een beoordelaar overheen is
-gegaan. Dat laatste is de regel *wie het zelf doet, laat het lezen*, en of die wordt
-nageleefd hoort daar zichtbaar te zijn - de eerste zeven ingrepen scoorden nul.
+**Doe je het met de hand** - omdat het te klein leek voor een werkitem - dan geldt
+nog één regel: *wie het zelf doet, laat het lezen*. Ook een kleine correctie gaat in
+een branch met een pull request en langs een onafhankelijke lezer.
 
 ## Wat je niet zelf beslist
 
 Alles wat `curriculum/` of `conventies/` raakt is een besluit van de vakdeskundige.
 Kom je zoiets tegen, leg het dan voor in plaats van het in te vullen - ook als het
 antwoord voor de hand ligt, en ook als het besluit "verander niets" luidt.
-
-## Procesexperiment #203
-
-Het goedgekeurde procesbesluit, de proefgrenzen en de uitgangsmeting staan in
-`onderzoek/203-proef.md`. Pas nieuwe routes niet midden in een lopend werkitem toe.
-Procesbesluiten worden in `onderzoek/` vastgelegd; de inhoudelijke vastlegplicht
-voor `curriculum/` en `conventies/` blijft gelden. Een instructie-PR sluit een
-werkitem met resterende praktijkproeven niet.
