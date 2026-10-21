@@ -395,6 +395,7 @@ draait wel.
 | De student werkt lokaal in VS Code; de browser is verrijking | didactisch | staand, onderbouwd |
 | Code uitvoerbaar in de browser | praktisch | open, uitvoering wijzigt |
 | Wat er niet meer toe doet, mag weg; we ruimen achter ons op | organisatorisch | gesloten op 24 september 2026, **deels uitgevoerd**: `teacher_guides/` is weg (#280); welke andere directories eronder vallen, wordt voorgelegd in #282 |
+| Docstring en functiesignatuur verdienen punten in het tentamen, als eenvoudig werk dat zelfdiscipline beloont | didactisch | gesloten op 21 oktober 2026, **uitgevoerd** in eerdere tentamens; vastgelegd bij `misja/ans_grading`#16 |
 
 ### Facultatieve extra van week 6
 
@@ -1263,6 +1264,35 @@ Vastgesteld door de vakdeskundige bij #378/C4 en het akkoord op het C2-ontwerp
 op 20 oktober 2026. De alinea over PGM2 is op 21 oktober 2026 bijgewerkt, op
 besluit van de vakdeskundige na de poortbesluiten van #393. Te heropenen wanneer
 de toepassing of voorkennis een andere introductieplek of leergrens vraagt.
+
+### Punten voor docstring en signatuur
+
+In het PGM1-tentamen verdienen een docstring en een correcte functiesignatuur
+punten. Het is eenvoudig werk met een klein bedrag per keer, en het staat er
+omdat het **zelfdiscipline beloont**: de opgave noemt deze details, en wie erop
+let krijgt er iets voor terug. Dat wordt studenten ook met zoveel woorden
+gezegd - let op dit soort details als ze genoemd worden, want het levert je wat
+op. De motivationele werking is de grond, en zij werkt alleen als de punten er
+werkelijk zijn.
+
+Dit is dus geen weging voor **P7**. Die uitkomst heeft in
+[leeruitkomsten.md](leeruitkomsten.md) de weging *geen*, en daar staat het
+voorstel "weging geven of expliciet als vormeis opnemen" nog open. Dat voorstel
+blijft open en hoort bij de doorlichting in #329. Deze punten zijn toetsbeleid:
+zij belonen het volgen van een expliciete instructie, niet het beheersen van een
+leeruitkomst. Daarmee wijzigt de rubric de vastgestelde matrijs niet als bijvangst
+van materiaalwerk, wat *Wat er aan de leeruitkomsten mag veranderen* hierboven
+verbiedt.
+
+**Wat zou dit heropenen.** Een weging voor P7 in de matrijs, want dan dragen
+dezelfde punten een uitkomst en is dit besluit overbodig. Of de vaststelling dat
+de aankondiging aan studenten niet meer wordt gedaan, want dan vervalt de
+motivationele grond en blijft een vormpunt zonder reden over.
+
+Vastgesteld door de vakdeskundige op 21 oktober 2026, bij werkitem
+`misja/ans_grading`#16, waar een ontwerper voorstelde deze punten te laten
+vervallen omdat de matrijs ze niet draagt. De praktijk is ouder dan dit besluit;
+wat hier nieuw is, is dat de grond is opgeschreven.
 
 ## Een besluit toevoegen
 
