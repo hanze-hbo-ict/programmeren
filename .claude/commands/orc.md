@@ -15,12 +15,12 @@ PR. Voor een werkitem in `hanze-hbo-ict/programmeren` staat de stap in Status op
 project 4 van `hanze-hbo-ict`. Gebruik de actuele project- en veld-ID's; labels uit
 oude routes bepalen niet welke agents starten.
 
-Dat bord draagt uitsluitend werkitems van die repository. Hoort het werkitem bij een
-andere repository, dan geldt daar haar eigen registratieafspraak en niet dit bord;
-zet zo'n issue er ook niet op, want de enige relatie tussen de repository's is
-inhoudelijk. In `misja/ans_grading` staat die afspraak in `rollen/aanvulling.md`,
-kop *Procesregistratie*: overdrachten en besluiten op issue en PR. Of daar een bord
-met Status bij hoort, stel je ter plaatse vast.
+Dat bord draagt uitsluitend werkitems van die repository. Hoort het werkitem elders,
+dan geldt de registratieafspraak van die repository en niet dit bord; zet zo'n issue
+er ook niet op. In `misja/ans_grading` staat die afspraak in `rollen/aanvulling.md`,
+kop *Procesregistratie*: overdrachten en besluiten op issue en PR; die repository is
+met programmeren alleen inhoudelijk verbonden. Of er een bord met Status bij hoort,
+stel je ter plaatse vast.
 
 ## Inname en route
 
