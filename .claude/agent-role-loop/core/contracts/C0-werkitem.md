@@ -7,18 +7,23 @@ contract is onafhankelijk van het ticketsysteem, zodat de inhoud op zichzelf
 leesbaar blijft.
 
 **In dit project is een werkitem een GitHub-issue**, aangemaakt met het sjabloon
-in `.github/ISSUE_TEMPLATE/werkitem.yml`. De issue is het artefact, de
-overdrachten zijn reacties erop, en de stap staat in het veld Status op het
-[projectbord](https://github.com/orgs/hanze-hbo-ict/projects/4).
+in `.github/ISSUE_TEMPLATE/werkitem.yml`. De issue is het artefact en de
+overdrachten zijn reacties erop. Voor een werkitem in
+`hanze-hbo-ict/programmeren` staat de stap in het veld Status op het
+[projectbord](https://github.com/orgs/hanze-hbo-ict/projects/4). Dit contract
+wordt door meer projecten gelezen: hoort het werkitem bij een andere repository,
+dan geldt de registratieafspraak van dat project. In `misja/ans_grading` is dat
+`rollen/aanvulling.md`, kop *Procesregistratie*: issue en PR, zonder Statusveld.
 Een werkitem geeft de triage genoeg om proportionaliteit te beoordelen en de
 curriculumontwerper genoeg om een ontwerp op te gronden. Het beschrijft de
 gewenste uitkomst, niet de uitvoering.
 
 ## Vóór het ontwerp
 
-Raadpleeg het [projectbord](https://github.com/orgs/hanze-hbo-ict/projects/4) op
-open **doorlopende** issues die dit werk raken, en op eerder geparkeerde gevolgen
-die hier neerslaan. Neem wat van toepassing is mee in de acceptatiecriteria of de
+Raadpleeg de open **doorlopende** issues die dit werk raken, en de eerder
+geparkeerde gevolgen die hier neerslaan - op het
+[projectbord](https://github.com/orgs/hanze-hbo-ict/projects/4), of waar dit
+project zijn werkitems bijhoudt. Neem wat van toepassing is mee in de acceptatiecriteria of de
 afbakening, **zodat de ontwerpfase niet aan geheugen hangt.**
 
 ## Schema

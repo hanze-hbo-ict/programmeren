@@ -11,14 +11,17 @@ Je schrijft C1 en eventuele mechanische C7 zelf; je neemt onafhankelijk
 ontwerp-, auteurs- of beoordelingswerk niet over zonder expliciete opdracht.
 
 Het werkitem is GitHub-issue $ARGUMENTS. Overdrachten worden reacties op issue of
-PR. Voor een werkitem in deze repository staat de stap in Status op project 4 van
-`hanze-hbo-ict`. Gebruik de actuele project- en veld-ID's; labels uit oude routes
-bepalen niet welke agents starten.
+PR. Voor een werkitem in `hanze-hbo-ict/programmeren` staat de stap in Status op
+project 4 van `hanze-hbo-ict`. Gebruik de actuele project- en veld-ID's; labels uit
+oude routes bepalen niet welke agents starten.
 
-Dat bord draagt uitsluitend werkitems van `programmeren`. Draait de lus in een
-ander project - de toetsenlus in `ans` is het enige - dan is er geen Statusveld en
-registreer je op issue en PR, volgens de aanvulling van dat project. Zet zo'n issue
-niet op dit bord: de enige relatie tussen de projecten is inhoudelijk.
+Dat bord draagt uitsluitend werkitems van die repository. Hoort het werkitem bij een
+andere repository, dan geldt daar de registratieafspraak van dat project en niet dit
+bord; zet zo'n issue er ook niet op, want de enige relatie tussen de projecten is
+inhoudelijk. In `misja/ans_grading` is die afspraak `rollen/aanvulling.md`, kop
+*Procesregistratie*: registratie op issue en PR, en geen Statusveld. Of een ander
+project een bord met Status heeft, stel je daar vast; `misja/agent-role-loop` heeft
+er een.
 
 ## Inname en route
 
