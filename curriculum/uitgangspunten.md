@@ -1243,13 +1243,14 @@ git-geschiedenis als vindplaats niet volstaat.
 PGM1 basis week 5 introduceert eenvoudige f-stringinterpolatie vóór de begincode,
 met een verplichte opdracht waarin de student zelf een vraag naar de dagkoers
 met het gegeven dagnummer maakt en die afzonderlijk afdrukt. Stringconstructie
-en afdrukken zijn verschillende handelingen. Meerdere argumenten bij `print` blijven volwaardig geldig.
+en afdrukken zijn verschillende handelingen. Meerdere argumenten bij `print`
+blijven geldig.
 
-Kolomopmaak is een ondersteund hulpmiddel: gebruikte notatie wordt aangereikt en
-verklaard en mag worden overgenomen of opgezocht. Zelf uitlijning ontwerpen of
-formaatspecificaties onthouden is geen zelfstandig PGM1-leerdoel. Correcte
-uitvoer met andere kolombreedtes voldoet als inhoud en rij- en kolomverbanden
-kloppen. Leeruitkomsten en gewichten veranderen niet.
+Kolomopmaak is een ondersteund hulpmiddel: de gebruikte formaatspecificatie
+wordt aangereikt en verklaard en mag worden overgenomen of opgezocht. Zelf
+uitlijning ontwerpen of formaatspecificaties onthouden is geen zelfstandig
+PGM1-leerdoel. Correcte uitvoer met andere kolombreedtes voldoet als inhoud en
+rij- en kolomverbanden kloppen. Leeruitkomsten en gewichten veranderen niet.
 
 PGM2 mag eenvoudige interpolatie als voorkennis veronderstellen, en niet meer
 dan dat. De datumcodes `02d` en `04d` staan sinds #393 nergens meer in het boek
