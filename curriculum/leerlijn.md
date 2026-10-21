@@ -81,8 +81,8 @@ voor rekenen en vergelijken, van sterk naar zwak, zonder *toekenning* en zonder
 `==` vergelijkt waar `=` toekent. *Toekenning* staat als term bij
 `## Variabelen`, met het enkele `=`. *Condities combineren en omkeren* staat na
 *De if-then-else boom*, zodat *conditie* eerst bij het if-statement valt, en
-sluit af met een tabel van alle operatoren in de voorrangsvolgorde van Python,
-met het advies om bij twijfel haakjes te zetten, vooral bij `and` en `or`. `%`
+sluit af met een tabel van alle operatoren die de student dan kent, in de
+voorrangsvolgorde van Python, met het advies om bij twijfel haakjes te zetten, vooral bij `and` en `or`. `%`
 heet *modulo*, en de tabel koppelt die naam aan de rest bij deling. Het plan van
 het maximumprobleem zegt "groter dan" in woorden en niet met `>`. Besloten door
 de vakdeskundige op 21 oktober 2026, bij werkitem #422.
