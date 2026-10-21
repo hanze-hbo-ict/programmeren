@@ -72,9 +72,20 @@ daarom staat *docstring* in de kolom van week 3 en niet van week 2. Zie
 `if not has_nine_digits(bsn):` in de uitwerking van de basisopgave. Daarna komt
 `not` terug in de oefenmidterm van week 4 (opdracht 19 en 20) en in PGM2 week 5
 (`assert not x`). `lectures/2a_var_con`, sectie *Condities combineren en omkeren*,
-zegt wat `not` doet en dat `not a == b` gelezen wordt als `not (a == b)`. De
-operatortabel daar blijft ongewijzigd. Het bestaande gebruik van `not` blijft
-staan. Besloten door de vakdeskundige op 21 oktober 2026, bij werkitem #400.
+zegt wat `not` doet en dat `not a == b` gelezen wordt als `not (a == b)`. Het
+bestaande gebruik van `not` blijft staan. Besloten door de vakdeskundige op 21
+oktober 2026, bij werkitem #400. Daarbij bleef de operatortabel ongewijzigd; dat
+is bij #422 heropend. De tabel in `## Operatoren` is nu de bewerkingsvolgorde
+voor rekenen en vergelijken, van sterk naar zwak, zonder *toekenning* en zonder
+`and` en `or`. Eronder staat dat een vergelijking een boolean oplevert, en dat
+`==` vergelijkt waar `=` toekent. *Toekenning* staat als term bij
+`## Variabelen`, met het enkele `=`. *Condities combineren en omkeren* staat na
+*De if-then-else boom*, zodat *conditie* eerst bij het if-statement valt, en
+sluit af met een tabel van alle operatoren in de voorrangsvolgorde van Python,
+met het advies om bij twijfel haakjes te zetten, vooral bij `and` en `or`. `%`
+heet *modulo*, en de tabel koppelt die naam aan de rest bij deling. Het plan van
+het maximumprobleem zegt "groter dan" in woorden en niet met `>`. Besloten door
+de vakdeskundige op 21 oktober 2026, bij werkitem #422.
 
 **Recursie gaat naar PGM2 en wordt in PGM1 niet onderwezen.** PGM1 laat geen
 zelfaanroepende functie zien, ook niet in week 3. De leesopdrachten daarover zijn
