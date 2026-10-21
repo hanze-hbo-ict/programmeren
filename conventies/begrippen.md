@@ -73,6 +73,9 @@ forceer geen Nederlandse vertaling. Voor dit materiaal werkt dat zo uit:
 | Plek waar bestanden in staan | **directory** | map (1×), folder (9×) | Geteld in `source/`; zie hieronder |
 | De eerste regel van een functie | **signatuur** | signature (4×) | Vastgesteld door de vakdeskundige op 10 september 2026 |
 | Uitdrukking die waar of onwaar is en bepaalt of een blok draait | **conditie** | voorwaarde (14×) | Vastgesteld door de vakdeskundige op 15 september 2026 |
+| String waarin Python waarden invult, met een `f` vóór de aanhalingstekens | **f-string** | - | 12× in `source/`, zonder concurrent. Verplichte PGM1-stof in basis week 5 sinds #378; zie het besluit *F-strings en uitvoer* in `curriculum/uitgangspunten.md`, vastgesteld door de vakdeskundige op 20 oktober 2026. Zie *F-string, interpolatie en formaatspecificatie* hieronder |
+| Het invullen van waarden in een string | **interpolatie** | - | Het eenvoudige geval heet in `curriculum/leerlijn.md` en `curriculum/uitgangspunten.md` *eenvoudige f-stringinterpolatie*. Zie *F-string, interpolatie en formaatspecificatie* hieronder |
+| De notatie achter de dubbele punt tussen de accolades, zoals `>4` in `f"{day:>4}"` | **formaatspecificatie** | - | Niet *formatcode*, *opmaaknotatie* of *formaatcode*, en *datumcodes* is geen synoniem maar een specifiek geval. Vastgesteld door de vakdeskundige op 21 oktober 2026, bij #378. Zie *F-string, interpolatie en formaatspecificatie* hieronder |
 
 ## Staat, en state machine
 
@@ -225,6 +228,50 @@ herziening. Dat is een bekende afwijking. Het college over de knapzak en
 week 4 verhuisden, zijn in #335 herzien en zeggen nu *basisgeval*; het college heet
 sindsdien `lectures/11a_use_it_or_lose_it.ipynb`.
 
+## F-string, interpolatie en formaatspecificatie
+
+Drie termen bij één onderwerp. Met #378 is de f-string verplichte stof in PGM1
+basis week 5, en de notatie voor de opmaak heeft sinds 21 oktober 2026 één naam.
+
+**Formaatspecificatie is de term.** *Formatcode*, *opmaaknotatie* en *formaatcode*
+zijn het niet. Vastgesteld door de vakdeskundige op 21 oktober 2026, bij #378.
+Twee redenen horen bij dat besluit, want ze gaan anders verloren: de term sluit aan
+bij wat Python zelf *format specification* noemt, en hij stond al in
+`curriculum/leerlijn.md` door het poortbesluit van #393. Wie hier opnieuw een
+woord kiest, maakt een wissel die al gemaakt is.
+
+**Datumcodes is geen synoniem maar een specifiek geval**: de codes `02d` en `04d`
+waarmee een datum met voorloopnullen werd uitgeschreven. Die staan sinds #393
+nergens meer in het boek - de vier formaatspecificaties die er nog staan zijn `>4`
+en `>6` in `problems/5_basis.ipynb` - dus *datumcodes* is niet de naam voor de
+notatie in het algemeen. Zie het besluit *F-strings en uitvoer* in
+[`curriculum/uitgangspunten.md`](../curriculum/uitgangspunten.md).
+
+**In de studenttekst blijft de term bewust weg.** `curriculum/leerlijn.md` legt
+vast dat PGM1 eenvoudige interpolatie levert *zonder formaatspecificatie*; de term
+daar invoeren zou een begripsstap toevoegen die het curriculum niet wil. Het
+optionele kopje over kolommen uitlijnen in `problems/5_basis.ipynb` wijst daarom
+met *deze opmaak* en *deze codes* naar de notatie in plaats van haar te benoemen,
+en dat hoort zo te blijven. Dit is de enige term in deze lijst die auteurs bindt
+zonder dat het materiaal haar hoeft te gebruiken; wie dat "rechtzet", maakt de les
+zwaarder dan zij hoort te zijn.
+
+**Waar de drie termen staan**, gemeten op `247ce1e5`. Komt er een vindplaats bij,
+dan hoort zij hier bij.
+
+- *F-string* staat twaalf keer in `source/`: zes keer in `problems/5_basis.ipynb`,
+  twee keer in `practicals/13_creatures.md`, en één keer in
+  `solutions/5_basis.ipynb`, `problems/13_opstap.ipynb`,
+  `solutions/12_opstap.ipynb` en `lectures/12b_data_object.ipynb`. De constructie
+  zelf - een `f` voor een string - staat er 106 keer, in 31 bestanden; dat is de
+  constructie en niet de term.
+- *Interpolatie* staat één keer in `source/`, in `problems/5_basis.ipynb`, waar het
+  begrip wordt ingevoerd. Verder in `curriculum/leerlijn.md`,
+  `curriculum/uitgangspunten.md` en `conventies/codeconventies.md`.
+- *Formaatspecificatie* staat niet in `source/`, om de reden hierboven, en alleen
+  in de bindende laag: `curriculum/leerlijn.md`, `curriculum/uitgangspunten.md` en
+  `conventies/codeconventies.md`, onder *F-strings en uitvoer*.
+
 ## Opgave, opdracht, stap
 
 Deze woorden liepen door elkaar: hetzelfde soort taak heette in het ene bestand
@@ -308,11 +355,11 @@ zij hier bij.
 - **Een ongenummerde `Opdracht`-kop**, waar een document één taak draagt in
   plaats van een reeks. **Nummer die niet alsnog**: er is geen reeks om in mee te
   tellen, en `problems/2_basis.ipynb` heeft juist geen *Opdracht 4* - zie
-  `handleidingen/week_2.md`. Zeven vindplaatsen: `### Opdracht` in
-  `practicals/2_rochambeau.ipynb`, `problems/2_basis.ipynb`,
-  `problems/3_basis.ipynb` en `lectures/12b_data_object.ipynb`,
+  `handleidingen/week_2.md`. Zeven vindplaatsen, in drie kopvormen: `### Opdracht`
+  in `practicals/2_rochambeau.ipynb`, `problems/2_basis.ipynb`,
+  `problems/3_basis.ipynb` en `lectures/12b_data_object.ipynb`;
   `### Opdracht: een vraag voor de dagkoers` in `problems/5_basis.ipynb` en in
-  zijn uitwerking `solutions/5_basis.ipynb`, en `## Opdracht` in
+  zijn uitwerking `solutions/5_basis.ipynb`; en `## Opdracht` in
   `practicals/4_python_bat.md`.
 
 Wat níet blijft is een **genummerde** `Opgave N`, of dat nu een kop is of een
