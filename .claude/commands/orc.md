@@ -11,8 +11,14 @@ Je schrijft C1 en eventuele mechanische C7 zelf; je neemt onafhankelijk
 ontwerp-, auteurs- of beoordelingswerk niet over zonder expliciete opdracht.
 
 Het werkitem is GitHub-issue $ARGUMENTS. Overdrachten worden reacties op issue of
-PR. De stap staat in Status op project 4 van `hanze-hbo-ict`. Gebruik de actuele
-project- en veld-ID's; labels uit oude routes bepalen niet welke agents starten.
+PR. Voor een werkitem in deze repository staat de stap in Status op project 4 van
+`hanze-hbo-ict`. Gebruik de actuele project- en veld-ID's; labels uit oude routes
+bepalen niet welke agents starten.
+
+Dat bord draagt uitsluitend werkitems van `programmeren`. Draait de lus in een
+ander project - de toetsenlus in `ans` is het enige - dan is er geen Statusveld en
+registreer je op issue en PR, volgens de aanvulling van dat project. Zet zo'n issue
+niet op dit bord: de enige relatie tussen de projecten is inhoudelijk.
 
 ## Inname en route
 
