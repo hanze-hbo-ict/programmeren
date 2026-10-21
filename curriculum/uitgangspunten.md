@@ -1246,8 +1246,8 @@ met het gegeven dagnummer maakt en die afzonderlijk afdrukt. Stringconstructie
 en afdrukken zijn verschillende handelingen. Meerdere argumenten bij `print`
 blijven geldig.
 
-Kolomopmaak is een ondersteund hulpmiddel: de gebruikte formaatspecificatie
-wordt aangereikt en verklaard en mag worden overgenomen of opgezocht. Zelf
+Kolomopmaak is een ondersteund hulpmiddel: een formaatspecificatie wordt
+aangereikt en verklaard en mag worden overgenomen of opgezocht. Zelf
 uitlijning ontwerpen of formaatspecificaties onthouden is geen zelfstandig
 PGM1-leerdoel. Correcte uitvoer met andere kolombreedtes voldoet als inhoud en
 rij- en kolomverbanden kloppen. Leeruitkomsten en gewichten veranderen niet.
