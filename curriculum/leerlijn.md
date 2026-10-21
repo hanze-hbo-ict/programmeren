@@ -71,7 +71,7 @@ daarom staat *docstring* in de kolom van week 3 en niet van week 2. Zie
 **`not` valt in week 2, bij `and` en `or`.** Het eerste gebruik staat in week 3:
 `if not has_nine_digits(bsn):` in de uitwerking van de basisopgave. Daarna komt
 `not` terug in de oefenmidterm van week 4 (opdracht 19 en 20) en in PGM2 week 5
-(`assert not x`). `lectures/2a_var_con`, sectie *Twee voorwaarden tegelijk*,
+(`assert not x`). `lectures/2a_var_con`, sectie *Condities combineren en omkeren*,
 zegt wat `not` doet en dat `not a == b` gelezen wordt als `not (a == b)`. De
 operatortabel daar blijft ongewijzigd. Het bestaande gebruik van `not` blijft
 staan. Besloten door de vakdeskundige op 21 oktober 2026, bij werkitem #400.
