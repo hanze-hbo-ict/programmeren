@@ -265,8 +265,10 @@ er een weg - dan hoort dit hermeten, geijkt op de getallen hieronder.
   `solutions/12_opstap.ipynb` en `lectures/12b_data_object.ipynb`. De constructie
   zelf - een kleine `f` voor een aanhalingsteken - staat er 95 keer, in 26
   bestanden; dat is de constructie en niet de term. Meet haar
-  hoofdlettergevoelig en sla een aanhalingsteken vlak vóór de `f` over, anders
-  tellen de letterlijke `"F"` en `"f"` uit het stringmateriaal mee.
+  hoofdlettergevoelig, op de gedecodeerde celinhoud en niet op de ruwe JSON,
+  waar het aanhalingsteken van de cel vlak vóór een `f` kan staan, en sla een
+  aanhalingsteken vlak vóór de `f` over, anders tellen de letterlijke `"F"` en
+  `"f"` uit het stringmateriaal mee.
 - *Interpolatie* staat één keer in `source/`, in `problems/5_basis.ipynb`, waar het
   begrip wordt ingevoerd. Verder in `curriculum/leerlijn.md`,
   `curriculum/uitgangspunten.md` en `conventies/codeconventies.md`.
