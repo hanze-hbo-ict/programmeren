@@ -116,7 +116,7 @@ uitgevoerd.
 | Uitkomst | Bevinding | Voorstel |
 |---|---|---|
 | **PGM2 A5** (finite state machines) | Niet onderwezen, niet getoetst, en de bijbehorende theoretische afsluiting is bewust losgelaten. Zie [uitgangspunten.md](uitgangspunten.md), *De theoretische afsluiting*. | **Schrappen.** |
-| **PGM1 P7** (docstrings) | Wél onderwezen en overal in het materiaal toegepast, maar niet getoetst. | Weging geven of expliciet als vormeis opnemen. |
+| **PGM1 P7** (docstrings) | Wél onderwezen en overal in het materiaal toegepast. Niet gewogen, maar wél bepunt: het tentamen keert punten uit voor een docstring, als eenvoudig werk dat zelfdiscipline beloont. Vastgesteld door de vakdeskundige op 21 oktober 2026; zie [uitgangspunten.md](uitgangspunten.md), *Punten voor docstring en signatuur*. Een puntentoekenning is geen weging, zie daar. | Weging geven, of de uitkomst laten zoals zij nu is: bepunt zonder weging. De variant *vormeis zonder punten* is door dat besluit afgevallen. |
 | **PGM2 P6** (operator overloading) | Wél onderwezen, en in de planning voor 2026 krijgt het een hele week. | Weging geven, of de week heroverwegen. |
 | **PGM2 P7** (externe bibliotheken) | Verspreid aanwezig, niet als onderwerp behandeld. | Besluiten of dit een leeruitkomst moet blijven. |
 | ~~**PGM1: de weging van de matrijs**~~ | **Uitgevoerd op 4 oktober 2026.** Het gewicht dat A4 achterliet is aan A3 toegekend: A3 weegt 20% en de matrijs sluit op 100%. Dat PGM1 geen uitkomst op creëren-niveau heeft, is daarbij als keuze vastgelegd en niet als restant. De grond, de niveaumeting van het oefententamen en wat beide besluiten zou heropenen staan in [uitgangspunten.md](uitgangspunten.md), *De weging van de PGM1-matrijs*. | Gedaan. |

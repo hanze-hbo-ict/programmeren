@@ -395,7 +395,7 @@ draait wel.
 | De student werkt lokaal in VS Code; de browser is verrijking | didactisch | staand, onderbouwd |
 | Code uitvoerbaar in de browser | praktisch | open, uitvoering wijzigt |
 | Wat er niet meer toe doet, mag weg; we ruimen achter ons op | organisatorisch | gesloten op 24 september 2026, **deels uitgevoerd**: `teacher_guides/` is weg (#280); welke andere directories eronder vallen, wordt voorgelegd in #282 |
-| Docstring en functiesignatuur verdienen punten in het tentamen, als eenvoudig werk dat zelfdiscipline beloont | didactisch | gesloten op 21 oktober 2026, **uitgevoerd** in eerdere tentamens; vastgelegd bij `misja/ans_grading`#16 |
+| In het PGM1-tentamen verdienen een docstring en een correcte signatuur punten, als eenvoudig werk dat zelfdiscipline beloont | didactisch | gesloten op 21 oktober 2026, **deels uitgevoerd**: eerdere tentamens keerden deze punten uit, maar de rubric staat buiten deze repository en die van 2026-1 wordt bij `misja/ans_grading`#16 gemaakt; zie *Punten voor docstring en signatuur* |
 
 ### Facultatieve extra van week 6
 
@@ -1267,32 +1267,52 @@ de toepassing of voorkennis een andere introductieplek of leergrens vraagt.
 
 ### Punten voor docstring en signatuur
 
-In het PGM1-tentamen verdienen een docstring en een correcte functiesignatuur
-punten. Het is eenvoudig werk met een klein bedrag per keer, en het staat er
-omdat het **zelfdiscipline beloont**: de opgave noemt deze details, en wie erop
-let krijgt er iets voor terug. Dat wordt studenten ook met zoveel woorden
-gezegd - let op dit soort details als ze genoemd worden, want het levert je wat
-op. De motivationele werking is de grond, en zij werkt alleen als de punten er
-werkelijk zijn.
+In het PGM1-tentamen verdienen een docstring en een correcte signatuur punten.
+Het is eenvoudig werk, en het staat er omdat het **zelfdiscipline beloont**: de
+opgave noemt deze details, en wie erop let krijgt er iets voor terug. Dat wordt
+studenten ook met zoveel woorden gezegd - let op dit soort details als ze
+genoemd worden, want het levert je wat op. De motivationele werking is de grond,
+en zij werkt alleen als de punten er werkelijk zijn en worden aangekondigd.
 
-Dit is dus geen weging voor **P7**. Die uitkomst heeft in
-[leeruitkomsten.md](leeruitkomsten.md) de weging *geen*, en daar staat het
-voorstel "weging geven of expliciet als vormeis opnemen" nog open. Dat voorstel
-blijft open en hoort bij de doorlichting in #329. Deze punten zijn toetsbeleid:
-zij belonen het volgen van een expliciete instructie, niet het beheersen van een
-leeruitkomst. Daarmee wijzigt de rubric de vastgestelde matrijs niet als bijvangst
-van materiaalwerk, wat *Wat er aan de leeruitkomsten mag veranderen* hierboven
-verbiedt.
+Dat is het besluit. **De rest van deze sectie is de lezing van de registratie en
+niet wat er is besloten**, zoals ook *De punten zijn geteld, de niveaus zijn
+gelezen* hierboven dat onderscheid maakt. Wie het anders leest, verantwoordt dat
+op dezelfde documenten.
 
-**Wat zou dit heropenen.** Een weging voor P7 in de matrijs, want dan dragen
-dezelfde punten een uitkomst en is dit besluit overbodig. Of de vaststelling dat
-de aankondiging aan studenten niet meer wordt gedaan, want dan vervalt de
-motivationele grond en blijft een vormpunt zonder reden over.
+**De twee helften staan verschillend tegenover de matrijs, en dat is geen
+detail.** Een correcte signatuur valt onder **P5**, *"Student definieert
+functies met positionele parameters en past ze toe"*, met een weging van 10% op
+toepassen. Die punten zijn dus gewone tentamenpunten op een gewogen uitkomst, en
+ze hebben geen eigen rechtvaardiging nodig; wat dit besluit erover zegt is
+alleen dat de signatuur **afzonderlijk** wordt uitgekeerd in plaats van op te
+gaan in het algoritmische werk. Een docstring valt onder **P7**, dat in
+[leeruitkomsten.md](leeruitkomsten.md) de weging *geen* heeft. Daar dragen de
+punten geen gewogen uitkomst, en rusten zij uitsluitend op de grond hierboven.
+
+Een puntentoekenning is geen weging. Dat volgt uit *Waarom deze meting per
+niveau gaat en niet per uitkomst* hierboven: punten zijn per niveau te verdelen
+en niet per uitkomst, want één opgave realiseert meerdere uitkomsten tegelijk.
+Vier docstringpunten maken van P7 dus geen gewogen uitkomst, en de vastgestelde
+matrijs verandert hier niet - geen rij, geen niveau, geen percentage. Daarmee
+blijft dit binnen *Wat er aan de leeruitkomsten mag veranderen* hierboven.
+
+Wat in [leeruitkomsten.md](leeruitkomsten.md) over P7 open blijft, is de vraag
+of die uitkomst een **weging** krijgt; die hoort bij de doorlichting in #329.
+Wel is de daar genoemde optie versmald: "expliciet als vormeis opnemen" kan na
+dit besluit niet meer betekenen *een vormeis zonder punten*.
+
+**Wat zou dit heropenen.** Voor de docstringhelft: een weging voor P7 in de
+matrijs, want dan draagt die punt een uitkomst en is deze grond overbodig. Of de
+vaststelling dat de aankondiging aan studenten niet meer wordt gedaan, want dan
+vervalt de motivationele werking en blijft een vormpunt zonder reden over. Voor
+de signatuurhelft: een besluit dat de signatuur niet langer afzonderlijk wordt
+uitgekeerd maar in het algoritmische criterium opgaat. Dat is een rubricvraag en
+raakt P5 zelf niet.
 
 Vastgesteld door de vakdeskundige op 21 oktober 2026, bij werkitem
-`misja/ans_grading`#16, waar een ontwerper voorstelde deze punten te laten
-vervallen omdat de matrijs ze niet draagt. De praktijk is ouder dan dit besluit;
-wat hier nieuw is, is dat de grond is opgeschreven.
+`misja/ans_grading`#16, waar een ontwerper voorstelde de docstringpunten te
+laten vervallen omdat de matrijs ze niet draagt. De praktijk is ouder dan dit
+besluit; wat hier nieuw is, is dat de grond is opgeschreven.
 
 ## Een besluit toevoegen
 
