@@ -316,10 +316,10 @@ sorteren". Dat is geen vooruitverwijzing en hoeft niet weg.
 
 Eenvoudige f-stringinterpolatie is stringconstructie, geen objectmethode. PGM1
 week 5 introduceert het zelf schrijven ervan. Meerdere argumenten bij `print`
-blijven een geldige uitvoervorm. Opmaaknotatie wordt bij gebruik aangereikt en
-verklaard; zelfstandig kolombreedtes ontwerpen of formatcodes onthouden is geen
-PGM1-eis. Zie het besluit *F-strings en uitvoer* in
-[`curriculum/uitgangspunten.md`](../curriculum/uitgangspunten.md).
+blijven een geldige uitvoervorm. Een formaatspecificatie wordt bij gebruik
+aangereikt en verklaard; zelfstandig kolombreedtes ontwerpen of
+formaatspecificaties onthouden is geen PGM1-eis. Zie het besluit *F-strings en
+uitvoer* in [`curriculum/uitgangspunten.md`](../curriculum/uitgangspunten.md).
 
 ## Docstrings
 
