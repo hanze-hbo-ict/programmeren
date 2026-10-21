@@ -73,7 +73,7 @@ forceer geen Nederlandse vertaling. Voor dit materiaal werkt dat zo uit:
 | Plek waar bestanden in staan | **directory** | map (1×), folder (9×) | Geteld in `source/`; zie hieronder |
 | De eerste regel van een functie | **signatuur** | signature (4×) | Vastgesteld door de vakdeskundige op 10 september 2026 |
 | Uitdrukking die waar of onwaar is en bepaalt of een blok draait | **conditie** | voorwaarde (14×) | Vastgesteld door de vakdeskundige op 15 september 2026 |
-| String waarin Python waarden invult, met een `f` vóór de aanhalingstekens | **f-string** | - | 12× in `source/`, zonder concurrent. Verplichte PGM1-stof in basis week 5 sinds #378; zie het besluit *F-strings en uitvoer* in `curriculum/uitgangspunten.md`, vastgesteld door de vakdeskundige op 20 oktober 2026. Zie *F-string, interpolatie en formaatspecificatie* hieronder |
+| String waarin Python waarden invult, met een `f` vóór de aanhalingstekens | **f-string** | - | Zonder concurrent in `source/`. Verplichte PGM1-stof in basis week 5 sinds #378; zie het besluit *F-strings en uitvoer* in `curriculum/uitgangspunten.md`, vastgesteld door de vakdeskundige op 20 oktober 2026. Zie *F-string, interpolatie en formaatspecificatie* hieronder |
 | Het invullen van waarden in een string | **interpolatie** | - | Het eenvoudige geval heet in `curriculum/leerlijn.md` en `curriculum/uitgangspunten.md` *eenvoudige f-stringinterpolatie*. Zie *F-string, interpolatie en formaatspecificatie* hieronder |
 | De notatie achter de dubbele punt tussen de accolades, zoals `>4` in `f"{day:>4}"` | **formaatspecificatie** | - | Niet *formatcode*, *opmaaknotatie* of *formaatcode*, en *datumcodes* is geen synoniem maar een specifiek geval. Vastgesteld door de vakdeskundige op 21 oktober 2026, bij #378. Zie *F-string, interpolatie en formaatspecificatie* hieronder |
 
@@ -232,6 +232,7 @@ sindsdien `lectures/11a_use_it_or_lose_it.ipynb`.
 
 Drie termen bij één onderwerp. Met #378 is de f-string verplichte stof in PGM1
 basis week 5, en de notatie voor de opmaak heeft sinds 21 oktober 2026 één naam.
+Alles wat deze sectie telt of uitputtend noemt, is gemeten op `7b38f84f`.
 
 **Formaatspecificatie is de term.** *Formatcode*, *opmaaknotatie* en *formaatcode*
 zijn het niet. Vastgesteld door de vakdeskundige op 21 oktober 2026, bij #378.
@@ -251,26 +252,28 @@ notatie in het algemeen. Zie het besluit *F-strings en uitvoer* in
 vast dat PGM1 eenvoudige interpolatie levert *zonder formaatspecificatie*; de term
 daar invoeren zou een begripsstap toevoegen die het curriculum niet wil. Het
 optionele kopje over kolommen uitlijnen in `problems/5_basis.ipynb` wijst daarom
-met *deze opmaak* en *deze codes* naar de notatie in plaats van haar te benoemen,
-en dat hoort zo te blijven. Dit is de enige term in deze lijst die auteurs bindt
-zonder dat het materiaal haar hoeft te gebruiken; wie dat "rechtzet", maakt de les
-zwaarder dan zij hoort te zijn.
+met *deze opmaak* en *deze codes* naar de notatie in plaats van haar te benoemen.
+Dit is de enige term in de tabel hierboven die auteurs bindt zonder dat het
+materiaal haar gebruikt.
 
-**Waar de drie termen staan**, gemeten op `247ce1e5`. Komt er een vindplaats bij,
-dan hoort zij hier bij.
+**Waar de drie termen staan.** Verandert een vindplaats - komt er een bij of valt
+er een weg - dan hoort dit hermeten, geijkt op de getallen hieronder.
 
 - *F-string* staat twaalf keer in `source/`: zes keer in `problems/5_basis.ipynb`,
   twee keer in `practicals/13_creatures.md`, en één keer in
   `solutions/5_basis.ipynb`, `problems/13_opstap.ipynb`,
   `solutions/12_opstap.ipynb` en `lectures/12b_data_object.ipynb`. De constructie
-  zelf - een `f` voor een string - staat er 106 keer, in 31 bestanden; dat is de
-  constructie en niet de term.
+  zelf - een kleine `f` voor een aanhalingsteken - staat er 95 keer, in 26
+  bestanden; dat is de constructie en niet de term. Meet haar
+  hoofdlettergevoelig en sla een aanhalingsteken vlak vóór de `f` over, anders
+  tellen de letterlijke `"F"` en `"f"` uit het stringmateriaal mee.
 - *Interpolatie* staat één keer in `source/`, in `problems/5_basis.ipynb`, waar het
   begrip wordt ingevoerd. Verder in `curriculum/leerlijn.md`,
   `curriculum/uitgangspunten.md` en `conventies/codeconventies.md`.
-- *Formaatspecificatie* staat niet in `source/`, om de reden hierboven, en alleen
-  in de bindende laag: `curriculum/leerlijn.md`, `curriculum/uitgangspunten.md` en
-  `conventies/codeconventies.md`, onder *F-strings en uitvoer*.
+- *Formaatspecificatie* staat niet in `source/`, om de reden hierboven, maar in de
+  bindende laag: `curriculum/leerlijn.md`, `curriculum/uitgangspunten.md` en
+  `conventies/codeconventies.md`, onder *F-strings en uitvoer*. Daarbuiten noemt
+  alleen het gesloten archief `onderzoek/metingen.md` hem nog.
 
 ## Opgave, opdracht, stap
 
