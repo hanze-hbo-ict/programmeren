@@ -22,7 +22,7 @@ dan de week waarin het hier staat.
 | Week | Onderwerp | Leeruitkomsten | Voor het eerst geïntroduceerd |
 |---|---|---|---|
 | 1 | Introductie, Picobot | - | state machine, staat, regels, string, algoritme |
-| 2 | Variabelen en condities | P1, P2, P3 | toekenning, variabele, operatoren, `if`, lijst, assertion |
+| 2 | Variabelen en condities | P1, P2, P3 | toekenning, variabele, operatoren, `and`, `or` en `not`, `if`, lijst, assertion |
 | 3 | Functies | P5, P6, P7, A2 | functiedefinitie, parameter, docstring, `return`, `None`/`NoneType`, `TypeError`, `NameError`, stack, frame, heap, lokale variabele, module en `import`, `range`, `sum`, `choice`, iterator, signatuur, main-functie |
 | 4 | Lussen | A1 | `for`, `while`, begrensde en onbegrensde lus, `break`, `continue`, het lusrecept, de operator `in`, `_` als wegwerpvariabele |
 | 5 | Geneste lussen | A1, A3 | geneste lus, 2D-lijst, ASCII-art, bordrepresentatie, eenvoudige f-stringinterpolatie |
@@ -67,6 +67,14 @@ ook al: `practicals/2_rochambeau.ipynb` schrijft over "comments en docstrings". 
 een docstring *is* wordt pas expliciet gemaakt bij de functies van week 3, en
 daarom staat *docstring* in de kolom van week 3 en niet van week 2. Zie
 *Onderdompeling gaat vooraf aan uitleg* in [uitgangspunten.md](uitgangspunten.md).
+
+**`not` valt in week 2, bij `and` en `or`.** Het eerste gebruik staat in week 3:
+`if not has_nine_digits(bsn):` in de uitwerking van de basisopgave. Daarna komt
+`not` terug in de oefenmidterm van week 4 (opdracht 19 en 20) en in PGM2 week 5
+(`assert not x`). `lectures/2a_var_con`, sectie *Twee voorwaarden tegelijk*,
+zegt wat `not` doet en dat `not a == b` gelezen wordt als `not (a == b)`. De
+operatortabel daar blijft ongewijzigd. Het bestaande gebruik van `not` blijft
+staan. Besloten door de vakdeskundige op 21 oktober 2026, bij werkitem #400.
 
 **Recursie gaat naar PGM2 en wordt in PGM1 niet onderwezen.** PGM1 laat geen
 zelfaanroepende functie zien, ook niet in week 3. De leesopdrachten daarover zijn

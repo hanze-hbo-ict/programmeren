@@ -425,15 +425,9 @@ al sterker vastlegt; drie staan nu als test in dat blok.
 
 Vastgesteld door de vakdeskundige op 20 oktober 2026, bij werkitem #408.
 
-## Geen `is` in PGM1
+### Assertions op booleans en `None`
 
-PGM1 gebruikt geen `is` en geen `is not`. Dat geldt voor heel PGM1: de weken 1
-tot en met 7, en ook het oefententamen en zijn uitwerking. `is` vraagt naar
-identiteit, en dat begrip wordt pas in PGM2 week 5 ingevoerd; zie
-[`curriculum/leerlijn.md`](../curriculum/leerlijn.md) en *identiteit* in
-[begrippen.md](begrippen.md).
-
-Een assertion op een boolean-uitkomst schrijf je in PGM1 daarom met `== True` of
+Een assertion op een boolean-uitkomst schrijf je in PGM1 met `== True` of
 `== False`, en een assertion op `None` met `== None`:
 
 ```python
@@ -445,9 +439,9 @@ assert dbl_pr(20) == None
 Dat is geen canonieke Python. Ruff heeft er de regels E712 en E711 voor, maar die
 staan niet in zijn standaardselectie, en de hooks draaien geen `ruff check`: van
 Python controleren zij de syntaxis en de opmaak (`ruff format --check`). Toch is
-dit de vorm, omdat de student in PGM1 `==` kent en `is` niet, en omdat `== False`
-een functie vangt die `None` teruggeeft. Vastgesteld door de vakdeskundige op
-9 oktober 2026, bij werkitem #377.
+dit de vorm, omdat de student in PGM1 `==` kent en `is` niet (zie *Geen `is` in
+PGM1* hieronder), en omdat `== False` een functie vangt die `None` teruggeeft.
+Vastgesteld door de vakdeskundige op 9 oktober 2026, bij werkitem #377.
 
 **Vanaf PGM2 week 5 geldt de canonieke vorm:** `assert x`, `assert not x` en
 `assert x is None`. Dan kent de student `is`. De overgang wordt uitgelegd in
@@ -455,6 +449,28 @@ een functie vangt die `None` teruggeeft. Vastgesteld door de vakdeskundige op
 `practicals/12_creatures` verwijzen daarnaar bij hun eerste assertion in de
 nieuwe vorm. Vastgesteld door de vakdeskundige op 20 oktober 2026, bij
 werkitem #391.
+
+Daarmee vervalt vanaf PGM2 week 5 bewust de tweede grond van #377, dat `== False`
+een functie vangt die `None` teruggeeft: `assert not x` slaagt ook als `x`
+`None` is, zodat een vergeten `return` niet opvalt. Dat is aanvaard, omdat
+`None` zich in een booleaanse context als `False` gedraagt en de student dan
+`is` kent. Vastgesteld door de vakdeskundige op
+21 oktober 2026, bij werkitem #400.
+
+## Geen `is` in PGM1
+
+PGM1 gebruikt geen `is` en geen `is not`. Dat geldt voor heel PGM1: de weken 1
+tot en met 7, en ook het oefententamen en zijn uitwerking. `is` vraagt naar
+identiteit, en dat begrip wordt pas in PGM2 week 5 ingevoerd; zie
+[`curriculum/leerlijn.md`](../curriculum/leerlijn.md) en *identiteit* in
+[begrippen.md](begrippen.md).
+
+Hoe je daarom in PGM1 een assertion op een boolean of op `None` schrijft, en
+welke vorm vanaf PGM2 week 5 geldt, staat onder *Assertions op booleans en
+`None`* in de sectie *Assertions* hierboven. Die twee vormen stonden tot
+werkitem #400 in deze sectie; ze zijn als paar naar *Assertions* verplaatst,
+zodat ze te vinden zijn waar de assertions staan. Vastgesteld door de
+vakdeskundige op 21 oktober 2026, bij werkitem #400.
 
 ## Opmaak
 
