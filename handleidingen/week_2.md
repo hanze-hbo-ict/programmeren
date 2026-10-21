@@ -105,7 +105,7 @@ van dit college aan elkaar knoopt.
 | 6 | 10 | Het if-statement, en de syntax die erbij hoort | `## If then else`, `### Het if-statement`, `### Syntax`, `### Opdracht 4` |
 | 7 | 10 | If-else | `### Het if-else statement`, `### Opdracht 5` |
 | 8 | 15 | De if-elif-else-boom | `### De if-then-else boom`, `### Opdracht 6` |
-| 9 | 10 | Condities combineren en omkeren: `and` en `or` | `### Condities combineren en omkeren`, `### Opdracht 7` |
+| 9 | 10 | Condities combineren en omkeren: `and`, `or` en `not` | `### Condities combineren en omkeren`, `### Opdracht 7` |
 | 10 | 5 | Het maximumprobleem afmaken, en vooruitblik | `## Maximum probleem` |
 
 Tien blokken, 90 minuten. De bron had er ook tien, maar niet dezelfde.
@@ -118,14 +118,6 @@ alinea's. Die vijf minuten gaan naar blok 9, dat **nieuw** is:
 `or` stonden toen in het eerste college van week 1 en zijn naar hier verhuisd -
 de handleiding van week 1 noemt dat blok als vervallen. En het huiswerk waarmee
 de bron afsloot, *Opdracht 8*, bestaat niet meer; zie blok 10.
-
-**Blok 9 staat later dan het materiaal.** In het notebook staat
-§`### Condities combineren en omkeren` onder §`## Operatoren`, dus vóór
-§`## If then else` - terwijl het voorbeeld dat er staat een `if`-statement is.
-Behandelen in leesvolgorde betekent dus vooruitwijzen naar iets wat de klas nog
-niet heeft gehad. Noem `and` en `or` in blok 3 alleen als de laatste regel van de
-operatorentabel, en doe de uitleg pas in blok 9, waar Opdracht 7 ze nodig heeft.
-Zeg hardop dat je een stukje van de pagina overslaat en er later op terugkomt.
 
 ### Hoe je het brengt
 
@@ -141,7 +133,12 @@ ziet dat het programma stilstaat en op je wacht.
 **Blok 3.** Dit is het langste blok en het bevat het meeste nieuwe. De volgorde
 van het materiaal is goed: eerst de variabele als doos met een naam, dan de
 datatypes, dan de operatorentabel. Doe de doos op het bord, met de naam erop en
-de waarde erin, en schrijf `getal_A = 5` ernaast.
+de waarde erin, en schrijf `getal_A = 5` ernaast. Het materiaal noemt dat een
+toekenning, met één `=`.
+
+De operatorentabel loopt van sterk naar zwak, en het materiaal zegt dat er ook
+bij. Daaronder staat dat een vergelijking `True` of `False` oplevert, en dat `==`
+vergelijkt waar `=` toekent. Opdracht 1 **c** in blok 4 vraagt daar al naar.
 
 Het punt waar dit blok om draait is dat `input()` **altijd een string
 teruggeeft**. Voer `getal_A = input("Geef getal a")` uit, typ `5`, en druk dan
@@ -183,11 +180,15 @@ er `Goed` uit en niet ook `Voldoende`. Opdracht 6 test precies dat, en **d** laa
 zien dat een geneste `if`-`else` hetzelfde doet als een `elif` - dezelfde
 uitkomst, andere vorm.
 
-**Blok 9.** `and` en `or`. Twee zinnen volstaan: `and` is waar als beide kanten
-waar zijn, `or` zodra er één waar is. Waar je tijd in stopt is de vorm: aan
-allebei de kanten van `and` moet een hele vergelijking staan. Het materiaal zet
-`if getal > 5 and < 10` er als fout naast; laat die fout één keer uitvoeren zodat
-de foutmelding erbij hoort. Opdracht 7 is hierna de zwaarste van het college.
+**Blok 9.** `and`, `or` en `not`. Twee zinnen volstaan voor `and` en `or`: `and`
+is waar als beide kanten waar zijn, `or` zodra er één waar is. Waar je tijd in
+stopt is de vorm: aan allebei de kanten van `and` moet een complete conditie
+staan. Het materiaal zet `if getal > 5 and < 10` er als fout naast; laat die fout
+één keer uitvoeren zodat de foutmelding erbij hoort. Dan `not`: het keert een
+boolean om, en het hoort bij de hele vergelijking erachter - `not a == b` lees je
+als `not (a == b)`. De sectie sluit af met alle operatoren in één tabel, van sterk
+naar zwak, en met het advies om bij twijfel haakjes te zetten, vooral bij `and` en
+`or`. Opdracht 7 is hierna de zwaarste van het college.
 
 **Blok 10.** Maak het maximumprobleem af: het plan van blok 1 staat er nog, en nu
 past de code eronder. Sluit af met "wat hebben we geleerd?" en laat de klas het
@@ -227,7 +228,7 @@ na te kijken. Geef het dus als vooruitblik mee en niet als huiswerk.
   Bij Opdracht 7 schrijft bijna iedereen `6` en `21` op waar `6.0` en `21.0` uit
   Python komt. Reken het niet in je hoofd voor: voer het uit.
 - **`and` met een halve vergelijking rechts.** `x > 5 and < 10` ziet er logisch
-  uit en is een `SyntaxError`. Het moet twee keer een hele vergelijking zijn.
+  uit en is een `SyntaxError`. Aan beide kanten moet een complete conditie staan.
 
 ### Als het niet uitkomt
 
@@ -543,9 +544,6 @@ dat zelf proberen vóór kijken het hele punt is.
 - **`source/course/practical_2.md` heeft als titel `# Werkcollege`**, maar draagt
   beide practica - ook het practicum van bijeenkomst 3. Dat is een restant; de
   begrippenlijst legt `practicals/` bij het practicum. Week 1 heeft hetzelfde.
-- **`### Condities combineren en omkeren` staat vóór `## If then else`** en gebruikt
-  toch een `if`-statement als voorbeeld. Zie de aantekening bij het blokschema
-  van bijeenkomst 1.
 - **"Opdracht 8" bestaat niet meer.** De handleiding van 2023 sloot het eerste
   college ermee af als huiswerk en opende het tweede met het nakijken ervan. Lees
   een oude verwijzing dus niet letterlijk: het programma dat het was, is nu
