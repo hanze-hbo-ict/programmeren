@@ -768,8 +768,9 @@ tentamen verandert niet inhoudelijk, maar moet wel PGM1 zaken/details
 aanhouden"*.
 
 Het eerste geval is de `is`-regel. In #377 zijn de drie asserts met `is` in
-`solutions/PGM1_examen.ipynb` omgezet naar `== True` en `== False`; zie *Geen
-`is` in PGM1* in [codeconventies.md](../conventies/codeconventies.md). Er
+`solutions/PGM1_examen.ipynb` omgezet naar `== True` en `== False`; zie
+*Assertions op booleans en `None`* in
+[codeconventies.md](../conventies/codeconventies.md). Er
 veranderde geen vraag, geen onderwerp en geen niveau, en de toets zelf,
 `extra/practice/pgm1_examen.ipynb`, bleef onaangeroerd.
 

@@ -105,7 +105,7 @@ van dit college aan elkaar knoopt.
 | 6 | 10 | Het if-statement, en de syntax die erbij hoort | `## If then else`, `### Het if-statement`, `### Syntax`, `### Opdracht 4` |
 | 7 | 10 | If-else | `### Het if-else statement`, `### Opdracht 5` |
 | 8 | 15 | De if-elif-else-boom | `### De if-then-else boom`, `### Opdracht 6` |
-| 9 | 10 | Twee voorwaarden tegelijk: `and` en `or` | `### Twee voorwaarden tegelijk`, `### Opdracht 7` |
+| 9 | 10 | Condities combineren en omkeren: `and` en `or` | `### Condities combineren en omkeren`, `### Opdracht 7` |
 | 10 | 5 | Het maximumprobleem afmaken, en vooruitblik | `## Maximum probleem` |
 
 Tien blokken, 90 minuten. De bron had er ook tien, maar niet dezelfde.
@@ -114,13 +114,13 @@ Tien blokken, 90 minuten. De bron had er ook tien, maar niet dezelfde.
 (*Start les* en *Introductie Maximum probleem*, samen 10 minuten) zijn hier één
 blok van 5 geworden; het materiaal zet het lesdoel en het probleem in dezelfde
 alinea's. Die vijf minuten gaan naar blok 9, dat **nieuw** is:
-§`### Twee voorwaarden tegelijk` bestond in 2023 niet in dit college. `and` en
+§`### Condities combineren en omkeren` bestond in 2023 niet in dit college. `and` en
 `or` stonden toen in het eerste college van week 1 en zijn naar hier verhuisd -
 de handleiding van week 1 noemt dat blok als vervallen. En het huiswerk waarmee
 de bron afsloot, *Opdracht 8*, bestaat niet meer; zie blok 10.
 
 **Blok 9 staat later dan het materiaal.** In het notebook staat
-§`### Twee voorwaarden tegelijk` onder §`## Operatoren`, dus vóór
+§`### Condities combineren en omkeren` onder §`## Operatoren`, dus vóór
 §`## If then else` - terwijl het voorbeeld dat er staat een `if`-statement is.
 Behandelen in leesvolgorde betekent dus vooruitwijzen naar iets wat de klas nog
 niet heeft gehad. Noem `and` en `or` in blok 3 alleen als de laatste regel van de
@@ -234,7 +234,7 @@ na te kijken. Geef het dus als vooruitblik mee en niet als huiswerk.
 - **Blok 3 loopt uit.** Dat mag; het is het blok dat je níét moet inkorten.
   Haal de tijd bij blok 8 vandaan: Opdracht 6 heeft vier deelvragen en je kunt er
   twee klassikaal doen en twee meegeven.
-- **Je komt niet aan blok 9 toe.** Sla `### Twee voorwaarden tegelijk` en
+- **Je komt niet aan blok 9 toe.** Sla `### Condities combineren en omkeren` en
   Opdracht 7 over en doe ze aan het begin van het werkcollege. Ze zijn daar
   meteen nodig: wie steen, papier en schaar in `if`-statements uitschrijft, komt
   vanzelf bij `and`. Wat je niet doet is blok 10 laten vallen - dan eindigt het
@@ -543,7 +543,7 @@ dat zelf proberen vóór kijken het hele punt is.
 - **`source/course/practical_2.md` heeft als titel `# Werkcollege`**, maar draagt
   beide practica - ook het practicum van bijeenkomst 3. Dat is een restant; de
   begrippenlijst legt `practicals/` bij het practicum. Week 1 heeft hetzelfde.
-- **`### Twee voorwaarden tegelijk` staat vóór `## If then else`** en gebruikt
+- **`### Condities combineren en omkeren` staat vóór `## If then else`** en gebruikt
   toch een `if`-statement als voorbeeld. Zie de aantekening bij het blokschema
   van bijeenkomst 1.
 - **"Opdracht 8" bestaat niet meer.** De handleiding van 2023 sloot het eerste
