@@ -1251,14 +1251,16 @@ formatcodes onthouden is geen zelfstandig PGM1-leerdoel. Correcte uitvoer met
 andere kolombreedtes voldoet als inhoud en rij- en kolomverbanden kloppen.
 Leeruitkomsten en gewichten veranderen niet.
 
-PGM2 mag eenvoudige interpolatie als voorkennis veronderstellen, maar geen
-zelfstandige beheersing van datumcodes zoals `02d` en `04d`. Die blijven lokale
-ondersteuning vragen. Het Date-ontwerp en de uitlegvolgorde worden in #393
-beslist; #378 verandert geen PGM2-materiaal.
+PGM2 mag eenvoudige interpolatie als voorkennis veronderstellen. De datumcodes
+`02d` en `04d` staan sinds #393 nergens meer in het boek en vragen dus geen
+lokale ondersteuning meer. Wat PGM2 week 5 tot en met 7 van PGM1 aanneemt,
+staat onder *Wat een week aan een latere week aflevert* in
+[leerlijn.md](leerlijn.md); #378 verandert geen PGM2-materiaal.
 
 Vastgesteld door de vakdeskundige bij #378/C4 en het akkoord op het C2-ontwerp
-op 20 oktober 2026. Te heropenen wanneer de toepassing of voorkennis een andere
-introductieplek of leergrens vraagt.
+op 20 oktober 2026. De alinea over PGM2 is op 21 oktober 2026 bijgewerkt, op
+besluit van de vakdeskundige na de poortbesluiten van #393. Te heropenen wanneer
+de toepassing of voorkennis een andere introductieplek of leergrens vraagt.
 
 ## Een besluit toevoegen
 
