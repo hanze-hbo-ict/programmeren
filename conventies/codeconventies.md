@@ -312,6 +312,15 @@ maar in de gewone Nederlandse betekenis: "een methode verzinnen om getallen te
 sorteren". Dat is geen vooruitverwijzing en hoeft niet weg.
 :::
 
+## F-strings en uitvoer
+
+Eenvoudige f-stringinterpolatie is stringconstructie, geen objectmethode. PGM1
+week 5 introduceert het zelf schrijven ervan. Meerdere argumenten bij `print`
+blijven een geldige uitvoervorm. Een formaatspecificatie wordt bij gebruik
+aangereikt en verklaard; zelfstandig kolombreedtes ontwerpen of
+formaatspecificaties onthouden is geen PGM1-eis. Zie het besluit *F-strings en
+uitvoer* in [`curriculum/uitgangspunten.md`](../curriculum/uitgangspunten.md).
+
 ## Docstrings
 
 Elke functie die de student schrijft of leest, heeft een docstring. Dat is een

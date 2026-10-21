@@ -308,10 +308,12 @@ zij hier bij.
 - **Een ongenummerde `Opdracht`-kop**, waar een document één taak draagt in
   plaats van een reeks. **Nummer die niet alsnog**: er is geen reeks om in mee te
   tellen, en `problems/2_basis.ipynb` heeft juist geen *Opdracht 4* - zie
-  `handleidingen/week_2.md`. Vijf vindplaatsen: `### Opdracht` in
+  `handleidingen/week_2.md`. Zeven vindplaatsen: `### Opdracht` in
   `practicals/2_rochambeau.ipynb`, `problems/2_basis.ipynb`,
-  `problems/3_basis.ipynb` en `lectures/12b_data_object.ipynb`, en
-  `## Opdracht` in `practicals/4_python_bat.md`.
+  `problems/3_basis.ipynb` en `lectures/12b_data_object.ipynb`,
+  `### Opdracht: een vraag voor de dagkoers` in `problems/5_basis.ipynb` en in
+  zijn uitwerking `solutions/5_basis.ipynb`, en `## Opdracht` in
+  `practicals/4_python_bat.md`.
 
 Wat níet blijft is een **genummerde** `Opgave N`, of dat nu een kop is of een
 label. Dat is een opdracht.
