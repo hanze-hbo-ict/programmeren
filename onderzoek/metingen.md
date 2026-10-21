@@ -3591,6 +3591,48 @@ maakte er een voorlegpunt van. De eerstejaars zag dat `not` in PGM1 nergens word
 terwijl het in 8 coderegels voorkomt. De vakdeskundige liet daar #400 van maken. De
 valkuil en de kopnaam van de conventie bleven onbeslist.
 
+## Werkitem #393 - de datumnotatie van `Date` in PGM2 week 5-7
+
+Route: LUS, M, procesversie `8b327b05`. Afgesplitst van #381. De orkestrator legde eerst de
+keuze uit C0 voor zonder ontwerp, omdat C0 de gevolgen al had gemeten. Daarna: een
+gecombineerde verkenner/ontwerper, de poort op het C2, de auteur, en eerstejaars en
+onderwijskundige parallel. Geen #203-proef, dus geen referentie en geen budgetgrens. PR #416
+met `Closes #393`, vier commits, gemerged op 21 oktober 2026 (`79a1d04f`): 6 bestanden,
++150/-169. Ontwerp en oplevering: 0 van 1 herstelrondes gebruikt.
+
+| Rol | Tokens | Duur | Toolaanroepen | Uitkomst |
+|---|---:|---|---:|---|
+| orkestrator (C1, twee C4's, PR, plaatsing C2/C5/C6, twee reacties op #378, C7) | niet beschikbaar | niet beschikbaar | | lopende sessie |
+| curriculumontwerper (gecombineerd) | 87.107 | 4 min 3 s | 24 | C2 met 3 open vragen |
+| auteur | 125.561 | 6 min 17 s | 27 | C5; 6 bestanden, 4 commits (`1caea346`) |
+| beoordelaar-eerstejaars | 56.872 | 1 min 31 s | 13 | AKKOORD, 0 blokkades, 0 puntjes |
+| beoordelaar-onderwijskundige | 78.202 | 23 min 22 s | 37 | AKKOORD MET PUNTJES, 0 blokkades, 4 puntjes |
+| **totaal agents** | **347.742** | | **101** | |
+
+Iedere rol draaide één keer, dus elke melding is een eigen totaal. De rollen noteerden zelf
+*niet beschikbaar*; de getallen komen uit de verbruiksmelding.
+
+**Twee poorten.** De eerste koos uit drie opties: behouden, `d-m-jjjj` of `d/m/jjjj`. De
+vakdeskundige koos `d-m-jjjj`. De tweede nam het C2 aan en koos op alle drie de open vragen de
+aanbeveling: de uitleg van `:02d` in `12b` schrappen, het testgeval `1-mei-2024` toevoegen, en
+de afhankelijkheid van #378 in deze PR vastleggen in `curriculum/leerlijn.md`. De ontwerper
+had gemeten dat geen van de acht oude testgevallen van `parse_dates` op `int` faalde, terwijl
+hint en uitwerking die foutbron wel noemden. Dat gat zat er al vóór dit werkitem.
+
+**Wat de beoordeling opleverde.** Geen blokkades. De eerstejaars maakte de opgave zelf, zonder
+de uitwerkingen. De onderwijskundige voerde alle cellen van de uitwerkingen uit en draaide de
+hooks los, zonder `pre-commit`, zodat er niets kon worden herschreven. Geen van beiden bouwde
+zelf, dus het buildbewijs komt van de auteur.
+
+Het eerste puntje van de onderwijskundige ging over de registratie van de orkestrator. De
+reactie op #378 citeerde niet letterlijk. Ze zei ook niet dat C0AC6 in het al goedgekeurde C2
+van #378 nog *"datumopmaak als blijvende lokale ondersteuning"* vraagt. Zonder die lezing had
+#378 een overdracht vastgelegd die de nieuwe leerlijnregel tegenspreekt. Dit is opnieuw *wie
+het zelf doet, laat het lezen*. Hier zat de lezing in de gekozen beoordeling en kostte ze geen
+extra ronde. De aanvulling staat op #378. Of C0AC6 wordt bijgesteld, wordt in de route van
+#378 beslist. De vakdeskundige liet puntje 2 (de leerlijnregel noemt de huidige PGM1-stand
+niet) staan. Puntjes 3 en 4 vroegen geen actie.
+
 ## Werkitem #386 - de `try` uit `solutions/6_extra`
 
 Route: LUS, XS, startcommit en procesversie `00c03b2a`. Afgesplitst van #377. Geen verkenner,
