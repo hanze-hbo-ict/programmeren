@@ -182,7 +182,7 @@ uitkomst, andere vorm.
 
 **Blok 9.** `and`, `or` en `not`. Twee zinnen volstaan voor `and` en `or`: `and`
 is waar als beide kanten waar zijn, `or` zodra er één waar is. Waar je tijd in
-stopt is de vorm: aan allebei de kanten van `and` moet een hele vergelijking
+stopt is de vorm: aan allebei de kanten van `and` moet een complete conditie
 staan. Het materiaal zet `if getal > 5 and < 10` er als fout naast; laat die fout
 één keer uitvoeren zodat de foutmelding erbij hoort. Dan `not`: het keert een
 boolean om, en het hoort bij de hele vergelijking erachter - `not a == b` lees je
@@ -228,7 +228,7 @@ na te kijken. Geef het dus als vooruitblik mee en niet als huiswerk.
   Bij Opdracht 7 schrijft bijna iedereen `6` en `21` op waar `6.0` en `21.0` uit
   Python komt. Reken het niet in je hoofd voor: voer het uit.
 - **`and` met een halve vergelijking rechts.** `x > 5 and < 10` ziet er logisch
-  uit en is een `SyntaxError`. Het moet twee keer een hele vergelijking zijn.
+  uit en is een `SyntaxError`. Aan beide kanten moet een complete conditie staan.
 
 ### Als het niet uitkomt
 
