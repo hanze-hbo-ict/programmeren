@@ -445,10 +445,8 @@ Vastgesteld door de vakdeskundige op 9 oktober 2026, bij werkitem #377.
 
 **Vanaf PGM2 week 5 geldt de canonieke vorm:** `assert x`, `assert not x` en
 `assert x is None`. Dan kent de student `is`. De overgang wordt uitgelegd in
-`lectures/12b_data_object`, sectie *`is` en `==`*, en `problems/12_basis` en
-`practicals/12_creatures` verwijzen daarnaar bij hun eerste assertion in de
-nieuwe vorm. Vastgesteld door de vakdeskundige op 20 oktober 2026, bij
-werkitem #391.
+`lectures/12b_data_object`, sectie *`is` en `==`*. Vastgesteld door de
+vakdeskundige op 20 oktober 2026, bij werkitem #391.
 
 Daarmee vervalt vanaf PGM2 week 5 bewust de tweede grond van #377, dat `== False`
 een functie vangt die `None` teruggeeft: `assert not x` slaagt ook als `x`
