@@ -16,12 +16,11 @@ project 4 van `hanze-hbo-ict`. Gebruik de actuele project- en veld-ID's; labels 
 oude routes bepalen niet welke agents starten.
 
 Dat bord draagt uitsluitend werkitems van die repository. Hoort het werkitem bij een
-andere repository, dan geldt daar de registratieafspraak van dat project en niet dit
-bord; zet zo'n issue er ook niet op, want de enige relatie tussen de projecten is
-inhoudelijk. In `misja/ans_grading` is die afspraak `rollen/aanvulling.md`, kop
-*Procesregistratie*: registratie op issue en PR, en geen Statusveld. Of een ander
-project een bord met Status heeft, stel je daar vast; `misja/agent-role-loop` heeft
-er een.
+andere repository, dan geldt daar haar eigen registratieafspraak en niet dit bord;
+zet zo'n issue er ook niet op, want de enige relatie tussen de repository's is
+inhoudelijk. In `misja/ans_grading` staat die afspraak in `rollen/aanvulling.md`,
+kop *Procesregistratie*: overdrachten en besluiten op issue en PR. Of daar een bord
+met Status bij hoort, stel je ter plaatse vast.
 
 ## Inname en route
 

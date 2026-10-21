@@ -11,9 +11,10 @@ in `.github/ISSUE_TEMPLATE/werkitem.yml`. De issue is het artefact en de
 overdrachten zijn reacties erop. Voor een werkitem in
 `hanze-hbo-ict/programmeren` staat de stap in het veld Status op het
 [projectbord](https://github.com/orgs/hanze-hbo-ict/projects/4). Dit contract
-wordt door meer projecten gelezen: hoort het werkitem bij een andere repository,
-dan geldt de registratieafspraak van dat project. In `misja/ans_grading` is dat
-`rollen/aanvulling.md`, kop *Procesregistratie*: issue en PR, zonder Statusveld.
+wordt door meer repository's gelezen: hoort het werkitem bij een andere, dan geldt
+haar eigen registratieafspraak. In `misja/ans_grading` staat die in
+`rollen/aanvulling.md`, kop *Procesregistratie*: overdrachten en besluiten op issue
+en PR.
 Een werkitem geeft de triage genoeg om proportionaliteit te beoordelen en de
 curriculumontwerper genoeg om een ontwerp op te gronden. Het beschrijft de
 gewenste uitkomst, niet de uitvoering.
