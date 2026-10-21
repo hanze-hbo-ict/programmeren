@@ -271,9 +271,10 @@ er een weg - dan hoort dit hermeten, geijkt op de getallen hieronder.
   begrip wordt ingevoerd. Verder in `curriculum/leerlijn.md`,
   `curriculum/uitgangspunten.md` en `conventies/codeconventies.md`.
 - *Formaatspecificatie* staat niet in `source/`, om de reden hierboven, maar in de
-  bindende laag: `curriculum/leerlijn.md`, `curriculum/uitgangspunten.md` en
-  `conventies/codeconventies.md`, onder *F-strings en uitvoer*. Daarbuiten noemt
-  alleen het gesloten archief `onderzoek/metingen.md` hem nog.
+  bindende laag: in `conventies/codeconventies.md` en
+  `curriculum/uitgangspunten.md` onder *F-strings en uitvoer*, en in
+  `curriculum/leerlijn.md` onder *Wat een week aan een latere week aflevert*.
+  Daarbuiten noemt alleen het gesloten archief `onderzoek/metingen.md` hem nog.
 
 ## Opgave, opdracht, stap
 
