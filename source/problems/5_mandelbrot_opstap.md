@@ -6,8 +6,9 @@ Je bouwt stap voor stap een programma dat onderzoekt welke complexe getallen
 bij de mandelbrotverzameling horen. Download {download}`mandelbrot.zip
 <assets/mandelbrot.zip>` en pak het archief uit. Werk in `mandelbrot.py`.
 
-Installeer Pillow eenmalig als Python meldt dat de module ontbreekt. Op macOS
-doe je dat met Homebrew, net als Python zelf:
+Installeer Pillow eenmalig als Python meldt dat de module ontbreekt; je krijgt
+dan een `ModuleNotFoundError`. Op macOS doe je dat met Homebrew, net als Python
+zelf:
 
 ```console
 brew install pillow

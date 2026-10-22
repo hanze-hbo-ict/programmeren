@@ -43,7 +43,7 @@ Zie je een versienummer, ga dan door naar het installeren van Python. Krijg je `
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-Het script vraagt om het wachtwoord van je Mac en legt uit wat het gaat doen voordat het begint. Aan het eind staat onder *Next steps* welke commando's je nog moet uitvoeren; voer die uit. Sluit daarna de terminal en open een nieuwe.
+Het script vraagt om het wachtwoord van je Mac. Terwijl je het typt, zie je geen tekens; dat hoort zo. Druk daarna op Return. Het script legt uit wat het gaat doen voordat het begint. Aan het eind staat onder *Next steps* welke commando's je nog moet uitvoeren; voer die uit. Sluit daarna de terminal en open een nieuwe.
 
 Installeer nu Python:
 
@@ -52,6 +52,12 @@ brew install python
 ```
 
 Controleer of het gelukt is:
+
+```console
+which python3
+```
+
+Zie je `/opt/homebrew/bin/python3`, dan start je de Python van Homebrew. Zie je `/usr/bin/python3`, dan start je nog de oude Python van macOS; controleer dan of je de commando's onder *Next steps* hebt uitgevoerd, open een nieuwe terminal en typ `which python3` opnieuw. Welke versie je hebt, zie je met:
 
 ```console
 python3 --version
@@ -72,7 +78,7 @@ python3 --version
 
 Geen probleem! Zorg er in ieder geval voor dat het een recente versie is.
 
-Op een Mac mag je de Python gebruiken die je al hebt. Weet wel dat alle verdere instructies voor macOS ervan uitgaan dat je Homebrew gebruikt. Installeer je later Pillow met `brew install pillow`, dan werkt dat alleen voor de Python van Homebrew.
+Op een Mac mag je de Python gebruiken die je al hebt. Weet wel dat alle verdere instructies voor macOS ervan uitgaan dat je Homebrew gebruikt. Of je Python die van Homebrew is, zie je met `which python3`: dan staat er `/opt/homebrew/bin/python3`. Installeer je later Pillow met `brew install pillow`, dan werkt dat alleen voor de Python van Homebrew.
 
 ## VSCode installeren
 
