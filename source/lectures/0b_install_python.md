@@ -11,7 +11,7 @@ Het **doel** van deze opgave is om:
 
 We gebruiken bij Programmeren software die je misschien nog niet hebt. Je hebt de volgende programma's nodig:
 
-* **Python**; wij gebruiken de laatste versie van [python.org](https://python.org).
+* **Python**; wij gebruiken een recente versie van Python 3. Hoe je die installeert, verschilt per besturingssysteem en staat hieronder.
 * **Een teksteditor**; geen tekstverwerker; om je Python-bestanden te bewerken. We raden [VSCode](https://code.visualstudio.com/) aan, een gratis, veel gebruikte tekstverwerker die beschikbaar is voor alle besturingssystemen (macOS, Windows en Linux). *Als je al een favoriete teksteditor hebt, kan je die ook gebruiken.*
 
 ### Downloaden en installeren
@@ -29,7 +29,33 @@ Tijdens het installeren zal worden gevraagd of je Python aan `PATH` zou willen t
 ````
 
 ````{tab-item} macOS
-Sinds macOS 11.0 ("Big Sur") is Python versie 3 op macOS standaard geïnstalleerd maar dit is vaak een oudere versie. We raden je aan de laatste versie van [python.org](https://www.python.org/downloads/macos/) te downloaden en te installeren.
+Sinds macOS 11.0 ("Big Sur") is Python versie 3 op macOS standaard geïnstalleerd maar dit is vaak een oudere versie. We raden je aan een recente versie te installeren met [Homebrew](https://brew.sh). Homebrew is een programma waarmee je software installeert vanuit de terminal. Later in het vak installeer je er ook Pillow mee, een module voor afbeeldingen.
+
+Open de app *Terminal* en controleer eerst of je Homebrew al hebt:
+
+```console
+brew --version
+```
+
+Zie je een versienummer, ga dan door naar het installeren van Python. Krijg je `command not found`, installeer Homebrew dan eerst met het commando van [brew.sh](https://brew.sh):
+
+```console
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Het script vraagt om het wachtwoord van je Mac en legt uit wat het gaat doen voordat het begint. Aan het eind staat onder *Next steps* welke commando's je nog moet uitvoeren; voer die uit. Sluit daarna de terminal en open een nieuwe.
+
+Installeer nu Python:
+
+```console
+brew install python
+```
+
+Controleer of het gelukt is:
+
+```console
+python3 --version
+```
 ````
 
 ````{tab-item} Linux
@@ -45,6 +71,8 @@ python3 --version
 ### Wacht, ik heb Python al
 
 Geen probleem! Zorg er in ieder geval voor dat het een recente versie is.
+
+Op een Mac mag je de Python gebruiken die je al hebt. Weet wel dat alle verdere instructies voor macOS ervan uitgaan dat je Homebrew gebruikt. Installeer je later Pillow met `brew install pillow`, dan werkt dat alleen voor de Python van Homebrew.
 
 ## VSCode installeren
 
