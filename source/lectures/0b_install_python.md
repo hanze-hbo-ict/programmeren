@@ -43,7 +43,7 @@ Zie je een versienummer, ga dan door naar het installeren van Python. Krijg je `
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-Het script vraagt om het wachtwoord van je Mac. Terwijl je het typt, zie je geen tekens; dat hoort zo. Druk daarna op Return. Het script legt uit wat het gaat doen voordat het begint. Aan het eind staat onder *Next steps* welke commando's je nog moet uitvoeren; voer die uit. Sluit daarna de terminal en open een nieuwe.
+Het script vraagt om het wachtwoord van je Mac. Terwijl je het typt, zie je geen tekens; dat hoort zo. Druk daarna op Return. Het script laat dan zien wat het gaat doen en vraagt je nog een keer op Return te drukken om te beginnen. Aan het eind staat onder *Next steps* welke commando's je nog moet uitvoeren; voer die uit. Sluit daarna de terminal en open een nieuwe.
 
 Installeer nu Python:
 
@@ -57,7 +57,7 @@ Controleer of het gelukt is:
 which python3
 ```
 
-Zie je `/opt/homebrew/bin/python3`, dan start je de Python van Homebrew. Zie je `/usr/bin/python3`, dan start je nog de oude Python van macOS; controleer dan of je de commando's onder *Next steps* hebt uitgevoerd, open een nieuwe terminal en typ `which python3` opnieuw. Welke versie je hebt, zie je met:
+Zie je `/opt/homebrew/bin/python3`, dan start je de Python van Homebrew. Zie je `/usr/bin/python3`, dan start je nog de oude Python van macOS. Zie je iets anders dan `/opt/homebrew/bin/python3`, vraag het dan aan je docent. Welke versie je hebt, zie je met:
 
 ```console
 python3 --version

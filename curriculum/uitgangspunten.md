@@ -765,16 +765,17 @@ Homebrew gebruikt. Zo staat het bij *Wacht, ik heb Python al* in
 **De grond is dat Homebrew de industriestandaard is voor het installeren van
 Python op een Mac** ([C4-aanvulling](https://github.com/hanze-hbo-ict/programmeren/issues/430#issuecomment-6337223720)).
 
-Daaruit volgt dat ook pakketten via Homebrew gaan. Dat heeft een praktisch
-gevolg: Homebrew installeert Pillow voor zijn eigen Python en niet voor die van
-python.org, en een kale `pip install Pillow` weigert op de Python van Homebrew
-met `externally-managed-environment` (PEP 668). Dat heeft de vakdeskundige op
+Daaruit volgt dat ook pakketten via Homebrew gaan, want een kale
+`pip install Pillow` weigert op de Python van Homebrew met
+`externally-managed-environment` (PEP 668). Dat heeft de vakdeskundige op
 22 oktober 2026 op een Mac getest; zie *Wat de repo niet weet* in
 [#430](https://github.com/hanze-hbo-ict/programmeren/issues/430). De auteur
 van #430 heeft het nagemeten met
 `/opt/homebrew/bin/python3 -m pip install Pillow --dry-run` (Python 3.14 van
-Homebrew). Pillow is nodig voor `png.py` in week 5 en week 6. Op Windows en
-Linux blijft het `pip install Pillow`.
+Homebrew). Een gevolg is dat `brew install pillow` Pillow installeert voor de
+Python van Homebrew en niet voor die van python.org. Pillow is nodig voor
+`png.py` in week 5 en week 6. Op Windows en Linux blijft het
+`pip install Pillow`.
 
 **Te heropenen wanneer** Homebrew op de Macs van studenten niet meer bruikbaar
 blijkt, of wanneer het materiaal overstapt op een andere manier van werken, zoals
