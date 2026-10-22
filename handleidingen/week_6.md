@@ -111,8 +111,10 @@ de repository.** Duurt die van jou korter of langer, schaal de blokken dan mee.
 - **Pillow bij de student.** Het werkcollege draait op `png.py`, en dat bestand
   gebruikt Pillow. De student is het al tegengekomen in
   `source/problems/5_mandelbrot_opstap.md`, dat zegt het te installeren zodra
-  Python meldt dat het ontbreekt; of iedereen dat heeft gedaan, weet je niet.
-  Controleer het aan het begin van bijeenkomst 2 en niet halverwege.
+  Python meldt dat het ontbreekt: op macOS met `brew install pillow`, op
+  Windows en Linux met `pip install Pillow`. Het practicum herhaalt dat onder
+  `## Voorbereiding`. Of iedereen het heeft gedaan, weet je niet. Controleer het
+  aan het begin van bijeenkomst 2 en niet halverwege.
 - **Papier.** Voor de voorspellingen in het college en voor de spiegelingen in
   het werkcollege, waar de klas eerst een klein raster tekent.
 
@@ -360,10 +362,11 @@ van de andere kant: hoe maak je zo'n bestand kleiner.
 
 ### Als het niet uitkomt
 
-- **Pillow ontbreekt bij een deel van de klas.** Laat hen `pip install Pillow`
-  draaien, zoals `## Onze PNG module` zegt, en laat hen tot blok 3 meekijken
-  bij een buur. Blok 3 is klassikaal, dus ze missen niets wat ze niet kunnen
-  inhalen.
+- **Pillow ontbreekt bij een deel van de klas.** Laat hen Pillow installeren
+  zoals `## Voorbereiding` van het practicum zegt, op macOS met
+  `brew install pillow` en op Windows en Linux met `pip install Pillow`, en
+  laat hen tot blok 3 meekijken bij een buur. Blok 3 is klassikaal, dus ze
+  missen niets wat ze niet kunnen inhalen.
 - **Blok 3 loopt uit.** Laat het lopen en haal de tijd bij **blok 4** vandaan:
   `binarize` is `greyscale` met een `if` en past in het practicum van morgen.
 - **Je komt niet aan blok 6 toe.** Doe `flip_vert` nog samen in blok 5 en geef

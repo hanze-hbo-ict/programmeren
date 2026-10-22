@@ -393,6 +393,7 @@ draait wel.
 | Picobot opent PGM1 | didactisch | staand, onderbouwd |
 | Opgaven in opstap, basis en extra | didactisch | gesloten op 23 september 2026, **deels uitgevoerd** voor PGM2: week 5 en 6 hebben opstap, basis en extra (#160, #270); de verplichte niveaus per week staan in `leerlijn.md` |
 | De student werkt lokaal in VS Code; de browser is verrijking | didactisch | staand, onderbouwd |
+| Op macOS is Homebrew de aanbevolen manier om Python en alle pakketten te installeren, zoals Pillow; een bestaande Python mag, maar de verdere Mac-instructies gaan van Homebrew uit | praktisch | gesloten op 22 oktober 2026 (#430, [C4](https://github.com/hanze-hbo-ict/programmeren/issues/430#issuecomment-6336154620) en [C4-aanvulling](https://github.com/hanze-hbo-ict/programmeren/issues/430#issuecomment-6337223720)), **uitgevoerd** in #430: `lectures/0b_install_python`, `problems/5_mandelbrot_opstap`, `practicals/6b_images` en `handleidingen/week_6.md`; zie *Python en pakketten op macOS* |
 | Code uitvoerbaar in de browser | praktisch | open, uitvoering wijzigt |
 | Wat er niet meer toe doet, mag weg; we ruimen achter ons op | organisatorisch | gesloten op 24 september 2026, **deels uitgevoerd**: `teacher_guides/` is weg (#280); welke andere directories eronder vallen, wordt voorgelegd in #282 |
 | In het PGM1-tentamen verdienen een docstring en een correcte signatuur punten, als eenvoudig werk dat zelfdiscipline beloont | didactisch | gesloten op 21 oktober 2026, **deels uitgevoerd**: eerdere tentamens keerden deze punten uit, maar de rubric staat buiten deze repository en die van 2026-1 wordt bij `misja/ans_grading`#16 gemaakt; zie *Punten voor docstring en signatuur* |
@@ -747,6 +748,39 @@ eerste opende met een checklist "Python geïnstalleerd, VS Code geïnstalleerd",
 tweede stuurde de student naar een raketicoon dat niet meer bestaat. Wie materiaal
 schrijft dat een omgeving veronderstelt, gaat uit van de lokale; komt de
 browseruitvoering terug, dan is dat winst en geen ander uitgangspunt.
+
+### Python en pakketten op macOS
+
+**Besluit: op macOS is Homebrew de aanbevolen manier om Python te installeren,
+en ook om alle pakketten te installeren, zoals Pillow (`brew install pillow`).**
+Vastgesteld door de vakdeskundige op 22 oktober 2026, bij werkitem #430; zie het
+[C4](https://github.com/hanze-hbo-ict/programmeren/issues/430#issuecomment-6336154620) en de
+[C4-aanvulling](https://github.com/hanze-hbo-ict/programmeren/issues/430#issuecomment-6337223720).
+
+**Een student die op zijn Mac al een Python heeft, mag die gebruiken.** Het
+materiaal zegt erbij dat alle verdere Mac-instructies ervan uitgaan dat hij
+Homebrew gebruikt. Zo staat het bij *Wacht, ik heb Python al* in
+`lectures/0b_install_python`.
+
+**De grond is dat Homebrew de industriestandaard is voor het installeren van
+Python op een Mac** ([C4-aanvulling](https://github.com/hanze-hbo-ict/programmeren/issues/430#issuecomment-6337223720)).
+
+Daaruit volgt dat ook pakketten via Homebrew gaan, want een kale
+`pip install Pillow` weigert op de Python van Homebrew met
+`externally-managed-environment` (PEP 668). Dat heeft de vakdeskundige op
+22 oktober 2026 op een Mac getest; zie *Wat de repo niet weet* in
+[#430](https://github.com/hanze-hbo-ict/programmeren/issues/430). De auteur
+van #430 heeft het nagemeten met
+`/opt/homebrew/bin/python3 -m pip install Pillow --dry-run` (Python 3.14 van
+Homebrew). Een gevolg is dat `brew install pillow` Pillow installeert voor de
+Python van Homebrew en niet voor die van python.org. Pillow is nodig voor
+`png.py` in week 5 en week 6. Op Windows en Linux blijft het
+`pip install Pillow`.
+
+**Te heropenen wanneer** Homebrew op de Macs van studenten niet meer bruikbaar
+blijkt, of wanneer het materiaal overstapt op een andere manier van werken, zoals
+een virtuele omgeving per project, waarmee `pip` op elk systeem dezelfde route
+wordt.
 
 ### Wat er nu voorgaat: de weken afmaken
 
