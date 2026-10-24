@@ -90,7 +90,8 @@ afwijking van week 6 kwam er bij #380 bij. Ze staan hier zodat een volgende
 weekherziening ze niet opnieuw als conflict afleidt.
 
 De sectie beschrijft ook de weken die onder de uitzondering voor toetsweken
-vallen: week 4, het tentamendeel van week 5, PGM1 week 7 en PGM2 week 7.
+vallen: PGM1 week 4, het tentamendeel van PGM1 week 5, PGM1 week 7 en PGM2
+week 7.
 
 Week 3 was van de herziening van die week (#198) tot #380 een afwijking. In het
 huidige model past ze zonder: `3a_functies` en `3b_functies_aanroepen` zijn de

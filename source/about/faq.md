@@ -2,7 +2,7 @@
 
 ## Is programmeerervaring nodig?
 
-Nee, we verwachten bij dit vak geen enkele ervaring, je zou het moeten kunnen volgen zonder voorafgaande programmeerkennis. Het is dan natuurlijk wel ten zeerste aan te raden dat je alle hoorcolleges en practica volgt en dat je de tijd neemt om alle opdrachten zorgvuldig te maken. Tijdens de hoorcolleges en practica is verder alle ruimte om vragen stellen!
+Nee, we verwachten bij dit vak geen enkele ervaring, je zou het moeten kunnen volgen zonder voorafgaande programmeerkennis. Het is dan natuurlijk wel ten zeerste aan te raden dat je alle colleges en practica volgt en dat je de tijd neemt om alle opdrachten zorgvuldig te maken. Tijdens de colleges en practica is verder alle ruimte om vragen stellen!
 
 ## Welk boek wordt gebruikt?
 

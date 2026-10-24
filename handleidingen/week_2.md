@@ -10,7 +10,7 @@ browsersimulator; vanaf nu heeft iedereen Python en een editor nodig. Reken erop
 dat dat bij een deel van de zaal niet af is - zie *Wat je nodig hebt*.
 
 De week draagt twee onderwerpen en niet één. Dat is de reden dat er twee colleges
-en twee practica staan, en het verklaart de indeling hieronder.
+en twee `practicals/`-bestanden staan, en het verklaart de indeling hieronder.
 
 ## 1. De week in het kort
 
@@ -28,15 +28,15 @@ opgaven en de uitwerkingen. De vijf bestanden in `source/solutions/` staan in di
 laatste; ze zijn openbaar voor de student en daarom geen materiaal dat je zelf
 brengt.
 
-### Deze week heeft twee practica
+### Deze week heeft twee `practicals/`-bestanden
 
 De indeling uit `curriculum/uitgangspunten.md`
 §`### Drie bijeenkomsten per week` gaat uit van twee colleges en één practicum.
-Week 2 heeft twee practica, en daarom is daar een erkende afwijking vastgelegd:
-`source/practicals/2_rochambeau.ipynb` gaat met `2b` mee in het tweede college,
-en `source/practicals/2_sequenties_en_data.ipynb` vult het practicum. De drie
-opgavebundels zijn huiswerk; wat het practicum aan ruimte overlaat, mag eraan
-besteed worden.
+Week 2 heeft twee `practicals/`-bestanden, en daarom is daar een erkende
+afwijking vastgelegd: `source/practicals/2_rochambeau.ipynb` gaat met `2b` mee
+in het tweede college, en `source/practicals/2_sequenties_en_data.ipynb` vult
+het practicum. De drie opgavebundels zijn huiswerk; wat het practicum aan ruimte
+overlaat, mag eraan besteed worden.
 
 De verdeling volgt het materiaal. Rochambeau is één programma dat je met een
 klas stap voor stap opbouwt, en dat past naast de uitleg van `2b`. Sequenties en
