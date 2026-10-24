@@ -206,7 +206,7 @@ Maak dus in een nieuwe tab een nieuw, leeg bestand (via het menu *File* en daaro
 Plak (of typ) onderstaande code in het nieuwe bestand
 
 ```python
-# Programmeren I, Practicum 0
+# Programmeren I, week 0
 # Naam:
 # Probleemomschrijving: Hello world
 

@@ -5,8 +5,8 @@ een lus, en daarmee de vraag waar de rest van het vak op staat: wat verzamel je
 terwijl je ergens langsloopt, en wanneer ben je klaar?
 
 De lijn die de drie bijeenkomsten bij elkaar houdt is het lusrecept van vijf
-vragen. Het wordt in het college voorgedaan, in het werkcollege drie keer samen
-toegepast, en in het practicum gebruikt om te verklaren waarom een programma
+vragen. Het wordt in het college voorgedaan, in het practicum drie keer samen
+toegepast, en bij de oefenmidterm gebruikt om te verklaren waarom een programma
 niet stopt. Het is een vastgelegd besluit; zie `curriculum/uitgangspunten.md`
 §`### Het lusrecept van week 4`.
 
@@ -21,37 +21,37 @@ bijeenkomsten terug.
 | Bijeenkomst | Vorm | Materiaal |
 |---|---|---|
 | 1 | College | `source/lectures/4a_lussen.ipynb` |
-| 2 | Werkcollege | `source/practicals/4_python_bat.md` |
-| 3 | Practicum | `source/lectures/4b_midterm.md` met `source/solutions/4_midterm.ipynb`, naast `source/problems/4_opstap.ipynb`, `source/problems/4_basis.ipynb` en `source/problems/4_extra.ipynb` |
+| 2 | Practicum | `source/practicals/4_python_bat.md` |
+| 3 | Oefenmidterm | `source/lectures/4b_midterm.md` met `source/solutions/4_midterm.ipynb`, naast `source/problems/4_opstap.ipynb`, `source/problems/4_basis.ipynb` en `source/problems/4_extra.ipynb` |
 
 Daarnaast staan er vier overzichtspagina's die je zelf niet hoeft te behandelen:
 `source/course/week_4.md` (`## Lussen`) vat de week samen voor de student, en
 `source/course/practical_4.md`, `source/course/opgaven_4.md` en
-`source/course/solutions_4.md` zijn de omslagpagina's boven het werkcollege, de
+`source/course/solutions_4.md` zijn de omslagpagina's boven het practicum, de
 opgaven en de uitwerkingen. De zes bestanden in `source/solutions/` staan in die
 laatste; ze zijn openbaar voor de student en daarom geen materiaal dat je zelf
 brengt. Dat weegt deze week zwaarder dan anders, want de oefenmidterm van
 bijeenkomst 3 heeft zijn uitwerking openbaar staan. Dat is geen lek maar een
 keuze, en het bepaalt hoe je die bijeenkomst inricht.
 
-### Deze week valt de oefenmidterm naar de derde bijeenkomst
+### Deze week valt onder de uitzondering voor toetsweken
 
-De indeling college - werkcollege - practicum uit
-`curriculum/uitgangspunten.md` §`### Drie bijeenkomsten per week` gaat ervan uit
-dat het werkcollege door een bestand uit `practicals/` wordt gevuld. Dat doet
-week 4 ook: `source/practicals/4_python_bat.md` vult het werkcollege. Wat
-afwijkt is het tweede collegebestand: `source/lectures/4b_midterm.md` schuift
-naar de derde bijeenkomst, naast de drie opgavebundels.
+`curriculum/uitgangspunten.md` §`### Drie bijeenkomsten per week` gaat uit van
+twee colleges en één practicum, en laat in een week met de oefenmidterm één
+college vervallen; die bijeenkomst gaat naar de toets. Week 4 valt onder die
+uitzondering. `source/lectures/4a_lussen.ipynb` is het college,
+`source/practicals/4_python_bat.md` is het practicum, en de oefenmidterm
+`source/lectures/4b_midterm.md` neemt in de derde bijeenkomst de plaats van het
+vervallen college in. De drie opgavebundels zijn huiswerk en staan daar naast de
+oefenmidterm.
 
-Dat is een erkende afwijking, vastgelegd in `curriculum/uitgangspunten.md`
-§`#### Vijf erkende afwijkingen` en vastgesteld door de vakdeskundige op
-**18 september 2026**. De grond is de midterm zelf: die wordt in week 5
-afgenomen, dus is het practicum van week 4 het oefenmoment. Het materiaal wijst
-dezelfde kant op: `source/practicals/4_python_bat.md` noemt zichzelf in zijn
-eerste zin een werkcollege.
+De werkvorm van de oefenmidterm is vastgesteld door de vakdeskundige op
+**18 september 2026** en staat in `curriculum/uitgangspunten.md`
+§`#### Erkende afwijkingen`: de student werkt zelfstandig en in eigen tempo, en
+neemt mee wat hij niet afkrijgt. De grond is de midterm zelf: die wordt in week
+5 afgenomen, dus is week 4 het oefenmoment.
 
-Wat de moedertabel wél bepaalt, en wat deze week gewoon geldt: de tweede
-bijeenkomst is de plek waar een probleem **gezamenlijk stap voor stap wordt
+In de tweede bijeenkomst wordt een probleem **gezamenlijk stap voor stap
 opgebouwd**, en de derde is **zelfstandig werken onder begeleiding**. Die derde
 bijeenkomst is dus twee dingen tegelijk - er wordt in de zaal gewerkt, en er
 wordt meegenomen wat niet af komt. Dat is de reden dat de oefenmidterm daar niet
@@ -85,10 +85,10 @@ er twee volledig over recursie, en die stof ligt sinds het besluit
 §`### Recursie na de lussen` in `curriculum/uitgangspunten.md` in week 9. De
 derde beschreef een klassikale lesvorm voor de oefenmidterm - op papier, geen
 overleg, daarna in duo's, daarna twintig minuten samen bespreken - en die vorm
-heeft deze week niet meer, nu de oefenmidterm in het practicum ligt. Wat van die
-bron overeind blijft is dus geen tijd maar een **werkvorm**: eerst zelf
-voorspellen, dan pas de uitwerking openen. Die staat in *Hoe je het brengt* van
-sectie 4, en een werkvorm draagt geen herkomstmerk.
+heeft deze week niet meer, nu de student zelfstandig en in eigen tempo aan de
+oefenmidterm werkt. Wat van die bron overeind blijft is dus geen tijd maar een
+**werkvorm**: eerst zelf voorspellen, dan pas de uitwerking openen. Die staat in
+*Hoe je het brengt* van sectie 4, en een werkvorm draagt geen herkomstmerk.
 
 Ter vergelijking: week 3 haalde 70 van zijn 270 minuten uit een bron en week 4
 nul. Alle twintig blokken zijn schattingen op de omvang van het materiaal. Wie
@@ -152,7 +152,7 @@ behandelen recursie, en die stof staat in week 9.
 
 **Eén volgorde-eis die niet onderhandelbaar is.** Blok 7 blijft in deze
 bijeenkomst, ook als de tijd knelt. Het lusrecept draagt de hele week: het
-werkcollege van morgen loopt `double_char` er expliciet langs in
+practicum van morgen loopt `double_char` er expliciet langs in
 `source/practicals/4_python_bat.md`, en de uitwerking van opdracht 20 van de
 oefenmidterm verwijst er in `source/solutions/4_midterm.ipynb` naar om uit te
 leggen waarom die lus nooit eindigt. Zonder blok 7 mist bijeenkomst 2 en 3 hun
@@ -269,7 +269,7 @@ naar huis.
   in heel week 4 nergens anders voor. Dat is vijf minuten.
 - **Je komt niet aan blok 8 toe.** Geef Opdracht 1 tot en met 5 mee en begin
   morgen niet met bespreken. Haal in dat geval geen tijd bij blok 7 weg: het
-  werkcollege van morgen begint met het recept en niet met deze opdrachten.
+  practicum van morgen begint met het recept en niet met deze opdrachten.
 - **Blok 4 loopt uit op de tweede quizvraag.** Zet de tabel op het bord tot
   `ix = 8` en zeg dat de rest op de pagina staat, met het antwoord erbij. Wil je
   toch verder, haal de tijd dan bij **blok 5** door `### Welke van de twee?` tot
@@ -282,17 +282,15 @@ naar huis.
 staat. En de twee woorden `break` en `continue` in blok 6: de uitleg eromheen
 mag tot twee zinnen, maar de woorden moeten vallen.
 
-## 3. Bijeenkomst 2 - Werkcollege: lussen schrijven in CodingBat
+## 3. Bijeenkomst 2 - Practicum: lussen schrijven in CodingBat
 
 Materiaal: `source/practicals/4_python_bat.md`, en de twaalf uitwerkingen in
 `source/solutions/4_python_bat.ipynb`.
 
-Dit is het werkcollege in de zin van `curriculum/uitgangspunten.md`: de plek
-waar een probleem gezamenlijk stap voor stap wordt opgebouwd. Deze bijeenkomst
-doet dat drie keer, en elke keer met dezelfde beweging: **samen er één
-opbouwen, daarna de rest van die groep zelf.** Elk gezamenlijk probleem gaat
-over één vraag van het lusrecept, zodat het college van gisteren het werkcollege
-van vandaag draagt.
+Deze bijeenkomst bouwt drie keer een probleem gezamenlijk stap voor stap op, en
+elke keer met dezelfde beweging: **samen er één opbouwen, daarna de rest van die
+groep zelf.** Elk gezamenlijk probleem gaat over één vraag van het lusrecept,
+zodat het college van gisteren het practicum van vandaag draagt.
 
 De twaalf problemen vallen uiteen in vier groepen, en die groepen zijn af te
 lezen aan de uitwerkingen en niet bedacht:
@@ -415,17 +413,16 @@ gedaan heeft.
   kant-en-klaar. `### Opdracht 1` **b** (`power`) kan erachteraan, maar weet wat
   je geeft: die is gemodelleerd op `fac` en gebruikt dus `range` zonder `if`, en
   de tests staan er als `print`-regels die de student zelf naar asserts omzet.
-  Meld het aan wie morgen het practicum geeft, want die twee zijn dan al gezien.
+  Meld het aan wie morgen bijeenkomst 3 geeft, want die twee zijn dan al gezien.
 - **Je houdt tijd over.** Laat duo's `end_other` een tweede keer schrijven met
   een index die vanaf achteren telt in plaats van met `[::-1]`. Dezelfde stof
   van de andere kant, en het kost je geen voorbereiding.
 
 **Wat je niet inkort.** Blok 6. Dat is de enige plek in de hele week waar samen
-wordt uitgelegd waarom een index nodig is, het is de reden dat deze bijeenkomst
-het werkcollege is, en het is de enige les die de `IndexError` hierboven vóór
-is. Kort liever blok 5 in tot `sum67` alleen.
+wordt uitgelegd waarom een index nodig is, en het is de enige les die de
+`IndexError` hierboven vóór is. Kort liever blok 5 in tot `sum67` alleen.
 
-## 4. Bijeenkomst 3 - Practicum: de oefenmidterm en de opgaven
+## 4. Bijeenkomst 3 - Oefenmidterm: zelf voorspellen, met de opgaven ernaast
 
 Materiaal: `source/lectures/4b_midterm.md` met
 `source/solutions/4_midterm.ipynb`, en de drie opgavebundels
@@ -596,7 +593,7 @@ het niet inroostert.
   `source/solutions/4_basis.ipynb` schrijft `## Opdracht 1`. Dezelfde namen,
   ander niveau; in de klas hoor je dat verschil niet.
 - **`source/practicals/4_python_bat.md` heeft één ongenummerde `## Opdracht`
-  met drie stappen.** "Opdracht 2 van het werkcollege" bestaat dus niet. Verwijs
+  met drie stappen.** "Opdracht 2 van het practicum" bestaat dus niet. Verwijs
   naar de stappen - "stap 2, je code bewaren" - of naar het CodingBat-probleem
   bij naam.
 - **`### Opdracht 4` van `source/problems/4_opstap.ipynb` geeft 9 bij beide
@@ -646,12 +643,12 @@ hun geheel.
 De derde beschreef de oefenmidterm en had als enige een expliciete lesindeling:
 5 minuten opening, 15 minuten op papier zonder overleg, 5 minuten overleg in
 duo's en 20 minuten klassikaal bespreken met Python Tutor, samen 45 van de 90.
-Die cyclus meet een les waarin de hele groep in de pas loopt, en onder de
-vastgestelde indeling valt de oefenmidterm in het practicum: zelfstandig, in
-eigen tempo, met meenemen wat niet af komt. *Geen overleg* is precies wat een
-practicum niet is, en twintig minuten álles bespreken is een andere handeling
-dan een peilmoment over vier vragen. Die tijden zijn daarom gewogen en niet
-overgenomen; het zouden geleende getallen zijn geweest en geen overgeleverde.
+Die cyclus meet een les waarin de hele groep in de pas loopt, en de vastgestelde
+werkvorm van de oefenmidterm is zelfstandig, in eigen tempo, met meenemen wat
+niet af komt. *Geen overleg* past niet bij die werkvorm, en twintig minuten
+álles bespreken is een andere handeling dan een peilmoment over vier vragen. Die
+tijden zijn daarom gewogen en niet overgenomen; het zouden geleende getallen
+zijn geweest en geen overgeleverde.
 
 Wat wél is overgenomen is de **werkvorm**: eerst zelf voorspellen, dan pas de
 uitwerking erbij. Die staat in blok 1 en 2 van sectie 4. De antwoorden uit die
@@ -667,9 +664,10 @@ twintig die er nu staan.
   nieuw ontwerp op de gewijzigde weekopzet. De vier van week 5 en 6 zijn met #276
   en #280 ook verdwenen; `teacher_guides/` bestaat niet meer.
 - **De bijeenkomstindeling van week 4 is met dit werkitem vastgelegd** als
-  vierde erkende afwijking in `curriculum/uitgangspunten.md`. Tegelijk is daar
-  één bijzin rechtgezet die van de oude indeling uitging: het besluit over het
-  lusrecept redeneerde vanuit een practicumsleuf die door CodingBat bezet zou
+  vierde erkende afwijking in `curriculum/uitgangspunten.md`; sinds #380 valt
+  week 4 daar onder de uitzondering voor toetsweken. Tegelijk is daar één bijzin
+  rechtgezet die van de oude indeling uitging: het besluit over het lusrecept
+  redeneerde vanuit een bijeenkomst met de opgaven die door CodingBat bezet zou
   zijn, en dat is sinds deze vaststelling niet meer zo. De conclusie van dat
   besluit is niet veranderd.
 - **`handleidingen/week_3.md` is met dit werkitem meegegaan.** Die handleiding

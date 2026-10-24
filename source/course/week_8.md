@@ -14,7 +14,7 @@ Het eerste college behandelt methoden en dictionaries. Dat heb je nodig voor
 het eerste deel van de opstap en voor de basis. Het tweede college behandelt
 sets, die je nodig hebt voor het tweede deel van de opstap en voor de extra. Het
 bouwt ook een taalmodel: een dictionary die bijhoudt welk woord op welk woord
-volgt. In het werkcollege werk je dat uit tot een programma dat zelf tekst
+volgt. In het practicum werk je dat uit tot een programma dat zelf tekst
 schrijft.
 
 Aan het eind van de week kun je met een dictionary gegevens opzoeken en tellen,

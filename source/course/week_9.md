@@ -17,7 +17,7 @@ Het eerste college behandelt de list comprehension, met `range`, `enumerate`,
 opstap. Het tweede college behandelt dict en set comprehensions, een lijst van
 lijsten, ook met een geneste comprehension, en wanneer je beter een lus houdt.
 Dat heb je nodig voor het tweede deel van de opstap, voor de basis en voor de
-extra. In het werkcollege maak je met deze vormen een register bij een tekst.
+extra. In het practicum maak je met deze vormen een register bij een tekst.
 
 Aan het eind van de week kun je een lus die een lijst, set of dictionary
 opbouwt herschrijven als comprehension, en een comprehension terugschrijven als

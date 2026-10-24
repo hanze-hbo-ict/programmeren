@@ -10,14 +10,14 @@ browsersimulator; vanaf nu heeft iedereen Python en een editor nodig. Reken erop
 dat dat bij een deel van de zaal niet af is - zie *Wat je nodig hebt*.
 
 De week draagt twee onderwerpen en niet één. Dat is de reden dat er twee colleges
-en twee practica staan, en het verklaart de indeling hieronder.
+en twee `practicals/`-bestanden staan, en het verklaart de indeling hieronder.
 
 ## 1. De week in het kort
 
 | Bijeenkomst | Vorm | Materiaal |
 |---|---|---|
 | 1 | College | `source/lectures/2a_var_con.ipynb` |
-| 2 | Werkcollege | `source/lectures/2b_strings_en_lists.ipynb` + `source/practicals/2_rochambeau.ipynb` |
+| 2 | College | `source/lectures/2b_strings_en_lists.ipynb` + `source/practicals/2_rochambeau.ipynb` |
 | 3 | Practicum | `source/practicals/2_sequenties_en_data.ipynb` + `source/problems/2_opstap.ipynb`, `2_basis.ipynb`, `2_extra.ipynb` |
 
 Daarnaast staan er vier overzichtspagina's die je zelf niet hoeft te behandelen:
@@ -28,19 +28,20 @@ opgaven en de uitwerkingen. De vijf bestanden in `source/solutions/` staan in di
 laatste; ze zijn openbaar voor de student en daarom geen materiaal dat je zelf
 brengt.
 
-### Deze week valt één practicum naar de derde bijeenkomst
+### Deze week heeft twee `practicals/`-bestanden
 
-De indeling college - werkcollege - practicum uit
-`curriculum/uitgangspunten.md` §`### Drie bijeenkomsten per week` gaat ervan uit
-dat een week één practicum heeft. Week 2 heeft er twee, en daarom is daar een
-erkende afwijking vastgelegd: `source/practicals/2_rochambeau.ipynb` vult het
-werkcollege en `source/practicals/2_sequenties_en_data.ipynb` schuift naar de
-derde bijeenkomst, naast de drie opgavebundels.
+De indeling uit `curriculum/uitgangspunten.md`
+§`### Drie bijeenkomsten per week` gaat uit van twee colleges en één practicum.
+Week 2 heeft twee `practicals/`-bestanden, en daarom is daar een erkende
+afwijking vastgelegd: `source/practicals/2_rochambeau.ipynb` gaat met `2b` mee
+in het tweede college, en `source/practicals/2_sequenties_en_data.ipynb` vult
+het practicum. De drie opgavebundels zijn huiswerk; wat het practicum aan ruimte
+overlaat, mag eraan besteed worden.
 
-De grond staat in het materiaal zelf. Rochambeau is één programma dat je met een
-klas stap voor stap opbouwt - precies wat een werkcollege is. Sequenties en data
-is een lange begeleide reeks cellen met `assert`-regels eronder: zelfstandig werk
-onder begeleiding, en dus een practicum.
+De verdeling volgt het materiaal. Rochambeau is één programma dat je met een
+klas stap voor stap opbouwt, en dat past naast de uitleg van `2b`. Sequenties en
+data is een lange begeleide reeks cellen met `assert`-regels eronder, waar de
+student zelfstandig doorheen werkt.
 
 ### Over de tijden
 
@@ -192,11 +193,11 @@ naar zwak, en met het advies om bij twijfel haakjes te zetten, vooral bij `and` 
 
 **Blok 10.** Maak het maximumprobleem af: het plan van blok 1 staat er nog, en nu
 past de code eronder. Sluit af met "wat hebben we geleerd?" en laat de klas het
-antwoord geven. Wijs vooruit naar het werkcollege: daar bouw je samen een
+antwoord geven. Wijs vooruit naar het tweede college: daar bouw je samen een
 programma dat steen, papier en schaar speelt.
 
 Dat vooruitzicht was in 2023 het huiswerk - *Opdracht 8*, een programma voor
-steen, papier en schaar dat in het volgende werkcollege werd nagekeken. Die
+steen, papier en schaar dat in de volgende bijeenkomst werd nagekeken. Die
 opdracht bestaat niet meer; hetzelfde programma is nu
 `source/practicals/2_rochambeau.ipynb` en je bouwt het samen op in plaats van het
 na te kijken. Geef het dus als vooruitblik mee en niet als huiswerk.
@@ -236,7 +237,7 @@ na te kijken. Geef het dus als vooruitblik mee en niet als huiswerk.
   Haal de tijd bij blok 8 vandaan: Opdracht 6 heeft vier deelvragen en je kunt er
   twee klassikaal doen en twee meegeven.
 - **Je komt niet aan blok 9 toe.** Sla `### Condities combineren en omkeren` en
-  Opdracht 7 over en doe ze aan het begin van het werkcollege. Ze zijn daar
+  Opdracht 7 over en doe ze aan het begin van het tweede college. Ze zijn daar
   meteen nodig: wie steen, papier en schaar in `if`-statements uitschrijft, komt
   vanzelf bij `and`. Wat je niet doet is blok 10 laten vallen - dan eindigt het
   college zonder dat het probleem waarmee het begon is opgelost.
@@ -245,16 +246,16 @@ na te kijken. Geef het dus als vooruitblik mee en niet als huiswerk.
   kost je geen voorbereiding.
 - **Een deel van de zaal heeft geen werkende Python.** Laat ze meekijken met een
   buurman en verwijs ze naar `source/lectures/0b_install_python.md`. Dit college
-  is nog te volgen zonder eigen machine; het werkcollege van morgen niet.
+  is nog te volgen zonder eigen machine; het tweede college van morgen niet.
 
-## 3. Bijeenkomst 2 - Werkcollege: strings, lijsten en Rochambeau
+## 3. Bijeenkomst 2 - College: strings, lijsten en Rochambeau
 
 Materiaal: `source/lectures/2b_strings_en_lists.ipynb` en
 `source/practicals/2_rochambeau.ipynb`.
 
 De bijeenkomst heeft twee helften met een verschillend karakter. De eerste is
 uitleg met leesvragen, net als het college van gisteren. De tweede is het
-werkcollege in eigenlijke zin: je bouwt samen met de klas één programma op.
+eerste practicum, Rochambeau: je bouwt samen met de klas één programma op.
 
 ### Blokschema bijeenkomst 2
 
@@ -324,7 +325,7 @@ als je `steen` intypt: dan beweert het te hebben gewonnen, ongeacht wat het zelf
 koos. Dat is een grap in het materiaal, en het is meteen de opgave: maak er een
 eerlijk spel van.
 
-**Blok 8.** Dit is het werkcollege. Bouw het samen op, aan het bord of in een
+**Blok 8.** Dit is Rochambeau. Bouw het samen op, aan het bord of in een
 bestand op het scherm, en laat de klas de volgende regel zeggen. Werk één wapen
 volledig uit - drie uitkomsten: winnen, verliezen, gelijk - en laat de andere
 twee wapens open. Dat is precies genoeg om de vorm te laten zien en niet zoveel
@@ -373,8 +374,8 @@ uitwerking staat in `source/solutions/2_rochambeau.ipynb`.
   vast.
 - **Je komt niet aan Rochambeau toe.** Schuif blok 7 tot en met 9 door naar het
   begin van bijeenkomst 3. Dat kost daar 25 minuten van het zelfstandige werk en
-  is de goedkoopste ingreep van de week - het practicum van bijeenkomst 3 heeft
-  drie bundels waarvan er geen enkele af hoeft.
+  is de goedkoopste ingreep van de week - naast het practicum staan in
+  bijeenkomst 3 drie opgavebundels, en dat is huiswerk dat daar niet af hoeft.
 - **Je houdt tijd over.** Laat duo's het tweede wapen van Rochambeau zelf
   uitwerken, of laat ze het programma zo maken dat de speler altijd wint. Dat
   laatste mag van de opgave en het is didactisch dezelfde oefening.
@@ -541,9 +542,6 @@ dat zelf proberen vóór kijken het hele punt is.
   `source/problems/2_opstap.ipynb` schrijft `#### Uitwerking A`,
   `source/solutions/2_opstap.ipynb` schrijft `### Uitwerking A`. Dezelfde
   namen, ander niveau.
-- **`source/course/practical_2.md` heeft als titel `# Werkcollege`**, maar draagt
-  beide practica - ook het practicum van bijeenkomst 3. Dat is een restant; de
-  begrippenlijst legt `practicals/` bij het practicum. Week 1 heeft hetzelfde.
 - **"Opdracht 8" bestaat niet meer.** De handleiding van 2023 sloot het eerste
   college ermee af als huiswerk en opende het tweede met het nakijken ervan. Lees
   een oude verwijzing dus niet letterlijk: het programma dat het was, is nu

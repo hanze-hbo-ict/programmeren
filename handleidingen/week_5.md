@@ -18,16 +18,16 @@ laten staan. Zie `curriculum/uitgangspunten.md`
 **Bijeenkomst 3 van deze week is geen lesmoment.** Die sessie wordt gebruikt
 voor het afnemen van het tentamen, en er is dus geen derde gelegenheid om
 lesstof in te halen die bij bijeenkomst 1 of 2 blijft liggen. Sectie 1 en
-sectie 4 leggen uit wat dat voor de indeling van de week betekent; het is een
-erkende afwijking, vastgelegd in `curriculum/uitgangspunten.md`
-§`#### Vijf erkende afwijkingen`.
+sectie 4 leggen uit wat dat voor de indeling van de week betekent; de week valt
+onder de uitzondering voor toetsweken in `curriculum/uitgangspunten.md`
+§`### Drie bijeenkomsten per week`.
 
 ## 1. De week in het kort
 
 | Bijeenkomst | Vorm | Materiaal |
 |---|---|---|
 | 1 | College | `source/lectures/5a_geneste_lus.ipynb` |
-| 2 | Werkcollege | `source/practicals/5b_boter_kaas_eieren.ipynb` |
+| 2 | Practicum | `source/practicals/5b_boter_kaas_eieren.ipynb` |
 | 3 | Tentamen | Geen nieuw lesmateriaal - zie sectie 4 |
 
 **Zes onderdelen dragen deze week geen begeleide bijeenkomst.**
@@ -44,7 +44,7 @@ Daarnaast staan er vier overzichtspagina's die je zelf niet hoeft te
 behandelen: `source/course/week_5.md` (`## Geneste lussen en 2D-lijsten`) vat
 de week samen voor de student, en `source/course/practical_5.md`,
 `source/course/opgaven_5.md` en `source/course/solutions_5.md` zijn de
-omslagpagina's boven het werkcollege, de opgaven en de uitwerkingen. Alle zeven
+omslagpagina's boven het practicum, de opgaven en de uitwerkingen. Alle zeven
 uitwerkingen in `source/solutions/` - `5a_ascii_art.ipynb`,
 `5b_boter_kaas_eieren.ipynb`, `5_opstap.ipynb`, `5_basis.ipynb`,
 `5_extra.ipynb`, `5_mandelbrot_opstap.md` en `5_mandelbrot_basis.md` - staan
@@ -52,52 +52,36 @@ onder die laatste; ze zijn openbaar voor de student.
 
 ### De bijeenkomstindeling van week 5
 
-**Bijeenkomst 3 is het tentamen, niet het practicum.** Dit is vastgesteld door
-de vakdeskundige, geciteerd in `curriculum/uitgangspunten.md`
-§`#### Vijf erkende afwijkingen`: *"de planning is dat de laatste (derde)
-sessie van die week gebruikt wordt voor het afnemen van de midterm. er blijven
-in die week dus twee bijeenkomsten over voor het materiaal."* Dat is een ander
-soort afwijking dan de vier die er al stonden - die gingen over welke map bij
-welke bijeenkomst hoort, deze gaat over dat een bijeenkomst geen lesmoment is.
+**Bijeenkomst 3 is het tentamen.** Week 5 valt onder de uitzondering voor
+toetsweken in `curriculum/uitgangspunten.md` §`### Drie bijeenkomsten per week`:
+één college vervalt, en die bijeenkomst gaat naar de midterm. De vakdeskundige,
+geciteerd in `curriculum/uitgangspunten.md` §`#### Erkende afwijkingen`: *"de
+planning is dat de laatste (derde) sessie van die week gebruikt wordt voor het
+afnemen van de midterm. er blijven in die week dus twee bijeenkomsten over voor
+het materiaal."*
 
-Daarmee vervalt de plek waar het materiaal dat de moedertabel niet kwijt kan
-normaal naartoe schuift. Bij week 2, 3 en 4 viel het overtollige
-`practicals/`-bestand naar het practicum van bijeenkomst 3, naast de
-opgavebundels. Week 5 heeft die derde bijeenkomst niet meer beschikbaar, dus
-schuift het overtollige bestand niet door naar een andere bijeenkomst maar naar
-zelfstandig werk zonder begeleide sessie - dezelfde plek waar de opgavebundels
-al stonden.
+**Wat een afwijking blijft: week 5 heeft twee `practicals/`-bestanden en één
+practicum.** Er is geen derde bijeenkomst waar het tweede bestand terecht kan,
+dus wordt het huiswerk, naast de opgavebundels. Dat staat in
+§`#### Erkende afwijkingen`; de verdeling hieronder is een voorstel van mij, ter
+bevestiging bij de poort van #276.
 
-**Welk van de twee `practicals/`-bestanden het werkcollege vult, is aan mij om
-vast te stellen.** Dat is geen open vraag maar een voorstel, ter bevestiging
-bij de poort:
+`source/practicals/5b_boter_kaas_eieren.ipynb` is het practicum van
+bijeenkomst 2. Het bestand geeft onder `### Voorbeeld` een volledig uitgewerkte
+functie voor de richting "oost", inclusief grenscontroles en lus, en de
+uitwerking van `### Opdracht 1` in `source/solutions/5b_boter_kaas_eieren.ipynb`
+is die functie woordelijk: de docent doet de eerste met de klas voor, en de klas
+herhaalt en typt mee. De acht opdrachten vallen bovendien in twee groepen van
+vier bijna identieke functies - drie op een rij, dan de generalisatie naar `n`
+op een rij - wat zich twee keer leent voor "samen de eerste, de rest zelf".
 
-`source/practicals/5b_boter_kaas_eieren.ipynb` hoort bij bijeenkomst 2. Het
-bestand geeft onder `### Voorbeeld` een volledig uitgewerkte functie voor de
-richting "oost", inclusief grenscontroles en lus - en de uitwerking van
-`### Opdracht 1` in `source/solutions/5b_boter_kaas_eieren.ipynb` is die functie
-woordelijk. Dat is het duidelijkst denkbare signaal voor een werkcollege: de
-docent doet de eerste met de klas voor, en de klas herhaalt en typt mee. De
-acht opdrachten vallen bovendien in twee groepen van vier bijna identieke
-functies - drie op een rij, dan de generalisatie naar `n` op een rij - wat zich
-twee keer leent voor "samen de eerste, de rest zelf".
-
-`source/practicals/5a_ascii_art.ipynb` hoort bij het zelfstandige werk, naast
-de opgavebundels. De zes opdrachten lopen op in moeilijkheid zonder gegeven
-tussenstap - van een rechthoek naar een driehoek, naar heuvels die de
-driehoek hergebruiken, naar een ruit, naar een gestreepte ruit, naar de
-laatste die het materiaal zelf "een uitdaging!" noemt - en het materiaal
-waarschuwt expliciet tegen "debuggen door willekeurige wijzigingen" en
-adviseert "eerst ontwerpen". Dat is een opgave die om rustig, zelfstandig
-redeneren vraagt en niet om een gezamenlijk opgebouwde eerste stap; ze past bij
-het karakter van de opgavebundels waarmee ze nu de bijeenkomst deelt, niet bij
-het karakter van het werkcollege.
-
-Dit voorstel wijkt af van de moedertabel in `curriculum/uitgangspunten.md`
-§`### Drie bijeenkomsten per week`, die `practicals/` aan bijeenkomst 2 koppelt.
-Bij week 5 doet één van de twee `practicals/`-bestanden dat niet: het landt bij
-zelfstandig werk, om de reden hierboven. Zie
-§`#### Vijf erkende afwijkingen` voor de vastlegging.
+`source/practicals/5a_ascii_art.ipynb` is huiswerk, naast de opgavebundels. De
+zes opdrachten lopen op in moeilijkheid zonder gegeven tussenstap - van een
+rechthoek naar een driehoek, naar heuvels die de driehoek hergebruiken, naar
+een ruit, naar een gestreepte ruit, naar de laatste die het materiaal zelf "een
+uitdaging!" noemt - en het materiaal waarschuwt expliciet tegen "debuggen door
+willekeurige wijzigingen" en adviseert "eerst ontwerpen". Dat vraagt om rustig,
+zelfstandig redeneren.
 
 ### Over de tijden
 
@@ -167,7 +151,7 @@ de repository.** Duurt die van jou korter of langer, schaal de blokken dan mee.
   zelf naar voor wie de dubbele lus van Opdracht 1 tot en met 4 niet in één
   keer ziet, en dat geldt evengoed voor een student die in de klas vastloopt.
 - **Papier of een geschreven kladversie.** De voorspel-cellen van het college
-  en het samen opbouwen van `in_a_row_3_east` in het werkcollege zijn beide
+  en het samen opbouwen van `in_a_row_3_east` in het practicum zijn beide
   alleen iets waard als de klas een antwoord heeft vóórdat de cel draait of
   jij typt.
 
@@ -205,7 +189,7 @@ knelt. Het is de plek waar de klas voor het eerst ziet dat een functie die een
 raster "verandert" in werkelijkheid een nieuw raster teruggeeft, en die
 gewoonte draagt de rest van de week: `problems/5_basis.ipynb` bouwt bij
 `add_fund` en `chart` op precies hetzelfde patroon, en de uitwerking van
-`in_a_row_3_east` in het werkcollege van morgen leest en verandert nooit het
+`in_a_row_3_east` in het practicum van morgen leest en verandert nooit het
 meegegeven bord.
 
 ### Hoe je het brengt
@@ -320,17 +304,15 @@ staat. En de laatste alinea van blok 8, `## Waar deze week ophoudt`: dat is de
 enige plek waar de grens van deze week met zoveel woorden bij naam wordt
 genoemd en vooruitgewezen naar week 7.
 
-## 3. Bijeenkomst 2 - Werkcollege: boter, kaas en eieren
+## 3. Bijeenkomst 2 - Practicum: boter, kaas en eieren
 
 Materiaal: `source/practicals/5b_boter_kaas_eieren.ipynb`, met de acht
 uitwerkingen in `source/solutions/5b_boter_kaas_eieren.ipynb`.
 
-Dit is het werkcollege in de zin van `curriculum/uitgangspunten.md`: de plek
-waar een probleem gezamenlijk stap voor stap wordt opgebouwd. Deze bijeenkomst
-doet dat twee keer, met dezelfde beweging beide keren: **samen de eerste
-opbouwen, dan de rest van de groep zelf.** De acht functies controleren of er
-drie, en later `n`, gelijke tekens op een rij staan vanaf een startpositie, in
-een van vier richtingen.
+Deze bijeenkomst bouwt twee keer een probleem gezamenlijk stap voor stap op, met
+dezelfde beweging beide keren: **samen de eerste opbouwen, dan de rest van de
+groep zelf.** De acht functies controleren of er drie, en later `n`, gelijke
+tekens op een rij staan vanaf een startpositie, in een van vier richtingen.
 
 ### Blokschema
 
@@ -432,21 +414,21 @@ is, en dat dezelfde functies straks een speler nodig heeft die zelf zet.
 
 **Wat je niet inkort.** Blok 2 en blok 4, de twee "samen"-momenten. Dat zijn de
 enige twee plekken in de week waar een probleem gezamenlijk van nul af wordt
-opgebouwd, en het is de reden dat dit het werkcollege is.
+opgebouwd.
 
 ## 4. Bijeenkomst 3 - Tentamen
 
 Bijeenkomst 3 van week 5 draagt geen lesmateriaal. De sessie wordt gebruikt om
 het tentamen af te nemen; zie *De bijeenkomstindeling van week 5* in sectie 1
 en de vastlegging in `curriculum/uitgangspunten.md`
-§`#### Vijf erkende afwijkingen`. De planning en organisatie van het tentamen
+§`#### Erkende afwijkingen`. De planning en organisatie van het tentamen
 zelf lopen buiten deze repository en buiten deze handleiding.
 
 ### Wat hier gebeurt
 
 Er is geen nieuw materiaal om te brengen en dus geen blokschema. Voor de
 docent van bijeenkomst 1 en 2 betekent dit vooral dat er geen derde moment
-meer is om iets in te halen: wat in het college of het werkcollege van deze
+meer is om iets in te halen: wat in het college of het practicum van deze
 week blijft liggen, komt niet "morgen" aan de beurt. Zie de uitwijkopties in
 sectie 2 en 3 voor wat je in dat geval laat vallen en wat niet.
 
@@ -540,11 +522,12 @@ git-geschiedenis.
 ### Wat er nog loopt
 
 - **De bijeenkomstindeling van week 5 is met dit werkitem voorgesteld**, als
-  vijfde erkende afwijking in `curriculum/uitgangspunten.md`
-  §`#### Vijf erkende afwijkingen`. Het deel over bijeenkomst 3 als tentamen is
-  al vastgesteld door de vakdeskundige, geciteerd in diezelfde paragraaf; het
-  deel over de verdeling van `5a_ascii_art.ipynb` en
-  `5b_boter_kaas_eieren.ipynb` over het werkcollege en het zelfstandige werk is
+  vijfde erkende afwijking in `curriculum/uitgangspunten.md`, die sinds #380
+  §`#### Erkende afwijkingen` heet; bijeenkomst 3 als tentamen valt sindsdien
+  onder de uitzondering voor toetsweken. Het deel over bijeenkomst 3 als
+  tentamen is al vastgesteld door de vakdeskundige, geciteerd in diezelfde
+  paragraaf; het deel over de verdeling van `5a_ascii_art.ipynb` en
+  `5b_boter_kaas_eieren.ipynb` over het practicum en het zelfstandige werk is
   mijn eigen meting en voorstel, ter bevestiging bij de poort van #276.
 - **`curriculum/uitgangspunten.md` bevat een niet meer kloppende statusregel.**
   Het besluitenregister zegt bij *Week 4 krijgt een lusrecept van vijf vragen*:

@@ -1,7 +1,7 @@
 # Extra: van tekst naar beeld
 
 Uitwerking van [de extra-opgave](/problems/6_extra). `save_rgb` komt uit de
-`png.py` van het [werkcollege](/practicals/6b_images); die module zit in
+`png.py` van het [practicum](/practicals/6b_images); die module zit in
 {download}`fraaie_plaatjes.zip <../problems/assets/fraaie_plaatjes.zip>`. Pak
 die zip uit en zet dit programma in dezelfde directory, dan slaagt de import.
 

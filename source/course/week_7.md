@@ -7,8 +7,8 @@ een lijst op een vaste plek veranderen, eerst bewust en daarna met aandacht voor
 verwijzingen en kopiëren. Je oefent ook hoe je een groter probleem in deelproblemen
 verdeelt en functies samenstelt.
 
-De kern is verplicht: de **opstap**, het **werkcollege** en de **basis**. In het
-werkcollege bouw je met de klas het algoritme voor vallende korrels op, van
+De kern is verplicht: de **opstap**, het **practicum** en de **basis**. In het
+practicum bouw je met de klas het algoritme voor vallende korrels op, van
 deelproblemen naar code. De extra is een zelfstandige uitdaging met Game of Life.
 Als je weinig tijd hebt, stop je na één werkende basisgeneratie; de extra mag de
 kern nooit verdringen.
@@ -19,7 +19,7 @@ kern nooit verdringen.
 2. Maak de opstap: één rastercel wijzigen, herkennen dat twee namen naar dezelfde
    lijst verwijzen en een klein
    tuplepaar uitpakken.
-3. Doe het [werkcollege](/practicals/7b_vallende_korrels) mee: knip het probleem
+3. Doe het [practicum](/practicals/7b_vallende_korrels) mee: knip het probleem
    van vallende korrels in deelproblemen en bouw het algoritme gezamenlijk op.
 4. Maak de basis: ontwerp de buurttelling, de regel voor één cel en de
    samengestelde functie voor één volledige generatie.
@@ -30,12 +30,12 @@ kern nooit verdringen.
 | Bijeenkomst | Richttijd | Product |
 |---|---:|---|
 | 1 | 90 minuten | College, directe mutatie, verwijzingen, kopiëren en tuple/unpacking in de opstap |
-| 2 | 90 minuten | Werkcollege: vallende korrels opgeknipt in deelproblemen, met één werkende tijdstap |
+| 2 | 90 minuten | Practicum: vallende korrels opgeknipt in deelproblemen, met één werkende tijdstap |
 | 3 | 90 minuten | Basis: `count_neighbors`, `next_cell` en één geteste generatie; daarna facultatief de Game-of-Life-extra |
 
 Loop je uit, rond dan eerst de opstap en één volledige basisgeneratie af. Laat
 visualisatie, meerdere generaties en de extra vallen; die zijn geen onderdeel van
-de minimale kern. Loopt bijeenkomst 2 uit, dan valt stap 3 van het werkcollege:
+de minimale kern. Loopt bijeenkomst 2 uit, dan valt stap 3 van het practicum:
 één werkende tijdstap is het product van die bijeenkomst, en `settle` kun je
 daarna zelf afmaken.
 

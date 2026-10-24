@@ -201,9 +201,9 @@ uitgangssituatie, niet de norm; het verschil tussen beide kolommen is het werk.
 | Week | Leidend voor 2026 | Verantwoordelijk | Leeruitkomsten | Voor het eerst geïntroduceerd | Materiaal nu |
 |---|---|---|---|---|---|
 | 1 | Datastructuren (lists ter herhaling, dictionaries, sets, methodeaanroep, Markov) | BRRA | P2, A1 | dictionary, sleutel en waarde, set, methodeaanroep | Datastructuren: colleges `8a_datastructuren` (methodeaanroep en dictionaries) en `8b_taalmodel` (sets en het Markov-model), practicum `8a_text_genereren`, opstap, basis (woorden tellen) en extra (woordenschat vergelijken) (#273) |
-| 2 | Comprehensions (list, dict, set, range, enumerate) | HOEM | A1; zie de opmerking bij *Voorgestelde correcties* in [leeruitkomsten.md](leeruitkomsten.md) | list comprehension, dict comprehension, set comprehension, `enumerate`, `zip`, de conditionele expressie `a if c else b` | Comprehensions: colleges `9a_list_comprehensions` (list comprehension met `range`, `enumerate`, `zip` en `a if c else b`) en `9b_dict_en_set_comprehensions` (dict en set comprehension, geneste comprehension, lus of comprehension), werkcollege `9_register`, opstap, basis (van lus naar comprehension en terug) en extra (een toernooi) (#326) |
-| 3 | Recursie | HOEM | A6 | recursie, basisgeval, recursief geval, recursieve aanroep | Recursie: colleges `10a_recursie` (hoe een recursieve functie werkt, het basisgeval, frames op de stack) en `10b_recursief_ontwerpen` (basisgeval, kleiner probleem, combineren), werkcollege `10_directory_doorzoeken`, opstap (lezen en naspelen, schrijven), basis (Scrabble) en extra (potjeslatijn, heen en terug) (#332, #359) |
-| 4 | Use it or lose it, lambda | HOEM | A4, A6 | use it or lose it, `lambda`, functie als argument | Use it or lose it en `lambda`: colleges `11a_use_it_or_lose_it` (*use it or lose it* met `exact_change` en de knapzak) en `11b_functie_als_argument` (`sorted`, `max` en `min` met `key=`, `lambda`, een eigen functie met een functieparameter), werkcollege `11_wisselgeld`, opstap, twee basisniveaus (*Basis: algoritmen*, het nijlpaarddiner, en *Basis: lambda*, een uitslag), twee extra's (*Extra: algoritmen*, het pijlenpad, en de periodieke tshirt) en de verdiepende opdracht `caesar_op_orde` (#335). De klassenstof staat sinds #160 in week 5 |
+| 2 | Comprehensions (list, dict, set, range, enumerate) | HOEM | A1; zie de opmerking bij *Voorgestelde correcties* in [leeruitkomsten.md](leeruitkomsten.md) | list comprehension, dict comprehension, set comprehension, `enumerate`, `zip`, de conditionele expressie `a if c else b` | Comprehensions: colleges `9a_list_comprehensions` (list comprehension met `range`, `enumerate`, `zip` en `a if c else b`) en `9b_dict_en_set_comprehensions` (dict en set comprehension, geneste comprehension, lus of comprehension), practicum `9_register`, opstap, basis (van lus naar comprehension en terug) en extra (een toernooi) (#326) |
+| 3 | Recursie | HOEM | A6 | recursie, basisgeval, recursief geval, recursieve aanroep | Recursie: colleges `10a_recursie` (hoe een recursieve functie werkt, het basisgeval, frames op de stack) en `10b_recursief_ontwerpen` (basisgeval, kleiner probleem, combineren), practicum `10_directory_doorzoeken`, opstap (lezen en naspelen, schrijven), basis (Scrabble) en extra (potjeslatijn, heen en terug) (#332, #359) |
+| 4 | Use it or lose it, lambda | HOEM | A4, A6 | use it or lose it, `lambda`, functie als argument | Use it or lose it en `lambda`: colleges `11a_use_it_or_lose_it` (*use it or lose it* met `exact_change` en de knapzak) en `11b_functie_als_argument` (`sorted`, `max` en `min` met `key=`, `lambda`, een eigen functie met een functieparameter), practicum `11_wisselgeld`, opstap, twee basisniveaus (*Basis: algoritmen*, het nijlpaarddiner, en *Basis: lambda*, een uitslag), twee extra's (*Extra: algoritmen*, het pijlenpad, en de periodieke tshirt) en de verdiepende opdracht `caesar_op_orde` (#335). De klassenstof staat sinds #160 in week 5 |
 | 5 | OO, klassen, encapsulatie | BRRA | P5, A2 | klassedefinitie, object, attribuut, constructor en `__init__`, `self`, een methode schrijven, `__repr__`, waarde en identiteit, `is`, encapsulatie, `_` voor een attribuut dat niet van buiten wordt gebruikt, `@property` en decorator, compositie | OO, klassen, encapsulatie: colleges `12a_objecten` en `12b_data_object`, practicum sessie 1 (`12_creatures`), opstap, basis (`Date`) en extra (`Board`) (#160) |
 | 6 | Polymorfisme, overerving, duck typing | BRRA | A2, A3 | overerving, subklasse en superklasse, `super()`, een methode overschrijven, standaardwaarde voor een parameter, polymorfisme, duck typing, `isinstance`, `self.__class__` en `__name__` | Polymorfisme, overerving, duck typing: colleges `13a_overerving` en `13b_polymorfisme`, practicum sessie 2 (`13_creatures`), opstap, basis (kassabon) en extra (spelers voor `Board`) (#270) |
 | 7 | Operator overloading, excepties, oefentoets | BRRA | P4, P6 | operator overloading, magische methode, `__eq__`, exception, `try`/`except`, `raise` | Operator overloading en exceptions: college `14a_operatoren_en_exceptions`, practicum sessie 3 (`14_creatures`), opstap, basis (`Date` met operatoren, en datums inlezen met `try`/`except`) en extra (min-max), en het oefententamen onder dezelfde week (#271) |
@@ -288,7 +288,7 @@ de poort van #332 besloot de vakdeskundige verder:
   `problems/11_algoritmen_extra`. Aanvaard is dat `/problems/10_basis` en
   `/problems/10_extra` sindsdien recursie tonen, waar eerst algoritmen stonden
   (VP3);
-- het werkcollege wordt *een directory doorzoeken*, naar het model van
+- het practicum wordt *een directory doorzoeken*, naar het model van
   `9_register`, met uitwerking. De verzamelingsbewerkingen op lijsten en de ggd
   via delers vervallen; het algoritme van Euclides staat in het tweede college
   (VP4);
@@ -331,16 +331,16 @@ vakdeskundige op 2 oktober 2026, bij de poort:
 
 - twee colleges: `11a_knapzak_probleem` is herzien tot `11a_use_it_or_lose_it`, en
   er is een nieuw college `11b_functie_als_argument` (VP1). Het ritme is dat van
-  week 2 en 3: eerst `11a`, dan `11b`, en het werkcollege als derde bijeenkomst.
+  week 2 en 3: eerst `11a`, dan `11b`, en het practicum als derde bijeenkomst.
   HOEM heeft het rooster niet vooraf bevestigd; wijkt het later af, dan verandert
   alleen de weekpagina (VP10);
 - `11a` opent met de vooruitblik uit `10b` en behandelt `exact_change` en `subset`.
   De top-down-reeks, `rem_all`, `rem_one`, `rem_up_to` en de eigen `def max`
   vervallen; `11a` introduceert de ingebouwde `max` met twee argumenten.
   `caesar_op_orde` geeft `rem_one` zelf (VP2);
-- wisselgeld is het werkcollege `11_wisselgeld`, in stapvorm en met uitwerking,
+- wisselgeld is het practicum `11_wisselgeld`, in stapvorm en met uitwerking,
   zonder `key=`. De periodieke tshirt blijft in week 4, als extra opgave. Of
-  `num_coins` en `exact_change` bijdragen aan het werkcollege of een basisopgave
+  `num_coins` en `exact_change` bijdragen aan het practicum of een basisopgave
   worden, liet de vakdeskundige aan de auteur, binnen twee voorwaarden: geen functie
   wordt in twee onderdelen van week 4 als nieuwe taak gevraagd, en de eigenaardigheid
   van `num_coins`, 0 voor *onmogelijk* én voor bedrag 0, is opgelost of verantwoord
@@ -368,7 +368,7 @@ vakdeskundige op 2 oktober 2026, bij de poort:
 - het werk is in één oplevering uitgevoerd (VP9).
 
 **Uitgevoerd** in #335, met deze keuzes van de auteur. `num_coins` en `exact_change`
-dragen bij aan het werkcollege, niet aan een basisopgave. `exact_change` staat
+dragen bij aan het practicum, niet aan een basisopgave. `exact_change` staat
 daar alleen als gegeven code uit het college, niet als taak. `num_coins` is de
 eerste stap: het geeft `-1` als het bedrag niet kan, zodat 0 alleen nog voor bedrag
 0 staat, en het neemt de eerste manier die lukt. `min_coins` is de tweede stap en
@@ -420,7 +420,8 @@ minder aan het eind.
 **De opzet van week 2.** Besloten door de vakdeskundige op 30 september 2026,
 bij de poort van #326:
 
-- *"twee colleges; het werkcollege is het derde college"* (VP4);
+- *"twee colleges; het werkcollege is het derde college"* (VP4; sinds #380 heet
+  die bijeenkomst *practicum*);
 - een extra-opgave, *"maar liever niet weer opnieuw over tekst vergelijken.
   Bedenk iets creatiefs om met wat complexere comprehensions te doen (bv genest
   of meerdere types combineren)"* (VP6). De extra heeft daarmee een andere
