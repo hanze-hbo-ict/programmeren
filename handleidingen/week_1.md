@@ -14,7 +14,7 @@ Er wordt deze week geen regel Python geschreven. Dat is opzet - zie
 | Bijeenkomst | Vorm | Materiaal |
 |---|---|---|
 | 1 | College | `source/lectures/1a_intro_programmeren.md` |
-| 2 | Werkcollege | `source/lectures/1b_picobot.md` |
+| 2 | College | `source/lectures/1b_picobot.md` |
 | 3 | Practicum | `source/practicals/1_picobot.md` |
 
 Daarnaast staan er twee overzichtspagina's die je zelf niet hoeft te behandelen:
@@ -23,9 +23,10 @@ student, en `source/course/practical_1.md` is de omslagpagina boven het practicu
 
 ### Deze week is bewust flexibel
 
-Week 1 volgt de indeling college - werkcollege - practicum uit
+Week 1 volgt de indeling met twee colleges en een practicum uit
 `curriculum/uitgangspunten.md` §`### Drie bijeenkomsten per week` niet strak, en
-dat is daar als erkende afwijking vastgelegd.
+dat is daar als erkende afwijking vastgelegd: er zijn geen opgaven, en het tweede
+college loopt over in het practicum.
 
 De reden is aanwijsbaar in het materiaal: de Picobot-opdrachten beginnen in
 bijeenkomst 2 als **plan** (`source/lectures/1b_picobot.md`
@@ -189,7 +190,7 @@ installeren.
   dat niet, geef dan de winsituatie weg - vier lucifers over, speler 1 aan zet -
   en laat ze van daaruit terugredeneren.
 
-## 3. Bijeenkomst 2 - Werkcollege: Picobot plannen
+## 3. Bijeenkomst 2 - College: Picobot plannen
 
 Materiaal: `source/lectures/1b_picobot.md`. Dit is de laatste bijeenkomst op
 papier; geprogrammeerd wordt er in bijeenkomst 3.
@@ -373,9 +374,6 @@ probleem is.
   en in `source/practicals/1_picobot.md` (daar *programmeer* je het, stap 3).
   Hetzelfde geldt voor `Opdracht 2: Het doolhof`. Noem in de klas altijd het
   bestand erbij, anders wijst een verwijzing naar twee plekken.
-- **`source/course/practical_1.md` heeft als titel `# Werkcollege`**, maar draagt
-  het practicum van bijeenkomst 3. Dat is een restant; de begrippenlijst legt
-  `practicals/` bij het practicum.
 - **De opdrachtnummers uit de handleiding van 2023 kloppen niet meer.** In het
   tweede college heette "naar de hoek" toen Opdracht 1 en is nu de voorgedane
   §`## Naar de hoek`; de lege kamer heette Opdracht 2 en is nu Opdracht 1; het

@@ -21,7 +21,7 @@ basisgeneratie het eindpunt; de extra mag de kern niet verdringen.
 | Bijeenkomst | Vorm | Materiaal | Product aan het einde |
 |---|---|---|---|
 | 1 | College en begeleide start | `source/lectures/7a_lists_advanced.ipynb`, `source/problems/7_opstap.ipynb` | De student kan één cel muteren, verwijzingen en kopiëren uitleggen en een tuple teruggeven en uitpakken. |
-| 2 | Werkcollege | `source/problems/7_basis.ipynb` | `count_neighbors` en `next_cell` zijn getest; de student heeft de invoer- en uitvoergrens van `next_generation` gepland. |
+| 2 | Deelproblemen en één cel | `source/problems/7_basis.ipynb` | `count_neighbors` en `next_cell` zijn getest; de student heeft de invoer- en uitvoergrens van `next_generation` gepland. |
 | 3 | Zelfstandig werk met gerichte begeleiding | `source/problems/7_basis.ipynb`, daarna `source/problems/7_extra.md` | De basis levert één correcte generatie op en laat het invoerbord onveranderd; daarna kan de student zelfstandig aan Game of Life beginnen. |
 
 De drie bijeenkomsten zijn elk een referentierooster van 90 minuten. Het
@@ -98,7 +98,7 @@ de hand van de zichtbare lijsten controleert.
 | 75-90 min | Laat de student één hoek- of randstap hardop uitleggen en de blinkertransitie tekenen. | Het plan voor `next_generation` gebruikt de twee eerder geteste deelproblemen. |
 
 De docent hoeft de buurttelling niet opnieuw als theorie te behandelen. De
-waarde van het werkcollege zit in het expliciet maken van de deelproblemen en
+waarde van deze bijeenkomst zit in het expliciet maken van de deelproblemen en
 hun contracten. Vraag bij iedere functie: welke gegevens komen erin, wat wordt
 teruggegeven, en welke kleine test maakt de verwachting zichtbaar?
 

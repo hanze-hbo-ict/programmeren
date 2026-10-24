@@ -2,9 +2,9 @@
 
 Deze week gaat over wat er onder een waarde ligt: bits, een type dat zegt hoe
 je ze leest, en een bestand dat niets anders is dan een rij bytes. Het college
-loopt van de doos in het geheugen naar het tekstbestand, het werkcollege leest
-een afbeelding in als lijst van lijsten en schrijft een nieuwe terug, en het
-practicum leest en schrijft tekstbestanden.
+loopt van de doos in het geheugen naar het tekstbestand, het practicum leest
+een afbeelding in als lijst van lijsten en schrijft een nieuwe terug, en de
+opgaven lezen en schrijven tekstbestanden.
 
 De draad die de drie bijeenkomsten verbindt is één teken: het regeleinde, `\n`.
 Het college laat zien dat regels in een bestand niet bestaan en dat er alleen
@@ -16,7 +16,7 @@ is de week van bestanden geworden (`curriculum/leerlijn.md`, en
 `curriculum/uitgangspunten.md` §`### Schakelingen en binair`). Binair komt in
 het materiaal nog voor als voorstelling van data, niet als rekenkunde om te
 oefenen. En **er verandert nog steeds niets ter plekke**: elke bewerking in het
-werkcollege bouwt een nieuwe lijst op, net als in week 5. De mutatiegrens ligt
+practicum bouwt een nieuwe lijst op, net als in week 5. De mutatiegrens ligt
 in week 7.
 
 ## 1. De week in het kort
@@ -24,29 +24,30 @@ in week 7.
 | Bijeenkomst | Vorm | Materiaal |
 |---|---|---|
 | 1 | College | `source/lectures/6a_data.ipynb` |
-| 2 | Werkcollege | `source/practicals/6b_images.ipynb` |
-| 3 | Practicum | `source/problems/6_opstap.ipynb`, `source/problems/6_basis.ipynb` en `source/problems/6_extra.ipynb` |
+| 2 | Practicum | `source/practicals/6b_images.ipynb` |
+| 3 | Herhaling | `source/problems/6_opstap.ipynb`, `source/problems/6_basis.ipynb` en `source/problems/6_extra.ipynb` |
 
 Daarnaast staan er vier overzichtspagina's die je zelf niet hoeft te
 behandelen: `source/course/week_6.md` (`## Data en bestanden`) vat de week
 samen voor de student, en `source/course/practical_6.md`,
 `source/course/opgaven_6.md` en `source/course/solutions_6.md` zijn de
-omslagpagina's boven het werkcollege, de opgaven en de uitwerkingen. Er zijn
+omslagpagina's boven het practicum, de opgaven en de uitwerkingen. Er zijn
 drie uitwerkingen, `source/solutions/6_opstap.ipynb`,
 `source/solutions/6_basis.ipynb` en `source/solutions/6_extra.md`, en ze
 zijn openbaar voor de student. De opstapuitwerking is de uitvoering van #194;
-voor het werkcollege staat er geen uitwerking in het boek.
+voor het practicum staat er geen uitwerking in het boek.
 
-### Deze week volgt de moedertabel
+### Deze week heeft één college
 
-Week 6 wijkt niet af van de indeling in `curriculum/uitgangspunten.md`
-§`### Drie bijeenkomsten per week`, en staat daarom niet onder
-§`#### Vijf erkende afwijkingen`. Er is één bestand in `lectures/`, één in
-`practicals/` en er zijn drie opgavebundels in `problems/`, en het materiaal
-spreekt de tabel nergens tegen: `source/course/practical_6.md` heeft als titel
-`# Werkcollege`, en `source/problems/6_extra.ipynb` begint met *"In het
-werkcollege heb je afbeeldingen bewerkt"*. Anders dan in week 5 is de derde
-bijeenkomst weer een gewoon practicum; het tentamen lag in week 5.
+Week 6 wijkt af van de indeling met twee colleges en één practicum in
+`curriculum/uitgangspunten.md` §`### Drie bijeenkomsten per week`, en staat
+daarom onder §`#### Erkende afwijkingen`. Er is één bestand in `lectures/`, één
+in `practicals/` en er zijn drie opgavebundels in `problems/`, en er is geen
+toets. Vastgesteld door de vakdeskundige op 23 oktober 2026 (#380): week 6 heeft
+één college, en één bijeenkomst kan naar herhaling. In deze handleiding is dat
+bijeenkomst 3, waarin de klas zelfstandig onder begeleiding aan de opgaven
+werkt. De opgaven zijn huiswerk; wat de bijeenkomst aan ruimte overlaat, mag
+eraan besteed worden.
 
 ### Over de tijden
 
@@ -103,12 +104,12 @@ de repository.** Duurt die van jou korter of langer, schaal de blokken dan mee.
 - **Een bestand `namen.txt` met de drie namen uit het college**, `Anouk`,
   `Bram` en `Chiara`, elk op een eigen regel. Het staat niet in de repository.
   Zet het klaar in de map waar je je code uitvoert.
-- **De bestanden van het practicum, klaar om te verspreiden.** De opstap leest
+- **De bestanden van de opgaven, klaar om te verspreiden.** De opstap leest
   `source/problems/assets/woorden.txt` en `source/problems/assets/metingen.txt`,
   de basis de vier sequenties in `source/problems/assets/dna/`. Geen van beide
   bundels geeft de student een downloadlink; zie sectie 4. Hoe je ze
   verspreidt, staat nergens in de repository.
-- **Pillow bij de student.** Het werkcollege draait op `png.py`, en dat bestand
+- **Pillow bij de student.** Het practicum draait op `png.py`, en dat bestand
   gebruikt Pillow. De student is het al tegengekomen in
   `source/problems/5_mandelbrot_opstap.md`, dat zegt het te installeren zodra
   Python meldt dat het ontbreekt: op macOS met `brew install pillow`, op
@@ -116,7 +117,7 @@ de repository.** Duurt die van jou korter of langer, schaal de blokken dan mee.
   `## Voorbereiding`. Of iedereen het heeft gedaan, weet je niet. Controleer het
   aan het begin van bijeenkomst 2 en niet halverwege.
 - **Papier.** Voor de voorspellingen in het college en voor de spiegelingen in
-  het werkcollege, waar de klas eerst een klein raster tekent.
+  het practicum, waar de klas eerst een klein raster tekent.
 
 ## 2. Bijeenkomst 1 - College: data
 
@@ -207,7 +208,7 @@ weg, want `"w"` maakt het bestand leeg zodra het wordt geopend, en daarna staat
 er alleen wat het voorbeeld schrijft. Dat is precies het waarschuwingskader
 onderaan het notebook, en nu hebben ze het gezien in plaats van gelezen. Sluit
 af met de brug naar morgen: een afbeelding is ook een bestand, en in het
-werkcollege lees je er een in, verander je hem en schrijf je hem terug.
+practicum lees je er een in, verander je hem en schrijf je hem terug.
 
 ### Waar het vastloopt
 
@@ -234,8 +235,8 @@ werkcollege lees je er een in, verander je hem en schrijf je hem terug.
   op zich.
 - **Je komt niet aan blok 7 toe.** Laat het schrijven dan niet vallen, maar
   kort blok 6 in tot de uitvoer en de verklaring van de lege regels. Schrijven
-  staat in de opstap (`## Bestanden schrijven`) en niet in het werkcollege; wie
-  het hier niet ziet, ziet het pas in het practicum.
+  staat in de opstap (`## Bestanden schrijven`) en niet in het practicum; wie
+  het hier niet ziet, ziet het pas in de opstap.
 - **Je houdt tijd over.** Laat de klas na blok 7 voorspellen wat er gebeurt als
   je het leesvoorbeeld van blok 6 nog eens uitvoert: twee namen, elk gevolgd
   door een lege regel.
@@ -244,13 +245,13 @@ werkcollege lees je er een in, verander je hem en schrijf je hem terug.
 gezegd wordt dat het type bepaalt hoe je bits leest. En blok 5, om de reden
 die bij het blokschema staat.
 
-## 3. Bijeenkomst 2 - Werkcollege: fraaie plaatjes
+## 3. Bijeenkomst 2 - Practicum: fraaie plaatjes
 
 Materiaal: `source/practicals/6b_images.ipynb`, met `fraaie_plaatjes.zip` uit
 `source/problems/assets/`.
 
-Dit is het werkcollege in de zin van `curriculum/uitgangspunten.md`: de plek
-waar een probleem gezamenlijk stap voor stap wordt opgebouwd. De gegeven
+In deze bijeenkomst wordt een probleem gezamenlijk stap voor stap opgebouwd. De
+gegeven
 functie `invert` heeft de vorm die alle opdrachten delen - een afbeelding
 inlezen, een nieuwe lijst van rijen opbouwen, die wegschrijven - en het
 materiaal zegt dat zelf: *"het is het gemakkelijkst om bij deze functies
@@ -268,7 +269,7 @@ dezelfde manier: **samen de eerste, dan de rest zelf.**
 | | | **Pauze** | | | |
 | 5 | 15 | **Samen `flip_vert`**, eerst op papier: welke rij komt waar; daarna zelf `flip_horiz` | `## Geometrische transformaties`, `` ### Opdracht 4: `flip_vert()` ``, `` ### Opdracht 5: `flip_horiz()` `` | op papier, dan klassikaal, dan zelfstandig | R |
 | 6 | 20 | Zelf `mirror_vert` en `mirror_horiz`, na een getekend raster van vier rijen | `` ### Opdracht 6: `mirror_vert()` ``, `` ### Opdracht 7: `mirror_horiz()` `` | op papier, dan zelfstandig | R |
-| 7 | 5 | Afronden: `scale` en de vrije opdracht gaan mee naar het practicum | `` ### Opdracht 8: `scale()` ``, `### Opdracht 9 Meer transformaties` | docent | R |
+| 7 | 5 | Afronden: `scale` en de vrije opdracht gaan mee naar bijeenkomst 3 | `` ### Opdracht 8: `scale()` ``, `### Opdracht 9 Meer transformaties` | docent | R |
 
 Zeven blokken, 90 minuten, alle zeven richttijd. Voor deze bijeenkomst bestaat
 geen bruikbare bron: zie *Over de tijden*.
@@ -332,7 +333,7 @@ oplevert. Wat een verwijzing is en waarom dat ertoe doet, is de stof van week
 7.
 
 **Blok 7.** Zeg dat `scale` - elke tweede rij en daarin elke tweede pixel - en
-de vrije `### Opdracht 9 Meer transformaties` morgen in het practicum een
+de vrije `### Opdracht 9 Meer transformaties` morgen in bijeenkomst 3 een
 plek hebben, en dat `source/problems/6_extra.ipynb` over dezelfde vraag gaat
 van de andere kant: hoe maak je zo'n bestand kleiner.
 
@@ -368,9 +369,9 @@ van de andere kant: hoe maak je zo'n bestand kleiner.
   laat hen tot blok 3 meekijken bij een buur. Blok 3 is klassikaal, dus ze
   missen niets wat ze niet kunnen inhalen.
 - **Blok 3 loopt uit.** Laat het lopen en haal de tijd bij **blok 4** vandaan:
-  `binarize` is `greyscale` met een `if` en past in het practicum van morgen.
+  `binarize` is `greyscale` met een `if` en past in bijeenkomst 3 van morgen.
 - **Je komt niet aan blok 6 toe.** Doe `flip_vert` nog samen in blok 5 en geef
-  `flip_horiz`, `mirror_vert` en `mirror_horiz` mee naar het practicum. Laat
+  `flip_horiz`, `mirror_vert` en `mirror_horiz` mee naar bijeenkomst 3. Laat
   wel de tekening op papier maken voordat ze weggaan; die maakt de spiegelingen
   morgen zonder docent te doen.
 - **Je houdt tijd over.** Doe `scale` nog in de zaal, en laat de klas vooraf
@@ -378,10 +379,9 @@ van de andere kant: hoe maak je zo'n bestand kleiner.
 
 **Wat je niet inkort.** Blok 3, het samen opbouwen van `greyscale`: dat is de
 enige plek in de bijeenkomst waar de gedeelde vorm van alle opdrachten
-gezamenlijk wordt neergezet, en het is de reden dat dit het werkcollege is. En
-de stap op papier in blok 5.
+gezamenlijk wordt neergezet. En de stap op papier in blok 5.
 
-## 4. Bijeenkomst 3 - Practicum: bestanden lezen en schrijven
+## 4. Bijeenkomst 3 - Herhaling: bestanden lezen en schrijven
 
 Materiaal: de drie opgavebundels `source/problems/6_opstap.ipynb`,
 `source/problems/6_basis.ipynb` en `source/problems/6_extra.ipynb`, met de
@@ -396,7 +396,7 @@ maakt uit tekstdata een klein beeldbestand.
 **Regel de bestanden vóór de bijeenkomst.** De opstapdownload `6_opstap.zip`
 bevat `assets/woorden.txt` en `assets/metingen.txt`; pak hem uit naast het
 notebook. De basis gebruikt de aanwezige `assets/dna/`-bestanden. De
-werkcollege-download bevat de facade en de afbeeldingen.
+practicumdownload bevat de facade en de afbeeldingen.
 
 ### Blokschema
 
@@ -406,7 +406,7 @@ werkcollege-download bevat de facade en de afbeeldingen.
 | 2 | 25 | Zelfstandig: de opstap bij `## Bestanden lezen`, of de basis tot en met stap 3 | `## Bestanden lezen`, `` ## Stap 1: `strip_newline(line)` `` t/m `` ## Stap 3: `count_repeats(sequence, pattern, start)` `` | zelfstandig, docent loopt rond | R |
 | | | **Pauze** | | | |
 | 3 | 10 | Peilmoment, klassikaal: wat er aan het eind van een regel hangt | opstap `### Opdracht 7`, basis `` ## Stap 1: `strip_newline(line)` `` | klassikaal | R |
-| 4 | 35 | Vrije ruimte: de basis afmaken, de extra, of wat van het werkcollege is blijven liggen | `` ## Stap 4: `longest_match(sequence, pattern)` `` t/m `` ## Stap 6: `identify(sequence, patterns, database)` ``, `## Van tekst naar beeld` | zelfstandig | R |
+| 4 | 35 | Vrije ruimte: de basis afmaken, de extra, of wat van het practicum is blijven liggen | `` ## Stap 4: `longest_match(sequence, pattern)` `` t/m `` ## Stap 6: `identify(sequence, patterns, database)` ``, `## Van tekst naar beeld` | zelfstandig | R |
 | 5 | 10 | Afronden: wat het programma níet zegt, en waar de database straks staat | `## Tot slot` | docent | R |
 
 Vijf blokken, 90 minuten, alle vijf richttijd. Voor deze bijeenkomst bestaat
@@ -449,7 +449,7 @@ de reden dat een antwoord fout is.
 **Blok 4.** Rondlopen. Wie bij de basis vastloopt stuur je naar de opstap en
 niet naar de uitwerking. Wie de basis af heeft mag naar de extra, en die is
 bedoeld om níét af te komen; zie *Als het niet uitkomt* voor wat die student
-van je nodig heeft. Wie in het werkcollege niet aan de spiegelingen en `scale`
+van je nodig heeft. Wie in het practicum niet aan de spiegelingen en `scale`
 toekwam, doet dat hier.
 
 **Blok 5.** Gebruik `## Tot slot` van `source/problems/6_basis.ipynb`. Twee
@@ -493,7 +493,7 @@ waar het materiaal zegt waar de grens van een uitkomst ligt.
 - **Blok 2 loopt uit omdat de helft nog bij de opstap zit.** Prima. Haal de
   tijd bij **blok 4** vandaan en niet bij blok 3; het peilmoment is het enige
   moment waarop de hele zaal hetzelfde teken bekijkt.
-- **Het werkcollege is blijven liggen.** Doe de spiegelingen hier, in blok 4,
+- **Het practicum is blijven liggen.** Doe de spiegelingen hier, in blok 4,
   met de tekening op papier van gisteren erbij.
 - **Iemand is na een halfuur met de basis klaar.** Stuur hem naar
   `source/problems/6_extra.ipynb` en laat hem eerst op papier de
@@ -514,7 +514,7 @@ bestanden op de goede plek begint niemand.
   `### Spelen met pixels` staat *"de geneste lus in de functie `convert`"* en
   *"zoals in `convert`"*, maar de gegeven functie heet `invert`. Zeg het
   voordat iemand ernaar zoekt.
-- **Er staan twee zinnen dubbel in het werkcollege.** Onder
+- **Er staan twee zinnen dubbel in het practicum.** Onder
   `## Opdracht 1: Uitproberen` staat *"Door dit te doen wordt de functie
   `invert()` uitgevoerd"* twee keer, en onder `` ## Opdracht 2: `greyscale()` ``
   staat de hint over `filename is not defined` twee keer. Daar staat ook de
@@ -524,20 +524,20 @@ bestanden op de goede plek begint niemand.
   code geen staat. List comprehensions zijn PGM2-stof;
   `curriculum/leerlijn.md` noemt deze vindplaats al onder de
   vooruitverwijzingen. Leg ze niet uit; de opdracht is zonder te maken.
-- **De opdrachten van het werkcollege staan op twee kopniveaus.**
+- **De opdrachten van het practicum staan op twee kopniveaus.**
   Opdracht 1 tot en met 3 zijn koppen van niveau `##`, Opdracht 4 tot en met 9
   van niveau `###`, onder `## Geometrische transformaties`, en
   `### Opdracht 9 Meer transformaties` mist de dubbele punt van de andere. En
-  "Opdracht 1" wijst deze week naar twee plekken: het werkcollege en
+  "Opdracht 1" wijst deze week naar twee plekken: het practicum en
   `### Opdracht 1` van de opstap. Noem het bestand erbij.
 - **De opstap geeft een downloadlink** voor `6_opstap.zip`; de basis behoudt
-  zijn DNA-assets in `assets/dna/`. De werkcollege-download blijft
+  zijn DNA-assets in `assets/dna/`. De practicumdownload blijft
   `fraaie_plaatjes.zip`.
 - **De eerdere extra- en solutionmeting is verouderd.** #303/#312 leverde de
   huidige tekst-naar-beeld-extra met bijbehorende uitwerking. Controleer in
   deze handleiding alleen de aansluiting op de facade en `fraaie_plaatjes.zip`;
   die reparatie wordt in #313 niet opnieuw uitgevoerd.
-- **Buiten het boek staat een oude uitwerking van het werkcollege**,
+- **Buiten het boek staat een oude uitwerking van het practicum**,
   `solutions/6b_images.ipynb` in de hoofdmap van de repository, niet in
   `source/`. Haar `mirror_vert` loopt vast op `im_pix.get_wh()`
   (`AttributeError: 'list' object has no attribute 'get_wh'`). Gebruik de
@@ -546,7 +546,7 @@ bestanden op de goede plek begint niemand.
 ### Korte antwoorden bij de collegeopdrachten
 
 Het college, `source/lectures/6a_data.ipynb`, heeft geen enkele kop
-*Opdracht*; daar is dus niets te beantwoorden. Het werkcollege heeft negen
+*Opdracht*; daar is dus niets te beantwoorden. Het practicum heeft negen
 opdrachten en **geen uitwerking in `source/solutions/`**, en omdat je
 `greyscale` in bijeenkomst 2 samen met de klas opbouwt, staan de antwoorden
 hier. Ze zijn voor jou, niet om uit te delen, en ze zijn **uitgevoerd op
@@ -585,7 +585,7 @@ versleutelde tekst kraakt door de meest voorkomende letter als `e` te nemen.
 Die opgave staat nu in PGM2 week 3; zie *Over de tijden*. Wat overeind blijft
 is de werkvorm van die derde opdracht, *"Probeer, plan, programmeer"*: eerst
 bedenken hoe je het op papier oplost, dan pas programmeren. Die staat nu bij de
-spiegelingen van het werkcollege en bij de extra van het practicum.
+spiegelingen van het practicum en bij de extra-opgave.
 
 *Decimaal en verder* beschreef een les met tien minuten herhaling van binaire
 getallen en zeven opdrachten: een test op oneven, getallen omrekenen naar
@@ -609,7 +609,7 @@ vindt ze in de git-geschiedenis, bijvoorbeeld met
   *Reikwijdte* in `conventies/conventies.md`.
 - **De opstap heeft een canonieke uitwerking** in
   `source/solutions/6_opstap.ipynb`; #194 is daarmee inhoudelijk uitgevoerd.
-- **Het werkcollege heeft geen uitwerking in het boek.** Volgens
+- **Het practicum heeft geen uitwerking in het boek.** Volgens
   `curriculum/uitgangspunten.md`
   §`### Elk opgaveniveau hoort een uitwerking te hebben` is dat bij een
   practicumbestand geen vastgesteld tekort; de korte antwoorden in deze

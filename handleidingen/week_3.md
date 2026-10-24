@@ -17,7 +17,7 @@ Opdracht 1 van het eerste college, en het is nu een functie met een naam.
 | Bijeenkomst | Vorm | Materiaal |
 |---|---|---|
 | 1 | College | `source/lectures/3a_functies.ipynb` |
-| 2 | Werkcollege | `source/lectures/3b_functies_aanroepen.md` |
+| 2 | College | `source/lectures/3b_functies_aanroepen.md` |
 | 3 | Practicum | `source/practicals/3_fijne_functies.ipynb` + `source/problems/3_opstap.ipynb`, `3_basis.ipynb`, `3_extra.ipynb` |
 
 Daarnaast staan er vier overzichtspagina's die je zelf niet hoeft te behandelen:
@@ -28,23 +28,19 @@ opgaven en de uitwerkingen. De vier bestanden in `source/solutions/` staan in di
 laatste; ze zijn openbaar voor de student en daarom geen materiaal dat je zelf
 brengt.
 
-### Deze week valt het practicum naar de derde bijeenkomst
+### Deze week volgt de indeling
 
-De indeling college - werkcollege - practicum uit
-`curriculum/uitgangspunten.md` §`### Drie bijeenkomsten per week` gaat ervan uit
-dat het werkcollege door een bestand uit `practicals/` wordt gevuld. Week 3 doet
-dat anders: `source/lectures/3b_functies_aanroepen.md` vult het werkcollege, en
-`source/practicals/3_fijne_functies.ipynb` schuift naar de derde bijeenkomst,
-naast de drie opgavebundels.
+Week 3 volgt de indeling uit `curriculum/uitgangspunten.md`
+§`### Drie bijeenkomsten per week`: twee colleges en één practicum.
+`source/lectures/3a_functies.ipynb` en `source/lectures/3b_functies_aanroepen.md`
+zijn de colleges, en `source/practicals/3_fijne_functies.ipynb` is het practicum.
+De drie opgavebundels zijn huiswerk; wat het practicum aan ruimte overlaat, mag
+eraan besteed worden, en daarom staan ze in bijeenkomst 3 naast het practicum.
 
-Dat is een erkende afwijking, vastgelegd in `curriculum/uitgangspunten.md`
-§`#### Vijf erkende afwijkingen` en vastgesteld door de vakdeskundige op
-**11 september 2026**. De grond staat in het materiaal zelf: `3b` laat de student
-zijn code opslaan als `wk3wc2.py` - werkcollege 2 - terwijl het bestand in
-`source/lectures/` staat.
+Tot #380 stond deze week als erkende afwijking in `uitgangspunten.md`. In het
+huidige model is ze dat niet meer.
 
-Wat de moedertabel wél bepaalt, en wat deze week gewoon geldt: de tweede
-bijeenkomst is de plek waar een probleem **gezamenlijk stap voor stap wordt
+In de tweede bijeenkomst wordt een probleem **gezamenlijk stap voor stap
 opgebouwd**, en de derde is **zelfstandig werken onder begeleiding**. Die derde
 bijeenkomst is dus vrije ruimte en geen af te vinken lijst.
 
@@ -239,15 +235,13 @@ daarbij doet.
   geef Opdracht 3 als het zelfstandige werk; die lijkt er het meest op, met
   strings in plaats van getallen.
 
-## 3. Bijeenkomst 2 - Werkcollege: functies aanroepen
+## 3. Bijeenkomst 2 - College: functies aanroepen
 
 Materiaal: `source/lectures/3b_functies_aanroepen.md`.
 
-Dit is het werkcollege in de zin van `curriculum/uitgangspunten.md`: de plek waar
-een probleem gezamenlijk stap voor stap wordt opgebouwd. Dat probleem is Opdracht
-2 - de turtle-code die de klas samen in `wk3wc2.py` opbouwt. Dat is ook de grond
-onder de erkende afwijking van deze week, en de reden dat blok 7 het zwaarste
-blok is en het laatste dat je inkort.
+Het hart van deze bijeenkomst is Opdracht 2: de turtle-code die de klas samen
+in `wk3wc2.py` opbouwt. Dat is de reden dat blok 7 het zwaarste blok is en het
+laatste dat je inkort.
 
 ### Blokschema
 
@@ -329,7 +323,7 @@ zelf een assertion schrijft; vraag bij het rondlopen welk randgeval de tweede
 dekt. Bespreek daarna klassikaal met Python Tutor op het scherm, zoals deelvraag
 **d** vraagt. De output is `15`.
 
-**Blok 7.** Dit is het werkcollege. Bouw het samen op: laat ze de code
+**Blok 7.** Dit is het hart van de bijeenkomst. Bouw het samen op: laat ze de code
 overnemen in `wk3wc2.py`, draai hem, en zorg dat er bij iedereen een driehoek in
 een eigen venster staat voordat je verdergaat. Dat is het punt waar de tijd
 verdwijnt en het is de moeite waard.
@@ -368,8 +362,8 @@ is en dat jij rondloopt.
   bij blok 6 vandaan: doe daar alleen **a** en **b** klassikaal en geef **c** en
   **d** mee. De stack samen doorlopen is niet thuis te doen; Opdracht 1 wel.
 - **Je komt niet aan blok 7 toe.** Dit is de ingreep die je niet moet doen. Blok
-  7 is de enige plek in de week waar samen een programma wordt opgebouwd, en het
-  is de reden dat deze bijeenkomst het werkcollege is. Kort liever blok 2 in tot
+  7 is de enige plek in de week waar samen een programma wordt opgebouwd. Kort
+  liever blok 2 in tot
   het antwoord en de `.0`, en sla blok 5 over - assertions naast `main()` komen
   morgen in het practicum vanzelf terug.
 - **Turtle werkt niet bij een deel van de zaal.** Laat die studenten meekijken
@@ -416,8 +410,8 @@ Vijf blokken, 90 minuten als richttijd.
 **Dit is een ritme en geen rooster.** Blok 2, 3 en 4 zijn één doorlopend werkblok
 met twee peilmomenten erin: na blok 2 kijk je waar de zaal staat, en bij de
 overgang naar blok 4 zeg je hardop dat wie nog in het practicum zit daar gewoon
-mag blijven. De moedertabel noemt deze bijeenkomst zelfstandig werken onder
-begeleiding, en dat is precies wat het is - er hoeft niets af.
+mag blijven. Deze bijeenkomst is zelfstandig werken onder begeleiding - er
+hoeft niets af.
 
 ### Hoe je het brengt
 
@@ -522,13 +516,10 @@ komt, en noem het woord lus.
   `source/practicals/3_fijne_functies.ipynb` schrijft
   `` ### Opdracht 1: `sq(x)` ``, `source/solutions/3_fijne_functies.ipynb`
   schrijft `` ## Opdracht 1: `sq(x)` ``. Dezelfde namen, ander niveau.
-- **`source/course/practical_3.md` heeft als titel `# Werkcollege`**, maar draagt
-  het practicum van bijeenkomst 3. Dat is een restant; de begrippenlijst legt
-  `practicals/` bij het practicum. Week 1 en week 2 hebben hetzelfde.
 - **`source/lectures/3b_functies_aanroepen.md` is een `.md` en geen notebook.**
   Er zijn dus geen cellen om uit te voeren, en alle code op die pagina is
   leeswerk. Dat is ook de reden dat Opdracht 2 de student naar een los bestand
-  stuurt, en daarmee de grond onder de erkende afwijking van deze week.
+  stuurt.
 - **De quiz in `3b` geeft het antwoord op dezelfde pagina**, een paar regels
   onder de vraag, onder `### Antwoord`. Zeg dat erbij voordat de klas begint te
   rekenen, anders scrollt de helft door.
@@ -608,8 +599,8 @@ Voor bijeenkomst 3 bestaat geen bron. Het practicum en de drie bundels zijn na
   citeert ze niet meer. Met #276 en #280 verdwenen ook die van week 5 en 6; sindsdien
   bestaat `teacher_guides/` niet meer.
 - **Kruisverwijzingen lopen stil achter als materiaal verschuift.** Eén zin in
-  `source/lectures/3a_functies.ipynb` zei dat `convert_from_seconds` in het
-  werkcollege wordt geschreven, terwijl die functie Opdracht 5 van het practicum
+  `source/lectures/3a_functies.ipynb` zei dat `convert_from_seconds` in
+  bijeenkomst 2 wordt geschreven, terwijl die functie Opdracht 5 van het practicum
   is en dus in bijeenkomst 3 ligt. Die zin is met dit werkitem rechtgezet. Het is
   het tweede geval op rij - `source/course/week_4.md` verwees eerder naar "de
   lijsten uit week 3" terwijl lijsten uit week 2 komen - en het is de reden om na
