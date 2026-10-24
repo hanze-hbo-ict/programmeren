@@ -48,8 +48,8 @@ oefenmidterm.
 De werkvorm van de oefenmidterm is vastgesteld door de vakdeskundige op
 **18 september 2026** en staat in `curriculum/uitgangspunten.md`
 §`#### Erkende afwijkingen`: de student werkt zelfstandig en in eigen tempo, en
-neemt mee wat hij niet afkrijgt. De grond is de midterm zelf: die wordt in week 5
-afgenomen, dus is week 4 het oefenmoment.
+neemt mee wat hij niet afkrijgt. De grond is de midterm zelf: die wordt in week
+5 afgenomen, dus is week 4 het oefenmoment.
 
 In de tweede bijeenkomst wordt een probleem **gezamenlijk stap voor stap
 opgebouwd**, en de derde is **zelfstandig werken onder begeleiding**. Die derde
@@ -86,10 +86,9 @@ er twee volledig over recursie, en die stof ligt sinds het besluit
 derde beschreef een klassikale lesvorm voor de oefenmidterm - op papier, geen
 overleg, daarna in duo's, daarna twintig minuten samen bespreken - en die vorm
 heeft deze week niet meer, nu de student zelfstandig en in eigen tempo aan de
-oefenmidterm werkt. Wat van die
-bron overeind blijft is dus geen tijd maar een **werkvorm**: eerst zelf
-voorspellen, dan pas de uitwerking openen. Die staat in *Hoe je het brengt* van
-sectie 4, en een werkvorm draagt geen herkomstmerk.
+oefenmidterm werkt. Wat van die bron overeind blijft is dus geen tijd maar een
+**werkvorm**: eerst zelf voorspellen, dan pas de uitwerking openen. Die staat in
+*Hoe je het brengt* van sectie 4, en een werkvorm draagt geen herkomstmerk.
 
 Ter vergelijking: week 3 haalde 70 van zijn 270 minuten uit een bron en week 4
 nul. Alle twintig blokken zijn schattingen op de omvang van het materiaal. Wie
@@ -646,9 +645,10 @@ De derde beschreef de oefenmidterm en had als enige een expliciete lesindeling:
 duo's en 20 minuten klassikaal bespreken met Python Tutor, samen 45 van de 90.
 Die cyclus meet een les waarin de hele groep in de pas loopt, en de vastgestelde
 werkvorm van de oefenmidterm is zelfstandig, in eigen tempo, met meenemen wat
-niet af komt. *Geen overleg* past niet bij die werkvorm, en twintig minuten álles
-bespreken is een andere handeling dan een peilmoment over vier vragen. Die tijden zijn daarom gewogen en niet
-overgenomen; het zouden geleende getallen zijn geweest en geen overgeleverde.
+niet af komt. *Geen overleg* past niet bij die werkvorm, en twintig minuten
+álles bespreken is een andere handeling dan een peilmoment over vier vragen. Die
+tijden zijn daarom gewogen en niet overgenomen; het zouden geleende getallen
+zijn geweest en geen overgeleverde.
 
 Wat wél is overgenomen is de **werkvorm**: eerst zelf voorspellen, dan pas de
 uitwerking erbij. Die staat in blok 1 en 2 van sectie 4. De antwoorden uit die

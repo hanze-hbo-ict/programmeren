@@ -21,7 +21,7 @@ Verder is het ook belangrijk om te ontdekken hoe de computer werkt. Wat kan het 
 
 ## Werkwijze
 
-Elke week zijn er twee korte hoorcolleges die nieuwe onderwerpen introduceren. Bij elk hoorcollege hoort een set aan opdrachten om te oefenen met de stof die in het hoorcollege is behandeld. Er is elke week ook een practicum waarin de stof van de week samenkomt in een (grotere) programmeer opdracht. Elke week is er ook een set aan opdrachten waar thuis mee geoefend kan worden. Deze zijn verdeeld in drie categorieën:
+Elke week zijn er twee korte colleges die nieuwe onderwerpen introduceren. Bij elk college hoort een set aan opdrachten om te oefenen met de stof die in het college is behandeld. Er is elke week ook een practicum waarin de stof van de week samenkomt in een (grotere) programmeeropdracht. Elke week is er ook een set aan opdrachten waar thuis mee geoefend kan worden. Deze zijn verdeeld in drie categorieën:
 
 - **Opstap**
 

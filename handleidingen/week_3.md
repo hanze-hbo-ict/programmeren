@@ -32,10 +32,11 @@ brengt.
 
 Week 3 volgt de indeling uit `curriculum/uitgangspunten.md`
 §`### Drie bijeenkomsten per week`: twee colleges en één practicum.
-`source/lectures/3a_functies.ipynb` en `source/lectures/3b_functies_aanroepen.md`
-zijn de colleges, en `source/practicals/3_fijne_functies.ipynb` is het practicum.
-De drie opgavebundels zijn huiswerk; wat het practicum aan ruimte overlaat, mag
-eraan besteed worden, en daarom staan ze in bijeenkomst 3 naast het practicum.
+`source/lectures/3a_functies.ipynb` en
+`source/lectures/3b_functies_aanroepen.md` zijn de colleges, en
+`source/practicals/3_fijne_functies.ipynb` is het practicum. De drie
+opgavebundels zijn huiswerk; wat het practicum aan ruimte overlaat, mag eraan
+besteed worden, en daarom staan ze in bijeenkomst 3 naast het practicum.
 
 Tot #380 stond deze week als erkende afwijking in `uitgangspunten.md`. In het
 huidige model is ze dat niet meer.
@@ -239,8 +240,8 @@ daarbij doet.
 
 Materiaal: `source/lectures/3b_functies_aanroepen.md`.
 
-Het hart van deze bijeenkomst is Opdracht 2: de turtle-code die de klas samen
-in `wk3wc2.py` opbouwt. Dat is de reden dat blok 7 het zwaarste blok is en het
+Het hart van deze bijeenkomst is Opdracht 2: de turtle-code die de klas samen in
+`wk3wc2.py` opbouwt. Dat is de reden dat blok 7 het zwaarste blok is en het
 laatste dat je inkort.
 
 ### Blokschema
@@ -363,9 +364,8 @@ is en dat jij rondloopt.
   **d** mee. De stack samen doorlopen is niet thuis te doen; Opdracht 1 wel.
 - **Je komt niet aan blok 7 toe.** Dit is de ingreep die je niet moet doen. Blok
   7 is de enige plek in de week waar samen een programma wordt opgebouwd. Kort
-  liever blok 2 in tot
-  het antwoord en de `.0`, en sla blok 5 over - assertions naast `main()` komen
-  morgen in het practicum vanzelf terug.
+  liever blok 2 in tot het antwoord en de `.0`, en sla blok 5 over - assertions
+  naast `main()` komen morgen in het practicum vanzelf terug.
 - **Turtle werkt niet bij een deel van de zaal.** Laat die studenten meekijken
   met een buurman en de code wél overnemen; deelvraag **d** gaat over de
   returnwaarde en die is ook zonder tekening te testen. Meld het, want het is
@@ -407,11 +407,11 @@ omvang van het materiaal, en geen overgeleverde lesindeling.
 
 Vijf blokken, 90 minuten als richttijd.
 
-**Dit is een ritme en geen rooster.** Blok 2, 3 en 4 zijn één doorlopend werkblok
-met twee peilmomenten erin: na blok 2 kijk je waar de zaal staat, en bij de
-overgang naar blok 4 zeg je hardop dat wie nog in het practicum zit daar gewoon
-mag blijven. Deze bijeenkomst is zelfstandig werken onder begeleiding - er
-hoeft niets af.
+**Dit is een ritme en geen rooster.** Blok 2, 3 en 4 zijn één doorlopend
+werkblok met twee peilmomenten erin: na blok 2 kijk je waar de zaal staat, en
+bij de overgang naar blok 4 zeg je hardop dat wie nog in het practicum zit daar
+gewoon mag blijven. Deze bijeenkomst is zelfstandig werken onder begeleiding -
+er hoeft niets af.
 
 ### Hoe je het brengt
 

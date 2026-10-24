@@ -68,19 +68,17 @@ een bijeenkomst aan ruimte overlaat, mag eraan besteed worden.
 **Uitzondering:** in een week met de oefenmidterm, de midterm of het
 oefententamen vervalt één college; die bijeenkomst gaat naar de toets. Dat geldt
 voor PGM1 week 4 (oefenmidterm), PGM1 week 5 (midterm), PGM1 week 7
-(oefententamen) en PGM2 week 7 (oefententamen). Dat het oefententamen van PGM1
-bij week 7 hoort en dat in die week één bijeenkomst naar het oefententamen kan,
-is vastgesteld door de vakdeskundige op 23 oktober 2026 (#380); welke
-bijeenkomst dat is, volgt in #433.
+(oefententamen) en PGM2 week 7 (oefententamen); zie *Erkende afwijkingen*
+hieronder.
 
 De tabel legt geen volgorde vast; die staat per week in de docentenhandleiding.
 De indeling is ook relevant voor de vraag waar context hoort te zitten: het
 practicum is de plek waar een groter probleem praktisch wordt uitgewerkt.
 
 Tot 9 oktober 2026 heette de bijeenkomst met `practicals/` hier *werkcollege* en
-de bijeenkomst met de opgaven *practicum*. Het model hierboven is vastgesteld door
-de vakdeskundige op 9 oktober 2026, bij de bespreking van #375, en vastgelegd met
-#380; zie ook `conventies/begrippen.md`.
+de bijeenkomst met de opgaven *practicum*. Het model hierboven is vastgesteld
+door de vakdeskundige op 9 oktober 2026, bij de bespreking van #375, en
+vastgelegd met #380; zie ook `conventies/begrippen.md`.
 
 #### Erkende afwijkingen
 
@@ -91,58 +89,65 @@ docentenhandleidingen (#182) en bij de herzieningen van week 4 (#256) en week 5
 afwijking van week 6 kwam er bij #380 bij. Ze staan hier zodat een volgende
 weekherziening ze niet opnieuw als conflict afleidt.
 
+De sectie beschrijft ook de weken die onder de uitzondering voor toetsweken
+vallen: week 4, het tentamendeel van week 5, PGM1 week 7 en PGM2 week 7.
+
 Week 3 was van de herziening van die week (#198) tot #380 een afwijking. In het
 huidige model past ze zonder: `3a_functies` en `3b_functies_aanroepen` zijn de
 colleges en `practicals/3_fijne_functies` is het practicum.
 
 **Week 1 heeft geen huiswerk, en het tweede college loopt over in het
-practicum.** Er is geen `problems/` voor week 1. De Picobot-opdrachten beginnen in
-het tweede college als plan (`source/lectures/1b_picobot.md`) en worden in het
-practicum geprogrammeerd (`source/practicals/1_picobot.md`); wat in het tweede
-college blijft liggen, gaat naar het practicum. De tijdsblokken in de handleiding
-van week 1 zijn daarom richtsnoer en geen strak rooster. Tot #380 stond hier ook
-dat er geen `solutions/` voor week 1 is; dat klopt niet meer sinds
-`solutions/1_picobot.md` er met #206 bij kwam.
+practicum.** Er is geen `problems/` voor week 1. De Picobot-opdrachten beginnen
+in het tweede college als plan (`source/lectures/1b_picobot.md`) en worden in
+het practicum geprogrammeerd (`source/practicals/1_picobot.md`); wat in het
+tweede college blijft liggen, gaat naar het practicum. De tijdsblokken in de
+handleiding van week 1 zijn daarom richtsnoer en geen strak rooster. Tot #380
+stond hier ook dat er geen `solutions/` voor week 1 is; dat klopt niet meer
+sinds `solutions/1_picobot.md` er met #206 bij kwam.
 
-**Week 2 heeft twee practica, en het eerste valt in het tweede college.** Week 2
-draagt twee onderwerpen. Het tweede college wordt gevuld door `2b` plus
-`practicals/2_rochambeau`, en `practicals/2_sequenties_en_data` vult het
-practicum.
+**Week 2 heeft twee `practicals/`-bestanden, en het eerste valt in het tweede
+college.** Week 2 draagt twee onderwerpen. Het tweede college wordt gevuld door
+`2b` plus `practicals/2_rochambeau`, en `practicals/2_sequenties_en_data` vult
+het practicum.
 
 **Week 4 valt onder de uitzondering: de oefenmidterm neemt de plaats van het
 vervallen college in.** Week 4 heeft het college `4a_lussen`, het practicum
 `practicals/4_python_bat` en, als derde bijeenkomst, de oefenmidterm
 (`lectures/4b_midterm`). De grond is de midterm zelf: die wordt in week 5
 afgenomen, dus is week 4 het oefenmoment. De student werkt aan de oefenmidterm
-zelfstandig en in eigen tempo, en neemt mee wat hij niet afkrijgt; de uitwerkingen
-staan openbaar in `solutions/4_midterm`. Die werkvorm is vastgesteld door de
-vakdeskundige op 18 september 2026; de grond is bij #380 herschreven. Het vraagt
-geen enkele bestandsverplaatsing.
+zelfstandig en in eigen tempo, en neemt mee wat hij niet afkrijgt; de
+uitwerkingen staan openbaar in `solutions/4_midterm`. Die werkvorm is
+vastgesteld door de vakdeskundige op 18 september 2026; de grond is bij #380
+herschreven. Het vraagt geen enkele bestandsverplaatsing.
 
 **Week 5 valt onder de uitzondering: de derde bijeenkomst is de midterm.**
-Vastgesteld door de vakdeskundige, gemeld bij #276 op 23 september 2026:
-*"de planning is dat de laatste (derde) sessie van die week gebruikt wordt voor
-het afnemen van de midterm. er blijven in die week dus twee bijeenkomsten over
-voor het materiaal."* Bijeenkomst 1 en 2 dragen het materiaal van week 5;
-bijeenkomst 3 draagt geen lesstof, en de planning van het tentamen zelf valt
-buiten deze repository. Het college is `5a_geneste_lus`, het practicum
+Vastgesteld door de vakdeskundige, gemeld bij #276 op 23 september 2026: *"de
+planning is dat de laatste (derde) sessie van die week gebruikt wordt voor het
+afnemen van de midterm. er blijven in die week dus twee bijeenkomsten over voor
+het materiaal."* Bijeenkomst 1 en 2 dragen het materiaal van week 5; bijeenkomst
+3 draagt geen lesstof, en de planning van het tentamen zelf valt buiten deze
+repository. Het college is `5a_geneste_lus`, het practicum
 `5b_boter_kaas_eieren`.
 
-Wat wel een afwijking blijft: week 5 heeft twee bestanden in `practicals/`
+Wat wel een afwijking blijft: week 5 heeft twee `practicals/`-bestanden
 (`5a_ascii_art.ipynb`, 6 opdrachten; `5b_boter_kaas_eieren.ipynb`, 8 opdrachten).
 `5b_boter_kaas_eieren` vult het practicum: het geeft de klas een volledig
 uitgewerkt voorbeeld voor de richting oost. `5a_ascii_art` - zes opdrachten met
 oplopende moeilijkheid en zonder gegeven tussenstap - is huiswerk, naast de
 opgavebundels van `problems/`.
 
-Het tentamen-feit is vastgesteld door de vakdeskundige. De verdeling van de
-twee `practicals/`-bestanden over het practicum en het huiswerk is een voorstel
-van de auteur bij #276, gemeten op 23 september 2026 en ter bevestiging bij de
-poort van dat werkitem.
+Het tentamen-feit is vastgesteld door de vakdeskundige. De verdeling van de twee
+`practicals/`-bestanden over het practicum en het huiswerk is een voorstel van
+de auteur bij #276, gemeten op 23 september 2026 en ter bevestiging bij de poort
+van dat werkitem.
 
-**Week 6 heeft één college, en één bijeenkomst kan naar herhaling.** Week 6 heeft
-één bestand in `lectures/` (`6a_data`) en één in `practicals/` (`6b_images`), en
-geen toets. Vastgesteld door de vakdeskundige op 23 oktober 2026 (#380).
+**Week 6 heeft één college.** Week 6 heeft één bestand in `lectures/`
+(`6a_data`) en één in `practicals/` (`6b_images`), en geen toets. Vastgesteld
+door de vakdeskundige op 23 oktober 2026 (#380).
+
+**PGM1 week 7 valt onder de uitzondering: het oefententamen.** In die week kan
+één bijeenkomst naar het oefententamen; welke dat is, volgt in #433. Vastgesteld
+door de vakdeskundige op 23 oktober 2026 (#380).
 
 **PGM2 week 7 valt onder de uitzondering: het oefententamen.** Het college is
 `14a_operatoren_en_exceptions` en het practicum `14_creatures`; zie
@@ -412,7 +417,7 @@ draait wel.
 | Code uitvoerbaar in de browser | praktisch | open, uitvoering wijzigt |
 | Wat er niet meer toe doet, mag weg; we ruimen achter ons op | organisatorisch | gesloten op 24 september 2026, **deels uitgevoerd**: `teacher_guides/` is weg (#280); welke andere directories eronder vallen, wordt voorgelegd in #282 |
 | In het PGM1-tentamen verdienen een docstring en een correcte signatuur punten, als eenvoudig werk dat zelfdiscipline beloont | didactisch | gesloten op 21 oktober 2026, **deels uitgevoerd**: eerdere tentamens keerden deze punten uit, maar de rubric staat buiten deze repository en die van 2026-1 wordt bij `misja/ans_grading`#16 gemaakt; zie *Punten voor docstring en signatuur* |
-| Een week heeft in beginsel twee colleges (`lectures/`) en één practicum (`practicals/`); de opgaven (`problems/`) zijn huiswerk; in een week met de oefenmidterm, de midterm of het oefententamen vervalt één college. *Werkcollege* is geen term meer | organisatorisch | gesloten op 9 oktober 2026 (bespreking #375), vastgelegd in #380; uitzondering en afwijkingen aangevuld door de vakdeskundige op 23 oktober 2026 (#380); **deels uitgevoerd**: `source/`, `curriculum/`, `conventies/` en de handleidingen van week 1 tot en met 6 volgen; de indeling van `handleidingen/week_7.md` volgt in #433; zie *Drie bijeenkomsten per week* |
+| Een week heeft in beginsel twee colleges (`lectures/`) en één practicum (`practicals/`); de opgaven (`problems/`) zijn huiswerk; in een week met de oefenmidterm, de midterm of het oefententamen vervalt één college. *Werkcollege* is geen term meer | organisatorisch | gesloten op 9 oktober 2026 (bespreking #375), vastgelegd in #380; uitzondering en afwijkingen aangevuld door de vakdeskundige op 23 oktober 2026 (#380); **deels uitgevoerd**: `curriculum/`, `conventies/`, `source/` buiten week 7 en de handleidingen van week 1 tot en met 6 zijn omgezet; `handleidingen/week_7.md`, `source/course/practical_7.md` en `source/course/week_7.md` gaan nog naar #433; zie *Drie bijeenkomsten per week* |
 
 ### Facultatieve extra van week 6
 

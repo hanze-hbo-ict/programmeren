@@ -30,11 +30,11 @@ brengt.
 
 ### Deze week heeft twee practica
 
-De indeling uit `curriculum/uitgangspunten.md` §`### Drie bijeenkomsten per week`
-gaat uit van twee colleges en één practicum. Week 2 heeft twee practica, en
-daarom is daar een erkende afwijking vastgelegd: `source/practicals/2_rochambeau.ipynb`
-gaat met `2b` mee in het tweede college, en
-`source/practicals/2_sequenties_en_data.ipynb` vult het practicum. De drie
+De indeling uit `curriculum/uitgangspunten.md`
+§`### Drie bijeenkomsten per week` gaat uit van twee colleges en één practicum.
+Week 2 heeft twee practica, en daarom is daar een erkende afwijking vastgelegd:
+`source/practicals/2_rochambeau.ipynb` gaat met `2b` mee in het tweede college,
+en `source/practicals/2_sequenties_en_data.ipynb` vult het practicum. De drie
 opgavebundels zijn huiswerk; wat het practicum aan ruimte overlaat, mag eraan
 besteed worden.
 

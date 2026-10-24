@@ -12,7 +12,7 @@ We hopen dat je het boek blijft lezen naast de colleges en practica. Daarnaast b
 
 ## Welke software is nodig?
 
-We gebruiken Python, versie 3. Je kan Python installeren zoals beschreven in de practicuminstructies, of je kan een andere installatie gebruiken. Zorg in het laatste geval er in ieder geval voor dat je een recente Python versie hebt (versie 3.9 of hoger). Daarnaast heb je een teksteditor of IDE nodig. Je kan VSCode gebruiken, de editor die wij aanbevelen, maar ook hier mag je een andere gebruiken, het is niet verplicht! Vraag jouw practicumdocent om hulp als het installeren van VSCode problemen geeft.
+We gebruiken Python, versie 3. Je kan Python installeren zoals beschreven in de [installatie-instructies](/lectures/0b_install_python), of je kan een andere installatie gebruiken. Zorg in het laatste geval er in ieder geval voor dat je een recente Python versie hebt (versie 3.9 of hoger). Daarnaast heb je een teksteditor of IDE nodig. Je kan VSCode gebruiken, de editor die wij aanbevelen, maar ook hier mag je een andere gebruiken, het is niet verplicht! Vraag je docent om hulp als het installeren van VSCode problemen geeft.
 
 ## Welke colleges zijn er?
 
@@ -22,7 +22,7 @@ Elke week zijn er twee colleges en een practicum. In een college wordt een onder
 
 Nee, aanwezigheid is bij de colleges en practica van Programmeren niet verplicht. Het wordt wél aangeraden ze te bezoeken. We behandelen veel onderwerpen en met elk college volgt een introductie van het onderwerp en kijken we terug op sommige opgaven van de week. En vaak worden ook hints gegeven die je direct kan gebruiken bij het maken van de opgaven!
 
-Maak gebruik van de colleges en practica om een begin te maken met de opdrachten en vooral ook om vragen te stellen over de opdrachten die je thuis hebt gemaakt. Gebruik het ook als een vast moment om naar de campus te komen en anderen te treffen en samen te werken, dit kan je ook helpen om in een studieritme te komen.
+Maak gebruik van de colleges en practica om een begin te maken met de opdrachten en vooral ook om vragen te stellen over de opgaven die je thuis hebt gemaakt. Gebruik het ook als een vast moment om naar de campus te komen en anderen te treffen en samen te werken, dit kan je ook helpen om in een studieritme te komen.
 
 ## Waar staan de opdrachten?
 

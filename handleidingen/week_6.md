@@ -25,7 +25,7 @@ in week 7.
 |---|---|---|
 | 1 | College | `source/lectures/6a_data.ipynb` |
 | 2 | Practicum | `source/practicals/6b_images.ipynb` |
-| 3 | Herhaling | `source/problems/6_opstap.ipynb`, `source/problems/6_basis.ipynb` en `source/problems/6_extra.ipynb` |
+| 3 | Bestanden lezen en schrijven | `source/problems/6_opstap.ipynb`, `source/problems/6_basis.ipynb` en `source/problems/6_extra.ipynb` |
 
 Daarnaast staan er vier overzichtspagina's die je zelf niet hoeft te
 behandelen: `source/course/week_6.md` (`## Data en bestanden`) vat de week
@@ -44,9 +44,8 @@ Week 6 wijkt af van de indeling met twee colleges en één practicum in
 daarom onder §`#### Erkende afwijkingen`. Er is één bestand in `lectures/`, één
 in `practicals/` en er zijn drie opgavebundels in `problems/`, en er is geen
 toets. Vastgesteld door de vakdeskundige op 23 oktober 2026 (#380): week 6 heeft
-één college, en één bijeenkomst kan naar herhaling. In deze handleiding is dat
-bijeenkomst 3, waarin de klas zelfstandig onder begeleiding aan de opgaven
-werkt. De opgaven zijn huiswerk; wat de bijeenkomst aan ruimte overlaat, mag
+één college. In bijeenkomst 3 werkt de klas zelfstandig onder begeleiding aan de
+opgaven. De opgaven zijn huiswerk; wat de bijeenkomst aan ruimte overlaat, mag
 eraan besteed worden.
 
 ### Over de tijden
@@ -251,10 +250,9 @@ Materiaal: `source/practicals/6b_images.ipynb`, met `fraaie_plaatjes.zip` uit
 `source/problems/assets/`.
 
 In deze bijeenkomst wordt een probleem gezamenlijk stap voor stap opgebouwd. De
-gegeven
-functie `invert` heeft de vorm die alle opdrachten delen - een afbeelding
-inlezen, een nieuwe lijst van rijen opbouwen, die wegschrijven - en het
-materiaal zegt dat zelf: *"het is het gemakkelijkst om bij deze functies
+gegeven functie `invert` heeft de vorm die alle opdrachten delen - een
+afbeelding inlezen, een nieuwe lijst van rijen opbouwen, die wegschrijven - en
+het materiaal zegt dat zelf: *"het is het gemakkelijkst om bij deze functies
 dezelfde structuur te gebruiken"*. De bijeenkomst doet het daarom twee keer op
 dezelfde manier: **samen de eerste, dan de rest zelf.**
 
@@ -381,7 +379,7 @@ van de andere kant: hoe maak je zo'n bestand kleiner.
 enige plek in de bijeenkomst waar de gedeelde vorm van alle opdrachten
 gezamenlijk wordt neergezet. En de stap op papier in blok 5.
 
-## 4. Bijeenkomst 3 - Herhaling: bestanden lezen en schrijven
+## 4. Bijeenkomst 3 - Bestanden lezen en schrijven
 
 Materiaal: de drie opgavebundels `source/problems/6_opstap.ipynb`,
 `source/problems/6_basis.ipynb` en `source/problems/6_extra.ipynb`, met de

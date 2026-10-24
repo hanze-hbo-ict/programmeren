@@ -25,8 +25,8 @@ student, en `source/course/practical_1.md` is de omslagpagina boven het practicu
 
 Week 1 volgt de indeling met twee colleges en een practicum uit
 `curriculum/uitgangspunten.md` §`### Drie bijeenkomsten per week` niet strak, en
-dat is daar als erkende afwijking vastgelegd: er zijn geen opgaven, en het tweede
-college loopt over in het practicum.
+dat is daar als erkende afwijking vastgelegd: er zijn geen opgaven, en het
+tweede college loopt over in het practicum.
 
 De reden is aanwijsbaar in het materiaal: de Picobot-opdrachten beginnen in
 bijeenkomst 2 als **plan** (`source/lectures/1b_picobot.md`

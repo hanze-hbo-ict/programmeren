@@ -19,10 +19,11 @@ knapzak. Dat heb je nodig voor het eerste deel van de opstap, voor de basis over
 algoritmen, voor de extra over de periodieke tshirt en voor het practicum, waarin
 je uitrekent met hoeveel munten je een bedrag betaalt. De extra over het pijlenpad
 probeert ook keuzes uit, maar met een recursieve aanroep in een lus over de keuzes,
-zoals in het practicum van week 3. Het tweede college gaat over `sorted`,
-`max` en `min` met `key=`, over `lambda`, en over een eigen functie met een
-functieparameter. Dat heb je nodig voor de andere twee delen van de opstap en voor
-de basis over `lambda`. *Caesar op orde* herhaalt de stof van beide colleges.
+zoals in het [practicum van week 3](/practicals/10_directory_doorzoeken).
+Het tweede college gaat over `sorted`, `max` en `min` met `key=`, over `lambda`,
+en over een eigen functie met een functieparameter. Dat heb je nodig voor de
+andere twee delen van de opstap en voor de basis over `lambda`. *Caesar op orde*
+herhaalt de stof van beide colleges.
 
 Aan het eind van de week kun je bij een probleem met keuzes beide keuzes
 recursief uitproberen en de beste kiezen, en kun je een functie meegeven als

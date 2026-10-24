@@ -309,10 +309,10 @@ genoemd en vooruitgewezen naar week 7.
 Materiaal: `source/practicals/5b_boter_kaas_eieren.ipynb`, met de acht
 uitwerkingen in `source/solutions/5b_boter_kaas_eieren.ipynb`.
 
-Deze bijeenkomst bouwt twee keer een probleem gezamenlijk stap voor stap op, met dezelfde beweging beide keren: **samen de eerste
-opbouwen, dan de rest van de groep zelf.** De acht functies controleren of er
-drie, en later `n`, gelijke tekens op een rij staan vanaf een startpositie, in
-een van vier richtingen.
+Deze bijeenkomst bouwt twee keer een probleem gezamenlijk stap voor stap op, met
+dezelfde beweging beide keren: **samen de eerste opbouwen, dan de rest van de
+groep zelf.** De acht functies controleren of er drie, en later `n`, gelijke
+tekens op een rij staan vanaf een startpositie, in een van vier richtingen.
 
 ### Blokschema
 
@@ -524,9 +524,9 @@ git-geschiedenis.
 - **De bijeenkomstindeling van week 5 is met dit werkitem voorgesteld**, als
   vijfde erkende afwijking in `curriculum/uitgangspunten.md`, die sinds #380
   §`#### Erkende afwijkingen` heet; bijeenkomst 3 als tentamen valt sindsdien
-  onder de uitzondering voor toetsweken. Het deel over bijeenkomst 3 als tentamen is
-  al vastgesteld door de vakdeskundige, geciteerd in diezelfde paragraaf; het
-  deel over de verdeling van `5a_ascii_art.ipynb` en
+  onder de uitzondering voor toetsweken. Het deel over bijeenkomst 3 als
+  tentamen is al vastgesteld door de vakdeskundige, geciteerd in diezelfde
+  paragraaf; het deel over de verdeling van `5a_ascii_art.ipynb` en
   `5b_boter_kaas_eieren.ipynb` over het practicum en het zelfstandige werk is
   mijn eigen meting en voorstel, ter bevestiging bij de poort van #276.
 - **`curriculum/uitgangspunten.md` bevat een niet meer kloppende statusregel.**
