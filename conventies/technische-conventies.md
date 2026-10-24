@@ -369,7 +369,7 @@ tot de vijf van week 5 uitvoerbare cellen kregen en
 `lectures/3b_functies_aanroepen` bij de herziening van week 3 een `.md` werd. Bij werkitem #335
 kwamen er zes notebooks van PGM2 week 4 uit, als delta en niet als volledige
 hertelling. Het college over de knapzak, nu `11a_use_it_or_lose_it`, kreeg
-uitvoerbare code; het werkcollege `11_wisselgeld` en de basis en de extra over
+uitvoerbare code; het practicum `11_wisselgeld` en de basis en de extra over
 algoritmen kregen invulcellen; de periodieke tshirt verhuisde van `practicals/` naar
 `problems/11_tshirt_extra` en kreeg ook invulcellen; en Text-ID
 (`problems/11_extra`) is verwijderd. Daarnaast kwamen er nieuwe notebooks bij die
@@ -383,7 +383,7 @@ als delta en niet als volledige hertelling. Gemeten op `00c03b2a`: dat notebook
 had vijf codecellen en één markdowncel, geen enkele cel droeg een tag, en het
 draaide dus volledig bij de build - grond 2 gold ervoor. Op 20 oktober 2026 is
 besloten dat deze uitwerking uitgaat van de situatie van de student en niet van
-die van de build: `save_rgb` komt uit de `png.py` van het werkcollege
+die van de build: `save_rgb` komt uit de `png.py` van het practicum
 `practicals/6b_images`, en die module zit alleen in
 `problems/assets/fraaie_plaatjes.zip` en staat nergens in `source/`. Daarmee
 verviel grond 2 en is het bestand een `.md` geworden, met de code in vijf

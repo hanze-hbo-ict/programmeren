@@ -304,6 +304,14 @@ niet op voort. Dat de schrijfwijzer juist dat bestand als model aanwijst en dat
 het onder deze regel klopt zonder te worden aangepast, is het bewijs dat de regel
 dit materiaal beschrijft in plaats van eraan wordt opgelegd.
 
+**Werkcollege is geen term.** De bijeenkomst met het materiaal onder
+`practicals/` heet *practicum*, net als dat materiaal zelf. *Werkcollege* is een
+afgewezen variant: tot dit besluit gebruikten het materiaal en
+`curriculum/uitgangspunten.md` dat woord voor dezelfde bijeenkomst, en heette de
+bijeenkomst met de opgaven *practicum*. Vastgesteld door de vakdeskundige op
+9 oktober 2026, bij de bespreking van #375; vastgelegd met #380. Het model van de
+week staat in `curriculum/uitgangspunten.md`, *Drie bijeenkomsten per week*.
+
 ### Waar de regel over gaat
 
 **De regel bindt koppen en labels, niet de lopende tekst.** Een label is de

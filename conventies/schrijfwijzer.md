@@ -204,7 +204,7 @@ twee plekken half hetzelfde beweert.
   wijziging hier een wijziging daar af, maak die band dan overbodig. Kan dat
   niet, leg dan vast waar de andere plek zit.
 - **Kruisverwijzingen moeten altijd kloppen.** Een zin die zegt waar iets anders
-  staat - "dat heb je in week 2 gezien", "in het werkcollege schrijf je die
+  staat - "dat heb je in week 2 gezien", "in het practicum schrijf je die
   functie zelf" - is een bewering over ander materiaal, en die veroudert zodra
   dat materiaal schuift. Verplaats je een onderdeel naar een andere week of een
   andere bijeenkomst, zoek dan de zinnen op die ernaar wijzen. Een dode link
