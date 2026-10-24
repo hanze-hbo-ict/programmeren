@@ -17,7 +17,7 @@ frame op de stack krijgt. Dat heb je nodig voor het eerste deel van de opstap,
 waarin je recursieve functies leest en naspeelt. Het tweede college laat zien hoe
 je zelf een recursieve functie ontwerpt, met drie vragen: wat is het basisgeval,
 wat is het kleinere probleem, en hoe combineer je? Dat heb je nodig voor het
-tweede deel van de opstap, voor de basis en voor de extra. In het werkcollege
+tweede deel van de opstap, voor de basis en voor de extra. In het practicum
 doorzoek je een directory met subdirectories.
 
 Aan het eind van de week kun je een recursieve functie lezen en aanroep voor
@@ -31,7 +31,7 @@ aanroep van een functie een frame op de stack zet, met de variabelen van die
 aanroep. Bij recursie staan er zo meer frames van dezelfde functie tegelijk op de
 stack. In [week 1 van Programmeren 2](/course/week_8) leerde je dictionaries,
 en in [week 2](/course/week_9) `sum([...])` met een list comprehension. Het
-werkcollege gebruikt die twee om een directory te doorzoeken die als dictionary
+practicum gebruikt die twee om een directory te doorzoeken die als dictionary
 is opgeschreven.
 
 ```{tableofcontents}

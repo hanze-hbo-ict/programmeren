@@ -1,6 +1,6 @@
 # Lussen in PythonBat
 
-In dit werkcollege ga je oefenen met Python-lussen: `for` en `while`.
+In dit practicum ga je oefenen met Python-lussen: `for` en `while`.
 
 Er staan 12 lusproblemen op de twee CodingBat-pagina's:
 
