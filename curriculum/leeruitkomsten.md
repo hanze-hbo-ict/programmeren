@@ -40,7 +40,10 @@ bindende document niet gedeeld en niet gevolgd in de tijd.
 Totaal: 80% toepassen, 20% analyseren. **Samen 100%.** PGM1 heeft geen uitkomst
 op creëren-niveau; dat is een besluit en geen gat. Zie
 [uitgangspunten.md](uitgangspunten.md), *De weging van de PGM1-matrijs*, voor
-beide besluiten en voor de meting waarop ze rusten.
+die twee besluiten en voor de meting waarop ze rusten. Diezelfde sectie draagt een
+derde besluit, van 27 oktober 2026: een vastgelegde uitzondering waarin een
+concrete PGM1-toets de gemeten niveauverdeling van het oefententamen volgt in
+plaats van deze 80% en 20%. De matrijs hierboven verandert daar niet door.
 
 > De eerder vermelde verdeling "70% toepassen" klopte niet met de som van de rijen,
 > ook vóór deze wijziging niet.

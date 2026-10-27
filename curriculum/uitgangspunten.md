@@ -394,6 +394,8 @@ draait wel.
 | Het oefententamen is representatief en verandert voorlopig niet; bij PGM1 volgt de vorm de conventies | organisatorisch | staand; op 9 oktober 2026 (#377) verduidelijkt voor het oefententamen van PGM1: de bevriezing betreft daar de onderwerpen, de aard van de vragen en het niveau, niet de vorm. Eerste geval, **uitgevoerd**: de drie `is`-asserts in `solutions/PGM1_examen.ipynb` zijn omgezet naar `== True`/`== False` zonder dat een vraag, een onderwerp of een niveau veranderde. Of dat oefententamen de overige conventies volgt, is niet gemeten |
 | PGM1 houdt geen gewicht op creëren-niveau; dat is een keuze en geen restant | didactisch | gesloten op 4 oktober 2026 (#104, C4), **uitgevoerd**: de PGM1-matrijs kent geen rij op dat niveau |
 | Het gewicht dat A4 achterliet gaat naar A3; de PGM1-matrijs wordt 80% toepassen en 20% analyseren | organisatorisch | gesloten op 4 oktober 2026 (#104, C4), **uitgevoerd** in dezelfde wijziging |
+| De PGM1-toets van werkitem `ans_grading`#11 volgt de gemeten niveauverdeling van het oefententamen, 72,2% toepassen en 27,8% analyseren, en niet de 80/20 van de matrijs | organisatorisch | gesloten op 27 oktober 2026 (`ans_grading`#11, C4); uitdrukkelijk een uitzondering, zie *Een uitzondering op de niveauverdeling, en waarom zij er is* |
+| Binnen studiejaar 2026-2027 volstaat registratie voor de niveauverdeling van een PGM1-toets: de verdeling van het oefententamen volgen mag zonder nieuw poortbesluit, mits de afwijking wordt vastgelegd | organisatorisch | gesloten op 27 oktober 2026 (`ans_grading`#11, C4); een uitzondering op *Wat er aan de leeruitkomsten mag veranderen*, afgebakend in *Een uitzondering op de niveauverdeling, en waarom zij er is*. Het eerste geval, de toets die bij dit besluit voorlag, staat daar geregistreerd; of latere toetsen van dit studiejaar hun afwijking vastleggen, is niet vastgesteld |
 | Leesvragen mogen fout aflopen; de fout is het antwoord | didactisch | staand, onderbouwd |
 | Onderdompeling mag vooraf gaan aan uitleg | didactisch | staand; de grens is nog een afleiding |
 | Studenten leveren geen werk in; opdrachten zijn oefening | organisatorisch | gesloten, **nog niet uitgevoerd**: `source/` draagt nog inleverinstructies. Het toernooi met bonuspunten uit het oude AI-materiaal komt niet terug in week 6 (#270, V3) en ook niet in week 7 (#271, VP2) |
@@ -752,6 +754,13 @@ dat een bevinding en geen vrijheid. Ze gaat als open vraag naar de poort, en wat
 daar wordt besloten landt in de matrijs of in de correctielijst. Wat níét mag is de
 matrijs stilzwijgend anders lezen dan hij staat.
 
+**Hierop is een uitzondering vastgelegd.** Binnen studiejaar 2026-2027 volstaat
+registratie voor de niveauverdeling van een PGM1-toets: wie zo'n toets samenstelt
+mag de verdeling van het oefententamen volgen zonder nieuw poortbesluit, mits hij
+die afwijking vastlegt. Het besluit, zijn grond, zijn afbakening en wat vastleggen
+daar betekent staan in *Een uitzondering op de niveauverdeling, en waarom zij er
+is* hieronder.
+
 ### Waar de student werkt
 
 De student werkt op zijn eigen machine, in VS Code. Dat is niet alleen praktisch:
@@ -837,7 +846,12 @@ De weging in de toetsmatrijs van PGM1 wachtte op diezelfde prioriteit. Zij is op
 ### De weging van de PGM1-matrijs
 
 Twee besluiten van de vakdeskundige, genomen op 4 oktober 2026 bij de poort
-van #104. Ze staan apart, want het tweede volgt niet uit het eerste.
+van #104. Ze staan apart, want het tweede volgt niet uit het eerste. Onderaan deze
+sectie staat een derde besluit, van 27 oktober 2026, over een uitzondering op de
+niveauverdeling bij de toets die toen voorlag. Op diezelfde datum is daarnaast
+vastgelegd dat registratie binnen studiejaar 2026-2027 volstaat voor de
+niveauverdeling van een PGM1-toets; de poortregel uit *Wat er aan de leeruitkomsten
+mag veranderen* kent daar dus een uitzondering.
 
 **PGM1 houdt geen gewicht op creëren-niveau.** Dat is een keuze, geen restant van
 de verplaatsing van A4.
@@ -963,6 +977,77 @@ doorgelicht.
 
 Zolang het oefententamen niet verandert, is het gat rond A2 een vraag over de
 matrijs en niet over de toets.
+
+#### Een uitzondering op de niveauverdeling, en waarom zij er is
+
+*27 oktober 2026. Expliciet besluit van de vakdeskundige; `ans_grading`#11, C4.*
+
+De toets die bij dit besluit voorlag volgt de gemeten niveauverdeling van het
+oefententamen - 65 punten toepassen en 25 analyseren, 72,2% en 27,8% - en niet de
+80% en 20% van de matrijs. Het gaat om het werkitem *PGM1 2026-2027:
+eerste-kans-toets samenstellen*, `ans_grading`#11; dat is de vindplaats waaruit de
+aanduiding "eerste kans" volgt, en dit register introduceert dat onderscheid niet.
+
+**Grond, van de vakdeskundige.** Het oefententamen is leidend voor onderwerpen,
+samenstelling en niveau: de student mag daarin niet worden verrast. De 7,8
+procentpunt wegwerken vraagt een andere samenstelling.
+
+Daaruit volgt, en dat is de lezing van dit register en niet de formulering van de
+vakdeskundige: die belofte aan de student weegt hier zwaarder dan het sluiten van
+de getallen.
+
+**Het is uitdrukkelijk een uitzondering, en zij staat niet alleen.** De
+vakdeskundige stelt daarbij vast dat de toets en het oefententamen niet geheel
+overeenkomen met de leeruitkomsten en hun gewichten, en dat daar voorlopig **met
+uitzonderingen** wordt gewerkt. Een herontwerp van de toetsing is iets voor het
+volgende studiejaar, om alles gelijk te trekken; gerekend vanaf dit besluit is dat
+2027-2028, en die precisering is van dit register. Tot dat herontwerp ligt een
+afwijking als deze vast als uitzondering; zij staat niet open als iets dat nog moet
+worden opgelost.
+
+Dat gaat over haar **status**. Of zij langs de poort moet of dat registratie
+volstaat, is haar **procedure**, en dat is een tweede vraag; de regel hierboven
+koppelt de twee door een bevinding naar de poort te sturen. Dat status en procedure
+hier uiteen kunnen lopen, is de lezing van dit register en niet de formulering van
+de vakdeskundige. Hij heeft de procedure voor dit studiejaar hieronder afzonderlijk
+beslist.
+
+**Wat de uitzondering voor deze toets zou heropenen.** Een gewijzigd
+oefententamen, of het herontwerp van de toetsing waarin matrijs en toets opnieuw op
+elkaar worden gelegd. Het herontwerp is de horizon hierboven; het gewijzigde
+oefententamen volgt uit de grond van deze uitzondering, want zij volgt juist de
+verdeling van dat oefententamen - en dat verband is de lezing van dit register.
+Zolang geen van beide heeft plaatsgevonden, blijft de uitzondering voor deze toets
+staan.
+
+**Binnen dit studiejaar volstaat registratie.** Op 27 oktober 2026 heeft de
+vakdeskundige daar afzonderlijk over beslist: binnen 2026-2027 mag een uitvoerder
+die een PGM1-toets samenstelt de verdeling van het oefententamen volgen zonder hem
+opnieuw te vragen, mits hij die afwijking vastlegt. Daarmee is zij een
+uitzondering op *Wat er aan de leeruitkomsten mag veranderen* hierboven, dat een
+niet gedragen uitkomst een bevinding noemt en als open vraag naar de poort stuurt.
+Welke regel hier wordt uitgezonderd, dat die regel voor al het overige blijft
+gelden, en dat deze vrijgave met het studiejaar ophoudt: dat is de lezing van dit
+register en niet de formulering van de vakdeskundige. Zijn eigen begrenzing luidt
+*"binnen 2026-2027"*.
+
+De vrijgave betreft de procedure: wat zonder poortbesluit is vastgelegd blijft een
+uitzondering. En zij reikt zo wijd als zijn omschrijving, die de verdeling van het
+oefententamen noemt; een vrij te kiezen getal geeft zij niet vrij. Beide zijn de
+lezing van dit register. Wat geldt voor een verdeling die noch de matrijs noch dat
+oefententamen volgt, is hier niet vastgesteld - de vakdeskundige heeft wel de
+variant afgewezen waarin alleen deze ene verdeling vrij was en elk ander getal
+alsnog werd voorgelegd.
+
+Vastleggen betekent hier: een eigen ingang in *De weging van de PGM1-matrijs*, met
+een rij in het *Besluitenregister* hierboven, waarin de gemeten verdeling, de grond
+en de heropeningsvoorwaarde staan - op dezelfde voet als deze ingang. De
+vakdeskundige vroeg vastleggen en noemde die plek en die drie onderdelen niet; zij
+komen van dit register en maken vindbaar wat hij vrijgaf. Een ongeregistreerde
+afwijking is geen uitzondering maar een gat.
+
+Het gat rond A2 hierboven wordt hiermee niet opgelost; zie *Wat hiermee niet is
+opgelost*.
 
 ### Wat een docentenhandleiding is, en waar hij staat
 
