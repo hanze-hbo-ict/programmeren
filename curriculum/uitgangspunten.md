@@ -394,7 +394,7 @@ draait wel.
 | Het oefententamen is representatief en verandert voorlopig niet; bij PGM1 volgt de vorm de conventies | organisatorisch | staand; op 9 oktober 2026 (#377) verduidelijkt voor het oefententamen van PGM1: de bevriezing betreft daar de onderwerpen, de aard van de vragen en het niveau, niet de vorm. Eerste geval, **uitgevoerd**: de drie `is`-asserts in `solutions/PGM1_examen.ipynb` zijn omgezet naar `== True`/`== False` zonder dat een vraag, een onderwerp of een niveau veranderde. Of dat oefententamen de overige conventies volgt, is niet gemeten |
 | PGM1 houdt geen gewicht op creëren-niveau; dat is een keuze en geen restant | didactisch | gesloten op 4 oktober 2026 (#104, C4), **uitgevoerd**: de PGM1-matrijs kent geen rij op dat niveau |
 | Het gewicht dat A4 achterliet gaat naar A3; de PGM1-matrijs wordt 80% toepassen en 20% analyseren | organisatorisch | gesloten op 4 oktober 2026 (#104, C4), **uitgevoerd** in dezelfde wijziging |
-| De eerste-kanstoets PGM1 2026-2027 volgt de gemeten niveauverdeling van het oefententamen, 72,2% toepassen en 27,8% analyseren, en niet de 80/20 van de matrijs | organisatorisch | gesloten op 27 oktober 2026 (`ans_grading`#11, C4); uitdrukkelijk een uitzondering, zie *Een uitzondering op de niveauverdeling, en waarom zij er is* |
+| De PGM1-toets van werkitem `ans_grading`#11 volgt de gemeten niveauverdeling van het oefententamen, 72,2% toepassen en 27,8% analyseren, en niet de 80/20 van de matrijs | organisatorisch | gesloten op 27 oktober 2026 (`ans_grading`#11, C4); uitdrukkelijk een uitzondering, zie *Een uitzondering op de niveauverdeling, en waarom zij er is* |
 | Leesvragen mogen fout aflopen; de fout is het antwoord | didactisch | staand, onderbouwd |
 | Onderdompeling mag vooraf gaan aan uitleg | didactisch | staand; de grens is nog een afleiding |
 | Studenten leveren geen werk in; opdrachten zijn oefening | organisatorisch | gesloten, **nog niet uitgevoerd**: `source/` draagt nog inleverinstructies. Het toernooi met bonuspunten uit het oude AI-materiaal komt niet terug in week 6 (#270, V3) en ook niet in week 7 (#271, VP2) |
@@ -838,7 +838,9 @@ De weging in de toetsmatrijs van PGM1 wachtte op diezelfde prioriteit. Zij is op
 ### De weging van de PGM1-matrijs
 
 Twee besluiten van de vakdeskundige, genomen op 4 oktober 2026 bij de poort
-van #104. Ze staan apart, want het tweede volgt niet uit het eerste.
+van #104. Ze staan apart, want het tweede volgt niet uit het eerste. Onderaan deze
+sectie staat een derde besluit, van 27 oktober 2026, over een uitzondering op de
+niveauverdeling bij een concrete toets.
 
 **PGM1 houdt geen gewicht op creëren-niveau.** Dat is een keuze, geen restant van
 de verplaatsing van A4.
@@ -969,29 +971,38 @@ matrijs en niet over de toets.
 
 *27 oktober 2026. Expliciet besluit van de vakdeskundige; `ans_grading`#11, C4.*
 
-De eerste-kanstoets PGM1 2026-2027 volgt de gemeten niveauverdeling van het
+De toets die bij dit besluit voorlag volgt de gemeten niveauverdeling van het
 oefententamen - 65 punten toepassen en 25 analyseren, 72,2% en 27,8% - en niet de
-80% en 20% van de matrijs.
+80% en 20% van de matrijs. Het gaat om het werkitem *PGM1 2026-2027:
+eerste-kans-toets samenstellen*, `ans_grading`#11; dat is de vindplaats waaruit de
+aanduiding "eerste kans" volgt, en dit register introduceert dat onderscheid niet.
 
-**Grond.** Van de vakdeskundige. Het oefententamen is leidend voor onderwerpen,
+**Grond, van de vakdeskundige.** Het oefententamen is leidend voor onderwerpen,
 samenstelling en niveau: de student mag daarin niet worden verrast. De 7,8
-procentpunt wegwerken zou een andere samenstelling vragen dan het oefententamen
-belooft, en die belofte weegt hier zwaarder dan het sluiten van de getallen.
+procentpunt wegwerken vraagt een andere samenstelling.
 
-**Het is uitdrukkelijk een uitzondering.** De vakdeskundige stelt daarbij vast dat
-de toets en het oefententamen niet geheel overeenkomen met de leeruitkomsten en
-hun gewichten, en dat daar voorlopig met uitzonderingen wordt gewerkt. **Een
-herontwerp van de toetsing staat voor het volgende studiejaar (2027-2028) op de
-rol, om alles gelijk te trekken.** Tot die herziening is een afwijking als deze een
-vastgelegde uitzondering, en niet een bevinding die nog moet worden opgelost.
+Daaruit volgt, en dat is de lezing van dit register en niet de formulering van de
+vakdeskundige: die belofte aan de student weegt hier zwaarder dan het sluiten van
+de getallen.
+
+**Het is uitdrukkelijk een uitzondering, en zij staat niet alleen.** De
+vakdeskundige stelt daarbij vast dat de toets en het oefententamen niet geheel
+overeenkomen met de leeruitkomsten en hun gewichten, en dat daar voorlopig **met
+uitzonderingen** wordt gewerkt. Een herontwerp van de toetsing is iets voor het
+volgende studiejaar (2027-2028), om alles gelijk te trekken. Tot dat herontwerp is
+een afwijking als deze een vastgelegde uitzondering, en niet een bevinding die nog
+moet worden opgelost.
+
+Dat regime reikt verder dan deze ene toets: wie later in dit studiejaar een
+PGM1-toets samenstelt, hoeft het beginsel niet opnieuw voor te leggen. Zijn eigen
+afwijking blijft wel zijn eigen registratie - wat hier vastligt is deze verdeling
+op deze toets, en niet een vrijbrief voor een willekeurig getal.
 
 **Wat haar zou heropenen.** Een gewijzigd oefententamen, of het herontwerp van de
-toetsing waarin matrijs en toets opnieuw op elkaar worden gelegd. Zolang geen van
-beide heeft plaatsgevonden, geldt deze uitzondering voor de eerste kans van
-2026-2027 en niet verder.
+toetsing waarin matrijs en toets opnieuw op elkaar worden gelegd.
 
-Het gat rond A2 hierboven wordt hiermee niet opgelost: dat blijft een vraag over de
-matrijs en niet over deze toets.
+Het gat rond A2 hierboven wordt hiermee niet opgelost; zie *Wat hiermee niet is
+opgelost*.
 
 ### Wat een docentenhandleiding is, en waar hij staat
 
