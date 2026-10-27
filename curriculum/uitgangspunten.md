@@ -994,13 +994,18 @@ volgende studiejaar, om alles gelijk te trekken; gerekend vanaf dit besluit is d
 een afwijking als deze een vastgelegde uitzondering, en niet een bevinding die nog
 moet worden opgelost.
 
-Dat de uitzonderingen meervoud zijn, zegt de vakdeskundige zelf; wat hij niet heeft
-gezegd is wie een volgende afwijking vaststelt. **Open vraag, niet ingevuld:** mag
-een volgende PGM1-toets van dit studiejaar van de niveauverdeling afwijken zonder
-poortbesluit, en volstaat registratie? Zolang dat niet is beslist, geldt
-*Wat er aan de leeruitkomsten mag veranderen* hierboven: een uitkomst die niet
-gedragen wordt is een bevinding en geen vrijheid, en zij gaat als open vraag naar
-de poort. Wat hier vastligt is deze verdeling op deze toets.
+**Binnen dit studiejaar volstaat registratie.** Op 27 oktober 2026 heeft de
+vakdeskundige daar afzonderlijk over beslist: wie later in studiejaar 2026-2027
+een PGM1-toets samenstelt mag van de niveauverdeling van de matrijs afwijken
+zonder nieuw poortbesluit, mits hij die afwijking vastlegt. Dit is een
+uitzondering op *Wat er aan de leeruitkomsten mag veranderen* hierboven, dat een
+niet gedragen uitkomst een bevinding noemt en als open vraag naar de poort stuurt.
+Die regel blijft voor al het overige gelden; wat hier wordt vrijgegeven is de
+niveauverdeling van een PGM1-toets binnen dit studiejaar, en niets anders.
+
+Vastleggen betekent hier: met de gemeten verdeling, de grond en de
+heropeningsvoorwaarde, op dezelfde voet als deze ingang. Een ongeregistreerde
+afwijking is geen uitzondering maar een gat.
 
 **Wat haar zou heropenen.** Een gewijzigd oefententamen, of het herontwerp van de
 toetsing waarin matrijs en toets opnieuw op elkaar worden gelegd - de twee gronden
