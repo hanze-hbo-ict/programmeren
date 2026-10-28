@@ -58,10 +58,16 @@ De uitzondering hieronder blijft staan.
 
 ### Gedeelde bestanden zijn Engels
 
-Bestanden die vanuit beide studiejaren worden gebruikt, zoals
-`board.py` (sinds #271 buiten `source/`, in `practicals/assets/`), `practicals/assets/file_and_dictionary_examples.py`
-en `lectures/assets/markov.py`, kunnen niet twee talen tegelijk hebben. Die zijn
-Engels. Dat is een bewuste uitzondering, geen slordigheid.
+Bestanden die vanuit beide studiejaren worden gebruikt, zoals `board.py`
+(sinds #271 buiten `source/`, in `practicals/assets/`), kunnen niet twee talen
+tegelijk hebben. Die zijn Engels. Dat is een bewuste uitzondering, geen slordigheid.
+
+`source/practicals/assets/file_and_dictionary_examples.py` en
+`source/lectures/assets/markov.py` vallen onder de Nederlandse docstring- en
+commentaarnorm; hun identifiers blijven Engels volgens de bestaande PGM2-regel.
+Dit volgt uit de besluiten van 9 oktober 2026, uitgevoerd in #381; de
+[overdracht van 19 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/383#issuecomment-6267813858)
+legt de correctie van deze normpassage bij #383.
 
 ## Naamgeving
 
