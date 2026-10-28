@@ -387,7 +387,7 @@ draait wel.
 | Docstrings en commentaar blijven Nederlands, ook in PGM2 | didactisch | gesloten op 23 september 2026; zie `conventies/codeconventies.md` |
 | Compositie is een begrip van PGM2 week 5; zie `leerlijn.md` en `conventies/begrippen.md` | didactisch | gesloten op 23 september 2026 (#267), **uitgevoerd** in #268 |
 | Mutatie pas vanaf PGM1 week 7, en als grens benoemd | didactisch | staand, onderbouwd |
-| Canonieke Python aanbieden, mechanisme later uitleggen | didactisch | staand, onderbouwd |
+| Canonieke Python aanbieden; `with open` is een vaste frase zonder uitleg van het mechanisme | didactisch | aangepast op [9 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/375#issuecomment-6076782174), B1; kaal `open`/`close` afgewezen omdat `close()` een objectmethode is |
 | Het bord verandert niet in week 5; de grens wordt daar benoemd | didactisch | gesloten |
 | De parameternamen van `board.py` blijven zoals ze zijn | praktisch | gesloten; sinds #271 staat `board.py` buiten `source/` |
 | De vastgestelde matrijs wijzigt niet als bijvangst; bevindingen gaan naar *Voorgestelde correcties* | organisatorisch | staand, onderbouwd |
@@ -403,18 +403,18 @@ draait wel.
 | De facultatieve extra van PGM1 week 6 is tekstbestand → RGB-raster → PNG met een vaste vergroting; zij blijft naast `6b_images` en draagt geen nieuwe leeruitkomst | didactisch | gesloten op 25 september 2026 (#303, C4), **uitgevoerd** in #312; samenhang gecontroleerd in #313 |
 | Tot en met week 4 ligt de nadruk op lezen en begrijpen; schrijven begint wel | didactisch | staand, onderbouwd |
 | Een weekpagina vat samen wat volgt en waarop het voortbouwt | praktisch | gesloten (#167), **deels uitgevoerd**: week 1 tot en met 4 dragen hem, met #168, #169, #230 en #162; week 6 draagt hem sinds #313; week 12 (PGM2 week 5) draagt hem sinds #160, week 8 (PGM2 week 1) sinds #273, week 13 (PGM2 week 6) sinds #270, week 14 (PGM2 week 7) sinds #271, week 9 (PGM2 week 2) sinds #326, week 10 (PGM2 week 3) sinds #332 en week 11 (PGM2 week 4) sinds #335; week 7 draagt sinds #102 een route, een tijdpad over drie bijeenkomsten en een uitvalpad; week 5 is nog een stub |
-| Elk opgaveniveau hoort een uitwerking te hebben | didactisch | gesloten, **deels uitgevoerd**; 1 van de 43 ontbreekt (hermeten in #332, bij #102, dat de opstap van PGM1 week 7 toevoegde, en bij #335; de telling staat in `leerlijn.md`) |
+| Opgaven en practica horen een uitwerking te hebben | didactisch | uitgebreid op [9 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/375#issuecomment-6076782174), C7, uitgevoerd in #382; op `054bfe52` 43/43 niveau-uitwerkingen en 15/16 practicumuitwerkingen, met `6b_images` als bewuste uitzondering. Collegeopdrachten blijven buiten de norm, caesar behoudt VP6; zie de norm hieronder en [C4 #383 van 28 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/383#issuecomment-6467804118) |
 | Week 4 krijgt een lusrecept van vijf vragen, in `4a_lussen` | didactisch | gesloten, **uitgevoerd** met #153; week 5 pikt het nog niet op (#163) |
 | Recursie gaat in beginsel naar PGM2; `unique` blijft in PGM1 als herkenbaar iteratief voorbeeld met vooruitwijzing | organisatorisch | gesloten, uitgevoerd in #162: de overige recursieplekken zijn verwijderd; recursie wordt uitgebreider behandeld in PGM2 |
 | Eerst de weken van PGM1 afronden; het materiaal moet zo snel mogelijk live | organisatorisch | staand |
-| Een docentenhandleiding gaat per week en helpt de docent die week te geven; hij is geen leeswijzer | didactisch | gesloten, **deels uitgevoerd**: week 1 en 2 staan er met #182; de weken 3 tot en met 12 ontbreken, zie #95 |
+| Een docentenhandleiding gaat per week en helpt de docent die week te geven; hij is geen leeswijzer | didactisch | gesloten, **deels uitgevoerd**: PGM1 7/7 handleidingen aanwezig, PGM2 0/7 (cursusweken 8–14), hermeten op `054bfe52` op 28 oktober 2026. Dit meet aanwezigheid, geen inhoudelijke afronding; week 7 heeft vervolgwerk in #341/#433, het overige handleidingwerk staat bij #95 |
 | Handleidingen zijn repo-materiaal en geen onderdeel van het boek | organisatorisch | gesloten, uitgevoerd |
 | Eenvoudige f-stringinterpolatie verplicht in PGM1 basis week 5; opmaak blijft ondersteund | didactisch | gesloten, uitgevoerd; #378/C4 en akkoord op C2, 20 oktober 2026; zie *F-strings en uitvoer* |
 | Objectmethoden pas vanaf PGM2 week 1, los van de mutatiegrens in PGM1 week 7 | didactisch | staand, onderbouwd |
 | Dictionaries en de Markov-opgave verhuizen van PGM1 week 7 naar PGM2 week 1 | didactisch | staand, **uitgevoerd**: PGM2 week 1 kreeg de datastructuren en de Markov-opgave met #148, PGM1 week 7 raakte ze kwijt met #315 |
 | Objecten pas in PGM2 | didactisch | staand, onderbouwd |
 | Picobot opent PGM1 | didactisch | staand, onderbouwd |
-| Opgaven in opstap, basis en extra | didactisch | gesloten op 23 september 2026, **deels uitgevoerd** voor PGM2: week 5 en 6 hebben opstap, basis en extra (#160, #270); de verplichte niveaus per week staan in `leerlijn.md` |
+| Opgaven in opstap, basis en extra | didactisch | gesloten op 23 september 2026, **uitgevoerd** voor PGM2: alle zeven weken hebben opstap, basis en extra, hermeten op `054bfe52` op 28 oktober 2026; week 4 heeft twee basis- en twee extrabestanden; de verplichte niveaus per week staan in `leerlijn.md` |
 | De student werkt lokaal in VS Code; de browser is verrijking | didactisch | staand, onderbouwd |
 | Op macOS is Homebrew de aanbevolen manier om Python en alle pakketten te installeren, zoals Pillow; een bestaande Python mag, maar de verdere Mac-instructies gaan van Homebrew uit | praktisch | gesloten op 22 oktober 2026 (#430, [C4](https://github.com/hanze-hbo-ict/programmeren/issues/430#issuecomment-6336154620) en [C4-aanvulling](https://github.com/hanze-hbo-ict/programmeren/issues/430#issuecomment-6337223720)), **uitgevoerd** in #430: `lectures/0b_install_python`, `problems/5_mandelbrot_opstap`, `practicals/6b_images` en `handleidingen/week_6.md`; zie *Python en pakketten op macOS* |
 | Code uitvoerbaar in de browser | praktisch | open, uitvoering wijzigt |
@@ -692,7 +692,7 @@ klassen in week 5 en de overerving in week 6, en dus op het punt waar beide
 redenen hierboven al gelden. Vastgesteld door de vakdeskundige op 23 september
 2026, bij de voorbereiding van de poort van #160.
 
-### Canonieke vormen, mechanisme later
+### Canonieke vormen, met `with open` als vaste frase
 
 De cursus legt nadruk op logische handelingen: open een bestand, lees het, sluit
 het. In de praktijk combineert Python die handelingen tot één constructie:
@@ -715,15 +715,12 @@ uitleg bij.
 zolang dit blok duurt*. Dat is eerder duidelijker dan twee statements die de
 student zelf moet onthouden te paren.
 
-**Het mechanisme kan wachten, net als bij `open` zelf.** Niemand legt in week 6
-uit wat een filedescriptor is. `with` bestaat om het sluiten te garanderen ook
-als er iets misgaat, en dat is exceptieterritorium: in PGM2 landt het naast de
-excepties en heeft het daar zijn reden.
-
-Prettige bijkomstigheid: deze vorm roept geen enkele methode aan, en past dus
-binnen de regel dat objectmethoden in PGM1 wegblijven. De variant zonder `with`
-zou dat ook doen, maar laat het bestand open en leert precies de gewoonte aan
-waarvoor `with` bestaat.
+**`with open` is een vaste frase; het mechanisme wordt in deze cursus niet
+uitgelegd.** De belofte dat dit in PGM2 naast de excepties komt, vervalt.
+Kaal `open`/`close` is overwogen en afgewezen: `close()` is een objectmethode,
+en past dus niet bij de grens voor objectmethoden in PGM1. De canonieke vorm
+blijft. Vastgesteld door de vakdeskundige op
+[9 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/375#issuecomment-6076782174), B1.
 
 ### Wat er aan de leeruitkomsten mag veranderen
 
@@ -1262,20 +1259,31 @@ week 6 heeft geen weekpagina.
 de terugverwijzing bij herordening van de weken structureel achterloopt op het
 materiaal - dan is zij een onderhoudslast in plaats van een leerlijn.
 
-### Elk opgaveniveau hoort een uitwerking te hebben
+### Opgaven en practica horen een uitwerking te hebben
 
-**Ieder bestaand bestand in `source/problems/` waarvan de bestandsnaam zonder
-extensie eindigt op `_opstap`, `_basis` of `_extra`, hoort een gelijknamige
-uitwerking in `source/solutions/` te hebben.** Een niveau zonder uitwerking is een omissie, geen keuze.
-Ziet een lezer dat opgaven geen uitwerking hebben, dan is dat een gebrek van de
-auteurs en het hoort gerepareerd te worden. Er is dus geen "de opstap heeft er
-met opzet geen". College- en practicumopdrachten
-vallen er niet automatisch onder; het feit dat daarvoor geen gelijknamige
-uitwerking bestaat, is op zichzelf geen vastgesteld tekort.
+**Elke opgave en elk practicum hoort een uitwerking te hebben**, besloten op
+[9 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/375#issuecomment-6076782174), C7, en uitgevoerd in #382.
+Voor de niveau-opgaven betekent dit: ieder bestaand bestand in `source/problems/`
+waarvan de stam eindigt op `_opstap`, `_basis` of `_extra`, heeft een gelijknamige
+uitwerking in `source/solutions/`. Een ontbrekende niveau-uitwerking is een omissie.
+De afzonderlijke corpora en actuele bestandsdekking staan in
+[leerlijn.md](leerlijn.md).
 
-Bij de vaststelling ontbrak ruim de helft van de uitwerkingen. Dat is te veel voor
-één ingreep en het hoeft ook niet in één keer: het liftt mee met de herziening van
-de week waar het bij hoort. De inventarisatie hoort in de werkitems, niet hier.
+**De uitzonderingen zijn expliciet.** `caesar_op_orde` blijft zonder niveau en
+zonder uitwerking: VP6 van #335 is behouden bij de poort van
+[19 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/382#issuecomment-6265574205). `6b_images` heeft geen boekuitwerking,
+omdat de docent de opdracht met de klas opbouwt; deze uitzondering is behouden op
+[28 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/383#issuecomment-6467804118), V3.
+Collegeopdrachten vallen buiten de automatische uitwerkingnorm; de bestaande
+route met korte antwoorden via de docentenhandleiding blijft gelden. Dat is
+besloten op [28 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/383#issuecomment-6467804118), V1.
+Studenten hebben daarbij niet standaard een zelfstandige nakijkmogelijkheid in
+het boek. Dit besluit vraagt geen nieuwe college-uitwerkingen.
+
+De uitwerkingen van PGM2 week 5 en 6 dienen ook als beginstand van de volgende
+practicumweek, volgens [C4 #382 van 19 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/382#issuecomment-6265574205).
+De vereiste beschikbaarheid is vastgelegd bij V12/VP12 in
+[practicum-oop.md](practicum-oop.md).
 
 **De vorm:** een uitwerking is een draaiende codecel en geen markdown-blok, zodat
 de build haar controleert. Programma's die met opzet stuklopen tonen hun

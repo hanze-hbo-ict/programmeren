@@ -88,6 +88,13 @@ Bij de poort van #271 (25 september 2026) is besloten, voor sessie 2 en 3:
   van #382:** de download is verwijderd, en wie week 6 niet af heeft, begint met
   de uitwerking `source/solutions/13_creatures.ipynb`. Grond: zie V12.
 
+**Beschikbaarheid van de beginstanden bij V12/VP12.** De uitwerking
+`source/solutions/12_creatures.ipynb` is vóór het practicum van PGM2 week 6
+beschikbaar voor studenten; `source/solutions/13_creatures.ipynb` vóór het
+practicum van week 7. Dit borgt de beginstandroute voor wie de vorige week niet
+af heeft en bepaalt geen publicatiemoment voor andere uitwerkingen.
+Vastgesteld door de vakdeskundige op [28 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/383#issuecomment-6467804118), V2.
+
 Wat hieronder staat is de opzet zoals aangeleverd.
 
 Deze drie sessies zijn waar studenten dit project voor het eerst bouwen — er bestaat nog niets van bij aanvang. De eerdere sessies die de onderliggende concepten behandelden (classes, constructors, `__repr__`, encapsulatie, polymorfisme, overerving, duck typing, operator overloading) gebruikten aparte, niet-gerelateerde oefeningen. Sessie 1 begint dus met een leeg bestand, en elke latere sessie bouwt alleen voort op wat in de *vorige sessie van deze workshop* is gebouwd — niet op iets uit die eerdere lessen.

@@ -129,12 +129,11 @@ en dat levert paren op die je uitpakt met `for word, count in ...`. Zowel het
 tuple als het uitpakken ervan is daar dus veronderstelde kennis. Vastgesteld met
 de docent van PGM2 op 1 september 2026.
 
-**Het materiaal van week 7 levert dit nog niet.** Gemeten op 1 september 2026:
-het woord *tuple* komt in `source/` voor in vier bestanden, en geen daarvan is
-een week 7-bestand; de enige plek vóór PGM2 week 1 is `problems/5_extra.md`, de
-optionele laag van week 5, ongemarkeerd. Dat is werk voor #102 en geen gebrek in
-PGM2 week 1: die week mag vooruitlopen op wat hier is afgesproken. Zie de rij in
-*Wat een week aan een latere week aflevert*.
+**Het materiaal van week 7 levert tuples en tuple unpacking.**
+`lectures/7a_lists_advanced.ipynb` behandelt onveranderlijkheid en uitpakken;
+`problems/7_opstap.ipynb` laat een tuple teruggeven, uitpakken en een mislukte
+mutatie onderzoeken. De leerlijn volgt hiermee het besluit van de vakdeskundige
+van [9 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/375#issuecomment-6076782174), A1a.
 
 ### Verdeling van het opgavemateriaal
 
@@ -193,6 +192,32 @@ loopt door zonder gat; dat is ze in de hele geschiedenis van
 `source/problems/5_opstap.ipynb` geweest. Sinds de herziening van week 5 telt die
 opstap twaalf opdrachten: acht om te lezen en vier om te schrijven.
 
+### Niveauverdeling PGM2
+
+Hermeten op 28 oktober 2026 bij #383, op `054bfe52`. De maat is dezelfde als
+hierboven: alle cellen van een notebook, of het hele Markdownbestand, gesplitst
+op witruimte. Het corpus bestaat uit de directe `.md`- en `.ipynb`-bestanden in
+`source/problems/` met cursusnummer 8–14 en suffix `_opstap`, `_basis` of
+`_extra`. Week 4 telt dus vijf bestanden, inclusief beide algoritmeniveaus,
+lambda en tshirt. `caesar_op_orde` heeft geen niveau en telt niet mee.
+De ijking op PGM1 week 4 levert 678, 1.066 en 1.048 woorden.
+
+| PGM2-week | opstap | basis | extra | Totaal |
+|---|---|---|---|---|
+| 1 | 523 | 1.162 | 526 | 2.211 |
+| 2 | 1.346 | 1.430 | 1.300 | 4.076 |
+| 3 | 1.307 | 995 | 1.066 | 3.368 |
+| 4 | 1.085 | 1.827 | 2.564 | 5.476 |
+| 5 | 1.309 | 2.360 | 2.573 | 6.242 |
+| 6 | 1.473 | 2.101 | 1.897 | 5.471 |
+| 7 | 1.448 | 2.452 | 2.540 | 6.440 |
+| **Totaal** | **8.491** | **12.327** | **12.466** | **33.284** |
+
+Deze maat registreert tekst- en codeomvang, geen moeilijkheid of leerwaarde.
+De extra van week 5–7 vormt bij besluit één doorlopende OOP-lijn. De
+vakdeskundige koos op [9 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/375#issuecomment-6076782174), B6, alleen registratie:
+uit deze verdeling volgt geen norm, herverdeling of materiaalwerk.
+
 ## Programmeren II
 
 **De planning voor 2026 is leidend.** Wat het materiaal nu doet is de
@@ -204,9 +229,9 @@ uitgangssituatie, niet de norm; het verschil tussen beide kolommen is het werk.
 | 2 | Comprehensions (list, dict, set, range, enumerate) | HOEM | A1; zie de opmerking bij *Voorgestelde correcties* in [leeruitkomsten.md](leeruitkomsten.md) | list comprehension, dict comprehension, set comprehension, `enumerate`, `zip`, de conditionele expressie `a if c else b` | Comprehensions: colleges `9a_list_comprehensions` (list comprehension met `range`, `enumerate`, `zip` en `a if c else b`) en `9b_dict_en_set_comprehensions` (dict en set comprehension, geneste comprehension, lus of comprehension), practicum `9_register`, opstap, basis (van lus naar comprehension en terug) en extra (een toernooi) (#326) |
 | 3 | Recursie | HOEM | A6 | recursie, basisgeval, recursief geval, recursieve aanroep | Recursie: colleges `10a_recursie` (hoe een recursieve functie werkt, het basisgeval, frames op de stack) en `10b_recursief_ontwerpen` (basisgeval, kleiner probleem, combineren), practicum `10_directory_doorzoeken`, opstap (lezen en naspelen, schrijven), basis (Scrabble) en extra (potjeslatijn, heen en terug) (#332, #359) |
 | 4 | Use it or lose it, lambda | HOEM | A4, A6 | use it or lose it, `lambda`, functie als argument | Use it or lose it en `lambda`: colleges `11a_use_it_or_lose_it` (*use it or lose it* met `exact_change` en de knapzak) en `11b_functie_als_argument` (`sorted`, `max` en `min` met `key=`, `lambda`, een eigen functie met een functieparameter), practicum `11_wisselgeld`, opstap, twee basisniveaus (*Basis: algoritmen*, het nijlpaarddiner, en *Basis: lambda*, een uitslag), twee extra's (*Extra: algoritmen*, het pijlenpad, en de periodieke tshirt) en de verdiepende opdracht `caesar_op_orde` (#335). De klassenstof staat sinds #160 in week 5 |
-| 5 | OO, klassen, encapsulatie | BRRA | P5, A2 | klassedefinitie, object, attribuut, constructor en `__init__`, `self`, een methode schrijven, `__repr__`, waarde en identiteit, `is`, encapsulatie, `_` voor een attribuut dat niet van buiten wordt gebruikt, `@property` en decorator, compositie | OO, klassen, encapsulatie: colleges `12a_objecten` en `12b_data_object`, practicum sessie 1 (`12_creatures`), opstap, basis (`Date`) en extra (`Board`) (#160) |
+| 5 | OO, klassen, encapsulatie | BRRA | P5, A2 | klassedefinitie, object, attribuut, constructor en `__init__`, magische methode, `self`, een methode schrijven, `__repr__`, waarde en identiteit, `is`, encapsulatie, `_` voor een attribuut dat niet van buiten wordt gebruikt, `@property` en decorator, compositie | OO, klassen, encapsulatie: colleges `12a_objecten` en `12b_data_object`, practicum sessie 1 (`12_creatures`), opstap, basis (`Date`) en extra (`Board`) (#160) |
 | 6 | Polymorfisme, overerving, duck typing | BRRA | A2, A3 | overerving, subklasse en superklasse, `super()`, een methode overschrijven, standaardwaarde voor een parameter, polymorfisme, duck typing, `isinstance`, `self.__class__` en `__name__` | Polymorfisme, overerving, duck typing: colleges `13a_overerving` en `13b_polymorfisme`, practicum sessie 2 (`13_creatures`), opstap, basis (kassabon) en extra (spelers voor `Board`) (#270) |
-| 7 | Operator overloading, excepties, oefentoets | BRRA | P4, P6 | operator overloading, magische methode, `__eq__`, exception, `try`/`except`, `raise` | Operator overloading en exceptions: college `14a_operatoren_en_exceptions`, practicum sessie 3 (`14_creatures`), opstap, basis (`Date` met operatoren, en datums inlezen met `try`/`except`) en extra (min-max), en het oefententamen onder dezelfde week (#271) |
+| 7 | Operator overloading, excepties, oefentoets | BRRA | P4, P6 | operator overloading, `__eq__`, exception, `try`/`except`, `raise` | Operator overloading en exceptions: college `14a_operatoren_en_exceptions`, practicum sessie 3 (`14_creatures`), opstap, basis (`Date` met operatoren, en datums inlezen met `try`/`except`) en extra (min-max), en het oefententamen onder dezelfde week (#271) |
 
 Een deel van deze onderwerpen komt in het huidige materiaal niet of nauwelijks
 voor. Dat is bekend en verwacht: de planning beschrijft waar PGM2 heen gaat, niet
@@ -218,10 +243,9 @@ een begrip hoort niet eerder voor te komen dan de week waarin het hier staat. Wa
 PGM1 al levert, staat hier niet opnieuw. De woorden in de kolom zijn geen
 termbesluit; welke vorm het materiaal gebruikt, staat in `conventies/begrippen.md`.
 Voor week 5 is dat vastgesteld (*object*, *attribuut*, *constructor*,
-*encapsulatie*, *compositie*, *waarde*, *identiteit*, *verwijzing*), en voor
+*encapsulatie*, *compositie*, *magische methode*, *waarde*, *identiteit*, *verwijzing*), en voor
 week 6 ook (*overerving*, *subklasse*, *superklasse*, *overschrijven*,
-*polymorfisme*, *duck typing*, #270) en week 7 (*magische methode*, *operator
-overloading*, een exception *gooien*, *afvangen* en *afhandelen*, #271) en week 2
+*polymorfisme*, *duck typing*, #270) en week 7 (*operator overloading*, een exception *gooien*, *afvangen* en *afhandelen*, #271) en week 2
 (*comprehension*, *list comprehension*, *dict comprehension* en *set
 comprehension*, #326) en week 3 (*basisgeval*, *recursief geval* en *recursieve
 aanroep*, #332) en week 4 (*use it or lose it*, *lambda-functie* en *functie als
@@ -354,8 +378,9 @@ vakdeskundige op 2 oktober 2026, bij de poort:
   drie niveaus* in [uitgangspunten.md](uitgangspunten.md);
 - Text-ID (`problems/11_extra`) gaat uit week 4 en is verwijderd: het onderwerp is
   dat van week 1, en de tekst staat grotendeels al in `8a_text_genereren`.
-  `problems/assets/file_and_dictionary_examples.py` blijft, want
-  `8a_text_genereren` en `opdrachten/tekst_genereren` gebruiken het ook (VP5);
+  `practicals/assets/file_and_dictionary_examples.py` blijft voor
+  `8a_text_genereren`. De Support-kopie `opdrachten/tekst_genereren` en haar asset
+  zijn bij besluit van [9 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/375#issuecomment-6076782174), B2, verwijderd in #381 (actualisatie van VP5);
 - `caesar_op_orde` blijft één verdiepende opdracht onder *Opgaven*: geen niveau en
   zonder uitwerking. `exact_change` is eruit, `decipher` kiest de beste rotatie met
   `max(..., key=...)`, en de bonusopgave is een gewone laatste functie zonder punten
@@ -600,39 +625,33 @@ recursie, en staan de basis en de extra over algoritmen in week 4, naast Text-ID
 Sinds #335 heeft week 4 een opstap, twee basisniveaus en twee extra's over *use it
 or lose it* en `lambda`, en is Text-ID weg.
 
-**Wat er wél uit volgt: één ontbrekende niveau-uitwerking.** Dat volgt niet uit
-de regel hierboven maar uit het besluit *Elk opgaveniveau hoort een uitwerking te
-hebben*, dat elk **bestaand** niveau bindt en dus onafhankelijk is van welke
-niveaus een week verplicht heeft. De meting telt 43 niveau-opgaven in
-`source/problems/`, waarvan 42 een gelijknamige uitwerking in `source/solutions/`
-hebben en 1 nog niet. Dit is
-werkitem #194 en geen werk voor de herziening van dit document. Die ene
-ontbrekende uitwerking is de opstap van PGM2 week 1 (`8_opstap`). Hermeten bij
-werkitem #335: vóór #335 41, 37 en 4; #335 gaf de basis en de extra over
-algoritmen een uitwerking, verwijderde Text-ID (`11_extra`), en voegde
-`11_opstap`, `11_lambda_basis` en `11_tshirt_extra` toe, alle drie met
-uitwerking: 43, 42 en 1. Tot #335 hoorden bij de ontbrekende ook de drie niveaus
-van PGM2 week 4: de basis en de extra over algoritmen (`11_algoritmen_basis` en
-`11_algoritmen_extra`, tot #332 `10_basis` en `10_extra`) en de extra Text-ID
-(`11_extra`). Hermeten bij #102: 41, 36 en 5 werden 41, 37 en 4, want #102
-voegde de uitwerking van de opstap van PGM1 week 7 toe. Hermeten bij #332: vóór #332
-41, 33 en 8; #332 voegde uitwerkingen toe voor opstap, basis en extra van
-PGM2 week 3 en verhuisde de twee algoritmeniveaus zonder uitwerking naar week 4:
-41, 36 en 5. Tot #332 hoorden daar ook de opstap, de basis en de extra over
-recursie bij (`10_recursie_*`, tot #326 `9_*`). Hermeten bij #160: hier
-stond 30, 19 en 11, maar vóór #160 waren het er al 30, 20 en 10, omdat de opstap
-van week 5 inmiddels een uitwerking had. #160 haalde `11_basis` weg en voegde
-opstap, basis en extra van PGM2 week 5 toe, alle drie met uitwerking. Hermeten
-bij #270: 32, 23 en 9 werden 35, 26 en 9, want #270 voegde opstap, basis en
-extra van PGM2 week 6 toe, alle drie met uitwerking. Hermeten bij #271: 38, 29 en
-9, want #271 voegde opstap, basis en extra van PGM2 week 7 toe, alle drie met
-uitwerking. Hermeten bij #326: vóór #326 waren het 38, 30 en 8, en niet 38, 29 en
-9; de kop zei toen negen en de lopende tekst 35, 27 en 8. #326 voegde opstap,
-basis en extra van PGM2 week 2 toe, alle drie met uitwerking: 41, 33 en 8. De
-maat: elk bestand in `source/problems/` waarvan de naam zonder extensie eindigt
-op `_opstap`, `_basis` of `_extra`, met of zonder gelijknamig bestand in
-`source/solutions/`. College- en
-practicumopdrachten vallen niet automatisch onder deze norm.
+**Opgaven en practica hebben een uitwerking.** Dit volgt uit het besluit
+van [9 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/375#issuecomment-6076782174), C7, uitgevoerd in #382.
+De norm en uitzonderingen staan in [uitgangspunten.md](uitgangspunten.md),
+*Opgaven en practica horen een uitwerking te hebben*.
+
+Op `054bfe52`, hermeten op 28 oktober 2026, hebben alle **43 niveau-opgaven**
+een gelijknamige uitwerking; ontbrekend: geen. Het corpus is alle directe
+`.md`- en `.ipynb`-bestanden in `source/problems/` met cursusnummer 1–14 en
+suffix `_opstap`, `_basis` of `_extra`. Alle 43 uitwerkingen staan in de TOC.
+De vijf paren van PGM2 week 4 dienen als ijking.
+
+Practicumdekking is een afzonderlijke maat: de TOC bevat **16 practicumpagina's**
+met cursusnummer 1–14; **15** hebben een gelijknamige uitwerking, alle in de TOC.
+De ontbrekende is `6b_images`, een bewuste uitzondering: de docent bouwt de
+opdracht met de klas op. Behoud daarvan is besloten op
+[28 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/383#issuecomment-6467804118), V3.
+`12_creatures`, `13_creatures` en `14_creatures` hebben ieder een bestand en
+TOC-entry en dienen als positieve ijking. Deze tellingen bewijzen bestandsdekking,
+geen inhoudelijke volledigheid of uitvoerbaarheid.
+
+Collegeopdrachten vallen buiten de automatische uitwerkingnorm; korte antwoorden
+lopen via de docentenhandleiding. Besloten op [28 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/383#issuecomment-6467804118), V1.
+De 13 PGM2-collegenotebooks van cursusweek 8–14 bevatten 40 `Opdracht`-koppen in
+Markdowncellen (per week 8, 7, 7, 4, 4, 7 en 3; ijking: `10a_recursie` heeft 3).
+Zij hebben geen gelijknamige college-uitwerkingen; dit zegt niet dat nergens een
+antwoord staat. `caesar_op_orde` blijft zonder niveau en zonder uitwerking:
+VP6 is behouden bij de poort van [19 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/382#issuecomment-6265574205).
 
 ## Volgorde van het werk
 
@@ -714,15 +733,15 @@ blijft een raakvlak vindbaar zonder dat het in een werkitem verstopt zit.
 
 | Van week | Naar week | Wat | Status |
 |---|---|---|---|
-| PGM1 week 7 | PGM2 week 1 | Week 7 levert **tuples en tuple unpacking**. PGM2 week 1 doorloopt dictionaries met `.items()` en pakt de paren uit met `for word, count in ...`; `lectures/8a_datastructuren.ipynb` verwijst er expliciet naar terug. Het materiaal van week 7 bevat op dit moment geen enkele tuple. | Besloten met beide docenten op 1 september 2026. Uit te voeren bij de herziening van week 7 (#102). PGM2 week 1 loopt hier met opzet op vooruit; dat is geen defect in die week. |
+| PGM1 week 7 | PGM2 week 1 | Week 7 levert **tuples en tuple unpacking**. PGM2 week 1 doorloopt dictionaries met `.items()` en pakt de paren uit met `for word, count in ...`; `lectures/8a_datastructuren.ipynb` verwijst er expliciet naar terug. Week 7 levert dit in `lectures/7a_lists_advanced.ipynb` en `problems/7_opstap.ipynb`. | Besloten met beide docenten op 1 september 2026; levering bevestigd bij het besluit van [9 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/375#issuecomment-6076782174), A1a. |
 | PGM1 week 4 | PGM2 week 1 | Week 4 levert de termen **begrensde** en **onbegrensde lus**, die `leeruitkomsten.md` r83 als PGM2 P1 toetst (5%, toepassen). Het materiaal gebruikte ze tot 1 september 2026 nergens. | Besloten bij de poort van #146, uit te voeren in datzelfde werkitem. |
 | PGM1 week 4 | PGM1 week 5 | Week 4 levert het **lusrecept**: vijf vragen waarvan de **vierde** het stopmoment is (*"Wanneer is het klaar?"*); de vijfde gaat over wat je teruggeeft. Week 5 bouwt erop voort met geneste lussen, en `unique` sluit week 4 af op precies het probleem dat week 5 opent - een lus in een lus. | Besloten bij de poort van #146. |
 | PGM1 week 5 | PGM2 week 7 | De vier zoekfuncties uit `practicals/5b_boter_kaas_eieren.ipynb` hebben andere parameternamen dan de gelijknamige functies in `board.py` regels 173-224, tot #271 `source/problems/assets/board.py` en sindsdien `practicals/assets/board.py`. | Besloten, laten zoals het is: `board.py` definieert ze zelf en importeert het werk van de student nooit. Zie het besluitenregister in [uitgangspunten.md](uitgangspunten.md). Tot #270 stond hier PGM2 week 6. Sinds #271 staan `board.py` en `practicals/13_vier_op_rij_speler.md`, het enige bestand dat het aanbiedt, buiten `source/` in `practicals/` (VP11); het raakvlak met het boek is daarmee vervallen. |
 | PGM1 week 5 | PGM1 week 7 | Week 5 levert `create_board` en `print_board` als vermogen; `source/problems/7_extra.md` regels 36-114 leert ze nu vanaf nul aan. | Voorstel: laat week 7 ernaar verwijzen in plaats van ze opnieuw aan te leren. |
 | PGM1 week 5 | PGM1 week 7 | `[[0] * 3] * 3` en de waarschuwing daarbij horen in week 7, naast aliasing en `deepcopy`. De constructie bijt pas zodra je erin toewijst, en dat gebeurt in week 5 niet. | Besloten in het weekontwerp van week 5, uit te voeren bij de herziening van week 7. |
 | PGM1 week 5 | PGM1 week 7 | Week 5 sluit af op één probleem: één vakje van een raster veranderen terwijl de rest blijft staan. Beide afsluitingen verwijzen naar `source/problems/7_extra.md`, de optionele extra-laag. | Voorstel: laat `source/lectures/7a_lists_advanced.ipynb` datzelfde probleem opnemen, zodat ook de student die extra overslaat het vervolg krijgt. |
-| PGM2 week 5 | PGM2 week 6 | Het practicum is één project over drie weken: `creatures.py`, beschreven in [practicum-oop.md](practicum-oop.md). Week 5 levert de klassen `Creature` en `Party`; week 6 bouwt er subklassen, `Beast` en een duck-typed `Turret` op. Wie week 5 niet af heeft, begint met de uitwerking `source/solutions/12_creatures.ipynb`. | Besloten bij de voorbereiding van de poort van #160. Week 5 is uitgevoerd in #160, week 6 in #270 (`practicals/13_creatures.md`). Tot #382 begon wie week 5 niet af had met een download van de eindstand; die is bij de poort van #382 vervallen (V12 herroepen, zie [practicum-oop.md](practicum-oop.md)). |
-| PGM2 week 6 | PGM2 week 7 | Week 7 geeft de klassen uit week 6 operatoren en vervangt de stille terugvalwaarden uit week 5 en 6 door `raise`. Het practicum gooit alleen exceptions en vangt er geen af, terwijl P4 het *afhandelen* van foutcondities vraagt. Week 6 levert (#270): `Beast`, `Dragon`, `Wolf`, `Goblin`, `Healer`, `Turret`, `battle_round` en `battle(side_a, side_b, max_rounds)`; `special_move` op `Creature` valt stil terug op een gewone aanval. Wat afwijkt van de opzet van sessie 3: alle vier de wezens hebben standaardwaarden, dus `Dragon("Ember")` werkt; `__repr__` noemde tot #271 `Creature(...)`, ook bij een subklasse, en `type(self).__name__` was in week 6 vermeden, dus de zin in sessie 3 dat `__repr__` "al sinds Sessie 1" `self.__class__` gebruikt, klopte niet; de limieten van `Turret` zijn attributen van het object, geen klasse-attributen. | Besloten als opzet. De afwijkingen zijn besloten bij de poort van #270 (V8, V9, V10). **Uitgevoerd** in #271 (`practicals/14_creatures.md`): het afvangen staat in de basisopgave (VP1); V10 is herroepen, en `__repr__` gebruikt sinds week 6 `self.__class__.__name__` (VP7). |
+| PGM2 week 5 | PGM2 week 6 | Het practicum is één project over drie weken: `creatures.py`, beschreven in [practicum-oop.md](practicum-oop.md). Week 5 levert de klassen `Creature` en `Party`; week 6 bouwt er subklassen, `Beast` en een duck-typed `Turret` op. Wie week 5 niet af heeft, begint met de uitwerking `source/solutions/12_creatures.ipynb`. | Besloten bij de voorbereiding van de poort van #160. Week 5 is uitgevoerd in #160, week 6 in #270 (`practicals/13_creatures.md`). Tot #382 begon wie week 5 niet af had met een download van de eindstand; die is bij de poort van #382 vervallen (V12 herroepen, zie [practicum-oop.md](practicum-oop.md)). De beschikbaarheid vóór het volgende practicum is daar bij V12/VP12 vastgelegd. |
+| PGM2 week 6 | PGM2 week 7 | Week 7 geeft de klassen uit week 6 operatoren en vervangt de stille terugvalwaarden uit week 5 en 6 door `raise`. Wie week 6 niet af heeft, begint met `source/solutions/13_creatures.ipynb`; de beschikbaarheidsnorm staat bij V12/VP12 in [practicum-oop.md](practicum-oop.md). Het practicum gooit alleen exceptions en vangt er geen af, terwijl P4 het *afhandelen* van foutcondities vraagt. Week 6 levert (#270): `Beast`, `Dragon`, `Wolf`, `Goblin`, `Healer`, `Turret`, `battle_round` en `battle(side_a, side_b, max_rounds)`; `special_move` op `Creature` valt stil terug op een gewone aanval. Wat afwijkt van de opzet van sessie 3: alle vier de wezens hebben standaardwaarden, dus `Dragon("Ember")` werkt; `__repr__` noemde tot #271 `Creature(...)`, ook bij een subklasse, en `type(self).__name__` was in week 6 vermeden, dus de zin in sessie 3 dat `__repr__` "al sinds Sessie 1" `self.__class__` gebruikt, klopte niet; de limieten van `Turret` zijn attributen van het object, geen klasse-attributen. | Besloten als opzet. De afwijkingen zijn besloten bij de poort van #270 (V8, V9, V10). **Uitgevoerd** in #271 (`practicals/14_creatures.md`): het afvangen staat in de basisopgave (VP1); V10 is herroepen, en `__repr__` gebruikt sinds week 6 `self.__class__.__name__` (VP7). |
 | PGM2 week 5 | PGM2 week 6 | `practicals/13_vier_op_rij_speler.md` verwijst op r37 naar het AI-practicum van week 5 en op r338 naar `host_game`, dat alleen daar wordt gebouwd. Sinds #160 wijst r37 naar `Board`, nu de extra-opgave van week 5. | Afgehandeld in #270: week 6 bouwt `host_game(px, po)` in `problems/13_extra.md`, en `13_vier_op_rij_speler` staat sinds #270 in de inhoudsopgave onder PGM2 week 7, met ongewijzigde inhoud (V5). Het bestand zelf, met `play_game` en de controle op `'human'` op r338, staat sinds #271 buiten `source/` (VP11); de inhoud leeft voort in `problems/14_extra.md`. |
 | PGM2 week 6 | PGM2 week 7 | De extra-opgave `problems/13_extra.md` legt de spelersinterface vast waarop week 7 voortbouwt: elke speler heeft een attribuut `ox` en een methode `next_move(board)` die een kolom teruggeeft waarin een zet mag; `Board.host_game(px, po)` gebruikt van een speler alleen die twee, zonder typecontrole; `Player.next_move` valt terug op de meest linkse kolom, en `Board` heeft `cols_to_win(ox)`. Een volgende speler, in #271, past in deze structuur als subklasse van `Player`, waarvoor `host_game` niet verandert. Het toernooi vervalt (V3). | Besloten bij de poort van #270 (24 september 2026). **Uitgevoerd** in #271: `MinimaxPlayer` is een subklasse van `Player`, en `host_game` is ongewijzigd. Het toernooi vervalt ook in week 7 (VP2). |
 | PGM2 week 2 | PGM2 week 3, 4, 5, 6 en 7 | Week 2 levert comprehensions. Latere weken gebruiken ze zonder ze uit te leggen, alle met één `for` en eventueel een filter: `practicals/10_directory_doorzoeken` en de laatste opdracht van `problems/10_opstap` (week 3, sinds #332), `caesar_op_orde` (tot #332 in week 3, sindsdien in week 4), `practicals/12_creatures.md` r290 en `problems/12_extra.md` r87 (week 5), `problems/13_opstap` (week 6), en `problems/14_opstap`, `problems/14_basis` en `practicals/14_creatures.md` (week 7). | Uitgevoerd in #326; de latere weken zijn daarvoor niet aangepast. |
