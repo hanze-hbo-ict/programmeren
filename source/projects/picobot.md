@@ -283,7 +283,7 @@ class World:
 :::{admonition} `self.room`
 :class: note
 
-Die lege list is niet de uiteindelijke waarde voor `self.room`! Deze verandert nog!
+Die lege lijst is niet de uiteindelijke waarde voor `self.room`! Deze verandert nog!
 :::
 
 Je kan terugkijken naar de implementatie van de klasse `Board` uit Vier op een rij als een voorbeeld van hoe je een ruimte in Picobot wilt opslaan; het beginpunt hierboven lijkt daar op! Merk op dat, net als `self._data` bij Vier op een rij, het een redelijke aanpak voor het maken van `self.room` is om een lijst van rijen te maken, die ieder een rij van kolommen is, die ieder een string van één karakter is.
@@ -360,7 +360,7 @@ De **hoofdfunctie** moet naar het onderwerp, genetische algoritmes, vernoemd wor
 
 Deze functie `genetic_algorithm(pop_size, num_gens)` moet `pop_size` willekeurige Picobot-programma's genereren als de beginpopulatie (200 is hier een goede waarde voor). Daarna moet de fitness van al deze programma's geëvalueerd worden, en moet je de programma's met de hoogste fitness kiezen. Deze programma's overleven en dienen bovendien als "ouders" voor de volgende generatie.
 
-:::{admonition} List-of-lists
+:::{admonition} Lijst van lijsten
 :class: tip
 
 Je kan een lijst met paren met (fitness, programma) sorteren. Stel dat dit de lijst `programs =  [(.4, prog1), (.2, prog2), (.3, prog3)]` is, dan kan je
