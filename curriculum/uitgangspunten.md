@@ -704,7 +704,7 @@ with open(filename) as file:
 ```
 
 De keuze is dan of je de losse handelingen voorop stelt of meteen de vorm
-aanleert die iedereen gebruikt. **Wij bieden de canonieke vorm aan**, om drie
+aanleert die iedereen gebruikt. **Wij bieden de canonieke vorm aan**, om twee
 redenen.
 
 **Er valt niets af te leren.** Wie `open` en `close` los leert, moet later zowel
