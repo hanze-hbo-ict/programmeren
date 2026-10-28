@@ -103,7 +103,18 @@ aparte ronde te zijn.
    blijft BLOKKEER; inhoudelijke duiding die bronnen niet oplossen gaat naar de mens.
 5. Bij blokkade volgt gericht auteursherstel en herstelbeoordeling volgens
    loop.md. Dezelfde auteurscontext mag blijven; de beoordelaar is vers en krijgt
-   de expliciete herstelbijlage. Noteer de rondeteller op GitHub.
+   de expliciete herstelbijlage. Neem in iedere herstelopdracht aan een
+   beoordelaar letterlijk deze formulering op:
+
+   > Herstelmodus beperkt de reikwijdte van de toets, niet de classificatie van gevonden defecten. Classificeer ieder daadwerkelijk gevonden defect volgens C6, ongeacht wanneer het is ontstaan. Een echte blokkade blijft BLOKKEER en start niet automatisch een nieuwe ronde buiten de herstelgrens.
+
+   Deze vaste formulering is goedgekeurd in [C4 van #297](https://github.com/hanze-hbo-ict/programmeren/issues/297#issuecomment-6469217855)
+   op 28 oktober 2026. Aanleiding is de [bevinding uit #266](https://github.com/hanze-hbo-ict/programmeren/pull/266):
+   een herstelopdracht mag de maatstaf van C6 niet vervangen. De oorspronkelijke
+   opdracht is niet onafhankelijk beschikbaar; de gepubliceerde eerstejaars-C6
+   van #264 beschrijft wel dat de opdracht de classificatie van P1 stuurde.
+   Een afzonderlijke reden bij het menselijke akkoord is niet beschikbaar.
+   Noteer de rondeteller op GitHub.
 6. De mens beslist over merge. Pas daarna Status Klaar als het werkitem geheel
    af is. Blijft er vervolgwerk, dan blijft de issue open met de volgende stap.
 

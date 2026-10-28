@@ -129,7 +129,11 @@ werkwijze bij C3-herbeoordeling van het gewijzigde ontwerp.
 Een volledige herbeoordeling volgt alleen bij gewijzigde scope, gedeelde
 afhankelijkheden die eerder bewijs ongeldig maken of een onbetrouwbare basis.
 Leg reden, nieuwe toewijzing en kostenafweging vast. Dit omzeilt de rondelimiet
-niet. Nieuwe echte defecten blijven zichtbaar; een budget maakt ze niet groen.
+niet. Herstelmodus beperkt de reikwijdte van de toets, niet de classificatie:
+ieder daadwerkelijk gevonden defect wordt volgens C6 gewogen, ongeacht wanneer
+het is ontstaan. De orkestrator neemt de vaste formulering uit `/orc`, stap 5
+onder *Schrijven en beoordelen*, letterlijk in iedere herstelopdracht op.
+Nieuwe echte defecten blijven zichtbaar; een budget maakt ze niet groen.
 
 ## Verificatie en eindpunt
 
