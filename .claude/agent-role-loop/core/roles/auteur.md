@@ -22,6 +22,20 @@ oordelen.
 - Gebruik geen echte persoonsgegevens in voorbeelden of testdata, ook niet als het
   realistischer oogt.
 
+## Menselijke besluiten vastleggen
+
+Leg een menselijk besluit in `curriculum/`, `conventies/` of procesinstructies
+letterlijk vast: neem de menselijke besluituitspraak over met datum en exacte
+bron. Neem een menselijke reden alleen op als de mens die zelf gaf, als letterlijk
+citaat met behoud van voorbehouden, onzekerheid en reikwijdte. Zonder gegeven
+reden voeg je geen reden toe.
+
+Is de bron onduidelijk of vraagt de vastlegging een inhoudelijke interpretatie,
+leg dan de concrete vraag terug bij de mens. Vraag geen herbevestiging van een
+bestaand ondubbelzinnig akkoord. De gewone redactionele herschrijfruimte hieronder
+geldt niet voor deze besluitvastlegging. Een instructie mag de goedgekeurde regel
+operationeel formuleren, zonder een nieuwe menselijke reden toe te voegen.
+
 ## Redactionele verantwoordelijkheid
 
 Bij tekstwerk gebruik je de vastgelegde redactionele uitgangspunten en de

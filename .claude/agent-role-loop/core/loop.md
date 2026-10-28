@@ -164,8 +164,8 @@ Inhoudelijke besluiten landen in `curriculum/` of `conventies/`. Een procesbeslu
 landt in de instructie die hij wijzigt - deze routenorm, `/orc`, de betrokken
 rolprompt of het betrokken contract - plus één regel in het register
 [procesbesluiten.md](procesbesluiten.md), dat geen onderbouwing draagt en zelf
-onder voorbehoud staat. Een door de orkestrator geschreven besluittekst krijgt
-onafhankelijke redactionele beoordeling op de diff en het menselijke bronbesluit;
+onder voorbehoud staat. Een door de orkestrator of auteur geschreven besluittekst
+krijgt onafhankelijke redactionele beoordeling op de diff en het menselijke bronbesluit;
 dit mag onderdeel zijn van de al gekozen beoordeling.
 
 ## Buiten een werkitem

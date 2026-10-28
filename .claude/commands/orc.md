@@ -77,10 +77,11 @@ reviewers wijzigen geen materiaal of GitHub-status en installeren niets.
 
 Inhoudelijke besluiten worden in curriculum/conventies vastgelegd; een proceskeuze
 landt in de instructie die hij wijzigt, plus één regel in het register
-`core/procesbesluiten.md`. Een door jou geschreven besluitdiff laat je
-onafhankelijk redactioneel toetsen tegen het C4 vóór de PR ter merge wordt
-aangeboden. Dit mag in de gekozen beoordeling worden opgenomen; het hoeft geen
-aparte ronde te zijn.
+`core/procesbesluiten.md`. Borg dat een door jou of de auteur geschreven
+besluitdiff onafhankelijk redactioneel wordt getoetst tegen het menselijke
+bronbesluit in C4 vóór de PR ter merge wordt aangeboden. Geef de beoordelaar de
+diff en dat bronbesluit. Dit mag in de gekozen beoordeling worden opgenomen; het
+hoeft geen aparte ronde te zijn.
 
 ## Schrijven en beoordelen
 
