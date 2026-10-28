@@ -85,13 +85,16 @@ gaat ze weg.
 Het proza is Nederlands. Voor vaktermen geldt:
 
 - Gebruik de Engelse term waar die in het vakgebied gangbaarder is. Forceer geen
-  Nederlandse vertaling voor `string`, `list`, `debuggen` of `commit`.
+  Nederlandse vertaling voor `string`, `debuggen` of `commit`.
 - Introduceer een Engelse term bij eerste gebruik kort in het Nederlands, en
   gebruik daarna alleen de Engelse. Voor beginners is die eerste toelichting
   wél nodig, anders dan bij ouderejaars.
 - Vervoeg Engelse termen niet tot hybriden. Niet "je cloneert de repository",
   wel "clone de repository".
 - Eén begrip, één term. Wissel niet ongemerkt tussen synoniemen.
+- Gebruik **lijst**, behalve als het specifiek over het Python-type `list` gaat.
+  Schrijf ook **lijsten** en **lijst van lijsten**. Het besluit met de menselijke
+  reden staat in [begrippen.md](begrippen.md#lijst-en-list).
 
 De taal van de **code zelf** (namen, commentaar, docstrings) is een aparte
 kwestie, met een eigen afspraak per studiejaar. Die hoort in de codeconventies;
