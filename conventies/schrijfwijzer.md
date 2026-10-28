@@ -207,10 +207,17 @@ twee plekken half hetzelfde beweert.
   staat - "dat heb je in week 2 gezien", "in het practicum schrijf je die
   functie zelf" - is een bewering over ander materiaal, en die veroudert zodra
   dat materiaal schuift. Verplaats je een onderdeel naar een andere week of een
-  andere bijeenkomst, zoek dan de zinnen op die ernaar wijzen. Een dode link
-  vangt de build; een verwijzing die nog werkt maar niet meer waar is, vangt
+  andere bijeenkomst, of verwijder je het na goedkeuring door de vakdeskundige,
+  zoek dan de zinnen op die ernaar wijzen en werk ze in dezelfde wijziging bij.
+  Een dode link vangt de build; een verwijzing die nog werkt maar niet meer waar is, vangt
   niemand. **Loopt stil af**, en dat maakt hem duur: de student leest een
   aanwijzing die hem naar de verkeerde plek stuurt.
+
+Deze controle bij verwijderen verduidelijkt de bestaande regel
+*Wat er niet meer toe doet, mag weg* in
+[`curriculum/uitgangspunten.md`](../curriculum/uitgangspunten.md).
+De vakdeskundige beslist nog steeds per directory wat weg mag.
+Vastgesteld op 28 oktober 2026, [C4 van #445](https://github.com/hanze-hbo-ict/programmeren/issues/445#issuecomment-6466878171), punt 11.
 
 ## Opmaak en interpunctie
 

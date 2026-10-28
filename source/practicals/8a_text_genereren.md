@@ -131,6 +131,8 @@ def count_vocab(filename):
     return vocab_count
 ```
 
+In PGM1 zag je bij [gegevensopslag](/lectures/6a_data) hoe ASCII tekens aan getallen koppelt. Ook UTF-8 is een tekencodering: een afspraak om opgeslagen bytes als tekens te lezen. Met `encoding="utf-8"` vertel je Python dat het dit bestand volgens UTF-8 moet lezen.
+
 Daarvan heb je *wel* het begin nodig: het `with`-blok dat het bestand leest, en `words = text.split()`, dat de tekst in woorden opdeelt. De code om woorden te tellen daaronder, van de eerste `print` tot en met de `return`, heb je **niet** nodig.
 
 In plaats daarvan heb je de code over `new_word` en `previous_word` uit het eerste fragment nodig, `words_follow = {}` inbegrepen. Hier is het resultaat:
@@ -151,7 +153,7 @@ for new_word in words:
     # leesteken -- als dat _wel_ zo is zet dan previous_word op '$'
 ```
 
-Het enige wat in dit voorbeeld nog niet staat is hoe je woorden die eindigen op een leesteken kan verwerken. Dat moet je zelf bedenken (maar er staan tips in het commentaar hierboven)...
+Dit fragment toont alleen de lus. Vul daarin nog de verwerking van woorden met een eindleesteken aan; de tips staan in het commentaar. Voor de complete functie combineer je het inlezen en opsplitsen van de tekst met deze lus. Geef na de lus de opgebouwde dictionary `words_follow` terug met `return`, zoals opdracht 1 vraagt.
 
 ### Je code controleren
 
