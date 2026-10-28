@@ -77,6 +77,18 @@ forceer geen Nederlandse vertaling. Voor dit materiaal werkt dat zo uit:
 | Het invullen van waarden in een string | **interpolatie** | - | Het eenvoudige geval heet in `curriculum/leerlijn.md` en `curriculum/uitgangspunten.md` *eenvoudige f-stringinterpolatie*. Zie *F-string, interpolatie en formaatspecificatie* hieronder |
 | De notatie achter de dubbele punt tussen de accolades, zoals `>4` in `f"{day:>4}"` | **formaatspecificatie** | - | Niet *formatcode*, *opmaaknotatie* of *formaatcode*, en *datumcodes* is geen synoniem maar een specifiek geval. Vastgesteld door de vakdeskundige op 21 oktober 2026, bij #378. Zie *F-string, interpolatie en formaatspecificatie* hieronder |
 
+## Lijst en list
+
+Gebruik **lijst**, behalve als het specifiek over het Python-type `list` gaat.
+Schrijf ook **lijsten** en **lijst van lijsten**; zet het Python-type in
+code-opmaak. De vaste term *list comprehension* blijft onder het bestaande
+besluit van 30 september 2026 bij #326 vallen; zie *Engelse termen die we niet
+vertalen*.
+
+De vakdeskundige besloot op [28 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/439#issuecomment-6472034480), met de volgende uitspraak en reden:
+
+> Mijn besluit is dat 'lijst' de te gebruiken term is, behalve als het specifiek over het Python-type gaat. De reden hiervoor is dat 'lijst' in de IT-context een leenvertaling (calque) van 'list' is en het dus onnatuurlijk is om in lopende tekst over een 'list' te spreken
+
 ## Staat, en state machine
 
 Voor het begrip zelf schrijven we **staat**. Week 1 noemt hetzelfde ding nu
