@@ -44,6 +44,10 @@ redeneringen. Controleer gerepareerde en daardoor geraakte criteria. Markeer
 niet-geraakte dekking als *eerder vastgesteld*, met bron en versie. Beoordeel ook
 of de diff de opgegeven reikwijdte respecteert.
 
+De herstelreikwijdte verandert de classificatie niet: weeg ieder daadwerkelijk
+gevonden defect volgens *Toets*, ongeacht wanneer het is ontstaan. Een bestaand
+defect wordt dus niet op grond van zijn ouderdom een puntje.
+
 Volledige herbeoordeling alleen onder de gronden in loop.md; leg de reden vast.
 Een nieuwe echte blokkade blijft zichtbaar, maar start niet automatisch een
 nieuwe ronde buiten de herstelgrens.
