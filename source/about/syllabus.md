@@ -29,8 +29,8 @@ Elke week zijn er twee korte colleges die nieuwe onderwerpen introduceren. Bij e
 
 - **Basis**
 
-    Dit zijn de opdrachten waarvan we verwachten dat je ze kan maken. De focus ligt vooral op korte problemen om de vaardigheden te testen. Heb je er veel moeite mee, dan is het verstandig om eerst de opstap te maken. Zijn de basisvragen (te) makkelijk voor jou, kijk dan naar de extra opdrachten.
+    Dit zijn de opgaven waarvan we verwachten dat je ze kan maken. De focus ligt vooral op korte problemen om de vaardigheden te testen. Heb je er veel moeite mee, dan is het verstandig om eerst de opstap te maken. Zijn de basisvragen (te) makkelijk voor jou, kijk dan naar de extra opgaven.
 
 - **Extra**
 
-    Dit zijn opdrachten die wat meer een uitdaging zijn. Vaak zijn het opdrachten om de geleerde vaardigheden in te zetten in echte ICT problemen. Zo krijg je beter inzicht in hoe de geleerde vaardigheden in de praktijk worden gebruikt. De problemen zijn ook groter en zal je stap voor stap moeten oplossen.
+    Dit zijn opgaven die wat meer een uitdaging zijn. Vaak zijn het opgaven om de geleerde vaardigheden in te zetten in echte ICT problemen. Zo krijg je beter inzicht in hoe de geleerde vaardigheden in de praktijk worden gebruikt. De problemen zijn ook groter en zal je stap voor stap moeten oplossen.

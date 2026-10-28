@@ -833,6 +833,12 @@ vakdeskundige op 9 oktober 2026 bij werkitem #377, in deze woorden: *"het
 tentamen verandert niet inhoudelijk, maar moet wel PGM1 zaken/details
 aanhouden"*.
 
+Deze vormafspraak geldt voor de toets `source/extra/practice/pgm1_examen.ipynb`
+én de uitwerking `source/solutions/PGM1_examen.ipynb`. De inhoudelijke
+bevriezing en de uitzondering voor `Opgave N`-koppen blijven gelden.
+Verduidelijkt door de vakdeskundige op 28 oktober 2026,
+[C4 van #445](https://github.com/hanze-hbo-ict/programmeren/issues/445#issuecomment-6466878171), punt 9.
+
 Het eerste geval is de `is`-regel. In #377 zijn de drie asserts met `is` in
 `solutions/PGM1_examen.ipynb` omgezet naar `== True` en `== False`; zie
 *Assertions op booleans en `None`* in

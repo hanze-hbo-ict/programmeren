@@ -32,6 +32,14 @@ door de nakijkomgeving getoetst. Vertalen zou de opgave veranderen. Bovendien is
 die woordenschat dezelfde als die van Python zelf; `list`, `count` en `string`
 leert de student toch al.
 
+Een concreet voorbeeld uit PGM2 is `source/practicals/8a_text_genereren.md`:
+het practicum vraagt `create_dictionary(filename)` en
+`generate_text(words_follow, n_words)`. De bijbehorende uitwerking
+`source/solutions/8a_text_genereren.ipynb` gebruikt dezelfde interface.
+Dit is een vindplaats bij de bestaande taalnorm, geen nieuwe corpustelling.
+Toegevoegd bij besluit van de vakdeskundige op 28 oktober 2026,
+[C4 van #445](https://github.com/hanze-hbo-ict/programmeren/issues/445#issuecomment-6466878171), punt 10.
+
 ### Docstrings en commentaar: Nederlands, in beide vakken
 
 Docstrings en commentaar zijn Nederlands, in PGM1 en in PGM2. Er is geen moment

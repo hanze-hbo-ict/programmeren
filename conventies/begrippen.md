@@ -127,6 +127,18 @@ verzamelen, niet andersom, dus de bredere naam is de juiste.
 De term staat in `source/lectures/4a_lussen.ipynb` (het lusrecept), in
 `source/practicals/4_python_bat.md` en nu ook in de week 4-uitwerkingen.
 
+## Lusvariabele, luswaarde en teller
+
+Een **lusvariabele** is een variabele die in de lus opeenvolgende waarden krijgt.
+De **luswaarde** is de waarde van die variabele tijdens één doorgang.
+Een **teller** is een variabele die een aantal bijhoudt. Een lusvariabele dient
+soms als teller, maar deze woorden zijn geen algemene synoniemen. De tellers
+voor streeppatronen in `source/solutions/5a_ascii_art.ipynb` zijn bijvoorbeeld
+geen lusvariabelen. Het bestaande beleid voor de ongebruikte variabele `_`
+blijft gelden; zie *Wanneer een korte index* in de codeconventies.
+
+Vastgesteld door de vakdeskundige op 28 oktober 2026, [C4 van #445](https://github.com/hanze-hbo-ict/programmeren/issues/445#issuecomment-6466878171), punt 8.
+
 ## Begrensde en onbegrensde lus
 
 Een lus is een **vorm van** herhaling, niet een synoniem ervoor. Daarom schrijven
