@@ -481,7 +481,7 @@ automatisch.
 `string`, `dictionary`, `integer`, `float`, `list comprehension`,
 `dict comprehension`, `set comprehension`, `comprehension`, `recursie`,
 `debuggen`, `commit`, `branch`, `assertion`, `docstring`, `index`, `slice`,
-`duck typing`, `operator overloading`, `use it or lose it`.
+`slicing`, `duck typing`, `operator overloading`, `use it or lose it`.
 
 *Dict comprehension*, *set comprehension* en het verzamelwoord *comprehension*
 blijven Engels, net als *list comprehension*. Vastgesteld door de vakdeskundige
@@ -489,6 +489,10 @@ op 30 september 2026, bij de poort van #326 (VP2).
 
 *Use it or lose it* blijft Engels, ook *use it* en *lose it* voor de twee keuzes.
 Vastgesteld door de vakdeskundige op 2 oktober 2026, bij de poort van #335 (VP8).
+
+*Slicing* blijft Engels naast *slice*. Vastgesteld door de vakdeskundige op
+27 oktober 2026, naar aanleiding van het woord *slicing* in de PGM1-toets
+(`solutions/PGM1_examen`, Opgave 6).
 
 Introduceer zo'n term bij eerste gebruik kort in het Nederlands. Voor
 eerstejaars is die ene toelichting nodig; daarna volstaat de term.
