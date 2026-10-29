@@ -27,7 +27,11 @@ brew install pillow
 ````
 
 ````{tab-item} Linux
-Op Linux installeer je Pillow voor de Python van je distributie. Gebruik de regel voor jouw systeem:
+Op Linux installeer je Pillow voor de Python van je distributie.
+
+Controleer op openSUSE eerst met `python3 --version` of je Python 3.13 gebruikt; bij een andere versie heb je een ander Pillow-pakket nodig. Vraag dan je docent om hulp, net als bij een distributie die niet in de tabel staat.
+
+Gebruik de regel voor jouw systeem:
 
 | Distributie | Commando's |
 | --- | --- |
@@ -36,7 +40,7 @@ Op Linux installeer je Pillow voor de Python van je distributie. Gebruik de rege
 | Arch Linux | `sudo pacman -Syu python-pillow` |
 | openSUSE Leap 16.0 of Tumbleweed met Python 3.13 | `sudo zypper install python313-Pillow` |
 
-De Linux-commando's vragen beheerdersrechten. Het Arch-commando werkt ook je systeem bij. Controleer op openSUSE eerst met `python3 --version` of je Python 3.13 gebruikt; bij een andere versie heb je een ander Pillow-pakket nodig. Vraag dan je docent om hulp, net als bij een distributie die niet in de tabel staat.
+De Linux-commando's vragen beheerdersrechten. Het Arch-commando werkt ook je systeem bij.
 ````
 
 `````
