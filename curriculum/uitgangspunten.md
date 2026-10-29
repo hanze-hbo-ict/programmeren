@@ -802,13 +802,32 @@ van #430 heeft het nagemeten met
 `/opt/homebrew/bin/python3 -m pip install Pillow --dry-run` (Python 3.14 van
 Homebrew). Een gevolg is dat `brew install pillow` Pillow installeert voor de
 Python van Homebrew en niet voor die van python.org. Pillow is nodig voor
-`png.py` in week 5 en week 6. Op Windows en Linux blijft het
-`pip install Pillow`.
+`png.py` in week 5 en week 6. Voor Windows en Linux geldt sinds #432 het
+onderstaande besluit.
 
 **Te heropenen wanneer** Homebrew op de Macs van studenten niet meer bruikbaar
 blijkt, of wanneer het materiaal overstapt op een andere manier van werken, zoals
 een virtuele omgeving per project, waarmee `pip` op elk systeem dezelfde route
 wordt.
+
+### Python starten en pakketten op Windows en Linux
+
+Vastgesteld door de vakdeskundige op 29 oktober 2026,
+[C4 van #432](https://github.com/hanze-hbo-ict/programmeren/issues/432#issuecomment-6494345001).
+De menselijke akkoorduitspraak luidt: “Ok, akkoord met de voorgestelde aanpassingen”.
+De goedgekeurde uitvoeropdracht is in C4 als volgt vastgelegd:
+
+> 1. Alle besturingssystemen gebruiken `python3` voor bestanden, interactieve sessies en versiecontrole.
+> 2. Windows: Scoop als aanbevolen Python-installatieroute. Week 0 beschrijft installatie van Scoop, vervolgens `scoop install python`. Bestaande werkende Python mag blijven; verdere instructies gaan van Scoop uit. Pillow: `python3 -m pip install Pillow`. Scoop biedt de python3-alias en installeert pip via ensurepip; bron: <https://github.com/ScoopInstaller/Main/blob/master/bucket/python.json> . Geen Python install manager als aanbevolen route.
+> 3. macOS: bestaand Homebrew-besluit behouden, Python via `brew install python`, Pillow via `brew install pillow`; bestaande werkende Python blijft toegestaan.
+> 4. Linux: Python en Pillow via distributiepakketten. Ubuntu, Debian, Linux Mint, Pop!_OS, Zorin OS: python3 en python3-pil; Fedora: python3 en python3-pillow; Arch Linux: python en python-pillow; openSUSE: passend Python 3-pakket met bijbehorend Pillow-pakket. Auteur controleert precieze commando's en koppeling aan python3 vóór opname. Manjaro alleen expliciet opnemen als het eigen pakketaanbod is bevestigd; anders geen nieuwe besluitvraag nodig. Geen beperking tot specifieke Ubuntu/Debian-versies. Geen installatie van gereedschap of pakketten op deze host voor platformtests.
+> 5. Bestaande installaties krijgen een controle op python3 en beschikbaarheid van Pillow bij diezelfde interpreter; afwijkingen gaan naar de docent.
+> 6. Alle betreffende instructies consistent bijwerken: week 0, practicum week 2, Mandelbrot-opstap, beeldbewerking en docentenhandleiding. Normbesluit in curriculum/uitgangspunten.md vastleggen met datum en link naar deze C4-reactie.
+> 7. Windows/Linux-uitvoertests zijn niet vereist: systemen zijn niet beschikbaar. Expliciet documenteren dat routes aan officiële documentatie zijn gecontroleerd en niet op echte systemen zijn getest. Dit geldt als invulling van AC4. Pre-commit en schone boekbuild blijven vereist.
+
+Het macOS/Homebrew-besluit hierboven blijft gelden. Er worden geen virtuele
+omgevingen geïntroduceerd. De Windows- en Linux-routes zijn aan officiële
+documentatie gecontroleerd en niet op echte systemen getest.
 
 ### Wat er nu voorgaat: de weken afmaken
 

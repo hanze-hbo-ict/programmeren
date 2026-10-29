@@ -112,7 +112,10 @@ de repository.** Duurt die van jou korter of langer, schaal de blokken dan mee.
   gebruikt Pillow. De student is het al tegengekomen in
   `source/problems/5_mandelbrot_opstap.md`, dat zegt het te installeren zodra
   Python meldt dat het ontbreekt: op macOS met `brew install pillow`, op
-  Windows en Linux met `pip install Pillow`. Het practicum herhaalt dat onder
+  Windows met `python3 -m pip install Pillow` en op Linux met het
+  distributiepakket uit de tabel in de voorbereiding. Controleer bij dezelfde
+  interpreter met `python3 -c "from PIL import Image"` of Pillow beschikbaar is.
+  Het practicum herhaalt dat onder
   `## Voorbereiding`. Of iedereen het heeft gedaan, weet je niet. Controleer het
   aan het begin van bijeenkomst 2 en niet halverwege.
 - **Papier.** Voor de voorspellingen in het college en voor de spiegelingen in
@@ -363,7 +366,8 @@ van de andere kant: hoe maak je zo'n bestand kleiner.
 
 - **Pillow ontbreekt bij een deel van de klas.** Laat hen Pillow installeren
   zoals `## Voorbereiding` van het practicum zegt, op macOS met
-  `brew install pillow` en op Windows en Linux met `pip install Pillow`, en
+  `brew install pillow`, op Windows met `python3 -m pip install Pillow` en
+  op Linux met het distributiepakket uit de tabel in de voorbereiding, en
   laat hen tot blok 3 meekijken bij een buur. Blok 3 is klassikaal, dus ze
   missen niets wat ze niet kunnen inhalen.
 - **Blok 3 loopt uit.** Laat het lopen en haal de tijd bij **blok 4** vandaan:

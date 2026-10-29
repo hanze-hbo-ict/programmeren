@@ -6,19 +6,48 @@ Je bouwt stap voor stap een programma dat onderzoekt welke complexe getallen
 bij de mandelbrotverzameling horen. Download {download}`mandelbrot.zip
 <assets/mandelbrot.zip>` en pak het archief uit. Werk in `mandelbrot.py`.
 
-Installeer Pillow eenmalig als Python meldt dat de module ontbreekt; je krijgt
-dan een `ModuleNotFoundError`. Op macOS doe je dat met Homebrew, net als Python
-zelf:
+Installeer Pillow eenmalig als Python meldt dat de module ontbreekt; je krijgt dan een `ModuleNotFoundError`.
+
+`````{tab-set}
+
+````{tab-item} Windows
+Installeer Pillow voor de Python van Scoop:
+
+```console
+python3 -m pip install Pillow
+```
+````
+
+````{tab-item} macOS
+Installeer Pillow met Homebrew, net als Python zelf:
 
 ```console
 brew install pillow
 ```
+````
 
-Op Windows en Linux:
+````{tab-item} Linux
+Op Linux installeer je Pillow voor de Python van je distributie. Gebruik de regel voor jouw systeem:
+
+| Distributie | Commando's |
+| --- | --- |
+| Ubuntu, Debian, Linux Mint, Pop!_OS, Zorin OS | Eerst `sudo apt update`, daarna `sudo apt install python3-pil` |
+| Fedora | `sudo dnf install python3-pillow` |
+| Arch Linux | `sudo pacman -Syu python-pillow` |
+| openSUSE Leap 16.0 of Tumbleweed met Python 3.13 | `sudo zypper install python313-Pillow` |
+
+De Linux-commando's vragen beheerdersrechten. Het Arch-commando werkt ook je systeem bij. Controleer op openSUSE eerst met `python3 --version` of je Python 3.13 gebruikt; bij een andere versie heb je een ander Pillow-pakket nodig. Vraag dan je docent om hulp, net als bij een distributie die niet in de tabel staat.
+````
+
+`````
+
+Controleer op elk besturingssysteem of Pillow bij dezelfde Python beschikbaar is:
 
 ```console
-pip install Pillow
+python3 -c "from PIL import Image"
 ```
+
+Keert de prompt terug zonder foutmelding, dan is Pillow beschikbaar. Krijg je een foutmelding, ook bij een bestaande Python-installatie, vraag dan je docent om hulp.
 
 De afbeelding-API komt later; in deze opstap werk je alleen met waarden en
 lussen.
