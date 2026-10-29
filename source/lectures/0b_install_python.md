@@ -19,13 +19,34 @@ We gebruiken bij Programmeren software die je misschien nog niet hebt. Je hebt d
 `````{tab-set}
 
 ````{tab-item} Windows
-Download en installeer Python van [python.org](https://www.python.org/downloads/windows/).
+We raden [Scoop](https://scoop.sh/) aan. Daarmee installeer je Python vanuit PowerShell.
 
-```{caution}
-Tijdens het installeren zal worden gevraagd of je Python aan `PATH` zou willen toevoegen, kies hier voor!
+1. Open **PowerShell** vanuit het startmenu, zonder *Als administrator uitvoeren*.
+2. Sta scripts voor je eigen account toe. Typ dit commando en bevestig als PowerShell daarom vraagt:
 
-![Python Installer](images/0/python_installer.png)
-```
+   ```console
+   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+   ```
+
+3. Installeer Scoop:
+
+   ```console
+   irm get.scoop.sh | iex
+   ```
+
+4. Installeer Python:
+
+   ```console
+   scoop install python
+   ```
+
+5. Sluit PowerShell en open een nieuwe. Controleer de installatie:
+
+   ```console
+   python3 --version
+   ```
+
+Zie je `Python 3` met een versienummer, dan kun je verder. Mislukt een stap, vraag dan je docent om hulp. De [Scoop-installatiehandleiding](https://github.com/ScoopInstaller/Install#installation) beschrijft de installatie.
 ````
 
 ````{tab-item} macOS
@@ -65,18 +86,29 @@ python3 --version
 ````
 
 ````{tab-item} Linux
-Linux gebruikers hebben het gemakkelijker, als je een up-to-date distributie als bijvoorbeeld Ubuntu, Mint of Arch hebt dan zal je ook een recente Python versie standaard al geïnstalleerd hebben. Controleer dit als volgt op een terminal:
+Open een terminal en controleer of Python er al is:
 
 ```console
 python3 --version
 ```
+
+Zie je `Python 3` met een versienummer, dan kun je verder. Ontbreekt Python, gebruik dan de regel voor jouw distributie:
+
+| Distributie | Commando's |
+| --- | --- |
+| Ubuntu, Debian, Linux Mint, Pop!_OS, Zorin OS | Eerst `sudo apt update`, daarna `sudo apt install python3` |
+| Fedora | `sudo dnf install python3` |
+| Arch Linux | `sudo pacman -Syu python` |
+| openSUSE Leap 16.0 of Tumbleweed | `sudo zypper install python3` |
+
+Deze commando's vragen beheerdersrechten. `sudo` kan om je wachtwoord vragen; tijdens het typen zie je geen tekens. Het Arch-commando werkt ook je systeem bij. Controleer daarna opnieuw met `python3 --version`. Staat jouw distributie er niet bij of mislukt de installatie, vraag dan je docent om hulp.
 ````
 
 `````
 
 ### Wacht, ik heb Python al
 
-Geen probleem! Zorg er in ieder geval voor dat het een recente versie is.
+Je mag een bestaande werkende Python blijven gebruiken. Controleer in een nieuwe terminal met `python3 --version` of je Python 3 kunt starten. Op Windows gaan de verdere instructies uit van Scoop, op Linux van de Python van je distributie. Werkt `python3` niet of opent de Microsoft Store, vraag dan je docent om hulp.
 
 Op een Mac mag je de Python gebruiken die je al hebt. Weet wel dat alle verdere instructies voor macOS ervan uitgaan dat je Homebrew gebruikt. Of je Python die van Homebrew is, zie je met `which python3`: dan staat er `/opt/homebrew/bin/python3`. Installeer je later Pillow met `brew install pillow`, dan werkt dat alleen voor de Python van Homebrew.
 
@@ -229,7 +261,7 @@ Sla dit bestand op als `hello.py` in je programmeerdirectory.
   * Type `ls`( mac) of `dir` (windows) om de bestanden in de huidige directory te zien
   * Zorg dat je je bestand `hello.py` ziet!
     * Als je hem niet zien, gebruik dan `cd ..` of `cd Desktop` of andere combinaties om naar de juiste directory te gaan.
-  * Typ op de prompt `python hello.py` (je kan hier tab completion voor gebruiken). Als je de melding krijgt dat python niet gevonden is kan het zijn dat de Path variabele niet goed is ingesteld (Windows).
+  * Typ op de prompt `python3 hello.py` (je kan hier tab completion voor gebruiken). Wordt `python3` niet gevonden, controleer dan de installatie hierboven of vraag je docent om hulp.
   * Dit voert het bestand `hello.py` uit.
-  * Als alles goed gaat wordt het programma uitgevoerd en zie je de uitvoer.
+  * Als alles goed gaat zie je `Hello World`.
   * Je kan nu je bestand bewerken, opnieuw opslaan en *pijltje omhoog* drukken om het opnieuw uit te voeren.
