@@ -20,7 +20,11 @@ Picobot ziet alleen maar het vakje noord, oost, west en zuid en kan bepalen of d
 
 Welke set instructies heeft Picobot nodig om de linkerbovenhoek te bereiken?
 
-### Oplossing
+```{raw} html
+<span id="oplossing"></span>
+```
+
+### Uitwerking
 
 1. Rij naar het noorden.
 2. Stop als er een obstakel in het noorden ligt.
