@@ -337,9 +337,9 @@ die pagina in `conventies/technische-conventies.md`: *"Voorbeeld schrappen"*; en
 over de links naar de voorbeeldpagina in het niet-gemigreerde
 `problems/opdrachten/feest_met_functies/index.md`: *"Links verwijderen"*.
 
-Het oefenbestand staat sindsdien weer als `extra/practice/1_recursie.ipynb`
-onder *Oefening*, met dezelfde elf opgaven, Nederlandse docstrings en
-uitwerkingen. De voorbeeldpagina is verwijderd. Opstap-opdracht 5 tot en met 10,
+Het oefenbestand staat weer als `extra/practice/1_recursie.ipynb` bij de opgaven
+van PGM2 week 3 (`course/opgaven_10`), met dezelfde elf opgaven, Nederlandse
+docstrings en uitwerkingen. De voorbeeldpagina is verwijderd. Opstap-opdracht 5 tot en met 10,
 die uit het oefenbestand kwamen, zijn vervangen door `add`, `product`,
 `flip_bits`, `no_punctuation`, `only_odds` en `is_palindrome`; `add` komt uit de
 voorbeeldpagina. **Uitgevoerd** in #338.
@@ -468,8 +468,9 @@ vergissing. Niet alles uit de bron was in het nieuwe materiaal terechtgekomen -
 zes van de twaalf opgaven kwamen in week 2 niet terug - en een student die na
 die week losse oefening met comprehensions zoekt, vond die nergens meer.
 Besloten door de vakdeskundige op 30 september 2026, bij werkitem #333. Het
-oefenbestand staat sindsdien weer als
-`extra/practice/2_list_comprehension.ipynb` onder *Oefening*, met
+oefenbestand staat weer als
+`extra/practice/2_list_comprehension.ipynb` bij de opgaven van PGM2 week 2
+(`course/opgaven_9`), met
 `images/mul_table.png` en met de opgaven zoals ze waren. Twee opgaven zijn
 vervangen, omdat `only_evens` en `ngram` in de weekstof blijven staan (college
 `9a` en `9_basis` stap 4): in het oefenbestand staan `only_leaps` en
@@ -479,6 +480,16 @@ niet in het oefenbestand: `mult_of_five`, `divisible_by`, `zipper`,
 `squares`, `without`, `highest`, `count_above` en `staircase`, die dezelfde
 syntaxis op dezelfde plek oefenen. De colleges en de andere niveaus van week 2
 zijn niet aangepast. **Uitgevoerd** in #333.
+
+**Plaatsing van de aanvullende oefenbestanden.** Op 29 oktober 2026 luidt het
+bronbesluit in [werkitem #456](https://github.com/hanze-hbo-ict/programmeren/issues/456):
+“De vakdeskundige vraagt beide bestanden onder te brengen bij de opgaven van de
+relevante week.” De gewenste uitkomst luidt: “Een student vindt de aanvullende
+oefeningen over list comprehensions bij de opgaven van PGM2 week 2
+(`source/course/opgaven_9.md`) en de recursieoefeningen bij die van PGM2 week 3
+(`source/course/opgaven_10.md`). De oefeningen blijven als herkenbare aanvullende
+oefenbestanden beschikbaar.” De inhoud en het behoud volgens #333 en #338 blijven
+gelden; de bronbestanden blijven in `extra/practice/`.
 
 **Welke syntaxis week 2 draagt.** Een comprehension met één `for` en een
 optioneel filter, over een lijst, een string, `range`, `.items()`, `enumerate`
