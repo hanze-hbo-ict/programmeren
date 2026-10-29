@@ -302,6 +302,29 @@ er een weg - dan hoort dit hermeten, geijkt op de getallen hieronder.
   `curriculum/leerlijn.md` onder *Wat een week aan een latere week aflevert*.
   Daarbuiten noemt alleen het gesloten archief `onderzoek/metingen.md` hem nog.
 
+## Uitwerking en antwoord
+
+Gebruik **Uitwerking** als rubriek voor één aangeboden aanpak of uitgewerkt
+antwoord, en **Uitwerkingen** voor een verzameling daarvan. Dit geldt ook voor
+paginakoppen en navigatietitels. **Antwoord** blijft de rubriek voor een kale
+antwoordwaarde zonder aanpak. Deze afspraak gaat over rubrieken; gewone woorden
+als *oplossing* en *antwoord* in lopende tekst worden op hun functie beoordeeld.
+
+De bestaande foutieve voorstellen `Uitwerking A` tot en met `Uitwerking G` in
+de debugopgave houden hun letters; zie *De nummering* hieronder. De
+`Opgave N`-uitzondering voor de vier oefententamens blijft gelden. De nieuwe
+rubrieknaam geldt ook voor de titels van beide tentamenuitwerkingen; hun inhoud
+blijft ongewijzigd. Het bij #440 voorlopig behouden `Oplossingen` valt onder deze
+nieuwe afspraak; #440 blijft afgerond.
+
+De vakdeskundige antwoordde op 29 oktober 2026 op het concrete
+[C2-voorstel van #443](https://github.com/hanze-hbo-ict/programmeren/issues/443#issuecomment-6494857766):
+
+> Ja, eens
+
+Dit besluit is vastgelegd in
+[C4 van #443](https://github.com/hanze-hbo-ict/programmeren/issues/443#issuecomment-6494927140).
+
 ## Opgave, opdracht, stap
 
 Deze woorden liepen door elkaar: hetzelfde soort taak heette in het ene bestand

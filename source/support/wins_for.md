@@ -41,7 +41,11 @@ class Board:
 
 Merk op dat je moet controleren of je in elk van de vier richtingen wint voor elke plaats op het bord; we doen dit extra grondig 🙂
 
-## Oplossingen voor de `in_a_row`-functies
+```{raw} html
+<span id="oplossingen-voor-de-in-a-row-functies"></span>
+```
+
+## Uitwerkingen voor de `in_a_row`-functies
 
 Als je de `in_a_row`-functies niet opgelost hebt, kan je onze oplossingen gebruiken. Succes!
 
