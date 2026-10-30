@@ -2,7 +2,7 @@
 
 ![Schotel](/images/saucer.png)
 
-## Operator overloading en exceptions
+## Fouten afhandelen
 
 Deze week laat je je eigen klassen meedoen met de operatoren van Python. Python
 vertaalt `a == b` naar de aanroep `a.__eq__(b)`, en `a < b` naar `a.__lt__(b)`.

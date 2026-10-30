@@ -2,7 +2,7 @@
 
 ![Schotel](/images/saucer.png)
 
-## Dictionaries, sets en een taalmodel
+## Datastructuren
 
 Deze week leer je twee nieuwe manieren om data te bewaren. Een **dictionary**
 koppelt een **sleutel** aan een **waarde**: je zoekt op met de sleutel, zoals je
