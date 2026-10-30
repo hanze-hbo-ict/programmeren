@@ -2,7 +2,7 @@
 
 ![Schotel](/images/saucer.png)
 
-## Klassen, objecten en encapsulatie
+## Klassen en objecten
 
 Deze week maak je je eigen types. Een **klasse** is het ontwerp: ze legt vast
 welke **attributen** en welke **methoden** een object krijgt. Een **object** is

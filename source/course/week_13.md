@@ -2,7 +2,7 @@
 
 ![Schotel](/images/saucer.png)
 
-## Overerving, polymorfisme en duck typing
+## Klassen uitbreiden
 
 Deze week bouw je klassen die voortbouwen op een klasse die er al is. Bij
 **overerving** krijgt een **subklasse** alle attributen en methoden van haar

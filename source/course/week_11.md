@@ -2,7 +2,7 @@
 
 ![Schotel](/images/saucer.png)
 
-## Use it or lose it en `lambda`
+## Functies van functies
 
 Deze week leer je twee dingen. Het eerste is **use it or lose it**: bij elk
 element van een lijst probeer je twee keuzes uit, het element gebruiken of het

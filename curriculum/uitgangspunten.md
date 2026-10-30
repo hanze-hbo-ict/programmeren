@@ -376,7 +376,7 @@ draait wel.
 
 | Besluit | Aard | Status |
 |---|---|---|
-| De zeven PGM2-weeknamen staan als `PGM2 Week N: Naam` in de navigatie; bestaande onderwerpteksten blijven behouden | redactioneel | gesloten op 30 oktober 2026, **uitgevoerd**; menselijke besluituitspraak: “Akkoord”; [C4 #459](https://github.com/hanze-hbo-ict/programmeren/issues/459#issuecomment-6525021963). De zeven captions in `source/_toc.yml` zijn de bron van de labels |
+| De zeven PGM2-weeknamen staan in de eerste inhoudelijke onderwerpkoppen van `source/course/week_8.md` t/m `week_14.md`; de navigatiecaptions zijn weer `PGM2 Week N` en `# Onderwerpen` blijft behouden | redactioneel | gesloten op 30 oktober 2026, **uitgevoerd**; vervangt het eerdere toepassingsbesluit over de captions. Letterlijke menselijke opdracht: “Nee. Ik wil de inhoudelijke onderwerpkop aanpassen; de titels in de navigatie moeten weer terug naar hoe ze waren”. Bron: gebruikersgesprek van 30 oktober 2026 (geen afzonderlijke openbare gespreks-URL beschikbaar), geregistreerd in [C4 #459](https://github.com/hanze-hbo-ict/programmeren/issues/459#issuecomment-6525447792) |
 | Recursie is naar PGM2 verplaatst; imperatief komt eerst | organisatorisch | gesloten, uitgevoerd; de matrijs volgt sinds 1 september 2026 |
 | De theoretische afsluiting is geschrapt | ervaring | gesloten |
 | Schakelingen zijn geschrapt, binair is afgeslankt | organisatorisch | gesloten, uitgevoerd |

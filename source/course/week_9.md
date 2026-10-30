@@ -2,7 +2,7 @@
 
 ![Schotel](/images/saucer.png)
 
-## Comprehensions
+## List comprehensions
 
 Deze week leer je een lus die een nieuwe lijst opbouwt korter op te schrijven,
 als **list comprehension**: `[len(word) for word in words]` is in één regel wat
