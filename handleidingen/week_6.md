@@ -25,7 +25,7 @@ in week 7.
 |---|---|---|
 | 1 | College | `source/lectures/6a_data.ipynb` |
 | 2 | Practicum | `source/practicals/6b_images.ipynb` |
-| 3 | Bestanden lezen en schrijven | `source/problems/6_opstap.ipynb`, `source/problems/6_basis.ipynb` en `source/problems/6_extra.ipynb` |
+| 3 | Zelfstandig werk met gerichte begeleiding | `source/problems/6_opstap.ipynb`, `source/problems/6_basis.ipynb` en `source/problems/6_extra.ipynb` |
 
 Daarnaast staan er vier overzichtspagina's die je zelf niet hoeft te
 behandelen: `source/course/week_6.md` (`## Data en bestanden`) vat de week

@@ -16,22 +16,28 @@ kern nooit verdringen.
 ## Route
 
 1. Lees het college over mutabiliteit, functiecompositie, deelproblemen en tuples.
-2. Maak de opstap: één rastercel wijzigen, herkennen dat twee namen naar dezelfde
-   lijst verwijzen en een klein
-   tuplepaar uitpakken.
+2. Maak als huiswerk de opstap: één rastercel wijzigen, herkennen dat twee namen
+   naar dezelfde lijst verwijzen en een klein tuplepaar uitpakken.
 3. Doe het [practicum](/practicals/7b_vallende_korrels) mee: knip het probleem
    van vallende korrels in deelproblemen en bouw het algoritme gezamenlijk op.
-4. Maak de basis: ontwerp de buurttelling, de regel voor één cel en de
-   samengestelde functie voor één volledige generatie.
-5. Kies daarna de extra: Game of Life met dezelfde rasterafspraken.
+4. Maak als huiswerk de basis: ontwerp de buurttelling, de regel voor één cel en
+   de samengestelde functie voor één volledige generatie.
+5. Kies daarna eventueel de extra: Game of Life met dezelfde rasterafspraken.
+6. Oefen in bijeenkomst 3 met het [oefententamen](/course/pgm1_tentamen).
 
 ## Tijdpad en uitvalpad
 
 | Bijeenkomst | Richttijd | Product |
 |---|---:|---|
-| 1 | 90 minuten | College, directe mutatie, verwijzingen, kopiëren en tuple/unpacking in de opstap |
+| 1 | 90 minuten | College: directe mutatie, verwijzingen, kopiëren en tuples uitpakken |
 | 2 | 90 minuten | Practicum: vallende korrels opgeknipt in deelproblemen, met één werkende tijdstap |
-| 3 | 90 minuten | Basis: `count_neighbors`, `next_cell` en één geteste generatie; daarna facultatief de Game-of-Life-extra |
+| 3 | 90 minuten | Oefententamen |
+
+De opstap en de basis zijn huiswerk. Je mag resterende tijd in de bijeenkomsten
+gebruiken om eraan te werken. Het huiswerkeindpunt is de afgeronde opstap en
+één geteste basisgeneratie met `count_neighbors` en `next_cell`, waarbij het
+invoerbord onveranderd blijft. De richttijden geven het bijeenkomstkader aan,
+geen toetsduur.
 
 Loop je uit, rond dan eerst de opstap en één volledige basisgeneratie af. Laat
 visualisatie, meerdere generaties en de extra vallen; die zijn geen onderdeel van

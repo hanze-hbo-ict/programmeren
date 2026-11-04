@@ -12,7 +12,9 @@ functiecompositie. De basisopgave maakt die lijn concreet met een volgende
 rastertoestand. Een tuple is daarbij een klein retourpaar: de student leert een
 tuple teruggeven, lezen en uitpakken.
 
-De verplichte route bestaat uit de opstap en de basis. Game of Life is een
+De verplichte route bestaat uit de opstap, het practicum en de basis.
+De opstap en de basis zijn huiswerk; gebruik resterende bijeenkomsttijd om
+studenten daarbij gericht te begeleiden. Game of Life is een
 zelfstandige, facultatieve extra. Als de tijd krap is, is één geteste
 basisgeneratie het eindpunt; de extra mag de kern niet verdringen.
 
@@ -20,12 +22,12 @@ basisgeneratie het eindpunt; de extra mag de kern niet verdringen.
 
 | Bijeenkomst | Vorm | Materiaal | Product aan het einde |
 |---|---|---|---|
-| 1 | College en begeleide start | `source/lectures/7a_lists_advanced.ipynb`, `source/problems/7_opstap.ipynb` | De student kan één cel muteren, verwijzingen en kopiëren uitleggen en een tuple teruggeven en uitpakken. |
-| 2 | Deelproblemen en één cel | `source/problems/7_basis.ipynb` | `count_neighbors` en `next_cell` zijn getest; de student heeft de invoer- en uitvoergrens van `next_generation` gepland. |
-| 3 | Zelfstandig werk met gerichte begeleiding | `source/problems/7_basis.ipynb`, daarna `source/problems/7_extra.md` | De basis levert één correcte generatie op en laat het invoerbord onveranderd; daarna kan de student zelfstandig aan Game of Life beginnen. |
+| 1 | College | `source/lectures/7a_lists_advanced.ipynb` | De student kan één cel muteren, verwijzingen en kopiëren uitleggen en een tuple teruggeven en uitpakken. |
+| 2 | Practicum | `source/practicals/7b_vallende_korrels.ipynb` | De student heeft vallende korrels opgedeeld in deelproblemen en één werkende tijdstap getest. |
+| 3 | Oefententamen | `source/course/pgm1_tentamen.md`, `source/extra/practice/pgm1_examen.ipynb` | De student heeft met het bestaande oefententamen geoefend. |
 
-De drie bijeenkomsten zijn elk een referentierooster van 90 minuten. Het
-rooster legt niet vast of een docent een bijeenkomst als één blok van 90 minuten
+De drie bijeenkomsten hebben elk een kader van 90 minuten. Dit schrijft geen
+toetsduur voor. Het rooster legt niet vast of een docent een bijeenkomst als één blok van 90 minuten
 of als twee blokken van 45 minuten organiseert. Houd de volgorde van de
 begripsstappen wel aan: directe mutatie, verwijzing, onafhankelijke kopie,
 tuple en uitpakken, daarna functiecompositie en de rastertoestand.
@@ -80,42 +82,42 @@ geen voorschrift voor de interne verdeling van de bijeenkomst.
 | 30-45 min | Bouw een onafhankelijke kopie met een nieuwe buitenlijst en `rij[:]` voor iedere rij. Laat eerst één verkeerde ondiepe kopie bespreken. | Alleen `kopie[0][0]` verandert; `bord` blijft gelijk. |
 | 45-60 min | Introduceer het contrast tussen een veranderbare lijst en een onveranderlijke tuple. Voer de gecontroleerde `TypeError` pas uit nadat de klas heeft voorspeld. | De student kan zeggen dat een tuple wel gelezen en uitgepakt, maar niet op een positie gewijzigd kan worden. |
 | 60-75 min | Laat `midden_van` een tuple `(rij, kolom)` teruggeven. Vraag waar de twee waarden voor staan. | `midden_van` geeft `(1, 1)` voor het gegeven 3x3-bord terug. |
-| 75-90 min | Laat de tuple uitpakken in `rij, kolom` en verbind dit met het grotere rasterprobleem van de basis. | De student heeft de opstap afgerond of kan precies aanwijzen welk begrip nog niet vaststaat. |
+| 75-90 min | Laat de tuple uitpakken in `rij, kolom` en verbind dit met het grotere rasterprobleem van de basis. | De student kan precies aanwijzen welk begrip nog niet vaststaat voor het huiswerk. |
 
-Gebruik het college voor de gezamenlijke voorbeelden en laat de student daarna
-de overeenkomstige opstapstappen zelf uitvoeren. De kern van deze bijeenkomst
+Gebruik het college voor de gezamenlijke voorbeelden. De overeenkomstige
+opstapstappen zijn huiswerk; laat studenten die bij resterende tijd alvast
+uitvoeren. De kern van deze bijeenkomst
 is niet een definitie uit het hoofd, maar een voorspelling die de student aan
 de hand van de zichtbare lijsten controleert.
 
-### Bijeenkomst 2 - deelproblemen en één cel
+### Bijeenkomst 2 - practicum vallende korrels
 
-| Richttijd | Docentaccent | Product of controlepunt |
-|---:|---|---|
-| 0-15 min | Laat studenten de mutatiegrens en de kopieergrens in één zin herhalen. Bespreek het doel van `next_generation`: lezen uit `board`, schrijven naar `result`. | Student benoemt dat tussentijdse nieuwe waarden niet terug het invoerbord in mogen. |
-| 15-35 min | Begin met `count_neighbors`. Teken een hoek, rand en binnen-cel en houd de acht relatieve posities zichtbaar. | Assertions voor een hoek, rand en binnen-cel zijn groen. |
-| 35-55 min | Bouw `next_cell` op uit de huidige cel en de buurttelling. Laat de regels eerst in gewone taal toepassen op één levende en één dode cel. | De student kan de uitkomst van één cel voorspellen vóór de functie wordt uitgevoerd. |
-| 55-75 min | Bespreek `copy_board` als gegeven hulpmiddel en laat de student de volledige generatie plannen. | Er is een lus over alle cellen die leest uit `board` en schrijft naar `result`. |
-| 75-90 min | Laat de student één hoek- of randstap hardop uitleggen en de blinkertransitie tekenen. | Het plan voor `next_generation` gebruikt de twee eerder geteste deelproblemen. |
+Gebruik `source/practicals/7b_vallende_korrels.ipynb`. Laat studenten eerst
+zelf deelproblemen benoemen met een naam, invoer en uitvoer. Vergelijk die
+met het plan in het practicum voordat de klas code schrijft.
 
-De docent hoeft de buurttelling niet opnieuw als theorie te behandelen. De
-waarde van deze bijeenkomst zit in het expliciet maken van de deelproblemen en
-hun contracten. Vraag bij iedere functie: welke gegevens komen erin, wat wordt
-teruggegeven, en welke kleine test maakt de verwachting zichtbaar?
+| Stap | Docentaccent | Product of controlepunt |
+|---|---|---|
+| Voorgedaan: `can_fall` | Laat voorspellen wanneer een korrel kan zakken en bespreek de gegeven controles. | De student onderscheidt een teruggegeven antwoord van een verandering aan het bord. |
+| 1: `drop_grain` | Laat aanwijzen welke twee cellen veranderen. | De controles voor één vallende korrel slagen. |
+| 2: `fall_once` | Vraag in welke volgorde de rijen worden doorlopen en waarom. | Eén volledige tijdstap werkt volgens de controles in het practicum. |
+| 3: `settle` | Laat herhaalde tijdstappen verbinden met het stopcriterium. | De student kan bepalen wanneer het bord stil ligt. |
 
-### Bijeenkomst 3 - kern afronden en extra kiezen
+Eén werkende tijdstap is het minimale bijeenkomstproduct. Loopt het practicum
+uit, laat stap 3 dan vervallen in de bijeenkomst; `settle` maakt de student
+later zelf af. Gebruik resterende tijd voor gerichte hulp bij opstap of basis.
+De interventies in §5-7 ondersteunen dat huiswerk.
 
-| Richttijd | Docentaccent | Product of controlepunt |
-|---:|---|---|
-| 0-20 min | Herneem de assertions uit de basis. Laat studenten eerst één generatie op papier voorspellen. | `count_neighbors`, `next_cell` en de blinkerassertion zijn aanwezig. |
-| 20-45 min | Begeleid `next_generation`: maak de kopie eerst, lees alle cellen uit het oude bord en schrijf alleen naar het resultaat. | De verwachte horizontale blinker verschijnt en het oorspronkelijke bord is onveranderd. |
-| 45-60 min | Bespreek de korte functiecompositie `generaties` alleen nadat één generatie werkt. | Twee generaties van de blinker leveren het oorspronkelijke bord op. |
-| 60-70 min | Doe een kerncheck en bepaal wie aan de extra kan beginnen. | Student kan de route en het minimale eindpunt verwoorden. |
-| 70-90 min | Laat studenten zelfstandig verdergaan met de extra; geef korte interventies bij de start en controleer het stopcriterium. | De student heeft de Game-of-Life-scaffolding gelezen en kiest een eerste test, of stopt verantwoord na de basis. |
+### Bijeenkomst 3 - oefententamen
 
-De grens bij minuut 60 is bewust: een student die de basis nog niet kan testen,
-gaat niet alvast de extra kopiëren. Een student die de basis groen heeft, hoeft
-geen toestemming voor een facultatieve uitdaging te vragen, maar moet wel weten
-dat één generatie en het onveranderde invoerbord het verplichte eindpunt zijn.
+Verwijs naar `source/course/pgm1_tentamen.md` en het bestaande oefententamen
+`source/extra/practice/pgm1_examen.ipynb`. Laat studenten daarmee oefenen.
+De instructies van die toets blijven leidend; dit rooster voegt geen
+afnameprotocol of toetsduur toe.
+
+De basis blijft huiswerk. Het minimale eindpunt is één geteste generatie die
+het invoerbord onveranderd laat. Raad de facultatieve extra pas aan als de
+basiscontroles groen zijn; gebruik §5-7 voor gerichte hulp bij vragen.
 
 ## 4. De opstap als diagnose en instap
 
@@ -288,7 +290,16 @@ het kleine bord gebruiken om die verwachting te toetsen.
 
 ## 8. Controlepunten voor de docent
 
-Gebruik deze lijst aan het einde van iedere bijeenkomst:
+Controleer de bijeenkomstproducten afzonderlijk:
+
+- [ ] Na bijeenkomst 1 kan de student mutatie, verwijzing, kopiëren en tuples
+      uitleggen aan de hand van de collegevoorbeelden.
+- [ ] Na bijeenkomst 2 werkt één tijdstap van vallende korrels; zo nodig maakt
+      de student `settle` later zelf af.
+- [ ] In bijeenkomst 3 heeft de student met het oefententamen geoefend.
+
+Gebruik de volgende lijst voor de huiswerkproducten en gerichte begeleiding
+bij resterende tijd:
 
 - [ ] De student leest `bord[rij][kolom]` in de juiste volgorde.
 - [ ] De student kan het verschil tussen directe mutatie, verwijzing en een
@@ -329,6 +340,9 @@ PGM1-stof te behandelen.
 
 - actuele weekroute: `source/course/week_7.md`;
 - college: `source/lectures/7a_lists_advanced.ipynb`;
+- practicum: `source/practicals/7b_vallende_korrels.ipynb`;
+- oefententamen: `source/course/pgm1_tentamen.md` en
+  `source/extra/practice/pgm1_examen.ipynb`;
 - diagnose en instap: `source/problems/7_opstap.ipynb`;
 - verplichte kern: `source/problems/7_basis.ipynb`;
 - zelfstandige extra en uitvalpad: `source/problems/7_extra.md`;
