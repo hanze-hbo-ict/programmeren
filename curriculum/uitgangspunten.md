@@ -377,6 +377,7 @@ draait wel.
 | Besluit | Aard | Status |
 |---|---|---|
 | De zeven PGM2-weeknamen staan in de eerste inhoudelijke onderwerpkoppen van `source/course/week_8.md` t/m `week_14.md`; de navigatiecaptions zijn weer `PGM2 Week N` en `# Onderwerpen` blijft behouden | redactioneel | gesloten op 30 oktober 2026, **uitgevoerd**; vervangt het eerdere toepassingsbesluit over de captions. Letterlijke menselijke opdracht: “Nee. Ik wil de inhoudelijke onderwerpkop aanpassen; de titels in de navigatie moeten weer terug naar hoe ze waren”. Bron: gebruikersgesprek van 30 oktober 2026 (geen afzonderlijke openbare gespreks-URL beschikbaar), geregistreerd in [C4 #459](https://github.com/hanze-hbo-ict/programmeren/issues/459#issuecomment-6525447792) |
+| Zes PGM2-uitkomsten met 70/15/15%, weekgewichten 15/10/15/15/15/15/15 en expliciete opvolging van dertien oude uitkomsten | inhoudelijk | gesloten op 4 november 2026, vastgesteld voor dit jaar; curriculumregistratie uitgevoerd in #466, materiaal-/toetsuitvoering afzonderlijk in #468–#472; letterlijke C4-bronnen hieronder |
 | Recursie is naar PGM2 verplaatst; imperatief komt eerst | organisatorisch | gesloten, uitgevoerd; de matrijs volgt sinds 1 september 2026 |
 | De theoretische afsluiting is geschrapt | ervaring | gesloten |
 | Schakelingen zijn geschrapt, binair is afgeslankt | organisatorisch | gesloten, uitgevoerd |
@@ -514,11 +515,10 @@ Picobot opent die boog, de theorie sluit hem.
 Bij hbo-studenten sloeg dat niet aan: te abstract. Het is geprobeerd en
 losgelaten. Picobot blijft, de sluiting komt niet terug.
 
-**Dat besluit is genomen; het gevolg voor A5 is nog een voorstel.** Leeruitkomst
-A5 over finite state machines staat gewoon in de PGM2-matrijs, zonder weging. Dat
-zij daaruit geschrapt wordt, staat als voorstel in de rij *PGM2 A5* onder
-*Voorgestelde correcties* in [leeruitkomsten.md](leeruitkomsten.md) en is niet
-bekrachtigd. Pas dat besluit haalt haar uit de matrijs.
+**Het gevolg voor A5 is op 4 november 2026 expliciet besloten:** A5 vervalt als
+afzonderlijke leeruitkomst; taal-FSM wordt niet meer onderwezen of getoetst.
+Het letterlijke menselijke besluit staat onder *Zes PGM2-uitkomsten vastgesteld
+voor dit jaar*.
 
 ### Schakelingen en binair
 
@@ -1490,6 +1490,159 @@ raakt P5 zelf niet.
 Aanleiding was dat een ontwerper bij dat werkitem voorstelde de docstringpunten
 te laten vervallen omdat de matrijs ze niet draagt. De praktijk is ouder dan dit
 besluit; wat hier nieuw is, is dat de grond is opgeschreven.
+
+## Zes PGM2-uitkomsten vastgesteld voor dit jaar
+
+Op 4 november 2026 zijn onderstaande menselijke uitspraken gedaan in het
+Codex-gesprek over #466. Een afzonderlijke gespreks-URL is niet beschikbaar.
+De exacte GitHub-registraties staan per deelbesluit. De uitspraken hieronder
+worden letterlijk bewaard, met de voorgelegde keuzes waar een kort antwoord
+anders niet zelfstandig leesbaar zou zijn. Er is geen afzonderlijke menselijke
+reden gegeven; toelichtingen van de orkestrator zijn geen menselijke redenen.
+
+### Deelbesluit 1
+
+Datum: 4 november 2026. Bron: [C4-deelbesluit 1](https://github.com/hanze-hbo-ict/programmeren/issues/466#issuecomment-6634426925).
+
+Voorgelegde keuze: zes uitkomsten L1–6 met gewichten 15/20/25/10/15/15%;
+70% toepassen, 15% analyseren, 15% creëren; functioneel of OO bij L6, geen
+afzonderlijke verplichting tot recursief ontwerp of combinatie van drie paradigma’s.
+
+Letterlijk menselijk antwoord:
+
+> akkoord; met de constatering dat waar student zelf een enkele functie met comprehension of recursie ontwerpt, dit ook telt (mits die vorm niet voorgeschreven was)
+
+### Deelbesluit 2
+
+Datum: 4 november 2026. Bron: [C4-deelbesluit 2](https://github.com/hanze-hbo-ict/programmeren/issues/466#issuecomment-6634542128).
+
+Letterlijk voorgelegde beslisvraag:
+
+> Ga je akkoord met de voorgestelde weekverdeling, met deze wijziging: 5% analyse van week 6 naar week 3 en 5% ontwerpen van week 3 naar week 6?
+>
+> Daarmee wordt zelfstandig functioneel ontwerp in week 3/4 en zelfstandig OO-ontwerp in week 6 verplicht geoefend. De weektotalen blijven 15/10/15/15/15/15/15% en de niveauverdeling blijft 70% toepassen, 15% analyseren en 15% creëren.
+
+Letterlijk menselijk antwoord:
+
+> ok
+
+Voorafgaande menselijke begrenzing, letterlijk:
+
+> ik zei niet dat gelijke weekgewichten mochten wijken
+
+### Deelbesluit 3
+
+Datum: 4 november 2026. Bron: [C4-deelbesluit 3](https://github.com/hanze-hbo-ict/programmeren/issues/466#issuecomment-6634561723).
+
+Letterlijk menselijk antwoord:
+
+> nee. de matrijs wordt vastgesteld voor dit jaar
+
+### Deelbesluit 4
+
+Datum: 4 november 2026. Bron: [C4-deelbesluit 4](https://github.com/hanze-hbo-ict/programmeren/issues/466#issuecomment-6634594165).
+
+Menselijke aanleiding, letterlijk:
+
+> Waarom is L5 alleen SRe1? wat wordt er gerealiseerd? Waarom is het bv niet SAn1?
+
+Voorgelegde correctie, letterlijk:
+
+> Ik stel daarom voor:
+>
+> - L5 → SAn1
+> - L6 → SOn1 en SRe1, omdat de student daar ontwerpt én implementeert.
+>
+> SAn1 ontbreekt nu in onze competentietabel; bij akkoord voegen we de bijbehorende omschrijving toe. Akkoord met deze correctie?
+
+Letterlijk menselijk antwoord:
+
+> ja
+
+### Deelbesluit 5
+
+Datum: 4 november 2026. Bron: [C4-deelbesluit 5](https://github.com/hanze-hbo-ict/programmeren/issues/466#issuecomment-6634608892).
+
+Letterlijk voorgelegde keuze:
+
+> Voor de competentiekoppeling resteert: L1–L4 → SRe1. Daar implementeren en controleren studenten gegevensverwerking, functies, objectgedrag en foutafhandeling volgens gegeven afspraken.
+>
+> Akkoord met SRe1 voor deze vier uitkomsten?
+
+Letterlijk menselijk antwoord:
+
+> ja
+
+### Deelbesluit 6
+
+Datum: 4 november 2026. Bron: [C4-deelbesluit 6](https://github.com/hanze-hbo-ict/programmeren/issues/466#issuecomment-6634622903).
+
+Letterlijk voorgelegde keuze:
+
+> Dan twee oude uitkomsten die buiten de nieuwe zesdeling vallen:
+>
+> - P7 — externe bibliotheken: vervalt als afzonderlijke leeruitkomst. Bibliotheken blijven waar nodig hulpmiddel bij opdrachten.
+> - A5 — finite state machines voor talen: vervalt. Dit onderdeel wordt niet meer onderwezen of getoetst.
+>
+> Beide hebben nu geen eigen toetsgewicht; er hoeft dus niets herverdeeld te worden.
+>
+> Akkoord met deze afhandeling?
+
+Letterlijk menselijk antwoord:
+
+> ja
+
+### Deelbesluit 7
+
+Datum: 4 november 2026. Bron: [C4-deelbesluit 7](https://github.com/hanze-hbo-ict/programmeren/issues/466#issuecomment-6634651621).
+
+Letterlijk voorgelegde uitvoerscope:
+
+> Het laatste besluit betreft wat we nu uitvoeren. Mijn voorstel:
+>
+> 1. De vastgestelde matrijs voor dit jaar verwerken in de drie curriculumbestanden, inclusief alle zojuist genomen besluiten.
+> 2. Vijf gekoppelde vervolgwerkitems aanmaken voor:
+>    - zelfstandig functioneel ontwerp in week 3/4 en OO-ontwerp in week 6;
+>    - analyse in week 3/4/5;
+>    - aanpassing van oefententamen en rubric;
+>    - herstel van de twee concrete toetsdefecten en lokale terminologie;
+>    - haalbaarheid van week 7 naast het oefententamen.
+>
+> Deze ronde levert de curriculumwijziging met onafhankelijke beoordeling op. De vervolgitems worden afzonderlijk uitgevoerd; jij beslist over merge.
+>
+> Akkoord met deze uitvoerscope?
+
+Letterlijk menselijk antwoord:
+
+> ja
+
+### Uitvoering en grenzen
+
+De matrijs is vastgesteld voor dit jaar, niet uitsluitend als voorstel.
+De besloten prestaties, bewijsgrenzen, competentiekoppelingen en de sluitende
+6×7-tabel staan in [leeruitkomsten.md](leeruitkomsten.md); de weekroute in
+[leerlijn.md](leerlijn.md). L1–4 zijn gekoppeld aan SRe1, L5 aan SAn1 en L6 aan
+SOn1/SRe1. SAn1 is toegevoegd met herleidbare officiële HBO-i-bron; dit is geen
+algemene competentiemodelmigratie en voegt geen OP-koppeling toe.
+
+De curriculumregistratie omvat uitsluitend die twee documenten en dit register.
+Vijf afzonderlijke vervolgitems zijn aangemaakt: [#468](https://github.com/hanze-hbo-ict/programmeren/issues/468)
+(zelfstandig functioneel W3/4 en OO W6), [#469](https://github.com/hanze-hbo-ict/programmeren/issues/469)
+(analyse W3/4/5), [#470](https://github.com/hanze-hbo-ict/programmeren/issues/470)
+(oefentoets en rubric), [#471](https://github.com/hanze-hbo-ict/programmeren/issues/471)
+(twee defecten en lokale terminologie) en [#472](https://github.com/hanze-hbo-ict/programmeren/issues/472)
+(W7-haalbaarheid). Hun uitvoering is niet in #466 gedaan. De bestaande toets is
+niet door heretikettering representatief voor de zes doelen. De mens beslist
+over merge.
+
+Exceptions inclusief `raise` blijven PGM2. Eventuele latere verplaatsing volgens #465 vraagt vervangende PGM1-dekking, een afzonderlijk besluit over L3/L4 en
+herverdeling; #356 is hier niet beslecht. Historische verwijzingen naar de oude
+P/A-matrijs in dit register beschrijven eerdere besluiten, niet de geldende tabel.
+
+**Te heropenen wanneer** de zes prestaties, hun gewichten of weektoerekening
+moeten veranderen, of de afzonderlijke vervolguitvoering een inhoudelijk besluit
+buiten haar begrensde opdracht nodig maakt. Onvoldoende W7-ruimte vraagt eerst
+zo'n besluit; 15% budget bewijst geen haalbare studenttijd.
 
 ## Een besluit toevoegen
 
