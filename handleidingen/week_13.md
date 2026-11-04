@@ -67,7 +67,7 @@ Gebruik [13b, *Eén aanroep, ander gedrag*, *Duck typing*, *Wat duck typing niet
 | Minuten | Docenthandeling en werkvorm | Waarneembaar signaal |
 |---:|---|---|
 | 10 | Haal twee objecten met verschillend gedrag op. Laat eerst hun gemeenschappelijke aanroep opschrijven. | Student ziet dezelfde handeling zonder aparte aanroep per soort. |
-| 25 | Volg *De studiegroep hoeft niets te weten*. Laat duo’s voorspellen wat de groepscode per object oproept. | Student verklaart het verschil vanuit het object, zonder typevertakking in de groepslus. |
+| 25 | Volg *De studiegroep hoeft niets te weten*. Laat duo’s voorspellen wat de groepscode per object aanroept. | Student verklaart het verschil vanuit het object, zonder typevertakking in de groepslus. |
 | 20 | Gebruik duck typing en de begrenzing ervan. Laat aanwijzen welke methode in een gegeven gebruik wel of niet nodig is. | Student verbindt geschiktheid aan de gebruikte handelingen. |
 | 15 | Laat `self.__class__.__name__` en `isinstance` in de bestaande voorbeelden lezen. Vraag hoe een typecontrole de toegelaten objecten verandert. | Student onderscheidt een klasse opvragen van op gedrag vertrouwen. |
 | 15 | Laat overerving of compositie kiezen bij de bestaande opdrachten. Vraag eerst: is dit een soort, of heeft dit iets als onderdeel? | De keuze volgt de betekenis van het domein. |

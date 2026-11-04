@@ -33,7 +33,7 @@ Open vooraf [het Markovpracticum](../source/practicals/8a_text_genereren.md),
 [a.txt](../source/practicals/assets/a.txt). Zet Python-bestand en invoertekst in dezelfde
 directory; controleer dat de tekst platte UTF-8-tekst is. Voor de huiswerkbegeleiding
 staat de [Markov-uitwerking](../source/solutions/8a_text_genereren.ipynb) klaar, naast de bestaande uitwerkingen van [opstap](../source/solutions/8_opstap.ipynb),
-[basis](../source/solutions/8_basis.ipynb) en [extra](../source/solutions/8_extra.ipynb) klaar.
+[basis](../source/solutions/8_basis.ipynb) en [extra](../source/solutions/8_extra.ipynb).
 
 ## College 1 — methoden en dictionaries
 
