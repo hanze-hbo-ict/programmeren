@@ -11,16 +11,19 @@ title: Oefententamen PGM2
 # Proeftoets
 
 Deze oefentoets heeft zes opgaven en 100 punten. Je oefent de zes leeruitkomsten
-van PGM2. Dit is geen uitspraak over de inhoud van het echte tentamen.
-Het cijfer is `1 + 9 * behaalde punten / 100`.
+van PGM2. Het echte tentamen kan andere vragen bevatten.
+Je berekent je cijfer met `1 + 9 * behaalde punten / 100`.
 
 ## Opgave 1 _Extensies_ (15pt)
 
 Een bestandsnaam heeft meestal een extensie, zoals `.py`. Bijlagen die eindigen
-op `.exe` kunnen schadelijke programma's bevatten. Hieronder staat een complete
-applicatie die alleen bestandsnamen met een toegestane extensie selecteert.
-De vergelijking is hoofdlettergevoelig; een lege extensie past op elke naam.
-De functies veranderen de invoerlijsten niet en bewaren volgorde en duplicaten.
+op `.exe` kunnen schadelijke programma's bevatten. Het programma hieronder
+kiest uit een lijst alleen de bestanden met een toegestane extensie.
+
+Hoofdletters en kleine letters tellen als verschillende tekens: `.PY` past dus
+niet op `.py`. Een lege extensie past op elke naam. De functies veranderen de
+lijsten die je meegeeft niet. Namen blijven in dezelfde volgorde staan; staat
+een naam tweemaal in de invoer, dan kan die ook tweemaal in het resultaat staan.
 
 ```python
 def check_extension(s, e):
@@ -41,7 +44,7 @@ def allowed_file(filename, extensions):
 
 
 def select_files(filenames, extensions):
-    """Selecteer toegestane bestandsnamen met behoud van volgorde en duplicaten."""
+    """Geef passende bestandsnamen terug, in dezelfde volgorde en met herhalingen."""
     return [name for name in filenames if allowed_file(name, extensions)]
 
 
@@ -52,33 +55,39 @@ assert select_files(["werk.py", "spel.exe", "leeg.txt"], [".py", ".txt"]) == [
 ]
 ```
 
-Beantwoord de volgende vragen met verwijzingen naar de code. Je hoeft geen code
-te schrijven.
+Lees de code en beantwoord de vragen. Verwijs bij je uitleg naar de functies en
+hun aanroepen. Je hoeft geen code te schrijven.
 
-1. Leg van elk van de drie functies uit welke verantwoordelijkheid die heeft,
-   welke invoer die ontvangt en welk resultaat die teruggeeft. (5pt)
-2. Verklaar hoe een bestandsnaam vanuit `select_files` bij `check_extension`
-   terechtkomt en hoe het resultaat terugwerkt in de selectie. Gebruik
-   `"spel.exe"` en `[".py", ".txt"]` als concreet voorbeeld. (5pt)
-3. De toelatingsregel verandert: extensies moeten voortaan ongeacht hoofdletters
-   worden herkend, zodat `"WERK.PY"` ook past op `".py"`. Benoem een geschikte
-   wijzigingsplaats, onderbouw waarom en verklaar de gevolgen voor de andere
-   twee functies en voor bestaande aanroepen. (5pt)
+1. Leg voor elk van de drie functies uit welk deel van het werk die doet,
+   welke gegevens je meegeeft en wat de functie teruggeeft. (5pt)
+2. Loop de aanroepen na voor `"spel.exe"` met `[".py", ".txt"]`: hoe geeft
+   `select_files` de naam door aan `allowed_file` en `check_extension`? Leg ook
+   uit hoe de teruggegeven waarden bepalen of de naam in de uitkomst komt. (5pt)
+3. Het programma moet voortaan hoofdletters en kleine letters hetzelfde
+   behandelen. Dan moet `"WERK.PY"` ook passen op `".py"`. Kies in welke functie
+   je dit zou aanpassen en leg uit waarom je die kiest. Wat betekent die
+   aanpassing voor de andere twee functies en voor de aanroepen die al in het
+   programma staan? Licht je antwoord toe. (5pt)
 
 ## Opgave 2 _Even op vele manieren_ (15pt)
 
-Schrijf drie functies die een nieuwe lijst opleveren zonder de invoerlijst te
-veranderen. Volgorde en dubbele waarden blijven behouden. De invoer is een lijst
-integers, ook negatief of leeg.
+Schrijf drie functies die getallen uit een lijst kiezen. Elke functie geeft een
+nieuwe lijst terug en laat de oorspronkelijke lijst heel. De getallen blijven
+in dezelfde volgorde staan. Komt een getal vaker voor, neem het dan ook vaker
+mee als het aan de voorwaarde voldoet. De lijst bevat integers, die ook negatief
+kunnen zijn. De lijst mag leeg zijn.
 
-1. Schrijf `only_even_lc(L)` met een list comprehension: geef de even waarden
-   terug. (5pt)
-2. Schrijf `only_even_rec(L)` met recursie, zonder lus of comprehension: geef
-   dezelfde selectie terug. (5pt)
-3. Schrijf `select_numbers(numbers, predicate)`. Roep het meegegeven predicaat
-   voor elk getal aan en neem het getal op als het resultaat waar is. Je mag
-   zelf kiezen hoe je de lijst verwerkt. Het predicaat accepteert één integer
-   en geeft een boolean terug. (5pt)
+1. Schrijf `only_even_lc(L)`: geef de even getallen uit `L` terug met een list
+   comprehension. (5pt)
+2. Schrijf `only_even_rec(L)`: geef dezelfde even getallen terug met recursie.
+   Gebruik geen lus of comprehension. (5pt)
+3. Schrijf `select_numbers(numbers, predicate)`. De tweede parameter is een
+   functie die één integer ontvangt en `True` of `False` teruggeeft. Roep deze
+   meegegeven functie voor elk getal aan. Neem het getal op als de functie
+   `True` teruggeeft. Je kiest zelf hoe je de lijst doorloopt. (5pt)
+
+De twee laatste voorbeelden geven verschillende functies mee: de ene kiest
+positieve getallen, de andere even getallen.
 
 ```python
 assert only_even_lc([-2, -1, 0, 2, 2]) == [-2, 0, 2, 2]
@@ -89,11 +98,14 @@ assert select_numbers([-2, 0, 3], lambda number: number % 2 == 0) == [-2, 0]
 
 ## Opgave 3 _Bonus_ (15pt)
 
-Studenten die huiswerk maakten krijgen 0.5 bonus. Gebruik onderstaande fictieve
-studentgegevens. Elke rij bevat studentnummer, cijfer en een boolean voor
-huiswerk. Bij een dubbel studentnummer vervangt de laatste rij de hele eerdere
-registratie, inclusief het huiswerkgegeven. Ken de bonus precies eenmaal toe,
-na verwerking van alle rijen. Er is geen maximumcijfer in dit contract.
+Studenten die huiswerk maakten krijgen 0.5 punt bij hun cijfer. Gebruik de
+verzonnen gegevens hieronder. Elke rij bevat een studentnummer, een cijfer en
+`True` als het huiswerk gemaakt is, anders `False`.
+
+Soms staat een studentnummer meer dan eenmaal in de lijst. Gebruik dan alleen
+de laatste rij voor dat nummer, zowel voor het cijfer als voor het huiswerk.
+Verwerk eerst alle rijen en geef daarna eenmaal de bonus. Je hoeft een cijfer
+na de bonus niet te begrenzen op een maximum.
 
 ```python
 records = [
@@ -105,21 +117,27 @@ records = [
 participants = {"S01", "S02", "S03", "S04"}
 ```
 
-`participants` bevat alle ingeschreven studentnummers, ook die zonder cijfer.
-Alle nummers in `records` zijn ingeschreven. Maak achtereenvolgens:
+De set `participants` bevat de nummers van alle ingeschreven studenten, ook
+studenten voor wie nog geen cijfer is ingevuld. Alle nummers uit `records`
+staan ook in `participants`.
 
-1. `students`: een dictionary met studentnummer als sleutel en `[cijfer, huiswerk]`
-   als waarde, volgens de regel voor duplicaten. (3pt)
-2. Werk de cijfers in die dictionary gericht bij met de bonus voor huiswerk. (3pt)
-3. `overview`: een lijst `[studentnummer, cijfer]` voor iedere sleutel, oplopend
-   gesorteerd op studentnummer. (3pt)
-4. `homework`: een set met de unieke nummers die volgens de definitieve
-   registratie huiswerk maakten. (3pt)
-5. Controleer met lidmaatschap of `"S03"` in `homework` staat en maak `missing`
-   met het setverschil: alle ingeschreven nummers die niet in `homework` staan.
-   Een ontbrekend cijfer telt dus als geen geregistreerd huiswerk. (3pt)
+Maak de volgende gegevens. Je mag lussen of comprehensions gebruiken.
 
-Je mag lussen of comprehensions gebruiken. Het resultaat is:
+1. Maak `students`: een dictionary met het studentnummer als sleutel en
+   `[cijfer, huiswerk]` als waarde. Houd bij dubbele nummers alleen de laatste
+   rij over. (3pt)
+2. Zoek in die dictionary op wie huiswerk maakte en verhoog de bijbehorende
+   cijfers met 0.5. (3pt)
+3. Maak `overview`: een lijst met voor elke student uit de dictionary een rij
+   `[studentnummer, cijfer]`. Sorteer op studentnummer, van laag naar hoog. (3pt)
+4. Maak `homework`: een set met de studentnummers waarvoor in de dictionary
+   staat dat het huiswerk gemaakt is. Ieder nummer komt eenmaal in de set. (3pt)
+5. Controleer met `in` of `"S03"` in `homework` staat. Maak ook `missing` met
+   het verschil van de sets `participants` en `homework`: wie is wel
+   ingeschreven, maar staat niet bij de huiswerkmakers? Een student zonder
+   cijfer hoort ook bij deze groep. (3pt)
+
+Bij de gegeven invoer moet je dit krijgen:
 
 ```python
 assert students == {"S01": [8.0, False], "S02": [5.1, False], "S03": [6.9, True]}
@@ -134,39 +152,47 @@ assert missing == {"S01", "S02", "S04"}
 Nim speel je met twee spelers. Je begint met 16 lucifers. Om de beurt pakt een
 speler 1, 2 of 3 lucifers, maar nooit meer dan er liggen. Wie de laatste pakt,
 wint. Een computer kan proberen een veelvoud van vier achter te laten.
-Die strategie garandeert geen winst vanuit elke mogelijke positie.
+Dat lukt niet vanuit elke stand en zorgt dus niet altijd voor winst.
 
-Maak precies de drie klassen hieronder en een interactieve besturing volgens
-het gegeven contract. De menselijke speler begint. De besturing moet ook met
-andere objecten met dezelfde spelersinterface werken.
+Schrijf de drie klassen uit de tabel en een lus waarmee je het spel speelt.
+De mens begint, daarna is de computer aan de beurt. Laat de lus elke speler op
+dezelfde manier om een zet vragen: roep `choose_move(game)` aan. Zo kun je ook
+een ander spelersobject gebruiken als dat dezelfde methode heeft.
 
-| Onderdeel | Contract |
+| Onderdeel | Wat moet het doen? |
 |---|---|
-| `Nim(number_of_sticks)` | Slaat het gegeven niet-negatieve gehele aantal op als `sticks`. Je hoeft de constructorinvoer niet te valideren. |
-| `Nim.player_takes(amount)` | Bij een integer met `1 <= amount <= min(3, sticks)` verminder je `sticks` met `amount`. Anders gooi je `ValueError` vóór enige wijziging. Deze methode geeft geen resultaat terug. |
-| `Nim.game_over()` | Geeft precies bij nul lucifers `True` terug, anders `False`. |
-| `Nim.__eq__(other)` | Twee Nim-objecten zijn gelijk als hun `sticks` gelijk zijn; een ander soort object is niet gelijk. Vergelijken verandert geen object. |
-| `Player.choose_move(game)` | Vraagt met `input` een geheel aantal lucifers en geeft dit als integer terug. Verandert het spel niet. |
-| `StrategicPlayer(Player)` | Erft van `Player` en overschrijft `choose_move(game)`. Bij een positief aantal kiest die `sticks % 4` als dat niet nul is, anders willekeurig uit `1` tot en met `min(3, sticks)`. Verandert het spel niet. Bij een afgelopen spel wordt deze methode niet aangeroepen. |
+| `Nim(number_of_sticks)` | Bewaar het aantal lucifers in `sticks`. Je mag aannemen dat het gegeven aantal een integer van nul of groter is; dat hoef je niet te controleren. |
+| `Nim.player_takes(amount)` | Het aantal `amount` moet een integer zijn, minstens 1 en hoogstens 3, en niet groter dan het aantal lucifers op tafel. Trek een geldig aantal van `sticks` af. Gooi anders `ValueError` en laat `sticks` ongewijzigd. De methode geeft geen waarde terug. |
+| `Nim.game_over()` | Geef `True` terug als er nul lucifers over zijn, anders `False`. |
+| `Nim.__eq__(other)` | Vergelijk twee Nim-objecten: ze zijn gelijk als ze evenveel lucifers hebben. Een Nim-object is niet gelijk aan een object van een ander soort. Verander de objecten niet bij het vergelijken. |
+| `Player.choose_move(game)` | Vraag de speler met `input` hoeveel lucifers die wil pakken. Zet de invoer om naar een integer en geef die terug. Verander het aantal lucifers niet. |
+| `StrategicPlayer(Player)` | Maak een subklasse van `Player` en overschrijf `choose_move(game)`. Kies `game.sticks % 4` als dat niet nul is. Kies anders willekeurig een legaal aantal: 1, 2 of 3, maar nooit meer dan er liggen. Geef de keuze terug zonder het spel te veranderen. Roep deze methode alleen aan zolang er nog lucifers liggen. |
 
-Bij twee resterende lucifers zijn dus alleen 1 en 2 legaal; bij nul geen enkele
-zet. `Nim(2) == Nim(2)` is waar, ongeacht welke speler aan de beurt zou zijn:
-alleen het aantal lucifers behoort tot een positie.
+Liggen er twee lucifers, dan mag je er 1 of 2 pakken, maar geen 3. Liggen er nul,
+dan kun je geen zet meer doen. `Nim(2) == Nim(2)` is waar: voor de vergelijking
+kijk je alleen naar het aantal lucifers, niet naar wie aan de beurt is.
 
-1. Implementeer de toestand, legale zet en eindcontrole. (7pt)
-2. Laat de besturing om beurten `choose_move(game)` aanroepen op de menselijke
-   en de computerspeler, en laat het spel de gekozen zet uitvoeren. Toon vóór
-   elke beurt het aantal en meld wie wint; stop direct bij het einde. (7pt)
-3. Implementeer `Player` en `StrategicPlayer` met overerving en overschrijven.
-   Gebruik beide in dezelfde besturing zonder op hun type te testen. (6pt)
-4. Implementeer de vergelijking van posities. (5pt)
-5. Laat `player_takes` een ongeldige zet met `ValueError` weigeren. (5pt)
-6. Vang alleen `ValueError` in de besturing af, zowel van de omzetting van
-   invoer als van de zetmethode. Meld `"Ongeldige zet"` en probeer opnieuw met
-   dezelfde speler en ongewijzigde spelstaat. Vooraf controleren vervangt het
-   gooien en afvangen van de exception niet. (5pt)
+1. Schrijf de methoden waarmee `Nim` het aantal lucifers bewaart, een geldige
+   zet uitvoert en nagaat of het spel afgelopen is. (7pt)
+2. Schrijf de spellus. Vraag om beurten een zet aan de menselijke speler en de
+   computer met `choose_move(game)` en laat `Nim` die zet uitvoeren. Toon vóór
+   elke beurt hoeveel lucifers er liggen. Stop zodra de laatste gepakt is en
+   meld wie wint. (7pt)
+3. Schrijf `Player` en de subklasse `StrategicPlayer`. Gebruik de overschreven
+   methode om de computer een zet te laten kiezen. Laat dezelfde spellus met
+   beide spelers werken, zonder in de lus hun type te controleren. (6pt)
+4. Schrijf `__eq__` zodat je Nim-objecten met `==` kunt vergelijken zoals in de
+   tabel staat. (5pt)
+5. Laat `player_takes` zelf `ValueError` gooien bij een ongeldige zet, voordat
+   het aantal lucifers verandert. (5pt)
+6. Vang in de spellus alleen `ValueError` af. Die fout kan ontstaan bij het
+   omzetten van de invoer naar een integer of bij het uitvoeren van de zet.
+   Meld `"Ongeldige zet"` en laat dezelfde speler opnieuw kiezen, met evenveel
+   lucifers op tafel. Alleen de invoer vooraf controleren is niet genoeg:
+   `player_takes` moet zelf de fout gooien en de lus moet die afvangen. (5pt)
 
-Controleer ook een rechtstreeks aangeroepen zetmethode:
+Controleer `player_takes` ook zonder spellus, zoals hieronder. De ongeldige zet
+mag het aantal lucifers niet veranderen; de geldige zet erna moet wel lukken.
 
 ```python
 game = Nim(2)
@@ -182,15 +208,19 @@ assert Nim(2) != Nim(3)
 
 ## Opgave 5 _Alfabetisch_ (5pt)
 
-Bij de woorden `"adem"`, `"adders"` en `"bel"` staan de letters op
-alfabetische volgorde. Gelijke opeenvolgende letters zijn toegestaan.
-De woorden `"test"`, `"python"` en `"student"` voldoen niet.
+In de woorden `"adem"`, `"adders"` en `"bel"` staan de letters op
+alfabetische volgorde. Een letter mag hetzelfde zijn als de vorige, zoals de
+twee d's in `"adders"`. Bij `"test"`, `"python"` en `"student"` staan de
+letters niet op volgorde.
 
-Schrijf `alfabet_word(s)` voor een niet-leeg woord met uitsluitend kleine
-letters a tot en met z. Geef een boolean terug. Gebruik recursie, zonder lus of
-comprehension. Voeg een Nederlandse docstring en minstens drie betekenisvolle
-assertions toe. Functie, docstring en assertions vormen samen één blok van 5
-punten: alleen als het geheel voldoet, verdien je die punten.
+Schrijf `alfabet_word(s)`. Je mag aannemen dat `s` minstens één letter bevat en
+alleen uit kleine letters a tot en met z bestaat. Geef `True` terug als de
+letters op alfabetische volgorde staan, anders `False`.
+
+Gebruik recursie, zonder lus of comprehension. Schrijf een Nederlandse docstring
+en minstens drie assertions waarmee je de functie controleert. Kies voorbeelden
+die verschillende gevallen controleren. De functie, docstring en assertions
+leveren samen 5 punten op: je krijgt die punten als alle drie voldoen.
 
 Python kan letters vergelijken:
 
@@ -198,39 +228,45 @@ Python kan letters vergelijken:
 assert "a" < "b"
 ```
 
-Denk bij het basisgeval ook aan een woord van één letter en controleer zowel
-stijgende als dalende overgangen.
+Denk bij je basisgeval aan een woord van één letter. Controleer ook gelijke
+letters, letters die op volgorde staan en letters die niet op volgorde staan.
 
 ## Opgave 6 _Moeilijke woorden_ (15pt)
 
-Wat maakt een woord moeilijk? Voor deze oefening gebruik je de lengte van
-woorden en zinnen als maat voor de leesbaarheid van een tekst.
+Wat maakt een woord moeilijk? In deze oefening gebruik je de lengte van woorden
+en zinnen om een score voor een tekst te berekenen. Je telt de lange woorden
+en zinnen en vergelijkt dat aantal met het totale aantal woorden en zinnen.
 
-| Begrip | Regel |
+| Wat tel je? | Regel |
 |---|---|
-| Woord | Een deel dat `sentence.split()` oplevert. Alle tekens daarin tellen mee voor de lengte, ook een apostrof. |
-| Zin | Een niet-leeg tekstdeel dat op een punt eindigt. |
-| Complex woord | Langer dan 10 tekens. |
-| Complexe zin | Meer dan 15 woorden. |
+| Woord | Elk deel dat `sentence.split()` oplevert. Tel alle tekens voor de lengte, ook een apostrof. |
+| Zin | Een stuk tekst met minstens één woord, afgesloten met een punt. |
+| Complex woord | Een woord met meer dan 10 tekens. |
+| Complexe zin | Een zin met meer dan 15 woorden. |
 | Score | `100 * (complexe woorden + complexe zinnen) / (woorden + zinnen)` |
 
-Schrijf `complexity_score(text)`, met een float als resultaat. De invoer bevat
-één of meer niet-lege zinnen, ieder afgesloten met een punt. Zinnen bevatten
-minstens één woord; punten komen uitsluitend voor als zinseinde.
+Schrijf `complexity_score(text)` en geef de score terug als float. De tekst
+bevat minstens één zin. Elke zin bevat minstens één woord en eindigt met een
+punt. Er staan geen andere punten in de tekst.
 
-Kies zelf een strategie en een structuur of taakverdeling. Licht beide keuzes
-kort toe, bijvoorbeeld in twee alinea's naast je code. Maak een functionele
-oplossing met comprehension of recursie, of een OO-oplossing met zelf gekozen
-samenwerkende objecten. Beide zijn geldig. Alleen imperatieve code in een
-`def` voldoet niet aan de functionele keuze. Je krijgt 5 punten voor de
-onderbouwde strategie, 5 voor de onderbouwde structuur en 5 voor een correcte
-implementatie die bij die keuzes past. Dezelfde code krijgt geen extra
-L2- of L3-punten.
+Bedenk zelf hoe je het probleem oplost. Kies ook zelf hoe je de code opbouwt:
+welke functies of klassen heb je nodig en welk werk laat je elk daarvan doen?
+Leg beide keuzes kort uit naast je code. Eén zelf bedachte functie kan genoeg
+zijn; je mag ook meerdere functies of klassen gebruiken.
 
-Lees eerst de volgende assertions met uitleg goed door om te begrijpen hoe de
-score in deze gevallen wordt bepaald. Je zal zien dat `round` wordt gebruikt om
-de score af te ronden tot één cijfer achter de komma, dit is om eenvoudiger het
-resultaat van de functie (de score) te kunnen testen.
+Kies voor functioneel programmeren met comprehension of recursie, of voor
+objectgeoriënteerd programmeren met zelf gekozen objecten die samenwerken.
+Beide zijn goed. Kies je de functionele oplossing, gebruik dan comprehension
+of recursie. Alleen lussen en toekenningen in een functie zetten is daarvoor
+niet genoeg.
+
+Je krijgt 5 punten voor je uitleg van de gekozen aanpak, 5 voor je uitleg van
+de opbouw van je code en 5 voor een werkende oplossing die deze keuzes volgt.
+Dezelfde code levert niet nog eens punten voor L2 of L3 op.
+
+De voorbeelden hieronder laten zien hoe je telt. `round` rondt de score af op
+één cijfer achter de komma om de uitkomst te controleren. Laat je functie zelf
+de score zonder die afronding teruggeven.
 
 ```python
 assert round(complexity_score("Dit is een korte zin."), 1) == 0.0
@@ -285,5 +321,6 @@ assert (
 # Score: 2 complexe elementen / 30 totale elementen ≈ 6.7%
 ```
 
-Hint: `text.split(".")[:-1]` kan zinnen opleveren en `sentence.split()` woorden.
-Dit is een hulpmiddel; je bepaalt zelf hoe je de berekening organiseert.
+Hint: met `text.split(".")[:-1]` kun je de zinnen uit de tekst halen.
+Met `sentence.split()` krijg je de woorden van een zin. Je mag deze hulpmiddelen
+gebruiken; je kiest zelf hoe je er de berekening mee maakt.
