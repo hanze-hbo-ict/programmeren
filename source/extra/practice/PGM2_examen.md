@@ -158,7 +158,7 @@ class Nim:
     def __init__(self, number_of_sticks):
         self.sticks = number_of_sticks
 
-    # schrijf hier de functie player_takes()
+    # schrijf hier de methode player_takes()
 
     def AI_turn(self): ...
 
@@ -186,18 +186,18 @@ while True:
     # de beurt van de computer
 ```
 
-1. Schrijf de functie `player_takes` binnen de klasse `Nim`. Deze functie
+1. Schrijf de methode `player_takes` binnen de klasse `Nim`. Deze methode
    accepteert een parameter `player_turn` (een integer) die aangeeft hoeveel
    lucifers een speler van tafel pakt en de variabele `self.sticks` vervolgens
    aanpast. (5)
 
-2. Maak de functie `AI_turn` af. Deze geeft het aantal lucifers dat de AI wil
+2. Maak de methode `AI_turn` af. Deze geeft het aantal lucifers dat de AI wil
    pakken terug. De AI wil altijd een meervoud van vier op tafel laten liggen;
    als dat niet mogelijk is, kiest het een willekeurige hoeveelheid lucifers.
    Gebruik `choice([1, 2, 3])` om een random aantal lucifers tussen 1 en
    3 te kiezen. (5)
 
-3. Maak de functie `game_over` af. Deze functie controleert of het spel voorbij
+3. Maak de methode `game_over` af. Deze methode controleert of het spel voorbij
    is door te checken of er nog lucifers op tafel liggen. Als er geen lucifers
    liggen, geeft het `True` terug en anders `False`. (5)
 
@@ -226,7 +226,7 @@ alfabet de letter "e" op "b" en de letter "l" op "e". Voor de woorden "test",
 Bedenk dat Python weet van de volgorde van letters, bijvoorbeeld:
 
 ```python
-assert "a" < "b" is True
+assert "a" < "b"
 ```
 
 ## Opgave 6 _Moeilijke woorden_ (20pt)
