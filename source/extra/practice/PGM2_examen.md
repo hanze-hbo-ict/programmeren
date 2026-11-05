@@ -262,7 +262,8 @@ niet genoeg.
 
 Je krijgt 5 punten voor je uitleg van de gekozen aanpak, 5 voor je uitleg van
 de opbouw van je code en 5 voor een werkende oplossing die deze keuzes volgt.
-Dezelfde code levert niet nog eens punten voor L2 of L3 op.
+De programmeerwijze die je kiest levert hier geen extra punten op; deze opgave
+heeft maximaal 15 punten.
 
 De voorbeelden hieronder laten zien hoe je telt. `round` rondt de score af op
 één cijfer achter de komma om de uitkomst te controleren. Laat je functie zelf
