@@ -43,3 +43,8 @@ legt uit hoe dat werkt.
 
 ```{tableofcontents}
 ```
+
+In de [basis over `lambda`](/problems/11_lambda_basis) maak je de verplichte zelfstandige
+ontwerptaak: een jeugdpodium bij de schoolrun. Je legt eerst je aanpak en
+opbouw vast, schrijft daarna je code en vergelijkt die met je plan.
+De eerdere stappen blijven toepassingsoefeningen met hints.

@@ -1635,6 +1635,21 @@ Vijf afzonderlijke vervolgitems zijn aangemaakt: [#468](https://github.com/hanze
 niet door heretikettering representatief voor de zes doelen. De mens beslist
 over merge.
 
+Op 5 november 2026 antwoordde de vakdeskundige op de uitvoerscope van
+[#468, C2](https://github.com/hanze-hbo-ict/programmeren/issues/468#issuecomment-6653015026)
+letterlijk:
+
+> Akkoord
+
+Bron: [C4 van #468](https://github.com/hanze-hbo-ict/programmeren/issues/468#issuecomment-6653124506).
+Daarmee is gekozen voor één verplichte zelfstandige slottaak over tegelvoorraad
+in W3 en één over een jeugdpodium in W4. In W6 vervangt de bundelaanbieding stap
+10; de oorspronkelijke oefening met een product per stuk blijft als hulpvoorbeeld
+beschikbaar. Bestaande toepassingssteun blijft behouden. Dit omvat de bijbehorende
+uitwerkingen en weekroutes; de vastgestelde uitkomsten en gewichten veranderen
+niet. De extra studentbelasting is niet vastgesteld. Analyse, toets/rubric,
+defectherstel en W7-haalbaarheid blijven de afzonderlijke vervolgitems hierboven.
+
 Exceptions inclusief `raise` blijven PGM2. Eventuele latere verplaatsing volgens #465 vraagt vervangende PGM1-dekking, een afzonderlijk besluit over L3/L4 en
 herverdeling; #356 is hier niet beslecht. Historische verwijzingen naar de oude
 P/A-matrijs in dit register beschrijven eerdere besluiten, niet de geldende tabel.
