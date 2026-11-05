@@ -24,6 +24,7 @@ De functies veranderen de invoerlijsten niet en bewaren volgorde en duplicaten.
 
 ```python
 def check_extension(s, e):
+    """Geef aan of de bestandsnaam eindigt op de gegeven extensie."""
     if e == "":
         return True
     if s == "" or s[-1] != e[-1]:
@@ -32,10 +33,15 @@ def check_extension(s, e):
 
 
 def allowed_file(filename, extensions):
-    return any(check_extension(filename, extension) for extension in extensions)
+    """Geef aan of een bestandsnaam op een toegestane extensie eindigt."""
+    for extension in extensions:
+        if check_extension(filename, extension):
+            return True
+    return False
 
 
 def select_files(filenames, extensions):
+    """Selecteer toegestane bestandsnamen met behoud van volgorde en duplicaten."""
     return [name for name in filenames if allowed_file(name, extensions)]
 
 
@@ -181,7 +187,7 @@ alfabetische volgorde. Gelijke opeenvolgende letters zijn toegestaan.
 De woorden `"test"`, `"python"` en `"student"` voldoen niet.
 
 Schrijf `alfabet_word(s)` voor een niet-leeg woord met uitsluitend kleine
-letters a–z. Geef een boolean terug. Gebruik recursie, zonder lus of
+letters a tot en met z. Geef een boolean terug. Gebruik recursie, zonder lus of
 comprehension. Voeg een Nederlandse docstring en minstens drie betekenisvolle
 assertions toe. Functie, docstring en assertions vormen samen één blok van 5
 punten: alleen als het geheel voldoet, verdien je die punten.
