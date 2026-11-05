@@ -41,3 +41,8 @@ De studiegroep uit week 5 is compositie; deze week komt overerving ernaast.
 
 ```{tableofcontents}
 ```
+
+In de [basis](/problems/13_basis) maak je de verplichte zelfstandige
+ontwerptaak: een bundelaanbieding op de kassabon. Je legt eerst je aanpak en
+opbouw vast, schrijft daarna je code en vergelijkt die met je plan.
+Het product per stuk bij stap 10 blijft beschikbaar als hulpvoorbeeld.
