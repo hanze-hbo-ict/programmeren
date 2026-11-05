@@ -1650,6 +1650,20 @@ uitwerkingen en weekroutes; de vastgestelde uitkomsten en gewichten veranderen
 niet. De extra studentbelasting is niet vastgesteld. Analyse, toets/rubric,
 defectherstel en W7-haalbaarheid blijven de afzonderlijke vervolgitems hierboven.
 
+Op 5 november 2026 antwoordde de vakdeskundige op de uitvoerscope van
+[#469, C2](https://github.com/hanze-hbo-ict/programmeren/issues/469#issuecomment-6653999449)
+letterlijk:
+
+> akkoord
+
+Bron: [C4 van #469](https://github.com/hanze-hbo-ict/programmeren/issues/469#issuecomment-6654153551).
+De goedgekeurde uitvoering omvat één verplichte analyse van gegeven
+Scrabblefuncties in W3, schoolrunfuncties in W4 en verbreding van de bestaande
+Date-analyse in W5, met eigen uitwerkingen en weekroutes. Bestaande ondersteuning
+en de taken van #468 blijven behouden; de analyse vraagt geen extra
+implementatie. De registratie betreft deze tienbestandscope; de vastgestelde
+uitkomsten en gewichten veranderen niet. Er is geen menselijke reden gegeven.
+
 Exceptions inclusief `raise` blijven PGM2. Eventuele latere verplaatsing volgens #465 vraagt vervangende PGM1-dekking, een afzonderlijk besluit over L3/L4 en
 herverdeling; #356 is hier niet beslecht. Historische verwijzingen naar de oude
 P/A-matrijs in dit register beschrijven eerdere besluiten, niet de geldende tabel.

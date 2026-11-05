@@ -50,3 +50,9 @@ opbouw vast en kiest zelf passende functionele constructies. Je schrijft daarna
 je code en wijst bij de vergelijking met je plan aan waarin je uitwerking
 functioneel is.
 De eerdere stappen blijven toepassingsoefeningen met hints.
+
+Na de zelfstandige taak volgt de verplichte analyse van gegeven werkende
+schoolrunfuncties. Je verklaart hun samenwerking en onderbouwt waar de regel
+voor gelijke tijden moet veranderen en welke resultaten dat raakt. Je hoeft
+de wijziging niet te programmeren. Dit is een afzonderlijk antwoord naast je
+eigen ontwerp.
