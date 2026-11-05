@@ -43,3 +43,9 @@ opbouw vast en kiest zelf passende functionele constructies. Je schrijft daarna
 je code en wijst bij de vergelijking met je plan aan waarin je uitwerking
 functioneel is.
 De eerdere stappen blijven toepassingsoefeningen met hints.
+
+Na de zelfstandige taak volgt de verplichte analyse van gegeven werkende
+Scrabblefuncties: wie doet wat, welke functies gebruiken elkaar, en waar hoort
+een andere regel bij gelijke scores? Je onderbouwt de wijziging en haar gevolgen;
+je hoeft haar niet te programmeren. Dit is een afzonderlijk antwoord naast je
+eigen ontwerp.
