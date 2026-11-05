@@ -10,253 +10,216 @@ title: Oefententamen PGM2
 
 # Proeftoets
 
-<!--
-1. recursie
-2. recursie, list comprehension , lus
-3. list comprehension
-4. klassen
-5. recursie
-6. complexe vraag
+Deze oefentoets heeft zes opgaven en 100 punten. Je oefent de zes leeruitkomsten
+van PGM2. Dit is geen uitspraak over de inhoud van het echte tentamen.
+Het cijfer is `1 + 9 * behaalde punten / 100`.
 
-pandoc tentamen.md -o tentamen.pdf  --pdf-engine=xelatex
--->
+## Opgave 1 _Extensies_ (15pt)
 
-## Opgave 1 _Extensies_ (10pt)
-
-<!-- recursie -->
-
-Een bestand op een computer heeft meestal een extensie die aangeeft welk type
-het is. Bijvoorbeeld, ".py" geeft aan dat het om een Python bestand gaat. In een
-email is het meestal niet toegestaan om een bijlage mee te sturen die eindigt op
-".exe" want dit zou namelijk malware kunnen zijn die schadelijk is voor de
-computer.
-
-We kunnen recursief bepalen of een string `s` (een bestandsnaam) eindigt met een
-string `e` (een extensie):
-
-- Als string `e` leeg is, geef `True` terug
-- Als string `s` leeg is, geef `False` terug
-- Als de laatste letter van `e` _niet_ gelijk is aan de laatste letter van `s`,
-  geef `False` terug
-- Anders roep je de functie opnieuw aan, maar dan zonder de _laatste_ letters
-  van beide strings en geeft het resultaat daarvan terug.
-
-Schrijf een functie `check_extension(s, e)` die gebruik maakt van het
-bovenstaande recursief algoritme. Je mag **geen** gebruik maken van list
-comprehensions of lusconstructies.
-
-Bijvoorbeeld:
+Een bestandsnaam heeft meestal een extensie, zoals `.py`. Bijlagen die eindigen
+op `.exe` kunnen schadelijke programma's bevatten. Hieronder staat een complete
+applicatie die alleen bestandsnamen met een toegestane extensie selecteert.
+De vergelijking is hoofdlettergevoelig; een lege extensie past op elke naam.
+De functies veranderen de invoerlijsten niet en bewaren volgorde en duplicaten.
 
 ```python
-assert check_extension("tentamen.docx", ".exe") == False
-assert check_extension("program.exe", ".exe") == True
-assert check_extension("example.py", ".py") == True
+def check_extension(s, e):
+    if e == "":
+        return True
+    if s == "" or s[-1] != e[-1]:
+        return False
+    return check_extension(s[:-1], e[:-1])
+
+
+def allowed_file(filename, extensions):
+    return any(check_extension(filename, extension) for extension in extensions)
+
+
+def select_files(filenames, extensions):
+    return [name for name in filenames if allowed_file(name, extensions)]
+
+
+assert check_extension("a", "a") is True
+assert select_files(["werk.py", "spel.exe", "leeg.txt"], [".py", ".txt"]) == [
+    "werk.py",
+    "leeg.txt",
+]
 ```
+
+Beantwoord de volgende vragen met verwijzingen naar de code. Je hoeft geen code
+te schrijven.
+
+1. Leg van elk van de drie functies uit welke verantwoordelijkheid die heeft,
+   welke invoer die ontvangt en welk resultaat die teruggeeft. (5pt)
+2. Verklaar hoe een bestandsnaam vanuit `select_files` bij `check_extension`
+   terechtkomt en hoe het resultaat terugwerkt in de selectie. Gebruik
+   `"spel.exe"` en `[".py", ".txt"]` als concreet voorbeeld. (5pt)
+3. De toelatingsregel verandert: extensies moeten voortaan ongeacht hoofdletters
+   worden herkend, zodat `"WERK.PY"` ook past op `".py"`. Benoem een geschikte
+   wijzigingsplaats, onderbouw waarom en verklaar de gevolgen voor de andere
+   twee functies en voor bestaande aanroepen. (5pt)
 
 ## Opgave 2 _Even op vele manieren_ (15pt)
 
-<!-- recursie, list comprehension -->
+Schrijf drie functies die een nieuwe lijst opleveren zonder de invoerlijst te
+veranderen. Volgorde en dubbele waarden blijven behouden. De invoer is een lijst
+integers, ook negatief of leeg.
 
-In deze opgave ga je op drie manieren een functie schrijven, achtereenvolgens
-met behulp van een _lus_, vervolgens met behulp van _list comprehension_ en tot
-slot _recursie_.
-
-1. Schrijf de functie `only_even_loop(L)` die een lijst `L` accepteert met
-   integers en een _lijst_ teruggeeft met enkel de **even** getallen in de lijst
-   `L`. Los het probleem op met behulp van een _lus_. (5pt)
-
-   Bijvoorbeeld:
-
-   ```python
-   assert only_even_loop([0, 1, 2, 3, 4]) == [0, 2, 4]
-   ```
-
-2. Schrijf de functie `only_even_lc(L)` die een lijst `L` accepteert met
-   integers en een _lijst_ teruggeeft met enkel de **even** getallen in de lijst
-   `L`. Los het probleem op met behulp van een _list comprehension_. (5pt)
-
-   Bijvoorbeeld:
-
-   ```python
-   assert only_even_lc([0, 1, 2, 3, 4]) == [0, 2, 4]
-   ```
-
-3. Schrijf de functie `only_even_rec(L)` die een lijst `L` accepteert met
-   integers en een _lijst_ teruggeeft met enkel de **even** getallen in de lijst
-   `L`. Los het probleem op met behulp van _recursie_. (5pt)
-
-   Bijvoorbeeld:
-
-   ```python
-   assert only_even_rec([0, 1, 2, 3, 4]) == [0, 2, 4]
-   ```
-
-## Opgave 3 _Bonus_ (10pt)
-
-<!-- list comprehension -->
-
-Gegeven is een lijst van studentnummers, het cijfer dat ze hebben behaald voor
-een tentamen en of ze wel of niet het huiswerk hebben gemaakt. Studenten die het
-huiswerk hebben gemaakt krijgen een 0.5 bonus op hun tentamencijfer.
-
-Schrijf een **list comprehension** (_geen_ functie) die een lijst maakt van alle
-studenten die het huiswerk hebben gemaakt met hun nieuwe cijfer inclusief bonus.
-Noem deze lijst `HW`.
-
-Bijvoorbeeld,
+1. Schrijf `only_even_lc(L)` met een list comprehension: geef de even waarden
+   terug. (5pt)
+2. Schrijf `only_even_rec(L)` met recursie, zonder lus of comprehension: geef
+   dezelfde selectie terug. (5pt)
+3. Schrijf `select_numbers(numbers, predicate)`. Roep het meegegeven predicaat
+   voor elk getal aan en neem het getal op als het resultaat waar is. Je mag
+   zelf kiezen hoe je de lijst verwerkt. Het predicaat accepteert één integer
+   en geeft een boolean terug. (5pt)
 
 ```python
-L = [
-    ["0308230", 7.6, True],
-    ["8273927", 5.1, False],
-    ["8234987", 6.4, False],
-    ["2368612", 5.9, True],
-    ["9731827", 3.2, False],
+assert only_even_lc([-2, -1, 0, 2, 2]) == [-2, 0, 2, 2]
+assert only_even_rec([]) == []
+assert select_numbers([-2, 0, 3], lambda number: number > 0) == [3]
+assert select_numbers([-2, 0, 3], lambda number: number % 2 == 0) == [-2, 0]
+```
+
+## Opgave 3 _Bonus_ (15pt)
+
+Studenten die huiswerk maakten krijgen 0.5 bonus. Gebruik onderstaande fictieve
+studentgegevens. Elke rij bevat studentnummer, cijfer en een boolean voor
+huiswerk. Bij een dubbel studentnummer vervangt de laatste rij de hele eerdere
+registratie, inclusief het huiswerkgegeven. Ken de bonus precies eenmaal toe,
+na verwerking van alle rijen. Er is geen maximumcijfer in dit contract.
+
+```python
+records = [
+    ["S01", 7.6, True],
+    ["S02", 5.1, False],
+    ["S03", 6.4, True],
+    ["S01", 8.0, False],
 ]
+participants = {"S01", "S02", "S03", "S04"}
 ```
 
-zal het volgende resultaat moeten opleveren:
+`participants` bevat alle ingeschreven studentnummers, ook die zonder cijfer.
+Alle nummers in `records` zijn ingeschreven. Maak achtereenvolgens:
+
+1. `students`: een dictionary met studentnummer als sleutel en `[cijfer, huiswerk]`
+   als waarde, volgens de regel voor duplicaten. (3pt)
+2. Werk de cijfers in die dictionary gericht bij met de bonus voor huiswerk. (3pt)
+3. `overview`: een lijst `[studentnummer, cijfer]` voor iedere sleutel, oplopend
+   gesorteerd op studentnummer. (3pt)
+4. `homework`: een set met de unieke nummers die volgens de definitieve
+   registratie huiswerk maakten. (3pt)
+5. Controleer met lidmaatschap of `"S03"` in `homework` staat en maak `missing`
+   met het setverschil: alle ingeschreven nummers die niet in `homework` staan.
+   Een ontbrekend cijfer telt dus als geen geregistreerd huiswerk. (3pt)
+
+Je mag lussen of comprehensions gebruiken. Het resultaat is:
 
 ```python
-HW = [
-    ["0308230", 8.1],
-    ["2368612", 6.4],
-]
+assert students == {"S01": [8.0, False], "S02": [5.1, False], "S03": [6.9, True]}
+assert overview == [["S01", 8.0], ["S02", 5.1], ["S03", 6.9]]
+assert homework == {"S03"}
+assert "S03" in homework
+assert missing == {"S01", "S02", "S04"}
 ```
 
-<!--
-De structuur van de list comprehension geven we je hier, jouw taak is om de
-`...`'s in te vullen.
+## Opgave 4 _Nim_ (35pt)
 
-<!-- codecontrole:skip -->
+Nim speel je met twee spelers. Je begint met 16 lucifers. Om de beurt pakt een
+speler 1, 2 of 3 lucifers, maar nooit meer dan er liggen. Wie de laatste pakt,
+wint. Een computer kan proberen een veelvoud van vier achter te laten.
+Die strategie garandeert geen winst vanuit elke mogelijke positie.
+
+Maak precies de drie klassen hieronder en een interactieve besturing volgens
+het gegeven contract. De menselijke speler begint. De besturing moet ook met
+andere objecten met dezelfde spelersinterface werken.
+
+| Onderdeel | Contract |
+|---|---|
+| `Nim(number_of_sticks)` | Slaat het gegeven niet-negatieve gehele aantal op als `sticks`. Je hoeft de constructorinvoer niet te valideren. |
+| `Nim.player_takes(amount)` | Bij een integer met `1 <= amount <= min(3, sticks)` verminder je `sticks` met `amount`. Anders gooi je `ValueError` vóór enige wijziging. Deze methode geeft geen resultaat terug. |
+| `Nim.game_over()` | Geeft precies bij nul lucifers `True` terug, anders `False`. |
+| `Nim.__eq__(other)` | Twee Nim-objecten zijn gelijk als hun `sticks` gelijk zijn; een ander soort object is niet gelijk. Vergelijken verandert geen object. |
+| `Player.choose_move(game)` | Vraagt met `input` een geheel aantal lucifers en geeft dit als integer terug. Verandert het spel niet. |
+| `StrategicPlayer(Player)` | Erft van `Player` en overschrijft `choose_move(game)`. Bij een positief aantal kiest die `sticks % 4` als dat niet nul is, anders willekeurig uit `1` tot en met `min(3, sticks)`. Verandert het spel niet. Bij een afgelopen spel wordt deze methode niet aangeroepen. |
+
+Bij twee resterende lucifers zijn dus alleen 1 en 2 legaal; bij nul geen enkele
+zet. `Nim(2) == Nim(2)` is waar, ongeacht welke speler aan de beurt zou zijn:
+alleen het aantal lucifers behoort tot een positie.
+
+1. Implementeer de toestand, legale zet en eindcontrole. (7pt)
+2. Laat de besturing om beurten `choose_move(game)` aanroepen op de menselijke
+   en de computerspeler, en laat het spel de gekozen zet uitvoeren. Toon vóór
+   elke beurt het aantal en meld wie wint; stop direct bij het einde. (7pt)
+3. Implementeer `Player` en `StrategicPlayer` met overerving en overschrijven.
+   Gebruik beide in dezelfde besturing zonder op hun type te testen. (6pt)
+4. Implementeer de vergelijking van posities. (5pt)
+5. Laat `player_takes` een ongeldige zet met `ValueError` weigeren. (5pt)
+6. Vang alleen `ValueError` in de besturing af, zowel van de omzetting van
+   invoer als van de zetmethode. Meld `"Ongeldige zet"` en probeer opnieuw met
+   dezelfde speler en ongewijzigde spelstaat. Vooraf controleren vervangt het
+   gooien en afvangen van de exception niet. (5pt)
+
+Controleer ook een rechtstreeks aangeroepen zetmethode:
 
 ```python
-HW = [... for ... in ... if ...]
+game = Nim(2)
+try:
+    game.player_takes(3)
+except ValueError:
+    assert game.sticks == 2
+game.player_takes(2)
+assert game.game_over() is True
+assert Nim(2) == Nim(2)
+assert Nim(2) != Nim(3)
 ```
 
--->
+## Opgave 5 _Alfabetisch_ (5pt)
 
-## Opgave 4 _Nim_ (20pt)
+Bij de woorden `"adem"`, `"adders"` en `"bel"` staan de letters op
+alfabetische volgorde. Gelijke opeenvolgende letters zijn toegestaan.
+De woorden `"test"`, `"python"` en `"student"` voldoen niet.
 
-<!-- klassen -->
+Schrijf `alfabet_word(s)` voor een niet-leeg woord met uitsluitend kleine
+letters a–z. Geef een boolean terug. Gebruik recursie, zonder lus of
+comprehension. Voeg een Nederlandse docstring en minstens drie betekenisvolle
+assertions toe. Functie, docstring en assertions vormen samen één blok van 5
+punten: alleen als het geheel voldoet, verdien je die punten.
 
-Nim is een spel voor twee spelers. Er liggen 16 lucifers op tafel en om de beurt
-pakt een speler 1, 2 of 3 lucifers. Degene die de laatste lucifer van tafel
-pakt, heeft gewonnen. De speler is altijd als eerste aan de beurt en de AI (de
-computer) is tweede.
-
-Zodra het de beurt is van de AI, pakt deze net zoveel lucifers totdat er weer
-een meervoud van 4 op tafel ligt. Als er bijvoorbeeld 13 lucifers op tafel
-liggen, dan zou de AI er 1 pakken zodat er 12 op tafel blijven liggen. Met deze
-strategie wint de AI altijd.
-
-```python
-from random import choice
-
-
-class Nim:
-    def __init__(self, number_of_sticks):
-        self.sticks = number_of_sticks
-
-    # schrijf hier de methode player_takes()
-
-    def AI_turn(self): ...
-
-    def game_over(self): ...
-
-
-game = Nim(16)
-
-while True:
-    print("Aantal stokjes op tafel: ", game.sticks)
-
-    player_turn = int(input("Hoeveel stokjes pak je? "))
-
-    if player_turn not in [1, 2, 3]:
-        print("Aantal niet toegestaan ...")
-        continue
-
-    # de beurt van de speler
-    game.player_takes(player_turn)
-
-    if game.game_over():
-        print("Jij wint")
-        break
-
-    # de beurt van de computer
-```
-
-1. Schrijf de methode `player_takes` binnen de klasse `Nim`. Deze methode
-   accepteert een parameter `player_turn` (een integer) die aangeeft hoeveel
-   lucifers een speler van tafel pakt en de variabele `self.sticks` vervolgens
-   aanpast. (5)
-
-2. Maak de methode `AI_turn` af. Deze geeft het aantal lucifers dat de AI wil
-   pakken terug. De AI wil altijd een meervoud van vier op tafel laten liggen;
-   als dat niet mogelijk is, kiest het een willekeurige hoeveelheid lucifers.
-   Gebruik `choice([1, 2, 3])` om een random aantal lucifers tussen 1 en
-   3 te kiezen. (5)
-
-3. Maak de methode `game_over` af. Deze methode controleert of het spel voorbij
-   is door te checken of er nog lucifers op tafel liggen. Als er geen lucifers
-   liggen, geeft het `True` terug en anders `False`. (5)
-
-4. De `while`-lus is niet helemaal compleet. De beurt van de computer ontbreekt.
-   Maak de `while`-lus af door de beurt van de computer toe te voegen onder het
-   commentaar `# de beurt van de computer`. (5)
-
-## Opgave 5 _Alfabetisch_ (15pt)
-
-<!-- recursie -->
-
-De woorden "adem", "adders" en "bel" zijn woorden waarbij de letters op
-alfabetische volgorde staan. Bijvoorbeeld in het geval van "bel" volgt in het
-alfabet de letter "e" op "b" en de letter "l" op "e". Voor de woorden "test",
-"python" en "student" geldt dit niet.
-
-1. Schrijf de functie `alfabet_word(s)` die een string `s` accepteert (een
-   woord) en als resultaat `True` teruggeeft indien de letters in alfabetische
-   volgorde staan en anders `False`.
-
-   Maak gebruik van **recursie**. Je mag _geen_ gebruik maken van list
-   comprehension of lusconstructies.
-
-2. Voeg ook een docstring en 3 assertions toe.
-
-Bedenk dat Python weet van de volgorde van letters, bijvoorbeeld:
+Python kan letters vergelijken:
 
 ```python
 assert "a" < "b"
 ```
 
-## Opgave 6 _Moeilijke woorden_ (20pt)
+Denk bij het basisgeval ook aan een woord van één letter en controleer zowel
+stijgende als dalende overgangen.
 
-Wat is precies een moeilijk woord? Dat lijkt een makkelijke vraag, maar welk
-kenmerk van een woord bepaalt of het moeilijk is? Onderzoekers zijn hier niet
-over uit, maar in sommige experimenten lijkt de lengte van woorden en zinnen
-effect te hebben op de begrijpelijkheid van teksten bij lezers met een laag
-niveau van leesvaardigheid.
+## Opgave 6 _Moeilijke woorden_ (15pt)
 
-Een onderzoeker (jij) wil de complexiteit van een tekst bepalen op basis van de
-volgende regels:
+Wat maakt een woord moeilijk? Voor deze oefening gebruik je de lengte van
+woorden en zinnen als maat voor de leesbaarheid van een tekst.
 
-1. Een woord is 'complex' als het langer is dan 10 letters
-2. Een zin is 'complex' als deze meer dan 15 woorden bevat
-3. De complexiteitsscore wordt als volgt berekend:
-   - Tel het totaal aantal woorden en zinnen (dit is het totaal aantal
-     elementen)
-   - Tel het aantal complexe woorden plus het aantal complexe zinnen (dit is het
-     totaal aantal _complexe_ elementen)
-   - De score is: (aantal _complexe_ elementen / totaal aantal elementen)
-     $\times$ 100
+| Begrip | Regel |
+|---|---|
+| Woord | Een deel dat `sentence.split()` oplevert. Alle tekens daarin tellen mee voor de lengte, ook een apostrof. |
+| Zin | Een niet-leeg tekstdeel dat op een punt eindigt. |
+| Complex woord | Langer dan 10 tekens. |
+| Complexe zin | Meer dan 15 woorden. |
+| Score | `100 * (complexe woorden + complexe zinnen) / (woorden + zinnen)` |
 
-Het is jouw taak om een functie `complexity_score(text)` te schrijven die een
-string `text` als parameter accepteert en als resultaat een score (float)
-teruggeeft. De string `text` kan meerdere zinnen bevatten.
+Schrijf `complexity_score(text)`, met een float als resultaat. De invoer bevat
+één of meer niet-lege zinnen, ieder afgesloten met een punt. Zinnen bevatten
+minstens één woord; punten komen uitsluitend voor als zinseinde.
 
-In deze opgave mag je zelf bepalen hoe je dit probleem oplost, alles is
-toegestaan. Dit wil zeggen dat je lussen, list comprehension, recursie,
-eventuele hulpfuncties en verder alle ingebouwde Python-functies mag gebruiken.
+Kies zelf een strategie en een structuur of taakverdeling. Licht beide keuzes
+kort toe, bijvoorbeeld in twee alinea's naast je code. Maak een functionele
+oplossing met comprehension of recursie, of een OO-oplossing met zelf gekozen
+samenwerkende objecten. Beide zijn geldig. Alleen imperatieve code in een
+`def` voldoet niet aan de functionele keuze. Je krijgt 5 punten voor de
+onderbouwde strategie, 5 voor de onderbouwde structuur en 5 voor een correcte
+implementatie die bij die keuzes past. Dezelfde code krijgt geen extra
+L2- of L3-punten.
 
 Lees eerst de volgende assertions met uitleg goed door om te begrijpen hoe de
 score in deze gevallen wordt bepaald. Je zal zien dat `round` wordt gebruikt om
@@ -283,7 +246,7 @@ assert (
 # Woorden (11): Dit(1) is(2) een(3) gecompliceerde(4) zin(5) met(6) veel(7)
 #               verschillende(8) woorden(9) erin(10) verstopt(11)
 # Zinnen (1): 1 zin van 11 woorden (< 15, dus niet complex)
-# Complex: gecompliceerde(13 letters), verschillende(13 letters)
+# Complex: gecompliceerde(14 letters), verschillende(13 letters)
 # Score: 2 complexe woorden / 12 totale elementen ≈ 16.7%
 
 assert (
@@ -294,7 +257,7 @@ assert (
 # Woorden (6): De(1) intelligentie(2) van(3) computerprogramma's(4)
 #              neemt(5) toe(6)
 # Zinnen (1): 1 zin van 6 woorden (< 15, dus niet complex)
-# Complex: intelligentie(12 letters), computerprogramma's(16 letters)
+# Complex: intelligentie(13 letters), computerprogramma's(19 letters)
 # Score: 2 complexe woorden / 7 totale elementen ≈ 28.6%
 
 assert (
@@ -312,18 +275,9 @@ assert (
 #             vijftien(10) woorden(11) bevat(12) en(13) daarom(14) als(15)
 #             complex(16) wordt(17) beschouwd(18) bij(19) deze(20) analyse(21)
 # Zin 3 (3): Nog(1) een(2) zin(3)
-# Complex: programmeren(11 letters), en zin 2 (21 woorden > 15)
+# Complex: programmeren(12 letters), en zin 2 (21 woorden > 15)
 # Score: 2 complexe elementen / 30 totale elementen ≈ 6.7%
 ```
 
-Tot slot het volgende, de string-methode `split()` geeft een lijst van strings
-terug. Gebruik deze methode om een tekst op te delen op basis van een
-scheidingsteken:
-
-- `text.split(".")[:-1]` voor het opdelen van een tekst in zinnen. Het `[:-1]`
-  verwijdert de lege string die ontstaat na de laatste punt.
-- `sentence.split()` voor het opdelen van een zin in woorden (hier is geen
-  scheidingsteken nodig, standaard zal worden opgedeeld op basis van spaties)
-
-Bij het splitsen van zinnen en vervolgens woorden zullen enkele woorden toch nog
-een spatie bevatten, het is _niet_ nodig om hier rekening mee te houden!
+Hint: `text.split(".")[:-1]` kan zinnen opleveren en `sentence.split()` woorden.
+Dit is een hulpmiddel; je bepaalt zelf hoe je de berekening organiseert.

@@ -1673,6 +1673,33 @@ moeten veranderen, of de afzonderlijke vervolguitvoering een inhoudelijk besluit
 buiten haar begrensde opdracht nodig maakt. Onvoldoende W7-ruimte vraagt eerst
 zo'n besluit; 15% budget bewijst geen haalbare studenttijd.
 
+## PGM2-oefentoets: zes opgaven, 100 punten
+
+Op 5 november 2026 sprak de vakdeskundige bij #470 letterlijk uit:
+
+> Ik zou voor de puntenverdeling liever wat rondere getallen zien
+
+Na het voorstel van 100 punten met opgavetotalen 15/15/15/35/5/15 en de
+vijfbestandscope antwoordde de vakdeskundige letterlijk:
+
+> Ok akkoord, gebruik 100 punten zoals je voorstelde
+
+Bron: [C4 #470](https://github.com/hanze-hbo-ict/programmeren/issues/470#issuecomment-6662338378).
+Het [deelpuntenaddendum](https://github.com/hanze-hbo-ict/programmeren/issues/470#issuecomment-6662364884)
+werkt de gehele deelpunten uit. Dit besluit is uitgevoerd in de zes opgaven,
+de uitwerkingen, de nieuwe docentrubric en de gerichte registratie in
+`leeruitkomsten.md`. De 90 oude punten zijn volledig geadministreerd; het oude
+ongesplitste Alfabetisch-blok van 15 is vervangen door een nieuw ongesplitst
+blok van 5. Nim is gegeven L3/L4-contractwerk, Moeilijke woorden zelfstandig
+L6-ontwerp. De LU-totalen zijn 15/20/25/10/15/15. De cijferformule blijft
+`1 + 9 * behaalde punten / totaal`, met PGM1 totaal 90 en PGM2 totaal 100.
+Dit wijzigt geen matrijs, weektoerekening, lesmateriaal of besluit over het echte
+tentamen. Studenttijd is niet vastgesteld; de mens beslist over merge.
+Er is geen verdere menselijke reden gegeven.
+
+**Te heropenen wanneer** de zesopgavenopzet, puntentoerekening of goedgekeurde
+vijfbestandscope inhoudelijk moet veranderen.
+
 ## Een besluit toevoegen
 
 Neem het op in de tabel met zijn aard en status, en licht het eronder toe als de
