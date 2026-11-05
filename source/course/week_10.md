@@ -38,6 +38,8 @@ is opgeschreven.
 ```
 
 In de [basis](/problems/10_basis) maak je de verplichte zelfstandige
-ontwerptaak: woorden met je eigen Scrabbletegels. Je legt eerst je aanpak en
-opbouw vast, schrijft daarna je code en vergelijkt die met je plan.
+functionele ontwerptaak: woorden met je eigen Scrabbletegels. Je legt eerst je aanpak en
+opbouw vast en kiest zelf passende functionele constructies. Je schrijft daarna
+je code en wijst bij de vergelijking met je plan aan waarin je uitwerking
+functioneel is.
 De eerdere stappen blijven toepassingsoefeningen met hints.

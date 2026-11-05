@@ -45,6 +45,8 @@ legt uit hoe dat werkt.
 ```
 
 In de [basis over `lambda`](/problems/11_lambda_basis) maak je de verplichte zelfstandige
-ontwerptaak: een jeugdpodium bij de schoolrun. Je legt eerst je aanpak en
-opbouw vast, schrijft daarna je code en vergelijkt die met je plan.
+functionele ontwerptaak: een jeugdpodium bij de schoolrun. Je legt eerst je aanpak en
+opbouw vast en kiest zelf passende functionele constructies. Je schrijft daarna
+je code en wijst bij de vergelijking met je plan aan waarin je uitwerking
+functioneel is.
 De eerdere stappen blijven toepassingsoefeningen met hints.
