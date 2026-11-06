@@ -405,7 +405,7 @@ draait wel.
 | De facultatieve extra van PGM1 week 6 is tekstbestand → RGB-raster → PNG met een vaste vergroting; zij blijft naast `6b_images` en draagt geen nieuwe leeruitkomst | didactisch | gesloten op 25 september 2026 (#303, C4), **uitgevoerd** in #312; samenhang gecontroleerd in #313 |
 | Tot en met week 4 ligt de nadruk op lezen en begrijpen; schrijven begint wel | didactisch | staand, onderbouwd |
 | Een weekpagina vat samen wat volgt en waarop het voortbouwt | praktisch | gesloten (#167), **deels uitgevoerd**: week 1 tot en met 4 dragen hem, met #168, #169, #230 en #162; week 6 draagt hem sinds #313; week 12 (PGM2 week 5) draagt hem sinds #160, week 8 (PGM2 week 1) sinds #273, week 13 (PGM2 week 6) sinds #270, week 14 (PGM2 week 7) sinds #271, week 9 (PGM2 week 2) sinds #326, week 10 (PGM2 week 3) sinds #332 en week 11 (PGM2 week 4) sinds #335; week 7 draagt sinds #102 een route, een tijdpad over drie bijeenkomsten en een uitvalpad; week 5 is nog een stub |
-| Opgaven en practica horen een uitwerking te hebben | didactisch | uitgebreid op [9 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/375#issuecomment-6076782174), C7, uitgevoerd in #382; op `054bfe52` 43/43 niveau-uitwerkingen en 15/16 practicumuitwerkingen, met `6b_images` als bewuste uitzondering. Collegeopdrachten blijven buiten de norm, caesar behoudt VP6; zie de norm hieronder en [C4 #383 van 28 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/383#issuecomment-6467804118) |
+| Opgaven en practica horen een uitwerking te hebben | didactisch | uitgebreid op [9 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/375#issuecomment-6076782174), C7, uitgevoerd in #382; op `054bfe52` 43/43 niveau-uitwerkingen en 15/16 practicumuitwerkingen, met `6b_images` als bewuste uitzondering. Collegeopdrachten blijven buiten de norm; caesar behield VP6 tot #481, dat die uitzondering opvolgde met een uitvoerbare uitwerking; zie de norm hieronder en [C4 #383 van 28 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/383#issuecomment-6467804118) |
 | Week 4 krijgt een lusrecept van vijf vragen, in `4a_lussen` | didactisch | gesloten, **uitgevoerd** met #153; week 5 pikt het nog niet op (#163) |
 | Recursie gaat in beginsel naar PGM2; `unique` blijft in PGM1 als herkenbaar iteratief voorbeeld met vooruitwijzing | organisatorisch | gesloten, uitgevoerd in #162: de overige recursieplekken zijn verwijderd; recursie wordt uitgebreider behandeld in PGM2 |
 | Eerst de weken van PGM1 afronden; het materiaal moet zo snel mogelijk live | organisatorisch | staand |
@@ -1810,7 +1810,7 @@ vraagt een nieuw begrensd menselijk besluit.
 
 ## PGM2-huiswerkroute (#481)
 
-Voorgelegd en goedgekeurd in [C4](https://github.com/hanze-hbo-ict/programmeren/issues/481#issuecomment-6685696981):
+Voorgelegd en goedgekeurd op 6 november 2026 in [C4](https://github.com/hanze-hbo-ict/programmeren/issues/481#issuecomment-6685696981):
 
 > De voorgestelde scope is:
 >
