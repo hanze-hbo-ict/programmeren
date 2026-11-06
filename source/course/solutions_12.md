@@ -9,4 +9,4 @@ De uitwerkingen volgen dezelfde niveaus als de [opgaven](/course/opgaven_12):
 - [Basis](/solutions/12_basis): `Date`.
 - [Extra](/solutions/12_extra): `Board`.
 
-Gebruik eerst de zelfcontroles bij je eigen werk.
+Controleer eerst je eigen werk, met de zelfcontroles waar die er zijn.

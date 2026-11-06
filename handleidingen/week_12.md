@@ -21,7 +21,7 @@ de opgaven onder `problems/` blijven huiswerk.
 
 ## Voorbereiding en middelen
 
-Bronstatus: gecontroleerd tegen `adfdc5c8` van `origin/master`. De actuele
+Bronstatus: gecontroleerd tegen `adfdc5c8` van `origin/master`; route bijgewerkt volgens [C4 van #481](https://github.com/hanze-hbo-ict/programmeren/issues/481#issuecomment-6685696981). De actuele
 [weekpagina](../source/course/week_12.md) geeft de studentroute. Open de
 collegenotebooks, voer je eigen demonstraties vooraf uit en houd de hieronder
 genoemde uitwerkingen bij de hand voor je begeleiding. Gebruik een werkende

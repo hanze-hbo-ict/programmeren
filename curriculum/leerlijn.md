@@ -344,7 +344,7 @@ de poort van #332 besloot de vakdeskundige verder:
 - de laatste opdracht van de opstap oefent dezelfde functie als lus, als list
   comprehension en recursief, gemarkeerd als voorbereiding op het oefententamen.
   Dat is de enige plek waar week 3 recursie naast een lus zet (VP5);
-- `caesar_op_orde` verhuisde bij #332 naar week 4 (VP6); sinds #481 staat alle inhoud in het derde deel van `problems/11_extra`, met uitwerking;
+- `caesar_op_orde` staat ongewijzigd in week 4, onder `opgaven_11` (VP6; sinds #481 opgevolgd: alle inhoud staat in het derde deel van `problems/11_extra`, met uitwerking);
 - het tweede college sluit af met een gemarkeerde vooruitblik op week 4, zonder
   de term *use it or lose it*; zie *Vooruitverwijzingen om na te lopen* (VP8).
 
@@ -444,7 +444,8 @@ De titels zijn daarmee *Basis: algoritmen*, *Basis: lambda*, *Extra: algoritmen*
 en *Extra: periodieke tshirt*; de eerdere titels hierboven zijn daardoor
 vervangen.
 Het niveauwoord staat erin, zoals [begrippen.md](../conventies/begrippen.md),
-*De drie opgaveniveaus*, vraagt.
+*De drie opgaveniveaus*, vraagt. Sinds #481 heten de samengevoegde bestanden *Basis*
+en *Extra*, met de contexten als deelkoppen.
 
 **Uitgevoerd** in #335, met deze keuze van de auteur: de eerste kop van de vier
 niveaubestanden en van hun uitwerkingen is gelijk aan hun titel in de
@@ -806,7 +807,7 @@ Alle drie niveaus hebben een gelijknamige uitwerking. Dit vervangt de vier oude
 W4-niveaubestanden en de afzonderlijke Caesar-bron; alle inhoud en ondersteuning
 blijft behouden. De PGM2-niveaudekking is daarmee 21 opgave-/uitwerkingparen,
 naast de ongewijzigde aanvullende oefeningen bij W2/W3. De gedateerde telling
-van 43 vakbrede paren hierboven verandert door deze samenvoeging met twee paren.
+van 43 vakbrede paren hierboven wordt door deze samenvoeging 41.
 De verplichte niveaus en prestaties wijzigen niet.
 
 ## Onderhoud

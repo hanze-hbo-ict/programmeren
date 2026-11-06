@@ -9,4 +9,4 @@ De uitwerkingen volgen dezelfde niveaus als de [opgaven](/course/opgaven_8):
 - [Basis](/solutions/8_basis): woorden tellen.
 - [Extra](/solutions/8_extra): woordenschat vergelijken.
 
-Gebruik eerst de zelfcontroles bij je eigen werk.
+Controleer eerst je eigen werk, met de zelfcontroles waar die er zijn.

@@ -13,7 +13,7 @@ De opstap en de basis zijn verplicht. De extra is facultatief.
 | [Basis](/problems/11_basis) | verplicht | Een zelftest in twee delen, zie hieronder. |
 | [Extra](/problems/11_extra) | facultatief | Een uitdaging in drie delen, zie hieronder. |
 
-Gebruik de zelfcontroles bij de taken. Vergelijk je werk daarna met de [uitwerkingen](/course/solutions_11).
+Gebruik de zelfcontroles bij de taken waar die er zijn. Vergelijk je werk daarna met de [uitwerkingen](/course/solutions_11).
 
 De [basis](/problems/11_basis) heeft twee delen, die allebei verplicht zijn:
 
@@ -29,8 +29,7 @@ vergelijking met je plan aan waarin je uitwerking functioneel is. De eerdere
 stappen blijven toepassingsoefeningen met hints. In opdracht 1 volgt de verplichte
 analyse van gegeven werkende schoolrunfuncties.
 
-De [extra](/problems/11_extra) heeft drie facultatieve delen. Elk deel begint met
-zijn eigen gegevens en heeft een uitwerking:
+De [extra](/problems/11_extra) heeft drie facultatieve delen. Elk deel staat op zichzelf en heeft een uitwerking:
 
 - {ref}`Pijlenpad <problems-11-algoritmen-extra>`, stappen 1–5.
 - {ref}`Periodieke tshirt <problems-11-tshirt-extra>`, stappen 6–8.

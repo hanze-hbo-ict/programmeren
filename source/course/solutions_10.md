@@ -9,6 +9,6 @@ De uitwerkingen volgen dezelfde niveaus als de [opgaven](/course/opgaven_10):
 - [Basis](/solutions/10_basis): Scrabble.
 - [Extra](/solutions/10_extra): potjeslatijn, heen en terug.
 
-Gebruik eerst de zelfcontroles bij je eigen werk.
+Controleer eerst je eigen werk, met de zelfcontroles waar die er zijn.
 
 De uitwerkingen van de [aanvullende oefeningen](/extra/practice/1_recursie) staan in die oefeningen zelf.

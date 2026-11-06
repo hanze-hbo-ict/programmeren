@@ -662,10 +662,8 @@ naast een volle basis is prima; week 2 en 3 laten zien dat het kan. En opbreken 
 geen reden om een opgave langer te maken - de bedoeling is dat dezelfde inhoud over
 drie niveaus wordt verdeeld, niet dat er drie keer zoveel komt te staan.
 
-De routeconsolidatie van #481 voert deze passage niet alsnog uit: zij geeft iedere
-PGM2-week één opstap, basis en extra en behoudt de bestaande contexten en
-ondersteuning; zie *PGM2-huiswerkroute (#481)*. Dat geeft deze passage geen nieuwe
-algemene betekenis.
+De routeconsolidatie van #481 voert deze passage niet alsnog uit; zie
+*PGM2-huiswerkroute (#481)*.
 
 ### Bestanden en excepties
 

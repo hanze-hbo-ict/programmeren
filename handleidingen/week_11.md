@@ -21,7 +21,7 @@ de opgaven onder `problems/` blijven huiswerk.
 
 ## Voorbereiding en middelen
 
-Bronstatus: gecontroleerd tegen `adfdc5c8` van `origin/master`. De actuele
+Bronstatus: gecontroleerd tegen `adfdc5c8` van `origin/master`; route bijgewerkt volgens [C4 van #481](https://github.com/hanze-hbo-ict/programmeren/issues/481#issuecomment-6685696981). De actuele
 [weekpagina](../source/course/week_11.md) geeft de studentroute. Open de
 collegenotebooks, voer je eigen demonstraties vooraf uit en houd de hieronder
 genoemde uitwerkingen bij de hand voor je begeleiding. Gebruik een werkende
@@ -31,7 +31,7 @@ eerst iedereen iets op te schrijven voordat je antwoorden uit de groep ophaalt.
 Open [wisselgeld](../source/practicals/11_wisselgeld.ipynb) en de gegeven
 muntvoorraad en onmogelijke gevallen. Houd de uitwerkingen van
 [wisselgeld](../source/solutions/11_wisselgeld.ipynb), [opstap](../source/solutions/11_opstap.ipynb),
-[het nijlpaarddiner](../source/solutions/11_basis.ipynb#solutions-11-algoritmen-basis) en
+[de nacht van het nijlpaard](../source/solutions/11_basis.ipynb#solutions-11-algoritmen-basis) en
 [de schoolrun](../source/solutions/11_basis.ipynb#solutions-11-lambda-basis) klaar. Zet twee kolommen op
 het bord: gebruiken en laten liggen. Daarin moet per tak het kleinere probleem
 zichtbaar blijven.
@@ -93,7 +93,7 @@ De opstap en de basis zijn verplicht. De extra is facultatief. Studenten vinden 
 
 Verdeel [de opstap](../source/problems/11_opstap.ipynb) in naspelen, lezen en
 schrijven. [De basis](../source/problems/11_basis.ipynb) heeft twee delen: geef na
-college 1 [het nijlpaarddiner](../source/problems/11_basis.ipynb#problems-11-algoritmen-basis)
+college 1 [de nacht van het nijlpaard](../source/problems/11_basis.ipynb#problems-11-algoritmen-basis)
 (stappen 1–3) en na college 2
 [de schoolrun](../source/problems/11_basis.ipynb#problems-11-lambda-basis) (stappen
 4–8 en opdracht 1) mee. Vraag bij het nijlpaard naar de keuze en het resterende

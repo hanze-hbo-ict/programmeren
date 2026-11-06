@@ -13,4 +13,4 @@ De opstap en de basis zijn verplicht. De extra is facultatief.
 | [Basis](/problems/14_basis) | verplicht | Een zelftest: je geeft `Date` operatoren en leest datums in met `try`/`except`. |
 | [Extra](/problems/14_extra) | facultatief | Een uitdaging: je schrijft een min-max-speler. |
 
-Gebruik de zelfcontroles bij de taken. Vergelijk je werk daarna met de [uitwerkingen](/course/solutions_14).
+Gebruik de zelfcontroles bij de taken waar die er zijn. Vergelijk je werk daarna met de [uitwerkingen](/course/solutions_14).

@@ -9,4 +9,4 @@ De uitwerkingen volgen dezelfde niveaus als de [opgaven](/course/opgaven_14):
 - [Basis](/solutions/14_basis): `Date` met operatoren en datums inlezen.
 - [Extra](/solutions/14_extra): min-max.
 
-Gebruik eerst de zelfcontroles bij je eigen werk.
+Controleer eerst je eigen werk, met de zelfcontroles waar die er zijn.

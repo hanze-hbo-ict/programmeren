@@ -13,7 +13,7 @@ De opstap en de basis zijn verplicht. De extra is facultatief.
 | [Basis](/problems/13_basis) | verplicht | Een zelftest: je laat producten samenwerken op een kassabon. |
 | [Extra](/problems/13_extra) | facultatief | Een uitdaging: je schrijft spelers voor `Board`. |
 
-Gebruik de zelfcontroles bij de taken. Vergelijk je werk daarna met de [uitwerkingen](/course/solutions_13).
+Gebruik de zelfcontroles bij de taken waar die er zijn. Vergelijk je werk daarna met de [uitwerkingen](/course/solutions_13).
 
 In de [basis](/problems/13_basis) maak je de verplichte zelfstandige
 ontwerptaak: een bundelaanbieding op de kassabon. Je legt eerst je aanpak en
