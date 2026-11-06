@@ -808,7 +808,6 @@ W4-niveaubestanden en de afzonderlijke Caesar-bron; alle inhoud en ondersteuning
 blijft behouden. De PGM2-niveaudekking is daarmee 21 opgave-/uitwerkingparen,
 naast de ongewijzigde aanvullende oefeningen bij W2/W3. De gedateerde telling
 van 43 vakbrede paren hierboven wordt door deze samenvoeging 41.
-De verplichte niveaus en prestaties wijzigen niet.
 
 ## Onderhoud
 

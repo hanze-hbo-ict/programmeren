@@ -1844,8 +1844,7 @@ Er is geen afzonderlijke menselijke reden gegeven.
 Deze routeconsolidatie behoudt de bestaande contexten en ondersteuning; zij voert
 *Eén opgave over drie niveaus* niet alsnog uit als inhoudelijk herontwerp.
 De aanvullende comprehensions- en recursieoefeningen blijven facultatief bij
-week 2 en 3, met hun ingebouwde uitwerkingen. Verplichte niveaus, leeruitkomsten
-en toetsgewichten blijven zoals vastgelegd in de leerlijn.
+week 2 en 3, met hun ingebouwde uitwerkingen.
 
 **Correctie op de uitvoering, 6 november 2026.** Bron: [C4-correctie](https://github.com/hanze-hbo-ict/programmeren/issues/481#issuecomment-6695203285). Letterlijk:
 
@@ -1855,10 +1854,10 @@ en toetsgewichten blijven zoals vastgelegd in de leerlijn.
 >
 > We hoeven bovendien docenten niet voor te schrijven wat verplicht is, dat kunnen ze zelf beoordelen. We vertellen alleen wat de functie is.
 >
-> Wat betreft 'verplicht': ik wil al die verwijzingen naar verplicht ontwerp- en analysetaken er wel uit hebben.
+> Wat betreft 'verplicht': ik wil al die verwijzingen naar verplicht ontwerp- en analysetaken er wel uit hebben. Wat betreft spelfouten: 'periodieke tshirt' is er een die ik je niet zie noemen
 
-Op de vragen over overige vermeldingen (B), de regel in de leerlijn (C) en PGM1 (D) en over het terugdraaien van de routetekst buiten week 4 (A):
+Op de voorgelegde vragen (A: de samenvoeging van week 4 blijft en de route van de andere weken gaat terug naar `f779d922`; B: overige "verplicht" in studentmateriaal; C: de regel in de leerlijn; D: PGM1):
 
-> B: laat die maar zitten. C: zou ik niet veranderen. D. nvt. A. eens.
+> B: laat die maar zitten. C: zou ik niet veranderen. D. nvt. A. eens. Verder alle puntjes die je noemt oppakken
 
-De regel "duidelijker aangeven wat verplicht, facultatief of aanvullend is" uit de voorgelegde scope hierboven is daarom niet uitgevoerd. De zinnen over verplichte ontwerp- en analysetaken staan niet meer in het studentmateriaal; de taken zelf blijven. Deze correctie wijzigt `leerlijn.md`, de leeruitkomsten en de toetsgewichten niet.
+De regel "duidelijker aangeven wat verplicht, facultatief of aanvullend is" uit de voorgelegde scope hierboven is daarom niet uitgevoerd. De zinnen over verplichte ontwerp- en analysetaken staan niet meer in het studentmateriaal; de taken zelf blijven. Deze correctie wijzigt de regel over verplichte niveaus in `leerlijn.md`, de leeruitkomsten en de toetsgewichten niet.
