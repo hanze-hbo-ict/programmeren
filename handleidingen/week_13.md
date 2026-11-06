@@ -94,6 +94,10 @@ Gebruik [13_creatures, stappen 1–8 en *Wat duck typing niet belooft*](../sourc
 
 ## Huiswerk en begeleiding
 
+De opstap en de basis zijn verplicht. De extra is facultatief. Studenten vinden de drie niveaus via de
+[opgaven](../source/course/opgaven_13.md) en de
+[uitwerkingen](../source/course/solutions_13.md).
+
 Gebruik [de opstap](../source/problems/13_opstap.ipynb) voor overerving,
 standaardwaarden en introspectie. [De basis over een kassabon](../source/problems/13_basis.ipynb)
 laat soorten producten en een `Receipt` samenwerken. Vraag bij een fout welke

@@ -261,3 +261,13 @@ vastgestelde uitkomsten. De oude diagnose dat exceptions uitsluitend als gegeven
 code voorkomen is achterhaald: `source/problems/14_basis.ipynb` laat zelf gooien
 én gericht afhandelen verplicht oefenen. Gerichte oefentoetsdekking voor L1 en L4 is in #470 gerealiseerd. Bestanden zijn PGM1-voorkennis; PGM2 leest daadwerkelijk bestanden,
 zonder afzonderlijk PGM2-basisbudget. Dit is geen besluit over de PGM1-matrijs.
+
+## Bestandsverwijzingen na #481
+
+De celverwijzingen in de eerdere dekkingssnapshot hierboven zijn historisch.
+Sinds de [routeconsolidatie #481](https://github.com/hanze-hbo-ict/programmeren/issues/481#issuecomment-6685696981)
+staan de taken uit `11_algoritmen_basis` in `11_basis`, nijlpaarddiner,
+stappen 1–3. De taken uit `11_lambda_basis` staan in `11_basis`, schoolrun,
+stappen 4–8 en opdracht 1. De zelfstandige ontwerptaak is stap 8; de afzonderlijke
+analyse blijft opdracht 1. Deze bestandswijziging verandert geen leeruitkomst,
+weektoerekening, toetsgewicht of bewijsgrens. Dit is geen nieuwe dekkingsmeting.

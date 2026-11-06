@@ -378,6 +378,15 @@ met uitvoerbare code, en `11_opstap` en `11_lambda_basis` met invulcellen. Eén
 college springt eruit omdat het in `lectures/` geen enkele grond heeft:
 `4b_midterm.ipynb`. Tot #335 gold dat ook voor het college over de knapzak.
 
+De W4-delta bij #335 hierboven is historisch. Volgens het
+[besluit #481 van 6 november 2026](https://github.com/hanze-hbo-ict/programmeren/issues/481#issuecomment-6685696981)
+zijn `11_algoritmen_basis` en `11_lambda_basis` samengevoegd tot `11_basis`;
+`11_algoritmen_extra`, `11_tshirt_extra` en de Caesar-pagina tot `11_extra`. De
+huidige `problems/11_extra` draagt dezelfde bestandsnaam als het bij #335
+verwijderde Text-ID, maar is een ander bestand. De gelijknamige uitwerkingen volgen
+die indeling. De nieuwe opgaven blijven notebooks wegens invulcellen; de uitwerkingen
+wegens uitvoerbare code. Dit verandert geen algemene formaat- of uitvoernorm.
+
 Bij werkitem #386 kwam `solutions/6_extra` uit de tweede rij: 31 wordt 30, ook
 als delta en niet als volledige hertelling. Gemeten op `00c03b2a`: dat notebook
 had vijf codecellen en één markdowncel, geen enkele cel droeg een tag, en het

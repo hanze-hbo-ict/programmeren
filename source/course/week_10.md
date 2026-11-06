@@ -37,6 +37,10 @@ is opgeschreven.
 ```{tableofcontents}
 ```
 
+## Huiswerk
+
+De basis is verplicht. De opstap en de extra zijn facultatief. Ga naar de [opgaven en zelfcontroles](/course/opgaven_10) en daarna naar de [uitwerkingen](/course/solutions_10). Wil je meer oefenen, dan vind je daar ook de aanvullende oefeningen.
+
 In de [basis](/problems/10_basis) maak je de verplichte zelfstandige
 functionele ontwerptaak: woorden met je eigen Scrabbletegels. Je legt eerst je aanpak en
 opbouw vast en kiest zelf passende functionele constructies. Je schrijft daarna

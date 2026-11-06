@@ -416,7 +416,7 @@ draait wel.
 | Dictionaries en de Markov-opgave verhuizen van PGM1 week 7 naar PGM2 week 1 | didactisch | staand, **uitgevoerd**: PGM2 week 1 kreeg de datastructuren en de Markov-opgave met #148, PGM1 week 7 raakte ze kwijt met #315 |
 | Objecten pas in PGM2 | didactisch | staand, onderbouwd |
 | Picobot opent PGM1 | didactisch | staand, onderbouwd |
-| Opgaven in opstap, basis en extra | didactisch | gesloten op 23 september 2026, **uitgevoerd** voor PGM2: alle zeven weken hebben opstap, basis en extra, hermeten op `054bfe52` op 28 oktober 2026; week 4 heeft twee basis- en twee extrabestanden; de verplichte niveaus per week staan in `leerlijn.md` |
+| Opgaven in opstap, basis en extra | didactisch | gesloten op 23 september 2026, **uitgevoerd** voor PGM2: alle zeven weken hebben opstap, basis en extra, hermeten op `054bfe52` op 28 oktober 2026; sinds #481 heeft ook week 4 één basis- en één extrabestand met behoud van de bestaande delen; de verplichte niveaus per week staan in `leerlijn.md` |
 | De student werkt lokaal in VS Code; de browser is verrijking | didactisch | staand, onderbouwd |
 | Op macOS is Homebrew de aanbevolen manier om Python en alle pakketten te installeren, zoals Pillow; een bestaande Python mag, maar de verdere Mac-instructies gaan van Homebrew uit | praktisch | gesloten op 22 oktober 2026 (#430, [C4](https://github.com/hanze-hbo-ict/programmeren/issues/430#issuecomment-6336154620) en [C4-aanvulling](https://github.com/hanze-hbo-ict/programmeren/issues/430#issuecomment-6337223720)), **uitgevoerd** in #430: `lectures/0b_install_python`, `problems/5_mandelbrot_opstap`, `practicals/6b_images` en `handleidingen/week_6.md`; zie *Python en pakketten op macOS* |
 | Code uitvoerbaar in de browser | praktisch | open, uitvoering wijzigt |
@@ -661,6 +661,11 @@ laten dragen.
 naast een volle basis is prima; week 2 en 3 laten zien dat het kan. En opbreken is
 geen reden om een opgave langer te maken - de bedoeling is dat dezelfde inhoud over
 drie niveaus wordt verdeeld, niet dat er drie keer zoveel komt te staan.
+
+De routeconsolidatie van #481 voert deze passage niet alsnog uit: zij geeft iedere
+PGM2-week één opstap, basis en extra en behoudt de bestaande contexten en
+ondersteuning; zie *PGM2-huiswerkroute (#481)*. Dat geeft deze passage geen nieuwe
+algemene betekenis.
 
 ### Bestanden en excepties
 
@@ -1290,9 +1295,11 @@ uitwerking in `source/solutions/`. Een ontbrekende niveau-uitwerking is een omis
 De afzonderlijke corpora en actuele bestandsdekking staan in
 [leerlijn.md](leerlijn.md).
 
-**De uitzonderingen zijn expliciet.** `caesar_op_orde` blijft zonder niveau en
-zonder uitwerking: VP6 van #335 is behouden bij de poort van
-[19 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/382#issuecomment-6265574205). `6b_images` heeft geen boekuitwerking,
+**De uitzonderingen zijn expliciet.** De vroegere Caesar-uitzondering (VP6 van #335,
+behouden op [19 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/382#issuecomment-6265574205))
+is bij #481 opgevolgd: Caesar is het derde deel van `problems/11_extra`, met
+uitvoerbare uitwerking in `solutions/11_extra`.
+`6b_images` heeft geen boekuitwerking,
 omdat de docent de opdracht met de klas opbouwt; deze uitzondering is behouden op
 [28 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/383#issuecomment-6467804118), V3.
 Collegeopdrachten vallen buiten de automatische uitwerkingnorm; de bestaande
@@ -1800,3 +1807,44 @@ bij [#465](https://github.com/hanze-hbo-ict/programmeren/issues/465).
 of prioriteit van het practicum, het behoud van de inhoud, de plaats van het
 verplichte huiswerk of de gereserveerde oefententamenbijeenkomst. Zo’n wijziging
 vraagt een nieuw begrensd menselijk besluit.
+
+## PGM2-huiswerkroute (#481)
+
+Voorgelegd en goedgekeurd in [C4](https://github.com/hanze-hbo-ict/programmeren/issues/481#issuecomment-6685696981):
+
+> De voorgestelde scope is:
+>
+> - Alleen PGM2, week 1–7: per week één herkenbare opstap-, basis- en extra-set.
+> - Week 4: algoritmenbasis en schoolrun samenvoegen tot één basisbestand; Pijlenpad, tshirt en Caesar tot één extrabestand, met overeenkomstige uitwerkingen.
+> - Caesar: alle zeven taken behouden en uitvoerbare uitwerkingen toevoegen, zoals je hebt besloten.
+> - Overige weken: bestaande niveaubestanden behouden; duidelijker aangeven wat verplicht, facultatief of aanvullend is.
+> - Alles laten aansluiten: nummering, zelfcontroles, hulpbestanden, navigatie, verwijzingen, docenthandleidingen en curriculumregistratie bijwerken.
+> - Verifiëren: uitwerkingen uitvoeren, verwijzingen controleren, schone build en onafhankelijke beoordeling.
+>
+> Er verdwijnt geen leerinhoud. PGM1, leeruitkomsten, toetsgewichten en de inhoud van colleges, practica en oefententamen blijven buiten de herziening.
+>
+> De oude week-4-bestanden worden na volledige migratie vervangen; behoud van oude externe URL’s is niet inbegrepen. Jij beslist uiteindelijk over merge.
+
+Letterlijk menselijk antwoord:
+
+> ok, akkoord
+
+Eerdere [Caesarbijstelling van 6 november 2026](https://github.com/hanze-hbo-ict/programmeren/issues/481#issuecomment-6685339975), letterlijk:
+
+> waarom caesar niet bij de extra opgaven? die is toch voor verdieping?
+
+Voorgelegd:
+
+> neem Caesar op als onderdeel van de ene extra-set van week 4, naast Pijlenpad en tshirt. Daarbij moeten we expliciet bepalen of de uitzondering zonder uitwerking blijft gelden.
+
+Letterlijk menselijk antwoord:
+
+> er moet dan ook een uitwerking komen
+
+Er is geen afzonderlijke menselijke reden gegeven.
+
+Deze routeconsolidatie behoudt de bestaande contexten en ondersteuning; zij voert
+*Eén opgave over drie niveaus* niet alsnog uit als inhoudelijk herontwerp.
+De aanvullende comprehensions- en recursieoefeningen blijven facultatief bij
+week 2 en 3, met hun ingebouwde uitwerkingen. Verplichte niveaus, leeruitkomsten
+en toetsgewichten blijven zoals vastgelegd in de leerlijn.

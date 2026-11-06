@@ -85,6 +85,10 @@ Gebruik [het practicum, opdracht 1 `create_dictionary`, opdracht 2 `generate_tex
 
 ## Huiswerk en begeleiding
 
+De opstap en de basis zijn verplicht. De extra is facultatief. Studenten vinden de drie niveaus via de
+[opgaven](../source/course/opgaven_8.md) en de
+[uitwerkingen](../source/course/solutions_8.md).
+
 Na college 1: het dictionarydeel van [de opstap](../source/problems/8_opstap.ipynb)
 en [de basis over woordenanalyse](../source/problems/8_basis.ipynb). Na college 2:
 het setdeel van de opstap. Laat studenten bij een vastgelopen `count_words`

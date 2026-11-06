@@ -31,3 +31,7 @@ ze hebt gemaakt.
 
 ```{tableofcontents}
 ```
+
+## Huiswerk
+
+De opstap en de basis zijn verplicht. De extra is facultatief. Ga naar de [opgaven en zelfcontroles](/course/opgaven_8) en daarna naar de [uitwerkingen](/course/solutions_8).

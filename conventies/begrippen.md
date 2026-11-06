@@ -250,7 +250,8 @@ uitwerking, `solutions/PGM2_examen.ipynb`; dat zegt *base case* tot zijn eigen
 herziening. Dat is een bekende afwijking. Het college over de knapzak en
 `problems/opdrachten/caesar_op_orde/index.md`, die bij #332 ongewijzigd naar
 week 4 verhuisden, zijn in #335 herzien en zeggen nu *basisgeval*; het college heet
-sindsdien `lectures/11a_use_it_or_lose_it.ipynb`.
+sindsdien `lectures/11a_use_it_or_lose_it.ipynb`. De Caesar-inhoud staat sinds #481 in
+`problems/11_extra.ipynb`, deel *Caesar op orde*, met dezelfde begrippen.
 
 ## F-string, interpolatie en formaatspecificatie
 

@@ -97,6 +97,9 @@ Gebruik [het oefententamen](../source/extra/practice/PGM2_examen.md) en [de best
 
 ## Huiswerk en begeleiding
 
+Studenten vinden de drie niveaus via de [opgaven](../source/course/opgaven_14.md)
+en de [uitwerkingen](../source/course/solutions_14.md).
+
 Geef [de opstap](../source/problems/14_opstap.ipynb) en
 [de basis over Date met operatoren](../source/problems/14_basis.ipynb) mee. Bewaak
 speciaal stappen 7–8, datums uit tekst inlezen met `try`/`except`: de constructor gooit

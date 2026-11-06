@@ -84,6 +84,11 @@ Gebruik [9_register, stappen 1–5](../source/practicals/9_register.ipynb).
 
 ## Huiswerk en begeleiding
 
+De opstap en de basis zijn verplicht. De extra is facultatief. Studenten vinden de drie niveaus via de
+[opgaven](../source/course/opgaven_9.md) en de
+[uitwerkingen](../source/course/solutions_9.md). De aanvullende oefeningen zijn facultatief
+en bevatten hun eigen uitwerkingen.
+
 Plan het eerste deel van [de opstap](../source/problems/9_opstap.ipynb) na college 1
 en het dict-/setdeel na college 2. [De basis](../source/problems/9_basis.ipynb) bouwt
 woordenanalyse korter op; stap 4, `ngram_loop`, vraagt juist de terugvertaling naar

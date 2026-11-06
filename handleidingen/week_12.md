@@ -90,6 +90,10 @@ Gebruik [12_creatures, stappen 1–5 en *Wat de property van hp verandert*](../s
 
 ## Huiswerk en begeleiding
 
+De opstap en de basis zijn verplicht. De extra is facultatief. Studenten vinden de drie niveaus via de
+[opgaven](../source/course/opgaven_12.md) en de
+[uitwerkingen](../source/course/solutions_12.md).
+
 Laat [de opstap over klassen](../source/problems/12_opstap.ipynb) gebruiken om
 constructor, methoden en properties afzonderlijk te oefenen. De verplichte
 [basis over Date](../source/problems/12_basis.ipynb) loopt door tot en met het afschermen

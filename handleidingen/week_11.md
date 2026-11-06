@@ -31,8 +31,8 @@ eerst iedereen iets op te schrijven voordat je antwoorden uit de groep ophaalt.
 Open [wisselgeld](../source/practicals/11_wisselgeld.ipynb) en de gegeven
 muntvoorraad en onmogelijke gevallen. Houd de uitwerkingen van
 [wisselgeld](../source/solutions/11_wisselgeld.ipynb), [opstap](../source/solutions/11_opstap.ipynb),
-[basis algoritmen](../source/solutions/11_algoritmen_basis.ipynb) en
-[basis lambda](../source/solutions/11_lambda_basis.ipynb) klaar. Zet twee kolommen op
+[het nijlpaarddiner](../source/solutions/11_basis.ipynb#solutions-11-algoritmen-basis) en
+[de schoolrun](../source/solutions/11_basis.ipynb#solutions-11-lambda-basis) klaar. Zet twee kolommen op
 het bord: gebruiken en laten liggen. Daarin moet per tak het kleinere probleem
 zichtbaar blijven.
 
@@ -87,19 +87,27 @@ Gebruik [11_wisselgeld, stappen 1–2](../source/practicals/11_wisselgeld.ipynb)
 
 ## Huiswerk en begeleiding
 
+De opstap en de basis zijn verplicht. De extra is facultatief. Studenten vinden de drie niveaus via de
+[opgaven](../source/course/opgaven_11.md) en de
+[uitwerkingen](../source/course/solutions_11.md).
+
 Verdeel [de opstap](../source/problems/11_opstap.ipynb) in naspelen, lezen en
-schrijven. Geef na college 1 [Basis: algoritmen](../source/problems/11_algoritmen_basis.ipynb)
-en na college 2 [Basis: lambda](../source/problems/11_lambda_basis.ipynb) mee. Vraag bij
-het nijlpaard naar de keuze en het resterende probleem; vraag bij de schoolrun
-welke functie aan `select` of `winner` wordt meegegeven. Beide basisbundels horen
-bij het huiswerk. [Pijlenpad](../source/problems/11_algoritmen_extra.ipynb),
-[periodieke tshirt](../source/problems/11_tshirt_extra.ipynb) en
-[Caesar op orde](../source/problems/opdrachten/caesar_op_orde/index.md) blijven
-facultatieve verdieping. Voor de eerste twee extra’s staan de uitwerkingen van
-[pijlenpad](../source/solutions/11_algoritmen_extra.ipynb) en
-[tshirt](../source/solutions/11_tshirt_extra.ipynb) klaar.
-Voor Caesar bestaat volgens besluit geen uitwerking;
-maak de handleiding niet tot een vervangend antwoordenboek.
+schrijven. [De basis](../source/problems/11_basis.ipynb) heeft twee delen: geef na
+college 1 [het nijlpaarddiner](../source/problems/11_basis.ipynb#problems-11-algoritmen-basis)
+(stappen 1–3) en na college 2
+[de schoolrun](../source/problems/11_basis.ipynb#problems-11-lambda-basis) (stappen
+4–8 en opdracht 1) mee. Vraag bij het nijlpaard naar de keuze en het resterende
+probleem; vraag bij de schoolrun welke functie aan `select` of `winner` wordt
+meegegeven. Beide delen horen bij het huiswerk.
+[De extra](../source/problems/11_extra.ipynb) bevat
+[Pijlenpad](../source/problems/11_extra.ipynb#problems-11-algoritmen-extra),
+[periodieke tshirt](../source/problems/11_extra.ipynb#problems-11-tshirt-extra) en
+[Caesar op orde](../source/problems/11_extra.ipynb#problems-opdrachten-caesar-op-orde-index).
+Alle drie blijven facultatieve verdieping. De uitwerkingen van
+[Pijlenpad](../source/solutions/11_extra.ipynb#solutions-11-algoritmen-extra),
+[tshirt](../source/solutions/11_extra.ipynb#solutions-11-tshirt-extra) en
+[Caesar](../source/solutions/11_extra.ipynb#solutions-11-caesar-op-orde) staan in één
+extra-uitwerking klaar.
 
 ## Voorkennis, nieuwe begrippen en vervolg
 
@@ -124,7 +132,7 @@ ervaringen met deze PGM2-lessen.
 
 Bij tijdgebrek behoud je één goede trace van beide takken en één diagnose van
 functie meegeven. Verkort vergelijkbare besprekingen en stel de extra uit; beide
-basisbundels blijven huiswerk. Leg onvoltooide practicumtests vast. Bij ontbrekende
+basisdelen blijven huiswerk. Leg onvoltooide practicumtests vast. Bij ontbrekende
 recursievoorbereiding speel je één bestaand klein geval uit het college samen na,
 inclusief terugkeer, en laat de student daarna het duo-ontwerp hervatten. Herhaal
 niet de volledige vorige week binnen deze bijeenkomst.

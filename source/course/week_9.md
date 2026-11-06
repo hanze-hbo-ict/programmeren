@@ -35,3 +35,7 @@ met dezelfde teksten.
 
 ```{tableofcontents}
 ```
+
+## Huiswerk
+
+De opstap en de basis zijn verplicht. De extra is facultatief. Ga naar de [opgaven en zelfcontroles](/course/opgaven_9) en daarna naar de [uitwerkingen](/course/solutions_9). Wil je meer oefenen, dan vind je daar ook de aanvullende oefeningen.

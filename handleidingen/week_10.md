@@ -90,6 +90,11 @@ Gebruik [10_directory_doorzoeken, stappen 1–5](../source/practicals/10_directo
 
 ## Huiswerk en begeleiding
 
+De basis is verplicht. De opstap en de extra zijn facultatief. Studenten vinden de drie niveaus via de
+[opgaven](../source/course/opgaven_10.md) en de
+[uitwerkingen](../source/course/solutions_10.md). De aanvullende oefeningen zijn facultatief
+en bevatten hun eigen uitwerkingen.
+
 Gebruik bij [de opstap](../source/problems/10_opstap.ipynb) eerst *Lezen en naspelen*
 en daarna *Schrijven*. Laat wie veel code probeert eerst één leesvraag uitwerken
 met frames. [De basis over Scrabble](../source/problems/10_basis.ipynb) verbindt
