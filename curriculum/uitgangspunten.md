@@ -423,6 +423,7 @@ draait wel.
 | Wat er niet meer toe doet, mag weg; we ruimen achter ons op | organisatorisch | gesloten op 24 september 2026, **deels uitgevoerd**: `teacher_guides/` is weg (#280); welke andere directories eronder vallen, wordt voorgelegd in #282 |
 | In het PGM1-tentamen verdienen een docstring en een correcte signatuur punten, als eenvoudig werk dat zelfdiscipline beloont | didactisch | gesloten op 21 oktober 2026, **deels uitgevoerd**: eerdere tentamens keerden deze punten uit, maar de rubric staat buiten deze repository en die van 2026-1 wordt bij `misja/ans_grading`#16 gemaakt; zie *Punten voor docstring en signatuur* |
 | Een week heeft in beginsel twee colleges (`lectures/`) en één practicum (`practicals/`); de opgaven (`problems/`) zijn huiswerk; in een week met de oefenmidterm, de midterm of het oefententamen vervalt één college. *Werkcollege* is geen term meer | organisatorisch | gesloten op 9 oktober 2026 (bespreking #375), vastgelegd in #380; uitzondering en afwijkingen aangevuld door de vakdeskundige op 23 oktober 2026 (#380); **uitgevoerd**: `curriculum/`, `conventies/`, `source/` buiten week 7 en de handleidingen van week 1 tot en met 6 zijn omgezet; `handleidingen/week_7.md`, `source/course/practical_7.md` en `source/course/week_7.md` zijn met #433 omgezet; zie *Drie bijeenkomsten per week* |
+| PGM2 week 7 behoudt alle inhoud en plaatst de overige creatures-operatoren na de exceptions, voor als er tijd over is | didactisch | gesloten op 6 november 2026 ([C4 #472](https://github.com/hanze-hbo-ict/programmeren/issues/472#issuecomment-6683936872)), uitgevoerd; zie [Week 7 naast het oefententamen](#week-7-naast-het-oefententamen-472), inclusief heropeningsvoorwaarde |
 
 ### Facultatieve extra van week 6
 
@@ -1794,3 +1795,8 @@ begroot. Werkelijke studenttijd is niet beschikbaar. Dit besluit prioriteert en
 plaatst achteraan; het stelt geen onvoorwaardelijke haalbaarheid voor iedere
 student vast. Verhuizing van exceptions naar PGM1 voor volgend studiejaar blijft
 bij [#465](https://github.com/hanze-hbo-ict/programmeren/issues/465).
+
+**Te heropenen wanneer** de gekozen route inhoudelijk moet veranderen: de volgorde
+of prioriteit van het practicum, het behoud van de inhoud, de plaats van het
+verplichte huiswerk of de gereserveerde oefententamenbijeenkomst. Zo’n wijziging
+vraagt een nieuw begrensd menselijk besluit.
