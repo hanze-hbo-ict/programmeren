@@ -41,12 +41,3 @@ De studiegroep uit week 5 is compositie; deze week komt overerving ernaast.
 
 ```{tableofcontents}
 ```
-
-## Huiswerk
-
-De opstap en de basis zijn verplicht. De extra is facultatief. Ga naar de [opgaven en zelfcontroles](/course/opgaven_13) en daarna naar de [uitwerkingen](/course/solutions_13).
-
-In de [basis](/problems/13_basis) maak je de verplichte zelfstandige
-ontwerptaak: een bundelaanbieding op de kassabon. Je legt eerst je aanpak en
-opbouw vast, schrijft daarna je code en vergelijkt die met je plan.
-Het product per stuk bij stap 10 blijft beschikbaar als hulpvoorbeeld.

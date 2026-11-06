@@ -35,13 +35,3 @@ het college terug als vergelijking: daarin is niets verborgen.
 
 ```{tableofcontents}
 ```
-
-## Huiswerk
-
-De opstap en de basis zijn verplicht. De extra is facultatief. Ga naar de [opgaven en zelfcontroles](/course/opgaven_12) en daarna naar de [uitwerkingen](/course/solutions_12).
-
-In stap 12 van de [basis](/problems/12_basis) maak je de verplichte analyse
-van een gegeven werkende `Date`-klasse. Je onderzoekt de verantwoordelijkheden
-en afhankelijkheden van methoden en onderbouwt waar externe schrijftoegang
-moet worden afgeschermd en wat daarvan de gevolgen zijn. Beantwoord die vragen
-vóór je in stap 13 de begeleide aanpassing uitvoert.

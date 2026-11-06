@@ -21,7 +21,7 @@ de opgaven onder `problems/` blijven huiswerk.
 
 ## Voorbereiding en middelen
 
-Bronstatus: route bijgewerkt volgens [C4 van #472](https://github.com/hanze-hbo-ict/programmeren/issues/472#issuecomment-6683936872), op basis van `c1fbba46` van `origin/master`, en volgens [C4 van #481](https://github.com/hanze-hbo-ict/programmeren/issues/481#issuecomment-6685696981). De actuele
+Bronstatus: route bijgewerkt volgens [C4 van #472](https://github.com/hanze-hbo-ict/programmeren/issues/472#issuecomment-6683936872), op basis van `c1fbba46` van `origin/master`. De actuele
 [weekpagina](../source/course/week_14.md) geeft de studentroute. Open de
 collegenotebooks, voer je eigen demonstraties vooraf uit en houd de hieronder
 genoemde uitwerkingen bij de hand voor je begeleiding. Gebruik een werkende
@@ -96,9 +96,6 @@ Gebruik [het oefententamen](../source/extra/practice/PGM2_examen.md) en [de best
 **Controlepunt.** De 5/70/10/5 minuten zijn een voorgestelde werkvorm binnen deze bijeenkomst, geen nieuw toetsvoorschrift of claim over de volledige tentamenduur. Gebruik de bestaande tentameninformatie; voeg geen toetsvragen of antwoorden toe.
 
 ## Huiswerk en begeleiding
-
-Studenten vinden de drie niveaus via de [opgaven](../source/course/opgaven_14.md)
-en de [uitwerkingen](../source/course/solutions_14.md).
 
 Geef [de opstap](../source/problems/14_opstap.ipynb) en
 [de basis over Date met operatoren](../source/problems/14_basis.ipynb) mee. Bewaak

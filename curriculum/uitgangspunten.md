@@ -1846,3 +1846,19 @@ Deze routeconsolidatie behoudt de bestaande contexten en ondersteuning; zij voer
 De aanvullende comprehensions- en recursieoefeningen blijven facultatief bij
 week 2 en 3, met hun ingebouwde uitwerkingen. Verplichte niveaus, leeruitkomsten
 en toetsgewichten blijven zoals vastgelegd in de leerlijn.
+
+**Correctie op de uitvoering, 6 november 2026.** Bron: [C4-correctie](https://github.com/hanze-hbo-ict/programmeren/issues/481#issuecomment-6695203285). Letterlijk:
+
+> Die eis in 468 en 469 klopt niet. Herkenbaar betekent dat het een opgave is, niet dat er bij moet staan wat die opgave is en al helemaal niet dat het verplichtn is
+>
+> Even voor de helderheid: niets is verplicht, studenten hoeven alleen een tentamen te halen. Ik begrijp dus niet zo goed waarom overal 'verplicht' staat
+>
+> We hoeven bovendien docenten niet voor te schrijven wat verplicht is, dat kunnen ze zelf beoordelen. We vertellen alleen wat de functie is.
+>
+> Wat betreft 'verplicht': ik wil al die verwijzingen naar verplicht ontwerp- en analysetaken er wel uit hebben.
+
+Op de vragen over overige vermeldingen (B), de regel in de leerlijn (C) en PGM1 (D) en over het terugdraaien van de routetekst buiten week 4 (A):
+
+> B: laat die maar zitten. C: zou ik niet veranderen. D. nvt. A. eens.
+
+De regel "duidelijker aangeven wat verplicht, facultatief of aanvullend is" uit de voorgelegde scope hierboven is daarom niet uitgevoerd. De zinnen over verplichte ontwerp- en analysetaken staan niet meer in het studentmateriaal; de taken zelf blijven. Deze correctie wijzigt `leerlijn.md`, de leeruitkomsten en de toetsgewichten niet.

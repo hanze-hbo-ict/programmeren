@@ -21,7 +21,7 @@ de opgaven onder `problems/` blijven huiswerk.
 
 ## Voorbereiding en middelen
 
-Bronstatus: gecontroleerd tegen `adfdc5c8` van `origin/master`; route bijgewerkt volgens [C4 van #481](https://github.com/hanze-hbo-ict/programmeren/issues/481#issuecomment-6685696981). De actuele
+Bronstatus: gecontroleerd tegen `adfdc5c8` van `origin/master`; verwijzingen bijgewerkt na de samenvoeging van week 4. De actuele
 [weekpagina](../source/course/week_11.md) geeft de studentroute. Open de
 collegenotebooks, voer je eigen demonstraties vooraf uit en houd de hieronder
 genoemde uitwerkingen bij de hand voor je begeleiding. Gebruik een werkende
@@ -30,9 +30,8 @@ eerst iedereen iets op te schrijven voordat je antwoorden uit de groep ophaalt.
 
 Open [wisselgeld](../source/practicals/11_wisselgeld.ipynb) en de gegeven
 muntvoorraad en onmogelijke gevallen. Houd de uitwerkingen van
-[wisselgeld](../source/solutions/11_wisselgeld.ipynb), [opstap](../source/solutions/11_opstap.ipynb),
-[de nacht van het nijlpaard](../source/solutions/11_basis.ipynb#solutions-11-algoritmen-basis) en
-[de schoolrun](../source/solutions/11_basis.ipynb#solutions-11-lambda-basis) klaar. Zet twee kolommen op
+[wisselgeld](../source/solutions/11_wisselgeld.ipynb), [opstap](../source/solutions/11_opstap.ipynb) en
+[de basis](../source/solutions/11_basis.ipynb) klaar. Zet twee kolommen op
 het bord: gebruiken en laten liggen. Daarin moet per tak het kleinere probleem
 zichtbaar blijven.
 
@@ -87,27 +86,14 @@ Gebruik [11_wisselgeld, stappen 1–2](../source/practicals/11_wisselgeld.ipynb)
 
 ## Huiswerk en begeleiding
 
-De opstap en de basis zijn verplicht. De extra is facultatief. Studenten vinden de drie niveaus via de
-[opgaven](../source/course/opgaven_11.md) en de
-[uitwerkingen](../source/course/solutions_11.md).
-
 Verdeel [de opstap](../source/problems/11_opstap.ipynb) in naspelen, lezen en
 schrijven. [De basis](../source/problems/11_basis.ipynb) heeft twee delen: geef na
-college 1 [de nacht van het nijlpaard](../source/problems/11_basis.ipynb#problems-11-algoritmen-basis)
-(stappen 1–3) en na college 2
-[de schoolrun](../source/problems/11_basis.ipynb#problems-11-lambda-basis) (stappen
-4–8 en opdracht 1) mee. Vraag bij het nijlpaard naar de keuze en het resterende
-probleem; vraag bij de schoolrun welke functie aan `select` of `winner` wordt
-meegegeven. Beide delen horen bij het huiswerk.
-[De extra](../source/problems/11_extra.ipynb) bevat
-[Pijlenpad](../source/problems/11_extra.ipynb#problems-11-algoritmen-extra),
-[periodieke tshirt](../source/problems/11_extra.ipynb#problems-11-tshirt-extra) en
-[Caesar op orde](../source/problems/11_extra.ipynb#problems-opdrachten-caesar-op-orde-index).
-Alle drie blijven facultatieve verdieping. De uitwerkingen van
-[Pijlenpad](../source/solutions/11_extra.ipynb#solutions-11-algoritmen-extra),
-[tshirt](../source/solutions/11_extra.ipynb#solutions-11-tshirt-extra) en
-[Caesar](../source/solutions/11_extra.ipynb#solutions-11-caesar-op-orde) staan in één
-extra-uitwerking klaar.
+college 1 *De nacht van het nijlpaard* (stappen 1–3) en na college 2 *De uitslag van
+de schoolrun* (stappen 4–8 en opdracht 1) mee. Vraag bij het nijlpaard naar de keuze
+en het resterende probleem; vraag bij de schoolrun welke functie aan `select` of
+`winner` wordt meegegeven. [De extra](../source/problems/11_extra.ipynb) is verdieping
+en bevat *Pijlenpad*, *Periodiek T-shirt* en *Caesar op orde*. De uitwerkingen van alle
+drie staan in [één extra-uitwerking](../source/solutions/11_extra.ipynb).
 
 ## Voorkennis, nieuwe begrippen en vervolg
 

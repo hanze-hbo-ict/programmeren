@@ -33,7 +33,3 @@ deze week wordt dat `==`.
 
 ```{tableofcontents}
 ```
-
-## Huiswerk
-
-De opstap en de basis zijn verplicht. De extra is facultatief. Ga naar de [opgaven en zelfcontroles](/course/opgaven_14) en daarna naar de [uitwerkingen](/course/solutions_14).

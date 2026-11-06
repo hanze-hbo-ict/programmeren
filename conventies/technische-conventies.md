@@ -385,8 +385,8 @@ zijn `11_algoritmen_basis` en `11_lambda_basis` samengevoegd tot `11_basis`;
 huidige `problems/11_extra` draagt dezelfde bestandsnaam als het bij #335
 verwijderde Text-ID, maar is een ander bestand. De gelijknamige uitwerkingen volgen
 die indeling. De nieuwe opgaven blijven notebooks wegens invulcellen; de uitwerkingen
-wegens uitvoerbare code. Dit verandert geen algemene formaat- of uitvoernorm. De tabel hierboven is daarvoor
-niet hermeten: vier opgave- en vier uitwerkingsnotebooks werden er twee en twee.
+wegens uitvoerbare code. Dit verandert geen algemene formaat- of uitvoernorm. De tabel hierboven is na deze
+samenvoeging niet hermeten: vier opgave- en vier uitwerkingsnotebooks werden er twee en twee.
 
 Bij werkitem #386 kwam `solutions/6_extra` uit de tweede rij: 31 wordt 30, ook
 als delta en niet als volledige hertelling. Gemeten op `00c03b2a`: dat notebook

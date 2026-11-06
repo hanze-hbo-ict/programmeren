@@ -21,7 +21,7 @@ de opgaven onder `problems/` blijven huiswerk.
 
 ## Voorbereiding en middelen
 
-Bronstatus: gecontroleerd tegen `adfdc5c8` van `origin/master`; route bijgewerkt volgens [C4 van #481](https://github.com/hanze-hbo-ict/programmeren/issues/481#issuecomment-6685696981). De actuele
+Bronstatus: gecontroleerd tegen `adfdc5c8` van `origin/master`. De actuele
 [weekpagina](../source/course/week_10.md) geeft de studentroute. Open de
 collegenotebooks, voer je eigen demonstraties vooraf uit en houd de hieronder
 genoemde uitwerkingen bij de hand voor je begeleiding. Gebruik een werkende
@@ -89,11 +89,6 @@ Gebruik [10_directory_doorzoeken, stappen 1–5](../source/practicals/10_directo
 **Controlepunt.** Laat bij een falende test de eerstvolgende recursieve aanroep als een al opgelost deelprobleem beschrijven: wat zou die moeten teruggeven en wat doet de aanroeper daarmee?
 
 ## Huiswerk en begeleiding
-
-De basis is verplicht. De opstap en de extra zijn facultatief. Studenten vinden de drie niveaus via de
-[opgaven](../source/course/opgaven_10.md) en de
-[uitwerkingen](../source/course/solutions_10.md). De aanvullende oefeningen zijn facultatief
-en bevatten hun eigen uitwerkingen.
 
 Gebruik bij [de opstap](../source/problems/10_opstap.ipynb) eerst *Lezen en naspelen*
 en daarna *Schrijven*. Laat wie veel code probeert eerst één leesvraag uitwerken

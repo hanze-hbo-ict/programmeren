@@ -21,7 +21,7 @@ de opgaven onder `problems/` blijven huiswerk.
 
 ## Voorbereiding en middelen
 
-Bronstatus: gecontroleerd tegen `adfdc5c8` van `origin/master`; route bijgewerkt volgens [C4 van #481](https://github.com/hanze-hbo-ict/programmeren/issues/481#issuecomment-6685696981). De actuele
+Bronstatus: gecontroleerd tegen `adfdc5c8` van `origin/master`. De actuele
 [weekpagina](../source/course/week_9.md) geeft de studentroute. Open de
 collegenotebooks, voer je eigen demonstraties vooraf uit en houd de hieronder
 genoemde uitwerkingen bij de hand voor je begeleiding. Gebruik een werkende
@@ -83,11 +83,6 @@ Gebruik [9_register, stappen 1–5](../source/practicals/9_register.ipynb).
 **Controlepunt.** Vraag bij een correct register om één waarde met de oorspronkelijke tekst te controleren. Laat daarna de bijbehorende comprehension teruglezen als een lus; zo controleer je begrip naast tests.
 
 ## Huiswerk en begeleiding
-
-De opstap en de basis zijn verplicht. De extra is facultatief. Studenten vinden de drie niveaus via de
-[opgaven](../source/course/opgaven_9.md) en de
-[uitwerkingen](../source/course/solutions_9.md). De aanvullende oefeningen zijn facultatief
-en bevatten hun eigen uitwerkingen.
 
 Plan het eerste deel van [de opstap](../source/problems/9_opstap.ipynb) na college 1
 en het dict-/setdeel na college 2. [De basis](../source/problems/9_basis.ipynb) bouwt

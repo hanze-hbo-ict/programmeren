@@ -266,7 +266,7 @@ zonder afzonderlijk PGM2-basisbudget. Dit is geen besluit over de PGM1-matrijs.
 
 De celverwijzingen in de eerdere dekkingssnapshot hierboven zijn historisch.
 Sinds de [routeconsolidatie #481](https://github.com/hanze-hbo-ict/programmeren/issues/481#issuecomment-6685696981)
-staan de taken uit `11_algoritmen_basis` in `11_basis`, nijlpaarddiner,
+staan de taken uit `11_algoritmen_basis` in `11_basis`, De nacht van het nijlpaard,
 stappen 1–3. De taken uit `11_lambda_basis` staan in `11_basis`, schoolrun,
 stappen 4–8 en opdracht 1. De zelfstandige ontwerptaak is stap 8; de afzonderlijke
 analyse blijft opdracht 1. Deze bestandswijziging verandert geen leeruitkomst,

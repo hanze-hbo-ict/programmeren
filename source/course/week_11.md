@@ -16,8 +16,8 @@ lambda-functie met `lambda`.
 
 Het eerste college gaat over *use it or lose it*, met het wisselgeld en de
 knapzak. Dat heb je nodig voor het eerste deel van de opstap, voor
-*De nacht van het nijlpaard* in de basis, voor de extra over de periodieke tshirt en voor het practicum, waarin
-je uitrekent met hoeveel munten je een bedrag betaalt. De extra over het pijlenpad
+*De nacht van het nijlpaard* in de basis, voor *Periodiek T-shirt* in de extra en voor het practicum, waarin
+je uitrekent met hoeveel munten je een bedrag betaalt. *Pijlenpad* in de extra
 probeert ook keuzes uit, maar met een recursieve aanroep in een lus over de keuzes,
 zoals in het [practicum van week 3](/practicals/10_directory_doorzoeken).
 Het tweede college gaat over `sorted`, `max` en `min` met `key=`, over `lambda`,
@@ -43,23 +43,3 @@ legt uit hoe dat werkt.
 
 ```{tableofcontents}
 ```
-
-## Huiswerk
-
-De opstap en de basis zijn verplicht. De extra is facultatief. Ga naar de [opgaven en zelfcontroles](/course/opgaven_11) en daarna naar de [uitwerkingen](/course/solutions_11).
-
-De basis heeft twee delen: *De nacht van het nijlpaard* en *De uitslag van de schoolrun*. De extra heeft drie
-delen: Pijlenpad, Periodieke tshirt en Caesar op orde.
-
-In {ref}`De uitslag van de schoolrun <problems-11-lambda-basis>` maak je de verplichte zelfstandige
-functionele ontwerptaak: een jeugdpodium bij de schoolrun. Je legt eerst je aanpak en
-opbouw vast en kiest zelf passende functionele constructies. Je schrijft daarna
-je code en wijst bij de vergelijking met je plan aan waarin je uitwerking
-functioneel is.
-De eerdere stappen blijven toepassingsoefeningen met hints.
-
-Na de zelfstandige taak volgt de verplichte analyse van gegeven werkende
-schoolrunfuncties. Je verklaart hun samenwerking en onderbouwt waar de regel
-voor gelijke tijden moet veranderen en welke resultaten dat raakt. Je hoeft
-de wijziging niet te programmeren. Dit is een afzonderlijk antwoord naast je
-eigen ontwerp.

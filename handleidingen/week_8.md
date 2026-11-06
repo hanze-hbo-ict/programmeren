@@ -21,7 +21,7 @@ de opgaven onder `problems/` blijven huiswerk.
 
 ## Voorbereiding en middelen
 
-Bronstatus: gecontroleerd tegen `adfdc5c8` van `origin/master`; route bijgewerkt volgens [C4 van #481](https://github.com/hanze-hbo-ict/programmeren/issues/481#issuecomment-6685696981). De actuele
+Bronstatus: gecontroleerd tegen `adfdc5c8` van `origin/master`. De actuele
 [weekpagina](../source/course/week_8.md) geeft de studentroute. Open de
 collegenotebooks, voer je eigen demonstraties vooraf uit en houd de hieronder
 genoemde uitwerkingen bij de hand voor je begeleiding. Gebruik een werkende
@@ -84,10 +84,6 @@ Gebruik [het practicum, opdracht 1 `create_dictionary`, opdracht 2 `generate_tex
 **Controlepunt.** Controleer modelconstructie afzonderlijk van willekeurige generatie. Een vloeiende tekst alleen bewijst niet dat de opvolgers goed worden bewaard. Leestekens blijven aan woorden vastzitten; na een terminaal woord zonder opvolgers volgt de bestaande terugkeer naar het startsymbool.
 
 ## Huiswerk en begeleiding
-
-De opstap en de basis zijn verplicht. De extra is facultatief. Studenten vinden de drie niveaus via de
-[opgaven](../source/course/opgaven_8.md) en de
-[uitwerkingen](../source/course/solutions_8.md).
 
 Na college 1: het dictionarydeel van [de opstap](../source/problems/8_opstap.ipynb)
 en [de basis over woordenanalyse](../source/problems/8_basis.ipynb). Na college 2:
