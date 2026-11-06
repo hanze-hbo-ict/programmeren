@@ -91,7 +91,7 @@ Gebruik [12_creatures, stappen 1–5 en *Wat de property van hp verandert*](../s
 ## Huiswerk en begeleiding
 
 Laat [de opstap over klassen](../source/problems/12_opstap.ipynb) gebruiken om
-constructor, methoden en properties afzonderlijk te oefenen. De verplichte
+constructor, methoden en properties afzonderlijk te oefenen. De
 [basis over Date](../source/problems/12_basis.ipynb) loopt door tot en met het afschermen
 van de datum in stap 13. Laat bij begeleiding eerst een test naar een concrete
 methode herleiden; laat kopiëren en waarde/identiteit niet ondersneeuwen onder de

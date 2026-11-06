@@ -405,7 +405,7 @@ draait wel.
 | De facultatieve extra van PGM1 week 6 is tekstbestand → RGB-raster → PNG met een vaste vergroting; zij blijft naast `6b_images` en draagt geen nieuwe leeruitkomst | didactisch | gesloten op 25 september 2026 (#303, C4), **uitgevoerd** in #312; samenhang gecontroleerd in #313 |
 | Tot en met week 4 ligt de nadruk op lezen en begrijpen; schrijven begint wel | didactisch | staand, onderbouwd |
 | Een weekpagina vat samen wat volgt en waarop het voortbouwt | praktisch | gesloten (#167), **deels uitgevoerd**: week 1 tot en met 4 dragen hem, met #168, #169, #230 en #162; week 6 draagt hem sinds #313; week 12 (PGM2 week 5) draagt hem sinds #160, week 8 (PGM2 week 1) sinds #273, week 13 (PGM2 week 6) sinds #270, week 14 (PGM2 week 7) sinds #271, week 9 (PGM2 week 2) sinds #326, week 10 (PGM2 week 3) sinds #332 en week 11 (PGM2 week 4) sinds #335; week 7 draagt sinds #102 een route, een tijdpad over drie bijeenkomsten en een uitvalpad; week 5 is nog een stub |
-| Opgaven en practica horen een uitwerking te hebben | didactisch | uitgebreid op [9 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/375#issuecomment-6076782174), C7, uitgevoerd in #382; op `054bfe52` 43/43 niveau-uitwerkingen en 15/16 practicumuitwerkingen, met `6b_images` als bewuste uitzondering. Collegeopdrachten blijven buiten de norm, caesar behoudt VP6; zie de norm hieronder en [C4 #383 van 28 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/383#issuecomment-6467804118) |
+| Opgaven en practica horen een uitwerking te hebben | didactisch | uitgebreid op [9 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/375#issuecomment-6076782174), C7, uitgevoerd in #382; op `054bfe52` 43/43 niveau-uitwerkingen en 15/16 practicumuitwerkingen, met `6b_images` als bewuste uitzondering. Collegeopdrachten blijven buiten de norm; caesar behield VP6 tot #481, dat die uitzondering opvolgde met een uitvoerbare uitwerking; zie de norm hieronder en [C4 #383 van 28 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/383#issuecomment-6467804118) |
 | Week 4 krijgt een lusrecept van vijf vragen, in `4a_lussen` | didactisch | gesloten, **uitgevoerd** met #153; week 5 pikt het nog niet op (#163) |
 | Recursie gaat in beginsel naar PGM2; `unique` blijft in PGM1 als herkenbaar iteratief voorbeeld met vooruitwijzing | organisatorisch | gesloten, uitgevoerd in #162: de overige recursieplekken zijn verwijderd; recursie wordt uitgebreider behandeld in PGM2 |
 | Eerst de weken van PGM1 afronden; het materiaal moet zo snel mogelijk live | organisatorisch | staand |
@@ -416,7 +416,7 @@ draait wel.
 | Dictionaries en de Markov-opgave verhuizen van PGM1 week 7 naar PGM2 week 1 | didactisch | staand, **uitgevoerd**: PGM2 week 1 kreeg de datastructuren en de Markov-opgave met #148, PGM1 week 7 raakte ze kwijt met #315 |
 | Objecten pas in PGM2 | didactisch | staand, onderbouwd |
 | Picobot opent PGM1 | didactisch | staand, onderbouwd |
-| Opgaven in opstap, basis en extra | didactisch | gesloten op 23 september 2026, **uitgevoerd** voor PGM2: alle zeven weken hebben opstap, basis en extra, hermeten op `054bfe52` op 28 oktober 2026; week 4 heeft twee basis- en twee extrabestanden; de verplichte niveaus per week staan in `leerlijn.md` |
+| Opgaven in opstap, basis en extra | didactisch | gesloten op 23 september 2026, **uitgevoerd** voor PGM2: alle zeven weken hebben opstap, basis en extra, hermeten op `054bfe52` op 28 oktober 2026; sinds #481 heeft ook week 4 één basis- en één extrabestand met behoud van de bestaande delen; de verplichte niveaus per week staan in `leerlijn.md` |
 | De student werkt lokaal in VS Code; de browser is verrijking | didactisch | staand, onderbouwd |
 | Op macOS is Homebrew de aanbevolen manier om Python en alle pakketten te installeren, zoals Pillow; een bestaande Python mag, maar de verdere Mac-instructies gaan van Homebrew uit | praktisch | gesloten op 22 oktober 2026 (#430, [C4](https://github.com/hanze-hbo-ict/programmeren/issues/430#issuecomment-6336154620) en [C4-aanvulling](https://github.com/hanze-hbo-ict/programmeren/issues/430#issuecomment-6337223720)), **uitgevoerd** in #430: `lectures/0b_install_python`, `problems/5_mandelbrot_opstap`, `practicals/6b_images` en `handleidingen/week_6.md`; zie *Python en pakketten op macOS* |
 | Code uitvoerbaar in de browser | praktisch | open, uitvoering wijzigt |
@@ -661,6 +661,9 @@ laten dragen.
 naast een volle basis is prima; week 2 en 3 laten zien dat het kan. En opbreken is
 geen reden om een opgave langer te maken - de bedoeling is dat dezelfde inhoud over
 drie niveaus wordt verdeeld, niet dat er drie keer zoveel komt te staan.
+
+De routeconsolidatie van #481 voert deze passage niet alsnog uit; zie
+*PGM2-huiswerkroute (#481)*.
 
 ### Bestanden en excepties
 
@@ -1290,9 +1293,11 @@ uitwerking in `source/solutions/`. Een ontbrekende niveau-uitwerking is een omis
 De afzonderlijke corpora en actuele bestandsdekking staan in
 [leerlijn.md](leerlijn.md).
 
-**De uitzonderingen zijn expliciet.** `caesar_op_orde` blijft zonder niveau en
-zonder uitwerking: VP6 van #335 is behouden bij de poort van
-[19 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/382#issuecomment-6265574205). `6b_images` heeft geen boekuitwerking,
+**De uitzonderingen zijn expliciet.** De vroegere Caesar-uitzondering (VP6 van #335,
+behouden op [19 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/382#issuecomment-6265574205))
+is bij #481 opgevolgd: Caesar is het derde deel van `problems/11_extra`, met
+uitvoerbare uitwerking in `solutions/11_extra`.
+`6b_images` heeft geen boekuitwerking,
 omdat de docent de opdracht met de klas opbouwt; deze uitzondering is behouden op
 [28 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/383#issuecomment-6467804118), V3.
 Collegeopdrachten vallen buiten de automatische uitwerkingnorm; de bestaande
@@ -1800,3 +1805,59 @@ bij [#465](https://github.com/hanze-hbo-ict/programmeren/issues/465).
 of prioriteit van het practicum, het behoud van de inhoud, de plaats van het
 verplichte huiswerk of de gereserveerde oefententamenbijeenkomst. Zo’n wijziging
 vraagt een nieuw begrensd menselijk besluit.
+
+## PGM2-huiswerkroute (#481)
+
+Voorgelegd en goedgekeurd op 6 november 2026 in [C4](https://github.com/hanze-hbo-ict/programmeren/issues/481#issuecomment-6685696981):
+
+> De voorgestelde scope is:
+>
+> - Alleen PGM2, week 1–7: per week één herkenbare opstap-, basis- en extra-set.
+> - Week 4: algoritmenbasis en schoolrun samenvoegen tot één basisbestand; Pijlenpad, tshirt en Caesar tot één extrabestand, met overeenkomstige uitwerkingen.
+> - Caesar: alle zeven taken behouden en uitvoerbare uitwerkingen toevoegen, zoals je hebt besloten.
+> - Overige weken: bestaande niveaubestanden behouden; duidelijker aangeven wat verplicht, facultatief of aanvullend is.
+> - Alles laten aansluiten: nummering, zelfcontroles, hulpbestanden, navigatie, verwijzingen, docenthandleidingen en curriculumregistratie bijwerken.
+> - Verifiëren: uitwerkingen uitvoeren, verwijzingen controleren, schone build en onafhankelijke beoordeling.
+>
+> Er verdwijnt geen leerinhoud. PGM1, leeruitkomsten, toetsgewichten en de inhoud van colleges, practica en oefententamen blijven buiten de herziening.
+>
+> De oude week-4-bestanden worden na volledige migratie vervangen; behoud van oude externe URL’s is niet inbegrepen. Jij beslist uiteindelijk over merge.
+
+Letterlijk menselijk antwoord:
+
+> ok, akkoord
+
+Eerdere [Caesarbijstelling van 6 november 2026](https://github.com/hanze-hbo-ict/programmeren/issues/481#issuecomment-6685339975), letterlijk:
+
+> waarom caesar niet bij de extra opgaven? die is toch voor verdieping?
+
+Voorgelegd:
+
+> neem Caesar op als onderdeel van de ene extra-set van week 4, naast Pijlenpad en tshirt. Daarbij moeten we expliciet bepalen of de uitzondering zonder uitwerking blijft gelden.
+
+Letterlijk menselijk antwoord:
+
+> er moet dan ook een uitwerking komen
+
+Er is geen afzonderlijke menselijke reden gegeven.
+
+Deze routeconsolidatie behoudt de bestaande contexten en ondersteuning; zij voert
+*Eén opgave over drie niveaus* niet alsnog uit als inhoudelijk herontwerp.
+De aanvullende comprehensions- en recursieoefeningen blijven facultatief bij
+week 2 en 3, met hun ingebouwde uitwerkingen.
+
+**Correctie op de uitvoering, 6 november 2026.** Bron: [C4-correctie](https://github.com/hanze-hbo-ict/programmeren/issues/481#issuecomment-6695203285). Letterlijk:
+
+> Die eis in 468 en 469 klopt niet. Herkenbaar betekent dat het een opgave is, niet dat er bij moet staan wat die opgave is en al helemaal niet dat het verplichtn is
+>
+> Even voor de helderheid: niets is verplicht, studenten hoeven alleen een tentamen te halen. Ik begrijp dus niet zo goed waarom overal 'verplicht' staat
+>
+> We hoeven bovendien docenten niet voor te schrijven wat verplicht is, dat kunnen ze zelf beoordelen. We vertellen alleen wat de functie is.
+>
+> Wat betreft 'verplicht': ik wil al die verwijzingen naar verplicht ontwerp- en analysetaken er wel uit hebben. Wat betreft spelfouten: 'periodieke tshirt' is er een die ik je niet zie noemen
+
+Op de voorgelegde vragen (A: de samenvoeging van week 4 blijft en de route van de andere weken gaat terug naar `f779d922`; B: overige "verplicht" in studentmateriaal; C: de regel in de leerlijn; D: PGM1):
+
+> B: laat die maar zitten. C: zou ik niet veranderen. D. nvt. A. eens. Verder alle puntjes die je noemt oppakken
+
+De regel "duidelijker aangeven wat verplicht, facultatief of aanvullend is" uit de voorgelegde scope hierboven is daarom niet uitgevoerd. De zinnen over verplichte ontwerp- en analysetaken staan niet meer in het studentmateriaal; de taken zelf blijven. Deze correctie wijzigt de regel over verplichte niveaus in `leerlijn.md`, de leeruitkomsten en de toetsgewichten niet.
