@@ -1700,6 +1700,50 @@ Er is geen verdere menselijke reden gegeven.
 **Te heropenen wanneer** de zesopgavenopzet, puntentoerekening of goedgekeurde
 vijfbestandscope inhoudelijk moet veranderen.
 
+## Gezamenlijke aanpassingen PGM2-oefentoets
+
+Op 6 november 2026 is de volgende verzameling letterlijk voorgelegd:
+
+> De verzamelde aanpassingen zijn:
+>
+> 1. **Opgave 2:** zowel de comprehension- als recursieve variant krijgt dezelfde twee assertions: de lege lijst en de lijst met negatieve getallen, nul en dubbele waarden.
+> 2. **Opgave 3:** expliciet zeggen dat de student rechtstreeks code schrijft, zonder een functie te maken. Deelvraag 2 blijft inhoudelijk gelijk; `.items()` is een geldige uitwerking.
+> 3. **Opgave 4:** vóór de tabel uitleggen dat ieder Nim-object het resterende aantal lucifers bewaart in het attribuut `sticks`, met `game = Nim(16)` als voorbeeld.
+> 4. **Docstrings:** in de studentopdracht ‘een Nederlandse docstring’ vervangen door ‘een duidelijke docstring’. De voorbeeldoplossing blijft Nederlands.
+> 5. **Opgave 6 — nog een voorstel:** twee deelvragen maken: **5 punten** voor eigen keuzes in aanpak én codeopbouw met korte toelichting, en **10 punten** voor de correcte implementatie. Dit vervangt de huidige verdeling van 5 + 5 + 5.
+>
+> De verwijzingen naar **L2/L3** zijn al uit de PR verwijderd. Bovenstaande wijzigingen zijn nog niet uitgevoerd.
+
+De vakdeskundige antwoordde letterlijk:
+
+> Voer deze wijzingen door, inclusief 5. Bovendien moeten deelvragen genummerd worden met a, b etc., niet met cijfers
+
+Bron: [gezamenlijk C4 van #470](https://github.com/hanze-hbo-ict/programmeren/issues/470#issuecomment-6682913167).
+De gekozen toelichting vóór de Nim-tabel luidt letterlijk:
+
+> Elk Nim-object bewaart het aantal lucifers dat nog op tafel ligt in het attribuut `sticks`. Bij het maken van het object geef je het beginaantal mee. Na `game = Nim(16)` is `game.sticks` dus `16`. Wanneer een speler lucifers pakt, verandert dit aantal.
+
+Deze toelichting was eerder gekozen met de letterlijke uitspraak:
+
+> Nee, de vorige bewoording was prima. Ik kijk nog even verder en dan passen we straks alles in een keer aan
+
+De uitvoering blijft beperkt tot de oorspronkelijke vijfbestandscope. Alle
+hoofdopgaven houden hun cijfers; deelvragen krijgen letters. De oude codes in
+de 90-puntenadministratie blijven herkenbaar oud. Opgave 6 blijft L6 en 15 punten:
+eigen aanpak én codeopbouw met korte toelichting samen 5, correcte implementatie
+van die eigen keuzes 10. Alleen een juiste score zonder uitvoering van het eigen
+ontwerp is onvoldoende voor die 10 punten. Totaal 100 en de LU-gewichten blijven gelijk.
+
+Voor studentdocstrings in deze oefentoets geldt nu een lokale uitzondering:
+duidelijkheid en bruikbaarheid tellen, niet een Nederlandse taalvoorwaarde.
+Voorbeelden en docstrings in het materiaal blijven Nederlands. Dit wijzigt de
+algemene codeconventie niet. Er is geen verdere menselijke reden gegeven.
+De automatische herstelstand blijft 1/1; dit is een expliciet menselijk vervolg,
+geen nieuwe automatische herstelronde. De mens beslist over merge.
+
+**Te heropenen wanneer** uitvoering buiten deze lokale uitzondering of de
+besloten prestaties, punten of vijfbestandscope nodig is.
+
 ## Een besluit toevoegen
 
 Neem het op in de tabel met zijn aard en status, en licht het eronder toe als de

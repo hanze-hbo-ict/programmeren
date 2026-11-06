@@ -187,8 +187,9 @@ Deze historische tabel bewaart de uitgangssituatie vóór #470. De gerealiseerde
 | 6 Moeilijke woorden | 20 | Ongesplitst vrije implementatie met gegeven formule/splitinstructie; kandidaat L6 na expliciete strategie-/structuurvrijheid, bewijs en functioneel-of-OO-grens. Huidige imperatieve vrijheid geen gegarandeerde L6. |
 
 Som oude punten: 10+5+5+5+10+5+5+5+5+15+20=90. Deze historische
-bronopgaven zijn vervangen volgens C4 van #470; 2b/2c zijn elk voor 5 punten
-behouden en 2a is vervallen. Alfabetisch is als geheel vervangen door het nieuwe
+bronopgaven zijn vervangen volgens C4 van #470; de oude 2b/2c zijn elk voor
+5 punten behouden als de huidige 2a/2b. De oude 2a is vervallen; de huidige 2c
+is de toegevoegde functieargumentvraag. Alfabetisch is als geheel vervangen door het nieuwe
 ongesplitste blok van 5 punten. De overige vervangingen en nieuwe deelpunten
 staan in de docentrubric; oude en nieuwe punten worden niet opgeteld.
 
