@@ -16,13 +16,13 @@ lambda-functie met `lambda`.
 
 Het eerste college gaat over *use it or lose it*, met het wisselgeld en de
 knapzak. Dat heb je nodig voor het eerste deel van de opstap, voor
-*De nacht van het nijlpaard* in de basis, voor *Periodiek T-shirt* in de extra en voor het practicum, waarin
-je uitrekent met hoeveel munten je een bedrag betaalt. *Pijlenpad* in de extra
+*De nacht van het nijlpaard*, voor *Periodiek T-shirt* en voor het practicum, waarin
+je uitrekent met hoeveel munten je een bedrag betaalt. *Pijlenpad*
 probeert ook keuzes uit, maar met een recursieve aanroep in een lus over de keuzes,
 zoals in het [practicum van week 3](/practicals/10_directory_doorzoeken).
 Het tweede college gaat over `sorted`, `max` en `min` met `key=`, over `lambda`,
 en over een eigen functie met een functieparameter. Dat heb je nodig voor de
-andere twee delen van de opstap en voor *De uitslag van de schoolrun* in de basis. *Caesar op orde*
+andere twee delen van de opstap en voor *De uitslag van de schoolrun*. *Caesar op orde*
 herhaalt de stof van beide colleges.
 
 Aan het eind van de week kun je bij een probleem met keuzes beide keuzes
