@@ -50,24 +50,19 @@ plaats van deze 80% en 20%. De matrijs hierboven verandert daar niet door.
 
 ## Hoe de percentages zich tot de toets verhouden
 
-De matrijzen hierboven sluiten op 100%, en beide oefententamens tellen 90 punten.
-Dat is geen fout. Het cijfer wordt zo berekend:
+De matrijzen sluiten op 100%. Het PGM1-oefententamen telt 90 punten; de
+herziene PGM2-oefentoets telt 100 punten, volgens C4 van #470.
+Het cijfer wordt met het betreffende toetstotaal berekend:
 
 $$
-\text{cijfer} = 9 \times \frac{\text{behaalde punten}}{\text{totaal aantal punten}} + 1
+\text{cijfer} = 1 + 9 \times \frac{\text{behaalde punten}}{\text{totaal aantal punten}}
 $$
 
-waarbij het totaal 90 is. De **+1** is de basis: een student die niets goed heeft
-haalt een 1 en geen 0. Wie alle 90 punten haalt komt op een 10 uit.
-
-Die basis wordt niet over de leeruitkomsten verdeeld. De percentages van de matrijs
-gaan dus over de negentig punten die te verdienen zijn, en een uitkomst van 10% komt
-overeen met 9 punten op de toets.
-
-Dit staat hier omdat het uit de repository niet af te leiden is. Een veegronde die
-de punten in het oefententamen telt, komt op 90 uit en concludeert dan dat er iets
-niet klopt; dat is precies wat er op 31 augustus 2026 gebeurde. Vastgesteld door de
-vakdeskundige.
+De **+1** is de basis en wordt niet over leeruitkomsten verdeeld. Nul punten
+levert een 1 op, alle punten een 10. Een aandeel van 10% betekent bij PGM1
+9 punten en bij deze PGM2-oefentoets 10 punten. De bestaande PGM1-uitzondering
+op de niveauverdeling blijft gelden. De PGM2-oefentoets volgt de zes vastgestelde
+LU-gewichten; dit doet geen uitspraak over het echte tentamen.
 
 ## Programmeren II
 
@@ -173,9 +168,9 @@ Paden in onderstaande tabel zijn relatief aan `source/`.
 | II-L5 | W4 `11_opstap` c2/6/11/15 vraagt aanroepen/uitvoer verklaren; `11_lambda_basis` c14 schrijft de samenwerking `winner`–`select`–`fastest` voor. W5 `12_basis` stap 12 onderzoekt externe mutatie; W6 `13_basis` stappen 3/8 en c32 vragen dispatch, vereiste interface en gevolgen van wijziging te verklaren. Nim vraagt aanvullen. | W5/6 bevatten echte analyse-elementen; geen nuldekkingclaim. Losse uitvoervragen en het volgen van opgegeven samenwerking garanderen nog geen integrale analyse van taakverdeling, afhankelijkheden én onderbouwde wijzigingsplaats. Die combinatie in W3/4/5 expliciteren in #469; W3 analyseert gegeven functies/recursie zonder OOP-voorkennis. Bestaande W6-analyse verdwijnt niet automatisch. |
 | II-L6 | `10_basis` geeft functies, opsplitsing, basisgevallen en analogieën. `11_algoritmen_basis` c3/7/10 geeft drie functies en use-it/lose-it-strategie; `practicals/11_wisselgeld` c2–7 geeft basisgevallen, kleinere problemen en combinatie. `10_extra` laat randgevallen kiezen, maar is facultatief. Toets 5 vraagt recursie zonder gegeven algoritme; toets 6 laat ook geheel imperatief werken. | Geen gegarandeerd zelfstandig strategie- én structuurontwerp voor iedereen in W3/4 aangetoond. Dit zegt niets over feitelijke beheersing of wat een student zonder hints doet. Toets 5 schrijft recursie voor en garandeert daardoor geen vrije vormkeuze volgens C4-deelbesluit 1; één zelf ontworpen functie blijft geldig L6-bewijs mits de vorm niet voorgeschreven was; toets 6 biedt vrijheid maar eist de nieuwe paradigma-/ontwerpgrens niet. |
 
-### Afhandeling van het oefententamen: alle 90 punten
+### Historische basis: alle 90 oude punten
 
-Bron: `extra/practice/PGM2_examen.md`, zes gepubliceerde opgaven. Alleen gepubliceerde deelpunten gebruiken; docstring/assertions hebben geen afzonderlijke gepubliceerde verdeling. De tabel verantwoordt alle punten, zonder nieuwe rubric te doen alsof die bestaat.
+Deze historische tabel bewaart de uitgangssituatie vóór #470. De gerealiseerde vervanging naar 100 punten staat in `handleidingen/PGM2_oefententamen_rubric.md`, inclusief alle oude eenheden; docstring/assertions hebben geen retrospectieve deelverdeling.
 
 | Eenheid | Bestaande punten | Prestatie en afhandeling in vervolg #470 |
 |---|---:|---|
@@ -191,7 +186,33 @@ Bron: `extra/practice/PGM2_examen.md`, zes gepubliceerde opgaven. Alleen gepubli
 | 5 Alfabetisch | 15 | Ongesplitst blok recursie plus docstring/3 assertions. Hoogstens kandidaat voor zelfstandig algoritmeontwerp; geen 15 creërenpunten boeken. Rubric-/niveaukeuze uitstellen, blok volledig administreren. |
 | 6 Moeilijke woorden | 20 | Ongesplitst vrije implementatie met gegeven formule/splitinstructie; kandidaat L6 na expliciete strategie-/structuurvrijheid, bewijs en functioneel-of-OO-grens. Huidige imperatieve vrijheid geen gegarandeerde L6. |
 
-Som 10+5+5+5+10+5+5+5+5+15+20=90. Geen verdeling van 90 volgens de nieuwe percentages ingevoerd. Voor opgave 4 als L5 eerst werkende applicatie aanbieden en gerichte analyseprestaties toevoegen; bestaande vier aanvulcriteria worden niet achteraf analyse genoemd. Voor opgave 6 als L6 scoreformule behouden, architectuur/strategie openlaten, korte keuzeverantwoording vragen en beide paradigma's toestaan. Advies: toetsherontwerp en nieuwe rubric apart laten besluiten; publiceren van de zesdoelenvariant betekent geen claim dat deze oefentoets haar al representeert.
+Som oude punten: 10+5+5+5+10+5+5+5+5+15+20=90. Deze historische
+bronopgaven zijn vervangen volgens C4 van #470; de oude 2b/2c zijn elk voor
+5 punten behouden als de huidige 2a/2b. De oude 2a is vervallen; de huidige 2c
+is de toegevoegde functieargumentvraag. Alfabetisch is als geheel vervangen door het nieuwe
+ongesplitste blok van 5 punten. De overige vervangingen en nieuwe deelpunten
+staan in de docentrubric; oude en nieuwe punten worden niet opgeteld.
+
+### Gerealiseerde oefentoetsdekking na #470
+
+De oefenbeschrijvingen in de historische tabel hierboven zijn niet opnieuw
+onderzocht. De toetsuitspraken daar beschrijven de situatie vóór deze herziening.
+Onderstaande gerichte registratie vervangt die toetsuitspraken, zonder nieuwe
+weekclaims of wijziging aan de matrijs of bewijsgrenzen.
+
+| LU | Opgave | Gevraagde prestatie | Punten |
+|---|---|---|---:|
+| II-L1 | 3 Bonus | Dictionary maken, opzoeken, wijzigen en verwerken; set, lidmaatschap en verschil. | 15 |
+| II-L2 | 2 en 5 | Comprehension, eenvoudige recursie en functieargument toepassen; alfabetische recursie met vormvereisten. | 20 |
+| II-L3 | 4 Nim | Gegeven toestand en samenwerking, overerving/polymorfisme en operatorvergelijking implementeren. | 25 |
+| II-L4 | 4 Nim | Zelf ongeldige zet gooien, gericht afvangen en met intacte toestand doorgaan. | 10 |
+| II-L5 | 1 Extensies | Werkende applicatie analyseren: verantwoordelijkheden, afhankelijkheden en onderbouwde wijzigingsplaats. | 15 |
+| II-L6 | 6 Moeilijke woorden | Zelf strategie en structuur kiezen, kort verantwoorden en functioneel of OO implementeren. | 15 |
+
+Opgaven: 15/15/15/35/5/15 = 100. Niveaus: 70/15/15. Geen punt telt dubbel.
+Dit is toetsopdrachtbewijs, geen uitspraak over feitelijke studentbeheersing,
+studenttijd of het echte tentamen. Bron: [C4 #470](https://github.com/hanze-hbo-ict/programmeren/issues/470#issuecomment-6662338378)
+en [deelpuntenaddendum](https://github.com/hanze-hbo-ict/programmeren/issues/470#issuecomment-6662364884).
 
 ### Vervolgwerk en samenhang
 
@@ -199,16 +220,14 @@ Som 10+5+5+5+10+5+5+5+5+15+20=90. Geen verdeling van 90 volgens de nieuwe percen
 |---|---|---|
 | [#468](https://github.com/hanze-hbo-ict/programmeren/issues/468) | V1: verplicht zelfstandig functioneel ontwerp W3/4 én OO-ontwerp W6; maximaal één ontwerptaak per betrokken week, toepassingssteun behouden; strategie, structuur en implementatie aantoonbaar zelfstandig. | Aangemaakt; afzonderlijke uitvoering. |
 | [#469](https://github.com/hanze-hbo-ict/programmeren/issues/469) | V2: maximaal één expliciete analyseprestatie in W3/4/5: taakverdeling, afhankelijkheden, wijzigingsplaats en gevolgen; W3 zonder OOP-voorkennis. Bestaande W5/6-vragen behouden waar passend. | Aangemaakt; afzonderlijke uitvoering. |
-| [#470](https://github.com/hanze-hbo-ict/programmeren/issues/470) | V3: zes bestaande toetsopgaven en noodzakelijke vervangende dekking, alle 90 punten eenmaal verantwoorden; eigen eindige toets/rubric en menselijk scopebesluit. Hergebruik 4/6 en rubric nog uitgesteld. | Aangemaakt; afzonderlijke uitvoering. |
+| [#470](https://github.com/hanze-hbo-ict/programmeren/issues/470) | V3: zes bestaande toetsopgaven en noodzakelijke vervangende dekking, alle 90 punten eenmaal verantwoorden; eigen eindige toets/rubric en menselijk scopebesluit. Hergebruik 4 als L3/L4-contract en 6 als zelfstandig L6-ontwerp besloten. | Uitgevoerd binnen vijfbestandscope; zie gerealiseerde oefentoetsdekking.  |
 | [#471](https://github.com/hanze-hbo-ict/programmeren/issues/471) | V4: vergelijkingsvoorbeeld opgave 5 en basisgevalvolgorde plus uitleg opgave 1 herstellen; lokale termen methode/basisgeval corrigeren; interfaces en punten behouden, contractgevallen uitvoeren. | Aangemaakt; afzonderlijke uitvoering. |
 | [#472](https://github.com/hanze-hbo-ict/programmeren/issues/472) | V5: bestaande W7-taken plaatsen in college, practicum, oefententamen en huiswerk; expliciet haalbaarheidsbesluit of begrensde reductie-/verplaatsingsvraag, geen extra L5/L6. | Aangemaakt; afzonderlijke uitvoering. |
 
-De twee concrete defecten blijven tot #471 zichtbaar: de uitwerking geeft bij
-`check_extension("a", "a")` False waar de opdracht True vereist; het
-vergelijkingsvoorbeeld van opgave 5 veroorzaakt een AssertionError door
-vergelijkingsketening. Nieuwe toetsdekking, toetsrubric en lesmateriaal zijn in
-Werkitem #466 niet uitgevoerd. Er is geen claim over het echte tentamen of een rubric
-buiten de repository.
+De defecten in het suffixbasisgeval en het lettervergelijkingsvoorbeeld zijn in
+Werkitem #471 hersteld; deze herziening behoudt die reparaties. De toets/rubric is in #470
+uitgevoerd; lesmateriaal en de overige vervolgitems vallen buiten die scope.
+Er is geen claim over het echte tentamen of een rubric buiten de repository.
 
 Deze variant houdt exceptions inclusief `raise` in PGM2. #465 is een afzonderlijk
 toekomstscenario: eventuele verhuizing vraagt vervangende PGM1-dekking, een
@@ -240,6 +259,5 @@ Daarnaast staat één uitkomst in de verkeerde matrijs:
 De actuele PGM2-dekking en begrensde vervolgen staan hierboven bij de zes
 vastgestelde uitkomsten. De oude diagnose dat exceptions uitsluitend als gegeven
 code voorkomen is achterhaald: `source/problems/14_basis.ipynb` laat zelf gooien
-én gericht afhandelen verplicht oefenen. Gerichte toetsdekking voor L1 en L4
-ontbreekt nog. Bestanden zijn PGM1-voorkennis; PGM2 leest daadwerkelijk bestanden,
+én gericht afhandelen verplicht oefenen. Gerichte oefentoetsdekking voor L1 en L4 is in #470 gerealiseerd. Bestanden zijn PGM1-voorkennis; PGM2 leest daadwerkelijk bestanden,
 zonder afzonderlijk PGM2-basisbudget. Dit is geen besluit over de PGM1-matrijs.
