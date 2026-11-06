@@ -1750,3 +1750,47 @@ Neem het op in de tabel met zijn aard en status, en licht het eronder toe als de
 grond niet in één regel past. Vermeld bij een gesloten besluit ook wat er zou
 moeten veranderen om het te heropenen. Dat is het verschil tussen een archief en
 een bruikbaar register.
+
+## Week 7 naast het oefententamen (#472)
+
+Vastgesteld op 6 november 2026, [C4 van #472](https://github.com/hanze-hbo-ict/programmeren/issues/472#issuecomment-6683936872).
+Bron: Codex-gesprek over #472; afzonderlijke gespreks-URL niet beschikbaar.
+
+De mens gaf als voorkeur en reden:
+
+> Volgend jaar willen we excepties naar PGM1 halen (zie relevante issue daarover). Dat betekent dat ik liever geen materiaal schrap nu, maar bepaalde aspecten tijdens het practicum eventueel facultatief maken een betere oplossing is. Sluit dit aan bij het ontwerp?
+
+Na toelichting op het behoud van vergelijkingsoperatoren vroeg de mens:
+
+> Is het haalbaar om 4-5 naar het einde te verplaatsen in plaats van ze te markeren als facultatief?
+
+Daarop is deze concrete werkwijze voorgelegd:
+
+> De docenthandleiding kan daarom aangeven dat studenten aan het laatste deel werken **als er tijd over is**, zonder die opdrachten afzonderlijk als facultatief te markeren.
+
+Letterlijk menselijk antwoord:
+
+> Ja exact. Past dit binnen het ontwerp?
+
+Na bevestiging van de scope vroeg de mens welke besluiten nog nodig waren. De resterende vraag was of drie bijeenkomsten van elk netto 90 minuten kloppen en hoeveel huiswerktijd beschikbaar is. Letterlijk menselijk antwoord:
+
+> Ja, drie bijeenkomsten kloppen. Er is geen huiswerktijd begroot, maar in het algemeen geldt dat voor een vak van 5 ECTS 140 uur is, dus ~14 uur per week, dus 8 uur zelfstudie
+
+De uitvoerroute behoudt alle inhoud: eerst creatures-stappen 1–3
+(vergelijkingen), dan oude 6–8 (exceptions/setterkeuze), dan oude 4–5
+(slotoperatoren). Het laatste deel is werk voor als er tijd over is, zonder
+afzonderlijk facultatief label en zonder verplichte thuisinhaalslag. Eén college,
+één practicum en één volledig gereserveerde oefententamenbijeenkomst duren elk
+netto 90 minuten. Opstap en alle Date-basisstappen blijven verplicht huiswerk;
+min-max blijft facultatief. De vergelijkingsroute en Date-basis blijven L3 dragen;
+W7 houdt L3 5% en L4 10%, zonder extra L5/L6 of dubbel tellen.
+
+Circa acht uur zelfstudie is een algemeen planningsuitgangspunt, geen afzonderlijk
+begroot W7-huiswerkbudget. Behandeltijden zijn inschattingen, geen waarnemingen
+of garanties. De C2-inschatting van 165–285 minuten voor opstap/basis,
+college-nawerk en reflectie past op papier binnen dit algemene uitgangspunt;
+onafgemaakte kernstappen en resterende toetsvoorbereiding zijn daarin niet
+begroot. Werkelijke studenttijd is niet beschikbaar. Dit besluit prioriteert en
+plaatst achteraan; het stelt geen onvoorwaardelijke haalbaarheid voor iedere
+student vast. Verhuizing van exceptions naar PGM1 voor volgend studiejaar blijft
+bij [#465](https://github.com/hanze-hbo-ict/programmeren/issues/465).
