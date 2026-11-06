@@ -21,7 +21,7 @@ de opgaven onder `problems/` blijven huiswerk.
 
 ## Voorbereiding en middelen
 
-Bronstatus: gecontroleerd tegen `adfdc5c8` van `origin/master`. De actuele
+Bronstatus: route bijgewerkt volgens [C4 van #472](https://github.com/hanze-hbo-ict/programmeren/issues/472#issuecomment-6683936872), op basis van `c1fbba46` van `origin/master`. De actuele
 [weekpagina](../source/course/week_14.md) geeft de studentroute. Open de
 collegenotebooks, voer je eigen demonstraties vooraf uit en houd de hieronder
 genoemde uitwerkingen bij de hand voor je begeleiding. Gebruik een werkende
@@ -68,12 +68,17 @@ Gebruik [14_creatures, *Waar je begint*, stappen 1–8 en *Wat duck typing niet 
 |---:|---|---|
 | 10 | Laat de week-6-beginstand uitvoeren en aanwijzen welke assertions uit eerdere weken komen. | Klassen, functies en controles staan in dezelfde volgorde; de opzettelijk falende cel ontbreekt. |
 | 20 | Laat stappen 1–3, kracht vergelijken en sorteren, maken. Vraag welke vergelijking Python omdraait bij `>` en `>=`. | Student verklaart vergelijking zonder voor elke operator een eigen methode toe te voegen. |
-| 25 | Begeleid stappen 4–5: `Party` optellen/aftrekken en een wezen vermenigvuldigen. Laat de verwijzingen tekenen vóór aftrekken en kopiëren. | Student verwijdert op identiteit en onderscheidt nieuwe wezens van gedeelde verwijzingen. |
-| 20 | Laat stappen 6–7 maken: constructor en `special_move` gooien nu. Open de vervangingsaanwijzingen naast de oude assertions. | Student wijzigt alleen de genoemde oude controles en behoudt controles voor geldig gedrag. |
-| 10 | Laat stap 8 en de `Turret`-grens bekijken. Laat de student de setterkeuze noteren en tijdelijke foutdemonstraties weer verwijderen. | De gekozen hp-grens past bij de assertions; meedoen aan een gevecht belooft geen sorteerbaarheid. |
+| 30 | Laat stappen 4–5 maken: constructor en `special_move` gooien nu. Open de vervangingsaanwijzingen naast de oude assertions. | Student wijzigt alleen de genoemde oude controles en behoudt controles voor geldig gedrag. |
+| 15 | Laat stap 6 en de `Turret`-grens bekijken. Laat de student de setterkeuze noteren en tijdelijke foutdemonstraties weer verwijderen. | De gekozen hp-grens past bij de assertions; meedoen aan een gevecht belooft geen sorteerbaarheid. |
+| 10 | Laat bij resterende tijd starten aan stappen 7–8: partijen optellen/aftrekken en wezens vermenigvuldigen. Laat verwijzingen tekenen vóór aftrekken en kopiëren. | Student onderscheidt identiteit, waarde en nieuwe wezens. |
 | 5 | Laat teststatus, setterkeuze en resterende stappen noteren. | Student kan het verschil tussen een bedoelde foutdemonstratie en een defect uitleggen. |
 
-**Controlepunt.** Volg voor vervallen assertions uitsluitend de actuele stappen 6–8. Bij een gooiende setter vervallen alleen de daar genoemde toewijzingscontroles. Het practicum gooit exceptions en vangt ze niet af; geef geen nieuw afvangwerk in creatures.
+**Controlepunt.** Volg voor vervallen assertions uitsluitend de actuele stappen 4–6. Bij een gooiende setter vervallen alleen de daar genoemde toewijzingscontroles. Het practicum gooit exceptions en vangt ze niet af; geef geen nieuw afvangwerk in creatures.
+
+De kernroute is stappen 1–6 met de `Turret`-sorteergrens. Werk aan stappen 7–8
+als er tijd over is; label deze stappen niet afzonderlijk als facultatief en
+maak er geen verplichte thuisinhaalslag van. De reflectievragen over deze
+slotoperatoren horen alleen bij studenten die dat deel hebben gemaakt.
 
 ## Oefententamen — zelfstandig oefenen
 
@@ -94,13 +99,22 @@ Gebruik [het oefententamen](../source/extra/practice/PGM2_examen.md) en [de best
 
 Geef [de opstap](../source/problems/14_opstap.ipynb) en
 [de basis over Date met operatoren](../source/problems/14_basis.ipynb) mee. Bewaak
-speciaal stap 8, datums uit tekst inlezen met `try`/`except`: de constructor gooit
+speciaal stappen 7–8, datums uit tekst inlezen met `try`/`except`: de constructor gooit
 bij een ongeldige datum en de inleescode handelt dat af door ongeldige datums
 te melden en over te slaan. Laat studenten bij begeleiding aanwijzen welke stap doorloopt na
 een ongeldige invoer. Bespreek bij `+=` in Date ook stap 4, waarom `return self`
 nodig is. Het oefententamen vervangt dit basiswerk niet.
 [Min-max](../source/problems/14_extra.md) is facultatief vervolg op Board en de spelers;
 de [uitwerking](../source/solutions/14_extra.ipynb) staat bij de overige uitwerkingen.
+
+De opstap (tien opdrachten) en alle acht basisstappen blijven verplicht; min-max
+blijft facultatief. Resterende collegeopdrachten, kernstappen van het practicum
+en de bijbehorende reflectievragen zijn zichtbaar nawerk. Onvoltooide
+oefententamenopgaven zijn eigen vervolgvoorbereiding. Circa acht uur zelfstudie
+per week is het algemene planningsuitgangspunt, geen afzonderlijke begroting
+voor W7. De C2-inschatting voor opstap/basis, college-nawerk en reflectie is
+165–285 minuten, exclusief onafgemaakte kernstappen en toetsvoorbereiding.
+Werkelijke studenttijd is niet beschikbaar; deze raming garandeert geen afronding.
 
 ## Voorkennis, nieuwe begrippen en vervolg
 
@@ -124,7 +138,8 @@ ervaringen met deze PGM2-lessen.
 
 ## Als de route niet afkomt
 
-Bij tijdgebrek stel je extra en uitgebreide plenaire bespreking uit. Noteer
+Bij tijdgebrek blijven stappen 7–8 voor als er tijd over is; ze worden geen
+verplicht huiswerk. Stel min-max en uitgebreide plenaire bespreking uit. Noteer
 onvoltooide verplichte stappen, maar schrap het afvangdeel uit de basis niet.
 Wie creatures niet af heeft, gebruikt [uitwerking 13](../source/solutions/13_creatures.ipynb)
 volgens de kopieerinstructie hierboven, zonder de opzettelijk falende cel. Wie

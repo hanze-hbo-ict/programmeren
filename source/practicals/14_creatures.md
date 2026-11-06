@@ -33,11 +33,11 @@ wat ervoor in de plaats komt.
 | 1 | `power_score` en `__eq__` | wezens op kracht vergelijken met `==` |
 | 2 | `__lt__` en `__le__` | wezens sorteren, en vergelijken met `<` en `<=` |
 | 3 | `>` en `>=` | werken zonder dat je ze schrijft |
-| 4 | `+` en `-` op `Party` | partijen samenvoegen, en een wezen eruit halen |
-| 5 | `*` op `Creature` | van één wezen een party maken |
-| 6 | de constructor | foute invoer weigeren in plaats van rechtzetten |
-| 7 | `special_move` | afdwingen dat elke subklasse een eigen versie heeft |
-| 8 | de `hp`-setter | zelf kiezen: stil rechtzetten of weigeren |
+| 4 | de constructor | foute invoer weigeren in plaats van rechtzetten |
+| 5 | `special_move` | afdwingen dat elke subklasse een eigen versie heeft |
+| 6 | de `hp`-setter | zelf kiezen: stil rechtzetten of weigeren |
+| 7 | `+` en `-` op `Party` | partijen samenvoegen, en een wezen eruit halen |
+| 8 | `*` op `Creature` | van één wezen een party maken |
 
 Onder elke stap staan assertions. Zet ze onderaan in `creatures.py`, onder die van
 week 6, en voer het bestand uit. Zie je geen foutmelding, dan klopt de stap.
@@ -131,7 +131,165 @@ daarvoor heeft `Creature` wel een methode, `__lt__`. Zo wordt `vlam >= grom`
 Met drie methoden, `__eq__`, `__lt__` en `__le__`, werken dus alle zes de
 vergelijkingen: `==`, `!=`, `<`, `<=`, `>` en `>=`.
 
-## Stap 4: partijen optellen en aftrekken
+## Stap 4: de constructor weigert foute invoer
+
+Sinds week 5 zet de constructor foute invoer stilletjes recht: wie een wezen met
+`-5` hp maakt, krijgt er een met `1` hp. Nu gooit de constructor een `ValueError`.
+Vervang de constructor van `Creature` door deze:
+
+```python
+    def __init__(self, name, hp, attack, defense):
+        """Maak een wezen op level 1; gooit een ValueError bij foute invoer."""
+        if hp <= 0:
+            raise ValueError("hp moet positief zijn")
+        if attack < 1:
+            raise ValueError("attack moet minstens 1 zijn")
+        if defense < 0:
+            raise ValueError("defense mag niet negatief zijn")
+        self.name = name
+        self._level = 1
+        self._max_hp = hp
+        self._hp = hp
+        self._attack_power = attack
+        self.defense = defense
+```
+
+De subklassen hoeven niet te veranderen: hun constructors roepen deze aan, via
+`super().__init__`.
+
+**Hierdoor vervalt een assertion van week 5.** In stap 1 van week 5 staat:
+
+```python
+assert repr(Creature("Pech", -5, 0, -3)) == (
+    "Creature(Pech, level 1, hp 1/1, attack 1, defense 0)"
+)
+```
+
+Die aanroep geeft nu een foutmelding, en dat is de bedoeling. Haal deze assertion
+weg. De assertions hieronder komen ervoor in de plaats: een wezen met geldige
+invoer, ook op de grens, komt er nog steeds door. Wil je de foutmelding zien, zet
+dan `Creature("Pech", -5, 0, -3)` één keer onderaan, voer het bestand uit en haal
+de regel weer weg. De laatste regel is:
+
+```text
+ValueError: hp moet positief zijn
+```
+
+```python
+assert repr(Creature("Vlam", 120, 25, 10)) == (
+    "Creature(Vlam, level 1, hp 120/120, attack 25, defense 10)"
+)
+assert repr(Creature("Stro", 1, 1, 0)) == (
+    "Creature(Stro, level 1, hp 1/1, attack 1, defense 0)"
+)
+assert repr(Dragon("Vlam")) == (
+    "Dragon(Vlam, level 1, hp 120/120, attack 25, defense 10)"
+)
+```
+
+## Stap 5: `special_move` afdwingen
+
+In week 6 deed `special_move` van `Creature` een gewone aanval. Een subklasse die
+vergat haar eigen versie te schrijven, viel daar stilletjes op terug. Nu dwingt
+`Creature` af dat elke subklasse `special_move` overschrijft: de versie van
+`Creature` gooit een `NotImplementedError`, met de naam van de klasse erin.
+Vervang `special_move` van `Creature` door:
+
+```python
+    def special_move(self, target):
+        """Gooit een NotImplementedError: elke subklasse schrijft een eigen versie."""
+        name = self.__class__.__name__
+        raise NotImplementedError(f"{name} moet special_move overschrijven")
+```
+
+`Dragon`, `Wolf`, `Goblin` en `Healer` overschrijven `special_move` al, en `Turret`
+heeft een eigen versie. Voor hen verandert er niets. Een gewoon `Creature` en een
+`Beast` hebben geen eigen versie: bij hen gooit `special_move` nu de exception.
+
+**Hierdoor vervallen assertions van week 6.**
+
+| Waar in week 6 | Wat er stond | Wat ervoor in de plaats komt |
+|---|---|---|
+| stap 1 | `assert vlam.special_move(grom) == "Vlam valt aan en doet 23 schade."` en `assert grom.hp == 17` | niets: haal beide regels weg, want `vlam` is een gewoon `Creature` |
+| stap 4 | `assert brul.special_move(pop) == "Brul valt aan en doet 10 schade."` | niets: haal de regel weg, want `brul` is een `Beast` |
+| stap 4 | `assert pop.hp == 165` | `assert pop.hp == 175`: de speciale zet van `brul` deed `10` schade, en die valt nu weg |
+
+Wil je de foutmelding zien, zet dan dit één keer onderaan, voer het bestand uit en
+haal de regels weer weg:
+
+```python
+brul = Beast("Brul", 50, 10, 0)
+brul.special_move(Creature("Pop", 200, 1, 0))
+```
+
+```text
+NotImplementedError: Beast moet special_move overschrijven
+```
+
+```python
+pop = Creature("Pop", 200, 1, 0)
+assert Dragon("Vlam").special_move(pop) == "Vlam spuwt vuur en doet 25 schade!"
+assert Wolf("Grijs").special_move(pop).startswith("Grijs huilt")
+assert battle(Party([Dragon("Vlam")]), Party([Goblin("Grom")]), 10) == 2
+```
+
+## Stap 6: de `hp`-setter
+
+Er is nog een plek die sinds week 5 stilletjes rechtzet: de setter van `hp`.
+
+```python
+    @hp.setter
+    def hp(self, value):
+        """Geeft hp de waarde value, maar nooit onder 0 of boven het maximum."""
+        self._hp = max(0, min(value, self._max_hp))
+```
+
+`vlam.hp = -5` gooit niets: `hp` wordt gewoon `0`. En `vlam.hp = 200` wordt
+`120`. Niets meldt dat je iets anders kreeg dan je vroeg.
+
+Je kunt de setter ook een `ValueError` laten gooien bij een waarde onder `0` of
+boven het maximum. `take_damage` en `heal` merken daar niets van: ze schrijven
+rechtstreeks naar `self._hp`, en gaan niet via de setter. Een wezen dat in een
+gevecht meer schade krijgt dan het hp heeft, eindigt dus nog steeds stil op `0`.
+Alleen een foute toewijzing van buiten de klasse gooit dan.
+
+Kies zelf: laat de setter zoals hij is, of laat hem gooien. **Kies je voor gooien,
+dan vervallen twee assertions van week 5**, in stap 3 van week 5: `vlam.hp = 200`
+met `assert vlam.hp == 120`, en `vlam.hp = -5` met `assert vlam.hp == 0`. Haal die
+vier regels dan weg. De assertions hieronder slagen bij beide keuzes:
+
+```python
+vlam = Dragon("Vlam")
+vlam.take_damage(500)
+assert vlam.hp == 0
+vlam.hp = 60
+assert vlam.hp == 60
+vlam.heal(1000)
+assert vlam.hp == 120
+```
+
+## Wat duck typing niet belooft, opnieuw
+
+In week 6 zag je dat een wachttoren in een party kan, maar dat niet elke methode
+van `Party` dan nog werkt. Met sorteren gebeurt hetzelfde. Probeer het, en haal de
+twee regels daarna weer weg:
+
+```python
+team = Party([Wolf("Grijs"), Turret()])
+sorted(team.alive_members())
+```
+
+```text
+TypeError: '<' not supported between instances of 'Turret' and 'Wolf'
+```
+
+`sorted` vraagt hier of de toren kleiner is dan de wolf. `Turret` heeft geen
+`__lt__`. Python draait de vergelijking om, maar `Creature` heeft geen methode voor
+`>`, en dan geeft Python zelf deze `TypeError`. Vraag je het andersom,
+`Wolf("Grijs") < Turret()`, dan komt de foutmelding uit je eigen `__lt__`:
+`een wezen is alleen met een wezen te vergelijken`.
+
+## Stap 7: partijen optellen en aftrekken
 
 Twee partijen die samen optrekken, en een wezen dat een party verlaat: daarvoor
 krijgt `Party` twee operatoren.
@@ -180,7 +338,7 @@ assert [creature.name for creature in rest.alive_members()] == ["Grom", "Vlam"]
 assert len(both.alive_members()) == 3
 ```
 
-## Stap 5: een wezen vermenigvuldigen
+## Stap 8: een wezen vermenigvuldigen
 
 `vlam * 3` geeft een nieuwe `Party` met drie nieuwe wezens. Elk is een kopie van
 `vlam` zoals die begon: met dezelfde naam, maximale hp, aanvalskracht en
@@ -242,194 +400,42 @@ assert len(others.alive_members()) == 2
 assert vlam.hp == 120
 ```
 
-## Stap 6: de constructor weigert foute invoer
-
-Sinds week 5 zet de constructor foute invoer stilletjes recht: wie een wezen met
-`-5` hp maakt, krijgt er een met `1` hp. Nu gooit de constructor een `ValueError`.
-Vervang de constructor van `Creature` door deze:
-
-```python
-    def __init__(self, name, hp, attack, defense):
-        """Maak een wezen op level 1; gooit een ValueError bij foute invoer."""
-        if hp <= 0:
-            raise ValueError("hp moet positief zijn")
-        if attack < 1:
-            raise ValueError("attack moet minstens 1 zijn")
-        if defense < 0:
-            raise ValueError("defense mag niet negatief zijn")
-        self.name = name
-        self._level = 1
-        self._max_hp = hp
-        self._hp = hp
-        self._attack_power = attack
-        self.defense = defense
-```
-
-De subklassen hoeven niet te veranderen: hun constructors roepen deze aan, via
-`super().__init__`.
-
-**Hierdoor vervalt een assertion van week 5.** In stap 1 van week 5 staat:
-
-```python
-assert repr(Creature("Pech", -5, 0, -3)) == (
-    "Creature(Pech, level 1, hp 1/1, attack 1, defense 0)"
-)
-```
-
-Die aanroep geeft nu een foutmelding, en dat is de bedoeling. Haal deze assertion
-weg. De assertions hieronder komen ervoor in de plaats: een wezen met geldige
-invoer, ook op de grens, komt er nog steeds door. Wil je de foutmelding zien, zet
-dan `Creature("Pech", -5, 0, -3)` één keer onderaan, voer het bestand uit en haal
-de regel weer weg. De laatste regel is:
-
-```text
-ValueError: hp moet positief zijn
-```
-
-```python
-assert repr(Creature("Vlam", 120, 25, 10)) == (
-    "Creature(Vlam, level 1, hp 120/120, attack 25, defense 10)"
-)
-assert repr(Creature("Stro", 1, 1, 0)) == (
-    "Creature(Stro, level 1, hp 1/1, attack 1, defense 0)"
-)
-assert repr(Dragon("Vlam")) == (
-    "Dragon(Vlam, level 1, hp 120/120, attack 25, defense 10)"
-)
-```
-
-## Stap 7: `special_move` afdwingen
-
-In week 6 deed `special_move` van `Creature` een gewone aanval. Een subklasse die
-vergat haar eigen versie te schrijven, viel daar stilletjes op terug. Nu dwingt
-`Creature` af dat elke subklasse `special_move` overschrijft: de versie van
-`Creature` gooit een `NotImplementedError`, met de naam van de klasse erin.
-Vervang `special_move` van `Creature` door:
-
-```python
-    def special_move(self, target):
-        """Gooit een NotImplementedError: elke subklasse schrijft een eigen versie."""
-        name = self.__class__.__name__
-        raise NotImplementedError(f"{name} moet special_move overschrijven")
-```
-
-`Dragon`, `Wolf`, `Goblin` en `Healer` overschrijven `special_move` al, en `Turret`
-heeft een eigen versie. Voor hen verandert er niets. Een gewoon `Creature` en een
-`Beast` hebben geen eigen versie: bij hen gooit `special_move` nu de exception.
-
-**Hierdoor vervallen assertions van week 6.**
-
-| Waar in week 6 | Wat er stond | Wat ervoor in de plaats komt |
-|---|---|---|
-| stap 1 | `assert vlam.special_move(grom) == "Vlam valt aan en doet 23 schade."` en `assert grom.hp == 17` | niets: haal beide regels weg, want `vlam` is een gewoon `Creature` |
-| stap 4 | `assert brul.special_move(pop) == "Brul valt aan en doet 10 schade."` | niets: haal de regel weg, want `brul` is een `Beast` |
-| stap 4 | `assert pop.hp == 165` | `assert pop.hp == 175`: de speciale zet van `brul` deed `10` schade, en die valt nu weg |
-
-Wil je de foutmelding zien, zet dan dit één keer onderaan, voer het bestand uit en
-haal de regels weer weg:
-
-```python
-brul = Beast("Brul", 50, 10, 0)
-brul.special_move(Creature("Pop", 200, 1, 0))
-```
-
-```text
-NotImplementedError: Beast moet special_move overschrijven
-```
-
-```python
-pop = Creature("Pop", 200, 1, 0)
-assert Dragon("Vlam").special_move(pop) == "Vlam spuwt vuur en doet 25 schade!"
-assert Wolf("Grijs").special_move(pop).startswith("Grijs huilt")
-assert battle(Party([Dragon("Vlam")]), Party([Goblin("Grom")]), 10) == 2
-```
-
-## Stap 8: de `hp`-setter
-
-Er is nog een plek die sinds week 5 stilletjes rechtzet: de setter van `hp`.
-
-```python
-    @hp.setter
-    def hp(self, value):
-        """Geeft hp de waarde value, maar nooit onder 0 of boven het maximum."""
-        self._hp = max(0, min(value, self._max_hp))
-```
-
-`vlam.hp = -5` gooit niets: `hp` wordt gewoon `0`. En `vlam.hp = 200` wordt
-`120`. Niets meldt dat je iets anders kreeg dan je vroeg.
-
-Je kunt de setter ook een `ValueError` laten gooien bij een waarde onder `0` of
-boven het maximum. `take_damage` en `heal` merken daar niets van: ze schrijven
-rechtstreeks naar `self._hp`, en gaan niet via de setter. Een wezen dat in een
-gevecht meer schade krijgt dan het hp heeft, eindigt dus nog steeds stil op `0`.
-Alleen een foute toewijzing van buiten de klasse gooit dan.
-
-Kies zelf: laat de setter zoals hij is, of laat hem gooien. **Kies je voor gooien,
-dan vervallen twee assertions van week 5**, in stap 3 van week 5: `vlam.hp = 200`
-met `assert vlam.hp == 120`, en `vlam.hp = -5` met `assert vlam.hp == 0`. Haal die
-vier regels dan weg. De assertions hieronder slagen bij beide keuzes:
-
-```python
-vlam = Dragon("Vlam")
-vlam.take_damage(500)
-assert vlam.hp == 0
-vlam.hp = 60
-assert vlam.hp == 60
-vlam.heal(1000)
-assert vlam.hp == 120
-```
-
-## Wat duck typing niet belooft, opnieuw
-
-In week 6 zag je dat een wachttoren in een party kan, maar dat niet elke methode
-van `Party` dan nog werkt. Met sorteren gebeurt hetzelfde. Probeer het, en haal de
-twee regels daarna weer weg:
-
-```python
-team = Party([Wolf("Grijs"), Turret()])
-sorted(team.alive_members())
-```
-
-```text
-TypeError: '<' not supported between instances of 'Turret' and 'Wolf'
-```
-
-`sorted` vraagt hier of de toren kleiner is dan de wolf. `Turret` heeft geen
-`__lt__`. Python draait de vergelijking om, maar `Creature` heeft geen methode voor
-`>`, en dan geeft Python zelf deze `TypeError`. Vraag je het andersom,
-`Wolf("Grijs") < Turret()`, dan komt de foutmelding uit je eigen `__lt__`:
-`een wezen is alleen met een wezen te vergelijken`.
-
 ## Vragen om over na te denken
+
+1. In week 5 en 6 zette de constructor foute invoer stilletjes recht. Wat had
+   daardoor concreet mis kunnen gaan, zonder dat iemand het merkte?
+2. `take_damage` berekent `self._hp - actual`, en dat kan onder nul komen voordat
+   `max(0, ...)` het rechtzet. Dat is dezelfde soort waarde als bij `vlam.hp = -5`.
+   Waarom is het goed dat het ene stil gebeurt, binnen de klasse, en het andere
+   niet, van buiten?
+3. `vlam > grom` werkt zonder methode voor `>`, doordat Python de vergelijking
+   omdraait. Heeft `Creature` daarmee alle vergelijkingen, of mist er toch iets? Wanneer
+   kan het omdraaien je in de steek laten?
+4. `Beast` gooit nu ook een `NotImplementedError` bij `special_move`. Is dat
+   terecht? Er bestaan geen beesten die geen draak of wolf zijn.
+
+### Na stappen 7 en 8
+
+Beantwoord deze vragen als je de laatste twee stappen hebt gemaakt.
 
 1. Bij een lijst maakt `+` een nieuwe lijst, en verandert `+=` de lijst zelf. Stel
    dat `party += other_party` de party zelf moet uitbreiden in plaats van een
    nieuwe te maken. Wat zou je aan `Party` moeten toevoegen? Zou je allebei willen
    hebben op dezelfde klasse? In de basisopgave verandert `+=` een `Date` wel zelf.
-2. In week 5 en 6 zette de constructor foute invoer stilletjes recht. Wat had
-   daardoor concreet mis kunnen gaan, zonder dat iemand het merkte?
-3. `take_damage` berekent `self._hp - actual`, en dat kan onder nul komen voordat
-   `max(0, ...)` het rechtzet. Dat is dezelfde soort waarde als bij `vlam.hp = -5`.
-   Waarom is het goed dat het ene stil gebeurt, binnen de klasse, en het andere
-   niet, van buiten?
-4. `vlam > grom` werkt zonder methode voor `>`, doordat Python de vergelijking
-   omdraait. Heeft `Creature` daarmee alle vergelijkingen, of mist er toch iets? Wanneer
-   kan het omdraaien je in de steek laten?
-5. `__mul__` kopieert de naam, de maximale hp, de aanvalskracht en de verdediging,
+2. `__mul__` kopieert de naam, de maximale hp, de aanvalskracht en de verdediging,
    maar niet het level: elke kopie begint op level 1. Is dat een fout, of wat je
    van vermenigvuldigen mag verwachten? Wat zou er nodig zijn om het level mee te
    nemen?
-6. `Beast` gooit nu ook een `NotImplementedError` bij `special_move`. Is dat
-   terecht? Er bestaan geen beesten die geen draak of wolf zijn.
-7. `team - Turret()` gooit een `TypeError`, want `__sub__` controleert met
+3. `team - Turret()` gooit een `TypeError`, want `__sub__` controleert met
    `isinstance` of het een `Creature` is. Toch kan een toren in een party. Is die
    controle in `__sub__` hier een goed idee?
 
 ## Tot slot
 
-Je wezens en partijen werken nu met de operatoren van Python: `sorted`, alle zes de
-vergelijkingen, `+`, `-` en `*`. Op twee plekken die in week 5 en 6 stilletjes
-terugvielen, gooit je code nu een exception, en een fout valt op waar hij ontstaat.
+Na stap 6 kun je wezens sorteren en met alle zes de vergelijkingen vergelijken.
+Op twee plekken die in week 5 en 6 stilletjes terugvielen, gooit je code nu een
+exception, en een fout valt op waar hij ontstaat. Met stappen 7 en 8 krijgen
+partijen ook `+` en `-`, en kun je een wezen met `*` vermenigvuldigen.
 
 In dit practicum gooi je exceptions, maar je vangt er geen af. Wat code die
 `creatures.py` gebruikt met zo'n exception doet, is een eigen keuze. Hoe je een

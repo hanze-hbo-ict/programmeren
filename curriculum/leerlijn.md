@@ -265,13 +265,21 @@ in W6 verdwijnen niet automatisch door de budgetverschuiving.
 
 W7 houdt 5% L3 (operatorgedrag) en 10% L4 (exceptions), geen extra L5/L6-taak
 zonder nieuw menselijk besluit. Eén college, één practicum en het oefententamen
-nemen de drie bijeenkomsten in. `handleidingen/week_14.md` schat elk op netto
-90 minuten; werkelijke studenttijd is niet beschikbaar. Basis heeft acht stappen,
-creatures acht plus vervanging van eerdere assertions; opstap/basis blijven
-huiswerk. [#472](https://github.com/hanze-hbo-ict/programmeren/issues/472) beoordeelt
-haalbaarheid afzonderlijk, inclusief afvangen in Date en de beschikbare
-W6-beginstand. Onvoldoende ruimte vraagt een begrensd menselijk besluit over
-omvang of volgorde, geen stil schrappen/verplaatsen.
+nemen de drie bijeenkomsten in, elk netto 90 minuten volgens het
+[besluit van 6 november 2026](uitgangspunten.md#week-7-naast-het-oefententamen-472).
+Creatures volgt vergelijken (1–3), exceptions en setterkeuze (4–6), daarna
+partijen optellen/aftrekken en wezens vermenigvuldigen (7–8). De docent plant
+het laatste deel voor als er tijd over is, zonder afzonderlijk facultatief label
+of verplichte thuisinhaalslag. De kernroute werkt zonder deze slotoperatoren;
+de vergelijkingsroute en Date-basis blijven L3 dragen.
+Opstap en alle acht Date-basisstappen, inclusief gooien en gericht afhandelen
+in stappen 7–8, blijven verplicht huiswerk; min-max blijft facultatief.
+College-nawerk, onafgemaakte kernstappen/reflectie en eigen toetsvoorbereiding
+blijven zichtbaar naast dit huiswerk. Het algemene uitgangspunt is circa acht
+uur zelfstudie per week, geen afzonderlijke W7-huiswerkbegroting. Behandeltijden
+in de handleiding zijn inschattingen; werkelijke studenttijd is niet beschikbaar.
+De gekozen prioriteit behoudt alle inhoud, maar garandeert geen haalbaarheid
+voor iedere student. De beschikbare W6-uitwerking blijft de instap bij achterstand.
 
 **De klassenstof van week 4 gaat naar week 5.** Gemeten op 23 september 2026
 gaan de lezingen `11a_objecten` en `11b_data_object`, het practicum
