@@ -1293,6 +1293,13 @@ uitwerking in `source/solutions/`. Een ontbrekende niveau-uitwerking is een omis
 De afzonderlijke corpora en actuele bestandsdekking staan in
 [leerlijn.md](leerlijn.md).
 
+**Plan en vergelijking horen niet in de uitwerking.** Een uitwerking van een zelfstandige
+ontwerptaak hoeft het plan vooraf en de vergelijking achteraf niet te tonen. Op de vraag
+of uitwerkingen dat moeten laten zien, antwoordde de vakdeskundige op
+[7 november 2026](https://github.com/hanze-hbo-ict/programmeren/issues/483#issuecomment-6704050884) letterlijk:
+
+> Ja doe dat; plan vooraf/achteraf is niet nodig
+
 **De uitzonderingen zijn expliciet.** De vroegere Caesar-uitzondering (VP6 van #335,
 behouden op [19 oktober 2026](https://github.com/hanze-hbo-ict/programmeren/issues/382#issuecomment-6265574205))
 is bij #481 opgevolgd: Caesar is het derde deel van `problems/11_extra`, met
