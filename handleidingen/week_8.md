@@ -83,7 +83,7 @@ Gebruik [8b, *Sets*, *Van tellen naar opvolgers*, *Tekst genereren* en *Opdracht
 |---|---|
 | Stappenplannen taalmodel en tekst genereren | Voeg bij het model `new_word` toe aan de lijst van `previous_word`, bij generatie aan de uitvoertekst; na zinseindpunctuatie wordt `previous_word` weer `"$"`. |
 | Opdracht 1 | `add` voegt `"koekje"` aan `s` toe en geeft `None`; `union` geeft een nieuwe set met `"spam"`, `"taart"`, `"koekje"` en `"thee"` en verandert `s` niet. |
-| Opdracht 2 | `both = monday & thursday`, `at_least_once = monday | thursday`; een set bewaart alleen aanwezigheid, zonder waarde per naam. |
+| Opdracht 2 | `both = monday & thursday`, `at_least_once = monday \| thursday`; een set bewaart alleen aanwezigheid, zonder waarde per naam. |
 | Opdracht 3 | `my_model = {"$": ["De", "De", "De"], "De": ["kat", "kat", "hond"], "kat": ["slaapt.", "eet."], "hond": ["blaft."]}`. |
 | Opdracht 4 | Zinnen 1 en 3 kunnen; zin 2 niet, omdat `"taarten!"` niet direct op `"krijg"` volgt. |
 | Opdracht 5 | De lijst is `["wil", "krijg", "wil"]`, de set bevat `"wil"` en `"krijg"`: kansen `2/3` en `1/2`; de lijst bewaart frequenties. |
