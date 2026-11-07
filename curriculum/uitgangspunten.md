@@ -1315,19 +1315,20 @@ De vereiste beschikbaarheid is vastgelegd bij V12/VP12 in
 de build haar controleert. Programma's die met opzet stuklopen tonen hun
 foutmelding in plaats van een beschrijving ervan.
 
-**Plan en vergelijking zijn niet nodig in de uitwerking.** Een uitwerking van een
-zelfstandige ontwerptaak, zoals stap 6 van week 3, stap 8 van week 4 en stap 10 van
-week 6 in PGM2, hoeft het plan vooraf en de vergelijking achteraf niet te tonen. Op de
-vraag of uitwerkingen dat moeten laten zien, antwoordde de vakdeskundige op
-[7 november 2026](https://github.com/hanze-hbo-ict/programmeren/issues/483#issuecomment-6704050884) letterlijk, waarbij "Ja doe dat" op een andere vraag in
-hetzelfde bericht sloeg:
-
-> Ja doe dat; plan vooraf/achteraf is niet nodig
-
 **Te heropenen wanneer** blijkt dat een gepubliceerde uitwerking bij een bepaald
 niveau het leereffect schaadt - de opstap is de kandidaat, want daar controleert de
 student nu door de cel te draaien. Dat is dan een besluit per niveau met een reden,
 en niet de huidige toestand die zichzelf verdedigt.
+
+**Plan en vergelijking zijn niet nodig in de uitwerking.** Een uitwerking van een
+zelfstandige ontwerptaak, zoals stap 6 van week 3, stap 8 van week 4 en stap 10 van
+week 6 in PGM2, hoeft het plan vooraf en de vergelijking achteraf niet te tonen. Op de
+vraag of uitwerkingen dat moeten laten zien, antwoordde de vakdeskundige op
+[7 november 2026](https://github.com/hanze-hbo-ict/programmeren/issues/483#issuecomment-6704050884) letterlijk:
+
+> Ja doe dat; plan vooraf/achteraf is niet nodig
+
+"Ja doe dat" sloeg op een andere vraag in hetzelfde bericht.
 
 ### Studenten leveren niets in
 
