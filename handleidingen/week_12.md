@@ -70,6 +70,22 @@ Gebruik [12b, *Stap voor stap*, *f"strings"*, *Quiz*, *Waarde en identiteit* en 
 
 **Controlepunt.** Eenvoudige f-stringinterpolatie is PGM1-voorkennis. Maak de bestaande opmaak leesbaar, maar voeg geen zelfstandig opmaakleerdoel toe. Bewaar tijd voor de verwijzingsvraag.
 
+## Korte antwoorden bij collegeopdrachten
+
+### 12a
+
+| Opdracht | Antwoordkern |
+|---|---|
+| Opdracht 1 | Voeg `student_number` aan de constructorparameters toe, bewaar het in `self._student_number` en neem het met `str(self._student_number)` in `__repr__` op. |
+| Opdracht 2 | Laat de property `student_number` alleen `self._student_number` teruggeven, zonder setter; maak `student_b` opnieuw met nummer: lezen lukt, toewijzen geeft `AttributeError`. |
+| Opdracht 3 | Voeg drie studenten met nummer en jaar 2023 toe en roep op één bewaarde student `delay(1)` aan: `starting_in(2023)` geeft de andere twee, `starting_in(2024)` die ene; druk ze in lussen af, want de groep bewaart dezelfde objecten. |
+
+### 12b
+
+| Opdracht | Antwoordkern |
+|---|---|
+| Opdracht — identiteit en gedeelde verwijzingen | Maak `b = a` en een apart object `c` met gelijke gegevens: `a is b` is `True`, `a is c` en `a == c` zijn `False`; na `b.delay(1)` heeft `a` jaar 2025 en `c` nog 2024, want alleen `a` en `b` delen een object. |
+
 ## Practicum — Creature en Party
 
 Doel: het project vanuit een leeg bestand opbouwen

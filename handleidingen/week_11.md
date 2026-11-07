@@ -68,6 +68,22 @@ Gebruik [11b, *Een functie meegeven met key=*, *lambda*, *Zelf een functie met e
 
 **Controlepunt.** Wijs bij een voortijdige aanroep naar de haakjes: wordt hier een functie meegegeven of al haar resultaat? Laat de student de aanroepende plek aanwijzen.
 
+## Korte antwoorden bij collegeopdrachten
+
+### 11a
+
+| Opdracht | Antwoordkern |
+|---|---|
+| Opdracht 1 — `count_ways` | Bedrag `0` geeft `1`, negatief bedrag of geen munten geeft `0`; tel anders `count_ways(amount - coins[0], coins[1:])` en `count_ways(amount, coins[1:])` op. |
+| Opdracht 2 — `most_items` | Geen items geeft `0`; sla een te zwaar eerste item over, kies anders het maximum van `1 + most_items(capacity - items[0], items[1:])` en `most_items(capacity, items[1:])`. |
+
+### 11b
+
+| Opdracht | Antwoordkern |
+|---|---|
+| Opdracht 1 | Gebruik `max(songs, key=lambda song: song[1])`, `sorted(songs, key=lambda song: song[1])` en `max(songs, key=lambda song: len(song[0]))` voor respectievelijk a, b en c. |
+| Opdracht 2 — `count_matching` | De functie geeft `len([x for x in L if test(x)])` terug: roep de meegegeven functie voor elk element aan. |
+
 ## Practicum — wisselgeld
 
 Doel: de eerste werkende muntkeuze onderscheiden van het kleinste aantal

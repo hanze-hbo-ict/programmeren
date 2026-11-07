@@ -66,6 +66,25 @@ Gebruik [9b, *Een set verzamelen*, *Een dictionary verzamelen*, *Tellen met sum*
 
 **Controlepunt.** Houd de weekgrens aan: één `for` met eventueel filter, ook in een geneste comprehension; geen twee `for`-clausules in één comprehension en geen generator expressions. Laat een onleesbare versie naar de gegeven lus terugbrengen.
 
+## Korte antwoorden bij collegeopdrachten
+
+### 9a
+
+| Opdracht | Antwoordkern |
+|---|---|
+| Opdracht 1 | De vier lijsten zijn `[0, 1, 4, 9]`, `["vuurtoren", "hoog"]`, `[1, 3, 4]` en `["kort", "lang", "kort"]`. |
+| Opdracht 2 | `positions = [i for i, word in enumerate(words) if word != "spam"]`. |
+| Opdracht 3 | Start `result = []`; loop langs `zip(names, scores)`, voeg bij `score < 8` met `result.append([name, score + 1])` toe; klaar na de lus, met `result` als antwoord. |
+| Opdracht 4 | `results = ["voldoende" if grade >= 5.5 else "onvoldoende" for grade in grades]`. |
+
+### 9b
+
+| Opdracht | Antwoordkern |
+|---|---|
+| Opdracht 1 | De uitvoer is een set met `2`, `3`, `4`, dan `{"ja": "j", "nee": "n"}`, `[[0, 1, 2], [1, 2, 3]]` en `2`; setvolgorde ligt niet vast. |
+| Opdracht 2 | `first_year = {animal: years[0] for animal, years in zodiac_years.items()}`. |
+| Opdracht 3 | Gebruik `{word: len(word) for word in words}` en `{word for word in words if len(word) > 4}` voor nieuwe verzamelingen; bewaar voor `longest` in een lus het beste woord en vervang het alleen bij strikt grotere lengte. |
+
 ## Practicum — een register bij een tekst
 
 Doel: de registerfuncties in samenhang bouwen en testen

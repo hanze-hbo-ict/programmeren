@@ -75,6 +75,25 @@ Gebruik [13b, *Eén aanroep, ander gedrag*, *Duck typing*, *Wat duck typing niet
 
 **Controlepunt.** Laat een student zeggen voor welke concrete handeling het object geschikt is. Een algemene uitspraak dat twee objecten “hetzelfde kunnen” is onvoldoende.
 
+## Korte antwoorden bij collegeopdrachten
+
+### 13a
+
+| Opdracht | Antwoordkern |
+|---|---|
+| Opdracht 1 | Laat `HonoursStudent(Student)` in `__init__(self, name, year, track)` eerst `super().__init__(name, year)` aanroepen en daarna `self.track = track` uitvoeren. |
+| Opdracht 2 | Geef in `__repr__` de tekst `super().__repr__() + ", honours: " + self.track` terug. |
+| Opdracht 3 | Gebruik `track="algemeen"` in de constructorsignatuur; bij weglaten wordt `self.track` dus `"algemeen"`. |
+| Opdracht 4 | Na heruitvoeren geeft de versie met `super()` `2029` (2024 + 3 + 2), de vaste versie met `self.year + 6` blijft `2030`. |
+
+### 13b
+
+| Opdracht | Antwoordkern |
+|---|---|
+| Opdracht 1 | Loop de niet-lege lijst langs en bewaar het hoogste `student.graduation_year()`; `Student` gebruikt de basisversie, `ExchangeStudent` erft haar en `PartTimeStudent` gebruikt zijn overschrijving. |
+| Opdracht 2 | De aanroep `student.graduation_year()` faalt bij `Auditor` met `AttributeError`; een methode in `Auditor` zou dat technisch oplossen, maar een afstudeerjaar past niet bij iemand die niet afstudeert. |
+| Opdracht 3 | Een docent is geen soort student, dus `Teacher` erft niet van `Student`. Gelijke attributen zijn geen soortrelatie en rechtvaardigen die overerving niet. |
+
 ## Practicum — soorten wezens
 
 Doel: voortbouwen op de beginstand en de duck-typinggrens testen

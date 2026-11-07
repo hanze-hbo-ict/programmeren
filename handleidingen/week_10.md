@@ -71,6 +71,26 @@ Gebruik [10b, `power`, `vwl`, `keepvwl`, `largest`, `strip_end`, `only_digits` e
 
 **Controlepunt.** Laat een student vóór een codewijziging de drie ontwerpvragen beantwoorden. De muntvraag is nog geen opdracht om twee keuzes recursief uit te schrijven.
 
+## Korte antwoorden bij collegeopdrachten
+
+### 10a
+
+| Opdracht | Antwoordkern |
+|---|---|
+| Opdracht 1, Recursie unplugged | Bij het laatste papiertje geef je dat getal terug; anders geef je het grootste van je eigen getal en het antwoord van rechts door (uitgewerkt als `largest` in 10b). |
+| Opdracht 2, Recursie unplugged | Een lege beker geeft `0` terug; anders pak je één papiertje, geef je de rest door en fluister je het antwoord van rechts plus `1` naar links. |
+| Opdracht 3, Recursie unplugged | Een lege beker geeft `0` terug; anders onthoud je je eigen getal en fluister je dat plus de som van rechts naar links. |
+
+### 10b
+
+| Opdracht | Antwoordkern |
+|---|---|
+| Opdracht 1 — `zeroest` | Bij één element geef je `L[0]` terug; anders bereken je `rest = zeroest(L[1:])` en kies je tussen `L[0]` en `rest` op de kleinste absolute waarde. |
+| Opdracht 2 — `counting` | Leeg geeft `0`; anders geeft de functie `1 + counting(L[1:])` terug. |
+| Opdracht 3 — `element_in` | Leeg geeft `False`, `L[0] == x` geeft `True`; anders geef je `element_in(x, L[1:])` terug. |
+| Opdracht 4 — `gcd` | Bij `b == 0` geef je `a` terug; anders geef je `gcd(b, a % b)` terug. |
+| Vooruitblik — precies betalen | 70 cent kan met 20 en 50, 80 cent niet; probeer per munt gebruiken (bedrag verlagen) en overslaan, steeds met de resterende munten. |
+
 ## Practicum — een directory doorzoeken
 
 Doel: de recursieve stap op de gegeven representatie toepassen

@@ -67,6 +67,27 @@ Gebruik [8b, *Sets*, *Van tellen naar opvolgers*, *Tekst genereren* en *Opdracht
 
 **Controlepunt.** Vraag welke opvolgers bij één sleutel horen en wat er verloren gaat als je die lijst door een set vervangt. Laat het antwoord aan het bestaande model aanwijzen.
 
+## Korte antwoorden bij collegeopdrachten
+
+### 8a
+
+| Opdracht | Antwoordkern |
+|---|---|
+| Opdracht 1 | `append` verandert `L` in `[3, 1, 4, 1]` en geeft `None`; beide `get`-aanroepen laten `d` intact en geven respectievelijk `3` en `0`. |
+| Opdracht 2 | Begin met `total = 0` en tel per `item` in `shopping_list` de waarde `prices.get(item, 0)` erbij op: totaal `7`. |
+| Opdracht 3 | Loop met `for animal, years in zodiac_years.items()` langs de dieren en druk alleen bij `year in years` het dier af; zonder treffer volgt geen uitvoer. |
+
+### 8b
+
+| Opdracht | Antwoordkern |
+|---|---|
+| Stappenplannen taalmodel en tekst genereren | Voeg bij het model `new_word` toe aan de lijst van `previous_word`, bij generatie aan de uitvoertekst; na zinseindpunctuatie wordt `previous_word` weer `"$"`. |
+| Opdracht 1 | `add` voegt `"koekje"` aan `s` toe en geeft `None`; `union` geeft een nieuwe set met `"spam"`, `"taart"`, `"koekje"` en `"thee"` en verandert `s` niet. |
+| Opdracht 2 | `both = monday & thursday`, `at_least_once = monday \| thursday`; een set bewaart alleen aanwezigheid, zonder waarde per naam. |
+| Opdracht 3 | `my_model = {"$": ["De", "De", "De"], "De": ["kat", "kat", "hond"], "kat": ["slaapt.", "eet."], "hond": ["blaft."]}`. |
+| Opdracht 4 | Zinnen 1 en 3 kunnen; zin 2 niet, omdat `"taarten!"` niet direct op `"krijg"` volgt. |
+| Opdracht 5 | De lijst is `["wil", "krijg", "wil"]`, de set bevat `"wil"` en `"krijg"`: kansen `2/3` en `1/2`; de lijst bewaart frequenties. |
+
 ## Practicum — tekst genereren
 
 Doel: een model controleren voordat er een langere tekst mee wordt gemaakt

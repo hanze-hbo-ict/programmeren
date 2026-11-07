@@ -58,6 +58,16 @@ Gebruik [14a, operatoren, exceptions en de bijbehorende opdrachten](../source/le
 
 **Controlepunt.** Vraag wie de fout constateert en wie ermee verder moet. Eén college moet beide kanten zichtbaar maken; plan geen tweede uitlegbijeenkomst achter het oefententamen.
 
+## Korte antwoorden bij collegeopdrachten
+
+### 14a
+
+| Opdracht | Antwoordkern |
+|---|---|
+| Opdracht 1 | Controleer zoals bij `__lt__` op `Student` en vergelijk `self._year <= other._year`: bij gelijk jaar is `<=` waar en `<` onwaar; `a >= b` gebruikt de omgekeerde vergelijking `b.__le__(a)`. |
+| Opdracht 2 | Gooi in `__init__` bij `year < 1900` een `ValueError`; zet in de jarenlus het maken en bewaren van elke student in `try`, en meld in `except ValueError` dat jaar zodat de lus doorgaat. |
+| Opdracht 3 | Gebruik `==` om een student met dezelfde naam en hetzelfde startjaar in een groep te vinden; gebruik `is` om te bepalen of twee groepsverwijzingen precies dezelfde student aanwijzen. |
+
 ## Practicum — operatoren en nieuwe foutgrenzen
 
 Doel: de creatures-keten afronden zonder oude controles willekeurig weg te halen
