@@ -76,6 +76,58 @@ forceer geen Nederlandse vertaling. Voor dit materiaal werkt dat zo uit:
 | String waarin Python waarden invult, met een `f` vóór de aanhalingstekens | **f-string** | - | Zonder concurrent in `source/`. Verplichte PGM1-stof in basis week 5 sinds #378; zie het besluit *F-strings en uitvoer* in `curriculum/uitgangspunten.md`, vastgesteld door de vakdeskundige op 20 oktober 2026. Zie *F-string, interpolatie en formaatspecificatie* hieronder |
 | Het invullen van waarden in een string | **interpolatie** | - | Het eenvoudige geval heet in `curriculum/leerlijn.md` en `curriculum/uitgangspunten.md` *eenvoudige f-stringinterpolatie*. Zie *F-string, interpolatie en formaatspecificatie* hieronder |
 | De notatie achter de dubbele punt tussen de accolades, zoals `>4` in `f"{day:>4}"` | **formaatspecificatie** | - | Niet *formatcode*, *opmaaknotatie* of *formaatcode*, en *datumcodes* is geen synoniem maar een specifiek geval. Vastgesteld door de vakdeskundige op 21 oktober 2026, bij #378. Zie *F-string, interpolatie en formaatspecificatie* hieronder |
+| Aanroepbare programmeerbouwsteen | **functie** | - | Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Eén gebruik van een functie | **aanroep** | functie-aanroep | Naast het werkwoord aanroepen. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Opgeslagen gegevens of instructies | **bestand** | - | Werkomgeving al in de voorbereiding; bestandsverwerking in PGM1 week 6. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Naam die een waarde of object aanwijst | **variabele** | - | Zie verwijzing; geen doosmodel. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Soort Python-waarde of -object | **type** | - | Niet de bestandsoort. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Teken of woord voor een bewerking | **operator** | - | Operator overloading is het eigen gedrag geven aan een operator. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Opzoeksleutel van een dictionary | **sleutel** | - | Nieuw in PGM2 week 1; niet de algemene betekenis van sleutel. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Python-verzameling zonder duplicaten | **set** | - | Nieuw in PGM2 week 1; het type heet `set`. Niet een set instructies. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Stappenplan voor een probleem | **algoritme** | - | PGM1 week 1; algoritmeontwerp is het ontwerpen daarvan. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Tekst in code die niet wordt uitgevoerd | **commentaar** | - | Een docstring beschrijft een functie, klasse of module en is niet hetzelfde als commentaar. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Naam in een functiedefinitie | **parameter** | - | Een argument is de waarde die bij de aanroep wordt meegegeven; PGM1 week 3. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Importeerbare Python-eenheid | **module** | - | PGM1 week 3; niet een onderwijsmodule. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Uitdrukking die een waarde oplevert | **expressie** | - | Onderscheid van statement. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Instructie in een programma | **statement** | - | Kan een expressie bevatten; ook in `if`-statement. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Onveranderbare geordende reeks | **tuple** | - | Het type heet `tuple`; PGM1 week 7. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Functie die Python direct aanbiedt | **ingebouwde functie** | - | Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Waarde waar of onwaar | **boolean** | - | Het type heet `bool`; niet hetzelfde als een conditie. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Een naam binden aan een waarde | **toekenning** | - | Onderscheid van vergelijken. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Waarde waarop een bewerking terugvalt | **standaardwaarde** | - | Dictionary-get gebruikt dit al in PGM2 week 1. Standaardwaarden van parameters komen in PGM2 in week 6; deze week geldt niet voor de algemene term. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Waarde die een functie teruggeeft | **returnwaarde** | - | Naast het werkwoord teruggeven; PGM1 week 3. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Een constructie binnen een andere constructie | **genest** | - | Bijvoorbeeld een geneste lus, lijst of comprehension; al PGM1. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Afhankelijk van een conditie | **conditioneel** | - | Bijvoeglijk gebruikt; geen vervanging voor het zelfstandig naamwoord conditie. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Expressie die afhankelijk van een conditie een waarde kiest | **conditionele expressie** | - | Nieuw in PGM2 week 2. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Functie voor een deelprobleem | **hulpfunctie** | - | Geen andere soort Python-functie. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Geval aan een relevante grens van probleem of controle | **randgeval** | - | Niet ieder foutgeval. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Attribuuttoegang via methoden | **property** | - | Nieuw in PGM2 week 5; onderscheiden van attribuut. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Schrijfkant van een property | **setter** | - | Nieuw in PGM2 week 5. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Gegevens van één functieaanroep in het uitvoeringsmodel | **frame** | - | PGM1 week 3; niet nieuw bij recursie. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Stapel frames in het uitvoeringsmodel | **stack** | - | PGM1 week 3; niet iedere abstracte stapel. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Geheugengebied buiten de stack in de figuuruitleg | **heap** | - | PGM1 week 3. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Startfunctie in het onderwezen programmaschema | **main-functie** | - | PGM1 week 3; Python verplicht deze startfunctie niet. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Gegevens die een programma ontvangt | **invoer** | input | Python-code zoals `input()` blijft staan. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Resultaat dat een programma oplevert of toont | **uitvoer** | output | Niet het werkwoord uitvoeren of iedere returnwaarde. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Vormregels van de programmeertaal | **syntaxis** | syntax | Beoordeel syntax highlighting als Engelse werkomgevingsaanduiding in context. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Notebookcel met controles | **testcel** | - | Niet iedere codecel. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Werkomgeving waarin commando’s worden ingevoerd | **terminal** | - | Niet hetzelfde als shell; voorbereiding. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Route naar een bestand of directory | **pad** | - | Niet een algoritmisch pad; voorbereiding. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Het teken `{` of `}` | **accolade** | - | De betekenis volgt uit dictionary-, set- of f-stringcontext. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Achtervoegsel van een bestandsnaam | **extensie** | - | Niet een software-uitbreiding; voorbereiding. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Document met tekst- en codecellen | **notebook** | - | Niet vertalen naar notitieboek. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+| Teken voor een regelovergang | **newline** | - | Geen visuele regelomloop of alinea; PGM1 week 6. Vastgesteld door de vakdeskundige op 13 november 2026; zie *Aanvulling bij #492* hieronder. |
+
+## Aanvulling bij #492
+
+De vakdeskundige gaf op 13 november 2026 letterlijk “akkoord” op
+[D1: termkeuzes](https://github.com/hanze-hbo-ict/programmeren/issues/492#issuecomment-6862557032)
+en [D2: introductieweken en markerstrategie](https://github.com/hanze-hbo-ict/programmeren/issues/492#issuecomment-6862581367).
+De nieuwe rijen hierboven voeren deze afspraken uit. Gewone cursuswoorden en
+opgavewoorden worden niet toegevoegd. De bestaande objectrij blijft gelden:
+*instantie* is toegestaan om een object als exemplaar van een klasse te benoemen.
+Eerder gebruik verandert geen introductieweek; het bestaande onderdompelingsbesluit
+in `curriculum/uitgangspunten.md` blijft gelden.
 
 ## Lijst en list
 

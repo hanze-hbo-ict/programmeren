@@ -170,6 +170,50 @@ opdracht, stap*; dat document bindt hier.
 te maken, maar hij verstopt precies de hulp waarvoor hij bedoeld is. Wie hem niet
 nodig heeft, leest eroverheen.
 
+## Leesbaarheid
+
+Behoud noodzakelijke vaktermen en leg ze uit passend bij de plaats in de
+leerlijn. Een vaste term ontslaat je niet van uitleg. Vereenvoudig gewone,
+onnodig moeilijke formuleringen met behoud van redenering, precieze instructies
+en programmeerinhoud.
+
+Gebruik de ruwe LiNT-II-prozascore als redactioneel signaal. De streefgrenzen zijn:
+
+| Tekstfunctie | Profiel | Centrale grens (afgeronde weergave) |
+|---|---|---|
+| College-uitleg | `introduces` | 45,0 |
+| Opgaven en practica | `practises` | 50,1 |
+| Naslag en extra | `reference` | 58,0 |
+
+Vergelijk de ruwe score met de ongeronde centrale waarden:
+44,961681620883596, 50,11724442358537 en 57,978536074574286.
+De jargon-geneutraliseerde analyse helpt bij het kiezen van zinnen, maar verlaagt
+het scoredoel niet. De toolstatus `over` begint pas boven de intervalbovengrens
+(circa 47,78, 53,34 en 60,50). `borderline` betekent dus niet dat de centrale
+streefgrens is gehaald: 46,0 bij `introduces` vraagt nog werk of menselijke afweging.
+
+Stop scoregericht herschrijven zodra de score op of onder de centrale grens ligt
+én de tekst inhoudelijk en redactioneel goed is. Onduidelijke uitleg moet ook bij
+een lage score worden verbeterd. Na maximaal drie herschrijfronden boven de grens
+beslist een mens over het vervolg, waaronder eventueel gemotiveerd behoud.
+Zinnen opknippen tot losse labels, fragmenten of lijstjes die alleen de score
+verlagen telt niet als verbetering. Bij minder dan 150 gescoorde woorden of een
+versnipperingswaarschuwing is passagebeoordeling nodig; de score volstaat dan niet
+als stopbewijs.
+
+Een voldoende score bewijst geen taalniveau 3F en is geen gelijkstelling met B1
+of B2. [#479](https://github.com/hanze-hbo-ict/programmeren/issues/479) beheert het
+inhoudelijke 3F-beoordelingskader en de kleine proef, met woordkeuze, zinsbouw,
+structuur, verwijzingen, instructies en voorkennis. Deze scorehulp vervangt dat
+menselijke oordeel niet. Ook uitgesloten tekst, zoals code, tabellen en inline
+code, moet de auteur lezen. Varianten- en scoresignalen vragen passagebeoordeling;
+tellingen leveren vindplaatsen, geen automatische defecten of schrapopdrachten.
+
+De vakdeskundige gaf op 13 november 2026 letterlijk “akkoord” op
+[D3: leesbaarheidsnorm](https://github.com/hanze-hbo-ict/programmeren/issues/492#issuecomment-6862594544).
+De meetinstructie staat in [technische-conventies.md](technische-conventies.md),
+*Leesbaarheid meten*.
+
 ## Expressiemiddelen
 
 Materiaal hoeft niet uit lopende tekst te bestaan. De leidende regel: een middel

@@ -639,3 +639,39 @@ geschreven.
 | Anker naar een andere pagina werkt niet | Extensie vergeten, of de HTML-`id` gekopieerd in plaats van de MyST-slug |
 | Build-waarschuwing bij een link naar een `.py` of `.zip` | Gewone link gebruikt in plaats van de `download`-rol |
 | Notebook faalt bij de build | Een `%run`-bestand of afbeelding staat niet mee onder `source/` |
+
+## Leesbaarheid meten
+
+Voer vanuit de repository uit:
+
+```sh
+uv run tools/tekstniveau.py check source
+```
+
+De tool leest de vierkolomstabel uit `conventies/begrippen.md`: vaste termen vet
+in *Wij schrijven*, varianten kommagescheiden in *Ook aangetroffen*. Controleer
+foutrecords en meldingen naast de exitcode; zonder `--strict` bewijst exitcode 0
+geen geslaagde meting of behaalde streefgrens. Registreer nieuwe varianten per
+bestand en passage als vervolgwerk en beoordeel hun betekenis vóór correctie.
+
+De profielprioriteit is `--profile`, daarna `tekstniveau.profile` in front matter
+of notebookmetadata, daarna de mapstandaard:
+
+| Map onder `source/` | Profiel |
+|---|---|
+| `lectures/` | `introduces` |
+| `problems/`, `practicals/` | `practises` |
+| `support/`, `extra/` | `reference` |
+
+Een afwijkende tekstfunctie vraagt een expliciet gemotiveerd profiel.
+Voor `solutions/`, `course/`, `about/` en `projects/` bestaat geen mapstandaard.
+Rapporteer daar zonder expliciete toewijzing *profiel ontbreekt*; kies niet
+stilzwijgend `reference`. Bestanden met foutrecords zijn niet gemeten. Rapporteer
+lijstparserfouten, profiel- en meetfouten afzonderlijk van variantensignalen;
+noem een onvolledige run geen geslaagde corpusmeting.
+
+De prozameting sluit onder meer code, tabellen en inline code uit. De ruwe score,
+centrale streefgrenzen, passagecontrole en stopregel staan in
+[schrijfwijzer.md](schrijfwijzer.md), *Leesbaarheid*. De toolstatus gebruikt een
+onzekerheidsinterval en bewijst niet dat die centrale grens of taalniveau 3F is
+gehaald.
