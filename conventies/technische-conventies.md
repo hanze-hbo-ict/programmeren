@@ -670,6 +670,32 @@ stilzwijgend `reference`. Bestanden met foutrecords zijn niet gemeten. Rapportee
 lijstparserfouten, profiel- en meetfouten afzonderlijk van variantensignalen;
 noem een onvolledige run geen geslaagde corpusmeting.
 
+CLI en JSON ronden de ruwe score af op één decimaal. Gebruik voor een
+weergegeven score `s` conservatief de gesloten afrondingsband van `s - 0,05`
+tot `s + 0,05`. Vergelijk deze band met de ongeronde centrale grens uit de
+schrijfwijzer, niet met de afgeronde grensweergave of de toolstatus:
+
+- Ligt de hele band onder de centrale grens, dan is het scoredeel van de
+  stopvoorwaarde aangetoond; controleer daarnaast de inhoud en redactie.
+- Ligt de hele band boven de centrale grens, dan is het scoredoel niet gehaald;
+  volg de herschrijf- en stopregel.
+- Bevat de band de centrale grens, dan volstaat deze uitvoer niet voor een
+  scorebeslissing. Beoordeel de passage en laat een mens over het vervolg
+  beslissen. Noteer het besluit zonder te claimen dat de scoregrens is gehaald.
+
+| Profiel | Hele band onder de grens | Grensgeval | Hele band boven de grens |
+|---|---|---|---|
+| `introduces` | Weergave hoogstens 44,9 | 45,0 | Weergave minstens 45,1 |
+| `practises` | Weergave hoogstens 50,0 | 50,1 | Weergave minstens 50,2 |
+| `reference` | Weergave hoogstens 57,9 | 58,0 | Weergave minstens 58,1 |
+
+Bijvoorbeeld: een werkelijke score 50,14 verschijnt als 50,1, terwijl hij boven
+de centrale grens ligt. Een werkelijke score 44,96 verschijnt als 45,0, terwijl
+hij onder de centrale grens ligt. Beide weergaven vragen daarom de
+bovenstaande grensgevalprocedure. Dit zijn rekenvoorbeelden, geen corpusscores.
+Leg bij de beslissing profiel, weergegeven score, afrondingsband en
+tekstbeoordeling vast, en bij een grensgeval ook het menselijke besluit.
+
 De prozameting sluit onder meer code, tabellen en inline code uit. De ruwe score,
 centrale streefgrenzen, passagecontrole en stopregel staan in
 [schrijfwijzer.md](schrijfwijzer.md), *Leesbaarheid*. De toolstatus gebruikt een

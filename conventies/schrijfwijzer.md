@@ -185,8 +185,16 @@ Gebruik de ruwe LiNT-II-prozascore als redactioneel signaal. De streefgrenzen zi
 | Opgaven en practica | `practises` | 50,1 |
 | Naslag en extra | `reference` | 58,0 |
 
-Vergelijk de ruwe score met de ongeronde centrale waarden:
+De ruwe score wordt beoordeeld tegen de ongeronde centrale waarden:
 44,961681620883596, 50,11724442358537 en 57,978536074574286.
+De CLI en JSON geven de score echter op één decimaal weer. Behandel die weergave
+niet als een exacte score: pas de afrondingsband uit *Leesbaarheid meten* in
+[technische-conventies.md](technische-conventies.md) toe. Alleen een band geheel
+onder de centrale grens draagt het scoredeel van de stopbeslissing. Bij een
+band die de grens bevat, volgt passagebeoordeling en menselijke afweging over
+het vervolg; claim dan niet dat het scoredoel aantoonbaar is gehaald. Leg de
+weergegeven score, het profiel, de band en de tekstbeoordeling vast, en bij zo'n
+grensgeval ook het menselijke besluit. De centrale grenzen blijven ongewijzigd.
 De jargon-geneutraliseerde analyse helpt bij het kiezen van zinnen, maar verlaagt
 het scoredoel niet. De toolstatus `over` begint pas boven de intervalbovengrens
 (circa 47,78, 53,34 en 60,50). `borderline` betekent dus niet dat de centrale
