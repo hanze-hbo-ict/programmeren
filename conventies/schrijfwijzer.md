@@ -210,12 +210,17 @@ versnipperingswaarschuwing is passagebeoordeling nodig; de score volstaat dan ni
 als stopbewijs.
 
 Een voldoende score bewijst geen taalniveau 3F en is geen gelijkstelling met B1
-of B2. [#479](https://github.com/hanze-hbo-ict/programmeren/issues/479) beheert het
-inhoudelijke 3F-beoordelingskader en de kleine proef, met woordkeuze, zinsbouw,
-structuur, verwijzingen, instructies en voorkennis. Deze scorehulp vervangt dat
-menselijke oordeel niet. Ook uitgesloten tekst, zoals code, tabellen en inline
-code, moet de auteur lezen. Varianten- en scoresignalen vragen passagebeoordeling;
-tellingen leveren vindplaatsen, geen automatische defecten of schrapopdrachten.
+of B2. Er is geen 3F-validatie van de programmeerteksten of proef met echte
+studenten uitgevoerd. De scorehulp vraagt daarnaast menselijke beoordeling van
+woordkeuze, zinsbouw, structuur, verwijzingen, instructies en voorkennis. Ook
+uitgesloten tekst, zoals code, tabellen en inline code, moet de auteur lezen.
+Varianten- en scoresignalen vragen passagebeoordeling; tellingen leveren
+vindplaatsen, geen automatische defecten of schrapopdrachten.
+
+De vakdeskundige gaf op 13 november 2026 letterlijk “ja doet dat maar” op het
+voorstel om #479 als vervangen te sluiten en de verwijzing hier aan te passen;
+zie het [besluit bij #479](https://github.com/hanze-hbo-ict/programmeren/issues/479#issuecomment-6864498417).
+De tekstniveautool en deze conventies vervangen die afzonderlijke opdracht.
 
 De vakdeskundige gaf op 13 november 2026 letterlijk “akkoord” op
 [D3: leesbaarheidsnorm](https://github.com/hanze-hbo-ict/programmeren/issues/492#issuecomment-6862594544).
