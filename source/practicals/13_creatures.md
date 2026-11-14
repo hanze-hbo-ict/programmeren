@@ -352,7 +352,7 @@ Schrijf de vier methoden die een gevecht nodig heeft:
 :::{admonition} Hint
 :class: tip
 
-`random.randint(a, b)` geeft een willekeurig geheel getal van `a` tot en met `b`.
+`random.randint(a, b)` geeft een willekeurige integer van `a` tot en met `b`.
 :::
 
 Een `Turret` is geen subklasse van `Creature`, maar hij heeft wel de methoden en
