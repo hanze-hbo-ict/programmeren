@@ -27,25 +27,25 @@ def generate_text(words_follow, n_words):
 
 ## Python's dictionaries gebruiken
 
-Je doel bij dit practicum is om een programma te schrijven dat uit zichzelf "betekenisvolle" tekst kan genereren! Je gaat dit doel bereiken door het schrijven van een algoritme dat met behulp van zogeheten Markovprocessen tekst genereert.
+In dit practicum schrijf je een programma dat zelf "betekenisvolle" tekst kan genereren! Je schrijft daarvoor een algoritme dat tekst genereert met zogeheten Markovprocessen.
 
-Dit practicum gebruikt een Python-dictionary om tekst te modelleren; en daarna te genereren.
+Je gebruikt een Python-dictionary om tekst te modelleren en daarna te genereren.
 
 ### Voorbeeldcode
 
-Je kan een paar voorbeelden vinden van hoe je in Python dictionaries kan gebruiken om tekst te analyseren met een *vocabulaireteller* (in tegenstelling tot een woordenteller) in {download}`deze voorbeeldcode; dit kan je gebruiken als naslagwerk voor wat je nodig hebt... <assets/file_and_dictionary_examples.py>`
+Een *vocabulaireteller* analyseert tekst met Python-dictionaries, in tegenstelling tot een woordenteller. Voorbeelden staan in {download}`deze voorbeeldcode; dit kan je gebruiken als naslagwerk voor wat je nodig hebt... <assets/file_and_dictionary_examples.py>`. Gebruik die voorbeelden als naslagwerk.
 
 ## Tekst genereren met Markovprocessen
 
-Hier is het basisidee: het Nederlands is een taal met veel structuur. Woorden hebben de neiging (sterker, de verplichting) om alleen in bepaalde volgordes voor te komen. De regels van de grammatica bepalen welke combinaties van verschillende stukken spraak toegestaan zijn. De zin "De kat klimt de trap op" heeft bijvoorbeeld een geldige woordvolgorde. "Trap de op kat klimt" heeft dat niet. Daarnaast beperkt de semantiek (de betekenis van een woord of zin) de mogelijke combinaties nog verder. "De trap klimt de kat op" is een perfect geldige zin, maar het is wel onzinnig en je zal deze woordvolgorde in de praktijk zeer waarschijnlijk niet tegenkomen.
+Het Nederlands heeft veel structuur. Woorden kunnen alleen in bepaalde volgordes voorkomen. De grammatica bepaalt welke combinaties van zinsdelen toegestaan zijn. De zin "De kat klimt de trap op" heeft bijvoorbeeld een geldige woordvolgorde. "Trap de op kat klimt" heeft dat niet. Daarnaast beperkt de betekenis van een woord of zin de mogelijke combinaties nog verder. Die betekenis heet de semantiek. "De trap klimt de kat op" is volgens de grammatica een geldige zin. Toch is hij onzinnig: je zal deze woordvolgorde in de praktijk waarschijnlijk niet tegenkomen.
 
-Zelfs zonder de formele regels van het Nederlands te kennen, of de betekenis van Nederlandse woorden, kunnen we een idee krijgen van welke woordcombinaties geldig zijn door simpelweg naar correcte Nederlandse teksten te kijken en de combinaties van woorden te bekijken die in de praktijk voorkomen. We kunnen daarna op basis van onze observaties *nieuwe* zinnen maken door willekeurig woorden te selecteren aan de hand van hoe vaak ze in die volgorde voorkomen. Bekijk bijvoorbeeld de volgende tekst:
+We kunnen ook zonder kennis van de Nederlandse regels of woordbetekenissen onderzoeken welke woordcombinaties geldig zijn. Daarvoor kijken we naar correcte Nederlandse teksten: welke combinaties van woorden komen daarin voor? Daarna maken we op basis daarvan *nieuwe* zinnen. We kiezen de woorden willekeurig, op basis van hoe vaak ze in die volgorde voorkomen. Bekijk bijvoorbeeld de volgende tekst:
 
 "Ik houd van rozen en anjers. Ik dacht, ik koop rozen voor mijn verjaardag."
 
-Als we beginnen met het kiezen van het woord "ik", kunnen we zien dat "ik" gevolgd kan worden door "houd", "dacht" en "koop", met in deze tekst een gelijke kans. We kiezen één van deze woorden willekeurig en voegen die toe aan onze zin, bijvoorbeeld "ik koop". Hierdoor moet het volgende woord "rozen" zijn, omdat in onze voorbeeldtekst "koop" altijd (dat wil zeggen, één keer) gevolgd wordt door "rozen". Als we dit proces herhalen kunnen we bijvoorbeeld de zin "ik koop rozen en anjers" krijgen. Merk op dat dit een geldige Nederlandse zin is, maar niet één die we eerder hebben gezien. Andere nieuwe zinnen die we zouden kunnen genereren zijn "ik houd van rozen voor mijn verjaardag" en "ik koop rozen voor mijn verjaardag".
+We beginnen met het woord "ik". Daarna kan "houd", "dacht" of "koop" volgen, in deze tekst met gelijke kans. We kiezen één van deze woorden willekeurig en voegen die toe aan onze zin, bijvoorbeeld "ik koop". Het volgende woord moet dan "rozen" zijn. In onze voorbeeldtekst volgt dat altijd op "koop": die combinatie komt één keer voor. Als we dit proces herhalen kunnen we bijvoorbeeld de zin "ik koop rozen en anjers" krijgen. Merk op dat dit een geldige Nederlandse zin is, maar niet één die we eerder hebben gezien. Andere nieuwe zinnen die we zouden kunnen genereren zijn "ik houd van rozen voor mijn verjaardag" en "ik koop rozen voor mijn verjaardag".
 
-Formeel gezegd heet het proces dat we gebruiken om deze zinnen te genereren een *Markovproces van de eerste orde*. Een Markovproces van de eerste orde is een proces waarin de toestand op tijdstip *t*+1 (dat wil zeggen, het volgende woord) alleen afhankelijk is van de toestand op tijdstip *t* (dat wil zeggen, het vorige woord). In een Markovproces van de tweede orde is het volgende woord afhankelijk van de *twee* vorige woorden, en zo verder. Ons voorbeeld hierboven was een proces van de eerste orde omdat de keuze voor het volgende woord alleen afhing van het huidige woord. Merk op dat de waarde van het volgende woord onafhankelijk is van de positie van het woord, en alleen maar afhangt van zijn directe geschiedenis. Dat wil zeggen dat het niet uitmaakt of we het 2e woord kiezen of het 92e. Het maakt alleen uit wat het 1e of 91e woord is, respectievelijk.
+We genereren deze zinnen met een *Markovproces van de eerste orde*. Daarin hangt de toestand op tijdstip *t*+1 alleen af van de toestand op tijdstip *t*. Hier is de volgende toestand het volgende woord, en de vorige toestand het vorige woord. In een Markovproces van de tweede orde is het volgende woord afhankelijk van de *twee* vorige woorden, en zo verder. Ons voorbeeld hierboven was een proces van de eerste orde omdat de keuze voor het volgende woord alleen afhing van het huidige woord. De keuze voor het volgende woord hangt alleen af van zijn directe geschiedenis, niet van zijn positie. Het maakt dus niet uit of we het 2e of het 92e woord kiezen. Alleen het vorige woord telt: respectievelijk het 1e of het 91e woord.
 
 ## Teksten analyseren en genereren
 
@@ -57,11 +57,11 @@ Hier zijn de details over de twee functies die je moet schrijven:
 
 ## Opdracht 1: De functie `create_dictionary`
 
-`create_dictionary(filename)` krijgt een string als argument mee, wat de naam van een tekstbestand is dat wat voorbeeldtekst bevat. Het moet een dictionary teruggeven waarvan de sleutels woorden zijn die in de tekst voorkomen en waarvan de waardes lijsten met woorden zijn die op het sleutelwoord kunnen volgen. Merk op dat je een manier moet bedenken waarop je bijhoudt hoe vaak een woord op het sleutelwoord volgt. Dat wil zeggen dat als het woord "fiets" twee keer zo vaak wordt gevolgd door het woord "kopen" als door het woord "repareren", je dictionary deze informatie ook moet bevatten. Je kan bijvoorbeeld het woord meerdere keren opnemen in de lijst.
+`create_dictionary(filename)` krijgt een string als argument: de naam van een tekstbestand met voorbeeldtekst. De functie moet een dictionary teruggeven. De sleutels zijn woorden uit de tekst. De waarde bij elke sleutel is een lijst met woorden die op dat woord kunnen volgen. Houd ook bij hoe vaak een woord op het sleutelwoord volgt. Volgt "kopen" bijvoorbeeld twee keer zo vaak op "fiets" als "repareren"? Dan moet die verhouding ook in je dictionary staan. Je kan daarvoor een woord meerdere keren opnemen in de lijst.
 
 De dictionary die wordt teruggegeven door `create_dictionary` geeft je de mogelijkheid om woord `t`+1 te kiezen als je woord `t` al hebt. Maar hoe kies je het *eerste* woord, als je geen bestaand woord hebt die je als sleutel voor de dictionary kan gebruiken?
 
-Om dit geval te kunnen afhandelen, moet je dictionary de string `$` bevatten; dit is het *startsymbool*. Het eerste woord in het bestand moet op deze string "opvolgen". Bovendien moet elke string die volgt op het laatste woord van een zin deze string opvolgen. Een woord dat een zin eindigt wordt gedefinieerd als elk woord waarvan het laatste teken een punt `.`, een vraagteken `?` of een uitroepteken `!` is.
+Om dit geval af te handelen, moet je dictionary de string `$` bevatten: het *startsymbool*. In de lijst bij deze sleutel staat het eerste woord van het bestand. Ook elk woord dat na het laatste woord van een zin komt, hoort in deze lijst. Een woord sluit een zin af als het laatste teken een punt `.`, een vraagteken `?` of een uitroepteken `!` is.
 
 :::{admonition} Bepalen of een woord eindigt op een leesteken
 :class: tip
@@ -214,15 +214,15 @@ Out[2]:
 
 ## Opdracht 2: De functie `generate_text`
 
-`generate_text(words_follow, n_words)` krijgt een dictionary met woordovergangen (gemaakt door je functie `create_dictionary` van hierboven) mee, en een positieve integer `n_words`. Hiermee moet `generate_text` een string van `n_words` woorden afdrukken.
+`generate_text(words_follow, n_words)` krijgt een dictionary met woordovergangen mee. Die heb je met je functie `create_dictionary` van hierboven gemaakt. Het andere argument is een positieve integer `n_words`. Hiermee moet `generate_text` een string van `n_words` woorden afdrukken.
 
-Het eerste woord moet willekeurig gekozen zijn uit de woorden die kunnen volgen op het startsymbool `"$"`. Bedenk dat `random.choice` een willekeurig element ***uit een lijst*** kan kiezen! Het tweede woord moet willekeurig gekozen worden uit de lijst woorden die kunnen volgen op het eerste woord, en zo verder. Als een gekozen woord eindigt op een punt `.`, een vraagteken `?` of een uitroepteken `!`, moet de functie `generate_text` deze gebeurtenis herkennen en een nieuwe zin beginnen door opnieuw een willekeurig woord te kiezen dat kan volgen op een `"$"`.
+Het eerste woord moet willekeurig gekozen zijn uit de woorden die kunnen volgen op het startsymbool `"$"`. Bedenk dat `random.choice` een willekeurig element ***uit een lijst*** kan kiezen! Het tweede woord moet willekeurig gekozen worden uit de lijst woorden die kunnen volgen op het eerste woord, en zo verder. Eindigt een gekozen woord op een punt `.`, een vraagteken `?` of een uitroepteken `!`? Dan moet de functie `generate_text` een nieuwe zin beginnen. Kies daarvoor opnieuw een willekeurig woord dat op een `"$"` kan volgen.
 
 Laat `'$'` niet terugkomen in de uitvoertekst; het is alleen een interne markering voor je functie.
 
-In dit practicum hoef je de woorden in het tekstbestand *niet* te ontdoen van leestekens. Laat leestekens staan zoals ze in de tekst voorkomen; en als je woorden genereert, hoef je je geen zorgen te maken als de gegenereerde tekst niet eindigt op een geldig leesteken, dat wil zeggen, je zou kunnen eindigen zonder punt, maar dat is prima. De tekst die je genereert zal niet perfect zijn, maar je kan verrast worden door hoe goed hij is!
+In dit practicum hoef je de woorden in het tekstbestand *niet* te ontdoen van leestekens. Laat leestekens staan zoals ze in de tekst voorkomen. De gegenereerde tekst hoeft niet op een geldig leesteken te eindigen. Een tekst zonder punt aan het eind is dus ook goed. De tekst die je genereert zal niet perfect zijn, maar je kan verrast worden door hoe goed hij is!
 
-Je mag ervan uitgaan dat er geen leestekens op zichzelf (of andere randgevallen) in de invoer voorkomen. Het beste kan je bij zulke onverwachte gevallen gewoonweg een nieuwe zin beginnen. In het specifieke geval dat je bij een woord uitkomt dat alleen maar als het laatste woord in je trainingsdata voorkomt (dat wil zeggen dat er geen opvolgende woorden zijn), dan kan je gewoon verder gaan met het genereren van tekst vanaf het startsymbool `$`.
+Je mag ervan uitgaan dat er geen leestekens op zichzelf (of andere randgevallen) in de invoer voorkomen. Het beste kan je bij zulke onverwachte gevallen gewoonweg een nieuwe zin beginnen. Een woord kan alleen als laatste woord in je trainingsdata voorkomen. Het heeft dan geen opvolgende woorden. Ga in dat geval verder met het genereren van tekst vanaf het startsymbool `$`.
 
 Hier zijn twee voorbeelden met de dictionary uit `test.txt` van hierboven. Je eigen uitvoer zal verschillen omdat de woorden willekeurig gekozen zijn, maar ze zouden er op moeten lijken:
 
@@ -251,7 +251,12 @@ Probeer gegenereerde essays niet te gebruiken als *echte* essays!
 :::{admonition} Platte-tekstbestanden
 :class: tip
 
-De makkelijkste manier om een platte-tekstbestand te maken dat je als invoer kan gebruiken is door de tekst te kopiëren van waar je hem gezien hebt via het menu of Control-C (Command-C op een Mac), en daarna een leeg tekstbestand te openen met Kladblok (Windows) of Teksteditor (Mac). Sla je `.txt`-bestand met platte tekst, bijvoorbeeld `spam.txt`, op in dezelfde directory als je Python-bestand.
+Maak een platte-tekstbestand om als invoer te gebruiken.
+
+1. Kopieer de tekst van de plek waar je hem gezien hebt. Gebruik daarvoor het menu of Control-C (Command-C op een Mac).
+2. Open daarna een leeg tekstbestand met Kladblok (Windows) of Teksteditor (Mac).
+3. Plak de gekopieerde tekst in het lege tekstbestand.
+4. Sla je `.txt`-bestand met platte tekst, bijvoorbeeld `spam.txt`, op in dezelfde directory als je Python-bestand.
 :::
 
 :::{admonition} Teksteditor op Mac
