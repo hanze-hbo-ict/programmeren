@@ -251,7 +251,11 @@ Probeer gegenereerde essays niet te gebruiken als *echte* essays!
 :::{admonition} Platte-tekstbestanden
 :class: tip
 
-Maak een platte-tekstbestand om als invoer te gebruiken. Kopieer de tekst van de plek waar je hem gezien hebt. Gebruik daarvoor het menu of Control-C (Command-C op een Mac). Open daarna een leeg tekstbestand met Kladblok (Windows) of Teksteditor (Mac). Sla je `.txt`-bestand met platte tekst, bijvoorbeeld `spam.txt`, op in dezelfde directory als je Python-bestand.
+Maak een platte-tekstbestand om als invoer te gebruiken.
+
+1. Kopieer de tekst van de plek waar je hem gezien hebt. Gebruik daarvoor het menu of Control-C (Command-C op een Mac).
+2. Open daarna een leeg tekstbestand met Kladblok (Windows) of Teksteditor (Mac).
+3. Sla je `.txt`-bestand met platte tekst, bijvoorbeeld `spam.txt`, op in dezelfde directory als je Python-bestand.
 :::
 
 :::{admonition} Teksteditor op Mac
