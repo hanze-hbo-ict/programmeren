@@ -18,6 +18,7 @@ def build_element(
     assignment: str,
     solution: str,
     dormant: bool = False,
+    download: str = "",
 ) -> str:
     """Return the raw HTML for an ``<interactive-code-cell>`` element."""
     solution_b64 = base64.b64encode(solution.encode()).decode() if solution else ""
@@ -26,6 +27,8 @@ def build_element(
         "data-assignment": assignment,
         "data-solution": solution_b64,
     }
+    if download:
+        attrs["data-download"] = download
     if dormant:
         attrs["data-dormant"] = "true"
     attr_str = " ".join(

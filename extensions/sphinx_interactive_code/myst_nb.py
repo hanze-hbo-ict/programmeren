@@ -12,6 +12,8 @@ Cell-level metadata (optional, in Jupyter cell metadata)::
         "solution": "def faculteit(n):\\n    return 1 if n == 0 else n * faculteit(n - 1)"
       }
     }
+
+The optional "download" metadata names a page download and its path in Python.
 """
 
 from __future__ import annotations
@@ -100,6 +102,7 @@ class NotebookCellTransform(SphinxPostTransform):
                 assignment=meta.get("assignment", ""),
                 solution=meta.get("solution", ""),
                 dormant=True,
+                download=meta.get("download", ""),
             )
 
             # Replace only cell_code_source — keep the outer cell_code container so
