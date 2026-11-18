@@ -59,7 +59,9 @@ class PageRuntime {
     this.#generation += 1;
     const generation = this.#generation;
     this.#worker?.terminate();
-    this.#worker = new Worker(new URL("./pyodide-worker.js", import.meta.url), { type: "module" });
+    const workerUrl = new URL("./pyodide-worker.js", import.meta.url);
+    if (window.SIC_WORKER_VERSION) workerUrl.searchParams.set("v", window.SIC_WORKER_VERSION);
+    this.#worker = new Worker(workerUrl, { type: "module" });
     this.#ready = new Promise((resolve, reject) => {
       const onMessage = (event) => {
         const message = event.data;

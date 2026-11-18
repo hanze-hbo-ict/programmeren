@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 from pathlib import Path
 from typing import TYPE_CHECKING, Any
@@ -19,6 +20,13 @@ _ = get_translation("sphinx_interactive_code")
 
 def _add_static_path(app: Sphinx) -> None:
     app.config.html_static_path.append(str(_STATIC))
+
+
+def _version_worker(app: Sphinx) -> None:
+    # Sphinx versions the entry script, but not the worker it loads dynamically.
+    worker = _STATIC / "pyodide-worker.js"
+    version = hashlib.sha256(worker.read_bytes()).hexdigest()[:16]
+    app.add_js_file(None, body=f"window.SIC_WORKER_VERSION = {json.dumps(version)};")
 
 
 def _inject_i18n(app: Sphinx) -> None:
@@ -53,6 +61,7 @@ def setup(app: Sphinx) -> dict[str, Any]:
 
     app.connect("builder-inited", _add_static_path)
     app.connect("builder-inited", _inject_i18n)
+    app.connect("builder-inited", _version_worker)
     app.add_js_file("interactive-code.js", type="module")
     app.add_css_file("interactive-code.css")
 
