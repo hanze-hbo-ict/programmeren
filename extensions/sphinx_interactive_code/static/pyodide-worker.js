@@ -74,6 +74,14 @@ async function run(message) {
     },
   });
   try {
+    if (message.download) {
+      const { path, url } = message.download;
+      const response = await fetch(url);
+      if (!response.ok) throw new Error(`Download van ${path} mislukt (HTTP ${response.status}).`);
+      const directory = path.slice(0, path.lastIndexOf("/"));
+      if (directory) pyodide.FS.mkdirTree(directory);
+      pyodide.FS.writeFile(path, new Uint8Array(await response.arrayBuffer()));
+    }
     const result = await pyodide.runPythonAsync(message.code);
     send("result", runId, {
       value: result === undefined || result === null ? "" : String(result),

@@ -87,7 +87,7 @@ class PageRuntime {
     return this.#ready;
   }
 
-  run(code, callbacks, url) {
+  run(code, callbacks, url, download) {
     if (this.#active) return Promise.reject(new Error("Er draait al een cel."));
     const runId = `${this.#generation}:${++PageRuntime.nextRunId}`;
     this.#active = { runId, callbacks, timer: null, grace: null };
@@ -95,7 +95,7 @@ class PageRuntime {
       this.#active.resolve = resolve;
       if (this.#interrupt) Atomics.store(this.#interrupt, 0, 0);
       this.#active.timer = setTimeout(() => this.#stop("timeout"), EXECUTION_TIMEOUT_MS);
-      this.#worker.postMessage({ type: "run", generation: this.#generation, runId, code });
+      this.#worker.postMessage({ type: "run", generation: this.#generation, runId, code, download });
     })).catch((error) => {
       this.#active = null;
       return { kind: "worker", message: error?.message || String(error) };
@@ -457,11 +457,20 @@ class InteractiveCodeCell extends HTMLElement {
     this.#markError(outputEl, false);
 
     try {
+      let download;
+      if (this.dataset.download) {
+        const path = this.dataset.download;
+        const name = path.split("/").at(-1);
+        const link = Array.from(document.querySelectorAll("a.reference.download[download]"))
+          .find((anchor) => new URL(anchor.href).pathname.endsWith(`/${encodeURIComponent(name)}`));
+        if (!link) throw new Error(`Downloadlink voor ${name} ontbreekt.`);
+        download = { path, url: link.href };
+      }
       const result = await pageRuntime.run(code, {
         output: (text, isError) => { outputEl.textContent += text; this.#markError(outputEl, isError); outputEl.hidden = false; },
         input: (buffer) => this.#askInput(buffer, outputEl),
         cleanup: () => this.#closeInput(),
-      }, this.dataset.pyodideUrl || DEFAULT_PYODIDE_URL);
+      }, this.dataset.pyodideUrl || DEFAULT_PYODIDE_URL, download);
       if (result.kind === "result") outputEl.textContent += result.value;
       if (result.kind === "python" || result.kind === "interrupt") {
         outputEl.textContent += `${t("pythonError")}${result.message}`;
