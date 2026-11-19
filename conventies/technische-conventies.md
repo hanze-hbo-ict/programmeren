@@ -526,6 +526,11 @@ Markdown-link geeft een build-waarschuwing.
 - **Literatuurverwijzingen** via `sphinxcontrib-bibtex` uit
   `source/references.bib`.
 
+De proef in [werkitem #516](https://github.com/hanze-hbo-ict/programmeren/issues/516)
+gebruikt standaard ingeklapte MyST-dropdowns voor de tekstvragen bij opdracht 2
+en 5 in `lectures/8b_taalmodel`. Gewone notebookviewers zonder MyST-ondersteuning
+kunnen de antwoordtekst meteen tonen.
+
 ## Notebooks
 
 - **Geen uitvoer in git.** `nbstripout` verwijdert die bij elke commit.
